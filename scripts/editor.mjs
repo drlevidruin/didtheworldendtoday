@@ -528,9 +528,13 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
     state.lastWriteAt = nowIso;
     writeJsonIfChanged(f.state, state);
     const n = checked.edition.items.length;
+    // How many "more" stories made it, and how many the editor named that the checks left out.
+    const m = Array.isArray(checked.edition.more) ? checked.edition.more.length : 0;
+    const named = Array.isArray(parsed.more) ? parsed.more.length : 0;
+    const moreNote = m || named ? ` and ${m} more${named > m ? ` (${named - m} left out)` : ''}` : '';
     // What was dropped, or kept without its label, goes in the same line so a bad day can be traced.
     const notes = checked.dropped.map((d) => `item ${d.index + 1} ${d.kept ? 'kept without a label' : 'dropped'} (${d.reason})`);
-    return done('written', `wrote ${n} item${n === 1 ? '' : 's'} for ${today} (${tokensOf(response)}, $${cost.toFixed(3)})${notes.length ? `; ${notes.join(', ')}` : ''}`, { written: n });
+    return done('written', `wrote ${n} item${n === 1 ? '' : 's'}${moreNote} for ${today} (${tokensOf(response)}, $${cost.toFixed(3)})${notes.length ? `; ${notes.join(', ')}` : ''}`, { written: n });
   } catch (err) {
     return done('failed', `stopped (${oneLine(err && err.message ? err.message : err, key)}), kept the current edition`);
   }

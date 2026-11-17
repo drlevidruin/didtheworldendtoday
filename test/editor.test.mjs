@@ -713,7 +713,7 @@ test('editor: the prompt asks for a label, a line and a one-sentence headline, i
   );
   assert.ok(
     p.includes(
-      '\n7. more: up to 30 more stories worth a look today, by id, best first. Use the same tests as rule 2: today, real, and the kind of thing this site is about. Each one a different event from the items and from each other. Pick the newest and the most talked about first.\n',
+      '\n7. more: up to 30 more stories worth a look today, by id, best first. Use the same tests as rule 2: today, real, and the kind of thing this site is about. Each one a different event from the items and from each other. Pick the newest and the most talked about first. List every event that passes, not just a few.\n',
     ),
     'rule 7 asks for up to 30 more stories, by id',
   );
@@ -812,8 +812,8 @@ test('editor: more is stored as the editor listed it, best first, and keeps only
   const again = validateEdition(e, { date: DATE, byId, excluder });
   assert.equal(again.ok, true);
   assert.deepEqual(again.edition.more, e.more);
-  // and the log line is still the one line it always was
-  assert.deepEqual(r.lines, ['editor: wrote 5 items for 2026-11-17 (1200 in, 300 out, $0.011)']);
+  // and the one log line says how many more made it, and how many it named that the checks left out
+  assert.deepEqual(r.lines, ['editor: wrote 5 items and 30 more (19 left out) for 2026-11-17 (1200 in, 300 out, $0.011)']);
 });
 
 test('editor: a missing more, or one that is not a list, is an empty list, and the edition is still written', async () => {
