@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T16:16:49.463Z",
+  "buildTime": "2026-11-17T16:27:30.704Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 11:16 ET",
+  "etStamp": "2026-11-17 11:27 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -54,17 +54,17 @@
     "date": "2026-11-17",
     "score": 92
   },
-  "headlinesRead": 1607,
-  "lastSuccessAt": "2026-11-17T16:16:49.463Z",
+  "headlinesRead": 1537,
+  "lastSuccessAt": "2026-11-17T16:27:30.704Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 17,
+    "flights": 16,
     "space": 3,
     "earth": 4,
-    "hacks": 39,
-    "grid": 7,
+    "hacks": 38,
+    "grid": 8,
     "germs": 4,
-    "internet": 9,
+    "internet": 10,
     "markets": 4,
     "animals": 4,
     "ai": 1,
@@ -175,11 +175,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "3 dead after plane crash in Grand Canyon National Park"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -191,57 +193,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1317,
+      "count": 1318,
       "error": null,
-      "lastOkAt": "2026-11-17T16:16:49.463Z"
+      "lastOkAt": "2026-11-17T16:27:30.704Z"
     },
     "bing": {
       "ok": true,
-      "count": 279,
-      "error": null,
-      "lastOkAt": "2026-11-17T16:16:49.463Z"
+      "count": 208,
+      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-17T16:27:30.704Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": null
     },
     "hn": {
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-17T16:16:49.463Z"
+      "lastOkAt": "2026-11-17T16:27:30.704Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T16:16:49.463Z"
+      "lastOkAt": "2026-11-17T16:27:30.704Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T16:16:49.463Z"
+      "lastOkAt": "2026-11-17T16:27:30.704Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T16:16:49.463Z"
+      "lastOkAt": "2026-11-17T16:27:30.704Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T16:16:49.463Z"
+      "lastOkAt": "2026-11-17T16:27:30.704Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T16:16:49.463Z"
+      "lastOkAt": "2026-11-17T16:27:30.704Z"
     },
     "x": {
       "ok": true,
@@ -254,7 +256,7 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T16:16:49.463Z"
+      "lastOkAt": "2026-11-17T16:27:30.704Z"
     }
   },
   "stories": [
@@ -745,6 +747,36 @@
       "score": 1.42
     },
     {
+      "id": "2bd37ab7e95f",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Fake National Grid warning about ‘major blackout’ shared online",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbkRLOXprdzRBZDFyUjAxSXhJeGFXSU9OTVQtYjhtMGRPa1p4WjYyTzZsRzBCVml1Q2kwUFBTS3BPNlp4dkI1RnlMZ29HeUtSLU50YjB2eFVvQUZjYmJqS181ZWJLVjRtQmtrNGJma1NCZG5LRDJTay1uT0FERjlVRmNDWHhTY00?oc=5",
+      "source": "Full Fact",
+      "publishedAt": "2026-11-17T16:14:35.000Z",
+      "firstSeenAt": "2026-11-17T16:27:30.704Z",
+      "outlets": 1,
+      "outletNames": [
+        "Full Fact"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "80d893c5d2e9",
+      "cat": "internet",
+      "kind": "news",
+      "title": "National Security Agency Reportedly Experiencing Major Outage",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ1FBWUJNSTg2OFoxUkROQzBXR0FpQUxGYzUtUXd4b1Blbnl4S3NBeHBpWm0tX0J2SWd5am1Pd0NIRlJFOVZDQUI0a0VSY0tVamIxMXFXRkRPZGdJaGlaWk9fdm43X3pwUlFEWXZPNXhOTjVoUWluZjdMYUladHY4MW1BRVc5ZEZfN0hWQ19uRGhsWC10Rk1VdmVVekJaNFJzeWlCRWRBd2M0eEpWbnZzUjNldWN6cTc0NW1zM193OA?oc=5",
+      "source": "Townhall",
+      "publishedAt": "2026-11-17T16:10:00.000Z",
+      "firstSeenAt": "2026-11-17T16:27:30.704Z",
+      "outlets": 1,
+      "outletNames": [
+        "Townhall"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "95fc0522f486",
       "cat": "internet",
       "kind": "news",
@@ -760,21 +792,6 @@
       "score": 1.39
     },
     {
-      "id": "4703fdc3b0b6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Major outage hits NSA's secret communications network",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRldrYTh2NzJrQU9DeVJPQVAtT1VRMG92LTBheVpXZnVSZ0pibjdTeGNSNmU0UlBFaWZ5eFlEY19OT21MZ0xtczV2NHkzOUxwTUZLZjVqZVhOaGcxWjFQZ0JOMHpCaGFWRTQzM3ZYYmpXb1BrWWpWVzRvcXNHZmkzMXBVVEsxaS1tZjFocFAzVGxHRTdnVEtVV2pXMmliVzVQbkHSAbQBQVVfeXFMTVM1ckFHb3VqVjh5SEFLSl8wZnozR01BWWN4QmpfX2otTTYzQUFvMmx2RlhyTGMwRnBvUzIzcFRFNGxEbFkxekZrVWVPWUJJVzRVTVJzbEdzZ2Y2ZnVOdWVVRXd3S2hpQVBkR19XWEY1ZFdtclZSc2I3UDQ2alRmS3FlczFpMUx0Tm95bGlzLWlDNjZ1M3BfRnNFWHNvRFNhMTEzZTZ1UTlFMFU4Y01ZZ1prZERk?oc=5",
-      "source": "Gulf News",
-      "publishedAt": "2026-11-17T15:50:25.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "Gulf News"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "fd99c05c1347",
       "cat": "germs",
       "kind": "news",
@@ -786,21 +803,6 @@
       "outlets": 1,
       "outletNames": [
         "Global Agriculture"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "882af3df3a6f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "FEMA nationwide emergency alert test sparks blackout fears",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbVZsM0tSS2J5aEQ0NktoTVIyVmNvc1NWZ2NoQl9aYi1wbUxuT1piZW1RWXpDU1N5ak9LUF9HMTF6ZGhuWnJlWDJHdHhXMEFycDc2d0dQa1p6MUlnTUg4TWZiRkp5am9Ecl9rTks5RmpPOHJzeEduQ2ZnSUxOa0lNV2RjeTJKVnhLelJxRGt3?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-17T14:18:55.000Z",
-      "firstSeenAt": "2026-11-17T14:46:34.896Z",
-      "outlets": 1,
-      "outletNames": [
-        "Beinsure"
       ],
       "score": 1.39
     },
@@ -951,6 +953,23 @@
         "Newswav"
       ],
       "score": 2.04
+    },
+    {
+      "id": "08abbe2cfb4e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack hits 178 organizations: Credit cards, crypto, other data at risk",
+      "url": "https://www.nj.com/news/2026/11/cyberattack-hits-178-organizations-credit-cards-crypto-other-data-at-risk.html",
+      "source": "NJ.com",
+      "publishedAt": "2026-11-17T01:57:00.000Z",
+      "firstSeenAt": "2026-11-17T15:16:40.034Z",
+      "outlets": 3,
+      "outletNames": [
+        "NJ.com",
+        "Syracuse.com",
+        "Yahoo"
+      ],
+      "score": 2.01
     },
     {
       "id": "e06bc2e7ff05",
@@ -1194,22 +1213,6 @@
       "score": 1.57
     },
     {
-      "id": "08abbe2cfb4e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack hits 178 organizations: Credit cards, crypto, other data at risk",
-      "url": "https://www.nj.com/news/2026/11/cyberattack-hits-178-organizations-credit-cards-crypto-other-data-at-risk.html",
-      "source": "NJ.com",
-      "publishedAt": "2026-11-17T01:57:00.000Z",
-      "firstSeenAt": "2026-11-17T15:16:40.034Z",
-      "outlets": 2,
-      "outletNames": [
-        "NJ.com",
-        "Syracuse.com"
-      ],
-      "score": 1.56
-    },
-    {
       "id": "b698fb63aeae",
       "cat": "hacks",
       "kind": "news",
@@ -1290,6 +1293,21 @@
       "score": 1.44
     },
     {
+      "id": "541df3fe6ade",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Target iPhone and iPad Users in Major Website Breach",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1ZRThNbkRUZEFWc01keWJ5eW9EZUNGblFycnFMRW9Vc0VmTkJEWHllakt5VnVTMFhhTHB1ejV4elFUQVdMWG9YdGpDM1p5UQ?oc=5",
+      "source": "Appleosophy",
+      "publishedAt": "2026-11-17T16:23:20.000Z",
+      "firstSeenAt": "2026-11-17T16:27:30.704Z",
+      "outlets": 1,
+      "outletNames": [
+        "Appleosophy"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "ba9b4d40eedf",
       "cat": "hacks",
       "kind": "news",
@@ -1350,6 +1368,21 @@
       "score": 1.4
     },
     {
+      "id": "4703fdc3b0b6",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Major outage hits NSA's secret communications network",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRldrYTh2NzJrQU9DeVJPQVAtT1VRMG92LTBheVpXZnVSZ0pibjdTeGNSNmU0UlBFaWZ5eFlEY19OT21MZ0xtczV2NHkzOUxwTUZLZjVqZVhOaGcxWjFQZ0JOMHpCaGFWRTQzM3ZYYmpXb1BrWWpWVzRvcXNHZmkzMXBVVEsxaS1tZjFocFAzVGxHRTdnVEtVV2pXMmliVzVQbkHSAbQBQVVfeXFMTVM1ckFHb3VqVjh5SEFLSl8wZnozR01BWWN4QmpfX2otTTYzQUFvMmx2RlhyTGMwRnBvUzIzcFRFNGxEbFkxekZrVWVPWUJJVzRVTVJzbEdzZ2Y2ZnVOdWVVRXd3S2hpQVBkR19XWEY1ZFdtclZSc2I3UDQ2alRmS3FlczFpMUx0Tm95bGlzLWlDNjZ1M3BfRnNFWHNvRFNhMTEzZTZ1UTlFMFU4Y01ZZ1prZERk?oc=5",
+      "source": "Gulf News",
+      "publishedAt": "2026-11-17T15:50:25.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 1,
+      "outletNames": [
+        "Gulf News"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "1eb0fb1ad21c",
       "cat": "flights",
       "kind": "news",
@@ -1376,6 +1409,21 @@
       "outlets": 1,
       "outletNames": [
         "Business Insurance"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "882af3df3a6f",
+      "cat": "grid",
+      "kind": "news",
+      "title": "FEMA nationwide emergency alert test sparks blackout fears",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbVZsM0tSS2J5aEQ0NktoTVIyVmNvc1NWZ2NoQl9aYi1wbUxuT1piZW1RWXpDU1N5ak9LUF9HMTF6ZGhuWnJlWDJHdHhXMEFycDc2d0dQa1p6MUlnTUg4TWZiRkp5am9Ecl9rTks5RmpPOHJzeEduQ2ZnSUxOa0lNV2RjeTJKVnhLelJxRGt3?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-17T14:18:55.000Z",
+      "firstSeenAt": "2026-11-17T14:46:34.896Z",
+      "outlets": 1,
+      "outletNames": [
+        "Beinsure"
       ],
       "score": 1.39
     },
@@ -1530,51 +1578,6 @@
       "score": 1.39
     },
     {
-      "id": "62dd891d62de",
-      "cat": "flights",
-      "kind": "news",
-      "title": "United Airlines Resumes Flights After Massive Outage",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPd1dPMzRVY2tGRTEtM0lPX3hmM1JUU19heHdPTVZCS19Mbmg0Y3lVaWFleGFVa2kzeHdRbVR0MmQ2Z1NSc3hISEVXdHh4MHY0TmFnNjFLRHBIVnZ5ekFsbWt6Yy1oUG1HVXBlQmhxanRJZXcwLVJ6OGZ2RmdUUVg1dXFfMHRaeGs?oc=5",
-      "source": "Coinpaper",
-      "publishedAt": "2026-11-17T05:28:25.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 1,
-      "outletNames": [
-        "Coinpaper"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "92387ab8945b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack Reaches Major Websites, Raises New Security Concerns",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSFVuaElOTnBPNWMzRkhEOVZDdUZDLXItdkNfVjRvYTRBUUFOeUFBMlp5d1BjYjhmUExURUN0am12NWhfQnUzRUlkZFJwS1NpYzNoSjFfSmZNNFQ1ODVxWWFYbjZRNENLdTBibXRYZmItLXZ1SnAyamxHZzdCQlFZV2c1WDBfSDRWd2NHbzBYNVl5RTNxbjhidUt2cw?oc=5",
-      "source": "DailyVoice.com",
-      "publishedAt": "2026-11-17T15:25:00.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "DailyVoice.com"
-      ],
-      "score": 1.38
-    },
-    {
-      "id": "19ffd0a52369",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major US Banks Outage: JPMorgan Cites Software Bug",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE44bG9BV0U2MmF2WU1WMXVPTVY3TGZqRm90WVRCa09FTTQ1em5nYnBUbk1HQk5XWGJqSEZxMEhLbC1sYkVYQVVjVFZUNGVPaUcyenlzcDR6T3lCQmlmNnJSQzYzTXFVSmVZMXMwZ2xTR1k2aFJjMmVmMg?oc=5",
-      "source": "Cybernews",
-      "publishedAt": "2026-11-17T13:30:00.000Z",
-      "firstSeenAt": "2026-11-17T14:10:18.338Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cybernews"
-      ],
-      "score": 1.38
-    },
-    {
       "id": "7755b3ac59be",
       "cat": "ai",
       "kind": "news",
@@ -1682,21 +1685,6 @@
       "score": 0.99
     },
     {
-      "id": "9cb00eae0c9e",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Delaware urges poultry owners to take precautions as bird flu concerns rise",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNVWFnSTlvb094c2ZtRC1fV2w5amZkaEJ1azNFUW9CU2xOdGtoRDNaaHBJdzhZYlNJNXp0MnpiZlJEdk8tQWd1VkticUNOaFlBakt1SldpeTdycUxxRVV2Z2FkS3cxSjM3TGFZay1ONUQzOEVORGp6Q3oxRUgxdU1KWFVQUkp0bERoVXN6OU9ibE5ZLU1BRjJPeVc1cmZnWmoybTRxVGZWT2tRdm1ScHdsR2p2cWZieU93NmRxdWtzS3pJMEw1V1hsc2I4R0lwNHZGVk8zYTZwaVRCQnFqNG1Lcg?oc=5",
-      "source": "CoastTV",
-      "publishedAt": "2026-11-17T15:26:00.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "CoastTV"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "6033c1d90689",
       "cat": "germs",
       "kind": "news",
@@ -1740,6 +1728,21 @@
         "BusinessLine"
       ],
       "score": 0.97
+    },
+    {
+      "id": "8f899e937fa8",
+      "cat": "germs",
+      "kind": "news",
+      "title": "New variant of Coffeeloader malware utilizes updated armoury packer",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMndycXl6WnMxTGRPbEsxeWFvV2F6ZTd5c0xBS1FSTEJfQkpxd3ZhM1BRYi13aXo4Q1hiMWJaLXdvWXRLMksxRXpKX3A5QWxFZFB5aUZrdzBTbm5GOFFEQ2k3bDhjT2lhd1ltMjhPeHg4bXZSWEJFTEdsSzd0aXBsS1NtVkVpME1GWWJHMlNqeHBvVEZFOEZ5am9reFRJQQ?oc=5",
+      "source": "SC Media",
+      "publishedAt": "2026-11-17T14:21:05.000Z",
+      "firstSeenAt": "2026-11-17T16:27:30.704Z",
+      "outlets": 1,
+      "outletNames": [
+        "SC Media"
+      ],
+      "score": 0.96
     },
     {
       "id": "9af8d53d2ba6",
