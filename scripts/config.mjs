@@ -836,15 +836,20 @@ export const EDITION = {
   homeDays: 7, // day blocks on the homepage: today and up to 6 earlier days
 };
 
-// The editor. It calls the Claude API at most EDITOR_DAILY_CAP times a day, and not
-// again until the stories it would read have changed and EDITOR_MIN_GAP_MINUTES have
-// passed since its last write. 20 calls an hour apart cover the whole day. It also stops for the day
-// once it has spent EDITOR_DAILY_BUDGET_USD. The owner's cap is $2 a day for the whole site: 1.40
-// here and 0.60 for X (X.dailyBudgetUsd above).
+// The editor. It calls the Claude API at most EDITOR_DAILY_CAP times a day. A regular call waits until the
+// stories it would read have changed and a gap has passed since its last call: EDITOR_MIN_GAP_MINUTES by day,
+// EDITOR_NIGHT_GAP_MINUTES from midnight until EDITOR_NIGHT_END_HOUR, and longer when the day's money must be
+// spread to last until midnight. Big news (the EDITOR_BREAKING_* settings below) jumps the line: it needs only
+// EDITOR_BREAKING_GAP_MINUTES, and it may spend the reserve. The editor stops for the day once it has spent
+// EDITOR_DAILY_BUDGET_USD. The owner's cap is $2 a day for the whole site: 1.40 here and 0.60 for X (X.dailyBudgetUsd above).
 export const EDITOR_MODEL = 'claude-opus-5-5';
 export const EDITOR_DAILY_CAP = 20;
-export const EDITOR_MIN_GAP_MINUTES = 60;
+export const EDITOR_MIN_GAP_MINUTES = 60; // between regular calls, from EDITOR_NIGHT_END_HOUR until midnight ET
+export const EDITOR_NIGHT_GAP_MINUTES = 180; // between regular calls, from midnight until EDITOR_NIGHT_END_HOUR ET
+export const EDITOR_NIGHT_END_HOUR = 6; // the night gap ends at this hour ET (6 is 6:00 AM)
 export const EDITOR_DAILY_BUDGET_USD = 1.4;
+export const EDITOR_BREAKING_RESERVE_USD = 0.25; // kept back from regular calls, for breaking news only
+export const EDITOR_COST_GUESS = 0.09; // dollars one call costs, until today's average is higher
 // What a call costs, in dollars per million tokens, for Opus 5.5 (Anthropic's pricing page, 2026-11-17).
 export const EDITOR_PRICES = { input: 4, output: 20, cacheWrite: 5, cacheRead: 0.2 };
 export const EDITOR_MAX_STORIES = 80;
@@ -852,6 +857,17 @@ export const EDITOR_MAX_STORIES = 80;
 // newest first, at most EDITOR_FRESH_MAX of them, and then the rest in the page's order up to the 80.
 export const EDITOR_FRESH_HOURS = 6;
 export const EDITOR_FRESH_MAX = 30;
+// Big news. A story is big when its trending is at least EDITOR_BREAKING_TRENDING, or it is a signal scoring at least
+// EDITOR_BREAKING_SIGNAL_SCORE, or it is in at least EDITOR_BREAKING_OUTLETS outlets and first reached our feeds in
+// the last EDITOR_BREAKING_NEW_HOURS hours. A big story the edition does not have and the editor has not been
+// sent while big today is breaking, and it gets a breaking call.
+export const EDITOR_BREAKING_TRENDING = 20000; // Google searches
+export const EDITOR_BREAKING_SIGNAL_SCORE = 5; // a nationwide ground stop, a quake of 7 or more, a G3 storm, an X5 flare
+export const EDITOR_BREAKING_OUTLETS = 8; // outlets that carry the story
+export const EDITOR_BREAKING_NEW_HOURS = 3; // how recently a many-outlet story must have first reached our feeds
+export const EDITOR_BREAKING_GAP_MINUTES = 15; // a breaking call waits only this long after the last call
+export const EDITOR_BREAKING_MAX = 6; // breaking calls a day
+export const EDITOR_BIG_SENT_MAX = 200; // big story ids kept for today, so one story is not breaking twice
 
 export function config() {
   return {
@@ -877,11 +893,22 @@ export function config() {
       model: EDITOR_MODEL,
       dailyCap: EDITOR_DAILY_CAP,
       minGapMinutes: EDITOR_MIN_GAP_MINUTES,
+      nightGapMinutes: EDITOR_NIGHT_GAP_MINUTES,
+      nightEndHour: EDITOR_NIGHT_END_HOUR,
       dailyBudgetUsd: EDITOR_DAILY_BUDGET_USD,
+      breakingReserveUsd: EDITOR_BREAKING_RESERVE_USD,
+      costGuess: EDITOR_COST_GUESS,
       prices: EDITOR_PRICES,
       maxStories: EDITOR_MAX_STORIES,
       freshHours: EDITOR_FRESH_HOURS,
       freshMax: EDITOR_FRESH_MAX,
+      breakingTrending: EDITOR_BREAKING_TRENDING,
+      breakingSignalScore: EDITOR_BREAKING_SIGNAL_SCORE,
+      breakingOutlets: EDITOR_BREAKING_OUTLETS,
+      breakingNewHours: EDITOR_BREAKING_NEW_HOURS,
+      breakingGapMinutes: EDITOR_BREAKING_GAP_MINUTES,
+      breakingMax: EDITOR_BREAKING_MAX,
+      bigSentMax: EDITOR_BIG_SENT_MAX,
     },
   };
 }
