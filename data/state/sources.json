@@ -1,38 +1,38 @@
 {
   "google": {
     "ok": true,
-    "count": 823,
-    "error": "1 of 26 queries failed: HTTP 429 (blocked after 13 of 26 queries)",
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
-    "lastOkAt": "2026-11-17T05:48:47.183Z"
+    "count": 300,
+    "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
+    "lastOkAt": "2026-11-17T06:35:21.637Z"
   },
   "bing": {
     "ok": true,
-    "count": 274,
+    "count": 270,
     "error": null,
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
-    "lastOkAt": "2026-11-17T05:48:47.183Z"
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
+    "lastOkAt": "2026-11-17T06:35:21.637Z"
   },
   "gdelt": {
     "ok": false,
     "count": 0,
-    "error": "rate limited (HTTP 429)",
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
+    "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
     "lastOkAt": null
   },
   "hn": {
     "ok": true,
-    "count": 10,
+    "count": 11,
     "error": null,
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
-    "lastOkAt": "2026-11-17T05:48:47.183Z"
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
+    "lastOkAt": "2026-11-17T06:35:21.637Z"
   },
   "usgs": {
     "ok": true,
     "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
-    "lastOkAt": "2026-11-17T05:48:47.183Z",
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
+    "lastOkAt": "2026-11-17T06:35:21.637Z",
     "vital": {
       "quake": {
         "mag": 6.6,
@@ -48,12 +48,12 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
-    "lastOkAt": "2026-11-17T05:48:47.183Z",
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
+    "lastOkAt": "2026-11-17T06:35:21.637Z",
     "vital": {
       "kp": {
-        "value": 0.67,
-        "time": "2026-11-17T00:00:00.000Z",
+        "value": 0.33,
+        "time": "2026-11-17T03:00:00.000Z",
         "max24": 1.33
       }
     }
@@ -62,8 +62,8 @@
     "ok": true,
     "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
-    "lastOkAt": "2026-11-17T05:48:47.183Z",
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
+    "lastOkAt": "2026-11-17T06:35:21.637Z",
     "vital": {
       "asteroid": {
         "des": "2026 WA",
@@ -80,14 +80,14 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
-    "lastOkAt": "2026-11-17T05:48:47.183Z",
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
+    "lastOkAt": "2026-11-17T06:35:21.637Z",
     "vital": {
       "faa": {
         "groundStops": [],
         "nationwide": false,
-        "groundDelays": 2,
-        "closures": 0,
+        "groundDelays": 1,
+        "closures": 1,
         "url": "https://nasstatus.faa.gov/"
       }
     }
@@ -96,8 +96,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
-    "lastOkAt": "2026-11-17T05:48:47.183Z",
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
+    "lastOkAt": "2026-11-17T06:35:21.637Z",
     "vital": {
       "status": {
         "worst": "minor",
@@ -121,8 +121,8 @@
             "description": "All Systems Operational"
           },
           {
-            "id": "chatbot",
-            "name": "a popular AI chatbot",
+            "id": "claude",
+            "name": "Claude",
             "indicator": "minor",
             "description": "Partially Degraded Service"
           },
@@ -159,14 +159,14 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
     "lastOkAt": null
   },
   "topstories": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-17T05:48:47.183Z",
-    "lastOkAt": "2026-11-17T05:48:47.183Z"
+    "lastTryAt": "2026-11-17T06:35:21.637Z",
+    "lastOkAt": "2026-11-17T06:35:21.637Z"
   }
 }
