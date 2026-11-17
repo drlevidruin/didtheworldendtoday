@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T18:45:37.991Z",
+  "buildTime": "2026-11-17T18:55:24.881Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 13:45 ET",
+  "etStamp": "2026-11-17 13:55 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -54,16 +54,16 @@
     "date": "2026-11-17",
     "score": 92
   },
-  "headlinesRead": 1617,
-  "lastSuccessAt": "2026-11-17T18:45:37.991Z",
+  "headlinesRead": 1629,
+  "lastSuccessAt": "2026-11-17T18:55:24.881Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 18,
+    "flights": 19,
     "space": 3,
     "earth": 4,
-    "hacks": 40,
+    "hacks": 41,
     "grid": 5,
-    "internet": 10,
+    "internet": 8,
     "germs": 4,
     "weather": 4,
     "markets": 4,
@@ -95,13 +95,7 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "PHX",
-          "hub": true,
-          "reason": "thunderstorms"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
       "closures": 0,
@@ -197,57 +191,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1325,
+      "count": 1329,
       "error": null,
-      "lastOkAt": "2026-11-17T18:45:37.991Z"
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "bing": {
       "ok": true,
-      "count": 281,
+      "count": 289,
       "error": null,
-      "lastOkAt": "2026-11-17T18:45:37.991Z"
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "gdelt": {
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
-      "lastOkAt": "2026-11-17T18:05:50.108Z"
+      "error": "timeout",
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "hn": {
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-17T18:45:37.991Z"
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T18:45:37.991Z"
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T18:45:37.991Z"
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T18:45:37.991Z"
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "faa": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T18:45:37.991Z"
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T18:45:37.991Z"
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "x": {
       "ok": true,
@@ -260,7 +254,7 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T18:45:37.991Z"
+      "lastOkAt": "2026-11-17T18:55:24.881Z"
     }
   },
   "stories": [
@@ -496,7 +490,7 @@
       "source": "Digital Trends",
       "publishedAt": "2026-11-17T01:51:00.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 10,
+      "outlets": 12,
       "outletNames": [
         "Digital Trends",
         "The Independent on MSN",
@@ -507,9 +501,11 @@
         "Daily Pakistan",
         "inkl",
         "Gulf News",
-        "MySA"
+        "MySA",
+        "Outlook India",
+        "UG Diplomat"
       ],
-      "score": 3.12
+      "score": 3.31
     },
     {
       "id": "1b105ba34662",
@@ -578,7 +574,7 @@
       "source": "The Baltimore Sun",
       "publishedAt": "2026-11-17T09:16:00.000Z",
       "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 11,
+      "outlets": 12,
       "outletNames": [
         "The Baltimore Sun",
         "KTVN",
@@ -590,9 +586,10 @@
         "Bozeman Daily Chronicle",
         "Around Prague",
         "ABC News - Breaking News, Latest News and Videos",
-        "AP News"
+        "AP News",
+        "Ottumwa Courier"
       ],
-      "score": 3.84
+      "score": 3.95
     },
     {
       "id": "918c99de455a",
@@ -651,24 +648,22 @@
       "score": 3.55
     },
     {
-      "id": "483804f87cec",
+      "id": "27502feaa440",
       "cat": "hacks",
       "kind": "news",
-      "title": "'Software bug' blamed for online banking outage | Morning in America",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNGlCSUJhTFl1Rmk5ZEZhTEowQUhKTnVNQ3JZeDlaY1BGZEVRM2VCWTVqNUpEX1hJSUR1OW5jOVYycnVOMXBhRUVYc1ZDNjk0SG9YMTdMaGpJSElWaFRUWXNwWHROQTIzcXZXZEtoNTF0dzI1WXlNeGU3eVJ5V1UzM0dqRTRtd1FpTGdZ?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T14:19:28.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 6,
+      "title": "Equinor detects cyberattack against some IT systems",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUTdVUVVtcmFYWms2YkJuU3lxZ05RakxKbndJakRORnJVLVRSQ0ItMnVSR2RaaGRRZmJsYzRkYlZrYkl0NGJ4LWdUcW5UOUsxa1F2LWw5LTBWc1VhdHlsZGFWM0VXdGZ0aWxMeGg4Vk9JdGYweGQ4NjVteVpQR2ZjSF9vbWRrTW42c2h1bkhEX2RSQ1VxWlVsRHhrNkJnUjQ?oc=5",
+      "source": "Reuters",
+      "publishedAt": "2026-11-17T18:06:21.000Z",
+      "firstSeenAt": "2026-11-17T18:32:06.239Z",
+      "outlets": 4,
       "outletNames": [
-        "Yahoo",
-        "KGET.com",
-        "NEWS10 ABC",
-        "WKRN News 2",
-        "WFLA",
-        "NBC4 WCMH-TV"
+        "Reuters",
+        "WTVB",
+        "CNA",
+        "Euronext Markets: Real-time Stock Market Data | live"
       ],
-      "score": 3.39
+      "score": 2.98
     },
     {
       "id": "c9aaf37c3d99",
@@ -867,6 +862,28 @@
       "score": 1.39
     },
     {
+      "id": "3b49d5ddbc4f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Outage Math at the Airport: When a Four-Hour Uber Beats Waiting Out a Ground Stop",
+      "url": "https://www.usnews.com/news/business/articles/2026-11-17/outage-math-at-the-airport-when-a-four-hour-uber-beats-waiting-out-a-ground-stop",
+      "source": "U.S. News & World Report",
+      "publishedAt": "2026-11-17T04:38:00.000Z",
+      "firstSeenAt": "2026-11-17T17:56:49.781Z",
+      "outlets": 8,
+      "outletNames": [
+        "U.S. News & World Report",
+        "WPLG Local 10",
+        "News4JAX",
+        "Rocky Mount Telegram",
+        "The Mercury News",
+        "Orange County Register",
+        "Boston Herald",
+        "The Baltimore Sun"
+      ],
+      "score": 3.11
+    },
+    {
       "id": "35860456c9f1",
       "cat": "flights",
       "kind": "news",
@@ -882,27 +899,6 @@
         "Technology Org"
       ],
       "score": 3.01
-    },
-    {
-      "id": "3b49d5ddbc4f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Outage Math at the Airport: When a Four-Hour Uber Beats Waiting Out a Ground Stop",
-      "url": "https://www.usnews.com/news/business/articles/2026-11-17/outage-math-at-the-airport-when-a-four-hour-uber-beats-waiting-out-a-ground-stop",
-      "source": "U.S. News & World Report",
-      "publishedAt": "2026-11-17T04:38:00.000Z",
-      "firstSeenAt": "2026-11-17T17:56:49.781Z",
-      "outlets": 7,
-      "outletNames": [
-        "U.S. News & World Report",
-        "WPLG Local 10",
-        "News4JAX",
-        "Rocky Mount Telegram",
-        "The Mercury News",
-        "Orange County Register",
-        "Boston Herald"
-      ],
-      "score": 2.96
     },
     {
       "id": "ba9b4d40eedf",
@@ -971,21 +967,43 @@
       "score": 2.67
     },
     {
-      "id": "27502feaa440",
+      "id": "483804f87cec",
       "cat": "hacks",
       "kind": "news",
-      "title": "Equinor detects cyberattack against some IT systems",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUTdVUVVtcmFYWms2YkJuU3lxZ05RakxKbndJakRORnJVLVRSQ0ItMnVSR2RaaGRRZmJsYzRkYlZrYkl0NGJ4LWdUcW5UOUsxa1F2LWw5LTBWc1VhdHlsZGFWM0VXdGZ0aWxMeGg4Vk9JdGYweGQ4NjVteVpQR2ZjSF9vbWRrTW42c2h1bkhEX2RSQ1VxWlVsRHhrNkJnUjQ?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-11-17T18:06:21.000Z",
+      "title": "'Software bug' blamed for online banking outage | Morning in America",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNGlCSUJhTFl1Rmk5ZEZhTEowQUhKTnVNQ3JZeDlaY1BGZEVRM2VCWTVqNUpEX1hJSUR1OW5jOVYycnVOMXBhRUVYc1ZDNjk0SG9YMTdMaGpJSElWaFRUWXNwWHROQTIzcXZXZEtoNTF0dzI1WXlNeGU3eVJ5V1UzM0dqRTRtd1FpTGdZ?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-16T20:37:58.000Z",
+      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "outlets": 8,
+      "outletNames": [
+        "Yahoo",
+        "KGET.com",
+        "NEWS10 ABC",
+        "WKRN News 2",
+        "WFLA",
+        "NBC4 WCMH-TV",
+        "WJBF",
+        "NewsNation"
+      ],
+      "score": 2.61
+    },
+    {
+      "id": "267d69ca6fc3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA pauses installation of new routers after ground stop",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5lOUR5Z2FVYl9wcUNQU1VzNkN4LVk0d3lCMzQ2X1hPaEdFdVl1VkZnVk83cndNcjZzNExYdHJ1cVE1M3JtUVVJUUVaQjNueC1UZk9WbHBpQUhMZG1EeG9iVUEwQTFVVXQ0c0YyYtIBckFVX3lxTFAxcllCeTNjOS1HNXRaU2VOaW90eXdiZjF4S0ZjY3ZCRURfOG00WjhaU192Skk4QjlVM0pMaTl2RkdydjRSZWJQOE9meVhMTzhBNWdBd0JOZHFIYWYxczFmMHV3LWh1cWlBYjN3S1JPcVhYZw?oc=5",
+      "source": "CNBC",
+      "publishedAt": "2026-11-17T16:57:15.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
       "outlets": 3,
       "outletNames": [
-        "Reuters",
-        "WTVB",
-        "CNA"
+        "CNBC",
+        "LiveNOW from FOX",
+        "Chicago Tribune"
       ],
-      "score": 2.57
+      "score": 2.52
     },
     {
       "id": "f65c9d1eaa32",
@@ -1186,20 +1204,20 @@
       "score": 2
     },
     {
-      "id": "267d69ca6fc3",
-      "cat": "flights",
+      "id": "0d7eab61dcdd",
+      "cat": "hacks",
       "kind": "news",
-      "title": "FAA pauses installation of new routers after ground stop",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5lOUR5Z2FVYl9wcUNQU1VzNkN4LVk0d3lCMzQ2X1hPaEdFdVl1VkZnVk83cndNcjZzNExYdHJ1cVE1M3JtUVVJUUVaQjNueC1UZk9WbHBpQUhMZG1EeG9iVUEwQTFVVXQ0c0YyYtIBckFVX3lxTFAxcllCeTNjOS1HNXRaU2VOaW90eXdiZjF4S0ZjY3ZCRURfOG00WjhaU192Skk4QjlVM0pMaTl2RkdydjRSZWJQOE9meVhMTzhBNWdBd0JOZHFIYWYxczFmMHV3LWh1cWlBYjN3S1JPcVhYZw?oc=5",
-      "source": "CNBC",
-      "publishedAt": "2026-11-17T16:57:15.000Z",
-      "firstSeenAt": "2026-11-17T18:32:06.239Z",
+      "title": "Equinor detects ongoing cyberattack, output unaffected",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOYVRMbDZwVzNkYWE2ZS1ZQUhqMDlva1RYREtiazlQdkN2M0NIa3Z1d015YzlCd3hKQVdVdVRzaU9jZGIxbWJTS1ZfVzlPUFpaa3VPU2JraFNKLW1RRzdMNUZnSFJRSHZYVGRmOGxOXzVXaVdnRVJVNERRaExxdzFKTnlxcEl5UmhUWm5aWlEtNzlsMXoyTzdIcTkyOTFOdw?oc=5",
+      "source": "Euronext Markets: Real-time Stock Market Data | live",
+      "publishedAt": "2026-11-17T18:22:21.000Z",
+      "firstSeenAt": "2026-11-17T18:55:24.881Z",
       "outlets": 2,
       "outletNames": [
-        "CNBC",
-        "LiveNOW from FOX"
+        "Euronext Markets: Real-time Stock Market Data | live",
+        "Reuters"
       ],
-      "score": 1.95
+      "score": 1.98
     },
     {
       "id": "a1d54db27e7a",
@@ -1329,6 +1347,22 @@
         "Washington Times"
       ],
       "score": 1.82
+    },
+    {
+      "id": "65a55854096f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "How Travel Advisors Responded to FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNm5NUlJzWkRRaXF6UXRFV1dGdEgwSzl3cTZMQUFfb2FpNnVqVmNBX1RlVV82NmxLcWhHNzFuR0hBVGFOWVdvNlVYcElRNnFuSDgtYzZ2WEh5YzBFeUhTVGdUVEdzRVo5VlNlMUxVR3FkcFExYWpHUEo2YnV5MFFfUlA3REFQVjgyVVA5eExWWGhOdjNL?oc=5",
+      "source": "Travel Pulse",
+      "publishedAt": "2026-11-17T13:15:00.000Z",
+      "firstSeenAt": "2026-11-17T18:55:24.881Z",
+      "outlets": 2,
+      "outletNames": [
+        "Travel Pulse",
+        "Travel Weekly"
+      ],
+      "score": 1.81
     },
     {
       "id": "386032b4932a",
@@ -1643,36 +1677,6 @@
       "outlets": 1,
       "outletNames": [
         "KVII"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "22d2ffc54f3b",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Highly classified US national security communications network is down - days after global Microsoft outage caused 'carnage'",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS296SGk1V2Z1OVFTNkxFRlBycU5iVnlna0pPM00tQk0wbGVtZVlzN3ZBLWVrYlN5WUJYZko2WmFrX0hxckJfTk5nRGF4bGpNU3B5ZXpPMzlYRHY4dGM1ckdHTFlkQy1DWHAtMWhFWnVjcnV4M1F5elo3cmRGTFZyV1RxSHZUTTFBek9FRTFNQVIteFI2NzVMRmVybmY3aS0wb1A3U3JnUVhMNkxpbUFZRVU1ZUQ1VE5keGc?oc=5",
-      "source": "www.lbc.co.uk",
-      "publishedAt": "2026-11-17T17:43:48.000Z",
-      "firstSeenAt": "2026-11-17T17:47:06.855Z",
-      "outlets": 1,
-      "outletNames": [
-        "www.lbc.co.uk"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "848864efaa83",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Major Brokerage Suffers Widespread Outage In Yet Another Tech Disruption",
-      "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxOTUw3Z0RfQWZpNHFOTThZMS1uMUdVamZmN3RfMl9jdlYyYTcyNXNXZUotdHdjenpxcEVfRHRkMlE1RzZNVWozbVl2SjJCekgxU1FtVVlRc1FrTWJhWUFUMDRUemg2aGNtNzE0MGttaDViY09hU1VrMm04VFRCYjdtZHRtQjNFU0dxVTZVUXM2bUhKSVdzcnRjWGJ5d19melFzOENUYTNrNHFpOEd2cmJvTzJtdmU3WHFUczNNMlRUenNEZVdXUWRzNGlucG9PekRNY25JekVrVHB2alJkYVFCZ25ZSnhvWm5KOGY0WmNNNmNHTHRlemsyclo4MzZxVURiUG5oU0F0UUNzYUhxZElPWHktdkVTdVdBZ3YxYVpuYXVmQ2NsZ3F2ckpSU3g1T3E4VXREOWJWSThOa1NPZVRnai1NWmN3Zk1ZNjM0UmFDMEpzQkhFU3dzbmVrVU1DQWJKNlpkQUZKMlp4dkU1UGpzdTZCNTA3Ync4QlBRenFvREJzanA5OTRhNDJianY0S1lMYzBtSG91Zi1IVVNuYjk4QnBxTHMwcVhXUVJqS09ZSXk5YmZG?oc=5",
-      "source": "The Daily Wire",
-      "publishedAt": "2026-11-17T17:25:58.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Daily Wire"
       ],
       "score": 1.4
     },
