@@ -744,10 +744,13 @@ test('phase 6 taste: the door, a stored story and the build all read the same ru
 // Headlines that were live on Nov 17, 2026 and are not news of a near miss, with the family and the term that say why.
 const NOT_A_NEAR_MISS = [
   // a politician's plane ride to a ball game
-  ['Mullin defends use of government plane to go to college football game after ground stop', 'sports', 'football'],
-  ['Mullin flew to football game less than 24 hours after FAA ground stop', 'sports', 'football'],
-  // the same story as AP titled it later in the day, with no sport named
-  ['Mullin defends use of government plane to go to LSU-Texas game after ground stop', 'format', 'defends'],
+  ['Mullin defends use of government plane to go to college football game after ground stop', 'politics', 'Mullin'],
+  ['Mullin flew to football game less than 24 hours after FAA ground stop', 'politics', 'Mullin'],
+  // the same story as AP titled it later in the day, with no sport named, and his next one
+  ['Mullin defends use of government plane to go to LSU-Texas game after ground stop', 'politics', 'Mullin'],
+  ['Mullin: No one getting fired over nationwide ground stop', 'politics', 'Mullin'],
+  // someone defending what they did is the reaction, not the near miss (made up, in the form of the AP headline)
+  ['Airline chief defends canceling every flight after ground stop', 'format', 'defends'],
   // a game called off, not a power grid
   ["EWU Women's basketball game against UC Irvine canceled due to power outage", 'sports', 'basketball'],
   // an explainer of a rumor, a research feature, a trade feature, an explainer
@@ -851,11 +854,11 @@ test('phase 14: the door, a stored story and the page list read the same rules',
   const raw = (title, over = {}) => ({ kind: 'news', cat: 'flights', title, url: 'https://pub.example/a', source: 'Example News', publishedAt: now - 3600e3, ...over });
   const stored = (title, id) => ({ ...raw(title), id, firstSeenAt: '2026-11-17T12:00:00.000Z', outlets: 1, outletNames: ['Example News'] });
   const good = 'FAA pauses router installations after nationwide ground stop';
-  const junk = 'Mullin flew to football game less than 24 hours after FAA ground stop';
+  const junk = "EWU Women's basketball game against UC Irvine canceled due to power outage";
   assert.ok(gk.admit(raw(good), now).keep, 'a real near miss gets in');
-  assert.deepEqual(gk.admit(raw(junk), now), { drop: 'excluded:sports', detail: 'football' }, 'at the door');
+  assert.deepEqual(gk.admit(raw(junk), now), { drop: 'excluded:sports', detail: 'basketball' }, 'at the door');
   assert.ok(gk.recheck(stored(good, 'aaaaaaaaaaaa')).keep);
-  assert.deepEqual(gk.recheck(stored(junk, 'bbbbbbbbbbbb')), { drop: 'excluded:sports', detail: 'football' }, 'a story already stored is cleaned on the next run');
+  assert.deepEqual(gk.recheck(stored(junk, 'bbbbbbbbbbbb')), { drop: 'excluded:sports', detail: 'basketball' }, 'a story already stored is cleaned on the next run');
   // a day file written before the rule still loses its junk on the page, and keeps the real near misses
   const day = [stored(good, 'aaaaaaaaaaaa'), ...NOT_A_NEAR_MISS.map(([title], i) => stored(title, `junk${String(i).padStart(8, '0')}`)), ...NEAR_MISSES.map((title, i) => stored(title, `real${String(i).padStart(8, '0')}`))];
   const shown = publishableStories(gk.excluder, day).map((s) => s.id);

@@ -631,7 +631,7 @@ export const EXCLUDE_FAMILIES = [
       'Senate', { term: 'Republican', prefix: true }, { term: 'Democrat', prefix: true }, 'GOP', 'abortion',
       { term: 'immigra', prefix: true }, { term: 'ICE', caseSensitive: true },
       // extended
-      'Duffy', 'Buttigieg', 'midterm', 'midterms', 'White House', 'lawmakers', 'lawmaker', 'senator', 'senators',
+      'Duffy', 'Mullin', 'Buttigieg', 'midterm', 'midterms', 'White House', 'lawmakers', 'lawmaker', 'senator', 'senators',
       'Obama', 'impeach', 'impeachment',
       // lawsuits and the attorneys general who bring them (a governor or a mayor can be a real near miss)
       'attorney general', 'attorneys general', 'sues', 'sued', 'lawsuit', 'lawsuits',
