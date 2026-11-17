@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T14:10:18.338Z",
+  "buildTime": "2026-11-17T14:31:37.066Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 09:10 ET",
+  "etStamp": "2026-11-17 09:31 ET",
   "score": 98,
   "fired": [
     "flights",
@@ -55,17 +55,17 @@
     "date": "2026-11-17",
     "score": 98
   },
-  "headlinesRead": 1592,
-  "lastSuccessAt": "2026-11-17T14:10:18.338Z",
+  "headlinesRead": 592,
+  "lastSuccessAt": "2026-11-17T14:31:37.066Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 20,
+    "flights": 19,
     "space": 3,
-    "earth": 5,
-    "hacks": 38,
+    "earth": 4,
+    "hacks": 40,
     "grid": 6,
-    "germs": 4,
     "internet": 7,
+    "germs": 4,
     "ai": 2,
     "markets": 4,
     "animals": 3,
@@ -98,7 +98,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 0,
+      "groundDelays": 1,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -176,11 +176,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "3 dead after plane crash in Grand Canyon National Park"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -192,15 +194,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1304,
-      "error": null,
-      "lastOkAt": "2026-11-17T14:10:18.338Z"
+      "count": 300,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
+      "lastOkAt": "2026-11-17T14:31:37.066Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
+      "count": 283,
       "error": null,
-      "lastOkAt": "2026-11-17T14:10:18.338Z"
+      "lastOkAt": "2026-11-17T14:31:37.066Z"
     },
     "gdelt": {
       "ok": false,
@@ -210,39 +212,39 @@
     },
     "hn": {
       "ok": true,
-      "count": 10,
+      "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-17T14:10:18.338Z"
+      "lastOkAt": "2026-11-17T14:31:37.066Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T14:10:18.338Z"
+      "lastOkAt": "2026-11-17T14:31:37.066Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T14:10:18.338Z"
+      "lastOkAt": "2026-11-17T14:31:37.066Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T14:10:18.338Z"
+      "lastOkAt": "2026-11-17T14:31:37.066Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T14:10:18.338Z"
+      "lastOkAt": "2026-11-17T14:31:37.066Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T14:10:18.338Z"
+      "lastOkAt": "2026-11-17T14:31:37.066Z"
     },
     "x": {
       "ok": true,
@@ -255,7 +257,7 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T14:10:18.338Z"
+      "lastOkAt": "2026-11-17T14:31:37.066Z"
     }
   },
   "stories": [
@@ -294,52 +296,6 @@
         "WBKO"
       ],
       "score": 4.91
-    },
-    {
-      "id": "99cd329f37d5",
-      "cat": "flights",
-      "kind": "news",
-      "title": "1.5-hour-long system outage forces United Airlines to delay departing flights",
-      "url": "https://apnews.com/article/united-airlines-outage-5a5e5f75bb07f11ffb8750901f0076ff",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-16T14:13:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 32,
-      "outletNames": [
-        "Fox News",
-        "NewsCord",
-        "Associated Press News",
-        "HuffPost",
-        "Insider",
-        "The Verge",
-        "Gizmodo",
-        "Chicago Tribune",
-        "USA TODAY on MSN",
-        "cnn.com",
-        "apnews.com",
-        "TIME",
-        "WFLA",
-        "Mediaite",
-        "Yahoo",
-        "Denver Gazette",
-        "NBC News",
-        "Yahoo News UK",
-        "NDTV",
-        "Modern Ghana",
-        "Shelby News",
-        "North Penn Now",
-        "The Independent",
-        "Free Malaysia Today",
-        "CBS News",
-        "The Mirror",
-        "Boston Herald",
-        "MySA",
-        "Spectrum News",
-        "AOL",
-        "Avi-Go",
-        "TriYakNews.com"
-      ],
-      "score": 4.6
     },
     {
       "id": "sig:asteroid:2026-WA:2026-11-17",
@@ -485,6 +441,23 @@
       "score": 3.57
     },
     {
+      "id": "e57fc73d6ac8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft identifies months-old bug as a root cause of global outage",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVDY1RTlKWmV4MmlUd3MxZ3hyNmozcVd4dURkdVpMX0htZXJ5ZXNYTXhzWXUzcWNwRWNkVnJRLWFsY0ExelNZSnBBbnc3dl9ZWnBmX25UeThva2RZWXVkeGo3SVJQbkZfcWl2QjV2NVRyck5NSUtqTmxxX2xBR3ZRQVp5RUNDcnM?oc=5",
+      "source": "The Guardian",
+      "publishedAt": "2026-11-16T20:23:00.000Z",
+      "firstSeenAt": "2026-11-17T04:41:57.645Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Guardian",
+        "Information Age | ACS",
+        "weareiowa.com"
+      ],
+      "score": 3.12
+    },
+    {
       "id": "8277025a75d7",
       "cat": "earth",
       "kind": "news",
@@ -531,6 +504,23 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "35860456c9f1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "What we know about what caused the FAA's nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPaW8xRjJ5aVF4T09CZHdOUjd1eGpPZDY4NHFsLW9FVHc3NXl4M0hLV1dWMGlpeTlseFZzZ2dUUEZWRXF0dUhmaTZwTnVLWjFST3pqdUtmdlduTjZpNGpTLWVSUFR6ZnRFV1REQmF5dTdPMXlUOVBrWE1rNnNEblNFSlhXWQ?oc=5",
+      "source": "Axios",
+      "publishedAt": "2026-11-16T20:32:33.000Z",
+      "firstSeenAt": "2026-11-17T06:35:21.637Z",
+      "outlets": 3,
+      "outletNames": [
+        "Axios",
+        "Around Prague",
+        "Technology Org"
+      ],
+      "score": 3.01
+    },
+    {
       "id": "1b105ba34662",
       "cat": "germs",
       "kind": "news",
@@ -548,23 +538,6 @@
         "Successful Farming"
       ],
       "score": 2.51
-    },
-    {
-      "id": "5fd3280f9984",
-      "cat": "grid",
-      "kind": "news",
-      "title": "EWU Women's basketball game against UC Irvine canceled due to power outage",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPLXFtcFhwM3pGTVF4NHRWZTE0emhmSGItRFlhQ1NPb2xQcjlJQjdVWXlvSXRTbXZqX0RyM255N21rVDYxS0k2aVJxN1lodWhfcE1XZ0ZMcmFSZGVnWkFIX0tkd1VRbkoyLWJkTlNibXFPLXgtWXdXNjlxdV9qb0Z6c0U0ZlREZi1nMkJJMnRNVEU0V00zOVJ3aGFfVFltdmpUSUtJRTdTYzdwSmhrc05DNGJCUXdNVXpOdkxBX0ZrMWNqeFlWbDR0S0dIWjVHVTRadFFGUWl1YXU4SDYtaHNzSXg2WQ?oc=5",
-      "source": "KXLY.com",
-      "publishedAt": "2026-11-17T04:15:57.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 3,
-      "outletNames": [
-        "KXLY.com",
-        "KREM",
-        "Eastern Washington University Athletics"
-      ],
-      "score": 2.33
     },
     {
       "id": "8feb10e23b97",
@@ -585,23 +558,6 @@
         "WCAX"
       ],
       "score": 3.55
-    },
-    {
-      "id": "35860456c9f1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "What we know about what caused the FAA's nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPaW8xRjJ5aVF4T09CZHdOUjd1eGpPZDY4NHFsLW9FVHc3NXl4M0hLV1dWMGlpeTlseFZzZ2dUUEZWRXF0dUhmaTZwTnVLWjFST3pqdUtmdlduTjZpNGpTLWVSUFR6ZnRFV1REQmF5dTdPMXlUOVBrWE1rNnNEblNFSlhXWQ?oc=5",
-      "source": "Axios",
-      "publishedAt": "2026-11-16T20:32:33.000Z",
-      "firstSeenAt": "2026-11-17T06:35:21.637Z",
-      "outlets": 3,
-      "outletNames": [
-        "Axios",
-        "Around Prague",
-        "Technology Org"
-      ],
-      "score": 3.01
     },
     {
       "id": "2186efaefb2e",
@@ -658,27 +614,6 @@
       "score": 2.67
     },
     {
-      "id": "cab3e4329fac",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Tremors felt in Australia after huge 6.6 magnitude earthquake rocks Indonesia",
-      "url": "https://www.thesun.ie/news/17928084/tremors-felt-australia-indonesia-earthquake/",
-      "source": "The Irish Sun",
-      "publishedAt": "2026-11-16T14:13:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 5,
-      "outletNames": [
-        "The Irish Sun",
-        "cedarnews.net",
-        "The Sun",
-        "Mezha.net",
-        "Babushahi.com"
-      ],
-      "score": 2.55,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "95dc0e6331b3",
       "cat": "hacks",
       "kind": "news",
@@ -693,6 +628,23 @@
         "WWLP"
       ],
       "score": 2.4
+    },
+    {
+      "id": "5fd3280f9984",
+      "cat": "grid",
+      "kind": "news",
+      "title": "EWU Women's basketball game against UC Irvine canceled due to power outage",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPLXFtcFhwM3pGTVF4NHRWZTE0emhmSGItRFlhQ1NPb2xQcjlJQjdVWXlvSXRTbXZqX0RyM255N21rVDYxS0k2aVJxN1lodWhfcE1XZ0ZMcmFSZGVnWkFIX0tkd1VRbkoyLWJkTlNibXFPLXgtWXdXNjlxdV9qb0Z6c0U0ZlREZi1nMkJJMnRNVEU0V00zOVJ3aGFfVFltdmpUSUtJRTdTYzdwSmhrc05DNGJCUXdNVXpOdkxBX0ZrMWNqeFlWbDR0S0dIWjVHVTRadFFGUWl1YXU4SDYtaHNzSXg2WQ?oc=5",
+      "source": "KXLY.com",
+      "publishedAt": "2026-11-17T04:15:57.000Z",
+      "firstSeenAt": "2026-11-17T10:15:25.360Z",
+      "outlets": 3,
+      "outletNames": [
+        "KXLY.com",
+        "KREM",
+        "Eastern Washington University Athletics"
+      ],
+      "score": 2.33
     },
     {
       "id": "1f758b82249b",
@@ -714,6 +666,22 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "720f7d751998",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide ground stop lifted after over 4 hours",
+      "url": "https://www.foxnews.com/video/6408479513112",
+      "source": "Fox News",
+      "publishedAt": "2026-11-16T16:00:00.000Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "outlets": 2,
+      "outletNames": [
+        "Fox News",
+        "NewsCord"
+      ],
+      "score": 2.23
+    },
+    {
       "id": "d19cad8945c9",
       "cat": "internet",
       "kind": "news",
@@ -729,22 +697,6 @@
         "scoop"
       ],
       "score": 1.88
-    },
-    {
-      "id": "0381207c68d4",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft issues apology for its global outage",
-      "url": "https://www.msn.com/en-us/technology/cybersecurity/microsoft-issues-apology-for-its-global-outage/vi-AA2hCeVd",
-      "source": "WFAA on MSN",
-      "publishedAt": "2026-11-16T14:27:54.000Z",
-      "firstSeenAt": "2026-11-17T13:15:57.758Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "WFAA"
-      ],
-      "score": 1.74
     },
     {
       "id": "329bce8ca7bb",
@@ -873,6 +825,21 @@
       "score": 1.39
     },
     {
+      "id": "dbe11c198b08",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft confirms all services are restored after global outage",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWEJfV21haXpneld6cDBuakxMSkthMDlzUnJ0QTE2NHRYV2gyMWpxY2sxQ1VLOXFxVS1WVDEtYUp1enJUbWtjZGtvbWlITVI2dlU2MVZXclV5SGc5WXlwVmlRN005OW5VamR3TnQtMjNUN0pJcnlQX1FweU5lRTl1OXpwaUtYZERqYzdDaWJkZ2tLWFZwVDVnT096OWdvaWEtS1E?oc=5",
+      "source": "Sky News",
+      "publishedAt": "2026-11-17T09:37:40.000Z",
+      "firstSeenAt": "2026-11-17T10:15:25.360Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sky News"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "681e458a3f27",
       "cat": "hacks",
       "kind": "news",
@@ -907,6 +874,23 @@
       "score": 2.36
     },
     {
+      "id": "7505a12e583b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FEMA emergency alert Tuesday: No blackout, cyberattack or action required",
+      "url": "https://www.stamfordadvocate.com/news/article/fema-emergency-alert-test-cyberattack-blackout-22534888.php",
+      "source": "The Advocate",
+      "publishedAt": "2026-11-17T05:58:00.000Z",
+      "firstSeenAt": "2026-11-17T14:10:18.338Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Advocate",
+        "CT Insider",
+        "Stamford Advocate"
+      ],
+      "score": 2.23
+    },
+    {
       "id": "652d563dcbd9",
       "cat": "hacks",
       "kind": "news",
@@ -919,22 +903,6 @@
       "outletNames": [
         "MEAWW News",
         "Fox News"
-      ],
-      "score": 2.23
-    },
-    {
-      "id": "720f7d751998",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Nationwide ground stop lifted after over 4 hours",
-      "url": "https://www.foxnews.com/video/6408479513112",
-      "source": "Fox News",
-      "publishedAt": "2026-11-16T16:00:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 2,
-      "outletNames": [
-        "Fox News",
-        "NewsCord"
       ],
       "score": 2.23
     },
@@ -1164,22 +1132,6 @@
         "Men's Journal"
       ],
       "score": 1.8
-    },
-    {
-      "id": "7505a12e583b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FEMA emergency alert Tuesday: No blackout, cyberattack or action required",
-      "url": "https://www.stamfordadvocate.com/news/article/fema-emergency-alert-test-cyberattack-blackout-22534888.php",
-      "source": "The Advocate",
-      "publishedAt": "2026-11-17T05:58:00.000Z",
-      "firstSeenAt": "2026-11-17T14:10:18.338Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Advocate",
-        "CT Insider"
-      ],
-      "score": 1.73
     },
     {
       "id": "d07012a13371",
@@ -1419,6 +1371,21 @@
       "score": 1.4
     },
     {
+      "id": "a68232644b38",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Hide Malware in Optimizely Code, Hit 178 Major Websites",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQ2RKY25sVG9YRkFkemhpMkJLbnVER2h5Sm9yWmFOOTdWYmY3WUt3Yjh0dGFMbW82UHVFSUFkWS1FOGNpbFRMZzZ1QlI4RGh2WTllQ1VqSWJTQTN3RnRyb1JRbFFFcEZNdF85NnVfOUNYZU1pbFVZXzVpUU9yd2hoQk9VaVdrNHFMSjRtUDdZaWt0MG9sOFBXaXdmRkRVQS13MG5Z?oc=5",
+      "source": "Security Boulevard",
+      "publishedAt": "2026-11-17T14:03:05.000Z",
+      "firstSeenAt": "2026-11-17T14:31:37.066Z",
+      "outlets": 1,
+      "outletNames": [
+        "Security Boulevard"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "ea256b6e072c",
       "cat": "flights",
       "kind": "news",
@@ -1490,21 +1457,6 @@
       "outlets": 1,
       "outletNames": [
         "NPR"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "dbe11c198b08",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft confirms all services are restored after global outage",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWEJfV21haXpneld6cDBuakxMSkthMDlzUnJ0QTE2NHRYV2gyMWpxY2sxQ1VLOXFxVS1WVDEtYUp1enJUbWtjZGtvbWlITVI2dlU2MVZXclV5SGc5WXlwVmlRN005OW5VamR3TnQtMjNUN0pJcnlQX1FweU5lRTl1OXpwaUtYZERqYzdDaWJkZ2tLWFZwVDVnT096OWdvaWEtS1E?oc=5",
-      "source": "Sky News",
-      "publishedAt": "2026-11-17T09:37:40.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sky News"
       ],
       "score": 1.39
     },
@@ -1643,6 +1595,21 @@
         "Anadolu Ajansı"
       ],
       "score": 1.36
+    },
+    {
+      "id": "fd4121c677a3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Four major US outages in five days and none was a cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPd3lhVGhNV3lTWEtiNVFhazZGVTJ1Z0xJdGFYWC1lUFZwczdoNzRFdUp4c2s0ZnNJYlEydV9GZnJRd3dHUHoxLWg1OHQxQXhuZXB0OUUtcS1NV1R5ZEZfN2FvaTQxM0FjcG5CZktkR1lmOWJKVlVYQjR5R3dyM2pWODUyX3JkVVhTam5OYzE2VUhXOUJLY1NZSkhrbENLT3lCdWRxZlBraEdvU0NTM1BCSUJzd28wU2Y0cXVsS01CeFlyRzNt?oc=5",
+      "source": "Insurance Business",
+      "publishedAt": "2026-11-17T10:34:56.000Z",
+      "firstSeenAt": "2026-11-17T14:31:37.066Z",
+      "outlets": 1,
+      "outletNames": [
+        "Insurance Business"
+      ],
+      "score": 1.31
     },
     {
       "id": "7755b3ac59be",
