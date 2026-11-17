@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T21:08:05.184Z",
+  "buildTime": "2026-11-17T21:14:13.908Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 16:08 ET",
-  "score": 98,
+  "etStamp": "2026-11-17 16:14 ET",
+  "score": 93,
   "fired": [
     "flights",
     "hacks",
@@ -20,11 +20,6 @@
   ],
   "bumps": [
     {
-      "key": "quake",
-      "label": "Quake M6 or more",
-      "points": 5
-    },
-    {
       "key": "asteroid",
       "label": "Asteroid inside 0.5 lunar distance",
       "points": 15
@@ -35,7 +30,7 @@
       "points": 6
     }
   ],
-  "change": 18,
+  "change": 13,
   "yesterday": {
     "date": "2026-11-16",
     "score": 80,
@@ -53,19 +48,19 @@
   },
   "record": {
     "date": "2026-11-17",
-    "score": 98
+    "score": 93
   },
-  "headlinesRead": 1657,
-  "lastSuccessAt": "2026-11-17T21:08:05.184Z",
+  "headlinesRead": 1615,
+  "lastSuccessAt": "2026-11-17T21:14:13.908Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 17,
+    "flights": 19,
+    "hacks": 36,
     "space": 3,
+    "internet": 11,
     "earth": 4,
-    "internet": 12,
-    "hacks": 37,
-    "grid": 4,
     "germs": 4,
+    "grid": 4,
     "animals": 3,
     "ai": 4,
     "weather": 4,
@@ -74,11 +69,11 @@
   },
   "vital": {
     "quake": {
-      "mag": 6.6,
-      "place": "148 km WSW of Tual, Indonesia",
-      "time": "2026-11-16T21:11:20.515Z",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tymu",
-      "pager": "green",
+      "mag": 5.2,
+      "place": "south of the Kermadec Islands",
+      "time": "2026-11-17T14:20:36.814Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tysq",
+      "pager": null,
       "tsunami": false
     },
     "kp": {
@@ -192,15 +187,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1332,
+      "count": 1333,
       "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     },
     "bing": {
       "ok": true,
-      "count": 284,
-      "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "count": 241,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     },
     "gdelt": {
       "ok": false,
@@ -212,37 +207,37 @@
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     },
     "usgs": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     },
     "x": {
       "ok": true,
@@ -255,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T21:08:05.184Z"
+      "lastOkAt": "2026-11-17T21:14:13.908Z"
     }
   },
   "stories": [
@@ -352,6 +347,29 @@
       "score": 5.02
     },
     {
+      "id": "681e458a3f27",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Breach 178 Websites, Including BBC, CNN, and Zoom, in Major Cyberattack",
+      "url": "https://www.techjuice.pk/hackers-breach-178-websites-including-bbc-cnn-and-zoom-in-major-cyberattack/",
+      "source": "TechJuice",
+      "publishedAt": "2026-11-17T03:27:00.000Z",
+      "latestAt": "2026-11-17T20:19:17.000Z",
+      "firstSeenAt": "2026-11-17T12:15:44.284Z",
+      "outlets": 8,
+      "outletNames": [
+        "TechJuice",
+        "Cryptonews",
+        "New York Post",
+        "TMZ on MSN",
+        "Black America Web",
+        "FOX5 Vegas",
+        "CNET",
+        "YAHOO!"
+      ],
+      "score": 4.78
+    },
+    {
       "id": "sig:faa-stop:PHX:2026-11-17",
       "cat": "flights",
       "kind": "signal",
@@ -397,31 +415,6 @@
         "size": "a bus",
         "at": "2026-11-17T07:59:00.000Z"
       }
-    },
-    {
-      "id": "sig:quake:us7000tymu",
-      "cat": "earth",
-      "kind": "signal",
-      "title": "M 6.6 - 148 km WSW of Tual, Indonesia",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tymu",
-      "source": "USGS",
-      "publishedAt": "2026-11-16T21:11:20.515Z",
-      "latestAt": "2026-11-16T21:11:20.515Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 1,
-      "outletNames": [
-        "USGS"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "quake",
-        "mag": 6.6,
-        "place": "148 km WSW of Tual, Indonesia",
-        "pager": "green",
-        "tsunami": false
-      },
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "0f3e0a31b0a5",
@@ -471,27 +464,6 @@
       "score": 4.33
     },
     {
-      "id": "681e458a3f27",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Breach 178 Websites, Including BBC, CNN, and Zoom, in Major Cyberattack",
-      "url": "https://www.techjuice.pk/hackers-breach-178-websites-including-bbc-cnn-and-zoom-in-major-cyberattack/",
-      "source": "TechJuice",
-      "publishedAt": "2026-11-17T03:27:00.000Z",
-      "latestAt": "2026-11-17T19:02:23.000Z",
-      "firstSeenAt": "2026-11-17T12:15:44.284Z",
-      "outlets": 6,
-      "outletNames": [
-        "TechJuice",
-        "Cryptonews",
-        "New York Post",
-        "TMZ on MSN",
-        "Black America Web",
-        "FOX5 Vegas"
-      ],
-      "score": 4.28
-    },
-    {
       "id": "bff7f3c221f9",
       "cat": "hacks",
       "kind": "news",
@@ -534,6 +506,29 @@
       "score": 3.77
     },
     {
+      "id": "c9aaf37c3d99",
+      "cat": "internet",
+      "kind": "news",
+      "title": "The US government's highly classified national security communications network is reportedly experiencing a major outage",
+      "url": "https://www.xda-developers.com/us-highly-classfied-national-security-communications-network-reportedly-down-right-now/",
+      "source": "XDA Developers",
+      "publishedAt": "2026-11-16T22:38:00.000Z",
+      "latestAt": "2026-11-17T20:55:00.000Z",
+      "firstSeenAt": "2026-11-17T18:32:06.239Z",
+      "outlets": 8,
+      "outletNames": [
+        "Digit",
+        "Beinsure",
+        "XDA Developers",
+        "Townhall",
+        "SuaraGarut.ID",
+        "XDA",
+        "KDRV",
+        "KEZI"
+      ],
+      "score": 3.74
+    },
+    {
       "id": "9c79c7379d15",
       "cat": "internet",
       "kind": "news",
@@ -549,23 +544,6 @@
         "TRT World"
       ],
       "score": 2.8
-    },
-    {
-      "id": "c9aaf37c3d99",
-      "cat": "internet",
-      "kind": "news",
-      "title": "NSA Net suffers major outage: US intelligence agency’s secret network faces disruption, here is what happened",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVDlxWE5mOU84NktYQ2NpUUZmbHVFM2RLTmV5cnlRdDVOZkl4OG5uMjZtcXNmRDE3UWp0cmxPRFRfUThpQl96aGd3OGZNVnp2c3g4cVVJRkxqbUdpT2NiZTVKaWQ5UHNsVGRRSkdtLXRQMUkzTWpsUlNfNk52UDR3QmZaYW4wcHhoUWFqSEthRkUzVW92ZnRnX0ZHTzUtenJlbVh3VlFNbkM4b3gwLXFQMnl1cnR6c29PYmlsOHI2b2Z3Z0Z0RGswVjJ4bHN6eG1pQlVRYm5IRHF6SnRxTFHSAeQBQVVfeXFMT3lqN1JDNGl4N3FJUzF2S3diUFFoR0lmTm9oVjJubmRXSi1oeWc2bkoxekRvZm1mdEZ2UjZTRHkxUU9SZWV3enpXQVotUDF4OTFtV2tJeEo2YmxHNmpvc2hYVUdiWmxuR1I0alptX0hkelAwbEtOcmhYb0g5VEI3LS1uQjl2djVsNFlqRU1ZcUVSNFdzYk4yNXN0bzZVRTEtTHlkaDRyUzZnaXp1RVBmMXowSnU2b19wUk9pbWlhZFoxalhaVjU3NDFoakVHS3Bqc2xEeFJ3czg5aFYzTUlwT1J2bG1Y?oc=5",
-      "source": "Digit",
-      "publishedAt": "2026-11-17T16:59:32.000Z",
-      "latestAt": "2026-11-17T17:58:59.000Z",
-      "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 2,
-      "outletNames": [
-        "Digit",
-        "Beinsure"
-      ],
-      "score": 2.73
     },
     {
       "id": "80868cee0799",
@@ -590,6 +568,25 @@
       "score": 2.48,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "aa473faf26e7",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu found in Oklahoma dairy herd",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdzlZMnc0RDBRSjJiTnJabEhNbUhOcUFRdDltTGJXdGlBT1g2OV85SXhEU0hyTFl1VVg1MEVfS1NhNmJWWEhQT0d6OUJTeXJIbkJfcGZuUW1GVlB0d3dHNHNMLWthU2JWS1FyR0czbkRmLUQxNW4xUm95NmZHcDRwRmZTeFRNSzg?oc=5",
+      "source": "KOSU",
+      "publishedAt": "2026-11-17T10:02:40.000Z",
+      "latestAt": "2026-11-17T19:06:40.000Z",
+      "firstSeenAt": "2026-11-17T21:14:13.908Z",
+      "outlets": 4,
+      "outletNames": [
+        "KOSU",
+        "Successful Farming",
+        "Duncan Banner",
+        "News 9"
+      ],
+      "score": 2.44
     },
     {
       "id": "1f758b82249b",
@@ -1426,23 +1423,6 @@
       "score": 1.85
     },
     {
-      "id": "d279c18cda1a",
-      "cat": "internet",
-      "kind": "news",
-      "title": "The US government's highly classified national security communications network is reportedly experiencing a major outage",
-      "url": "https://www.xda-developers.com/us-highly-classfied-national-security-communications-network-reportedly-down-right-now/",
-      "source": "XDA Developers",
-      "publishedAt": "2026-11-16T22:38:00.000Z",
-      "latestAt": "2026-11-17T16:10:00.000Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
-      "outlets": 2,
-      "outletNames": [
-        "XDA Developers",
-        "Townhall"
-      ],
-      "score": 1.84
-    },
-    {
       "id": "e3fdce1d5385",
       "cat": "hacks",
       "kind": "news",
@@ -1679,22 +1659,6 @@
       "score": 1.4
     },
     {
-      "id": "00119b487ab3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack Targets iPhones, Crypto of Visitors to Major Websites",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMkFmdWp6ZEk4Q05Ta3VLNmNBU0dPZDZvWFVISk9QQ085alFOTkZKU2hlVUhKVXNydXFSRnBFcXkxTHBpM2dTMmhOX2pVQjB4MjV2ZlFZMWZuOW1ocFlfTGd1SFMzeG10UW1RMHhtQ3BIS19wRnVJdGFlejg3QURUN05QVWI2QjFQdEZsY0NDQ0dHWFFDa3hz?oc=5",
-      "source": "CNET",
-      "publishedAt": "2026-11-17T20:19:17.000Z",
-      "latestAt": "2026-11-17T20:19:17.000Z",
-      "firstSeenAt": "2026-11-17T20:47:50.440Z",
-      "outlets": 1,
-      "outletNames": [
-        "CNET"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "ca2f0f111f4b",
       "cat": "flights",
       "kind": "news",
@@ -1773,6 +1737,38 @@
         "OregonLive.com"
       ],
       "score": 1.37
+    },
+    {
+      "id": "1f4000ce7c19",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Fallout over nationwide ground stop continues",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNVzctQzRoaEpKUWxKaG5JeE94eV9DSXBTVnh4M19tQ0E1a1U3andFR3YydU9WS09XRzhCZDlQV3RqSUswZFdhMkVaVmRGQnB0Snp0aDFVTVA2SGVmNjBvcFNnUm44SzNOTkQxcWFwd05IcjRHU2ZpZ1V5cl9vQUFDQ3gwNmhITWtVaEtHMmkxYzA4SUV5SkdnSlpVYXMweXdaWEpNYWp6a2RkRWJ6MkVyaWc5Tng1OTJJNkJCeEU0U3I4LTVPdzc3RHQxWXU?oc=5",
+      "source": "news8000.com",
+      "publishedAt": "2026-11-17T19:27:00.000Z",
+      "latestAt": "2026-11-17T19:27:00.000Z",
+      "firstSeenAt": "2026-11-17T21:14:13.908Z",
+      "outlets": 1,
+      "outletNames": [
+        "news8000.com"
+      ],
+      "score": 1.36
+    },
+    {
+      "id": "b8b97857130f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Tim McGraw Misses Hondo Rodeo Fest Opener After Nationwide FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQTEstWTdlRFp6ZzBqRkxsMWdYVEN1bkYwMEpmNTdhTm5Ma2U2ZlppMXh5SUpkOGxxZ0JaTHBwOHlZU29KTDJTNVRmbGItSExoSFg3blp3czRmSDYwcFU4N2UyTDFrcHlaTzBJejRPbXNQUGJMUWlSeHpONzdtZzNDS2RzR2JQOEhUSmttLWpDY1drR2tFa3ZwWVdWd2lGSlZzSmY2MjZ3Um9nV0thQTdxY0JGclNPUQ?oc=5",
+      "source": "Backstage Country",
+      "publishedAt": "2026-11-17T19:25:22.000Z",
+      "latestAt": "2026-11-17T19:25:22.000Z",
+      "firstSeenAt": "2026-11-17T21:14:13.908Z",
+      "outlets": 1,
+      "outletNames": [
+        "Backstage Country"
+      ],
+      "score": 1.36
     },
     {
       "id": "b47a68c32a95",
@@ -1969,6 +1965,24 @@
       "score": 0.93
     },
     {
+      "id": "42bf52d37cd0",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Japan Meteorological Agency Fixes System After False M9.9 Earthquake Alert",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1RMm9GWmMxWWR0Wmg5N3o4bTUyY21lclhya1dycWsyLXE5WTVWeV9kTkhyUGhRclBNakZSdTJVWDd1V1hrcHg3U2NkSHZtY3o2T2t0Vw?oc=5",
+      "source": "News On Japan",
+      "publishedAt": "2026-11-17T16:05:22.000Z",
+      "latestAt": "2026-11-17T16:05:22.000Z",
+      "firstSeenAt": "2026-11-17T21:14:13.908Z",
+      "outlets": 1,
+      "outletNames": [
+        "News On Japan"
+      ],
+      "score": 0.91,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "a46e2f1c033c",
       "cat": "sun",
       "kind": "news",
@@ -2001,22 +2015,6 @@
       "score": 0.9,
       "quiet": true,
       "quietReason": "headline mentions tornado"
-    },
-    {
-      "id": "8f899e937fa8",
-      "cat": "germs",
-      "kind": "news",
-      "title": "New variant of Coffeeloader malware utilizes updated armoury packer",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMndycXl6WnMxTGRPbEsxeWFvV2F6ZTd5c0xBS1FSTEJfQkpxd3ZhM1BRYi13aXo4Q1hiMWJaLXdvWXRLMksxRXpKX3A5QWxFZFB5aUZrdzBTbm5GOFFEQ2k3bDhjT2lhd1ltMjhPeHg4bXZSWEJFTEdsSzd0aXBsS1NtVkVpME1GWWJHMlNqeHBvVEZFOEZ5am9reFRJQQ?oc=5",
-      "source": "SC Media",
-      "publishedAt": "2026-11-17T14:21:05.000Z",
-      "latestAt": "2026-11-17T14:21:05.000Z",
-      "firstSeenAt": "2026-11-17T21:08:05.184Z",
-      "outlets": 1,
-      "outletNames": [
-        "SC Media"
-      ],
-      "score": 0.89
     },
     {
       "id": "90ad96fae449",
