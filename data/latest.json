@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T19:17:12.554Z",
+  "buildTime": "2026-11-17T19:21:36.686Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 14:17 ET",
+  "etStamp": "2026-11-17 14:21 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -54,8 +54,8 @@
     "date": "2026-11-17",
     "score": 92
   },
-  "headlinesRead": 1629,
-  "lastSuccessAt": "2026-11-17T19:17:12.554Z",
+  "headlinesRead": 1653,
+  "lastSuccessAt": "2026-11-17T19:21:36.686Z",
   "rollingFallback": false,
   "cats": {
     "flights": 18,
@@ -192,74 +192,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1330,
+      "count": 1332,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "bing": {
       "ok": true,
-      "count": 285,
+      "count": 279,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "gdelt": {
-      "ok": false,
+      "ok": true,
       "count": 0,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "x": {
       "ok": true,
-      "count": 2,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z",
+      "skipped": "interval"
+    },
+    "trends": {
+      "ok": true,
+      "count": 30,
+      "error": null,
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T19:17:12.554Z"
+      "lastOkAt": "2026-11-17T19:21:36.686Z"
     }
   },
   "stories": [
@@ -271,8 +278,9 @@
       "url": "https://www.msn.com/en-us/technology/aviation/faa-pauses-router-installations-after-nationwide-ground-stop/ar-AA2hCCT7",
       "source": "The Wall Street Journal on MSN",
       "publishedAt": "2026-11-17T08:20:00.000Z",
+      "latestAt": "2026-11-17T19:06:12.000Z",
       "firstSeenAt": "2026-11-17T17:17:00.109Z",
-      "outlets": 23,
+      "outlets": 24,
       "outletNames": [
         "The Wall Street Journal on MSN",
         "WSJ",
@@ -296,9 +304,10 @@
         "Oskaloosa Herald",
         "@AP on X",
         "Shaw Local",
-        "Axios"
+        "Axios",
+        "WISN"
       ],
-      "score": 6.58
+      "score": 6.65
     },
     {
       "id": "b1a6a57f4f9b",
@@ -308,6 +317,7 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQYWtZT2QtSGt4bnd0WWpPckNjSHc1WVA0TTVwcGY0M0JEYjBMaU5SVXhaTGRFMDF6aW9FRUJvMTB4WGM2bE4xU0JFNTRLVnQ2eFRDbHZ0VkJ6cy1PdzYyYUdiYzNDaWI0WlRwMGNzWDlpQ1lUb2tOWXc2STNQMkx3Y0E0LXFzTzhId0RqaDVESy1tYnRFek9UdEFTNnpsUmtUN203RHRwdUQ5aVlKUnfSAcIBQVVfeXFMTjVDbm9SQ1hvbXFYLVV6RXMza2I0ZUdlQzZGQkNvVDl5NXRidThXZE5DQUM0T25ReWhKLUNVN1hXSjBRYnZDX3hwM3VmTXc3Q0hUeTJralNOQ0hHQlhXMGJlcWNJMlZjSHVYQmttVjJrRjRrUXg4blR4aVVaY0NueG1BaWhjcmVqaE16NjFub1R3X2VybUo3VXdRWlBQQUYwMC1tTy1KZmNoSjNJSDhTUjU5SjRob1RyWEtCRmRfUlREcEE?oc=5",
       "source": "Dakota News Now",
       "publishedAt": "2026-11-16T23:46:00.000Z",
+      "latestAt": "2026-11-17T02:07:00.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 24,
       "outletNames": [
@@ -346,6 +356,7 @@
       "url": "https://nasstatus.faa.gov/",
       "source": "FAA",
       "publishedAt": "2026-11-17T18:32:06.239Z",
+      "latestAt": "2026-11-17T18:32:06.239Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
       "outlets": 1,
       "outletNames": [
@@ -368,6 +379,7 @@
       "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WA",
       "source": "NASA/JPL",
       "publishedAt": "2026-11-17T04:14:48.722Z",
+      "latestAt": "2026-11-17T04:14:48.722Z",
       "firstSeenAt": "2026-11-17T04:14:48.722Z",
       "outlets": 1,
       "outletNames": [
@@ -391,6 +403,7 @@
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tymu",
       "source": "USGS",
       "publishedAt": "2026-11-16T21:11:20.515Z",
+      "latestAt": "2026-11-16T21:11:20.515Z",
       "firstSeenAt": "2026-11-17T04:14:48.722Z",
       "outlets": 1,
       "outletNames": [
@@ -415,6 +428,7 @@
       "url": "https://www.techjuice.pk/hackers-breach-178-websites-including-bbc-cnn-and-zoom-in-major-cyberattack/",
       "source": "TechJuice",
       "publishedAt": "2026-11-17T03:27:00.000Z",
+      "latestAt": "2026-11-17T18:56:15.000Z",
       "firstSeenAt": "2026-11-17T12:15:44.284Z",
       "outlets": 6,
       "outletNames": [
@@ -435,6 +449,7 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOTGdyNldDTEdiY2xsWnVqWkNJRlJaNXhMOUZYZXpwRThSeFpOVUFBbEx4TkVaY3Mxeno1ZHdoVU9CZVlFbWlITjhQMGZVUHZMZU1EMks3ejQ1Rnlac1lRREt0dHY1SGxMR2phd21sMU5kcnNuVHF4d3ZrRWo5OFI2UGVSTmgtMGRDQkNvSW5VZXM0U0NYdmtBMEcxUkl6RHhfR244WlFmYmFYbGdUUXlMV0xxVFY5VTI3T3RsaVhMYVFWYWdhRXUtRXM3VUM2LUtsS3NXcA?oc=5",
       "source": "TradingView",
       "publishedAt": "2026-11-17T01:02:00.000Z",
+      "latestAt": "2026-11-17T13:53:00.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 5,
       "outletNames": [
@@ -454,6 +469,7 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPWnZRQ3hXLU5hOTZLVTA2Y2pIeXhoQXg2OHVjbk90eURnYUZwQl9QQUVVaUQxdnlSSUV3Y2Zwb3dEamcyZWxqaEQxOHFWNDlJbXZTdUlnTFhjbXhBcklBcGhmQjQxbzZUbjRtRklsOUtwM2VLeXZLdUhKYTFKZ3ZvVVpzSDk0WkhpOFdXN2VnRHNVSTA?oc=5",
       "source": "malverngazette.co.uk",
       "publishedAt": "2026-11-17T10:24:40.000Z",
+      "latestAt": "2026-11-17T10:24:40.000Z",
       "firstSeenAt": "2026-11-17T11:45:41.326Z",
       "outlets": 4,
       "outletNames": [
@@ -472,6 +488,7 @@
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPcEppVTRLRzhQWF93VUFDclRacUpFYm51b3ZVeHE0czJhQ0ZSa00wQTlKMlE4SmhwVnhidTBicm1WdFdKTExWVmQ0ZFk5Y25SZml3dnlsSjdSU2RYbjZiRzNUeEVzSXNiMkltUWJFMEwyQ0tSVUpqUXpUb093WVNfSmlyVnpFckVmZ09PZDlRSVlwX0ZKdnBiVWtaSmpzQW4xeUV4ZTAzd010SW9GcTZ4US1VTnUzV1A5OFJjZA?oc=5",
       "source": "Alaska's News Source",
       "publishedAt": "2026-11-17T05:10:59.000Z",
+      "latestAt": "2026-11-17T05:29:57.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 7,
       "outletNames": [
@@ -493,6 +510,7 @@
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVDY1RTlKWmV4MmlUd3MxZ3hyNmozcVd4dURkdVpMX0htZXJ5ZXNYTXhzWXUzcWNwRWNkVnJRLWFsY0ExelNZSnBBbnc3dl9ZWnBmX25UeThva2RZWXVkeGo3SVJQbkZfcWl2QjV2NVRyck5NSUtqTmxxX2xBR3ZRQVp5RUNDcnM?oc=5",
       "source": "The Guardian",
       "publishedAt": "2026-11-16T20:23:00.000Z",
+      "latestAt": "2026-11-17T05:52:00.000Z",
       "firstSeenAt": "2026-11-17T04:41:57.645Z",
       "outlets": 4,
       "outletNames": [
@@ -511,6 +529,7 @@
       "url": "https://www.digitaltrends.com/phones/apple-services-hit-by-widespread-outage-reports-users-flag-problems-with-icloud-app-store-and-apple-pay/",
       "source": "Digital Trends",
       "publishedAt": "2026-11-17T01:51:00.000Z",
+      "latestAt": "2026-11-17T18:52:50.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
       "outlets": 16,
       "outletNames": [
@@ -541,6 +560,7 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQYndUYVZmMEg5aDhzOEQxM3A2cFN5WlBQT2ozWU9jdlZLSXVyTG1tU3pobi1KTUQwMVlZR2h5TnRZWVgxM2hTd04waGl6NkxWU280QUswanB3YTU1YlF0MGZSYks0dmhsVUxWUlJkUVM3N3RkSU1Gdy0wcXhmMVhtaHRRZmo?oc=5",
       "source": "Oklahoma Voice",
       "publishedAt": "2026-11-16T19:37:35.000Z",
+      "latestAt": "2026-11-17T19:06:40.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 9,
       "outletNames": [
@@ -564,6 +584,7 @@
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNbmt4NVZXeFVObWRVbGF2ZEs1X2ZqdXVGVXNXMXhmcDYwbVJWRm9BTXdTUnpTZWlrUGNJSmtCRGgwLUM3R213WDhqU3UyVHk1c1dza3dkbERIUUlkZUZyMTR6NEkwclVlNzN0UXI0SUpINTVMQWE3RW85dW1yM3VlZjhUTkNhMEZfY3ktZ2ZCdzZZZEk1YWh2N2VjeTZndkRrNXpNY09JTHlMWndyb21sWExoaU5NREVRdGs2OUhyblFoQmJabkJScGsxelU?oc=5",
       "source": "Anadolu Ajansı",
       "publishedAt": "2026-11-17T16:41:26.000Z",
+      "latestAt": "2026-11-17T17:34:38.000Z",
       "firstSeenAt": "2026-11-17T16:47:02.425Z",
       "outlets": 2,
       "outletNames": [
@@ -580,6 +601,7 @@
       "url": "https://nasstatus.faa.gov/",
       "source": "FAA",
       "publishedAt": "2026-11-17T04:14:48.722Z",
+      "latestAt": "2026-11-17T04:14:48.722Z",
       "firstSeenAt": "2026-11-17T04:14:48.722Z",
       "outlets": 1,
       "outletNames": [
@@ -602,6 +624,7 @@
       "url": "https://www.baltimoresun.com/2026/11/17/mullin-nationwide-ground-stop/",
       "source": "The Baltimore Sun",
       "publishedAt": "2026-11-17T04:10:00.000Z",
+      "latestAt": "2026-11-17T18:35:00.000Z",
       "firstSeenAt": "2026-11-17T17:32:03.215Z",
       "outlets": 14,
       "outletNames": [
@@ -630,6 +653,7 @@
       "url": "https://www.baltimoresun.com/2026/11/17/nationwide-ground-stop-prompts-traveler-to-buy-a-bronco-another-to-rent-a-u-haul/",
       "source": "The Baltimore Sun",
       "publishedAt": "2026-11-17T10:42:00.000Z",
+      "latestAt": "2026-11-17T18:42:09.000Z",
       "firstSeenAt": "2026-11-17T17:56:49.781Z",
       "outlets": 4,
       "outletNames": [
@@ -648,6 +672,7 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUTdVUVVtcmFYWms2YkJuU3lxZ05RakxKbndJakRORnJVLVRSQ0ItMnVSR2RaaGRRZmJsYzRkYlZrYkl0NGJ4LWdUcW5UOUsxa1F2LWw5LTBWc1VhdHlsZGFWM0VXdGZ0aWxMeGg4Vk9JdGYweGQ4NjVteVpQR2ZjSF9vbWRrTW42c2h1bkhEX2RSQ1VxWlVsRHhrNkJnUjQ?oc=5",
       "source": "Reuters",
       "publishedAt": "2026-11-17T18:06:21.000Z",
+      "latestAt": "2026-11-17T18:10:14.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
       "outlets": 4,
       "outletNames": [
@@ -666,6 +691,7 @@
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
       "source": "Click2Houston",
       "publishedAt": "2026-11-17T16:12:55.000Z",
+      "latestAt": "2026-11-17T17:10:12.000Z",
       "firstSeenAt": "2026-11-17T16:16:49.463Z",
       "outlets": 2,
       "outletNames": [
@@ -682,6 +708,7 @@
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVDlxWE5mOU84NktYQ2NpUUZmbHVFM2RLTmV5cnlRdDVOZkl4OG5uMjZtcXNmRDE3UWp0cmxPRFRfUThpQl96aGd3OGZNVnp2c3g4cVVJRkxqbUdpT2NiZTVKaWQ5UHNsVGRRSkdtLXRQMUkzTWpsUlNfNk52UDR3QmZaYW4wcHhoUWFqSEthRkUzVW92ZnRnX0ZHTzUtenJlbVh3VlFNbkM4b3gwLXFQMnl1cnR6c29PYmlsOHI2b2Z3Z0Z0RGswVjJ4bHN6eG1pQlVRYm5IRHF6SnRxTFHSAeQBQVVfeXFMT3lqN1JDNGl4N3FJUzF2S3diUFFoR0lmTm9oVjJubmRXSi1oeWc2bkoxekRvZm1mdEZ2UjZTRHkxUU9SZWV3enpXQVotUDF4OTFtV2tJeEo2YmxHNmpvc2hYVUdiWmxuR1I0alptX0hkelAwbEtOcmhYb0g5VEI3LS1uQjl2djVsNFlqRU1ZcUVSNFdzYk4yNXN0bzZVRTEtTHlkaDRyUzZnaXp1RVBmMXowSnU2b19wUk9pbWlhZFoxalhaVjU3NDFoakVHS3Bqc2xEeFJ3czg5aFYzTUlwT1J2bG1Y?oc=5",
       "source": "Digit",
       "publishedAt": "2026-11-17T16:59:32.000Z",
+      "latestAt": "2026-11-17T17:58:59.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
       "outlets": 2,
       "outletNames": [
@@ -698,6 +725,7 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNGlCSUJhTFl1Rmk5ZEZhTEowQUhKTnVNQ3JZeDlaY1BGZEVRM2VCWTVqNUpEX1hJSUR1OW5jOVYycnVOMXBhRUVYc1ZDNjk0SG9YMTdMaGpJSElWaFRUWXNwWHROQTIzcXZXZEtoNTF0dzI1WXlNeGU3eVJ5V1UzM0dqRTRtd1FpTGdZ?oc=5",
       "source": "Yahoo",
       "publishedAt": "2026-11-16T20:37:58.000Z",
+      "latestAt": "2026-11-17T17:12:50.000Z",
       "firstSeenAt": "2026-11-17T17:32:03.215Z",
       "outlets": 9,
       "outletNames": [
@@ -714,6 +742,44 @@
       "score": 2.72
     },
     {
+      "id": "714ddb59fd11",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Predicting Hail Damage On Researchers' Radar",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZ1dobmEyWGNSWS1XTE8yVjQzZVRnMVd5aE1QTVFna2NISm84VUN5OEp1YUx2blp0ZTNvdlkzWndLVFNZOC1nTHlKM04zTTV1bTF4Z0YzSFBRVFZ0S05tT0ZMU2V4RDJPWnlPdGw4dU53TTBLRVgwNktseE1YVmY3UTVBMWFNdw?oc=5",
+      "source": "Mirage News",
+      "publishedAt": "2026-11-17T17:08:10.000Z",
+      "latestAt": "2026-11-17T17:13:39.000Z",
+      "firstSeenAt": "2026-11-17T17:17:00.109Z",
+      "outlets": 3,
+      "outletNames": [
+        "Mirage News",
+        "The National Tribune",
+        "UQ News"
+      ],
+      "score": 2.58
+    },
+    {
+      "id": "582cd084aefd",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is Apple down? Thousands of users report issues accessing iCloud and Apple Pay",
+      "url": "https://www.the-sun.com/news/17311983/apple-down-outage-us-icloud/",
+      "source": "The US Sun",
+      "publishedAt": "2026-11-17T05:27:00.000Z",
+      "latestAt": "2026-11-17T19:07:00.000Z",
+      "firstSeenAt": "2026-11-17T19:21:36.686Z",
+      "outlets": 5,
+      "outletNames": [
+        "The US Sun",
+        "The Providence Journal",
+        "USA TODAY",
+        "KTLA",
+        "WION"
+      ],
+      "score": 2.55
+    },
+    {
       "id": "8fea1f91f5e5",
       "cat": "earth",
       "kind": "news",
@@ -721,6 +787,7 @@
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1TeHl0ZGNfLWs1TmRENUhHR0VrVGw2SHdwTW12OG5ULVJWcXR3ODVKRHhrZEFHVGxLU190cDhuanBxbjBZQjNTcVBUWnFWQXRXSTJxb2htakFJdzTSAVZBVV95cUxOTFhCY2RxaUd2dmQyZ3A4MFM1aU1iZjdueWpQNlZvTG5BNzFoZlUzaXduSFNlZGppc1lXU2tXUjM0UWxsQzdYYnVKVEZzOWZKVFlSdXRRdw?oc=5",
       "source": "K-VIBE",
       "publishedAt": "2026-11-17T14:52:34.000Z",
+      "latestAt": "2026-11-17T15:22:55.000Z",
       "firstSeenAt": "2026-11-17T17:47:06.855Z",
       "outlets": 3,
       "outletNames": [
@@ -738,6 +805,7 @@
       "url": "https://www.themirror.com/news/us-news/nsa-comms-outage-network-down-2113689",
       "source": "The Mirror US",
       "publishedAt": "2026-11-17T07:54:00.000Z",
+      "latestAt": "2026-11-17T16:05:05.000Z",
       "firstSeenAt": "2026-11-17T16:16:49.463Z",
       "outlets": 2,
       "outletNames": [
@@ -754,6 +822,7 @@
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPLXFtcFhwM3pGTVF4NHRWZTE0emhmSGItRFlhQ1NPb2xQcjlJQjdVWXlvSXRTbXZqX0RyM255N21rVDYxS0k2aVJxN1lodWhfcE1XZ0ZMcmFSZGVnWkFIX0tkd1VRbkoyLWJkTlNibXFPLXgtWXdXNjlxdV9qb0Z6c0U0ZlREZi1nMkJJMnRNVEU0V00zOVJ3aGFfVFltdmpUSUtJRTdTYzdwSmhrc05DNGJCUXdNVXpOdkxBX0ZrMWNqeFlWbDR0S0dIWjVHVTRadFFGUWl1YXU4SDYtaHNzSXg2WQ?oc=5",
       "source": "KXLY.com",
       "publishedAt": "2026-11-17T04:15:57.000Z",
+      "latestAt": "2026-11-17T09:46:21.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 3,
       "outletNames": [
@@ -771,6 +840,7 @@
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQUVJQVUNpay1ianNsa1B4MHprRGxibXhuRWlPOTNNY2pzQnE4TUJjMWtQTXgydHRYMXpfU1VpcWpvdVU2QWM5QmpCZEtDLUdVRjMwNGlDY3hqZThVWC1XWWtlRG5yTmhVY0hYZEhhWERUS0RBWVFNRF82TkpVNWRlcEFLQV9POTRjeEloR0lTaFZkejVENElZd3AzSWQ3Ui1TeENTdjFwSWs2Vl9scWVRWA?oc=5",
       "source": "Hiru News",
       "publishedAt": "2026-11-17T02:15:00.000Z",
+      "latestAt": "2026-11-17T06:51:06.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 3,
       "outletNames": [
@@ -783,38 +853,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "4896fd2b975f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Is NSA Down? America's Spy Agency Hit by Major Outage As Officials Scramble To Assess Damage",
-      "url": "https://www.ibtimes.sg/nsa-down-americas-spy-agency-hit-by-major-outage-officials-scramble-assess-damage-96333",
-      "source": "International Business Times Singapore",
-      "publishedAt": "2026-11-17T03:25:00.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 2,
-      "outletNames": [
-        "International Business Times Singapore",
-        "International Business Times, Singapore Edition"
-      ],
-      "score": 2.14
-    },
-    {
-      "id": "714ddb59fd11",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Predicting Hail Damage On Researchers' Radar",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZ1dobmEyWGNSWS1XTE8yVjQzZVRnMVd5aE1QTVFna2NISm84VUN5OEp1YUx2blp0ZTNvdlkzWndLVFNZOC1nTHlKM04zTTV1bTF4Z0YzSFBRVFZ0S05tT0ZMU2V4RDJPWnlPdGw4dU53TTBLRVgwNktseE1YVmY3UTVBMWFNdw?oc=5",
-      "source": "Mirage News",
-      "publishedAt": "2026-11-17T17:12:00.000Z",
-      "firstSeenAt": "2026-11-17T17:17:00.109Z",
-      "outlets": 2,
-      "outletNames": [
-        "Mirage News",
-        "The National Tribune"
-      ],
-      "score": 2
-    },
-    {
       "id": "76cac740da8b",
       "cat": "markets",
       "kind": "news",
@@ -822,6 +860,7 @@
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQRXFNaU45UFFaVXltZC1MNDY0b01iblhrSTRVai1abG9pdWI5Tnpma3pkaE9feXlNckdGS3F2d0dtbFJrVWlscXY5TVhVODhSTThCYVJnZXRuRHVuVGViaENXMXdObTRBQkt0WFVMSmplaHZOTjZLYlU3SE05S0NYX3Zzamloa0N1TmxURklRNy1OdGtGODhSSlREZlYtekJDUFFJcG93dmNMeV9SUWtxS2RnbmY1dU4zbXQtNy0tQVh1MXFsOGlEV0txajJkdlpmRUJtdkExSGl5YWJ0eWc5OGFTV0dLU05YWVE?oc=5",
       "source": "IndyStar",
       "publishedAt": "2026-11-17T10:30:56.000Z",
+      "latestAt": "2026-11-17T10:30:56.000Z",
       "firstSeenAt": "2026-11-17T14:46:34.896Z",
       "outlets": 2,
       "outletNames": [
@@ -838,6 +877,7 @@
       "url": "https://www.usatoday.com/story/news/local/westpb/2026/11/17/90-day-power-outage-nov-17-in-palm-beach-county/92823700007/",
       "source": "USA TODAY",
       "publishedAt": "2026-11-17T09:50:00.000Z",
+      "latestAt": "2026-11-17T17:50:00.000Z",
       "firstSeenAt": "2026-11-17T18:05:50.108Z",
       "outlets": 2,
       "outletNames": [
@@ -854,6 +894,7 @@
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9pNHJZWUdHZEp0cjFtTzhJdDJMaDRpOHBTWTBpMi1wV3JVQWZCajhmbnBxRy1NSmVCczQ2NmhfQy1Cb1VZQ1FYMFplT3dkalF0OEVUNF9weHRSQTFBQ1dVQnV2bWdqZjRSTjB0dk43RDlCeHBBWEZ1c19udnpqenc?oc=5",
       "source": "Yahoo News UK",
       "publishedAt": "2026-11-16T23:22:00.000Z",
+      "latestAt": "2026-11-16T23:22:00.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 2,
       "outletNames": [
@@ -870,6 +911,7 @@
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbE9JVi10eUpNVEJleDNJaVAxUHg2dFNQbE1kbHQ4aEthVk1jb2RWRGd3UWoyamVBY0NSMkZwbXhfYmZiQkZpTWQyWnRqdEttalNSZFYzZEZfRHJHV2hjS1luTFhMSEk4NUZ3Qk9BVE1uUHQtZUpxWWVwV1FyZmlNM1l0aWpRZkxzTGJWVXZCLTM?oc=5",
       "source": "KFVS12",
       "publishedAt": "2026-11-16T21:48:45.000Z",
+      "latestAt": "2026-11-17T14:05:49.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 2,
       "outletNames": [
@@ -886,6 +928,7 @@
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
       "source": "Global Agriculture",
       "publishedAt": "2026-11-17T15:14:39.000Z",
+      "latestAt": "2026-11-17T15:14:39.000Z",
       "firstSeenAt": "2026-11-17T15:31:45.442Z",
       "outlets": 1,
       "outletNames": [
@@ -901,6 +944,7 @@
       "url": "https://nasstatus.faa.gov/",
       "source": "FAA",
       "publishedAt": "2026-11-17T19:17:12.554Z",
+      "latestAt": "2026-11-17T19:17:12.554Z",
       "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 1,
       "outletNames": [
@@ -923,6 +967,7 @@
       "url": "https://www.usnews.com/news/business/articles/2026-11-17/outage-math-at-the-airport-when-a-four-hour-uber-beats-waiting-out-a-ground-stop",
       "source": "U.S. News & World Report",
       "publishedAt": "2026-11-17T04:38:00.000Z",
+      "latestAt": "2026-11-17T17:38:13.000Z",
       "firstSeenAt": "2026-11-17T17:56:49.781Z",
       "outlets": 8,
       "outletNames": [
@@ -945,6 +990,7 @@
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPaW8xRjJ5aVF4T09CZHdOUjd1eGpPZDY4NHFsLW9FVHc3NXl4M0hLV1dWMGlpeTlseFZzZ2dUUEZWRXF0dUhmaTZwTnVLWjFST3pqdUtmdlduTjZpNGpTLWVSUFR6ZnRFV1REQmF5dTdPMXlUOVBrWE1rNnNEblNFSlhXWQ?oc=5",
       "source": "Axios",
       "publishedAt": "2026-11-16T20:32:33.000Z",
+      "latestAt": "2026-11-17T13:51:11.000Z",
       "firstSeenAt": "2026-11-17T06:35:21.637Z",
       "outlets": 3,
       "outletNames": [
@@ -962,6 +1008,7 @@
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10UTB4dS1kNlYzbkJzQUZhTUk0eFVOM1JCWTkwREhXRml2eTl2d2FDX3ZVd0NrWjNUdjZ2dU5obzhnV1Y5eUdpc3NlOHRicjNFSzh4N1lCQmtGU2tPV3FzNGdiQmNQY1dPVjVaN2ZEYVlOUnlIM2MwZmxCMjBDWnc?oc=5",
       "source": "FLYING Magazine",
       "publishedAt": "2026-11-17T17:00:00.000Z",
+      "latestAt": "2026-11-17T17:00:00.000Z",
       "firstSeenAt": "2026-11-17T17:32:03.215Z",
       "outlets": 2,
       "outletNames": [
@@ -978,6 +1025,7 @@
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNS1pwak5BeWNwZUZhSE1CRFU4alVBZ3RjUGQwZ2cyS2FGZUhvdjlremR0NjdtT3BYYmdGeV9MT2VPYl9mUHpVejFRRVBoN3Q0NW1SVTJVaFJIZm02RU5tY3BjdWYxNTROTEpoLWZKbF9ZeVRUYlFSTFc0Wkd6QVAxcFhRWDFVb09sbDdXV3JMbU95TnNjY1dtY0J5Xzh1bUhPcUI3THl3UGpERUJXTXI3YXlqeVpfSy01?oc=5",
       "source": "FOX5 Vegas",
       "publishedAt": "2026-11-17T05:45:00.000Z",
+      "latestAt": "2026-11-17T05:45:00.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 4,
       "outletNames": [
@@ -996,6 +1044,7 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYU96bFczd05HSUxFZndWOWZ4Z0p0RnZLMGgzVmVEejhicXY2NVdxZElhWUhlNk11blBEOUdlSXViY0I3b3cxRFF6eW9ZY0xnUlllTXh5YmdVdkNPbENoS0dQTnRuaEsweU5ESUhYeTZHY1hQWmh4WGQzb2diWFZEQ0tNLS1oRWUtckMwZEpFdFZoS3ptdTM3MWRtTQ?oc=5",
       "source": "KGNS",
       "publishedAt": "2026-11-17T03:43:54.000Z",
+      "latestAt": "2026-11-17T03:43:54.000Z",
       "firstSeenAt": "2026-11-17T06:35:21.637Z",
       "outlets": 2,
       "outletNames": [
@@ -1012,6 +1061,7 @@
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUktGNFdJSU0wME1BQU83a2l6T2tONmhGZ0NEUHk4a2dKbGw3TkxwbU9GZWV5MHh4cVJZNFFNN05ZcFJfVkZvNV90bUw5bHpiOHc2UE9ka0VONDhmNEkwSnU0ZldnZ0NLTnZUVXU3eFlQV0R2cGJ1NGdRSEg1aVhSV3hFQVVHbW5nOS1nQ3N6YzZGaGpuTDhQbUhidnJ1SXFDdjlyZ3lfQW5fNm8?oc=5",
       "source": "Anadolu Ajansı",
       "publishedAt": "2026-11-17T08:44:18.000Z",
+      "latestAt": "2026-11-17T08:44:18.000Z",
       "firstSeenAt": "2026-11-17T15:16:40.034Z",
       "outlets": 2,
       "outletNames": [
@@ -1028,6 +1078,7 @@
       "url": "https://www.yahoo.com/news/videos/banking-outage-raises-concerns-amid-101815810.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T02:19:00.000Z",
+      "latestAt": "2026-11-17T10:28:00.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 3,
       "outletNames": [
@@ -1045,6 +1096,7 @@
       "url": "https://www.aol.com/articles/major-bank-outage-ends-chase-163645000.html",
       "source": "AOL",
       "publishedAt": "2026-11-17T08:36:00.000Z",
+      "latestAt": "2026-11-17T16:36:45.000Z",
       "firstSeenAt": "2026-11-17T16:47:02.425Z",
       "outlets": 2,
       "outletNames": [
@@ -1061,6 +1113,7 @@
       "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-targeted-178-major-websites-173238143.html",
       "source": "YAHOO!",
       "publishedAt": "2026-11-17T09:32:00.000Z",
+      "latestAt": "2026-11-17T17:32:38.000Z",
       "firstSeenAt": "2026-11-17T17:56:49.781Z",
       "outlets": 2,
       "outletNames": [
@@ -1077,6 +1130,7 @@
       "url": "https://www.yahoo.com/news/videos/tech-expert-offers-advice-nationwide-033610762.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-16T19:36:00.000Z",
+      "latestAt": "2026-11-17T03:39:05.000Z",
       "firstSeenAt": "2026-11-17T04:14:48.722Z",
       "outlets": 2,
       "outletNames": [
@@ -1093,6 +1147,7 @@
       "url": "https://www.nj.com/news/2026/11/cyberattack-hits-178-organizations-credit-cards-crypto-other-data-at-risk.html",
       "source": "NJ.com",
       "publishedAt": "2026-11-17T01:57:00.000Z",
+      "latestAt": "2026-11-17T14:57:00.000Z",
       "firstSeenAt": "2026-11-17T15:16:40.034Z",
       "outlets": 4,
       "outletNames": [
@@ -1111,6 +1166,7 @@
       "url": "https://www.stamfordadvocate.com/news/article/fema-emergency-alert-test-cyberattack-blackout-22534888.php",
       "source": "The Advocate",
       "publishedAt": "2026-11-17T05:58:00.000Z",
+      "latestAt": "2026-11-17T14:00:47.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 3,
       "outletNames": [
@@ -1128,6 +1184,7 @@
       "url": "https://www.aol.com/articles/equinor-detects-ongoing-cyberattack-output-181620000.html",
       "source": "AOL",
       "publishedAt": "2026-11-17T10:27:00.000Z",
+      "latestAt": "2026-11-17T18:27:32.000Z",
       "firstSeenAt": "2026-11-17T18:55:24.881Z",
       "outlets": 3,
       "outletNames": [
@@ -1145,6 +1202,7 @@
       "url": "https://cointelegraph.com/news/google-ai-agents-automated-cyberattacks-software-flaws",
       "source": "Cointelegraph",
       "publishedAt": "2026-11-17T02:05:00.000Z",
+      "latestAt": "2026-11-17T13:41:43.000Z",
       "firstSeenAt": "2026-11-17T10:55:10.909Z",
       "outlets": 3,
       "outletNames": [
@@ -1162,6 +1220,7 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/charles-schwab-website-briefly-goes-161241571.html",
       "source": "Yahoo Finance",
       "publishedAt": "2026-11-17T08:13:00.000Z",
+      "latestAt": "2026-11-17T16:12:00.000Z",
       "firstSeenAt": "2026-11-17T17:47:06.855Z",
       "outlets": 3,
       "outletNames": [
@@ -1172,6 +1231,23 @@
       "score": 2.17
     },
     {
+      "id": "4896fd2b975f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is NSA Down? America's Spy Agency Hit by Major Outage As Officials Scramble To Assess Damage",
+      "url": "https://www.ibtimes.sg/nsa-down-americas-spy-agency-hit-by-major-outage-officials-scramble-assess-damage-96333",
+      "source": "International Business Times Singapore",
+      "publishedAt": "2026-11-17T03:25:00.000Z",
+      "latestAt": "2026-11-17T17:25:20.000Z",
+      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "outlets": 2,
+      "outletNames": [
+        "International Business Times Singapore",
+        "International Business Times, Singapore Edition"
+      ],
+      "score": 2.14
+    },
+    {
       "id": "2f33be5de347",
       "cat": "flights",
       "kind": "news",
@@ -1179,6 +1255,7 @@
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbjhWN2pKa3ZCc2JLUGtHT3oxWnREekFac3BBTWlsTEpWMW80NnJRVnRjSUswZnBRQ0lETFd3Z3BXMjNpT0I5dGdSUTM2dFZXdTJuRk0ydnRON2l1dHF1a09pUXp2LXdrYU5Ob2x6LUtrdkRqRkc2T0xyMk5uTWNQQll3?oc=5",
       "source": "FedScoop",
       "publishedAt": "2026-11-16T22:34:39.000Z",
+      "latestAt": "2026-11-16T22:34:39.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 2,
       "outletNames": [
@@ -1195,6 +1272,7 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMUdtOWppRUF4RGN4cm10aU1PRTZZaWRVVGpoUFJjRFpFeW9BV3hEYm9zV0NMQ0djNDhIY2V6Mm9Zb3pWOXp0cHVjVUljQUdxeFhqdnhJRDRHNklJb0tWOWRoc1dNc1VoLW80Rm1tVl9vaHBjTTBFTGM1T1pIUzVUUW9JN1Q2Vm9aMGRaamdNalRnUQ?oc=5",
       "source": "The Independent",
       "publishedAt": "2026-11-16T21:53:00.000Z",
+      "latestAt": "2026-11-16T21:53:00.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 2,
       "outletNames": [
@@ -1211,6 +1289,7 @@
       "url": "https://www.outlookindia.com/international/jpmorgan-chase-outage-us-bank-services-recover-nationwide-technical-disruption-zelle-payments",
       "source": "Outlook India",
       "publishedAt": "2026-11-17T01:01:00.000Z",
+      "latestAt": "2026-11-17T01:01:00.000Z",
       "firstSeenAt": "2026-11-17T18:05:50.108Z",
       "outlets": 2,
       "outletNames": [
@@ -1227,6 +1306,7 @@
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaVNzdUlMVHpGTmpXaTNxVTVfVXpXQTg3YXFwSVNKOUJQY0hJUkx2TkNCcGtPb3pCazY0dWtSVUZqbHhwa1RaaEh5V1F2MGRqcFFDZ3NGSldKcl9oOThMNWpVcm1BV1lhekxFbXFkM0JHaHdlbTg4TFhqVzdUVTZJTklvaFkxd1BaYkJnSEVMVUo1aEJVVFhnTE9TWEtPZ9IBowFBVV95cUxNdzZ0R2tpd3ZFOG9wMjBwNDFzb1p0QmFXTW56VTktdkFRVU12QWZWZUVORVo3ZEpEcU1jZm1HNExpVmUzT2VsVElaWDd3T2JUWnF1WUlCRVdZeW1tblFMa1oxeUdBSldXZmZHNTR1RDdKeXBDWFA2TS01eTdSclZzcnh0aUxhMGJNOVNsTmRwbEdVd25Pd0llbno5Q1NvZUZvOVJj?oc=5",
       "source": "Forex Factory",
       "publishedAt": "2026-11-17T17:05:27.000Z",
+      "latestAt": "2026-11-17T18:40:16.000Z",
       "firstSeenAt": "2026-11-17T18:45:37.991Z",
       "outlets": 2,
       "outletNames": [
@@ -1243,6 +1323,7 @@
       "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxQVXRSVGVuYkFkbVU3UTJLR0lfZnJUSWNwcHI0RU5pUURqblRFelpjRTJjTjFLRlpfUVBZREMyTVhtV0RYeFpsaC1WZWdSZUxLUHNLY0RHbDRqWTlKSkN4TzhMSHEtZGhuNTZVZWpCV0xhOGZCWUhTOXd5VzlTd2x6S0d1dnQ3TFZFVWw5eld5ZEhlQkdISUhaT2Q0VXNUaG03SWJRbjZOeHJyQ0VOZFoxYzdjSmJxUDhQQTVna0Fxc1hyR0JyU0RxOFhsTUt2TmRLbXZBbHYwaFhLTkI4eVpDOFFfUk1aX1ozRDY3RE02dlRQN3owUkxrSG1qcllLZTRWQ0l6cEVsenQ0c3QtTHZBVV95SkFsakRVWE12Ug?oc=5",
       "source": "WLOS",
       "publishedAt": "2026-11-17T03:07:54.000Z",
+      "latestAt": "2026-11-17T06:48:37.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 2,
       "outletNames": [
@@ -1259,6 +1340,7 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQc2Vwemc4anBfSGdYWXFrMWNUQUhNUmlMcEZtU20tdTUxTXVKdTN2VnJwc29sa0taNU5ETHBrSzh6azU4WjNOZUQtUy02UUY4THYwTkpuMndhamdWUFg5MlNBaS13U2tOdXFRNVdjOWgyNDhpM19waGNvRFZZUmpvVGJ4bFZyWTRTN2p3?oc=5",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T15:20:52.000Z",
+      "latestAt": "2026-11-17T15:20:52.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
       "outlets": 2,
       "outletNames": [
@@ -1268,6 +1350,24 @@
       "score": 1.89
     },
     {
+      "id": "339c02e7c1ed",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Gmail, Apple Pay and iCloud hit by outage reports: What’s happening today?",
+      "url": "https://www.oregonlive.com/nation/2026/11/gmail-apple-pay-and-icloud-hit-by-outage-reports-whats-happening-today.html",
+      "source": "OregonLive.com",
+      "publishedAt": "2026-11-17T02:58:00.000Z",
+      "latestAt": "2026-11-17T05:58:00.000Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 3,
+      "outletNames": [
+        "OregonLive.com",
+        "NJ.com",
+        "mlive"
+      ],
+      "score": 1.88
+    },
+    {
       "id": "91ba416bdff4",
       "cat": "hacks",
       "kind": "news",
@@ -1275,6 +1375,7 @@
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxORXluOFZmNHZveDdnU1J2Q3VIZzZzZ2wySWR4bGJ3Y0RyWERLekdJbDlLRlFzSnNCMFlHYlNjbFVqcklveFo1dVVVVUpzN0J5bG8tZGtZbDJUZnp5Vzc2ckZlY19ZcW1WdXJMMkMxbEhVelNYYjVTOEpkTXJ4V3M3aUtoWUkwc2YwUmhWdnowbGJNcDFkMjduZUVsSG9vSlBIbjJzd0R0emVuM2lrUFhJQTU2YkdpMUl0dUE?oc=5",
       "source": "TechCrunch",
       "publishedAt": "2026-11-16T19:53:00.000Z",
+      "latestAt": "2026-11-16T19:53:00.000Z",
       "firstSeenAt": "2026-11-17T12:15:44.284Z",
       "outlets": 3,
       "outletNames": [
@@ -1292,6 +1393,7 @@
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNd2lRLUUwd01jLVFwXy1NZlB4SHZRNU9EZjJGdWFBanBTOTFkNVc3VzctYnNzUkFtOU1jLXhiSVVKY3A0M0lidXNDS2FFbEp3azJSM0tjVGFwaE96Z2M4eUZPOWZqWFN3c1JvMFpCVzhCNFZUN0xuQ3hPd1g2aUhOcnlnTTh2T2xBUjZKdVZ3?oc=5",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T01:23:20.000Z",
+      "latestAt": "2026-11-17T01:27:11.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 2,
       "outletNames": [
@@ -1308,6 +1410,7 @@
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOXzg4MHhtcUpkLWF0TjA0dWZYMjZaRWFMLXR2YVBPRjNmZUpxZ21Rei1abkFhYUJKTHd6WUVPN1ZJNWFzSjhYbUVmOUJGWnlVQzlNc0RnUjNxYzJHcnEwaVRUQ0V4TnhWRkRSVXFoVktpNEJycXlYWWk4QkNhRkJvNTcybU5vZC1Gamc?oc=5",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T01:15:00.000Z",
+      "latestAt": "2026-11-17T01:15:00.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 2,
       "outletNames": [
@@ -1324,6 +1427,7 @@
       "url": "https://www.xda-developers.com/us-highly-classfied-national-security-communications-network-reportedly-down-right-now/",
       "source": "XDA Developers",
       "publishedAt": "2026-11-16T22:38:00.000Z",
+      "latestAt": "2026-11-17T16:10:00.000Z",
       "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 2,
       "outletNames": [
@@ -1340,6 +1444,7 @@
       "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNWG11QXdtN0NiTHNqdHNaMkJkZkRkTmswQm5MSEtTN3FMYmhaWlNSSEFSM1J3T19lMFhzOHlaYkJ0UkdPSTBQeE8yTGdQVGVXYnFGN1RmWThOR1FEZzdUaFd6Ui1BXzZ0T2lRU1liTHhZcGt0UTJIczE5UWZDSU96c1BSU3hQUTdEUFdiSzFSbGtzZkprdWNraUU2Y2d1UThrWVhyY3ptSmNnTlNzbjRxbVBWbE82MjJRSUtEaGJwajgzbVRGQkI4RU1ubnVDbEZVbFBzUmtRQmZoVS1IVU0xUUpzZjlnRE4xblBmTGxhZy1nTWtGTWdVZVdraEM0bEd00gGGAkFVX3lxTE1tdkJwdWs1QjRYMlJ4MEJEUXFmVEpjVWZoZERjZXlaakh0VUdNYmdrQ083Yl9mX0VLLTVfNUd0bEg1ZmtRSl9YVzNKVHFpQXRwT3Zpc1Yxbjk5aENtZVlvanlfZ3E1MTN6anVNM2F4YTFGb0lfNml3R0NobFNNRHRXZHJaaGVzTHl6aEdLS0Vvak9pYm9seVZrYkFYelROV2t0Vzlyb2xvTG5YSVBwVFJXYkVoMUgzWnEzcWJJNzgwSXMzVU9ZMDI2RjNmT1FwZERZdkFGMUl2bFhiSmh5ZExCdnd2dnZaUWtUWHBYOEZnbkJBQ19DMDNHbndReXdJcXd1dk5oWlE?oc=5",
       "source": "The Times of India",
       "publishedAt": "2026-11-16T21:01:16.000Z",
+      "latestAt": "2026-11-17T08:35:07.000Z",
       "firstSeenAt": "2026-11-17T17:47:06.855Z",
       "outlets": 2,
       "outletNames": [
@@ -1356,6 +1461,7 @@
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPX2NvUkJ3eWdqN00zaEFLV1JLMEQzYXkzUERCLVRjc0JoYkxLOVRFcmxBUDlpUE9DZUJFaHhrZHRMUW14Rm45aWprMGhZRG82ZWlmZS1STm1EWE5maTZuaE5yRGpHYV9xTmRiR2VOVVdlTloxcUdGdDBZWC1JVXpKZlJhbVJMc3IzRF8zbUJ5dnZkVVp2dlY4MlZ1RmVZeHNhUTNlakhTNUh6a0tMNXJwQ1NCOFdsZGtsQTRNaDQ5QlF5Mm9CR0hPSHZaQkt0bDEySjVJazYxUmxyOXJlbm5BQnZCdFNrZw?oc=5",
       "source": "MLQ.ai",
       "publishedAt": "2026-11-17T08:37:30.000Z",
+      "latestAt": "2026-11-17T08:40:47.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 2,
       "outletNames": [
@@ -1372,6 +1478,7 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNm5NUlJzWkRRaXF6UXRFV1dGdEgwSzl3cTZMQUFfb2FpNnVqVmNBX1RlVV82NmxLcWhHNzFuR0hBVGFOWVdvNlVYcElRNnFuSDgtYzZ2WEh5YzBFeUhTVGdUVEdzRVo5VlNlMUxVR3FkcFExYWpHUEo2YnV5MFFfUlA3REFQVjgyVVA5eExWWGhOdjNL?oc=5",
       "source": "Travel Pulse",
       "publishedAt": "2026-11-17T13:15:00.000Z",
+      "latestAt": "2026-11-17T18:44:58.000Z",
       "firstSeenAt": "2026-11-17T18:55:24.881Z",
       "outlets": 2,
       "outletNames": [
@@ -1388,6 +1495,7 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPR3daOEIxaW95UzNBYUx0UkdKbkx0a1JmQ05KaUJFUi1hVEpRNmQzSUdRRkJWMXpnMUxhSWNnQURNUXp0aXlSTGJ6Tm56SGRkRG1YRkxaWkw3OUFWdG9wY2MtU28wQU1RLXJHMTE3UlVIN2NXeHg3RTV2MXNpeFRTNUdRSmVIdTFlb1lJam1fT2dGZHFmRjJmNWpJM3Y0Tkk?oc=5",
       "source": "Yahoo",
       "publishedAt": "2026-11-16T23:49:46.000Z",
+      "latestAt": "2026-11-16T23:49:46.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 2,
       "outletNames": [
@@ -1404,6 +1512,7 @@
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPTlg5RjFnN293bmgxNVpCMjJvSTJueXdxNnBtM1JNY2k1Q1Z1RDlKN25wU3lsd2JfeVBVWmc0cHlYZXV0eVFNY0JJRGlhT0I4NndYb2hMWjE2WFRnMWFiS3ozLTVPVTg0dFZ2MTAwX01IbG9NdmV5U0ZTVk9lWUxWSVlHbUJDSDJWLXI1RHcwdTNod2ZlblFULXhfSFRVMWZFUGlPS2U1NGh5bmFDb2kwdEpGa3hUSjhUT1BsWUhncXQ2UDZ5ckZPVVdpb2w1Y2hwemU0WmQ5dVR1TnN5SENuYjRabTPSAfgBQVVfeXFMTjFJRzcyZkRJY1MyQ0tNR25leVR4M1lKelBDOFo0VURiaHVZN21JbmE0RFMtZlJrNmZMY056WFBQckd4b3lTeHNkamRRVkw4bHFINTFRcWZvVXllZUlHQ0dHSnF3NnNHb0xXcWZIN1VwalFzY2F4ZVNCYVMzNkJiRDg0cEVfLVVmajR3UENHbHNZV3V0TVJFaFVZZktQZDllX1hGUWoxc0hWWXJRX1FMRDJxUHNyZXhUdVRQd21lZUlfYWl6VmljUXFIVzUxVVpvSHdlMXZzT2QweV9aM2tnOW9VT2xJSXZlYjZfOG83M3paa2o0NGwyc28?oc=5",
       "source": "WSB-TV",
       "publishedAt": "2026-11-16T22:32:50.000Z",
+      "latestAt": "2026-11-16T23:34:55.000Z",
       "firstSeenAt": "2026-11-17T06:35:21.637Z",
       "outlets": 2,
       "outletNames": [
@@ -1420,6 +1529,7 @@
       "url": "https://www.yahoo.com/news/world/articles/cnn-zoom-ikea-among-178-154723905.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T07:47:00.000Z",
+      "latestAt": "2026-11-17T15:41:03.000Z",
       "firstSeenAt": "2026-11-17T16:16:49.463Z",
       "outlets": 2,
       "outletNames": [
@@ -1436,6 +1546,7 @@
       "url": "https://finance.yahoo.com/markets/options/articles/pulls-250-000-401-k-143153711.html",
       "source": "Yahoo Finance",
       "publishedAt": "2026-11-17T06:31:00.000Z",
+      "latestAt": "2026-11-17T14:31:00.000Z",
       "firstSeenAt": "2026-11-17T14:56:43.267Z",
       "outlets": 2,
       "outletNames": [
@@ -1452,6 +1563,7 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNQmlkbjlvVF9OcG9qOGlsZGZIejQyQW9SemRpblFkVjE4YlVqY2lIVHdaMFBnenNjWTJzN0w3U0lmaEZqZ2xocENnd3ZsNG92LUNGMWlQcjdlRHRlbzB3bjAzZXVNVjM0SjhlU004WEVqRVEzb19nOENuNjRXN3lFMUpiTFg2NXZUaFJuTDBYbzZVTGZPeE9Wb3kzRFVEOHNHbWlyM01BdGZ6TF9zYVdYczZjTEVzVVJ2QVIwcDFCdS0tMFBZU2puZl9VejlzdXdUUnlDN9IB2gFBVV95cUxNYTNZX1pVUjdwb0w2WGtPejRNNlVwb1h6NWx6b05aNy1idzJUdHk5NFdQeFE0YmZ5T2lBRkhCTXhJSU9jV01lbjJUQURpTmh5MWhvVG5LaE5DMjgwQ2VlbFBhNzBiTkg4Z3pFQWM2dUVoTVZRNjhKT3k3NUt0N1FfX3RBbnFSQUR1N3ltS1pqdHpRTFhBQVZrVGxRR3cwV2xVcElWbDlOZGdCWTQxNHljOENSVkFYV1VxRjA0MGV2MFJwLWx1YjNPUVpGYTBQWG40QzhYTWZBdENWdw?oc=5",
       "source": "Malay Mail",
       "publishedAt": "2026-11-17T01:46:48.000Z",
+      "latestAt": "2026-11-17T06:05:00.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 2,
       "outletNames": [
@@ -1468,6 +1580,7 @@
       "url": "https://www.nbcnewyork.com/news/national-international/apple-gmail-marriott-and-more-services-down-in-latest-wave-of-widespread-outages/6573469/",
       "source": "NBC New York",
       "publishedAt": "2026-11-17T10:29:00.000Z",
+      "latestAt": "2026-11-17T18:29:52.000Z",
       "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 2,
       "outletNames": [
@@ -1484,6 +1597,7 @@
       "url": "https://www.yahoo.com/news/articles/georgia-county-announces-target-cyberattack-171451675.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T09:14:00.000Z",
+      "latestAt": "2026-11-17T17:14:51.000Z",
       "firstSeenAt": "2026-11-17T17:47:06.855Z",
       "outlets": 2,
       "outletNames": [
@@ -1500,6 +1614,7 @@
       "url": "https://www.yahoo.com/news/videos/banking-outage-rattles-u-133020908.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T05:30:00.000Z",
+      "latestAt": "2026-11-17T13:30:20.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 2,
       "outletNames": [
@@ -1516,6 +1631,7 @@
       "url": "https://www.msn.com/en-us/news/other/mullin-flew-to-football-game-less-than-24-hours-after-faa-ground-stop/ar-AA2hDrLS",
       "source": "USA TODAY on MSN",
       "publishedAt": "2026-11-17T09:48:10.000Z",
+      "latestAt": "2026-11-17T17:48:00.000Z",
       "firstSeenAt": "2026-11-17T18:45:37.991Z",
       "outlets": 2,
       "outletNames": [
@@ -1532,6 +1648,7 @@
       "url": "https://www.pv-magazine.com/2026/11/17/chilean-pv-plant-hit-by-cyberattack-remains-disconnected/",
       "source": "pv magazine International",
       "publishedAt": "2026-11-17T01:58:00.000Z",
+      "latestAt": "2026-11-17T01:58:00.000Z",
       "firstSeenAt": "2026-11-17T12:45:49.157Z",
       "outlets": 2,
       "outletNames": [
@@ -1548,6 +1665,7 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdm9TZHEwdGdreFFXRGM1aGRqMVU0TTZBN29fd015ZFl6RjR4ZHg2QnB3WnVKZm4wZzZDLUFWR0YyX0hsOHJ6TEMxTG1JaW1WMXppcG5YQXBaQTdzcTJtNVJnSXd1WnJXd0lZci14bFhHR09ueXVMSkdlNjYtNFpoY0ROS1UwN1VQZ1AzUlMzMWZwQQ?oc=5",
       "source": "WMTW",
       "publishedAt": "2026-11-16T22:48:00.000Z",
+      "latestAt": "2026-11-16T22:48:00.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 2,
       "outletNames": [
@@ -1564,6 +1682,7 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQS2FnbEZoTlVUMnZwTnp5dUtvVTV5OU5ESXRFOTFwQzRYT1k3NWc5aXZ5bTkyWFFnY2oyaE1ZNXJXWFRwd3Z4ZzFkY3dXWC1GV2ZrOTVNbXNGcjQ2Nk5BYVpvNk5weUVSTkpYbEdMak5ZOHQ0QjFkd2ZLV3A1aW9NSGVzOU5qa0V4ckR6MQ?oc=5",
       "source": "Mezha.net",
       "publishedAt": "2026-11-16T22:44:50.000Z",
+      "latestAt": "2026-11-17T05:05:47.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 2,
       "outletNames": [
@@ -1580,6 +1699,7 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOUEdWZFVzanVISEY5WDU3Ql9ZTC1DV0E5a3pYS3d4Z0hQWUdmMmFubVVrOTEtV21kakRJeXZubWpGYXk2NV81NFhweXJJMENsYVJtVV9BeVpVcE96R01yRVlIYkRkcUhVSkJ4SWoxeTV3ajF4MF84cWlwbDAwc09uTXlKTUNPWUZuRWpRcEpYaGhLLTROOE4tczZoNnBGN2YtUGkw0gHfAUFVX3lxTFA2UlFPaXpuUFN0R29UODZvQUpZUS1xVjNMdTNQdGViMDl3OXBGOEtQWnotV0t0TldocHROeG15MnpHc2RWcDBRdjhiNGtXakxzV201dEwtSFprTm5iaWZMN2Ewbmt5cFJfZmw4Smh2cm5ZU0JSSXdFQ2p3Sm9tV3VWX0ZMRHljZHlGTDNnTzNnNm5qLS1zZklmTjlkQjdCa011ZjhtbkpnZGNVc2VjM256bFMyTlVNZGhmaHlwSU1OVVZPTTA1eHMzRVJXbFFfaS12YjlsLWEyekZEdnpxWVE?oc=5",
       "source": "Coinpedia",
       "publishedAt": "2026-11-17T03:48:47.000Z",
+      "latestAt": "2026-11-17T15:54:15.000Z",
       "firstSeenAt": "2026-11-17T16:16:49.463Z",
       "outlets": 2,
       "outletNames": [
@@ -1596,6 +1716,7 @@
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOenpvMTVKUWFiNC1lY2s4OGtVTVdLbzdOLV9kSHJtTkRnVllMbno0QmFIYlZ4NFltQmVVN1lhNVplWGZreFN2N0F1dWF0Sm1qeW1sYlU1Sm5VdFotb1V0cVdfMERraVpVQkFwLTNBR1VjVjBvSVFuWHFvX3ZidG45VUYwVUJUeUNST2c?oc=5",
       "source": "Decrypt",
       "publishedAt": "2026-11-16T21:16:03.000Z",
+      "latestAt": "2026-11-16T21:16:03.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 2,
       "outletNames": [
@@ -1612,6 +1733,7 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUGFORUtfMDVoQWtWR1p0eFQzUzk5ZVFDT1k3YjNJd0hSbWNBQjdxOGg3R2lERHdzVFBmS3I0X3dsMVQwckN2SmhiYndJZjV5cGJ6eXpVN1VlUklDLXNJa0JMSFh6aVAyWW41eUxYRXNtUXNLcEZOSkJnMlN0MkF3dGxrMGhJNDJsSGdkbThiRlVZX0MtcENjdWRJUjJFYXdabnRnUk1BeVRzaVRSSkY1OWN0TXVMdVl2MmVJWjI5bw?oc=5",
       "source": "Yahoo Finance",
       "publishedAt": "2026-11-16T20:54:54.000Z",
+      "latestAt": "2026-11-17T10:34:36.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 2,
       "outletNames": [
@@ -1621,22 +1743,6 @@
       "score": 1.56
     },
     {
-      "id": "339c02e7c1ed",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Gmail, Apple Pay and iCloud hit by outage reports: What’s happening today?",
-      "url": "https://www.oregonlive.com/nation/2026/11/gmail-apple-pay-and-icloud-hit-by-outage-reports-whats-happening-today.html",
-      "source": "OregonLive.com",
-      "publishedAt": "2026-11-17T02:58:00.000Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
-      "outlets": 2,
-      "outletNames": [
-        "OregonLive.com",
-        "NJ.com"
-      ],
-      "score": 1.46
-    },
-    {
       "id": "a364888d95be",
       "cat": "hacks",
       "kind": "news",
@@ -1644,6 +1750,7 @@
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8ycEhWQ1E0RjhndDBRQy11b0tuTkF6RkJnRHlRZWhJOHpURWVNZVVROGFQbTZTUnZGRzRqUGkwOWx0a0RmVEZxbzBGUHJiSXlFQy1hMmdnSFdCVEpsMDg0OVBUUTlKbUN5V3haNGJ3ZUlZQk0?oc=5",
       "source": "Mashable",
       "publishedAt": "2026-11-16T21:29:08.000Z",
+      "latestAt": "2026-11-16T21:29:08.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 2,
       "outletNames": [
@@ -1660,25 +1767,11 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNenctUkhhbUpTeXEyT0tJZUZ6SXcwZ21QQXd5T0RDb3BkbTM3M0hEdnBINmNVbU1XcU8zbG5VZ3V4QTVCRm95Z25iRHB3TVY1VHNvVV93eUplakJnY2dTTUo2MThOQVgtUFd0NjQ3cnlLRFVLd2hybTBuSFMxSEFkc2NlamxxN1l5Tm00M1dCWDBrdEZ5UHB4N3l3cDNDNm1mRTk4?oc=5",
       "source": "The Independent",
       "publishedAt": "2026-11-17T19:05:00.000Z",
+      "latestAt": "2026-11-17T19:05:00.000Z",
       "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 1,
       "outletNames": [
         "The Independent"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "95fc0522f486",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
-      "source": "CyberSecurityNews",
-      "publishedAt": "2026-11-17T18:41:15.000Z",
-      "firstSeenAt": "2026-11-17T18:45:37.991Z",
-      "outlets": 1,
-      "outletNames": [
-        "CyberSecurityNews"
       ],
       "score": 1.4
     },
@@ -1690,6 +1783,7 @@
       "url": "https://www.msn.com/en-za/news/other/tens-of-millions-of-red-crabs-swarm-across-australias-christmas-island-in-their-spectacular-annual-migration/vi-AA2hCZO1",
       "source": "DW South Africa on MSN",
       "publishedAt": "2026-11-17T07:47:17.000Z",
+      "latestAt": "2026-11-17T07:47:17.000Z",
       "firstSeenAt": "2026-11-17T16:16:49.463Z",
       "outlets": 1,
       "outletNames": [
@@ -1705,6 +1799,7 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWEdRNVVWSTJPckM1dEtPc1lhQW1HeUxvZUVJODZlSENtQXpHSWNjdnFFNERqcVRJYlFIVlhLbGd2amlhemQteF9kbjJFTHctaDFPelR4Q1ZCdDNsQlZRaVozS0VzdWU1WkNlclE4QVdhcWdndTJWaC1Ec3B3R09aalhYZjhiWGVKTll3Q3hOdmUwRzA4VHowY1Zn?oc=5",
       "source": "Refindustry",
       "publishedAt": "2026-11-16T23:45:00.000Z",
+      "latestAt": "2026-11-16T23:45:00.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 1,
       "outletNames": [
@@ -1720,6 +1815,7 @@
       "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQNzZmaVh2Y0lCaGtBZC04SENCZ0xtYW1IWi1zb2Z6UEJjVk1HZGIyOVVESmJMMFhwdG1TbWUxNXloNk1tWFZaTl9UakNkSUFZWHlFbHZ4c1NYNENmM1B3cWlJTW9FNnBMejZOeHRSMi1qT2w3MlJtZXVQZEkxTTU0aFB1WDdyRjdIcDZmX3dsV0pzVHVGS0hvclJLZGNUMHlSUWVvNS1tT3gyQUJHalNYbUVwZ1c2dnJWN2FFbWNQeUxnRWhGRkxtWGVrU3BSM05IdlZ1YWZOZmd6VU5XVUpNbjAyVWZPVHlnaFc0aF93b2EyWTk4SlJkNThrNGZuNzI4YWlTbzZvV2U0LWlUOEp1S3NXQ3h4RUpjaW5v0gGgAkFVX3lxTE9WYTBIOHY2cFJPMkY2VHJfa0RiQWpPTUtzYmdMejVQdDNGYW9IV2Z3ZU15LTRHbDdKMGh5Zmd1VHJSamNyYU4tMnpxcjZRUl82OVI0ZGlJdHlPbmlZRnZIbnRTblRYd3NtQWJGajRLR05fcEhzMXpUZnhXRVBpU1dPZ3ZuWE9GZmIzTmRCY0pmZEt2OU43SnVqUmp0VWh1SHJGQWpZdzNuQ3gyMW5MeElMZnNoWnZFZ2p2a0Z3QlN1VlU2TjV3YzZtb25yNGl5T3hmVElhbENzMDNXVy1nd1hFZVI1N21TYmpCeVhvOUU3R25BQmwwZUVzVGVqcGFjNTdHQTdnZ1puOG5lNEVhTk43WjdTNktkcDZISmFxTnhMNw?oc=5",
       "source": "News24",
       "publishedAt": "2026-11-16T23:37:27.000Z",
+      "latestAt": "2026-11-16T23:37:27.000Z",
       "firstSeenAt": "2026-11-17T14:46:34.896Z",
       "outlets": 1,
       "outletNames": [
@@ -1735,6 +1831,7 @@
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZzQyQ2VkQUpEcmpFMUFzX0ppRVdTQjZsQURaN1U3SF9GcHpCS1hCV0d1UUhOMEJ0YnM0cVBTVGFZdk1Pb1Eyb2lVZ3B2dHNmeFpTTUtsWE1vZElib0cyR0YweDhESkU0ZmE1Mmc4RDJfRXg4U1pIVmZOTjktLWpFd1kteFRVc1h1T1AtbnpYTWtRT2VaeGhv?oc=5",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T19:00:00.000Z",
+      "latestAt": "2026-11-17T19:00:00.000Z",
       "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 1,
       "outletNames": [
@@ -1750,6 +1847,7 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSzZka0pZZlFIRlJmeTFQbjVJclhxbzdqbndMWDhDMEFxQURqZ0dac1JWZ2RkTUZfMDI2dFRzc1ZSdjRHcTFlUF8yZDlHMnp0VmwxWEptbnNJSng5UUVha0xHRjFraTNkbWt5aGN5LWlPNXNhQ2FOUWJhQ3E3aHNURUtPY0dFbk1XeGcxY25aMjRWS1dv?oc=5",
       "source": "KSDK",
       "publishedAt": "2026-11-17T16:03:51.000Z",
+      "latestAt": "2026-11-17T16:03:51.000Z",
       "firstSeenAt": "2026-11-17T16:16:49.463Z",
       "outlets": 1,
       "outletNames": [
@@ -1765,6 +1863,7 @@
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE51RnJ3RTBBT2czN01kdVI1Z0U0cm9zZFFYVFJqWU9ncjF4YU1LSUxtMHFfLTF5Qm1KeFdHXzFURkozUVdpTDJ3c2lWYUFhUXZ4cUNwUQ?oc=5",
       "source": "News On Japan",
       "publishedAt": "2026-11-17T15:19:35.000Z",
+      "latestAt": "2026-11-17T15:19:35.000Z",
       "firstSeenAt": "2026-11-17T15:31:45.442Z",
       "outlets": 1,
       "outletNames": [
@@ -1780,6 +1879,7 @@
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5NUWRTSE9vNEhMN3BVZnpEYWo5UVRqbTBwVVhWWGVMN0FDd2x2SjRGcUxuRXUzV2hEdUwycnpva3NkNkRIR0UwclhVTThZeWdZNWY0Mkp6SUVFYmNKSldyazMtSWFUNTNqZEJTMGMxMVpYcV9sU3NxcENNMlFlZw?oc=5",
       "source": "East Greenwich News",
       "publishedAt": "2026-11-17T14:04:41.000Z",
+      "latestAt": "2026-11-17T14:04:41.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 1,
       "outletNames": [
@@ -1795,6 +1895,7 @@
       "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxObVRmbld3cDNBVG1Fakl5LUZKUFVsckMtbFBSX0g4d2htbnRqcTU5VVhydTg0LVl0a0tUbDZxSEdQZ3R2aXpCM3RjZGNRXzJqZm11eUk5T3FmYjZWY2dBQi1NME9CV0x6dGNDbVNnY21MSFI5aXdSVDdCOWJya0ViZHBWR1k0d1l1Y0poZjkyUDBoWEYxZzRSdThvczJoa1RDVUUxM0hqemFSdHp2R19sdVlkWnRpNE5tTjJiSzl4MXp6eWEtSXJHS3dvWUpndDRqcU9RTmhhWTBPdXlXZzZkdVJZeDUwV0tRZjl1UkhyWnpPdTk2bGFZNk1SRGpMVWhnc2Q5ZVdIbGVnTkN2c0dIMkpjdkNUN3pmUTRId082Xy11OG5aeTVHVU5HM2lkUlg4d2xaTXlCQ2hIcXVCdHo4?oc=5",
       "source": "GuruFocus",
       "publishedAt": "2026-11-17T18:09:06.000Z",
+      "latestAt": "2026-11-17T18:09:06.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
       "outlets": 1,
       "outletNames": [
@@ -1810,6 +1911,7 @@
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMmtpTFlNc1F5c09XYm1RMmpTUVh3RWlBNFVqWU1pZ2luNm5QTmFhLW9ZTm1IOVk0cGU1Ni1FNWctV0s5RGs2OVVFQ1NWV0VramJ3eXo2Tm5iMWpTRmI5bzhSNGJlbzllVC02Y0VsajhUS1Z4VXZaWXloYlJlVExpWmJFOHJHY0Y1Z19USVc2bHJwM1JONDJWazVDXzBnTjBILXNqTEpFTHMteHNDNzA3QkpJdzhvdkE?oc=5",
       "source": "Farmers' Advance",
       "publishedAt": "2026-11-17T17:26:00.000Z",
+      "latestAt": "2026-11-17T17:26:00.000Z",
       "firstSeenAt": "2026-11-17T17:47:06.855Z",
       "outlets": 1,
       "outletNames": [
@@ -1825,6 +1927,7 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOU1U1OFNOOTZPVFAwS3VodTFiXzA1WEJnZk9GbjFWQjY0UElXNnlsUy1HczBZSDc5eVAxczdiZzVldjltT3VMVlhBY1pWSER4VldINU5CVS1pZTlFaTQ3NXdoVkpXTHQ0U1ppV19IenViVThvMXFiaHF4ZnFaeTZVSkRnRUl3NnVDQWRoN1lGWWppdw?oc=5",
       "source": "Breakingthenews.net",
       "publishedAt": "2026-11-17T15:45:00.000Z",
+      "latestAt": "2026-11-17T15:45:00.000Z",
       "firstSeenAt": "2026-11-17T16:16:49.463Z",
       "outlets": 1,
       "outletNames": [
@@ -1840,6 +1943,7 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdWItZzd3a0IzRzlGbFdZZzBQYUljcDV5dHZienFlUk04dHFRTjJXT1RfYVc5ZlFRZjNfR3VMQUxiMXBObTJkNEpiZjhpQUJHdHVOc05zMkxpUmNxX0F3SFBHZ2J1c1hEdDhEZmFKTWx5eTBNaWZYd1diTWREZXVWamNoNWgyM3o2VlFqaGtHV3NhNzZORWJjeUhTTzkxa2xwaUhQZmNkNA?oc=5",
       "source": "The Malaysian Reserve",
       "publishedAt": "2026-11-17T11:43:41.000Z",
+      "latestAt": "2026-11-17T11:43:41.000Z",
       "firstSeenAt": "2026-11-17T13:31:03.951Z",
       "outlets": 1,
       "outletNames": [
@@ -1855,6 +1959,7 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeFNtMTdJa2M4UGJIMjg5el9GM3dsS21HblJ0X0NiSnA2QkF1TWVlaktxYkMyelpSVnJHY3dvaG56NDlMQVQ5STZHWk5SaXBCSi05WEthZzQ0N2hSZnJYNXFmTnRMQWhERTdMVENtUTRpcFV0UkJwY0sxUHA1ODF6dm1XNFlMUEUzNGJrMkxfdEFac2FzeTBqclJIVTFlRHZ2MWUzSzBn0gGuAUFVX3lxTE01bnZOSlVKbjY1NW9yNzcyNG03WGtWT3NUci1UN1FhbnI2RkIxRTRJY3FoVThnT21BTkNzdkpIU1BSdnBnanhiY1N5OHZ6MkdMZEVuWDM0SGhsSURIallFc1pyRjlKaXhWbnB4TDlWTm5mSDVJbnI2TWE0bmZMdEo1dmI3TXhycXlPRjFqQnl4SWs1cDQtY3ctSDdFWlhTSnRNTHk1cTc0N3dXdnFWUQ?oc=5",
       "source": "NBC Bay Area",
       "publishedAt": "2026-11-17T07:08:50.000Z",
+      "latestAt": "2026-11-17T08:04:25.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 1,
       "outletNames": [
@@ -1872,6 +1977,7 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNQXpzeFF4Uk1vT0tpdWZRa3FIei1qRnJ1UkxzMUdzSGxqTjdIbzBRNUVEaHNaMGNIcWhOT2p2bWlWeldZYnFjb3U1Q090ekFwek11MkZIcE02cW42eEZ0SmF3RW5DQWJDVi04NDhTdzF4VUUwekhVdTNqM1ZfeUFsZEQ5dm03bG9SZWdJZGg2QmZodw?oc=5",
       "source": "The Watchers - Watching the world evolve and transform",
       "publishedAt": "2026-11-17T02:26:07.000Z",
+      "latestAt": "2026-11-17T02:26:07.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 1,
       "outletNames": [
@@ -1887,6 +1993,7 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQaVhqVVlwM3B1T1o4OUJJNnpZTVE5R3IzQmY4d2dFdFZucVZyT1Uyck1rdkQxRWV0VktBQks2VzcxbF9aQ2IyLWlmUXFadjhIdUtaS1BUV3BNTnI1eHQzZHJuR0E1UV93MGpzbWdPeDlId2xOZkwtb3V1ejJBb3JzcUNad0FjWDVQYjFRWHpjT093TlVNdGVBVDEwZlhicm1pbnZVYmh6QQ?oc=5",
       "source": "The Watchers - Watching the world evolve and transform",
       "publishedAt": "2026-11-17T02:22:07.000Z",
+      "latestAt": "2026-11-17T02:22:07.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 1,
       "outletNames": [
@@ -1902,6 +2009,7 @@
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNc00yU3dRNFg5U0ZIdF9SUjlQVHN5UC1jSThJT0ZNS1A3SXhETjFXX3hna0p0Nnh4TDhNRjc3eFZycTFvWC1PdzFoZlB5Rzl5SFhHeUtpbkNHZzFtY2l3OXdGdDBGOGNac29VaUZfRFZwbkEwejlTRFMtUC1kakR3RGtLaTVpQm9WMEFXWWtZenpwLXFzNjVUcF83TU5FcXJSc3I1TzR5TkhtSzVSWXQ3dG9jbEprMnlPNWx1YTEyY1hZc3kzSDA2WGR0VGVzTVJqekE?oc=5",
       "source": "open.kg",
       "publishedAt": "2026-11-17T04:22:06.000Z",
+      "latestAt": "2026-11-17T04:22:06.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 1,
       "outletNames": [
@@ -1917,6 +2025,7 @@
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNRkZNUnhiZU5xWlhCalYyMTA1SWkxR3VZMFVEX185Sy1vRHlvakhsTl9uRTUxRE5lVEswRWh1aFZyVzYzb0hTZ2NfeFdubHZ0dnJ4MTZOSW9XNnphQk9xU0F5aTRpQXZHUmJJWlVlWUZfcy1ERzZPTWZvb3QzTGZMcEJpR0lCOE93SzVXTWtFREhzZHRORDNMYl9henhlc1lFZlh5Umt0dXdVZkJqRi16MVItd0ZqM0lMTk9wM1BuNG5IZzItaU1RSDEtaUc3NTJRajd2QVlGM1pwM0QyX2gteDhlRUdSalJTYzlseHpVb0ZhSFJi0gH6AUFVX3lxTE5MZkEzMFdUd29ZRWdYcU55cjByYThCUHJaN1lzV3BGbE0xelhWNVV1bHAyRHlIVDNydWxwM0FGRExhTHdlcUdFcWI4OS16N29WYXl1ZlZ2MXZ2T1NwZUdsQlhIXzRmSWlNS3lnRlpVRjdtY3Jvd1JDZ3NESDRhbU00WEZJZ0VqQy1VQ25FQkFuUUJBYVJRZTJCa3pzcWpZV19vZnNOazRUNTl6QmRfWDB1N2M4Z0lzYjgzdlBvX1YzT25CamtMbDl0OVI2dGkzc0gxZXRoczlReXprZHRIX3dRZERaMVNpVW5FbHFVck5ZTXdMdkRFQmdXZEE?oc=5",
       "source": "7NEWS",
       "publishedAt": "2026-11-17T04:19:00.000Z",
+      "latestAt": "2026-11-17T04:19:00.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 1,
       "outletNames": [
@@ -1927,6 +2036,22 @@
       "quietReason": "headline mentions tornado"
     },
     {
+      "id": "90ad96fae449",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Aurora Alert: NOAA Reveals Where Northern Lights Could Be Visible This Week",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZzhQTlZma3VTVVR1bnYyMUhOZTZBUW1lRTlsTVF0NV8zVndzN2hNR2JmS09xeGR4eEdwZ0pudHV4NUZ4eTcxelRqNHZiRFpWT0ZkR3M3M1BzbUFnY2RPRTlrLUpDRlVjOXppY1hfSFA3NzJTOWxaeFUzMGVMbDdqMllqLTc?oc=5",
+      "source": "The Daily Galaxy",
+      "publishedAt": "2026-11-17T11:25:00.000Z",
+      "latestAt": "2026-11-17T11:25:00.000Z",
+      "firstSeenAt": "2026-11-17T19:21:36.686Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Daily Galaxy"
+      ],
+      "score": 0.87
+    },
+    {
       "id": "12ae11536682",
       "cat": "space",
       "kind": "news",
@@ -1934,6 +2059,7 @@
       "url": "https://www.msn.com/en-us/news/other/airplane-size-asteroid-2024-bj-flies-closer-than-the-moon-in-orbit-animation/vi-AA2hDF9W",
       "source": "Space on MSN",
       "publishedAt": "2026-11-17T10:50:00.000Z",
+      "latestAt": "2026-11-17T10:50:00.000Z",
       "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 1,
       "outletNames": [
@@ -1949,25 +2075,11 @@
       "url": "https://www.msn.com/en-us/news/other/x9-time-lapse-sun-unleashes-the-largest-solar-flare-since-2017/vi-AA2hDCA5",
       "source": "Space on MSN",
       "publishedAt": "2026-11-17T10:50:00.000Z",
+      "latestAt": "2026-11-17T10:50:00.000Z",
       "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 1,
       "outletNames": [
         "Space on MSN"
-      ],
-      "score": 0.86
-    },
-    {
-      "id": "486a9cd54266",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Cyprus Unveils First Home-Built Satellites and AI Space Weather Centre",
-      "url": "https://en.politis.com.cy/life/1070007/cyprus-unveils-first-home-built-satellites-and-ai-space-weather-centre",
-      "source": "en.politis.com.cy",
-      "publishedAt": "2026-11-17T05:06:00.000Z",
-      "firstSeenAt": "2026-11-17T13:15:57.758Z",
-      "outlets": 1,
-      "outletNames": [
-        "en.politis.com.cy"
       ],
       "score": 0.86
     },
@@ -1979,6 +2091,7 @@
       "url": "https://www.timesnownews.com/world/us/us-news/fbi-issues-cyber-warning-cyberattack-us-outage-microsoft-faa-nsa-banks-artex-ai-article-156526858",
       "source": "Times Now",
       "publishedAt": "2026-11-17T10:20:00.000Z",
+      "latestAt": "2026-11-17T10:20:00.000Z",
       "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 1,
       "outletNames": [
@@ -1994,6 +2107,7 @@
       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPcWhxU2hKYVF3WEpsVkNfMWotckl2X3R6Q3F5QmhtTmJvT0JwWTJrSFczakFLc1d2WW90cmxMZEtMbDNhX3ZZTnNnajVxX1BraEdkTmFsQnhKX0pacno1ZHVvaHFXc0ZCNkFBNXFzd051bTc4X1k1Q0F0VVJKRFpRcWJMS2puYTBVWmRWRXQ2ZzVGVnRKVngtQ0ZubUxrYW14ejhPdW40eWJjemlVSnFscXJ0MXFpbHJJdE9hTUVDUkJXTU5QbThOX3lRQWtTN0tOaUZfS05uZlY1bmx4TVAzYktNSlF0QmxIUDNJM3UySTVicWR4MGFaOTcyM3ZXY1VuR1ZYMXBCWlI?oc=5",
       "source": "El Cronista",
       "publishedAt": "2026-11-16T20:03:27.000Z",
+      "latestAt": "2026-11-16T20:03:27.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
       "outlets": 1,
       "outletNames": [
