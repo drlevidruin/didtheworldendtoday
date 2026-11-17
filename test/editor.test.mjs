@@ -797,7 +797,7 @@ test('editor: the official SDK is a dependency, and it builds a client without t
 
 const hoursBefore = (hours, minutes = 0, from = NOW) => new Date(Date.parse(from) - hours * 3600000 - minutes * 60000).toISOString();
 
-test('editor: hoursAgo is whole hours back from now, rounded down, from publishedAt, else firstSeenAt, else null, and never below zero', () => {
+test('editor: hoursAgo is whole hours back from now, rounded down, from the later of publishedAt and firstSeenAt, else null, and never below zero', () => {
   const now = Date.parse(NOW);
   assert.equal(hoursAgo({ publishedAt: hoursBefore(3) }, now), 3);
   assert.equal(hoursAgo({ publishedAt: hoursBefore(3, 59) }, now), 3, '3 hours 59 minutes is still 3');
@@ -811,8 +811,10 @@ test('editor: hoursAgo is whole hours back from now, rounded down, from publishe
   assert.equal(hoursAgo({ publishedAt: null, firstSeenAt: hoursBefore(5) }, now), 5, 'null');
   assert.equal(hoursAgo({ publishedAt: '', firstSeenAt: hoursBefore(5) }, now), 5, 'empty');
   assert.equal(hoursAgo({ publishedAt: 'sometime yesterday', firstSeenAt: hoursBefore(5, 30) }, now), 5, 'not a time');
-  // publishedAt wins when it is fine, even if firstSeenAt says something else
-  assert.equal(hoursAgo({ publishedAt: hoursBefore(4), firstSeenAt: hoursBefore(1) }, now), 4);
+  // the later of the two wins: a story first seen an hour ago is new, whatever its lead headline says
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(4), firstSeenAt: hoursBefore(1) }, now), 1);
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(17), firstSeenAt: hoursBefore(0, 20) }, now), 0, 'the Apple outage of 11/17');
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(2), firstSeenAt: hoursBefore(6) }, now), 2);
   // neither one: null
   assert.equal(hoursAgo({}, now), null);
   assert.equal(hoursAgo(null, now), null);
@@ -822,7 +824,7 @@ test('editor: hoursAgo is whole hours back from now, rounded down, from publishe
   assert.equal(hoursAgo({ firstSeenAt: ahead }, now), 0);
 });
 
-test('editor: every story it sends has hoursAgo, from publishedAt, from firstSeenAt when publishedAt is ahead of the clock or missing, and null when both are missing', async () => {
+test('editor: every story it sends has hoursAgo, from the later of publishedAt and firstSeenAt, from firstSeenAt when publishedAt is ahead of the clock or missing, and null when both are missing', async () => {
   const stories = [
     story('t1', 'flights', 'United Airlines system outage delays departing flights', { score: 90, publishedAt: hoursBefore(2, 40), firstSeenAt: hoursBefore(1) }),
     story('t2', 'hacks', 'Chase online banking outage lasts for hours', { score: 88, publishedAt: hoursBefore(-1), firstSeenAt: hoursBefore(6) }),
@@ -834,7 +836,7 @@ test('editor: every story it sends has hoursAgo, from publishedAt, from firstSee
   await run(s, client);
   const sent = JSON.parse(client.calls[0].messages[0].content).stories;
   const hours = Object.fromEntries(sent.map((x) => [x.id, x.hoursAgo]));
-  assert.deepEqual(hours, { t1: 2, t2: 6, t3: 9, t4: null });
+  assert.deepEqual(hours, { t1: 1, t2: 6, t3: 9, t4: null }, 't1 came out 2:40 ago and reached our feeds 1:00 ago');
   for (const one of sent) assert.ok('hoursAgo' in one, `${one.id} has the key, even when it is null`);
   // the clock moves it: an hour later the same story is an hour older
   const later = await run(s, client, { now: hoursBefore(-1) });
@@ -842,7 +844,7 @@ test('editor: every story it sends has hoursAgo, from publishedAt, from firstSee
   const t = setup({ stories });
   const c2 = fakeClient(answer(GOOD));
   await run(t, c2, { now: hoursBefore(-1) });
-  assert.equal(JSON.parse(c2.calls[0].messages[0].content).stories.find((x) => x.id === 't1').hoursAgo, 3);
+  assert.equal(JSON.parse(c2.calls[0].messages[0].content).stories.find((x) => x.id === 't1').hoursAgo, 2);
 });
 
 // ---- no repeats: told -------------------------------------------------------------------------------------

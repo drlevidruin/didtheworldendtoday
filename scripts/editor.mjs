@@ -120,8 +120,11 @@ export function costOf(usage, prices = EDITOR_PRICES) {
   );
 }
 
-// Whole hours from the moment a story came out to now, rounded down and never below zero. The moment is
-// publishedAt when it parses and is not in the future, else firstSeenAt, else there is none and the answer is null.
+// Whole hours from the moment a story came out to now, rounded down and never below zero. The moment is the
+// later of publishedAt and firstSeenAt; with neither it is null. A publishedAt in the future is a feed mistake
+// and is skipped, and a firstSeenAt in the future counts as now. The later one, because a story's publishedAt
+// is its lead headline's, and a story that first reached our feeds an hour ago is new news even when its lead
+// says last night (the Apple outage of 11/17 did that).
 export function hoursAgo(story, nowMs) {
   const ms = (v) => {
     const t = typeof v === 'number' ? v : Date.parse(v);
@@ -129,8 +132,8 @@ export function hoursAgo(story, nowMs) {
   };
   const published = ms(story && story.publishedAt);
   const seen = ms(story && story.firstSeenAt);
-  const at = published !== null && published <= nowMs ? published : seen;
-  return at === null ? null : Math.max(0, Math.floor((nowMs - at) / HOUR_MS));
+  const times = [published !== null && published <= nowMs ? published : null, seen === null ? null : Math.min(seen, nowMs)].filter((t) => t !== null);
+  return times.length ? Math.floor((nowMs - Math.max(...times)) / HOUR_MS) : null;
 }
 
 // What the last two editions before today told, newest edition first, as "label: line" (just the line
