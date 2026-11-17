@@ -30,6 +30,7 @@ html[data-quiet="1"]{--bg:${WHITE};--on:${WHITE}}
 html[data-quiet="1"] .bn{color:${WHITE}}
 html[data-quiet="1"] .row.best:not(.quiet) .rn{color:${INK}}
 html[data-quiet="1"] .em{display:none}
+html[data-quiet="1"] #quip{display:none}
 *,*::before,*::after{box-sizing:border-box}
 html{background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--text);-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;overflow-x:hidden}
 body{margin:0;min-height:100vh;overflow-x:hidden;overflow-x:clip}
@@ -54,7 +55,7 @@ a.band{text-decoration:none}
 .is-checking .check{display:flex}
 .snap{animation:snap .12s ease-out}
 .hero .note{max-width:330px;margin:12px auto 0;font:600 15px/1.4 var(--text);overflow-wrap:anywhere}
-.deck{max-width:330px;margin:12px auto 0;font:600 20px/1.3 var(--text);text-wrap:balance;overflow-wrap:anywhere;color:var(--ink)}
+.deck{max-width:330px;margin:12px auto 0;font:700 22px/1.25 var(--text);min-height:2.5em;text-wrap:balance;overflow-wrap:anywhere;color:var(--ink)}
 .board{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto 1fr;column-gap:16px;row-gap:6px;align-items:center;min-height:120px;margin-top:20px;padding:16px;background:var(--ink);color:var(--on);text-align:left}
 .bl{grid-column:1/-1;grid-row:1;font:700 12px/1.2 var(--text);letter-spacing:.08em;text-transform:uppercase}
 .bn{grid-column:1;grid-row:2;font:400 72px/.8 var(--disp);color:${score}}

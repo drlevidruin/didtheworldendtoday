@@ -733,7 +733,7 @@ export const X = {
     'tsunami', 'volcano',
   ],
   minIntervalMinutes: 60,
-  dailyBudgetUsd: 0.5, // override with X_DAILY_BUDGET_USD
+  dailyBudgetUsd: 0.6, // override with X_DAILY_BUDGET_USD. The editor's 1.40 and this 0.60 make the owner's $2 a day.
   costPerPostRead: 0.005,
   costPerUserRead: 0.01,
   maxResults: 10,
@@ -813,10 +813,15 @@ export const EDITION = {
 
 // The editor. It calls the Claude API at most EDITOR_DAILY_CAP times a day, and not
 // again until the stories it would read have changed and EDITOR_MIN_GAP_MINUTES have
-// passed since its last write. 12 calls 2 hours apart spread over the whole day.
+// passed since its last write. 20 calls an hour apart cover the whole day. It also stops for the day
+// once it has spent EDITOR_DAILY_BUDGET_USD. The owner's cap is $2 a day for the whole site: 1.40
+// here and 0.60 for X (X.dailyBudgetUsd above).
 export const EDITOR_MODEL = 'claude-opus-5-5';
-export const EDITOR_DAILY_CAP = 12;
-export const EDITOR_MIN_GAP_MINUTES = 120;
+export const EDITOR_DAILY_CAP = 20;
+export const EDITOR_MIN_GAP_MINUTES = 60;
+export const EDITOR_DAILY_BUDGET_USD = 1.4;
+// What a call costs, in dollars per million tokens, for Opus 5.5 (Anthropic's pricing page, 2026-11-17).
+export const EDITOR_PRICES = { input: 4, output: 20, cacheWrite: 5, cacheRead: 0.2 };
 export const EDITOR_MAX_STORIES = 80;
 
 export function config() {
@@ -839,6 +844,13 @@ export function config() {
     gdelt: GDELT,
     hn: HN,
     edition: EDITION,
-    editor: { model: EDITOR_MODEL, dailyCap: EDITOR_DAILY_CAP, minGapMinutes: EDITOR_MIN_GAP_MINUTES, maxStories: EDITOR_MAX_STORIES },
+    editor: {
+      model: EDITOR_MODEL,
+      dailyCap: EDITOR_DAILY_CAP,
+      minGapMinutes: EDITOR_MIN_GAP_MINUTES,
+      dailyBudgetUsd: EDITOR_DAILY_BUDGET_USD,
+      prices: EDITOR_PRICES,
+      maxStories: EDITOR_MAX_STORIES,
+    },
   };
 }

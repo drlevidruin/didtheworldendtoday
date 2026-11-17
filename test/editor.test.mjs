@@ -5,11 +5,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { config, EDITOR_DAILY_CAP, EDITOR_MAX_STORIES, EDITOR_MIN_GAP_MINUTES, EDITOR_MODEL } from '../scripts/config.mjs';
+import { config, EDITOR_DAILY_BUDGET_USD, EDITOR_DAILY_CAP, EDITOR_MAX_STORIES, EDITOR_MIN_GAP_MINUTES, EDITOR_MODEL, EDITOR_PRICES } from '../scripts/config.mjs';
 import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
 import { listingOrder, publishableStories, validateEdition } from '../scripts/lib/editions.mjs';
 import { EDITOR_SYSTEM_PROMPT } from '../scripts/lib/editor-prompt.mjs';
-import { EDITION_SCHEMA, askEditor, runEditor } from '../scripts/editor.mjs';
+import { EDITION_SCHEMA, askEditor, costOf, hoursAgo, runEditor, toldBefore } from '../scripts/editor.mjs';
 import { readJson, REPO, tmpRoot } from './helpers.mjs';
 
 const cfg = config();
@@ -195,17 +195,22 @@ test('editor: quiet mode, by the switch or by the automatic check, means no call
   assert.equal((await run(s, client)).status, 'written');
 });
 
-test('editor: after the daily cap of calls it stops, and a new day starts at zero', async () => {
-  assert.equal(EDITOR_DAILY_CAP, 12);
-  assert.equal(cfg.editor.dailyCap, 12);
-  const s = setup({ state: { date: DATE, calls: EDITOR_DAILY_CAP, lastWriteAt: null, lastIdsHash: null } });
+test('editor: after the daily cap of 20 calls it stops, and a new day starts at zero', async () => {
+  assert.equal(EDITOR_DAILY_CAP, 20);
+  assert.equal(cfg.editor.dailyCap, 20);
+  const s = setup({ state: { date: DATE, calls: EDITOR_DAILY_CAP, usd: 0.5, lastWriteAt: null, lastIdsHash: null } });
   const client = fakeClient(answer(GOOD));
   const r = await run(s, client);
   assert.equal(r.status, 'skipped');
   assert.equal(client.calls.length, 0);
-  assert.match(r.lines[0], /already called the API 12 times today \(the cap is 12\)/);
+  assert.match(r.lines[0], /already called the API 20 times today \(the cap is 20\)/);
+  // one call under the cap still goes through
+  const under = setup({ state: { date: DATE, calls: EDITOR_DAILY_CAP - 1, usd: 0.5, lastWriteAt: null, lastIdsHash: null } });
+  const last = fakeClient(answer(GOOD));
+  assert.equal((await run(under, last)).status, 'written');
+  assert.equal(stateOf(under).calls, EDITOR_DAILY_CAP);
   // yesterday's count does not carry over
-  const fresh = setup({ state: { date: '2026-11-16', calls: EDITOR_DAILY_CAP, lastWriteAt: '2026-11-16T22:00:00.000Z', lastIdsHash: 'abc' } });
+  const fresh = setup({ state: { date: '2026-11-16', calls: EDITOR_DAILY_CAP, usd: 1.4, lastWriteAt: '2026-11-16T22:00:00.000Z', lastIdsHash: 'abc' } });
   const next = fakeClient(answer(GOOD));
   assert.equal((await run(fresh, next)).status, 'written');
   assert.deepEqual(stateOf(fresh).calls, 1);
@@ -225,19 +230,19 @@ test('editor: after the daily cap of calls it stops, and a new day starts at zer
   assert.equal(stateOf(t).calls, 2);
 });
 
-test('editor: it waits 120 minutes after a write, and not a minute less, so a day\'s 12 calls spread over 24 hours', async () => {
-  assert.equal(EDITOR_MIN_GAP_MINUTES, 120);
-  assert.equal(cfg.editor.minGapMinutes, 120);
-  assert.equal(EDITOR_DAILY_CAP * EDITOR_MIN_GAP_MINUTES, 24 * 60);
-  const lastWriteAt = '2026-11-17T13:00:00.000Z';
-  const base = { date: DATE, calls: 1, lastWriteAt, lastIdsHash: 'older' };
+test('editor: it waits 60 minutes after a write, and not a minute less, so a day\'s 20 calls fit in a day', async () => {
+  assert.equal(EDITOR_MIN_GAP_MINUTES, 60);
+  assert.equal(cfg.editor.minGapMinutes, 60);
+  assert.ok(EDITOR_DAILY_CAP * EDITOR_MIN_GAP_MINUTES <= 24 * 60, '20 calls an hour apart need 20 hours');
+  const lastWriteAt = '2026-11-17T14:00:00.000Z';
+  const base = { date: DATE, calls: 1, usd: 0.08, lastWriteAt, lastIdsHash: 'older' };
   const s = setup({ state: base });
   const client = fakeClient(answer(GOOD));
-  const early = await run(s, client, { now: '2026-11-17T14:59:00.000Z' }); // 119 minutes
+  const early = await run(s, client, { now: '2026-11-17T14:59:00.000Z' }); // 59 minutes
   assert.equal(early.status, 'skipped');
   assert.equal(client.calls.length, 0);
-  assert.match(early.lines[0], /last edition was written 119 minutes ago, waiting 120 between writes/);
-  const exactly = await run(s, client, { now: '2026-11-17T15:00:00.000Z' }); // 120 minutes
+  assert.match(early.lines[0], /last edition was written 59 minutes ago, waiting 60 between writes/);
+  const exactly = await run(s, client, { now: '2026-11-17T15:00:00.000Z' }); // 60 minutes
   assert.equal(exactly.status, 'written');
   assert.equal(client.calls.length, 1);
   // a failed call is not a write, so it does not start the wait
@@ -293,7 +298,7 @@ test('editor: nothing filed yet, or nothing new to say, means no call', async ()
 
 // ---- what it asks ------------------------------------------------------------------------------------
 
-test('editor: the request has the shape the API wants, and each story is sent with six plain fields', async () => {
+test('editor: the request has the shape the API wants, and each story is sent with seven plain fields', async () => {
   const s = setup();
   const client = fakeClient(answer(GOOD));
   await run(s, client);
@@ -312,10 +317,12 @@ test('editor: the request has the shape the API wants, and each story is sent wi
   assert.equal(req.messages.length, 1);
   assert.equal(req.messages[0].role, 'user');
   const sent = JSON.parse(req.messages[0].content);
-  assert.deepEqual(Object.keys(sent), ['date', 'score', 'stories']);
+  assert.deepEqual(Object.keys(sent), ['date', 'score', 'told', 'stories']);
   assert.equal(sent.date, DATE);
   assert.equal(sent.score, 62);
-  for (const one of sent.stories) assert.deepEqual(Object.keys(one), ['id', 'cat', 'title', 'source', 'outlets', 'serious']);
+  assert.deepEqual(sent.told, [], 'no earlier edition, so nothing was told');
+  for (const one of sent.stories) assert.deepEqual(Object.keys(one), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo']);
+  for (const one of sent.stories) assert.equal(one.hoursAgo, 3, 'published at 12:00 UTC, read at 15:00 UTC');
   const want = listingOrder(publishableStories(excluder, dayStories()), cfg.variety).map((x) => x.id);
   assert.deepEqual(sent.stories.map((x) => x.id), want, 'in the order the page lists them');
   assert.equal(sent.stories.find((x) => x.id === 'sig:quake:q9').serious, true, 'a quiet card is serious');
@@ -389,7 +396,7 @@ test('editor: a good answer is written as today\'s edition, with the lead story\
   const r = await run(s, client);
   assert.equal(r.status, 'written');
   assert.equal(r.written, 5);
-  assert.deepEqual(r.lines, ['editor: wrote 5 items for 2026-11-17 (1200 in, 300 out)'], 'one line: items, tokens in, tokens out');
+  assert.deepEqual(r.lines, ['editor: wrote 5 items for 2026-11-17 (1200 in, 300 out, $0.011)'], 'one line: items, tokens in, tokens out, what the call cost');
   const e = readJson(editionPath(s));
   assert.deepEqual(Object.keys(e), ['date', 'by', 'writtenAt', 'headline', 'items']);
   assert.equal(e.date, DATE);
@@ -409,9 +416,9 @@ test('editor: a good answer is written as today\'s edition, with the lead story\
   const checked = validateEdition(e, { date: DATE, used: new Set(), byId: new Map(), excluder });
   assert.equal(checked.ok, true);
   assert.deepEqual(checked.dropped, []);
-  // the state: four keys, one call, the write time and the hash of the stories it read
-  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'lastWriteAt', 'lastIdsHash']);
-  assert.deepEqual([stateOf(s).date, stateOf(s).calls, stateOf(s).lastWriteAt], [DATE, 1, NOW]);
+  // the state: five keys, one call, today's spend, the write time and the hash of the stories it read
+  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash']);
+  assert.deepEqual([stateOf(s).date, stateOf(s).calls, stateOf(s).usd, stateOf(s).lastWriteAt], [DATE, 1, 0.0108, NOW]);
   assert.match(stateOf(s).lastIdsHash, /^[0-9a-f]{16}$/);
 });
 
@@ -436,7 +443,19 @@ test('editor: the order of the items is the rank: item 1 is the closest call and
 
 test('editor: the prompt asks for a label, a line and a one-sentence headline, in a ranking from most world-ending to least', () => {
   const p = EDITOR_SYSTEM_PROMPT;
-  assert.match(p, /2\. Pick 4 to 6 events \(3 on a quiet day\)\. Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics\.\n/);
+  assert.ok(
+    p.includes(
+      '\nInput: one day\'s headlines as JSON: {date, score, told, stories: [{id, cat, title, source, outlets, serious, hoursAgo}]}. Many headlines describe the same event. hoursAgo is how many hours ago the story came out. told lists the items of the last two days, as "label: line".\n',
+    ),
+    'the input paragraph names told and hoursAgo',
+  );
+  assert.ok(
+    p.includes(
+      '\n2. Pick 4 to 6 events (3 on a quiet day). Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics. Pick the newest: take events from the last 12 hours first (hoursAgo 12 or less), and an older one only when that leaves fewer than 4. Skip any event already in told, unless something new and bigger happened to it, and then the line says what is new.\n',
+    ),
+    'rule 2 asks for the newest events and no repeats',
+  );
+  assert.ok(p.includes('\n1. Group the headlines into events. One item per event, with all of its ids, the best headline\'s id first.\n'), 'rule 1 is as it was');
   assert.match(
     p,
     /3\. Rank the events from most world-ending to least and list them in that order, so item 1 is the closest call\. Picture each one at a bigger scale, then weigh how many people it would reach, how much of the world, how fragile the system looked, and how close it came\. Outlet counts don't decide the rank\. A serious story is ranked by the same test, never put on top just for being serious, and keeps its plain line\./,
@@ -634,7 +653,7 @@ test('editor: an answer that is not JSON, or not an edition, keeps the old editi
   const r = await run(s, fakeClient(response));
   assert.equal(r.status, 'written');
   assert.equal(readJson(editionPath(s)).items.length, 5);
-  assert.match(r.lines[0], /\(5 in, 6 out\)$/);
+  assert.match(r.lines[0], /\(5 in, 6 out, \$0\.000\)$/);
 });
 
 test('editor: a failed call keeps the old edition, counts as a call, and never prints the key', async () => {
@@ -750,11 +769,15 @@ test('editor: the same answer written twice gives the same file, so a repeat com
 test('editor: askEditor passes its client the request unchanged and hands back what the client says', async () => {
   const seen = [];
   const client = { beta: { messages: { create: async (r) => (seen.push(r), { ok: true }) } } };
-  const out = await askEditor(client, { model: 'm', date: DATE, score: 12, stories: [{ id: 'x' }] });
+  const out = await askEditor(client, { model: 'm', date: DATE, score: 12, told: ['Label: A line.'], stories: [{ id: 'x' }] });
   assert.deepEqual(out, { ok: true });
   assert.equal(seen.length, 1);
   assert.equal(seen[0].model, 'm');
   assert.equal(JSON.parse(seen[0].messages[0].content).score, 12);
+  assert.deepEqual(JSON.parse(seen[0].messages[0].content).told, ['Label: A line.']);
+  // told is always there, even when the caller has nothing to say
+  await askEditor(client, { model: 'm', date: DATE, score: 12, stories: [] });
+  assert.deepEqual(JSON.parse(seen[1].messages[0].content).told, []);
 });
 
 test('editor: the official SDK is a dependency, and it builds a client without touching the network', async () => {
@@ -768,4 +791,275 @@ test('editor: the official SDK is a dependency, and it builds a client without t
   const source = fs.readFileSync(path.join(REPO, 'scripts', 'editor.mjs'), 'utf8');
   assert.ok(source.includes("new Anthropic({ timeout: 120_000, maxRetries: 2 })"), 'the client is built the way the brief says');
   assert.ok(!/\bfetch\(/.test(source), 'no hand-made HTTP call');
+});
+
+// ---- the newest news: hoursAgo ----------------------------------------------------------------------------
+
+const hoursBefore = (hours, minutes = 0, from = NOW) => new Date(Date.parse(from) - hours * 3600000 - minutes * 60000).toISOString();
+
+test('editor: hoursAgo is whole hours back from now, rounded down, from publishedAt, else firstSeenAt, else null, and never below zero', () => {
+  const now = Date.parse(NOW);
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(3) }, now), 3);
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(3, 59) }, now), 3, '3 hours 59 minutes is still 3');
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(0, 30) }, now), 0);
+  assert.equal(hoursAgo({ publishedAt: NOW }, now), 0, 'this very moment');
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(30) }, now), 30, 'more than a day is still counted in hours');
+  // publishedAt that is in the future, missing, empty or not a time: firstSeenAt is the time
+  const ahead = hoursBefore(-2);
+  assert.equal(hoursAgo({ publishedAt: ahead, firstSeenAt: hoursBefore(5) }, now), 5, 'in the future');
+  assert.equal(hoursAgo({ firstSeenAt: hoursBefore(5) }, now), 5, 'missing');
+  assert.equal(hoursAgo({ publishedAt: null, firstSeenAt: hoursBefore(5) }, now), 5, 'null');
+  assert.equal(hoursAgo({ publishedAt: '', firstSeenAt: hoursBefore(5) }, now), 5, 'empty');
+  assert.equal(hoursAgo({ publishedAt: 'sometime yesterday', firstSeenAt: hoursBefore(5, 30) }, now), 5, 'not a time');
+  // publishedAt wins when it is fine, even if firstSeenAt says something else
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(4), firstSeenAt: hoursBefore(1) }, now), 4);
+  // neither one: null
+  assert.equal(hoursAgo({}, now), null);
+  assert.equal(hoursAgo(null, now), null);
+  assert.equal(hoursAgo({ publishedAt: ahead }, now), null, 'a future publishedAt and no firstSeenAt');
+  assert.equal(hoursAgo({ publishedAt: 'x', firstSeenAt: 'y' }, now), null);
+  // never negative, even when firstSeenAt is ahead of the clock
+  assert.equal(hoursAgo({ firstSeenAt: ahead }, now), 0);
+});
+
+test('editor: every story it sends has hoursAgo, from publishedAt, from firstSeenAt when publishedAt is ahead of the clock or missing, and null when both are missing', async () => {
+  const stories = [
+    story('t1', 'flights', 'United Airlines system outage delays departing flights', { score: 90, publishedAt: hoursBefore(2, 40), firstSeenAt: hoursBefore(1) }),
+    story('t2', 'hacks', 'Chase online banking outage lasts for hours', { score: 88, publishedAt: hoursBefore(-1), firstSeenAt: hoursBefore(6) }),
+    story('t3', 'internet', 'Cloudflare outage takes down thousands of websites', { score: 86, publishedAt: undefined, firstSeenAt: hoursBefore(9, 59) }),
+    story('t4', 'markets', 'Nasdaq falls into a correction after a tech sell-off', { score: 80, publishedAt: undefined, firstSeenAt: undefined }),
+  ];
+  const s = setup({ stories });
+  const client = fakeClient(answer(GOOD));
+  await run(s, client);
+  const sent = JSON.parse(client.calls[0].messages[0].content).stories;
+  const hours = Object.fromEntries(sent.map((x) => [x.id, x.hoursAgo]));
+  assert.deepEqual(hours, { t1: 2, t2: 6, t3: 9, t4: null });
+  for (const one of sent) assert.ok('hoursAgo' in one, `${one.id} has the key, even when it is null`);
+  // the clock moves it: an hour later the same story is an hour older
+  const later = await run(s, client, { now: hoursBefore(-1) });
+  assert.equal(later.status, 'skipped', 'the same stories: no second call');
+  const t = setup({ stories });
+  const c2 = fakeClient(answer(GOOD));
+  await run(t, c2, { now: hoursBefore(-1) });
+  assert.equal(JSON.parse(c2.calls[0].messages[0].content).stories.find((x) => x.id === 't1').hoursAgo, 3);
+});
+
+// ---- no repeats: told -------------------------------------------------------------------------------------
+
+const asEdition = (items, over = {}) => ({ date: '2026-11-01', by: 'editor', headline: 'A headline that says one thing about the day. Still here.', items, ...over });
+const oneItem = (label, line, i = 0) => ({ emoji: '\u{1F5A5}️', ...(label === null ? {} : { label }), line, ids: [`old${i}`], quiet: false, cat: 'internet', title: `Old ${i}`, url: `https://pub.example/old${i}`, source: 'Pub A', outlets: 2 });
+
+test('editor: told is the items of the two latest editions before today, newest first, as "label: line", the line alone when there is no label', () => {
+  const editions = new Map([
+    ['2026-11-13', asEdition([oneItem('Too old', 'Three days back.')])],
+    ['2026-11-15', asEdition([oneItem('Day before', 'Told on the 15th.'), oneItem(null, 'No label here.'), oneItem('   ', 'Blank label.')], { by: 'hand' })],
+    ['2026-11-16', asEdition([oneItem('Bank outage', 'Chase was down for hours.'), oneItem('Quake', 'A 6.6 near Indonesia.')])],
+    [DATE, asEdition([oneItem('Today', 'Not told yet.')])],
+    ['2026-11-18', asEdition([oneItem('Tomorrow', 'Not yet.')])],
+  ]);
+  assert.deepEqual(toldBefore(editions, DATE), [
+    'Bank outage: Chase was down for hours.',
+    'Quake: A 6.6 near Indonesia.',
+    'Day before: Told on the 15th.',
+    'No label here.',
+    'Blank label.',
+  ]);
+  // an item with no line says nothing, and an edition with no items is not one of the two
+  const odd = new Map([
+    ['2026-11-14', asEdition([oneItem('Older', 'The older day.')])],
+    ['2026-11-15', { date: '2026-11-15', by: 'editor' }],
+    ['2026-11-16', asEdition([oneItem('Empty', ''), oneItem('Real', 'A real line.'), null, 'text'])],
+  ]);
+  assert.deepEqual(toldBefore(odd, DATE), ['Real: A real line.', 'Older: The older day.']);
+  assert.deepEqual(toldBefore(new Map(), DATE), []);
+  assert.deepEqual(toldBefore(new Map([[DATE, asEdition([oneItem('Today', 'Only today.')])]]), DATE), [], 'today alone tells nothing');
+});
+
+test('editor: told holds at most 12, and the newest day is kept first when there are more', () => {
+  const day = (tag) => asEdition(Array.from({ length: 8 }, (_, i) => oneItem(`${tag} ${i + 1}`, `Line ${i + 1} of ${tag}.`, i)));
+  const editions = new Map([
+    ['2026-11-14', day('Oldest')],
+    ['2026-11-15', day('Older')],
+    ['2026-11-16', day('Newest')],
+  ]);
+  const told = toldBefore(editions, DATE);
+  assert.equal(told.length, 12);
+  assert.deepEqual(told.slice(0, 8), Array.from({ length: 8 }, (_, i) => `Newest ${i + 1}: Line ${i + 1} of Newest.`), 'all 8 of the newest edition');
+  assert.deepEqual(told.slice(8), Array.from({ length: 4 }, (_, i) => `Older ${i + 1}: Line ${i + 1} of Older.`), 'then as many of the one before as fit');
+  assert.ok(!told.some((t) => t.startsWith('Oldest')), 'the third edition back is never read');
+});
+
+test('editor: the request carries told from the two editions before today, hand or editor, and nothing from today\'s own edition', async () => {
+  const hand = asEdition([oneItem('Bank outage', 'Chase was down for hours on Sunday.', 1), oneItem('Quake', 'A 6.6 quake shook Indonesia.', 2)], { date: '2026-11-15', by: 'hand' });
+  const editor = asEdition([oneItem('Cloud outage', 'Cloudflare dropped thousands of sites.', 3), oneItem(null, 'A line with no label.', 4)], { date: '2026-11-16', by: 'editor' });
+  const tooOld = asEdition([oneItem('Ancient', 'Told a long time ago.', 5)], { date: '2026-11-10', by: 'editor' });
+  const s = setup({ editions: { '2026-11-10': tooOld, '2026-11-15': hand, '2026-11-16': editor, [DATE]: OLD } });
+  const client = fakeClient(answer(GOOD));
+  const r = await run(s, client);
+  assert.equal(r.status, 'written', r.lines.join(' | '));
+  const sent = JSON.parse(client.calls[0].messages[0].content);
+  assert.deepEqual(sent.told, [
+    'Cloud outage: Cloudflare dropped thousands of sites.',
+    'A line with no label.',
+    'Bank outage: Chase was down for hours on Sunday.',
+    'Quake: A 6.6 quake shook Indonesia.',
+  ]);
+  assert.ok(sent.told.every((t) => typeof t === 'string'));
+  assert.ok(!JSON.stringify(sent).includes('Old label') && !JSON.stringify(sent).includes('The old line for'), 'what the editor wrote earlier today is not told');
+  assert.ok(!JSON.stringify(sent).includes('Told a long time ago'), 'three editions back is not told');
+});
+
+// ---- the money --------------------------------------------------------------------------------------------
+
+const near = (a, b) => Math.abs(a - b) < 1e-9;
+const usageOf = (input, output, extra = {}) => ({ input_tokens: input, output_tokens: output, ...extra });
+// A different story set each time, so the same-stories rule never gets in the way of the money.
+const withExtra = (s, n) => {
+  const stories = [...dayStories(), ...Array.from({ length: n }, (_, i) => story(`x${i}`, 'hacks', `Retailer number ${i} confirms a security incident after passwords leak`))];
+  fs.writeFileSync(path.join(s.dataDir, 'days', `${DATE}.json`), JSON.stringify({ date: DATE, score: 62, stories }));
+};
+
+test('editor: the budget and the prices are in the config: $1.40 a day, and Opus 5.5 per million tokens', () => {
+  assert.equal(EDITOR_DAILY_BUDGET_USD, 1.4);
+  assert.deepEqual(EDITOR_PRICES, { input: 4, output: 20, cacheWrite: 5, cacheRead: 0.2 });
+  assert.equal(cfg.editor.dailyBudgetUsd, 1.4);
+  assert.deepEqual(cfg.editor.prices, EDITOR_PRICES);
+  assert.equal(cfg.editor.dailyCap, 20);
+  assert.equal(cfg.editor.minGapMinutes, 60);
+  assert.equal(cfg.editor.model, EDITOR_MODEL);
+  assert.equal(cfg.editor.maxStories, 80);
+  assert.equal(cfg.x.dailyBudgetUsd + cfg.editor.dailyBudgetUsd, 2, 'the editor and X together stay inside the owner\'s $2 a day');
+});
+
+test('editor: costOf prices input, output, cache writes and cache reads per million tokens, and a missing or odd count costs nothing', () => {
+  assert.ok(near(costOf(usageOf(1e6, 0)), 4));
+  assert.ok(near(costOf(usageOf(0, 1e6)), 20));
+  assert.ok(near(costOf({ cache_creation_input_tokens: 1e6 }), 5));
+  assert.ok(near(costOf({ cache_read_input_tokens: 1e6 }), 0.2));
+  assert.ok(near(costOf(usageOf(7735, 2413)), 0.0792), 'the first live call: 7735 in, 2413 out');
+  assert.ok(near(costOf(usageOf(1000, 500, { cache_creation_input_tokens: 2000, cache_read_input_tokens: 10000 })), 0.026));
+  assert.equal(costOf({}), 0);
+  assert.equal(costOf(undefined), 0);
+  assert.equal(costOf(null), 0);
+  assert.equal(costOf('lots'), 0);
+  assert.equal(costOf({ input_tokens: 'lots', output_tokens: -5, cache_read_input_tokens: null, cache_creation_input_tokens: NaN }), 0);
+  assert.ok(near(costOf(usageOf(1e6, 0), { input: 1, output: 1, cacheWrite: 1, cacheRead: 1 }), 1), 'the prices can be passed in');
+});
+
+test('editor: each answered call adds its cost to usd, rounded to 4 decimals, and the written line shows that call\'s cost to 3', async () => {
+  const s = setup();
+  const first = await run(s, fakeClient(answer(GOOD, { usage: usageOf(7735, 2413) })));
+  assert.equal(first.status, 'written');
+  assert.deepEqual(first.lines, ['editor: wrote 5 items for 2026-11-17 (7735 in, 2413 out, $0.079)']);
+  assert.equal(stateOf(s).usd, 0.0792);
+  // an hour later, new stories, a call that used the cache: the cost adds up
+  withExtra(s, 1);
+  const second = await run(s, fakeClient(answer(GOOD, { usage: usageOf(1000, 500, { cache_creation_input_tokens: 2000, cache_read_input_tokens: 10000 }) })), { now: hoursBefore(-1) });
+  assert.equal(second.status, 'written', second.lines.join(' | '));
+  assert.deepEqual(second.lines, ['editor: wrote 5 items for 2026-11-17 (1000 in, 500 out, $0.026)'], 'this call, not the total');
+  assert.equal(stateOf(s).usd, 0.1052);
+  assert.equal(stateOf(s).calls, 2);
+  // a long run of small calls stays rounded to 4 decimals
+  const t = setup({ state: { date: DATE, calls: 0, usd: 0.1, lastWriteAt: null, lastIdsHash: null } });
+  await run(t, fakeClient(answer(GOOD, { usage: usageOf(3, 7) })));
+  assert.equal(stateOf(t).usd, 0.1002, '0.1 + 0.000152 is kept to 4 decimals');
+  assert.equal(String(stateOf(t).usd).replace(/^\d+\.?/, '').length <= 4, true);
+});
+
+test('editor: a refused, cut-off or unreadable answer was still paid for, and a call that threw was not', async () => {
+  const paid = [
+    ['a refusal', answer('', { stop_reason: 'refusal', usage: usageOf(5000, 0) }), 0.02],
+    ['a cut-off answer', answer('{"date":', { stop_reason: 'max_tokens', usage: usageOf(1000, 16000) }), 0.324],
+    ['an answer that is not JSON', answer('{ nope', { usage: usageOf(2000, 100) }), 0.01],
+    ['an edition that fails its checks', answer(withItems(GOOD.items.slice(0, 2)), { usage: usageOf(2500, 500) }), 0.02],
+  ];
+  for (const [name, response, usd] of paid) {
+    const s = setup({ editions: { [DATE]: OLD } });
+    const r = await run(s, fakeClient(response));
+    assert.equal(r.status, 'kept', name);
+    assert.ok(near(stateOf(s).usd, usd), `${name}: usd is ${stateOf(s).usd}, not ${usd}`);
+  }
+  // an answer with no usage costs nothing
+  const none = setup();
+  await run(none, fakeClient({ stop_reason: 'end_turn', content: [{ type: 'text', text: JSON.stringify(GOOD) }] }));
+  assert.equal(stateOf(none).usd, 0);
+  // a thrown call: nothing came back, so nothing is added
+  const thrown = setup({ state: { date: DATE, calls: 2, usd: 0.3, lastWriteAt: null, lastIdsHash: null } });
+  const failed = await run(thrown, fakeClient(() => {
+    throw new Error('overloaded');
+  }));
+  assert.equal(failed.status, 'failed');
+  assert.equal(stateOf(thrown).usd, 0.3, 'the same as before');
+  assert.equal(stateOf(thrown).calls, 3, 'but it still counts as a call');
+});
+
+test('editor: at or over $1.40 it makes no call and says so in one line, and it takes the spend from a state that has none as zero', async () => {
+  const at = (usd) => setup({ state: { date: DATE, calls: 3, usd, lastWriteAt: '2026-11-17T10:00:00.000Z', lastIdsHash: 'older' } });
+  const cases = [
+    [1.4, 'editor: already spent $1.40 today (the cap is $1.40)'],
+    [1.4001, 'editor: already spent $1.40 today (the cap is $1.40)'],
+    [1.4292, 'editor: already spent $1.43 today (the cap is $1.40)'],
+    [2, 'editor: already spent $2.00 today (the cap is $1.40)'],
+  ];
+  for (const [usd, line] of cases) {
+    const s = at(usd);
+    const client = fakeClient(answer(GOOD));
+    const r = await run(s, client);
+    assert.equal(r.status, 'skipped', String(usd));
+    assert.deepEqual(r.lines, [line], String(usd));
+    assert.equal(client.calls.length, 0, `${usd}: no call`);
+    assert.deepEqual(listFiles(path.join(s.dataDir, 'editions')), [], `${usd}: no edition`);
+    assert.equal(stateOf(s).calls, 3, `${usd}: nothing is counted`);
+  }
+  // just under the budget still calls
+  const under = at(1.3999);
+  const c1 = fakeClient(answer(GOOD, { usage: usageOf(1000, 100) }));
+  assert.equal((await run(under, c1)).status, 'written');
+  assert.equal(c1.calls.length, 1);
+  assert.equal(stateOf(under).usd, 1.4059, '1.3999 + 0.006');
+  // a state from before this existed has no usd: it counts as zero, and the file gains it
+  const old = setup({ state: { date: DATE, calls: 2, lastWriteAt: null, lastIdsHash: null } });
+  assert.equal((await run(old, fakeClient(answer(GOOD)))).status, 'written');
+  assert.deepEqual(Object.keys(stateOf(old)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash']);
+  // a spend that is not a number counts as zero too
+  for (const usd of ['lots', null, -4, NaN, {}]) {
+    const odd = at(usd);
+    assert.equal((await run(odd, fakeClient(answer(GOOD)))).status, 'written', JSON.stringify(usd));
+  }
+  // the budget comes from the config, and falls back to $1.40 when a config has none
+  const small = { ...cfg, editor: { ...cfg.editor, dailyBudgetUsd: 0.05 } };
+  const tiny = at(0.05);
+  assert.deepEqual((await run(tiny, fakeClient(answer(GOOD)), { config: small })).lines, ['editor: already spent $0.05 today (the cap is $0.05)']);
+  const bare = { ...cfg, editor: { model: cfg.editor.model, dailyCap: 20, minGapMinutes: 60, maxStories: 80 } };
+  const spent = at(1.4);
+  assert.deepEqual((await run(spent, fakeClient(answer(GOOD)), { config: bare })).lines, ['editor: already spent $1.40 today (the cap is $1.40)']);
+  const priced = at(0);
+  await run(priced, fakeClient(answer(GOOD, { usage: usageOf(1e6, 0) })), { config: bare });
+  assert.equal(stateOf(priced).usd, 4, 'and the prices fall back too');
+});
+
+test('editor: the day\'s spend stops the day: calls go on until the total passes $1.40, then every later run skips, and tomorrow starts at zero', async () => {
+  const s = setup({ state: { date: DATE, calls: 17, usd: 1.35, lastWriteAt: null, lastIdsHash: null } });
+  const costly = () => fakeClient(answer(GOOD, { usage: usageOf(7735, 2413) }));
+  assert.equal((await run(s, costly())).status, 'written');
+  assert.equal(stateOf(s).usd, 1.4292, 'a call that starts under the budget may end over it');
+  withExtra(s, 2);
+  const blocked = costly();
+  const next = await run(s, blocked, { now: hoursBefore(-2) });
+  assert.equal(next.status, 'skipped');
+  assert.deepEqual(next.lines, ['editor: already spent $1.43 today (the cap is $1.40)']);
+  assert.equal(blocked.calls.length, 0);
+  // the next morning: a new day, a new budget, and new stories (yesterday's ids are used up)
+  const newDay = dayStories().map((st) => ({ ...st, id: st.id.replace(/^s/, 'n') }));
+  fs.writeFileSync(path.join(s.dataDir, 'days', '2026-11-18.json'), JSON.stringify({ date: '2026-11-18', score: 50, stories: newDay }));
+  fs.writeFileSync(s.file('data/latest.json'), JSON.stringify({ schema: 1, etDate: '2026-11-18', score: 50, quiet: { quiet: false }, stories: newDay }));
+  const forNewDay = withItems(GOOD.items.map((it) => ({ ...it, ids: it.ids.map((id) => id.replace(/^s/, 'n')) })), { date: '2026-11-18' });
+  const fresh = fakeClient(answer(forNewDay, { usage: usageOf(7735, 2413) }));
+  const morning = await run(s, fresh, { now: '2026-11-18T15:00:00.000Z' });
+  assert.equal(fresh.calls.length, 1, 'a call is made');
+  assert.equal(morning.status, 'written', morning.lines.join(' | '));
+  assert.equal(stateOf(s).date, '2026-11-18');
+  assert.equal(stateOf(s).usd, 0.0792, 'only the new day\'s call');
+  assert.equal(stateOf(s).calls, 1);
 });

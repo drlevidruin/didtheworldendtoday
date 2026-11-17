@@ -1,10 +1,10 @@
 // The homepage and the day pages.
 //
-// The sign. A black band with the question, ALMOST. in black on yellow, the day's headline, and the
-// Doom Score on a black board. The first screen of a phone holds all of that and the first near
-// miss. The homepage is that screen and then a feed of days: today first, then up to six earlier
-// days, yesterday's near misses open and the rest folded away. A day page is the same sign for
-// another day, that day's near misses, and every headline we read that day. One share button a
+// The sign. A black band with the question, ALMOST. in black on yellow, a joke that points down at the
+// list, and the Doom Score on a black board. The first screen of a phone holds all of that and the
+// first near miss. The homepage is that screen and then a feed of days: today first, then up to six
+// earlier days, yesterday's near misses open and the rest folded away. A day page is the same sign
+// for another day, that day's near misses, and every headline we read that day. One share button a
 // page, right after the rows it shares.
 //
 // A day is what resolveDays() hands over (scripts/lib/editions.mjs), plus the
@@ -47,6 +47,7 @@ import {
 import { esc, num } from './esc.mjs';
 import { footer, page } from './layout.mjs';
 import { headlines, rows, squares } from './parts.mjs';
+import { QUIP_SCRIPT, quipFor } from './quips.mjs';
 import { HOUR_MS, addDays } from '../lib/time.mjs';
 
 const jsonAttr = (value) => esc(JSON.stringify(value));
@@ -104,8 +105,20 @@ function board(score, cap) {
 </div>`;
 }
 
-// The first screen after the band, top to bottom: ALMOST., the notes that belong with it, the day's
-// headline and the Doom Score board. Every clock time on the page is Eastern.
+// The line under ALMOST. It is a quip that points down at the list (scripts/templates/quips.mjs). The HTML
+// carries the quip picked from the date, for a visitor with no JavaScript and for a crawler, and the script
+// right after it swaps in the next quip from the visitor's own bag. Nothing sits between the two tags and
+// nothing is added inside the script, because the page policy allows that script by the hash of its text.
+// The day's headline is not in the hero any more: it keeps its place in the share card, the feed, the
+// earlier-day blocks, the almanac and the day page's description. Quiet mode has no jokes, so the line
+// stays the day's quiet headline, with no id and no script.
+function deck(d, v) {
+  if (v.quiet.quiet) return `<p class="deck">${esc(d.headline)}</p>`;
+  return `<p class="deck" id="quip">${esc(quipFor(d.date))}</p><script>${QUIP_SCRIPT}</script>`;
+}
+
+// The first screen after the band, top to bottom: ALMOST., the notes that belong with it, the quip and the
+// Doom Score board. Every clock time on the page is Eastern.
 function hero(v) {
   const d = v.day;
   const live = d.date === v.today;
@@ -116,7 +129,7 @@ function hero(v) {
   const note = v.quiet.quiet && v.quiet.note ? `<p class="note">${esc(v.quiet.note)}</p>\n` : '';
   return `<section class="hero" id="hero" data-lines="${jsonAttr(checkLines(v.headlinesRead))}">
 <button class="vbox" type="button" data-act="check"><span class="verdict" id="verdict">${esc(VERDICT)}</span><span class="check" id="check" aria-hidden="true"></span></button>
-${note}<p class="deck">${esc(d.headline)}</p>
+${note}${deck(d, v)}
 ${board(d.score, cap)}
 <p class="stale" id="stale" data-template="${esc(STALE_TEMPLATE)}"${stale ? '' : ' hidden'}>${stale ? esc(staleLine(checkedMs)) : ''}</p>
 <p class="sr" id="said" role="status" aria-live="polite"></p>

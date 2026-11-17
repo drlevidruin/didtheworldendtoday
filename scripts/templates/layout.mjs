@@ -4,10 +4,11 @@ import { css, css404 } from './css.mjs';
 import { ALMANAC_NAV, COMMENT, CREDIT_HANDLE, CREDIT_URL, DESCRIPTION, FOOTER_LINES, FOOTER_LINES_QUIET, SITE_NAME, TAGLINE, TODAY_LINK, everyHeadline, updatedText } from './copy.mjs';
 import { esc } from './esc.mjs';
 import { WHITE, YELLOW } from './palette.mjs';
+import { QUIP_CSP } from './quips.mjs';
 
-// Section 8: nothing loads from anywhere but this site, no inline script.
-export const CSP =
-  "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self'";
+// Section 8: nothing loads from anywhere but this site, and no script runs inline except one: the quip
+// script under ALMOST., which the policy allows by the hash of its exact text (scripts/templates/quips.mjs).
+export const CSP = `default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' ${QUIP_CSP}; connect-src 'self'; font-src 'self'`;
 
 // The font files the first screen draws, loaded before the stylesheet asks for them: League Gothic for the
 // question, ALMOST. and the numbers, and Libre Franklin in the three weights of the headline (600), the

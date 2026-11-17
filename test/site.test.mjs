@@ -8,6 +8,7 @@ import http from 'node:http';
 import path from 'node:path';
 import vm from 'node:vm';
 import zlib from 'node:zlib';
+import { createHash } from 'node:crypto';
 import { XMLParser, XMLValidator } from 'fast-xml-parser';
 import resvg from '@resvg/resvg-js';
 import { config } from '../scripts/config.mjs';
@@ -17,6 +18,7 @@ import { createServer, resolveStatic, SUBFOLDER } from '../scripts/serve.mjs';
 import * as copy from '../scripts/templates/copy.mjs';
 import { almanacRows, headline as headlineRow, headlines as headlineRows, row as dayRow, rows as dayRows } from '../scripts/templates/parts.mjs';
 import { CSP } from '../scripts/templates/layout.mjs';
+import { QUIPS, QUIP_CSP, QUIP_SCRIPT, quipFor } from '../scripts/templates/quips.mjs';
 import { feedXml } from '../scripts/templates/feed.mjs';
 import { esc, num, url } from '../scripts/templates/esc.mjs';
 import { capFirst, firstSentence, joinNames } from '../scripts/lib/text.mjs';
@@ -235,6 +237,10 @@ function thirdPartyStrings(dataRoot) {
 
 const without = (text, strings) => strings.reduce((rest, one) => (rest.includes(one) ? rest.split(one).join(' ') : rest), text);
 
+// The jokes under ALMOST. are our own words and the list holds all 100 of them in the page's one inline script, one of
+// which says "The receipts are below." The words of the cut features are looked for in the page without the jokes.
+const withoutQuips = (text) => text.replace(/(<p class="deck" id="quip">)[^<]*(<\/p>)<script>[\s\S]*?<\/script>/, '$1$2');
+
 function isInternal(ref) {
   return ref.trim() !== '' && !/^(?:[a-z][a-z0-9+.-]*:|#|\/\/)/i.test(ref);
 }
@@ -293,10 +299,10 @@ function auditSite(base, { label = 'site', needDay = true, live = null } = {}) {
     assert.ok(raw.startsWith(`<!doctype html>\n<!-- ${copy.COMMENT} -->\n<html lang="en"`) || rel === '404.html', `${where} opens with the comment`);
     if (rel === '404.html') assert.ok(raw.includes(`<!-- ${copy.COMMENT} -->`), `${where} has the comment`);
     assert.ok(raw.includes(`<meta http-equiv="Content-Security-Policy" content="${esc(CSP)}">`), `${where} has the policy`);
-    for (const word of CUT_WORDS) assert.ok(!html.includes(word), `${where} still says "${word}"`);
+    for (const word of CUT_WORDS) assert.ok(!withoutQuips(html).includes(word), `${where} still says "${word}"`);
     for (const hook of CUT_HOOKS) assert.ok(!raw.includes(hook), `${where} still has ${hook}`);
     // "chip" is a word a publisher's headline can use, so only a build of text we wrote is held to it
-    if (!live) assert.ok(!/\bchips?\b/i.test(raw), `${where} mentions a chip`);
+    if (!live) assert.ok(!/\bchips?\b/i.test(withoutQuips(raw)), `${where} mentions a chip`);
     assert.ok(/<title>[^<]+<\/title>/.test(raw), `${where} has a title`);
     for (const tag of ['og:title', 'og:description', 'og:image', 'og:url']) assert.ok(raw.includes(`property="${tag}"`), `${where} has ${tag}`);
     assert.ok(raw.includes('name="twitter:card" content="summary_large_image"') && raw.includes('name="twitter:image"'), `${where} has the twitter card`);
@@ -305,9 +311,16 @@ function auditSite(base, { label = 'site', needDay = true, live = null } = {}) {
     assert.ok(image.startsWith(`${SITE}/og/`) && image.endsWith('.png'), `${where} points the share image at this site`);
     assert.ok(files.has(image.slice(SITE.length + 1)), `${where}: ${image} exists`);
 
-    // nothing runs inline, nothing loads from elsewhere
-    const scripts = [...raw.matchAll(/<script\b([^>]*)>/gi)].map((m) => m[1]);
-    for (const one of scripts) assert.ok(/\ssrc="[^"]*assets\/app\.js"/.test(one) && !/https?:/.test(one), `${where}: only the one local script`);
+    // nothing runs inline but the one quip script, which the page policy allows by its hash, and nothing loads from elsewhere
+    const scripts = [...raw.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)];
+    for (const [, one] of scripts.filter((m) => /\ssrc=/.test(m[1]))) assert.ok(/\ssrc="[^"]*assets\/app\.js"/.test(one) && !/https?:/.test(one), `${where}: only the one local script`);
+    const inline = scripts.filter((m) => !/\ssrc=/.test(m[1]));
+    assert.ok(inline.length <= 1, `${where}: at most one inline script`);
+    for (const [, attrs, text] of inline) {
+      assert.equal(attrs, '', `${where}: the inline script has no attributes`);
+      assert.equal(text, QUIP_SCRIPT, `${where}: and it is the quip script`);
+      assert.ok(CSP.includes(`'sha256-${createHash('sha256').update(text, 'utf8').digest('base64')}'`), `${where}: the policy allows it by its hash`);
+    }
     assert.ok(!/<[a-z][^>]*\son[a-z]+\s*=/i.test(html), `${where} has an inline event handler`);
     assert.ok(!/<[a-z][^>]*\sstyle\s*=/i.test(html), `${where} has an inline style attribute`);
     assert.ok(!/href="\s*javascript:/i.test(raw), `${where} has a javascript: link`);
@@ -406,7 +419,8 @@ test('an edition the editor wrote can use words we cut from our own pages and th
   const out = build(real, { siteUrl: SITE });
   const home = read('index.html', out.dist);
   for (const line of lines) assert.ok(home.includes(esc(line)), `the page carries the model's line: ${line}`);
-  assert.ok(home.includes('Check again tomorrow for more of this news. Doom Bingo is not coming back. Still here.'), 'and its headline');
+  assert.equal(todayHeadline(out.dist), 'Check again tomorrow for more of this news. Doom Bingo is not coming back. Still here.', 'and its headline is in the data file');
+  assert.ok(read(`day/${day}/index.html`, out.dist).includes('Check again tomorrow for more of this news. Doom Bingo is not coming back. Still here.'), 'and on the day page');
   auditSite(out.dist, { label: 'model text', live: thirdPartyStrings(real) });
 });
 
@@ -638,7 +652,13 @@ function rowFacts(html) {
 const factsIn = (html) => rowsOf(html).map(rowFacts);
 // every caption on a page: a row's is inside its card, a headline's is a line of its own under it
 const capsIn = (html) => [...html.matchAll(/<(?:p|span) class="cap">([^<]*)/g)].map((m) => m[1]);
-const headlineOf = (html) => unesc((heroOf(html).match(/<p class="deck">([^<]*)<\/p>/) || [])[1] || '');
+// The line under ALMOST.: a quip on a normal page (it has an id, so the script can swap it) and the day's quiet line in quiet mode.
+const deckOf = (html) => unesc((heroOf(html).match(/<p class="deck"(?: id="quip")?>([^<]*)<\/p>/) || [])[1] || '');
+// The day's headline is not in the hero any more. A day page still says it in its description, and the homepage's is in
+// api/today.json, the copy of the day the homepage shows.
+const descriptionOf = (html) => unesc((html.match(/<meta name="description" content="([^"]*)">/) || [])[1] || '');
+const dayHeadlineOf = (html) => descriptionOf(html).replace(/ Doom Score \d+ of \d+ on .*$/, '');
+const todayHeadline = (base = dist) => readJson(path.join(base, 'api', 'today.json')).headline;
 const lineCount = (html) => (html.match(/<li class="row/g) || []).length;
 const wordOf = (n) => (n === 1 ? 'headline' : 'headlines');
 
@@ -654,8 +674,8 @@ test('the editions this file writes pass the same check the build and the editor
   assert.equal(ED16.items.length, cfg.edition.maxItems, 'the closest call and five more');
   for (const ed of [ED15, ED16]) for (const item of ed.items) assert.ok(item.label && item.label.split(' ').length <= cfg.edition.labelMaxWords, `${ed.date}: "${item.label}" is a label of one to four words`);
   // The two builds really differ: one reads the editions, one reads the plain headlines.
-  assert.equal(headlineOf(read('index.html', edDist)), ED16.headline);
-  assert.equal(headlineOf(read('index.html')), copy.subline(latest.score));
+  assert.equal(todayHeadline(edDist), ED16.headline);
+  assert.equal(todayHeadline(dist), copy.subline(latest.score));
 });
 
 // ---- the homepage ------------------------------------------------------------------------------------
@@ -672,8 +692,12 @@ test('the first screen reads top to bottom: the black band and its question, ALM
     has(home, '<div class="band"><h1 class="q">Did the world end today?</h1></div>');
     const hero = heroOf(home);
     has(hero, '<button class="vbox" type="button" data-act="check"><span class="verdict" id="verdict">ALMOST.</span><span class="check" id="check" aria-hidden="true"></span></button>');
-    has(hero, `<p class="deck">${esc(head)}</p>`);
-    assert.ok(hero.indexOf('id="verdict"') < hero.indexOf('class="deck"') && hero.indexOf('class="deck"') < hero.indexOf('role="meter"'), `${label}: ALMOST., the headline under it, then the board`);
+    // the joke under ALMOST.: the quip for the date, and the one script right after it
+    has(hero, `<p class="deck" id="quip">${esc(quipFor('2026-11-16'))}</p><script>${QUIP_SCRIPT}</script>`);
+    assert.ok(hero.indexOf('id="verdict"') < hero.indexOf('class="deck"') && hero.indexOf('class="deck"') < hero.indexOf('role="meter"'), `${label}: ALMOST., the joke under it, then the board`);
+    // the day's headline is not on the first screen, but it is still the day's: the data file, the card and the feed have it
+    assert.equal(todayHeadline(base), head, `${label}: the day's headline`);
+    assert.ok(!home.includes(esc(head)), `${label}: and it is not on the homepage's first screen or anywhere else on the page`);
     // the board is one meter for a screen reader: the number, the ten squares and the small print are its picture
     const score = latest.score;
     has(hero, `<div class="board" role="meter" aria-label="Doom Score" aria-valuenow="${score}" aria-valuemin="0" aria-valuemax="99" aria-valuetext="${score} out of 99">`);
@@ -833,7 +857,7 @@ test('an edition that breaks a rule is not used: its day shows plain headlines a
   for (const [name, raw] of Object.entries(cases)) {
     const dist16 = homeOf({ ...EDITIONS, '2026-11-16': raw });
     const home = read('index.html', dist16);
-    assert.equal(headlineOf(home), copy.subline(latest.score), `${name}: the ladder line stands in`);
+    assert.equal(todayHeadline(dist16), copy.subline(latest.score), `${name}: the ladder line stands in`);
     assert.deepEqual(factsIn(blocksOf(home)[0]).map((f) => f.label), plainRows, `${name}: the plain headlines stand in`);
     has(blocksOf(home)[1], `<p class="dh">${esc(ED15.headline)}</p>`);
     assert.ok(!home.includes(ED16.items[0].line), `${name}: none of the lines`);
@@ -841,7 +865,7 @@ test('an edition that breaks a rule is not used: its day shows plain headlines a
   assert.ok(noEnding.length <= cfg.edition.headlineMax, 'the first case fails for its missing ending, not for its length');
   // a file that is not JSON at all counts as no edition
   const junk = withEditions({ ...EDITIONS, '2026-11-16': '{"headline": "Oops. Still here.", ' });
-  assert.equal(headlineOf(read('index.html', junk.dist)), copy.subline(latest.score));
+  assert.equal(todayHeadline(junk.dist), copy.subline(latest.score));
   auditSite(junk.dist, { label: 'broken edition file' });
 });
 
@@ -849,7 +873,7 @@ test('one bad line is dropped and the rest stay: the closest call is then the fi
   const bad = { ...ED16, items: ED16.items.map((i, n) => (n === 0 ? { ...i, line: 'Airlines are back! Mostly.' } : i)) };
   const { dist: out } = withEditions({ ...EDITIONS, '2026-11-16': bad });
   const home = read('index.html', out);
-  assert.equal(headlineOf(home), ED16.headline, 'the edition still stands');
+  assert.equal(todayHeadline(out), ED16.headline, 'the edition still stands');
   const facts = factsIn(blocksOf(home)[0]);
   assert.deepEqual(facts.map((f) => f.line), ED16.items.slice(1).map((i) => i.line));
   assert.deepEqual(facts.map((f) => f.rank), ['1', '2', '3', '4', '5'], 'the ranks start over');
@@ -865,7 +889,7 @@ test('a label that is missing or bad does not cost the row: it keeps its emoji, 
   });
   const { dist: out } = withEditions({ ...EDITIONS, '2026-11-16': { ...ED16, items } });
   const home = read('index.html', out);
-  assert.equal(headlineOf(home), ED16.headline, 'the edition still stands');
+  assert.equal(todayHeadline(out), ED16.headline, 'the edition still stands');
   const rows = rowsOf(blocksOf(home)[0]);
   const facts = rows.map(rowFacts);
   assert.equal(facts.length, 6, 'every row stays');
@@ -905,7 +929,7 @@ test('a story told by an earlier day\'s edition is left out of every later editi
   const [today, yesterday] = blocksOf(home);
   assert.deepEqual(factsIn(yesterday).map((f) => f.line), [...ED15.items.map((i) => i.line), SHARED_15], 'the 15th tells it');
   assert.deepEqual(factsIn(today).map((f) => f.line), ED16.items.map((i) => i.line), 'the 16th does not');
-  assert.equal(headlineOf(home), ED16.headline, 'and its edition still stands');
+  assert.equal(todayHeadline(both), ED16.headline, 'and its edition still stands');
   assert.ok(!home.includes(SHARED_16));
   const day16 = read('day/2026-11-16/index.html', both);
   assert.ok(!rowsOf(day16).some((r) => r.includes(SHARED_16)), 'not in the day page rows either');
@@ -937,7 +961,7 @@ test('no page says chip, Doom Bingo, Vital signs, The receipts or Check again, a
   for (const [label, base] of [['plain headlines', dist], ['editions', edDist]]) {
     assert.ok(pages(base).length >= 6, label);
     for (const rel of pages(base)) {
-      const raw = read(rel, base);
+      const raw = withoutQuips(read(rel, base));
       for (const word of ['Doom Bingo', 'Vital signs', 'The receipts', 'Check again', 'Closest call today']) assert.ok(!raw.includes(word), `${label} ${rel}: ${word}`);
       assert.ok(!/\bchips?\b/i.test(raw), `${label} ${rel}: chip`);
       for (const hook of ['id="bingo"', 'id="vitals"', 'id="receipts"', 'id="lead"', 'class="cell', 'class="chip', 'class="btns"']) assert.ok(!raw.includes(hook), `${label} ${rel}: ${hook}`);
@@ -1278,7 +1302,8 @@ test('quiet mode: every day goes plain, the editions rest, nothing jokes, the pa
   auditSite(out.dist, { label: 'quiet mode' });
   const home = read('index.html', out.dist);
   const hero = heroOf(home);
-  assert.equal(headlineOf(home), copy.QUIET_LINE);
+  assert.equal(deckOf(home), copy.QUIET_LINE);
+  assert.ok(!home.includes('id="quip"') && !heroOf(home).includes('<script'), 'quiet mode has no joke and no inline script');
   has(hero, '<p class="note">Thinking of everyone affected.</p>');
   assert.ok(hero.indexOf('id="verdict"') < hero.indexOf('class="note"') && hero.indexOf('class="note"') < hero.indexOf('class="deck"'), 'the note sits under ALMOST., over the quiet line');
   assert.ok(!hero.includes('class="go"') && !hero.includes('See what almost got us'), 'no button to scroll, and no joke on one');
@@ -1315,7 +1340,7 @@ test('quiet mode: every day goes plain, the editions rest, nothing jokes, the pa
   assert.ok(captions.length >= 1 && captions.every((c) => c.startsWith('No jokes on this one.')), `${captions}`);
   assert.match(read('index.html'), /data-quiet="0"/);
   // the day pages say the same, and so do the about and almanac pages: a quiet page is white all through
-  for (const rel of ['day/2026-11-16/index.html', 'day/2026-11-15/index.html']) assert.equal(headlineOf(read(rel, out.dist)), copy.QUIET_LINE, rel);
+  for (const rel of ['day/2026-11-16/index.html', 'day/2026-11-15/index.html']) assert.equal(deckOf(read(rel, out.dist)), copy.QUIET_LINE, rel);
   for (const rel of ['almanac/index.html', 'about/index.html', 'day/2026-11-16/index.html']) {
     const html = read(rel, out.dist);
     assert.match(html, /<html lang="en"[^>]*data-quiet="1"/, `${rel} is quiet`);
@@ -1544,7 +1569,9 @@ test('a line the editor wrote that is HTML is just as inert: the headline, the l
   assert.equal(validateEdition(hostile, { date: '2026-11-16', excluder: gk.excluder }).ok, true, 'it passes the check, so the page must be the one to keep it safe');
   auditSite(out.dist, { label: 'hostile edition' });
   const home = read('index.html', out.dist);
-  has(home, '&lt;i&gt;All fine&lt;/i&gt; &amp; &quot;ok&quot; &lt;script&gt;alert(5)&lt;/script&gt; said the page. Still here.');
+  // the headline is not on the homepage's first screen any more: the day page says it, as text, in its description
+  has(read('day/2026-11-16/index.html', out.dist), '&lt;i&gt;All fine&lt;/i&gt; &amp; &quot;ok&quot; &lt;script&gt;alert(5)&lt;/script&gt; said the page. Still here.');
+  assert.equal(todayHeadline(out.dist), hostile.headline, 'and in the data file it is the same text');
   const facts = factsIn(blocksOf(home)[0]);
   assert.deepEqual(facts.map((f) => f.label), ['<b>Boom</b>', '"quote" & <i>it</i>', 'Plain label']);
   assert.deepEqual(facts.map((f) => f.line), ['<img src=x onerror=alert(1)> and "quotes" & <b>bold</b>', 'Second line with <a href="https://evil.example">a link</a> in it', 'Third line is plain.']);
@@ -1632,7 +1659,7 @@ test('day pages: the same sign for another day, that day\'s near misses, every h
   const past = read('day/2026-11-15/index.html', edDist);
   has(past, '<title>Did the world end on November 15, 2026? ALMOST.</title>');
   has(past, '<div class="band"><h1 class="q">Did the world end on Nov 15?</h1></div>');
-  assert.equal(headlineOf(past), ED15.headline);
+  assert.equal(dayHeadlineOf(past), ED15.headline);
   has(past, '<div class="board" role="meter" aria-label="Doom Score" aria-valuenow="11" aria-valuemin="0" aria-valuemax="99" aria-valuetext="11 out of 99">');
   has(past, '<span class="bn">11</span>');
   assert.ok(!past.includes('class="go"') && !past.includes('class="sh"') && !past.includes('Share today'), 'Share today is for the homepage');
@@ -1658,7 +1685,7 @@ test('day pages: the same sign for another day, that day\'s near misses, every h
   const today = read('day/2026-11-16/index.html', edDist);
   has(today, '<title>Did the world end on November 16, 2026? ALMOST.</title>');
   has(today, '<div class="band"><h1 class="q">Did the world end today?</h1></div>');
-  assert.equal(headlineOf(today), ED16.headline);
+  assert.equal(dayHeadlineOf(today), ED16.headline);
   has(today, 'data-live="1"');
   assert.ok(!today.includes('data-since'), 'no ticking time');
   has(today, '<nav class="dnav" aria-label="Other days">\n<a href="../2026-11-15/">Earlier: Nov 15</a>\n<span></span>\n</nav>');
@@ -1675,7 +1702,7 @@ test('day pages: the same sign for another day, that day\'s near misses, every h
   assert.equal(heads.filter((h) => h.quiet).length, 1);
   for (const m of today.matchAll(/<a class="hla" ([^>]*)>/g)) assert.match(m[1], /target="_blank" rel="noopener"/);
   // a plain-headline day reads the same way
-  assert.equal(headlineOf(read('day/2026-11-16/index.html')), copy.subline(latest.score));
+  assert.equal(dayHeadlineOf(read('day/2026-11-16/index.html')), copy.subline(latest.score));
   assert.equal(lineCount(read('day/2026-11-16/index.html')), cfg.edition.fallbackRows);
 });
 
@@ -1686,7 +1713,7 @@ test('a day page for a day with no stories and no edition says so plainly', () =
   const page = read('day/2026-11-15/index.html', out.dist);
   has(page, '<p class="empty">Nothing on file for this day.</p>');
   assert.ok(!page.includes('Every headline we read that day'), 'no empty list');
-  assert.equal(headlineOf(page), copy.subline(11), 'the ladder line');
+  assert.equal(dayHeadlineOf(page), copy.subline(11), 'the ladder line');
   assert.deepEqual(almanacRowsOf(read('almanac/index.html', out.dist)).map((row) => row[0]), ['../day/2026-11-16/'], 'a day with nothing filed is not in the Almanac');
   auditSite(out.dist, { label: 'an empty day' });
 });
@@ -1797,7 +1824,7 @@ test('a new day with nothing filed yet shows "Nothing new yet today." and stays 
   has(yesterday, '<p class="dk">YESTERDAY</p>');
   has(yesterday, '<h2 class="dl"><a href="./day/2026-11-16/">MONDAY, NOV 16</a></h2>');
   assert.deepEqual(factsIn(yesterday).map((f) => f.line), ED16.items.map((i) => i.line), 'yesterday keeps its edition');
-  assert.equal(headlineOf(home), copy.subline(11), 'the ladder line over the empty day');
+  assert.equal(todayHeadline(out.dist), copy.subline(11), 'the ladder line over the empty day');
   assert.deepEqual(almanacRowsOf(read('almanac/index.html', out.dist)).map((row) => row[0]), ['../day/2026-11-16/', '../day/2026-11-15/']);
   assert.equal([].concat(new XMLParser().parse(read('feed.xml', out.dist)).rss.channel.item).length, 2);
 });
@@ -2029,7 +2056,8 @@ test('the type and the spacing are the ones the design names', () => {
   has(ruleFor(sheet, '.hero'), 'padding:20px 20px 28px');
   has(ruleFor(sheet, '.verdict'), 'font:400 min(31vw,120px)/.8 var(--disp)');
   has(ruleFor(sheet, '.verdict'), 'overflow-wrap:anywhere');
-  has(ruleFor(sheet, '.deck'), 'font:600 20px/1.3 var(--text)');
+  has(ruleFor(sheet, '.deck'), 'font:700 22px/1.25 var(--text)');
+  has(ruleFor(sheet, '.deck'), 'min-height:2.5em');
   has(ruleFor(sheet, '.deck'), 'max-width:330px');
   has(ruleFor(sheet, '.deck'), 'text-wrap:balance');
   has(ruleFor(sheet, '.board'), 'min-height:120px');
@@ -2075,11 +2103,12 @@ test('the type and the spacing are the ones the design names', () => {
   has(ruleFor(sheet, 'footer'), 'border-top:3px solid var(--ink)');
   has(ruleFor(sheet, 'footer .all a'), 'min-height:48px');
   has(ruleFor(sheet, 'footer .fl a'), 'min-height:48px');
-  // no text is smaller than 12px, and nothing but the display type and the emoji is above 20px
+  // no text is smaller than 12px, and nothing but the display type, the emoji and the joke under ALMOST. is above 20px
   const sizes = rulesOf(sheet).flatMap((r) => [...r.body.matchAll(/font:(\d+) (\d+)px\/[\d.]+ var\(--(text|disp)\)/g)].map((m) => ({ selector: r.selector, weight: Number(m[1]), px: Number(m[2]), face: m[3] })));
   assert.ok(sizes.length >= 20);
   assert.ok(Math.min(...sizes.map((x) => x.px)) >= 12, 'nothing is smaller than 12px');
-  assert.ok(sizes.filter((x) => x.face === 'text' && x.selector !== '.em').every((x) => x.px <= 20), 'Libre Franklin is never above 20px, except in the emoji column, which holds a picture');
+  assert.ok(sizes.filter((x) => x.face === 'text' && x.selector !== '.em' && x.selector !== '.deck').every((x) => x.px <= 20), 'Libre Franklin is never above 20px, except in the emoji column, which holds a picture, and the joke under ALMOST.');
+  assert.deepEqual(sizes.filter((x) => x.selector === '.deck').map((x) => [x.weight, x.px]), [[700, 22]], 'the joke is the punchline: bold, 22px');
   assert.ok(sizes.filter((x) => x.face === 'text').every((x) => [400, 600, 700].includes(x.weight)), 'and only in the three weights that ship');
   assert.ok(sizes.filter((x) => x.face === 'disp').every((x) => x.weight === 400), 'League Gothic only in its one weight');
   // flat: no gradients or text shadows, and the one box shadow is the ring on a hovered button
@@ -2343,6 +2372,92 @@ test('the page and its script agree: every hook the script reads is on the page,
   assert.ok(day.includes('<script src="../../assets/app.js" defer></script>'), 'a day page loads the script from two folders up');
   assert.ok(read('index.html', edDist).includes('<script src="./assets/app.js" defer></script>'));
   for (const rel of ['about/index.html', 'almanac/index.html']) assert.ok(!/<script/i.test(read(rel, edDist)), `${rel} needs no script`);
+});
+
+// ---- the joke under ALMOST. -------------------------------------------------------------------------------------------------------
+
+// The scripts a page runs from inside itself, and the policy its meta tag states.
+const inlineScripts = (html) => [...html.matchAll(/<script\b(?![^>]*\ssrc=)[^>]*>([\s\S]*?)<\/script>/gi)].map((m) => m[1]);
+const policyOf = (html) => unesc((html.match(/<meta http-equiv="Content-Security-Policy" content="([^"]*)">/) || [])[1] || '');
+
+test('the homepage and every day page carry the joke for their date with the one script right after it, and the policy allows exactly that script', () => {
+  for (const [label, base] of [['editions', edDist], ['plain headlines', dist]]) {
+    for (const [rel, date] of [['index.html', '2026-11-16'], ['day/2026-11-16/index.html', '2026-11-16'], ['day/2026-11-15/index.html', '2026-11-15']]) {
+      const html = read(rel, base);
+      const where = `${label}: ${rel}`;
+      // the deck is the joke, and the script follows its closing tag with nothing between
+      const m = html.match(/<p class="deck" id="quip">([^<]*)<\/p><script>([\s\S]*?)<\/script>/);
+      assert.ok(m, `${where}: the deck is #quip and the script comes right after it`);
+      assert.equal(unesc(m[1]), quipFor(date), `${where}: the joke picked from the date`);
+      assert.equal(deckOf(html), quipFor(date), `${where}: it is what the hero says under ALMOST.`);
+      const hero = heroOf(html);
+      assert.ok(hero.indexOf('id="verdict"') < hero.indexOf('id="quip"') && hero.indexOf('id="quip"') < hero.indexOf('role="meter"'), `${where}: under ALMOST. and over the board`);
+      // the script is the one in the module, byte for byte, and the policy holds the hash of the text taken from the page
+      const text = m[2];
+      assert.equal(text, QUIP_SCRIPT, `${where}: the script is the quip script`);
+      const hash = createHash('sha256').update(text, 'utf8').digest('base64');
+      assert.ok(policyOf(html).includes(`script-src 'self' 'sha256-${hash}'; connect-src`), `${where}: the policy allows sha256-${hash}`);
+      assert.ok(policyOf(html).includes(QUIP_CSP), `${where}: and it is QUIP_CSP`);
+      assert.equal(policyOf(html), CSP, `${where}: the policy is the one policy`);
+      // one inline script, which cannot close its tag early or open a comment, and is small
+      assert.equal(inlineScripts(html).length, 1, `${where}: one inline script`);
+      assert.ok(!text.includes('</') && !text.includes('<!--'), `${where}: nothing in it can end the tag early`);
+      assert.ok(Buffer.byteLength(text) < 8000, `${where}: ${Buffer.byteLength(text)} bytes`);
+      // the page's other script is the local file, deferred, so it starts only after the joke and its script are in the page
+      const external = [...html.matchAll(/<script\b([^>]*\ssrc="([^"]*)"[^>]*)><\/script>/g)];
+      assert.equal(external.length, 1, `${where}: one script file`);
+      assert.ok(external[0][2].endsWith('assets/app.js'), `${where}: ${external[0][2]}`);
+      assert.ok(/\sdefer(\s|$)/.test(external[0][1]), `${where}: the page script is deferred`);
+      // the page carries the other 99 jokes only inside that script, and shows one of them in its text
+      assert.equal(QUIPS.filter((q) => html.includes(esc(q)) && !text.includes(q)).length, 0);
+      assert.equal(QUIPS.filter((q) => html.replace(text, '').includes(esc(q))).length, 1, `${where}: outside the script the page says one joke`);
+    }
+  }
+  // the pages with no hero have no joke and no inline script, and the same policy
+  for (const rel of ['about/index.html', 'almanac/index.html', '404.html']) {
+    const html = read(rel, edDist);
+    assert.deepEqual(inlineScripts(html), [], `${rel}: no inline script`);
+    assert.ok(!html.includes('id="quip"') && !html.includes('dtwet-quips'), `${rel}: no joke`);
+    assert.equal(policyOf(html), CSP, `${rel}: the same policy`);
+  }
+});
+
+test('a page with nothing filed still tells a joke, and each day of the run has its own: the joke follows the date, not the build', () => {
+  const dates = ['2026-11-15', '2026-11-16'];
+  const said = dates.map((d) => deckOf(read(`day/${d}/index.html`, edDist)));
+  assert.deepEqual(said, dates.map((d) => quipFor(d)));
+  assert.notEqual(said[0], said[1], 'two days in a row, two jokes');
+  // a day with nothing filed
+  const r = copyRoot(root);
+  edit(dayFile(r, '2026-11-15'), (d) => (d.stories = []));
+  const out = buildAt(r);
+  const page = read('day/2026-11-15/index.html', out.dist);
+  assert.equal(deckOf(page), quipFor('2026-11-15'));
+  assert.equal(inlineScripts(page).length, 1);
+  // the same build twice gives the same joke text, so a rebuild with no news changes no file
+  assert.equal(deckOf(read('index.html', buildAt(copyRoot(edRoot)).dist)), deckOf(read('index.html', edDist)));
+});
+
+test('quiet mode has no joke: no #quip, no inline script, and the line under ALMOST. is the quiet line, on the homepage and on every day page', () => {
+  const r = copyRoot(edRoot);
+  edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: '' }));
+  const out = buildAt(r);
+  for (const rel of ['index.html', 'day/2026-11-16/index.html', 'day/2026-11-15/index.html']) {
+    const html = read(rel, out.dist);
+    assert.ok(!html.includes('id="quip"'), `${rel}: no #quip`);
+    assert.deepEqual(inlineScripts(html), [], `${rel}: no inline script`);
+    assert.ok(!html.includes('dtwet-quips'), `${rel}: nothing about the joke bag`);
+    for (const q of QUIPS) assert.ok(!html.includes(esc(q)), `${rel}: not even a line of the list: ${q}`);
+    has(heroOf(html), `<p class="deck">${esc(copy.QUIET_LINE)}</p>`);
+    assert.equal(policyOf(html), CSP, `${rel}: the policy does not change with quiet mode`);
+  }
+  // a page that turns quiet while it is open hides its joke through the html attribute
+  const sheet = sheetOf(read('index.html', edDist));
+  assert.ok(sheet.includes('html[data-quiet="1"] #quip{display:none}'), 'the rule is in the sheet of a normal page');
+  assert.ok(sheetOf(read('index.html', out.dist)).includes('html[data-quiet="1"] #quip{display:none}'), 'and of a quiet one');
+  // the one rule that sets the joke's look
+  const deck = ruleFor(sheet, '.deck');
+  for (const part of ['font:700 22px/1.25 var(--text)', 'min-height:2.5em', 'max-width:330px', 'text-wrap:balance', 'overflow-wrap:anywhere', 'color:var(--ink)']) has(deck, part);
 });
 
 test('page script: the Eastern clock time reads exactly as the server writes it, in winter, in summer and across the clock changes', () => {

@@ -1,6 +1,6 @@
-// didtheworldendtoday.com page script. One small file, no libraries, no inline
-// script anywhere (the page policy forbids it). Everything here is a nicety:
-// the page already reads correctly without it.
+// didtheworldendtoday.com page script. One small file, no libraries, and no inline
+// script but the one under ALMOST., which the page policy allows by its hash.
+// Everything here is a nicety: the page already reads correctly without it.
 (function () {
   'use strict';
 
@@ -144,6 +144,17 @@
     return new Promise(function (resolve) {
       setTimeout(resolve, ms);
     });
+  }
+
+  // The next joke under ALMOST. The one inline script on the page (scripts/templates/quips.mjs) hands over
+  // window.dtwetQuip. A tap and a page swap each ask for one new line, and quiet mode has none.
+  function nextQuip() {
+    if (html.getAttribute('data-quiet') === '1' || typeof window.dtwetQuip !== 'function') return;
+    try {
+      window.dtwetQuip();
+    } catch (e) {
+      /* the line already on the page stays */
+    }
   }
 
   // The line that says the data is old, under the Doom Score board. Every time on the page is a
@@ -321,9 +332,11 @@
     bar.className = 'fresh';
     bar.textContent = 'Updated. Tap to refresh.';
     bar.addEventListener('click', function () {
-      swapMain().catch(function () {
-        window.location.reload();
-      });
+      swapMain()
+        .then(nextQuip)
+        .catch(function () {
+          window.location.reload();
+        });
     });
     doc.body.appendChild(bar);
   }
@@ -396,6 +409,7 @@
         busy = false;
         if (!plain) snap();
         tick();
+        nextQuip();
         var said = $('#said');
         if (said) said.textContent = 'Checked. ' + ($('#verdict') ? $('#verdict').textContent : '');
       });

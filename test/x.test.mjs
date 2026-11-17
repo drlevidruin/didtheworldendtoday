@@ -148,7 +148,7 @@ test('money already spent today counts against the cap, and a new UTC day starts
   const seeded = {
     users: Object.fromEntries(users.map((u) => [u.id, u.username])),
     usersFetchedAt: new Date(NOW - 86400000).toISOString(),
-    usage: { '2026-11-16': { calls: 9, posts: 80, users: 0, usd: 0.46 } },
+    usage: { '2026-11-16': { calls: 9, posts: 112, users: 0, usd: 0.56 } },
   };
   const m = xApi();
   const r = await x.run(ctxFor(m, { xState: seeded }));
@@ -158,11 +158,12 @@ test('money already spent today counts against the cap, and a new UTC day starts
   assert.equal(tomorrow.skipped, null);
 });
 
-test('the default cap is $0.50 a day, and a bad override falls back to it', () => {
-  assert.equal(x.budgetUsd({}, cfg.x), 0.5);
-  assert.equal(x.budgetUsd({ X_DAILY_BUDGET_USD: 'lots' }, cfg.x), 0.5);
-  assert.equal(x.budgetUsd({ X_DAILY_BUDGET_USD: '' }, cfg.x), 0.5);
-  assert.equal(x.budgetUsd({ X_DAILY_BUDGET_USD: '-3' }, cfg.x), 0.5);
+test('the default cap is $0.60 a day, which with the editor\'s $1.40 makes the owner\'s $2, and a bad override falls back to it', () => {
+  assert.equal(x.budgetUsd({}, cfg.x), 0.6);
+  assert.equal(cfg.x.dailyBudgetUsd + cfg.editor.dailyBudgetUsd, 2);
+  assert.equal(x.budgetUsd({ X_DAILY_BUDGET_USD: 'lots' }, cfg.x), 0.6);
+  assert.equal(x.budgetUsd({ X_DAILY_BUDGET_USD: '' }, cfg.x), 0.6);
+  assert.equal(x.budgetUsd({ X_DAILY_BUDGET_USD: '-3' }, cfg.x), 0.6);
   assert.equal(x.budgetUsd({ X_DAILY_BUDGET_USD: '0' }, cfg.x), 0);
   assert.equal(x.budgetUsd({ X_DAILY_BUDGET_USD: '2.5' }, cfg.x), 2.5);
 });
