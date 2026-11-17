@@ -1,9 +1,9 @@
 // npm run edit
 //
-// Writes today's edition with the Claude API: a short headline and 4 to 6 lines,
-// one per near miss, from the headlines the update step just filed. It runs after
-// `npm run update` and before `npm run build`, and it never fails the run: every
-// problem becomes one log line, and the edition already on file stays.
+// Writes today's edition with the Claude API: a one-sentence headline and 4 to 6 items,
+// one per near miss, each with a label, an emoji and a line, from the headlines the update
+// step just filed. It runs after `npm run update` and before `npm run build`, and it never
+// fails the run: every problem becomes one log line, and the edition already on file stays.
 //
 // It does nothing, and says why in one line, when
 //   - ANTHROPIC_API_KEY is empty;
@@ -43,10 +43,11 @@ export const EDITION_SCHEMA = {
         type: 'object',
         properties: {
           emoji: { type: 'string' },
+          label: { type: 'string' },
           line: { type: 'string' },
           ids: { type: 'array', items: { type: 'string' } },
         },
-        required: ['emoji', 'line', 'ids'],
+        required: ['emoji', 'label', 'line', 'ids'],
         additionalProperties: false,
       },
     },
@@ -204,13 +205,14 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
       if (!entry || typeof entry !== 'object') continue;
       const ids = [...new Set(Array.isArray(entry.ids) ? entry.ids.filter((id) => typeof id === 'string' && byId.has(id)) : [])];
       if (!ids.length) continue;
-      items.push({ emoji: entry.emoji, line: entry.line, ids });
+      items.push({ emoji: entry.emoji, label: entry.label, line: entry.line, ids });
     }
     // The order of the items is the rank: the editor lists them most world-ending first.
     items = items.map((it) => {
       const lead = byId.get(it.ids[0]);
       return {
         emoji: it.emoji,
+        label: it.label,
         line: it.line,
         ids: it.ids,
         quiet: Boolean(lead.quiet) || Boolean(quietCard(lead)),
@@ -230,7 +232,9 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
     state.lastWriteAt = nowIso;
     writeJsonIfChanged(f.state, state);
     const n = checked.edition.items.length;
-    return done('written', `wrote ${n} item${n === 1 ? '' : 's'} for ${today} (${tokensOf(response)})`, { written: n });
+    // What was dropped, or kept without its label, goes in the same line so a bad day can be traced.
+    const notes = checked.dropped.map((d) => `item ${d.index + 1} ${d.kept ? 'kept without a label' : 'dropped'} (${d.reason})`);
+    return done('written', `wrote ${n} item${n === 1 ? '' : 's'} for ${today} (${tokensOf(response)})${notes.length ? `; ${notes.join(', ')}` : ''}`, { written: n });
   } catch (err) {
     return done('failed', `stopped (${oneLine(err && err.message ? err.message : err, key)}), kept the current edition`);
   }

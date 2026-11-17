@@ -1,6 +1,6 @@
 # Did the world end today?
 
-A site that answers "Did the world end today?" with ALMOST. and then shows the day's near misses, one day at a time. Every day gets a short headline and 4 to 6 lines, a Doom Score from 0 to 99, and its own page. The homepage is a feed of the last week. Older days live in the Almanac of Almost. Made by [@thelpdrive](https://x.com/thelpdrive).
+A site that answers "Did the world end today?" with ALMOST. and then shows the day's near misses, one day at a time. Every day gets a headline of one plain sentence and then "Still here.", 4 to 6 lines, a Doom Score from 0 to 99, and its own page. It looks like a safety sign: black on yellow, with a huge ALMOST. and the Doom Score on a black board. The homepage is a feed of the last week. Older days live in the Almanac of Almost. Made by [@thelpdrive](https://x.com/thelpdrive).
 
 ## How it works
 
@@ -36,11 +36,11 @@ Today's score and stories are the last 24 hours, and each run saves that view as
 
 ### The daily edition
 
-Each day has an edition in `data/editions/YYYY-MM-DD.json`: a short headline that ends in "Still here." and 4 to 6 lines, one per near miss, ranked from most world-ending to least, so line 1 is the closest call. The order of the lines is the rank; there is no separate best story. A story shows up once. If an earlier day's edition already told it, it never appears in a later edition or in a later day's plain headlines.
+Each day has an edition in `data/editions/YYYY-MM-DD.json`: a headline of one plain sentence and then "Still here." (up to 110 characters) and 4 to 6 lines, one per near miss, ranked from most world-ending to least, so line 1 is the closest call. Each line has a label that names the thing, in 1 to 4 words ("FAA outage"), over a line of up to 110 characters that says what happened. The order of the lines is the rank; there is no separate best story. A story shows up once. If an earlier day's edition already told it, it never appears in a later edition or in a later day's plain headlines.
 
 The editor (`npm run edit`, `scripts/editor.mjs`) writes today's edition by sending the day's headlines to the Claude API. It calls the API at most 12 times a day, no more than once every 2 hours, and only when the stories have changed since the last call. It does nothing when quiet mode is on, and it never replaces an edition written by hand. It never fails a run: if the key is missing, the call fails, or the answer breaks a rule, it logs one line and the edition already on file stays.
 
-One check decides whether an edition can be used, for the editor and for the build. It needs a headline that ends in "Still here.", at least 3 usable lines, no dashes, semicolons or exclamation marks in our own text, nothing the taste filter blocks, and ids that are real stories not used on an earlier day. A day with no usable edition shows its plain headlines instead: up to 5, in the usual order, no more than 2 from one category, and no jokes. The first two editions (Nov 16 and Nov 17, 2026) were written by hand.
+One check decides whether an edition can be used, for the editor and for the build. It needs a headline of one sentence and then "Still here." (at least 5 words before "Still here.", a first sentence of at least 4 words that is not the whole headline, and no text after that sentence that starts with a lowercase letter or a number, which means an abbreviation cut it short; up to 110 characters), at least 3 usable lines, no dashes, semicolons or exclamation marks in our own text, nothing the taste filter blocks, and ids that are real stories not used on an earlier day. A label has its own check: 1 to 4 words, up to 32 characters, no period, and the same text rules as a line. A missing or bad label never costs the row. The row stays, its line shows where the label would be, and the log says why the label was left off. A day with no usable edition shows its plain headlines instead: up to 5, in the usual order, no more than 2 from one category, no jokes, no rank numbers and no closest call. The first two editions (Nov 16 and Nov 17, 2026) were written by hand.
 
 ## Run it on your computer
 
@@ -57,7 +57,17 @@ npm test           # offline, no network
 
 `npm run serve` also serves the same files under `http://127.0.0.1:8787/didtheworldendtoday/`. Every link on the site is relative, so both addresses work. `PORT` and `HOST` change where it listens. `SITE_URL` changes the address used in share images, the feed and the sitemap (the default is `https://didtheworldendtoday.com`).
 
-The fonts are committed in `assets/fonts/` (Anton, SIL Open Font License). The build never downloads anything.
+The fonts are committed in `assets/fonts/`: League Gothic and Libre Franklin, both under the SIL Open Font License. The license texts sit next to them and the build copies them into `dist/assets/` beside the web fonts. League Gothic is the Google Fonts release (`ofl/leaguegothic`), whose license reserves no font name, so a subset of it is allowed. The pages use four small woff2 subsets: League Gothic Regular (10.7 KB) and Libre Franklin in 400, 600 and 700 (about 16.8 KB each). They keep the Latin letters, numbers and punctuation, Latin Extended-A (U+0100 to U+017F) and the comma-below letters (U+0218 to U+021B), so names like Doncic with its accents, Erdogan, Lodz and Brasov draw. The share image is drawn by resvg from three TTF files: League Gothic Regular, Libre Franklin SemiBold and Libre Franklin Bold. The build never downloads anything. Until League Gothic loads, a stand-in made from the phone's own Arial Bold, cut to the width of League Gothic, holds ALMOST. inside the screen, so no page scrolls sideways at 320 pixels wide.
+
+## The look
+
+A safety sign: yellow (`#FFD100`) and black (`#000000`), and one red (`#D81E05`) in two places only, the Doom Score number on the board and the number 1 of the day's closest call. There is no grey, no orange and no cream. League Gothic sets the big type (the question, ALMOST., the numbers and the line over the rows) and Libre Franklin sets everything else, in 400, 600 and 700. Nothing has a rounded corner. The colors live in `scripts/templates/palette.mjs`. Quiet mode is white and black with no red, no yellow and no emoji.
+
+The first screen, top to bottom: a black band with the question, ALMOST. as one huge button (tap it to check again), the day's one-sentence headline, and the Doom Score on a black board with the number, ten squares (one solid square for each ten points) and the scale in small print. Then today's near misses. A row is its rank, its emoji, the label, the line and the news site, and the whole row is one link to the story. One black Share today button follows the rows. Earlier days come next: yesterday's rows show, and the days before it fold theirs behind a button. A day with no edition has no rank numbers and nothing red but the score. The footer says when the site last checked, links to every headline of today, and credits [@thelpdrive](https://x.com/thelpdrive).
+
+Sharing works like a word game. The share text is the question and ALMOST., the emoji of the day's rows in rank order, the Doom Score with ten squares (black for the score, yellow for what is left), and the address of the day. A past day asks about its own date. Quiet mode keeps its own plainer text.
+
+The share image shows the first sentence of the day's headline, so the first sentence has to make sense on its own. A card is 1200 by 630: a black band with the question, ALMOST. in black on yellow, the Doom Score on a black board, that sentence, and the address.
 
 ## Quiet mode
 
@@ -69,7 +79,7 @@ Only an explicit `false` turns quiet mode off. If `quiet.json` is unreadable (a 
 
 It also turns on by itself when 3 or more of the top 30 Google News headlines are about a mass-casualty event, or name a toll such as "12 dead", and then stays on for at least 6 hours. Separately, any story about a big quake, a flood, a fire or a storm that could hurt people gets a quiet card with no joke. The card also links to a charity, but only when something says people were hurt: a headline that reports harm to people or homes (damage, destroyed, homes, evacuated, displaced, injured, dead, killed, missing), or a USGS quake with a PAGER rating of yellow, orange or red or a tsunami flag. The link goes to the Red Cross for a place in the United States and to the international Red Cross and Red Crescent for a place in another country. A state or city names a US place; a bare "US" counts only when no other place is named; a region that other countries share (the Midwest, the Gulf Coast, the Northeast) names nothing, so a headline with only that gets no link. A warning, a forecast, a headline that says nobody was hurt (no damage, no injuries), an evacuation that has ended, or a quake that is only big gets the caption alone.
 
-In quiet mode every day shows plain headlines and no jokes, and the editor stays off.
+In quiet mode every day shows plain headlines and no jokes, the page is white and black with no red and no emoji, and the editor stays off.
 
 ## Turn on X
 
@@ -109,7 +119,7 @@ At the registrar, point the domain at GitHub Pages with these records:
 - `scripts/build.mjs` and `scripts/templates/`: the site builder (`npm run build`)
 - `scripts/serve.mjs`: the local server (`npm run serve`)
 - `scripts/config.mjs`: every query, keyword and number in one place, including the news sites we never publish (`EXCLUDE_SOURCES`) and one-off headlines to hide (`HIDE_TITLES`)
-- `assets/`: the page script and the fonts
+- `assets/`: the page script and the fonts (League Gothic and Libre Franklin, with their licenses)
 - `data/`: what the pipeline and the editor save, committed by the bot
 - `test/`: the offline tests
 - `quiet.json`: the manual quiet switch

@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import vm from 'node:vm';
+import zlib from 'node:zlib';
 import { XMLParser, XMLValidator } from 'fast-xml-parser';
 import resvg from '@resvg/resvg-js';
 import { config } from '../scripts/config.mjs';
@@ -18,11 +19,13 @@ import { almanacRows, headline as headlineRow, headlines as headlineRows, row as
 import { CSP } from '../scripts/templates/layout.mjs';
 import { feedXml } from '../scripts/templates/feed.mjs';
 import { esc, num, url } from '../scripts/templates/esc.mjs';
-import { capFirst, joinNames } from '../scripts/lib/text.mjs';
+import { capFirst, firstSentence, joinNames } from '../scripts/lib/text.mjs';
 import { headlineLink, isUsPlace, quietCard } from '../scripts/lib/quietcards.mjs';
 import { validateEdition } from '../scripts/lib/editions.mjs';
 import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
-import { fitHeadline, fitQuestion, fontFileIn, ogSvg, questionText, renderPng } from '../scripts/templates/graphics.mjs';
+import { BODY, DISPLAY, drawable, faviconSvg, readCmap, fitQuestion, fitSentence, fontFilesIn, ogSvg, questionText, renderPng } from '../scripts/templates/graphics.mjs';
+import { INK, RED, WHITE, YELLOW } from '../scripts/templates/palette.mjs';
+import { css, css404 } from '../scripts/templates/css.mjs';
 import * as usgs from '../scripts/sources/usgs.mjs';
 import * as faa from '../scripts/sources/faa.mjs';
 import * as jpl from '../scripts/sources/jpl.mjs';
@@ -169,6 +172,12 @@ function pngSize(file) {
 // with the publishers' own text taken out of what is scanned (`live` is the list of those
 // strings, see thirdPartyStrings). Our own static pages are still held to the words.
 
+// The four web fonts the pages use: League Gothic for the big type, Libre Franklin 400, 600 and 700 for the rest.
+// Each font's license ships beside them.
+const WEB_FONTS = ['leaguegothic.woff2', 'librefranklin-400.woff2', 'librefranklin-600.woff2', 'librefranklin-700.woff2'];
+const FONT_LICENSES = ['OFL-LeagueGothic.txt', 'OFL-LibreFranklin.txt'];
+// A font license names the font's own project address, so it is the one text file allowed to say github.com.
+const isLicense = (rel) => /^assets\/OFL-[A-Za-z]+\.txt$/.test(rel);
 const TOKENS = ['undefined', 'NaN', '[object'];
 // Words and hooks of features that were cut. They are ours, so no page may say them.
 const CUT_WORDS = ['Doom Bingo', 'Vital signs', 'The receipts', 'Check again', 'Closest call today', 'Your first check'];
@@ -244,7 +253,7 @@ function auditSite(base, { label = 'site', needDay = true, live = null } = {}) {
   const ownWords = (rel) => !live || OWN_FILES.has(rel);
   const ours = (text) => (live ? without(text, strings) : text);
   const pages = [...files.keys()].filter((r) => r.endsWith('.html'));
-  for (const need of ['index.html', 'about/index.html', 'almanac/index.html', '404.html', 'feed.xml', 'api/today.json', 'og/latest.png', 'robots.txt', 'sitemap.xml', 'favicon.svg', 'apple-touch-icon.png', 'site.webmanifest', 'assets/app.js', 'assets/anton.woff2']) {
+  for (const need of ['index.html', 'about/index.html', 'almanac/index.html', '404.html', 'feed.xml', 'api/today.json', 'og/latest.png', 'robots.txt', 'sitemap.xml', 'favicon.svg', 'apple-touch-icon.png', 'site.webmanifest', 'assets/app.js', ...WEB_FONTS.map((f) => `assets/${f}`), ...FONT_LICENSES.map((f) => `assets/${f}`)]) {
     assert.ok(files.has(need), `${label}: ${need} exists`);
   }
   assert.ok(!files.has('CNAME') && !files.has('.nojekyll'), `${label}: no CNAME and no .nojekyll`);
@@ -262,7 +271,7 @@ function auditSite(base, { label = 'site', needDay = true, live = null } = {}) {
     for (const t of tokens) assert.ok(!ours(text).includes(t), `${label}: ${rel} contains ${t}`);
     if (ownWords(rel)) {
       for (const d of [EM, EN]) assert.ok(!text.includes(d), `${label}: ${rel} contains a long dash`);
-      assert.ok(!/github\.com/i.test(text), `${label}: ${rel} links the repository`);
+      if (!isLicense(rel)) assert.ok(!/github\.com/i.test(text), `${label}: ${rel} links the repository`);
       assert.ok(!/drlevidruin|levidruin/i.test(text), `${label}: ${rel} names a person`);
     }
     if (rel.endsWith('.json') || rel.endsWith('.webmanifest')) JSON.parse(text);
@@ -272,7 +281,10 @@ function auditSite(base, { label = 'site', needDay = true, live = null } = {}) {
   const sized = (rel) => fs.statSync(files.get(rel)).size;
   assert.ok(sized('index.html') < 100 * 1000, `${label}: index.html is ${sized('index.html')} bytes`);
   assert.ok(sized('assets/app.js') < 15 * 1000, `${label}: app.js is ${sized('assets/app.js')} bytes`);
-  assert.ok(sized('assets/anton.woff2') < 50 * 1000, `${label}: the font is ${sized('assets/anton.woff2')} bytes`);
+  for (const font of WEB_FONTS) assert.ok(sized(`assets/${font}`) < 50 * 1000, `${label}: ${font} is ${sized(`assets/${font}`)} bytes`);
+  assert.ok(!files.has('assets/anton.woff2') && ![...files.keys()].some((f) => /newsreader/i.test(f)), `${label}: the old fonts are gone`);
+  assert.deepEqual([...files.keys()].filter((f) => /\.(?:ttf|otf|woff)$/.test(f)), [], `${label}: no font file but the four woff2 ships`);
+  for (const license of FONT_LICENSES) assert.match(fs.readFileSync(files.get(`assets/${license}`), 'utf8'), /SIL OPEN FONT LICENSE Version 1\.1/, `${label}: ${license} is the license text`);
 
   for (const rel of pages) {
     const raw = fs.readFileSync(files.get(rel), 'utf8');
@@ -375,7 +387,7 @@ test('an edition the editor wrote can use words we cut from our own pages and th
     date: day,
     by: 'editor',
     writtenAt: `${day}T15:00:00.000Z`,
-    headline: 'Check again tomorrow. Still here.',
+    headline: 'Check again tomorrow for more of this news. Doom Bingo is not coming back. Still here.',
     items: lines.map((line, i) => ({
       emoji: '\u{1F527}',
       line,
@@ -394,7 +406,7 @@ test('an edition the editor wrote can use words we cut from our own pages and th
   const out = build(real, { siteUrl: SITE });
   const home = read('index.html', out.dist);
   for (const line of lines) assert.ok(home.includes(esc(line)), `the page carries the model's line: ${line}`);
-  assert.ok(home.includes('Check again tomorrow. Still here.'), 'and its headline');
+  assert.ok(home.includes('Check again tomorrow for more of this news. Doom Bingo is not coming back. Still here.'), 'and its headline');
   auditSite(out.dist, { label: 'model text', live: thirdPartyStrings(real) });
 });
 
@@ -512,7 +524,7 @@ test('a very busy day stays under 100 KB: the day page leaves its lowest headlin
   const home = read('index.html', out.dist);
   assert.ok(Buffer.byteLength(home) < 100 * 1000, `index.html is ${Buffer.byteLength(home)} bytes`);
   assert.equal((home.match(/<li class="row/g) || []).length, cfg.edition.fallbackRows, 'the homepage shows a handful of rows, not the day');
-  assert.ok(home.includes(`Plus ${200 - cfg.edition.fallbackRows} more headlines`), 'and says how many it left to the day page');
+  assert.ok(home.includes('Every headline we read today (200)'), 'and the footer says how many there are, with a door to the day page that lists them');
   const day = read('day/2026-11-16/index.html', out.dist);
   assert.ok(Buffer.byteLength(day) < 100 * 1000, `the day page is ${Buffer.byteLength(day)} bytes`);
   const shown = (day.match(/<li class="hd/g) || []).length;
@@ -538,7 +550,7 @@ const storyOf = (day, start) => {
   assert.ok(hit, `fixture story "${start}"`);
   return hit;
 };
-const itemOf = (s, emoji, line, over = {}) => ({ emoji, line, ids: [s.id], quiet: false, cat: s.cat, title: s.title, url: s.url, source: s.source, outlets: s.outlets, ...over });
+const itemOf = (s, emoji, label, line, over = {}) => ({ emoji, label, line, ids: [s.id], quiet: false, cat: s.cat, title: s.title, url: s.url, source: s.source, outlets: s.outlets, ...over });
 
 const AIRLINES = storyOf(stored16, 'Airlines recover');
 const AWS = storyOf(stored16, 'Major AWS outage');
@@ -554,25 +566,25 @@ const ED16 = {
   date: '2026-11-16',
   by: 'hand',
   writtenAt: '2026-11-17T09:16:00.000Z',
-  headline: 'Planes stopped, apps blinked, a rock waved. Still here.',
+  headline: 'A nationwide ground stop kept planes on the tarmac for hours. Still here.',
   items: [
-    itemOf(AIRLINES, '✈️', 'Airlines are digging out after a nationwide ground stop. Your bag is probably fine.'),
-    itemOf(AWS, '🖥️', 'A big AWS outage knocked a bunch of your favorite apps offline for a while.'),
-    itemOf(BREACH, '🔓', 'A retailer lost millions of customer records. Good day to change a password.'),
-    itemOf(NASDAQ, '📉', 'Trading got halted as the Nasdaq slid. It usually comes back.'),
-    itemOf(ROCK, '☄️', "An asteroid the size of a bus passed us at a third of the moon's distance. It kept going."),
-    itemOf(QUAKE, '🌋', 'A magnitude 6.6 quake hit near Tual, Indonesia.'),
+    itemOf(AIRLINES, '✈️', 'Ground stop', 'Airlines are digging out after a nationwide ground stop. Your bag is probably fine.'),
+    itemOf(AWS, '🖥️', 'AWS outage', 'A big AWS outage knocked a bunch of your favorite apps offline for a while.'),
+    itemOf(BREACH, '🔓', 'Retail breach', 'A retailer lost millions of customer records. Good day to change a password.'),
+    itemOf(NASDAQ, '📉', 'Nasdaq halt', 'Trading got halted as the Nasdaq slid. It usually comes back.'),
+    itemOf(ROCK, '☄️', 'Asteroid pass', "An asteroid the size of a bus passed us at a third of the moon's distance. It kept going."),
+    itemOf(QUAKE, '🌋', 'Tual quake', 'A magnitude 6.6 quake hit near Tual, Indonesia.'),
   ],
 };
 const ED15 = {
   date: '2026-11-15',
   by: 'hand',
   writtenAt: '2026-11-16T04:00:00.000Z',
-  headline: 'The grid blinked three times. Still here.',
+  headline: 'A substation failure left a whole city in the dark for a while. Still here.',
   items: [
-    itemOf(SUBSTATION, '⚡', 'A substation failed and a whole city lost power for a while.'),
-    itemOf(FIFTY, '🔌', 'Fifty thousand customers sat in the dark. The lights came back.'),
-    itemOf(ROLLING, '🌡️', 'Demand spiked and the regional grid rolled some blackouts. Nobody panicked.'),
+    itemOf(SUBSTATION, '⚡', 'City blackout', 'A substation failed and a whole city lost power for a while.'),
+    itemOf(FIFTY, '🔌', 'Power outage', 'Fifty thousand customers sat in the dark. The lights came back.'),
+    itemOf(ROLLING, '🌡️', 'Grid blackouts', 'Demand spiked and the regional grid rolled some blackouts. Nobody panicked.'),
   ],
 };
 const EDITIONS = { '2026-11-15': ED15, '2026-11-16': ED16 };
@@ -609,14 +621,14 @@ function rowFacts(html) {
   return {
     best: /^<li class="row[^"]*\bbest\b/.test(html),
     quiet: /^<li class="row[^"]*\bquiet\b/.test(html),
-    tag: get(/<p class="tag">([^<]*)<\/p>/),
-    rank: get(/<span class="rn">([^<]*)<\/span>/),
-    emoji: get(/<span class="em">([^<]*)<\/span>/),
-    text: get(/<span class="txt">([^<]*)<\/span>/),
-    // the source is two lines: the name, and under it how many news sites told the story
-    name: get(/<span class="sn">([^<]*)<\/span>/),
-    count: get(/<span class="sc">([^<]*)<\/span>/),
-    cta: get(/<span class="cta">([^<]*)<\/span>/),
+    plain: /^<li class="row[^"]*\bplain\b/.test(html),
+    rank: get(/<span class="rn" aria-hidden="true">([^<]*)<\/span>/),
+    emoji: get(/<span class="em" aria-hidden="true">([^<]*)<\/span>/),
+    // what the row says: the label over the line. A row with no label has its line where the label goes.
+    label: get(/<span class="lb">([^<]*)<\/span>/),
+    line: get(/<span class="ln">([^<]*)<\/span>/),
+    // the source: the news site's name and nothing else
+    src: get(/<span class="src">([^<]*)<\/span>/),
     href: get(/<a class="card" href="([^"]*)"/),
     cap: get(/<span class="cap">([\s\S]*?)<\/span>/),
     help: get(/<a class="help" href="([^"]*)"/),
@@ -626,7 +638,7 @@ function rowFacts(html) {
 const factsIn = (html) => rowsOf(html).map(rowFacts);
 // every caption on a page: a row's is inside its card, a headline's is a line of its own under it
 const capsIn = (html) => [...html.matchAll(/<(?:p|span) class="cap">([^<]*)/g)].map((m) => m[1]);
-const headlineOf = (html) => unesc((heroOf(html).match(/<p class="hl [^"]*">([^<]*)<\/p>/) || [])[1] || '');
+const headlineOf = (html) => unesc((heroOf(html).match(/<p class="deck">([^<]*)<\/p>/) || [])[1] || '');
 const lineCount = (html) => (html.match(/<li class="row/g) || []).length;
 const wordOf = (n) => (n === 1 ? 'headline' : 'headlines');
 
@@ -640,6 +652,7 @@ test('the editions this file writes pass the same check the build and the editor
   }
   assert.ok(ED16.headline.length <= cfg.edition.headlineMax && ED16.headline.endsWith('Still here.'));
   assert.equal(ED16.items.length, cfg.edition.maxItems, 'the closest call and five more');
+  for (const ed of [ED15, ED16]) for (const item of ed.items) assert.ok(item.label && item.label.split(' ').length <= cfg.edition.labelMaxWords, `${ed.date}: "${item.label}" is a label of one to four words`);
   // The two builds really differ: one reads the editions, one reads the plain headlines.
   assert.equal(headlineOf(read('index.html', edDist)), ED16.headline);
   assert.equal(headlineOf(read('index.html')), copy.subline(latest.score));
@@ -647,133 +660,150 @@ test('the editions this file writes pass the same check the build and the editor
 
 // ---- the homepage ------------------------------------------------------------------------------------
 
-test('the homepage reads top to bottom: the question, ALMOST., the headline, the score, one button, today, yesterday, the end, the footer', () => {
-  for (const [label, base, head] of [
-    ['editions', edDist, ED16.headline],
-    ['plain headlines', dist, copy.subline(latest.score)],
+test('the first screen reads top to bottom: the black band and its question, ALMOST., the headline, the Doom Score board, the line over the rows, the first row and its source', () => {
+  for (const [label, base, head, firstRow] of [
+    ['editions', edDist, ED16.headline, '<li class="row best'],
+    ['plain headlines', dist, copy.subline(latest.score), '<li class="row plain'],
   ]) {
     const home = read('index.html', base);
-    const marks = ['<main', 'class="hero"', 'class="q"', 'id="verdict"', 'class="hl ', 'class="doom"', 'class="meter"', 'class="scale"', 'class="go"', 'class="sh"', 'class="mast"', 'id="today"', '<span class="hot">TODAY</span>', '<span>YESTERDAY</span>', 'class="end"', '<footer>'].map((m) => home.indexOf(m));
+    const marks = ['<main', 'class="band"', 'class="q"', 'class="hero"', 'data-act="check"', 'id="verdict"', 'class="deck"', 'role="meter"', 'class="bn"', 'class="sq"', 'id="stale"', 'id="today"', 'class="sec"', firstRow, 'class="src"', 'data-act="share"', 'class="end"', '<footer>'].map((m) => home.indexOf(m));
     assert.ok(marks.every((n) => n > 0), `${label}: ${marks}`);
     assert.deepEqual(marks, [...marks].sort((a, b) => a - b), `${label}: in this order`);
+    has(home, '<div class="band"><h1 class="q">Did the world end today?</h1></div>');
     const hero = heroOf(home);
-    assert.match(hero, /<span class="q">Did the world end today\?<\/span>/);
-    assert.match(hero, /<span class="verdict" id="verdict">ALMOST\.<\/span>/);
-    has(hero, `<p class="hl ${copy.headlineClass(head)}">${esc(head)}</p>`);
-    assert.ok(hero.indexOf('id="verdict"') < hero.indexOf('class="hl '), `${label}: under ALMOST.`);
-    const doom = hero.match(/<p class="doom">[\s\S]*?<\/p>/)[0];
-    assert.match(doom, /<span class="when">Mon, Nov 16<\/span>/, `${label}: the date`);
-    assert.match(doom, new RegExp(`Doom Score <b class="n">${latest.score}</b> of 99`), `${label}: the score`);
-    assert.match(doom, /<span class="upd">Updated 5:30 PM ET<\/span>/, `${label}: when it was updated, in Eastern time, as a clock time`);
-    assert.ok(!doom.includes('data-since') && !/ago|checked/.test(doom), `${label}: no ticking relative time`);
-    assert.ok(!/[↑↓→]/.test(doom), `${label}: no arrow in the Doom line`);
-    assert.ok(hero.includes(`<progress class="meter" max="99" value="${latest.score}"`), `${label}: the meter`);
-    has(hero, '<p class="scale">0 is a quiet day. 99 is the end.</p>');
-    assert.ok(hero.indexOf('class="meter"') < hero.indexOf('class="scale"') && hero.indexOf('class="scale"') < hero.indexOf('class="go"'), `${label}: the scale sits under the meter`);
-    has(hero, '<p class="mast">didtheworldendtoday.com · @thelpdrive</p>');
-    assert.ok(hero.indexOf('class="mast"') > hero.indexOf('class="sh"'), `${label}: the masthead line is the last thing in the hero`);
+    has(hero, '<button class="vbox" type="button" data-act="check"><span class="verdict" id="verdict">ALMOST.</span><span class="check" id="check" aria-hidden="true"></span></button>');
+    has(hero, `<p class="deck">${esc(head)}</p>`);
+    assert.ok(hero.indexOf('id="verdict"') < hero.indexOf('class="deck"') && hero.indexOf('class="deck"') < hero.indexOf('role="meter"'), `${label}: ALMOST., the headline under it, then the board`);
+    // the board is one meter for a screen reader: the number, the ten squares and the small print are its picture
+    const score = latest.score;
+    has(hero, `<div class="board" role="meter" aria-label="Doom Score" aria-valuenow="${score}" aria-valuemin="0" aria-valuemax="99" aria-valuetext="${score} out of 99">`);
+    has(hero, '<span class="bl">Doom Score</span>');
+    has(hero, `<span class="bn">${score}</span>`);
+    has(hero, '<span class="sq" aria-hidden="true">');
+    has(hero, '<span class="bt">out of 99. 0 is a quiet day. 99 is the end.</span>');
+    const filled = Math.round(score / 10);
+    assert.equal((hero.match(/<span class="f"><\/span>/g) || []).length, filled, `${label}: ${filled} of ten squares are solid`);
+    assert.equal((hero.match(/<span><\/span>/g) || []).length, 10 - filled, `${label}: the rest are outlines`);
+    assert.ok(hero.indexOf('role="meter"') < hero.indexOf('id="stale"'), `${label}: the stale line, hidden here, sits under the board`);
+    has(hero, 'id="stale" data-template="Last checked {time}. That&#39;s on us, not the world." hidden></p>');
     assert.ok(!hero.includes(copy.TAGLINE), `${label}: the tagline is for the footer`);
-    // one obvious button: a link to today, and "Share today" is plain text under it
-    assert.equal((home.match(/class="go"/g) || []).length, 1, `${label}: one big button`);
-    assert.match(hero, /<a class="go" href="#today">See what almost got us ↓<\/a>/);
-    assert.equal((home.match(/id="today"/g) || []).length, 1, `${label}: and its target exists once`);
-    assert.match(hero, /<button class="sh" type="button" data-act="share">Share today<\/button>/);
-    assert.equal((hero.match(/<button\b/g) || []).length, 2, `${label}: ALMOST. replays the check, Share today shares`);
-    assert.ok(!hero.includes('class="btns"'), `${label}: no row of buttons`);
-    // the footer closes it
+    // the old first screen is gone: no date line, no number line, no thin meter, no URL-and-handle line, no share button
+    for (const gone of ['class="when"', 'class="doom"', 'class="meter"', '<progress', 'class="scale"', 'Updated', 'class="mast"', 'class="go"', 'class="sh"', 'didtheworldendtoday.com', '@thelpdrive', 'Share']) assert.ok(!hero.includes(gone), `${label}: the hero has no ${gone}`);
+    assert.ok(!/[↑↓→←]/.test(hero), `${label}: no arrow on the first screen`);
+    assert.equal((hero.match(/<button\b/g) || []).length, 1, `${label}: ALMOST. is the one button in the hero`);
+    assert.equal((home.match(/id="today"/g) || []).length, 1, `${label}: today's block is there once`);
+    // the share button comes once, after today's rows, and nothing else on the page says share
+    assert.equal((home.match(/data-act="share"/g) || []).length, 1, `${label}: one share button`);
+    assert.equal((blocksOf(home)[0].match(/<button\b/g) || []).length, 1, `${label}: and it is in today's block`);
+    // the footer closes it: when the page was checked, the way to every headline, the pages, the credit
     assert.ok(home.indexOf('<p class="tagline">') > home.indexOf('<footer>'), `${label}: the tagline is in the footer`);
+    has(home, '<p class="up">Updated 5:30 PM ET</p>');
+    assert.ok(home.indexOf('class="up"') > home.indexOf('<footer>'), `${label}: "Updated" lives in the footer`);
     for (const line of copy.FOOTER_LINES) assert.ok(home.includes(line), `${label}: ${line}`);
     // the words themselves, not only whatever the constant says
     for (const line of ['Checked every 15 minutes by a robot with low standards.', 'Headlines belong to their publishers. The jokes are ours.', 'Satire. Not financial, medical, or end-of-the-world advice.']) has(home, `<p>${line}</p>`);
     has(home, '<a href="https://x.com/thelpdrive" target="_blank" rel="noopener">@thelpdrive</a>');
-    for (const link of ['href="./about/">About</a>', 'href="./feed.xml">RSS</a>']) has(home, link);
+    for (const link of ['href="./about/">About</a>', 'href="./feed.xml">RSS</a>', 'href="./almanac/">Almanac</a>']) has(home, link);
   }
-  // the one filled orange control is the big button
-  const css = read('index.html', edDist).match(/<style>([\s\S]*?)<\/style>/)[1];
-  assert.match(css, /\.go\{[^}]*background:var\(--hot\)/, 'the big button is orange');
-  for (const small of ['.btn', '.sh']) assert.ok(!new RegExp(`\\${small}\\{[^}]*background:var\\(--hot\\)`).test(css), `${small} is not orange`);
+  // one control is filled: the black share button. Nothing is filled with the red.
+  const sheet = read('index.html', edDist).match(/<style>([\s\S]*?)<\/style>/)[1];
+  assert.match(sheet, /\.btn\{[^}]*background:var\(--ink\)/, 'the share button is black');
+  assert.ok(!/\.btn\{[^}]*#D81E05/i.test(sheet), 'and it is not red');
 });
 
-test('today and yesterday are day blocks: a label, the rows, a way to the day, and a share button', () => {
+test('today and yesterday are day blocks: today has the line over its rows and the one share button, yesterday has its label, its date, its headline, its score and its rows', () => {
   for (const [label, base, ranked] of [['editions', edDist, true], ['plain headlines', dist, false]]) {
-    const [today, yesterday, ...more] = blocksOf(read('index.html', base));
+    const home = read('index.html', base);
+    const [today, yesterday, ...more] = blocksOf(home);
     assert.equal(more.length, 0, `${label}: two days, two blocks`);
     // today
-    assert.match(today, /^<section class="day" id="today" data-share-text=/);
-    has(today, '<h2 class="dl"><span class="hot">TODAY</span><span> &middot; MONDAY, NOV 16</span></h2>');
-    if (ranked) {
-      has(today, '<p class="rank">Ranked from most world-ending to least.</p>');
-      assert.ok(today.indexOf('class="rank"') < today.indexOf('class="rows"'), `${label}: the rank note sits above the rows`);
-    } else {
-      assert.ok(!today.includes('class="rank"') && !today.includes('Ranked from'), `${label}: plain headlines are not ranked, so the page does not say they are`);
-    }
-    assert.ok(!today.includes('class="dh"') && !today.includes('class="ds"'), `${label}: today's headline and score are already in the hero`);
-    // yesterday
-    assert.match(yesterday, /^<section class="day" data-share-text=/);
-    has(yesterday, '<h2 class="dl"><span>YESTERDAY</span><span> &middot; SUNDAY, NOV 15</span></h2>');
-    assert.ok(!yesterday.includes('id="today"'));
-    assert.ok(!yesterday.includes('class="rank"'), `${label}: only today's block says how its rows are ordered`);
-    has(yesterday, '<p class="ds">Doom Score 11 of 99</p>');
-    // each ends with the same share button
-    for (const block of [today, yesterday]) {
-      has(block, '<button class="btn" type="button" data-act="share">Share this day</button>');
-      assert.ok(block.indexOf('class="rows"') < block.indexOf('class="df"'), `${label}: the rows come before the footer of the block`);
-    }
-    // the first row of a block is the closest call, and only the first
+    assert.match(today, /^<section class="day" id="today">/);
+    has(today, `<h2 class="sec">${ranked ? 'TODAY’S NEAR MISSES' : 'TODAY’S TOP STORIES'}</h2>`);
+    assert.ok(today.indexOf('class="sec"') < today.indexOf('class="rows"'), `${label}: the line sits above the rows`);
+    assert.ok(!today.includes('class="dl"') && !today.includes('class="dh"') && !today.includes('class="ds"'), `${label}: today's label, headline and score are already in the sign above`);
+    assert.ok(!/WORST FIRST|CLOSEST CALL|Ranked from|class="rank"|class="tag"/.test(home), `${label}: no separate note about the order`);
+    has(today, '<button class="btn" type="button" data-act="share">Share today</button>');
+    assert.ok(today.indexOf('class="rows"') < today.indexOf('data-act="share"'), `${label}: the share button comes right after the rows`);
+    // yesterday: a kicker, the date as a link to its page, a headline, a score with ten squares, the rows (open), no share button of its own
+    assert.match(yesterday, /^<section class="day" id="day-2026-11-15">/);
+    has(yesterday, '<p class="dk">YESTERDAY</p>');
+    has(yesterday, '<h2 class="dl"><a href="./day/2026-11-15/">SUNDAY, NOV 15</a></h2>');
+    has(yesterday, '<p class="ds">Doom Score 11 <span class="sq" aria-hidden="true">');
+    assert.equal((yesterday.match(/<span class="f"><\/span>/g) || []).length, 1, `${label}: a score of 11 fills one of the ten squares`);
+    assert.equal((yesterday.match(/<span><\/span>/g) || []).length, 9, `${label}: and leaves nine`);
+    const at = (m) => yesterday.indexOf(m);
+    assert.ok(at('class="dk"') < at('class="dl"') && at('class="dl"') < at('class="dh"') && at('class="dh"') < at('class="ds"') && at('class="ds"') < at('class="rows"'), `${label}: kicker, date, headline, score, rows`);
+    assert.ok(!yesterday.includes('id="today"') && !yesterday.includes('class="sec"') && !yesterday.includes('data-act="share"'), `${label}: only today's block has the line over its rows and the share button`);
+    assert.ok(!yesterday.includes('<details'), `${label}: yesterday's rows are open`);
+    // a ranked day numbers its rows from 1 and marks only the first; a day of plain headlines does neither
     for (const block of [today, yesterday]) {
       const facts = rowsOf(block).map(rowFacts);
       assert.ok(facts.length >= 2, `${label}: ${facts.length} rows`);
-      assert.deepEqual(facts.map((f) => f.best), facts.map((_, i) => i === 0), `${label}: only the first row is best`);
-      assert.deepEqual(facts.map((f) => f.tag).filter(Boolean), ['CLOSEST CALL'], `${label}: one tag`);
-      assert.equal(facts[0].tag, 'CLOSEST CALL');
-      assert.deepEqual(facts.map((f) => f.rank), facts.map((_, i) => String(i + 1)), `${label}: the rank is the place in the list, 1 first`);
+      if (ranked) {
+        assert.deepEqual(facts.map((f) => f.best), facts.map((_, i) => i === 0), `${label}: only the first row is best`);
+        assert.deepEqual(facts.map((f) => f.rank), facts.map((_, i) => String(i + 1)), `${label}: the rank is the place in the list, 1 first`);
+        assert.ok(facts.every((f) => !f.plain), `${label}: no row is plain`);
+      } else {
+        assert.ok(facts.every((f) => f.plain && !f.best && f.rank === null), `${label}: plain headlines have no rank and no best`);
+      }
     }
   }
 });
 
-test('an edition is what its day says: the headline, the lines in order, the emoji, and one link to the story behind each', () => {
+test('an edition is what its day says: the headline, then each row as rank, emoji, label, line and source, in the order the edition gave, with one link to the story behind it', () => {
   const home = read('index.html', edDist);
   const [today, yesterday] = blocksOf(home);
-  assert.ok(!yesterday.includes(`<p class="dh">${esc(ED16.headline)}</p>`), "today's headline is the hero's, not repeated");
+  assert.ok(!yesterday.includes(`<p class="dh">${esc(ED16.headline)}</p>`), "today's headline is the sign's, not repeated");
   has(yesterday, `<p class="dh">${esc(ED15.headline)}</p>`);
   for (const [block, ed] of [[today, ED16], [yesterday, ED15]]) {
-    const facts = rowsOf(block).map(rowFacts);
-    assert.deepEqual(facts.map((f) => f.text), ed.items.map((i) => i.line), `${ed.date}: every line, in the order the edition gave`);
-    assert.deepEqual(facts.map((f) => f.emoji), ed.items.map((i) => i.emoji));
+    const rows = rowsOf(block);
+    const facts = rows.map(rowFacts);
+    assert.deepEqual(facts.map((f) => f.label), ed.items.map((i) => i.label), `${ed.date}: every label, in the order the edition gave`);
+    assert.deepEqual(facts.map((f) => f.line), ed.items.map((i) => i.line), `${ed.date}: every line`);
+    assert.deepEqual(facts.map((f) => f.emoji), ed.items.map((i) => i.emoji), `${ed.date}: every emoji`);
+    assert.deepEqual(facts.map((f) => f.rank), ed.items.map((_, i) => String(i + 1)), `${ed.date}: the ranks`);
+    // the rank and the emoji are pictures: a screen reader hears "1. Asteroid pass. ..." from the card and nothing twice
+    for (const row of rows) {
+      assert.ok(row.includes('<span class="rn" aria-hidden="true">') && row.includes('<span class="em" aria-hidden="true">'), `${ed.date}: the rank and the emoji are hidden from screen readers`);
+      const at = (m) => row.indexOf(m);
+      assert.ok(at('class="rn"') < at('class="em"') && at('class="em"') < at('class="lb"') && at('class="lb"') < at('class="ln"') && at('class="ln"') < at('class="src"'), `${ed.date}: rank, emoji, label, line, source`);
+    }
     facts.forEach((f, i) => {
       assert.equal(f.href, ed.items[i].url, `${ed.date} row ${i}: its own story`);
-      const parts = copy.sourceParts(ed.items[i].outlets, ed.items[i].source);
-      assert.deepEqual([f.name, f.count], [parts.name || null, parts.count || null], `${ed.date} row ${i}: the news site, and how many carried it`);
-      assert.equal(f.cta, 'Read it →', `${ed.date} row ${i}: what the card says it does`);
+      assert.equal(f.src, copy.rowSource(ed.items[i].source), `${ed.date} row ${i}: the news site, and nothing else`);
+      assert.ok(!/news sites?|Read it/.test(rows[i]), `${ed.date} row ${i}: no count and no "Read it"`);
     });
     for (const m of block.matchAll(/<a class="card" ([^>]*)>/g)) assert.match(m[1], /target="_blank" rel="noopener"/);
   }
   // the lines are ours: no joke is added, no headline is swapped in
-  assert.ok(!today.includes(esc(AIRLINES.title)), "the edition's line stands in for the publisher's headline");
-  // "Plus N more": the day's stories minus the rows shown, and nothing at all when that is zero
-  const more = stored16.stories.length - ED16.items.length;
-  assert.ok(more > 0);
-  has(today, `<a class="plus" href="./day/2026-11-16/">Plus ${more} more ${wordOf(more)} we read so you don&#39;t have to →</a>`);
-  assert.equal(stored15.stories.length, ED15.items.length, 'yesterday: three stories, three lines');
-  assert.ok(!yesterday.includes('class="plus"'), 'nothing left to read, so no link');
+  assert.ok(!today.includes(esc(AIRLINES.title)), "the edition's label and line stand in for the publisher's headline");
+  // the old doors are gone: the rest of the day's headlines are in the footer
+  assert.ok(!home.includes('class="plus"') && !home.includes('more headlines we read'), 'no "Plus N more" link');
+  has(home, `<p class="all"><a href="./day/2026-11-16/#all">Every headline we read today (${stored16.stories.length})</a></p>`);
 });
 
-test('a day with no edition shows its plain headlines: up to five, two a category at most, each as its publisher wrote it', () => {
+test('a day with no edition shows its plain headlines: up to five, two a category at most, each as its publisher wrote it, with no rank', () => {
   const home = read('index.html');
   const [today, yesterday] = blocksOf(home);
   const facts = rowsOf(today).map(rowFacts);
   assert.equal(facts.length, cfg.edition.fallbackRows, 'five rows');
   const catOf = new Map(stored16.stories.map((s) => [s.title, s.cat]));
+  const storyOfTitle = new Map(stored16.stories.map((s) => [s.title, s]));
+  const emojiOf = new Map(cfg.categories.map((c) => [c.id, c.emoji]));
   const per = new Map();
   for (const f of facts) {
-    assert.ok(catOf.has(f.text), `"${f.text}" is one of the day's own headlines`);
-    per.set(catOf.get(f.text), (per.get(catOf.get(f.text)) || 0) + 1);
+    assert.ok(catOf.has(f.label), `"${f.label}" is one of the day's own headlines`);
+    per.set(catOf.get(f.label), (per.get(catOf.get(f.label)) || 0) + 1);
+    const story = storyOfTitle.get(f.label);
+    assert.equal(f.src, copy.rowSource(story.source), `"${f.label}": the source`);
+    assert.equal(f.line, null, 'a plain headline has no line under it');
+    assert.equal(f.rank, null, 'and no rank');
+    assert.equal(f.emoji, emojiOf.get(catOf.get(f.label)), 'it wears the emoji of its category');
   }
   assert.ok([...per.values()].every((n) => n <= cfg.edition.fallbackPerCategory), `no category twice over: ${[...per]}`);
-  assert.ok(facts.every((f) => /^[^\s]/.test(f.emoji || '')), 'each row has an emoji');
-  assert.equal(facts[0].tag, 'CLOSEST CALL');
-  assert.deepEqual(factsIn(yesterday).map((f) => f.text), ['Blackout hits city after substation failure', 'Power outage leaves 50,000 customers in the dark'], 'two grid stories at most, in the usual order');
-  has(yesterday, '<a class="plus" href="./day/2026-11-15/">Plus 1 more headline we read so you don&#39;t have to →</a>');
+  assert.ok(facts.every((f) => f.plain && !f.best), 'no row is the closest call');
+  assert.deepEqual(factsIn(yesterday).map((f) => f.label), ['Blackout hits city after substation failure', 'Power outage leaves 50,000 customers in the dark'], 'two grid stories at most, in the usual order');
+  assert.ok(!home.includes('class="plus"'), 'no "Plus N more" link');
   assert.ok(home.includes(`<p class="dh">${copy.subline(11)}</p>`), "yesterday's headline is the ladder line for its score");
   // no joke anywhere: the only caption on the page is the plain line of a quiet story
   const captions = capsIn(home);
@@ -783,12 +813,17 @@ test('a day with no edition shows its plain headlines: up to five, two a categor
 test('an edition that breaks a rule is not used: its day shows plain headlines and the other days are untouched', () => {
   const homeOf = (editions) => withEditions(editions).dist;
   const bad = (change) => ({ ...ED16, ...change });
-  const plainRows = factsIn(blocksOf(read('index.html'))[0]).map((f) => f.text);
+  const plainRows = factsIn(blocksOf(read('index.html'))[0]).map((f) => f.label);
+  const noEnding = 'A nationwide ground stop kept planes on the tarmac for hours today.';
   const cases = {
-    'no "Still here." at the end': bad({ headline: 'Planes stopped, apps blinked, a rock waved.' }),
-    'a headline with a dash in it': bad({ headline: `Planes stopped ${EM} apps blinked. Still here.` }),
-    'a headline with an exclamation mark': bad({ headline: 'Planes stopped, apps blinked! Still here.' }),
-    'a headline that is too long': bad({ headline: `${'Everything is fine and nothing is wrong at all today '.repeat(2)}Still here.` }),
+    'no "Still here." at the end': bad({ headline: noEnding }),
+    'a headline with a dash in it': bad({ headline: `A nationwide ground stop kept planes on the tarmac ${EM} for hours. Still here.` }),
+    'a headline with an exclamation mark': bad({ headline: 'A nationwide ground stop kept planes on the tarmac for hours! Still here.' }),
+    'a headline that is too long': bad({ headline: `${'Everything is fine and nothing is wrong at all today. '.repeat(4)}Still here.` }),
+    'a headline of two words and "Still here."': bad({ headline: 'Planes stopped. Still here.' }),
+    'a first sentence of three words': bad({ headline: 'Planes stopped today. A big AWS outage knocked your favorite apps offline. Still here.' }),
+    'a headline with no sentence before "Still here."': bad({ headline: 'A nationwide ground stop kept planes on the tarmac for hours, Still here.' }),
+    'a first sentence cut short by an abbreviation we do not list': bad({ headline: 'A nationwide ground stop began on Nov. 16 and kept planes on the tarmac. Still here.' }),
     'only two usable lines': bad({ items: ED16.items.slice(0, 2) }),
     'the wrong date': bad({ date: '2026-11-17' }),
     'no items': bad({ items: 'six' }),
@@ -799,10 +834,11 @@ test('an edition that breaks a rule is not used: its day shows plain headlines a
     const dist16 = homeOf({ ...EDITIONS, '2026-11-16': raw });
     const home = read('index.html', dist16);
     assert.equal(headlineOf(home), copy.subline(latest.score), `${name}: the ladder line stands in`);
-    assert.deepEqual(factsIn(blocksOf(home)[0]).map((f) => f.text), plainRows, `${name}: the plain headlines stand in`);
+    assert.deepEqual(factsIn(blocksOf(home)[0]).map((f) => f.label), plainRows, `${name}: the plain headlines stand in`);
     has(blocksOf(home)[1], `<p class="dh">${esc(ED15.headline)}</p>`);
     assert.ok(!home.includes(ED16.items[0].line), `${name}: none of the lines`);
   }
+  assert.ok(noEnding.length <= cfg.edition.headlineMax, 'the first case fails for its missing ending, not for its length');
   // a file that is not JSON at all counts as no edition
   const junk = withEditions({ ...EDITIONS, '2026-11-16': '{"headline": "Oops. Still here.", ' });
   assert.equal(headlineOf(read('index.html', junk.dist)), copy.subline(latest.score));
@@ -815,10 +851,31 @@ test('one bad line is dropped and the rest stay: the closest call is then the fi
   const home = read('index.html', out);
   assert.equal(headlineOf(home), ED16.headline, 'the edition still stands');
   const facts = factsIn(blocksOf(home)[0]);
-  assert.deepEqual(facts.map((f) => f.text), ED16.items.slice(1).map((i) => i.line));
-  assert.equal(facts[0].tag, 'CLOSEST CALL');
+  assert.deepEqual(facts.map((f) => f.line), ED16.items.slice(1).map((i) => i.line));
+  assert.deepEqual(facts.map((f) => f.rank), ['1', '2', '3', '4', '5'], 'the ranks start over');
   assert.deepEqual(facts.map((f) => f.best), [true, false, false, false, false]);
-  has(blocksOf(home)[0], `Plus ${stored16.stories.length - 5} more headlines`);
+});
+
+test('a label that is missing or bad does not cost the row: it keeps its emoji, its link and its place, and shows its line where the label goes', () => {
+  const items = ED16.items.map((i, n) => {
+    if (n === 1) return { ...i, label: '' }; // missing
+    if (n === 2) return { ...i, label: 'Five words is too many' };
+    if (n === 3) return { ...i, label: 'Nasdaq halt.' }; // a period
+    return i;
+  });
+  const { dist: out } = withEditions({ ...EDITIONS, '2026-11-16': { ...ED16, items } });
+  const home = read('index.html', out);
+  assert.equal(headlineOf(home), ED16.headline, 'the edition still stands');
+  const rows = rowsOf(blocksOf(home)[0]);
+  const facts = rows.map(rowFacts);
+  assert.equal(facts.length, 6, 'every row stays');
+  assert.deepEqual(facts.map((f) => f.rank), ['1', '2', '3', '4', '5', '6']);
+  assert.deepEqual(facts.map((f) => f.emoji), ED16.items.map((i) => i.emoji));
+  assert.deepEqual(facts.map((f) => f.href), ED16.items.map((i) => i.url));
+  assert.deepEqual(facts.map((f) => f.label), [ED16.items[0].label, ED16.items[1].line, ED16.items[2].line, ED16.items[3].line, ED16.items[4].label, ED16.items[5].label], 'a row with no label shows its line where the label goes');
+  assert.deepEqual(facts.map((f) => f.line), [ED16.items[0].line, null, null, null, ED16.items[4].line, ED16.items[5].line], 'and has no second line');
+  const kept = JSON.parse(fs.readFileSync(path.join(out, 'api', 'today.json'), 'utf8')).items.map((i) => i.label);
+  assert.deepEqual(kept, [ED16.items[0].label, '', '', '', ED16.items[4].label, ED16.items[5].label], 'the data file has no label for them either');
 });
 
 // ---- a story is told once -----------------------------------------------------------------------------
@@ -829,8 +886,8 @@ test('one bad line is dropped and the rest stay: the closest call is then the fi
 const SHARED = { id: 'shared:1', kind: 'news', cat: 'internet', title: 'Slack outage drags on past midnight for thousands of users', url: 'https://pub0.example/shared/1', source: 'Pub A', publishedAt: '2026-11-15T23:30:00.000Z', firstSeenAt: '2026-11-15T23:30:00.000Z', outlets: 3, outletNames: PUBS, score: 50 };
 const SHARED_15 = 'Slack went down late Sunday and was still wobbling at midnight.';
 const SHARED_16 = 'Slack was still down on Monday morning.';
-const ED15_SHARED = { ...ED15, items: [...ED15.items, itemOf(SHARED, '💬', SHARED_15)] };
-const ED16_SHARED = { ...ED16, items: [ED16.items[0], itemOf(SHARED, '💬', SHARED_16), ...ED16.items.slice(1)] };
+const ED15_SHARED = { ...ED15, items: [...ED15.items, itemOf(SHARED, '💬', 'Slack outage', SHARED_15)] };
+const ED16_SHARED = { ...ED16, items: [ED16.items[0], itemOf(SHARED, '💬', 'Slack outage', SHARED_16), ...ED16.items.slice(1)] };
 
 function sharedSite(editions) {
   const r = copyRoot(root);
@@ -846,8 +903,8 @@ test('a story told by an earlier day\'s edition is left out of every later editi
   const both = sharedSite({ '2026-11-15': ED15_SHARED, '2026-11-16': ED16_SHARED });
   const home = read('index.html', both);
   const [today, yesterday] = blocksOf(home);
-  assert.deepEqual(factsIn(yesterday).map((f) => f.text), [...ED15.items.map((i) => i.line), SHARED_15], 'the 15th tells it');
-  assert.deepEqual(factsIn(today).map((f) => f.text), ED16.items.map((i) => i.line), 'the 16th does not');
+  assert.deepEqual(factsIn(yesterday).map((f) => f.line), [...ED15.items.map((i) => i.line), SHARED_15], 'the 15th tells it');
+  assert.deepEqual(factsIn(today).map((f) => f.line), ED16.items.map((i) => i.line), 'the 16th does not');
   assert.equal(headlineOf(home), ED16.headline, 'and its edition still stands');
   assert.ok(!home.includes(SHARED_16));
   const day16 = read('day/2026-11-16/index.html', both);
@@ -856,21 +913,21 @@ test('a story told by an earlier day\'s edition is left out of every later editi
 
   // The 15th tells it and the 16th has no edition: the plain headlines skip it, though it is the day's biggest story.
   const plain16 = sharedSite({ '2026-11-15': ED15_SHARED });
-  const plain = factsIn(blocksOf(read('index.html', plain16))[0]).map((f) => f.text);
+  const plain = factsIn(blocksOf(read('index.html', plain16))[0]).map((f) => f.label);
   assert.ok(plain.length === cfg.edition.fallbackRows && !plain.includes(SHARED.title), `plain headlines: ${plain}`);
   assert.ok(headsOf(read('day/2026-11-16/index.html', plain16)).some((h) => h.includes(esc(SHARED.title))), 'still on the day page list');
 
   // An earlier day with no usable edition told nothing, so the story is still free the next day.
   const free = sharedSite({ '2026-11-15': { ...ED15_SHARED, headline: 'The grid blinked three times.' } });
   const first = factsIn(blocksOf(read('index.html', free))[0])[0];
-  assert.equal(first.text, SHARED.title, 'its own score makes it the first plain headline');
+  assert.equal(first.label, SHARED.title, 'its own score makes it the first plain headline');
 });
 
 test('a day shows a story once: a second line about an id an earlier line took is dropped', () => {
-  const twice = { ...ED16, items: [ED16.items[0], itemOf(AIRLINES, '🧳', 'Same story, second line.'), ...ED16.items.slice(1)] };
+  const twice = { ...ED16, items: [ED16.items[0], itemOf(AIRLINES, '🧳', 'Same story', 'Same story, second line.'), ...ED16.items.slice(1)] };
   const { dist: out } = withEditions({ ...EDITIONS, '2026-11-16': twice });
   const facts = factsIn(blocksOf(read('index.html', out))[0]);
-  assert.deepEqual(facts.map((f) => f.text), ED16.items.map((i) => i.line));
+  assert.deepEqual(facts.map((f) => f.line), ED16.items.map((i) => i.line));
 });
 
 // ---- the words that went with the cut features -----------------------------------------------------------
@@ -892,58 +949,77 @@ test('no page says chip, Doom Bingo, Vital signs, The receipts or Check again, a
 
 // ---- the share text -----------------------------------------------------------------------------------------
 
-test('the share text is the verdict, the day\'s headline, its emoji, the date and score, and the day address', () => {
+test('the share text is the question, the emoji of the rows in order, the Doom Score with ten squares, and the day address', () => {
   const home = read('index.html', edDist);
+  const squares = (n) => '⬛'.repeat(n) + '🟨'.repeat(10 - n);
   const full = attr(home, 'data-share-full').split('\n');
   assert.deepEqual(full, [
     'Did the world end today? ALMOST.',
-    ED16.headline,
-    ED16.items.map((i) => i.emoji).join(''),
-    `Mon, Nov 16 · Doom Score ${latest.score} of 99`,
+    ED16.items.map((i) => i.emoji).join(' '),
+    `Doom Score ${latest.score} ${squares(Math.round(latest.score / 10))}`,
     'didtheworldendtoday.com/day/2026-11-16/',
   ]);
+  assert.ok(!full.some((line) => line.includes('Still here')), 'the headline is not in the share: the picture carries it');
   assert.deepEqual(attr(home, 'data-share-text').split('\n'), full.slice(0, -1), 'the share sheet gets the same text and takes the link on its own');
   assert.equal(attr(home, 'data-share-url'), `${SITE}/day/2026-11-16/`);
+  // the page carries the share text of the day it shows, once, on the page itself: the one share button reads it
+  assert.match(home, /<main id="main" data-share-text=/);
+  assert.equal((home.match(/data-share-full=/g) || []).length, 1, 'one share text on the page');
   const [today, yesterday] = blocksOf(home);
-  assert.equal(attr(today, 'data-share-full'), attr(home, 'data-share-full'), 'today\'s block shares what the hero shares');
-  assert.deepEqual(attr(yesterday, 'data-share-full').split('\n'), ['Did the world end on Nov 15? ALMOST.', ED15.headline, ED15.items.map((i) => i.emoji).join(''), 'Sun, Nov 15 · Doom Score 11 of 99', 'didtheworldendtoday.com/day/2026-11-15/']);
-  assert.equal(attr(yesterday, 'data-share-url'), `${SITE}/day/2026-11-15/`);
-  // a day page shares its own day
-  assert.equal(attr(read('day/2026-11-15/index.html', edDist), 'data-share-full'), attr(yesterday, 'data-share-full'));
-  // plain headlines share the ladder line and the category emoji
-  const plain = attr(read('index.html'), 'data-share-full').split('\n');
-  assert.equal(plain.length, 5);
-  assert.equal(plain[1], copy.subline(latest.score));
-  assert.equal(plain[2], factsIn(blocksOf(read('index.html'))[0]).map((f) => f.emoji).join(''));
-  assert.equal(plain[3], `Mon, Nov 16 · Doom Score ${latest.score} of 99`, 'the weekday and the date, then the score out of 99');
-  // nothing the page prints for a person differs from what a share carries
-  assert.ok(!full.some((line) => /[↑↓→]/.test(line)), 'no arrow in a share of a normal day');
+  assert.equal(attr(today, 'data-share-full'), null, 'a block of the page does not carry a second one');
+  assert.equal(attr(yesterday, 'data-share-full'), null);
+  const day15 = attr(read('day/2026-11-15/index.html', edDist), 'data-share-full');
+  assert.deepEqual(day15.split('\n'), ['Did the world end on Nov 15? ALMOST.', ED15.items.map((i) => i.emoji).join(' '), `Doom Score 11 ${squares(1)}`, 'didtheworldendtoday.com/day/2026-11-15/']);
+  assert.equal(attr(read('day/2026-11-15/index.html', edDist), 'data-share-url'), `${SITE}/day/2026-11-15/`);
+  // plain headlines share the emoji of their categories, which the rows draw too
+  const plainHome = read('index.html');
+  const plain = attr(plainHome, 'data-share-full').split('\n');
+  assert.equal(plain.length, 4);
+  const catOf = new Map(stored16.stories.map((s) => [s.title, s.cat]));
+  const emojiOf = new Map(cfg.categories.map((c) => [c.id, c.emoji]));
+  assert.equal(plain[1], factsIn(blocksOf(plainHome)[0]).map((f) => emojiOf.get(catOf.get(f.label))).join(' '));
+  assert.equal(plain[2], `Doom Score ${latest.score} ${squares(Math.round(latest.score / 10))}`);
+  assert.ok(!full.some((line) => /[↑↓→←]/.test(line)), 'no arrow in a share of a normal day');
 });
 
-test('shareText: today, a past day, no headline, no emoji, and the quiet text with its grid', () => {
+test('shareText: the text the owner asked for, a past day, no emoji, and the quiet text with its grid', () => {
   const fired = ['flights', 'hacks', 'space', 'earth', 'markets', 'grid', 'weather'];
-  const base = { score: 71, change: 9, fired, categories: cfg.categories, host: 'didtheworldendtoday.com', headline: 'Planes stopped. Apps blinked. Still here.', emojis: ['✈️', '🖥️', '🌋'] };
+  const emojis = ['☄️', '✈️', '💳', '🏦', '🎟️', '💍'];
+  const base = { score: 92, change: 9, fired, categories: cfg.categories, host: 'didtheworldendtoday.com', emojis };
+  // exactly this, for the 17th
   assert.equal(
-    copy.shareText({ ...base, live: true, date: '2026-11-16' }),
-    ['Did the world end today? ALMOST.', 'Planes stopped. Apps blinked. Still here.', '✈️🖥️🌋', 'Mon, Nov 16 · Doom Score 71 of 99', 'didtheworldendtoday.com/day/2026-11-16/'].join('\n'),
+    copy.shareText({ ...base, live: true, date: '2026-11-17' }),
+    'Did the world end today? ALMOST.\n☄️ ✈️ 💳 🏦 🎟️ 💍\nDoom Score 92 ⬛⬛⬛⬛⬛⬛⬛⬛⬛🟨\ndidtheworldendtoday.com/day/2026-11-17/',
   );
-  const past = copy.shareText({ ...base, live: false, date: '2026-11-15', score: 30, change: -4 }).split('\n');
-  assert.deepEqual(past, ['Did the world end on Nov 15? ALMOST.', 'Planes stopped. Apps blinked. Still here.', '✈️🖥️🌋', 'Sun, Nov 15 · Doom Score 30 of 99', 'didtheworldendtoday.com/day/2026-11-15/']);
-  assert.equal(copy.shareText({ ...base, live: true, date: '2026-11-16', withUrl: false }).split('\n').length, 4, 'no address, one line fewer');
-  const bare = copy.shareText({ ...base, live: true, date: '2026-11-16', headline: '', emojis: [] }).split('\n');
-  assert.deepEqual(bare, ['Did the world end today? ALMOST.', copy.subline(71), 'Mon, Nov 16 · Doom Score 71 of 99', 'didtheworldendtoday.com/day/2026-11-16/'], 'the ladder line stands in for a headline, and no emoji means no emoji line');
-  for (const change of [0, null, undefined, NaN, 9, -9]) assert.ok(!copy.shareText({ ...base, live: true, date: '2026-11-16', change }).includes('Doom Score 71 of 99 '), `a normal day never shows an arrow (${change})`);
-  const quiet = copy.shareText({ ...base, live: true, date: '2026-11-16', quiet: true }).split('\n');
-  assert.deepEqual(quiet, ['Did the world end today? ALMOST.', 'Not a day for jokes. Back soon.', 'Mon, Nov 16 · Doom Score 71 of 99 ↑9', '✈️🏦⬛☄️', '⬛🌋📉⬛', '⚡⬛🌀⬛', 'didtheworldendtoday.com/day/2026-11-16/'], 'quiet mode shares the quiet line and the grid, not the headline or the emoji');
-  assert.equal(copy.shareText({ ...base, change: 0, live: true, date: '2026-11-16', quiet: true }).split('\n')[2], 'Mon, Nov 16 · Doom Score 71 of 99', 'no change, no arrow');
+  assert.deepEqual(
+    copy.shareText({ ...base, live: false, date: '2026-11-16', score: 71 }).split('\n'),
+    ['Did the world end on Nov 16? ALMOST.', '☄️ ✈️ 💳 🏦 🎟️ 💍', 'Doom Score 71 ⬛⬛⬛⬛⬛⬛⬛🟨🟨🟨', 'didtheworldendtoday.com/day/2026-11-16/'],
+    'a past day asks about its own date',
+  );
+  assert.equal(copy.shareText({ ...base, live: true, date: '2026-11-17', withUrl: false }).split('\n').length, 3, 'no address, one line fewer');
+  assert.deepEqual(copy.shareText({ ...base, live: true, date: '2026-11-17', emojis: [] }).split('\n'), ['Did the world end today? ALMOST.', 'Doom Score 92 ⬛⬛⬛⬛⬛⬛⬛⬛⬛🟨', 'didtheworldendtoday.com/day/2026-11-17/'], 'no rows, no emoji line');
+  assert.ok(!copy.shareText({ ...base, live: true, date: '2026-11-17', headline: 'A headline. Still here.' }).includes('Still here'), 'the headline is not in the text');
+  // the squares: one black for each tenth, rounded, kept from 0 to 10
+  const squaresOf = (score) => copy.shareText({ ...base, live: true, date: '2026-11-17', score, emojis: [] }).split('\n')[1];
+  assert.equal(squaresOf(0), 'Doom Score 0 🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨');
+  assert.equal(squaresOf(4), 'Doom Score 4 🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨');
+  assert.equal(squaresOf(5), 'Doom Score 5 ⬛🟨🟨🟨🟨🟨🟨🟨🟨🟨');
+  assert.equal(squaresOf(62), 'Doom Score 62 ⬛⬛⬛⬛⬛⬛🟨🟨🟨🟨');
+  assert.equal(squaresOf(99), 'Doom Score 99 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛');
+  assert.equal(squaresOf('nope'), 'Doom Score 0 🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨', 'a score that is not a number reads as 0');
+  assert.deepEqual([0, 4, 5, 11, 62, 92, 95, 99, 150, -3, NaN, null].map(copy.filledSquares), [0, 0, 1, 1, 6, 9, 10, 10, 10, 0, 0, 0]);
+  // quiet mode keeps its own text: the quiet line, the date and score, and the grid of fired categories
+  const quiet = copy.shareText({ ...base, score: 71, live: true, date: '2026-11-16', quiet: true }).split('\n');
+  assert.deepEqual(quiet, ['Did the world end today? ALMOST.', 'Not a day for jokes. Back soon.', 'Mon, Nov 16 · Doom Score 71 of 99 ↑9', '✈️🏦⬛☄️', '⬛🌋📉⬛', '⚡⬛🌀⬛', 'didtheworldendtoday.com/day/2026-11-16/'], 'quiet mode shares the quiet line and the grid, not the emoji of the rows');
+  assert.equal(copy.shareText({ ...base, score: 71, change: 0, live: true, date: '2026-11-16', quiet: true }).split('\n')[2], 'Mon, Nov 16 · Doom Score 71 of 99', 'no change, no arrow');
   for (const bad of [0, null, undefined, '', NaN, 'up']) assert.equal(copy.changeText(bad), '', String(bad));
   assert.equal(copy.changeText(9), '↑9');
   assert.equal(copy.changeText(-4), '↓4');
-  assert.equal(copy.shareText({ live: true, date: '2026-11-16', score: 'nope', categories: [], host: 'h' }).split('\n').at(-2), 'Mon, Nov 16 · Doom Score 0 of 99', 'a score that is not a number reads as 0');
-  // the last line is the weekday, the date and the score out of the cap, and the cap is the one the page uses
-  assert.equal(copy.shareText({ ...base, live: true, date: '2026-11-17', score: 92 }).split('\n').at(-2), 'Tue, Nov 17 · Doom Score 92 of 99');
-  assert.equal(copy.shareText({ ...base, live: true, date: '2026-11-17', score: 92, cap: 50 }).split('\n').at(-2), 'Tue, Nov 17 · Doom Score 92 of 50');
+  assert.equal(copy.shareText({ live: true, date: '2026-11-16', score: 'nope', categories: [], host: 'h', quiet: true }).split('\n').at(-2), 'Mon, Nov 16 · Doom Score 0 of 99', 'a score that is not a number reads as 0');
+  assert.equal(copy.shareText({ ...base, live: true, date: '2026-11-17', score: 92, cap: 50, quiet: true }).split('\n')[2], 'Tue, Nov 17 · Doom Score 92 of 50 ↑9');
 });
+
+
 
 test('the quiet page shares the quiet text, with a grid of twelve squares', () => {
   const r = copyRoot(edRoot);
@@ -959,28 +1035,45 @@ test('the quiet page shares the quiet text, with a grid of twelve squares', () =
 
 // ---- the share image --------------------------------------------------------------------------------------------
 
-test('the share image carries the day\'s headline, in capitals, as big as fits in two lines, and leaves out what Anton cannot draw', () => {
-  const fontFile = fontFileIn(path.join(REPO, 'assets'));
-  const base = { date: '2026-11-16', score: 62, host: 'didtheworldendtoday.com', fontFile };
-  const fit = fitHeadline(ED16.headline, { width: 1072, fontFile });
-  assert.equal(fit.lines.join(' '), ED16.headline.toUpperCase());
-  assert.ok(fit.lines.length <= 2 && fit.size >= 28 && fit.size <= 64, `${fit.size} px on ${fit.lines.length} lines`);
+const FONT_FILES = fontFilesIn(path.join(REPO, 'assets'));
+const countOf = (svg, color) => (svg.match(new RegExp(color, 'gi')) || []).length;
+
+test('the share image carries the first sentence of the day\'s headline, in sentence case, as big as fits in two lines', () => {
+  const fontFiles = FONT_FILES;
+  const base = { date: '2026-11-16', score: 62, host: 'didtheworldendtoday.com', fontFiles };
+  const first = firstSentence(ED16.headline);
+  assert.equal(first, 'A nationwide ground stop kept planes on the tarmac for hours.');
+  const fit = fitSentence(first, { width: 1072, fontFiles });
+  assert.equal(fit.lines.join(' '), first, 'sentence case, the words as they were written');
+  assert.ok(fit.lines.length <= 2 && fit.size >= 30 && fit.size <= 56, `${fit.size} px on ${fit.lines.length} lines`);
   const svg = ogSvg({ ...base, headline: ED16.headline });
-  for (const line of fit.lines) assert.ok(svg.includes(`font-size="${fit.size}" letter-spacing=`) && svg.includes(`>${line}</text>`), `the card draws "${line}"`);
-  assert.ok(svg.indexOf('>ALMOST.<') < svg.indexOf(`>${fit.lines[0]}</text>`) && svg.indexOf(`>${fit.lines[0]}</text>`) < svg.indexOf('NOVEMBER 16, 2026'), 'under ALMOST., above the date');
-  assert.equal((svg.match(/<text /g) || []).length, 6 + fit.lines.length, 'the six fixed texts and the headline lines');
-  // a short line is set bigger than a long one, and the longest allowed still fits
-  const short = fitHeadline('Quiet day. Still here.', { width: 1072, fontFile });
-  const longest = fitHeadline(`${'Everything is fine and nothing is wrong at all, '.repeat(2).slice(0, 68)} Still here.`, { width: 1072, fontFile });
-  assert.equal(short.size, 64);
-  assert.ok(short.lines.length === 1 && longest.size < short.size && longest.lines.length <= 2 && longest.size >= 28, `${longest.size}`);
-  // emoji, escaping, and no headline at all
-  assert.deepEqual(fitHeadline('Planes ✈️ stopped. Still here.', { width: 1072, fontFile }).lines, ['PLANES STOPPED. STILL HERE.']);
-  assert.ok(ogSvg({ ...base, headline: '<b>&"' }).includes('&lt;B&gt;&amp;&quot;'), 'the headline is escaped');
-  assert.equal((ogSvg(base).match(/<text /g) || []).length, 6, 'no headline, no headline text');
-  assert.deepEqual(fitHeadline('', { width: 1072, fontFile }).lines, []);
+  for (const line of fit.lines) has(svg, `font-family="${BODY}" font-weight="600" font-size="${fit.size}" fill="${INK}">${esc(line)}</text>`);
+  // only the first sentence is on the card: not "Still here."
+  assert.ok(!svg.includes('Still here'), 'the card shows sentence one alone');
+  assert.ok(svg.indexOf('>ALMOST.<') < svg.indexOf(`>${fit.lines[0]}</text>`) && svg.indexOf(`>${fit.lines[0]}</text>`) < svg.indexOf('>didtheworldendtoday.com<'), 'under ALMOST., above the address');
+  assert.equal((svg.match(/<text /g) || []).length, 5 + fit.lines.length, 'the question, ALMOST., DOOM SCORE, the number, the sentence lines and the address');
+  // a short sentence is set at 56 on one line, a longer one smaller on two, and one too long for two lines is cut at 30
+  const short = fitSentence('Quiet day.', { width: 1072, fontFiles });
+  const medium = fitSentence('An asteroid the size of a bus missed Earth at 2:59 AM ET and kept going toward the sun.', { width: 1072, fontFiles });
+  const huge = fitSentence('Airlines across the country were held on the ground for more than an hour and a half while a system that tracks every crew and every plane was rebuilt by hand from the start.', { width: 1072, fontFiles });
+  assert.deepEqual([short.size, short.lines.length], [56, 1]);
+  assert.ok(medium.size < 56 && medium.size >= 30 && medium.lines.length === 2, `${medium.size} px on ${medium.lines.length} lines`);
+  assert.deepEqual([huge.size, huge.lines.length], [30, 2], 'two lines at 30px when nothing bigger will do');
+  assert.ok(huge.lines[1].endsWith('…'), 'and the end is cut with an ellipsis');
+  // abbreviations and numbers do not end the sentence, so the card shows all of it
+  const abbreviations = 'Gov. Healey closed the U.S. Capitol for 3.5 hours on Monday. Banks stayed open. Still here.';
+  assert.equal(fitSentence(firstSentence(abbreviations), { width: 1072, fontFiles }).lines.join(' '), 'Gov. Healey closed the U.S. Capitol for 3.5 hours on Monday.');
+  // emoji are left out, and so is nothing else the fonts can draw: the degree sign and the accents stay
+  assert.deepEqual(fitSentence('Planes ✈️ stopped for hours.', { width: 1072, fontFiles }).lines, ['Planes stopped for hours.'], 'neither font draws emoji, so none is asked for');
+  assert.deepEqual(fitSentence('It hit 118°F in Phoenix.', { width: 1072, fontFiles }).lines, ['It hit 118°F in Phoenix.'], 'the degree sign stays');
+  assert.deepEqual(fitSentence('Dončić and Erdoğan met in Łódź.', { width: 1072, fontFiles }).lines, ['Dončić and Erdoğan met in Łódź.'], 'Latin Extended letters stay');
+  assert.equal(drawable('118°F ✈️ 🇺🇸', FONT_FILES), '118°F', 'drawable keeps what the font has');
+  assert.equal(drawable('118°F ✈️ 🇺🇸'), '118°F', 'and with no font to ask, a degree sign is still kept');
+  assert.ok(ogSvg({ ...base, headline: '<b>&"' }).includes('&lt;b&gt;&amp;&quot;'), 'the sentence is escaped');
+  assert.equal((ogSvg(base).match(/<text /g) || []).length, 5, 'no headline, no sentence text');
+  assert.deepEqual(fitSentence('', { width: 1072, fontFiles }).lines, []);
   // the pictures the build writes are these cards
-  const card = (headline, d = {}) => renderPng(ogSvg({ date: '2026-11-16', score: latest.score, host: 'didtheworldendtoday.com', headline, fontFile, live: true, ...d }), { fontFile, width: 1200 });
+  const card = (headline, d = {}) => renderPng(ogSvg({ date: '2026-11-16', score: latest.score, host: 'didtheworldendtoday.com', headline, fontFiles, live: true, ...d }), { fontFiles, width: 1200 });
   assert.ok(fs.readFileSync(path.join(edDist, 'og', 'latest.png')).equals(card(ED16.headline)), "today's headline on the latest card");
   assert.ok(fs.readFileSync(path.join(edDist, 'og', '2026-11-16.png')).equals(card(ED16.headline)), "and on today's own card");
   assert.ok(fs.readFileSync(path.join(edDist, 'og', '2026-11-15.png')).equals(card(ED15.headline, { date: '2026-11-15', score: 11, live: false })), "yesterday's headline on yesterday's card, which asks about its own date");
@@ -988,39 +1081,118 @@ test('the share image carries the day\'s headline, in capitals, as big as fits i
   assert.ok(!card(ED16.headline).equals(card(copy.subline(latest.score))), 'the picture changes with the headline');
   const r = copyRoot(edRoot);
   edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: '' }));
-  assert.ok(fs.readFileSync(path.join(buildAt(r).dist, 'og', 'latest.png')).equals(card(copy.QUIET_LINE)), 'the quiet line in quiet mode');
+  assert.ok(fs.readFileSync(path.join(buildAt(r).dist, 'og', 'latest.png')).equals(card(copy.QUIET_LINE, { quiet: true })), 'the quiet line in quiet mode');
 });
 
-test('the share image asks the question in full ink at the top left, names the date on a past day, and never runs into DOOM SCORE', () => {
-  const fontFile = fontFileIn(path.join(REPO, 'assets'));
-  assert.equal(questionText('2026-11-17', true), 'DID THE WORLD END TODAY?');
-  assert.equal(questionText('2026-11-17', false), 'DID THE WORLD END ON TUE, NOV 17?', 'a past day names its weekday and date, in capitals');
-  assert.equal(questionText('2026-11-16', false), 'DID THE WORLD END ON MON, NOV 16?');
-  assert.equal(questionText('nope', false), 'DID THE WORLD END TODAY?', 'a date that is not a date leaves the question as it is');
-  const live = ogSvg({ date: '2026-11-17', score: 92, host: 'didtheworldendtoday.com', headline: 'Asteroid missed. Still here.', fontFile, live: true });
-  const past = ogSvg({ date: '2026-11-17', score: 92, host: 'didtheworldendtoday.com', headline: 'Asteroid missed. Still here.', fontFile, live: false });
-  assert.match(live, /<text x="64" y="112" font-family="Anton" font-size="52" letter-spacing="[\d.]+" fill="#[0-9a-fA-F]{6}">DID THE WORLD END TODAY\?<\/text>/, 'the question: top left, Anton 52, full ink with no fade');
-  assert.ok(!/<text x="64"[^>]*fill-opacity[^>]*>DID THE WORLD END/.test(live), 'the question is not faded');
-  assert.match(past, /<text x="64" y="112" font-family="Anton" font-size="\d+" [^>]*>DID THE WORLD END ON TUE, NOV 17\?<\/text>/);
-  assert.ok(!live.includes('ON TUE'), 'the live card does not name a date in the question');
-  assert.equal((past.match(/<text /g) || []).length, 7, 'the six fixed texts and the one line of headline');
-  assert.equal((live.match(/<text /g) || []).length, 7);
-  // the question never runs into DOOM SCORE: measured with the real font, every weekday and month, longest first
+test('the share image is drawn with both fonts: League Gothic for the big type, Libre Franklin for the sentence and the small words', () => {
+  const fontFiles = FONT_FILES;
+  assert.deepEqual(fontFiles.map((f) => path.basename(f)), ['LeagueGothic-Regular.ttf', 'LibreFranklin-SemiBold.ttf', 'LibreFranklin-Bold.ttf']);
+  for (const f of fontFiles) assert.ok(fs.existsSync(f) && fs.statSync(f).size > 10000, `${f} is there`);
+  assert.deepEqual([DISPLAY, BODY], ['League Gothic', 'Libre Franklin']);
+  const svg = ogSvg({ date: '2026-11-16', score: 62, host: 'didtheworldendtoday.com', headline: ED16.headline, fontFiles });
+  assert.deepEqual([...new Set([...svg.matchAll(/font-family="([^"]*)"/g)].map((m) => m[1]))].sort(), ['League Gothic', 'Libre Franklin'], 'no other family is asked for');
+  assert.deepEqual([...new Set([...svg.matchAll(/font-weight="(\d+)"/g)].map((m) => m[1]))].sort(), ['600', '700'], 'the sentence is semibold and the small words are bold');
+  // resvg quietly uses another font when a family name is not one it knows, so prove each name finds its own file:
+  // the same text is a different width in each family, and a family is a different width without its file
   const { Resvg } = resvg;
-  const box = (textEl) => new Resvg(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">${textEl}</svg>`, { font: { fontFiles: [fontFile], loadSystemFonts: false, defaultFontFamily: 'Anton' } }).getBBox();
-  const label = box(live.match(/<text [^>]*>DOOM SCORE<\/text>/)[0]);
-  let day = Date.parse('2026-11-17T12:00:00Z');
+  const width = (family, files) => new Resvg(`<svg xmlns="http://www.w3.org/2000/svg" width="8000" height="300" viewBox="0 0 8000 300"><text x="0" y="200" font-family="${family}" font-weight="600" font-size="100">Did the world end today</text></svg>`, { font: { fontFiles: files, loadSystemFonts: false, defaultFontFamily: DISPLAY } }).getBBox().width;
+  const gothic = width(DISPLAY, fontFiles);
+  const franklin = width(BODY, fontFiles);
+  assert.ok(gothic > 100 && franklin > 100 && Math.abs(gothic - franklin) > 100, `League Gothic ${Math.round(gothic)}, Libre Franklin ${Math.round(franklin)}`);
+  assert.equal(Math.round(width(BODY, [fontFiles[0]])), Math.round(gothic), 'with no Libre Franklin file the name falls back to League Gothic');
+  assert.ok(Math.abs(width(DISPLAY, [fontFiles[1]]) - width(BODY, [fontFiles[1]])) < 1, 'and with no League Gothic file it falls back to Libre Franklin');
+  // and the picture shows it: each file, taken away, changes the card
+  const both = renderPng(svg, { fontFiles, width: 1200 });
+  const without = (n) => renderPng(svg, { fontFiles: fontFiles.filter((_, i) => i !== n), width: 1200 });
+  for (const n of [0, 1, 2]) assert.ok(!both.equals(without(n)), `the card needs ${path.basename(fontFiles[n])}`);
+  // the sentence is measured with the font it is drawn in: the same words are narrower in League Gothic, so they would be set bigger
+  const long = 'An asteroid the size of a bus missed Earth at 2:59 AM ET and kept going toward the sun.';
+  assert.equal(fitSentence(long, { width: 1072, fontFiles: [fontFiles[0]] }).size, 56, 'measured in League Gothic the sentence would fit at the top size');
+  assert.ok(fitSentence(long, { width: 1072, fontFiles }).size < 56, 'measured in Libre Franklin, the font it is drawn in, it has to shrink');
+  // both fonts really drew the card: the picture has big black letters on yellow and yellow letters on black
+  const pixels = new Resvg(svg, { fitTo: { mode: 'width', value: 1200 }, font: { fontFiles, loadSystemFonts: false, defaultFontFamily: DISPLAY } }).render().pixels;
+  const at = (x, y) => [pixels[(y * 1200 + x) * 4], pixels[(y * 1200 + x) * 4 + 1], pixels[(y * 1200 + x) * 4 + 2]];
+  const dark = (x0, y0, x1, y1) => {
+    let n = 0;
+    for (let y = y0; y < y1; y += 1) for (let x = x0; x < x1; x += 1) if (at(x, y)[0] < 60 && at(x, y)[1] < 60) n += 1;
+    return n;
+  };
+  assert.ok(dark(64, 152, 757, 377) > 20000, 'ALMOST. is drawn in black over the yellow page');
+  assert.ok(dark(64, 405, 900, 540) > 8000, 'and so is the sentence');
+});
+
+test('the share image uses yellow, black and one red: the red is the Doom Score number and nothing else, and quiet mode has none', () => {
+  const fontFiles = FONT_FILES;
+  const base = { date: '2026-11-16', score: 62, host: 'didtheworldendtoday.com', headline: ED16.headline, fontFiles };
+  const normal = ogSvg(base);
+  assert.equal(countOf(normal, RED), 1, 'the red is the Doom Score number alone');
+  has(normal, `<text x="822" y="321" font-family="${DISPLAY}" font-size="150" fill="${RED}">62</text>`);
+  has(normal, `<rect width="1200" height="630" fill="${YELLOW}"/>`);
+  has(normal, `<rect width="1200" height="110" fill="${INK}"/>`);
+  has(normal, `<rect x="800" y="154" width="336" height="221" fill="${INK}"/>`);
+  assert.equal((normal.match(new RegExp(`<rect x="\\d+" y="335" width="20" height="20" fill="${YELLOW}"/>`, 'g')) || []).length, 6, 'six of the ten squares are solid for a 62');
+  assert.equal((normal.match(/<rect [^>]*fill="none"/g) || []).length, 4, 'and four are outlines');
+  const quiet = ogSvg({ ...base, headline: copy.QUIET_LINE, quiet: true });
+  assert.equal(countOf(quiet, RED), 0, 'quiet mode draws no red');
+  assert.equal(countOf(quiet, YELLOW), 0, 'and no yellow: the page is white');
+  has(quiet, `<rect width="1200" height="630" fill="${WHITE}"/>`);
+  has(quiet, `font-size="150" fill="${WHITE}">62</text>`);
+  assert.ok(quiet.includes('Not a day for jokes.') && !quiet.includes('Back soon'), 'and the quiet line, its first sentence');
+  for (const [svg, allowed] of [[normal, [YELLOW, INK, RED]], [quiet, [WHITE, INK]]]) for (const color of svg.match(/#[0-9a-fA-F]{6}/g)) assert.ok(allowed.includes(color.toUpperCase()), `${color} is one of the card's colors`);
+  assert.ok(!/<text[^>]*>[\u{1F000}-\u{1FAFF}]/u.test(normal + quiet) && !/\p{Extended_Pictographic}/u.test(normal + quiet), 'no emoji is drawn on the card');
+  // and the picture itself: the red and the yellow are on the normal card, and not one pixel of either is on the quiet card
+  const { Resvg } = resvg;
+  const count = (svg, test) => {
+    const pixels = new Resvg(svg, { fitTo: { mode: 'width', value: 1200 }, font: { fontFiles, loadSystemFonts: false, defaultFontFamily: DISPLAY } }).render().pixels;
+    let n = 0;
+    for (let i = 0; i < pixels.length; i += 4) if (test(pixels[i], pixels[i + 1], pixels[i + 2])) n += 1;
+    return n;
+  };
+  const red = (r, g, b) => r > 150 && g < 70 && b < 90;
+  const yellow = (r, g, b) => r > 200 && g > 160 && b < 80;
+  assert.ok(count(normal, red) > 1000, 'the normal card has red in it');
+  assert.ok(count(normal, red) < 20000, 'and only the number is red');
+  assert.ok(count(normal, yellow) > 100000, 'and a yellow page');
+  assert.equal(count(quiet, red), 0, 'the quiet card has no red in it');
+  assert.equal(count(quiet, yellow), 0, 'and no yellow');
+  assert.ok(!/(?:drlevidruin|levidruin|github|@thelpdrive)/i.test(normal + quiet), 'no repository link and no name on the card');
+});
+
+test('the share image asks the question in yellow on the black band, names the date on a past day, and keeps ALMOST. clear of the board', () => {
+  const fontFiles = FONT_FILES;
+  assert.equal(questionText('2026-11-17', true), 'DID THE WORLD END TODAY?');
+  assert.equal(questionText('2026-11-17', false), 'DID THE WORLD END ON NOV 17?', 'a past day names its date, in capitals');
+  assert.equal(questionText('2026-11-16', false), 'DID THE WORLD END ON NOV 16?');
+  assert.equal(questionText('nope', false), 'DID THE WORLD END TODAY?', 'a date that is not a date leaves the question as it is');
+  const live = ogSvg({ date: '2026-11-17', score: 92, host: 'didtheworldendtoday.com', headline: 'Asteroid missed Earth by a mile. Still here.', fontFiles, live: true });
+  const past = ogSvg({ date: '2026-11-17', score: 92, host: 'didtheworldendtoday.com', headline: 'Asteroid missed Earth by a mile. Still here.', fontFiles, live: false });
+  assert.match(live, /<text x="600" y="\d+" text-anchor="middle" font-family="League Gothic" font-size="\d+" letter-spacing="[\d.]+" fill="#FFD100">DID THE WORLD END TODAY\?<\/text>/, 'the question: centered on the black band, League Gothic, yellow');
+  assert.match(past, /<text x="600" y="\d+" text-anchor="middle" font-family="League Gothic" font-size="\d+" [^>]*>DID THE WORLD END ON NOV 17\?<\/text>/);
+  assert.ok(!live.includes('ON NOV'), 'the live card does not name a date in the question');
+  assert.match(live, /<text x="824" y="\d+" font-family="Libre Franklin" font-weight="700" font-size="24" letter-spacing="[\d.]+" fill="#FFD100">DOOM SCORE<\/text>/, 'DOOM SCORE on the board, in yellow');
+  assert.match(live, /<text x="822" y="\d+" font-family="League Gothic" font-size="150" fill="#D81E05">92<\/text>/, 'and the number, in red');
+  assert.match(live, /<text x="59" y="375" font-family="League Gothic" font-size="300" fill="#000000">ALMOST\.<\/text>/, 'ALMOST. in huge black type, left');
+  assert.equal((past.match(/<text /g) || []).length, 6, 'the question, ALMOST., DOOM SCORE, the number, one line of the sentence and the address');
+  assert.equal((live.match(/<text /g) || []).length, 6);
+  const { Resvg } = resvg;
+  const box = (textEl) => new Resvg(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">${textEl}</svg>`, { font: { fontFiles, loadSystemFonts: false, defaultFontFamily: DISPLAY } }).getBBox();
+  // ALMOST. ends well before the board starts, and sits on the page, not on the band
+  const verdict = box(live.match(/<text x="59"[^>]*>ALMOST\.<\/text>/)[0]);
+  assert.ok(verdict.x >= 60 && verdict.x + verdict.width <= 800 - 24, `ALMOST. runs from ${Math.round(verdict.x)}px to ${Math.round(verdict.x + verdict.width)}px, the board starts at 800px`);
+  assert.ok(verdict.y >= 110, 'and starts under the band');
+  // the question fits the band, measured with the real font, for every weekday and month, live and past
+  const day = Date.parse('2026-11-17T12:00:00Z');
   for (let i = 0; i < 400; i += 3) {
     const date = new Date(day + i * 86400e3).toISOString().slice(0, 10);
     for (const isLive of [true, false]) {
-      const svg = ogSvg({ date, score: 7, host: 'h', headline: '', fontFile, live: isLive });
-      const q = box(svg.match(/<text x="64" y="112"[^>]*>[^<]*<\/text>/)[0]);
-      assert.ok(q.x + q.width <= label.x - 40, `${date} ${isLive ? 'live' : 'past'}: the question ends ${Math.round(q.x + q.width)}px, DOOM SCORE starts ${Math.round(label.x)}px`);
-      assert.ok(fitQuestion(questionText(date, isLive), { fontFile }) >= 34, `${date}: the question stays easy to read`);
+      const svg = ogSvg({ date, score: 92, host: 'h', headline: '', fontFiles, live: isLive });
+      const q = box(svg.match(/<text x="600"[^>]*>[^<]*<\/text>/)[0]);
+      assert.ok(q.x >= 64 && q.x + q.width <= 1136, `${date} ${isLive ? 'live' : 'past'}: the question runs ${Math.round(q.x)}px to ${Math.round(q.x + q.width)}px`);
+      assert.ok(fitQuestion(questionText(date, isLive), { fontFiles }) >= 44, `${date}: the question stays big`);
     }
   }
-  // the footer: the site and the one credited handle
-  assert.match(live, />DIDTHEWORLDENDTODAY\.COM \u00b7 @THELPDRIVE<\/text>/, 'the address and the handle, bottom right');
+  // the address is the site's, in the bottom left, and the card names no one
+  assert.match(live, /<text x="64" y="598"[^>]*>didtheworldendtoday\.com<\/text>/, 'the address');
   assert.ok(!/drlevidruin|levidruin|github/i.test(live + past), 'no link to the repository and no name of a person');
 });
 
@@ -1050,7 +1222,7 @@ const MACHINERY = {
   reason: 'automatic check',
 };
 
-test('api/today.json is the public copy: the numbers, the stories, the headline and the lines, and none of the machinery', () => {
+test('api/today.json is the public copy: the numbers, the stories, the headline, the labels and the lines, and none of the machinery', () => {
   const r = copyRoot(edRoot);
   edit(latestFile(r), (l) => {
     l.quiet = { quiet: false, note: 'A hard day', ...MACHINERY };
@@ -1066,10 +1238,11 @@ test('api/today.json is the public copy: the numbers, the stories, the headline 
   assert.ok(json.buildTime && json.etDate && Array.isArray(json.fired) && json.vital && json.cats, 'what the page needs is there');
   // the day's headline and lines, as the page reads them
   assert.equal(json.headline, ED16.headline);
+  assert.deepEqual(json.items.map((i) => i.label), ED16.items.map((i) => i.label));
   assert.deepEqual(json.items.map((i) => i.line), ED16.items.map((i) => i.line));
   assert.deepEqual(json.items.map((i) => i.emoji), ED16.items.map((i) => i.emoji));
   assert.deepEqual(json.items.map((i) => i.url), ED16.items.map((i) => new URL(i.url).href));
-  assert.deepEqual(Object.keys(json.items[0]).sort(), ['emoji', 'line', 'url'], 'a line has an emoji, words and a link, nothing else');
+  assert.deepEqual(Object.keys(json.items[0]).sort(), ['emoji', 'label', 'line', 'url'], 'a row has an emoji, a label, a line and a link, nothing else');
   // the main build, where no edition exists, says the ladder line and the plain headlines
   const plain = readJson(path.join(dist, 'api', 'today.json'));
   assert.deepEqual(plain.quiet, { quiet: false, note: '' });
@@ -1090,15 +1263,15 @@ test('publicCopy names what is public, drops bad links, and leaves the headline 
   assert.equal(publicCopy('text'), null);
   const sample = { schema: 1, score: 40, x: { enabled: true }, sources: { a: 1 }, secret: 1, quiet: { quiet: true, note: 7, auto: { matches: ['x'] } }, stories: [] };
   assert.deepEqual(publicCopy(sample), { schema: 1, score: 40, stories: [], quiet: { quiet: true, note: '' } });
-  const day = { headline: 'Quiet one. Still here.', rows: [{ emoji: '✈️', line: 'First.', url: 'javascript:alert(1)', ids: ['a'] }, { emoji: '🌋', line: 'Second.', url: 'https://a.example/x' }] };
-  assert.deepEqual(publicCopy(sample, day).items, [{ emoji: '✈️', line: 'First.', url: '' }, { emoji: '🌋', line: 'Second.', url: 'https://a.example/x' }]);
+  const day = { headline: 'Quiet one. Still here.', rows: [{ emoji: '✈️', label: 'First label', line: 'First.', url: 'javascript:alert(1)', ids: ['a'] }, { emoji: '🌋', line: 'Second.', url: 'https://a.example/x' }] };
+  assert.deepEqual(publicCopy(sample, day).items, [{ emoji: '✈️', label: 'First label', line: 'First.', url: '' }, { emoji: '🌋', label: '', line: 'Second.', url: 'https://a.example/x' }]);
   assert.equal(publicCopy(sample, day).headline, 'Quiet one. Still here.');
   assert.deepEqual(publicCopy(sample, { headline: 'H. Still here.' }).items, []);
 });
 
 // ---- quiet mode ------------------------------------------------------------------------------------------------------
 
-test('quiet mode: every day goes plain, the editions rest, nothing jokes, and the long footer is gone', () => {
+test('quiet mode: every day goes plain, the editions rest, nothing jokes, the page is white with no red, no yellow and no emoji, and the long footer is gone', () => {
   const r = copyRoot(edRoot);
   edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: 'Thinking of everyone affected.' }));
   const out = buildAt(r);
@@ -1107,46 +1280,58 @@ test('quiet mode: every day goes plain, the editions rest, nothing jokes, and th
   const hero = heroOf(home);
   assert.equal(headlineOf(home), copy.QUIET_LINE);
   has(hero, '<p class="note">Thinking of everyone affected.</p>');
-  has(hero, `<a class="go" href="#today">${esc("See today's stories ↓")}</a>`);
-  assert.ok(!hero.includes('See what almost got us'), 'no joke on the button');
+  assert.ok(hero.indexOf('id="verdict"') < hero.indexOf('class="note"') && hero.indexOf('class="note"') < hero.indexOf('class="deck"'), 'the note sits under ALMOST., over the quiet line');
+  assert.ok(!hero.includes('class="go"') && !hero.includes('See what almost got us'), 'no button to scroll, and no joke on one');
   assert.match(home, /<html lang="en"[^>]*data-quiet="1"/);
+  // a white page: no red and no yellow anywhere in it, and black text and a black band
+  const sheet = sheetOf(home);
+  assert.ok(!/#D81E05/i.test(home) && !/#FFD100/i.test(home), 'neither the red nor the yellow is anywhere on a quiet page');
+  has(sheet, ':root{--bg:#FFFFFF;--ink:#000000;--on:#FFFFFF;');
+  has(home, '<meta name="theme-color" content="#FFFFFF">');
+  // a page that turns quiet while it is open does the same through the html attribute
+  assert.ok(sheet.includes('html[data-quiet="1"]{--bg:#FFFFFF;--on:#FFFFFF}') && sheet.includes('html[data-quiet="1"] .bn{color:#FFFFFF}') && sheet.includes('html[data-quiet="1"] .em{display:none}'), 'the runtime rules are in the sheet');
+  const normalSheet = sheetOf(read('index.html', edDist));
+  assert.ok(normalSheet.includes(':root{--bg:#FFD100;') && normalSheet.includes('#D81E05'), 'a normal page is yellow and has its red');
+  // no emoji is drawn in a quiet page: the rows have no place for one
+  assert.ok(!home.includes('class="em"') && !/\p{Extended_Pictographic}/u.test(home.replace(/<main[^>]*>/, '')), 'no emoji is drawn on a quiet page');
+  has(home, '<h2 class="sec">TODAY’S TOP STORIES</h2>');
   assert.ok(!home.includes(copy.TAGLINE), 'no tagline');
   assert.ok(!home.includes('robot with low standards'));
   for (const line of copy.FOOTER_LINES_QUIET) assert.ok(home.includes(line), line);
   for (const line of ['Checked every 15 minutes.', 'Headlines belong to their publishers.']) has(home, `<p>${line}</p>`);
   has(home, `<meta name="description" content="${esc(copy.QUIET_DESCRIPTION)}">`);
-  // each day lists its plain headlines, the first one as the top story, with the quiet caption where it belongs
+  // each day lists its plain headlines with no rank and no closest call, and the quiet caption where it belongs
   for (const block of blocksOf(home)) {
     const facts = factsIn(block);
     assert.ok(facts.length >= 2);
-    assert.equal(facts[0].tag, 'TOP STORY');
-    assert.deepEqual(facts.map((f) => f.tag).filter(Boolean), ['TOP STORY']);
+    assert.ok(facts.every((f) => f.plain && !f.best && f.rank === null && f.emoji === null), 'plain rows: no rank, no emoji');
   }
   const [today, yesterday] = blocksOf(home);
-  assert.deepEqual(factsIn(today).map((f) => f.text), factsIn(blocksOf(read('index.html'))[0]).map((f) => f.text), 'the same plain headlines as a day with no edition');
-  for (const item of [...ED16.items, ...ED15.items]) assert.ok(!home.includes(esc(item.line)), `the edition's line stays off: ${item.line}`);
+  assert.deepEqual(factsIn(today).map((f) => f.label), factsIn(blocksOf(read('index.html'))[0]).map((f) => f.label), 'the same plain headlines as a day with no edition');
+  for (const item of [...ED16.items, ...ED15.items]) assert.ok(!home.includes(esc(item.line)) && !home.includes(`<span class="lb">${esc(item.label)}</span>`), `the edition's words stay off: ${item.label}`);
   for (const text of [ED16.headline, ED15.headline]) assert.ok(!home.includes(esc(text)) && !read('almanac/index.html', out.dist).includes(esc(text)) && !read('feed.xml', out.dist).includes(esc(text)), text);
   has(yesterday, `<p class="dh">${copy.QUIET_LINE}</p>`);
   const captions = capsIn(home);
   assert.ok(captions.length >= 1 && captions.every((c) => c.startsWith('No jokes on this one.')), `${captions}`);
   assert.match(read('index.html'), /data-quiet="0"/);
-  // the day pages say the same
+  // the day pages say the same, and so do the about and almanac pages: a quiet page is white all through
   for (const rel of ['day/2026-11-16/index.html', 'day/2026-11-15/index.html']) assert.equal(headlineOf(read(rel, out.dist)), copy.QUIET_LINE, rel);
+  for (const rel of ['almanac/index.html', 'about/index.html', 'day/2026-11-16/index.html']) {
+    const html = read(rel, out.dist);
+    assert.match(html, /<html lang="en"[^>]*data-quiet="1"/, `${rel} is quiet`);
+    assert.ok(!/#D81E05/i.test(html) && !/#FFD100/i.test(html), `${rel}: no red and no yellow`);
+  }
 });
 
-test('a quiet build has no joke left anywhere: the plus link, the end of the feed and the page script are plain', () => {
-  const JOKES = ["so you don't have to", 'so you don&#39;t have to', 'fine before that too', 'New near misses'];
+test('a quiet build has no joke left anywhere: the end of the feed and the page script are plain', () => {
+  const JOKES = ['fine before that too', 'New near misses', "so you don't have to", 'so you don&#39;t have to'];
   const r = copyRoot(edRoot);
   edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: '' }));
   const quiet = buildAt(r).dist;
   const home = read('index.html', quiet);
-  // the two places that joke on a normal page are there, in their plain form
-  const plus = [...home.matchAll(/<a class="plus"[^>]*>([^<]*)<\/a>/g)].map((m) => m[1]);
-  assert.ok(plus.length >= 1, 'a day has more headlines than rows');
-  for (const text of plus) assert.match(text, /^Plus \d+ more headlines? \u2192$/, text);
-  assert.equal(copy.plusText(95, true), 'Plus 95 more headlines \u2192');
-  assert.equal(copy.plusText(1, true), 'Plus 1 more headline \u2192');
+  // the place that jokes on a normal page is there, in its plain form
   has(home, `<div class="end">\n<p>${esc("That's every day we've checked.")}</p>`);
+  assert.ok(!home.includes('class="plus"'), 'there is no "Plus N more" link in any build');
   // and not one file of the build says any of the jokes, the page script included
   let looked = 0;
   for (const [rel, full] of listDist(quiet)) {
@@ -1156,9 +1341,9 @@ test('a quiet build has no joke left anywhere: the plus link, the end of the fee
     for (const joke of JOKES) assert.ok(!text.includes(joke), `${rel} says "${joke}"`);
   }
   assert.ok(looked >= 10, `${looked} text files looked at`);
-  // a normal build still says the first two, so the check above can fail
+  // a normal build still says the end-of-feed joke, so the check above can fail
   const normal = read('index.html', edDist);
-  assert.ok(normal.includes('so you don&#39;t have to') && normal.includes(esc(copy.FEED_END)), 'a normal build still jokes in both places, so this check can fail');
+  assert.ok(normal.includes(esc(copy.FEED_END)), 'a normal build still jokes at the end of the feed, so this check can fail');
 });
 
 // ---- quiet rows ----------------------------------------------------------------------------------------------------------
@@ -1295,9 +1480,9 @@ test('quiet cards: the page shows the right link, opening safely, for each case'
   };
   // the caption is a line of the card, and the donate link is its own link after the card, never inside it
   const abroad = quakeRow({ pager: 'orange' });
-  assert.ok(abroad.includes('</a>\n<a class="help" href="https://www.ifrc.org/" target="_blank" rel="noopener">Support the Red Cross and Red Crescent →</a>'), 'Tual, Indonesia, PAGER orange');
+  assert.ok(abroad.includes('</a>\n<a class="help" href="https://www.ifrc.org/" target="_blank" rel="noopener">Support the Red Cross and Red Crescent</a>'), 'Tual, Indonesia, PAGER orange');
   const home = quakeRow({ pager: 'yellow', place: '10 km W of Anchorage, Alaska' });
-  assert.ok(home.includes('</a>\n<a class="help" href="https://www.redcross.org/donate" target="_blank" rel="noopener">Donate to the Red Cross →</a>'), 'Anchorage, Alaska, PAGER yellow');
+  assert.ok(home.includes('</a>\n<a class="help" href="https://www.redcross.org/donate" target="_blank" rel="noopener">Donate to the Red Cross</a>'), 'Anchorage, Alaska, PAGER yellow');
   assert.ok(quakeRow({ tsunami: true }).includes('href="https://www.ifrc.org/"'), 'a tsunami flag outside the US');
   const green = quakeRow({ pager: 'green', tsunami: false });
   assert.ok(green.includes('<span class="cap">No jokes on this one.</span>') && !green.includes('class="help"'), 'back to green: no link');
@@ -1306,7 +1491,7 @@ test('quiet cards: the page shows the right link, opening safely, for each case'
     const facts = rowFacts(row);
     assert.ok(row.indexOf('</a>') < row.indexOf('class="help"'), 'the card closes before the donate link opens');
     assert.equal((row.match(/<a /g) || []).length, 2, 'the card and the donate link, and nothing else');
-    assert.ok(facts.help && facts.helpText.endsWith(' →'));
+    assert.ok(facts.help && /^(?:Donate to the Red Cross|Support the Red Cross and Red Crescent)$/.test(facts.helpText) && !/[→←]/.test(facts.helpText), 'the link says what it does, with no arrow');
   }
 });
 
@@ -1329,7 +1514,7 @@ test('a headline that is HTML, with a javascript: link, renders as inert text: i
     assert.ok(!/href="javascript:/i.test(html), `${rel}: no javascript: link`);
     const first = rowsOf(html).find((r) => r.includes('&lt;img src=x'));
     assert.ok(first && !first.includes('<a '), `${rel}: the row has no link at all`);
-    assert.ok(first.includes('<span class="src"><span class="sn">&lt;script&gt;alert(2)&lt;/script&gt;</span><span class="sc">2 news sites</span></span>') && !first.includes('class="cta"'), `${rel}: but it still says where it came from, and offers nothing to open`);
+    assert.ok(first.includes('<span class="src">&lt;script&gt;alert(2)&lt;/script&gt;</span>') && !first.includes('Read it'), `${rel}: but it still says where it came from, and offers nothing to open`);
     assert.ok(html.includes('&quot; onmouseover=&quot;alert(3)&quot; x=&quot;'), `${rel}: quotes are escaped`);
     const second = rowsOf(html).find((r) => r.includes('onmouseover'));
     assert.ok(second.includes('href="https://example.com/?q=%22%3E%3Cscript%3Ealert(4)%3C/script%3E"'), `${rel}: the link cannot break out of its attribute`);
@@ -1345,44 +1530,42 @@ test('a headline that is HTML, with a javascript: link, renders as inert text: i
   assert.ok(heads.find((h) => h.includes('onmouseover')).includes('href="https://example.com/?q=%22%3E%3Cscript%3Ealert(4)%3C/script%3E"'));
 });
 
-test('a line the editor wrote that is HTML is just as inert: the headline, the lines, the source, the link, the share text, the feed and the card', () => {
+test('a line the editor wrote that is HTML is just as inert: the headline, the labels, the lines, the source, the link, the share text, the feed and the card', () => {
   const hostile = {
     ...ED16,
-    headline: '<i>All fine</i> & "ok" <script>alert(5)</script>. Still here.',
+    headline: '<i>All fine</i> & "ok" <script>alert(5)</script> said the page. Still here.',
     items: [
-      itemOf(AIRLINES, '<b>\u{1F4A5}', '<img src=x onerror=alert(1)> and "quotes" & <b>bold</b>', { source: '<script>alert(2)</script>', title: '" onmouseover="alert(3)" x="', url: 'https://example.com/?q="><script>alert(4)</script>', outlets: 1 }),
-      itemOf(AWS, '🖥️', 'Second line with <a href="https://evil.example">a link</a> in it', { source: "O'Reilly & <Sons>", outlets: 1 }),
-      itemOf(BREACH, '🔓', 'Third line is plain.', { outlets: 'many' }),
+      itemOf(AIRLINES, '<b>\u{1F4A5}', '<b>Boom</b>', '<img src=x onerror=alert(1)> and "quotes" & <b>bold</b>', { source: '<script>alert(2)</script>', title: '" onmouseover="alert(3)" x="', url: 'https://example.com/?q="><script>alert(4)</script>', outlets: 1 }),
+      itemOf(AWS, '🖥️', '"quote" & <i>it</i>', 'Second line with <a href="https://evil.example">a link</a> in it', { source: "O'Reilly & <Sons>", outlets: 1 }),
+      itemOf(BREACH, '🔓', 'Plain label', 'Third line is plain.', { outlets: 'many' }),
     ],
   };
   const out = withEditions({ ...EDITIONS, '2026-11-16': hostile });
   assert.equal(validateEdition(hostile, { date: '2026-11-16', excluder: gk.excluder }).ok, true, 'it passes the check, so the page must be the one to keep it safe');
   auditSite(out.dist, { label: 'hostile edition' });
   const home = read('index.html', out.dist);
-  has(home, '&lt;i&gt;All fine&lt;/i&gt; &amp; &quot;ok&quot; &lt;script&gt;alert(5)&lt;/script&gt;. Still here.');
+  has(home, '&lt;i&gt;All fine&lt;/i&gt; &amp; &quot;ok&quot; &lt;script&gt;alert(5)&lt;/script&gt; said the page. Still here.');
   const facts = factsIn(blocksOf(home)[0]);
-  assert.deepEqual(facts.map((f) => f.text), ['<img src=x onerror=alert(1)> and "quotes" & <b>bold</b>', 'Second line with <a href="https://evil.example">a link</a> in it', 'Third line is plain.']);
-  assert.equal(facts[0].emoji, '<b>\u{1F4A5}');
+  assert.deepEqual(facts.map((f) => f.label), ['<b>Boom</b>', '"quote" & <i>it</i>', 'Plain label']);
+  assert.deepEqual(facts.map((f) => f.line), ['<img src=x onerror=alert(1)> and "quotes" & <b>bold</b>', 'Second line with <a href="https://evil.example">a link</a> in it', 'Third line is plain.']);
   assert.equal(facts[0].href, 'https://example.com/?q=%22%3E%3Cscript%3Ealert(4)%3C/script%3E');
-  assert.equal(facts[0].name, '<script>alert(2)</script>');
-  assert.equal(facts[0].count, null, 'one news site, so no count');
-  assert.equal(facts[0].cta, 'Read it →');
-  assert.equal(facts[2].name, BREACH.source, 'a count that is not a number reads as one news site');
-  assert.equal(facts[2].count, null);
+  assert.equal(facts[0].src, '<script>alert(2)</script>', 'the news site, as text');
+  assert.equal(facts[2].src, BREACH.source, 'a count that is not a number changes nothing: a row names its source and nothing else');
   for (const rel of ['index.html', 'day/2026-11-16/index.html', 'almanac/index.html', 'feed.xml']) {
     const text = read(rel, out.dist);
-    for (const tag of ['<img src=x', '<script>alert', '<i>All', '<b>bold', '<b>\u{1F4A5}', '<a href="https://evil.example"']) assert.ok(!text.includes(tag), `${rel}: ${tag}`);
+    for (const tag of ['<img src=x', '<script>alert', '<i>All', '<b>bold', '<b>Boom', '<i>it', '<b>\u{1F4A5}', '<a href="https://evil.example"']) assert.ok(!text.includes(tag), `${rel}: ${tag}`);
   }
   // the feed is still valid XML, and what a reader's app decodes from it is still text
   const xml = read('feed.xml', out.dist);
   assert.equal(XMLValidator.validate(xml), true);
   const item = [].concat(new XMLParser().parse(xml).rss.channel.item)[0];
-  assert.equal(item.title, '<i>All fine</i> & "ok" <script>alert(5)</script>. Still here.', 'a title is plain text in RSS');
+  assert.equal(item.title, hostile.headline, 'a title is plain text in RSS');
   const leftover = item.description.replace(/<\/?(?:p|ol|li)>/g, '').replace(/<a href="[^"]*">Read it<\/a>/g, '');
   assert.ok(!leftover.includes('<'), `the description is escaped HTML, so no tag of theirs is in it: ${leftover.slice(0, 120)}`);
-  // the share text is an attribute: the quotes cannot end it
-  assert.ok(attr(home, 'data-share-text').includes('"ok"'), 'the text a person copies is the words, unescaped');
+  // the share text is an attribute: the quotes cannot end it, and the card holds nothing of theirs but text
   assert.ok(!/<[a-z][^>]*\son[a-z]+\s*=/i.test(home));
+  const card = ogSvg({ date: '2026-11-16', score: 62, host: 'didtheworldendtoday.com', headline: hostile.headline, fontFiles: FONT_FILES });
+  assert.ok(!card.includes('<script') && !card.includes('<i>') && card.includes('&lt;i&gt;All fine&lt;/i&gt;'), 'on the card it is escaped text too');
 });
 
 test('esc, url and num', () => {
@@ -1402,14 +1585,23 @@ test('esc, url and num', () => {
 });
 
 test('a row with a bad link shows its text and no anchor, and a row with missing fields still prints', () => {
-  const ctx = { byId: new Map(), quietMode: false, quietCaption: 'q', quietLink: 'https://www.redcross.org/donate', quietLinkIntl: 'https://www.ifrc.org/' };
-  const bad = dayRow({ emoji: '🌐', line: '<b>hi</b>', ids: ['a'], quiet: false, url: 'javascript:alert(1)', source: 'S', outlets: 1 }, 1, ctx);
-  assert.ok(bad.includes('<span class="txt">&lt;b&gt;hi&lt;/b&gt;</span>'));
+  const ctx = { byId: new Map(), quietMode: false, quietCaption: 'q', quietLink: 'https://www.redcross.org/donate', quietLinkIntl: 'https://www.ifrc.org/', plain: false };
+  const bad = dayRow({ emoji: '🌐', label: '<b>L</b>', line: '<b>hi</b>', ids: ['a'], quiet: false, url: 'javascript:alert(1)', source: 'S', outlets: 1 }, 1, ctx);
+  assert.ok(bad.includes('<span class="lb">&lt;b&gt;L&lt;/b&gt;</span>') && bad.includes('<span class="ln">&lt;b&gt;hi&lt;/b&gt;</span>'));
   assert.ok(!bad.includes('<a '), 'no anchor');
-  assert.ok(bad.includes('<span class="src"><span class="sn">S</span></span>') && !bad.includes('class="cta"'), 'the words stay, and there is nothing to open');
+  assert.ok(bad.includes('<span class="src">S</span>') && !bad.includes('Read it'), 'the words stay, and there is nothing to open');
+  // no label: the line takes the label place and the row has no second line
+  const bare = dayRow({ emoji: '🌐', label: '', line: 'Only a line', ids: ['a'], url: 'https://example.com/', source: 'S' }, 0, ctx);
+  assert.ok(bare.includes('<span class="lb">Only a line</span>') && !bare.includes('class="ln"'));
+  // a plain headline is its own title in the label place, with no rank and no line
+  const plain = dayRow({ emoji: '🌐', label: '', line: 'A line', title: 'The publisher\'s own headline', ids: ['a'], url: 'https://example.com/', source: 'S' }, 0, { ...ctx, plain: true });
+  assert.ok(plain.includes('<span class="lb">The publisher&#39;s own headline</span>') && !plain.includes('class="ln"') && !plain.includes('class="rn"') && !plain.includes('class="sr"'));
+  assert.ok(plain.startsWith('<li class="row plain">'));
   for (const odd of [{}, { line: 'Only a line' }, { emoji: null, line: undefined, url: 42, outlets: 'x', source: undefined }, null]) {
-    const html = dayRow(odd || {}, 0, ctx);
-    for (const token of ['undefined', 'NaN', '[object']) assert.ok(!html.includes(token), `${token} in ${JSON.stringify(odd)}`);
+    for (const plainRow of [false, true]) {
+      const html = dayRow(odd || {}, 0, { ...ctx, plain: plainRow });
+      for (const token of ['undefined', 'NaN', '[object']) assert.ok(!html.includes(token), `${token} in ${JSON.stringify(odd)}`);
+    }
   }
   const heads = headlineRow({ id: 'z', cat: 'zzz', title: 't', url: 'https://example.com', source: 's', outlets: 'x' }, ctx);
   for (const token of ['undefined', 'NaN', '[object']) assert.ok(!heads.includes(token), token);
@@ -1436,44 +1628,49 @@ const headFacts = (html) => {
   };
 };
 
-test('day pages: the same hero for another day, that day\'s lines, every headline we read that day, and a way to the next and previous', () => {
+test('day pages: the same sign for another day, that day\'s near misses, every headline we read that day, and a way to the next and previous', () => {
   const past = read('day/2026-11-15/index.html', edDist);
   has(past, '<title>Did the world end on November 15, 2026? ALMOST.</title>');
-  has(past, '<span class="q">Did the world end on Sunday, Nov 15?</span>');
+  has(past, '<div class="band"><h1 class="q">Did the world end on Nov 15?</h1></div>');
   assert.equal(headlineOf(past), ED15.headline);
-  has(past, '<span class="when">Sun, Nov 15</span>');
-  has(past, 'Doom Score <b class="n">11</b> of 99');
-  assert.ok(!past.includes('class="ago"') && !past.includes('class="dot"'), 'a finished day is not "checked just now"');
-  has(past, '<a class="go" href="#rows">See what almost got us ↓</a>');
-  assert.ok(!past.includes('data-act="share">Share today'), 'Share today is for the homepage');
-  assert.equal((past.match(/data-act="share"/g) || []).length, 2, 'the share pill in the hero and the share button at the bottom');
-  has(past, '<button class="sh" type="button" data-act="share">Share this day</button>');
+  has(past, '<div class="board" role="meter" aria-label="Doom Score" aria-valuenow="11" aria-valuemin="0" aria-valuemax="99" aria-valuetext="11 out of 99">');
+  has(past, '<span class="bn">11</span>');
+  assert.ok(!past.includes('class="go"') && !past.includes('class="sh"') && !past.includes('Share today'), 'Share today is for the homepage');
+  assert.equal((past.match(/data-act="share"/g) || []).length, 1, 'one share button on the page');
+  has(past, '<button class="btn" type="button" data-act="share">Share this day</button>');
   has(past, '<section class="day" id="rows">');
-  assert.deepEqual(factsIn(past).map((f) => f.text), ED15.items.map((i) => i.line));
+  has(past, '<h2 class="sec">NEAR MISSES</h2>');
+  assert.deepEqual(factsIn(past).map((f) => f.label), ED15.items.map((i) => i.label));
+  assert.deepEqual(factsIn(past).map((f) => f.line), ED15.items.map((i) => i.line));
+  // the same sign as the homepage, for that day, then the share button right after the rows
+  const marks = ['class="band"', 'class="hero"', 'data-act="check"', 'class="deck"', 'role="meter"', 'class="sec"', '<li class="row best', 'class="src"', 'data-act="share"', 'id="all"', 'class="dnav"', '<footer>'].map((m) => past.indexOf(m));
+  assert.ok(marks.every((n) => n > 0), `${marks}`);
+  assert.deepEqual(marks, [...marks].sort((a, b) => a - b), 'the day page reads in the same order');
   has(past, `${SITE}/og/2026-11-15.png`);
   has(past, 'data-live="0"');
-  assert.ok(past.includes('<meta name="description" content="The grid blinked three times. Still here. Doom Score 11 of 99 on November 15, 2026. Every story links to its source.">'), 'the description says the headline, the score, the day, and that every story links to its source');
-  has(past, 'href="../2026-11-16/">Nov 16 &rarr;</a>');
-  assert.ok(!past.includes('&larr;'), 'no day before it');
+  assert.ok(past.includes(`<meta name="description" content="${esc(ED15.headline)} Doom Score 11 of 99 on November 15, 2026. Every story links to its source.">`), 'the description says the headline, the score, the day, and that every story links to its source');
+  has(past, '<nav class="dnav" aria-label="Other days">\n<span></span>\n<a href="../2026-11-16/">Later: Nov 16</a>\n</nav>');
+  assert.ok(!past.includes('Earlier:'), 'no day before it');
+  assert.ok(!/[→←]|&rarr;|&larr;/.test(past.slice(past.indexOf('<nav'))), 'no arrows in the way to the next day, or in the footer');
   has(past, '<h2 class="sec">Every headline we read that day</h2>');
   assert.deepEqual(headsOf(past).map((h) => headFacts(h).title).sort(), stored15.stories.map((s) => s.title).sort(), 'every story of the day, once');
 
   const today = read('day/2026-11-16/index.html', edDist);
   has(today, '<title>Did the world end on November 16, 2026? ALMOST.</title>');
-  has(today, '<span class="q">Did the world end today?</span>');
+  has(today, '<div class="band"><h1 class="q">Did the world end today?</h1></div>');
   assert.equal(headlineOf(today), ED16.headline);
   has(today, 'data-live="1"');
-  has(today, '<span class="upd">Updated 5:30 PM ET</span>');
   assert.ok(!today.includes('data-since'), 'no ticking time');
-  has(today, 'href="../2026-11-15/">&larr; Nov 15</a>');
-  assert.ok(!today.includes('&rarr;'), 'nothing after today');
-  assert.deepEqual(factsIn(today).map((f) => f.text), ED16.items.map((i) => i.line));
+  has(today, '<nav class="dnav" aria-label="Other days">\n<a href="../2026-11-15/">Earlier: Nov 15</a>\n<span></span>\n</nav>');
+  assert.ok(!today.includes('Later:'), 'nothing after today');
+  has(today, '<h2 class="sec">Headlines from the last 24 hours, as of 5:30 PM ET</h2>');
+  assert.deepEqual(factsIn(today).map((f) => f.line), ED16.items.map((i) => i.line));
   const heads = headsOf(today).map(headFacts);
-  assert.deepEqual(heads.map((h) => h.title).sort(), stored16.stories.map((s) => s.title).sort(), 'all of them, the ones in the lines too');
+  assert.deepEqual(heads.map((h) => h.title).sort(), stored16.stories.map((s) => s.title).sort(), 'all of them, the ones in the rows too');
   // each headline is the link, with its source and outlet count under it
   const cloud = heads.find((h) => h.title === 'Cloudflare outage knocks thousands of sites offline');
   assert.equal(cloud.href, 'https://pub0.example/internet/0');
-  assert.equal(cloud.source, 'Pub A · Read it →', 'the news site, then what the headline does');
+  assert.equal(cloud.source, 'Pub A · Read it', 'the news site, then what the headline does');
   assert.equal(heads.find((h) => h.title === '<img src=x onerror=alert(1)>').source, '<script>alert(2)</script> · 2 news sites', 'no link, so no "Read it"');
   assert.equal(heads.filter((h) => h.quiet).length, 1);
   for (const m of today.matchAll(/<a class="hla" ([^>]*)>/g)) assert.match(m[1], /target="_blank" rel="noopener"/);
@@ -1514,7 +1711,9 @@ test('the Almanac lists every day, newest first: each row is a link with its dat
     has(html, '<ol class="alm" role="list">');
     assert.ok(!html.includes('Worst day so far'), `${label}: two editions are too few for a record line`);
     assert.ok(!/<script/i.test(html));
-    has(html, '<a href="../">← Today</a>');
+    has(html, '<a class="band" href="../"><span class="q">Did the world end today?</span></a>');
+    has(html, '<a href="../">Today</a>');
+    assert.ok(!/[→←]/.test(html), `${label}: no arrow`);
   }
 });
 
@@ -1546,26 +1745,34 @@ test('the record line, "Worst day so far", is on the Almanac only, and waits unt
   assert.equal(copy.RECORD_MIN_EDITIONS, 7);
 });
 
-test('the homepage shows today and up to six earlier days, then a way to the older ones', () => {
+test('the homepage shows today and up to six earlier days, yesterday open and the rest folded, then a way to the older ones', () => {
   const seven = build(rootWithDays(7), { siteUrl: SITE, config: LONG_RUN });
   const home7 = read('index.html', seven.dist);
   assert.equal(blocksOf(home7).length, 7);
   has(home7, '<div class="end">');
   has(home7, `<p>${esc(copy.FEED_END)}</p>`);
-  has(home7, '<a href="./almanac/">Every day so far →</a>');
-  assert.ok(!home7.includes('Older days') && !home7.includes('The Almanac of Almost →'));
+  has(home7, '<a href="./almanac/">Every day so far</a>');
+  assert.ok(!home7.includes('Older days') && !home7.includes('The Almanac of Almost →') && !/[→←]/.test(home7.replace(/<main[\s\S]*<\/main>/, '')), 'no arrows in the words around the feed');
 
   const nine = build(rootWithDays(9), { siteUrl: SITE, config: LONG_RUN });
   const home9 = read('index.html', nine.dist);
   const blocks = blocksOf(home9);
   assert.equal(blocks.length, 7, 'seven blocks, not nine');
-  has(blocks[2], '<h2 class="dl"><span>SATURDAY</span><span> &middot; NOV 14</span></h2>');
-  has(blocks[2], '<p class="ds">Doom Score 20 of 99</p>');
-  has(home9, '<p class="end"><a href="./almanac/">Every day so far →</a></p>');
+  has(blocks[2], '<p class="dk">SATURDAY</p>');
+  has(blocks[2], '<h2 class="dl"><a href="./day/2026-11-14/">NOV 14</a></h2>');
+  has(blocks[2], '<p class="ds">Doom Score 20 <span class="sq" aria-hidden="true">');
+  has(home9, '<p class="end"><a href="./almanac/">Every day so far</a></p>');
   assert.ok(!home9.includes(esc(copy.FEED_END)), 'and not "that is every day"');
   assert.ok(!home9.includes('NOV 8') && !home9.includes('NOV 9'), 'the two oldest days are not on the homepage');
   assert.equal((read('almanac/index.html', nine.dist).match(/class="al"/g) || []).length, 9, 'the Almanac has all nine');
   assert.ok(fs.existsSync(path.join(nine.dist, 'day', '2026-11-08', 'index.html')), 'and each has its own page');
+  // yesterday's rows are open; every day before it is folded behind a button
+  assert.ok(!blocks[1].includes('<details'), "yesterday's rows are open");
+  for (const block of blocks.slice(2)) {
+    assert.equal((block.match(/<details class="dd">/g) || []).length, 1, 'an older day has its rows behind one details');
+    assert.match(block, /<details class="dd">\n<summary>Show the 1 top story<\/summary>\n<ol class="rows" role="list">/, 'its summary says how many, and these have no edition');
+    assert.ok(block.indexOf('class="ds"') < block.indexOf('<details'), 'the kicker, date, headline and score stay in view above it');
+  }
   auditSite(nine.dist, { label: 'nine days' });
 });
 
@@ -1584,11 +1791,12 @@ test('a new day with nothing filed yet shows "Nothing new yet today." and stays 
   auditSite(out.dist, { label: 'midnight' });
   const home = read('index.html', out.dist);
   const [today, yesterday] = blocksOf(home);
-  has(today, '<h2 class="dl"><span class="hot">TODAY</span><span> &middot; TUESDAY, NOV 17</span></h2>');
+  assert.ok(!today.includes('class="sec"') && !today.includes('class="rows"'), 'no line over rows that are not there');
   has(today, '<p class="empty">Nothing new yet today.</p>');
   assert.ok(!today.includes('class="plus"'));
-  has(yesterday, '<h2 class="dl"><span>YESTERDAY</span><span> &middot; MONDAY, NOV 16</span></h2>');
-  assert.deepEqual(factsIn(yesterday).map((f) => f.text), ED16.items.map((i) => i.line), 'yesterday keeps its edition');
+  has(yesterday, '<p class="dk">YESTERDAY</p>');
+  has(yesterday, '<h2 class="dl"><a href="./day/2026-11-16/">MONDAY, NOV 16</a></h2>');
+  assert.deepEqual(factsIn(yesterday).map((f) => f.line), ED16.items.map((i) => i.line), 'yesterday keeps its edition');
   assert.equal(headlineOf(home), copy.subline(11), 'the ladder line over the empty day');
   assert.deepEqual(almanacRowsOf(read('almanac/index.html', out.dist)).map((row) => row[0]), ['../day/2026-11-16/', '../day/2026-11-15/']);
   assert.equal([].concat(new XMLParser().parse(read('feed.xml', out.dist)).rss.channel.item).length, 2);
@@ -1618,17 +1826,26 @@ test('the feed is valid RSS: one item per day, the headline for a title, the lin
 
 // ---- the first words and the check -------------------------------------------------------------------------------------------
 
-test('the subline ladder breaks exactly where the spec says', () => {
+test('the subline ladder breaks exactly where the spec says, and every line is two plain sentences or so and ends with "Still here."', () => {
+  const quiet = 'A quiet day in the news. Suspiciously quiet. Still here.';
   const ladder = [
-    [0, 'Suspiciously quiet.'], [19, 'Suspiciously quiet.'],
-    [20, 'Routine background apocalypse.'], [39, 'Routine background apocalypse.'],
-    [40, 'The usual amount of almost.'], [59, 'The usual amount of almost.'],
-    [60, 'Louder than usual. Still here.'], [79, 'Louder than usual. Still here.'],
-    [80, 'Not for lack of trying.'], [94, 'Not for lack of trying.'],
-    [95, 'Honestly, impressive. Still no.'], [99, 'Honestly, impressive. Still no.'],
+    [0, quiet], [19, quiet],
+    [20, 'A few small things went wrong today. Still here.'], [39, 'A few small things went wrong today. Still here.'],
+    [40, 'The usual number of things went wrong today. Still here.'], [59, 'The usual number of things went wrong today. Still here.'],
+    [60, 'More went wrong today than usual. Still here.'], [79, 'More went wrong today than usual. Still here.'],
+    [80, 'A lot went wrong today. Still here.'], [94, 'A lot went wrong today. Still here.'],
+    [95, 'Nearly everything went wrong today. Still here.'], [99, 'Nearly everything went wrong today. Still here.'],
   ];
   for (const [score, line] of ladder) assert.equal(copy.subline(score), line, String(score));
-  assert.equal(copy.subline('nope'), 'Suspiciously quiet.');
+  assert.equal(copy.subline('nope'), quiet);
+  assert.deepEqual(copy.LADDER.map(([from]) => from), [0, 20, 40, 60, 80, 95], 'the same thresholds as before');
+  for (const [, line] of copy.LADDER) {
+    assert.ok(line.endsWith(' Still here.'), `"${line}" ends with Still here.`);
+    assert.ok(!line.includes(EM) && !line.includes(EN) && !line.includes(' - '), `"${line}" has no dash`);
+    assert.ok(!/[!;:]/.test(line), `"${line}" is plain`);
+    assert.ok(line.length <= cfg.edition.headlineMax, `"${line}" fits the headline limit`);
+    assert.ok(firstSentence(line).length < line.length, `"${line}" has a first sentence the card can show alone`);
+  }
 });
 
 test('the home page says what section 9 says', () => {
@@ -1752,33 +1969,304 @@ test('the About page: every fact the Doom Score runs on is there in plain words,
   assert.ok(page.includes('in the last 12 hours or the next three days'), 'the window reads from the code');
 });
 
-test('design tokens: the three colors, Anton for the big type, system fonts for the rest, and a size class for every length of headline', () => {
+// The stylesheet of a page, as its inlined text. A rule is `selector{declarations}`.
+const sheetOf = (html) => html.match(/<style>([\s\S]*?)<\/style>/)[1];
+const rulesOf = (sheet) => [...sheet.matchAll(/([^{}]+)\{([^{}]*)\}/g)].map((m) => ({ selector: m[1].trim(), body: m[2] }));
+const ruleFor = (sheet, selector) => {
+  const hit = rulesOf(sheet).find((r) => r.selector === selector);
+  assert.ok(hit, `the style sheet has ${selector}`);
+  return hit.body;
+};
+
+test('design tokens: yellow, black and one red, white when quiet, League Gothic for the big type, Libre Franklin for the rest, and no other font', () => {
+  assert.deepEqual([YELLOW, INK, RED, WHITE], ['#FFD100', '#000000', '#D81E05', '#FFFFFF']);
   const home = read('index.html');
-  for (const c of ['#0B0B0F', '#F2EFE8', '#FF6A00']) assert.ok(home.includes(c), c);
-  assert.ok(home.includes('font-family:Anton') && home.includes('system-ui') && home.includes('ui-monospace'));
-  assert.ok(home.includes('url(./assets/anton.woff2)'), 'the font is relative to the page');
-  assert.ok(read('day/2026-11-16/index.html').includes('url(../../assets/anton.woff2)'));
-  assert.ok(!/fonts\.(?:googleapis|gstatic)/.test(home));
-  const { from, to, step } = copy.HEADLINE_BUCKETS;
-  for (let n = from; n <= to; n += step) assert.ok(home.includes(`.n${n}{--n:${n}}`), `.n${n}`);
-  const seen = new Set();
-  for (let length = 0; length <= 120; length += 1) {
-    const klass = copy.headlineClass('x'.repeat(length));
-    seen.add(klass);
-    assert.ok(home.includes(`.${klass}{--n:`), `${length} characters: ${klass} is in the style sheet`);
-  }
-  assert.equal(copy.headlineClass('x'.repeat(10)), `n${from}`, 'a short line takes the biggest type');
-  assert.equal(copy.headlineClass('x'.repeat(200)), `n${to}`, 'a long one the smallest');
-  assert.ok(seen.size > 10);
+  const sheet = sheetOf(home);
+  has(sheet, ':root{--bg:#FFD100;--ink:#000000;--on:#FFD100;--disp:"League Gothic","League Gothic Fit",sans-serif;--text:"Libre Franklin","Helvetica Neue",Arial,sans-serif;color-scheme:light}');
+  assert.ok(sheet.includes('color-scheme:light') && !/prefers-color-scheme/.test(sheet), 'light only');
+  assert.ok(sheet.includes('html{background:var(--bg);color:var(--ink);'), 'black on yellow');
+  has(home, '<meta name="theme-color" content="#FFD100">');
+  has(home, '<meta name="color-scheme" content="light">');
+  // the fonts: League Gothic for the display type, Libre Franklin 400, 600 and 700 for the rest
+  has(sheet, '@font-face{font-family:"League Gothic";src:url(./assets/leaguegothic.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}');
+  for (const weight of [400, 600, 700]) has(sheet, `@font-face{font-family:"Libre Franklin";src:url(./assets/librefranklin-${weight}.woff2) format("woff2");font-weight:${weight};font-style:normal;font-display:swap}`);
+  assert.equal((sheet.match(/font-display:swap/g) || []).length, 4, 'text shows at once, in a fallback, while a font loads');
+  assert.equal((sheet.match(/@font-face/g) || []).length, 5, 'four font files, and the stand-in that holds the width of ALMOST. while League Gothic loads');
+  has(sheet, '@font-face{font-family:"League Gothic Fit";src:local("Arial Bold")');
+  assert.ok(sheet.includes('size-adjust:52%'), 'the stand-in is set to the width of League Gothic');
+  assert.ok(read('day/2026-11-16/index.html').includes('url(../../assets/leaguegothic.woff2)'), 'the fonts are relative to the page, two folders down too');
+  for (const gone of ['Newsreader', 'Anton', 'anton.woff2', 'system-ui', 'ui-monospace', '-apple-system', 'BlinkMacSystemFont']) assert.ok(!sheet.includes(gone), `${gone} is not in the style sheet`);
+  assert.ok(!/(?<!sans-)serif/.test(sheet), 'no serif face');
+  assert.ok(!/fonts\.(?:googleapis|gstatic)/.test(home), 'no font comes from another site');
+  // the files the first screen needs are preloaded
+  assert.deepEqual(
+    [...home.matchAll(/<link rel="preload" href="([^"]*)" as="font" type="font\/woff2" crossorigin>/g)].map((m) => m[1]),
+    ['./assets/leaguegothic.woff2', './assets/librefranklin-600.woff2', './assets/librefranklin-700.woff2', './assets/librefranklin-400.woff2'],
+  );
+  assert.deepEqual(
+    [...read('day/2026-11-16/index.html').matchAll(/<link rel="preload" href="([^"]*)"/g)].map((m) => m[1]),
+    ['../../assets/leaguegothic.woff2', '../../assets/librefranklin-600.woff2', '../../assets/librefranklin-700.woff2', '../../assets/librefranklin-400.woff2'],
+  );
+  // the things that went with the earlier looks are gone
+  for (const old of ['.n40{', '.go{', '.sh{', '.mast', '.hl{', '.pulse', '@keyframes pulse', 'border-radius:999px', 'border-radius:14px', 'border-radius:12px', '.cta', '.sn{', '.sc{', '--hot', '--mute', '--line', '--paper', '.meter', '.doom', '.when', '.tag{', '.txt{', '.plus']) assert.ok(!sheet.includes(old), `${old} is gone`);
+  // no corner is rounded, anywhere
+  assert.deepEqual([...new Set([...sheet.matchAll(/border-radius:([^;}]+)/g)].map((m) => m[1]))], ['0'], 'every corner is square');
+  // a font on every page: the 404 reads the two it needs from the site's own address
+  const css404Text = css404(SITE);
+  assert.ok(css404Text.includes(`url(${SITE}/assets/leaguegothic.woff2)`) && css404Text.includes(`url(${SITE}/assets/librefranklin-700.woff2)`));
+  assert.ok(css404Text.includes('background:#FFD100') && css404Text.includes('color:#000000'), 'the 404 is yellow and black too');
+  assert.ok(!/Newsreader/.test(css404Text), 'and has none of the old font');
 });
 
-test('robots, sitemap and manifest', () => {
+test('the type and the spacing are the ones the design names', () => {
+  const sheet = sheetOf(read('index.html'));
+  // the first screen
+  has(ruleFor(sheet, '.band'), 'height:56px');
+  has(ruleFor(sheet, '.band'), 'background:var(--ink)');
+  has(ruleFor(sheet, '.band .q'), 'font:400 26px/1 var(--disp)');
+  has(ruleFor(sheet, '.band .q'), 'text-transform:uppercase');
+  has(ruleFor(sheet, '.hero'), 'max-width:600px');
+  has(ruleFor(sheet, '.hero'), 'padding:20px 20px 28px');
+  has(ruleFor(sheet, '.verdict'), 'font:400 min(31vw,120px)/.8 var(--disp)');
+  has(ruleFor(sheet, '.verdict'), 'overflow-wrap:anywhere');
+  has(ruleFor(sheet, '.deck'), 'font:600 20px/1.3 var(--text)');
+  has(ruleFor(sheet, '.deck'), 'max-width:330px');
+  has(ruleFor(sheet, '.deck'), 'text-wrap:balance');
+  has(ruleFor(sheet, '.board'), 'min-height:120px');
+  has(ruleFor(sheet, '.board'), 'background:var(--ink)');
+  has(ruleFor(sheet, '.board'), 'color:var(--on)');
+  has(ruleFor(sheet, '.bn'), 'font:400 72px/.8 var(--disp)');
+  has(ruleFor(sheet, '.bl'), 'font:700 12px/1.2 var(--text)');
+  has(ruleFor(sheet, '.bt'), 'font:400 13px/1.3 var(--text)');
+  has(ruleFor(sheet, '.sq span'), 'width:14px');
+  // the rows: a 2px rule, 16px of room, the rank in a 32px column, the emoji in a 48px one
+  has(ruleFor(sheet, '.sec'), 'font:400 24px/1.1 var(--disp)');
+  has(ruleFor(sheet, '.row'), 'border-top:2px solid var(--ink)');
+  has(ruleFor(sheet, '.row'), 'padding:16px 0');
+  has(ruleFor(sheet, '.row'), 'min-height:48px');
+  has(ruleFor(sheet, '.rn'), 'flex:0 0 32px');
+  has(ruleFor(sheet, '.rn'), 'font:400 36px/1 var(--disp)');
+  has(ruleFor(sheet, '.em'), 'flex:0 0 48px');
+  has(ruleFor(sheet, '.em'), 'font:400 40px/1 var(--text)');
+  has(ruleFor(sheet, '.lb'), 'font:700 18px/1.25 var(--text)');
+  has(ruleFor(sheet, '.row.plain .lb'), 'font-size:16px');
+  has(ruleFor(sheet, '.ln'), 'font:400 15px/1.4 var(--text)');
+  has(ruleFor(sheet, '.src'), 'font:400 14px/1.4 var(--text)');
+  has(ruleFor(sheet, '.src'), 'text-decoration:underline');
+  has(ruleFor(sheet, '.wrap'), 'max-width:600px');
+  has(ruleFor(sheet, '.wrap'), 'padding:0 20px');
+  // earlier days: a 48px gap and a 3px rule, the kicker, the date in League Gothic 30px, the headline, the score with ten 10px squares
+  has(ruleFor(sheet, '.day+.day'), 'margin-top:48px');
+  has(ruleFor(sheet, '.day+.day'), 'border-top:3px solid var(--ink)');
+  has(ruleFor(sheet, '.dl'), 'font:400 30px/1.05 var(--disp)');
+  // the date of an earlier day links to its page: a 48px tap target
+  has(ruleFor(sheet, '.dl a'), 'min-height:48px');
+  has(ruleFor(sheet, '.dh'), 'font:600 18px/1.3 var(--text)');
+  has(ruleFor(sheet, '.ds .sq span'), 'width:10px');
+  has(ruleFor(sheet, '.ds .sq span'), 'height:10px');
+  has(ruleFor(sheet, '.dd summary,.more summary'), 'min-height:48px');
+  // one black share button, the width of the page, 52px tall, and square
+  has(ruleFor(sheet, '.btn'), 'width:100%');
+  has(ruleFor(sheet, '.btn'), 'height:52px');
+  has(ruleFor(sheet, '.btn'), 'background:var(--ink)');
+  has(ruleFor(sheet, '.btn'), 'border-radius:0');
+  has(ruleFor(sheet, '.btn'), 'font:700 18px/1 var(--text)');
+  // the footer: Updated, every headline, the pages, who made it
+  has(ruleFor(sheet, 'footer'), 'border-top:3px solid var(--ink)');
+  has(ruleFor(sheet, 'footer .all a'), 'min-height:48px');
+  has(ruleFor(sheet, 'footer .fl a'), 'min-height:48px');
+  // no text is smaller than 12px, and nothing but the display type and the emoji is above 20px
+  const sizes = rulesOf(sheet).flatMap((r) => [...r.body.matchAll(/font:(\d+) (\d+)px\/[\d.]+ var\(--(text|disp)\)/g)].map((m) => ({ selector: r.selector, weight: Number(m[1]), px: Number(m[2]), face: m[3] })));
+  assert.ok(sizes.length >= 20);
+  assert.ok(Math.min(...sizes.map((x) => x.px)) >= 12, 'nothing is smaller than 12px');
+  assert.ok(sizes.filter((x) => x.face === 'text' && x.selector !== '.em').every((x) => x.px <= 20), 'Libre Franklin is never above 20px, except in the emoji column, which holds a picture');
+  assert.ok(sizes.filter((x) => x.face === 'text').every((x) => [400, 600, 700].includes(x.weight)), 'and only in the three weights that ship');
+  assert.ok(sizes.filter((x) => x.face === 'disp').every((x) => x.weight === 400), 'League Gothic only in its one weight');
+  // flat: no gradients or text shadows, and the one box shadow is the ring on a hovered button
+  assert.ok(!/text-shadow|linear-gradient|radial-gradient|backdrop-filter|filter:/.test(sheet), 'flat: no shadows on text and no gradients');
+  assert.deepEqual([...sheet.matchAll(/box-shadow:([^;}]+)/g)].map((m) => m[1]), ['inset 0 0 0 3px var(--ink)'], 'the hover ring of the share button is the only shadow');
+  assert.ok(!/(?:^|[;{])\s*opacity:(?!1\b)(?!0\b)/.test(sheet.replace(/\.toast[^}]*\}/g, '')), 'nothing is faded to grey with opacity');
+  // the first screen fits a 320px phone: the side padding is 20px, so 280px of room, and the board and ALMOST. are told to give way
+  assert.ok(sheet.includes('@media (max-width:339px){') || /@media\s*\(max-width:339px\)/.test(sheet), 'the smallest phones get a smaller number on the board');
+  has(ruleFor(sheet, '.board'), 'grid-template-columns:auto minmax(0,1fr)');
+  has(ruleFor(sheet, '.rb'), 'min-width:0');
+  assert.ok(/html\{[^}]*overflow-x:hidden/.test(sheet) && /body\{[^}]*overflow-x:hidden/.test(sheet), 'a page never scrolls sideways, whatever a font does');
+});
+
+test('the red is used in two places only: the Doom Score number on the board and the number 1 of the closest call, and a quiet page has none', () => {
+  const sheet = sheetOf(read('index.html', edDist));
+  assert.equal(sheet.split('#D81E05').length - 1, 2, 'the red is written twice');
+  const using = rulesOf(sheet).filter((r) => /#D81E05/i.test(r.body)).map((r) => r.selector).sort();
+  assert.deepEqual(using, ['.bn', '.row.best:not(.quiet) .rn'], 'only these two rules take the red');
+  // and the closest call is red only when it is a closest call: a quiet row, or a quiet page, is not
+  assert.ok(sheet.includes('.row.best:not(.quiet) .rn{color:#D81E05}') && !sheet.includes('.row.best .rn{color:#D81E05}'));
+  has(ruleFor(sheet, '.bn'), 'color:#D81E05');
+  // no grey, no orange, no cream anywhere in the sheet: every hex is one of the four
+  const hexes = new Set((sheet.match(/#[0-9a-fA-F]{3,8}\b/g) || []).map((h) => h.toUpperCase()));
+  assert.deepEqual([...hexes].sort(), ['#000000', '#D81E05', '#FFD100', '#FFFFFF'].sort(), 'yellow, black, red and the white of quiet mode');
+  assert.ok(!/rgba?\(|hsla?\(|gr[ae]y|opacity:\.|color-mix/.test(sheet), 'no color is written any other way');
+  // a quiet build never prints the red or the yellow: the two rules go white and black, and the page is white
+  const r = copyRoot(edRoot);
+  edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: '' }));
+  const quiet = sheetOf(read('index.html', buildAt(r).dist));
+  assert.ok(!/#D81E05/i.test(quiet) && !/#FFD100/i.test(quiet), 'a quiet build never prints the red or the yellow');
+  has(quiet, ':root{--bg:#FFFFFF;--ink:#000000;--on:#FFFFFF;');
+  has(ruleFor(quiet, '.bn'), 'color:#FFFFFF');
+  assert.ok(quiet.includes('.row.best:not(.quiet) .rn{color:#000000}'), 'and rank 1 is black');
+  // a page that turns quiet while it is open gets the same from the html attribute
+  assert.ok(sheet.includes('html[data-quiet="1"] .bn{color:#FFFFFF}') && sheet.includes('html[data-quiet="1"] .row.best:not(.quiet) .rn{color:#000000}') && sheet.includes('html[data-quiet="1"]{--bg:#FFFFFF;--on:#FFFFFF}'));
+  // no page prints the red anywhere but its style sheet
+  const bare = read('index.html', edDist).replace(/<style>[\s\S]*?<\/style>/, '');
+  assert.ok(!/#D81E05/i.test(bare), 'the red is not in the markup');
+  // a day with no edition is not ranked: no rank numbers, no closest call, so the only red on its page is the score
+  const plain = read('index.html');
+  assert.ok(!plain.includes('class="rn"') && !plain.includes('class="row best') && !plain.includes('CLOSEST CALL'), 'a plain day has nothing numbered and nothing red');
+  const plainDay = read('day/2026-11-16/index.html');
+  assert.ok(!plainDay.includes('class="rn"') && !plainDay.includes('class="row best'), 'and neither does its day page');
+  // a ranked day marks one row, the first; the page holds two ranked days, so two lists
+  const lists = read('index.html', edDist).match(/<ol class="rows" role="list">[\s\S]*?<\/ol>/g) || [];
+  assert.equal(lists.length, 2, 'today and yesterday, both ranked');
+  for (const list of lists) {
+    assert.equal((list.match(/class="row best/g) || []).length, 1, 'one closest call in a ranked list');
+    assert.ok(list.startsWith('<ol class="rows" role="list">\n<li class="row best'), 'and it is the first row');
+  }
+});
+
+// Every file we wrote that draws or styles something, read as text.
+function authored(dirRel, pattern) {
+  const out = [];
+  (function walk(dir) {
+    for (const name of fs.readdirSync(dir)) {
+      const full = path.join(dir, name);
+      if (fs.statSync(full).isDirectory()) walk(full);
+      else if (pattern.test(name)) out.push(full);
+    }
+  })(path.join(REPO, dirRel));
+  return out;
+}
+
+test('no color of an old look is left in scripts/ or assets/: only the four of this one', () => {
+  const OLD = ['#0B0B0F', '#F2EFE8', '#FF6A00', '#FF8230', '#6A6A74', '#7A7A84', '#9A9AA3', '#A3A3AC', '#8C8C94', '#5A2E10', '#34343E', '#2A2A33', '#24242C', '#15151B', '#F4EFE4', '#171512', '#C8102E', '#6B655B', '#D8D1C2'];
+  const FOUR = new Set([YELLOW, INK, RED, WHITE].map((c) => c.toLowerCase()));
+  const long = (hex) => (hex.length === 4 ? `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}` : hex).toLowerCase();
+  const files = [...authored('scripts', /\.(?:mjs|js|json|css|svg|html)$/), ...authored('assets', /\.(?:js|css|svg|json|html)$/)];
+  assert.ok(files.length >= 20, `${files.length} files looked at`);
+  for (const file of files) {
+    const text = fs.readFileSync(file, 'utf8');
+    const where = path.relative(REPO, file);
+    for (const hex of text.match(/#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/g) || []) {
+      assert.ok(!OLD.some((old) => old.toLowerCase() === hex.toLowerCase()), `${where} still has ${hex} from an old look`);
+      assert.ok(FOUR.has(long(hex)), `${where} uses ${hex}, which is not one of the four`);
+    }
+    assert.ok(!/\bAnton\b|\bNewsreader\b/.test(text), `${where} still names a font of an old look`);
+  }
+  // the font files of the old looks are gone, and the two families come with their licenses
+  const fonts = fs.readdirSync(path.join(REPO, 'assets', 'fonts')).sort();
+  assert.deepEqual(fonts, ['LeagueGothic-Regular.ttf', 'LibreFranklin-Bold.ttf', 'LibreFranklin-SemiBold.ttf', 'OFL-LeagueGothic.txt', 'OFL-LibreFranklin.txt', 'leaguegothic.woff2', 'librefranklin-400.woff2', 'librefranklin-600.woff2', 'librefranklin-700.woff2']);
+  for (const license of ['OFL-LeagueGothic.txt', 'OFL-LibreFranklin.txt']) assert.ok(/SIL OPEN FONT LICENSE/i.test(fs.readFileSync(path.join(REPO, 'assets', 'fonts', license), 'utf8')), `${license} is the license text`);
+  // League Gothic is the Google Fonts release, whose license declares no Reserved Font Name, so a subset is not a Modified Version
+  const gothicLicense = fs.readFileSync(path.join(REPO, 'assets', 'fonts', 'OFL-LeagueGothic.txt'), 'utf8');
+  assert.ok(gothicLicense.startsWith('Copyright 2010 The League Gothic Project Authors'), 'the copyright line of the Google Fonts release');
+  assert.ok(!/with Reserved Font Names?/i.test(gothicLicense.split('\n').slice(0, 3).join(' ')), 'and it reserves no name');
+});
+
+test('robots, sitemap, manifest and the icons', () => {
   assert.equal(read('robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
   const locs = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
   assert.deepEqual(locs, [`${SITE}/`, `${SITE}/almanac/`, `${SITE}/about/`, `${SITE}/day/2026-11-16/`, `${SITE}/day/2026-11-15/`]);
   const manifest = readJson(path.join(dist, 'site.webmanifest'));
   assert.equal(manifest.start_url, './');
-  assert.equal(manifest.background_color, '#0B0B0F');
+  assert.equal(manifest.background_color, '#FFD100');
+  assert.equal(manifest.theme_color, '#FFD100');
+  // the icons: a black League Gothic A on a yellow square, drawn from the font's own outlines so no font is needed
+  const icon = read('favicon.svg');
+  assert.ok(icon.includes(`fill="${YELLOW}"`) && icon.includes(`fill="${INK}"`) && !icon.includes(RED) && !icon.includes(WHITE), 'a black A on yellow, and nothing else');
+  assert.ok(!icon.includes('<text') && !icon.includes('font-family') && !icon.includes('rx='), 'outlines, not text, with square corners');
+  assert.equal(icon, faviconSvg());
+  assert.deepEqual(pngSize(path.join(dist, 'apple-touch-icon.png')), [180, 180]);
+  assert.ok(fs.readFileSync(path.join(dist, 'apple-touch-icon.png')).equals(renderPng(faviconSvg(), { fontFiles: FONT_FILES, width: 180 })), 'the apple icon is the same drawing');
+  // and the picture shows it: black letter, yellow square, nothing in between but the edges of the letter
+  const { Resvg } = resvg;
+  const px = new Resvg(icon, { fitTo: { mode: 'width', value: 64 } }).render().pixels;
+  const at = (x, y) => [px[(y * 64 + x) * 4], px[(y * 64 + x) * 4 + 1], px[(y * 64 + x) * 4 + 2]];
+  assert.deepEqual(at(1, 1), [0xff, 0xd1, 0x00], 'the corner is yellow');
+  let dark = 0;
+  let bright = 0;
+  for (let i = 0; i < px.length; i += 4) {
+    if (px[i] < 40 && px[i + 1] < 40) dark += 1;
+    if (px[i] > 240 && px[i + 1] > 200 && px[i + 2] < 20) bright += 1;
+  }
+  assert.ok(dark > 300 && dark < 1400, `${dark} black pixels make the A`);
+  assert.ok(bright > 2400, `${bright} yellow pixels around it`);
+  assert.ok(at(32, 32)[0] < 40 || at(32, 38)[0] < 40 || at(32, 44)[0] < 40, 'the letter is in the middle');
+});
+
+test('the web fonts keep what a name can need: Latin Extended-A, the comma-below letters and the degree sign, and the licenses ship beside them', () => {
+  // A woff2 is a Brotli stream behind a table directory. The cmap table is not transformed, so it can be read straight out of it.
+  const TAGS = ['cmap', 'head', 'hhea', 'hmtx', 'maxp', 'name', 'OS/2', 'post', 'cvt ', 'fpgm', 'glyf', 'loca', 'prep', 'CFF ', 'VORG', 'EBDT', 'EBLC', 'gasp', 'hdmx', 'kern', 'LTSH', 'PCLT', 'VDMX', 'vhea', 'vmtx', 'BASE', 'GDEF', 'GPOS', 'GSUB'];
+  const charsOf = (file) => {
+    const b = fs.readFileSync(file);
+    assert.equal(b.toString('latin1', 0, 4), 'wOF2', `${file} is a woff2`);
+    let at = 48;
+    const base128 = () => {
+      let n = 0;
+      for (let i = 0; i < 5; i += 1) {
+        const byte = b[at];
+        at += 1;
+        n = n * 128 + (byte & 0x7f);
+        if (!(byte & 0x80)) return n;
+      }
+      throw new Error('bad UIntBase128');
+    };
+    const tables = [];
+    for (let i = 0; i < b.readUInt16BE(12); i += 1) {
+      const flags = b[at];
+      at += 1;
+      const index = flags & 0x3f;
+      const tag = index === 63 ? b.toString('latin1', at, (at += 4)) : TAGS[index];
+      const version = flags >> 6;
+      const length = base128();
+      const transformed = tag === 'glyf' || tag === 'loca' ? version === 0 : version !== 0;
+      tables.push({ tag, size: transformed ? base128() : length });
+    }
+    const raw = zlib.brotliDecompressSync(b.subarray(at, at + b.readUInt32BE(20)));
+    let offset = 0;
+    for (const t of tables) {
+      if (t.tag === 'cmap') {
+        const sfnt = Buffer.alloc(28 + t.size);
+        sfnt.writeUInt16BE(1, 4);
+        sfnt.write('cmap', 12, 'latin1');
+        sfnt.writeUInt32BE(28, 20);
+        raw.copy(sfnt, 28, offset, offset + t.size);
+        return readCmap(sfnt);
+      }
+      offset += t.size;
+    }
+    throw new Error(`${file} has no cmap`);
+  };
+  const range = (from, to) => Array.from({ length: to - from + 1 }, (_, i) => from + i);
+  const WANT = [0x41, 0x7a, 0x30, 0x2e, 0x27, 0x2019, 0xb0, 0xc9, 0xf1, ...range(0x100, 0x17f), ...range(0x218, 0x21b)];
+  const fonts = fs.readdirSync(path.join(REPO, 'assets', 'fonts'));
+  const full = (name) => readCmap(fs.readFileSync(path.join(REPO, 'assets', 'fonts', name)));
+  // the full fonts are the references: League Gothic is itself missing 22 of the Latin Extended-A letters (a few with a circumflex or breve, and the like), so what must be kept is whatever the full font can draw
+  const reference = { 'leaguegothic.woff2': full('LeagueGothic-Regular.ttf'), 'librefranklin-400.woff2': full('LibreFranklin-SemiBold.ttf'), 'librefranklin-600.woff2': full('LibreFranklin-SemiBold.ttf'), 'librefranklin-700.woff2': full('LibreFranklin-Bold.ttf') };
+  assert.deepEqual(Object.keys(reference).sort(), WEB_FONTS.filter((f) => f.endsWith('.woff2')).sort(), 'every web font is checked');
+  assert.ok(fonts.includes('LeagueGothic-Regular.ttf'));
+  for (const [name, source] of Object.entries(reference)) {
+    const chars = charsOf(path.join(dist, 'assets', name));
+    const kept = WANT.filter((cp) => source.has(cp));
+    assert.ok(kept.length >= 105, `${name}: the full font draws ${kept.length} of the ones named`);
+    for (const cp of kept) assert.ok(chars.has(cp), `${name} has U+${cp.toString(16).toUpperCase().padStart(4, '0')}, which the full font draws`);
+    for (const cp of [0x41, 0x7a, 0x30, 0x2e, 0x27, 0x2019, 0xb0, 0xc9, 0xf1, 0x106, 0x10d, 0x11f, 0x141, 0x17a, 0x218, 0x219, 0x21a, 0x21b]) assert.ok(chars.has(cp), `${name} has U+${cp.toString(16).toUpperCase().padStart(4, '0')}: Dončić, Erdoğan, Łódź, Brașov and the degree sign`);
+    assert.ok(!chars.has(0x2190) && !chars.has(0x2192), `${name} has no arrows, so none is used`);
+  }
+  // the card's own copies are complete fonts: Dončić, Erdoğan, Łódź and a degree sign all draw
+  for (const file of FONT_FILES) {
+    const chars = readCmap(fs.readFileSync(file));
+    for (const ch of 'ćčğŁóź°') assert.ok(chars.has(ch.codePointAt(0)), `${path.basename(file)} has ${ch}`);
+  }
+  // each license is copied beside the fonts in dist
+  for (const license of ['OFL-LeagueGothic.txt', 'OFL-LibreFranklin.txt']) assert.equal(read(`assets/${license}`), fs.readFileSync(path.join(REPO, 'assets', 'fonts', license), 'utf8'), `${license} ships beside the fonts`);
 });
 
 // ---- one date --------------------------------------------------------------------------------------------------------------------------
@@ -1805,11 +2293,16 @@ test('one date everywhere: the edition\'s Eastern date, whatever the machine clo
     l.buildTime = '2026-11-17T03:40:00.000Z';
     l.etDate = '2026-11-16';
   });
-  const home = read('index.html', buildAt(r).dist);
-  assert.match(home, /<span class="when">Mon, Nov 16<\/span>/);
-  has(home, 'TODAY</span><span> &middot; MONDAY, NOV 16</span>');
-  assert.equal(attr(home, 'data-share-full').split('\n')[3].slice(0, 11), 'Mon, Nov 16');
-  assert.ok(!home.includes('Nov 17'), 'no UTC date on the page');
+  const built = buildAt(r).dist;
+  const home = read('index.html', built);
+  const yesterday = copy.dayLabel('2026-11-15', '2026-11-16');
+  has(home, `<p class="dk">${yesterday.head}</p>\n<h2 class="dl"><a href="./day/2026-11-15/">${yesterday.rest}</a></h2>`);
+  has(home, '<h1 class="q">Did the world end today?</h1>');
+  assert.equal(attr(home, 'data-share-full').split('\n')[0], 'Did the world end today? ALMOST.', 'the 16th is still today at 10:40 pm Eastern');
+  assert.equal(attr(read('day/2026-11-15/index.html', built), 'data-share-full').split('\n')[0], 'Did the world end on Nov 15? ALMOST.');
+  has(read('day/2026-11-16/index.html', built), '<h1 class="q">Did the world end today?</h1>');
+  assert.ok(!/Nov 17|NOV 17/.test(home), 'no UTC date on the page');
+  assert.ok(!fs.existsSync(path.join(built, 'day', '2026-11-17')), 'and no page for it');
   // Nothing on the page or in the script reads the visitor's own calendar date.
   assert.ok(!home.includes('data-local'));
   const code = fs.readFileSync(path.join(REPO, 'assets', 'app.js'), 'utf8');
@@ -1834,13 +2327,13 @@ test('the page and its script agree: every hook the script reads is on the page,
     for (const name of ['root', 'live', 'build', 'success', 'quiet', 'date', 'page']) assert.ok(new RegExp(`<html [^>]*data-${name}="`).test(home), `${label}: data-${name}`);
     for (const once of ['id="main"', '<footer>', 'id="hero"', 'id="verdict"']) assert.equal(home.split(once).length - 1, 1, `${label}: ${once} once, so the page can be swapped in place`);
     assert.match(home, /<main id="main" data-share-text="[^"]*" data-share-full="[^"]*" data-share-url="[^"]*" data-build="/, `${label}: Share today reads the main block`);
-    const blocks = blocksOf(home);
-    assert.equal(blocks.length, 2);
-    for (const block of blocks) {
-      assert.ok(block.includes('data-share-full="') && block.includes('data-share-text="') && block.includes('data-share-url="'), `${label}: a block carries its own share text`);
-      assert.equal((block.match(/data-act="share"/g) || []).length, 1, `${label}: and its own button`);
-    }
-    assert.equal((home.match(/data-act="share"/g) || []).length, 3, `${label}: Share today and one button per day`);
+    const [today, earlier, ...rest] = blocksOf(home);
+    assert.equal(rest.length, 0);
+    assert.equal((home.match(/data-share-full="/g) || []).length, 1, `${label}: one share text on the page, on the main block`);
+    assert.ok(!today.includes('data-share-full') && !earlier.includes('data-share-full'), `${label}: a day block does not carry a second one`);
+    assert.equal((today.match(/data-act="share"/g) || []).length, 1, `${label}: today's block ends with the one button`);
+    assert.ok(!earlier.includes('data-act="share"'), `${label}: an earlier day has no button; its own page has one`);
+    assert.equal((home.match(/data-act="share"/g) || []).length, 1, `${label}: one share button on the page`);
     assert.equal((home.match(/data-act="check"/g) || []).length, 1, `${label}: ALMOST. is the one check button`);
   }
   for (const token of ["'[data-share-full]'", "'data-share-text'", "'data-share-full'", "'data-share-url'", "'#main'", "'#hero'", "'#verdict'", "'#check'", "'#said'", "'#stale'", "'data-lines'", "'data-template'"]) assert.ok(code.includes(token), `app.js reads ${token}`);
@@ -2025,7 +2518,7 @@ function fakeBrowser({ quiet = '0', build = '2026-11-17T15:00:00.000Z', fetched 
   const intervals = [];
   const appended = [];
   const element = () => {
-    const node = { className: '', innerHTML: '', type: '', _on: {}, classList: { add() {}, remove() {} }, setAttribute() {}, remove() {}, addEventListener(type, fn) { node._on[type] = fn; } };
+    const node = { className: '', innerHTML: '', textContent: '', type: '', _on: {}, classList: { add() {}, remove() {} }, setAttribute() {}, remove() {}, addEventListener(type, fn) { node._on[type] = fn; } };
     return node;
   };
   const document = {
@@ -2061,7 +2554,8 @@ test('page script: the refresh banner has no joke, and the page takes quiet from
   assert.equal(goingQuiet.attrs['data-quiet'], '1', 'the fetched data says quiet, so the page does too');
   const bar = goingQuiet.appended.find((node) => node.className === 'fresh');
   assert.ok(bar, 'newer data shows the banner');
-  assert.ok(bar.innerHTML.includes('Updated. Tap to refresh.') && !bar.innerHTML.includes('near misses'), bar.innerHTML);
+  assert.equal(bar.textContent, 'Updated. Tap to refresh.', 'plain words');
+  assert.equal(bar.innerHTML, '', 'and no markup, so no pulsing dot');
   // And the other way round: the quiet is lifted.
   const lifted = fakeBrowser({ quiet: '1', fetched: { buildTime: later, quiet: { quiet: false, note: '' } } });
   pageScript(lifted.globals);
@@ -2147,7 +2641,8 @@ test('serve: a real server answers on a loopback port, at the root and in the su
     assert.equal(sub.status, 200);
     assert.equal(sub.body, home.body, 'the same page in the subfolder');
     assert.match((await ask(`${SUBFOLDER}/assets/app.js`)).headers['content-type'], /javascript/);
-    assert.equal((await ask('/assets/anton.woff2')).headers['content-type'], 'font/woff2');
+    for (const font of WEB_FONTS) assert.equal((await ask(`/assets/${font}`)).headers['content-type'], 'font/woff2', font);
+    assert.equal((await ask('/assets/anton.woff2')).status, 404, 'the old display font is gone');
     const missing = await ask('/nope');
     assert.equal(missing.status, 404);
     assert.ok(missing.body.includes("This page ended. The world didn&#39;t."));
@@ -2202,40 +2697,46 @@ test('phase 6 links: a row is one link across the whole card, the donate link st
   const quakeFirst = { ...ED16, items: [ED16.items[5], ...ED16.items.slice(0, 5)] };
   const { dist: quakeDist } = withEditions({ ...EDITIONS, '2026-11-16': quakeFirst });
   const pages = [
-    ['home', read('index.html', edDist), 'CLOSEST CALL'],
-    ['plain home', read('index.html'), 'CLOSEST CALL'],
-    ['live day', read('day/2026-11-16/index.html', edDist), 'CLOSEST CALL'],
-    ['past day', read('day/2026-11-15/index.html', edDist), 'CLOSEST CALL'],
-    ['plain day', read('day/2026-11-16/index.html'), 'CLOSEST CALL'],
-    ['quiet story first', read('index.html', quakeDist), 'TOP STORY'],
+    ['home', read('index.html', edDist), true],
+    ['plain home', read('index.html'), false],
+    ['live day', read('day/2026-11-16/index.html', edDist), true],
+    ['past day', read('day/2026-11-15/index.html', edDist), true],
+    ['plain day', read('day/2026-11-16/index.html'), false],
+    ['quiet story first', read('index.html', quakeDist), true],
   ];
-  for (const [label, html, tag] of pages) {
+  for (const [label, html, ranked] of pages) {
     assert.deepEqual(anchorDepth(html), { deepest: 1, end: 0 }, `${label}: no link holds another, and every link closes`);
     assert.ok(!/<a\b[^>]*>\s*<(?:li|ol|ul|div|p|section|h[1-6])\b/.test(html), `${label}: a link holds words, never a block`);
+    // there is no tag over the first row any more: the closest call is the red 1
+    assert.ok(!html.includes('class="tag"') && !html.includes('CLOSEST CALL') && !html.includes('TOP STORY'), `${label}: no tag on a row`);
     // a homepage has a block of rows for today and one for yesterday, each with its own first row
     const groups = html.includes('<section class="day"') && !html.includes('id="rows"') ? blocksOf(html).map(rowsOf) : [rowsOf(html)];
     assert.ok(groups.every((g) => g.length >= 2), `${label}: ${groups.map((g) => g.length)} rows`);
-    for (const [at, row] of groups.flatMap((g, n) => g.map((r) => [n, r]))) {
-      const f = rowFacts(row);
-      if (row.includes('<div class="card">')) {
-        // a story with no safe link still reads, and has nothing to open
-        assert.ok(!row.includes('<a ') && !row.includes('class="cta"'), `${label} row ${f.rank}: no link, so no "Read it"`);
-        continue;
+    for (const group of groups) {
+      for (const [index, row] of group.entries()) {
+        const f = rowFacts(row);
+        const rank = String(index + 1);
+        assert.equal(f.plain, !ranked, `${label} row ${rank}: only a day with an edition is ranked`);
+        if (row.includes('<div class="card">')) {
+          // a story with no safe link still reads, and has nothing to open
+          assert.ok(!row.includes('<a '), `${label} row ${rank}: no link`);
+          continue;
+        }
+        assert.equal((row.match(/<a class="card"/g) || []).length, 1, `${label} row ${rank}: one card link`);
+        const card = row.match(/<a class="card" href="[^"]*" target="_blank" rel="noopener">([\s\S]*?)<\/a>/);
+        assert.ok(card, `${label} row ${rank}: the card is a link that opens in a new tab`);
+        // inside the card: the number a screen reader says (a ranked row only), the label, the line, the caption of a quiet row, the news site
+        const said = ranked ? `<span class="sr">${rank}\\. </span> ` : '';
+        assert.match(card[1], new RegExp(`^${said}<span class="lb">[^<]+</span>(?: <span class="ln">[^<]+</span>)?(?: <span class="cap">[^<]+</span>)?(?: <span class="src">[^<]+</span>)?$`), `${label} row ${rank}`);
+        assert.equal(card[1].includes('class="cap"'), f.quiet, `${label} row ${rank}: a quiet row has its caption in the card, and no other row has one`);
+        assert.ok(!row.includes('<p class="cap">'), `${label} row ${rank}: the caption is never a paragraph under the card`);
+        // outside it: the rank number (for the eye only), the emoji and the donate link
+        for (const outside of ['class="rn"', 'class="em"', 'class="help"']) assert.ok(!card[1].includes(outside), `${label} row ${rank}: ${outside} stands outside the card`);
+        if (ranked) assert.ok(row.includes(`<span class="rn" aria-hidden="true">${rank}</span>`), `${label} row ${rank}: the number is not read out, the card reads it`);
+        else assert.ok(!row.includes('class="rn"') && !row.includes('class="sr"'), `${label} row ${rank}: a plain headline has no number at all`);
+        assert.equal(f.best, ranked && index === 0, `${label} row ${rank}: only the first ranked row is the closest call`);
+        if (f.help) assert.ok(row.indexOf('</a>') < row.indexOf('class="help"'), `${label} row ${rank}: the card closes before the donate link opens`);
       }
-      assert.equal((row.match(/<a class="card"/g) || []).length, 1, `${label} row ${f.rank}: one card link`);
-      const card = row.match(/<a class="card" href="[^"]*" target="_blank" rel="noopener">([\s\S]*?)<\/a>/);
-      assert.ok(card, `${label} row ${f.rank}: the card is a link that opens in a new tab`);
-      // inside the card: the number a screen reader says, the line, and the bar with the news site and "Read it"
-      // a quiet row has its caption in there too, between the line and the bar
-      assert.match(card[1], new RegExp(`^<span class="sr">${f.rank}\\. </span><span class="txt">[^<]+</span>(?:<span class="cap">[^<]+</span>)?<span class="bar"><span class="src">[\\s\\S]*</span><span class="cta">Read it →</span></span>$`), `${label} row ${f.rank}`);
-      assert.equal(card[1].includes('class="cap"'), f.quiet, `${label} row ${f.rank}: a quiet row has its caption in the card, and no other row has one`);
-      assert.ok(!row.includes('<p class="cap">'), `${label} row ${f.rank}: the caption is never a paragraph under the card`);
-      // outside it: the rank and emoji (for the eye only), the tag and the donate link
-      for (const outside of ['class="rk"', 'class="tag"', 'class="help"']) assert.ok(!card[1].includes(outside), `${label} row ${f.rank}: ${outside} stands outside the card`);
-      assert.ok(row.includes('<div class="rk" aria-hidden="true"><span class="rn">'), `${label} row ${f.rank}: the number and the emoji are not read out`);
-      assert.equal(f.tag, f.rank === '1' ? (at === 0 ? tag : 'CLOSEST CALL') : null, `${label} row ${f.rank}: only the first row has a tag`);
-      assert.equal(f.best, f.rank === '1', `${label} row ${f.rank}: only the first row is the closest call`);
-      if (f.help) assert.ok(row.indexOf('</a>') < row.indexOf('class="help"'), `${label} row ${f.rank}: the card closes before the donate link opens`);
     }
     // the list of every headline: the link is the headline and its words, and a donate link stands beside it
     for (const head of headsOf(html)) {
@@ -2252,21 +2753,26 @@ test('phase 6 links: a row is one link across the whole card, the donate link st
 test('phase 6 day pages: someone who lands from a shared link can find today, every day, the scale, the share button and where to follow', () => {
   const live = read('day/2026-11-16/index.html', edDist);
   const past = read('day/2026-11-15/index.html', edDist);
-  for (const [label, html] of [['live day', live], ['past day', past]]) {
-    // a way out above the hero: today, and every day so far
-    has(html, '<div class="top"><a href="../../">← Today</a><a href="../../almanac/">Every day so far →</a></div>');
-    assert.equal((html.match(/class="top"/g) || []).length, 1, `${label}: once`);
-    assert.ok(html.indexOf('class="top"') < html.indexOf('<section class="hero"'), `${label}: above the hero`);
-    // the hero: the scale under the meter, the share button, then the masthead line
+  const nav = { live: '<nav class="dnav" aria-label="Other days">\n<a href="../2026-11-15/">Earlier: Nov 15</a>\n<span></span>\n</nav>', past: '<nav class="dnav" aria-label="Other days">\n<span></span>\n<a href="../2026-11-16/">Later: Nov 16</a>\n</nav>' };
+  for (const [label, html, question] of [['live day', live, 'Did the world end today?'], ['past day', past, 'Did the world end on Nov 15?']]) {
+    // the band says which day this is
+    has(html, `<div class="band"><h1 class="q">${question}</h1></div>`);
+    // no bar of links above the hero: the way out is under the rows and in the footer
+    assert.ok(!html.includes('class="top"') && !/[←→]/.test(html), `${label}: no top bar and no arrow`);
+    // the hero: the board with the scale in its small print, and no share button in it
     const hero = heroOf(html);
-    has(hero, '<p class="scale">0 is a quiet day. 99 is the end.</p>');
-    assert.ok(hero.indexOf('class="meter"') < hero.indexOf('class="scale"'), `${label}: the scale sits under the meter`);
-    has(hero, '<button class="sh" type="button" data-act="share">Share this day</button>');
-    has(hero, '<p class="mast">didtheworldendtoday.com · @thelpdrive</p>');
-    assert.ok(hero.indexOf('class="sh"') < hero.indexOf('class="mast"'), `${label}: the masthead line is last`);
-    // the rows say how they are ordered, and the foot of the rows shares and follows
-    has(html, '<h2 class="sec">Ranked from most world-ending to least</h2>\n<ol class="rows" role="list">');
+    has(hero, '<span class="bt">out of 99. 0 is a quiet day. 99 is the end.</span>');
+    assert.ok(!hero.includes('data-act="share"') && !hero.includes('class="scale"') && !hero.includes('class="mast"'), `${label}: the hero has no share button and no old scale line`);
+    // the rows say what they are, and the foot of the rows shares and follows
+    has(html, '<h2 class="sec">NEAR MISSES</h2>\n<ol class="rows" role="list">');
     has(html, '<div class="df">\n<button class="btn" type="button" data-act="share">Share this day</button>\n<a class="follow" href="https://x.com/thelpdrive" target="_blank" rel="noopener">Follow @thelpdrive for tomorrow&#39;s ALMOST.</a>\n</div>');
+    assert.equal((html.match(/data-act="share"/g) || []).length, 1, `${label}: the one share button`);
+    // the two ends of the list of days sit under the headlines, and the footer has the way to today and to every day
+    has(html, label === 'live day' ? nav.live : nav.past);
+    assert.ok(html.indexOf('class="dnav"') > html.indexOf('id="all"') || !html.includes('id="all"'), `${label}: the ends come after the headlines`);
+    has(html, '<a href="../../">Today</a>');
+    has(html, '<a href="../../almanac/">Almanac</a>');
+    assert.ok(html.indexOf('<footer>') > html.indexOf('class="dnav"'), `${label}: the footer is last`);
   }
   // the live day's list is the last 24 hours and says when it was read; a finished day's list is that day's
   has(live, '<h2 class="sec">Headlines from the last 24 hours, as of 5:30 PM ET</h2>');
@@ -2292,52 +2798,63 @@ test('phase 6 day pages: someone who lands from a shared link can find today, ev
   assert.ok(headlineRows([...ten, one('A'), one('B')], ctx).includes('<summary>Show 2 more headlines</summary>'));
 });
 
-test('phase 6 quiet pages: no claim that the rows are ranked, "Top stories" over them, and a follow line with no joke', () => {
+test('phase 6 quiet pages: no claim that the rows are ranked, "Top stories" over them, plain rows with no rank, and a follow line with no joke', () => {
   const r = copyRoot(edRoot);
   edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: '' }));
   const out = buildAt(r);
   const home = read('index.html', out.dist);
-  assert.ok(!home.includes('class="rank"') && !home.includes(copy.RANK_NOTE), 'the quiet homepage does not say its rows are ranked');
+  assert.ok(!home.includes('NEAR MISSES') && !home.includes('WORST FIRST'), 'the quiet homepage does not say its rows are ranked');
+  has(home, '<h2 class="sec">TODAY’S TOP STORIES</h2>');
   for (const rel of ['day/2026-11-16/index.html', 'day/2026-11-15/index.html']) {
     const page = read(rel, out.dist);
-    has(page, '<h2 class="sec">Top stories</h2>\n<ol class="rows" role="list">');
-    assert.ok(!page.includes(copy.RANK_HEADING), `${rel}: no ranking claim`);
+    has(page, '<h2 class="sec">TOP STORIES</h2>\n<ol class="rows" role="list">');
+    assert.ok(!page.includes('NEAR MISSES') && !page.includes('WORST FIRST'), `${rel}: no ranking claim`);
     has(page, '<a class="follow" href="https://x.com/thelpdrive" target="_blank" rel="noopener">Follow @thelpdrive</a>');
     assert.ok(!page.includes('ALMOST.</a>') && !page.includes('tomorrow'), `${rel}: no joke in the follow line`);
-    assert.equal(rowFacts(rowsOf(page)[0]).tag, 'TOP STORY', `${rel}: the first row is the top story`);
-    has(page, '<div class="top">');
+    // every row is plain: the news site's own headline, no number, no closest call, no emoji
+    const facts = factsIn(page);
+    assert.ok(facts.length >= 2 && facts.every((f) => f.plain && !f.best && f.rank === null && f.emoji === null), `${rel}: plain rows`);
+    assert.ok(!page.includes('class="rn"') && !page.includes('class="tag"') && !page.includes('class="top"'), `${rel}: no number, no tag, no top bar`);
   }
   // an ordinary build is the other way round, so these checks can fail
   const normal = read('day/2026-11-16/index.html', edDist);
-  assert.ok(normal.includes(copy.RANK_HEADING) && normal.includes('tomorrow&#39;s ALMOST.') && !normal.includes('>Top stories<'));
-  assert.ok(read('index.html', edDist).includes('<p class="rank">Ranked from most world-ending to least.</p>'));
+  assert.ok(normal.includes('<h2 class="sec">NEAR MISSES</h2>') && normal.includes('tomorrow&#39;s ALMOST.') && !normal.includes('>TOP STORIES<'));
+  assert.ok(read('index.html', edDist).includes('<h2 class="sec">TODAY’S NEAR MISSES</h2>'));
 });
 
 // ---- phase 6 fix round -------------------------------------------------------------------------------------------------------
 
 test('phase 6 fix round: only an edition says its rows are ranked, and a day of plain headlines is "Top stories" with no claim', () => {
-  const RANKED = '<h2 class="sec">Ranked from most world-ending to least</h2>\n<ol class="rows" role="list">';
-  const TOP = '<h2 class="sec">Top stories</h2>\n<ol class="rows" role="list">';
-  // an edition on every day: the note on the homepage and the heading on both day pages
-  has(read('index.html', edDist), '<p class="rank">Ranked from most world-ending to least.</p>');
+  const RANKED = '<h2 class="sec">NEAR MISSES</h2>\n<ol class="rows" role="list">';
+  const TOP = '<h2 class="sec">TOP STORIES</h2>\n<ol class="rows" role="list">';
+  const RANKED_TODAY = '<h2 class="sec">TODAY’S NEAR MISSES</h2>';
+  const TOP_TODAY = '<h2 class="sec">TODAY’S TOP STORIES</h2>';
+  // an edition on every day: the line on the homepage and on both day pages
+  has(read('index.html', edDist), RANKED_TODAY);
   for (const rel of ['day/2026-11-16/index.html', 'day/2026-11-15/index.html']) has(read(rel, edDist), RANKED);
-  // no edition on any day: nothing says the rows are ranked, and the day pages say "Top stories"
+  // no edition on any day: nothing says the rows are ranked, and the pages say "Top stories"
   const home = read('index.html');
-  assert.ok(!home.includes('class="rank"') && !home.includes(copy.RANK_NOTE) && !home.includes('Ranked from'), 'the plain homepage makes no claim about order');
+  assert.ok(!home.includes('NEAR MISSES') && !home.includes('WORST FIRST'), 'the plain homepage makes no claim about order');
+  has(home, TOP_TODAY);
   for (const rel of ['day/2026-11-16/index.html', 'day/2026-11-15/index.html']) {
     const page = read(rel);
     has(page, TOP);
-    assert.ok(!page.includes(copy.RANK_HEADING) && !page.includes('class="rank"'), `${rel}: no ranking claim`);
+    assert.ok(!page.includes('NEAR MISSES') && !page.includes('WORST FIRST'), `${rel}: no ranking claim`);
   }
   // one day of each: every page says what its own day is
   const todayOnly = withEditions({ '2026-11-16': ED16 }).dist;
-  has(read('index.html', todayOnly), '<p class="rank">Ranked from most world-ending to least.</p>');
+  has(read('index.html', todayOnly), RANKED_TODAY);
   has(read('day/2026-11-16/index.html', todayOnly), RANKED);
   has(read('day/2026-11-15/index.html', todayOnly), TOP);
   const yesterdayOnly = withEditions({ '2026-11-15': ED15 }).dist;
-  assert.ok(!read('index.html', yesterdayOnly).includes('class="rank"'), "today is plain headlines, so today's block does not say it is ranked");
+  has(read('index.html', yesterdayOnly), TOP_TODAY);
+  assert.ok(!read('index.html', yesterdayOnly).includes('NEAR MISSES'), "today is plain headlines, so today's block does not say it is ranked");
   has(read('day/2026-11-16/index.html', yesterdayOnly), TOP);
   has(read('day/2026-11-15/index.html', yesterdayOnly), RANKED);
+  // the words themselves, not only what the constants say
+  assert.deepEqual([copy.SECTION_TODAY, copy.SECTION_TODAY_PLAIN, copy.SECTION_DAY, copy.SECTION_DAY_PLAIN], ['TODAY’S NEAR MISSES', 'TODAY’S TOP STORIES', 'NEAR MISSES', 'TOP STORIES']);
+  // the old line said how the rows were ordered; the red 1 says it now
+  for (const gone of ['WORST FIRST', 'MOST WORLD-ENDING']) for (const base of [edDist, dist]) assert.ok(!read('index.html', base).includes(gone), `no "${gone}" on a page`);
 });
 
 test('phase 6 fix round: a place is a US place only when it is only a US place, and a headline that says nobody was hurt gets no link', () => {
@@ -2392,46 +2909,52 @@ test('phase 6 fix round: the feed says the date and the Doom Score the way the p
   assert.ok(xml({}).includes('Mon, Nov 16 · Doom Score 0 of 99'));
 });
 
-test('phase 6 fix round: the source on a card is two lines, the name and under it the count, with no dot between them', () => {
+test('phase 6 fix round: a row names its news site and nothing else; the list of every headline keeps the count and "Read it", each after a dot', () => {
   const ctx = { byId: new Map(), quietMode: false, quietCaption: 'q', quietLink: '', quietLinkIntl: '' };
-  const make = (over) => dayRow({ emoji: 'e', line: 'A line.', ids: ['a'], url: 'https://x.example/a', source: 'TradingView', outlets: 4, ...over }, 1, ctx);
-  assert.ok(make({}).includes('<span class="bar"><span class="src"><span class="sn">TradingView</span><span class="sc">4 news sites</span></span><span class="cta">Read it →</span></span>'));
-  const one = make({ outlets: 1 });
-  assert.ok(one.includes('<span class="src"><span class="sn">TradingView</span></span>') && !one.includes('class="sc"'), 'one news site: the name alone');
-  const bar = (html) => html.match(/<span class="bar">[\s\S]*<\/span><\/span>/)[0];
-  assert.ok(!bar(make({})).includes('·') && !bar(make({})).includes('&middot;'), 'no dot between the name and the count');
-  assert.ok(make({ source: '', outlets: 5 }).includes('<span class="src"><span class="sc">5 news sites</span></span>'), 'no name, a count');
-  const bare = make({ source: '', outlets: 1 });
-  assert.ok(bare.includes('<span class="bar"><span class="src"></span><span class="cta">Read it →</span></span>'), 'no source: the empty span keeps "Read it" on the right');
-  assert.ok(!make({ source: '', outlets: 1, url: '' }).includes('class="bar"'), 'no source and no link: no bar');
-  assert.ok(make({ url: 'javascript:alert(1)' }).includes('<span class="bar"><span class="src"><span class="sn">TradingView</span><span class="sc">4 news sites</span></span></span>'), 'no safe link: the source, and no "Read it"');
-  // a web address reads as its host, on the first line
-  assert.ok(make({ source: 'https://www.essexcountynews.co.uk/' }).includes('<span class="sn">essexcountynews.co.uk</span>'));
+  const make = (over) => dayRow({ emoji: 'e', label: 'Card skimmers', line: 'A line.', ids: ['a'], url: 'https://x.example/a', source: 'TradingView', outlets: 4, ...over }, 0, ctx);
+  const src = (over) => rowFacts(make(over)).src;
+  assert.equal(src({}), 'TradingView', 'the name, with no count and no "Read it"');
+  assert.equal(src({ outlets: 1 }), 'TradingView');
+  assert.equal(src({ source: 'NASA/JPL', outlets: 1 }), 'NASA/JPL');
+  assert.equal(src({ source: 'WSB-TV', outlets: 2 }), 'WSB-TV');
+  assert.equal(src({ source: '', outlets: 5 }), null, 'no name, no line, whatever the count');
+  assert.ok(!make({ source: '', outlets: 1 }).includes('class="src"'), 'no source: no line');
+  assert.equal(src({ url: 'javascript:alert(1)' }), 'TradingView', 'no safe link: the name still shows');
+  assert.ok(make({ url: 'javascript:alert(1)' }).includes('<div class="card">') && !make({ url: 'javascript:alert(1)' }).includes('<a '));
+  for (const html of [make({}), make({ outlets: 1 }), make({ source: 'WSB-TV', outlets: 2 })]) assert.ok(!/news sites|Read it/.test(html), 'a row says neither how many told it nor what the link does');
+  // a web address reads as its host
+  assert.equal(src({ source: 'https://www.essexcountynews.co.uk/' }), 'essexcountynews.co.uk');
   // the parts, and the one-line form the list of every headline keeps
   assert.deepEqual(copy.sourceParts(4, 'TradingView'), { name: 'TradingView', count: '4 news sites' });
   assert.deepEqual(copy.sourceParts(1, 'TradingView'), { name: 'TradingView', count: '' });
   assert.deepEqual(copy.sourceParts('x', ''), { name: '', count: '' });
   const head = headlineRow({ id: 'h', cat: 'internet', title: 'A headline', url: 'https://x.example/a', source: 'TradingView', outlets: 4 }, ctx);
-  assert.ok(head.includes('<span class="hs">TradingView · 4 news sites · Read it →</span>'), 'the list keeps one line');
+  assert.ok(head.includes('<span class="hs">TradingView · 4 news sites · Read it</span>'), 'the list keeps one line too');
+  assert.equal(copy.rowSource('https://www.essexcountynews.co.uk/'), 'essexcountynews.co.uk');
 });
 
-test('phase 6 fix round: a quiet row has its caption inside the card, between the line and the bar, and the donate link after the card', () => {
+test('phase 6 fix round: a quiet row has its caption inside the card, between the line and the source line, and the donate link after the card', () => {
   const lead = { id: 'q1', cat: 'weather', kind: 'news', title: 'Tornado destroys homes in Oklahoma town', url: 'https://example.com/q1', source: 'Example', quiet: true };
   const ctx = { byId: new Map([['q1', lead]]), quietMode: false, quietCaption: 'No jokes on this one.', quietLink: cfg.quiet.quietLink, quietLinkIntl: cfg.quiet.quietLinkIntl };
-  const item = { emoji: '🌪️', line: 'A tornado hit Oklahoma.', ids: ['q1'], quiet: true, url: 'https://example.com/q1', source: 'Example', outlets: 3 };
+  const item = { emoji: '🌪️', label: 'Oklahoma tornado', line: 'A tornado hit Oklahoma.', ids: ['q1'], quiet: true, url: 'https://example.com/q1', source: 'Example', outlets: 3 };
   const html = dayRow(item, 1, ctx);
   const card = html.match(/<a class="card" href="[^"]*" target="_blank" rel="noopener">([\s\S]*?)<\/a>/)[1];
-  assert.equal(card, '<span class="sr">2. </span><span class="txt">A tornado hit Oklahoma.</span><span class="cap">No jokes on this one.</span><span class="bar"><span class="src"><span class="sn">Example</span><span class="sc">3 news sites</span></span><span class="cta">Read it →</span></span>');
-  assert.ok(html.includes('</a>\n<a class="help" href="https://www.redcross.org/donate" target="_blank" rel="noopener">Donate to the Red Cross →</a>\n</div>'), 'the donate link is its own link, after the card');
+  assert.equal(card, '<span class="sr">2. </span> <span class="lb">Oklahoma tornado</span> <span class="ln">A tornado hit Oklahoma.</span> <span class="cap">No jokes on this one.</span> <span class="src">Example</span>');
+  assert.ok(html.includes('</a>\n<a class="help" href="https://www.redcross.org/donate" target="_blank" rel="noopener">Donate to the Red Cross</a>\n</div>'), 'the donate link is its own link, after the card');
   assert.equal(html.match(/class="cap"/g).length, 1, 'one caption');
   assert.ok(!html.includes('<p class="cap">'), 'not a paragraph under the card');
+  assert.ok(!/[→←↑↓]/.test(html), 'no arrow in the donate link');
+  assert.ok(/^<li class="row quiet">/.test(html), 'a quiet row has the class the red rule steps around');
   assert.deepEqual(anchorDepth(html), { deepest: 1, end: 0 });
+  // a quiet page draws no emoji at all
+  const hushed = dayRow(item, 1, { ...ctx, quietMode: true });
+  assert.ok(!hushed.includes(item.emoji) && !hushed.includes('class="em"'), 'and no emoji is drawn in quiet mode');
   // a quiet row with nothing to link to still has its caption, in the card, and no donate link
   const plain = dayRow({ ...item, ids: ['gone'] }, 1, ctx);
-  assert.ok(plain.includes('<span class="cap">No jokes on this one.</span><span class="bar">') && !plain.includes('class="help"'));
+  assert.ok(plain.includes('<span class="cap">No jokes on this one.</span> <span class="src">') && !plain.includes('class="help"'));
   // a row with no safe link has the caption in the same place
   const noLink = dayRow({ ...item, url: 'javascript:alert(1)' }, 1, ctx);
-  assert.ok(noLink.includes('<div class="card"><span class="sr">2. </span><span class="txt">A tornado hit Oklahoma.</span><span class="cap">No jokes on this one.</span><span class="bar">'));
+  assert.ok(noLink.includes('<div class="card"><span class="sr">2. </span> <span class="lb">Oklahoma tornado</span> <span class="ln">A tornado hit Oklahoma.</span> <span class="cap">No jokes on this one.</span> <span class="src">'));
   // a row that is not quiet has no caption at all
   assert.ok(!dayRow({ ...item, quiet: false }, 1, ctx).includes('class="cap"'));
   // the list of every headline keeps its caption as a line under the link, and the donate link after it
@@ -2456,7 +2979,8 @@ test('phase 6 one id, one story: when two stories carry one id, every page lists
   assert.equal(new Set(titles).size, titles.length, 'and no headline twice');
   assert.equal(titles.includes(a.title) + titles.includes(b.title), 1, 'exactly one of the two is listed');
   const home = read('index.html', out.dist);
-  const lines = rowsOf(home).map((x) => rowFacts(x).text);
+  const lines = rowsOf(home).map((x) => rowFacts(x).label);
+  assert.ok(lines.length >= 4 && lines.every(Boolean), 'the homepage has its rows');
   assert.equal(new Set(lines).size, lines.length, 'the rows on the homepage are all different stories');
   const ids = readJson(path.join(out.dist, 'api', 'today.json')).stories.map((s) => s.id);
   assert.equal(new Set(ids).size, ids.length, 'the data file has each id once');
@@ -2488,63 +3012,56 @@ test('phase 6 source text: the news site, how many told it, and a web address re
     [undefined, ''],
   ]) assert.equal(copy.sourceName(given), shown, String(given));
   assert.equal(copy.sourceText(3, 'https://www.essexcountynews.co.uk/'), 'essexcountynews.co.uk · 3 news sites');
-  // under a headline in the list: the same words, then what the headline does
-  assert.equal(copy.headlineMeta(1, 'Pub A', true), 'Pub A · Read it →');
-  assert.equal(copy.headlineMeta(2, 'Pub A', true), 'Pub A · 2 news sites · Read it →');
+  // under a headline in the list: the same words, then what the link does (a row shows the name alone)
+  assert.equal(copy.headlineMeta(1, 'Pub A', true), 'Pub A · Read it');
+  assert.equal(copy.headlineMeta(2, 'Pub A', true), 'Pub A · 2 news sites · Read it');
   assert.equal(copy.headlineMeta(1, 'Pub A', false), 'Pub A', 'no link, nothing to read');
-  assert.equal(copy.headlineMeta(1, '', true), 'Read it →');
+  assert.equal(copy.headlineMeta(1, '', true), 'Read it');
   assert.equal(copy.headlineMeta(1, '', false), '');
-  assert.equal(copy.headlineMeta(7, 'https://www.example.com/x', true), 'example.com · 7 news sites · Read it →');
+  assert.equal(copy.headlineMeta(7, 'https://www.example.com/x', true), 'example.com · 7 news sites · Read it');
+  assert.equal(copy.READ_IT, 'Read it');
   // a source that is an address never reaches a page as an address
   const ctx = { byId: new Map(), quietMode: false, quietCaption: 'q', quietLink: '', quietLinkIntl: '' };
-  const row = dayRow({ emoji: 'e', line: 'A line.', ids: ['a'], url: 'https://x.example/a', source: 'https://www.essexcountynews.co.uk/', outlets: 1 }, 0, ctx);
-  assert.equal(rowFacts(row).name, 'essexcountynews.co.uk');
-  assert.equal(rowFacts(row).count, null);
+  const row = dayRow({ emoji: 'e', label: 'A label', line: 'A line.', ids: ['a'], url: 'https://x.example/a', source: 'https://www.essexcountynews.co.uk/', outlets: 1 }, 0, ctx);
+  assert.equal(rowFacts(row).src, 'essexcountynews.co.uk', 'a row shows the name alone');
   const head = headlineRow({ id: 'h', cat: 'internet', title: 'A headline', url: 'https://x.example/a', source: 'https://www.essexcountynews.co.uk/', outlets: 2 }, ctx);
-  assert.ok(head.includes('<span class="hs">essexcountynews.co.uk · 2 news sites · Read it →</span>'));
+  assert.ok(head.includes('<span class="hs">essexcountynews.co.uk · 2 news sites · Read it</span>'));
   assert.ok(!head.includes('https://www.essex'), 'the address itself is not shown');
 });
 
 test('phase 6 tap targets: every control is at least 48px tall, a card and a headline link spread over their whole row, and the small print is big enough', () => {
-  const css = read('index.html', edDist).match(/<style>([\s\S]*?)<\/style>/)[1];
-  const rule = (selector) => {
-    const m = css.match(new RegExp(`(?:^|[}\\n])${selector.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\{([^}]*)\\}`));
-    assert.ok(m, `a rule for ${selector}`);
-    return m[1];
-  };
-  const rem = (body, prop) => {
-    const m = body.match(new RegExp(`(?:^|;)${prop}:([\\d.]+)rem`));
+  const sheet = sheetOf(read('index.html', edDist));
+  const px = (body, prop) => {
+    const m = body.match(new RegExp(`(?:^|;)${prop}:([\\d.]+)px`));
     return m ? Number(m[1]) : 0;
   };
-  for (const selector of ['.go', '.sh', '.btn', '.help', '.plus', '.follow', '.end a', '.hla', '.more summary', '.dnav a', '.top a']) {
-    assert.ok(rem(rule(selector), 'min-height') >= 3, `${selector} is at least 48px tall`);
+  // the share button is 52px tall; every other control is at least 48px
+  assert.equal(px(ruleFor(sheet, '.btn'), 'height'), 52, '.btn is 52px tall');
+  for (const selector of ['.row', '.help', '.follow', '.end a', '.hla', '.al', '.dd summary,.more summary', '.dnav a', 'footer .all a', 'footer .fl a']) {
+    assert.ok(px(ruleFor(sheet, selector), 'min-height') >= 48, `${selector} is at least 48px tall`);
   }
+  assert.ok(ruleFor(sheet, '.vbox').includes('width:100%'), 'ALMOST. is a button as wide as the column, taller than any finger');
   // the row is the frame and the link's own box is stretched over it, so a tap anywhere in the row opens the story
-  assert.match(rule('.row'), /position:relative/);
-  assert.match(rule('.card::after'), /content:"";position:absolute;inset:0/);
-  assert.match(rule('.hd'), /position:relative/);
-  assert.match(rule('.hla::after'), /content:"";position:absolute;inset:0/);
+  assert.match(ruleFor(sheet, '.row'), /position:relative/);
+  assert.match(ruleFor(sheet, '.card::after'), /content:"";position:absolute;inset:0/);
+  assert.match(ruleFor(sheet, '.hd'), /position:relative/);
+  assert.match(ruleFor(sheet, '.hla::after'), /content:"";position:absolute;inset:0/);
   // the donate link sits above the stretched link, so it can be tapped on its own
-  assert.match(rule('.help'), /position:relative;z-index:1/);
-  // the source is the name, on up to two lines so a long name is never cut short, and the count under it
-  assert.match(rule('.src'), /min-width:0/);
-  assert.match(rule('.sn'), /-webkit-line-clamp:2/);
-  assert.match(rule('.sn'), /overflow:hidden/);
-  assert.doesNotMatch(rule('.sn'), /white-space:nowrap/);
-  assert.match(rule('.sn'), /color:var\(--ink\)/);
-  assert.match(rule('.sn'), /font-weight:700/);
-  assert.match(rule('.sc'), /display:block/);
-  assert.equal(rem(rule('.sc'), 'font-size'), 0.8);
-  assert.match(rule('.sc'), /font-weight:500/);
-  assert.match(rule('.sc'), /color:var\(--mute\)/);
-  // the caption is a line of the card, so it is a block of its own
-  assert.match(rule('.cap'), /display:block/);
-  assert.match(rule('.cta'), /flex:none/);
-  // the small print: the tag is .75rem, the footer .9rem
-  assert.match(rule('.tag'), /font:800 \.75rem\//);
-  assert.match(rule('footer'), /font-size:\.9rem/);
+  assert.match(ruleFor(sheet, '.help'), /position:relative;z-index:1/);
+  // the source line is an underlined line of the card, and the caption is a block of its own
+  assert.match(ruleFor(sheet, '.src'), /display:block/);
+  assert.match(ruleFor(sheet, '.src'), /overflow-wrap:anywhere/, 'a long name wraps instead of running off the card');
+  assert.match(ruleFor(sheet, '.cap'), /display:block/);
+  // the focus ring of a stretched link is drawn on the row
+  assert.match(ruleFor(sheet, '.card:focus-visible::after'), /outline:3px solid var\(--ink\)/);
+  assert.match(ruleFor(sheet, '.hla:focus-visible::after'), /outline:3px solid var\(--ink\)/);
+  // nothing is set smaller than 12px; only the kicker over a day, the board's label and its small print are under 14px
+  const sized = rulesOf(sheet).flatMap((r) => [...r.body.matchAll(/(?:font:\d+ |font-size:)(\d+)px/g)].map((m) => ({ selector: r.selector, px: Number(m[1]) })));
+  assert.ok(sized.length > 20 && Math.min(...sized.map((x) => x.px)) === 12, `smallest type ${Math.min(...sized.map((x) => x.px))}px`);
+  assert.deepEqual(sized.filter((x) => x.px < 14).map((x) => x.selector).sort(), ['.bl', '.bt', '.dk'], 'only the kicker, the board label and its small print are below 14px');
+  assert.match(ruleFor(sheet, 'footer'), /font:400 14px\/1\.6 var\(--text\)/);
   // the details button is a real button for the eye and the finger
-  assert.match(rule('.more summary'), /cursor:pointer/);
+  assert.match(ruleFor(sheet, '.dd summary,.more summary'), /cursor:pointer/);
 });
 
 test('phase 6 words: no page says the old names for things, and the about page explains the rank, the time and the doom score', () => {
@@ -2559,4 +3076,120 @@ test('phase 6 words: no page says the old names for things, and the about page e
     assert.ok(!/\boutlets?\b/i.test(words(html)), `${label}: "news sites", not "outlets"`);
     if (plainSources) assert.ok(!/\bsources?\b/i.test(words(html)), `${label}: "news sites", not "sources"`);
   }
+});
+
+// ---- phase 8 ---------------------------------------------------------------------------------------------------------------------
+
+test('the Doom Score board is one meter for a screen reader, and its number and its ten squares read the score: 0, 5, 92 and 99', () => {
+  for (const [score, filled] of [[0, 0], [5, 1], [92, 9], [99, 10]]) {
+    const r = copyRoot(edRoot);
+    edit(latestFile(r), (l) => {
+      l.score = score;
+    });
+    edit(dayFile(r, '2026-11-16'), (d) => {
+      d.score = score;
+    });
+    const home = read('index.html', buildAt(r).dist);
+    const board = heroOf(home).match(/<div class="board"[\s\S]*?<\/div>/)[0];
+    has(board, `<div class="board" role="meter" aria-label="Doom Score" aria-valuenow="${score}" aria-valuemin="0" aria-valuemax="99" aria-valuetext="${score} out of 99">`);
+    has(board, '<span class="bl">Doom Score</span>');
+    has(board, `<span class="bn">${score}</span>`);
+    has(board, '<span class="bt">out of 99. 0 is a quiet day. 99 is the end.</span>');
+    // the squares are the picture of the number: hidden from a screen reader, which hears the meter
+    const squares = board.match(/<span class="sq" aria-hidden="true">([\s\S]*?)<\/span><span class="bt">/)[1];
+    assert.equal(squares, `${'<span class="f"></span>'.repeat(filled)}${'<span></span>'.repeat(10 - filled)}`, `score ${score}: ${filled} solid squares, then outlines, ten in all`);
+    // the share text draws the same ten squares: black for what is filled, yellow for what is left
+    assert.equal(attr(home, 'data-share-full').split('\n')[2], `Doom Score ${score} ${'⬛'.repeat(filled)}${'🟨'.repeat(10 - filled)}`, `score ${score}: the share text agrees`);
+  }
+  // an earlier day shows its score the same way, smaller, under its headline
+  const home = read('index.html', edDist);
+  const yesterday = blocksOf(home)[1];
+  has(yesterday, `<p class="ds">Doom Score 11 <span class="sq" aria-hidden="true">${'<span class="f"></span>'.repeat(1)}${'<span></span>'.repeat(9)}</span></p>`);
+});
+
+test('the footer: when it was checked, the door to every headline, the pages, who made it, then the lines; Today is a link on every page but the homepage', () => {
+  const footerOf = (html) => html.slice(html.indexOf('<footer>'), html.indexOf('</footer>') + '</footer>'.length);
+  const linksOf = (foot) => [...foot.matchAll(/<a href="([^"]*)"[^>]*>([^<]*)<\/a>/g)].map((m) => [m[1], unesc(m[2])]);
+  const every = copy.everyHeadline(stored16.stories.length);
+  const credit = ['https://x.com/thelpdrive', '@thelpdrive'];
+  const cases = [
+    ['homepage', read('index.html', edDist), [[`./day/2026-11-16/#all`, every], ['./almanac/', 'Almanac'], ['./about/', 'About'], ['./feed.xml', 'RSS'], credit]],
+    ['day page', read('day/2026-11-15/index.html', edDist), [['../../day/2026-11-16/#all', every], ['../../', 'Today'], ['../../almanac/', 'Almanac'], ['../../about/', 'About'], ['../../feed.xml', 'RSS'], credit]],
+    ['almanac', read('almanac/index.html', edDist), [['../day/2026-11-16/#all', every], ['../', 'Today'], ['../almanac/', 'Almanac'], ['../about/', 'About'], ['../feed.xml', 'RSS'], credit]],
+    ['about', read('about/index.html', edDist), [['../day/2026-11-16/#all', every], ['../', 'Today'], ['../almanac/', 'Almanac'], ['../about/', 'About'], ['../feed.xml', 'RSS'], credit]],
+  ];
+  for (const [label, html, links] of cases) {
+    const foot = footerOf(html);
+    assert.equal((html.match(/<footer>/g) || []).length, 1, `${label}: one footer`);
+    assert.deepEqual(linksOf(foot), links, `${label}: the links, in order`);
+    // top to bottom: Updated, every headline, the links, the tagline, the three lines
+    const at = ['class="up"', 'class="all"', 'class="fl"', 'class="tagline"', ...copy.FOOTER_LINES.map((l) => `<p>${esc(l)}</p>`)].map((m) => foot.indexOf(m));
+    assert.ok(at.every((n) => n > 0) && at.every((n, i) => i === 0 || n > at[i - 1]), `${label}: in order ${at}`);
+    has(foot, '<p class="up">Updated 5:30 PM ET</p>');
+    assert.ok(foot.includes('<a href="https://x.com/thelpdrive" target="_blank" rel="noopener">@thelpdrive</a>'), `${label}: the credit opens in a new tab`);
+    assert.ok(!/github|levidruin|drlevidruin/i.test(foot), `${label}: no link to the repository and no name`);
+    assert.ok(!/[←→↑↓]/.test(foot), `${label}: no arrow`);
+  }
+  // quiet: the same links, no tagline, the short lines
+  const r = copyRoot(edRoot);
+  edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: '' }));
+  const quiet = footerOf(read('index.html', buildAt(r).dist));
+  assert.ok(!quiet.includes('class="tagline"'), 'a quiet footer has no joke');
+  for (const line of copy.FOOTER_LINES_QUIET) has(quiet, `<p>${esc(line)}</p>`);
+  assert.deepEqual(linksOf(quiet).map((l) => l[1]), [every, 'Almanac', 'About', 'RSS', '@thelpdrive']);
+  // a day with no headlines has no door to them
+  const empty = withEditions({}, (root2) => {
+    edit(latestFile(root2), (l) => {
+      l.stories = [];
+    });
+    edit(dayFile(root2, '2026-11-16'), (d) => {
+      d.stories = [];
+    });
+  });
+  const emptyFoot = footerOf(read('index.html', empty.dist));
+  assert.ok(!emptyFoot.includes('class="all"'), 'no stories, no "Every headline" link');
+  assert.deepEqual(linksOf(emptyFoot).map((l) => l[1]), ['Almanac', 'About', 'RSS', '@thelpdrive']);
+});
+
+test('no page scrolls sideways at 320px, with the fonts loaded or not: every wide thing can shrink or wrap, and the page itself clips what a fallback font makes too wide', () => {
+  const sheet = sheetOf(read('index.html', edDist));
+  // the big word is sized from the screen, wraps rather than runs off, and has a stand-in cut to the width of League Gothic
+  has(ruleFor(sheet, '.verdict'), 'font:400 min(31vw,120px)/.8 var(--disp)');
+  has(ruleFor(sheet, '.verdict'), 'overflow-wrap:anywhere');
+  has(ruleFor(sheet, '.verdict'), 'white-space:normal');
+  has(sheet, '--disp:"League Gothic","League Gothic Fit",sans-serif');
+  const fit = sheet.match(/@font-face\{font-family:"League Gothic Fit";[^}]*\}/)[0];
+  for (const face of ['Arial Bold', 'Arial-BoldMT', 'Helvetica Neue Bold', 'HelveticaNeue-Bold', 'Roboto Bold', 'Liberation Sans Bold']) has(fit, `local("${face}")`);
+  has(fit, 'size-adjust:52%');
+  assert.ok(!/url\(/.test(fit), 'the stand-in downloads nothing: it is a font the phone already has');
+  // a phone narrower than 340px gets a smaller number and tighter squares, so the board never pushes out
+  assert.ok(/@media \(max-width:339px\)\{[^@]*\.sq\{gap:3px\}[^@]*\.bn\{font-size:64px\}/.test(sheet), 'the board is smaller on the smallest phones');
+  has(ruleFor(sheet, '.board'), 'grid-template-columns:auto minmax(0,1fr)');
+  has(ruleFor(sheet, '.bm'), 'min-width:0');
+  has(ruleFor(sheet, '.rb'), 'min-width:0');
+  has(ruleFor(sheet, '.wrap'), 'width:100%');
+  // every kind of long text wraps: the label, the line, the headline, the source, the caption, the headline of a day
+  for (const selector of ['.lb', '.ln', '.ht']) has(ruleFor(sheet, selector), 'overflow-wrap:break-word');
+  for (const selector of ['.src', '.hs', '.deck', '.dh', '.cap', '.verdict']) has(ruleFor(sheet, selector), 'overflow-wrap:anywhere');
+  // and the last guard: the page and its body cut off anything that still sticks out
+  has(ruleFor(sheet, 'html'), 'overflow-x:hidden');
+  has(ruleFor(sheet, 'body'), 'overflow-x:hidden');
+  // nothing is given a width wider than a 320px phone's 280px of room
+  const widths = rulesOf(sheet).flatMap((r) => [...r.body.matchAll(/(?:^|;)(?:min-)?width:(\d+)px/g)].map((m) => ({ selector: r.selector, px: Number(m[1]) })));
+  assert.deepEqual(widths.filter((w) => w.px > 280), [], 'no fixed width beyond the room a small phone has');
+  // the same on the 404, which has its own sheet: the big word wraps there too
+  const css = css404(SITE);
+  assert.ok(css.includes('overflow-wrap:anywhere') && /html\{[^}]*overflow-x:hidden|body\{[^}]*overflow-x:hidden/.test(css), 'the 404 cannot scroll sideways either');
+});
+
+test('our own copy has no arrows: neither font has one, so no page, script or template draws one', () => {
+  const ARROW = /[←-⇿⟰-⟿⤀-⥿]/;
+  for (const base of [dist, edDist]) {
+    for (const rel of ['index.html', 'day/2026-11-16/index.html', 'day/2026-11-15/index.html', 'almanac/index.html', 'about/index.html', '404.html']) assert.ok(!ARROW.test(read(rel, base)), `${rel} has no arrow`);
+  }
+  // in the code, the one place is the quiet share text, whose change mark a share sheet draws in its own font
+  const withArrow = [...authored('scripts', /\.mjs$/), ...authored('assets', /\.js$/)].filter((f) => ARROW.test(fs.readFileSync(f, 'utf8'))).map((f) => path.relative(REPO, f));
+  assert.deepEqual(withArrow, ['scripts/templates/copy.mjs']);
+  const copyText = fs.readFileSync(path.join(REPO, 'scripts', 'templates', 'copy.mjs'), 'utf8');
+  assert.deepEqual(copyText.split('\n').filter((l) => ARROW.test(l)).map((l) => l.trim()), ['if (n > 0) return `↑${n}`;', 'if (n < 0) return `↓${Math.abs(n)}`;'], 'only the two lines of the change mark');
 });

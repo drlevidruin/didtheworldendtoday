@@ -1,6 +1,7 @@
 // robots.txt, sitemap.xml and the web app manifest.
 import { SITE_NAME, TAGLINE } from './copy.mjs';
 import { esc } from './esc.mjs';
+import { YELLOW } from './palette.mjs';
 import { etDate } from '../lib/time.mjs';
 
 export function robotsTxt(siteUrl) {
@@ -36,8 +37,8 @@ export function manifestJson() {
         start_url: './',
         scope: './',
         display: 'standalone',
-        background_color: '#0B0B0F',
-        theme_color: '#0B0B0F',
+        background_color: YELLOW,
+        theme_color: YELLOW,
         icons: [
           { src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
           { src: 'apple-touch-icon.png', sizes: '180x180', type: 'image/png' },

@@ -1,12 +1,18 @@
 // The page shell: the comment, the head (security policy, titles, share
 // cards), the inlined style, and the one external script.
-import { CSS_404, css } from './css.mjs';
-import { COMMENT, CREDIT_HANDLE, CREDIT_URL, DESCRIPTION, FOOTER_LINES, FOOTER_LINES_QUIET, SITE_NAME, TAGLINE } from './copy.mjs';
+import { css, css404 } from './css.mjs';
+import { ALMANAC_NAV, COMMENT, CREDIT_HANDLE, CREDIT_URL, DESCRIPTION, FOOTER_LINES, FOOTER_LINES_QUIET, SITE_NAME, TAGLINE, TODAY_LINK, everyHeadline, updatedText } from './copy.mjs';
 import { esc } from './esc.mjs';
+import { WHITE, YELLOW } from './palette.mjs';
 
 // Section 8: nothing loads from anywhere but this site, no inline script.
 export const CSP =
   "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self'";
+
+// The font files the first screen draws, loaded before the stylesheet asks for them: League Gothic for the
+// question, ALMOST. and the numbers, and Libre Franklin in the three weights of the headline (600), the
+// labels and the board (700) and the lines (400).
+export const PRELOADED_FONTS = ['leaguegothic.woff2', 'librefranklin-600.woff2', 'librefranklin-700.woff2', 'librefranklin-400.woff2'];
 
 const IMAGE_ALT = "ALMOST. Did the world end today? The day's headline and the Doom Score.";
 
@@ -27,15 +33,15 @@ export function page(opts) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${esc(canonical)}">
-<meta name="theme-color" content="#0B0B0F">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="${data.quiet === '1' ? WHITE : YELLOW}">
+<meta name="color-scheme" content="light">
 <link rel="icon" href="${esc(root)}favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${esc(root)}apple-touch-icon.png">
 <link rel="manifest" href="${esc(root)}site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="${esc(SITE_NAME)}" href="${esc(root)}feed.xml">
-<link rel="preload" href="${esc(root)}assets/anton.woff2" as="font" type="font/woff2" crossorigin>
+${PRELOADED_FONTS.map((f) => `<link rel="preload" href="${esc(root)}assets/${f}" as="font" type="font/woff2" crossorigin>`).join('\n')}
 ${social({ title, description, canonical, image })}
-<style>${css(root)}</style>
+<style>${css(root, { quiet: data.quiet === '1' })}</style>
 ${script ? `<script src="${esc(root)}assets/app.js" defer></script>\n` : ''}</head>
 <body>
 ${body}
@@ -64,19 +70,34 @@ export function social({ title, description, canonical, image }) {
   ].join('\n');
 }
 
-// The tagline, the footer lines, then who made it and the two other pages. Quiet
-// mode drops the tagline, which is a joke, and two of the lines.
-export function footer({ root, quiet = false }) {
+// What the footer says, small, at the bottom of every page: when the site last checked, the door to every
+// headline of today, the pages (Today on any page but the homepage), who made it, and the footer lines.
+// Quiet mode drops the tagline, which is a joke, and one of the lines.
+//   home: this is the homepage, which needs no link to itself
+//   updatedMs: when the data was last read well (epoch milliseconds); no time, no line
+//   today, headlineCount: today's date and how many headlines it has; none, no link
+export function footer({ root, quiet = false, home = true, updatedMs = NaN, today = '', headlineCount = 0 }) {
   const lines = (quiet ? FOOTER_LINES_QUIET : FOOTER_LINES).map((l) => `<p>${esc(l)}</p>`).join('\n');
   const tag = quiet ? '' : `<p class="tagline">${esc(TAGLINE)}</p>\n`;
+  const updated = updatedText(updatedMs);
+  const up = updated ? `<p class="up">${esc(updated)}</p>\n` : '';
+  const count = Math.floor(Number(headlineCount));
+  const all = today && count > 0 ? `<p class="all"><a href="${esc(root)}day/${esc(today)}/#all">${esc(everyHeadline(count))}</a></p>\n` : '';
+  const links = [
+    home ? '' : `<a href="${esc(root)}">${esc(TODAY_LINK)}</a>`,
+    `<a href="${esc(root)}almanac/">${esc(ALMANAC_NAV)}</a>`,
+    `<a href="${esc(root)}about/">About</a>`,
+    `<a href="${esc(root)}feed.xml">RSS</a>`,
+    `<a href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(CREDIT_HANDLE)}</a>`,
+  ].filter(Boolean);
   return `<footer>
+${up}${all}<p class="fl">${links.join('\n')}</p>
 ${tag}${lines}
-<p class="by">by <a href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(CREDIT_HANDLE)}</a> &middot; <a href="${esc(root)}about/">About</a> &middot; <a href="${esc(root)}feed.xml">RSS</a></p>
 </footer>`;
 }
 
-// The 404 page is served at any depth: own style, system fonts, no relative
-// links, home by the absolute site address.
+// The 404 page is served at any depth: own style, the fonts and home by the absolute
+// site address, no relative links.
 export function notFoundPage({ siteUrl, line, linkText }) {
   const home = `${siteUrl}/`;
   const title = line;
@@ -90,9 +111,9 @@ export function notFoundPage({ siteUrl, line, linkText }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(DESCRIPTION)}">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#0B0B0F">
+<meta name="theme-color" content="${YELLOW}">
 ${social({ title, description: DESCRIPTION, canonical: home, image: `${siteUrl}/og/latest.png` })}
-<style>${CSS_404}</style>
+<style>${css404(siteUrl)}</style>
 </head>
 <body>
 <main>

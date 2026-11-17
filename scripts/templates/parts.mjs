@@ -5,7 +5,11 @@
 // One story, one link. A row is a card whose link is stretched over the whole row by
 // the stylesheet, so the whole row opens the story. The donate link of a quiet row sits
 // next to the card, never inside it, so a link never holds another link.
-import { BEST_TAG, HELP_INTL, HELP_US, HEADLINES_SHOWN, READ_IT, TOP_TAG, headlineMeta, moreHeadlines, rowDate, sourceParts } from './copy.mjs';
+//
+// A row of near misses, left to right: its rank (red for the closest call), its emoji, then the
+// label, the line and the source. A day that has no edition is not ranked: its rows have no rank and
+// show the publisher's own headline in place of a label. In quiet mode no emoji is drawn at all.
+import { HELP_INTL, HELP_US, HEADLINES_SHOWN, headlineMeta, moreHeadlines, rowDate, rowSource } from './copy.mjs';
 import { esc, num, url } from './esc.mjs';
 import { quietCard } from '../lib/quietcards.mjs';
 import { quietLinkFor } from '../lib/editions.mjs';
@@ -18,7 +22,7 @@ function quietHelp(which, ctx) {
   const href = url(which === 'ifrc' ? ctx.quietLinkIntl : which === 'redcross' ? ctx.quietLink : '');
   if (!href) return '';
   const text = which === 'ifrc' ? HELP_INTL : HELP_US;
-  return `<a class="help" href="${href}" target="_blank" rel="${REL}">${esc(`${text} \u2192`)}</a>`;
+  return `<a class="help" href="${href}" target="_blank" rel="${REL}">${esc(text)}</a>`;
 }
 
 // In the list of every headline the caption is a line of its own under the link.
@@ -29,36 +33,59 @@ function quietNote(which, ctx) {
 }
 
 // ---- the rows of a day -----------------------------------------------------------
-// ctx: { byId: Map of the day's stories, quietMode, quietCaption, quietLink, quietLinkIntl }
-// item: { emoji, line, ids, quiet, url, source, outlets }
+// ctx: { byId: Map of the day's stories, quietMode, quietCaption, quietLink, quietLinkIntl, plain }
+// item: { emoji, label, line, ids, quiet, title, url, source, outlets }
+// plain: the day has no edition, so its rows are the day's own headlines and are not ranked.
 // The rank is the place in the list: the list is already in order, closest call first.
+
+// What a row says: the label over the line. A row without a label shows its line where the label
+// would be; a row of plain headlines shows the publisher's headline there and has no line.
+function words(item, plain) {
+  if (plain) return { label: item.title || item.line || '', line: '' };
+  if (item.label) return { label: item.label, line: item.line || '' };
+  return { label: item.line || '', line: '' };
+}
 
 export function row(item, index, ctx) {
   const quiet = Boolean(item.quiet);
+  const plain = Boolean(ctx.plain);
   const rank = index + 1;
   const href = url(item.url);
-  const { name, count } = sourceParts(num(item.outlets, 1), item.source);
-  const tag = index === 0 ? `<p class="tag">${esc(quiet || ctx.quietMode ? TOP_TAG : BEST_TAG)}</p>\n` : '';
-  // The source is two lines: the name, then how many news sites told it (nothing when only one did).
-  const src = `<span class="src">${name ? `<span class="sn">${esc(name)}</span>` : ''}${count ? `<span class="sc">${esc(count)}</span>` : ''}</span>`;
-  const bar = name || count || href ? `<span class="bar">${src}${href ? `<span class="cta">${esc(READ_IT)}</span>` : ''}</span>` : '';
-  // The caption is part of the card, between the line and the bar. The donate link is not: it is
-  // its own link after the card, so a link never holds another link.
-  const cap = quiet ? `<span class="cap">${esc(ctx.quietCaption)}</span>` : '';
-  const inner = `<span class="sr">${rank}. </span><span class="txt">${esc(item.line)}</span>${cap}${bar}`;
+  const { label, line } = words(item, plain);
+  const source = rowSource(item.source);
+  const text = [
+    plain ? '' : `<span class="sr">${rank}. </span>`,
+    label ? `<span class="lb">${esc(label)}</span>` : '',
+    line ? `<span class="ln">${esc(line)}</span>` : '',
+    // The caption is part of the card, between the line and the source. The donate link is not: it is
+    // its own link after the card, so a link never holds another link.
+    quiet ? `<span class="cap">${esc(ctx.quietCaption)}</span>` : '',
+    source ? `<span class="src">${esc(source)}</span>` : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
   // A story whose link is not safe still reads; it just has nothing to open.
-  const card = href ? `<a class="card" href="${href}" target="_blank" rel="${REL}">${inner}</a>` : `<div class="card">${inner}</div>`;
+  const card = href ? `<a class="card" href="${href}" target="_blank" rel="${REL}">${text}</a>` : `<div class="card">${text}</div>`;
   const help = quiet ? quietHelp(quietLinkFor(item, ctx.byId), ctx) : '';
-  return `<li class="row${index === 0 ? ' best' : ''}${quiet ? ' quiet' : ''}">
-<div class="rk" aria-hidden="true"><span class="rn">${rank}</span><span class="em">${esc(item.emoji)}</span></div>
-<div class="rb">
-${tag}${card}${help ? `\n${help}` : ''}
+  const emoji = !ctx.quietMode && item.emoji ? `<span class="em" aria-hidden="true">${esc(item.emoji)}</span>\n` : '';
+  const rankCell = plain ? '' : `<span class="rn" aria-hidden="true">${rank}</span>\n`;
+  const cls = ['row', !plain && index === 0 ? 'best' : '', plain ? 'plain' : '', quiet ? 'quiet' : ''].filter(Boolean).join(' ');
+  return `<li class="${cls}">
+${rankCell}${emoji}<div class="rb">
+${card}${help ? `\n${help}` : ''}
 </div>
 </li>`;
 }
 
 export function rows(items, ctx) {
   return `<ol class="rows" role="list">\n${items.map((item, i) => row(item, i, ctx)).join('\n')}\n</ol>`;
+}
+
+// ---- the board of ten squares -------------------------------------------------------------
+// filled of ten squares are solid; the rest are outlines. Drawn by the stylesheet, hidden from screen readers.
+export function squares(filled) {
+  const n = Math.max(0, Math.min(10, Math.round(num(filled))));
+  return Array.from({ length: 10 }, (_, i) => `<span${i < n ? ' class="f"' : ''}></span>`).join('');
 }
 
 // ---- every headline of a day ---------------------------------------------------------

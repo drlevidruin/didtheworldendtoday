@@ -2,9 +2,11 @@
 //
 // data/editions/YYYY-MM-DD.json   { date, by, writtenAt, headline, items[] }
 //
-// by is "hand" or "editor". The headline is one short line that ends in "Still
-// here.". Each item is one near miss, closest call first:
-//   { emoji, line, ids[], best?, quiet, cat, title, url, source, outlets }
+// by is "hand" or "editor". The headline is one plain sentence and then "Still
+// here.", 110 characters at most. The share card shows the sentence alone.
+// Each item is one near miss, closest call first:
+//   { emoji, line, ids[], best?, quiet, cat, title, url, source, outlets, label }
+// The label names the thing in 1 to 4 words ("FAA outage"); the line says what happened.
 // ids[0] is the lead story. cat, title, url, source and outlets are copied from
 // the lead when the edition is written, so an edition never depends on a story
 // still being in the rolling window.
@@ -24,7 +26,7 @@ import { readJsonLenient } from './json.mjs';
 import { receiptsOrder } from './order.mjs';
 import { looksNotEnglish } from './quality.mjs';
 import { quietCard } from './quietcards.mjs';
-import { clean, safeUrl } from './text.mjs';
+import { clean, firstSentence, safeUrl, wordCount } from './text.mjs';
 import { isDateStr } from './time.mjs';
 
 export const STILL_HERE = EDITION.headlineEnd;
@@ -136,6 +138,21 @@ function excludedBy(excluder, text, signal, source = '') {
 
 const isSignalId = (id) => String(id).startsWith('sig:');
 
+// A label names the thing the story is about, like a name: 1 to 4 words, short, no period, and
+// the same text rules as a line. A label that fails never costs the row: it just goes without one.
+function checkLabel(raw, excluder) {
+  const label = typeof raw === 'string' ? clean(raw) : '';
+  if (!label) return { reason: 'label missing' };
+  if (label.length > EDITION.labelMax) return { reason: 'label too long' };
+  if (wordCount(label) > EDITION.labelMaxWords) return { reason: `label has more than ${EDITION.labelMaxWords} words` };
+  if (label.includes('.')) return { reason: 'label has a period' };
+  const bad = badText(label);
+  if (bad) return { reason: `label has ${bad}` };
+  const hit = excludedBy(excluder, label, false);
+  if (hit) return { reason: `label excluded: ${hit.family}` };
+  return { label };
+}
+
 function checkItem(raw, { used, taken, byId, excluder }) {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return { reason: 'not an item' };
 
@@ -172,10 +189,13 @@ function checkItem(raw, { used, taken, byId, excluder }) {
   const lead = byId.get(ids[0]);
   const quiet = Boolean(raw.quiet) || Boolean(lead && (quietCard(lead) || lead.quiet));
 
+  const labelled = checkLabel(raw.label, excluder);
   const outlets = Number(raw.outlets);
   return {
+    labelReason: labelled.reason || null,
     item: {
       emoji,
+      label: labelled.label || '',
       line,
       ids,
       quiet,
@@ -200,6 +220,15 @@ export function validateEdition(raw, { date, used = new Set(), byId = new Map(),
   const headline = typeof raw.headline === 'string' ? clean(raw.headline) : '';
   if (!headline || headline.length > EDITION.headlineMax) return fail('headline length');
   if (!headline.endsWith(STILL_HERE)) return fail('headline does not end with Still here.');
+  // One sentence before "Still here.": it is what the share card shows alone, so it has to be a whole sentence.
+  const lead = headline.slice(0, headline.length - STILL_HERE.length).trim();
+  if (wordCount(lead) < EDITION.headlineMinWords) return fail('headline too short');
+  const first = firstSentence(headline);
+  if (wordCount(first) < EDITION.firstSentenceMinWords) return fail('headline first sentence too short');
+  if (first.length >= headline.length) return fail('headline has no sentence before Still here.');
+  // An abbreviation we do not list ("Nov. 17") would end the sentence early: what follows would start
+  // with a lowercase letter or a number.
+  if (/^[\p{Ll}\p{N}]/u.test(headline.slice(first.length).trim())) return fail('headline first sentence is cut short');
   const badHead = badText(headline);
   if (badHead) return fail(`headline has ${badHead}`);
   if (excludedBy(excluder, headline, false)) return fail('headline excluded');
@@ -212,6 +241,8 @@ export function validateEdition(raw, { date, used = new Set(), byId = new Map(),
     if (checked.item) {
       items.push(checked.item);
       for (const id of checked.item.ids) taken.add(id);
+      // The row stays; only its label is gone. The reason is listed with the dropped ones.
+      if (checked.labelReason) dropped.push({ index, reason: checked.labelReason, kept: true });
     } else dropped.push({ index, reason: checked.reason });
   });
   const kept = items.slice(0, EDITION.maxItems);
@@ -242,6 +273,7 @@ function orderKeys(item) {
   out.url = item.url;
   out.source = item.source;
   out.outlets = item.outlets;
+  out.label = item.label || '';
   return out;
 }
 
@@ -249,7 +281,8 @@ function orderKeys(item) {
 
 // A day with no usable edition, or any day while quiet mode is on: up to 5 of the
 // day's stories in listing order, skipping used ids and stories with no title, at
-// most 2 from one category. The line is the cleaned headline and never carries a joke.
+// most 2 from one category. The line is the cleaned headline and never carries a joke;
+// there is no label, and the page shows these rows unranked.
 export function fallbackRows({ stories, used = new Set(), emojiByCat = new Map() }) {
   const rows = [];
   const perCat = new Map();
@@ -263,6 +296,7 @@ export function fallbackRows({ stories, used = new Set(), emojiByCat = new Map()
     const outlets = Number(s.outlets);
     const row = {
       emoji: emojiByCat.get(s.cat) || '📰',
+      label: '',
       line: title,
       ids: [s.id],
       quiet: Boolean(s.quiet) || Boolean(quietCard(s)),

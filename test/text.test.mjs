@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { clean, decodeEntities, safeUrl, tokens, truncate } from '../scripts/lib/text.mjs';
+import { ABBREVIATIONS, clean, decodeEntities, firstSentence, isAbbreviation, safeUrl, tokens, truncate, wordCount } from '../scripts/lib/text.mjs';
 
 test('clean strips control characters, zero-width and bidi tricks, and squeezes spaces', () => {
   assert.equal(clean('  Big\u0000 outage\u0007\u001b[31m   today​  '), 'Big outage [31m today');
@@ -62,4 +62,73 @@ test('tokens drop short words and stop words', () => {
   const t = tokens('The Cloudflare outage is over, and it was big');
   assert.ok(t.has('cloudflare') && t.has('outage') && t.has('big'));
   assert.ok(!t.has('the') && !t.has('is') && !t.has('and'));
+});
+
+test('firstSentence: the text up to the first period that ends a sentence', () => {
+  const cases = [
+    ['An asteroid the size of a bus missed Earth at 2:59 AM ET. Grounded flights sent one Vegas wedding to Atlanta. Still here.', 'An asteroid the size of a bus missed Earth at 2:59 AM ET.'],
+    ['Banks went dark. Planes were late.', 'Banks went dark.'],
+    ['Banks went dark.', 'Banks went dark.'],
+    ['U.S. banks went dark for an hour. Still here.', 'U.S. banks went dark for an hour.'],
+    ['Not a day for jokes. Back soon.', 'Not a day for jokes.'],
+    ['Banks went dark for an hour', 'Banks went dark for an hour'],
+    ['  Padded sentence here.   Another one.  ', 'Padded sentence here.'],
+    ['', ''],
+    [null, ''],
+    [undefined, ''],
+    // a period inside a word, a number or an address is not the end
+    ['The rate rose to 3.5 percent today. Markets shrugged.', 'The rate rose to 3.5 percent today.'],
+    ['NASA posted the file at nasa.gov. Nobody read it.', 'NASA posted the file at nasa.gov.'],
+    ['Version 2.0.1 shipped late. Users noticed.', 'Version 2.0.1 shipped late.'],
+    // letters with periods between them are an abbreviation, so the period after them is not the end either
+    ['U.S. banks went dark for an hour. Planes were late.', 'U.S. banks went dark for an hour.'],
+    ['Planes in the U.K. and the U.S. were late. Banks were fine.', 'Planes in the U.K. and the U.S. were late.'],
+    ['Washington, D.C. lost power for an hour. Then it came back.', 'Washington, D.C. lost power for an hour.'],
+    // titles and company words
+    ['Gov. Healey closed the roads. Snow kept falling.', 'Gov. Healey closed the roads.'],
+    ['Acme Inc. said servers were down. Nobody noticed.', 'Acme Inc. said servers were down.'],
+    ['Dr. Smith and Mr. Jones met in St. Louis. Then they left.', 'Dr. Smith and Mr. Jones met in St. Louis.'],
+    ['No. 1 seed Gonzaga lost. Fans were calm.', 'No. 1 seed Gonzaga lost.'],
+    // the same words in lower case are the end of a sentence
+    ['She said no. Then she left.', 'She said no.'],
+    ['Everyone was there, even a co. Then it ended.', 'Everyone was there, even a co.'],
+    // a quote or a bracket before the word does not hide an abbreviation
+    ['"Gov. Healey" closed the roads. Snow kept falling.', '"Gov. Healey" closed the roads.'],
+    // an ellipsis, then a space: the sentence ends there
+    ['Wait... what happened. Next.', 'Wait...'],
+    // a closing quote or bracket after the period still ends the sentence, and goes with it
+    ['She said "It missed." Then left.', 'She said "It missed."'],
+    ['She said “It missed.” Then left.', 'She said “It missed.”'],
+    ['He called it ‘done.’ Then he left.', 'He called it ‘done.’'],
+    ['Planes were late (all of them.) Then it ended.', 'Planes were late (all of them.)'],
+    ['The sign read [closed.] Nobody came.', 'The sign read [closed.]'],
+    ['He said "Banks went dark."', 'He said "Banks went dark."'],
+    ['He said “Banks went dark.”', 'He said “Banks went dark.”'],
+    ['The rate was "3.5." Next.', 'The rate was "3.5."'],
+    // a closer with no space after it is not the end of a sentence
+    ['She said "stop."Then left. Next.', 'She said "stop."Then left.'],
+  ];
+  for (const [text, first] of cases) assert.equal(firstSentence(text), first, JSON.stringify(text));
+  // the headline the card shows: sentence one, never "Still here."
+  assert.equal(firstSentence('Banks went dark for an hour. Planes were late in three cities. Still here.'), 'Banks went dark for an hour.');
+  assert.equal(firstSentence('Still here.'), 'Still here.');
+});
+
+test('the abbreviations that do not end a sentence are the listed ones, and letters with periods between them', () => {
+  assert.deepEqual(ABBREVIATIONS, ['Mr', 'Mrs', 'Ms', 'Dr', 'St', 'Jr', 'Sr', 'Inc', 'Co', 'Corp', 'Ltd', 'vs', 'No', 'Gov', 'Sen', 'Rep', 'Gen', 'Lt', 'Mt', 'Ft']);
+  for (const word of ABBREVIATIONS) {
+    assert.equal(isAbbreviation(word), true, word);
+    assert.equal(firstSentence(`${word}. Smith spoke up. Then left.`), `${word}. Smith spoke up.`, `${word}. does not end a sentence`);
+  }
+  for (const word of ['U.S', 'U.K', 'D.C', 'U.N', 'a.m', 'p.m']) assert.equal(isAbbreviation(word), true, word);
+  for (const word of ['Banks', 'went', 'hours', 'NASA', 'nasa.gov', 'U', 'ET', '']) assert.equal(isAbbreviation(word), false, word);
+});
+
+test('wordCount counts runs of characters that are not spaces', () => {
+  assert.equal(wordCount('Banks went dark.'), 3);
+  assert.equal(wordCount('  Banks   went\tdark.\n'), 3);
+  assert.equal(wordCount('2:59 AM ET'), 3);
+  assert.equal(wordCount(''), 0);
+  assert.equal(wordCount(null), 0);
+  assert.equal(wordCount(undefined), 0);
 });

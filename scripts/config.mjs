@@ -790,14 +790,19 @@ export const HN = {
 };
 
 // ---------------------------------------------------------------------------
-// The daily edition: a short headline and 4 to 6 lines for every day, written
-// by hand or by the editor (scripts/editor.mjs). One set of rules checks both.
-// An edition that breaks them is not used, and the day shows plain headlines.
+// The daily edition: a one-sentence headline and 3 to 6 items for every day, each with
+// a label, an emoji and a line, written by hand or by the editor (scripts/editor.mjs).
+// One set of rules checks both. An edition that breaks them is not used, and the day
+// shows plain headlines.
 // ---------------------------------------------------------------------------
 export const EDITION = {
   headlineEnd: 'Still here.',
-  headlineMax: 80, // characters
-  lineMax: 200, // characters
+  headlineMax: 110, // characters: one sentence and "Still here."
+  headlineMinWords: 5, // words before "Still here."
+  firstSentenceMinWords: 4, // the share card shows the first sentence alone
+  labelMax: 32, // characters, and 1 to 4 words
+  labelMaxWords: 4,
+  lineMax: 110, // characters
   emojiMax: 8, // UTF-16 units
   minItems: 3,
   maxItems: 6,

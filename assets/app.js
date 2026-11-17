@@ -146,8 +146,8 @@
     });
   }
 
-  // The line that says the data is old. The time in the hero is a clock time, so it never
-  // needs to tick; only this line can appear while the page is open.
+  // The line that says the data is old, under the Doom Score board. Every time on the page is a
+  // clock time, so none of them ticks; only this line can appear while the page is open.
   function tick() {
     var stale = $('#stale');
     var seen = Date.parse(html.getAttribute('data-success'));
@@ -230,8 +230,8 @@
     return ok;
   }
 
-  // The button's own day: the nearest block that carries share text. The hero's
-  // "Share today" has the page itself (today), a day block has its own.
+  // The button's own day: the nearest block that carries share text. A page has one share
+  // button, and the page itself (#main) carries the share text of the day it shows.
   function share(from) {
     var block = (from && from.closest ? from.closest('[data-share-full]') : null) || $('#main');
     if (!block) return;
@@ -319,7 +319,7 @@
     bar = doc.createElement('button');
     bar.type = 'button';
     bar.className = 'fresh';
-    bar.innerHTML = '<span class="dot" aria-hidden="true"></span><span>Updated. Tap to refresh.</span>';
+    bar.textContent = 'Updated. Tap to refresh.';
     bar.addEventListener('click', function () {
       swapMain().catch(function () {
         window.location.reload();

@@ -1,7 +1,7 @@
 // npm run build
 //
 // Renders the site from data/ into dist/. Nothing is downloaded and nothing
-// is fetched: the data files, the day editions, the committed font and the
+// is fetched: the data files, the day editions, the committed fonts and the
 // committed page script are all it needs.
 //
 //   dist/index.html                 the homepage: a feed of days, today first
@@ -12,7 +12,8 @@
 //                                   plus today's headline and lines
 //   dist/og/YYYY-MM-DD.png, latest.png   1200x630 share images
 //   dist/favicon.svg  dist/apple-touch-icon.png
-//   dist/assets/app.js  dist/assets/anton.woff2
+//   dist/assets/app.js  dist/assets/leaguegothic.woff2  dist/assets/librefranklin-{400,600,700}.woff2
+//   dist/assets/OFL-LeagueGothic.txt  dist/assets/OFL-LibreFranklin.txt   the licenses of the two fonts
 //
 // Every internal link is relative (a ROOT prefix per page type), so the same
 // build works at the root of a domain and inside a subfolder. Absolute URLs
@@ -36,13 +37,19 @@ import { safeUrl } from './lib/text.mjs';
 import { NOT_FOUND_LINE, QUIET_LINE, subline } from './templates/copy.mjs';
 import { aboutPage, almanacPage } from './templates/pages.mjs';
 import { feedXml } from './templates/feed.mjs';
-import { faviconSvg, fontFileIn, ogSvg, renderPng } from './templates/graphics.mjs';
+import { faviconSvg, fontFilesIn, ogSvg, renderPng } from './templates/graphics.mjs';
 import { pageHtml } from './templates/home.mjs';
 import { notFoundPage } from './templates/layout.mjs';
 import { manifestJson, robotsTxt, sitemapXml } from './templates/seo.mjs';
 
 export const DEFAULT_SITE_URL = 'https://didtheworldendtoday.com';
 const ASSETS = path.join(REPO_ROOT, 'assets');
+
+// The web fonts the pages ask for (see the stylesheet): Latin subsets, one file each.
+export const WEB_FONTS = ['leaguegothic.woff2', 'librefranklin-400.woff2', 'librefranklin-600.woff2', 'librefranklin-700.woff2'];
+
+// The subsets dropped the license names the fonts carry, so each license text is served beside them.
+export const FONT_LICENSES = ['OFL-LeagueGothic.txt', 'OFL-LibreFranklin.txt'];
 
 // What api/today.json shows the world: the page's own numbers and stories, and
 // none of the machinery. It is a list of what is public, so a field added to the
@@ -53,7 +60,7 @@ const ASSETS = path.join(REPO_ROOT, 'assets');
 const PUBLIC_KEYS = ['schema', 'buildTime', 'etDate', 'etStamp', 'score', 'fired', 'bumps', 'change', 'yesterday', 'record', 'headlinesRead', 'lastSuccessAt', 'rollingFallback', 'cats', 'vital', 'stories'];
 
 // today: the day the homepage shows ({ headline, rows }). When it is given the copy
-// also carries the day's headline and its lines (emoji, line, url).
+// also carries the day's headline and its rows (emoji, label, line, url).
 export function publicCopy(latest, today = null) {
   if (!latest || typeof latest !== 'object') return null;
   const out = {};
@@ -62,7 +69,7 @@ export function publicCopy(latest, today = null) {
   out.quiet = { quiet: Boolean(q.quiet), note: typeof q.note === 'string' ? q.note : '' };
   if (today) {
     out.headline = today.headline;
-    out.items = (today.rows || []).map((r) => ({ emoji: r.emoji, line: r.line, url: safeUrl(r.url) || '' }));
+    out.items = (today.rows || []).map((r) => ({ emoji: r.emoji, label: r.label || '', line: r.line, url: safeUrl(r.url) || '' }));
   }
   return out;
 }
@@ -220,7 +227,10 @@ export function build(rootOrOpts, maybeOpts) {
     nowMs: Date.parse(latest.buildTime) || nowMs,
     lastSuccessAt: latest.lastSuccessAt,
     headlinesRead: Number(latest.headlinesRead) || 0,
+    todayTotal: todayView.total,
   };
+  // What the footer of every page says besides its own links: when the data was last read, and today's headlines.
+  const foot = { updatedMs: Date.parse(latest.lastSuccessAt || latest.buildTime), today, headlineCount: todayView.total };
 
   const out = [];
   const write = (rel, content) => {
@@ -254,8 +264,8 @@ export function build(rootOrOpts, maybeOpts) {
   });
 
   // ---- the other pages --------------------------------------------------------------------
-  write('almanac/index.html', almanacPage({ root: '../', siteUrl, entries, record, quiet: quiet.quiet }));
-  write('about/index.html', aboutPage({ root: '../', siteUrl, cfg, quiet: quiet.quiet, xEnabled: Boolean(latest.x && latest.x.enabled) }));
+  write('almanac/index.html', almanacPage({ root: '../', siteUrl, entries, record, quiet: quiet.quiet, foot }));
+  write('about/index.html', aboutPage({ root: '../', siteUrl, cfg, quiet: quiet.quiet, xEnabled: Boolean(latest.x && latest.x.enabled), foot }));
   write('404.html', notFoundPage({ siteUrl, line: NOT_FOUND_LINE, linkText: 'Back to today' }));
 
   // ---- data, feed, search and app files ------------------------------------------------------
@@ -266,17 +276,19 @@ export function build(rootOrOpts, maybeOpts) {
   write('site.webmanifest', manifestJson());
   write('favicon.svg', faviconSvg());
   write('assets/app.js', fs.readFileSync(path.join(assets, 'app.js')));
-  write('assets/anton.woff2', fs.readFileSync(path.join(assets, 'fonts', 'anton.woff2')));
+  for (const font of WEB_FONTS) write(`assets/${font}`, fs.readFileSync(path.join(assets, 'fonts', font)));
+  for (const license of FONT_LICENSES) write(`assets/${license}`, fs.readFileSync(path.join(assets, 'fonts', license)));
 
   // ---- pictures --------------------------------------------------------------------------------
-  // The card carries the day's headline, the same words the page puts under ALMOST.
-  const fontFile = fontFileIn(assets);
-  const og = (view) => renderPng(ogSvg({ date: view.date, score: view.score, host: siteHost, headline: view.headline, fontFile, live: view.date === today }), { fontFile, width: 1200 });
+  // The card is the sign: the question on the black band, ALMOST., the first sentence of the day's headline
+  // and the Doom Score board. In quiet mode the headline is the quiet line, the page is white and nothing is red.
+  const fontFiles = fontFilesIn(assets);
+  const og = (view) => renderPng(ogSvg({ date: view.date, score: view.score, host: siteHost, headline: view.headline, fontFiles, live: view.date === today, quiet: quiet.quiet }), { fontFiles, width: 1200 });
   write('og/latest.png', og(todayView));
   // The homepage points at today's own card, so it has one even before today's file exists.
   if (!dates.includes(today)) write(`og/${today}.png`, og(todayView));
   for (const view of views) write(`og/${view.date}.png`, og(view));
-  write('apple-touch-icon.png', renderPng(faviconSvg({ rounded: false }), { fontFile, width: 180 }));
+  write('apple-touch-icon.png', renderPng(faviconSvg(), { fontFiles, width: 180 }));
 
   return { dist: p.dist, hasData, days: dates, files: out };
 }

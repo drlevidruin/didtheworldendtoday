@@ -1,6 +1,7 @@
 // Every word the site says, and the small formatters for dates, times and the
 // share text, in one file. The voice rule lives here: facts may name companies,
-// agencies and places, jokes never aim at people, and nothing we write has an em dash.
+// agencies and places, jokes never aim at people, and nothing we write has an em dash
+// or an arrow (neither of our two fonts has one).
 
 export const SITE_NAME = 'Did the world end today?';
 export const VERDICT = 'ALMOST.';
@@ -14,15 +15,15 @@ export const CREDIT_HANDLE = '@thelpdrive';
 export const CREDIT_URL = 'https://x.com/thelpdrive';
 
 // ---- the ladder, by score -----------------------------------------------------
-// The headline of a day that has no written edition.
+// The headline of a day that has no written edition. Every line ends in "Still here."
 
 export const LADDER = [
-  [0, 'Suspiciously quiet.'],
-  [20, 'Routine background apocalypse.'],
-  [40, 'The usual amount of almost.'],
-  [60, 'Louder than usual. Still here.'],
-  [80, 'Not for lack of trying.'],
-  [95, 'Honestly, impressive. Still no.'],
+  [0, 'A quiet day in the news. Suspiciously quiet. Still here.'],
+  [20, 'A few small things went wrong today. Still here.'],
+  [40, 'The usual number of things went wrong today. Still here.'],
+  [60, 'More went wrong today than usual. Still here.'],
+  [80, 'A lot went wrong today. Still here.'],
+  [95, 'Nearly everything went wrong today. Still here.'],
 ];
 
 export function subline(score) {
@@ -177,29 +178,33 @@ export function changeText(change) {
 
 // ---- the buttons and labels of the day feed -----------------------------------
 
-export const GO_TEXT = 'See what almost got us \u2193';
-export const GO_TEXT_QUIET = "See today's stories \u2193"; // quiet mode: no joke on the button
 export const SHARE_TODAY = 'Share today';
 export const SHARE_DAY = 'Share this day';
-export const BEST_TAG = 'CLOSEST CALL';
-export const TOP_TAG = 'TOP STORY'; // the first row when it is a quiet story, or the whole site is quiet
 export const FEED_END = "That's every day we've checked. The world was fine before that too, probably.";
 export const FEED_END_QUIET = "That's every day we've checked."; // quiet mode: no joke at the end either
-export const EVERY_DAY = 'Every day so far \u2192';
+export const EVERY_DAY = 'Every day so far';
 export const OLDER_DAYS = EVERY_DAY;
 export const ALMANAC_LINK = EVERY_DAY;
 export const ALMANAC_LEAD = "Every day we've checked, newest first.";
-export const TODAY_LINK = '\u2190 Today';
-export const RANK_NOTE = 'Ranked from most world-ending to least.'; // under TODAY on the homepage
-export const RANK_HEADING = 'Ranked from most world-ending to least'; // over the rows of a day page
-export const RANK_HEADING_QUIET = 'Top stories';
+export const TODAY_LINK = 'Today';
+export const ALMANAC_NAV = 'Almanac';
+// The two ends of a day page: the stored day before it and the stored day after it.
+export const earlierDay = (d) => `Earlier: ${shortDate(d)}`;
+export const laterDay = (d) => `Later: ${shortDate(d)}`;
+// The line over the rows of a day. Only an edition is ranked: plain headlines, and every day in
+// quiet mode, are "top stories". The homepage's today block says "today's", a day page does not.
+export const SECTION_TODAY = 'TODAY\u2019S NEAR MISSES';
+export const SECTION_TODAY_PLAIN = 'TODAY\u2019S TOP STORIES';
+export const SECTION_DAY = 'NEAR MISSES';
+export const SECTION_DAY_PLAIN = 'TOP STORIES';
+export const sectionLine = ({ today, ranked }) => (today ? (ranked ? SECTION_TODAY : SECTION_TODAY_PLAIN) : ranked ? SECTION_DAY : SECTION_DAY_PLAIN);
 export const ALL_HEADLINES = 'Every headline we read that day';
 export const NOTHING_YET = 'Nothing new yet today.';
 export const NOTHING_FILED = 'Nothing on file for this day.';
 export const FIRST_DAY_PENDING = 'The first day is still being written.';
 export const FOLLOW_TEXT = `Follow ${CREDIT_HANDLE} for tomorrow's ${VERDICT}`;
 export const FOLLOW_QUIET = `Follow ${CREDIT_HANDLE}`;
-export const READ_IT = 'Read it \u2192';
+export const READ_IT = 'Read it';
 export const HELP_US = 'Donate to the Red Cross';
 export const HELP_INTL = 'Support the Red Cross and Red Crescent';
 
@@ -220,37 +225,32 @@ export function allHeadlinesLive(ms) {
   return time ? `Headlines from the last 24 hours, as of ${time}` : 'Headlines from the last 24 hours';
 }
 
-export const scaleText = (cap) => `0 is a quiet day. ${cap} is the end.`;
-export const mastText = (host) => `${host} \u00b7 ${CREDIT_HANDLE}`;
+// The small line on the board under the squares.
+export const boardNote = (cap) => `out of ${cap}. 0 is a quiet day. ${cap} is the end.`;
+
+// How many of the ten squares on the board are filled: the Doom Score over ten, rounded, kept from 0 to 10.
+export const filledSquares = (score) => {
+  const n = Number(score);
+  return Number.isFinite(n) ? Math.min(10, Math.max(0, Math.round(n / 10))) : 0;
+};
 export const moreHeadlines = (n) => `Show ${n} more ${n === 1 ? 'headline' : 'headlines'}`;
 
-// The size class of a day headline: the longer the line, the smaller the type, so
-// it never takes more than two lines on a phone. The classes are in the stylesheet.
-export const HEADLINE_BUCKETS = { from: 40, to: 80, step: 2 };
-export function headlineClass(text) {
-  const { from, to, step } = HEADLINE_BUCKETS;
-  const n = String(text ?? '').length;
-  return `n${Math.min(to, Math.max(from, Math.ceil(n / step) * step))}`;
-}
-
-// "TODAY \u00b7 TUESDAY, NOV 17", "YESTERDAY \u00b7 MONDAY, NOV 16", "SUNDAY \u00b7 NOV 15".
-// Returns the pieces so the page can color the first word.
+// The label over an earlier day on the homepage: "YESTERDAY" over "MONDAY, NOV 16", or the
+// weekday over the date ("SUNDAY" over "NOV 15"). Returns the two pieces.
 export function dayLabel(date, today) {
   const yesterday = new Date(`${today}T12:00:00Z`);
   yesterday.setUTCDate(yesterday.getUTCDate() - 1);
-  const wide = weekdayDate(date).toUpperCase();
-  if (date === today) return { head: 'TODAY', rest: wide };
-  if (date === yesterday.toISOString().slice(0, 10)) return { head: 'YESTERDAY', rest: wide };
-  const name = weekdayName(date).toUpperCase();
-  const md = shortDate(date).toUpperCase();
-  return { head: name, rest: md, plain: true };
+  if (date === today) return { head: 'TODAY', rest: weekdayDate(date).toUpperCase() };
+  if (date === yesterday.toISOString().slice(0, 10)) return { head: 'YESTERDAY', rest: weekdayDate(date).toUpperCase() };
+  return { head: weekdayName(date).toUpperCase(), rest: shortDate(date).toUpperCase() };
 }
 
-// "Plus 94 more headlines we read so you don't have to \u2192"; in quiet mode just "Plus 94 more headlines \u2192"
-export function plusText(n, quiet = false) {
-  const noun = n === 1 ? 'headline' : 'headlines';
-  return quiet ? `Plus ${n} more ${noun} \u2192` : `Plus ${n} more ${noun} we read so you don't have to \u2192`;
-}
+// The door to an earlier day's rows: "Show the 6 near misses", or "Show the 5 top stories" for a day
+// with no edition.
+export const showRows = (n, ranked) => (ranked ? `Show the ${n} near ${n === 1 ? 'miss' : 'misses'}` : `Show the ${n} top ${n === 1 ? 'story' : 'stories'}`);
+
+// The footer's door to the day page that lists every headline read.
+export const everyHeadline = (n) => `Every headline we read today (${n})`;
 
 // A source that is a web address ("https://www.example.co.uk/") reads as its host
 // ("example.co.uk"). Every view of a source goes through here.
@@ -282,29 +282,38 @@ export function sourceText(outlets, source) {
   return [name, count].filter(Boolean).join(' \u00b7 ');
 }
 
-// "CBS News \u00b7 32 news sites \u00b7 Read it \u2192" under a headline in the full list. Without a link there is nothing to read.
+// A row of near misses names its source and nothing else: no count, no "Read it".
+export const rowSource = (source) => sourceName(source);
+
+// "CBS News \u00b7 32 news sites \u00b7 Read it" under a headline in the full list. Without a link there is nothing to read.
+// (A row of the day's near misses shows the source name alone: sourceName.)
 export function headlineMeta(outlets, source, linked = true) {
   return [sourceText(outlets, source), linked ? READ_IT : ''].filter(Boolean).join(' \u00b7 ');
 }
 
 // ---- the share text ---------------------------------------------------------
-// A day shares its headline and the emoji of its rows:
+// A day shares like a Wordle grid: the question, the emoji of its rows in rank order, and the Doom
+// Score as ten squares, black for the score and yellow for what is left:
 //
 //   Did the world end today? ALMOST.        (a past day: "Did the world end on Nov 16? ALMOST.")
-//   Asteroid missed. Banks back. Bags still lost. Still here.
-//   \u2604\ufe0f\ud83c\udfe6\u2708\ufe0f\ud83e\uddf3\ud83d\udc8d\ud83d\udcb3
-//   Tue, Nov 17 \u00b7 Doom Score 68 of 99
+//   \u2604\ufe0f \u2708\ufe0f \ud83d\udcb3 \ud83c\udfe6 \ud83c\udf9f\ufe0f \ud83d\udc8d
+//   Doom Score 92 \u2b1b\u2b1b\u2b1b\u2b1b\u2b1b\u2b1b\u2b1b\u2b1b\u2b1b\ud83d\udfe8
 //   didtheworldendtoday.com/day/2026-11-17/
 //
-// A reader on a streak gets "Checked 3 days running." above the link, added by the
-// page script. Quiet mode keeps its own text: the quiet line and the grid of
+// A day with no rows has no emoji line. A reader on a streak gets "Checked 3 days running." above the
+// link, added by the page script. Quiet mode keeps its own text: the quiet line and the grid of
 // fired categories (an emoji where one fired, a black square where none did).
 
-export function shareText({ live, date, score, change, fired, categories, host, quiet = false, withUrl = true, headline = '', emojis = [], cap = 99 }) {
+// Ten squares: a black one for each tenth of the score, and a yellow one for each tenth left.
+export const scoreSquares = (score) => {
+  const filled = filledSquares(score);
+  return '\u2b1b'.repeat(filled) + '\ud83d\udfe8'.repeat(10 - filled);
+};
+
+export function shareText({ live, date, score, change, fired, categories, host, quiet = false, withUrl = true, emojis = [], cap = 99 }) {
   const doom = Number.isFinite(Number(score)) ? Math.round(Number(score)) : 0;
   const top = Number.isFinite(Number(cap)) && Number(cap) > 0 ? Math.round(Number(cap)) : 99;
   const first = live ? `Did the world end today? ${VERDICT}` : `Did the world end on ${shortDate(date)}? ${VERDICT}`;
-  const doomLine = `${rowDate(date)} \u00b7 Doom Score ${doom} of ${top}`;
   let lines;
   if (quiet) {
     const firedSet = new Set(fired || []);
@@ -312,10 +321,10 @@ export function shareText({ live, date, score, change, fired, categories, host, 
     const rows = [];
     for (let i = 0; i < cells.length; i += 4) rows.push(cells.slice(i, i + 4).join(''));
     const arrow = changeText(change);
-    lines = [first, QUIET_LINE, `${doomLine}${arrow ? ` ${arrow}` : ''}`, ...rows];
+    lines = [first, QUIET_LINE, `${rowDate(date)} \u00b7 Doom Score ${doom} of ${top}${arrow ? ` ${arrow}` : ''}`, ...rows];
   } else {
-    const strip = (Array.isArray(emojis) ? emojis : []).join('');
-    lines = [first, headline || subline(score), ...(strip ? [strip] : []), doomLine];
+    const strip = (Array.isArray(emojis) ? emojis : []).filter(Boolean).join(' ');
+    lines = [first, ...(strip ? [strip] : []), `Doom Score ${doom} ${scoreSquares(doom)}`];
   }
   if (withUrl) lines.push(`${host}/day/${date}/`);
   return lines.join('\n');

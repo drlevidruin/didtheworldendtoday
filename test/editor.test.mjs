@@ -99,13 +99,13 @@ const answer = (body, extra = {}) => ({
 
 const GOOD = {
   date: DATE,
-  headline: 'Planes late. Banks down. Servers back. Still here.',
+  headline: 'United planes sat late for an hour and a half. Still here.',
   items: [
-    { emoji: '✈️', line: 'United systems went down for an hour and departures were delayed.', ids: ['s01'] },
-    { emoji: '\u{1F3E6}', line: 'Chase online banking was down for hours on Monday.', ids: ['s02'] },
-    { emoji: '\u{1F5A5}️', line: 'Cloudflare went down and took thousands of sites with it.', ids: ['s03', 's07'] },
-    { emoji: '\u{1F4C9}', line: 'The Nasdaq fell into a correction. Line went down. It usually comes back.', ids: ['s04'] },
-    { emoji: '☄️', line: 'A bus-sized asteroid passed between Earth and the Moon. It missed.', ids: ['s05'] },
+    { emoji: '✈️', label: 'United outage', line: 'Systems down for an hour. Departures were delayed.', ids: ['s01'] },
+    { emoji: '\u{1F3E6}', label: 'Chase banking', line: 'Online banking was down for hours on Monday.', ids: ['s02'] },
+    { emoji: '\u{1F5A5}️', label: 'Cloudflare outage', line: 'Took thousands of sites down with it.', ids: ['s03', 's07'] },
+    { emoji: '\u{1F4C9}', label: 'Nasdaq sell-off', line: 'Fell into a correction. It usually comes back.', ids: ['s04'] },
+    { emoji: '☄️', label: 'Asteroid pass', line: 'Bus-sized, between Earth and the Moon. Missed.', ids: ['s05'] },
   ],
 };
 const withItems = (items, over = {}) => ({ ...GOOD, items, ...over });
@@ -115,9 +115,10 @@ const OLD = {
   date: DATE,
   by: 'editor',
   writtenAt: '2026-11-17T09:00:00.000Z',
-  headline: 'Old headline here. Still here.',
+  headline: 'The old headline says one thing about the day. Still here.',
   items: ['s01', 's02', 's03'].map((id) => ({
     emoji: '\u{1F5A5}️',
+    label: 'Old label',
     line: `The old line for ${id}.`,
     ids: [id],
     ...(id === 's01' ? { best: true } : {}),
@@ -130,7 +131,7 @@ const OLD = {
   })),
 };
 
-const HAND = { ...OLD, by: 'hand', headline: 'Hand written headline here. Still here.' };
+const HAND = { ...OLD, by: 'hand', headline: 'A hand written headline says one thing about the day. Still here.' };
 
 const run = (s, client, over = {}) => {
   const lines = [];
@@ -342,7 +343,10 @@ test('editor: the schema lists every key, allows nothing extra, and uses no keyw
   assert.deepEqual(Object.keys(EDITION_SCHEMA.properties).sort(), ['date', 'headline', 'items']);
   assert.deepEqual([...EDITION_SCHEMA.required].sort(), ['date', 'headline', 'items']);
   assert.ok(!('best' in EDITION_SCHEMA.properties), 'the order of the items is the rank, so there is no best id to ask for');
-  assert.deepEqual(Object.keys(EDITION_SCHEMA.properties.items.items.properties).sort(), ['emoji', 'ids', 'line']);
+  assert.deepEqual(Object.keys(EDITION_SCHEMA.properties.items.items.properties).sort(), ['emoji', 'ids', 'label', 'line']);
+  // the label is asked for on every item, as a string
+  assert.deepEqual(EDITION_SCHEMA.properties.items.items.properties.label, { type: 'string' });
+  assert.ok(EDITION_SCHEMA.properties.items.items.required.includes('label'), 'every item must carry a label');
 });
 
 test('editor: stories the edition could never use are never sent: used ids, no title, blocked topics, other languages, and more than 80', async () => {
@@ -393,11 +397,12 @@ test('editor: a good answer is written as today\'s edition, with the lead story\
   assert.equal(e.writtenAt, NOW);
   assert.equal(e.headline, GOOD.headline);
   const lead = e.items[0];
-  assert.deepEqual(Object.keys(lead), ['emoji', 'line', 'ids', 'best', 'quiet', 'cat', 'title', 'url', 'source', 'outlets']);
+  assert.deepEqual(Object.keys(lead), ['emoji', 'line', 'ids', 'best', 'quiet', 'cat', 'title', 'url', 'source', 'outlets', 'label']);
+  assert.equal(lead.label, 'United outage');
   assert.deepEqual([lead.cat, lead.title, lead.url, lead.source, lead.outlets], ['flights', 'United Airlines system outage delays departing flights', 'https://pub.example/s01', 'Pub A', 12], 'copied from the lead story, s01');
   assert.deepEqual(e.items[0].ids, ['s01']);
   assert.deepEqual(e.items[2].ids, ['s03', 's07'], 'an item keeps all of its ids');
-  assert.deepEqual(Object.keys(e.items[2]), ['emoji', 'line', 'ids', 'quiet', 'cat', 'title', 'url', 'source', 'outlets'], 'only the first item is marked best');
+  assert.deepEqual(Object.keys(e.items[2]), ['emoji', 'line', 'ids', 'quiet', 'cat', 'title', 'url', 'source', 'outlets', 'label'], 'only the first item is marked best');
   assert.ok(!JSON.stringify(e).includes('claude') && !JSON.stringify(e).includes('opus'), 'no model name in the file');
   assert.ok(!s.read('data/editions/2026-11-17.json').includes(KEY));
   // it passes the same check the build runs
@@ -429,22 +434,74 @@ test('editor: the order of the items is the rank: item 1 is the closest call and
   }
 });
 
-test('editor: the prompt asks for a ranking from most world-ending to least, and no longer for a best id', () => {
+test('editor: the prompt asks for a label, a line and a one-sentence headline, in a ranking from most world-ending to least', () => {
   const p = EDITOR_SYSTEM_PROMPT;
   assert.match(p, /2\. Pick 4 to 6 events \(3 on a quiet day\)\. Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics\.\n/);
   assert.match(
     p,
     /3\. Rank the events from most world-ending to least and list them in that order, so item 1 is the closest call\. Picture each one at a bigger scale, then weigh how many people it would reach, how much of the world, how fragile the system looked, and how close it came\. Outlet counts don't decide the rank\. A serious story is ranked by the same test, never put on top just for being serious, and keeps its plain line\./,
   );
-  assert.match(p, /\n4\. line: what happened, in 25 words or fewer\./);
-  assert.match(p, /\n5\. headline: the whole day in 12 words or fewer, fragments are fine, built only from your items, ending with "Still here\." Start it with item 1\.\n/);
+  assert.ok(
+    p.includes(
+      '\n4. label: 1 to 4 words that name the thing in the story, not what happened to it: the object, company, place or event, written like a name (Asteroid 2026 WA, FAA outage, Card skimmers). Nouns only, no verb, no joke, no period, and the label must not repeat the first words of the line.\n',
+    ),
+    'rule 4 asks for a label',
+  );
+  assert.ok(
+    p.includes(
+      '\n5. line: what happened, in 12 words or fewer, at most two short sentences. The label already names the thing, so don\'t repeat it. emoji: one emoji that names the thing, an object or a place, never a face or a skull. A serious story gets a plain one (\u{1F30F} for an earthquake).\n',
+    ),
+    'rule 5 asks for a short line and an emoji',
+  );
+  assert.ok(
+    p.includes(
+      '\n6. headline: one sentence about item 1 and how it missed us, with one real detail from its line (a size, a time like 2:59 AM ET, a number) and no period inside it (write US, not U.S.), then "Still here." At most 15 words in all, and only facts already in your items.\n',
+    ),
+    'rule 6 asks for one sentence and then Still here.',
+  );
+  assert.ok(!/two full sentences/.test(p) && !p.includes('25 words or fewer'), 'the phase 7 rules are gone');
+  assert.ok(!p.includes('the whole day in 12 words or fewer'), 'the old rule 5 is gone');
   assert.ok(!/\bbest:/.test(p) && !/the id of the closest call/.test(p), 'no best step');
   assert.ok(!/the closest call first: bigger scale, more outlets/.test(p), 'outlet counts no longer decide');
+  assert.ok(p.includes('\n- The label says who or what. The line says how big, how long, how it ended. Numbers beat adjectives: "an hour and a half", "80% of its servers".\n'), 'the first voice rule');
   assert.match(p, /- Clock times are Eastern, written like 2:59 AM ET\.\n/);
-  assert.match(p, /- An Nvidia-led sell-off pushed the Nasdaq into a correction, which is Wall Street for a big drop\.\n/);
-  assert.ok(!/Line went down\. It usually comes back\./.test(p), 'the old Nasdaq example is gone');
-  assert.match(p, /A headline in the right voice: "Microsoft found its bug\. Banks down\. Goats loose\. Still here\."\n/);
+  assert.ok(
+    p.includes(
+      '\nItems in the right voice (label: line):\n- Asteroid 2026 WA: Passed a third of the way to the Moon. Missed. So far.\n- FAA outage: Grounded flights nationwide. Traced to one old copper-wire switch.\n- Outlook outage: Microsoft says a July bug took out over 80% of its servers.\n- Nvidia sell-off: Pushed the Nasdaq into a correction. Wall Street for a big drop.\nA headline in the right voice: "An asteroid the size of a bus missed Earth at 2:59 AM ET. Still here."\n',
+    ),
+    'the examples are labels and lines, and a one-sentence headline',
+  );
+  assert.ok(!/An Nvidia-led sell-off pushed/.test(p) && !p.includes('Grounded flights sent one Vegas wedding'), 'the old examples are gone');
+  assert.ok(!p.includes('Microsoft found its bug'), 'the old example is gone');
   assert.ok(!/[\u2013\u2014]/.test(p), 'no em or en dash in what the editor is told');
+});
+
+test('editor: a missing label or one with too many words is left off, the row stays, and the log line says so', async () => {
+  const s = setup();
+  const items = GOOD.items.map((it, i) => {
+    if (i === 1) return { emoji: it.emoji, line: it.line, ids: it.ids }; // no label at all
+    if (i === 2) return { ...it, label: 'Five words are too many' };
+    return it;
+  });
+  const r = await run(s, fakeClient(answer(withItems(items))));
+  assert.equal(r.status, 'written');
+  assert.equal(r.written, 5, 'every row stays');
+  const e = readJson(editionPath(s));
+  assert.deepEqual(e.items.map((i) => i.label), ['United outage', '', '', 'Nasdaq sell-off', 'Asteroid pass']);
+  assert.match(r.line, /item 2 kept without a label \(label missing\)/);
+  assert.match(r.line, /item 3 kept without a label \(label has more than 4 words\)/);
+  assert.ok(!/dropped/.test(r.line), 'nothing was dropped');
+});
+
+test('editor: a label with a period is left off and the row stays', async () => {
+  const s = setup();
+  const items = GOOD.items.map((it, i) => (i === 3 ? { ...it, label: 'Nasdaq sell-off.' } : it));
+  const r = await run(s, fakeClient(answer(withItems(items))));
+  assert.equal(r.status, 'written');
+  assert.equal(r.written, 5);
+  const e = readJson(editionPath(s));
+  assert.deepEqual(e.items.map((i) => i.label), ['United outage', 'Chase banking', 'Cloudflare outage', '', 'Asteroid pass']);
+  assert.match(r.line, /item 4 kept without a label \(label has a period\)/);
 });
 
 test('editor: ids that are not stories it sent are dropped, and an item left with none is dropped', async () => {
@@ -515,7 +572,19 @@ test('editor: fewer than 3 usable items keeps the old edition exactly as it was'
 });
 
 test('editor: a headline that breaks the rules keeps the old edition', async () => {
-  for (const headline of ['Planes late. Banks down.', `Planes late ${EM} banks down. Still here.`, 'Planes late! Still here.', '']) {
+  const longOne = `United planes sat late for an hour and a half on Monday and for most of Tuesday afternoon and evening across the whole country. Still here.`;
+  const tooLong = `United planes sat late for an hour. ${'Banks went down for a while. '.repeat(8)}Still here.`;
+  assert.ok(longOne.length > 110 && tooLong.length > 110);
+  for (const headline of [
+    'Planes late. Banks down.',
+    `United planes sat late for an hour and a half ${EM} for part of Monday. Still here.`,
+    'United planes sat late for an hour and a half on Monday! Still here.',
+    '',
+    'Planes late. Banks down. Still here.',
+    'Planes sat late on Nov. 17 for an hour. Still here.',
+    longOne,
+    tooLong,
+  ]) {
     const s = setup({ editions: { [DATE]: OLD } });
     const before = s.read(`data/editions/${DATE}.json`);
     const r = await run(s, fakeClient(answer(withItems(GOOD.items, { headline }))));

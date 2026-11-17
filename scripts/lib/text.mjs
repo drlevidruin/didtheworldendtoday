@@ -155,6 +155,71 @@ export function safeUrl(u) {
   }
 }
 
+// ---- sentences ---------------------------------------------------------------
+
+// Words that end in a period without ending a sentence ("Gov. Healey", "Acme Inc. said").
+export const ABBREVIATIONS = [
+  'Mr',
+  'Mrs',
+  'Ms',
+  'Dr',
+  'St',
+  'Jr',
+  'Sr',
+  'Inc',
+  'Co',
+  'Corp',
+  'Ltd',
+  'vs',
+  'No',
+  'Gov',
+  'Sen',
+  'Rep',
+  'Gen',
+  'Lt',
+  'Mt',
+  'Ft',
+];
+const ABBREVIATION = new Set(ABBREVIATIONS);
+// Letters with periods between them: U.S, U.K, D.C (the last period is the one being asked about).
+const LETTER_DOTS = /^(?:\p{L}\.)+\p{L}$/u;
+
+// The word right before a period, without opening quotes or brackets.
+function wordBefore(text, i) {
+  const word = text.slice(0, i).match(/\S+$/)?.[0] ?? '';
+  return word.replace(/^[^\p{L}\p{N}]+/u, '');
+}
+
+export function isAbbreviation(word) {
+  return ABBREVIATION.has(word) || LETTER_DOTS.test(word);
+}
+
+// Closing quotes and brackets that can sit between a period and the space after it: ." .” .’ .)
+const CLOSERS = /[\u201d\u2019"')\]}\u00bb]/;
+
+// The text up to and including the first period that ends a sentence: a period followed by a
+// space or by the end of the text, unless the word before it is an abbreviation. A closing quote or
+// bracket may come between them (She said "It missed." Then left.). "2:59 AM ET." ends a sentence,
+// "U.S. banks" and "Gov. Healey" do not, and "3.5" or "nasa.gov" never do.
+// With no sentence end, the whole text.
+export function firstSentence(text) {
+  const t = String(text ?? '').trim();
+  for (let i = t.indexOf('.'); i !== -1; i = t.indexOf('.', i + 1)) {
+    let end = i + 1;
+    while (end < t.length && CLOSERS.test(t[end])) end += 1;
+    if (end < t.length && !/\s/.test(t[end])) continue;
+    const word = wordBefore(t, i);
+    if (!word || isAbbreviation(word)) continue;
+    return t.slice(0, end);
+  }
+  return t;
+}
+
+// Words as a reader counts them: runs of non-space characters.
+export function wordCount(text) {
+  return String(text ?? '').split(/\s+/).filter(Boolean).length;
+}
+
 // First letter up, the rest untouched: 'passes in 3 hours' -> 'Passes in 3 hours'.
 export function capFirst(text) {
   const t = String(text ?? '');

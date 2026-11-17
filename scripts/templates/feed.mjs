@@ -1,5 +1,5 @@
 // RSS: one item per day. The title is the day's headline and the description
-// lists its lines. Every line and source is escaped as text, every link is
+// lists its rows as "Label: line". Every label, line and source is escaped as text, every link is
 // checked, and the HTML inside each item is escaped once more because RSS
 // carries it as text. Dates are written in Eastern time with their real offset.
 import { SITE_NAME, TAGLINE, rfc822ET, rowDate } from './copy.mjs';
@@ -8,12 +8,14 @@ import { esc, num, url } from './esc.mjs';
 export const FEED_DAYS = 30;
 
 // day: { date, score, headline, rows[] }. The first line reads like the page: the weekday and
-// date, then the Doom Score out of the cap.
+// date, then the Doom Score out of the cap. A row reads "Label: line"; a row with no label is its line alone.
+export const feedRowText = (r) => (r.label ? `${r.label}: ${r.line}` : String(r.line ?? ''));
+
 function itemHtml(day, cap) {
   const lines = (day.rows || []).map((r) => {
     const href = url(r.url);
     const read = href ? ` <a href="${href}">Read it</a>` : '';
-    return `<li>${esc(r.emoji)} ${esc(r.line)}${read}</li>`;
+    return `<li>${esc(r.emoji)} ${esc(feedRowText(r))}${read}</li>`;
   });
   return `<p>${esc(rowDate(day.date))} \u00b7 Doom Score ${num(day.score)} of ${cap}</p>${lines.length ? `<ol>${lines.join('')}</ol>` : ''}`;
 }

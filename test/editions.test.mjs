@@ -53,6 +53,7 @@ const story = (id, over = {}) => ({
 
 const item = (id, over = {}) => ({
   emoji: '\u{1F5A5}️',
+  label: 'Service outage',
   line: `A service went down for an hour and came back. Story ${id}.`,
   ids: [id],
   quiet: false,
@@ -64,11 +65,14 @@ const item = (id, over = {}) => ({
   ...over,
 });
 
+// One plain sentence, then "Still here.": what every edition in these tests says unless a test says otherwise.
+const HEADLINE = 'Banks went dark for an hour in three states. Still here.';
+
 const edition = (date, ids, over = {}) => ({
   date,
   by: 'editor',
   writtenAt: `${date}T15:00:00.000Z`,
-  headline: 'Banks down. Planes late. Still here.',
+  headline: HEADLINE,
   items: ids.map((id) => item(id)),
   ...over,
 });
@@ -87,11 +91,12 @@ test('validation: a good edition passes, the first row is the closest call, and 
   assert.deepEqual(r.dropped, []);
   assert.equal(r.edition.date, TODAY);
   assert.equal(r.edition.by, 'editor');
-  assert.equal(r.edition.headline, 'Banks down. Planes late. Still here.');
+  assert.equal(r.edition.headline, HEADLINE);
   assert.deepEqual(r.edition.items.map((i) => i.ids), [['a'], ['b'], ['c'], ['d']]);
   assert.deepEqual(r.edition.items.map((i) => Boolean(i.best)), [true, false, false, false], 'only the first row is the closest call');
-  assert.deepEqual(Object.keys(r.edition.items[0]), ['emoji', 'line', 'ids', 'best', 'quiet', 'cat', 'title', 'url', 'source', 'outlets']);
-  assert.deepEqual(Object.keys(r.edition.items[1]), ['emoji', 'line', 'ids', 'quiet', 'cat', 'title', 'url', 'source', 'outlets']);
+  assert.deepEqual(Object.keys(r.edition.items[0]), ['emoji', 'line', 'ids', 'best', 'quiet', 'cat', 'title', 'url', 'source', 'outlets', 'label']);
+  assert.deepEqual(Object.keys(r.edition.items[1]), ['emoji', 'line', 'ids', 'quiet', 'cat', 'title', 'url', 'source', 'outlets', 'label']);
+  assert.equal(r.edition.items[0].label, 'Service outage');
   assert.equal(STILL_HERE, 'Still here.');
 });
 
@@ -121,30 +126,79 @@ test('validation: anything that is not an edition fails with a reason and never 
   assert.equal(r.dropped.length, 5);
 });
 
-test('validation: the headline must end in "Still here." and stay short and plain', () => {
+test('validation: the headline is one sentence and then "Still here.", up to 110 characters', () => {
   const run = (headline) => validateEdition(edition(TODAY, ['a', 'b', 'c'], { headline }), ctx());
-  assert.equal(run('Banks down. Planes late. Still here.').ok, true);
-  assert.equal(run('Still here.').ok, true);
-  assert.equal(run('   Banks down.   Still here.  ').edition.headline, 'Banks down. Still here.', 'spaces are tidied');
+  assert.equal(EDITION.headlineMax, 110);
+  assert.equal(EDITION.lineMax, 110);
+  assert.equal(run(HEADLINE).ok, true);
+  assert.equal(run('An asteroid the size of a bus missed Earth at 2:59 AM ET. Still here.').ok, true);
+  assert.equal(run('U.S. banks went dark for an hour in three states. Still here.').ok, true, 'U.S. does not end the first sentence');
+  assert.equal(run('   Banks went dark for an hour in three states.   Still here.  ').edition.headline, HEADLINE, 'spaces are tidied');
+  // exactly as long as the limit passes, one character more does not
+  const sized = (n) => {
+    const start = 'Banks went dark for an hour in';
+    const end = '. Still here.';
+    const room = n - start.length - end.length; // characters for the words in between
+    return `${start}${' many'.repeat(Math.floor(room / 5))}${'s'.repeat(room % 5)}${end}`;
+  };
+  assert.equal(sized(EDITION.headlineMax).length, EDITION.headlineMax);
+  assert.equal(run(sized(EDITION.headlineMax)).ok, true, 'at the limit');
+  assert.equal(run(sized(EDITION.headlineMax + 1)).ok, false, 'one over');
+  assert.equal(run(sized(170)).ok, false, 'the old limit is gone');
   for (const bad of [
     '',
-    'Banks down. Planes late.',
-    'Still here. Banks down.',
-    'Banks down. Still here',
-    'x'.repeat(EDITION.headlineMax) + ' Still here.',
-    `Banks down ${EM} still here. Still here.`,
-    `Banks down ${EN} planes late. Still here.`,
-    'Banks down; planes late. Still here.',
-    'Banks down! Still here.',
-    'Banks undefined. Still here.',
-    'Trump says banks down. Still here.',
+    'Banks went dark for an hour in three states.',
+    'Still here. Banks went dark for an hour in three states.',
+    'Banks went dark for an hour in three states. Still here',
+    'Still here.',
+    `Banks went dark ${EM} for an hour in three states. Still here.`,
+    `Banks went dark for an hour ${EN} in three states. Still here.`,
+    'Banks went dark; planes were late in three states. Still here.',
+    'Banks went dark for an hour in three states! Still here.',
+    'Banks went undefined for an hour in three states. Still here.',
+    'Trump says banks went dark for an hour in three states. Still here.',
   ]) {
     const r = run(bad);
     assert.equal(r.ok, false, JSON.stringify(bad));
   }
   for (const odd of [undefined, null, 7, [], {}]) assert.equal(run(odd).ok, false, String(odd));
-  assert.match(run('Banks down. Planes late.').reason, /Still here/);
-  assert.match(run('x'.repeat(100) + ' Still here.').reason, /length/);
+  assert.match(run('Banks went dark for an hour in three states.').reason, /Still here/);
+  assert.match(run(`Banks went dark for an hour. ${'a'.repeat(200)}. Still here.`).reason, /length/);
+});
+
+test('validation: the text before "Still here." is at least 5 words, and the first sentence at least 4 and not the whole headline', () => {
+  const run = (headline) => validateEdition(edition(TODAY, ['a', 'b', 'c'], { headline }), ctx());
+  assert.equal(EDITION.headlineMinWords, 5);
+  assert.equal(EDITION.firstSentenceMinWords, 4);
+  // 5 words before "Still here." passes, 4 does not (phase 7's 8-word rule is gone)
+  assert.equal(run('Banks went dark again today. Still here.').ok, true, '5 words');
+  const four = run('Banks went dark again. Still here.');
+  assert.equal(four.ok, false);
+  assert.match(four.reason, /headline too short/);
+  // a first sentence of 4 words passes, 3 does not, even when the whole headline is long enough
+  assert.equal(run('Banks went dark again. Planes were late in three cities. Still here.').ok, true);
+  const short = run('Banks went dark. Planes were late in three cities across the country. Still here.');
+  assert.equal(short.ok, false);
+  assert.match(short.reason, /first sentence too short/);
+  // no sentence end at all before "Still here." means the first sentence is the whole headline
+  const whole = run('Banks went dark for an hour in three states and Still here.');
+  assert.equal(whole.ok, false);
+  assert.match(whole.reason, /no sentence before/);
+});
+
+test('validation: an abbreviation we do not list cuts the first sentence short, and the headline fails', () => {
+  const run = (headline) => validateEdition(edition(TODAY, ['a', 'b', 'c'], { headline }), ctx());
+  // "Nov." is not on the list, so the sentence would end there: what follows starts with a number or a lowercase letter
+  const number = run('Banks went dark on Nov. 17 for an hour. Still here.');
+  assert.equal(number.ok, false);
+  assert.match(number.reason, /cut short/);
+  const lower = run('Banks went dark in Nov. and planes were late. Still here.');
+  assert.equal(lower.ok, false);
+  assert.match(lower.reason, /cut short/);
+  // listed abbreviations and initials are fine, and so is a second real sentence that starts with a capital
+  assert.equal(run('Gov. Healey says banks went dark for an hour. Still here.').ok, true);
+  assert.equal(run('Banks went dark for an hour. Planes were late in three cities. Still here.').ok, true);
+  assert.equal(run('Banks went dark for an hour. 3 planes were late. Still here.').ok, false, 'a digit after sentence one reads as a cut');
 });
 
 test('validation: a line with a dash, a semicolon, an exclamation mark or a stray token is dropped, and its neighbours stay', () => {
@@ -172,6 +226,56 @@ test('validation: a line with a dash, a semicolon, an exclamation mark or a stra
   assert.match(reasons(r)[3], /exclamation/);
   assert.equal(badText('A plain line.'), null);
   assert.equal(badText('A "quoted" line, with commas: and a colon.'), null);
+});
+
+test('validation: a label is 1 to 4 words with no period, and a missing or bad one keeps the row and is listed with the dropped reasons', () => {
+  assert.equal(EDITION.labelMax, 32);
+  assert.equal(EDITION.labelMaxWords, 4);
+  const run = (label) => validateEdition(edition(TODAY, [], { items: [item('a', { label }), item('b'), item('c')] }), ctx());
+  // good labels are kept, with their spaces tidied
+  for (const [label, kept] of [
+    ['FAA outage', 'FAA outage'],
+    ['Asteroid 2026 WA', 'Asteroid 2026 WA'],
+    ['Nvidia', 'Nvidia'],
+    ['  Outlook   outage  ', 'Outlook outage'],
+    ['Aaaaaaaa Aaaaaaaa Aaaaaaaa Aaaaa', 'Aaaaaaaa Aaaaaaaa Aaaaaaaa Aaaaa'], // 4 words and exactly 32 characters
+  ]) {
+    const r = run(label);
+    assert.equal(r.ok, true, label);
+    assert.equal(r.edition.items[0].label, kept);
+    assert.deepEqual(r.dropped, [], label);
+  }
+  // 5 words, a period, too many characters, a dash, a semicolon, an exclamation mark, an excluded topic, and nothing at all:
+  // the row stays without a label, and the reason is listed
+  for (const [label, why] of [
+    ['One two three four five', /more than 4 words/],
+    ['FAA outage.', /period/],
+    ['Aaaaaaaa Aaaaaaaa Aaaaaaaa Aaaaaa', /too long/],
+    [`FAA ${EM} outage`, /em dash/],
+    ['FAA; outage', /semicolon/],
+    ['FAA outage!', /exclamation/],
+    ['Trump outage', /excluded/],
+    ['', /missing/],
+    ['   ', /missing/],
+    [undefined, /missing/],
+    [null, /missing/],
+    [7, /missing/],
+  ]) {
+    const r = run(label);
+    assert.equal(r.ok, true, `${String(label)}: the row stays`);
+    assert.deepEqual(r.edition.items.map((i) => i.ids[0]), ['a', 'b', 'c']);
+    assert.equal(r.edition.items[0].label, '', `${String(label)}: no label`);
+    assert.equal(r.edition.items[0].line, item('a').line, 'the line is untouched');
+    assert.equal(r.dropped.length, 1);
+    assert.equal(r.dropped[0].index, 0);
+    assert.equal(r.dropped[0].kept, true, 'listed, but the row is kept');
+    assert.match(r.dropped[0].reason, why, String(label));
+  }
+  // rows without labels still count toward the 3 an edition needs
+  const bare = validateEdition(edition(TODAY, [], { items: ['a', 'b', 'c'].map((id) => item(id, { label: undefined })) }), ctx());
+  assert.equal(bare.ok, true);
+  assert.deepEqual(bare.edition.items.map((i) => i.label), ['', '', '']);
+  assert.equal(bare.dropped.length, 3);
 });
 
 test('validation: a line on an excluded topic is dropped, in the line or in the story it points at', () => {
@@ -309,6 +413,7 @@ test('fallback: up to 5 stories in the order given, the category emoji, the head
   rows.forEach((r, i) => {
     assert.equal(r.line, `A plain headline ${i} about ${cats[i]}`, 'the cleaned headline');
     assert.equal(r.line, r.title, 'no joke: the line is the headline');
+    assert.equal(r.label, '', 'no label: the page shows the headline in its place');
     assert.equal(r.url, `https://pub.example/s${i}`);
     assert.equal(r.source, 'Pub A');
     assert.equal(r.outlets, 3);
@@ -422,7 +527,7 @@ test('days: a day with no edition shows its plain headline from the ladder, and 
   const editions = new Map([['2026-11-16', edition('2026-11-16', ['a', 'b', 'c'])]]);
   const out = resolve(days, editions);
   assert.equal(out.get('2026-11-15').headline, subline(10));
-  assert.equal(out.get('2026-11-16').headline, 'Banks down. Planes late. Still here.');
+  assert.equal(out.get('2026-11-16').headline, HEADLINE);
   assert.equal(out.get('2026-11-17').headline, subline(83));
   // quiet mode: no day uses its edition, and every plain day says the quiet line
   const quiet = resolve(days, editions, { quietMode: true, fallbackHeadline: () => QUIET_LINE });
@@ -558,20 +663,22 @@ test('launch editions: both pass the one check exactly as written, and the 17th 
   assert.deepEqual(sixteenth.dropped, [], 'nothing was dropped');
   assert.equal(sixteenth.edition.items.length, 6);
   assert.equal(sixteenth.edition.by, 'hand');
-  assert.equal(sixteenth.edition.headline, 'Microsoft found its bug. Banks down. Goats loose. Still here.');
+  assert.equal(sixteenth.edition.headline, 'Microsoft says a bug hiding since July knocked out Outlook worldwide. Still here.');
   const used = new Set(sixteenth.edition.items.flatMap((i) => i.ids));
   const seventeenth = validateEdition(launch('2026-11-17'), ctx({ date: '2026-11-17', used }));
   assert.equal(seventeenth.ok, true, seventeenth.reason);
   assert.deepEqual(seventeenth.dropped, [], 'nothing was dropped, so no id of the 17th was told on the 16th');
   assert.equal(seventeenth.edition.items.length, 6);
   assert.equal(seventeenth.edition.by, 'hand');
-  assert.equal(seventeenth.edition.headline, 'Asteroid missed. Banks back. Wedding moved to the airport. Still here.');
+  assert.equal(seventeenth.edition.headline, 'An asteroid the size of a bus missed Earth at 2:59 AM ET. Still here.');
   for (const e of [sixteenth.edition, seventeenth.edition]) {
     assert.deepEqual(e.items.map((i) => Boolean(i.best)), [true, false, false, false, false, false], 'the closest call is first');
+    assert.ok(e.headline.length <= EDITION.headlineMax, 'a one-sentence headline of 110 characters or fewer');
     for (const it of e.items) {
       assert.ok(!badText(it.line), it.line);
       assert.ok(it.url.startsWith('https://'), it.url);
       assert.ok(it.line.length <= EDITION.lineMax);
+      assert.ok(it.label && it.label.length <= EDITION.labelMax && !it.label.includes('.'), `a label on every item: ${it.label}`);
     }
   }
   // no id in both

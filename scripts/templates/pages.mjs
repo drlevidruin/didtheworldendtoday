@@ -1,26 +1,28 @@
 // The Almanac page and the About page.
-import { ALMANAC_LEAD, CREDIT_HANDLE, CREDIT_URL, DESCRIPTION, ET_NOTE, FIRST_DAY_PENDING, HOW_WE_RANK, QUIET_CARDS_ABOUT, TODAY_LINK, pageTitle, recordLine } from './copy.mjs';
+import { ALMANAC_LEAD, CREDIT_HANDLE, CREDIT_URL, DESCRIPTION, ET_NOTE, FIRST_DAY_PENDING, HOW_WE_RANK, QUIET_CARDS_ABOUT, SITE_NAME, pageTitle, recordLine } from './copy.mjs';
 import { esc, url } from './esc.mjs';
 import { footer, page } from './layout.mjs';
 import { almanacRows } from './parts.mjs';
 
-function top(root) {
-  return `<div class="top"><a href="${esc(root)}">${esc(TODAY_LINK)}</a><a href="${esc(root)}about/">About</a></div>`;
+// The black band of the sign, here a link back to today. These pages have no verdict of their own.
+function band(root) {
+  return `<a class="band" href="${esc(root)}"><span class="q">${esc(SITE_NAME)}</span></a>`;
 }
 
 // entries: [{ date, score, headline }], newest first. Each row is a link to its day.
-export function almanacPage({ root, siteUrl, entries, record, quiet }) {
+// foot: what the footer needs besides the page: { updatedMs, today, headlineCount }
+export function almanacPage({ root, siteUrl, entries, record, quiet, foot = {} }) {
   const recordText = recordLine(record, entries.length);
   const body = `<main id="main">
+${band(root)}
 <div class="wrap">
-${top(root)}
 <h1 class="pg">The Almanac of Almost</h1>
 <p class="lead">${esc(ALMANAC_LEAD)}</p>
 ${recordText ? `<p class="record">${esc(recordText)}</p>` : ''}
 ${entries.length ? almanacRows(entries, { root }) : `<p class="empty">${esc(FIRST_DAY_PENDING)}</p>`}
 </div>
 </main>
-${footer({ root, quiet })}`;
+${footer({ root, quiet, home: false, ...foot })}`;
   return page({
     root,
     title: pageTitle('The Almanac of Almost'),
@@ -28,7 +30,7 @@ ${footer({ root, quiet })}`;
     canonical: `${siteUrl}/almanac/`,
     image: `${siteUrl}/og/latest.png`,
     body,
-    data: { page: 'almanac' },
+    data: { page: 'almanac', quiet: quiet ? '1' : '0' },
     script: false,
   });
 }
@@ -87,7 +89,7 @@ function sourceList(cfg, xEnabled) {
   return `<ul>\n${rows.join('\n')}\n</ul>`;
 }
 
-export function aboutPage({ root, siteUrl, cfg, quiet, xEnabled = false }) {
+export function aboutPage({ root, siteUrl, cfg, quiet, xEnabled = false, foot = {} }) {
   const d = cfg.doom;
   const fire =
     `A category counts when ${d.publishersToFire} or more different publishers have a headline about it in the last 24 hours. ` +
@@ -95,8 +97,8 @@ export function aboutPage({ root, siteUrl, cfg, quiet, xEnabled = false }) {
     `an asteroid that passes ${closerThan(d.asteroid.withinLd)}, a space storm of Kp ${d.kp.at} or more, an X-class flare alert from the Sun, ` +
     `an earthquake of magnitude ${d.quake.at} or more, or a big website that says it is in a major outage.`;
   const body = `<main id="main">
+${band(root)}
 <div class="wrap">
-${top(root)}
 <h1 class="pg">About</h1>
 <div class="prose">
 <p class="lede">This site checks the news every 15 minutes for the ways the world almost ends. A system fails. A flight is grounded. A big rock misses us. Every story links to its source, and every day is kept in the Almanac of Almost.</p>
@@ -132,7 +134,7 @@ ${sourceList(cfg, xEnabled)}
 </div>
 </div>
 </main>
-${footer({ root, quiet })}`;
+${footer({ root, quiet, home: false, ...foot })}`;
   return page({
     root,
     title: pageTitle('About'),
@@ -140,7 +142,7 @@ ${footer({ root, quiet })}`;
     canonical: `${siteUrl}/about/`,
     image: `${siteUrl}/og/latest.png`,
     body,
-    data: { page: 'about' },
+    data: { page: 'about', quiet: quiet ? '1' : '0' },
     script: false,
   });
 }
