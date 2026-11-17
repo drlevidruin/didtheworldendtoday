@@ -464,6 +464,14 @@ const NAMED_DRUGS = [
   'insulin', 'Ozempic', 'Wegovy', 'Zepbound', 'Mounjaro', 'amoxicillin', 'fentanyl', 'oxycodone', 'opioid', 'opioids',
 ];
 
+// News sites that only repost press releases. A story whose source is one of these is left out.
+// Matched on the source's name, ignoring case and punctuation.
+export const EXCLUDE_SOURCES = ['EIN Presswire', 'EIN News', 'PR Newswire', 'Business Wire', 'GlobeNewswire', 'Accesswire', 'openPR', 'PRWeb', 'Newsfile'];
+
+// Headlines we have seen and do not want, by hand. Lowercase pieces of a title; a title that
+// holds one is left out. Add a line here when a headline slips through the families below.
+export const HIDE_TITLES = ['muir announces', 'drastic step'];
+
 export const EXCLUDE_FAMILIES = [
   {
     name: 'death',
@@ -475,6 +483,8 @@ export const EXCLUDE_FAMILIES = [
       'drowned', 'drowning', 'mourn', 'mourns', 'mourning', 'vigil',
       'claimed lives', 'claims lives', 'lost their lives', 'lost lives', 'lives lost', 'loss of life', 'slain',
       'slaughter', 'survivors', 'rubble', 'rescuers',
+      // animal culls
+      'cull', 'culls', 'culled', 'culling',
     ],
   },
   {
@@ -540,6 +550,8 @@ export const EXCLUDE_FAMILIES = [
       { term: 'toddler', prefix: true }, { term: 'teen', prefix: true }, // teen, teens, teenager, teenage
       'infant', 'infants', 'baby', 'babies', 'newborn', 'newborns', 'juvenile', 'juveniles', 'underage',
       'boy', 'boys', 'girl', 'girls',
+      // a school district's initials: "KISD", "Katy ISD"
+      { pattern: '\\b[A-Z]{0,5}ISD\\b', caseSensitive: true, label: 'school district' },
     ],
   },
   {
@@ -599,6 +611,8 @@ export const EXCLUDE_FAMILIES = [
       // extended
       'Duffy', 'Buttigieg', 'midterm', 'midterms', 'White House', 'lawmakers', 'lawmaker', 'senator', 'senators',
       'Obama', 'impeach', 'impeachment',
+      // lawsuits and the attorneys general who bring them (a governor or a mayor can be a real near miss)
+      'attorney general', 'attorneys general', 'sues', 'sued', 'lawsuit', 'lawsuits',
       // trade, the Fed and the people who make the news about themselves
       { term: 'tariff', prefix: true }, 'Powell', 'Federal Reserve', 'Fed chair', 'Supreme Court', 'sanctions',
       'Elon Musk', { term: 'Musk', caseSensitive: true },
@@ -619,6 +633,10 @@ export const EXCLUDE_FAMILIES = [
       'prediction', 'predictions', 'horoscope', 'is there going to be', 'will there be', 'emergency supply',
       'supply list', 'prepare for', 'preparedness', 'survival guide', 'sponsored', 'press release',
       { pattern: "here['\\u2019]?s what" },
+      // a photo-archive tag ("April 15. Archives." or "Photo archive: ..."): the word has to end the headline or a clause.
+      // The National Archives, Archive of Our Own and the Wayback Machine's archives are sites with real outages and
+      // breaches, and the Internet Archive is one too
+      { pattern: '(?<!Internet\\s)archives?(?=\\s*(?:[.:|]|$))', label: 'archives' },
       // A columnist's section label ("SOLAR FLARE | Life's just a rom-com") is not
       // an incident. Newsroom tags such as BREAKING | stay.
       {
@@ -634,7 +652,7 @@ export const EXCLUDE_FAMILIES = [
     terms: [
       'must know', 'black friday', 'cyber monday', 'promo code', 'coupon', 'coupons', 'life hack', 'life hacks',
       'hack you', 'hacks for', 'hacks to', 'travel hack', 'travel hacks', 'money hack', 'money hacks', 'best deals',
-      '% off',
+      '% off', 'the best',
     ],
   },
   {
@@ -644,6 +662,8 @@ export const EXCLUDE_FAMILIES = [
     label: 'question headline',
     predicate: (title) => title.includes('?') && !/\b(?:down|outages?|offline|not working)\b[^?]*\?/i.test(title),
   },
+  { name: 'press release', label: 'press release site', sources: EXCLUDE_SOURCES },
+  { name: 'hidden', label: 'hidden headline', titles: HIDE_TITLES },
 ];
 
 // ---------------------------------------------------------------------------

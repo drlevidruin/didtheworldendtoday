@@ -1,32 +1,34 @@
 // RSS: one item per day. The title is the day's headline and the description
 // lists its lines. Every line and source is escaped as text, every link is
 // checked, and the HTML inside each item is escaped once more because RSS
-// carries it as text.
-import { SITE_NAME, TAGLINE, shortDate } from './copy.mjs';
+// carries it as text. Dates are written in Eastern time with their real offset.
+import { SITE_NAME, TAGLINE, rfc822ET, rowDate } from './copy.mjs';
 import { esc, num, url } from './esc.mjs';
 
 export const FEED_DAYS = 30;
 
-// day: { date, score, headline, rows[] }
-function itemHtml(day) {
+// day: { date, score, headline, rows[] }. The first line reads like the page: the weekday and
+// date, then the Doom Score out of the cap.
+function itemHtml(day, cap) {
   const lines = (day.rows || []).map((r) => {
     const href = url(r.url);
     const read = href ? ` <a href="${href}">Read it</a>` : '';
     return `<li>${esc(r.emoji)} ${esc(r.line)}${read}</li>`;
   });
-  return `<p>${esc(shortDate(day.date))} \u00b7 Doom ${num(day.score)}/99</p>${lines.length ? `<ol>${lines.join('')}</ol>` : ''}`;
+  return `<p>${esc(rowDate(day.date))} \u00b7 Doom Score ${num(day.score)} of ${cap}</p>${lines.length ? `<ol>${lines.join('')}</ol>` : ''}`;
 }
 
-export function feedXml({ siteUrl, days, buildTime }) {
+export function feedXml({ siteUrl, days, buildTime, doomCap }) {
+  const cap = num(doomCap, 99);
   const items = days.slice(0, FEED_DAYS).map((day) => {
     const link = `${siteUrl}/day/${day.date}/`;
-    const stamp = new Date(Date.parse(day.updatedAt) || Date.parse(buildTime) || 0).toUTCString();
+    const stamp = rfc822ET(Date.parse(day.updatedAt) || Date.parse(buildTime) || 0);
     return `<item>
 <title>${esc(day.headline)}</title>
 <link>${esc(link)}</link>
 <guid isPermaLink="true">${esc(link)}</guid>
 <pubDate>${stamp}</pubDate>
-<description>${esc(itemHtml(day))}</description>
+<description>${esc(itemHtml(day, cap))}</description>
 </item>`;
   });
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -36,7 +38,7 @@ export function feedXml({ siteUrl, days, buildTime }) {
 <link>${esc(siteUrl)}/</link>
 <description>${esc(TAGLINE)}</description>
 <language>en-us</language>
-<lastBuildDate>${new Date(Date.parse(buildTime) || 0).toUTCString()}</lastBuildDate>
+<lastBuildDate>${rfc822ET(Date.parse(buildTime) || 0)}</lastBuildDate>
 <atom:link href="${esc(siteUrl)}/feed.xml" rel="self" type="application/rss+xml"/>
 ${items.join('\n')}
 </channel>

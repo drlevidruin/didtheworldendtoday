@@ -56,6 +56,7 @@ export function social({ title, description, canonical, image }) {
     `<meta property="og:image:height" content="630">`,
     `<meta property="og:image:alt" content="${esc(IMAGE_ALT)}">`,
     `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:site" content="${esc(CREDIT_HANDLE)}">`,
     `<meta name="twitter:title" content="${esc(title)}">`,
     `<meta name="twitter:description" content="${esc(description)}">`,
     `<meta name="twitter:image" content="${esc(image)}">`,

@@ -32,11 +32,11 @@ Set up Pages first. In the repository's Settings, open Pages and set Source to *
 
 A category fires when 3 or more different publishers have a headline in it within 24 hours, or when its instrument trips. Each fired category is worth 6 points. The floor is 11, because there is always something. The cap is 99, because it is never 100. Instruments add points on top: an FAA ground stop, an asteroid inside 1 lunar distance, a strong geomagnetic storm, a big quake, a big status page in major outage. The exact numbers live in `DOOM` in `scripts/config.mjs` and are printed on the About page, which reads them from the same place.
 
-Today's score and stories are the last 24 hours, and each run saves that view as today's file in `data/days/`. When the Eastern date changes, that day's last file is its final version. It is never rewritten, so the Almanac scores never move, and "yesterday" always means yesterday's final score. Every date on the site is an Eastern date.
+Today's score and stories are the last 24 hours, and each run saves that view as today's file in `data/days/`. When the Eastern date changes, that day's last file is its final version. It is never rewritten, so the Almanac scores never move, and "yesterday" always means yesterday's final score. Every date and time on the site is Eastern: a page says `Updated 6:12 AM ET`, and the feed and the sitemap use Eastern time too.
 
 ### The daily edition
 
-Each day has an edition in `data/editions/YYYY-MM-DD.json`: a short headline that ends in "Still here." and 4 to 6 lines, one per near miss, closest call first. A story shows up once. If an earlier day's edition already told it, it never appears in a later edition or in a later day's plain headlines.
+Each day has an edition in `data/editions/YYYY-MM-DD.json`: a short headline that ends in "Still here." and 4 to 6 lines, one per near miss, ranked from most world-ending to least, so line 1 is the closest call. The order of the lines is the rank; there is no separate best story. A story shows up once. If an earlier day's edition already told it, it never appears in a later edition or in a later day's plain headlines.
 
 The editor (`npm run edit`, `scripts/editor.mjs`) writes today's edition by sending the day's headlines to the Claude API. It calls the API at most 12 times a day, no more than once every 2 hours, and only when the stories have changed since the last call. It does nothing when quiet mode is on, and it never replaces an edition written by hand. It never fails a run: if the key is missing, the call fails, or the answer breaks a rule, it logs one line and the edition already on file stays.
 
@@ -67,7 +67,7 @@ To turn it on by hand, open `quiet.json` in the GitHub app, change `false` to `t
 
 Only an explicit `false` turns quiet mode off. If `quiet.json` is unreadable (a stray comma from a phone, say), or the `quiet` setting is missing, misspelled, empty, or anything other than `true` or `false`, the site goes quiet and the run logs a warning that says why. It never guesses the other way. A missing file counts as off.
 
-It also turns on by itself when 3 or more of the top 30 Google News headlines are about a mass-casualty event, or name a toll such as "12 dead", and then stays on for at least 6 hours. Separately, any story about a big quake, a flood, a fire or a storm that could hurt people gets a quiet card with no joke. When people are likely hurt it also links to the Red Cross (the international Red Cross and Red Crescent for a quake abroad); a quake that is only big gets the caption alone.
+It also turns on by itself when 3 or more of the top 30 Google News headlines are about a mass-casualty event, or name a toll such as "12 dead", and then stays on for at least 6 hours. Separately, any story about a big quake, a flood, a fire or a storm that could hurt people gets a quiet card with no joke. The card also links to a charity, but only when something says people were hurt: a headline that reports harm to people or homes (damage, destroyed, homes, evacuated, displaced, injured, dead, killed, missing), or a USGS quake with a PAGER rating of yellow, orange or red or a tsunami flag. The link goes to the Red Cross for a place in the United States and to the international Red Cross and Red Crescent for a place in another country. A state or city names a US place; a bare "US" counts only when no other place is named; a region that other countries share (the Midwest, the Gulf Coast, the Northeast) names nothing, so a headline with only that gets no link. A warning, a forecast, a headline that says nobody was hurt (no damage, no injuries), an evacuation that has ended, or a quake that is only big gets the caption alone.
 
 In quiet mode every day shows plain headlines and no jokes, and the editor stays off.
 
@@ -108,7 +108,7 @@ At the registrar, point the domain at GitHub Pages with these records:
 - `scripts/lib/editions.mjs`: the one check for editions, the plain-headline fallback, and the used-ids rule
 - `scripts/build.mjs` and `scripts/templates/`: the site builder (`npm run build`)
 - `scripts/serve.mjs`: the local server (`npm run serve`)
-- `scripts/config.mjs`: every query, keyword and number in one place
+- `scripts/config.mjs`: every query, keyword and number in one place, including the news sites we never publish (`EXCLUDE_SOURCES`) and one-off headlines to hide (`HIDE_TITLES`)
 - `assets/`: the page script and the fonts
 - `data/`: what the pipeline and the editor save, committed by the bot
 - `test/`: the offline tests

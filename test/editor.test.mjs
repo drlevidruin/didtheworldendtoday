@@ -100,7 +100,6 @@ const answer = (body, extra = {}) => ({
 const GOOD = {
   date: DATE,
   headline: 'Planes late. Banks down. Servers back. Still here.',
-  best: 's03',
   items: [
     { emoji: '✈️', line: 'United systems went down for an hour and departures were delayed.', ids: ['s01'] },
     { emoji: '\u{1F3E6}', line: 'Chase online banking was down for hours on Monday.', ids: ['s02'] },
@@ -340,7 +339,9 @@ test('editor: the schema lists every key, allows nothing extra, and uses no keyw
     assert.deepEqual([...o.required].sort(), Object.keys(o.properties).sort(), 'every key is required');
     assert.equal(o.additionalProperties, false);
   }
-  assert.deepEqual(Object.keys(EDITION_SCHEMA.properties).sort(), ['best', 'date', 'headline', 'items']);
+  assert.deepEqual(Object.keys(EDITION_SCHEMA.properties).sort(), ['date', 'headline', 'items']);
+  assert.deepEqual([...EDITION_SCHEMA.required].sort(), ['date', 'headline', 'items']);
+  assert.ok(!('best' in EDITION_SCHEMA.properties), 'the order of the items is the rank, so there is no best id to ask for');
   assert.deepEqual(Object.keys(EDITION_SCHEMA.properties.items.items.properties).sort(), ['emoji', 'ids', 'line']);
 });
 
@@ -393,8 +394,10 @@ test('editor: a good answer is written as today\'s edition, with the lead story\
   assert.equal(e.headline, GOOD.headline);
   const lead = e.items[0];
   assert.deepEqual(Object.keys(lead), ['emoji', 'line', 'ids', 'best', 'quiet', 'cat', 'title', 'url', 'source', 'outlets']);
-  assert.deepEqual([lead.cat, lead.title, lead.url, lead.source, lead.outlets], ['internet', 'Cloudflare outage takes down thousands of websites', 'https://pub.example/s03', 'Pub A', 7], 'copied from the lead story, s03');
-  assert.deepEqual(e.items[0].ids, ['s03', 's07']);
+  assert.deepEqual([lead.cat, lead.title, lead.url, lead.source, lead.outlets], ['flights', 'United Airlines system outage delays departing flights', 'https://pub.example/s01', 'Pub A', 12], 'copied from the lead story, s01');
+  assert.deepEqual(e.items[0].ids, ['s01']);
+  assert.deepEqual(e.items[2].ids, ['s03', 's07'], 'an item keeps all of its ids');
+  assert.deepEqual(Object.keys(e.items[2]), ['emoji', 'line', 'ids', 'quiet', 'cat', 'title', 'url', 'source', 'outlets'], 'only the first item is marked best');
   assert.ok(!JSON.stringify(e).includes('claude') && !JSON.stringify(e).includes('opus'), 'no model name in the file');
   assert.ok(!s.read('data/editions/2026-11-17.json').includes(KEY));
   // it passes the same check the build runs
@@ -407,21 +410,41 @@ test('editor: a good answer is written as today\'s edition, with the lead story\
   assert.match(stateOf(s).lastIdsHash, /^[0-9a-f]{16}$/);
 });
 
-test('editor: the closest call goes first, and the others keep their order', async () => {
+test('editor: the order of the items is the rank: item 1 is the closest call and nothing is moved', async () => {
   const s = setup();
-  const client = fakeClient(answer({ ...GOOD, best: 's05' }));
+  const client = fakeClient(answer(GOOD));
   await run(s, client);
   const e = readJson(editionPath(s));
-  assert.deepEqual(e.items.map((i) => i.ids[0]), ['s05', 's01', 's02', 's03', 's04']);
-  assert.deepEqual(e.items.map((i) => Boolean(i.best)), [true, false, false, false, false]);
-  // a best id that is the lead of a later item, or one of its other ids, still moves that item
-  const t = setup();
-  await run(t, fakeClient(answer({ ...GOOD, best: 's07' })));
-  assert.deepEqual(readJson(editionPath(t)).items.map((i) => i.ids[0]), ['s03', 's01', 's02', 's04', 's05']);
-  // an unknown best changes nothing
-  const u = setup();
-  await run(u, fakeClient(answer({ ...GOOD, best: 'nope' })));
-  assert.deepEqual(readJson(editionPath(u)).items.map((i) => i.ids[0]), ['s01', 's02', 's03', 's04', 's05']);
+  assert.deepEqual(e.items.map((i) => i.ids[0]), ['s01', 's02', 's03', 's04', 's05']);
+  assert.deepEqual(e.items.map((i) => Boolean(i.best)), [true, false, false, false, false], 'the first item is the best one');
+  // the reverse order is kept just as it is: the editor's order is the rank
+  const back = setup();
+  await run(back, fakeClient(answer(withItems([...GOOD.items].reverse()))));
+  assert.deepEqual(readJson(editionPath(back)).items.map((i) => i.ids[0]), ['s05', 's04', 's03', 's02', 's01']);
+  // an answer that still carries a "best" id from the old habit moves nothing
+  for (const best of ['s05', 's07', 'nope']) {
+    const t = setup();
+    await run(t, fakeClient(answer({ ...GOOD, best })));
+    assert.deepEqual(readJson(editionPath(t)).items.map((i) => i.ids[0]), ['s01', 's02', 's03', 's04', 's05'], `best ${best} changes nothing`);
+  }
+});
+
+test('editor: the prompt asks for a ranking from most world-ending to least, and no longer for a best id', () => {
+  const p = EDITOR_SYSTEM_PROMPT;
+  assert.match(p, /2\. Pick 4 to 6 events \(3 on a quiet day\)\. Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics\.\n/);
+  assert.match(
+    p,
+    /3\. Rank the events from most world-ending to least and list them in that order, so item 1 is the closest call\. Picture each one at a bigger scale, then weigh how many people it would reach, how much of the world, how fragile the system looked, and how close it came\. Outlet counts don't decide the rank\. A serious story is ranked by the same test, never put on top just for being serious, and keeps its plain line\./,
+  );
+  assert.match(p, /\n4\. line: what happened, in 25 words or fewer\./);
+  assert.match(p, /\n5\. headline: the whole day in 12 words or fewer, fragments are fine, built only from your items, ending with "Still here\." Start it with item 1\.\n/);
+  assert.ok(!/\bbest:/.test(p) && !/the id of the closest call/.test(p), 'no best step');
+  assert.ok(!/the closest call first: bigger scale, more outlets/.test(p), 'outlet counts no longer decide');
+  assert.match(p, /- Clock times are Eastern, written like 2:59 AM ET\.\n/);
+  assert.match(p, /- An Nvidia-led sell-off pushed the Nasdaq into a correction, which is Wall Street for a big drop\.\n/);
+  assert.ok(!/Line went down\. It usually comes back\./.test(p), 'the old Nasdaq example is gone');
+  assert.match(p, /A headline in the right voice: "Microsoft found its bug\. Banks down\. Goats loose\. Still here\."\n/);
+  assert.ok(!/[\u2013\u2014]/.test(p), 'no em or en dash in what the editor is told');
 });
 
 test('editor: ids that are not stories it sent are dropped, and an item left with none is dropped', async () => {
@@ -435,7 +458,7 @@ test('editor: ids that are not stories it sent are dropped, and an item left wit
   const r = await run(s, fakeClient(answer(withItems(items))));
   assert.equal(r.status, 'written');
   const e = readJson(editionPath(s));
-  assert.deepEqual(e.items.map((i) => i.ids), [['s03', 's07'], ['s01'], ['s02'], ['s08'], ['s09']], 'the closest call first, unknown ids gone, the invented item gone');
+  assert.deepEqual(e.items.map((i) => i.ids), [['s01'], ['s02'], ['s03', 's07'], ['s08'], ['s09']], 'in the order the editor listed them, unknown ids gone, the invented item gone');
   assert.ok(!JSON.stringify(e).includes('made-up'));
 });
 
@@ -468,7 +491,7 @@ test('editor: a line with a long dash is dropped, and so is a line on an exclude
   const text = JSON.stringify(e);
   assert.ok(!text.includes(EM), 'no long dash in the file');
   assert.ok(!text.includes('Congress') && !text.includes('gunman'), 'no excluded topic in the file');
-  assert.deepEqual(e.items.map((i) => i.ids[0]), ['s03', 's01', 's02', 's04', 's05']);
+  assert.deepEqual(e.items.map((i) => i.ids[0]), ['s01', 's02', 's03', 's04', 's05']);
 });
 
 test('editor: fewer than 3 usable items keeps the old edition exactly as it was', async () => {
@@ -526,7 +549,7 @@ test('editor: a refusal, a cut-off answer or no answer keeps the old edition, an
 });
 
 test('editor: an answer that is not JSON, or not an edition, keeps the old edition', async () => {
-  const bad = ['{ not json', '', 'Here is the edition: {}', '[]', '"text"', '42', 'null', '{"items": 5}', '{"headline": "x"}', '{"date":"2026-11-17","headline":"Still here.","best":"s01"}'];
+  const bad = ['{ not json', '', 'Here is the edition: {}', '[]', '"text"', '42', 'null', '{"items": 5}', '{"headline": "x"}', '{"date":"2026-11-17","headline":"Still here."}'];
   for (const text of bad) {
     const s = setup({ editions: { [DATE]: OLD } });
     const before = s.read(`data/editions/${DATE}.json`);
@@ -635,7 +658,7 @@ test('editor: an edition written by hand for today is never replaced: it says so
   assert.ok(!JSON.stringify(e).includes('Old headline'));
   // and tomorrow is a new day: yesterday's hand edition does not stand in the way
   const tomorrow = setup({ editions: { [DATE]: HAND } });
-  const fresh = { ...GOOD, date: '2026-11-18', best: 's04', items: ['s04', 's05', 's06', 's07'].map((id, i) => ({ emoji: '\u{1F4C9}', line: `A new line number ${i + 1} about ${id}.`, ids: [id] })) };
+  const fresh = { ...GOOD, date: '2026-11-18', items: ['s04', 's05', 's06', 's07'].map((id, i) => ({ emoji: '\u{1F4C9}', line: `A new line number ${i + 1} about ${id}.`, ids: [id] })) };
   const c3 = fakeClient(answer(fresh));
   fs.writeFileSync(path.join(tomorrow.dataDir, 'days', '2026-11-18.json'), JSON.stringify({ date: '2026-11-18', score: 55, stories: dayStories() }));
   fs.writeFileSync(path.join(tomorrow.root, 'data', 'latest.json'), JSON.stringify({ schema: 1, etDate: '2026-11-18', score: 55, quiet: { quiet: false }, stories: dayStories() }));

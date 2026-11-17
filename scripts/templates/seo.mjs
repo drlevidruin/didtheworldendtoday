@@ -1,14 +1,16 @@
 // robots.txt, sitemap.xml and the web app manifest.
 import { SITE_NAME, TAGLINE } from './copy.mjs';
 import { esc } from './esc.mjs';
+import { etDate } from '../lib/time.mjs';
 
 export function robotsTxt(siteUrl) {
   return `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`;
 }
 
-// dates: every stored ET day; lastmod: ISO time of the newest build
+// dates: every stored ET day; lastmod: ISO time of the newest build, written as its Eastern date
 export function sitemapXml({ siteUrl, dates, lastmod }) {
-  const day = String(lastmod || '').slice(0, 10);
+  const built = Date.parse(lastmod);
+  const day = Number.isFinite(built) ? etDate(built) : '';
   const urls = [
     { loc: `${siteUrl}/`, mod: day },
     { loc: `${siteUrl}/almanac/`, mod: day },

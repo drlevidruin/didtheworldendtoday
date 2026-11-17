@@ -9,17 +9,21 @@
   var MIN = 60000;
   var HOUR = 3600000;
 
-  // Same wording and thresholds as the server side, so nothing changes when
-  // this script takes over from the page the server wrote.
-  function ago(ms) {
-    var sec = Math.max(0, Math.floor((Number(ms) || 0) / 1000));
-    if (sec < 60) return 'just now';
-    var min = Math.floor(sec / 60);
-    if (min < 60) return min + ' min ago';
-    var hours = Math.floor(min / 60);
-    if (hours < 24) return hours === 1 ? '1 hour ago' : hours + ' hours ago';
-    var days = Math.floor(hours / 24);
-    return days === 1 ? '1 day ago' : days + ' days ago';
+  // Every clock time on the site is Eastern, written like "6:12 AM ET". This is built
+  // the same way the server builds it (scripts/templates/copy.mjs), from the hour and
+  // minute alone, so the page the server wrote and this script always say the same thing.
+  var ET_CLOCK = null;
+  function etClock(ms) {
+    if (ms == null || ms === '' || typeof ms === 'boolean' || !Number.isFinite(Number(ms))) return '';
+    var at = new Date(Number(ms));
+    if (!Number.isFinite(at.getTime())) return '';
+    if (!ET_CLOCK) ET_CLOCK = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit', hourCycle: 'h23' });
+    var part = {};
+    ET_CLOCK.formatToParts(at).forEach(function (p) {
+      part[p.type] = p.value;
+    });
+    var hour = Number(part.hour) % 24;
+    return (hour % 12 || 12) + ':' + part.minute + ' ' + (hour < 12 ? 'AM' : 'PM') + ' ET';
   }
 
   function etDay(ms) {
@@ -103,7 +107,7 @@
 
   if (typeof module === 'object' && module && module.exports) {
     module.exports = {
-      ago: ago,
+      etClock: etClock,
       etDay: etDay,
       addDay: addDay,
       streakNext: streakNext,
@@ -142,18 +146,14 @@
     });
   }
 
+  // The line that says the data is old. The time in the hero is a clock time, so it never
+  // needs to tick; only this line can appear while the page is open.
   function tick() {
-    var now = Date.now();
-    $$('.ago[data-since]').forEach(function (el) {
-      var at = Date.parse(el.getAttribute('data-since'));
-      if (Number.isFinite(at)) el.textContent = 'checked ' + ago(now - at);
-    });
     var stale = $('#stale');
     var seen = Date.parse(html.getAttribute('data-success'));
     if (stale && LIVE && Number.isFinite(seen)) {
-      var late = now - seen;
-      if (late > 2 * HOUR) {
-        stale.textContent = (stale.getAttribute('data-template') || '').replace('{n}', String(Math.floor(late / HOUR)));
+      if (Date.now() - seen > 2 * HOUR) {
+        stale.textContent = (stale.getAttribute('data-template') || '').replace('{time}', etClock(seen));
         stale.hidden = false;
       } else {
         stale.hidden = true;

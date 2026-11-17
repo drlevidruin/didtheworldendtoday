@@ -10,11 +10,13 @@ import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
 import {
   STILL_HERE,
   badText,
+  dedupeById,
   editionFile,
   fallbackRows,
   idsHash,
   listEditionDates,
   listingOrder,
+  onePerId,
   publishableStories,
   quietLinkFor,
   readEditions,
@@ -472,6 +474,50 @@ test('listing order: the same stories come out in the same order however they ar
   for (const run of [a.slice(0, 12)]) for (const cat of cats) assert.ok(run.filter((id) => stories.find((s) => s.id === id).cat === cat).length <= cfg.variety.firstMax, `${cat} in the first 12`);
 });
 
+test('publishable stories: a story from a press-release wire is not published, whatever its headline says', () => {
+  const stories = [
+    story('wire', { title: 'Cloudflare outage knocks thousands of sites offline for an hour', source: 'EIN Presswire' }),
+    story('wire2', { title: 'Cloudflare outage knocks thousands of sites offline for an hour', source: 'ein-presswire' }),
+    story('news', { title: 'Cloudflare outage knocks thousands of sites offline for an hour', source: 'The Verge' }),
+    story('close', { title: 'Cloudflare outage knocks thousands of sites offline for an hour', source: 'Presswire Daily Review' }),
+  ];
+  assert.deepEqual(publishableStories(excluder, stories).map((s) => s.id), ['news', 'close']);
+  // the same check runs on an edition item, by the source it carries
+  const wire = validateEdition(edition(TODAY, ['a', 'b', 'c']), ctx());
+  assert.equal(wire.ok, true);
+  const raw = edition(TODAY, ['a', 'b', 'c', 'd']);
+  raw.items[3].source = 'EIN Presswire';
+  const checked = validateEdition(raw, ctx());
+  assert.equal(checked.edition.items.length, 3);
+  assert.deepEqual(reasons(checked), ['excluded: press release']);
+});
+
+test('one id, one story: the first story of an id in the listing order stays, and the page never lists an id twice', () => {
+  const a = story('dup', { title: 'United Airlines ground stop delays flights across the country', score: 90, publishedAt: '2026-11-17T10:00:00.000Z' });
+  const b = story('dup', { title: 'Fox News reports dozens of flights canceled as FAA halts departures', score: 40, publishedAt: '2026-11-17T11:00:00.000Z' });
+  const c = story('solo', { title: 'Chase online banking was down for hours on Monday afternoon', cat: 'hacks', score: 60 });
+  // dedupeById keeps the first of an id, in the order given, and never changes a story
+  assert.deepEqual(dedupeById([b, c, a]).map((s) => s.title), [b.title, c.title]);
+  assert.deepEqual(dedupeById([a, b, c]).map((s) => s.title), [a.title, c.title]);
+  assert.equal(dedupeById([a, b, c])[0], a, 'the story itself, not a copy');
+  assert.deepEqual(dedupeById([a, null, 'text', 7, [], c]).map((s) => s.id), ['dup', 'solo']);
+  assert.deepEqual(dedupeById(undefined), []);
+  // the listing order is the same however the pair arrives: the higher ranked story keeps the id
+  for (const order of [[a, b, c], [b, a, c], [c, b, a]]) {
+    const listed = listingOrder(order, cfg.variety);
+    assert.deepEqual(listed.map((s) => s.id).sort(), ['dup', 'solo'], 'each id once');
+    assert.equal(listed.find((s) => s.id === 'dup').title, a.title, 'the higher ranked story of the pair stays');
+  }
+  // onePerId leaves the stories in their own order, only without the second one of an id
+  assert.deepEqual(onePerId([b, c, a], cfg.variety).map((s) => s.title), [c.title, a.title]);
+  assert.deepEqual(onePerId([a, b, c], cfg.variety).map((s) => s.title), [a.title, c.title]);
+  assert.deepEqual(onePerId([c], cfg.variety), [c]);
+  assert.deepEqual(onePerId([], cfg.variety), []);
+  // a plain day built from the listing order shows that story once
+  const rows = fallbackRows({ stories: listingOrder([a, b, c], cfg.variety), emojiByCat });
+  assert.deepEqual(rows.map((r) => r.ids[0]).sort(), ['dup', 'solo']);
+});
+
 test('ids hash: the same set in any order is the same, a different set is not', () => {
   assert.match(idsHash(['a', 'b', 'c']), /^[0-9a-f]{16}$/);
   assert.equal(idsHash(['a', 'b', 'c']), idsHash(['c', 'a', 'b']));
@@ -512,14 +558,14 @@ test('launch editions: both pass the one check exactly as written, and the 17th 
   assert.deepEqual(sixteenth.dropped, [], 'nothing was dropped');
   assert.equal(sixteenth.edition.items.length, 6);
   assert.equal(sixteenth.edition.by, 'hand');
-  assert.equal(sixteenth.edition.headline, 'Banks down. United down. Microsoft found its bug. Still here.');
+  assert.equal(sixteenth.edition.headline, 'Microsoft found its bug. Banks down. Goats loose. Still here.');
   const used = new Set(sixteenth.edition.items.flatMap((i) => i.ids));
   const seventeenth = validateEdition(launch('2026-11-17'), ctx({ date: '2026-11-17', used }));
   assert.equal(seventeenth.ok, true, seventeenth.reason);
   assert.deepEqual(seventeenth.dropped, [], 'nothing was dropped, so no id of the 17th was told on the 16th');
   assert.equal(seventeenth.edition.items.length, 6);
   assert.equal(seventeenth.edition.by, 'hand');
-  assert.equal(seventeenth.edition.headline, 'Asteroid missed. Banks back. Bags still lost. Still here.');
+  assert.equal(seventeenth.edition.headline, 'Asteroid missed. Banks back. Wedding moved to the airport. Still here.');
   for (const e of [sixteenth.edition, seventeenth.edition]) {
     assert.deepEqual(e.items.map((i) => Boolean(i.best)), [true, false, false, false, false, false], 'the closest call is first');
     for (const it of e.items) {

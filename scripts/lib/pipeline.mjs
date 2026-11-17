@@ -38,7 +38,7 @@ export function createGatekeeper(cfg) {
     const q = quality(raw.kind, title, [raw.source]);
     if (q) return { drop: q.reason, detail: q.detail };
 
-    const hit = excluder.test(title, { signal: raw.kind === 'signal' });
+    const hit = excluder.test(title, { signal: raw.kind === 'signal', source: raw.source });
     if (hit) return { drop: `excluded:${hit.family}`, detail: hit.term };
 
     if (raw.kind === 'signal') {
@@ -55,7 +55,7 @@ export function createGatekeeper(cfg) {
   function recheck(story) {
     const q = quality(story.kind, story.title, [story.source]);
     if (q) return { drop: q.reason, detail: q.detail };
-    const hit = excluder.test(story.title, { signal: story.kind === 'signal' });
+    const hit = excluder.test(story.title, { signal: story.kind === 'signal', source: story.source });
     if (hit) return { drop: `excluded:${hit.family}`, detail: hit.term };
     if (story.kind === 'signal') return { keep: story };
     const cat = gate.pick(story.title, story.cat);

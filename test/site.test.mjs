@@ -8,6 +8,7 @@ import http from 'node:http';
 import path from 'node:path';
 import vm from 'node:vm';
 import { XMLParser, XMLValidator } from 'fast-xml-parser';
+import resvg from '@resvg/resvg-js';
 import { config } from '../scripts/config.mjs';
 import { build, publicCopy } from '../scripts/build.mjs';
 import { runUpdate } from '../scripts/update.mjs';
@@ -15,12 +16,13 @@ import { createServer, resolveStatic, SUBFOLDER } from '../scripts/serve.mjs';
 import * as copy from '../scripts/templates/copy.mjs';
 import { almanacRows, headline as headlineRow, headlines as headlineRows, row as dayRow, rows as dayRows } from '../scripts/templates/parts.mjs';
 import { CSP } from '../scripts/templates/layout.mjs';
+import { feedXml } from '../scripts/templates/feed.mjs';
 import { esc, num, url } from '../scripts/templates/esc.mjs';
 import { capFirst, joinNames } from '../scripts/lib/text.mjs';
-import { isUsPlace, quietCard } from '../scripts/lib/quietcards.mjs';
+import { headlineLink, isUsPlace, quietCard } from '../scripts/lib/quietcards.mjs';
 import { validateEdition } from '../scripts/lib/editions.mjs';
 import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
-import { fitHeadline, fontFileIn, ogSvg, renderPng } from '../scripts/templates/graphics.mjs';
+import { fitHeadline, fitQuestion, fontFileIn, ogSvg, questionText, renderPng } from '../scripts/templates/graphics.mjs';
 import * as usgs from '../scripts/sources/usgs.mjs';
 import * as faa from '../scripts/sources/faa.mjs';
 import * as jpl from '../scripts/sources/jpl.mjs';
@@ -170,7 +172,7 @@ function pngSize(file) {
 const TOKENS = ['undefined', 'NaN', '[object'];
 // Words and hooks of features that were cut. They are ours, so no page may say them.
 const CUT_WORDS = ['Doom Bingo', 'Vital signs', 'The receipts', 'Check again', 'Closest call today', 'Your first check'];
-const CUT_HOOKS = ['id="bingo"', 'id="vitals"', 'id="receipts"', 'id="lead"', 'id="almanac"', 'id="streak"', 'class="card', 'class="cell', 'class="btns"', 'class="chips"', 'class="chip'];
+const CUT_HOOKS = ['id="bingo"', 'id="vitals"', 'id="receipts"', 'id="lead"', 'id="almanac"', 'id="streak"', 'class="cell', 'class="btns"', 'class="chips"', 'class="chip'];
 const OWN_FILES = new Set(['about/index.html', '404.html', 'assets/app.js', 'robots.txt', 'site.webmanifest', 'favicon.svg']);
 const xmlEsc = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 
@@ -286,6 +288,7 @@ function auditSite(base, { label = 'site', needDay = true, live = null } = {}) {
     assert.ok(/<title>[^<]+<\/title>/.test(raw), `${where} has a title`);
     for (const tag of ['og:title', 'og:description', 'og:image', 'og:url']) assert.ok(raw.includes(`property="${tag}"`), `${where} has ${tag}`);
     assert.ok(raw.includes('name="twitter:card" content="summary_large_image"') && raw.includes('name="twitter:image"'), `${where} has the twitter card`);
+    assert.ok(raw.includes('<meta name="twitter:site" content="@thelpdrive">'), `${where} names the account on the twitter card`);
     const image = raw.match(/property="og:image" content="([^"]+)"/)[1];
     assert.ok(image.startsWith(`${SITE}/og/`) && image.endsWith('.png'), `${where} points the share image at this site`);
     assert.ok(files.has(image.slice(SITE.length + 1)), `${where}: ${image} exists`);
@@ -607,14 +610,22 @@ function rowFacts(html) {
     best: /^<li class="row[^"]*\bbest\b/.test(html),
     quiet: /^<li class="row[^"]*\bquiet\b/.test(html),
     tag: get(/<p class="tag">([^<]*)<\/p>/),
-    emoji: get(/<span class="em" aria-hidden="true">([^<]*)<\/span>/),
-    text: get(/<p class="txt">([^<]*)<\/p>/),
-    cap: get(/<p class="cap">([\s\S]*?)<\/p>/),
-    href: get(/<p class="read"><a href="([^"]*)"/),
-    read: get(/<p class="read">(?:<a [^>]*>)?([^<]*)(?:<\/a>)?<\/p>/),
+    rank: get(/<span class="rn">([^<]*)<\/span>/),
+    emoji: get(/<span class="em">([^<]*)<\/span>/),
+    text: get(/<span class="txt">([^<]*)<\/span>/),
+    // the source is two lines: the name, and under it how many news sites told the story
+    name: get(/<span class="sn">([^<]*)<\/span>/),
+    count: get(/<span class="sc">([^<]*)<\/span>/),
+    cta: get(/<span class="cta">([^<]*)<\/span>/),
+    href: get(/<a class="card" href="([^"]*)"/),
+    cap: get(/<span class="cap">([\s\S]*?)<\/span>/),
+    help: get(/<a class="help" href="([^"]*)"/),
+    helpText: get(/<a class="help"[^>]*>([^<]*)<\/a>/),
   };
 }
 const factsIn = (html) => rowsOf(html).map(rowFacts);
+// every caption on a page: a row's is inside its card, a headline's is a line of its own under it
+const capsIn = (html) => [...html.matchAll(/<(?:p|span) class="cap">([^<]*)/g)].map((m) => m[1]);
 const headlineOf = (html) => unesc((heroOf(html).match(/<p class="hl [^"]*">([^<]*)<\/p>/) || [])[1] || '');
 const lineCount = (html) => (html.match(/<li class="row/g) || []).length;
 const wordOf = (n) => (n === 1 ? 'headline' : 'headlines');
@@ -642,7 +653,7 @@ test('the homepage reads top to bottom: the question, ALMOST., the headline, the
     ['plain headlines', dist, copy.subline(latest.score)],
   ]) {
     const home = read('index.html', base);
-    const marks = ['<main', 'class="hero"', 'class="q"', 'id="verdict"', 'class="hl ', 'class="doom"', 'class="meter"', 'class="go"', 'class="sh"', 'id="today"', '<span class="hot">TODAY</span>', '<span>YESTERDAY</span>', 'class="end"', '<footer>'].map((m) => home.indexOf(m));
+    const marks = ['<main', 'class="hero"', 'class="q"', 'id="verdict"', 'class="hl ', 'class="doom"', 'class="meter"', 'class="scale"', 'class="go"', 'class="sh"', 'class="mast"', 'id="today"', '<span class="hot">TODAY</span>', '<span>YESTERDAY</span>', 'class="end"', '<footer>'].map((m) => home.indexOf(m));
     assert.ok(marks.every((n) => n > 0), `${label}: ${marks}`);
     assert.deepEqual(marks, [...marks].sort((a, b) => a - b), `${label}: in this order`);
     const hero = heroOf(home);
@@ -653,9 +664,14 @@ test('the homepage reads top to bottom: the question, ALMOST., the headline, the
     const doom = hero.match(/<p class="doom">[\s\S]*?<\/p>/)[0];
     assert.match(doom, /<span class="when">Mon, Nov 16<\/span>/, `${label}: the date`);
     assert.match(doom, new RegExp(`Doom Score <b class="n">${latest.score}</b> of 99`), `${label}: the score`);
-    assert.match(doom, /<span class="ago" data-since="[^"]+">checked (?:just now|\d+ min ago)<\/span>/, `${label}: when it was checked`);
+    assert.match(doom, /<span class="upd">Updated 5:30 PM ET<\/span>/, `${label}: when it was updated, in Eastern time, as a clock time`);
+    assert.ok(!doom.includes('data-since') && !/ago|checked/.test(doom), `${label}: no ticking relative time`);
     assert.ok(!/[↑↓→]/.test(doom), `${label}: no arrow in the Doom line`);
     assert.ok(hero.includes(`<progress class="meter" max="99" value="${latest.score}"`), `${label}: the meter`);
+    has(hero, '<p class="scale">0 is a quiet day. 99 is the end.</p>');
+    assert.ok(hero.indexOf('class="meter"') < hero.indexOf('class="scale"') && hero.indexOf('class="scale"') < hero.indexOf('class="go"'), `${label}: the scale sits under the meter`);
+    has(hero, '<p class="mast">didtheworldendtoday.com · @thelpdrive</p>');
+    assert.ok(hero.indexOf('class="mast"') > hero.indexOf('class="sh"'), `${label}: the masthead line is the last thing in the hero`);
     assert.ok(!hero.includes(copy.TAGLINE), `${label}: the tagline is for the footer`);
     // one obvious button: a link to today, and "Share today" is plain text under it
     assert.equal((home.match(/class="go"/g) || []).length, 1, `${label}: one big button`);
@@ -668,7 +684,7 @@ test('the homepage reads top to bottom: the question, ALMOST., the headline, the
     assert.ok(home.indexOf('<p class="tagline">') > home.indexOf('<footer>'), `${label}: the tagline is in the footer`);
     for (const line of copy.FOOTER_LINES) assert.ok(home.includes(line), `${label}: ${line}`);
     // the words themselves, not only whatever the constant says
-    for (const line of ['Checked every 15 minutes by a robot with low standards.', 'Headlines belong to their publishers. The dread is ours.', 'Satire. Not financial, medical, or end-of-the-world advice.']) has(home, `<p>${line}</p>`);
+    for (const line of ['Checked every 15 minutes by a robot with low standards.', 'Headlines belong to their publishers. The jokes are ours.', 'Satire. Not financial, medical, or end-of-the-world advice.']) has(home, `<p>${line}</p>`);
     has(home, '<a href="https://x.com/thelpdrive" target="_blank" rel="noopener">@thelpdrive</a>');
     for (const link of ['href="./about/">About</a>', 'href="./feed.xml">RSS</a>']) has(home, link);
   }
@@ -679,17 +695,24 @@ test('the homepage reads top to bottom: the question, ALMOST., the headline, the
 });
 
 test('today and yesterday are day blocks: a label, the rows, a way to the day, and a share button', () => {
-  for (const [label, base] of [['editions', edDist], ['plain headlines', dist]]) {
+  for (const [label, base, ranked] of [['editions', edDist, true], ['plain headlines', dist, false]]) {
     const [today, yesterday, ...more] = blocksOf(read('index.html', base));
     assert.equal(more.length, 0, `${label}: two days, two blocks`);
     // today
     assert.match(today, /^<section class="day" id="today" data-share-text=/);
     has(today, '<h2 class="dl"><span class="hot">TODAY</span><span> &middot; MONDAY, NOV 16</span></h2>');
+    if (ranked) {
+      has(today, '<p class="rank">Ranked from most world-ending to least.</p>');
+      assert.ok(today.indexOf('class="rank"') < today.indexOf('class="rows"'), `${label}: the rank note sits above the rows`);
+    } else {
+      assert.ok(!today.includes('class="rank"') && !today.includes('Ranked from'), `${label}: plain headlines are not ranked, so the page does not say they are`);
+    }
     assert.ok(!today.includes('class="dh"') && !today.includes('class="ds"'), `${label}: today's headline and score are already in the hero`);
     // yesterday
     assert.match(yesterday, /^<section class="day" data-share-text=/);
     has(yesterday, '<h2 class="dl"><span>YESTERDAY</span><span> &middot; SUNDAY, NOV 15</span></h2>');
     assert.ok(!yesterday.includes('id="today"'));
+    assert.ok(!yesterday.includes('class="rank"'), `${label}: only today's block says how its rows are ordered`);
     has(yesterday, '<p class="ds">Doom Score 11 of 99</p>');
     // each ends with the same share button
     for (const block of [today, yesterday]) {
@@ -703,6 +726,7 @@ test('today and yesterday are day blocks: a label, the rows, a way to the day, a
       assert.deepEqual(facts.map((f) => f.best), facts.map((_, i) => i === 0), `${label}: only the first row is best`);
       assert.deepEqual(facts.map((f) => f.tag).filter(Boolean), ['CLOSEST CALL'], `${label}: one tag`);
       assert.equal(facts[0].tag, 'CLOSEST CALL');
+      assert.deepEqual(facts.map((f) => f.rank), facts.map((_, i) => String(i + 1)), `${label}: the rank is the place in the list, 1 first`);
     }
   }
 });
@@ -718,9 +742,11 @@ test('an edition is what its day says: the headline, the lines in order, the emo
     assert.deepEqual(facts.map((f) => f.emoji), ed.items.map((i) => i.emoji));
     facts.forEach((f, i) => {
       assert.equal(f.href, ed.items[i].url, `${ed.date} row ${i}: its own story`);
-      assert.equal(f.read, copy.readText(ed.items[i].outlets, ed.items[i].source), `${ed.date} row ${i}: what the link says`);
+      const parts = copy.sourceParts(ed.items[i].outlets, ed.items[i].source);
+      assert.deepEqual([f.name, f.count], [parts.name || null, parts.count || null], `${ed.date} row ${i}: the news site, and how many carried it`);
+      assert.equal(f.cta, 'Read it →', `${ed.date} row ${i}: what the card says it does`);
     });
-    for (const m of block.matchAll(/<p class="read"><a ([^>]*)>/g)) assert.match(m[1], /target="_blank" rel="noopener"/);
+    for (const m of block.matchAll(/<a class="card" ([^>]*)>/g)) assert.match(m[1], /target="_blank" rel="noopener"/);
   }
   // the lines are ours: no joke is added, no headline is swapped in
   assert.ok(!today.includes(esc(AIRLINES.title)), "the edition's line stands in for the publisher's headline");
@@ -750,7 +776,7 @@ test('a day with no edition shows its plain headlines: up to five, two a categor
   has(yesterday, '<a class="plus" href="./day/2026-11-15/">Plus 1 more headline we read so you don&#39;t have to →</a>');
   assert.ok(home.includes(`<p class="dh">${copy.subline(11)}</p>`), "yesterday's headline is the ladder line for its score");
   // no joke anywhere: the only caption on the page is the plain line of a quiet story
-  const captions = [...home.matchAll(/<p class="cap">([^<]*)/g)].map((m) => m[1]);
+  const captions = capsIn(home);
   assert.ok(captions.length >= 1 && captions.every((c) => c.startsWith('No jokes on this one.')), `captions: ${captions}`);
 });
 
@@ -857,7 +883,7 @@ test('no page says chip, Doom Bingo, Vital signs, The receipts or Check again, a
       const raw = read(rel, base);
       for (const word of ['Doom Bingo', 'Vital signs', 'The receipts', 'Check again', 'Closest call today']) assert.ok(!raw.includes(word), `${label} ${rel}: ${word}`);
       assert.ok(!/\bchips?\b/i.test(raw), `${label} ${rel}: chip`);
-      for (const hook of ['id="bingo"', 'id="vitals"', 'id="receipts"', 'id="lead"', 'class="cell', 'class="card', 'class="chip', 'class="btns"']) assert.ok(!raw.includes(hook), `${label} ${rel}: ${hook}`);
+      for (const hook of ['id="bingo"', 'id="vitals"', 'id="receipts"', 'id="lead"', 'class="cell', 'class="chip', 'class="btns"']) assert.ok(!raw.includes(hook), `${label} ${rel}: ${hook}`);
     }
   }
   const code = read('assets/app.js');
@@ -873,14 +899,14 @@ test('the share text is the verdict, the day\'s headline, its emoji, the date an
     'Did the world end today? ALMOST.',
     ED16.headline,
     ED16.items.map((i) => i.emoji).join(''),
-    `Nov 16 · Doom ${latest.score}/99`,
+    `Mon, Nov 16 · Doom Score ${latest.score} of 99`,
     'didtheworldendtoday.com/day/2026-11-16/',
   ]);
   assert.deepEqual(attr(home, 'data-share-text').split('\n'), full.slice(0, -1), 'the share sheet gets the same text and takes the link on its own');
   assert.equal(attr(home, 'data-share-url'), `${SITE}/day/2026-11-16/`);
   const [today, yesterday] = blocksOf(home);
   assert.equal(attr(today, 'data-share-full'), attr(home, 'data-share-full'), 'today\'s block shares what the hero shares');
-  assert.deepEqual(attr(yesterday, 'data-share-full').split('\n'), ['Did the world end on Nov 15? ALMOST.', ED15.headline, ED15.items.map((i) => i.emoji).join(''), 'Nov 15 · Doom 11/99', 'didtheworldendtoday.com/day/2026-11-15/']);
+  assert.deepEqual(attr(yesterday, 'data-share-full').split('\n'), ['Did the world end on Nov 15? ALMOST.', ED15.headline, ED15.items.map((i) => i.emoji).join(''), 'Sun, Nov 15 · Doom Score 11 of 99', 'didtheworldendtoday.com/day/2026-11-15/']);
   assert.equal(attr(yesterday, 'data-share-url'), `${SITE}/day/2026-11-15/`);
   // a day page shares its own day
   assert.equal(attr(read('day/2026-11-15/index.html', edDist), 'data-share-full'), attr(yesterday, 'data-share-full'));
@@ -889,7 +915,7 @@ test('the share text is the verdict, the day\'s headline, its emoji, the date an
   assert.equal(plain.length, 5);
   assert.equal(plain[1], copy.subline(latest.score));
   assert.equal(plain[2], factsIn(blocksOf(read('index.html'))[0]).map((f) => f.emoji).join(''));
-  assert.equal(plain[3], `Nov 16 · Doom ${latest.score}/99`);
+  assert.equal(plain[3], `Mon, Nov 16 · Doom Score ${latest.score} of 99`, 'the weekday and the date, then the score out of 99');
   // nothing the page prints for a person differs from what a share carries
   assert.ok(!full.some((line) => /[↑↓→]/.test(line)), 'no arrow in a share of a normal day');
 });
@@ -899,21 +925,24 @@ test('shareText: today, a past day, no headline, no emoji, and the quiet text wi
   const base = { score: 71, change: 9, fired, categories: cfg.categories, host: 'didtheworldendtoday.com', headline: 'Planes stopped. Apps blinked. Still here.', emojis: ['✈️', '🖥️', '🌋'] };
   assert.equal(
     copy.shareText({ ...base, live: true, date: '2026-11-16' }),
-    ['Did the world end today? ALMOST.', 'Planes stopped. Apps blinked. Still here.', '✈️🖥️🌋', 'Nov 16 · Doom 71/99', 'didtheworldendtoday.com/day/2026-11-16/'].join('\n'),
+    ['Did the world end today? ALMOST.', 'Planes stopped. Apps blinked. Still here.', '✈️🖥️🌋', 'Mon, Nov 16 · Doom Score 71 of 99', 'didtheworldendtoday.com/day/2026-11-16/'].join('\n'),
   );
   const past = copy.shareText({ ...base, live: false, date: '2026-11-15', score: 30, change: -4 }).split('\n');
-  assert.deepEqual(past, ['Did the world end on Nov 15? ALMOST.', 'Planes stopped. Apps blinked. Still here.', '✈️🖥️🌋', 'Nov 15 · Doom 30/99', 'didtheworldendtoday.com/day/2026-11-15/']);
+  assert.deepEqual(past, ['Did the world end on Nov 15? ALMOST.', 'Planes stopped. Apps blinked. Still here.', '✈️🖥️🌋', 'Sun, Nov 15 · Doom Score 30 of 99', 'didtheworldendtoday.com/day/2026-11-15/']);
   assert.equal(copy.shareText({ ...base, live: true, date: '2026-11-16', withUrl: false }).split('\n').length, 4, 'no address, one line fewer');
   const bare = copy.shareText({ ...base, live: true, date: '2026-11-16', headline: '', emojis: [] }).split('\n');
-  assert.deepEqual(bare, ['Did the world end today? ALMOST.', copy.subline(71), 'Nov 16 · Doom 71/99', 'didtheworldendtoday.com/day/2026-11-16/'], 'the ladder line stands in for a headline, and no emoji means no emoji line');
-  for (const change of [0, null, undefined, NaN, 9, -9]) assert.ok(!copy.shareText({ ...base, live: true, date: '2026-11-16', change }).includes('Doom 71/99 '), `a normal day never shows an arrow (${change})`);
+  assert.deepEqual(bare, ['Did the world end today? ALMOST.', copy.subline(71), 'Mon, Nov 16 · Doom Score 71 of 99', 'didtheworldendtoday.com/day/2026-11-16/'], 'the ladder line stands in for a headline, and no emoji means no emoji line');
+  for (const change of [0, null, undefined, NaN, 9, -9]) assert.ok(!copy.shareText({ ...base, live: true, date: '2026-11-16', change }).includes('Doom Score 71 of 99 '), `a normal day never shows an arrow (${change})`);
   const quiet = copy.shareText({ ...base, live: true, date: '2026-11-16', quiet: true }).split('\n');
-  assert.deepEqual(quiet, ['Did the world end today? ALMOST.', 'Not a day for jokes. Back soon.', 'Nov 16 · Doom 71/99 ↑9', '✈️🏦⬛☄️', '⬛🌋📉⬛', '⚡⬛🌀⬛', 'didtheworldendtoday.com/day/2026-11-16/'], 'quiet mode shares the quiet line and the grid, not the headline or the emoji');
-  assert.equal(copy.shareText({ ...base, change: 0, live: true, date: '2026-11-16', quiet: true }).split('\n')[2], 'Nov 16 · Doom 71/99', 'no change, no arrow');
+  assert.deepEqual(quiet, ['Did the world end today? ALMOST.', 'Not a day for jokes. Back soon.', 'Mon, Nov 16 · Doom Score 71 of 99 ↑9', '✈️🏦⬛☄️', '⬛🌋📉⬛', '⚡⬛🌀⬛', 'didtheworldendtoday.com/day/2026-11-16/'], 'quiet mode shares the quiet line and the grid, not the headline or the emoji');
+  assert.equal(copy.shareText({ ...base, change: 0, live: true, date: '2026-11-16', quiet: true }).split('\n')[2], 'Mon, Nov 16 · Doom Score 71 of 99', 'no change, no arrow');
   for (const bad of [0, null, undefined, '', NaN, 'up']) assert.equal(copy.changeText(bad), '', String(bad));
   assert.equal(copy.changeText(9), '↑9');
   assert.equal(copy.changeText(-4), '↓4');
-  assert.equal(copy.shareText({ live: true, date: '2026-11-16', score: 'nope', categories: [], host: 'h' }).split('\n').at(-2), 'Nov 16 · Doom 0/99', 'a score that is not a number reads as 0');
+  assert.equal(copy.shareText({ live: true, date: '2026-11-16', score: 'nope', categories: [], host: 'h' }).split('\n').at(-2), 'Mon, Nov 16 · Doom Score 0 of 99', 'a score that is not a number reads as 0');
+  // the last line is the weekday, the date and the score out of the cap, and the cap is the one the page uses
+  assert.equal(copy.shareText({ ...base, live: true, date: '2026-11-17', score: 92 }).split('\n').at(-2), 'Tue, Nov 17 · Doom Score 92 of 99');
+  assert.equal(copy.shareText({ ...base, live: true, date: '2026-11-17', score: 92, cap: 50 }).split('\n').at(-2), 'Tue, Nov 17 · Doom Score 92 of 50');
 });
 
 test('the quiet page shares the quiet text, with a grid of twelve squares', () => {
@@ -922,7 +951,7 @@ test('the quiet page shares the quiet text, with a grid of twelve squares', () =
   const full = attr(read('index.html', buildAt(r).dist), 'data-share-full').split('\n');
   assert.equal(full.length, 7, 'verdict, quiet line, date and score, three grid rows, address');
   assert.equal(full[1], copy.QUIET_LINE);
-  assert.equal(full[2], `Nov 16 · Doom ${latest.score}/99 ↑${latest.change}`);
+  assert.equal(full[2], `Mon, Nov 16 · Doom Score ${latest.score} of 99 ↑${latest.change}`);
   const cells = full.slice(3, 6).map((row) => [...new Intl.Segmenter('en', { granularity: 'grapheme' }).segment(row)].length);
   assert.deepEqual(cells, [4, 4, 4]);
   assert.equal(full[6], 'didtheworldendtoday.com/day/2026-11-16/');
@@ -951,15 +980,48 @@ test('the share image carries the day\'s headline, in capitals, as big as fits i
   assert.equal((ogSvg(base).match(/<text /g) || []).length, 6, 'no headline, no headline text');
   assert.deepEqual(fitHeadline('', { width: 1072, fontFile }).lines, []);
   // the pictures the build writes are these cards
-  const card = (headline, d = {}) => renderPng(ogSvg({ date: '2026-11-16', score: latest.score, host: 'didtheworldendtoday.com', headline, fontFile, ...d }), { fontFile, width: 1200 });
+  const card = (headline, d = {}) => renderPng(ogSvg({ date: '2026-11-16', score: latest.score, host: 'didtheworldendtoday.com', headline, fontFile, live: true, ...d }), { fontFile, width: 1200 });
   assert.ok(fs.readFileSync(path.join(edDist, 'og', 'latest.png')).equals(card(ED16.headline)), "today's headline on the latest card");
   assert.ok(fs.readFileSync(path.join(edDist, 'og', '2026-11-16.png')).equals(card(ED16.headline)), "and on today's own card");
-  assert.ok(fs.readFileSync(path.join(edDist, 'og', '2026-11-15.png')).equals(card(ED15.headline, { date: '2026-11-15', score: 11 })), "yesterday's headline on yesterday's card");
+  assert.ok(fs.readFileSync(path.join(edDist, 'og', '2026-11-15.png')).equals(card(ED15.headline, { date: '2026-11-15', score: 11, live: false })), "yesterday's headline on yesterday's card, which asks about its own date");
   assert.ok(fs.readFileSync(path.join(dist, 'og', '2026-11-16.png')).equals(card(copy.subline(latest.score))), 'the ladder line when a day has no edition');
   assert.ok(!card(ED16.headline).equals(card(copy.subline(latest.score))), 'the picture changes with the headline');
   const r = copyRoot(edRoot);
   edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: '' }));
   assert.ok(fs.readFileSync(path.join(buildAt(r).dist, 'og', 'latest.png')).equals(card(copy.QUIET_LINE)), 'the quiet line in quiet mode');
+});
+
+test('the share image asks the question in full ink at the top left, names the date on a past day, and never runs into DOOM SCORE', () => {
+  const fontFile = fontFileIn(path.join(REPO, 'assets'));
+  assert.equal(questionText('2026-11-17', true), 'DID THE WORLD END TODAY?');
+  assert.equal(questionText('2026-11-17', false), 'DID THE WORLD END ON TUE, NOV 17?', 'a past day names its weekday and date, in capitals');
+  assert.equal(questionText('2026-11-16', false), 'DID THE WORLD END ON MON, NOV 16?');
+  assert.equal(questionText('nope', false), 'DID THE WORLD END TODAY?', 'a date that is not a date leaves the question as it is');
+  const live = ogSvg({ date: '2026-11-17', score: 92, host: 'didtheworldendtoday.com', headline: 'Asteroid missed. Still here.', fontFile, live: true });
+  const past = ogSvg({ date: '2026-11-17', score: 92, host: 'didtheworldendtoday.com', headline: 'Asteroid missed. Still here.', fontFile, live: false });
+  assert.match(live, /<text x="64" y="112" font-family="Anton" font-size="52" letter-spacing="[\d.]+" fill="#[0-9a-fA-F]{6}">DID THE WORLD END TODAY\?<\/text>/, 'the question: top left, Anton 52, full ink with no fade');
+  assert.ok(!/<text x="64"[^>]*fill-opacity[^>]*>DID THE WORLD END/.test(live), 'the question is not faded');
+  assert.match(past, /<text x="64" y="112" font-family="Anton" font-size="\d+" [^>]*>DID THE WORLD END ON TUE, NOV 17\?<\/text>/);
+  assert.ok(!live.includes('ON TUE'), 'the live card does not name a date in the question');
+  assert.equal((past.match(/<text /g) || []).length, 7, 'the six fixed texts and the one line of headline');
+  assert.equal((live.match(/<text /g) || []).length, 7);
+  // the question never runs into DOOM SCORE: measured with the real font, every weekday and month, longest first
+  const { Resvg } = resvg;
+  const box = (textEl) => new Resvg(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">${textEl}</svg>`, { font: { fontFiles: [fontFile], loadSystemFonts: false, defaultFontFamily: 'Anton' } }).getBBox();
+  const label = box(live.match(/<text [^>]*>DOOM SCORE<\/text>/)[0]);
+  let day = Date.parse('2026-11-17T12:00:00Z');
+  for (let i = 0; i < 400; i += 3) {
+    const date = new Date(day + i * 86400e3).toISOString().slice(0, 10);
+    for (const isLive of [true, false]) {
+      const svg = ogSvg({ date, score: 7, host: 'h', headline: '', fontFile, live: isLive });
+      const q = box(svg.match(/<text x="64" y="112"[^>]*>[^<]*<\/text>/)[0]);
+      assert.ok(q.x + q.width <= label.x - 40, `${date} ${isLive ? 'live' : 'past'}: the question ends ${Math.round(q.x + q.width)}px, DOOM SCORE starts ${Math.round(label.x)}px`);
+      assert.ok(fitQuestion(questionText(date, isLive), { fontFile }) >= 34, `${date}: the question stays easy to read`);
+    }
+  }
+  // the footer: the site and the one credited handle
+  assert.match(live, />DIDTHEWORLDENDTODAY\.COM \u00b7 @THELPDRIVE<\/text>/, 'the address and the handle, bottom right');
+  assert.ok(!/drlevidruin|levidruin|github/i.test(live + past), 'no link to the repository and no name of a person');
 });
 
 test('the homepage share image is today\'s own card, and the latest card is still written', () => {
@@ -1065,7 +1127,7 @@ test('quiet mode: every day goes plain, the editions rest, nothing jokes, and th
   for (const item of [...ED16.items, ...ED15.items]) assert.ok(!home.includes(esc(item.line)), `the edition's line stays off: ${item.line}`);
   for (const text of [ED16.headline, ED15.headline]) assert.ok(!home.includes(esc(text)) && !read('almanac/index.html', out.dist).includes(esc(text)) && !read('feed.xml', out.dist).includes(esc(text)), text);
   has(yesterday, `<p class="dh">${copy.QUIET_LINE}</p>`);
-  const captions = [...home.matchAll(/<p class="cap">([^<]*)/g)].map((m) => m[1]);
+  const captions = capsIn(home);
   assert.ok(captions.length >= 1 && captions.every((c) => c.startsWith('No jokes on this one.')), `${captions}`);
   assert.match(read('index.html'), /data-quiet="0"/);
   // the day pages say the same
@@ -1113,16 +1175,40 @@ const quakeStory = (over = {}, sig = {}) => ({
   ...over,
 });
 
-test('quiet cards: the donate link shows for PAGER yellow, orange or red, a tsunami flag, or a disaster word', () => {
+test('quiet cards: a USGS quake links when PAGER is yellow, orange or red or a tsunami flag is up, and a headline links only when it reports harm', () => {
   assert.deepEqual(quietCard(quakeStory()), { reason: 'quake M6.5 or more', link: null }, 'green and no tsunami: nothing says anyone was hurt');
   assert.equal(quietCard(quakeStory({}, { pager: undefined })).link, null, 'no PAGER reading reads as green');
   assert.equal(quietCard(quakeStory({}, { pager: null })).link, null);
   for (const pager of ['yellow', 'orange', 'red', 'Orange']) assert.equal(quietCard(quakeStory({}, { pager })).link, 'ifrc', pager);
   assert.equal(quietCard(quakeStory({}, { tsunami: true })).link, 'ifrc', 'a tsunami flag, PAGER green');
   const headline = (title) => ({ id: 'n', cat: 'weather', kind: 'news', title, url: 'https://example.com/n', source: 'Example', quiet: true });
-  assert.equal(quietCard(headline('Magnitude 7.1 earthquake strikes off the coast')).link, null, 'a headline magnitude alone is the same as a USGS magnitude alone');
-  assert.equal(quietCard(headline('Magnitude 7.1 earthquake prompts tsunami warning')).link, 'redcross');
-  for (const title of ['Flash flood warning for the valley', 'Wildfire forces evacuations near town', 'Hurricane makes landfall on the coast', 'Tornado crosses the county']) assert.equal(quietCard(headline(title)).link, 'redcross', title);
+  // a warning, a forecast, a big quake or a wave that hurt no one, or harm with no place named: the caption alone
+  for (const title of [
+    'Magnitude 7.1 earthquake strikes off the coast',
+    'Magnitude 7.1 earthquake prompts tsunami warning',
+    'Tornado warning issued for the Bay Area',
+    'Tsunami waves reach Sri Lanka and Indonesia after the quake',
+    'Flash flood warning for the valley',
+    'Hurricane makes landfall on the coast',
+    'Tornado crosses the county',
+    'Floods leave dozens dead',
+    'Wildfire forces evacuations near town',
+    'Wildfire evacuation order lifted in California',
+    'Typhoon dies down over Japan',
+  ]) assert.equal(quietCard(headline(title)).link, null, title);
+  // harm to people or homes in the US goes to the US Red Cross
+  for (const title of [
+    'Oklahoma tornado destroys homes',
+    'Wildfire forces evacuations near Santa Barbara, CA',
+    'Flood displaced hundreds in Louisiana',
+    'Wildfire destroys homes in Moore, OK',
+    'Tornado kills two in Alabama',
+    'Hiker dies in wildfire near Phoenix',
+    'Flood damaged homes in Georgia, US',
+  ]) assert.equal(quietCard(headline(title)).link, 'redcross', title);
+  // harm to people or homes abroad goes to the international Red Cross and Red Crescent
+  for (const title of ['Tornadoes in NSW and Queensland damaged homes', 'Cyclone leaves thousands displaced in Bangladesh', 'Flood deaths rise to 40 in Indonesia']) assert.equal(quietCard(headline(title)).link, 'ifrc', title);
+  assert.equal(quietCard(headline('Typhoon damaged homes in Guam and Japan')).link, 'redcross', 'a US place wins when a headline names one and a place abroad');
   assert.equal(quietCard(headline('Cloudflare outage knocks thousands of sites offline')), null, 'not a quiet card at all');
 });
 
@@ -1141,9 +1227,43 @@ test('quiet cards: a USGS quake outside the US goes to the international Red Cro
   assert.equal(isUsPlace(undefined), false);
   assert.equal(quietCard(quakeStory({ title: 'M 6.8 - Alaska' }, { tsunami: true, place: 'Gulf of Alaska' })).link, 'redcross', 'a US quake with a tsunami flag');
   const news = (title) => ({ id: 'n2', cat: 'earth', kind: 'news', title, url: 'https://example.com/n2', source: 'Example', quiet: true });
-  assert.equal(quietCard(news('Deadly flood hits a town in Indonesia')).link, 'redcross', 'a news story is not a USGS quake, so it goes to the US Red Cross');
+  assert.equal(quietCard(news('Flood leaves 40 dead in Indonesia')).link, 'ifrc', 'a news story is read by its headline, and the place decides the charity');
+  assert.equal(quietCard(news('Deadly flood hits a town in Indonesia')).link, null, 'no harm in the words, so no link');
   assert.equal(cfg.quiet.quietLink, 'https://www.redcross.org/donate');
   assert.equal(cfg.quiet.quietLinkIntl, 'https://www.ifrc.org/');
+});
+
+test('phase 6 donate rule: the four headlines the owner saw, by the rule and on the page', () => {
+  const ctx = { byId: new Map(), quietMode: false, quietCaption: 'No jokes on this one.', quietLink: cfg.quiet.quietLink, quietLinkIntl: cfg.quiet.quietLinkIntl };
+  const story = (title) => ({ id: 'n', cat: 'weather', kind: 'news', title, url: 'https://example.com/n', source: 'Example', outlets: 2 });
+  const cases = [
+    // a warning with nobody hurt, in a US city: a quiet card and no link
+    ['Tornado warning, waterspouts and hail sweep Bay Area in rare severe storm', null],
+    // homes damaged, outside the US: the international Red Cross and Red Crescent
+    ['A possible tornado has damaged dozens of homes while giant 10cm hail and destructive storms lashed NSW and Queensland', 'ifrc'],
+    // a big quake and a wave that did not come: quiet by size, and nothing says anyone was hurt
+    ['No tsunami threat to Sri Lanka after 6.6-magnitude earthquake near Indonesia', null],
+    // homes destroyed in the US: the US Red Cross
+    ['Tornado destroys homes in Oklahoma town', 'redcross'],
+  ];
+  for (const [title, link] of cases) {
+    const card = quietCard(story(title));
+    assert.ok(card, `${title}: a quiet card`);
+    assert.equal(card.link, link, title);
+    const html = headlineRow(story(title), ctx);
+    assert.ok(html.includes('<p class="cap">No jokes on this one.</p>'), `${title}: the plain line`);
+    const expected = { ifrc: 'https://www.ifrc.org/', redcross: 'https://www.redcross.org/donate' }[link];
+    if (!expected) assert.ok(!html.includes('class="help"'), `${title}: no donate link on the page`);
+    else {
+      assert.equal(html.match(/<a class="help" href="([^"]*)"/)?.[1], expected, title);
+      assert.ok(html.indexOf('</a>') < html.indexOf('class="help"'), `${title}: the donate link sits outside the headline link`);
+      assert.equal((html.match(/<a /g) || []).length, 2, `${title}: the headline link and the donate link only`);
+    }
+  }
+  // the sentence on the About page says the same thing the rule does
+  assert.match(copy.QUIET_CARDS_ABOUT, /hurt, or likely hurt, it also links to a charity/);
+  assert.match(copy.QUIET_CARDS_ABOUT, /Red Cross for a place in the United States/);
+  assert.match(copy.QUIET_CARDS_ABOUT, /international Red Cross and Red Crescent for a place in another country/);
 });
 
 test('a quiet story is a quiet row even when its edition says it is not, and a quake that is only big gets the plain line and no donate link', () => {
@@ -1173,19 +1293,28 @@ test('quiet cards: the page shows the right link, opening safely, for each case'
     assert.ok(row, 'the quake row is there');
     return row;
   };
+  // the caption is a line of the card, and the donate link is its own link after the card, never inside it
   const abroad = quakeRow({ pager: 'orange' });
-  assert.ok(abroad.includes('<p class="cap">No jokes on this one. <a href="https://www.ifrc.org/" target="_blank" rel="noopener">Support the Red Cross and Red Crescent</a></p>'), 'Tual, Indonesia, PAGER orange');
+  assert.ok(abroad.includes('</a>\n<a class="help" href="https://www.ifrc.org/" target="_blank" rel="noopener">Support the Red Cross and Red Crescent →</a>'), 'Tual, Indonesia, PAGER orange');
   const home = quakeRow({ pager: 'yellow', place: '10 km W of Anchorage, Alaska' });
-  assert.ok(home.includes('<p class="cap">No jokes on this one. <a href="https://www.redcross.org/donate" target="_blank" rel="noopener">Donate to the Red Cross</a></p>'), 'Anchorage, Alaska, PAGER yellow');
+  assert.ok(home.includes('</a>\n<a class="help" href="https://www.redcross.org/donate" target="_blank" rel="noopener">Donate to the Red Cross →</a>'), 'Anchorage, Alaska, PAGER yellow');
   assert.ok(quakeRow({ tsunami: true }).includes('href="https://www.ifrc.org/"'), 'a tsunami flag outside the US');
-  assert.ok(quakeRow({ pager: 'green', tsunami: false }).includes('<p class="cap">No jokes on this one.</p>'), 'back to green: no link');
+  const green = quakeRow({ pager: 'green', tsunami: false });
+  assert.ok(green.includes('<span class="cap">No jokes on this one.</span>') && !green.includes('class="help"'), 'back to green: no link');
+  for (const row of [abroad, home, green]) assert.equal(rowFacts(row).cap, 'No jokes on this one.', 'the caption is in the card');
+  for (const row of [abroad, home]) {
+    const facts = rowFacts(row);
+    assert.ok(row.indexOf('</a>') < row.indexOf('class="help"'), 'the card closes before the donate link opens');
+    assert.equal((row.match(/<a /g) || []).length, 2, 'the card and the donate link, and nothing else');
+    assert.ok(facts.help && facts.helpText.endsWith(' →'));
+  }
 });
 
 test('a quiet line whose story has left the day keeps its caption and has no link to guess at', () => {
   const gone = { ...ED16, items: ED16.items.map((i, n) => (n === 5 ? { ...i, ids: ['gone:quake'], quiet: true } : i)) };
   const { dist: out } = withEditions({ ...EDITIONS, '2026-11-16': gone });
   const row = rowsOf(read('index.html', out)).find((x) => /^<li class="row[^"]*\bquiet\b/.test(x));
-  assert.ok(row && row.includes('<p class="cap">No jokes on this one.</p>'));
+  assert.ok(row && row.includes('<span class="cap">No jokes on this one.</span>') && !row.includes('class="help"'));
 });
 
 // ---- hostile text ---------------------------------------------------------------------------------------------------------
@@ -1200,7 +1329,7 @@ test('a headline that is HTML, with a javascript: link, renders as inert text: i
     assert.ok(!/href="javascript:/i.test(html), `${rel}: no javascript: link`);
     const first = rowsOf(html).find((r) => r.includes('&lt;img src=x'));
     assert.ok(first && !first.includes('<a '), `${rel}: the row has no link at all`);
-    assert.ok(first.includes('Read it · 2 outlets →'), `${rel}: but it still says where it came from`);
+    assert.ok(first.includes('<span class="src"><span class="sn">&lt;script&gt;alert(2)&lt;/script&gt;</span><span class="sc">2 news sites</span></span>') && !first.includes('class="cta"'), `${rel}: but it still says where it came from, and offers nothing to open`);
     assert.ok(html.includes('&quot; onmouseover=&quot;alert(3)&quot; x=&quot;'), `${rel}: quotes are escaped`);
     const second = rowsOf(html).find((r) => r.includes('onmouseover'));
     assert.ok(second.includes('href="https://example.com/?q=%22%3E%3Cscript%3Ealert(4)%3C/script%3E"'), `${rel}: the link cannot break out of its attribute`);
@@ -1235,8 +1364,11 @@ test('a line the editor wrote that is HTML is just as inert: the headline, the l
   assert.deepEqual(facts.map((f) => f.text), ['<img src=x onerror=alert(1)> and "quotes" & <b>bold</b>', 'Second line with <a href="https://evil.example">a link</a> in it', 'Third line is plain.']);
   assert.equal(facts[0].emoji, '<b>\u{1F4A5}');
   assert.equal(facts[0].href, 'https://example.com/?q=%22%3E%3Cscript%3Ealert(4)%3C/script%3E');
-  assert.equal(facts[0].read, 'Read it · <script>alert(2)</script> →');
-  assert.equal(facts[2].read, `Read it · ${BREACH.source} →`, 'a count that is not a number reads as one outlet');
+  assert.equal(facts[0].name, '<script>alert(2)</script>');
+  assert.equal(facts[0].count, null, 'one news site, so no count');
+  assert.equal(facts[0].cta, 'Read it →');
+  assert.equal(facts[2].name, BREACH.source, 'a count that is not a number reads as one news site');
+  assert.equal(facts[2].count, null);
   for (const rel of ['index.html', 'day/2026-11-16/index.html', 'almanac/index.html', 'feed.xml']) {
     const text = read(rel, out.dist);
     for (const tag of ['<img src=x', '<script>alert', '<i>All', '<b>bold', '<b>\u{1F4A5}', '<a href="https://evil.example"']) assert.ok(!text.includes(tag), `${rel}: ${tag}`);
@@ -1272,9 +1404,9 @@ test('esc, url and num', () => {
 test('a row with a bad link shows its text and no anchor, and a row with missing fields still prints', () => {
   const ctx = { byId: new Map(), quietMode: false, quietCaption: 'q', quietLink: 'https://www.redcross.org/donate', quietLinkIntl: 'https://www.ifrc.org/' };
   const bad = dayRow({ emoji: '🌐', line: '<b>hi</b>', ids: ['a'], quiet: false, url: 'javascript:alert(1)', source: 'S', outlets: 1 }, 1, ctx);
-  assert.ok(bad.includes('<p class="txt">&lt;b&gt;hi&lt;/b&gt;</p>'));
+  assert.ok(bad.includes('<span class="txt">&lt;b&gt;hi&lt;/b&gt;</span>'));
   assert.ok(!bad.includes('<a '), 'no anchor');
-  assert.ok(bad.includes('<p class="read">Read it · S →</p>'), 'the words stay');
+  assert.ok(bad.includes('<span class="src"><span class="sn">S</span></span>') && !bad.includes('class="cta"'), 'the words stay, and there is nothing to open');
   for (const odd of [{}, { line: 'Only a line' }, { emoji: null, line: undefined, url: 42, outlets: 'x', source: undefined }, null]) {
     const html = dayRow(odd || {}, 0, ctx);
     for (const token of ['undefined', 'NaN', '[object']) assert.ok(!html.includes(token), `${token} in ${JSON.stringify(odd)}`);
@@ -1282,7 +1414,7 @@ test('a row with a bad link shows its text and no anchor, and a row with missing
   const heads = headlineRow({ id: 'z', cat: 'zzz', title: 't', url: 'https://example.com', source: 's', outlets: 'x' }, ctx);
   for (const token of ['undefined', 'NaN', '[object']) assert.ok(!heads.includes(token), token);
   assert.ok(!headlineRow({}, ctx).includes('undefined'));
-  assert.ok(dayRows([{ emoji: 'e', line: 'l', url: 'https://example.com/', source: 's', outlets: 1 }], ctx).startsWith('<ol class="rows">') && headlineRows([{ title: 't' }], ctx).startsWith('<ol class="heads">'));
+  assert.ok(dayRows([{ emoji: 'e', line: 'l', url: 'https://example.com/', source: 's', outlets: 1 }], ctx).startsWith('<ol class="rows" role="list">') && headlineRows([{ title: 't' }], ctx).startsWith('<ol class="heads" role="list">'));
   assert.ok(almanacRows([{ date: '2026-11-16', score: 'x', headline: '<b>x</b>' }], { root: '../' }).includes('&lt;b&gt;x&lt;/b&gt;'));
   assert.ok(!almanacRows([{}], { root: '../' }).includes('undefined'));
 });
@@ -1296,9 +1428,11 @@ const headFacts = (html) => {
   };
   return {
     quiet: /^<li class="hd quiet/.test(html),
-    title: get(/<p class="ht">(?:<a [^>]*>)?([^<]*)(?:<\/a>)?<\/p>/),
-    href: get(/<p class="ht"><a href="([^"]*)"/),
-    source: get(/<p class="hs">([^<]*)<\/p>/),
+    title: get(/<span class="ht">([^<]*)<\/span>/),
+    href: get(/<a class="hla" href="([^"]*)"/),
+    source: get(/<span class="hs">([^<]*)<\/span>/),
+    cap: get(/<p class="cap">([\s\S]*?)<\/p>/),
+    help: get(/<a class="help" href="([^"]*)"/),
   };
 };
 
@@ -1312,7 +1446,8 @@ test('day pages: the same hero for another day, that day\'s lines, every headlin
   assert.ok(!past.includes('class="ago"') && !past.includes('class="dot"'), 'a finished day is not "checked just now"');
   has(past, '<a class="go" href="#rows">See what almost got us ↓</a>');
   assert.ok(!past.includes('data-act="share">Share today'), 'Share today is for the homepage');
-  assert.equal((past.match(/data-act="share"/g) || []).length, 1, 'one share button, at the bottom');
+  assert.equal((past.match(/data-act="share"/g) || []).length, 2, 'the share pill in the hero and the share button at the bottom');
+  has(past, '<button class="sh" type="button" data-act="share">Share this day</button>');
   has(past, '<section class="day" id="rows">');
   assert.deepEqual(factsIn(past).map((f) => f.text), ED15.items.map((i) => i.line));
   has(past, `${SITE}/og/2026-11-15.png`);
@@ -1328,7 +1463,8 @@ test('day pages: the same hero for another day, that day\'s lines, every headlin
   has(today, '<span class="q">Did the world end today?</span>');
   assert.equal(headlineOf(today), ED16.headline);
   has(today, 'data-live="1"');
-  has(today, '<span class="ago" data-since=');
+  has(today, '<span class="upd">Updated 5:30 PM ET</span>');
+  assert.ok(!today.includes('data-since'), 'no ticking time');
   has(today, 'href="../2026-11-15/">&larr; Nov 15</a>');
   assert.ok(!today.includes('&rarr;'), 'nothing after today');
   assert.deepEqual(factsIn(today).map((f) => f.text), ED16.items.map((i) => i.line));
@@ -1337,10 +1473,10 @@ test('day pages: the same hero for another day, that day\'s lines, every headlin
   // each headline is the link, with its source and outlet count under it
   const cloud = heads.find((h) => h.title === 'Cloudflare outage knocks thousands of sites offline');
   assert.equal(cloud.href, 'https://pub0.example/internet/0');
-  assert.equal(cloud.source, 'Pub A');
-  assert.equal(heads.find((h) => h.title === '<img src=x onerror=alert(1)>').source, '<script>alert(2)</script> · 2 outlets');
+  assert.equal(cloud.source, 'Pub A · Read it →', 'the news site, then what the headline does');
+  assert.equal(heads.find((h) => h.title === '<img src=x onerror=alert(1)>').source, '<script>alert(2)</script> · 2 news sites', 'no link, so no "Read it"');
   assert.equal(heads.filter((h) => h.quiet).length, 1);
-  for (const m of today.matchAll(/<p class="ht"><a ([^>]*)>/g)) assert.match(m[1], /target="_blank" rel="noopener"/);
+  for (const m of today.matchAll(/<a class="hla" ([^>]*)>/g)) assert.match(m[1], /target="_blank" rel="noopener"/);
   // a plain-headline day reads the same way
   assert.equal(headlineOf(read('day/2026-11-16/index.html')), copy.subline(latest.score));
   assert.equal(lineCount(read('day/2026-11-16/index.html')), cfg.edition.fallbackRows);
@@ -1373,9 +1509,12 @@ test('the Almanac lists every day, newest first: each row is a link with its dat
       ['../day/2026-11-15/', 'Sun, Nov 15 &middot; Doom 11', heads[1]],
     ], label);
     has(html, '<h1 class="pg">The Almanac of Almost</h1>');
+    has(html, '<p class="lead">Every day we&#39;ve checked, newest first.</p>');
+    assert.ok(html.indexOf('class="pg"') < html.indexOf('class="lead"') && html.indexOf('class="lead"') < html.indexOf('class="alm"'), `${label}: the lead sits between the title and the list`);
+    has(html, '<ol class="alm" role="list">');
     assert.ok(!html.includes('Worst day so far'), `${label}: two editions are too few for a record line`);
     assert.ok(!/<script/i.test(html));
-    has(html, 'href="../">&larr; Today</a>');
+    has(html, '<a href="../">← Today</a>');
   }
 });
 
@@ -1413,8 +1552,8 @@ test('the homepage shows today and up to six earlier days, then a way to the old
   assert.equal(blocksOf(home7).length, 7);
   has(home7, '<div class="end">');
   has(home7, `<p>${esc(copy.FEED_END)}</p>`);
-  has(home7, '<a href="./almanac/">The Almanac of Almost →</a>');
-  assert.ok(!home7.includes('Older days'));
+  has(home7, '<a href="./almanac/">Every day so far →</a>');
+  assert.ok(!home7.includes('Older days') && !home7.includes('The Almanac of Almost →'));
 
   const nine = build(rootWithDays(9), { siteUrl: SITE, config: LONG_RUN });
   const home9 = read('index.html', nine.dist);
@@ -1422,7 +1561,7 @@ test('the homepage shows today and up to six earlier days, then a way to the old
   assert.equal(blocks.length, 7, 'seven blocks, not nine');
   has(blocks[2], '<h2 class="dl"><span>SATURDAY</span><span> &middot; NOV 14</span></h2>');
   has(blocks[2], '<p class="ds">Doom Score 20 of 99</p>');
-  has(home9, '<p class="end"><a href="./almanac/">Older days are in the Almanac of Almost →</a></p>');
+  has(home9, '<p class="end"><a href="./almanac/">Every day so far →</a></p>');
   assert.ok(!home9.includes(esc(copy.FEED_END)), 'and not "that is every day"');
   assert.ok(!home9.includes('NOV 8') && !home9.includes('NOV 9'), 'the two oldest days are not on the homepage');
   assert.equal((read('almanac/index.html', nine.dist).match(/class="al"/g) || []).length, 9, 'the Almanac has all nine');
@@ -1472,7 +1611,8 @@ test('the feed is valid RSS: one item per day, the headline for a title, the lin
   }
   const first = [].concat(new XMLParser().parse(read('feed.xml', edDist)).rss.channel.item)[0];
   for (const item of ED16.items) assert.ok(first.description.includes(esc(item.line)), `the body has: ${item.line}`);
-  assert.ok(first.description.includes(`Nov 16 · Doom ${latest.score}/99`));
+  assert.ok(first.description.includes(`<p>Mon, Nov 16 · Doom Score ${latest.score} of 99</p>`), 'the first line reads like the page');
+  assert.ok(!first.description.includes('/99'), 'no fraction');
   assert.ok(first.description.includes(`<a href="${new URL(ED16.items[0].url).href}">Read it</a>`), 'each line links its story');
 });
 
@@ -1495,7 +1635,9 @@ test('the home page says what section 9 says', () => {
   const home = read('index.html');
   has(home, '<title>Did the world end today? ALMOST.</title>');
   has(home, `<meta name="description" content="${esc(copy.DESCRIPTION)}">`);
-  assert.equal(copy.DESCRIPTION, "Live coverage of the end of the world, which keeps not happening. Today's near misses, a 0-99 Doom Score, and the Almanac of Almost. Checked every 15 minutes.");
+  assert.equal(copy.DESCRIPTION, "Live coverage of the end of the world, which keeps not happening. Today's near misses, ranked from most world-ending to least. Checked every 15 minutes.");
+  assert.equal(copy.QUIET_DESCRIPTION, "Today's top stories and a 0-99 Doom Score. Checked every 15 minutes.");
+  for (const text of [copy.DESCRIPTION, copy.QUIET_DESCRIPTION]) assert.ok(text.length <= 160, `${text.length} characters, short enough for a search result`);
   assert.equal(copy.TAGLINE, 'Live coverage of the end of the world, which keeps not happening.');
   assert.equal(copy.COMMENT, "If the world has ended and this still says ALMOST., sorry. We'll update it when we're back.");
   assert.ok(home.startsWith(`<!doctype html>\n<!-- ${copy.COMMENT} -->\n`), 'the comment under the doctype');
@@ -1518,25 +1660,27 @@ test('tapping ALMOST. runs the six lines from the spec, with the real headline c
   assert.match(read('index.html'), /<button class="vbox" type="button" data-act="check"><span class="verdict" id="verdict">ALMOST\.<\/span>/, 'ALMOST. is the button');
 });
 
-test('the stale line appears when the newest good read is more than two hours old, and not before', () => {
+test('the stale line appears when the newest good read is more than two hours old, and not before, and it names the time in Eastern', () => {
   const stale = (minutes) => {
     const r = copyRoot(root);
     edit(latestFile(r), (l) => (l.lastSuccessAt = new Date(Date.parse(l.buildTime) - minutes * 60000).toISOString()));
     return read('index.html', buildAt(r).dist);
   };
-  const said = (n) => esc(`We haven't checked in ${n} hours. That's on us, not the world.`);
-  const late = stale(210);
+  const said = (clock) => esc(`Last checked ${clock}. That's on us, not the world.`);
+  const late = stale(210); // built 5:30 PM Eastern, last good read 2:00 PM
   assert.match(late, /<p class="stale" id="stale" data-template="[^"]*">/);
-  assert.ok(late.includes(`">${said(3)}</p>`), 'three hours late says three hours');
-  assert.ok(stale(121).includes(`">${said(2)}</p>`), 'two hours and a bit says two');
+  assert.ok(late.includes(`">${said('2:00 PM ET')}</p>`), 'three and a half hours late says the clock time of the last good read');
+  assert.ok(stale(121).includes(`">${said('3:29 PM ET')}</p>`), 'two hours and a bit says its clock time too');
   assert.match(stale(120), /<p class="stale" id="stale" data-template="[^"]*" hidden><\/p>/);
   assert.match(read('index.html'), /<p class="stale" id="stale" data-template="[^"]*" hidden><\/p>/);
-  assert.equal(copy.staleLine(5), "We haven't checked in 5 hours. That's on us, not the world.");
+  assert.match(late, /data-template="Last checked \{time\}\. That&#39;s on us, not the world\."/, 'the page script fills the same sentence in');
+  assert.equal(copy.staleLine(Date.parse('2026-11-16T22:30:00Z')), "Last checked 5:30 PM ET. That's on us, not the world.");
+  assert.ok(!/hours? ago|We haven/.test(late), 'no count of hours, no "we haven\'t"');
   assert.ok(!/Probably us|went quiet/.test(late), 'the old joke is gone');
   // a past day was finished long ago, so it never says we have not checked
   const r = copyRoot(root);
   edit(latestFile(r), (l) => (l.lastSuccessAt = new Date(Date.parse(l.buildTime) - 600 * 60000).toISOString()));
-  assert.ok(!/We haven(?:'|&#39;)t checked in \d/.test(read('day/2026-11-15/index.html', buildAt(r).dist)));
+  assert.ok(!/Last checked \d/.test(read('day/2026-11-15/index.html', buildAt(r).dist)));
 });
 
 test('the 404 says its line and links home by the site address', () => {
@@ -1552,21 +1696,60 @@ test('the About page says what the site does in plain words, and Claude is named
   const about = read('about/index.html');
   for (const needle of [
     'We leave out headlines about people being killed, hurt or attacked.',
-    'The Doom Score',
+    '<h2 id="doom-score">The Doom Score</h2>',
     'Where it comes from',
     'Quiet cards and quiet mode',
     'We read the news and watch the sky and the internet: asteroids, solar storms, earthquakes, and the big status pages.',
     'It comes on when a deadly disaster takes over the news, or when someone switches it on by hand.',
     'We show headlines and links only. Publishers who want a headline removed can DM <a href="https://x.com/thelpdrive" target="_blank" rel="noopener">@thelpdrive</a> on X.',
     'Built by <a href="https://x.com/thelpdrive" target="_blank" rel="noopener">@thelpdrive</a> with Claude, an AI. Claude writes each day\'s headline and the short line on each story, from that day\'s headlines. It can get things wrong, so every line links to its source.',
-    'Each fired category is worth 6 points',
-    'The floor is 11',
-    'The cap is 99',
+    'The Doom Score is a number from 0 to 99. It is just adding, with no secret formula.',
+    'Each category that counts adds 6 points.',
+    'The lowest score is 11, because there is always something going on.',
+    'The highest is 99, because it is never 100.',
   ]) assert.ok(about.includes(needle), needle);
   assert.ok(/<a [^>]*>Claude<\/a>/.test(about), 'the status pages we watch are listed with Claude among them');
   for (const word of ['vital', 'Vital', 'bingo', 'Bingo', 'mass-casualty', 'nobody is doing on purpose']) assert.ok(!about.includes(word), word);
   assert.ok(!/a popular AI chatbot/i.test(about + read('index.html')), 'no stand-in name');
   for (const rel of ['almanac/index.html', '404.html', 'feed.xml', 'day/2026-11-15/index.html']) assert.ok(!/claude/i.test(read(rel)), `${rel} does not say Claude`);
+});
+
+test('the About page: every fact the Doom Score runs on is there in plain words, the numbers come from the code, and the time and the ranking are explained', () => {
+  const about = read('about/index.html');
+  const d = cfg.doom;
+  // the numbers are the ones the code uses, so the page cannot drift from the rule
+  const bullets = [...about.matchAll(/<li>((?:A space storm|An earthquake|An asteroid|A ground stop|Any big website)[^<]*)<\/li>/g)].map((m) => unesc(m[1]));
+  assert.deepEqual(bullets, [
+    `A space storm of Kp ${d.kp.at} or more: +${d.kp.points} (Kp ${d.kp.bigAt} or more: +${d.kp.bigPoints} instead)`,
+    `An earthquake of magnitude ${d.quake.at} or more: +${d.quake.points} (magnitude ${d.quake.bigAt} or more: +${d.quake.bigPoints} instead)`,
+    'An asteroid passing closer than the Moon, in the last day or the next two days: +8 (closer than halfway to the Moon: +15 instead)',
+    `A ground stop at a major hub airport: +${d.faa.hubPoints} (a ground stop for the whole country: +${d.faa.nationwidePoints} instead)`,
+    `Any big website in a major outage: +${d.status.points}`,
+  ]);
+  assert.equal(d.asteroid.points, 8);
+  assert.equal(d.asteroid.closePoints, 15);
+  assert.equal(d.asteroid.withinLd, 1);
+  assert.equal(d.asteroid.closeLd, 0.5);
+  assert.deepEqual([cfg.signals.asteroidWindow.pastHours, cfg.signals.asteroidWindow.nextHours], [24, 48], 'the window the About page names is the one the asteroid reader uses');
+  // the sentence that says when a category counts
+  assert.ok(about.includes(`A category counts when ${d.publishersToFire} or more different publishers have a headline about it in the last 24 hours.`));
+  for (const fact of ['a ground stop from the FAA (planes must stay on the ground)', 'an asteroid that passes closer than the Moon', 'a space storm of Kp 5 or more', 'an X-class flare alert from the Sun', 'an earthquake of magnitude 6 or more', 'a big website that says it is in a major outage']) assert.ok(about.includes(fact), fact);
+  // the section has its own anchor, and the time and the ranking are explained
+  assert.equal((about.match(/id="doom-score"/g) || []).length, 1);
+  assert.ok(about.indexOf('id="doom-score"') < about.indexOf('Days run midnight to midnight'), 'the time note is in the Doom Score section');
+  assert.ok(about.includes('<p>Days run midnight to midnight, Eastern time. Every time on this site is Eastern.</p>'));
+  assert.ok(about.includes('<h2>How we rank</h2>'));
+  assert.ok(about.includes("<p>Each day&#39;s list goes from most world-ending to least: how many people it could reach, how much of the world, and how close it came.</p>"));
+  assert.ok(about.indexOf('How we rank') < about.indexOf('Where it comes from'));
+  assert.ok(about.includes('When people or homes are hurt, or likely hurt, it also links to a charity: the Red Cross for a place in the United States, or the international Red Cross and Red Crescent for a place in another country.'), 'the donate rule the cards follow');
+  // plain words: none of the long ones the first version used
+  for (const word of ['fires when', 'arithmetic', 'instrument trips', 'lunar distance', 'status page in major outage', 'inside 1']) assert.ok(!about.includes(word), `"${word}" is gone`);
+  // and a week that is not the default: the bullets follow the config
+  const odd = { ...cfg, doom: { ...cfg.doom, perCategory: 7, floor: 9, cap: 98 }, signals: { ...cfg.signals, asteroidWindow: { ...cfg.signals.asteroidWindow, pastHours: 12, nextHours: 72 } } };
+  const r = copyRoot(root);
+  const page = read('about/index.html', build(r, { siteUrl: SITE, config: { ...odd, firstEdition: '2026-11-14' } }).dist);
+  assert.ok(page.includes('Each category that counts adds 7 points. The lowest score is 9') && page.includes('The highest is 98'));
+  assert.ok(page.includes('in the last 12 hours or the next three days'), 'the window reads from the code');
 });
 
 test('design tokens: the three colors, Anton for the big type, system fonts for the rest, and a size class for every length of headline', () => {
@@ -1625,7 +1808,7 @@ test('one date everywhere: the edition\'s Eastern date, whatever the machine clo
   const home = read('index.html', buildAt(r).dist);
   assert.match(home, /<span class="when">Mon, Nov 16<\/span>/);
   has(home, 'TODAY</span><span> &middot; MONDAY, NOV 16</span>');
-  assert.equal(attr(home, 'data-share-full').split('\n')[3].slice(0, 6), 'Nov 16');
+  assert.equal(attr(home, 'data-share-full').split('\n')[3].slice(0, 11), 'Mon, Nov 16');
   assert.ok(!home.includes('Nov 17'), 'no UTC date on the page');
   // Nothing on the page or in the script reads the visitor's own calendar date.
   assert.ok(!home.includes('data-local'));
@@ -1660,7 +1843,8 @@ test('the page and its script agree: every hook the script reads is on the page,
     assert.equal((home.match(/data-act="share"/g) || []).length, 3, `${label}: Share today and one button per day`);
     assert.equal((home.match(/data-act="check"/g) || []).length, 1, `${label}: ALMOST. is the one check button`);
   }
-  for (const token of ["'[data-share-full]'", "'data-share-text'", "'data-share-full'", "'data-share-url'", "'#main'", "'#hero'", "'#verdict'", "'#check'", "'#said'", "'#stale'", "'data-lines'", "'data-since'"]) assert.ok(code.includes(token), `app.js reads ${token}`);
+  for (const token of ["'[data-share-full]'", "'data-share-text'", "'data-share-full'", "'data-share-url'", "'#main'", "'#hero'", "'#verdict'", "'#check'", "'#said'", "'#stale'", "'data-lines'", "'data-template'"]) assert.ok(code.includes(token), `app.js reads ${token}`);
+  assert.ok(!code.includes('data-since'), 'the page no longer carries a ticking "checked" time, so the script does not look for one');
   const day = read('day/2026-11-16/index.html', edDist);
   for (const hook of ['id="hero"', 'id="main"', 'data-live="1"', 'data-page="day"']) assert.ok(day.includes(hook), `a day page: ${hook}`);
   assert.ok(day.includes('<script src="../../assets/app.js" defer></script>'), 'a day page loads the script from two folders up');
@@ -1668,10 +1852,90 @@ test('the page and its script agree: every hook the script reads is on the page,
   for (const rel of ['about/index.html', 'almanac/index.html']) assert.ok(!/<script/i.test(read(rel, edDist)), `${rel} needs no script`);
 });
 
-test('page script: relative times read exactly as the server writes them', () => {
-  const { ago } = pageScript();
-  for (const ms of [0, 1, 999, 59000, 60000, 61000, 119000, 3599000, 3600000, 7199000, 7200000, 86399000, 86400000, 172800000, 5 * 86400000, -5, NaN, undefined]) assert.equal(ago(ms), copy.ago(ms), String(ms));
-  assert.equal(ago(14 * 60000), '14 min ago');
+test('page script: the Eastern clock time reads exactly as the server writes it, in winter, in summer and across the clock changes', () => {
+  const { etClock } = pageScript();
+  const at = (iso) => Date.parse(iso);
+  const cases = [
+    ['2026-11-17T11:12:00Z', '6:12 AM ET'],
+    ['2026-11-17T05:00:00Z', '12:00 AM ET'],
+    ['2026-11-17T04:59:00Z', '11:59 PM ET'],
+    ['2026-11-17T17:00:00Z', '12:00 PM ET'],
+    ['2026-11-17T17:05:00Z', '12:05 PM ET'],
+    ['2026-11-16T22:30:00Z', '5:30 PM ET'],
+    ['2026-07-04T16:05:00Z', '12:05 PM ET'],
+    ['2026-07-04T04:00:00Z', '12:00 AM ET'],
+    ['2026-03-08T06:59:59Z', '1:59 AM ET'],
+    ['2026-03-08T07:00:00Z', '3:00 AM ET'],
+    ['2026-11-01T05:59:59Z', '1:59 AM ET'],
+    ['2026-11-01T06:00:00Z', '1:00 AM ET'],
+  ];
+  for (const [iso, want] of cases) {
+    assert.equal(copy.etClock(at(iso)), want, `the server: ${iso}`);
+    assert.equal(etClock(at(iso)), want, `the page script: ${iso}`);
+  }
+  // one every 37 minutes through a year and a bit, which crosses both clock changes: the two always agree
+  let count = 0;
+  for (let ms = at('2026-01-01T00:00:00Z'); ms < at('2027-02-01T00:00:00Z'); ms += 37 * 60000) {
+    const server = copy.etClock(ms);
+    assert.match(server, /^(?:[1-9]|1[0-2]):[0-5]\d (?:AM|PM) ET$/, server);
+    assert.equal(etClock(ms), server, new Date(ms).toISOString());
+    count += 1;
+  }
+  assert.ok(count > 14000, `${count} instants`);
+  // a number string reads like the number, and anything that is not a time reads as nothing, on both sides
+  assert.equal(etClock(String(at('2026-11-17T11:12:00Z'))), '6:12 AM ET');
+  assert.equal(copy.etClock(String(at('2026-11-17T11:12:00Z'))), '6:12 AM ET');
+  for (const bad of [Number.NaN, undefined, null, '', true, false, 'soon', {}, Infinity, -Infinity, 8.64e15 + 1]) {
+    assert.equal(etClock(bad), '', `script: ${String(bad)}`);
+    assert.equal(copy.etClock(bad), '', `server: ${String(bad)}`);
+  }
+  // the machine's own time zone changes nothing
+  const was = process.env.TZ;
+  try {
+    for (const tz of ['Pacific/Kiritimati', 'Asia/Tokyo', 'America/Los_Angeles', 'UTC']) {
+      process.env.TZ = tz;
+      assert.equal(copy.etClock(at('2026-11-17T11:12:00Z')), '6:12 AM ET', tz);
+      assert.equal(etClock(at('2026-11-17T11:12:00Z')), '6:12 AM ET', tz);
+    }
+  } finally {
+    if (was === undefined) delete process.env.TZ;
+    else process.env.TZ = was;
+  }
+  // "Updated 6:12 AM ET" and the stale line use the same time
+  assert.equal(copy.updatedText(at('2026-11-17T11:12:00Z')), 'Updated 6:12 AM ET');
+  assert.equal(copy.updatedText('soon'), '');
+  assert.equal(copy.staleLine(at('2026-11-17T11:12:00Z')), "Last checked 6:12 AM ET. That's on us, not the world.");
+  assert.equal(copy.STALE_TEMPLATE.replace('{time}', etClock(at('2026-11-17T11:12:00Z'))), copy.staleLine(at('2026-11-17T11:12:00Z')), 'the page script fills the same sentence the server writes');
+});
+
+test('the RSS dates are Eastern with their real offset, the sitemap dates are Eastern days', () => {
+  const at = (iso) => Date.parse(iso);
+  assert.equal(copy.rfc822ET(at('2026-11-17T10:55:10Z')), 'Tue, 17 Nov 2026 05:55:10 -0500');
+  assert.equal(copy.rfc822ET(at('2026-07-04T16:00:00Z')), 'Sat, 04 Jul 2026 12:00:00 -0400', 'summer is -0400');
+  assert.equal(copy.rfc822ET(at('2026-03-08T06:59:59Z')), 'Sun, 08 Mar 2026 01:59:59 -0500');
+  assert.equal(copy.rfc822ET(at('2026-03-08T07:00:00Z')), 'Sun, 08 Mar 2026 03:00:00 -0400', 'the clocks go forward');
+  assert.equal(copy.rfc822ET(at('2026-11-01T05:59:59Z')), 'Sun, 01 Nov 2026 01:59:59 -0400');
+  assert.equal(copy.rfc822ET(at('2026-11-01T06:00:00Z')), 'Sun, 01 Nov 2026 01:00:00 -0500', 'and back');
+  assert.equal(copy.rfc822ET(at('2026-12-31T23:59:59Z')), 'Thu, 31 Dec 2026 18:59:59 -0500', 'the weekday and the date are the Eastern ones');
+  assert.equal(copy.rfc822ET(at('2027-01-01T04:59:59Z')), 'Thu, 31 Dec 2026 23:59:59 -0500', 'five hours behind UTC, so still the old year');
+  for (const bad of [Number.NaN, undefined, null, '', 'soon', true]) assert.equal(copy.rfc822ET(bad), '', String(bad));
+  // every date reads back as the same instant, to the second
+  for (let ms = at('2026-01-01T00:00:00Z'); ms < at('2027-01-01T00:00:00Z'); ms += 3 * 3600e3 + 1234) assert.equal(Date.parse(copy.rfc822ET(ms)), Math.floor(ms / 1000) * 1000, new Date(ms).toISOString());
+  // in the feed
+  for (const [label, base] of [['editions', edDist], ['plain headlines', dist]]) {
+    const xml = read('feed.xml', base);
+    assert.match(xml, /<lastBuildDate>Mon, 16 Nov 2026 17:30:00 -0500<\/lastBuildDate>/, label);
+    const dates = [...xml.matchAll(/<pubDate>([^<]+)<\/pubDate>/g)].map((m) => m[1]);
+    assert.equal(dates.length, 2, label);
+    for (const d of dates) assert.match(d, /^[A-Z][a-z]{2}, \d{2} [A-Z][a-z]{2} \d{4} \d{2}:\d{2}:\d{2} -0[45]00$/, `${label}: ${d}`);
+    assert.ok(!/ GMT<\/(?:pubDate|lastBuildDate)>/.test(xml), `${label}: no UTC dates`);
+  }
+  // the sitemap's dates are the Eastern day of the build: 9 pm Eastern on the 16th is the 17th in UTC
+  const r = copyRoot(edRoot);
+  edit(latestFile(r), (l) => (l.buildTime = '2026-11-17T02:00:00.000Z'));
+  const out = buildAt(r);
+  const sitemap = read('sitemap.xml', out.dist);
+  assert.match(sitemap, /<loc>https:\/\/didtheworldendtoday\.com\/<\/loc><lastmod>2026-11-16<\/lastmod>/, 'the 16th, not the 17th');
 });
 
 test('page script: the streak counts consecutive Eastern days', () => {
@@ -1919,4 +2183,380 @@ test('the README says what to set up before the first push: Pages from GitHub Ac
   for (const address of ['185.199.108.153', '185.199.109.153', '185.199.110.153', '185.199.111.153']) assert.ok(readme.includes(address), address);
   assert.match(readme, /One CNAME record for `www`, pointing at your GitHub Pages host, which is your GitHub username followed by `\.github\.io`/);
   assert.ok(!/ALIAS|ANAME/.test(readme));
+});
+
+// ---- phase 6: one big link per card, the day page from a shared link, the quiet pages, and the words under a headline ----------------
+
+// How links sit in each other on a page: 1 when none holds another, and 0 at the end when every one is closed.
+function anchorDepth(html) {
+  let depth = 0;
+  let deepest = 0;
+  for (const m of html.matchAll(/<a\b[^>]*>|<\/a>/g)) {
+    depth += m[0] === '</a>' ? -1 : 1;
+    deepest = Math.max(deepest, depth);
+  }
+  return { deepest, end: depth };
+}
+
+test('phase 6 links: a row is one link across the whole card, the donate link stands beside it, and no link holds another', () => {
+  const quakeFirst = { ...ED16, items: [ED16.items[5], ...ED16.items.slice(0, 5)] };
+  const { dist: quakeDist } = withEditions({ ...EDITIONS, '2026-11-16': quakeFirst });
+  const pages = [
+    ['home', read('index.html', edDist), 'CLOSEST CALL'],
+    ['plain home', read('index.html'), 'CLOSEST CALL'],
+    ['live day', read('day/2026-11-16/index.html', edDist), 'CLOSEST CALL'],
+    ['past day', read('day/2026-11-15/index.html', edDist), 'CLOSEST CALL'],
+    ['plain day', read('day/2026-11-16/index.html'), 'CLOSEST CALL'],
+    ['quiet story first', read('index.html', quakeDist), 'TOP STORY'],
+  ];
+  for (const [label, html, tag] of pages) {
+    assert.deepEqual(anchorDepth(html), { deepest: 1, end: 0 }, `${label}: no link holds another, and every link closes`);
+    assert.ok(!/<a\b[^>]*>\s*<(?:li|ol|ul|div|p|section|h[1-6])\b/.test(html), `${label}: a link holds words, never a block`);
+    // a homepage has a block of rows for today and one for yesterday, each with its own first row
+    const groups = html.includes('<section class="day"') && !html.includes('id="rows"') ? blocksOf(html).map(rowsOf) : [rowsOf(html)];
+    assert.ok(groups.every((g) => g.length >= 2), `${label}: ${groups.map((g) => g.length)} rows`);
+    for (const [at, row] of groups.flatMap((g, n) => g.map((r) => [n, r]))) {
+      const f = rowFacts(row);
+      if (row.includes('<div class="card">')) {
+        // a story with no safe link still reads, and has nothing to open
+        assert.ok(!row.includes('<a ') && !row.includes('class="cta"'), `${label} row ${f.rank}: no link, so no "Read it"`);
+        continue;
+      }
+      assert.equal((row.match(/<a class="card"/g) || []).length, 1, `${label} row ${f.rank}: one card link`);
+      const card = row.match(/<a class="card" href="[^"]*" target="_blank" rel="noopener">([\s\S]*?)<\/a>/);
+      assert.ok(card, `${label} row ${f.rank}: the card is a link that opens in a new tab`);
+      // inside the card: the number a screen reader says, the line, and the bar with the news site and "Read it"
+      // a quiet row has its caption in there too, between the line and the bar
+      assert.match(card[1], new RegExp(`^<span class="sr">${f.rank}\\. </span><span class="txt">[^<]+</span>(?:<span class="cap">[^<]+</span>)?<span class="bar"><span class="src">[\\s\\S]*</span><span class="cta">Read it →</span></span>$`), `${label} row ${f.rank}`);
+      assert.equal(card[1].includes('class="cap"'), f.quiet, `${label} row ${f.rank}: a quiet row has its caption in the card, and no other row has one`);
+      assert.ok(!row.includes('<p class="cap">'), `${label} row ${f.rank}: the caption is never a paragraph under the card`);
+      // outside it: the rank and emoji (for the eye only), the tag and the donate link
+      for (const outside of ['class="rk"', 'class="tag"', 'class="help"']) assert.ok(!card[1].includes(outside), `${label} row ${f.rank}: ${outside} stands outside the card`);
+      assert.ok(row.includes('<div class="rk" aria-hidden="true"><span class="rn">'), `${label} row ${f.rank}: the number and the emoji are not read out`);
+      assert.equal(f.tag, f.rank === '1' ? (at === 0 ? tag : 'CLOSEST CALL') : null, `${label} row ${f.rank}: only the first row has a tag`);
+      assert.equal(f.best, f.rank === '1', `${label} row ${f.rank}: only the first row is the closest call`);
+      if (f.help) assert.ok(row.indexOf('</a>') < row.indexOf('class="help"'), `${label} row ${f.rank}: the card closes before the donate link opens`);
+    }
+    // the list of every headline: the link is the headline and its words, and a donate link stands beside it
+    for (const head of headsOf(html)) {
+      const link = head.match(/<a class="hla" href="[^"]*" target="_blank" rel="noopener">([\s\S]*?)<\/a>/);
+      if (!link) continue;
+      assert.match(link[1], /^<span class="ht">[\s\S]*<\/span>(?:<span class="hs">[\s\S]*<\/span>)?$/, `${label}: a headline link holds the headline and its source`);
+      assert.ok(!link[1].includes('class="cap"') && !link[1].includes('class="help"'), `${label}: the caption and the donate link stand outside the headline link`);
+    }
+  }
+  // the day's rows and its list of headlines are lists a screen reader can count
+  for (const [label, html] of pages) for (const m of html.matchAll(/<ol class="(?:rows|heads)"([^>]*)>/g)) assert.match(m[1], /role="list"/, label);
+});
+
+test('phase 6 day pages: someone who lands from a shared link can find today, every day, the scale, the share button and where to follow', () => {
+  const live = read('day/2026-11-16/index.html', edDist);
+  const past = read('day/2026-11-15/index.html', edDist);
+  for (const [label, html] of [['live day', live], ['past day', past]]) {
+    // a way out above the hero: today, and every day so far
+    has(html, '<div class="top"><a href="../../">← Today</a><a href="../../almanac/">Every day so far →</a></div>');
+    assert.equal((html.match(/class="top"/g) || []).length, 1, `${label}: once`);
+    assert.ok(html.indexOf('class="top"') < html.indexOf('<section class="hero"'), `${label}: above the hero`);
+    // the hero: the scale under the meter, the share button, then the masthead line
+    const hero = heroOf(html);
+    has(hero, '<p class="scale">0 is a quiet day. 99 is the end.</p>');
+    assert.ok(hero.indexOf('class="meter"') < hero.indexOf('class="scale"'), `${label}: the scale sits under the meter`);
+    has(hero, '<button class="sh" type="button" data-act="share">Share this day</button>');
+    has(hero, '<p class="mast">didtheworldendtoday.com · @thelpdrive</p>');
+    assert.ok(hero.indexOf('class="sh"') < hero.indexOf('class="mast"'), `${label}: the masthead line is last`);
+    // the rows say how they are ordered, and the foot of the rows shares and follows
+    has(html, '<h2 class="sec">Ranked from most world-ending to least</h2>\n<ol class="rows" role="list">');
+    has(html, '<div class="df">\n<button class="btn" type="button" data-act="share">Share this day</button>\n<a class="follow" href="https://x.com/thelpdrive" target="_blank" rel="noopener">Follow @thelpdrive for tomorrow&#39;s ALMOST.</a>\n</div>');
+  }
+  // the live day's list is the last 24 hours and says when it was read; a finished day's list is that day's
+  has(live, '<h2 class="sec">Headlines from the last 24 hours, as of 5:30 PM ET</h2>');
+  has(past, '<h2 class="sec">Every headline we read that day</h2>');
+  assert.ok(!past.includes('Headlines from the last 24 hours') && !live.includes('Every headline we read that day'));
+  // ten headlines show; the rest wait behind a button and none is lost
+  const n = stored16.stories.length;
+  assert.ok(n > copy.HEADLINES_SHOWN && stored15.stories.length <= copy.HEADLINES_SHOWN, 'a long day and a short day to compare');
+  const all = live.slice(live.indexOf('<section id="all">'));
+  const [shown, rest] = all.split('<details class="more">');
+  assert.equal((shown.match(/<li class="hd/g) || []).length, copy.HEADLINES_SHOWN, 'ten show');
+  assert.equal(rest.match(/<summary>([^<]*)<\/summary>/)[1], `Show ${n - copy.HEADLINES_SHOWN} more headlines`);
+  assert.equal((rest.match(/<li class="hd/g) || []).length, n - copy.HEADLINES_SHOWN, 'the rest are behind the button');
+  assert.ok(!/<details class="more" open/.test(live), 'closed until it is tapped');
+  assert.equal((live.match(/<li class="hd/g) || []).length, n, 'every headline of the day is on the page');
+  assert.ok(!past.includes('<details'), 'a short day has nothing to hide');
+  // the same cut at the edges, and the word for one
+  const one = (title) => ({ id: title, cat: 'internet', title, url: 'https://example.com/a', source: 'S', outlets: 1 });
+  const ctx = { byId: new Map(), quietMode: false, quietCaption: 'No jokes on this one.', quietLink: cfg.quiet.quietLink, quietLinkIntl: cfg.quiet.quietLinkIntl };
+  const ten = Array.from({ length: 10 }, (_, i) => one(`Story ${i}`));
+  assert.ok(!headlineRows(ten, ctx).includes('<details'), 'ten is not hidden');
+  assert.ok(headlineRows([...ten, one('Story 10')], ctx).includes('<summary>Show 1 more headline</summary>'), 'one more is "headline"');
+  assert.ok(headlineRows([...ten, one('A'), one('B')], ctx).includes('<summary>Show 2 more headlines</summary>'));
+});
+
+test('phase 6 quiet pages: no claim that the rows are ranked, "Top stories" over them, and a follow line with no joke', () => {
+  const r = copyRoot(edRoot);
+  edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: '' }));
+  const out = buildAt(r);
+  const home = read('index.html', out.dist);
+  assert.ok(!home.includes('class="rank"') && !home.includes(copy.RANK_NOTE), 'the quiet homepage does not say its rows are ranked');
+  for (const rel of ['day/2026-11-16/index.html', 'day/2026-11-15/index.html']) {
+    const page = read(rel, out.dist);
+    has(page, '<h2 class="sec">Top stories</h2>\n<ol class="rows" role="list">');
+    assert.ok(!page.includes(copy.RANK_HEADING), `${rel}: no ranking claim`);
+    has(page, '<a class="follow" href="https://x.com/thelpdrive" target="_blank" rel="noopener">Follow @thelpdrive</a>');
+    assert.ok(!page.includes('ALMOST.</a>') && !page.includes('tomorrow'), `${rel}: no joke in the follow line`);
+    assert.equal(rowFacts(rowsOf(page)[0]).tag, 'TOP STORY', `${rel}: the first row is the top story`);
+    has(page, '<div class="top">');
+  }
+  // an ordinary build is the other way round, so these checks can fail
+  const normal = read('day/2026-11-16/index.html', edDist);
+  assert.ok(normal.includes(copy.RANK_HEADING) && normal.includes('tomorrow&#39;s ALMOST.') && !normal.includes('>Top stories<'));
+  assert.ok(read('index.html', edDist).includes('<p class="rank">Ranked from most world-ending to least.</p>'));
+});
+
+// ---- phase 6 fix round -------------------------------------------------------------------------------------------------------
+
+test('phase 6 fix round: only an edition says its rows are ranked, and a day of plain headlines is "Top stories" with no claim', () => {
+  const RANKED = '<h2 class="sec">Ranked from most world-ending to least</h2>\n<ol class="rows" role="list">';
+  const TOP = '<h2 class="sec">Top stories</h2>\n<ol class="rows" role="list">';
+  // an edition on every day: the note on the homepage and the heading on both day pages
+  has(read('index.html', edDist), '<p class="rank">Ranked from most world-ending to least.</p>');
+  for (const rel of ['day/2026-11-16/index.html', 'day/2026-11-15/index.html']) has(read(rel, edDist), RANKED);
+  // no edition on any day: nothing says the rows are ranked, and the day pages say "Top stories"
+  const home = read('index.html');
+  assert.ok(!home.includes('class="rank"') && !home.includes(copy.RANK_NOTE) && !home.includes('Ranked from'), 'the plain homepage makes no claim about order');
+  for (const rel of ['day/2026-11-16/index.html', 'day/2026-11-15/index.html']) {
+    const page = read(rel);
+    has(page, TOP);
+    assert.ok(!page.includes(copy.RANK_HEADING) && !page.includes('class="rank"'), `${rel}: no ranking claim`);
+  }
+  // one day of each: every page says what its own day is
+  const todayOnly = withEditions({ '2026-11-16': ED16 }).dist;
+  has(read('index.html', todayOnly), '<p class="rank">Ranked from most world-ending to least.</p>');
+  has(read('day/2026-11-16/index.html', todayOnly), RANKED);
+  has(read('day/2026-11-15/index.html', todayOnly), TOP);
+  const yesterdayOnly = withEditions({ '2026-11-15': ED15 }).dist;
+  assert.ok(!read('index.html', yesterdayOnly).includes('class="rank"'), "today is plain headlines, so today's block does not say it is ranked");
+  has(read('day/2026-11-16/index.html', yesterdayOnly), TOP);
+  has(read('day/2026-11-15/index.html', yesterdayOnly), RANKED);
+});
+
+test('phase 6 fix round: a place is a US place only when it is only a US place, and a headline that says nobody was hurt gets no link', () => {
+  const link = (title) => headlineLink(title);
+  // the four the reviewer sent
+  assert.equal(link('Floods destroy homes in northeast India'), 'ifrc', 'a direction in front of a country abroad is not the US');
+  assert.equal(link('Hurricane destroys homes in Baja California'), 'ifrc', 'Baja California is Mexico, not California');
+  assert.equal(link('Storm destroys homes in Jamaica, US aid on the way'), 'ifrc', 'a named place abroad beats a bare "US"');
+  assert.equal(link("Nor'easter damages homes across New England"), 'redcross', 'New England is a US place, and "damages" is harm');
+  // a region word that is also a region of other countries names no place by itself
+  for (const title of ['Tornado destroys homes across the Midwest', 'Hurricane damages homes along the Gulf Coast', 'Storm destroys homes in the Northeast', 'Wildfire destroys homes on the East Coast', 'Flood damages homes on the West Coast']) assert.equal(link(title), null, title);
+  assert.equal(link('Cyclone damages homes on Australia’s east coast'), 'ifrc', 'the east coast of a country abroad');
+  assert.equal(link('Hurricane damages homes along the Gulf Coast of Mexico'), 'ifrc');
+  for (const title of ['Flood destroys homes in Baja California and southern California', 'Hurricane destroys homes in New Mexico', 'Storm damaged homes in the Pacific Northwest']) assert.equal(link(title), 'redcross', title);
+  assert.equal(link('Flood kills 12 in Baja California Sur'), 'ifrc');
+  // a named US place still wins over a named place abroad, and a bare "US" or "U.S." still counts when nothing else is named
+  assert.equal(link('Typhoon damaged homes in Guam and Japan'), 'redcross');
+  for (const title of ['Wildfire destroys homes, U.S. officials say', 'Flood damaged homes in Georgia, US', 'Storm destroys homes across the United States']) assert.equal(link(title), 'redcross', title);
+  // the harm words: damage, damages, displaces, displacing, evacuation, evacuations
+  for (const title of ['Heavy damage reported in Moore, OK after tornado', 'Storm damages homes in Moore, OK', 'Flood displaces thousands in Bangladesh', 'Floods displacing families in Louisiana', 'Evacuations ordered near Moore, OK', 'Evacuation ordered as wildfire nears Santa Barbara, CA']) assert.ok(link(title), title);
+  assert.equal(link('Flood displaces thousands in Bangladesh'), 'ifrc');
+  assert.equal(link('Floods displacing families in Louisiana'), 'redcross');
+  assert.equal(link('Damaging winds forecast for Texas'), null, '"damaging" is a forecast, not harm');
+  // an evacuation that is over, and harm that did not happen, is not harm
+  for (const title of [
+    'Wildfire evacuation order lifted in California',
+    'Wildfire evacuation orders lifted in California',
+    'Officials lift evacuation order after California wildfire',
+    'Cal Fire lifts the remaining evacuation orders in Texas',
+    'Strong quake shakes Tokyo, no damage reported',
+    'Quake near Santa Barbara, CA: no injuries reported',
+    'No one hurt as flood hits Texas town',
+    'Nobody was injured when the tornado crossed Oklahoma',
+  ]) assert.equal(link(title), null, title);
+  // but harm named next to it still counts
+  for (const title of ['No injuries, but homes destroyed in Moore, OK', 'No deaths reported, but dozens of homes damaged in Texas', 'Wildfire evacuation order lifted, but 40 homes destroyed in California']) assert.equal(link(title), 'redcross', title);
+  // a story is read the same way on the page
+  const news = (title) => ({ id: 'n', cat: 'weather', kind: 'news', title, url: 'https://example.com/n', source: 'Example', quiet: true });
+  assert.equal(quietCard(news('Floods destroy homes in northeast India')).link, 'ifrc');
+  assert.equal(quietCard(news('Hurricane destroys homes in Baja California')).link, 'ifrc');
+  assert.equal(quietCard(news('Wildfire evacuation order lifted in California')).link, null);
+});
+
+test('phase 6 fix round: the feed says the date and the Doom Score the way the page does', () => {
+  const items = [].concat(new XMLParser().parse(read('feed.xml', edDist)).rss.channel.item);
+  assert.ok(items[0].description.startsWith(`<p>Mon, Nov 16 · Doom Score ${latest.score} of 99</p>`), items[0].description);
+  assert.ok(items[1].description.startsWith('<p>Sun, Nov 15 · Doom Score 11 of 99</p>'), items[1].description);
+  // the cap is the page's cap, and a score that is not a number reads as 0
+  const day = { date: '2026-11-16', score: 'x', headline: 'H. Still here.', rows: [], updatedAt: '2026-11-16T22:30:00Z' };
+  const xml = (extra) => feedXml({ siteUrl: SITE, days: [day], buildTime: '2026-11-16T22:30:00Z', ...extra });
+  assert.ok(xml({ doomCap: 50 }).includes('Mon, Nov 16 · Doom Score 0 of 50'));
+  assert.ok(xml({}).includes('Mon, Nov 16 · Doom Score 0 of 99'));
+});
+
+test('phase 6 fix round: the source on a card is two lines, the name and under it the count, with no dot between them', () => {
+  const ctx = { byId: new Map(), quietMode: false, quietCaption: 'q', quietLink: '', quietLinkIntl: '' };
+  const make = (over) => dayRow({ emoji: 'e', line: 'A line.', ids: ['a'], url: 'https://x.example/a', source: 'TradingView', outlets: 4, ...over }, 1, ctx);
+  assert.ok(make({}).includes('<span class="bar"><span class="src"><span class="sn">TradingView</span><span class="sc">4 news sites</span></span><span class="cta">Read it →</span></span>'));
+  const one = make({ outlets: 1 });
+  assert.ok(one.includes('<span class="src"><span class="sn">TradingView</span></span>') && !one.includes('class="sc"'), 'one news site: the name alone');
+  const bar = (html) => html.match(/<span class="bar">[\s\S]*<\/span><\/span>/)[0];
+  assert.ok(!bar(make({})).includes('·') && !bar(make({})).includes('&middot;'), 'no dot between the name and the count');
+  assert.ok(make({ source: '', outlets: 5 }).includes('<span class="src"><span class="sc">5 news sites</span></span>'), 'no name, a count');
+  const bare = make({ source: '', outlets: 1 });
+  assert.ok(bare.includes('<span class="bar"><span class="src"></span><span class="cta">Read it →</span></span>'), 'no source: the empty span keeps "Read it" on the right');
+  assert.ok(!make({ source: '', outlets: 1, url: '' }).includes('class="bar"'), 'no source and no link: no bar');
+  assert.ok(make({ url: 'javascript:alert(1)' }).includes('<span class="bar"><span class="src"><span class="sn">TradingView</span><span class="sc">4 news sites</span></span></span>'), 'no safe link: the source, and no "Read it"');
+  // a web address reads as its host, on the first line
+  assert.ok(make({ source: 'https://www.essexcountynews.co.uk/' }).includes('<span class="sn">essexcountynews.co.uk</span>'));
+  // the parts, and the one-line form the list of every headline keeps
+  assert.deepEqual(copy.sourceParts(4, 'TradingView'), { name: 'TradingView', count: '4 news sites' });
+  assert.deepEqual(copy.sourceParts(1, 'TradingView'), { name: 'TradingView', count: '' });
+  assert.deepEqual(copy.sourceParts('x', ''), { name: '', count: '' });
+  const head = headlineRow({ id: 'h', cat: 'internet', title: 'A headline', url: 'https://x.example/a', source: 'TradingView', outlets: 4 }, ctx);
+  assert.ok(head.includes('<span class="hs">TradingView · 4 news sites · Read it →</span>'), 'the list keeps one line');
+});
+
+test('phase 6 fix round: a quiet row has its caption inside the card, between the line and the bar, and the donate link after the card', () => {
+  const lead = { id: 'q1', cat: 'weather', kind: 'news', title: 'Tornado destroys homes in Oklahoma town', url: 'https://example.com/q1', source: 'Example', quiet: true };
+  const ctx = { byId: new Map([['q1', lead]]), quietMode: false, quietCaption: 'No jokes on this one.', quietLink: cfg.quiet.quietLink, quietLinkIntl: cfg.quiet.quietLinkIntl };
+  const item = { emoji: '🌪️', line: 'A tornado hit Oklahoma.', ids: ['q1'], quiet: true, url: 'https://example.com/q1', source: 'Example', outlets: 3 };
+  const html = dayRow(item, 1, ctx);
+  const card = html.match(/<a class="card" href="[^"]*" target="_blank" rel="noopener">([\s\S]*?)<\/a>/)[1];
+  assert.equal(card, '<span class="sr">2. </span><span class="txt">A tornado hit Oklahoma.</span><span class="cap">No jokes on this one.</span><span class="bar"><span class="src"><span class="sn">Example</span><span class="sc">3 news sites</span></span><span class="cta">Read it →</span></span>');
+  assert.ok(html.includes('</a>\n<a class="help" href="https://www.redcross.org/donate" target="_blank" rel="noopener">Donate to the Red Cross →</a>\n</div>'), 'the donate link is its own link, after the card');
+  assert.equal(html.match(/class="cap"/g).length, 1, 'one caption');
+  assert.ok(!html.includes('<p class="cap">'), 'not a paragraph under the card');
+  assert.deepEqual(anchorDepth(html), { deepest: 1, end: 0 });
+  // a quiet row with nothing to link to still has its caption, in the card, and no donate link
+  const plain = dayRow({ ...item, ids: ['gone'] }, 1, ctx);
+  assert.ok(plain.includes('<span class="cap">No jokes on this one.</span><span class="bar">') && !plain.includes('class="help"'));
+  // a row with no safe link has the caption in the same place
+  const noLink = dayRow({ ...item, url: 'javascript:alert(1)' }, 1, ctx);
+  assert.ok(noLink.includes('<div class="card"><span class="sr">2. </span><span class="txt">A tornado hit Oklahoma.</span><span class="cap">No jokes on this one.</span><span class="bar">'));
+  // a row that is not quiet has no caption at all
+  assert.ok(!dayRow({ ...item, quiet: false }, 1, ctx).includes('class="cap"'));
+  // the list of every headline keeps its caption as a line under the link, and the donate link after it
+  const head = headlineRow(lead, ctx);
+  assert.ok(head.includes('</a>\n<p class="cap">No jokes on this one.</p>\n<a class="help" href="https://www.redcross.org/donate"'), head);
+});
+
+test('phase 6 one id, one story: when two stories carry one id, every page lists the story once, and so does the data file', () => {
+  const r = copyRoot(root);
+  const [a, b] = stored16.stories;
+  assert.notEqual(a.title, b.title);
+  const share = (stories) => {
+    stories.find((s) => s.title === b.title).id = stories.find((s) => s.title === a.title).id;
+  };
+  edit(dayFile(r, '2026-11-16'), (d) => share(d.stories));
+  edit(latestFile(r), (l) => share(l.stories));
+  const out = buildAt(r);
+  auditSite(out.dist, { label: 'one id twice' });
+  const day = read('day/2026-11-16/index.html', out.dist);
+  const titles = headsOf(day).map((h) => headFacts(h).title);
+  assert.equal(titles.length, stored16.stories.length - 1, 'one story fewer: the second one with that id is left out');
+  assert.equal(new Set(titles).size, titles.length, 'and no headline twice');
+  assert.equal(titles.includes(a.title) + titles.includes(b.title), 1, 'exactly one of the two is listed');
+  const home = read('index.html', out.dist);
+  const lines = rowsOf(home).map((x) => rowFacts(x).text);
+  assert.equal(new Set(lines).size, lines.length, 'the rows on the homepage are all different stories');
+  const ids = readJson(path.join(out.dist, 'api', 'today.json')).stories.map((s) => s.id);
+  assert.equal(new Set(ids).size, ids.length, 'the data file has each id once');
+  assert.equal(ids.length, stored16.stories.length - 1);
+});
+
+test('phase 6 source text: the news site, how many told it, and a web address read as its host', () => {
+  assert.equal(copy.sourceText(1, 'CBS News'), 'CBS News');
+  assert.equal(copy.sourceText(2, 'CBS News'), 'CBS News · 2 news sites');
+  assert.equal(copy.sourceText(32, 'CBS News'), 'CBS News · 32 news sites');
+  assert.equal(copy.sourceText('3', 'CBS News'), 'CBS News · 3 news sites');
+  assert.equal(copy.sourceText(3.9, 'CBS News'), 'CBS News · 3 news sites');
+  assert.equal(copy.sourceText(5, ''), '5 news sites', 'no name, a count');
+  for (const [outlets, source] of [[1, ''], [undefined, undefined], [null, null], ['x', ''], [0, '']]) assert.equal(copy.sourceText(outlets, source), '', `${outlets} ${source}`);
+  assert.equal(copy.sourceText('x', 'S'), 'S', 'a count that is not a number is not shown');
+  assert.ok(!/\bsources?\b|outlets?/i.test(copy.sourceText(4, 'S')), 'a person reads "news sites"');
+  // a web address is its host, without www and without the slash
+  for (const [given, shown] of [
+    ['https://www.essexcountynews.co.uk/', 'essexcountynews.co.uk'],
+    ['http://example.com/a/b?c=1', 'example.com'],
+    ['https://WWW.Example.COM', 'example.com'],
+    ['www.example.com', 'example.com'],
+    ['example.com/news', 'example.com'],
+    ['CBS News', 'CBS News'],
+    ['U.S. News', 'U.S. News'],
+    ["O'Reilly & Sons", "O'Reilly & Sons"],
+    ['', ''],
+    [null, ''],
+    [undefined, ''],
+  ]) assert.equal(copy.sourceName(given), shown, String(given));
+  assert.equal(copy.sourceText(3, 'https://www.essexcountynews.co.uk/'), 'essexcountynews.co.uk · 3 news sites');
+  // under a headline in the list: the same words, then what the headline does
+  assert.equal(copy.headlineMeta(1, 'Pub A', true), 'Pub A · Read it →');
+  assert.equal(copy.headlineMeta(2, 'Pub A', true), 'Pub A · 2 news sites · Read it →');
+  assert.equal(copy.headlineMeta(1, 'Pub A', false), 'Pub A', 'no link, nothing to read');
+  assert.equal(copy.headlineMeta(1, '', true), 'Read it →');
+  assert.equal(copy.headlineMeta(1, '', false), '');
+  assert.equal(copy.headlineMeta(7, 'https://www.example.com/x', true), 'example.com · 7 news sites · Read it →');
+  // a source that is an address never reaches a page as an address
+  const ctx = { byId: new Map(), quietMode: false, quietCaption: 'q', quietLink: '', quietLinkIntl: '' };
+  const row = dayRow({ emoji: 'e', line: 'A line.', ids: ['a'], url: 'https://x.example/a', source: 'https://www.essexcountynews.co.uk/', outlets: 1 }, 0, ctx);
+  assert.equal(rowFacts(row).name, 'essexcountynews.co.uk');
+  assert.equal(rowFacts(row).count, null);
+  const head = headlineRow({ id: 'h', cat: 'internet', title: 'A headline', url: 'https://x.example/a', source: 'https://www.essexcountynews.co.uk/', outlets: 2 }, ctx);
+  assert.ok(head.includes('<span class="hs">essexcountynews.co.uk · 2 news sites · Read it →</span>'));
+  assert.ok(!head.includes('https://www.essex'), 'the address itself is not shown');
+});
+
+test('phase 6 tap targets: every control is at least 48px tall, a card and a headline link spread over their whole row, and the small print is big enough', () => {
+  const css = read('index.html', edDist).match(/<style>([\s\S]*?)<\/style>/)[1];
+  const rule = (selector) => {
+    const m = css.match(new RegExp(`(?:^|[}\\n])${selector.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\{([^}]*)\\}`));
+    assert.ok(m, `a rule for ${selector}`);
+    return m[1];
+  };
+  const rem = (body, prop) => {
+    const m = body.match(new RegExp(`(?:^|;)${prop}:([\\d.]+)rem`));
+    return m ? Number(m[1]) : 0;
+  };
+  for (const selector of ['.go', '.sh', '.btn', '.help', '.plus', '.follow', '.end a', '.hla', '.more summary', '.dnav a', '.top a']) {
+    assert.ok(rem(rule(selector), 'min-height') >= 3, `${selector} is at least 48px tall`);
+  }
+  // the row is the frame and the link's own box is stretched over it, so a tap anywhere in the row opens the story
+  assert.match(rule('.row'), /position:relative/);
+  assert.match(rule('.card::after'), /content:"";position:absolute;inset:0/);
+  assert.match(rule('.hd'), /position:relative/);
+  assert.match(rule('.hla::after'), /content:"";position:absolute;inset:0/);
+  // the donate link sits above the stretched link, so it can be tapped on its own
+  assert.match(rule('.help'), /position:relative;z-index:1/);
+  // the source is the name, on up to two lines so a long name is never cut short, and the count under it
+  assert.match(rule('.src'), /min-width:0/);
+  assert.match(rule('.sn'), /-webkit-line-clamp:2/);
+  assert.match(rule('.sn'), /overflow:hidden/);
+  assert.doesNotMatch(rule('.sn'), /white-space:nowrap/);
+  assert.match(rule('.sn'), /color:var\(--ink\)/);
+  assert.match(rule('.sn'), /font-weight:700/);
+  assert.match(rule('.sc'), /display:block/);
+  assert.equal(rem(rule('.sc'), 'font-size'), 0.8);
+  assert.match(rule('.sc'), /font-weight:500/);
+  assert.match(rule('.sc'), /color:var\(--mute\)/);
+  // the caption is a line of the card, so it is a block of its own
+  assert.match(rule('.cap'), /display:block/);
+  assert.match(rule('.cta'), /flex:none/);
+  // the small print: the tag is .75rem, the footer .9rem
+  assert.match(rule('.tag'), /font:800 \.75rem\//);
+  assert.match(rule('footer'), /font-size:\.9rem/);
+  // the details button is a real button for the eye and the finger
+  assert.match(rule('.more summary'), /cursor:pointer/);
+});
+
+test('phase 6 words: no page says the old names for things, and the about page explains the rank, the time and the doom score', () => {
+  const about = read('about/index.html', edDist);
+  has(about, esc(copy.ET_NOTE));
+  has(about, esc(copy.HOW_WE_RANK));
+  has(about, esc(copy.QUIET_CARDS_ABOUT));
+  assert.match(about, /id="doom-score"/, 'the Doom Score has a place a link can point to');
+  // a person reads "news sites", never "outlets", and the pages that list stories never say "sources"
+  const words = (html) => html.replace(/<style>[\s\S]*?<\/style>/, ' ').replace(/<[^>]+>/g, ' ');
+  for (const [label, html, plainSources] of [['home', read('index.html', edDist), true], ['day', read('day/2026-11-16/index.html', edDist), true], ['almanac', read('almanac/index.html', edDist), true], ['about', about, false]]) {
+    assert.ok(!/\boutlets?\b/i.test(words(html)), `${label}: "news sites", not "outlets"`);
+    if (plainSources) assert.ok(!/\bsources?\b/i.test(words(html)), `${label}: "news sites", not "sources"`);
+  }
 });

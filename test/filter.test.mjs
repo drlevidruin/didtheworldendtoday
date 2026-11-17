@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { config, crashWithPeople } from '../scripts/config.mjs';
+import { config, crashWithPeople, EXCLUDE_SOURCES, HIDE_TITLES } from '../scripts/config.mjs';
 import { compileExcluder, compileGate } from '../scripts/lib/filter.mjs';
 import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
 import { looksNotEnglish, qualityCheck } from '../scripts/lib/quality.mjs';
@@ -555,4 +555,118 @@ test('review: a small word right before a capitalised word is part of a name, no
 test('item 14: the language check is steady and safe on odd input', () => {
   for (const odd of [undefined, null, '', 42, {}, [], '...', '   ']) assert.equal(looksNotEnglish(odd), false, String(odd));
   assert.deepEqual([1, 2, 3].map(() => looksNotEnglish(SPANISH_CHARITY_RUN)), [true, true, true]);
+});
+
+// ---- phase 6: what never goes on a page ------------------------------------------------------------------------------------
+
+// Headlines that were live and not wanted, with the family that says why.
+const NOT_WANTED = [
+  ["Data breach: 45,000 current and former KISD employees 'may have been exposed'", 'children'],
+  ['California Attorney General Rob Bonta Sues OpenAI Over Hugging Face Cyberattack', 'politics'],
+  ['Southern Indian state to cull thousands of birds after Bird flu detected', 'death'],
+  ['ChatGPT or Claude down? The best backup AI to use', 'junk'],
+  ['Spring daffodils covered in snow after an ice storm hit the Niagara region April 15. Archives.', 'format'],
+  ['FAA ground stop led a woman to take this drastic step to get home', 'hidden'],
+];
+
+// Headlines that sit close to those and are news.
+const STILL_NEWS = [
+  'Hackers inject credit card, crypto-stealing malware into 178 major websites',
+  'FAA outage traced to aging copper-wire switch as expert warns air traffic system needs overhaul',
+  'Couple who missed wedding due to nationwide ground stop married at airport',
+  'Bird flu detected in Oklahoma dairy herd',
+  'Internet Archive breach exposes 31 million accounts',
+  'Wayback Machine back online after hackers knocked out Internet Archive',
+  // a sitting official in a real near miss is news, so a governor or a mayor is not a reason to drop a headline
+  'Governor declares state of emergency as wildfire forces evacuations',
+  // sites with archive in the name have real outages and breaches
+  'National Archives website hit by cyberattack',
+  'Archive of Our Own down after DDoS attack',
+  'The Wayback Machine archives went offline after attack',
+];
+
+test('phase 6 taste: each headline the owner flagged is dropped, by the family that says why', () => {
+  for (const [title, family] of NOT_WANTED) assert.equal(verdict(title, { source: 'Example News' })?.family, family, title);
+  for (const title of STILL_NEWS) assert.equal(verdict(title, { source: 'Example News' }), null, title);
+});
+
+test('phase 6 taste: lawsuits and attorneys general are politics, whatever the case, and a governor or a mayor in a near miss is not', () => {
+  for (const title of [
+    'Attorney General sues cloud company over outage',
+    'Attorneys general warn exchange after crash',
+    'Company sued after major outage',
+    'Bank sues vendor over a day of downtime',
+    'Class action lawsuit filed over bank outage',
+    'Lawsuits pile up after the airline outage',
+  ]) assert.equal(verdict(title)?.family, 'politics', title);
+  // a governor or a mayor speaking in a real near miss is not a reason to drop it
+  for (const title of [
+    'Governor declares state of emergency as wildfire forces evacuations',
+    'Governor orders power restored after blackout',
+    'Governors ask for grid help',
+    'Mayor says water back on after outage',
+    'Mayors meet on the grid',
+  ]) assert.equal(verdict(title), null, title);
+  // words that only look like the lawsuit words
+  for (const title of ['Suede sofa outage at the airport lounge', 'Pursued by hackers, the bank stayed online', 'Sale of the outage insurance ended']) assert.equal(verdict(title), null, title);
+});
+
+test('phase 6 taste: a school district is named by its capital initials, and only in capitals', () => {
+  for (const title of ['Katy ISD network outage', 'MISD systems down for a second day', 'KISD employees may have been exposed', 'Hackers hit LISD servers', 'ISD outage drags on', 'Big outage hits HOUSTON ISD today']) assert.equal(verdict(title)?.family, 'children', title);
+  // not a district: lowercase, more than five capitals, or a word that holds the letters
+  for (const title of ['The isd card reader failed at the airport', 'The ABCDEFISD gateway failed', 'Kiss day: the iSD card failed', 'Network outage hits AWSISDS today']) assert.equal(verdict(title), null, title);
+  // the rule is exact about case: "Isd" is not a district
+  assert.equal(verdict('Airport Isd system outage ends'), null);
+});
+
+test('phase 6 taste: animal culls, "the best" and photo archives are dropped, and a word that holds them is not', () => {
+  for (const title of ['Cattle culled after outbreak', 'Officials cull flocks after bird flu', 'Culling of poultry begins', 'Hundreds of hens culls reported']) assert.equal(verdict(title)?.family, 'death', title);
+  for (const title of ['A table that is the best of the best for outages', 'The best apps to use when the cloud is down', 'Why this is the best time to check your backups']) assert.ok(verdict(title), title);
+  // a photo-archive tag ends the headline or a clause
+  for (const title of ['Photo archive: ice storm hits region', 'Spring daffodils covered in snow after an ice storm hit the Niagara region April 15. Archives.', 'Photos from the archive | Storm hits region', 'Storm photos, archives', 'Flood photos: Archives']) assert.equal(verdict(title)?.family, 'format', title);
+  // a site with archive in its name has real outages and breaches, so a headline that merely names it is news
+  for (const title of ['National Archives website hit by cyberattack', 'Archive of Our Own down after DDoS attack', 'The Wayback Machine archives went offline after attack', 'Archives show the grid failed before', 'Internet Archive hacked again', 'Internet Archive breach exposes 31 million accounts', 'Outage keeps the Internet Archive offline']) assert.equal(verdict(title), null, title);
+  for (const title of ['Mcculloch says the grid is back', 'Cullen says the cloud is up', 'Disarchive tool goes offline', 'The bestseller outage hits the store']) assert.equal(verdict(title), null, title);
+});
+
+test('phase 6 taste: a story from a press-release wire is dropped by the news site, whatever its headline says', () => {
+  assert.deepEqual(EXCLUDE_SOURCES, ['EIN Presswire', 'EIN News', 'PR Newswire', 'Business Wire', 'GlobeNewswire', 'Accesswire', 'openPR', 'PRWeb', 'Newsfile']);
+  const title = 'Cloudflare outage knocks thousands of sites offline';
+  assert.equal(verdict(title, { source: 'EIN Presswire' })?.family, 'press release');
+  assert.deepEqual(verdict(title, { source: 'EIN Presswire' }), { family: 'press release', term: 'EIN Presswire' });
+  // case, spacing and punctuation do not matter, and extra words after the name do not either
+  for (const source of ['ein presswire', 'EIN-Presswire', 'ein_presswire', 'EIN Presswire (press release)', 'PRNewswire', 'PR Newswire', 'Business Wire', 'BUSINESSWIRE', 'GlobeNewswire', 'Globe Newswire', 'Accesswire', 'openPR', 'OpenPR', 'PRWeb', 'Newsfile', 'EIN News']) assert.equal(verdict(title, { source })?.family, 'press release', source);
+  // the wire's web address is the same site: GDELT names its sources that way
+  for (const source of ['einpresswire.com', 'www.einpresswire.com', 'prnewswire.com', 'https://www.businesswire.com/', 'globenewswire.com', 'accesswire.com', 'openpr.com', 'prweb.com', 'einnews.com', 'Globe Newswire (press release)', 'PRNewswire (press release)']) assert.equal(verdict(title, { source })?.family, 'press release', source);
+  // whole words: a news site that merely holds the letters is a news site
+  for (const source of ['The Verge', 'Open Prairie Reporter', 'Press Democrat', 'Einstein Weekly', 'Wired', 'Presswire Daily Review', 'openprairie.com', 'prwebdesign.com', 'newsfiles.com', 'seinnews.com', 'businesswired.com', '', null, undefined, 42]) assert.equal(verdict(title, { source }), null, String(source));
+  // with no source given, a headline is read alone, as it always was
+  assert.equal(verdict(title), null);
+});
+
+test('phase 6 taste: a headline hidden by hand is dropped by a lowercase piece of its title', () => {
+  assert.deepEqual(HIDE_TITLES.slice(0, 2), ['muir announces', 'drastic step']);
+  assert.ok(HIDE_TITLES.every((t) => t === t.toLowerCase() && t.trim() === t && t.length > 3), 'lowercase, trimmed, and not so short that it catches everything');
+  assert.deepEqual(verdict('FAA ground stop led a woman to take this DRASTIC STEP to get home'), { family: 'hidden', term: 'drastic step' }, 'any case in the title');
+  assert.equal(verdict('Muir announces plan for the lights')?.family, 'hidden');
+  assert.equal(verdict('Cloudflare outage knocks thousands of sites offline'), null);
+  // the families are the only place a piece is held: a custom list works the same way
+  const own = compileExcluder([{ name: 'hidden', titles: ['One-Off Title', ''], sources: ['Some Wire'] }]);
+  assert.equal(own.test('A one-off title appears')?.term, 'one-off title');
+  assert.equal(own.test('Nothing like it'), null, 'an empty piece catches nothing');
+  assert.equal(own.test('Nothing like it', { source: 'some-wire' })?.term, 'Some Wire');
+});
+
+test('phase 6 taste: the door, a stored story and the build all read the same rules, news site included', () => {
+  const gk = createGatekeeper(cfg);
+  const now = Date.parse('2026-11-17T15:00:00Z');
+  const raw = (over = {}) => ({ kind: 'news', cat: 'internet', title: 'Cloudflare outage knocks thousands of sites offline', url: 'https://pub.example/a', source: 'The Verge', publishedAt: now - 3600e3, ...over });
+  assert.equal(gk.admit(raw(), now).keep?.title, 'Cloudflare outage knocks thousands of sites offline');
+  assert.deepEqual(gk.admit(raw({ source: 'EIN Presswire' }), now), { drop: 'excluded:press release', detail: 'EIN Presswire' }, 'at the door');
+  assert.equal(gk.admit(raw({ title: 'Cloudflare outage over, says Attorney General of Texas' }), now).drop, 'excluded:politics');
+  assert.ok(gk.admit(raw({ title: 'Cloudflare outage over, says Mayor of Springfield' }), now).keep, 'a mayor is not a reason');
+  const stored = { ...raw(), id: 'abc123abc123', firstSeenAt: '2026-11-17T12:00:00.000Z', outlets: 1, outletNames: ['EIN Presswire'] };
+  assert.deepEqual(gk.recheck({ ...stored, source: 'EIN Presswire' }), { drop: 'excluded:press release', detail: 'EIN Presswire' }, 'a story already stored is cleaned on the next run');
+  assert.equal(gk.recheck({ ...stored, title: 'Katy ISD network outage' }).drop, 'excluded:children');
+  assert.ok(gk.recheck(stored).keep, 'and a good one stays');
 });

@@ -6,8 +6,8 @@ export const SITE_NAME = 'Did the world end today?';
 export const VERDICT = 'ALMOST.';
 export const TAGLINE = 'Live coverage of the end of the world, which keeps not happening.';
 export const DESCRIPTION =
-  "Live coverage of the end of the world, which keeps not happening. Today's near misses, a 0-99 Doom Score, and the Almanac of Almost. Checked every 15 minutes.";
-export const QUIET_DESCRIPTION = "Today's near misses, a 0-99 Doom Score, and the Almanac of Almost. Checked every 15 minutes.";
+  "Live coverage of the end of the world, which keeps not happening. Today's near misses, ranked from most world-ending to least. Checked every 15 minutes.";
+export const QUIET_DESCRIPTION = "Today's top stories and a 0-99 Doom Score. Checked every 15 minutes.";
 export const COMMENT = "If the world has ended and this still says ALMOST., sorry. We'll update it when we're back.";
 
 export const CREDIT_HANDLE = '@thelpdrive';
@@ -36,18 +36,20 @@ export function subline(score) {
 
 export const STALE_AFTER_HOURS = 2;
 
-export const STALE_TEMPLATE = "We haven't checked in {n} hours. That's on us, not the world.";
+// {time} is the Eastern clock time of the last good check, written like "6:12 AM ET".
+// The page script fills in the same template the same way.
+export const STALE_TEMPLATE = "Last checked {time}. That's on us, not the world.";
 
-export function staleLine(hours) {
-  const n = Math.max(STALE_AFTER_HOURS, Math.floor(Number(hours) || 0));
-  return STALE_TEMPLATE.replace('{n}', String(n));
+// ms: when the data was last read well, as epoch milliseconds.
+export function staleLine(ms) {
+  return STALE_TEMPLATE.replace('{time}', etClock(ms));
 }
 
 export const QUIET_LINE = 'Not a day for jokes. Back soon.';
 
 export const FOOTER_LINES = [
   'Checked every 15 minutes by a robot with low standards.',
-  'Headlines belong to their publishers. The dread is ours.',
+  'Headlines belong to their publishers. The jokes are ours.',
   'Satire. Not financial, medical, or end-of-the-world advice.',
 ];
 export const FOOTER_LINES_QUIET = ['Checked every 15 minutes.', 'Headlines belong to their publishers.'];
@@ -102,26 +104,64 @@ export const rowDate = when(WEEKDAY_SHORT); // Mon, Nov 16
 export const weekdayDate = when(WEEKDAY_LONG); // Monday, Nov 16
 export const weekdayName = when(WEEKDAY_ONLY); // Monday
 
-const ET_CLOCK = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit' });
-export const etClock = (ms) => (Number.isFinite(Number(ms)) ? `${ET_CLOCK.format(new Date(Number(ms)))} ET` : ''); // 3:05 PM ET
-
 export const homeTitle = `${SITE_NAME} ${VERDICT}`;
 export const dayTitle = (d) => `Did the world end on ${longDate(d)}? ${VERDICT}`;
 export const pageTitle = (name) => `${name} | ${SITE_NAME}`;
 
-// ---- times -----------------------------------------------------------------
-// The page script uses the same rules, so a card never changes wording when
-// the script takes over from the server.
+// ---- Eastern clock times --------------------------------------------------------
+// Every clock time the site shows is Eastern, written like "6:12 AM ET". The page script
+// (assets/app.js) builds it the same way, from the hour and minute alone, so no engine's own
+// spacing or punctuation can make the page script and the server say two different things.
 
-export function ago(ms) {
-  const sec = Math.max(0, Math.floor((Number(ms) || 0) / 1000));
-  if (sec < 60) return 'just now';
-  const min = Math.floor(sec / 60);
-  if (min < 60) return `${min} min ago`;
-  const hours = Math.floor(min / 60);
-  if (hours < 24) return hours === 1 ? '1 hour ago' : `${hours} hours ago`;
-  const days = Math.floor(hours / 24);
-  return days === 1 ? '1 day ago' : `${days} days ago`;
+const ET_CLOCK = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit', hourCycle: 'h23' });
+const isInstant = (ms) => ms !== null && ms !== undefined && ms !== '' && typeof ms !== 'boolean' && Number.isFinite(Number(ms));
+
+// ms: epoch milliseconds. Anything that is not a time reads as nothing.
+export function etClock(ms) {
+  if (!isInstant(ms)) return '';
+  const at = new Date(Number(ms));
+  if (Number.isNaN(at.getTime())) return '';
+  const part = {};
+  for (const p of ET_CLOCK.formatToParts(at)) part[p.type] = p.value;
+  const hour = Number(part.hour) % 24;
+  return `${hour % 12 || 12}:${part.minute} ${hour < 12 ? 'AM' : 'PM'} ET`; // 6:12 AM ET
+}
+
+// "Updated 6:12 AM ET", the line next to the Doom Score.
+export function updatedText(ms) {
+  const time = etClock(ms);
+  return time ? `Updated ${time}` : '';
+}
+
+const WEEKDAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const ET_FIELDS = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'America/New_York',
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  hourCycle: 'h23',
+});
+
+// The date and time for RSS (RFC 822) in Eastern time with its real offset:
+// "Tue, 17 Nov 2026 05:55:10 -0500", and -0400 in summer.
+export function rfc822ET(ms) {
+  if (!isInstant(ms)) return '';
+  const at = new Date(Number(ms));
+  if (Number.isNaN(at.getTime())) return '';
+  const f = {};
+  for (const p of ET_FIELDS.formatToParts(at)) f[p.type] = Number(p.value);
+  const hour = f.hour % 24;
+  // The Eastern wall clock read as if it were UTC, minus the real instant, is the offset.
+  const wall = Date.UTC(f.year, f.month - 1, f.day, hour, f.minute, f.second);
+  const offset = Math.round((wall - Math.floor(at.getTime() / 1000) * 1000) / 60000);
+  const two = (n) => String(n).padStart(2, '0');
+  const abs = Math.abs(offset);
+  const weekday = WEEKDAY_NAMES[new Date(Date.UTC(f.year, f.month - 1, f.day)).getUTCDay()];
+  return `${weekday}, ${two(f.day)} ${MONTH_NAMES[f.month - 1]} ${f.year} ${two(hour)}:${two(f.minute)}:${two(f.second)} ${offset < 0 ? '-' : '+'}${two(Math.floor(abs / 60))}${two(abs % 60)}`;
 }
 
 // ---- the Doom change arrow ---------------------------------------------------
@@ -145,12 +185,44 @@ export const BEST_TAG = 'CLOSEST CALL';
 export const TOP_TAG = 'TOP STORY'; // the first row when it is a quiet story, or the whole site is quiet
 export const FEED_END = "That's every day we've checked. The world was fine before that too, probably.";
 export const FEED_END_QUIET = "That's every day we've checked."; // quiet mode: no joke at the end either
-export const OLDER_DAYS = 'Older days are in the Almanac of Almost \u2192';
-export const ALMANAC_LINK = 'The Almanac of Almost \u2192';
+export const EVERY_DAY = 'Every day so far \u2192';
+export const OLDER_DAYS = EVERY_DAY;
+export const ALMANAC_LINK = EVERY_DAY;
+export const ALMANAC_LEAD = "Every day we've checked, newest first.";
+export const TODAY_LINK = '\u2190 Today';
+export const RANK_NOTE = 'Ranked from most world-ending to least.'; // under TODAY on the homepage
+export const RANK_HEADING = 'Ranked from most world-ending to least'; // over the rows of a day page
+export const RANK_HEADING_QUIET = 'Top stories';
 export const ALL_HEADLINES = 'Every headline we read that day';
 export const NOTHING_YET = 'Nothing new yet today.';
 export const NOTHING_FILED = 'Nothing on file for this day.';
 export const FIRST_DAY_PENDING = 'The first day is still being written.';
+export const FOLLOW_TEXT = `Follow ${CREDIT_HANDLE} for tomorrow's ${VERDICT}`;
+export const FOLLOW_QUIET = `Follow ${CREDIT_HANDLE}`;
+export const READ_IT = 'Read it \u2192';
+export const HELP_US = 'Donate to the Red Cross';
+export const HELP_INTL = 'Support the Red Cross and Red Crescent';
+
+// The About page
+export const ET_NOTE = 'Days run midnight to midnight, Eastern time. Every time on this site is Eastern.';
+export const HOW_WE_RANK = "Each day's list goes from most world-ending to least: how many people it could reach, how much of the world, and how close it came.";
+export const QUIET_CARDS_ABOUT =
+  'A quiet card is a story about something that could hurt people, like a big quake, a flood or a fire. It gets no joke. Just the plain facts. ' +
+  'When people or homes are hurt, or likely hurt, it also links to a charity: the Red Cross for a place in the United States, ' +
+  'or the international Red Cross and Red Crescent for a place in another country.';
+
+// How many of a day's headlines show before "Show N more headlines".
+export const HEADLINES_SHOWN = 10;
+
+// The list label on a day page. The live day's list is the last 24 hours, so it says when it was read.
+export function allHeadlinesLive(ms) {
+  const time = etClock(ms);
+  return time ? `Headlines from the last 24 hours, as of ${time}` : 'Headlines from the last 24 hours';
+}
+
+export const scaleText = (cap) => `0 is a quiet day. ${cap} is the end.`;
+export const mastText = (host) => `${host} \u00b7 ${CREDIT_HANDLE}`;
+export const moreHeadlines = (n) => `Show ${n} more ${n === 1 ? 'headline' : 'headlines'}`;
 
 // The size class of a day headline: the longer the line, the smaller the type, so
 // it never takes more than two lines on a phone. The classes are in the stylesheet.
@@ -174,25 +246,45 @@ export function dayLabel(date, today) {
   return { head: name, rest: md, plain: true };
 }
 
-// "Read it \u00b7 32 outlets \u2192", or the source's own name for a story told by one outlet.
-export function readText(outlets, source) {
-  const n = Number(outlets);
-  const tail = Number.isFinite(n) && n > 1 ? `${Math.floor(n)} outlets` : String(source || '').trim();
-  return tail ? `Read it \u00b7 ${tail} \u2192` : 'Read it \u2192';
-}
-
 // "Plus 94 more headlines we read so you don't have to \u2192"; in quiet mode just "Plus 94 more headlines \u2192"
 export function plusText(n, quiet = false) {
   const noun = n === 1 ? 'headline' : 'headlines';
   return quiet ? `Plus ${n} more ${noun} \u2192` : `Plus ${n} more ${noun} we read so you don't have to \u2192`;
 }
 
-// "Source \u00b7 32 outlets" under a headline on a day page; just the source for one outlet.
-export function sourceText(outlets, source) {
+// A source that is a web address ("https://www.example.co.uk/") reads as its host
+// ("example.co.uk"). Every view of a source goes through here.
+export function sourceName(source) {
+  const s = String(source ?? '').trim();
+  if (!s) return '';
+  const scheme = /^[a-z][a-z0-9+.-]*:\/\//i.test(s);
+  if (scheme || /^www\./i.test(s) || /^[a-z0-9-]+(?:\.[a-z0-9-]+)+\/\S*$/i.test(s)) {
+    try {
+      const host = new URL(scheme ? s : `https://${s}`).hostname.replace(/^www\./i, '');
+      if (host) return host;
+    } catch {
+      /* not an address after all: show it as it is */
+    }
+  }
+  return s;
+}
+
+// The two parts of a source: its name and, when more than one news site told the story, the count
+// ("32 news sites"). A card shows them on two lines; the list of every headline puts them on one.
+export function sourceParts(outlets, source) {
   const n = Number(outlets);
-  const name = String(source || '').trim();
-  if (Number.isFinite(n) && n > 1) return name ? `${name} \u00b7 ${Math.floor(n)} outlets` : `${Math.floor(n)} outlets`;
-  return name;
+  return { name: sourceName(source), count: Number.isFinite(n) && n > 1 ? `${Math.floor(n)} news sites` : '' };
+}
+
+// "CBS News \u00b7 32 news sites" on one line; just the name when one news site told it.
+export function sourceText(outlets, source) {
+  const { name, count } = sourceParts(outlets, source);
+  return [name, count].filter(Boolean).join(' \u00b7 ');
+}
+
+// "CBS News \u00b7 32 news sites \u00b7 Read it \u2192" under a headline in the full list. Without a link there is nothing to read.
+export function headlineMeta(outlets, source, linked = true) {
+  return [sourceText(outlets, source), linked ? READ_IT : ''].filter(Boolean).join(' \u00b7 ');
 }
 
 // ---- the share text ---------------------------------------------------------
@@ -201,16 +293,18 @@ export function sourceText(outlets, source) {
 //   Did the world end today? ALMOST.        (a past day: "Did the world end on Nov 16? ALMOST.")
 //   Asteroid missed. Banks back. Bags still lost. Still here.
 //   \u2604\ufe0f\ud83c\udfe6\u2708\ufe0f\ud83e\uddf3\ud83d\udc8d\ud83d\udcb3
-//   Nov 17 \u00b7 Doom 68/99
+//   Tue, Nov 17 \u00b7 Doom Score 68 of 99
 //   didtheworldendtoday.com/day/2026-11-17/
 //
 // A reader on a streak gets "Checked 3 days running." above the link, added by the
 // page script. Quiet mode keeps its own text: the quiet line and the grid of
 // fired categories (an emoji where one fired, a black square where none did).
 
-export function shareText({ live, date, score, change, fired, categories, host, quiet = false, withUrl = true, headline = '', emojis = [] }) {
+export function shareText({ live, date, score, change, fired, categories, host, quiet = false, withUrl = true, headline = '', emojis = [], cap = 99 }) {
   const doom = Number.isFinite(Number(score)) ? Math.round(Number(score)) : 0;
+  const top = Number.isFinite(Number(cap)) && Number(cap) > 0 ? Math.round(Number(cap)) : 99;
   const first = live ? `Did the world end today? ${VERDICT}` : `Did the world end on ${shortDate(date)}? ${VERDICT}`;
+  const doomLine = `${rowDate(date)} \u00b7 Doom Score ${doom} of ${top}`;
   let lines;
   if (quiet) {
     const firedSet = new Set(fired || []);
@@ -218,18 +312,13 @@ export function shareText({ live, date, score, change, fired, categories, host, 
     const rows = [];
     for (let i = 0; i < cells.length; i += 4) rows.push(cells.slice(i, i + 4).join(''));
     const arrow = changeText(change);
-    lines = [first, QUIET_LINE, `${shortDate(date)} \u00b7 Doom ${doom}/99${arrow ? ` ${arrow}` : ''}`, ...rows];
+    lines = [first, QUIET_LINE, `${doomLine}${arrow ? ` ${arrow}` : ''}`, ...rows];
   } else {
     const strip = (Array.isArray(emojis) ? emojis : []).join('');
-    lines = [first, headline || subline(score), ...(strip ? [strip] : []), `${shortDate(date)} \u00b7 Doom ${doom}/99`];
+    lines = [first, headline || subline(score), ...(strip ? [strip] : []), doomLine];
   }
   if (withUrl) lines.push(`${host}/day/${date}/`);
   return lines.join('\n');
-}
-
-// The three pieces of the Doom line under the date.
-export function checkedText(ms) {
-  return `checked ${ago(ms)}`;
 }
 
 // ---- small helpers for the templates ----------------------------------------

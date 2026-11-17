@@ -50,9 +50,8 @@ export const EDITION_SCHEMA = {
         additionalProperties: false,
       },
     },
-    best: { type: 'string' },
   },
-  required: ['date', 'headline', 'items', 'best'],
+  required: ['date', 'headline', 'items'],
   additionalProperties: false,
 };
 
@@ -207,9 +206,7 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
       if (!ids.length) continue;
       items.push({ emoji: entry.emoji, line: entry.line, ids });
     }
-    // The closest call goes first.
-    const bestAt = typeof parsed.best === 'string' ? items.findIndex((it) => it.ids.includes(parsed.best)) : -1;
-    if (bestAt > 0) items = [items[bestAt], ...items.slice(0, bestAt), ...items.slice(bestAt + 1)];
+    // The order of the items is the rank: the editor lists them most world-ending first.
     items = items.map((it) => {
       const lead = byId.get(it.ids[0]);
       return {

@@ -11,32 +11,43 @@
 import {
   ALL_HEADLINES,
   ALMANAC_LINK,
+  CREDIT_URL,
   DESCRIPTION,
+  EVERY_DAY,
   FEED_END,
   FEED_END_QUIET,
+  FOLLOW_QUIET,
+  FOLLOW_TEXT,
   GO_TEXT,
   GO_TEXT_QUIET,
   NOTHING_FILED,
   NOTHING_YET,
   OLDER_DAYS,
   QUIET_DESCRIPTION,
+  RANK_HEADING,
+  RANK_HEADING_QUIET,
+  RANK_NOTE,
   SHARE_DAY,
   SHARE_TODAY,
   STALE_AFTER_HOURS,
   STALE_TEMPLATE,
+  TODAY_LINK,
   VERDICT,
+  allHeadlinesLive,
   checkLines,
-  checkedText,
   dayLabel,
   dayTitle,
   headlineClass,
   homeTitle,
   longDate,
+  mastText,
   plusText,
   rowDate,
+  scaleText,
   shareText,
   shortDate,
   staleLine,
+  updatedText,
   weekdayDate,
 } from './copy.mjs';
 import { esc, num } from './esc.mjs';
@@ -69,36 +80,40 @@ function shareAttrs(d, v) {
     quiet: v.quiet.quiet,
     headline: d.headline,
     emojis: d.rows.map((r) => r.emoji),
+    cap: num(v.doomCap, 99),
   };
   return ` data-share-text="${esc(shareText({ ...args, withUrl: false }))}" data-share-full="${esc(shareText(args))}" data-share-url="${esc(`${v.siteUrl}/day/${d.date}/`)}"`;
 }
 
 // The fold: the question, ALMOST., the day's headline, the date with the Doom
-// Score, the orange button. The date is the edition's Eastern date, written into
-// the page at build time; it is never swapped for the visitor's own date.
+// Score, the orange button, the share pill. The date is the edition's Eastern date,
+// written into the page at build time; it is never swapped for the visitor's own date.
+// Every clock time here is Eastern.
 function hero(v) {
   const d = v.day;
   const live = d.date === v.today;
   const score = Math.round(num(d.score));
   const cap = num(v.doomCap, 99);
-  const checkedAt = v.lastSuccessAt || v.buildTime;
-  const sinceMs = Math.max(0, v.nowMs - Date.parse(checkedAt));
+  const checkedMs = Date.parse(v.lastSuccessAt || v.buildTime);
   const question = live ? 'Did the world end today?' : `Did the world end on ${weekdayDate(d.date)}?`;
-  const ago = live ? `<span class="sep wide" aria-hidden="true">&middot;</span><span class="ago" data-since="${esc(checkedAt)}">${esc(checkedText(Number.isFinite(sinceMs) ? sinceMs : 0))}</span>` : '';
-  const staleHours = (Date.parse(v.buildTime) - Date.parse(v.lastSuccessAt || v.buildTime)) / HOUR_MS;
+  const updated = live ? updatedText(checkedMs) : '';
+  const upd = updated ? `<span class="sep wide" aria-hidden="true">&middot;</span><span class="upd">${esc(updated)}</span>` : '';
+  const staleHours = (Date.parse(v.buildTime) - checkedMs) / HOUR_MS;
   const stale = live && Number.isFinite(staleHours) && staleHours > STALE_AFTER_HOURS;
   const lines = [];
   if (v.quiet.quiet && v.quiet.note) lines.push(`<p class="note">${esc(v.quiet.note)}</p>`);
-  lines.push(`<p class="stale" id="stale" data-template="${esc(STALE_TEMPLATE)}"${stale ? '' : ' hidden'}>${stale ? esc(staleLine(staleHours)) : ''}</p>`);
+  lines.push(`<p class="stale" id="stale" data-template="${esc(STALE_TEMPLATE)}"${stale ? '' : ' hidden'}>${stale ? esc(staleLine(checkedMs)) : ''}</p>`);
   const go = v.quiet.quiet ? GO_TEXT_QUIET : GO_TEXT;
-  const share = v.kind === 'home' ? `\n<button class="sh" type="button" data-act="share">${esc(SHARE_TODAY)}</button>` : '';
   return `<section class="hero" id="hero" data-lines="${jsonAttr(checkLines(v.headlinesRead))}">
 <h1 class="ask"><span class="q">${esc(question)}</span><button class="vbox" type="button" data-act="check"><span class="verdict" id="verdict">${esc(VERDICT)}</span><span class="check" id="check" aria-hidden="true"></span></button></h1>
 <p class="hl ${headlineClass(d.headline)}">${esc(d.headline)}</p>
-<p class="doom"><span class="pts">${live ? '<span class="dot" aria-hidden="true"></span>' : ''}<span class="when">${esc(rowDate(d.date))}</span><span class="sep" aria-hidden="true">&middot;</span><span>Doom Score <b class="n">${score}</b> of ${cap}</span></span>${ago}</p>
+<p class="doom"><span class="pts">${live ? '<span class="dot" aria-hidden="true"></span>' : ''}<span class="when">${esc(rowDate(d.date))}</span><span class="sep" aria-hidden="true">&middot;</span><span>Doom Score <b class="n">${score}</b> of ${cap}</span></span>${upd}</p>
 <progress class="meter" max="${cap}" value="${score}" aria-label="Doom Score ${score} of ${cap}">${score}</progress>
+<p class="scale">${esc(scaleText(cap))}</p>
 ${lines.join('\n')}
-<a class="go" href="${v.kind === 'home' ? '#today' : '#rows'}">${esc(go)}</a>${share}
+<a class="go" href="${v.kind === 'home' ? '#today' : '#rows'}">${esc(go)}</a>
+<button class="sh" type="button" data-act="share">${esc(v.kind === 'home' ? SHARE_TODAY : SHARE_DAY)}</button>
+<p class="mast">${esc(mastText(v.siteHost))}</p>
 <p class="sr" id="said" role="status" aria-live="polite"></p>
 </section>`;
 }
@@ -110,8 +125,11 @@ function dayBlock(d, v) {
   const label = dayLabel(d.date, v.today);
   const score = Math.round(num(d.score));
   const head = `<h2 class="dl"><span${isToday ? ' class="hot"' : ''}>${esc(label.head)}</span><span> &middot; ${esc(label.rest)}</span></h2>`;
-  // Today's headline is already in the hero, so only the earlier days repeat theirs.
-  const intro = isToday ? '' : `\n<p class="dh">${esc(d.headline)}</p>\n<p class="ds">Doom Score ${score} of ${num(v.doomCap, 99)}</p>`;
+  // Today's headline is already in the hero, so only the earlier days repeat theirs. Today says
+  // how its rows are ordered; a day of plain headlines, and the quiet page, make no claim about order.
+  const ranked = !v.quiet.quiet && d.by !== 'fallback';
+  const rank = d.rows.length && ranked ? `\n<p class="rank">${esc(RANK_NOTE)}</p>` : '';
+  const intro = isToday ? rank : `\n<p class="dh">${esc(d.headline)}</p>\n<p class="ds">Doom Score ${score} of ${num(v.doomCap, 99)}</p>`;
   const body = d.rows.length ? rows(d.rows, rowContext(d, v)) : `<p class="empty">${esc(isToday ? NOTHING_YET : NOTHING_FILED)}</p>`;
   const more = d.total - d.rows.length;
   const plus = more > 0 ? `<a class="plus" href="${esc(v.root)}day/${esc(d.date)}/">${esc(plusText(more, v.quiet.quiet))}</a>\n` : '';
@@ -140,13 +158,28 @@ ${feedEnd(v)}
 
 // ---- a day page -----------------------------------------------------------------------
 
+// Above the hero, so someone who lands here from a shared link can get to today or to every day.
+function dayTop(v) {
+  return `<div class="wrap">
+<div class="top"><a href="${esc(v.root)}">${esc(TODAY_LINK)}</a><a href="${esc(v.root)}almanac/">${esc(EVERY_DAY)}</a></div>
+</div>`;
+}
+
 function dayBody(v) {
   const d = v.day;
+  const quiet = v.quiet.quiet;
+  const live = d.date === v.today;
   const ctx = rowContext(d, v);
   const parts = [];
-  parts.push(`<section class="day" id="rows">\n${d.rows.length ? rows(d.rows, ctx) : `<p class="empty">${esc(NOTHING_FILED)}</p>`}\n</section>`);
-  if (d.stories.length) parts.push(`<section id="all">\n<h2 class="sec">${esc(ALL_HEADLINES)}</h2>\n${headlines(d.stories, ctx)}\n</section>`);
-  parts.push(`<div class="df">\n<button class="btn" type="button" data-act="share">${esc(SHARE_DAY)}</button>\n</div>`);
+  // Only an edition is ranked. Plain headlines, and every day in quiet mode, are "Top stories".
+  const ranked = !quiet && d.by !== 'fallback';
+  const list = d.rows.length ? `<h2 class="sec">${esc(ranked ? RANK_HEADING : RANK_HEADING_QUIET)}</h2>\n${rows(d.rows, ctx)}` : `<p class="empty">${esc(NOTHING_FILED)}</p>`;
+  const follow = `<a class="follow" href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(quiet ? FOLLOW_QUIET : FOLLOW_TEXT)}</a>`;
+  parts.push(`<section class="day" id="rows">\n${list}\n<div class="df">\n<button class="btn" type="button" data-act="share">${esc(SHARE_DAY)}</button>\n${follow}\n</div>\n</section>`);
+  if (d.stories.length) {
+    const label = live ? allHeadlinesLive(Date.parse(v.lastSuccessAt || v.buildTime)) : ALL_HEADLINES;
+    parts.push(`<section id="all">\n<h2 class="sec">${esc(label)}</h2>\n${headlines(d.stories, ctx)}\n</section>`);
+  }
   const prev = v.prev ? `<a href="../${esc(v.prev)}/">&larr; ${esc(shortDate(v.prev))}</a>` : '<span></span>';
   const next = v.next ? `<a href="../${esc(v.next)}/">${esc(shortDate(v.next))} &rarr;</a>` : '<span></span>';
   parts.push(`<nav class="dnav" aria-label="Other days">\n${prev}\n${next}\n</nav>`);
@@ -155,7 +188,7 @@ function dayBody(v) {
 
 export function mainHtml(v) {
   return `<main id="main"${shareAttrs(v.day, v)} data-build="${esc(v.buildTime)}">
-${hero(v)}
+${v.kind === 'home' ? '' : `${dayTop(v)}\n`}${hero(v)}
 ${v.kind === 'home' ? homeBody(v) : dayBody(v)}
 </main>`;
 }

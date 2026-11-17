@@ -165,6 +165,34 @@ function buildSignal(members, now) {
   };
 }
 
+// One id, one story. A merged story takes the id of the earliest stored story in its group. A group can
+// join two different stories through a third headline that is close to both; when that headline leaves the
+// window the two come apart, and both can carry the id of the one they once shared. Here the story whose
+// own headline made the id keeps it (or, when none did, the first to carry it). Every other story with that
+// id takes the id of its own headline, or a numbered one when that is in use. An id carried by one story is
+// never touched, so a stored story keeps its id, and a new id never lands on one that is in use.
+export function uniqueIds(stories) {
+  const count = new Map();
+  for (const s of stories) count.set(s.id, (count.get(s.id) || 0) + 1);
+  const keeper = new Map();
+  for (const s of stories) {
+    if (count.get(s.id) > 1 && s.kind !== 'signal' && !keeper.has(s.id) && storyId(titleKey(s.title)) === s.id) keeper.set(s.id, s);
+  }
+  for (const s of stories) {
+    if (count.get(s.id) > 1 && !keeper.has(s.id)) keeper.set(s.id, s);
+  }
+  const taken = new Set(count.keys());
+  for (const s of stories) {
+    if (count.get(s.id) < 2 || keeper.get(s.id) === s) continue;
+    const key = titleKey(s.title);
+    let id = storyId(key);
+    for (let n = 1; taken.has(id); n += 1) id = storyId(`${key}#${n}`);
+    s.id = id;
+    taken.add(id);
+  }
+  return stories;
+}
+
 export function mergeStories(existing, fresh, { now, fuzzy = FUZZY } = {}) {
   const nowMs = typeof now === 'number' ? now : now.getTime();
   const storedNodes = existing.map(fromStory).sort((a, b) => (a.id < b.id ? -1 : 1));
@@ -225,7 +253,7 @@ export function mergeStories(existing, fresh, { now, fuzzy = FUZZY } = {}) {
   const out = [];
   for (const members of groups.values()) out.push(buildNews(members, nowMs));
   for (const members of signalGroups.values()) out.push(buildSignal(members, nowMs));
-  return out;
+  return uniqueIds(out);
 }
 
 export function compareStories(a, b) {

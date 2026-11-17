@@ -225,7 +225,7 @@ export async function runUpdate(opts = {}) {
   }
 
   // The almanac index never lists a story the current rules would not publish, old days included.
-  const index = buildIndex(p, cfg.firstEdition, (s) => !gk.excluder.test(s.title, { signal: s.kind === 'signal' }));
+  const index = buildIndex(p, cfg.firstEdition, (s) => !gk.excluder.test(s.title, { signal: s.kind === 'signal', source: s.source }));
   saveIndex(p, index);
   const record = recordDay(index);
 

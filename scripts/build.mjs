@@ -31,7 +31,7 @@ import { readJsonLenient, toJson } from './lib/json.mjs';
 import { etDate, etStamp, addDays } from './lib/time.mjs';
 import { listDayDates, readDayLenient, recordDay } from './lib/store.mjs';
 import { createGatekeeper } from './lib/pipeline.mjs';
-import { listingOrder, publishableStories, readEditions, resolveDays } from './lib/editions.mjs';
+import { listingOrder, onePerId, publishableStories, readEditions, resolveDays } from './lib/editions.mjs';
 import { safeUrl } from './lib/text.mjs';
 import { NOT_FOUND_LINE, QUIET_LINE, subline } from './templates/copy.mjs';
 import { aboutPage, almanacPage } from './templates/pages.mjs';
@@ -136,7 +136,7 @@ export function build(rootOrOpts, maybeOpts) {
 
   const stored = readJsonLenient(p.latest, null);
   const hasData = Boolean(stored && typeof stored === 'object' && Array.isArray(stored.stories));
-  const latest = hasData ? { ...stored, stories: publishableStories(gk.excluder, stored.stories) } : emptyLatest(cfg, nowMs);
+  const latest = hasData ? { ...stored, stories: onePerId(publishableStories(gk.excluder, stored.stories), cfg.variety) } : emptyLatest(cfg, nowMs);
   const today = latest.etDate;
 
   // Today's day is the homepage's own snapshot: its day page reads the same numbers
@@ -260,7 +260,7 @@ export function build(rootOrOpts, maybeOpts) {
 
   // ---- data, feed, search and app files ------------------------------------------------------
   write('api/today.json', toJson(publicCopy(latest, todayView)));
-  write('feed.xml', feedXml({ siteUrl, days: filed, buildTime: latest.buildTime }));
+  write('feed.xml', feedXml({ siteUrl, days: filed, buildTime: latest.buildTime, doomCap: cfg.doom.cap }));
   write('sitemap.xml', sitemapXml({ siteUrl, dates, lastmod: latest.buildTime }));
   write('robots.txt', robotsTxt(siteUrl));
   write('site.webmanifest', manifestJson());
@@ -271,7 +271,7 @@ export function build(rootOrOpts, maybeOpts) {
   // ---- pictures --------------------------------------------------------------------------------
   // The card carries the day's headline, the same words the page puts under ALMOST.
   const fontFile = fontFileIn(assets);
-  const og = (view) => renderPng(ogSvg({ date: view.date, score: view.score, host: siteHost, headline: view.headline, fontFile }), { fontFile, width: 1200 });
+  const og = (view) => renderPng(ogSvg({ date: view.date, score: view.score, host: siteHost, headline: view.headline, fontFile, live: view.date === today }), { fontFile, width: 1200 });
   write('og/latest.png', og(todayView));
   // The homepage points at today's own card, so it has one even before today's file exists.
   if (!dates.includes(today)) write(`og/${today}.png`, og(todayView));

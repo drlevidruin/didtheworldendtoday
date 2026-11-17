@@ -42,17 +42,35 @@ export function publishableStories(excluder, list) {
   return plain(list).filter((s) => {
     try {
       if (s.kind !== 'signal' && looksNotEnglish(s.title)) return false;
-      return !excluder.test(s.title, { signal: s.kind === 'signal' });
+      return !excluder.test(s.title, { signal: s.kind === 'signal', source: s.source });
     } catch {
       return false; // a story too odd to check is not published
     }
   });
 }
 
+// The first story of each id, in the order given. An id belongs to one story, so a second story with
+// the same id (a data file can still hold a pair) is left off and never published.
+export function dedupeById(list) {
+  const seen = new Set();
+  return plain(list).filter((s) => {
+    if (seen.has(s.id)) return false;
+    seen.add(s.id);
+    return true;
+  });
+}
+
 // One day's stories in the order the page lists them. It depends only on the
 // stories themselves, so a day written in rank order and a day written in
-// listing order come out the same.
-export const listingOrder = (stories, variety) => receiptsOrder([...stories].sort(compareStories), variety);
+// listing order come out the same. No id is listed twice: the first in this order keeps it.
+export const listingOrder = (stories, variety) => dedupeById(receiptsOrder([...stories].sort(compareStories), variety));
+
+// The same stories in their own order with the second story of any id left off. Which one stays is
+// decided by the listing order, so the page and the data it came from agree.
+export function onePerId(stories, variety) {
+  const keep = new Set(listingOrder(stories, variety));
+  return plain(stories).filter((s) => keep.has(s));
+}
 
 // ---- files ---------------------------------------------------------------------
 
@@ -107,10 +125,10 @@ export function badText(text) {
 }
 
 // The hard exclusion filter, or a reason when it cannot be asked.
-function excludedBy(excluder, text, signal) {
+function excludedBy(excluder, text, signal, source = '') {
   if (!excluder || typeof excluder.test !== 'function') return null;
   try {
-    return excluder.test(String(text ?? ''), { signal });
+    return excluder.test(String(text ?? ''), { signal, source });
   } catch {
     return { family: 'unreadable', term: '' };
   }
@@ -146,7 +164,8 @@ function checkItem(raw, { used, taken, byId, excluder }) {
   if (!href || !href.startsWith('https://')) return { reason: 'url is not https' };
 
   const title = typeof raw.title === 'string' ? clean(raw.title) : '';
-  const hit = excludedBy(excluder, line, false) || excludedBy(excluder, title, isSignalId(asked[0]));
+  const source = typeof raw.source === 'string' ? raw.source : '';
+  const hit = excludedBy(excluder, line, false) || excludedBy(excluder, title, isSignalId(asked[0]), source);
   if (hit) return { reason: `excluded: ${hit.family}` };
 
   // A quiet-card lead stays quiet, whatever the edition says.
