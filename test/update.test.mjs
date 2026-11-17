@@ -9,6 +9,7 @@ import { sameWithoutVolatile } from '../scripts/data-changed.mjs';
 import * as usgs from '../scripts/sources/usgs.mjs';
 import * as faa from '../scripts/sources/faa.mjs';
 import * as jpl from '../scripts/sources/jpl.mjs';
+import * as xsrc from '../scripts/sources/x.mjs';
 import { failingSource, fakeSource, fixture, fixtureJson, mockFetch, newsItem, noSleep, readJson, throwingSource, tmpRoot } from './helpers.mjs';
 
 const cfg = config();
@@ -644,4 +645,33 @@ test('summary: one line says what became of the X posts, the drops listed with t
   assert.ok(lines.includes("  x posts: 1 passed the filters, 1 dropped; stories that hold one: 2 in all, 1 in today's list"));
   assert.ok(lines.includes('    dropped excluded:violence [shooting]: BREAKING: Shooting at a mall'));
   assert.ok(!formatSummary({ ...base, xTrace: xTrace([], [], [], []) }).includes('x posts'), 'no X posts, no line');
+});
+
+// ---- X posts reach the day file ----------------------------------------------------------------------------------
+test('X posts reach the day file, and the next run keeps them, whether their own headline or their keyword filed them', async () => {
+  const root = tmpRoot();
+  const handles = { 110: 'DownDetector', 101: 'BNONews', 102: 'spectatorindex' };
+  const posts = [
+    { id: '8001', author_id: '110', created_at: '2026-11-17T20:40:00.000Z', text: 'User reports indicate problems with Uber since 3:24 PM EST. How is it affecting you? #Uber https://t.co/uber0001' },
+    { id: '8003', author_id: '101', created_at: '2026-11-17T20:45:00.000Z', text: 'Classified US national security communications network hit by outage, NSA says https://t.co/nsa00001' },
+    { id: '8004', author_id: '102', created_at: '2026-11-17T20:50:00.000Z', text: 'Transportation Secretary Sean Duffy says federal intelligence agencies have ruled out a cyberattack as the cause of the outage' },
+  ];
+  const xFeed = (items) => fakeSource('x', { enabled: true, count: items.length, items });
+  const news = feed(cat3('flights', '2026-11-17T19:00:00Z'));
+
+  const first = await go(root, '2026-11-17T21:00:00Z', [news, xFeed(xsrc.postsToItems(posts, handles, cfg.x))]);
+  assert.equal(first.report.xTrace.passed, 2);
+  assert.deepEqual(first.report.xTrace.dropped.map((d) => d.reason), ['excluded:politics']);
+  const posted = (root) => readJson(dayPath(root, '2026-11-17')).stories.filter((s) => s.kind === 'x').map((s) => [s.cat, s.title]).sort();
+  const expected = [
+    ['internet', 'Classified US national security communications network hit by outage, NSA says'],
+    ['internet', 'User reports indicate problems with Uber since 3:24 PM EST.'],
+  ];
+  assert.deepEqual(posted(root), expected);
+
+  // An hour on, X has nothing new. The stored posts are checked again by the current rules and stay.
+  const second = await go(root, '2026-11-17T22:05:00Z', [news, xFeed([])]);
+  assert.deepEqual(second.report.cleaned, {});
+  assert.deepEqual(posted(root), expected);
+  assert.equal(second.report.xTrace.inAll, 2);
 });

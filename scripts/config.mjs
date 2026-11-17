@@ -787,6 +787,31 @@ export const X = {
     'ransomware', '"is down"', 'earthquake', '"solar flare"', 'asteroid', '"flash crash"', '"trading halted"',
     'tsunami', 'volcano',
   ],
+  // Where a post is filed when its headline fits no category on its own: the first of these words it holds, the most
+  // specific first. A category that rejects the headline does not file it. Every word in keywords above needs an
+  // entry here, and every entry a real category id.
+  keywordCategories: {
+    'power outage': 'grid',
+    blackout: 'grid',
+    'ground stop': 'flights',
+    grounded: 'flights',
+    hacked: 'hacks',
+    breach: 'hacks',
+    cyberattack: 'hacks',
+    ransomware: 'hacks',
+    earthquake: 'earth',
+    tsunami: 'earth',
+    volcano: 'earth',
+    'solar flare': 'sun',
+    asteroid: 'space',
+    'flash crash': 'markets',
+    'trading halted': 'markets',
+    outage: 'internet',
+    'is down': 'internet',
+  },
+  // Wording that holds one of those words and means something else. It is cut out before the words are looked for:
+  // "Bitcoin is down 5%" is a price, not an outage, and "in breach of contract" is a broken deal, not a hack.
+  keywordVeto: [/\bis down\s+(?:\d|\$|by\b|from\b|to\b|about\b|nearly\b|over\b|more\b|less\b)/i, /\bbreach(?:es)?\s+of\b/i],
   minIntervalMinutes: 60,
   dailyBudgetUsd: 0.6, // override with X_DAILY_BUDGET_USD. The editor's 1.40 and this 0.60 make the owner's $2 a day.
   costPerPostRead: 0.005,

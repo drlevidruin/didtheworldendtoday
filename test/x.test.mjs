@@ -2,9 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { config } from '../scripts/config.mjs';
 import { createHttp } from '../scripts/lib/http.mjs';
+import { compileGate, compileKeywordFiling } from '../scripts/lib/filter.mjs';
 import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
 import * as x from '../scripts/sources/x.mjs';
-import { mockFetch, noSleep } from './helpers.mjs';
+import { fixtureJson, mockFetch, noSleep } from './helpers.mjs';
 
 const cfg = config();
 const TOKEN = 'AAAA-secret-token-for-tests-%3D%3D';
@@ -348,4 +349,143 @@ test('the Downdetector keyword is narrow: other reports of "user reports" do not
     const [item] = x.postsToItems([post(7100, 101, text)], { 101: 'BNONews' }, cfg.x);
     assert.equal(gk.admit(item, NOW).drop, 'off-topic', text);
   }
+});
+
+// ---- Phase 17: X posts reach the page ------------------------------------------------------------------------------
+// The run of 4:32 PM ET on 11/17 read 4 posts and kept none. Downdetector's posts end in "How is it affecting you?
+// #Name", so the question rule dropped every one, and the NSA post fit no category on its own.
+
+const HANDLES = Object.fromEntries(users.map((u) => [u.id, u.username]));
+const idOf = (name) => users.find((u) => u.username === name).id;
+const headline = (text) => x.postHeadline(text, cfg.x.headlineChars);
+const xItem = (text, who = 'BNONews') => x.postsToItems([post(8100, idOf(who), text)], HANDLES, cfg.x)[0];
+
+const FOUR_POSTS = [
+  post(8001, DD, 'User reports indicate problems with Uber since 3:24 PM EST. How is it affecting you? #Uber https://t.co/uber0001'),
+  post(8002, DD, 'User reports indicate problems with Roblox since 3:20 PM EST. How is it affecting you? #Roblox'),
+  post(8003, idOf('BNONews'), 'Classified US national security communications network hit by outage, NSA says https://t.co/nsa00001'),
+  post(8004, idOf('spectatorindex'), 'Transportation Secretary Sean Duffy says federal intelligence agencies have ruled out a cyberattack as the cause of the outage'),
+];
+
+test('the four posts of the 4:32 PM run: Uber, Roblox and the NSA post are kept as internet, and the Duffy post is still dropped as politics', () => {
+  const gk = createGatekeeper(cfg);
+  const items = x.postsToItems(FOUR_POSTS, HANDLES, cfg.x);
+  assert.equal(items.length, 4);
+  const [uber, roblox, nsa, duffy] = items.map((i) => gk.admit(i, NOW));
+  assert.equal(uber.keep?.cat, 'internet', JSON.stringify(uber));
+  assert.equal(uber.keep.title, 'User reports indicate problems with Uber since 3:24 PM EST.');
+  assert.equal(uber.keep.kind, 'x');
+  assert.equal(roblox.keep?.cat, 'internet', JSON.stringify(roblox));
+  assert.equal(roblox.keep.title, 'User reports indicate problems with Roblox since 3:20 PM EST.');
+  assert.equal(nsa.keep?.cat, 'internet', JSON.stringify(nsa));
+  assert.equal(nsa.keep.title, 'Classified US national security communications network hit by outage, NSA says');
+  assert.deepEqual(duffy, { drop: 'excluded:politics', detail: 'Duffy' });
+});
+
+test('a post that is only a question stays as it is, and the question rule still drops it', () => {
+  const gk = createGatekeeper(cfg);
+  for (const text of ['Anyone else having trouble with Verizon today?', 'Is your Wi-Fi acting up? Is it just you?']) {
+    assert.equal(headline(text), text, 'the headline is the post');
+    assert.equal(gk.admit(xItem(text, 'DownDetector'), NOW).drop, 'excluded:question', text);
+  }
+  const hashed = xItem('How is it affecting you? #Uber', 'DownDetector');
+  assert.ok(hashed, 'a question with a hashtag is still a post');
+  assert.equal(hashed.title, 'How is it affecting you?', 'the hashtag at its end still goes');
+  assert.equal(gk.admit(hashed, NOW).drop, 'excluded:question');
+});
+
+test('hashtags at the end of a post go, and a hashtag inside a sentence stays', () => {
+  assert.equal(headline('Uber outage right now #Uber'), 'Uber outage right now');
+  assert.equal(headline('Roblox outage right now #Roblox #outage'), 'Roblox outage right now');
+  assert.equal(headline('Uber outage right now #Uber https://t.co/abc12345'), 'Uber outage right now', 'once the link is cut out the hashtag is at the end');
+  assert.equal(headline('Big #outage at Uber right now'), 'Big #outage at Uber right now');
+  assert.equal(headline('Big #outage at Uber right now #Uber'), 'Big #outage at Uber right now');
+  assert.equal(headline('#Uber #outage'), '#Uber #outage', 'a post of nothing but hashtags is left alone');
+});
+
+test('when a post says something and then asks, the questions at its end go and the rest stays', () => {
+  assert.equal(headline('User reports indicate problems with Uber since 3:24 PM EST. How is it affecting you? #Uber'), 'User reports indicate problems with Uber since 3:24 PM EST.');
+  assert.equal(headline('Uber is down for thousands of users. Is it down for you? Who else is affected?'), 'Uber is down for thousands of users.');
+  assert.equal(headline('Uber is down!! How is it affecting you??'), 'Uber is down!!');
+  assert.equal(headline('Is Uber down? Reports say yes. Is it you?'), 'Is Uber down? Reports say yes.', 'only the questions at the end go');
+  assert.equal(headline('Is Uber down? Is it just me?'), 'Is Uber down? Is it just me?', 'nothing but questions');
+});
+
+test('a full stop after an abbreviation does not end a sentence', () => {
+  assert.equal(headline('Dr. Smith asked: is it safe?'), 'Dr. Smith asked: is it safe?');
+  assert.equal(headline('Reports: Sen. Smith says the grid is fine. Dr. Jones asked: is it safe?'), 'Reports: Sen. Smith says the grid is fine.');
+  assert.equal(headline('Outage began at 3 p.m. EST. Are you affected?'), 'Outage began at 3 p.m. EST.');
+});
+
+test('every word in X.keywords has an entry in the map, every entry names a real category, and a more specific phrase comes first', () => {
+  const map = cfg.x.keywordCategories;
+  const ids = cfg.categories.map((c) => c.id);
+  for (const word of cfg.x.keywords.map((k) => k.replaceAll('"', ''))) assert.ok(Object.hasOwn(map, word), `no entry for "${word}"`);
+  for (const [word, cat] of Object.entries(map)) assert.ok(ids.includes(cat), `"${word}" is filed under ${cat}, which is not a category`);
+  const order = Object.keys(map);
+  for (const a of order) {
+    for (const b of order) if (a !== b && b.split(' ').includes(a)) assert.ok(order.indexOf(b) < order.indexOf(a), `"${b}" must come before "${a}"`);
+  }
+});
+
+test('a headline that fits no category is filed by the first keyword it holds, a category that rejects it files nothing, and a price is not an outage', () => {
+  const file = compileKeywordFiling(cfg.x.keywordCategories, cfg.x.keywordVeto, compileGate(cfg.categories));
+  for (const [word, cat] of Object.entries(cfg.x.keywordCategories)) {
+    assert.equal(file(`Officials say ${word} near the harbor tonight`), cat, word);
+    assert.equal(file(`OFFICIALS SAY ${word.toUpperCase()} NEAR THE HARBOR`), cat, `${word} in capitals`);
+  }
+  assert.equal(file('Power outage at the harbor after an outage at the port'), 'grid', 'the most specific keyword first');
+  assert.equal(file('Ground stop at the harbor airport after an outage'), 'flights');
+  assert.equal(file('Nothing to see at the harbor tonight'), null);
+  assert.equal(file('TV blackout hits cable subscribers in the region'), null, 'Lights out rejects a TV blackout');
+  assert.equal(file('Electricity outage in the old town'), null, 'Internet down rejects an electricity outage');
+  assert.equal(file('The S&P 500 is down 2.1% today'), null, 'a price');
+  assert.equal(file('Bitcoin is down 5% after an outage at the exchange'), 'internet', 'the price is cut out, the outage still counts');
+  assert.equal(file('Judge finds company in breach of contract over pipeline deal'), null, 'a broken deal, not a hack');
+  assert.equal(file('Club says rival in breach of transfer rules'), null);
+  assert.equal(file('Data breach exposes millions of patient records'), 'hacks');
+});
+
+test('only an X post is filed by its keyword, and only after the quality and exclusion checks', () => {
+  const gk = createGatekeeper(cfg);
+  assert.equal(gk.admit(xItem('Blackout in Cuba'), NOW).keep?.cat, 'grid');
+  assert.equal(gk.admit(xItem('Uber is down'), NOW).keep?.cat, 'internet');
+  assert.equal(gk.admit(xItem('Tsunami near the harbor'), NOW).keep?.cat, 'earth');
+  assert.equal(gk.admit(xItem('Nothing to see at the harbor tonight'), NOW).drop, 'off-topic');
+  const news = { kind: 'news', cat: null, title: 'Blackout in Cuba', url: 'https://example.com/a', source: 'Example Times', publishedAt: NOW - 5 * MIN };
+  assert.equal(gk.admit(news, NOW).drop, 'off-topic', 'a news headline is not filed by a keyword');
+  assert.equal(gk.admit(xItem('Trump says the outage was sabotage'), NOW).drop, 'excluded:politics');
+  assert.match(gk.admit(xItem('Gunman killed after outage at the station'), NOW).drop, /^excluded:/);
+});
+
+const STORED_X = {
+  id: 'a1b2c3d4e5f6',
+  cat: 'internet',
+  kind: 'x',
+  title: 'Classified US national security communications network hit by outage, NSA says',
+  url: 'https://x.com/BNONews/status/8003',
+  source: '@BNONews on X',
+  publishedAt: '2026-11-17T21:00:00.000Z',
+  latestAt: '2026-11-17T21:00:00.000Z',
+  firstSeenAt: '2026-11-17T21:05:00.000Z',
+  outlets: 1,
+  outletNames: ['@BNONews on X'],
+  score: 1,
+};
+
+test('a stored X story filed by its keyword survives recheck, and so does a story told by several outlets that holds the post', () => {
+  const gk = createGatekeeper(cfg);
+  assert.deepEqual(gk.recheck(STORED_X), { keep: STORED_X });
+  assert.equal(gk.recheck({ ...STORED_X, cat: 'grid' }).keep?.cat, 'internet', 'filed the way admit files it');
+  const told = { ...STORED_X, kind: 'news', source: 'Example Times', outletNames: ['Example Times', '@BNONews on X'], outlets: 2 };
+  assert.equal(gk.recheck(told).keep?.cat, 'internet', 'the post can be the headline of a story several outlets tell');
+  assert.equal(gk.recheck({ ...told, outletNames: ['Example Times', 'Other Times'] }).drop, 'off-topic', 'a story with no post in it is not');
+  assert.equal(gk.recheck({ ...STORED_X, title: 'Trump says the outage was sabotage' }).drop, 'excluded:politics', 'the exclusions still come first');
+});
+
+test('today\'s live day file (11/17) goes through the gate as it is: nothing in it is dropped, moved or changed', () => {
+  const gk = createGatekeeper(cfg);
+  const day = fixtureJson('day-2026-11-17-live.json');
+  assert.ok(day.stories.length >= 100, `${day.stories.length} stories`);
+  for (const story of day.stories) assert.deepEqual(gk.recheck(story), { keep: story }, story.title);
 });

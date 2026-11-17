@@ -2,14 +2,21 @@
 // headline quality (script, tags, cut-off titles, blocked publishers), the
 // hard exclusion filter, and the category keyword gate. Each drop has a named
 // reason so the run summary can show what was thrown away and why.
-import { compileExcluder, compileGate } from './filter.mjs';
+import { compileExcluder, compileGate, compileKeywordFiling } from './filter.mjs';
 import { compileBlocklist, hasNonLatinScript, blockKey, qualityCheck } from './quality.mjs';
 import { clean, safeUrl } from './text.mjs';
 import { HOUR_MS } from './time.mjs';
 
+// A story that holds an X post: one that is a post, or a story several outlets tell that has a post among them.
+export function holdsXPost(story) {
+  return story.kind === 'x' || (Array.isArray(story.outletNames) && story.outletNames.some((n) => / on X$/.test(String(n))));
+}
+
 export function createGatekeeper(cfg) {
   const excluder = compileExcluder(cfg.exclude);
   const gate = compileGate(cfg.categories);
+  // An X post whose headline fits no category on its own is filed by the keyword that found it.
+  const fileByKeyword = compileKeywordFiling(cfg.x?.keywordCategories, cfg.x?.keywordVeto, gate);
   const blocked = compileBlocklist(cfg.blockedPublishers);
   const maxAgeMs = cfg.window.maxAgeHours * HOUR_MS;
 
@@ -52,6 +59,8 @@ export function createGatekeeper(cfg) {
     const search = typeof trendTerm === 'string' && trendTerm ? trendTerm : null;
     let cat = gate.pick(title, item.cat);
     if (!cat && search) cat = gate.pick(search, null);
+    // The quality and exclusion checks above have already judged the headline.
+    if (!cat && raw.kind === 'x') cat = fileByKeyword(title);
     if (!cat) return { drop: 'off-topic' };
     return { keep: { ...item, cat, title, url, publishedAt, ...(search ? { trendTerm: search } : {}) } };
   }
@@ -69,6 +78,9 @@ export function createGatekeeper(cfg) {
     // A story whose headline fits no category is filed by its Google search, the way admit files it. The story
     // keeps the search either way.
     if (!cat && typeof story.trendTerm === 'string' && story.trendTerm) cat = gate.pick(story.trendTerm, story.cat);
+    // A stored X post is filed by its keyword the way admit files it, so the next run does not drop it as off-topic.
+    // A story told by several outlets can carry a post's headline, so any story that holds a post counts.
+    if (!cat && holdsXPost(story)) cat = fileByKeyword(story.title);
     if (!cat) return { drop: 'off-topic' };
     let next = cat === story.cat ? story : { ...story, cat };
     // A story told by several outlets keeps only the ones we would publish.

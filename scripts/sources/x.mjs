@@ -88,10 +88,49 @@ function newerId(a, b) {
   return BigInt(b) > BigInt(a) ? b : a;
 }
 
-// Post text as a headline: links removed, entities decoded, cut to 200 chars.
+const HASHTAG = /^#[\p{L}\p{N}_]+$/u;
+// A word that ends in a full stop without ending a sentence: "U.S.", "p.m.", "Dr.", "Nov.".
+const ABBREVIATION = /^(?:\p{L}(?:\.\p{L})*|Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|Mt|Ft|Gov|Sen|Rep|Gen|Col|Lt|Capt|Sgt|Inc|Ltd|Corp|Co|No|vs|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.$/u;
+
+function endsSentence(word) {
+  const w = word.replace(/["'\u201d\u2019)\]]+$/u, '');
+  if (/[!?]$/.test(w)) return true;
+  return w.endsWith('.') && !ABBREVIATION.test(w.replace(/^["'\u201c\u2018(\[]+/u, ''));
+}
+
+const isQuestion = (sentence) => /\?["'\u201d\u2019)\]]*$/u.test(sentence);
+
+// Hashtags at the end of a post go. One inside a sentence stays, and so does a post made only of hashtags.
+function dropTrailingHashtags(text) {
+  const words = text.split(' ');
+  let end = words.length;
+  while (end > 0 && HASHTAG.test(words[end - 1])) end -= 1;
+  return end === 0 ? text : words.slice(0, end).join(' ');
+}
+
+// A post that says something and then asks "How is it affecting you?" is the statement. A post that is only
+// questions stays as it is, and the question rule judges it.
+function dropTrailingQuestions(text) {
+  const sentences = [];
+  let current = [];
+  for (const word of text.split(' ')) {
+    current.push(word);
+    if (endsSentence(word)) {
+      sentences.push(current.join(' '));
+      current = [];
+    }
+  }
+  if (current.length) sentences.push(current.join(' '));
+  if (sentences.every(isQuestion)) return text;
+  while (isQuestion(sentences[sentences.length - 1])) sentences.pop();
+  return sentences.join(' ');
+}
+
+// Post text as a headline: links removed, entities decoded, the hashtags and the questions at the end dropped,
+// cut to 200 chars.
 export function postHeadline(text, chars) {
   const t = clean(decodeEntities(String(text ?? '')).replace(/https?:\/\/\S+/g, ' '));
-  return truncate(t, chars);
+  return truncate(dropTrailingQuestions(dropTrailingHashtags(t)), chars);
 }
 
 export function postsToItems(posts, handles, cfg) {

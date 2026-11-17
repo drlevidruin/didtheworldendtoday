@@ -48,7 +48,7 @@ import { addDays, etDate, etStamp, HOUR_MS } from './lib/time.mjs';
 import { mergeStories, selectForDay } from './lib/cluster.mjs';
 import { computeDoom } from './lib/doom.mjs';
 import { quietReason } from './lib/quietcards.mjs';
-import { createGatekeeper } from './lib/pipeline.mjs';
+import { createGatekeeper, holdsXPost } from './lib/pipeline.mjs';
 import { receiptsOrder } from './lib/order.mjs';
 import { buildIndex, pruneBefore, readDay, recordDay, saveDay, saveIndex } from './lib/store.mjs';
 import { emptyLatch, evaluateTopStories, normalizeLatch, readQuietFile, resolveQuiet } from './lib/quietmode.mjs';
@@ -103,12 +103,11 @@ function validStoredStory(s) {
 // What became of this run's X posts, for the run's summary: how many passed the filters, the ones that did not and
 // why, and how many stories hold an X post, in all and in today's list. The owner wants X posts on the page.
 export function xTrace(kept, droppedList, merged, rolling) {
-  const fromX = (s) => s.kind === 'x' || (Array.isArray(s.outletNames) && s.outletNames.some((n) => / on X$/.test(String(n))));
   return {
     passed: kept.filter((i) => i.kind === 'x').length,
     dropped: droppedList.filter((d) => d.via === 'x'),
-    inAll: merged.filter(fromX).length,
-    onList: rolling.filter(fromX).length,
+    inAll: merged.filter(holdsXPost).length,
+    onList: rolling.filter(holdsXPost).length,
   };
 }
 

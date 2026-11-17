@@ -126,12 +126,16 @@ export function compileGate(categories) {
   const byId = new Map(categories.map((c) => [c.id, c]));
   const order = categories.map((c) => c.id);
 
-  function matches(catId, title) {
+  // True when the category exists and none of its reject patterns vetoes the headline.
+  function allows(catId, title) {
     const c = byId.get(catId);
-    if (!c) return false;
+    return Boolean(c) && !(c.reject || []).some((re) => re.test(String(title ?? '')));
+  }
+
+  function matches(catId, title) {
+    if (!allows(catId, title)) return false;
     const t = String(title ?? '');
-    if ((c.reject || []).some((re) => re.test(t))) return false;
-    return c.keywords.some((entry) => entryMatches(entry, t));
+    return byId.get(catId).keywords.some((entry) => entryMatches(entry, t));
   }
 
   // The category a headline belongs to. A category may "claim" a headline
@@ -151,5 +155,20 @@ export function compileGate(categories) {
     return null;
   }
 
-  return { matches, pick, order };
+  return { matches, allows, pick, order };
+}
+
+// ---- filing by keyword -----------------------------------------------------
+// An X post is found by a keyword, so one whose headline fits no category on its own is filed by the first keyword
+// it holds. map: { phrase: category id } in order, the most specific first. veto: regexes for wording that holds a
+// keyword and means something else; it is cut out of the headline before the keywords are looked for. A category
+// that rejects the headline files nothing. Returns (title) => category id, or null.
+export function compileKeywordFiling(map, veto, gate) {
+  const rules = Object.entries(map || {}).map(([phrase, cat]) => ({ cat, re: compileTerm(phrase).re }));
+  const cuts = (veto || []).map((re) => new RegExp(re.source, re.flags.includes('g') ? re.flags : `${re.flags}g`));
+  return (title) => {
+    const t = cuts.reduce((rest, re) => rest.replace(re, ' '), String(title ?? ''));
+    for (const r of rules) if (r.re.test(t) && gate.allows(r.cat, title)) return r.cat;
+    return null;
+  };
 }
