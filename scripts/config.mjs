@@ -12,9 +12,9 @@ export const WINDOW = {
 };
 
 export const LIMITS = {
-  storiesPerDay: 60, // top stories kept per day file
   perCategoryFloor: 4, // best few of each category survive the cut
-  rollingStories: 100, // stories in latest.json
+  rollingStories: 100, // stories in latest.json and in today's day file
+  fallbackStories: 10, // shown (and never scored) when the last 24 hours are empty
 };
 
 // The first edition of the Almanac. No day before this date is ever written
@@ -465,6 +465,24 @@ export const CATEGORIES = [
 // headlines may carry place names from USGS (a quake near a country is not
 // politics), so place and politics families are skipped for signals only.
 // ---------------------------------------------------------------------------
+// A crash with people in it is excluded; a market, crypto, app, site or server
+// crash is the kind of thing this site is about. A headline with a crash word
+// is dropped when it names a vehicle or an airline, and also when it names no
+// market or computer word at all ("after Air India crash"), because an unknown
+// crash is far more likely to be a human one than a software one.
+const CRASH_WORD = /\b(?:crash(?:es|ed|ing)?|wreck(?:age)?|derail(?:s|ed|ment|ments)?)\b/i;
+const VEHICLE_WORD =
+  /\b(?:planes?|airplanes?|aircraft|airliners?|jets?|flights?|helicopters?|choppers?|copters?|trains?|rail|railway|trams?|subway|buses|bus|cars?|trucks?|vans?|vehicles?|motorcycles?|motorbikes?|cyclists?|boats?|ferry|ships?|vessels?|yachts?|pilots?|passengers?|drivers?|runway|highway|freeway|interstate|cockpit|airlines?|airways|aviation|Boeing|Airbus|Cessna|Embraer)\b/i;
+const DIGITAL_WORD =
+  /\b(?:markets?|stocks?|shares|equities|bitcoin|btc|ethereum|crypto\w*|coins?|tokens?|dow|nasdaq|s&p|selloff|sell-off|prices?|index|bonds?|yields?|trading|traders?|exchange|apps?|sites?|websites?|servers?|software|browser|systems?|network|computers?|pcs?|phones?|iphones?|android|ios|windows|games?|gaming|platforms?|cloud|login|database|ai|chatbot|bots?|algorithm|code)\b/i;
+
+export function crashWithPeople(title) {
+  const t = String(title ?? '');
+  if (!CRASH_WORD.test(t)) return false;
+  if (VEHICLE_WORD.test(t)) return true;
+  return !DIGITAL_WORD.test(t);
+}
+
 export const EXCLUDE_FAMILIES = [
   {
     name: 'death',
@@ -472,7 +490,7 @@ export const EXCLUDE_FAMILIES = [
       'killed', 'kills', 'kill', 'dead', 'death', 'deaths', 'dies', 'died', 'dying', 'fatal', 'fatalities',
       'toll', 'victim', 'victims', 'suicide', 'overdose', 'funeral', 'obituary', 'bodies',
       // extended
-      'deadly', 'fatality', 'casualties', 'casualty', 'murdered', 'killing', 'killings', 'killer', 'perished',
+      'deadly', 'fatality', 'fatally', 'casualties', 'casualty', 'murdered', 'killing', 'killings', 'killer', 'perished',
       'drowned', 'drowning', 'mourn', 'mourns', 'mourning', 'vigil',
       'claimed lives', 'claims lives', 'lost their lives', 'lost lives', 'lives lost', 'loss of life', 'slain',
       'slaughter', 'survivors', 'rubble', 'rescuers',
@@ -481,9 +499,12 @@ export const EXCLUDE_FAMILIES = [
   {
     name: 'injury',
     terms: [
-      'injured', 'injuries', 'wounded', 'missing', 'injury',
+      { term: 'injur', prefix: true }, // injured, injuries, injury, injures, injuring
+      'wounded', 'missing',
       // extended
-      'trapped', 'critical condition', { term: 'hospitali', prefix: true },
+      'trapped', 'critical condition',
+      // hospitalized, hospitalised, hospitalizations; not hospitality
+      { pattern: 'hospitali[sz]\\w*', label: 'hospitalized' },
     ],
   },
   {
@@ -496,6 +517,13 @@ export const EXCLUDE_FAMILIES = [
       'shootings', 'gunmen', 'gunshot', 'gunshots', 'stabbed', 'murders', 'hostages', 'rapes', 'raped', 'rapist',
       { term: 'abus', prefix: true }, 'sexually', 'assault', 'assaulted', 'trafficking', 'molest', 'molested',
       'pedophile', 'hate crime',
+      // gunfire and people being shot ("shot" alone is a camera, a vaccine and a rocket launch)
+      'gunfire', 'gunfight', 'shootout', 'opened fire', 'open fire', 'shots fired', 'mauled',
+      {
+        pattern:
+          '(?:man|woman|men|women|person|people|suspect|driver|officer|officers|passenger|passengers|guard|worker|workers|teen|boy|girl|pilot)\\b[^.]{0,40}\\bshot\\b|\\bshot (?:dead|and (?:killed|wounded)|by police)',
+        label: 'shot',
+      },
     ],
   },
   {
@@ -508,13 +536,47 @@ export const EXCLUDE_FAMILIES = [
     ],
   },
   {
+    // Kids and schools: the site belongs to a school principal.
     name: 'children',
-    terms: ['child', 'children', 'kid', 'kids'],
-    combos: [{ label: 'school with lockdown or threat', needs: ['school', { pattern: 'lockdown|threats?' }] }],
+    terms: [
+      'child', 'children', 'kid', 'kids',
+      'schoolchild', 'schoolchildren', 'schoolkid', 'schoolkids', 'schoolboy', 'schoolboys', 'schoolgirl', 'schoolgirls',
+      'school', 'schools', 'preschool', 'kindergarten', 'daycare', 'student', 'students',
+      { term: 'toddler', prefix: true }, { term: 'teen', prefix: true }, // teen, teens, teenager, teenage
+      'infant', 'infants', 'baby', 'babies', 'newborn', 'newborns', 'juvenile', 'juveniles', 'underage',
+      'boy', 'boys', 'girl', 'girls',
+    ],
   },
   {
+    // A crash with people in it. Market, crypto, app, site and server crashes stay.
     name: 'crash',
-    terms: ['plane crash', 'crashed', 'crash kills', 'helicopter crash', 'train crash', 'bus crash'],
+    label: 'crash with people',
+    predicate: crashWithPeople,
+  },
+  {
+    name: 'hate',
+    terms: [
+      { term: 'antisemit', prefix: true }, { term: 'anti-semit', prefix: true }, 'Jewish', 'Jew', 'Jews', 'Judaism',
+      'synagogue', 'synagogues', 'rabbi', 'mosque', 'mosques', 'imam', 'Muslim', 'Muslims', 'Islam', 'Islamic', 'Islamist',
+      { term: 'Islamophob', prefix: true }, 'Hindu', 'Sikh', 'Buddhist', 'Catholic', 'Christian', 'Christians', 'Christianity',
+      'church', 'churches', 'cathedral', 'pastor', 'priest', 'Pope', 'Vatican', { term: 'religio', prefix: true },
+      'Nazi', 'Nazis', 'Holocaust', 'racism', 'racist', 'racists', 'racial', { term: 'white supremac', prefix: true },
+      'KKK', 'Ku Klux', 'hate speech', 'hate group', { term: 'bigot', prefix: true }, 'slur', 'slurs',
+    ],
+  },
+  {
+    // Human illness. A germ with no sick people in it (a lab, an animal, space, a superbug) stays.
+    name: 'illness',
+    terms: [
+      'patient', 'patients', 'hospital', 'hospitals', 'clinic', 'clinics', 'therapy', 'therapist', 'therapists',
+      'sick', 'sickens', 'sickened', 'sickness', 'illness', 'illnesses', 'epidemic', 'pandemic',
+      { pattern: '(?<!tornado\\s)outbreaks?', label: 'outbreak' },
+      'measles', 'mumps', 'rubella', 'polio', 'whooping cough', 'pertussis', 'tuberculosis', 'cholera', 'dengue',
+      'malaria', 'norovirus', 'hepatitis', 'HIV', 'mpox', 'monkeypox', 'Ebola', 'Marburg', 'Nipah', 'Zika', 'chikungunya',
+      'Legionnaires', 'Legionella', 'listeria', 'salmonella', { pattern: 'E\\.?\\s?coli', label: 'E. coli' }, 'botulism',
+      'foodborne', 'food poisoning', 'covid', 'coronavirus',
+      { term: 'vaccin', prefix: true }, 'immunization', 'immunisation', 'antivax', 'anti-vax',
+    ],
   },
   {
     name: 'places',
@@ -537,6 +599,11 @@ export const EXCLUDE_FAMILIES = [
       // extended
       'Duffy', 'Buttigieg', 'midterm', 'midterms', 'White House', 'lawmakers', 'lawmaker', 'senator', 'senators',
       'Obama', 'impeach', 'impeachment',
+      // trade, the Fed and the people who make the news about themselves
+      { term: 'tariff', prefix: true }, 'Powell', 'Federal Reserve', 'Fed chair', 'Supreme Court', 'sanctions',
+      'Elon Musk', { term: 'Musk', caseSensitive: true },
+      // government officials commenting on an outage are still politics
+      { term: 'DHS', caseSensitive: true }, 'Homeland Security', 'Pentagon', 'Capitol Hill',
     ],
   },
   {
@@ -613,8 +680,7 @@ export const STATUS_PAGES = [
   { id: 'github', name: 'GitHub', host: 'www.githubstatus.com' },
   { id: 'cloudflare', name: 'Cloudflare', host: 'www.cloudflarestatus.com' },
   { id: 'openai', name: 'OpenAI', host: 'status.openai.com' },
-  // Named by its role: the credit on /about is the only place the site says Claude.
-  { id: 'chatbot', name: 'a popular AI chatbot', host: 'status.claude.com', listed: false },
+  { id: 'claude', name: 'Claude', host: 'status.claude.com' },
   { id: 'discord', name: 'Discord', host: 'discordstatus.com' },
   { id: 'reddit', name: 'Reddit', host: 'www.redditstatus.com' },
   { id: 'zoom', name: 'Zoom', host: 'www.zoomstatus.com' },
@@ -668,6 +734,7 @@ export const QUIET = {
     /\bmassacres?\b/i,
     /\b(?:dozens|scores|hundreds)\b[^.]{0,20}\b(?:killed|dead)\b/i,
     /\bdeath tolls?\b/i,
+    /\b\d+\s+(?:killed|dead)\b/i,
   ],
   // Used only when Google News top stories refuses us, so the kill switch
   // still has a pair of eyes. An addition to the spec; it costs one request
@@ -677,7 +744,10 @@ export const QUIET = {
     { via: 'npr-top-stories', url: 'https://feeds.npr.org/1001/rss.xml' },
   ],
   quietCaption: 'No jokes on this one.',
+  // Where a quiet card sends people who want to help. A quake outside the US
+  // goes to the international federation, everything else to the US Red Cross.
   quietLink: 'https://www.redcross.org/donate',
+  quietLinkIntl: 'https://www.ifrc.org/',
 };
 
 // GDELT is a bounded bonus: few calls, wide spacing, stop at the first refusal.

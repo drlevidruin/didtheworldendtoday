@@ -7,7 +7,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { config } from '../scripts/config.mjs';
 import { publicCopy } from '../scripts/build.mjs';
-import { fixture, readJson, REPO } from './helpers.mjs';
+import { spawnSync } from 'node:child_process';
+import { fixture, readJson, REPO, tmpRoot } from './helpers.mjs';
 
 const cfg = config();
 const pkg = readJson(path.join(REPO, 'package.json'));
@@ -88,8 +89,6 @@ test('workflow: triggers, concurrency, permissions, environment', () => {
   assert.match(workflow, /concurrency:\s*\n\s*group: site\s*\n\s*cancel-in-progress: false/);
   assert.match(workflow, /permissions:\s*\n\s*contents: write\s*\n\s*pages: write\s*\n\s*id-token: write/);
   assert.match(workflow, /SITE_URL: https:\/\/didtheworldendtoday\.com/);
-  assert.match(workflow, /X_BEARER_TOKEN: \$\{\{ secrets\.X_BEARER_TOKEN \}\}/);
-  assert.match(workflow, /X_DAILY_BUDGET_USD: \$\{\{ vars\.X_DAILY_BUDGET_USD \}\}/);
   assert.match(workflow, /environment:\s*\n\s*name: github-pages/);
   const jobsText = workflow.slice(workflow.indexOf('\njobs:\n') + 7);
   assert.deepEqual([...jobsText.matchAll(/^  ([a-z_-]+):\s*$/gm)].map((m) => m[1]), ['update'], 'one job only');
@@ -114,14 +113,116 @@ test('workflow: the steps come in the spec order', () => {
   assert.match(workflow, /upload-pages-artifact@v\d+\s*\n\s*with:\s*\n\s*path: dist/);
 });
 
-test('workflow: the data commit has the bot author, a dated message, and a retrying push', () => {
+test('workflow: the checkout follows the branch, so a run that waited starts from the newest main', () => {
+  assert.match(workflow, /uses: actions\/checkout@v7\s*\n\s*with:\s*\n\s*ref: \$\{\{ github\.ref \}\}/);
+});
+
+test('workflow: the X token and its budget are visible to the update step and to no other', () => {
+  const top = workflow.slice(workflow.indexOf('\nenv:\n'), workflow.indexOf('\njobs:\n'));
+  assert.ok(!/X_BEARER_TOKEN|X_DAILY_BUDGET_USD/.test(top), 'not in the workflow-level environment');
+  const jobEnv = workflow.slice(workflow.indexOf('\n    runs-on:'), workflow.indexOf('\n    steps:'));
+  assert.ok(!/X_BEARER_TOKEN|X_DAILY_BUDGET_USD/.test(jobEnv), 'not in the job-level environment');
+  const steps = workflow.split(/\n      - name: /).slice(1);
+  const names = (re) => steps.filter((step) => re.test(step)).map((step) => step.split('\n')[0]);
+  assert.deepEqual(names(/X_BEARER_TOKEN/), ['Update data']);
+  assert.deepEqual(names(/X_DAILY_BUDGET_USD/), ['Update data']);
+  const update = steps.find((step) => step.startsWith('Update data'));
+  assert.match(update, /run: npm run update\s*\n\s*env:\s*\n\s*X_BEARER_TOKEN: \$\{\{ secrets\.X_BEARER_TOKEN \}\}\s*\n\s*X_DAILY_BUDGET_USD: \$\{\{ vars\.X_DAILY_BUDGET_USD \}\}/);
+});
+
+test('workflow: the data commit has the bot author, a dated message, and a push that retries and survives a data conflict', () => {
   assert.match(workflow, /git config user\.name "thelpdrive bot"/);
   assert.match(workflow, /git config user\.email "bot@didtheworldendtoday\.com"/);
   assert.match(workflow, /git add data\b/);
-  assert.match(workflow, /git commit -m "data: \$\(TZ=America\/New_York date '\+%Y-%m-%d %H:%M'\) ET"/);
+  assert.match(workflow, /msg="data: \$\(TZ=America\/New_York date '\+%Y-%m-%d %H:%M'\) ET"/);
+  assert.match(workflow, /git commit -m "\$msg"/);
   assert.match(workflow, /for attempt in 1 2 3; do/);
-  assert.match(workflow, /git pull --rebase && git push/);
+  assert.match(workflow, /git fetch --depth=50 origin main/);
+  assert.match(workflow, /git rebase origin\/main/);
+  assert.match(workflow, /git rebase --abort/);
+  assert.match(workflow, /git reset --hard origin\/main/);
   assert.match(workflow, /refs\/heads\/main/);
+});
+
+// The commit step is run for real, against a local stand-in for the remote, so the
+// recovery is proven and not only read: a second run pushes first and touches the
+// same files, and this run's reading still lands without losing what the other added.
+function commitStepScript() {
+  const at = workflow.indexOf('- name: Commit data if it changed');
+  const from = workflow.indexOf('run: |\n', at) + 'run: |\n'.length;
+  const to = workflow.indexOf('\n      - name: Configure Pages');
+  assert.ok(at > 0 && to > from, 'the commit step is in the workflow');
+  return `#!/bin/bash\nset -e\n${workflow.slice(from, to).split('\n').map((l) => l.replace(/^ {10}/, '')).join('\n')}\n`;
+}
+
+function git(cwd, ...args) {
+  const r = spawnSync('git', args, { cwd, encoding: 'utf8' });
+  assert.equal(r.status, 0, `git ${args.join(' ')}: ${r.stderr}`);
+  return r.stdout.trim();
+}
+
+function remoteWithTwoRuns() {
+  const root = tmpRoot('dtwet-commit-step-');
+  git(root, 'init', '-q', '--bare', 'origin.git');
+  git(path.join(root, 'origin.git'), 'symbolic-ref', 'HEAD', 'refs/heads/main');
+  git(root, 'clone', '-q', 'origin.git', 'seed');
+  const seed = path.join(root, 'seed');
+  git(seed, 'config', 'user.name', 'seed');
+  git(seed, 'config', 'user.email', 'seed@example.com');
+  fs.mkdirSync(path.join(seed, 'data', 'days'), { recursive: true });
+  fs.mkdirSync(path.join(seed, 'scripts'), { recursive: true });
+  fs.writeFileSync(path.join(seed, 'data', 'latest.json'), '{"from":"seed"}\n');
+  fs.writeFileSync(path.join(seed, 'data', 'days', '2026-11-16.json'), '{"from":"seed"}\n');
+  fs.writeFileSync(path.join(seed, 'scripts', 'data-changed.mjs'), 'process.exit(0);\n');
+  git(seed, 'add', '-A');
+  git(seed, 'commit', '-q', '-m', 'seed');
+  git(seed, 'branch', '-M', 'main');
+  git(seed, 'push', '-q', 'origin', 'main');
+  const url = `file://${path.join(root, 'origin.git')}`;
+  for (const run of ['runA', 'runB']) git(root, 'clone', '-q', '--depth', '1', url, run);
+  return { root, url, runA: path.join(root, 'runA'), runB: path.join(root, 'runB') };
+}
+
+function runCommitStep(cwd, root) {
+  const script = path.join(root, 'commit-step.sh');
+  fs.writeFileSync(script, commitStepScript());
+  const env = { ...process.env, GITHUB_REF: 'refs/heads/main', PATH: `${path.dirname(process.execPath)}${path.delimiter}${process.env.PATH}` };
+  return spawnSync('bash', [script], { cwd, env, encoding: 'utf8' });
+}
+
+const gitAvailable = spawnSync('git', ['--version']).status === 0 && spawnSync('bash', ['--version']).status === 0;
+
+test('workflow: a data push that races another run keeps this run\'s files and loses nothing the other run added', { skip: !gitAvailable }, () => {
+  const { root, url, runA, runB } = remoteWithTwoRuns();
+  // Run B finishes first and pushes, touching latest.json and adding a day file.
+  git(runB, 'config', 'user.name', 'b');
+  git(runB, 'config', 'user.email', 'b@example.com');
+  fs.writeFileSync(path.join(runB, 'data', 'latest.json'), '{"from":"B"}\n');
+  fs.writeFileSync(path.join(runB, 'data', 'days', '2026-11-17.json'), '{"from":"B"}\n');
+  git(runB, 'add', 'data');
+  git(runB, 'commit', '-q', '-m', 'data: run B');
+  git(runB, 'push', '-q', 'origin', 'main');
+  // Run A read newer data into the same latest.json and now commits and pushes.
+  fs.writeFileSync(path.join(runA, 'data', 'latest.json'), '{"from":"A"}\n');
+  const r = runCommitStep(runA, root);
+  assert.equal(r.status, 0, `${r.stdout}\n${r.stderr}`);
+  const check = path.join(root, 'check');
+  git(root, 'clone', '-q', url, check);
+  assert.equal(fs.readFileSync(path.join(check, 'data', 'latest.json'), 'utf8'), '{"from":"A"}\n', 'this run\'s file wins');
+  assert.equal(fs.readFileSync(path.join(check, 'data', 'days', '2026-11-17.json'), 'utf8'), '{"from":"B"}\n', 'the other run\'s new file is kept');
+  const subjects = git(check, 'log', '--format=%s').split('\n');
+  assert.equal(subjects.length, 3, 'seed, run B and this run: the commit was not dropped');
+  assert.match(subjects[0], /^data: \d{4}-\d\d-\d\d \d\d:\d\d ET$/);
+});
+
+test('workflow: a data push with no race goes straight through', { skip: !gitAvailable }, () => {
+  const { root, url, runA } = remoteWithTwoRuns();
+  fs.writeFileSync(path.join(runA, 'data', 'latest.json'), '{"from":"A"}\n');
+  const r = runCommitStep(runA, root);
+  assert.equal(r.status, 0, `${r.stdout}\n${r.stderr}`);
+  const check = path.join(root, 'check');
+  git(root, 'clone', '-q', url, check);
+  assert.equal(fs.readFileSync(path.join(check, 'data', 'latest.json'), 'utf8'), '{"from":"A"}\n');
 });
 
 test('workflow: current action versions, and no secret besides the optional X token', () => {
@@ -142,6 +243,34 @@ test('the public data copy keeps what the page needs and drops the per-source st
   assert.deepEqual(today.stories, latest.stories);
   assert.ok(!('sources' in today), 'per-source status stays private');
   assert.ok('sources' in latest, 'the input is not touched');
+});
+
+test('the public data copy carries the quiet switch and its note, and no detector state', () => {
+  const latest = {
+    schema: 1,
+    score: 18,
+    stories: [],
+    x: { enabled: true, spentUsd: 0.4 },
+    someFutureField: { private: true },
+    quiet: {
+      quiet: true,
+      why: 'auto',
+      note: 'A hard day',
+      manual: { quiet: false, note: '', problem: null },
+      auto: { tripped: true, matches: ['Mass shooting at a mall leaves dozens dead'], checked: 30 },
+      latch: { until: '2026-11-17T04:00:00Z' },
+    },
+  };
+  const today = publicCopy(latest);
+  assert.deepEqual(today.quiet, { quiet: true, note: 'A hard day' });
+  assert.ok(!JSON.stringify(today).includes('Mass shooting'), 'the headlines that tripped the check are not published');
+  assert.ok(!('x' in today), 'the X budget stays private');
+  assert.ok(!('someFutureField' in today), 'a field nobody named public stays private');
+  assert.deepEqual(Object.keys(latest.quiet).sort(), ['auto', 'latch', 'manual', 'note', 'quiet', 'why'], 'the input is not touched');
+  assert.equal(today.score, 18);
+  assert.deepEqual(today.stories, []);
+  assert.deepEqual(publicCopy({ schema: 1, quiet: null }).quiet, { quiet: false, note: '' }, 'a missing quiet block reads as off');
+  assert.equal(publicCopy(null), null);
 });
 
 // ---- writing rules ---------------------------------------------------------------

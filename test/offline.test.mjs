@@ -102,6 +102,23 @@ test('--verbose prints the kept and dropped lists and still exits 0', () => {
   assert.match(r.stdout, /DROPPED/);
 });
 
+test('a malformed quiet.json is read as quiet ON, the run says so out loud, and it still exits 0', () => {
+  for (const content of ['{ "quiet": tru', '', '[]', '{"quiet": "maybe"}']) {
+    const root = tmpRoot();
+    fs.writeFileSync(path.join(root, 'quiet.json'), content);
+    const r = cli('scripts/update.mjs', root, '2026-11-16T22:30:00Z');
+    assert.equal(r.status, 0, `"${content}": ${r.stderr}`);
+    assert.match(r.stdout, /quiet: ON \(manual: /);
+    assert.match(r.stdout, /quiet\.json PROBLEM: /);
+    assert.match(r.stdout, /^::warning::quiet\.json /m, 'shows as a note on the run page');
+    const latest = latestOf(root);
+    assert.equal(latest.quiet.quiet, true);
+    assert.ok(latest.quiet.manual.problem);
+    const out = build(root, { siteUrl: 'https://didtheworldendtoday.com' });
+    assert.match(fs.readFileSync(path.join(out.dist, 'index.html'), 'utf8'), /<html lang="en"[^>]*data-quiet="1"/, 'and the site goes quiet');
+  }
+});
+
 test('a real bug (a nonsense clock) fails loudly instead of pretending', () => {
   const r = cli('scripts/update.mjs', tmpRoot(), 'not a time');
   assert.notEqual(r.status, 0);

@@ -9,7 +9,7 @@ function top(root) {
 }
 
 export function almanacPage({ root, siteUrl, entries, record, categories, quiet }) {
-  const recordText = recordLine(record);
+  const recordText = recordLine(record, entries.length);
   const body = `<main id="main">
 <div class="wrap">
 ${top(root)}
@@ -56,8 +56,7 @@ function sourceList(cfg, xEnabled) {
   ];
   const rows = items.map(([href, name, what]) => `<li><a href="${url(href)}" target="_blank" rel="noopener">${esc(name)}</a>: ${esc(what)}</li>`);
   // The status pages are named for the big names; the list ends with "and more".
-  const named = (cfg.statusPages || []).filter((p) => p.listed !== false);
-  const links = named.map((p) => `<a href="${url(`https://${p.host}/`)}" target="_blank" rel="noopener">${esc(p.name)}</a>`);
+  const links = (cfg.statusPages || []).map((p) => `<a href="${url(`https://${p.host}/`)}" target="_blank" rel="noopener">${esc(p.name)}</a>`);
   const text = links.length ? `${links.join(', ')} and more` : 'the status pages of big services';
   rows.push(`<li>Status pages: ${text}, for "is the internet down"</li>`);
   if (xEnabled) rows.push(`<li><a href="https://x.com/" target="_blank" rel="noopener">X</a>: live posts from breaking news accounts</li>`);
@@ -90,7 +89,7 @@ ${doomBullets(d)
 ${sourceList(cfg, xEnabled)}
 
 <h2>Quiet cards and quiet mode</h2>
-<p>A quiet card is a story about something that could hurt people, like a big quake, a flood or a fire. It gets no joke, only the plain facts and a link to the Red Cross.</p>
+<p>A quiet card is a story about something that could hurt people, like a big quake, a flood or a fire. It gets no joke, only the plain facts. When people are likely hurt, it also links to the Red Cross, or to the international Red Cross and Red Crescent for a quake abroad.</p>
 <p>Quiet mode is the whole site going plain: when a mass-casualty event dominates the news, or when it is switched on by hand, the jokes stop until it passes.</p>
 
 <h2>Headlines</h2>

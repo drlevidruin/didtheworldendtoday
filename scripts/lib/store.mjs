@@ -1,6 +1,8 @@
 // Day files and the almanac index.
 //
-// data/days/YYYY-MM-DD.json  { date, score, fired, bumps, updatedAt, stories[] }
+// data/days/YYYY-MM-DD.json  { date, score, fired, bumps, change, updatedAt, stories[] }
+//                            today's edition only, rewritten every run; a day
+//                            that has passed is never rewritten
 // data/days.json             [{ date, score, fired, top, cats }], newest first
 //
 // The site has a first edition (config FIRST_EDITION). A day before it was
@@ -86,12 +88,17 @@ export function pruneBefore(p, floor) {
   return removed;
 }
 
-export function buildIndex(p, floor = null) {
+// keep(story) is optional: a story it refuses is left out of the entry's top
+// story and counts, so the almanac never shows what the current rules would
+// not publish. The day file itself is not changed.
+export function buildIndex(p, floor = null, keep = null) {
   const out = [];
   for (const date of listDayDates(p)) {
     if (floor && date < floor) continue;
     const day = readDayLenient(p, date);
-    if (day && day.date === date && Array.isArray(day.stories)) out.push(indexEntry(day));
+    if (day && day.date === date && Array.isArray(day.stories)) {
+      out.push(indexEntry(keep ? { ...day, stories: day.stories.filter((s) => s && typeof s === 'object' && keep(s)) } : day));
+    }
   }
   return out;
 }

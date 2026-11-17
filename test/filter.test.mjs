@@ -33,10 +33,13 @@ for (const [family, terms] of Object.entries(SPEC_TERMS)) {
   });
 }
 
-test('school together with lockdown or threat is excluded, school alone is not', () => {
+test('any headline about a school, students, patients or a hospital is excluded', () => {
   assert.equal(verdict('Network outage hits school district after lockdown')?.family, 'children');
   assert.equal(verdict('School network faces threat from hackers')?.family, 'children');
-  assert.equal(verdict('School district network outage leaves laptops offline'), null);
+  assert.equal(verdict('School district network outage leaves laptops offline')?.family, 'children');
+  assert.equal(verdict('Student portal down for hours')?.family, 'children');
+  assert.equal(verdict('Patient portal outage')?.family, 'illness');
+  assert.equal(verdict('Hospital network restores systems after outage')?.family, 'illness');
 });
 
 test('ICE is case sensitive, so an ice storm survives', () => {
@@ -88,7 +91,65 @@ test('extended casualty terms: lives lost, rubble, survivors, trapped, hospitali
     ['Recall expands as hospitalizations rise', 'injury'],
   ];
   for (const [title, family] of cases) assert.equal(verdict(title)?.family, family, title);
-  assert.equal(verdict('Hospital network restores systems after outage') ?? null, null);
+});
+
+// ---- the hard exclusions, with the exact headlines the review found ---------------------
+
+const MUST_BE_EXCLUDED = {
+  'violence and injury': ['Man fatally shot at airport', 'Gunfire at LAX terminal', 'Robot malfunction injures worker', 'Dozens hospitalized after chemical leak', '12 killed in blast', 'Report: 30 dead after storm'],
+  'kids and schools': ['Hackers hit schoolchildren records', "Hackers leak students' records", 'Toddlers game app exposes data', 'Teens targeted by app flaw', 'Baby formula recalled over botulism', 'School district network outage leaves laptops offline', 'Student portal down for hours', 'Patient portal outage', 'Hospital network restores systems after outage'],
+  'crashes with people': ['Airline stock falls after Air India crash', 'Plane crash disrupts flights', 'Helicopter crash in Hudson', 'Train crash near Paris', 'Bus crash on highway', 'Car crash closes bridge'],
+  'hate and religion': ['Antisemitic rants spread on app', 'Jewish school targeted by hackers', 'Synagogue websites hit by outage', 'Mosque site hacked', 'Church livestream goes down', 'Nazis flood forum', 'Racism on platform'],
+  'politics and people in the news': ['Tariff hike rattles markets', 'Vaccine debate flares', 'Powell fired as Fed chair', 'Elon Musk says X is down', "DHS chief insists the 'homeland is secure' as tech outages hit airlines and banks", 'Homeland Security briefed on the bank outage'],
+  'human illness': ['Listeria sickens 27 across states', 'Ebola outbreak in Congo', 'Therapy notes of 30,000 patients leaked', 'Measles cases rise', 'Vaccines recalled', 'E. coli found in lettuce', 'Salmonella recall', 'Botulism scare', 'Dozens hospitalized after leak', 'US has lost measles elimination status'],
+};
+
+for (const [group, titles] of Object.entries(MUST_BE_EXCLUDED)) {
+  test(`taste filter, ${group}: every exact headline from the review is excluded`, () => {
+    for (const title of titles) assert.ok(verdict(title), `"${title}" should be excluded`);
+  });
+}
+
+test('taste filter: the families the exact headlines land in', () => {
+  const expected = [
+    ['Man fatally shot at airport', 'death'],
+    ['Gunfire at LAX terminal', 'violence'],
+    ['Robot malfunction injures worker', 'injury'],
+    ['Hackers hit schoolchildren records', 'children'],
+    ['Baby formula recalled over botulism', 'children'],
+    ['Airline stock falls after Air India crash', 'crash'],
+    ['Antisemitic rants spread on app', 'hate'],
+    ['Synagogue websites hit by outage', 'hate'],
+    ['Tariff hike rattles markets', 'politics'],
+    ['Powell fired as Fed chair', 'politics'],
+    ['Elon Musk says X is down', 'politics'],
+    ['Listeria sickens 27 across states', 'illness'],
+    ['Therapy notes of 30,000 patients leaked', 'illness'],
+  ];
+  for (const [title, family] of expected) assert.equal(verdict(title)?.family, family, title);
+});
+
+test('taste filter: tech and market crashes, cyberattacks and animal or lab germs are still kept', () => {
+  for (const title of [
+    'Cyberattack takes city payment systems offline',
+    'DDoS attack knocks gaming site offline',
+    'Market crash wipes billions from tech stocks',
+    'Crypto crash: Bitcoin plunges below 60,000',
+    'App crash leaves banking customers locked out',
+    'Server crashes knock thousands of sites offline',
+    'Site crashes as demand spikes',
+    'Stocks plunge in sudden flash crash',
+    'Bitcoin crashes below 60,000 in wild swing',
+    'Cloudflare outage knocks thousands of sites offline',
+    'Tornado outbreak sweeps the plains',
+    'Superbug found in lab-grown samples',
+    'Bird flu found at dairy farm',
+    'New virus found in bats',
+    'Microbes survive on the space station',
+    'Hospitality software outage hits hotels',
+    'Ice storm knocks out power to 40,000 customers',
+    'Warsaw airport reports an outage',
+  ]) assert.equal(verdict(title), null, title);
 });
 
 test('format family: a columnist label with a pipe is dropped, newsroom tags are not', () => {

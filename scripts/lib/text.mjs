@@ -155,8 +155,16 @@ export function safeUrl(u) {
   }
 }
 
-// First letter up, the rest untouched: 'a popular AI chatbot' -> 'A popular AI chatbot'.
+// First letter up, the rest untouched: 'passes in 3 hours' -> 'Passes in 3 hours'.
 export function capFirst(text) {
   const t = String(text ?? '');
   return t.charAt(0).toUpperCase() + t.slice(1);
+}
+
+// A list of names as a sentence: 'Cloudflare', 'Cloudflare and Claude', 'GitHub, Cloudflare, and Claude'.
+export function joinNames(names) {
+  const list = (Array.isArray(names) ? names : []).map((n) => String(n ?? '').trim()).filter(Boolean);
+  if (list.length <= 1) return list.join('');
+  if (list.length === 2) return `${list[0]} and ${list[1]}`;
+  return `${list.slice(0, -1).join(', ')}, and ${list[list.length - 1]}`;
 }

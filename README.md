@@ -20,6 +20,10 @@ Every 15 minutes a GitHub Action reads the feeds, saves what it found as plain J
 
 Headlines are stored as published, escaped when a page is built, and linked only if the link is http or https.
 
+### Before the first push
+
+Set up Pages first. In the repository's Settings, open Pages and set Source to **GitHub Actions**. The workflow deploys through it, so the first run fails until this is set.
+
 ### When it runs
 
 `.github/workflows/update.yml` runs at minutes 4, 19, 34 and 49 of every hour (not on the hour, when GitHub is busiest) and on every push to `main`. Each run installs, updates the data, builds, runs the tests, commits the data if it changed, and deploys.
@@ -27,6 +31,8 @@ Headlines are stored as published, escaped when a page is built, and linked only
 ### The Doom Score
 
 A category fires when 3 or more different publishers have a headline in it within 24 hours, or when its instrument trips. Each fired category is worth 6 points. The floor is 11, because there is always something. The cap is 99, because it is never 100. Instruments add points on top: an FAA ground stop, an asteroid inside 1 lunar distance, a strong geomagnetic storm, a big quake, a big status page in major outage. The exact numbers live in `DOOM` in `scripts/config.mjs` and are printed on the About page, which reads them from the same place.
+
+Today's score and stories are the last 24 hours, the same as the homepage, and each run saves that view as today's file in `data/days/`. When the Eastern date changes, that day's last file is its final edition. It is never rewritten, so the Almanac scores never move, and "yesterday" always means yesterday's final score.
 
 ## Run it on your computer
 
@@ -50,7 +56,9 @@ When something terrible is dominating the news, the site drops the jokes and say
 
 To turn it on by hand, open `quiet.json` in the GitHub app, change `false` to `true`, optionally add a short `note`, and commit. Within 15 minutes the site goes plain. Change it back the same way.
 
-It also turns on by itself when 3 or more of the top 30 Google News headlines are about a mass-casualty event, and then stays on for at least 6 hours. Separately, any story about a big quake, a flood, a fire or a storm that could hurt people gets a quiet card: the plain facts and a link to the Red Cross, no joke.
+If `quiet.json` is ever unreadable (a stray comma from a phone, say), the site goes quiet and the run logs the problem. It never guesses the other way.
+
+It also turns on by itself when 3 or more of the top 30 Google News headlines are about a mass-casualty event, or name a toll such as "12 dead", and then stays on for at least 6 hours. Separately, any story about a big quake, a flood, a fire or a storm that could hurt people gets a quiet card with no joke. When people are likely hurt it also links to the Red Cross (the international Red Cross and Red Crescent for a quake abroad); a quake that is only big gets the caption alone.
 
 ## Turn on X
 
@@ -66,7 +74,10 @@ X runs at most once an hour and skips the call when it could go over the daily c
 
 The deploy uses GitHub Actions, so the repository has no `CNAME` file and no `.nojekyll`. The domain is set in the repository's Settings, under Pages, as the custom domain `didtheworldendtoday.com`. Tick Enforce HTTPS once GitHub's certificate is ready.
 
-At the registrar, point the domain at GitHub Pages with four A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`.
+At the registrar, point the domain at GitHub Pages with these records:
+
+- Four A records for the apex (`didtheworldendtoday.com`): `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`.
+- One CNAME record for `www`, pointing at your GitHub Pages host, which is your GitHub username followed by `.github.io`.
 
 `SITE_URL` in the workflow is the domain used for absolute links. Change it there if the domain ever changes.
 

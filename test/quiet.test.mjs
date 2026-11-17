@@ -7,7 +7,7 @@ import { createHttp } from '../scripts/lib/http.mjs';
 import { emptyLatch, evaluateTopStories, normalizeLatch, readQuietFile, resolveQuiet } from '../scripts/lib/quietmode.mjs';
 import { headlineMagnitude, quietReason } from '../scripts/lib/quietcards.mjs';
 import * as topstories from '../scripts/sources/topstories.mjs';
-import { fixtureJson, mockFetch, noSleep, tmpRoot, REPO } from './helpers.mjs';
+import { fixtureJson, mockFetch, noSleep, tmpRoot } from './helpers.mjs';
 
 const cfg = config();
 const HOUR = 3600e3;

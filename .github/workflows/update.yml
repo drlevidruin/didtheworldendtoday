@@ -18,8 +18,6 @@ permissions:
 
 env:
   SITE_URL: https://didtheworldendtoday.com
-  X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-  X_DAILY_BUDGET_USD: ${{ vars.X_DAILY_BUDGET_USD }}
 
 jobs:
   update:
@@ -29,8 +27,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
+      # ref: the branch itself, not the commit that triggered the run, so a run
+      # that waited behind another one starts from the newest main.
       - name: Check out
         uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref }}
 
       - name: Set up Node
         uses: actions/setup-node@v7
@@ -41,8 +43,12 @@ jobs:
       - name: Install
         run: npm ci
 
+      # The X token is visible to this step and no other.
       - name: Update data
         run: npm run update
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_DAILY_BUDGET_USD: ${{ vars.X_DAILY_BUDGET_USD }}
 
       - name: Build site
         run: npm run build
@@ -57,16 +63,29 @@ jobs:
           status=$?
           set -e
           if [ "$status" -eq 0 ]; then
+            msg="data: $(TZ=America/New_York date '+%Y-%m-%d %H:%M') ET"
             git config user.name "thelpdrive bot"
             git config user.email "bot@didtheworldendtoday.com"
             git add data
-            git commit -m "data: $(TZ=America/New_York date '+%Y-%m-%d %H:%M') ET"
+            git commit -m "$msg"
             if [ "$GITHUB_REF" = "refs/heads/main" ]; then
               for attempt in 1 2 3; do
-                if git pull --rebase && git push; then
-                  exit 0
+                if git fetch --depth=50 origin main; then
+                  if ! git rebase origin/main; then
+                    # Only data/ can conflict. This run's files are the newest reading, so they win and the commit is kept.
+                    # They go on top of what is already there, so nothing another run added is lost.
+                    git rebase --abort
+                    mine="$(mktemp -d)"
+                    cp -R data/. "$mine"
+                    git reset --hard origin/main
+                    cp -R "$mine"/. data
+                    git add data
+                    git commit -m "$msg" || true
+                  fi
+                  if git push; then
+                    exit 0
+                  fi
                 fi
-                git rebase --abort 2>/dev/null || true
                 sleep 5
               done
               echo "::warning::Could not push the data commit after 3 tries. The site still deploys from this run."

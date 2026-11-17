@@ -27,11 +27,14 @@ button{font:inherit;color:inherit}
 .is-checking .verdict{visibility:hidden}
 .is-checking .check{display:flex}
 .snap{animation:snap .12s ease-out}
-.date{margin-top:.9rem;font:500 1rem/1.3 var(--sans);letter-spacing:.06em;color:var(--mute)}
-.doom{margin-top:1.15rem;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.3rem .55rem;font:600 1rem/1.2 var(--sans)}
+.hero .line{margin-top:.9rem;max-width:100%;font:800 clamp(1.2rem,5.6vw,1.9rem)/1.15 var(--sans);letter-spacing:-.01em;text-wrap:balance}
+.doom{margin-top:1.15rem;display:flex;flex-direction:column;align-items:center;gap:.45rem;font:600 1rem/1.2 var(--sans)}
+.doom .pts{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.3rem .55rem}
 .doom .n{font:400 1.9rem/1 var(--disp);color:var(--hot);letter-spacing:.01em}
 .doom .chg{font-weight:700}
-.doom .sep,.doom .ago{color:var(--mute);font-weight:500}
+.doom .sep,.doom .ago,.doom .when{color:var(--mute);font-weight:500}
+.doom .ago{font-size:.85rem}
+.doom .wide{display:none}
 .dot{flex:none;width:.6rem;height:.6rem;border-radius:50%;background:var(--hot);animation:pulse 2s ease-out infinite}
 .meter{display:block;appearance:none;-webkit-appearance:none;width:min(15rem,62vw);height:.3rem;margin:.85rem auto 0;border:0;border-radius:99px;overflow:hidden;background:var(--line);color:var(--hot)}
 .meter::-webkit-progress-bar{background:var(--line)}
@@ -44,8 +47,7 @@ button{font:inherit;color:inherit}
 
 .wrap{width:100%;max-width:44rem;margin:0 auto;padding:0 1.25rem}
 .sub{padding:2.75rem 0 .5rem;text-align:center}
-.sub .line{font:800 clamp(1.45rem,6.2vw,2.1rem)/1.15 var(--sans);letter-spacing:-.01em}
-.sub .tag{margin-top:.7rem;color:var(--mute);font-size:.95rem}
+.sub .tag{color:var(--mute);font-size:.95rem}
 .sub .stale,.sub .streak{margin-top:.8rem;font-size:.95rem}
 .sub .stale{color:var(--ink);font-weight:600}
 .sub .note{margin-top:.5rem;color:var(--mute)}
@@ -138,9 +140,15 @@ footer .by{margin-top:.6rem}
 
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,106,0,.65)}70%{box-shadow:0 0 0 .65rem rgba(255,106,0,0)}100%{box-shadow:0 0 0 0 rgba(255,106,0,0)}}
 @keyframes snap{from{transform:scale(1.08)}to{transform:scale(1)}}
+@media (min-width:34rem){
+.doom{flex-direction:row;gap:.55rem}
+.doom .ago{font-size:1rem}
+.doom .wide{display:inline}
+}
 @media (min-width:46rem){
-.date{font-size:1.15rem}
+.hero .line{margin-top:1.1rem}
 .doom{margin-top:1.4rem;font-size:1.15rem}
+.doom .ago{font-size:1.15rem}
 .doom .n{font-size:2.3rem}
 .meter{width:18rem;height:.35rem;margin-top:1rem}
 .btns{margin-top:2rem}

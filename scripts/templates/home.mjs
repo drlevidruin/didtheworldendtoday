@@ -5,8 +5,10 @@ import {
   DESCRIPTION,
   QUIET_DESCRIPTION,
   QUIET_LINE,
+  RECORD_MIN_EDITIONS,
   STALE_AFTER_HOURS,
   STALE_TEMPLATE,
+  STREAK_FIRST,
   STREAK_TEMPLATE,
   TAGLINE,
   VERDICT,
@@ -14,11 +16,11 @@ import {
   checkLines,
   checkedText,
   dayTitle,
-  heroDate,
   homeTitle,
   longDate,
   monthDay,
   recordLine,
+  rowDate,
   shareText,
   shortDate,
   staleLine,
@@ -31,7 +33,9 @@ import { HOUR_MS } from '../lib/time.mjs';
 
 const jsonAttr = (value) => esc(JSON.stringify(value));
 
-// The fold: the question, ALMOST., the date, the Doom line and two buttons.
+// The fold: the question, ALMOST., the line under it, the date with the Doom
+// score, and two buttons. The date is the edition's Eastern date, written into
+// the page at build time; it is never swapped for the visitor's own date.
 function hero(v) {
   const score = Math.round(num(v.score));
   const chg = changeText(v.change);
@@ -41,6 +45,7 @@ function hero(v) {
     ? `<span class="ago" data-since="${esc(checkedAt)}">${esc(checkedText(Number.isFinite(sinceMs) ? sinceMs : 0))}</span>`
     : `<span class="ago">final</span>`;
   const question = v.live ? 'Did the world end today?' : `Did the world end on ${monthDay(v.date)}?`;
+  const line = v.quiet.quiet ? QUIET_LINE : subline(v.score);
   const buttons = v.live
     ? `<button class="btn" type="button" data-act="check">Check again</button>
 <button class="btn" type="button" data-act="share">Share</button>`
@@ -48,8 +53,8 @@ function hero(v) {
 <a class="btn" href="${esc(v.root)}">Today</a>`;
   return `<section class="hero" id="hero" data-lines="${jsonAttr(checkLines(v.headlinesRead))}">
 <h1 class="ask"><span class="q">${esc(question)}</span><span class="vbox"><span class="verdict" id="verdict">${esc(VERDICT)}</span><span class="check" id="check" aria-hidden="true"></span></span></h1>
-<p class="date"${v.live && v.kind === 'home' ? ' data-local="date"' : ''}>${esc(heroDate(v.date))}</p>
-<p class="doom"><span class="dot" aria-hidden="true"></span><span>Doom</span> <b class="n">${score}</b>${chg ? ` <span class="chg">${esc(chg)}</span>` : ''}<span class="sep" aria-hidden="true">&middot;</span>${tail}</p>
+<p class="line" id="line">${esc(line)}</p>
+<p class="doom"><span class="pts">${v.live ? '<span class="dot" aria-hidden="true"></span>' : ''}<span class="when">${esc(rowDate(v.date))}</span><span class="sep" aria-hidden="true">&middot;</span><span>Doom</span> <b class="n">${score}</b>${chg ? ` <span class="chg">${esc(chg)}</span>` : ''}</span><span class="sep wide" aria-hidden="true">&middot;</span>${tail}</p>
 <progress class="meter" max="99" value="${score}" aria-label="Doom Score ${score} of 99">${score}</progress>
 <div class="btns">
 ${buttons}
@@ -58,27 +63,34 @@ ${buttons}
 </section>`;
 }
 
-// Just below the fold: the voice line, the stale line, quiet mode, the streak.
+// Just below the fold: the tagline, the stale line, quiet mode's note, the streak.
 function sub(v) {
   const staleHours = (Date.parse(v.buildTime) - Date.parse(v.lastSuccessAt || v.buildTime)) / HOUR_MS;
   const stale = v.live && Number.isFinite(staleHours) && staleHours > STALE_AFTER_HOURS;
   const lines = [];
   if (v.quiet.quiet) {
-    lines.push(`<p class="line" id="line">${esc(QUIET_LINE)}</p>`);
     if (v.quiet.note) lines.push(`<p class="note">${esc(v.quiet.note)}</p>`);
   } else {
-    lines.push(`<p class="line" id="line">${esc(subline(v.score))}</p>`);
     lines.push(`<p class="tag">${esc(TAGLINE)}</p>`);
   }
   lines.push(`<p class="stale" id="stale" data-template="${esc(STALE_TEMPLATE)}"${stale ? '' : ' hidden'}>${stale ? esc(staleLine(staleHours)) : ''}</p>`);
-  if (v.live) lines.push(`<p class="streak" id="streak" data-template="${esc(STREAK_TEMPLATE)}" hidden></p>`);
+  if (v.live) lines.push(`<p class="streak" id="streak" data-first="${esc(STREAK_FIRST)}" data-template="${esc(STREAK_TEMPLATE)}" hidden></p>`);
   return `<div class="sub">\n${lines.join('\n')}\n</div>`;
 }
 
 export function mainHtml(v) {
   const cats = new Map(v.categories.map((c) => [c.id, c]));
-  const ctx = { cats, nowMs: v.nowMs, live: v.live, quietMode: v.quiet.quiet, quietCaption: v.quietCaption, quietLink: v.quietLink, used: new Map() };
-  const shareArgs = { live: v.live, date: v.date, score: v.score, change: v.change, fired: v.fired, categories: v.categories, host: v.siteHost };
+  const ctx = {
+    cats,
+    nowMs: v.nowMs,
+    live: v.live,
+    quietMode: v.quiet.quiet,
+    quietCaption: v.quietCaption,
+    quietLink: v.quietLink,
+    quietLinkIntl: v.quietLinkIntl,
+    used: new Map(),
+  };
+  const shareArgs = { live: v.live, date: v.date, score: v.score, change: v.change, fired: v.fired, categories: v.categories, host: v.siteHost, quiet: v.quiet.quiet };
   const [lead, ...rest] = v.stories;
 
   const sections = [];
@@ -95,7 +107,7 @@ ${card(lead, ctx, { lead: true })}
 <h2 class="sec">The receipts</h2>
 ${receipts(rest, ctx, v.categories)}
 </section>`);
-  const record = v.live ? recordLine(v.record) : '';
+  const record = v.live ? recordLine(v.record, v.editions) : '';
   sections.push(`<section id="bingo">
 <h2 class="sec">Doom Bingo</h2>
 ${bingo(v.fired, v.categories)}
@@ -138,7 +150,8 @@ export function pageHtml(v) {
       ? QUIET_DESCRIPTION
       : DESCRIPTION;
   const canonical = isDay ? `${v.siteUrl}/day/${v.date}/` : `${v.siteUrl}/`;
-  const image = isDay ? `${v.siteUrl}/og/${v.date}.png` : `${v.siteUrl}/og/latest.png`;
+  // Both read the card for the edition's own date, so what gets shared is what the page says.
+  const image = `${v.siteUrl}/og/${v.date}.png`;
   const data = {
     build: v.buildTime,
     success: v.lastSuccessAt || v.buildTime,

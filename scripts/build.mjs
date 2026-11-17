@@ -8,7 +8,7 @@
 //   dist/day/YYYY-MM-DD/index.html  one page per stored day
 //   dist/almanac/  dist/about/  dist/404.html
 //   dist/feed.xml  dist/sitemap.xml  dist/robots.txt  dist/site.webmanifest
-//   dist/api/today.json             public copy of latest.json (no per-source status)
+//   dist/api/today.json             public copy of latest.json (no state, no per-source status)
 //   dist/og/YYYY-MM-DD.png, latest.png   1200x630 share images
 //   dist/favicon.svg  dist/apple-touch-icon.png
 //   dist/assets/app.js  dist/assets/anton.woff2
@@ -26,9 +26,11 @@ import { paths, REPO_ROOT } from './lib/paths.mjs';
 import { readJsonLenient, toJson } from './lib/json.mjs';
 import { etDate, etStamp, addDays } from './lib/time.mjs';
 import { listDayDates, readDayLenient, indexEntry, recordDay } from './lib/store.mjs';
+import { compareStories } from './lib/cluster.mjs';
+import { createGatekeeper } from './lib/pipeline.mjs';
 import { receiptsOrder } from './lib/order.mjs';
 import { safeUrl } from './lib/text.mjs';
-import { NOT_FOUND_LINE } from './templates/copy.mjs';
+import { NOT_FOUND_LINE, QUIET_LINE, subline } from './templates/copy.mjs';
 import { aboutPage, almanacPage } from './templates/pages.mjs';
 import { feedXml } from './templates/feed.mjs';
 import { faviconSvg, fontFileIn, ogSvg, renderPng } from './templates/graphics.mjs';
@@ -39,10 +41,21 @@ import { manifestJson, robotsTxt, sitemapXml } from './templates/seo.mjs';
 export const DEFAULT_SITE_URL = 'https://didtheworldendtoday.com';
 const ASSETS = path.join(REPO_ROOT, 'assets');
 
+// What api/today.json shows the world: the page's own numbers and stories, and
+// none of the machinery. It is a list of what is public, so a field added to the
+// data later stays private until it is named here. The per-source status, the X
+// state, and everything about why quiet mode is on (the manual switch, the
+// automatic check and the headlines that tripped it) are not on the list.
+// Quiet mode itself is public: whether it is on, and the note.
+const PUBLIC_KEYS = ['schema', 'buildTime', 'etDate', 'etStamp', 'score', 'fired', 'bumps', 'change', 'yesterday', 'record', 'headlinesRead', 'lastSuccessAt', 'rollingFallback', 'cats', 'vital', 'stories'];
+
 export function publicCopy(latest) {
   if (!latest || typeof latest !== 'object') return null;
-  const { sources, ...rest } = latest; // eslint-disable-line no-unused-vars
-  return rest;
+  const out = {};
+  for (const key of PUBLIC_KEYS) if (key in latest) out[key] = latest[key];
+  const q = latest.quiet && typeof latest.quiet === 'object' ? latest.quiet : {};
+  out.quiet = { quiet: Boolean(q.quiet), note: typeof q.note === 'string' ? q.note : '' };
+  return out;
 }
 
 function siteUrlFrom(value) {
@@ -80,12 +93,31 @@ const plainStories = (list) => (Array.isArray(list) ? list.filter((s) => s && ty
 // The Doomsday Clock tile needs its two facts; if the data lost them, the config has them.
 const validClock = (c) => (c && Number.isFinite(Number(c.secondsToMidnight)) && /^\d{4}-\d\d-\d\d$/.test(String(c.setOn)) && typeof c.url === 'string' ? c : null);
 
-function readDays(p, firstEdition) {
+// A day file is never rewritten once its day has passed, so a rule that tightens
+// later (the taste filter) is applied here instead: a story the current
+// exclusion rules would not publish is left off every page, the almanac and the
+// feed. The data file itself is not changed.
+function publishable(gk, list) {
+  return plainStories(list).filter((s) => {
+    try {
+      return !gk.excluder.test(s.title, { signal: s.kind === 'signal' });
+    } catch {
+      return false; // a story too odd to check is not published
+    }
+  });
+}
+
+// One day's stories in the order the page lists them. It depends only on the
+// stories themselves, so a day written in rank order and a day written in
+// listing order come out the same.
+const listingOrder = (stories, variety) => receiptsOrder([...stories].sort(compareStories), variety);
+
+function readDays(p, firstEdition, gk, variety) {
   const days = [];
   for (const date of listDayDates(p)) {
     if (firstEdition && date < firstEdition) continue;
     const day = readDayLenient(p, date);
-    if (day && day.date === date && Array.isArray(day.stories)) days.push({ ...day, stories: plainStories(day.stories) });
+    if (day && day.date === date && Array.isArray(day.stories)) days.push({ ...day, stories: listingOrder(publishable(gk, day.stories), variety) });
   }
   return days; // newest first
 }
@@ -113,11 +145,18 @@ export function build(rootOrOpts, maybeOpts) {
   const siteUrl = siteUrlFrom(opts.siteUrl ?? process.env.SITE_URL);
   const siteHost = siteUrl.replace(/^https?:\/\//, '');
   const nowMs = opts.now ? new Date(opts.now).getTime() : Date.now();
+  const gk = createGatekeeper(cfg);
 
   const stored = readJsonLenient(p.latest, null);
   const hasData = Boolean(stored && typeof stored === 'object' && Array.isArray(stored.stories));
-  const latest = hasData ? { ...stored, stories: plainStories(stored.stories) } : emptyLatest(cfg, nowMs);
-  const days = readDays(p, cfg.firstEdition);
+  const latest = hasData ? { ...stored, stories: publishable(gk, stored.stories) } : emptyLatest(cfg, nowMs);
+  // Today's edition is the homepage's own snapshot: its day page reads the same
+  // numbers and stories, so the page, the share text and the share card cannot
+  // disagree. Every other day is read from its file as it was left.
+  const read = readDays(p, cfg.firstEdition, gk, cfg.variety);
+  const days = read.map((d) =>
+    hasData && d.date === latest.etDate ? { ...d, score: latest.score, fired: latest.fired, bumps: latest.bumps, change: latest.change, stories: latest.stories } : d,
+  );
   const index = days.map(indexEntry);
   const record = recordDay(index) || latest.record || null;
   // A day with nothing filed yet (the first hours after midnight Eastern) is not listed in the Almanac or the feed.
@@ -136,8 +175,10 @@ export function build(rootOrOpts, maybeOpts) {
     clock: validClock(latest.vital && latest.vital.clock) || cfg.clock,
     quietCaption: cfg.quiet.quietCaption,
     quietLink: cfg.quiet.quietLink,
+    quietLinkIntl: cfg.quiet.quietLinkIntl,
     quiet,
     record,
+    editions: listed.length,
     buildTime: latest.buildTime,
     nowMs: Date.parse(latest.buildTime) || nowMs,
     lastSuccessAt: latest.lastSuccessAt,
@@ -189,6 +230,8 @@ export function build(rootOrOpts, maybeOpts) {
   days.forEach((day, i) => {
     const before = days[i + 1] && days[i + 1].date === addDays(day.date, -1) ? days[i + 1] : null;
     const isToday = day.date === latest.etDate;
+    // A day's change is what it said on the day; an older file without one is worked out from the day before.
+    const change = 'change' in day ? (Number.isFinite(Number(day.change)) && day.change !== null ? Number(day.change) : null) : before ? day.score - before.score : null;
     write(
       `day/${day.date}/index.html`,
       fitPage(
@@ -200,7 +243,7 @@ export function build(rootOrOpts, maybeOpts) {
             live: isToday,
             date: day.date,
             score: day.score,
-            change: before ? day.score - before.score : null,
+            change,
             fired: firedOf(day.fired),
             bumps: bumpsOf(day.bumps),
             stories,
@@ -209,7 +252,7 @@ export function build(rootOrOpts, maybeOpts) {
             prev: dates[i + 1] || null,
             next: dates[i - 1] || null,
           }),
-        receiptsOrder(day.stories, cfg.variety),
+        day.stories,
         opts.pageBudget,
       ),
     );
@@ -231,9 +274,13 @@ export function build(rootOrOpts, maybeOpts) {
   write('assets/anton.woff2', fs.readFileSync(path.join(assets, 'fonts', 'anton.woff2')));
 
   // ---- pictures ----------------------------------------------------------------
+  // The card carries the same line the page puts under ALMOST. (or the quiet line, in quiet mode).
   const fontFile = fontFileIn(assets);
-  const og = (date, score, fired) => renderPng(ogSvg({ date, score, fired, categories: cfg.categories, host: siteHost }), { fontFile, width: 1200 });
+  const og = (date, score, fired) =>
+    renderPng(ogSvg({ date, score, fired, categories: cfg.categories, host: siteHost, line: quiet.quiet ? QUIET_LINE : subline(score) }), { fontFile, width: 1200 });
   write('og/latest.png', og(latest.etDate, latest.score, firedOf(latest.fired)));
+  // The homepage points at today's own card, so it has one even before today's file exists.
+  if (!dates.includes(latest.etDate)) write(`og/${latest.etDate}.png`, og(latest.etDate, latest.score, firedOf(latest.fired)));
   for (const day of days) write(`og/${day.date}.png`, og(day.date, day.score, firedOf(day.fired)));
   write('apple-touch-icon.png', renderPng(faviconSvg({ rounded: false }), { fontFile, width: 180 }));
 

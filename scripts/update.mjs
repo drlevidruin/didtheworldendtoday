@@ -16,13 +16,17 @@
 //         X_BEARER_TOKEN   turns the X source on (never printed)
 //
 // Files written (all JSON, two-space indent, atomic):
-//   data/days/YYYY-MM-DD.json  { date, score, fired[], bumps[], updatedAt, stories[] }
-//                              top 60 stories of that ET day. updatedAt moves
-//                              only when the content does.
+//   data/days/YYYY-MM-DD.json  { date, score, fired[], bumps[], change, updatedAt, stories[] }
+//                              today's edition only: the same rolling 24 hour view
+//                              the homepage shows, stories in listing order. Every
+//                              run rewrites today's file; a day whose ET date has
+//                              passed is never touched again, so its last snapshot
+//                              is its final edition and its almanac score.
+//                              updatedAt moves only when the content does.
 //   data/days.json             [{ date, score, fired[], top{title,url,source,cat}, cats{} }], newest first
 //   data/latest.json           what the homepage renders: rolling 24 h stories,
-//                              score, fired[], bumps[], change vs yesterday,
-//                              yesterday, record, vital signs, quiet mode,
+//                              score, fired[], bumps[], change vs yesterday's final
+//                              score, yesterday, record, vital signs, quiet mode,
 //                              per-source status, headlinesRead, buildTime
 //   data/state/sources.json    per source: ok, count, error, lastTryAt, lastOkAt, last good vital
 //   data/state/x.json          since_id, cached user ids, usage and estimated spend per UTC day
@@ -169,7 +173,7 @@ export async function runUpdate(opts = {}) {
     }
   }
 
-  // ---- merge, bucket into ET days, score -----------------------------------
+  // ---- merge, then the one view everything is built from -------------------
   const merged = mergeStories(storedKept, kept, { now: nowMs });
   for (const s of merged) {
     const reason = quietReason(s);
@@ -181,44 +185,48 @@ export async function runUpdate(opts = {}) {
       delete s.quietReason;
     }
   }
-  const buckets = new Map(poolDates.map((d) => [d, []]));
-  let outOfWindow = 0;
-  for (const s of merged) {
-    const bucket = buckets.get(etDate(Date.parse(s.publishedAt)));
-    if (bucket) bucket.push(s);
-    else outOfWindow += 1;
-  }
+
+  // The homepage, today's day page, the share card and the score all read this
+  // one list: the stories of the last 24 hours. Nothing published before the
+  // first edition's day is ever shown.
+  const eligible = merged.filter((s) => etDate(Date.parse(s.publishedAt)) >= cfg.firstEdition);
+  const outOfWindow = merged.length - eligible.length;
   const doomCfg = { categories: cfg.categories, doom: cfg.doom };
   const selCfg = { floor: cfg.limits.perCategoryFloor, categoryCount: cfg.categories.length };
-  const dayResults = {};
-  for (const d of poolDates) {
-    const list = selectForDay(buckets.get(d), { limit: cfg.limits.storiesPerDay, ...selCfg });
-    const doom = computeDoom(list, doomCfg);
-    const prev = prevDays[d];
-    if (d !== today && !prev && list.length === 0) continue; // do not invent empty past days
-    const day = saveDay(p, { date: d, score: doom.score, fired: doom.fired, bumps: doom.bumps, stories: list }, prev, nowIso);
-    dayResults[d] = { day, doom };
-  }
-
-  // ---- the homepage view: rolling 24 hours --------------------------------
-  const poolStories = poolDates.flatMap((d) => dayResults[d]?.day.stories ?? []);
   const windowStart = nowMs - cfg.window.rollingHours * HOUR_MS;
-  let rollingPool = poolStories.filter((s) => {
+  let rollingPool = eligible.filter((s) => {
     const t = Date.parse(s.publishedAt);
     return t >= windowStart && t <= nowMs + HOUR_MS;
   });
   let rollingFallback = false;
-  if (!rollingPool.length && poolStories.length) {
-    // Nothing in the last 24 hours (a quiet midnight, or every feed down): keep showing the latest we have.
-    rollingPool = [...poolStories].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt)).slice(0, 10);
+  if (!rollingPool.length && eligible.length) {
+    // Nothing in the last 24 hours (a quiet midnight, or every feed down): keep the list from going empty.
+    rollingPool = [...eligible].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt)).slice(0, cfg.limits.fallbackStories);
     rollingFallback = true;
   }
   const rolling = selectForDay(rollingPool, { limit: cfg.limits.rollingStories, ...selCfg });
-  const rollingDoom = computeDoom(rolling, doomCfg);
+  // Stories shown only to keep the list from going empty are old news: they never count toward the score or a fired category.
+  const rollingDoom = computeDoom(rollingFallback ? [] : rolling, doomCfg);
+  // Listed so no one category fills the top of the page (see lib/order.mjs).
+  const listing = receiptsOrder(rolling, cfg.variety);
 
-  const index = buildIndex(p, cfg.firstEdition);
+  // Yesterday's file is its final edition: the rolling score is compared with that.
+  const yesterdayDate = addDays(today, -1);
+  const yesterdayDay = prevDays[yesterdayDate];
+  const yesterday =
+    yesterdayDay && yesterdayDay.date === yesterdayDate && Array.isArray(yesterdayDay.stories) && Number.isFinite(yesterdayDay.score)
+      ? { date: yesterdayDate, score: yesterdayDay.score, fired: Array.isArray(yesterdayDay.fired) ? yesterdayDay.fired : [] }
+      : null;
+  const change = yesterday ? rollingDoom.score - yesterday.score : null;
+
+  // Today's file is the same view, written every run. A day that has passed is never rewritten.
+  if (today >= cfg.firstEdition) {
+    saveDay(p, { date: today, score: rollingDoom.score, fired: rollingDoom.fired, bumps: rollingDoom.bumps, change, stories: listing }, prevDays[today], nowIso);
+  }
+
+  // The almanac index never lists a story the current rules would not publish, old days included.
+  const index = buildIndex(p, cfg.firstEdition, (s) => !gk.excluder.test(s.title, { signal: s.kind === 'signal' }));
   saveIndex(p, index);
-  const yesterdayEntry = index.find((e) => e.date === addDays(today, -1)) || null;
   const record = recordDay(index);
 
   // ---- vital signs, with last-good reuse -----------------------------------
@@ -283,8 +291,8 @@ export async function runUpdate(opts = {}) {
     score: rollingDoom.score,
     fired: rollingDoom.fired,
     bumps: rollingDoom.bumps,
-    change: yesterdayEntry ? rollingDoom.score - yesterdayEntry.score : null,
-    yesterday: yesterdayEntry ? { date: yesterdayEntry.date, score: yesterdayEntry.score, fired: yesterdayEntry.fired } : null,
+    change,
+    yesterday,
     record,
     headlinesRead: headlinesRead || prevLatest?.headlinesRead || 0,
     lastSuccessAt,
@@ -294,8 +302,7 @@ export async function runUpdate(opts = {}) {
     quiet: quietOut,
     x: { enabled: Boolean(byId.x?.enabled), skipped: byId.x?.skipped ?? null },
     sources: sourcesOut,
-    // Listed so no one category fills the top of the page (see lib/order.mjs).
-    stories: receiptsOrder(rolling, cfg.variety),
+    stories: listing,
   };
   writeJsonIfChanged(p.latest, latest);
 
@@ -307,11 +314,10 @@ export async function runUpdate(opts = {}) {
     dropped,
     cleaned,
     outOfWindow,
-    todayStories: dayResults[today]?.day.stories.length ?? 0,
     rollingCount: rolling.length,
+    rollingFallback,
     score: rollingDoom.score,
     fired: rollingDoom.fired,
-    dayScore: dayResults[today]?.doom.score ?? null,
     quiet: quietOut,
     kept: rolling,
     droppedList,
@@ -336,7 +342,7 @@ export function formatSummary(report) {
     .map(([k, n]) => `${k} ${n}`)
     .join(', ');
   if (cleaned) lines.push(`  removed from the archive by the current rules: ${cleaned}`);
-  lines.push(`  stories: ${report.todayStories} today, ${report.rollingCount} in the last 24 h`);
+  lines.push(`  stories: ${report.rollingCount} in the last 24 h${report.rollingFallback ? ' (none that new, so the latest are shown and not scored)' : ''}`);
   lines.push(`  doom ${report.score}, fired: ${report.fired.join(' ') || 'none'}`);
   const q = report.quiet;
   lines.push(
@@ -344,6 +350,8 @@ export function formatSummary(report) {
       q.auto.checked ? `${q.auto.matched} of ${q.auto.headlines} headlines match, via ${q.auto.via}` : `unavailable (${String(q.auto.error).slice(0, 80)})`
     }`,
   );
+  // A switch file nobody can read means quiet, and the run says so out loud.
+  if (q.manual && q.manual.problem) lines.push(`  quiet.json PROBLEM: ${q.manual.problem}`);
   return lines.join('\n');
 }
 
@@ -379,6 +387,8 @@ async function main() {
   const dumpFile = dumpAt >= 0 ? args[dumpAt + 1] : null;
   const { report } = await runUpdate({});
   console.log(formatSummary(report));
+  // Shows as a yellow note on the Actions run page.
+  if (report.quiet.manual && report.quiet.manual.problem) console.log(`::warning::${report.quiet.manual.problem}`);
   if (args.includes('--verbose')) console.log(formatVerbose(report));
   if (dumpFile) fs.writeFileSync(dumpFile, JSON.stringify({ kept: report.kept, dropped: report.droppedList }, null, 2));
 }

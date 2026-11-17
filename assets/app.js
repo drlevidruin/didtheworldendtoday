@@ -47,8 +47,72 @@
     return Number.isFinite(x) && Number.isFinite(y) && x > y;
   }
 
+  // The streak sentence: the first visit says one thing, a run of days the other.
+  function streakLine(n, first, template) {
+    if (!(n >= 2)) return first || '';
+    return (template || '').replace('{n}', String(n));
+  }
+
+  // The share text with "Checked N days running." added for a streak of 2 or
+  // more: above the link when the text ends with one, else at the end.
+  function withStreak(text, n) {
+    var body = String(text || '');
+    if (!(n >= 2)) return body;
+    var line = 'Checked ' + n + ' days running.';
+    if (!body) return line;
+    var lines = body.split('\n');
+    if (/^\S+\/day\/\d{4}-\d{2}-\d{2}\/?$/.test(lines[lines.length - 1])) lines.splice(lines.length - 1, 0, line);
+    else lines.push(line);
+    return lines.join('\n');
+  }
+
+  // Someone closing the share sheet is not a failure; anything else falls back to copying.
+  function shouldCopyAfterShareError(err) {
+    return !(err && err.name === 'AbortError');
+  }
+
+  // A request that gives up after ms, body included, so a stalled connection can
+  // never leave a button disabled. read(response) turns the response into a value.
+  var TIMEOUT_MS = 8000;
+  function timedFetch(url, ms, read) {
+    var controller = typeof AbortController === 'function' ? new AbortController() : null;
+    var timer = 0;
+    var init = { cache: 'no-store' };
+    if (controller) {
+      init.signal = controller.signal;
+      timer = setTimeout(function () {
+        controller.abort();
+      }, ms);
+    }
+    function done() {
+      clearTimeout(timer);
+    }
+    return fetch(url, init)
+      .then(read)
+      .then(
+        function (value) {
+          done();
+          return value;
+        },
+        function (err) {
+          done();
+          throw err;
+        },
+      );
+  }
+
   if (typeof module === 'object' && module && module.exports) {
-    module.exports = { ago: ago, etDay: etDay, addDay: addDay, streakNext: streakNext, newer: newer };
+    module.exports = {
+      ago: ago,
+      etDay: etDay,
+      addDay: addDay,
+      streakNext: streakNext,
+      newer: newer,
+      streakLine: streakLine,
+      withStreak: withStreak,
+      shouldCopyAfterShareError: shouldCopyAfterShareError,
+      timedFetch: timedFetch,
+    };
   }
   if (typeof document !== 'object') return;
 
@@ -78,17 +142,6 @@
     });
   }
 
-  // The date under ALMOST. is the visitor's own date, not ours.
-  function localDate() {
-    var el = $('[data-local="date"]');
-    if (!el) return;
-    try {
-      el.textContent = new Date().toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric' });
-    } catch (e) {
-      /* keep the date the server wrote */
-    }
-  }
-
   function tick() {
     var now = Date.now();
     $$('time.rel').forEach(function (el) {
@@ -112,22 +165,25 @@
     }
   }
 
+  function savedStreak() {
+    try {
+      return JSON.parse(window.localStorage.getItem(KEY));
+    } catch (e) {
+      return null;
+    }
+  }
+
+  // Counts this visit once per Eastern day and writes the sentence under the buttons.
   function streak() {
     var el = $('#streak');
     if (!el) return;
-    var saved = null;
-    try {
-      saved = JSON.parse(window.localStorage.getItem(KEY));
-    } catch (e) {
-      saved = null;
-    }
-    var next = streakNext(saved, etDay(Date.now()));
+    var next = streakNext(savedStreak(), etDay(Date.now()));
     try {
       window.localStorage.setItem(KEY, JSON.stringify(next));
     } catch (e) {
       /* private mode: show the line anyway */
     }
-    el.textContent = (el.getAttribute('data-template') || '').replace('{n}', String(next.n));
+    el.textContent = streakLine(next.n, el.getAttribute('data-first'), el.getAttribute('data-template'));
     el.hidden = false;
   }
 
@@ -184,9 +240,16 @@
   function share() {
     var main = $('#main');
     if (!main) return;
-    var text = main.getAttribute('data-share-text') || '';
-    var full = main.getAttribute('data-share-full') || text;
+    // The streak is the visitor's own, so it is added here and not by the server.
+    var days = streakNext(savedStreak(), etDay(Date.now())).n;
+    var text = withStreak(main.getAttribute('data-share-text') || '', days);
+    var full = withStreak(main.getAttribute('data-share-full') || text, days);
     var link = main.getAttribute('data-share-url') || '';
+    function copy() {
+      copyText(full).then(function (ok) {
+        toast(ok ? 'Copied. Paste it anywhere.' : 'Could not copy. Select the text and try again.');
+      });
+    }
     var touch = false;
     try {
       touch = window.matchMedia('(pointer: coarse)').matches;
@@ -194,12 +257,16 @@
       touch = false;
     }
     if (touch && navigator.share) {
-      navigator.share({ text: text, url: link }).catch(function () {});
+      try {
+        navigator.share({ text: text, url: link }).catch(function (err) {
+          if (shouldCopyAfterShareError(err)) copy();
+        });
+      } catch (e) {
+        copy();
+      }
       return;
     }
-    copyText(full).then(function (ok) {
-      toast(ok ? 'Copied. Paste it anywhere.' : 'Could not copy. Select the text and try again.');
-    });
+    copy();
   }
 
   // ---- fresh data -----------------------------------------------------------------
@@ -209,22 +276,19 @@
   }
 
   function fetchLatest() {
-    return fetch(ROOT + 'api/today.json?t=' + minute(), { cache: 'no-store' })
-      .then(function (res) {
-        return res.ok ? res.json() : null;
-      })
-      .catch(function () {
-        return null;
-      });
+    return timedFetch(ROOT + 'api/today.json?t=' + minute(), TIMEOUT_MS, function (res) {
+      return res.ok ? res.json() : null;
+    }).catch(function () {
+      return null;
+    });
   }
 
   // Fetch this same page again and swap the content in place.
   function swapMain() {
-    return fetch(window.location.pathname + '?t=' + minute(), { cache: 'no-store' })
-      .then(function (res) {
-        if (!res.ok) throw new Error('page');
-        return res.text();
-      })
+    return timedFetch(window.location.pathname + '?t=' + minute(), TIMEOUT_MS, function (res) {
+      if (!res.ok) throw new Error('page');
+      return res.text();
+    })
       .then(function (text) {
         var next = new DOMParser().parseFromString(text, 'text/html');
         var fresh = next.querySelector('#main');
@@ -378,7 +442,6 @@
   function init() {
     var chips = $('.chips');
     if (chips) chips.hidden = false;
-    localDate();
     tick();
     streak();
   }

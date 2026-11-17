@@ -53,11 +53,17 @@ export const FOOTER_LINES_QUIET = ['Checked every 15 minutes.', 'Headlines belon
 
 export const NOT_FOUND_LINE = "This page ended. The world didn't.";
 
-// The streak line is filled in by the page script; this is its sentence.
-export const STREAK_TEMPLATE = 'Day {n} of checking. Still here.';
+// The streak line is filled in by the page script: the first visit says one
+// thing, every later day of a run says the other.
+export const STREAK_FIRST = 'Your first check. Still here.';
+export const STREAK_TEMPLATE = "You've checked {n} days running. Still here.";
 
-export function recordLine(record) {
+// "Worst day so far" means nothing until there have been a few days to compare.
+export const RECORD_MIN_EDITIONS = 7;
+
+export function recordLine(record, editions = 0) {
   if (!record || !Number.isFinite(Number(record.score)) || !record.date) return '';
+  if (!(Number(editions) >= RECORD_MIN_EDITIONS)) return '';
   return `Worst day so far: ${shortDate(record.date)}, Doom ${Number(record.score)}`;
 }
 
@@ -81,7 +87,6 @@ export function checkLines(headlines) {
 
 const fmt = (opts) => new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', ...opts });
 const LONG = fmt({ year: 'numeric', month: 'long', day: 'numeric' });
-const HERO = fmt({ weekday: 'long', month: 'long', day: 'numeric' });
 const SHORT = fmt({ month: 'short', day: 'numeric' });
 const MONTH_DAY = fmt({ month: 'long', day: 'numeric' });
 const WEEKDAY_SHORT = fmt({ weekday: 'short', month: 'short', day: 'numeric' });
@@ -93,7 +98,6 @@ const when = (format) => (d) => {
 };
 
 export const longDate = when(LONG); // November 16, 2026
-export const heroDate = when(HERO); // Monday, November 16
 export const shortDate = when(SHORT); // Nov 16
 export const monthDay = when(MONTH_DAY); // November 16
 export const rowDate = when(WEEKDAY_SHORT); // Mon, Nov 16
@@ -122,19 +126,22 @@ export function ago(ms) {
 
 // ---- the Doom change arrow ---------------------------------------------------
 
+// No yesterday, or no change: no arrow and no number at all.
 export function changeText(change) {
-  if (change === null || change === undefined || !Number.isFinite(Number(change))) return '';
+  if (change === null || change === undefined || change === '' || !Number.isFinite(Number(change))) return '';
   const n = Math.round(Number(change));
   if (n > 0) return `↑${n}`;
   if (n < 0) return `↓${Math.abs(n)}`;
-  return '→0';
+  return '';
 }
 
 // ---- the share text ---------------------------------------------------------
-// Wordle-shaped: the fired categories show their emoji, the rest a black
-// square, four to a row in category order.
+// Wordle-shaped: the verdict, the line under it, the date and score, then the
+// fired categories show their emoji and the rest a black square, four to a
+// row in category order, then the link. A reader on a streak gets one more
+// line above the link, added by the page script.
 
-export function shareText({ live, date, score, change, fired, categories, host, withUrl = true }) {
+export function shareText({ live, date, score, change, fired, categories, host, quiet = false, withUrl = true }) {
   const firedSet = new Set(fired || []);
   const cells = categories.map((c) => (firedSet.has(c.id) ? c.emoji : '⬛'));
   const rows = [];
@@ -143,10 +150,11 @@ export function shareText({ live, date, score, change, fired, categories, host, 
   const doom = Number.isFinite(Number(score)) ? Math.round(Number(score)) : 0;
   const lines = [
     live ? `Did the world end today? ${VERDICT}` : `Did the world end on ${shortDate(date)}? ${VERDICT}`,
+    quiet ? QUIET_LINE : subline(score),
     `${shortDate(date)} · Doom ${doom}/99${arrow ? ` ${arrow}` : ''}`,
     ...rows,
   ];
-  if (withUrl) lines.push(`${host}/day/${date}`);
+  if (withUrl) lines.push(`${host}/day/${date}/`);
   return lines.join('\n');
 }
 

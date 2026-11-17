@@ -24,8 +24,9 @@ export function faviconSvg({ rounded = true } = {}) {
 `;
 }
 
-// categories: the 12 in grid order; fired: ids that fired
-export function ogSvg({ date, score, fired, categories, host }) {
+// categories: the 12 in grid order; fired: ids that fired; line: the sentence
+// under ALMOST. (the ladder line for the score, or the quiet line in quiet mode)
+export function ogSvg({ date, score, fired, categories, host, line = '' }) {
   const on = new Set(fired || []);
   const cell = 88;
   const gap = 12;
@@ -44,8 +45,8 @@ export function ogSvg({ date, score, fired, categories, host }) {
 <rect width="1200" height="630" fill="${BG}"/>
 <text x="64" y="118" font-family="Anton" font-size="40" letter-spacing="4.5" fill="${INK}" fill-opacity="0.7">DID THE WORLD END TODAY?</text>
 <text x="58" y="340" font-family="Anton" font-size="190" fill="${INK}">ALMOST.</text>
-<text x="64" y="418" font-family="Anton" font-size="42" letter-spacing="3" fill="${MUTE}">${esc(longDate(date).toUpperCase())}</text>
-<text x="64" y="540" font-family="Anton" font-size="100"><tspan fill="${INK}" font-size="52" letter-spacing="3">DOOM </tspan><tspan fill="${HOT}">${s}</tspan><tspan fill="${MUTE}" font-size="52">/99</tspan></text>
+${line ? `<text x="64" y="410" font-family="Anton" font-size="44" letter-spacing="2.5" fill="${INK}">${esc(String(line).toUpperCase())}</text>\n` : ''}<text x="64" y="476" font-family="Anton" font-size="34" letter-spacing="3" fill="${MUTE}">${esc(longDate(date).toUpperCase())}</text>
+<text x="64" y="570" font-family="Anton" font-size="100"><tspan fill="${INK}" font-size="52" letter-spacing="3">DOOM </tspan><tspan fill="${HOT}">${s}</tspan><tspan fill="${MUTE}" font-size="52">/99</tspan></text>
 ${cells}
 <text x="${1200 - 64}" y="596" text-anchor="end" font-family="Anton" font-size="26" letter-spacing="2.5" fill="${MUTE}">${esc(String(host || '').toUpperCase())}</text>
 </svg>

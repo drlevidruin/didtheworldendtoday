@@ -41,7 +41,7 @@ function snapshot(root) {
   return out;
 }
 
-test('stories are filed under the ET day they were published, and yesterday stays yesterday', async () => {
+test('a day is never rewritten once its ET date has passed, and the next day starts its own file', async () => {
   const root = tmpRoot();
   await go(root, '2026-11-16T22:30:00Z', [feed(cat3('internet', '2026-11-16T20:00:00Z'))]);
   const before = fs.readFileSync(dayPath(root, '2026-11-16'), 'utf8');
@@ -49,17 +49,70 @@ test('stories are filed under the ET day they were published, and yesterday stay
   assert.equal(day16.stories.length, 3);
   const firstSeen = Object.fromEntries(day16.stories.map((s) => [s.id, s.firstSeenAt]));
 
+  // A later run on the 17th finds new stories and drops nothing it should keep.
   await go(root, '2026-11-17T15:00:00Z', [feed(cat3('grid', '2026-11-17T14:00:00Z'))]);
-  assert.equal(fs.readFileSync(dayPath(root, '2026-11-16'), 'utf8'), before, 'yesterday\'s file is byte for byte the same');
+  assert.equal(fs.readFileSync(dayPath(root, '2026-11-16'), 'utf8'), before, 'the 16th is byte for byte what it was at its last run');
   const day17 = readJson(dayPath(root, '2026-11-17'));
-  assert.equal(day17.stories.length, 3);
-  assert.ok(day17.stories.every((s) => s.cat === 'grid'));
-  for (const s of readJson(dayPath(root, '2026-11-16')).stories) assert.equal(s.firstSeenAt, firstSeen[s.id]);
+  assert.equal(day17.stories.length, 6, 'the 17th is the rolling 24 hours, which still reaches back into the evening of the 16th');
+  assert.deepEqual(day17.stories.map((s) => s.cat).sort(), ['grid', 'grid', 'grid', 'internet', 'internet', 'internet']);
+  for (const s of day17.stories.filter((x) => x.cat === 'internet')) assert.equal(s.firstSeenAt, firstSeen[s.id]);
 
-  const latest = latestOf(root);
-  assert.equal(latest.stories.length, 6, 'the rolling 24 hours reaches back into yesterday evening');
+  // And a run a day later, when the 16th's stories are old, still leaves the 16th and 17th as they were.
+  const seventeen = fs.readFileSync(dayPath(root, '2026-11-17'), 'utf8');
+  await go(root, '2026-11-18T15:00:00Z', [feed(cat3('hacks', '2026-11-18T14:00:00Z'))]);
+  assert.equal(fs.readFileSync(dayPath(root, '2026-11-16'), 'utf8'), before);
+  assert.equal(fs.readFileSync(dayPath(root, '2026-11-17'), 'utf8'), seventeen, 'the 17th is final once it is the 18th');
+  assert.deepEqual(readJson(dayPath(root, '2026-11-18')).stories.map((s) => s.cat), ['hacks', 'hacks', 'hacks']);
+});
+
+test('item 1: today\'s day file is the homepage: same score, fired, bumps, change and stories in listing order', async () => {
+  const root = tmpRoot();
+  const now = new Date('2026-11-17T20:30:00Z');
+  const quake = usgs.parseUsgs(fixtureJson('usgs.json'), { minMag: 6 });
+  const stop = faa.parseFaa(fixture('faa-stops.xml'), cfg.faa);
+  const instruments = [
+    fakeSource('usgs', { count: 1, vital: { quake: quake.vital }, signals: quake.signals }),
+    fakeSource('faa', { count: 2, vital: { faa: faa.faaVital(stop) }, signals: faa.faaSignals(stop, now.getTime()) }),
+  ];
+  // Yesterday, a calm day: one fired category, so its final score is the floor.
+  await go(root, '2026-11-16T22:30:00Z', [feed(cat3('internet', '2026-11-16T20:00:00Z'))]);
+  const yesterdayFinal = readJson(dayPath(root, '2026-11-16'));
+  // Today: busy, with stories from the evening before still inside the 24 hours.
+  const items = [...cat3('internet', '2026-11-17T12:00:00Z'), ...cat3('grid', '2026-11-17T13:00:00Z'), ...cat3('hacks', '2026-11-17T14:00:00Z'), ...cat3('markets', '2026-11-17T15:00:00Z')];
+  const { latest } = await go(root, now.toISOString(), [feed(items), ...instruments]);
+  const day = readJson(dayPath(root, '2026-11-17'));
+
+  assert.equal(day.date, '2026-11-17');
+  assert.equal(day.score, latest.score);
+  assert.deepEqual(day.fired, latest.fired);
+  assert.deepEqual(day.bumps, latest.bumps);
+  assert.equal(day.change, latest.change);
+  assert.deepEqual(day.stories, latest.stories, 'the same stories in the same order');
+  assert.ok(latest.bumps.length >= 1, 'the instruments were counted');
   assert.equal(latest.yesterday.date, '2026-11-16');
-  assert.equal(latest.etDate, '2026-11-17');
+  assert.equal(latest.yesterday.score, yesterdayFinal.score, 'compared with yesterday\'s final score');
+  assert.equal(latest.change, latest.score - yesterdayFinal.score);
+  assert.ok(latest.change > 0);
+  const index = readJson(path.join(root, 'data', 'days.json'));
+  assert.equal(index[0].date, '2026-11-17');
+  assert.equal(index[0].score, latest.score);
+  assert.equal(index[0].top.title, latest.stories[0].title, 'the almanac top story is the first receipt');
+});
+
+test('item 1: yesterday and change use yesterday\'s final snapshot, not what it would be scored now', async () => {
+  const root = tmpRoot();
+  // The 16th ends at 11 pm with two fired categories: its final score is 12.
+  await go(root, '2026-11-17T04:00:00Z', [feed([...cat3('internet', '2026-11-17T01:00:00Z'), ...cat3('grid', '2026-11-17T02:00:00Z')])]);
+  assert.equal(readJson(dayPath(root, '2026-11-16')).score, 12);
+  // At 12:30 am on the 17th the same stories are still in the rolling view, and the 16th is left alone.
+  const { latest } = await go(root, '2026-11-17T05:30:00Z', [feed([])]);
+  assert.equal(latest.score, 12);
+  assert.deepEqual(latest.yesterday, { date: '2026-11-16', score: 12, fired: ['internet', 'grid'] });
+  assert.equal(latest.change, 0);
+  // Later that evening the rolling view has moved on, and yesterday's score has not.
+  const { latest: later } = await go(root, '2026-11-18T01:00:00Z', [feed(cat3('markets', '2026-11-18T00:00:00Z'))]);
+  assert.equal(later.yesterday.score, 12, 'yesterday never moves');
+  assert.equal(readJson(dayPath(root, '2026-11-16')).score, 12);
 });
 
 test('a story with no date is dated when first seen, a future date counts as just now, and both stay put', async () => {
@@ -75,17 +128,20 @@ test('a story with no date is dated when first seen, a future date counts as jus
   assert.ok(second.latest.stories.every((s) => s.firstSeenAt === '2026-11-16T22:00:00.000Z'));
 });
 
-test('midnight Eastern splits the days: 11:59 pm and 12:01 am land in different day files', async () => {
+test('midnight Eastern: 11:59 pm and 12:01 am are both in the new day\'s rolling view, and the old day stays', async () => {
   const root = tmpRoot();
   const items = [
     newsItem({ title: 'Cloudflare outage knocks thousands of sites offline', publishedAt: Date.parse('2026-11-17T04:59:00Z'), url: 'https://a.example/1' }),
     newsItem({ title: 'Major AWS outage disrupts popular apps', publishedAt: Date.parse('2026-11-17T05:01:00Z'), url: 'https://a.example/2' }),
   ];
+  await go(root, '2026-11-17T04:59:30Z', [feed([items[0]])]);
+  const final16 = fs.readFileSync(dayPath(root, '2026-11-16'), 'utf8');
   await go(root, '2026-11-17T05:30:00Z', [feed(items)]);
+  assert.equal(fs.readFileSync(dayPath(root, '2026-11-16'), 'utf8'), final16, 'the 16th keeps what it had at its last run');
   assert.deepEqual(readJson(dayPath(root, '2026-11-16')).stories.map((s) => s.title), ['Cloudflare outage knocks thousands of sites offline']);
-  assert.deepEqual(readJson(dayPath(root, '2026-11-17')).stories.map((s) => s.title), ['Major AWS outage disrupts popular apps']);
+  assert.equal(readJson(dayPath(root, '2026-11-17')).stories.length, 2, 'the new day opens with the rolling 24 hours');
   const latest = latestOf(root);
-  assert.equal(latest.stories.length, 2, 'the homepage shows both: it is a rolling 24 hours');
+  assert.equal(latest.stories.length, 2);
   assert.equal(latest.etDate, '2026-11-17');
 });
 
@@ -149,6 +205,84 @@ test('archive entries the current rules would reject are removed and counted', a
   assert.equal(report.cleaned['off-topic'], 1);
   assert.deepEqual(readJson(dayPath(root, '2026-11-16')).stories.map((s) => s.id), ['aaaa1111']);
   assert.match(formatSummary(report), /removed from the archive by the current rules: excluded:death 1, off-topic 1/);
+});
+
+test('item 12: every stored story is checked again on every run, and a frozen day is left as it was', async () => {
+  const root = tmpRoot();
+  const story = (id, title, over = {}) => ({ id, cat: 'internet', kind: 'news', title, url: `https://example.com/${id}`, source: 'Pub A', publishedAt: '2026-11-17T14:00:00.000Z', firstSeenAt: '2026-11-17T14:05:00.000Z', outlets: 1, outletNames: ['Pub A'], score: 1, ...over });
+  const banned = [
+    'Man fatally shot at airport',
+    'Gunfire at LAX terminal',
+    'Robot malfunction injures worker',
+    'Hackers hit schoolchildren records',
+    "Hackers leak students' records",
+    'Toddlers game app exposes data',
+    'Teens targeted by app flaw',
+    'Baby formula recalled over botulism',
+    'Airline stock falls after Air India crash',
+    'Antisemitic rants spread on app',
+    'Jewish school targeted by hackers',
+    'Synagogue websites hit by outage',
+    'Tariff hike rattles markets',
+    'Vaccine debate flares',
+    'Powell fired as Fed chair',
+    'Elon Musk says X is down',
+    'Listeria sickens 27 across states',
+    'Ebola outbreak in Congo',
+    'Therapy notes of 30,000 patients leaked',
+    'US has lost measles elimination status',
+  ];
+  const kept = [
+    story('keep0001', 'Cloudflare outage knocks thousands of sites offline'),
+    story('keep0002', 'Market crash wipes billions from tech stocks', { cat: 'markets' }),
+    story('keep0003', 'DDoS attack knocks gaming site offline', { cat: 'hacks' }),
+  ];
+  const bad = (when) => banned.map((title, i) => story(`bad${String(i).padStart(5, '0')}${when}`, title, { publishedAt: when === 'y' ? '2026-11-16T20:00:00.000Z' : '2026-11-17T14:00:00.000Z' }));
+  const frozen = { date: '2026-11-16', score: 40, fired: [], bumps: [], change: null, updatedAt: '2026-11-16T23:59:00.000Z', stories: bad('y') };
+  fs.mkdirSync(path.dirname(dayPath(root, '2026-11-16')), { recursive: true });
+  fs.writeFileSync(dayPath(root, '2026-11-16'), JSON.stringify(frozen));
+  fs.writeFileSync(dayPath(root, '2026-11-17'), JSON.stringify({ date: '2026-11-17', score: 30, fired: [], bumps: [], change: 0, updatedAt: '2026-11-17T14:30:00.000Z', stories: [...kept, ...bad('t')] }));
+  const frozenBefore = fs.readFileSync(dayPath(root, '2026-11-16'), 'utf8');
+  const { report, latest } = await go(root, '2026-11-17T15:00:00Z', [feed([])]);
+  const titles = latest.stories.map((x) => x.title);
+  for (const title of banned) assert.ok(!titles.includes(title), `"${title}" is gone from latest.json`);
+  assert.deepEqual(titles.sort(), kept.map((x) => x.title).sort(), 'the harmless stories stay');
+  assert.deepEqual(readJson(dayPath(root, '2026-11-17')).stories.map((x) => x.title).sort(), kept.map((x) => x.title).sort(), "today's file is cleaned too");
+  const cleaned = Object.values(report.cleaned).reduce((a, b) => a + b, 0);
+  assert.equal(cleaned, banned.length * 2, "yesterday's and today's copies are both turned away");
+  assert.equal(fs.readFileSync(dayPath(root, '2026-11-16'), 'utf8'), frozenBefore, 'a day that has passed is never rewritten');
+});
+
+test('item 19: a malformed quiet.json means quiet ON, the problem is named in latest.json and the run summary, and the run still succeeds', async () => {
+  const shapes = [
+    ['{ "quiet": tru', /not valid JSON/],
+    ['', /not valid JSON/],
+    ['[]', /not an object/],
+    ['{"quiet": "maybe"}', /not true or false/],
+    ['{"quiet": {"x": 1}}', /not true or false/],
+  ];
+  for (const [content, why] of shapes) {
+    const root = tmpRoot();
+    fs.writeFileSync(path.join(root, 'quiet.json'), content);
+    const { report, latest } = await go(root, '2026-11-16T22:00:00Z', [feed(cat3('internet', '2026-11-16T20:00:00Z'))]);
+    assert.equal(latest.quiet.quiet, true, `"${content}" is read as quiet`);
+    assert.equal(latest.quiet.why, 'manual');
+    assert.match(latest.quiet.manual.problem, why);
+    assert.match(latest.quiet.reason, why);
+    const summary = formatSummary(report);
+    assert.match(summary, /quiet: ON \(manual: /);
+    assert.match(summary, /quiet\.json PROBLEM: /);
+    assert.ok(latest.stories.length >= 3, 'the stories still file as usual');
+  }
+  // Someone fixes the file: the next run is back to normal and the problem is gone.
+  const root = tmpRoot();
+  fs.writeFileSync(path.join(root, 'quiet.json'), '{ nope');
+  await go(root, '2026-11-16T22:00:00Z', [feed([])]);
+  fs.writeFileSync(path.join(root, 'quiet.json'), '{"quiet": false, "note": ""}');
+  const fixed = await go(root, '2026-11-16T22:15:00Z', [feed([])]);
+  assert.equal(fixed.latest.quiet.quiet, false);
+  assert.equal(fixed.latest.quiet.manual.problem, null);
+  assert.ok(!/PROBLEM/.test(formatSummary(fixed.report)));
 });
 
 test('a hostile headline is stored as text, stripped of control characters, and unsafe links are dropped', async () => {
@@ -400,12 +534,22 @@ test('a damaged state file does not stop a run', async () => {
   assert.equal(latest.stories.length, 3);
 });
 
-test('when the last 24 hours are empty the page keeps the latest stories it has', async () => {
+test('item 16: when the last 24 hours are empty the page keeps the latest stories, but they never count toward the score', async () => {
   const root = tmpRoot();
-  await go(root, '2026-11-16T22:00:00Z', [feed(cat3('internet', '2026-11-16T20:00:00Z'))]);
-  const { latest } = await go(root, '2026-11-18T03:00:00Z', [failingSource('google')]);
+  const old = [...cat3('internet', '2026-11-16T20:00:00Z'), ...cat3('grid', '2026-11-16T20:00:00Z')];
+  const first = await go(root, '2026-11-16T22:00:00Z', [feed(old)]);
+  assert.equal(first.latest.score, 12, 'two fired categories while they are fresh');
+  const { latest, report } = await go(root, '2026-11-18T03:00:00Z', [failingSource('google')]);
   assert.equal(latest.rollingFallback, true);
-  assert.equal(latest.stories.length, 3);
+  assert.equal(latest.stories.length, 6, 'the list is not empty');
+  assert.equal(latest.score, 11, 'the floor: old stories are not news from today');
+  assert.deepEqual(latest.fired, []);
+  assert.deepEqual(latest.bumps, []);
+  assert.equal(readJson(dayPath(root, '2026-11-17')).score, 11, 'today\'s file says the same');
+  assert.match(formatSummary(report), /none that new, so the latest are shown and not scored/);
+  const again = await go(root, '2026-11-18T03:15:00Z', [feed([])]);
+  assert.equal(again.latest.rollingFallback, true);
+  assert.equal(again.latest.score, 11);
 });
 
 test('the run summary lists every source, the drops, the score and the quiet check', async () => {

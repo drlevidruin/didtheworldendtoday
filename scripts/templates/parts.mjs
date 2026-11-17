@@ -3,9 +3,12 @@
 // esc(), third-party links through url(), and numbers through num().
 import { ago, etClock, hashOf, plural, rowDate, shortDate } from './copy.mjs';
 import { esc, num, url } from './esc.mjs';
-import { capFirst } from '../lib/text.mjs';
+import { capFirst, joinNames } from '../lib/text.mjs';
+import { quietCard } from '../lib/quietcards.mjs';
 
 const REL = 'noopener';
+const HELP_US = 'Donate to the Red Cross';
+const HELP_INTL = 'Support the Red Cross and Red Crescent';
 
 function link(href, text, extra = '') {
   const safe = url(href);
@@ -13,7 +16,7 @@ function link(href, text, extra = '') {
 }
 
 // ---- story cards ------------------------------------------------------------
-// ctx: { cats: Map id -> category, nowMs, live, quietMode, quietCaption, quietLink, used }
+// ctx: { cats: Map id -> category, nowMs, live, quietMode, quietCaption, quietLink, quietLinkIntl, used }
 
 // A story always starts from the same joke (its id picks it), but two cards
 // in a row from one category never repeat it: the second takes the next one.
@@ -37,7 +40,10 @@ export function card(story, ctx, { lead = false } = {}) {
   const meta = [`${esc(story.source)}${more}`, stamp].filter(Boolean).join(' &middot; ');
   let caption = '';
   if (story.quiet) {
-    caption = `<p class="cap">${esc(ctx.quietCaption)} ${link(ctx.quietLink, 'Donate to the Red Cross')}</p>`;
+    // The charity link only shows when people are likely hurt; a quake that is big and nothing more gets the caption alone.
+    const q = quietCard(story);
+    const help = q && q.link === 'ifrc' ? link(ctx.quietLinkIntl, HELP_INTL) : q && q.link === 'redcross' ? link(ctx.quietLink, HELP_US) : '';
+    caption = `<p class="cap">${esc(ctx.quietCaption)}${help ? ` ${help}` : ''}</p>`;
   } else if (!ctx.quietMode) {
     const text = captionFor(cat, story.id, ctx);
     if (text) caption = `<p class="cap">${esc(text)}</p>`;
@@ -135,7 +141,7 @@ export function vitals(v, { nowMs, clock }) {
       tile(
         'Internet',
         bad.length ? `${bad.length} of ${pages.length} wobbling` : 'All calm',
-        bad.length ? esc(capFirst(bad.map((p) => p.name).join(', '))) + esc(staleTag(st)) : `${pages.length} status pages checked${esc(staleTag(st))}`,
+        bad.length ? esc(joinNames(bad.map((p) => p.name))) + esc(staleTag(st)) : `${pages.length} status pages checked${esc(staleTag(st))}`,
       ),
     );
   }
@@ -149,7 +155,7 @@ export function vitals(v, { nowMs, clock }) {
       tile(
         'Closest asteroid',
         `${num(a.ld).toFixed(2)} lunar distances`,
-        `${link(a.url, a.des)}${a.size ? `, about the size of ${esc(a.size)}` : ''}${timing ? `. ${esc(timing)}` : ''}${esc(staleTag(a))}`,
+        `${link(a.url, a.des)}${a.size ? `, about the size of ${esc(a.size)}` : ''}${timing ? `. ${esc(capFirst(timing))}` : ''}${esc(staleTag(a))}`,
       ),
     );
   }
@@ -162,7 +168,7 @@ export function vitals(v, { nowMs, clock }) {
   if (!q || q.unavailable) out.push(q ? NO_READING('Biggest quake') : tile('Biggest quake', 'Quiet', 'Nothing above M4.5 in 24 hours'));
   else {
     const t = Date.parse(q.time);
-    out.push(tile('Biggest quake', `M ${num(q.mag).toFixed(1)}`, `${link(q.url, q.place)}${Number.isFinite(t) ? `. ${esc(ago(nowMs - t))}` : ''}${esc(staleTag(q))}`));
+    out.push(tile('Biggest quake', `M ${num(q.mag).toFixed(1)}`, `${link(q.url, q.place)}${Number.isFinite(t) ? `. ${esc(capFirst(ago(nowMs - t)))}` : ''}${esc(staleTag(q))}`));
   }
 
   const f = v && v.faa;
@@ -172,7 +178,7 @@ export function vitals(v, { nowMs, clock }) {
     const where = stops.map((s) => `${esc(s.airport)}${s.reason ? ` (${esc(s.reason)})` : ''}`).join(', ');
     const delays = num(f.groundDelays) ? `${plural(num(f.groundDelays), 'ground delay program')}` : '';
     const big = f.nationwide ? 'Nationwide stop' : stops.length ? plural(stops.length, 'ground stop') : 'None';
-    out.push(tile('FAA ground stops', big, [where, esc(delays)].filter(Boolean).join('. ') + esc(staleTag(f))));
+    out.push(tile('FAA ground stops', big, [where, esc(capFirst(delays))].filter(Boolean).join('. ') + esc(staleTag(f))));
   }
 
   out.push(
