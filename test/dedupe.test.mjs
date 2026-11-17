@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mergeStories, selectForDay, storyId, uniqueIds } from '../scripts/lib/cluster.mjs';
+import { compileBoilerplate, mergeStories, selectForDay, storyId, uniqueIds } from '../scripts/lib/cluster.mjs';
 import { newsRank, boostFor, recencyFor } from '../scripts/lib/rank.mjs';
 import { titleKey, urlKey, stripPublisher, publisherKey } from '../scripts/lib/text.mjs';
 import { newsItem } from './helpers.mjs';
@@ -351,4 +351,68 @@ test('trendTerm: the Google search a trend story came from is kept with it, the 
     assert.ok(!('trendTerm' in s), String(bad));
     assert.ok(!('trendTerm' in merge([stored(CF, { cat: 'internet', trendTerm: bad })], [], NOW)[0]), `stored ${String(bad)}`);
   }
+});
+
+// ---- boilerplate: wording that many headlines share does not join them -----------------------------------------------
+
+const BOILER = [/^residents report widespread problems with\b/i, /\s+since (?:early )?this morning\b/i];
+const ROBLOX = 'Residents report widespread problems with Roblox since this morning';
+const DISCORD = 'Residents report widespread problems with Discord since this morning';
+const mergeWith = (existing, fresh, boilerplate) => mergeStories(existing, fresh, { now: NOW, boilerplate });
+const two = (a, b) => [
+  newsItem({ title: a, source: 'Pub A', url: 'https://pub-a.example/1' }),
+  newsItem({ title: b, source: 'Pub B', url: 'https://pub-b.example/2' }),
+];
+
+test('boilerplate: headlines that share only the same sentence are one story until the sentence is cut out, and the cut changes nothing else', () => {
+  assert.equal(mergeWith([], two(ROBLOX, DISCORD), undefined).length, 1, 'with no list they join on the six words they share');
+  assert.equal(mergeWith([], two(ROBLOX, DISCORD), []).length, 1);
+  const out = mergeWith([], two(ROBLOX, DISCORD), BOILER);
+  assert.equal(out.length, 2, 'with the list each is its own story');
+  assert.deepEqual(out.map((s) => s.title).sort(), [DISCORD, ROBLOX], 'the headline shown is whole');
+  assert.deepEqual(out.map((s) => s.url).sort(), ['https://pub-a.example/1', 'https://pub-b.example/2']);
+  assert.deepEqual(out.map((s) => s.id).sort(), [storyId(titleKey(DISCORD)), storyId(titleKey(ROBLOX))].sort(), 'the id still comes from the whole headline');
+  assert.equal(merge([], two(ROBLOX, DISCORD)).length, 1, 'the merge helper above passes no list, as before');
+});
+
+test('boilerplate: the title key and the link still join headlines, cut or not', () => {
+  const sameTitle = mergeWith([], two(ROBLOX, ROBLOX), BOILER);
+  assert.equal(sameTitle.length, 1, 'the same headline from two outlets');
+  assert.equal(sameTitle[0].outlets, 2);
+  const sameLink = mergeWith([], [
+    newsItem({ title: ROBLOX, source: 'Pub A', url: 'https://pub.example/a?utm_source=x' }),
+    newsItem({ title: DISCORD, source: 'Pub B', url: 'https://pub.example/a' }),
+  ], BOILER);
+  assert.equal(sameLink.length, 1, 'the same link');
+});
+
+test('boilerplate: a stored story is cut the same way, so it takes in no new headline that shares only the sentence', () => {
+  const [storedRoblox] = mergeWith([], [two(ROBLOX, DISCORD)[0]], BOILER);
+  assert.equal(mergeWith([storedRoblox], [two(ROBLOX, DISCORD)[1]], undefined).length, 1, 'without the list the stored story takes it in');
+  const next = mergeWith([storedRoblox], [two(ROBLOX, DISCORD)[1]], BOILER);
+  assert.equal(next.length, 2);
+  assert.ok(next.some((s) => s.id === storedRoblox.id && s.outlets === 1), 'the stored story is as it was');
+  // two stored stories are compared with each other too
+  const [storedDiscord] = mergeWith([], [two(ROBLOX, DISCORD)[1]], BOILER);
+  assert.equal(mergeWith([storedRoblox, storedDiscord], [], undefined).length, 1);
+  assert.equal(mergeWith([storedRoblox, storedDiscord], [], BOILER).length, 2);
+});
+
+test('boilerplate: what is left after the cut still joins near-verbatim rewrites, and the patterns may carry any flags', () => {
+  const a = 'Residents report widespread problems with Roblox, Discord and Fortnite since this morning, officials say';
+  const b = 'Residents report widespread problems with Discord, Roblox and Fortnite since this morning, officials said';
+  for (const list of [BOILER, [/^residents report widespread problems with\b/gi, /\s+since this morning\b/g]]) {
+    assert.equal(mergeWith([], two(a, b), list).length, 1);
+  }
+});
+
+test('compileBoilerplate: cuts every match without fusing the words around it, and a list that is missing or holds something else cuts nothing', () => {
+  const cut = compileBoilerplate([/\bfoo\b/i, /\bbar\b/]);
+  const words = (title) => cut(title).split(/\s+/).filter(Boolean);
+  assert.deepEqual(words('foo one Foo two bar three'), ['one', 'two', 'three']);
+  assert.deepEqual(words('one-foo-two'), ['one-', '-two'], 'what is left is not joined into a new word');
+  assert.equal(cut('nothing to cut'), 'nothing to cut');
+  assert.equal(cut(null), '');
+  assert.equal(cut('foo one foo'), cut('foo one foo'), 'a pattern keeps no position between calls');
+  for (const none of [undefined, null, [], 'foo', {}, ['foo', 5, null]]) assert.equal(compileBoilerplate(none)('foo bar'), 'foo bar', String(none));
 });

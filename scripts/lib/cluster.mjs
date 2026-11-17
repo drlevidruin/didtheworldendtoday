@@ -4,15 +4,28 @@
 // items found this run and returns the merged story list. Two news items are
 // the same story when they share a normalized title key (lowercase, no
 // punctuation, first 12 words) or the same URL; a conservative word-overlap
-// check also joins near-verbatim rewrites of one headline. Merged stories
-// keep the earliest time (publishedAt), know the newest (latestAt) and count
-// distinct outlets. Stored stories keep their id and first-seen time, so
-// nothing is ever lost or re-dated.
+// check also joins near-verbatim rewrites of one headline. Wording that many
+// headlines share (X.boilerplate in config.mjs) is cut out first, for that
+// check only, so a sentence that is the same in every Downdetector post does
+// not join them all into one story. Merged stories keep the earliest time
+// (publishedAt), know the newest (latestAt) and count distinct outlets. Stored
+// stories keep their id and first-seen time, so nothing is ever lost or
+// re-dated.
 import { createHash } from 'node:crypto';
 import { titleKey, urlKey, tokens, publisherKey, hostOf } from './text.mjs';
 import { newsRank, MAX_OUTLETS } from './rank.mjs';
 
 export const FUZZY = { minShared: 4, minOverlap: 0.75 };
+
+// Takes the patterns (X.boilerplate in config.mjs) and returns a function that cuts them out of a headline. Every match
+// goes, and a space takes its place, so the words on either side are not joined. Anything in the list that is not a
+// pattern is ignored. Only the word check uses the result: the headline, its title key and its link never go through it.
+export function compileBoilerplate(patterns) {
+  const cuts = (Array.isArray(patterns) ? patterns : [])
+    .filter((re) => re instanceof RegExp)
+    .map((re) => new RegExp(re.source, re.flags.includes('g') ? re.flags : `${re.flags}g`));
+  return (title) => cuts.reduce((rest, re) => rest.replace(re, ' '), String(title ?? ''));
+}
 
 export function storyId(tkey) {
   return createHash('sha1').update(tkey).digest('hex').slice(0, 12);
@@ -241,8 +254,9 @@ export function uniqueIds(stories) {
   return stories;
 }
 
-export function mergeStories(existing, fresh, { now, fuzzy = FUZZY } = {}) {
+export function mergeStories(existing, fresh, { now, fuzzy = FUZZY, boilerplate = [] } = {}) {
   const nowMs = typeof now === 'number' ? now : now.getTime();
+  const cut = compileBoilerplate(boilerplate);
   const storedNodes = existing.map(fromStory).sort((a, b) => (a.id < b.id ? -1 : 1));
   const freshNodes = fresh
     .map((f) => fromItem(f, nowMs))
@@ -263,7 +277,8 @@ export function mergeStories(existing, fresh, { now, fuzzy = FUZZY } = {}) {
   for (const n of newsNodes) {
     n.tkey = titleKey(n.title);
     n.ukey = urlKey(n.url);
-    n.tok = tokens(n.title);
+    // A stored story is one node with one headline, so it is cut the same way as a new one.
+    n.tok = tokens(cut(n.title));
   }
 
   const dsu = new Dsu(newsNodes.length);

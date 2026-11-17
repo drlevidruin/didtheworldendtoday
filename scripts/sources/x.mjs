@@ -89,6 +89,10 @@ function newerId(a, b) {
 }
 
 const HASHTAG = /^#[\p{L}\p{N}_]+$/u;
+// A label at the start of a post: "BREAKING:", "JUST IN:" and the like, in any case, with any emoji, symbols or
+// punctuation and spaces before it (anything but a letter, a number, a bracket or a quote). Labels that follow each
+// other ("BREAKING: JUST IN:") go as one. The colon is part of a label: "Breaking news from Tokyo" is a headline.
+const LEADING_LABELS = /^(?:[^\p{L}\p{N}\p{Ps}\p{Pe}\p{Pi}\p{Pf}"'`]*(?:breaking(?:\s+news)?|just\s+in|update|developing|new|alert|urgent)\s*:)+\s*/iu;
 // A word that ends in a full stop without ending a sentence: "U.S.", "p.m.", "Dr.", "Nov.".
 const ABBREVIATION = /^(?:\p{L}(?:\.\p{L})*|Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|Mt|Ft|Gov|Sen|Rep|Gen|Col|Lt|Capt|Sgt|Inc|Ltd|Corp|Co|No|vs|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.$/u;
 
@@ -99,6 +103,13 @@ function endsSentence(word) {
 }
 
 const isQuestion = (sentence) => /\?["'\u201d\u2019)\]]*$/u.test(sentence);
+
+// The label at the start of a post goes ("BREAKING: Norway-based Equinor says ..."). A post that is only a label stays
+// as it is.
+function dropLeadingLabels(text) {
+  const rest = text.replace(LEADING_LABELS, '');
+  return /[\p{L}\p{N}]/u.test(rest) ? rest : text;
+}
 
 // Hashtags at the end of a post go. One inside a sentence stays, and so does a post made only of hashtags.
 function dropTrailingHashtags(text) {
@@ -126,11 +137,11 @@ function dropTrailingQuestions(text) {
   return sentences.join(' ');
 }
 
-// Post text as a headline: links removed, entities decoded, the hashtags and the questions at the end dropped,
-// cut to 200 chars.
+// Post text as a headline: links removed, entities decoded, the label at the start and the hashtags and the questions
+// at the end dropped, cut to 200 chars.
 export function postHeadline(text, chars) {
   const t = clean(decodeEntities(String(text ?? '')).replace(/https?:\/\/\S+/g, ' '));
-  return truncate(dropTrailingQuestions(dropTrailingHashtags(t)), chars);
+  return truncate(dropTrailingQuestions(dropTrailingHashtags(dropLeadingLabels(t))), chars);
 }
 
 export function postsToItems(posts, handles, cfg) {

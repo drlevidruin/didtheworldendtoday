@@ -675,3 +675,29 @@ test('X posts reach the day file, and the next run keeps them, whether their own
   assert.deepEqual(posted(root), expected);
   assert.equal(second.report.xTrace.inAll, 2);
 });
+
+// ---- one story per outage ----------------------------------------------------------------------------------------
+test('Downdetector posts about different services are different stories in the day file, and the next run keeps them apart', async () => {
+  const root = tmpRoot();
+  const handles = { 110: 'DownDetector' };
+  const dd = (id, service, since, at) => ({ id, author_id: '110', created_at: at, text: `User reports indicate problems with ${service} since ${since} EST. How is it affecting you? #${service.replace(/ /g, '')}` });
+  const posts = [
+    dd('8201', 'Uber', '3:24 PM', '2026-11-17T20:30:00.000Z'),
+    dd('8202', 'Roblox', '3:20 PM', '2026-11-17T20:26:00.000Z'),
+    dd('8203', 'Microsoft 365', '10:02 AM', '2026-11-17T15:10:00.000Z'),
+    dd('8204', 'Apple Music', '12:00 PM', '2026-11-17T17:05:00.000Z'),
+  ];
+  const xFeed = (items) => fakeSource('x', { enabled: true, count: items.length, items });
+  const news = feed(cat3('flights', '2026-11-17T19:00:00Z'));
+  const posted = () => readJson(dayPath(root, '2026-11-17')).stories.filter((s) => s.kind === 'x').map((s) => s.url).sort();
+  const expected = posts.map((p) => `https://x.com/DownDetector/status/${p.id}`).sort();
+
+  const first = await go(root, '2026-11-17T21:52:00Z', [news, xFeed(xsrc.postsToItems(posts, handles, cfg.x))]);
+  assert.equal(first.report.xTrace.passed, 4);
+  assert.deepEqual(posted(), expected, 'four stories, each with its own post');
+  assert.equal(first.report.xTrace.onList, 4);
+
+  const second = await go(root, '2026-11-17T23:00:00Z', [news, xFeed([])]);
+  assert.deepEqual(posted(), expected, 'stored side by side, none takes in another');
+  assert.equal(second.report.xTrace.inAll, 4);
+});

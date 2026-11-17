@@ -4,8 +4,9 @@ import { config } from '../scripts/config.mjs';
 import { createHttp } from '../scripts/lib/http.mjs';
 import { compileGate, compileKeywordFiling } from '../scripts/lib/filter.mjs';
 import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
+import * as cluster from '../scripts/lib/cluster.mjs';
 import * as x from '../scripts/sources/x.mjs';
-import { fixtureJson, mockFetch, noSleep } from './helpers.mjs';
+import { fixtureJson, mockFetch, newsItem, noSleep } from './helpers.mjs';
 
 const cfg = config();
 const TOKEN = 'AAAA-secret-token-for-tests-%3D%3D';
@@ -74,11 +75,11 @@ test('first run: one users lookup, then one search, with the token only in the r
   assert.equal(r.items.length, 3);
 });
 
-test('posts become headlines: link removed, entities decoded, linked to the post', async () => {
+test('posts become headlines: link removed, entities decoded, the label at the start dropped, linked to the post', async () => {
   const r = await x.run(ctxFor(xApi()));
   const byUrl = Object.fromEntries(r.items.map((i) => [i.url, i]));
   const first = byUrl['https://x.com/BNONews/status/9001'];
-  assert.equal(first.title, 'BREAKING: Major outage hits airline check-in systems');
+  assert.equal(first.title, 'Major outage hits airline check-in systems');
   assert.equal(first.kind, 'x');
   assert.equal(first.source, '@BNONews on X');
   assert.equal(first.publishedAt, NOW - 5 * MIN);
@@ -488,4 +489,210 @@ test('today\'s live day file (11/17) goes through the gate as it is: nothing in 
   const day = fixtureJson('day-2026-11-17-live.json');
   assert.ok(day.stories.length >= 100, `${day.stories.length} stories`);
   for (const story of day.stories) assert.deepEqual(gk.recheck(story), { keep: story }, story.title);
+});
+
+// ---- Phase 17c: one story per outage, and post headlines without labels -------------------------------------------
+// The run of 4:52 PM ET on 11/17 passed 8 posts, but only 4 stories held one. Every Downdetector post is the same
+// sentence with another name in it, so the word-overlap check joined Uber, Roblox, Microsoft 365 and every later
+// outage into one story that ranked low and hid them all. And Breaking911 and BNONews start posts with a label.
+
+const LABELS = ['BREAKING', 'BREAKING NEWS', 'JUST IN', 'UPDATE', 'DEVELOPING', 'NEW', 'ALERT', 'URGENT'];
+const EQUINOR = "Norway-based Equinor, Europe's largest natural gas supplier, says it will cut output";
+
+test('a label at the start of a post goes: every label, in any case, with or without emoji and symbols before it', () => {
+  for (const label of LABELS) {
+    const lower = label.toLowerCase();
+    for (const form of [label, lower, lower[0].toUpperCase() + lower.slice(1)]) assert.equal(headline(`${form}: ${EQUINOR}`), EQUINOR, form);
+  }
+  for (const lead of ['🚨 ', '🚨', '⚠️ ', '🔴 ', '🚨🚨 ', '⭕ ', '❗ ', '‼️ ', '🇺🇸 ', '► ', '>> ', '★ ', '• ', '- ', '| ', '* ', '#']) {
+    assert.equal(headline(`${lead}BREAKING: ${EQUINOR}`), EQUINOR, `${lead}BREAKING:`);
+    assert.equal(headline(`${lead}JUST IN: ${EQUINOR}`), EQUINOR, `${lead}JUST IN:`);
+  }
+  assert.equal(headline('BREAKING:Uber is down for thousands of users'), 'Uber is down for thousands of users', 'a space after the colon is not needed');
+  assert.equal(headline('BREAKING : Uber is down for thousands of users'), 'Uber is down for thousands of users', 'nor before it');
+});
+
+test('labels that follow each other all go, and a label that is not at the start stays', () => {
+  assert.equal(headline('🚨 BREAKING: JUST IN: Uber is down for thousands of users'), 'Uber is down for thousands of users');
+  assert.equal(headline('BREAKING NEWS: UPDATE: 🚨 JUST IN: Uber is down for thousands of users'), 'Uber is down for thousands of users');
+  assert.equal(headline('Uber is down. BREAKING: Roblox is down too'), 'Uber is down. BREAKING: Roblox is down too');
+  assert.equal(headline('Outage update: Uber is back for most users'), 'Outage update: Uber is back for most users');
+  assert.equal(headline('Uber is down, says the BREAKING: tag'), 'Uber is down, says the BREAKING: tag');
+  assert.equal(headline('RT @someone: BREAKING: Uber is down'), 'RT @someone: BREAKING: Uber is down');
+  for (const text of ['"BREAKING: Uber is down," says a user', '(BREAKING: Uber is down)', '[BREAKING: Uber is down]', '\u201cBREAKING: Uber is down\u201d, says a user']) {
+    assert.equal(headline(text), text, 'a post that opens with a quote or a bracket does not open with a label');
+  }
+});
+
+test('a label needs its colon, so a headline that only starts with the same word stays', () => {
+  for (const text of [
+    'Breaking news from Tokyo',
+    'Breaking news from Tokyo: a quake strikes the coast',
+    'Just in time for the storm, power is back',
+    'Update on the Uber outage: service is back',
+    'New outage hits Uber users across the country',
+    'Alert level raised after the quake',
+    'Urgent repairs under way at the data center',
+    'Developing countries hit by the outage',
+  ]) {
+    assert.equal(headline(text), text);
+  }
+  assert.equal(headline('BREAKING: Breaking news from Tokyo'), 'Breaking news from Tokyo', 'the label goes and the headline that begins with the same words stays');
+});
+
+test('a post that is only a label stays as it is, and the gate still drops it', () => {
+  for (const text of ['BREAKING:', '🚨 BREAKING:', 'JUST IN:', '🚨 BREAKING: JUST IN:', 'BREAKING NEWS: 🚨']) assert.equal(headline(text), text, text);
+  assert.equal(headline('BREAKING: Uber'), 'Uber', 'one word after the label is enough for the label to go');
+  const only = xItem('BREAKING:');
+  assert.ok(only, 'a post that is only a label is still a post');
+  assert.equal(only.title, 'BREAKING:');
+  assert.equal(createGatekeeper(cfg).admit(only, NOW).drop, 'too-short');
+});
+
+test('the label rule works with the hashtag and question rules, and the page gets the headline without the label', () => {
+  assert.equal(headline('🚨 BREAKING: Uber is down right now #Uber'), 'Uber is down right now');
+  assert.equal(headline('BREAKING: User reports indicate problems with Uber since 3:24 PM EST. How is it affecting you? #Uber https://t.co/uber0001'), 'User reports indicate problems with Uber since 3:24 PM EST.');
+  assert.equal(headline('JUST IN: Is Uber down? Is it just you?'), 'Is Uber down? Is it just you?', 'a post of nothing but questions is still left to the question rule');
+  const gk = createGatekeeper(cfg);
+  const verdict = gk.admit(xItem('🚨 BREAKING: Cloudflare outage knocks thousands of sites offline'), NOW);
+  assert.equal(verdict.keep?.title, 'Cloudflare outage knocks thousands of sites offline');
+  assert.equal(verdict.keep.cat, 'internet');
+  const long = headline(`BREAKING: ${'word '.repeat(100)}`);
+  assert.ok(Array.from(long).length <= cfg.x.headlineChars && long.startsWith('word'), 'the 200 characters are spent on the post, not on its label');
+});
+
+// Downdetector's four posts of the 4:52 PM run, as the X source returns them.
+const DD_FOUR = [
+  post(8201, DD, 'User reports indicate problems with Uber since 3:24 PM EST. How is it affecting you? #Uber https://t.co/uber0001', 28),
+  post(8202, DD, 'User reports indicate problems with Roblox since 3:20 PM EST. How is it affecting you? #Roblox', 32),
+  post(8203, DD, 'User reports indicate problems with Microsoft 365 since 10:02 AM EST. How is it affecting you? #Microsoft365', 40),
+  post(8204, DD, 'User reports indicate problems with Apple Music since 12:00 PM EST. How is it affecting you? #AppleMusic', 35),
+];
+const DD_TITLES = [
+  'User reports indicate problems with Uber since 3:24 PM EST.',
+  'User reports indicate problems with Roblox since 3:20 PM EST.',
+  'User reports indicate problems with Microsoft 365 since 10:02 AM EST.',
+  'User reports indicate problems with Apple Music since 12:00 PM EST.',
+];
+const ddLink = (p) => `https://x.com/DownDetector/status/${p.id}`;
+const MERGE = { now: NOW, boilerplate: cfg.x.boilerplate };
+
+// One run the way update.mjs does it: the posts become items, the gate keeps some, and the kept are merged into what
+// the day file held. The stored stories are checked again first, as the run does.
+function runOf(posts, storedStories = []) {
+  const gk = createGatekeeper(cfg);
+  const kept = x.postsToItems(posts, HANDLES, cfg.x).map((item) => gk.admit(item, NOW).keep).filter(Boolean);
+  const storedKept = storedStories.map((s) => gk.recheck(s).keep).filter(Boolean);
+  return { kept, merged: cluster.mergeStories(storedKept, kept, MERGE) };
+}
+
+test('four Downdetector posts about four services, in one run, come out as four stories, each with its own link', () => {
+  const { kept, merged } = runOf(DD_FOUR);
+  assert.equal(kept.length, 4, 'all four pass the filters');
+  assert.equal(merged.length, 4, merged.map((s) => s.title).join(' | '));
+  assert.deepEqual(merged.map((s) => s.url).sort(), DD_FOUR.map(ddLink).sort());
+  assert.deepEqual(merged.map((s) => s.title).sort(), [...DD_TITLES].sort(), 'each headline is shown whole, with its time');
+  for (const s of merged) {
+    assert.equal(s.kind, 'x');
+    assert.equal(s.cat, 'internet');
+    assert.equal(s.outlets, 1);
+    assert.deepEqual(s.outletNames, ['@DownDetector on X']);
+  }
+  assert.equal(new Set(merged.map((s) => s.id)).size, 4, 'four ids');
+});
+
+test('a stored Downdetector story about Uber does not take in a new post about Roblox, and two stored ones stay two', () => {
+  const [uber, roblox, microsoft, apple] = DD_FOUR;
+  const first = runOf([uber]);
+  assert.equal(first.merged.length, 1);
+  const [storedUber] = first.merged;
+
+  const second = runOf([roblox], first.merged);
+  assert.equal(second.merged.length, 2, second.merged.map((s) => s.title).join(' | '));
+  const uberAfter = second.merged.find((s) => s.url === ddLink(uber));
+  assert.ok(uberAfter, 'the Uber story is still there, with its own link');
+  assert.equal(uberAfter.id, storedUber.id, 'and its id');
+  assert.equal(uberAfter.title, DD_TITLES[0]);
+  assert.equal(uberAfter.outlets, 1);
+  assert.ok(second.merged.some((s) => s.url === ddLink(roblox) && s.title === DD_TITLES[1]), 'Roblox is its own story');
+
+  // Stored side by side, none of them takes in another, whatever else arrives.
+  const third = runOf([microsoft], second.merged);
+  const fourth = runOf([apple], third.merged);
+  assert.equal(fourth.merged.length, 4);
+  const again = runOf([], fourth.merged);
+  assert.deepEqual(again.merged.map((s) => s.id).sort(), fourth.merged.map((s) => s.id).sort(), 'a run with nothing new keeps all four');
+});
+
+test('the cut is for the word check only: the same post text twice is still one story, and the headline shown is whole', () => {
+  const twice = runOf([post(8301, DD, DD_FOUR[0].text, 20), post(8302, DD, DD_FOUR[0].text, 10)]);
+  assert.equal(twice.merged.length, 1, 'the title key does not change');
+  assert.equal(twice.merged[0].title, DD_TITLES[0]);
+  assert.equal(twice.merged[0].url, 'https://x.com/DownDetector/status/8301', 'the older post is the story link');
+});
+
+test('two outlets\' near-verbatim rewrites of one news headline still merge with the boilerplate list on', () => {
+  const rewrites = [
+    newsItem({ title: 'FAA outage traced to aging copper-wire switch as expert warns air traffic system needs overhaul', source: 'WSB', url: 'https://a.com/1' }),
+    newsItem({ title: 'FAA outage traced to aging copper-wire switch, expert warns air traffic system needs overhaul', source: 'KSL', url: 'https://b.com/2' }),
+    newsItem({ title: 'Bank of America online banking outage leaves customers locked out', source: 'CNN', url: 'https://c.com/3' }),
+  ];
+  const out = cluster.mergeStories([], rewrites, MERGE);
+  assert.equal(out.length, 2);
+  assert.equal(out.find((s) => /FAA/.test(s.title)).outlets, 2);
+});
+
+test('the Downdetector wording is cut down to the service, in each form it comes in, and nothing else is cut', () => {
+  const cut = cluster.compileBoilerplate(cfg.x.boilerplate);
+  const left = (title) => cut(title).replace(/\s+/g, ' ').trim();
+  for (const [title, service] of [
+    ['User reports indicate problems with Uber since 3:24 PM EST.', 'Uber'],
+    ['User reports indicate problems at Apple since 12:20 PM EST.', 'Apple'],
+    ['User reports indicate issues with Microsoft 365 since 10:02 AM EST.', 'Microsoft 365'],
+    ['User reports indicate issues at Apple Music since 12:00 PM EDT.', 'Apple Music'],
+    ['User reports indicate possible problems at Verizon Wireless since 3:15 PM EST.', 'Verizon Wireless'],
+    ['User reports indicate Instagram is having problems since 9:02 AM EST.', 'Instagram'],
+    ['user reports indicate problems with uber since 3:24 pm est.', 'uber'],
+    ['USER REPORTS INDICATE PROBLEMS WITH UBER SINCE 3:24 PM EST.', 'UBER'],
+    ['User reports indicate problems with Uber since 3:24 PM EST', 'Uber'],
+  ]) {
+    assert.equal(left(title), service, title);
+  }
+  for (const zone of ['EST', 'EDT', 'CST', 'CDT', 'MST', 'MDT', 'PST', 'PDT', 'GMT', 'BST', 'UTC']) {
+    for (const time of ['12:00 AM', '1:05 AM', '9:02 AM', '12:20 PM', '3:24 PM', '11:59 PM']) {
+      assert.equal(left(`User reports indicate problems with Uber since ${time} ${zone}.`), 'Uber', `${time} ${zone}`);
+    }
+  }
+  for (const title of [
+    'Verizon outage hits customers across the US',
+    'Uber is having problems with payments in several cities',
+    'Roblox down for thousands since the update, users report',
+    'Users report problems with Uber since the app update',
+    'Outage began at 3:24 PM EST and lasted two hours',
+    'Power restored to 40,000 customers after outage',
+  ]) {
+    assert.equal(cut(title), title, 'a headline that is not that sentence is left whole');
+  }
+});
+
+test('the boilerplate list is plain regular expressions, and none of them changes a headline in today\'s live day file', () => {
+  assert.ok(Array.isArray(cfg.x.boilerplate) && cfg.x.boilerplate.length >= 1);
+  for (const re of cfg.x.boilerplate) assert.ok(re instanceof RegExp, String(re));
+  const cut = cluster.compileBoilerplate(cfg.x.boilerplate);
+  const day = fixtureJson('day-2026-11-17-live.json');
+  for (const s of day.stories) assert.equal(cut(s.title), s.title, s.title);
+});
+
+test('today\'s live day file (11/17) goes through the merge with the boilerplate list on: no story is lost, joined or renamed', () => {
+  const day = fixtureJson('day-2026-11-17-live.json');
+  assert.ok(day.stories.length >= 100, `${day.stories.length} stories`);
+  const out = cluster.mergeStories(day.stories, [], { now: Date.parse('2026-11-17T21:52:00Z'), boilerplate: cfg.x.boilerplate });
+  assert.equal(out.length, day.stories.length);
+  const byId = new Map(out.map((s) => [s.id, s]));
+  for (const s of day.stories) {
+    const same = byId.get(s.id);
+    assert.ok(same, `${s.title} is still a story`);
+    assert.equal(same.title, s.title);
+    assert.equal(same.outlets, s.outlets, s.title);
+  }
 });

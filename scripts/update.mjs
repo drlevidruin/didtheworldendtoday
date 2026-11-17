@@ -189,7 +189,7 @@ export async function runUpdate(opts = {}) {
   }
 
   // ---- merge, then the one view everything is built from -------------------
-  const merged = mergeStories(storedKept, kept, { now: nowMs });
+  const merged = mergeStories(storedKept, kept, { now: nowMs, boilerplate: cfg.x?.boilerplate });
   for (const s of merged) {
     const reason = quietReason(s);
     if (reason) {

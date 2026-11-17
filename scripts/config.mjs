@@ -812,6 +812,14 @@ export const X = {
   // Wording that holds one of those words and means something else. It is cut out before the words are looked for:
   // "Bitcoin is down 5%" is a price, not an outage, and "in breach of contract" is a broken deal, not a hack.
   keywordVeto: [/\bis down\s+(?:\d|\$|by\b|from\b|to\b|about\b|nearly\b|over\b|more\b|less\b)/i, /\bbreach(?:es)?\s+of\b/i],
+  // Wording that many headlines share, cut out of a headline before its words are compared with another's, and only for
+  // that: the headline shown, its title key and its link do not change. Every Downdetector post is one sentence with
+  // another name in it ("User reports indicate problems with Uber since 3:24 PM EST."), so without this they all join
+  // into one story. The patterns are the start of that sentence and its end.
+  boilerplate: [
+    /^user reports indicate\b(?:\s+(?:possible\s+)?(?:problems|issues)\s+(?:with|at)\b)?/i,
+    /\s+(?:is having\s+(?:problems|issues)\s+)?since\s+\d{1,2}:\d{2}\s*[ap]m\s+(?:[ecmp][sd]t|gmt|bst|utc)\b\.?/i,
+  ],
   minIntervalMinutes: 60,
   dailyBudgetUsd: 0.6, // override with X_DAILY_BUDGET_USD. The editor's 1.40 and this 0.60 make the owner's $2 a day.
   costPerPostRead: 0.005,
