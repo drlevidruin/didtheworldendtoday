@@ -96,7 +96,7 @@ test('a custom rule works the same way', () => {
   }
 });
 
-test('the homepage list is written in listing order, and the chips still count every story', async () => {
+test('the stored list is written in listing order, and the per-category counts still count every story', async () => {
   const root = tmpRoot();
   const T = {
     flights: ['Flights grounded at Newark after system glitch', 'Southwest flights delayed by a major IT outage', 'Airlines recover after nationwide FAA ground stop'],
@@ -114,6 +114,6 @@ test('the homepage list is written in listing order, and the chips still count e
   for (const cat of Object.keys(T)) {
     assert.ok(countIn(latest.stories, cat, 5) <= 1, `${cat} in the first 5`);
     assert.ok(countIn(latest.stories, cat, 10) <= 2, `${cat} in the first 10`);
-    assert.equal(latest.cats[cat], 3, 'the chip for a category counts all of its stories');
+    assert.equal(latest.cats[cat], 3, 'the count for a category includes all of its stories');
   }
 });

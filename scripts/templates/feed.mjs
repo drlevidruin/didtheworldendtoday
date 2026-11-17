@@ -1,33 +1,32 @@
-// RSS: one item per day with its verdict and top stories. Every headline and
-// source name is escaped as text, every link is checked, and the HTML inside
-// each item is escaped once more because RSS carries it as text.
-import { SITE_NAME, TAGLINE, VERDICT, longDate } from './copy.mjs';
+// RSS: one item per day. The title is the day's headline and the description
+// lists its lines. Every line and source is escaped as text, every link is
+// checked, and the HTML inside each item is escaped once more because RSS
+// carries it as text.
+import { SITE_NAME, TAGLINE, shortDate } from './copy.mjs';
 import { esc, num, url } from './esc.mjs';
 
 export const FEED_DAYS = 30;
-const TOP_STORIES = 8;
 
-function itemHtml(day, categories) {
-  const emoji = new Map(categories.map((c) => [c.id, c.emoji]));
-  const fired = (Array.isArray(day.fired) ? day.fired : []).map((id) => emoji.get(id) || '').join('');
-  const items = (day.stories || []).slice(0, TOP_STORIES).map((s) => {
-    const href = url(s.url);
-    const title = href ? `<a href="${href}">${esc(s.title)}</a>` : esc(s.title);
-    return `<li>${title} (${esc(s.source)})</li>`;
+// day: { date, score, headline, rows[] }
+function itemHtml(day) {
+  const lines = (day.rows || []).map((r) => {
+    const href = url(r.url);
+    const read = href ? ` <a href="${href}">Read it</a>` : '';
+    return `<li>${esc(r.emoji)} ${esc(r.line)}${read}</li>`;
   });
-  return `<p>Doom ${num(day.score)}/99. ${esc(fired)}</p>${items.length ? `<ul>${items.join('')}</ul>` : ''}`;
+  return `<p>${esc(shortDate(day.date))} \u00b7 Doom ${num(day.score)}/99</p>${lines.length ? `<ol>${lines.join('')}</ol>` : ''}`;
 }
 
-export function feedXml({ siteUrl, days, categories, buildTime }) {
+export function feedXml({ siteUrl, days, buildTime }) {
   const items = days.slice(0, FEED_DAYS).map((day) => {
     const link = `${siteUrl}/day/${day.date}/`;
     const stamp = new Date(Date.parse(day.updatedAt) || Date.parse(buildTime) || 0).toUTCString();
     return `<item>
-<title>${esc(`Did the world end on ${longDate(day.date)}? ${VERDICT} Doom ${num(day.score)}/99`)}</title>
+<title>${esc(day.headline)}</title>
 <link>${esc(link)}</link>
 <guid isPermaLink="true">${esc(link)}</guid>
 <pubDate>${stamp}</pubDate>
-<description>${esc(itemHtml(day, categories))}</description>
+<description>${esc(itemHtml(day))}</description>
 </item>`;
   });
   return `<?xml version="1.0" encoding="UTF-8"?>

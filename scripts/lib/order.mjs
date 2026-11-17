@@ -1,20 +1,20 @@
-// The order stories are listed in, so one big event cannot fill the first
-// screen. Rank still decides who comes first; this only holds back a story
+// The order stories are listed in, so one big event cannot fill the top of a
+// day's list. Rank still decides who comes first; this only holds back a story
 // when its category already has its share of the top of the list.
 //
 // Rule (config VARIETY): no category takes more than 3 of the first 12
-// receipts or more than 6 of the first 30. A held-back story is not thrown
+// stories or more than 6 of the first 30. A held-back story is not thrown
 // away: it keeps its rank order and lands as soon as its category has room,
-// or at the end of the list ("show more"). The category chips are built from
-// the full list, so they still show every story of their category.
+// or at the end of the list. The per-category counts in the data (`cats`)
+// come from the full list, so they still count every story of their category.
 //
 // When the list has too few categories to meet the rule (every story left
 // belongs to a full category), the story whose category has the fewest places
-// so far goes next, so the top of the page stays as mixed as it can be.
+// so far goes next, so the top of the list stays as mixed as it can be.
 //
-// The lead story (the closest call) sits ahead of the receipts, so the
-// windows here count it too: positions 0 to 12 hold at most 3 of a category,
-// which means receipts 1 to 12 do as well, however the page counts them.
+// The windows here are one position wider than the config says: positions 0 to
+// 12 hold at most 3 of a category, which means the first 12 stories do as well,
+// however the page counts them.
 import { VARIETY } from '../config.mjs';
 
 export function receiptsOrder(stories, variety = VARIETY) {

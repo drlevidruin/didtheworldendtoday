@@ -1,5 +1,5 @@
 // Everything tunable lives here: queries, keyword gates, exclusion lists,
-// the Doom Score rule, captions and per-source settings. Nothing in this file
+// the Doom Score rule, the daily edition rules and per-source settings. Nothing in this file
 // is clever on purpose. Change a word, run `npm run update`, look at the
 // kept and dropped lists it prints with --verbose.
 
@@ -21,9 +21,9 @@ export const LIMITS = {
 // or kept, so launch day has no "yesterday" and no fake change arrow.
 export const FIRST_EDITION = '2026-11-16';
 
-// Variety in the receipts: no category takes more than `firstMax` of the first
+// Variety in the listing: no category takes more than `firstMax` of the first
 // `first` stories, or more than `secondMax` of the first `second`. The overflow
-// keeps its rank order after them (under "show more").
+// keeps its rank order after them, at the end of the list.
 export const VARIETY = { first: 12, firstMax: 3, second: 30, secondMax: 6 };
 
 // Publishers whose headlines are mostly stock-chatter, shopping or machine
@@ -52,9 +52,8 @@ export const DOOM = {
 // keywords: a headline must match one entry (an array entry needs all of its
 //           regexes). Only headlines count, never descriptions.
 // reject: regexes that veto the category even when a keyword matched.
-// nearMiss: a joke goes on a story only when its headline holds one of these words,
-//           so a headline that merely lands in the category gets no caption at all.
-// captions: category-level jokes, picked by a hash of the story id.
+// emoji: what a row shows when a day has no written edition and the site lists
+//        plain headlines instead.
 // ---------------------------------------------------------------------------
 const OUTAGE = 'outages?|glitch(?:es)?|failures?|meltdown|malfunctions?|shut ?down|disruptions?';
 // Words that say "it broke": used next to a service or a bank.
@@ -82,6 +81,12 @@ const ANIMALS =
   'bears?|lions?|tigers?|zebras?|camels?|kangaroos?|wolf|wolves|coyotes?|deer|moose|elk|alligators?|' +
   'crocodiles?|pythons?|penguins?|elephants?|giraffes?|bison|buffalo|seals?|sea lions?|sharks?|whales?|' +
   'cougars?|bobcats?|lynx|raccoons?|foxes|fox|otters?|beavers?|pelicans?|turkeys|geese|swans?';
+
+// "derecho" is the storm, and also the Spanish word for a right or a law ("Por el derecho de
+// la niñez a crecer en familia"). It counts as weather only when no Spanish article, preposition
+// or legal word sits next to it.
+const DERECHO_STORM =
+  /(?<![\p{L}\p{N}_])(?<!\b(?:el|del|al|un|su|mi|tu|por|con|sin|ese|este|y|o|en|de|la|los|las)\s)derechos?(?![\p{L}\p{N}_])(?!\s+(?:de|del|a|al|humanos?|civil|civiles|penal|laboral|internacional|internacionales|fundamentales?|constitucional)\b)/iu;
 
 export const CATEGORIES = [
   {
@@ -120,14 +125,6 @@ export const CATEGORIES = [
       /\b(?:United|Delta|American Airlines|Southwest|JetBlue|Alaska Airlines|Spirit|Frontier|Ryanair|easyJet|Lufthansa|British Airways|Qantas|Air Canada|airlines?)\b[^.]{0,60}\b(?:outages?|technical (?:issues?|problems?)|tech issues?|technology issues?|computer (?:issues?|problems?)|delay(?:s|ed)? (?:departing )?flights)\b/i,
     ],
     reject: [],
-    nearMiss: [
-      /\b(?:ground stops?|ground(?:ed|ing|s)|delay(?:s|ed)?|outages?|glitch(?:es)?|failures?|meltdowns?|malfunctions?|halted|cancel{1,2}ed|(?:technical|technology|tech|computer|IT|system) (?:issues?|problems?))\b/i,
-    ],
-    captions: [
-      "Nobody's going anywhere, which is technically safe.",
-      'The sky is open. The airlines would like a moment.',
-      'Somewhere, a very patient person is holding a boarding pass.',
-    ],
   },
   {
     id: 'hacks',
@@ -171,14 +168,6 @@ export const CATEGORIES = [
       // Threat reports and policy warnings are not incidents.
       /\bQ[1-4]\s+20\d\d\b|\b(?:underprepared|unprepared)\b/i,
     ],
-    nearMiss: [
-      /\b(?:hack(?:ed|ers?|ing|s)?|breach(?:es|ed)?|leak(?:s|ed|ing)?|ransomware|cyber ?attacks?|(?:security|cyber|cybersecurity) incidents?|malware|infostealer|botnet|DDoS|zero-?days?|exposed|stolen|compromised)\b/i,
-    ],
-    captions: [
-      'Your data is out there, making friends.',
-      'Your password is having the busiest week of its life.',
-      'The vault was fine. Then someone asked it nicely.',
-    ],
   },
   {
     id: 'internet',
@@ -210,15 +199,6 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\bpower outages?\b/i, /\belectricity\b/i, /\bblackouts?\b/i],
-    nearMiss: [
-      /\b(?:outages?|down|offline|glitch(?:es)?|not working|disruptions?|failures?|(?:undersea|subsea|submarine) cables?|DNS|false (?:emergency |missile |tsunami |nuclear |amber )?alerts?)\b/i,
-      /\balerts?\b[^.]{0,40}\b(?:errors?|mistakes?|glitch(?:es)?|in error|accidental(?:ly)?)\b/i,
-    ],
-    captions: [
-      'Half the internet is down. You found the other half.',
-      'Have you tried turning the planet off and on again?',
-      'The cloud is just someone else\'s computer, and it is tired.',
-    ],
   },
   {
     id: 'space',
@@ -238,14 +218,6 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\bmeteor showers?\b/i, /\bbuy\b/i],
-    nearMiss: [
-      /\b(?:asteroids?|near[- ]Earth|flybys?|fly-by|close approach|near miss|fireballs?|bolides?|meteorites?|space rocks?|mini-?moons?|potentially hazardous|planetary defen[cs]e)\b/i,
-    ],
-    captions: [
-      'It missed. They always miss. So far.',
-      'A very large rock just waved from a safe distance.',
-      "Physics says we're fine. Physics is undefeated so far.",
-    ],
   },
   {
     id: 'sun',
@@ -264,14 +236,6 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [],
-    nearMiss: [
-      /\b(?:solar (?:flares?|storms?|eruptions?|outbursts?)|flares?|auroras?|northern lights|(?:geo)?magnetic|coronal mass ejections?|CMEs?|space weather|radio blackouts?|X-?class)\b/i,
-    ],
-    captions: [
-      'The sun is having a moment.',
-      'The nearest star would like your attention.',
-      'Eight light minutes away and still making a scene.',
-    ],
   },
   {
     id: 'earth',
@@ -294,14 +258,6 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\bstock|\bmarkets?\b/i],
-    nearMiss: [
-      /\b(?:earthquakes?|quakes?|tremors?|temblors?|volcan(?:o(?:es)?|ic)|erupt(?:s|ed|ing|ion|ions)?)\b/i,
-    ],
-    captions: [
-      'The ground has opinions today.',
-      'The planet shrugged. Everything on it noticed.',
-      'Tectonic plates are just slow arguments.',
-    ],
   },
   {
     id: 'markets',
@@ -331,18 +287,6 @@ export const CATEGORIES = [
       /\b(?:drug|clinical|trial|phase [123]|FDA|biotech|therapeutics|pharma\w*)\b/i,
       /\bmarket (?:size|share|research|report|outlook|analysis|trends?|to \d{4})\b|\b(?:to|by) 20[3-9]\d\b|\bCAGR\b/i,
     ],
-    nearMiss: [
-      /\b(?:plunge[sd]?|plummet(?:s|ed)?|sell-?offs?|tumble[sd]?|tank(?:s|ed)?|rout|meltdown|free ?fall|nosedive|circuit breakers?|wipes? out|erases?|evaporates?|trading (?:halt(?:ed|s)?|suspended|paused)|halts? trading)\b/i,
-      /\b(?:loses|lose)\b[^.]{0,30}\$\s?\d[\d.,]*\s?(?:billion|trillion)\b/i,
-      // a crash counts only when it is a market, crypto or digital one
-      /\b(?:flash|market|stock|crypto|bitcoin|digital)\s+crash(?:es|ed)?\b/i,
-      /\b(?:stocks|stock markets?|markets?|Dow|Nasdaq|S&P|Wall Street|crypto|bitcoin|ether|ethereum)\b[^.]{0,40}\bcrash(?:es|ed)?\b/i,
-    ],
-    captions: [
-      'Line go down. Line usually comes back.',
-      'Somewhere, a chart is having a very dramatic afternoon.',
-      'The numbers are doing a bit. The numbers usually stop.',
-    ],
   },
   {
     id: 'ai',
@@ -365,14 +309,6 @@ export const CATEGORIES = [
       /\b(?:ChatGPT|Claude|Gemini|Copilot|Grok|OpenAI|Anthropic)\b[^.]{0,60}\b(?:down|outages?|glitch(?:es)?|disruptions?|failures?|crash(?:es|ed)?|not working|offline)\b/i,
     ],
     reject: [],
-    nearMiss: [
-      /\b(?:outages?|down|offline|glitch(?:es)?|failures?|disruptions?|malfunction(?:s|ed)?|crash(?:es|ed)?|rogue|haywire|meltdown|fiasco|blunder|not working|gone wrong|goes wrong|bugs?|stuck|stalled?|hallucinat\w*|amok|deletes?|deleted|wipes?|wiped)\b/i,
-    ],
-    captions: [
-      'The machines are learning. Slowly, we hope.',
-      'The robot was asked to be helpful. It has questions.',
-      'Autocomplete has strong opinions today.',
-    ],
   },
   {
     id: 'grid',
@@ -395,14 +331,6 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\b(?:media|TV|news|internet|social media|sports?) blackout\b/i, /\b90-day blackout\b/i],
-    nearMiss: [
-      /\b(?:blackouts?|power outages?|power (?:cuts?|failures?)|without (?:power|electricity)|(?:lose|loses|lost) power|grid (?:failure|collapse|emergency|alert|strain)|in the dark|outages?)\b/i,
-    ],
-    captions: [
-      'Somewhere, a very dark neighborhood.',
-      'Have you tried candles? People used to love candles.',
-      'The electrons took the afternoon off.',
-    ],
   },
   {
     id: 'germs',
@@ -425,14 +353,6 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\bhospitali[sz]\w*\b/i, /\bmistakes?\b|\btips\b|\bprotect\b/i],
-    nearMiss: [
-      /\b(?:viruses|virus|variants?|strains?|bird flu|H5N1|avian (?:flu|influenza)|pathogens?|superbugs?)\b/i,
-    ],
-    captions: [
-      'Something is spreading. Possibly just headlines.',
-      'Wash your hands. Also, your feed.',
-      'Tiny things are making big plans.',
-    ],
   },
   {
     id: 'weather',
@@ -451,18 +371,11 @@ export const CATEGORIES = [
       /\b(?:giant|large|huge|big|massive|destructive|damaging|severe|golf[- ]?ball|baseball|softball|tennis[- ]?ball|marble|pea|egg|grapefruit|quarter|lemon|orange|apple|ping[- ]?pong)(?:[- ]sized?)?[ -]hail\b/i,
       /\b\d+(?:\.\d+)?[- ]?(?:cm|mm|in|inch|inches|centimet(?:er|re)s?)[- ]?(?:wide |across )?hail\b/i,
       /\bhail\b[^.]{0,20}\b(?:damage[sd]?|storms?|warnings?|threat|risk)\b/i,
-      /\b(?:derecho|waterspout|dust storm|haboob|ice storm|thundersnow|heat dome|heat ?wave|polar vortex|atmospheric river|cold snap|blizzard|hurricane|typhoon|cyclone|tornado(?:es)?)\b/i,
+      DERECHO_STORM,
+      /\b(?:waterspout|dust storm|haboob|ice storm|thundersnow|heat dome|heat ?wave|polar vortex|atmospheric river|cold snap|blizzard|hurricane|typhoon|cyclone|tornado(?:es)?)\b/i,
     ],
     claim: [],
     reject: [/\bawareness week\b/i, /\bwhat (?:watches|advisories|warnings)\b/i, /\bunderstanding\b/i, /\bstocks?\b|\bshares\b|\bsales\b/i],
-    nearMiss: [
-      /\b(?:record|freak|unseasonabl[ey]|hail(?:storms?|stones?)?|heat dome|cold snap|polar vortex|thundersnow|haboob|dust storm|waterspout)\b/i,
-    ],
-    captions: [
-      'The sky is doing a bit.',
-      'The atmosphere is just showing off now.',
-      'Clouds have entered their dramatic era.',
-    ],
   },
   {
     id: 'animals',
@@ -489,16 +402,6 @@ export const CATEGORIES = [
       /\b(?:mauled|bitten|bites?|attacks?|attacked|attacking|stung|hospitali[sz]ed)\b/i,
       // Team nicknames (Bears, Lions, Tigers, Sharks, Bulls) in a game report.
       /\b(?:NFL|NBA|NHL|MLB|NCAA|MLS|playoffs?|quarterback|touchdowns?|overtime|vs\.?|defeats?|beats?|wins?|loses?|scores?|rookie|coach)\b/i,
-    ],
-    nearMiss: [
-      /\b(?:swarm(?:s|ing)?|infestation|escaped|escapes|loose|orcas?|wildlife)\b/i,
-      /\b(?:break\w*|broke|walk\w*|wander\w*|stroll\w*|sneak\w*|enter\w*|barg\w*|climb\w*)\s+into\b/i,
-      /\braid(?:s|ed)?\b|\bin (?:a |the )?(?:house|kitchen|garage|pool|school|grocery|store|home|car)\b/i,
-    ],
-    captions: [
-      "The animals know something. They're not saying.",
-      'The animals have formed a committee.',
-      'Nature is writing a strongly worded letter.',
     ],
   },
 ];
@@ -866,6 +769,31 @@ export const HN = {
   minPoints: 40,
 };
 
+// ---------------------------------------------------------------------------
+// The daily edition: a short headline and 4 to 6 lines for every day, written
+// by hand or by the editor (scripts/editor.mjs). One set of rules checks both.
+// An edition that breaks them is not used, and the day shows plain headlines.
+// ---------------------------------------------------------------------------
+export const EDITION = {
+  headlineEnd: 'Still here.',
+  headlineMax: 80, // characters
+  lineMax: 200, // characters
+  emojiMax: 8, // UTF-16 units
+  minItems: 3,
+  maxItems: 6,
+  fallbackRows: 5, // plain headlines shown for a day with no edition
+  fallbackPerCategory: 2,
+  homeDays: 7, // day blocks on the homepage: today and up to 6 earlier days
+};
+
+// The editor. It calls the Claude API at most EDITOR_DAILY_CAP times a day, and not
+// again until the stories it would read have changed and EDITOR_MIN_GAP_MINUTES have
+// passed since its last write. 12 calls 2 hours apart spread over the whole day.
+export const EDITOR_MODEL = 'claude-opus-5-5';
+export const EDITOR_DAILY_CAP = 12;
+export const EDITOR_MIN_GAP_MINUTES = 120;
+export const EDITOR_MAX_STORIES = 80;
+
 export function config() {
   return {
     window: WINDOW,
@@ -885,5 +813,7 @@ export function config() {
     quiet: QUIET,
     gdelt: GDELT,
     hn: HN,
+    edition: EDITION,
+    editor: { model: EDITOR_MODEL, dailyCap: EDITOR_DAILY_CAP, minGapMinutes: EDITOR_MIN_GAP_MINUTES, maxStories: EDITOR_MAX_STORIES },
   };
 }

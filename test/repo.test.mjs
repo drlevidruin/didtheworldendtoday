@@ -14,31 +14,31 @@ const cfg = config();
 const pkg = readJson(path.join(REPO, 'package.json'));
 const workflow = fs.readFileSync(path.join(REPO, '.github', 'workflows', 'update.yml'), 'utf8');
 
-// ---- the 12 categories and their captions ----------------------------------------
+// ---- the 12 categories ------------------------------------------------------------
 
 const SPEC_CATEGORIES = [
-  ['flights', '✈️', 'Grounded', "Nobody's going anywhere, which is technically safe."],
-  ['hacks', '\u{1F3E6}', 'Hacked', 'Your data is out there, making friends.'],
-  ['internet', '\u{1F310}', 'Internet down', 'Half the internet is down. You found the other half.'],
-  ['space', '☄️', 'Space rocks', 'It missed. They always miss. So far.'],
-  ['sun', '\u{1F31E}', 'Angry sun', 'The sun is having a moment.'],
-  ['earth', '\u{1F30B}', 'Restless planet', 'The ground has opinions today.'],
-  ['markets', '\u{1F4C9}', 'Markets', 'Line go down. Line usually comes back.'],
-  ['ai', '\u{1F916}', 'Robots', 'The machines are learning. Slowly, we hope.'],
-  ['grid', '⚡', 'Lights out', 'Somewhere, a very dark neighborhood.'],
-  ['germs', '\u{1F9A0}', 'Germs', 'Something is spreading. Possibly just headlines.'],
-  ['weather', '\u{1F300}', 'Weather', 'The sky is doing a bit.'],
-  ['animals', '\u{1F41D}', 'Animal uprising', "The animals know something. They're not saying."],
+  ['flights', '\u2708\uFE0F', 'Grounded'],
+  ['hacks', '\u{1F3E6}', 'Hacked'],
+  ['internet', '\u{1F310}', 'Internet down'],
+  ['space', '\u2604\uFE0F', 'Space rocks'],
+  ['sun', '\u{1F31E}', 'Angry sun'],
+  ['earth', '\u{1F30B}', 'Restless planet'],
+  ['markets', '\u{1F4C9}', 'Markets'],
+  ['ai', '\u{1F916}', 'Robots'],
+  ['grid', '\u26A1', 'Lights out'],
+  ['germs', '\u{1F9A0}', 'Germs'],
+  ['weather', '\u{1F300}', 'Weather'],
+  ['animals', '\u{1F41D}', 'Animal uprising'],
 ];
 
-test('the 12 categories are in the spec order with the spec emoji, labels and captions', () => {
+test('the 12 categories are in the spec order with the spec emoji and labels, and no captions', () => {
   assert.equal(cfg.categories.length, 12);
-  SPEC_CATEGORIES.forEach(([id, emoji, label, caption], i) => {
+  SPEC_CATEGORIES.forEach(([id, emoji, label], i) => {
     const c = cfg.categories[i];
     assert.equal(c.id, id, `position ${i + 1}`);
     assert.equal(c.emoji, emoji, id);
     assert.equal(c.label, label, id);
-    assert.ok(c.captions.includes(caption), `${id} keeps the section 9 caption`);
+    assert.ok(!('captions' in c), `${id} has no caption: the editor writes the lines now`);
     assert.ok(c.queries.length >= 1 && c.keywords.length >= 1, id);
   });
 });
@@ -59,14 +59,15 @@ test('the headline cap is gentle: every query is a plain search string', () => {
 
 // ---- package.json ----------------------------------------------------------------
 
-test('package.json: ESM, Node 22, four scripts, two small dependencies', () => {
+test('package.json: ESM, Node 22, five scripts, three small dependencies', () => {
   assert.equal(pkg.type, 'module');
   assert.match(pkg.engines.node, />=\s?22/);
   assert.equal(pkg.scripts.update, 'node scripts/update.mjs');
+  assert.equal(pkg.scripts.edit, 'node scripts/editor.mjs');
   assert.equal(pkg.scripts.build, 'node scripts/build.mjs');
   assert.equal(pkg.scripts.serve, 'node scripts/serve.mjs');
   assert.match(pkg.scripts.test, /^node --test /);
-  assert.deepEqual(Object.keys(pkg.dependencies).sort(), ['@resvg/resvg-js', 'fast-xml-parser']);
+  assert.deepEqual(Object.keys(pkg.dependencies).sort(), ['@anthropic-ai/sdk', '@resvg/resvg-js', 'fast-xml-parser']);
   assert.equal(pkg.devDependencies, undefined);
   assert.equal(fs.readFileSync(path.join(REPO, '.nvmrc'), 'utf8').trim(), '22');
   const ignore = fs.readFileSync(path.join(REPO, '.gitignore'), 'utf8');
@@ -100,15 +101,31 @@ test('workflow: the steps come in the spec order', () => {
     'actions/setup-node@',
     'run: npm ci',
     'run: npm run update',
-    'run: npm run build',
-    'run: npm test',
+    'run: npm run edit',
     'node scripts/data-changed.mjs',
     'git commit',
+    'run: npm run build',
+    'run: npm test',
     'actions/configure-pages@',
     'actions/upload-pages-artifact@',
     'actions/deploy-pages@',
   ].map(indexOfStep);
   assert.deepEqual(order, [...order].sort((a, b) => a - b));
+  // The data and the editor's state are saved before the build and the tests, so a run that fails there still counts its editor call.
+  const names = workflow.split(/\n      - name: /).slice(1).map((step) => step.split('\n')[0]);
+  assert.deepEqual(names, [
+    'Check out',
+    'Set up Node',
+    'Install',
+    'Update data',
+    "Write today's edition",
+    'Commit data if it changed',
+    'Build site',
+    'Test',
+    'Configure Pages',
+    'Upload site',
+    'Deploy',
+  ]);
   assert.match(workflow, /node-version: 22\s*\n\s*cache: npm/);
   assert.match(workflow, /upload-pages-artifact@v\d+\s*\n\s*with:\s*\n\s*path: dist/);
 });
@@ -128,6 +145,25 @@ test('workflow: the X token and its budget are visible to the update step and to
   assert.deepEqual(names(/X_DAILY_BUDGET_USD/), ['Update data']);
   const update = steps.find((step) => step.startsWith('Update data'));
   assert.match(update, /run: npm run update\s*\n\s*env:\s*\n\s*X_BEARER_TOKEN: \$\{\{ secrets\.X_BEARER_TOKEN \}\}\s*\n\s*X_DAILY_BUDGET_USD: \$\{\{ vars\.X_DAILY_BUDGET_USD \}\}/);
+});
+
+test('workflow: the Anthropic key is visible to the edition step and to no other, and the step runs right after update and before the data commit', () => {
+  const top = workflow.slice(workflow.indexOf('\nenv:\n'), workflow.indexOf('\njobs:\n'));
+  assert.ok(!/ANTHROPIC_API_KEY/.test(top), 'not in the workflow-level environment');
+  const jobEnv = workflow.slice(workflow.indexOf('\n    runs-on:'), workflow.indexOf('\n    steps:'));
+  assert.ok(!/ANTHROPIC_API_KEY/.test(jobEnv), 'not in the job-level environment');
+  const steps = workflow.split(/\n      - name: /).slice(1);
+  const names = steps.map((step) => step.split('\n')[0]);
+  assert.deepEqual(steps.filter((step) => /ANTHROPIC_API_KEY/.test(step)).map((step) => step.split('\n')[0]), ["Write today's edition"]);
+  const edit = steps.find((step) => step.startsWith("Write today's edition"));
+  assert.match(edit, /run: npm run edit\s*\n\s*env:\s*\n\s*ANTHROPIC_API_KEY: \$\{\{ secrets\.ANTHROPIC_API_KEY \}\}/);
+  assert.ok(!/continue-on-error|if:/.test(edit), 'the editor catches its own errors, so the step needs no escape hatch');
+  assert.equal(names.indexOf("Write today's edition"), names.indexOf('Update data') + 1, 'right after Update data');
+  assert.equal(names.indexOf('Commit data if it changed'), names.indexOf("Write today's edition") + 1, 'the data and the editor state are saved right after the edition step');
+  assert.equal(names.indexOf('Build site'), names.indexOf('Commit data if it changed') + 1, 'and before the build and the tests, so a failure there still saves them');
+  const update = steps.find((step) => step.startsWith('Update data'));
+  assert.ok(!/ANTHROPIC_API_KEY/.test(update), 'the update step never sees the Anthropic key');
+  for (const step of steps) if (!step.startsWith("Write today's edition")) assert.ok(!/ANTHROPIC_API_KEY/.test(step), step.split('\n')[0]);
 });
 
 test('workflow: the data commit has the bot author, a dated message, and a push that retries and survives a data conflict', () => {
@@ -155,7 +191,7 @@ test('workflow: the data commit has the bot author, a dated message, and a push 
 function commitStepScript() {
   const at = workflow.indexOf('- name: Commit data if it changed');
   const from = workflow.indexOf('run: |\n', at) + 'run: |\n'.length;
-  const to = workflow.indexOf('\n      - name: Configure Pages');
+  const to = workflow.indexOf('\n      - name: ', from);
   assert.ok(at > 0 && to > from, 'the commit step is in the workflow');
   return `#!/bin/bash\nset -e\n${workflow.slice(from, to).split('\n').map((l) => l.replace(/^ {10}/, '')).join('\n')}\n`;
 }
@@ -256,11 +292,11 @@ test('workflow: a data push with no race goes straight through', { skip: !gitAva
   assert.equal(fs.readFileSync(path.join(check, 'data', 'latest.json'), 'utf8'), '{"from":"A"}\n');
 });
 
-test('workflow: current action versions, and no secret besides the optional X token', () => {
+test('workflow: current action versions, and no secret besides the optional X token and the Anthropic key', () => {
   const uses = [...workflow.matchAll(/uses: ([\w.-]+\/[\w.-]+)@(v\d+)/g)].map((m) => `${m[1]}@${m[2]}`);
   assert.deepEqual(uses, ['actions/checkout@v7', 'actions/setup-node@v7', 'actions/configure-pages@v6', 'actions/upload-pages-artifact@v5', 'actions/deploy-pages@v5']);
   const secrets = [...workflow.matchAll(/secrets\.(\w+)/g)].map((m) => m[1]);
-  assert.deepEqual(secrets, ['X_BEARER_TOKEN']);
+  assert.deepEqual(secrets, ['X_BEARER_TOKEN', 'ANTHROPIC_API_KEY']);
   assert.ok(!/pull_request_target/.test(workflow));
   assert.ok(!/\$\{\{\s*github\.event\.(?:issue|pull_request|comment)/.test(workflow), 'no untrusted text is put into a script');
 });

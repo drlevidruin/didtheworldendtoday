@@ -9,11 +9,13 @@
   },
   "scripts": {
     "update": "node scripts/update.mjs",
+    "edit": "node scripts/editor.mjs",
     "build": "node scripts/build.mjs",
     "serve": "node scripts/serve.mjs",
     "test": "node --test \"test/*.test.mjs\""
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.9.0",
     "@resvg/resvg-js": "^2.6.2",
     "fast-xml-parser": "^5.12.1"
   }

@@ -1,14 +1,14 @@
 // The page shell: the comment, the head (security policy, titles, share
 // cards), the inlined style, and the one external script.
 import { CSS_404, css } from './css.mjs';
-import { COMMENT, CREDIT_HANDLE, CREDIT_URL, DESCRIPTION, FOOTER_LINES, FOOTER_LINES_QUIET, SITE_NAME } from './copy.mjs';
+import { COMMENT, CREDIT_HANDLE, CREDIT_URL, DESCRIPTION, FOOTER_LINES, FOOTER_LINES_QUIET, SITE_NAME, TAGLINE } from './copy.mjs';
 import { esc } from './esc.mjs';
 
 // Section 8: nothing loads from anywhere but this site, no inline script.
 export const CSP =
   "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self'";
 
-const IMAGE_ALT = 'ALMOST. Did the world end today? The Doom Score and the grid of what fired.';
+const IMAGE_ALT = "ALMOST. Did the world end today? The day's headline and the Doom Score.";
 
 // opts: root, title, description, canonical, image (absolute), body,
 //       data (extra attributes for <html>, already safe), script (bool)
@@ -63,16 +63,14 @@ export function social({ title, description, canonical, image }) {
   ].join('\n');
 }
 
+// The tagline, the footer lines, then who made it and the two other pages. Quiet
+// mode drops the tagline, which is a joke, and two of the lines.
 export function footer({ root, quiet = false }) {
   const lines = (quiet ? FOOTER_LINES_QUIET : FOOTER_LINES).map((l) => `<p>${esc(l)}</p>`).join('\n');
+  const tag = quiet ? '' : `<p class="tagline">${esc(TAGLINE)}</p>\n`;
   return `<footer>
-${lines}
-<p class="by">by <a href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(CREDIT_HANDLE)}</a></p>
-<nav aria-label="More">
-<a href="${esc(root)}almanac/">Almanac</a>
-<a href="${esc(root)}about/">About</a>
-<a href="${esc(root)}feed.xml">RSS</a>
-</nav>
+${tag}${lines}
+<p class="by">by <a href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(CREDIT_HANDLE)}</a> &middot; <a href="${esc(root)}about/">About</a> &middot; <a href="${esc(root)}feed.xml">RSS</a></p>
 </footer>`;
 }
 

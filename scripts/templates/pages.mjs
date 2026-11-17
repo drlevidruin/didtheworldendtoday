@@ -1,5 +1,5 @@
 // The Almanac page and the About page.
-import { CREDIT_HANDLE, CREDIT_URL, DESCRIPTION, pageTitle, recordLine } from './copy.mjs';
+import { CREDIT_HANDLE, CREDIT_URL, DESCRIPTION, FIRST_DAY_PENDING, pageTitle, recordLine } from './copy.mjs';
 import { esc, url } from './esc.mjs';
 import { footer, page } from './layout.mjs';
 import { almanacRows } from './parts.mjs';
@@ -8,14 +8,15 @@ function top(root) {
   return `<div class="top"><a href="${esc(root)}">&larr; Today</a><a href="${esc(root)}about/">About</a></div>`;
 }
 
-export function almanacPage({ root, siteUrl, entries, record, categories, quiet }) {
+// entries: [{ date, score, headline }], newest first. Each row is a link to its day.
+export function almanacPage({ root, siteUrl, entries, record, quiet }) {
   const recordText = recordLine(record, entries.length);
   const body = `<main id="main">
 <div class="wrap">
 ${top(root)}
 <h1 class="pg">The Almanac of Almost</h1>
 ${recordText ? `<p class="record">${esc(recordText)}</p>` : ''}
-${entries.length ? almanacRows(entries, { root, categories, withFired: true }) : '<p class="empty">The first day is still being written.</p>'}
+${entries.length ? almanacRows(entries, { root }) : `<p class="empty">${esc(FIRST_DAY_PENDING)}</p>`}
 </div>
 </main>
 ${footer({ root, quiet })}`;
@@ -66,19 +67,21 @@ function sourceList(cfg, xEnabled) {
 export function aboutPage({ root, siteUrl, cfg, quiet, xEnabled = false }) {
   const d = cfg.doom;
   const fire =
-    `A category fires when ${d.publishersToFire} or more different publishers have a headline in it within the last 24 hours, ` +
-    `or when its instrument trips: an FAA ground stop, an asteroid inside 1 lunar distance, Kp 5 or more or an X-class flare alert, ` +
-    `a quake of M6 or more, or a big status page in major outage.`;
+    `A category fires when ${d.publishersToFire} or more different publishers have a headline in it in the last 24 hours. ` +
+    `It also fires when its instrument trips: an FAA ground stop, an asteroid inside ${d.asteroid.withinLd} lunar distance, ` +
+    `Kp ${d.kp.at} or more or an X-class flare alert, a quake of M${d.quake.at} or more, or a big status page in major outage.`;
   const body = `<main id="main">
 <div class="wrap">
 ${top(root)}
 <h1 class="pg">About</h1>
 <div class="prose">
-<p class="lede">This site checks every 15 minutes for the ways the world almost ends: systems failing, near misses, glitches and close calls. Every story links to its source, and every day is kept for good in the Almanac of Almost.</p>
-<p class="scope">We cover the ways the world almost ends that nobody is doing on purpose.</p>
+<p class="lede">This site checks the news every 15 minutes for the ways the world almost ends. A system fails. A flight is grounded. A big rock misses us. Every story links to its source, and every day is kept in the Almanac of Almost.</p>
+<p class="scope">We leave out headlines about people being killed, hurt or attacked.</p>
 
 <h2>The Doom Score</h2>
-<p>The Doom Score runs from 0 to ${d.cap} and it is plain arithmetic. ${esc(fire)} Each fired category is worth ${d.perCategory} points. The floor is ${d.floor}, because there is always something. The cap is ${d.cap}, because it is never 100. Then the extras:</p>
+<p>The Doom Score runs from 0 to ${d.cap}. It is plain arithmetic.</p>
+<p>${esc(fire)}</p>
+<p>Each fired category is worth ${d.perCategory} points. The floor is ${d.floor}, because there is always something. The cap is ${d.cap}, because it is never 100. Then come the extras:</p>
 <ul>
 ${doomBullets(d)
   .map((t) => `<li>${esc(t)}</li>`)
@@ -86,18 +89,18 @@ ${doomBullets(d)
 </ul>
 
 <h2>Where it comes from</h2>
+<p>We read the news and watch the sky and the internet: asteroids, solar storms, earthquakes, and the big status pages.</p>
 ${sourceList(cfg, xEnabled)}
 
 <h2>Quiet cards and quiet mode</h2>
-<p>A quiet card is a story about something that could hurt people, like a big quake, a flood or a fire. It gets no joke, only the plain facts. When people are likely hurt, it also links to the Red Cross, or to the international Red Cross and Red Crescent for a quake abroad.</p>
-<p>Quiet mode is the whole site going plain: when a mass-casualty event dominates the news, or when it is switched on by hand, the jokes stop until it passes.</p>
+<p>A quiet card is a story about something that could hurt people, like a big quake, a flood or a fire. It gets no joke. Just the plain facts. When people are likely hurt, it also links to the Red Cross. For a quake abroad, it links to the international Red Cross and Red Crescent.</p>
+<p>Quiet mode is the whole site going plain. It comes on when a deadly disaster takes over the news, or when someone switches it on by hand. The jokes stop until it passes.</p>
 
 <h2>Headlines</h2>
-<p>Headlines and links only. Publishers who want a headline removed: DM <a href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(CREDIT_HANDLE)}</a> on X.</p>
+<p>We show headlines and links only. Publishers who want a headline removed can DM <a href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(CREDIT_HANDLE)}</a> on X.</p>
 
 <h2>Credits</h2>
-<p>Built by <a href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(CREDIT_HANDLE)}</a> with Claude.</p>
-<p>The Doomsday Clock comes from the <a href="${url(cfg.clock.url)}" target="_blank" rel="noopener">Bulletin of the Atomic Scientists</a>.</p>
+<p>Built by <a href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(CREDIT_HANDLE)}</a> with Claude, an AI. Claude writes each day's headline and the short line on each story, from that day's headlines. It can get things wrong, so every line links to its source.</p>
 </div>
 </div>
 </main>

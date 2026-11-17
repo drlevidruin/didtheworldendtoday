@@ -47,10 +47,10 @@
     return Number.isFinite(x) && Number.isFinite(y) && x > y;
   }
 
-  // The streak sentence: the first visit says one thing, a run of days the other.
-  function streakLine(n, first, template) {
-    if (!(n >= 2)) return first || '';
-    return (template || '').replace('{n}', String(n));
+  // Whether the site is quiet, as fresh data says it: true, false, or null when the data does not say.
+  function quietIn(json) {
+    var q = json && json.quiet;
+    return q && typeof q.quiet === 'boolean' ? q.quiet : null;
   }
 
   // The share text with "Checked N days running." added for a streak of 2 or
@@ -108,7 +108,7 @@
       addDay: addDay,
       streakNext: streakNext,
       newer: newer,
-      streakLine: streakLine,
+      quietIn: quietIn,
       withStreak: withStreak,
       shouldCopyAfterShareError: shouldCopyAfterShareError,
       timedFetch: timedFetch,
@@ -144,10 +144,6 @@
 
   function tick() {
     var now = Date.now();
-    $$('time.rel').forEach(function (el) {
-      var at = Date.parse(el.getAttribute('datetime'));
-      if (Number.isFinite(at)) el.textContent = ago(now - at);
-    });
     $$('.ago[data-since]').forEach(function (el) {
       var at = Date.parse(el.getAttribute('data-since'));
       if (Number.isFinite(at)) el.textContent = 'checked ' + ago(now - at);
@@ -173,18 +169,15 @@
     }
   }
 
-  // Counts this visit once per Eastern day and writes the sentence under the buttons.
+  // Counts this visit once per Eastern day. The count goes into the share text
+  // ("Checked 3 days running.") and nowhere else on the page.
   function streak() {
-    var el = $('#streak');
-    if (!el) return;
     var next = streakNext(savedStreak(), etDay(Date.now()));
     try {
       window.localStorage.setItem(KEY, JSON.stringify(next));
     } catch (e) {
-      /* private mode: show the line anyway */
+      /* private mode: the share text still counts this visit */
     }
-    el.textContent = streakLine(next.n, el.getAttribute('data-first'), el.getAttribute('data-template'));
-    el.hidden = false;
   }
 
   // ---- toast and share ------------------------------------------------------------
@@ -237,14 +230,16 @@
     return ok;
   }
 
-  function share() {
-    var main = $('#main');
-    if (!main) return;
+  // The button's own day: the nearest block that carries share text. The hero's
+  // "Share today" has the page itself (today), a day block has its own.
+  function share(from) {
+    var block = (from && from.closest ? from.closest('[data-share-full]') : null) || $('#main');
+    if (!block) return;
     // The streak is the visitor's own, so it is added here and not by the server.
     var days = streakNext(savedStreak(), etDay(Date.now())).n;
-    var text = withStreak(main.getAttribute('data-share-text') || '', days);
-    var full = withStreak(main.getAttribute('data-share-full') || text, days);
-    var link = main.getAttribute('data-share-url') || '';
+    var text = withStreak(block.getAttribute('data-share-text') || '', days);
+    var full = withStreak(block.getAttribute('data-share-full') || text, days);
+    var link = block.getAttribute('data-share-url') || '';
     function copy() {
       copyText(full).then(function (ok) {
         toast(ok ? 'Copied. Paste it anywhere.' : 'Could not copy. Select the text and try again.');
@@ -307,6 +302,13 @@
       });
   }
 
+  // The site can go quiet while a page is open. The fetched data knows before the page does,
+  // so the page takes quiet from it and the tap on ALMOST. stops joking at once.
+  function takeQuiet(json) {
+    var q = quietIn(json);
+    if (q !== null) html.setAttribute('data-quiet', q ? '1' : '0');
+  }
+
   var bar = null;
   function removeBar() {
     if (bar) bar.remove();
@@ -317,7 +319,7 @@
     bar = doc.createElement('button');
     bar.type = 'button';
     bar.className = 'fresh';
-    bar.innerHTML = '<span class="dot" aria-hidden="true"></span><span>New near misses. Tap to refresh.</span>';
+    bar.innerHTML = '<span class="dot" aria-hidden="true"></span><span>Updated. Tap to refresh.</span>';
     bar.addEventListener('click', function () {
       swapMain().catch(function () {
         window.location.reload();
@@ -329,11 +331,12 @@
   function poll() {
     if (bar) return;
     fetchLatest().then(function (json) {
+      takeQuiet(json);
       if (json && newer(json.buildTime, html.getAttribute('data-build'))) showBar();
     });
   }
 
-  // ---- Check again ---------------------------------------------------------------
+  // ---- Tap ALMOST. ---------------------------------------------------------------
 
   var busy = false;
 
@@ -364,13 +367,12 @@
     }, 200);
   }
 
+  // Replays the check, looks for newer data at the same time, and swaps the page in place when there is some.
   function check() {
     if (busy) return;
     var hero = $('#hero');
     if (!hero) return;
     busy = true;
-    var button = $('[data-act="check"]');
-    if (button) button.disabled = true;
     var lines = [];
     try {
       lines = JSON.parse(hero.getAttribute('data-lines')) || [];
@@ -378,12 +380,13 @@
       lines = [];
     }
     var plain = html.getAttribute('data-quiet') === '1' || reduce || !lines.length;
-    var fetched = fetchLatest();
+    var fetched = LIVE ? fetchLatest() : Promise.resolve(null);
     var shown = plain ? Promise.resolve() : sequence(hero, lines);
     Promise.all([fetched, shown])
       .then(function (done) {
         var json = done[0];
-        if (json && newer(json.buildTime, html.getAttribute('data-build'))) return swapMain();
+        takeQuiet(json);
+        if (LIVE && json && newer(json.buildTime, html.getAttribute('data-build'))) return swapMain();
         return null;
       })
       .catch(function () {
@@ -391,8 +394,6 @@
       })
       .then(function () {
         busy = false;
-        var again = $('[data-act="check"]');
-        if (again) again.disabled = false;
         if (!plain) snap();
         tick();
         var said = $('#said');
@@ -400,48 +401,17 @@
       });
   }
 
-  // ---- the category chips ------------------------------------------------------------
-
-  function filter(cat) {
-    $$('.chip').forEach(function (chip) {
-      chip.setAttribute('aria-pressed', chip.getAttribute('data-cat') === cat ? 'true' : 'false');
-    });
-    var more = $('#receipts .more');
-    $$('#receipts .card').forEach(function (card) {
-      card.hidden = cat !== 'all' && card.getAttribute('data-cat') !== cat;
-    });
-    if (!more) return;
-    if (more.getAttribute('data-was') === null) more.setAttribute('data-was', more.open ? '1' : '0');
-    var inside = $$('.card', more).filter(function (card) {
-      return !card.hidden;
-    }).length;
-    if (cat === 'all') {
-      more.hidden = false;
-      more.open = more.getAttribute('data-was') === '1';
-      more.removeAttribute('data-was');
-    } else {
-      more.hidden = inside === 0;
-      more.open = inside > 0;
-    }
-  }
-
   // ---- wiring ------------------------------------------------------------------------
 
   function onClick(event) {
-    var node = event.target && event.target.closest ? event.target.closest('[data-act],.chip') : null;
+    var node = event.target && event.target.closest ? event.target.closest('[data-act]') : null;
     if (!node) return;
-    if (node.classList.contains('chip')) {
-      filter(node.getAttribute('data-cat'));
-      return;
-    }
     var act = node.getAttribute('data-act');
     if (act === 'check') check();
-    else if (act === 'share') share();
+    else if (act === 'share') share(node);
   }
 
   function init() {
-    var chips = $('.chips');
-    if (chips) chips.hidden = false;
     tick();
     streak();
   }

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { config, crashWithPeople } from '../scripts/config.mjs';
 import { compileExcluder, compileGate } from '../scripts/lib/filter.mjs';
 import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
-import { hasNearMiss } from '../scripts/lib/nearmiss.mjs';
+import { looksNotEnglish, qualityCheck } from '../scripts/lib/quality.mjs';
 
 const cfg = config();
 const ex = compileExcluder(cfg.exclude);
@@ -218,14 +218,14 @@ for (const c of cfg.categories) {
   });
 }
 
-test('every category has a caption line and a keyword gate', () => {
+test('every category has a keyword gate and a query, and no caption', () => {
   assert.equal(cfg.categories.length, 12);
   assert.deepEqual(
     cfg.categories.map((c) => c.id),
     ['flights', 'hacks', 'internet', 'space', 'sun', 'earth', 'markets', 'ai', 'grid', 'germs', 'weather', 'animals'],
   );
   for (const c of cfg.categories) {
-    assert.ok(c.captions.length >= 1 && c.captions[0].length > 5, c.id);
+    assert.ok(!('captions' in c) && !('nearMiss' in c), `${c.id}: the editor writes the lines now`);
     assert.ok(c.keywords.length >= 3, c.id);
     assert.ok(c.queries.length >= 1, c.id);
   }
@@ -449,15 +449,13 @@ test('item 6: a crash with people in it still goes, and the word next to the cra
   }
 });
 
-// ---- phase 4, item 4: a joke is only for a near miss -------------------------------------
+// ---- real headlines still flow through the filters ---------------------------------------
 //
-// The second safety net. A story that passes every filter still gets its category's joke only
-// when its headline holds one of that category's near-miss words. The tables below are headlines
-// that pass the filter and the gate: the first table has a near-miss word, the second does not.
+// The jokes are the editor's now, so a category no longer has a near-miss word list. What stays
+// is the second safety net: a story that passes every filter is filed in its category. These
+// tables are real headlines that pass the taste filter and the gate.
 
-const byId = Object.fromEntries(cfg.categories.map((c) => [c.id, c]));
-
-const JOKE = {
+const WITH_NEAR_MISS_WORDS = {
   flights: ['Nationwide ground stop halts flights across the US', 'United Airlines system outage delays departing flights', 'Delta flights grounded after computer system crashes', 'United Airlines says it resolved a technology issue that affected departing flights'],
   hacks: ['Hackers steal customer data in breach at retailer', 'Ransomware attack knocks out payment systems', 'Retailer confirms security incident after passwords leak'],
   internet: ['Cloudflare outage takes down thousands of websites', 'Slack is down for users across the US', '911 outage hits several counties'],
@@ -474,7 +472,7 @@ const JOKE = {
 
 // Real headlines that land in a category and are not near misses: a bank outage is not a hack,
 // a recall is not a germ, a hurricane watch is not a freak of weather.
-const NO_JOKE = {
+const OTHER_STORIES = {
   flights: ['Airspace closed over the northern coast for a rocket launch', 'Air traffic control radar problem slows arrivals at the hub'],
   hacks: ['Major banking outage linked to Chase, impacted Wells Fargo and BofA', 'Chase Bank recovering after widespread outage'],
   internet: ['Downdetector shows a spike in reports for Spotify'],
@@ -484,67 +482,77 @@ const NO_JOKE = {
   weather: ['Derecho knocks down trees across the region', 'Hurricane watch posted along the coast'],
 };
 
-test('item 4: every category has a short nearMiss list of plain regexes', () => {
-  for (const c of cfg.categories) {
-    assert.ok(Array.isArray(c.nearMiss) && c.nearMiss.length >= 1 && c.nearMiss.length <= 4, `${c.id} has 1 to 4 near-miss patterns`);
-    for (const re of c.nearMiss) {
-      assert.ok(re instanceof RegExp, `${c.id}: a pattern`);
-      // a global or sticky pattern answers differently the second time it is asked
-      assert.ok(!re.global && !re.sticky, `${c.id}: no g or y flag`);
-    }
-  }
-});
-
-test('item 4: the words the brief names are near misses in their category', () => {
-  const NAMED = {
-    flights: ['outage', 'glitch', 'delay', 'grounded', 'ground stop'],
-    internet: ['outage', 'down', 'glitch'],
-    hacks: ['hack', 'breach', 'leak', 'ransomware', 'cyberattack'],
-    markets: ['plunge', 'sell-off', 'flash crash', 'market crash', 'crypto crash', 'bitcoin crash', 'digital crash'],
-    space: ['asteroid'],
-    sun: ['solar storm', 'flare', 'aurora'],
-    grid: ['blackout', 'power outage'],
-  };
-  for (const [id, words] of Object.entries(NAMED)) {
-    for (const word of words) {
-      assert.equal(hasNearMiss(byId[id], `Report says a ${word} was seen today`), true, `${id}: ${word}`);
-      assert.equal(hasNearMiss(byId[id], `REPORT SAYS A ${word.toUpperCase()} WAS SEEN TODAY`), true, `${id}: ${word} in capitals`);
-    }
-  }
-});
-
-test('item 4: words that mean someone may be hurt, or that belong to another category, are not near misses', () => {
-  const NOT = {
-    hacks: ['outage', 'bank down', 'delay'],
-    markets: ['crash', 'bus crash', 'plane crash', 'car crash on the highway'],
-    germs: ['outbreak', 'recall', 'listeria', 'measles', 'salmonella', 'E. coli'],
-    weather: ['tornado', 'hurricane', 'blizzard', 'derecho', 'heat wave', 'ice storm'],
-    animals: ['attack', 'bite'],
-  };
-  for (const [id, words] of Object.entries(NOT)) {
-    for (const word of words) assert.equal(hasNearMiss(byId[id], `Report says a ${word} was seen today`), false, `${id}: ${word}`);
-  }
-});
-
 for (const c of cfg.categories) {
-  test(`item 4: "${c.id}" headlines with a near-miss word are kept, filed and joked`, () => {
-    for (const t of JOKE[c.id]) {
+  test(`item 4: "${c.id}" headlines pass the taste filter and are filed in the category`, () => {
+    for (const t of [...WITH_NEAR_MISS_WORDS[c.id], ...(OTHER_STORIES[c.id] || [])]) {
       assert.equal(verdict(t), null, `${t} passes the taste filter`);
       assert.equal(gate.pick(t, c.id), c.id, `${t} files under ${c.id}`);
-      assert.equal(hasNearMiss(c, t), true, `${t} is a near miss`);
-    }
-    for (const t of NO_JOKE[c.id] || []) {
-      assert.equal(verdict(t), null, `${t} passes the taste filter`);
-      assert.equal(gate.pick(t, c.id), c.id, `${t} files under ${c.id}`);
-      assert.equal(hasNearMiss(c, t), false, `${t} is kept, with no joke`);
     }
   });
 }
 
-test('item 4: hasNearMiss is steady and safe on odd input', () => {
-  const c = byId.flights;
-  const title = 'Nationwide ground stop halts flights';
-  assert.deepEqual([1, 2, 3, 4].map(() => hasNearMiss(c, title)), [true, true, true, true], 'the same answer every time it is asked');
-  for (const odd of [undefined, null, '', 42, {}, [], 'no such words here']) assert.equal(hasNearMiss(c, odd), false, String(odd));
-  for (const noCategory of [undefined, null, {}, { nearMiss: 'outage' }, { nearMiss: [] }, { nearMiss: ['outage'] }, { id: 'zzz' }]) assert.equal(hasNearMiss(noCategory, title), false, JSON.stringify(noCategory));
+// ---- phase 5, item 14: the weather matcher and the English check --------------------------
+
+const SPANISH_CHARITY_RUN = 'Por el derecho de la niñez a crecer en familia, las Aldeas Infantiles SOS convocan a una carrera pedestre';
+const OUTLOOK_DROP = 'Microsoft blames the major global drop in Outlook, Teams, and Copilot on a latent software failure since July';
+
+test('item 14: the Spanish word for a right is not a storm', () => {
+  assert.equal(gate.matches('weather', SPANISH_CHARITY_RUN), false, 'the charity run is not weather');
+  assert.equal(gate.pick(SPANISH_CHARITY_RUN, 'weather'), null, 'and files nowhere');
+  for (const t of ['El derecho a la salud en debate', 'Los derechos humanos en el congreso', 'Un derecho de todos los niños', 'Por el derecho de las familias']) assert.equal(gate.matches('weather', t), false, t);
+});
+
+test('item 14: a derecho storm still counts as weather', () => {
+  for (const t of ['Derecho knocks down trees across the region', 'A derecho tore through Iowa overnight', 'Derecho leaves 200,000 without power', 'Rare derecho storm hits the Plains', 'Meteorologists warn a derecho is possible Friday', 'The derecho, a line of fast storms, moved east']) {
+    assert.equal(gate.matches('weather', t), true, t);
+  }
+});
+
+test('item 14: headlines that are not in English are dropped at the door, English ones are not', () => {
+  assert.equal(qualityCheck(SPANISH_CHARITY_RUN, ['Aldeas Infantiles'], null)?.reason, 'quality:language');
+  for (const t of ['Las autoridades confirman que el vuelo fue cancelado por la tormenta', 'Le gouvernement annonce une panne des systèmes de réservation', 'Der Flughafen ist wegen einer Störung der Systeme gesperrt', 'O governo diz que o sistema ficou fora do ar por uma hora', 'Il governo conferma che la rete è stata colpita da un attacco']) {
+    assert.equal(looksNotEnglish(t), true, t);
+  }
+  assert.equal(qualityCheck(OUTLOOK_DROP, ['Demócrata'], null), null, 'the English headline from a Spanish-named outlet is kept');
+  assert.equal(looksNotEnglish(OUTLOOK_DROP), false);
+  // names and loan words that look foreign are not enough
+  for (const t of ['Los Angeles airport hit by a ground stop', 'La Nina is back and the winter outlook is changing', 'El Salvador tells the world its grid is back up', 'Del Monte recalls cans after a mix-up at the plant', 'Air traffic control outage in Paris, a day after the strike was called off']) {
+    assert.equal(looksNotEnglish(t), false, t);
+  }
+});
+
+test('review: die, van, door and met are English words too, so they are not counted as foreign', () => {
+  assert.equal(looksNotEnglish('die van door met'), false, 'four small words that are also English add up to nothing');
+  // each one alone, said twice, adds up to nothing too, so none of them can come back unnoticed
+  for (const w of ['die', 'van', 'door', 'met']) assert.equal(looksNotEnglish(`${w} ${w}`), false, w);
+  // English headlines with a name or a word in them: kept
+  for (const t of ['Door County van catches fire', 'Die Hard van chase recreated', 'Van Halen and Die Antwoord announce a joint tour', 'Vincent van Gogh show draws record crowds', 'Mayor met van drivers at the Door County fair']) {
+    assert.equal(looksNotEnglish(t), false, t);
+    assert.equal(qualityCheck(t, ['Example'], null), null, `${t} passes the door`);
+  }
+  // headlines in other languages still go, because they are full of words that are only foreign
+  for (const t of [SPANISH_CHARITY_RUN, 'De regering heeft het plan niet door de Kamer gekregen', 'Het kabinet is het niet eens met de plannen voor de stad', 'Die Bundesregierung hat den Plan nicht mit der Opposition besprochen']) {
+    assert.equal(looksNotEnglish(t), true, t);
+    assert.equal(qualityCheck(t, ['Example'], null)?.reason, 'quality:language', t);
+  }
+});
+
+test('review: a small word right before a capitalised word is part of a name, not a foreign word', () => {
+  // kept: the Spanish in them is a name
+  for (const t of ['Día de los Muertos parade draws record crowds', 'Los Angeles de la Salle high school wins title']) {
+    assert.equal(looksNotEnglish(t), false, t);
+    assert.equal(qualityCheck(t, ['Example'], null), null, `${t} passes the door`);
+  }
+  // dropped: the same small words with no name after them are a sentence in Spanish
+  for (const t of ['El desfile de los muertos reúne a miles de personas en la ciudad', SPANISH_CHARITY_RUN]) {
+    assert.equal(looksNotEnglish(t), true, t);
+  }
+  // the name has to follow right away: a comma between is a new phrase, and the word counts
+  assert.equal(looksNotEnglish('el, Madrid y la, Barcelona'), true);
+  assert.equal(looksNotEnglish('Madrid el Barcelona'), false, 'with a name straight after, it does not');
+});
+
+test('item 14: the language check is steady and safe on odd input', () => {
+  for (const odd of [undefined, null, '', 42, {}, [], '...', '   ']) assert.equal(looksNotEnglish(odd), false, String(odd));
+  assert.deepEqual([1, 2, 3].map(() => looksNotEnglish(SPANISH_CHARITY_RUN)), [true, true, true]);
 });

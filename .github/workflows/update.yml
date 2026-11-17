@@ -51,12 +51,15 @@ jobs:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           X_DAILY_BUDGET_USD: ${{ vars.X_DAILY_BUDGET_USD }}
 
-      - name: Build site
-        run: npm run build
+      # The Anthropic key is visible to this step and no other. The editor catches
+      # everything and exits 0, so a bad night here never stops the build.
+      - name: Write today's edition
+        run: npm run edit
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      - name: Test
-        run: npm test
-
+      # Saved before the build and the tests, so a run that fails there still keeps its data
+      # and the editor's call count.
       - name: Commit data if it changed
         run: |
           set +e
@@ -96,6 +99,12 @@ jobs:
           elif [ "$status" -ne 3 ]; then
             echo "::warning::Could not tell whether data changed (exit $status). Skipping the data commit."
           fi
+
+      - name: Build site
+        run: npm run build
+
+      - name: Test
+        run: npm test
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
