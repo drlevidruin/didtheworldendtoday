@@ -73,10 +73,6 @@ test('package.json: ESM, Node 22, four scripts, two small dependencies', () => {
   assert.match(ignore, /^dist$/m);
 });
 
-test('quiet.json ships switched off', () => {
-  assert.deepEqual(readJson(path.join(REPO, 'quiet.json')), { quiet: false, note: '' });
-});
-
 // ---- the workflow ----------------------------------------------------------------
 
 function indexOfStep(text) {

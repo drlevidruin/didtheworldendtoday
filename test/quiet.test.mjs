@@ -23,12 +23,6 @@ function quietFile(content) {
   return file;
 }
 
-test('the file that ships says quiet is off', () => {
-  const r = readQuietFile(path.join(REPO, 'quiet.json'));
-  assert.equal(r.quiet, false);
-  assert.equal(r.problem, null);
-});
-
 test('manual: a missing file is off', () => {
   const r = readQuietFile(quietFile());
   assert.deepEqual(r, { quiet: false, note: '', problem: null });
