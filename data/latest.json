@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T21:32:24.598Z",
+  "buildTime": "2026-11-17T21:47:22.431Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 16:32 ET",
+  "etStamp": "2026-11-17 16:47 ET",
   "score": 93,
   "fired": [
     "flights",
@@ -50,8 +50,8 @@
     "date": "2026-11-17",
     "score": 93
   },
-  "headlinesRead": 1590,
-  "lastSuccessAt": "2026-11-17T21:32:24.598Z",
+  "headlinesRead": 1657,
+  "lastSuccessAt": "2026-11-17T21:47:22.431Z",
   "rollingFallback": false,
   "cats": {
     "flights": 17,
@@ -182,80 +182,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1329,
+      "count": 1333,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     },
     "bing": {
       "ok": true,
-      "count": 216,
-      "error": "6 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "count": 283,
+      "error": null,
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     },
     "x": {
       "ok": true,
-      "count": 4,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:32:24.598Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T21:32:24.598Z"
+      "lastOkAt": "2026-11-17T21:47:22.431Z"
     }
   },
   "stories": [
@@ -267,7 +268,7 @@
       "url": "https://www.msn.com/en-us/technology/aviation/faa-pauses-router-installations-after-nationwide-ground-stop/ar-AA2hCCT7",
       "source": "The Wall Street Journal on MSN",
       "publishedAt": "2026-11-16T22:34:39.000Z",
-      "latestAt": "2026-11-17T21:00:00.000Z",
+      "latestAt": "2026-11-17T21:29:21.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 32,
       "outletNames": [
@@ -423,7 +424,7 @@
       "url": "https://www.digitaltrends.com/phones/apple-services-hit-by-widespread-outage-reports-users-flag-problems-with-icloud-app-store-and-apple-pay/",
       "source": "Digital Trends",
       "publishedAt": "2026-11-17T01:51:00.000Z",
-      "latestAt": "2026-11-17T20:39:00.000Z",
+      "latestAt": "2026-11-17T20:57:00.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
       "outlets": 32,
       "outletNames": [
@@ -492,7 +493,7 @@
       "publishedAt": "2026-11-17T18:06:21.000Z",
       "latestAt": "2026-11-17T21:07:26.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "Reuters",
         "WTVB",
@@ -500,9 +501,10 @@
         "Euronext Markets: Real-time Stock Market Data | live",
         "Gulf News",
         "marketscreener.com",
-        "Yahoo! Finance Canada"
+        "Yahoo! Finance Canada",
+        "Toronto Star"
       ],
-      "score": 3.78
+      "score": 3.97
     },
     {
       "id": "c9aaf37c3d99",
@@ -640,15 +642,16 @@
       "publishedAt": "2026-11-17T10:42:00.000Z",
       "latestAt": "2026-11-17T18:42:09.000Z",
       "firstSeenAt": "2026-11-17T17:56:49.781Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "13WHAM-TV",
         "KVAL",
         "WSMH",
         "The Baltimore Sun",
-        "WWMT"
+        "WWMT",
+        "KATU"
       ],
-      "score": 4.09
+      "score": 4.41
     },
     {
       "id": "8feb10e23b97",
@@ -697,7 +700,7 @@
       "title": "Outage Math at the Airport: When a Four-Hour Uber Beats Waiting Out a Ground Stop",
       "url": "https://www.usnews.com/news/business/articles/2026-11-17/outage-math-at-the-airport-when-a-four-hour-uber-beats-waiting-out-a-ground-stop",
       "source": "U.S. News & World Report",
-      "publishedAt": "2026-11-17T04:38:00.000Z",
+      "publishedAt": "2026-11-17T04:10:00.000Z",
       "latestAt": "2026-11-17T19:09:49.000Z",
       "firstSeenAt": "2026-11-17T17:56:49.781Z",
       "outlets": 12,
@@ -715,7 +718,7 @@
         "Orlando Sentinel",
         "AP News"
       ],
-      "score": 3.57
+      "score": 3.53
     },
     {
       "id": "cd727588fafd",
@@ -1095,7 +1098,7 @@
       "url": "https://www.aol.com/articles/equinor-detects-ongoing-cyberattack-output-181620000.html",
       "source": "AOL",
       "publishedAt": "2026-11-17T10:27:00.000Z",
-      "latestAt": "2026-11-17T18:27:32.000Z",
+      "latestAt": "2026-11-17T20:53:40.000Z",
       "firstSeenAt": "2026-11-17T18:55:24.881Z",
       "outlets": 4,
       "outletNames": [
@@ -1149,7 +1152,7 @@
       "url": "https://www.dallasnews.com/business/technology/article/fbi-dallas-hackers-warning-22535909.php",
       "source": "The Dallas Morning News",
       "publishedAt": "2026-11-17T12:31:00.000Z",
-      "latestAt": "2026-11-17T20:37:43.000Z",
+      "latestAt": "2026-11-17T20:37:57.000Z",
       "firstSeenAt": "2026-11-17T20:39:00.012Z",
       "outlets": 2,
       "outletNames": [
@@ -1662,6 +1665,22 @@
       "score": 1.52
     },
     {
+      "id": "95fc0522f486",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
+      "source": "CyberSecurityNews",
+      "publishedAt": "2026-11-17T21:41:49.000Z",
+      "latestAt": "2026-11-17T21:41:49.000Z",
+      "firstSeenAt": "2026-11-17T21:47:22.431Z",
+      "outlets": 1,
+      "outletNames": [
+        "CyberSecurityNews"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "ff98ba9c88a9",
       "cat": "internet",
       "kind": "news",
@@ -1758,22 +1777,6 @@
       "score": 1.38
     },
     {
-      "id": "098b22096bcc",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple Hit by Major Outage as Tech Chaos Spreads",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQS1FzZ3h6UUJzenI2TmhvV3pwMEFiMGtMcVZWR1hqNDloYUlKOUlfSk1SZERZSVRPNm5tN1Y1eUdycm1iTlJscFJZcFpkVG05SVFPT0Z1U0M0YnZVMDRyVE9YVko1UWRzUTRvbzlzWVdEakttd0hYTjFIMGtpY21tdWFrRQ?oc=5",
-      "source": "The Daily Beast",
-      "publishedAt": "2026-11-17T19:40:10.000Z",
-      "latestAt": "2026-11-17T19:40:10.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Daily Beast"
-      ],
-      "score": 1.38
-    },
-    {
       "id": "b47a68c32a95",
       "cat": "weather",
       "kind": "news",
@@ -1822,6 +1825,22 @@
       "score": 1
     },
     {
+      "id": "3e8a11fcbb51",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Dow Jones Industrial Average Falls 1.5% in Tuesday Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBCbG5XRzVLRnFkMUZLTnpoZkJhQnJsNG9tTXZOUElvV0R2djA3Q3N1cjlYZUNlblZZWFlrNU4xQk80RUJxS1M1d0RqV051NUZadUV3VXN1eWladw?oc=5",
+      "source": "www.tokenpost.com",
+      "publishedAt": "2026-11-17T21:15:08.000Z",
+      "latestAt": "2026-11-17T21:15:08.000Z",
+      "firstSeenAt": "2026-11-17T21:47:22.431Z",
+      "outlets": 1,
+      "outletNames": [
+        "www.tokenpost.com"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "c9f85d217c9d",
       "cat": "markets",
       "kind": "news",
@@ -1836,6 +1855,24 @@
         "The Economic Times"
       ],
       "score": 0.99
+    },
+    {
+      "id": "109c22827c38",
+      "cat": "germs",
+      "kind": "news",
+      "title": "13 years ago, on this date Indiana had their second largest tornado outbreak",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOTTVZN2hTaFF3cFlUQV9JNjJKVE10X1EtT0dwQ3pkTjRORkxqM29BUnMtd1F2MWNnYUlOOFpuUk8yRklvZU9fTmQ5dVd0RkNnNUh6YW5XQk0zMWZYenc0cldhcUlLQjdnN2JHQkJVRDFLMzQ4OHFQYV91QUFCN2ZsR183NTM4WHJpaVYwUzV5VzBfYnpGZWZz0gGcAUFVX3lxTE4tNVl2ZnJ6ZS1OS0l5SHkwVDVaMlpNWlpLanprbHdsZ21nUGRDdTBCbHBKNUFNeDdoeENCYlB3TVB1Q0p2NmRwNzdlTnFYYTFqby1PcFp3RlloM3lDSmdrWlgtTmI1ZGFTeTNuQV96dVFCVlBRTUk4aXRSbjVNMUI0SW5IU0NHd3NvOTNpZkphRUxrcXcxdjd1UzVDdA?oc=5",
+      "source": "Fox 59",
+      "publishedAt": "2026-11-17T21:03:14.000Z",
+      "latestAt": "2026-11-17T21:03:14.000Z",
+      "firstSeenAt": "2026-11-17T21:47:22.431Z",
+      "outlets": 1,
+      "outletNames": [
+        "Fox 59"
+      ],
+      "score": 0.99,
+      "quiet": true,
+      "quietReason": "headline mentions tornado"
     },
     {
       "id": "44d28f38a30e",
@@ -1886,22 +1923,6 @@
       "score": 0.99
     },
     {
-      "id": "7f56a25427bd",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Data-centre stocks plunge on tighter US chip export controls",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdWItZzd3a0IzRzlGbFdZZzBQYUljcDV5dHZienFlUk04dHFRTjJXT1RfYVc5ZlFRZjNfR3VMQUxiMXBObTJkNEpiZjhpQUJHdHVOc05zMkxpUmNxX0F3SFBHZ2J1c1hEdDhEZmFKTWx5eTBNaWZYd1diTWREZXVWamNoNWgyM3o2VlFqaGtHV3NhNzZORWJjeUhTTzkxa2xwaUhQZmNkNA?oc=5",
-      "source": "The Malaysian Reserve",
-      "publishedAt": "2026-11-17T11:43:41.000Z",
-      "latestAt": "2026-11-17T11:43:41.000Z",
-      "firstSeenAt": "2026-11-17T13:31:03.951Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Malaysian Reserve"
-      ],
-      "score": 0.97
-    },
-    {
       "id": "9af8d53d2ba6",
       "cat": "weather",
       "kind": "news",
@@ -1950,22 +1971,6 @@
         "The Watchers - Watching the world evolve and transform"
       ],
       "score": 0.94
-    },
-    {
-      "id": "9cb00eae0c9e",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Delaware urges poultry owners to take precautions as bird flu concerns rise",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNVWFnSTlvb094c2ZtRC1fV2w5amZkaEJ1azNFUW9CU2xOdGtoRDNaaHBJdzhZYlNJNXp0MnpiZlJEdk8tQWd1VkticUNOaFlBakt1SldpeTdycUxxRVV2Z2FkS3cxSjM3TGFZay1ONUQzOEVORGp6Q3oxRUgxdU1KWFVQUkp0bERoVXN6OU9ibE5ZLU1BRjJPeVc1cmZnWmoybTRxVGZWT2tRdm1ScHdsR2p2cWZieU93NmRxdWtzS3pJMEw1V1hsc2I4R0lwNHZGVk8zYTZwaVRCQnFqNG1Lcg?oc=5",
-      "source": "CoastTV",
-      "publishedAt": "2026-11-17T15:26:00.000Z",
-      "latestAt": "2026-11-17T15:26:00.000Z",
-      "firstSeenAt": "2026-11-17T19:34:37.068Z",
-      "outlets": 1,
-      "outletNames": [
-        "CoastTV"
-      ],
-      "score": 0.93
     },
     {
       "id": "42bf52d37cd0",
