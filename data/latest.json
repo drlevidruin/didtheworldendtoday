@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T20:28:57.987Z",
+  "buildTime": "2026-11-17T20:39:00.012Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 15:28 ET",
+  "etStamp": "2026-11-17 15:39 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -54,22 +54,22 @@
     "date": "2026-11-17",
     "score": 92
   },
-  "headlinesRead": 1627,
-  "lastSuccessAt": "2026-11-17T20:28:57.987Z",
+  "headlinesRead": 1645,
+  "lastSuccessAt": "2026-11-17T20:39:00.012Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 18,
-    "space": 4,
+    "flights": 20,
+    "space": 3,
     "earth": 4,
-    "internet": 10,
-    "hacks": 38,
-    "grid": 5,
-    "weather": 4,
+    "internet": 13,
+    "hacks": 35,
     "germs": 4,
-    "markets": 4,
-    "sun": 4,
+    "grid": 4,
     "animals": 3,
-    "ai": 2
+    "ai": 2,
+    "weather": 4,
+    "markets": 4,
+    "sun": 4
   },
   "vital": {
     "quake": {
@@ -186,80 +186,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
       "count": 1330,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     },
     "bing": {
       "ok": true,
-      "count": 252,
-      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "count": 274,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
-      "count": 12,
+      "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     },
     "x": {
       "ok": true,
-      "count": 5,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:28:57.987Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T20:28:57.987Z"
+      "lastOkAt": "2026-11-17T20:39:00.012Z"
     }
   },
   "stories": [
@@ -429,9 +430,9 @@
       "url": "https://www.digitaltrends.com/phones/apple-services-hit-by-widespread-outage-reports-users-flag-problems-with-icloud-app-store-and-apple-pay/",
       "source": "Digital Trends",
       "publishedAt": "2026-11-17T01:51:00.000Z",
-      "latestAt": "2026-11-17T20:26:00.000Z",
+      "latestAt": "2026-11-17T20:36:13.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 31,
+      "outlets": 32,
       "outletNames": [
         "Digital Trends",
         "The Independent on MSN",
@@ -463,9 +464,10 @@
         "The Times of India",
         "AOL.com",
         "WBRC 6 News",
-        "UA.NEWS"
+        "UA.NEWS",
+        "The Sunday Guardian"
       ],
-      "score": 4.3
+      "score": 4.33
     },
     {
       "id": "681e458a3f27",
@@ -475,7 +477,7 @@
       "url": "https://www.techjuice.pk/hackers-breach-178-websites-including-bbc-cnn-and-zoom-in-major-cyberattack/",
       "source": "TechJuice",
       "publishedAt": "2026-11-17T03:27:00.000Z",
-      "latestAt": "2026-11-17T18:56:15.000Z",
+      "latestAt": "2026-11-17T19:02:23.000Z",
       "firstSeenAt": "2026-11-17T12:15:44.284Z",
       "outlets": 6,
       "outletNames": [
@@ -507,25 +509,6 @@
         "Yahoo Finance"
       ],
       "score": 4.28
-    },
-    {
-      "id": "af6bc72c8b91",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Nationwide UK blackout explained after viral November 19 power cut claims",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPWnZRQ3hXLU5hOTZLVTA2Y2pIeXhoQXg2OHVjbk90eURnYUZwQl9QQUVVaUQxdnlSSUV3Y2Zwb3dEamcyZWxqaEQxOHFWNDlJbXZTdUlnTFhjbXhBcklBcGhmQjQxbzZUbjRtRklsOUtwM2VLeXZLdUhKYTFKZ3ZvVVpzSDk0WkhpOFdXN2VnRHNVSTA?oc=5",
-      "source": "malverngazette.co.uk",
-      "publishedAt": "2026-11-17T10:24:40.000Z",
-      "latestAt": "2026-11-17T10:24:40.000Z",
-      "firstSeenAt": "2026-11-17T11:45:41.326Z",
-      "outlets": 4,
-      "outletNames": [
-        "malverngazette.co.uk",
-        "The Worcester News",
-        "Evesham Journal",
-        "Ledbury Reporter"
-      ],
-      "score": 4.11
     },
     {
       "id": "8feb10e23b97",
@@ -584,23 +567,46 @@
       "score": 2.73
     },
     {
-      "id": "5fd3280f9984",
-      "cat": "grid",
+      "id": "80868cee0799",
+      "cat": "earth",
       "kind": "news",
-      "title": "EWU Women's basketball game against UC Irvine canceled due to power outage",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPLXFtcFhwM3pGTVF4NHRWZTE0emhmSGItRFlhQ1NPb2xQcjlJQjdVWXlvSXRTbXZqX0RyM255N21rVDYxS0k2aVJxN1lodWhfcE1XZ0ZMcmFSZGVnWkFIX0tkd1VRbkoyLWJkTlNibXFPLXgtWXdXNjlxdV9qb0Z6c0U0ZlREZi1nMkJJMnRNVEU0V00zOVJ3aGFfVFltdmpUSUtJRTdTYzdwSmhrc05DNGJCUXdNVXpOdkxBX0ZrMWNqeFlWbDR0S0dIWjVHVTRadFFGUWl1YXU4SDYtaHNzSXg2WQ?oc=5",
-      "source": "KXLY.com",
-      "publishedAt": "2026-11-17T04:15:57.000Z",
-      "latestAt": "2026-11-17T09:46:21.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 4,
+      "title": "Magnitude 6.8 earthquake strikes Indonesia's Banda Sea, tremors felt across eastern regions",
+      "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/17/magnitude-68-earthquake-strikes-indonesia039s-banda-sea-tremors-felt-across-eastern-regions",
+      "source": "The Star",
+      "publishedAt": "2026-11-16T23:18:00.000Z",
+      "latestAt": "2026-11-17T13:18:00.000Z",
+      "firstSeenAt": "2026-11-17T20:16:45.097Z",
+      "outlets": 7,
       "outletNames": [
-        "KXLY.com",
-        "KREM",
-        "Eastern Washington University Athletics",
-        "UCI Athletics"
+        "The Star",
+        "Anadolu Ajansı",
+        "Daily Sun",
+        "thechronicle.com.ph",
+        "A News",
+        "en.bd-pratidin.com",
+        "Muslim Network TV"
       ],
-      "score": 2.7
+      "score": 2.48,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "8fea1f91f5e5",
+      "cat": "earth",
+      "kind": "news",
+      "title": "3.6 magnitude earthquake hits city in southeastern S. Korea: weather agency",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1TeHl0ZGNfLWs1TmRENUhHR0VrVGw2SHdwTW12OG5ULVJWcXR3ODVKRHhrZEFHVGxLU190cDhuanBxbjBZQjNTcVBUWnFWQXRXSTJxb2htakFJdzTSAVZBVV95cUxOTFhCY2RxaUd2dmQyZ3A4MFM1aU1iZjdueWpQNlZvTG5BNzFoZlUzaXduSFNlZGppc1lXU2tXUjM0UWxsQzdYYnVKVEZzOWZKVFlSdXRRdw?oc=5",
+      "source": "K-VIBE",
+      "publishedAt": "2026-11-17T14:52:34.000Z",
+      "latestAt": "2026-11-17T15:22:55.000Z",
+      "firstSeenAt": "2026-11-17T17:47:06.855Z",
+      "outlets": 3,
+      "outletNames": [
+        "K-VIBE",
+        "The Korea Times",
+        "The Korea Herald"
+      ],
+      "score": 2.46
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-16",
@@ -646,35 +652,6 @@
       "score": 4.09
     },
     {
-      "id": "13311d6c0ac1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Mullin defends use of government plane to go to college football game after ground stop",
-      "url": "https://www.baltimoresun.com/2026/11/17/mullin-nationwide-ground-stop/",
-      "source": "The Baltimore Sun",
-      "publishedAt": "2026-11-17T04:10:00.000Z",
-      "latestAt": "2026-11-17T18:35:00.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 14,
-      "outletNames": [
-        "The Baltimore Sun",
-        "KTVN",
-        "News4JAX",
-        "Associated Press News",
-        "Toronto Star",
-        "The Washington Post",
-        "Los Angeles Times",
-        "Bozeman Daily Chronicle",
-        "Around Prague",
-        "ABC News - Breaking News, Latest News and Videos",
-        "AP News",
-        "Ottumwa Courier",
-        "Boston Herald",
-        "CTV News"
-      ],
-      "score": 3.74
-    },
-    {
       "id": "136ab8542f66",
       "cat": "hacks",
       "kind": "news",
@@ -714,81 +691,63 @@
       "score": 3.56
     },
     {
-      "id": "ba9b4d40eedf",
+      "id": "sig:faa-stop:TEB:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T19:17:12.554Z",
+      "latestAt": "2026-11-17T19:17:12.554Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
+    },
+    {
+      "id": "cd727588fafd",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
-      "source": "Click2Houston",
-      "publishedAt": "2026-11-17T16:12:55.000Z",
-      "latestAt": "2026-11-17T17:10:12.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "title": "Chase Bank outage sparks issues for customers at several major US banks",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMUdtOWppRUF4RGN4cm10aU1PRTZZaWRVVGpoUFJjRFpFeW9BV3hEYm9zV0NMQ0djNDhIY2V6Mm9Zb3pWOXp0cHVjVUljQUdxeFhqdnhJRDRHNklJb0tWOWRoc1dNc1VoLW80Rm1tVl9vaHBjTTBFTGM1T1pIUzVUUW9JN1Q2Vm9aMGRaamdNalRnUQ?oc=5",
+      "source": "The Independent",
+      "publishedAt": "2026-11-16T21:53:00.000Z",
+      "latestAt": "2026-11-17T13:58:33.000Z",
+      "firstSeenAt": "2026-11-17T14:10:18.338Z",
+      "outlets": 4,
+      "outletNames": [
+        "The Independent",
+        "Newswav",
+        "Yahoo Finance UK",
+        "Yahoo Finance"
+      ],
+      "score": 3.06
+    },
+    {
+      "id": "70eecf50dbad",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Apple reporting major outage impacting Apple Pay, App Store",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQlpsQV9ZUmlHS2FEbmJ2a2IwLWZkd0twV1h2TzhVNjZGWnkyb2N6b3ZNaExFcG9MYU9RWmdBN1owQzVja0J5X3UzX0JkV1RNcGc2U2gyaDBJbU1IcDd5c1NyRXR1SVoyUWhOTWNTNk9ldmpRcXduVG1GUzRxUzlvODRUQWNQUTA?oc=5",
+      "source": "MySA",
+      "publishedAt": "2026-11-17T18:33:49.000Z",
+      "latestAt": "2026-11-17T18:49:23.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
       "outlets": 2,
       "outletNames": [
-        "Click2Houston",
-        "News4JAX"
+        "MySA",
+        "cedarnews.net"
       ],
-      "score": 2.8
-    },
-    {
-      "id": "714ddb59fd11",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Predicting Hail Damage On Researchers' Radar",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZ1dobmEyWGNSWS1XTE8yVjQzZVRnMVd5aE1QTVFna2NISm84VUN5OEp1YUx2blp0ZTNvdlkzWndLVFNZOC1nTHlKM04zTTV1bTF4Z0YzSFBRVFZ0S05tT0ZMU2V4RDJPWnlPdGw4dU53TTBLRVgwNktseE1YVmY3UTVBMWFNdw?oc=5",
-      "source": "Mirage News",
-      "publishedAt": "2026-11-17T17:08:10.000Z",
-      "latestAt": "2026-11-17T17:13:39.000Z",
-      "firstSeenAt": "2026-11-17T17:17:00.109Z",
-      "outlets": 3,
-      "outletNames": [
-        "Mirage News",
-        "The National Tribune",
-        "UQ News"
-      ],
-      "score": 2.58
-    },
-    {
-      "id": "80868cee0799",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.8 earthquake strikes Indonesia's Banda Sea, tremors felt across eastern regions",
-      "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/17/magnitude-68-earthquake-strikes-indonesia039s-banda-sea-tremors-felt-across-eastern-regions",
-      "source": "The Star",
-      "publishedAt": "2026-11-16T23:18:00.000Z",
-      "latestAt": "2026-11-17T13:18:00.000Z",
-      "firstSeenAt": "2026-11-17T20:16:45.097Z",
-      "outlets": 7,
-      "outletNames": [
-        "The Star",
-        "Anadolu Ajansı",
-        "Daily Sun",
-        "thechronicle.com.ph",
-        "A News",
-        "en.bd-pratidin.com",
-        "Muslim Network TV"
-      ],
-      "score": 2.48,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
-      "id": "8fea1f91f5e5",
-      "cat": "earth",
-      "kind": "news",
-      "title": "3.6 magnitude earthquake hits city in southeastern S. Korea: weather agency",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1TeHl0ZGNfLWs1TmRENUhHR0VrVGw2SHdwTW12OG5ULVJWcXR3ODVKRHhrZEFHVGxLU190cDhuanBxbjBZQjNTcVBUWnFWQXRXSTJxb2htakFJdzTSAVZBVV95cUxOTFhCY2RxaUd2dmQyZ3A4MFM1aU1iZjdueWpQNlZvTG5BNzFoZlUzaXduSFNlZGppc1lXU2tXUjM0UWxsQzdYYnVKVEZzOWZKVFlSdXRRdw?oc=5",
-      "source": "K-VIBE",
-      "publishedAt": "2026-11-17T14:52:34.000Z",
-      "latestAt": "2026-11-17T15:22:55.000Z",
-      "firstSeenAt": "2026-11-17T17:47:06.855Z",
-      "outlets": 3,
-      "outletNames": [
-        "K-VIBE",
-        "The Korea Times",
-        "The Korea Herald"
-      ],
-      "score": 2.46
+      "score": 2.7
     },
     {
       "id": "6fe2b0ca1078",
@@ -798,7 +757,7 @@
       "url": "https://www.themirror.com/news/us-news/nsa-comms-outage-network-down-2113689",
       "source": "The Mirror US",
       "publishedAt": "2026-11-17T07:54:00.000Z",
-      "latestAt": "2026-11-17T16:05:05.000Z",
+      "latestAt": "2026-11-17T17:11:00.000Z",
       "firstSeenAt": "2026-11-17T16:16:49.463Z",
       "outlets": 2,
       "outletNames": [
@@ -826,24 +785,6 @@
       "score": 2.24,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
-    },
-    {
-      "id": "e40f3dcbf7dc",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Is 90-day power outage today, Nov. 17, in PBC? FEMA to send test alert",
-      "url": "https://www.usatoday.com/story/news/local/westpb/2026/11/17/90-day-power-outage-nov-17-in-palm-beach-county/92823700007/",
-      "source": "USA TODAY",
-      "publishedAt": "2026-11-17T09:45:00.000Z",
-      "latestAt": "2026-11-17T17:50:00.000Z",
-      "firstSeenAt": "2026-11-17T18:05:50.108Z",
-      "outlets": 3,
-      "outletNames": [
-        "USA TODAY",
-        "The Palm Beach Post",
-        "Yahoo"
-      ],
-      "score": 2.23
     },
     {
       "id": "2e30a9b7cd85",
@@ -886,95 +827,117 @@
       "score": 2.18
     },
     {
-      "id": "4896fd2b975f",
-      "cat": "internet",
+      "id": "0b6dba6e1bfa",
+      "cat": "grid",
       "kind": "news",
-      "title": "Is NSA Down? America's Spy Agency Hit by Major Outage As Officials Scramble To Assess Damage",
-      "url": "https://www.ibtimes.sg/nsa-down-americas-spy-agency-hit-by-major-outage-officials-scramble-assess-damage-96333",
-      "source": "International Business Times Singapore",
-      "publishedAt": "2026-11-17T03:25:00.000Z",
-      "latestAt": "2026-11-17T17:25:20.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "title": "Nearly 3,800 California customers face 5 hours without electricity after midday outage",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9pNHJZWUdHZEp0cjFtTzhJdDJMaDRpOHBTWTBpMi1wV3JVQWZCajhmbnBxRy1NSmVCczQ2NmhfQy1Cb1VZQ1FYMFplT3dkalF0OEVUNF9weHRSQTFBQ1dVQnV2bWdqZjRSTjB0dk43RDlCeHBBWEZ1c19udnpqenc?oc=5",
+      "source": "Yahoo News UK",
+      "publishedAt": "2026-11-16T23:22:00.000Z",
+      "latestAt": "2026-11-16T23:22:00.000Z",
+      "firstSeenAt": "2026-11-17T10:15:25.360Z",
       "outlets": 2,
       "outletNames": [
-        "International Business Times Singapore",
-        "International Business Times, Singapore Edition"
+        "Yahoo News UK",
+        "The Cool Down"
       ],
-      "score": 2.14
+      "score": 1.64
     },
     {
-      "id": "76cac740da8b",
-      "cat": "markets",
+      "id": "fd99c05c1347",
+      "cat": "germs",
       "kind": "news",
-      "title": "China Advanced Smart Circuit Breaker Solution Provider MLELE at Yiwu PV Expo: Solar Energy Integration",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQRXFNaU45UFFaVXltZC1MNDY0b01iblhrSTRVai1abG9pdWI5Tnpma3pkaE9feXlNckdGS3F2d0dtbFJrVWlscXY5TVhVODhSTThCYVJnZXRuRHVuVGViaENXMXdObTRBQkt0WFVMSmplaHZOTjZLYlU3SE05S0NYX3Zzamloa0N1TmxURklRNy1OdGtGODhSSlREZlYtekJDUFFJcG93dmNMeV9SUWtxS2RnbmY1dU4zbXQtNy0tQVh1MXFsOGlEV0txajJkdlpmRUJtdkExSGl5YWJ0eWc5OGFTV0dLU05YWVE?oc=5",
-      "source": "IndyStar",
-      "publishedAt": "2026-11-17T10:30:56.000Z",
-      "latestAt": "2026-11-17T10:30:56.000Z",
-      "firstSeenAt": "2026-11-17T14:46:34.896Z",
-      "outlets": 2,
-      "outletNames": [
-        "IndyStar",
-        "The Journal News | lohud.com"
-      ],
-      "score": 1.86
-    },
-    {
-      "id": "12ae11536682",
-      "cat": "space",
-      "kind": "news",
-      "title": "Airplane-size asteroid 2024 BJ flies closer than the moon in orbit animation",
-      "url": "https://www.msn.com/en-us/news/other/airplane-size-asteroid-2024-bj-flies-closer-than-the-moon-in-orbit-animation/vi-AA2hDF9W",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-17T10:50:00.000Z",
-      "latestAt": "2026-11-17T11:01:59.000Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
-      "outlets": 2,
-      "outletNames": [
-        "Space on MSN",
-        "Dailymotion on MSN"
-      ],
-      "score": 1.72
-    },
-    {
-      "id": "6cce963e1f51",
-      "cat": "sun",
-      "kind": "news",
-      "title": "X9 time-lapse: Sun unleashes the largest solar flare since 2017",
-      "url": "https://www.msn.com/en-us/news/other/x9-time-lapse-sun-unleashes-the-largest-solar-flare-since-2017/vi-AA2hDCA5",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-17T10:50:00.000Z",
-      "latestAt": "2026-11-17T11:01:51.000Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
-      "outlets": 2,
-      "outletNames": [
-        "Space on MSN",
-        "Dailymotion on MSN"
-      ],
-      "score": 1.72
-    },
-    {
-      "id": "sig:faa-stop:TEB:2026-11-17",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T19:17:12.554Z",
-      "latestAt": "2026-11-17T19:17:12.554Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
+      "source": "Global Agriculture",
+      "publishedAt": "2026-11-17T15:14:39.000Z",
+      "latestAt": "2026-11-17T15:14:39.000Z",
+      "firstSeenAt": "2026-11-17T15:31:45.442Z",
       "outlets": 1,
       "outletNames": [
-        "FAA"
+        "Global Agriculture"
       ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
+      "score": 1.39
+    },
+    {
+      "id": "2bd37ab7e95f",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Fake National Grid warning about ‘major blackout’ shared online",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbkRLOXprdzRBZDFyUjAxSXhJeGFXSU9OTVQtYjhtMGRPa1p4WjYyTzZsRzBCVml1Q2kwUFBTS3BPNlp4dkI1RnlMZ29HeUtSLU50YjB2eFVvQUZjYmJqS181ZWJLVjRtQmtrNGJma1NCZG5LRDJTay1uT0FERjlVRmNDWHhTY00?oc=5",
+      "source": "Full Fact",
+      "publishedAt": "2026-11-17T16:14:35.000Z",
+      "latestAt": "2026-11-17T16:14:35.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "Full Fact"
+      ],
+      "score": 1.3
+    },
+    {
+      "id": "e8dd29d897f1",
+      "cat": "grid",
+      "kind": "news",
+      "title": "No global blackout expected, Luxembourg grid operator says",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMFB3aldoUkFNbDZUTmZrekRrX0M5bFEzMXMtS1ZIUlJGWDdGcTdrdFNoSWtvR2VWcDdMX0VBcHR4TVZZcjF1V01ucFV3cnFpdXRmZHhpQW8wanhwNGU4Q2V2ZTVqMlg1R3Z0YzdiUGJ1bV9uU2xFaVFiWkQ5ZExKckQ0alZqaXNqbV9kS29BMkx2NDZ1SzQwUHdUV2xxMzZhSXJuVUJoaUlMU1E?oc=5",
+      "source": "Luxembourg Times",
+      "publishedAt": "2026-11-17T13:35:23.000Z",
+      "latestAt": "2026-11-17T13:35:23.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "Luxembourg Times"
+      ],
+      "score": 1.24
+    },
+    {
+      "id": "915d66a0face",
+      "cat": "animals",
+      "kind": "news",
+      "title": "Tens of millions of red crabs swarm across Australia's Christmas Island in their spectacular annual migration",
+      "url": "https://www.msn.com/en-za/news/other/tens-of-millions-of-red-crabs-swarm-across-australias-christmas-island-in-their-spectacular-annual-migration/vi-AA2hCZO1",
+      "source": "DW South Africa on MSN",
+      "publishedAt": "2026-11-17T07:47:17.000Z",
+      "latestAt": "2026-11-17T07:47:17.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 1,
+      "outletNames": [
+        "DW South Africa on MSN"
+      ],
+      "score": 1.2
+    },
+    {
+      "id": "7755b3ac59be",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Microsoft Restores Outlook, Teams and Copilot After Global Outage",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWEdRNVVWSTJPckM1dEtPc1lhQW1HeUxvZUVJODZlSENtQXpHSWNjdnFFNERqcVRJYlFIVlhLbGd2amlhemQteF9kbjJFTHctaDFPelR4Q1ZCdDNsQlZRaVozS0VzdWU1WkNlclE4QVdhcWdndTJWaC1Ec3B3R09aalhYZjhiWGVKTll3Q3hOdmUwRzA4VHowY1Zn?oc=5",
+      "source": "Refindustry",
+      "publishedAt": "2026-11-16T23:45:00.000Z",
+      "latestAt": "2026-11-16T23:45:00.000Z",
+      "firstSeenAt": "2026-11-17T14:10:18.338Z",
+      "outlets": 1,
+      "outletNames": [
+        "Refindustry"
+      ],
+      "score": 1.06
+    },
+    {
+      "id": "bd2a111b832a",
+      "cat": "grid",
+      "kind": "news",
+      "title": "About 2,600 customers to lose power during Ottawa County substation upgrade work",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcFRCclhMRXVmaGVUdnlWRWQtcUxJWXF1dndqVHJWUmZxMW1yQXRuWGh1QXROcUFsMlRaSnRqYThXQjY0dVhSU1ZjOTlMYlBmREx6T2t5OU1yMk9ya1dPRlFaak1EVkxfVWwyUXo3Y1RUV0plbnE0WmhCbVprYjZjajhMVE9SeFBsemltcTNmRzZsMG0wWnNpTHRSbzA5aFZIdVRNd0xQbExTOW1lUnNKUjBQR0VzWTBxMXZNUGg3c3MyMWVfSDdwS1Jn?oc=5",
+      "source": "WWMT",
+      "publishedAt": "2026-11-17T20:23:28.000Z",
+      "latestAt": "2026-11-17T20:23:28.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "WWMT"
+      ],
+      "score": 1
     },
     {
       "id": "3b49d5ddbc4f",
@@ -1002,22 +965,21 @@
       "score": 3.36
     },
     {
-      "id": "35860456c9f1",
-      "cat": "flights",
+      "id": "ba9b4d40eedf",
+      "cat": "hacks",
       "kind": "news",
-      "title": "What we know about what caused the FAA's nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPaW8xRjJ5aVF4T09CZHdOUjd1eGpPZDY4NHFsLW9FVHc3NXl4M0hLV1dWMGlpeTlseFZzZ2dUUEZWRXF0dUhmaTZwTnVLWjFST3pqdUtmdlduTjZpNGpTLWVSUFR6ZnRFV1REQmF5dTdPMXlUOVBrWE1rNnNEblNFSlhXWQ?oc=5",
-      "source": "Axios",
-      "publishedAt": "2026-11-16T20:32:33.000Z",
-      "latestAt": "2026-11-17T13:51:11.000Z",
-      "firstSeenAt": "2026-11-17T06:35:21.637Z",
-      "outlets": 3,
+      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
+      "source": "Click2Houston",
+      "publishedAt": "2026-11-17T16:12:55.000Z",
+      "latestAt": "2026-11-17T17:10:12.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 2,
       "outletNames": [
-        "Axios",
-        "Around Prague",
-        "Technology Org"
+        "Click2Houston",
+        "News4JAX"
       ],
-      "score": 3.01
+      "score": 2.8
     },
     {
       "id": "bc84ae3870f8",
@@ -1056,30 +1018,6 @@
       "score": 2.77
     },
     {
-      "id": "483804f87cec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "'Software bug' blamed for online banking outage | Morning in America",
-      "url": "https://www.yahoo.com/news/videos/software-bug-blamed-online-banking-141928009.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-16T20:37:58.000Z",
-      "latestAt": "2026-11-17T17:12:50.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 9,
-      "outletNames": [
-        "Yahoo",
-        "KGET.com",
-        "NEWS10 ABC",
-        "WKRN News 2",
-        "WFLA",
-        "NBC4 WCMH-TV",
-        "WJBF",
-        "NewsNation",
-        "WSPA 7News"
-      ],
-      "score": 2.72
-    },
-    {
       "id": "2db880a1742d",
       "cat": "flights",
       "kind": "news",
@@ -1112,24 +1050,6 @@
         "WWLP"
       ],
       "score": 2.67
-    },
-    {
-      "id": "cd727588fafd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank outage sparks issues for customers at several major US banks",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMUdtOWppRUF4RGN4cm10aU1PRTZZaWRVVGpoUFJjRFpFeW9BV3hEYm9zV0NMQ0djNDhIY2V6Mm9Zb3pWOXp0cHVjVUljQUdxeFhqdnhJRDRHNklJb0tWOWRoc1dNc1VoLW80Rm1tVl9vaHBjTTBFTGM1T1pIUzVUUW9JN1Q2Vm9aMGRaamdNalRnUQ?oc=5",
-      "source": "The Independent",
-      "publishedAt": "2026-11-16T21:53:00.000Z",
-      "latestAt": "2026-11-17T13:58:33.000Z",
-      "firstSeenAt": "2026-11-17T14:10:18.338Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Independent",
-        "Newswav",
-        "Yahoo Finance UK"
-      ],
-      "score": 2.64
     },
     {
       "id": "0d7eab61dcdd",
@@ -1239,42 +1159,6 @@
       "score": 2.33
     },
     {
-      "id": "7505a12e583b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FEMA emergency alert Tuesday: No blackout, cyberattack or action required",
-      "url": "https://www.stamfordadvocate.com/news/article/fema-emergency-alert-test-cyberattack-blackout-22534888.php",
-      "source": "The Advocate",
-      "publishedAt": "2026-11-17T05:58:00.000Z",
-      "latestAt": "2026-11-17T14:00:47.000Z",
-      "firstSeenAt": "2026-11-17T14:10:18.338Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Advocate",
-        "CT Insider",
-        "Stamford Advocate"
-      ],
-      "score": 2.23
-    },
-    {
-      "id": "99833eef5980",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Mullin flew to football game less than 24 hours after FAA ground stop",
-      "url": "https://www.msn.com/en-us/news/other/mullin-flew-to-football-game-less-than-24-hours-after-faa-ground-stop/ar-AA2hDrLS",
-      "source": "USA TODAY on MSN",
-      "publishedAt": "2026-11-17T09:48:10.000Z",
-      "latestAt": "2026-11-17T19:49:00.000Z",
-      "firstSeenAt": "2026-11-17T18:45:37.991Z",
-      "outlets": 3,
-      "outletNames": [
-        "USA TODAY on MSN",
-        "CNN",
-        "Central Oregon Daily"
-      ],
-      "score": 2.2
-    },
-    {
       "id": "5757daefe85e",
       "cat": "hacks",
       "kind": "news",
@@ -1309,6 +1193,23 @@
         "Insider"
       ],
       "score": 2.17
+    },
+    {
+      "id": "4896fd2b975f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is NSA Down? America's Spy Agency Hit by Major Outage As Officials Scramble To Assess Damage",
+      "url": "https://www.ibtimes.sg/nsa-down-americas-spy-agency-hit-by-major-outage-officials-scramble-assess-damage-96333",
+      "source": "International Business Times Singapore",
+      "publishedAt": "2026-11-17T03:25:00.000Z",
+      "latestAt": "2026-11-17T17:25:20.000Z",
+      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "outlets": 2,
+      "outletNames": [
+        "International Business Times Singapore",
+        "International Business Times, Singapore Edition"
+      ],
+      "score": 2.14
     },
     {
       "id": "ebbcae13fefd",
@@ -1484,23 +1385,6 @@
       "score": 1.82
     },
     {
-      "id": "65a55854096f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "How Travel Advisors Responded to FAA Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNm5NUlJzWkRRaXF6UXRFV1dGdEgwSzl3cTZMQUFfb2FpNnVqVmNBX1RlVV82NmxLcWhHNzFuR0hBVGFOWVdvNlVYcElRNnFuSDgtYzZ2WEh5YzBFeUhTVGdUVEdzRVo5VlNlMUxVR3FkcFExYWpHUEo2YnV5MFFfUlA3REFQVjgyVVA5eExWWGhOdjNL?oc=5",
-      "source": "Travel Pulse",
-      "publishedAt": "2026-11-17T13:15:00.000Z",
-      "latestAt": "2026-11-17T18:44:58.000Z",
-      "firstSeenAt": "2026-11-17T18:55:24.881Z",
-      "outlets": 2,
-      "outletNames": [
-        "Travel Pulse",
-        "Travel Weekly"
-      ],
-      "score": 1.81
-    },
-    {
       "id": "386032b4932a",
       "cat": "hacks",
       "kind": "news",
@@ -1548,23 +1432,6 @@
       "outletNames": [
         "Yahoo",
         "The National CIO Review"
-      ],
-      "score": 1.72
-    },
-    {
-      "id": "9b67e47784c0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "He Pulls $250,000 From His 401(k) at 63, Planning to Move It Into an IRA Within 60 Days. If a Bank Outage Pushes the Deposit Past Day 60, the IRS Can Tax All of It: About $51,000",
-      "url": "https://finance.yahoo.com/markets/options/articles/pulls-250-000-401-k-143153711.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-17T06:31:00.000Z",
-      "latestAt": "2026-11-17T14:31:00.000Z",
-      "firstSeenAt": "2026-11-17T14:56:43.267Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "24/7 Wall St."
       ],
       "score": 1.72
     },
@@ -1637,23 +1504,6 @@
       "score": 1.71
     },
     {
-      "id": "ea194cee54b9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Massive U.S. Banking Outage! Chase, Wells Fargo, Bank Of America Hit After FAA & Microsoft Chaos",
-      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNWG11QXdtN0NiTHNqdHNaMkJkZkRkTmswQm5MSEtTN3FMYmhaWlNSSEFSM1J3T19lMFhzOHlaYkJ0UkdPSTBQeE8yTGdQVGVXYnFGN1RmWThOR1FEZzdUaFd6Ui1BXzZ0T2lRU1liTHhZcGt0UTJIczE5UWZDSU96c1BSU3hQUTdEUFdiSzFSbGtzZkprdWNraUU2Y2d1UThrWVhyY3ptSmNnTlNzbjRxbVBWbE82MjJRSUtEaGJwajgzbVRGQkI4RU1ubnVDbEZVbFBzUmtRQmZoVS1IVU0xUUpzZjlnRE4xblBmTGxhZy1nTWtGTWdVZVdraEM0bEd00gGGAkFVX3lxTE1tdkJwdWs1QjRYMlJ4MEJEUXFmVEpjVWZoZERjZXlaakh0VUdNYmdrQ083Yl9mX0VLLTVfNUd0bEg1ZmtRSl9YVzNKVHFpQXRwT3Zpc1Yxbjk5aENtZVlvanlfZ3E1MTN6anVNM2F4YTFGb0lfNml3R0NobFNNRHRXZHJaaGVzTHl6aEdLS0Vvak9pYm9seVZrYkFYelROV2t0Vzlyb2xvTG5YSVBwVFJXYkVoMUgzWnEzcWJJNzgwSXMzVU9ZMDI2RjNmT1FwZERZdkFGMUl2bFhiSmh5ZExCdnd2dnZaUWtUWHBYOEZnbkJBQ19DMDNHbndReXdJcXd1dk5oWlE?oc=5",
-      "source": "The Times of India",
-      "publishedAt": "2026-11-16T21:01:16.000Z",
-      "latestAt": "2026-11-17T08:35:07.000Z",
-      "firstSeenAt": "2026-11-17T20:28:57.987Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Times of India",
-        "Convergence Now"
-      ],
-      "score": 1.71
-    },
-    {
       "id": "e0bd7656430d",
       "cat": "hacks",
       "kind": "news",
@@ -1671,21 +1521,21 @@
       "score": 1.64
     },
     {
-      "id": "0b6dba6e1bfa",
-      "cat": "grid",
+      "id": "7f1f8c9363fa",
+      "cat": "flights",
       "kind": "news",
-      "title": "Nearly 3,800 California customers face 5 hours without electricity after midday outage",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9pNHJZWUdHZEp0cjFtTzhJdDJMaDRpOHBTWTBpMi1wV3JVQWZCajhmbnBxRy1NSmVCczQ2NmhfQy1Cb1VZQ1FYMFplT3dkalF0OEVUNF9weHRSQTFBQ1dVQnV2bWdqZjRSTjB0dk43RDlCeHBBWEZ1c19udnpqenc?oc=5",
-      "source": "Yahoo News UK",
-      "publishedAt": "2026-11-16T23:22:00.000Z",
-      "latestAt": "2026-11-16T23:22:00.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
+      "title": "Mullin defends use of government plane to go to LSU-Texas game after ground stop",
+      "url": "https://apnews.com/article/markwayne-mullin-nationwide-ground-stop-lsu-1155f7fe532f55b272d3b9fefcd68d2b",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-17T09:16:00.000Z",
+      "latestAt": "2026-11-17T18:35:00.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
       "outlets": 2,
       "outletNames": [
-        "Yahoo News UK",
-        "The Cool Down"
+        "Associated Press News",
+        "AP News"
       ],
-      "score": 1.64
+      "score": 1.62
     },
     {
       "id": "6d960feb6e43",
@@ -1773,21 +1623,20 @@
       "score": 1.56
     },
     {
-      "id": "e127ce1b29a2",
-      "cat": "grid",
+      "id": "5f4b0eabb2f5",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Overnight power outage scheduled in Fredericktown",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbE9JVi10eUpNVEJleDNJaVAxUHg2dFNQbE1kbHQ4aEthVk1jb2RWRGd3UWoyamVBY0NSMkZwbXhfYmZiQkZpTWQyWnRqdEttalNSZFYzZEZfRHJHV2hjS1luTFhMSEk4NUZ3Qk9BVE1uUHQtZUpxWWVwV1FyZmlNM1l0aWpRZkxzTGJWVXZCLTM?oc=5",
-      "source": "KFVS12",
-      "publishedAt": "2026-11-16T21:48:45.000Z",
-      "latestAt": "2026-11-17T14:05:49.000Z",
-      "firstSeenAt": "2026-11-17T14:10:18.338Z",
-      "outlets": 2,
+      "title": "FBI warns that AI is helping hackers launch faster global cyberattacks",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOV0NvNEZRRmpvdTdsbk5ndHZUeHU4azVNQmtSOEV2NU1yYlNZenlBbDNMZ3g3aWZCN3EycGM0VE9JeUlUVzZ0cW5EdExveC1XWkQ4WEFFUTQ0NnhCVkFiMVczQ09RSEgtVHRSY0dXVkdsX1VKY3YxdkxBYXhOZ2x6N1g2amNqZGYyQ0lta0RMaHJ6M19LaWRHcWV3?oc=5",
+      "source": "Dallas News",
+      "publishedAt": "2026-11-17T20:37:09.000Z",
+      "latestAt": "2026-11-17T20:37:09.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
       "outletNames": [
-        "KFVS12",
-        "My Mo Info"
+        "Dallas News"
       ],
-      "score": 1.45
+      "score": 1.4
     },
     {
       "id": "61bdf64af468",
@@ -1822,22 +1671,6 @@
       "score": 1.39
     },
     {
-      "id": "fd99c05c1347",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
-      "source": "Global Agriculture",
-      "publishedAt": "2026-11-17T15:14:39.000Z",
-      "latestAt": "2026-11-17T15:14:39.000Z",
-      "firstSeenAt": "2026-11-17T15:31:45.442Z",
-      "outlets": 1,
-      "outletNames": [
-        "Global Agriculture"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "73c22f23ac27",
       "cat": "internet",
       "kind": "news",
@@ -1854,36 +1687,116 @@
       "score": 1.38
     },
     {
-      "id": "915d66a0face",
-      "cat": "animals",
+      "id": "098b22096bcc",
+      "cat": "internet",
       "kind": "news",
-      "title": "Tens of millions of red crabs swarm across Australia's Christmas Island in their spectacular annual migration",
-      "url": "https://www.msn.com/en-za/news/other/tens-of-millions-of-red-crabs-swarm-across-australias-christmas-island-in-their-spectacular-annual-migration/vi-AA2hCZO1",
-      "source": "DW South Africa on MSN",
-      "publishedAt": "2026-11-17T07:47:17.000Z",
-      "latestAt": "2026-11-17T07:47:17.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "title": "Apple Hit by Major Outage as Tech Chaos Spreads",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQS1FzZ3h6UUJzenI2TmhvV3pwMEFiMGtMcVZWR1hqNDloYUlKOUlfSk1SZERZSVRPNm5tN1Y1eUdycm1iTlJscFJZcFpkVG05SVFPT0Z1U0M0YnZVMDRyVE9YVko1UWRzUTRvbzlzWVdEakttd0hYTjFIMGtpY21tdWFrRQ?oc=5",
+      "source": "The Daily Beast",
+      "publishedAt": "2026-11-17T19:40:10.000Z",
+      "latestAt": "2026-11-17T19:40:10.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
       "outlets": 1,
       "outletNames": [
-        "DW South Africa on MSN"
+        "The Daily Beast"
       ],
-      "score": 1.2
+      "score": 1.38
     },
     {
-      "id": "7755b3ac59be",
-      "cat": "ai",
+      "id": "0d0c2e655f16",
+      "cat": "flights",
       "kind": "news",
-      "title": "Microsoft Restores Outlook, Teams and Copilot After Global Outage",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWEdRNVVWSTJPckM1dEtPc1lhQW1HeUxvZUVJODZlSENtQXpHSWNjdnFFNERqcVRJYlFIVlhLbGd2amlhemQteF9kbjJFTHctaDFPelR4Q1ZCdDNsQlZRaVozS0VzdWU1WkNlclE4QVdhcWdndTJWaC1Ec3B3R09aalhYZjhiWGVKTll3Q3hOdmUwRzA4VHowY1Zn?oc=5",
-      "source": "Refindustry",
-      "publishedAt": "2026-11-16T23:45:00.000Z",
-      "latestAt": "2026-11-16T23:45:00.000Z",
-      "firstSeenAt": "2026-11-17T14:10:18.338Z",
+      "title": "FAA ground stop could cost major airlines $345 million",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMkhhQXFGcGNGWEZpc0tpbGZxRHU0X2RiZkJvN0xLVTNEV3BURWswa2lpeGZ2V2tvbHFpMDd1MTBxcGlLdzM5djdOVEROMFlETk9VZDR2cm5TdERPdEtOWVJsMm5MdlVzOTJ6b0dDaXJrdDBvWlJCOTg0UUI1emdIcU5jYnpuUjlQbEx2cE42c1NvVnQxcDJqOFNhN2wzZw?oc=5",
+      "source": "The Spokesman-Review",
+      "publishedAt": "2026-11-17T19:39:45.000Z",
+      "latestAt": "2026-11-17T19:39:45.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
       "outlets": 1,
       "outletNames": [
-        "Refindustry"
+        "The Spokesman-Review"
       ],
-      "score": 1.06
+      "score": 1.38
+    },
+    {
+      "id": "9395030e4455",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA halts upgrades after failure that grounded flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZXg0cUZXNUpxWHUyV1hwVlM2akdpcWNuX2xkNnJpZE5RajQ2a2RPb3hMZVRGRGlRRm1PWHhucm1VQTRuczJzeWJQN1B4Y0xfUEk2NzVaeU9BLXJiaGpydFVFU2lyc2l6dTRjS3k3MF9FR0ZHQ3MwaTFjeVk2UXpWS1BpeVk3UzBFWXRGTkh1aGpHUlBfenN0UEpqaE1uYzM5MnNJY3lwQjNJeVFZc3c4c0ZB?oc=5",
+      "source": "OregonLive.com",
+      "publishedAt": "2026-11-17T19:29:00.000Z",
+      "latestAt": "2026-11-17T19:29:00.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "OregonLive.com"
+      ],
+      "score": 1.37
+    },
+    {
+      "id": "1f4000ce7c19",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Fallout over nationwide ground stop continues",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNVzctQzRoaEpKUWxKaG5JeE94eV9DSXBTVnh4M19tQ0E1a1U3andFR3YydU9WS09XRzhCZDlQV3RqSUswZFdhMkVaVmRGQnB0Snp0aDFVTVA2SGVmNjBvcFNnUm44SzNOTkQxcWFwd05IcjRHU2ZpZ1V5cl9vQUFDQ3gwNmhITWtVaEtHMmkxYzA4SUV5SkdnSlpVYXMweXdaWEpNYWp6a2RkRWJ6MkVyaWc5Tng1OTJJNkJCeEU0U3I4LTVPdzc3RHQxWXU?oc=5",
+      "source": "news8000.com",
+      "publishedAt": "2026-11-17T19:27:00.000Z",
+      "latestAt": "2026-11-17T19:27:00.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "news8000.com"
+      ],
+      "score": 1.37
+    },
+    {
+      "id": "b8b97857130f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Tim McGraw Misses Hondo Rodeo Fest Opener After Nationwide FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQTEstWTdlRFp6ZzBqRkxsMWdYVEN1bkYwMEpmNTdhTm5Ma2U2ZlppMXh5SUpkOGxxZ0JaTHBwOHlZU29KTDJTNVRmbGItSExoSFg3blp3czRmSDYwcFU4N2UyTDFrcHlaTzBJejRPbXNQUGJMUWlSeHpONzdtZzNDS2RzR2JQOEhUSmttLWpDY1drR2tFa3ZwWVdWd2lGSlZzSmY2MjZ3Um9nV0thQTdxY0JGclNPUQ?oc=5",
+      "source": "Backstage Country",
+      "publishedAt": "2026-11-17T19:25:22.000Z",
+      "latestAt": "2026-11-17T19:25:22.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "Backstage Country"
+      ],
+      "score": 1.37
+    },
+    {
+      "id": "853d1e48989d",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Major outage hits US spy agency's classified communication system: Report",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPeDBfUUNzN19aQmpQTzRaR3M2LUVSbXdESzBQTFB1WDdTWGZhb0tLTEVEdzdpdnZsQTJmSUhQVDVzN3BBQVlXR0IwMmtiRTdMZHV5cUQ0dm9aekcxa2YySDE4LU14eHYwOEx6ZlhGbmJyYTVaRlhPbFRtcjZFbDRqUTkwY3BkelQwc1dLVG95a0ZBSGVqc25WMVhJVDhxa0JhUDQ2NzlEWmtrUFNqZnc0cERDcTVWYXZMcGp1MUxxTHBfbUNkM1Z1RHZ5N1cxeDZldHh1OG9kWkhjOGFvVHNBQTZKaElxaUFMYkstN2lRZzBQT3pWV3fSAfsBQVVfeXFMTWhfdk5NUVY2T09yQUJQMUlEamdVOW5iQVQtNFpOUF9SX2EtSldCZEJIQk01MEJTNjFwTmxYZjRjTUN0Rl9VTS1SdlJ2NGJuUnZ0VEZ3LXJHY3F1MkptbjJVbWpZR3VuRUhMZDdsTU5JcW9pQ0dlVktZLWFtRU80WndtX25IV2tiRUVuVTJJcFprdThGckRnbXV5XzlSWWxkdThRZktXN1c5VE5QYm5tVkNOZzFnbzdCYlpiT0I5WEozLXJoWlA4bzYxRkR6VzhmaTM5U2hjVWhXUUtpNlB0cG5XdmhBM3UzWEZGbDR5Y1FpYTZwaHgzMzl0NkU?oc=5",
+      "source": "India Today",
+      "publishedAt": "2026-11-17T19:21:13.000Z",
+      "latestAt": "2026-11-17T19:21:13.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "India Today"
+      ],
+      "score": 1.37
+    },
+    {
+      "id": "c79efcbed01b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "US flight shutdown: FAA halts router installations after nationwide disruption",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZjBlWm1QMG5fdnc1Unk1eFpLOTlzWmstblZOYTBKdXVOZ0xQbG9sNUpIZmgxUWtWUlBBTkJpYUZ6UU4wWVVEaFN4ZDV6VTVzVlBqaS1wdFI5blJnVk00M3VmOVNwT0l5TGtUWm44UU10U3BOSVdKcnJ6eldOMHVHS2dFRzNObHVQSE9wa1gxZzh0TU5wZlJCV0gyMURkOU5iMG1ZcnV4QWNsN1hxbFpiN3ZHUjZnYXJscmk0ZzBEN294YnVCSHE00gHaAUFVX3lxTFBxbk5FcEUybXg4UTZkZ3pieEJ1SFdTWkFFYUFMOHZ2NHdTaXRxMi1EQVRiR3JnN2lmTjBVWlpLdldaYTBDMndfZXk3LTFEOVI5QlZoa1h5Mms2SEVlUUh5YVA2cmhMaU9hQ2J6d21rcGxuM3B2Zm1nMUZxdkhzaEJVYmxfRmtKa0hXMFVTc1RiOEV3RHowSlVya19sVkdvbHN5ZFJPdHBrSm1ubnFDMFpZV19VbU9ZZS1LSFZkeWNhSWhELXlaQ2VQWFJPdTdySkwwZUh3d1g5N2NB?oc=5",
+      "source": "Gulf News",
+      "publishedAt": "2026-11-17T19:09:06.000Z",
+      "latestAt": "2026-11-17T19:09:06.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "Gulf News"
+      ],
+      "score": 1.37
     },
     {
       "id": "b47a68c32a95",
@@ -1994,6 +1907,22 @@
       "outlets": 1,
       "outletNames": [
         "The Malaysian Reserve"
+      ],
+      "score": 0.97
+    },
+    {
+      "id": "ee8406b79e09",
+      "cat": "markets",
+      "kind": "news",
+      "title": "US stocks fall as Nvidia-led sell-off pushes Nasdaq into correction",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZ3FLcEtFQkFRLWlra2RsR1Vtc1Z1YTU4cEpLNGlVOEVwTnM2Z1lvVlJ2UmNNTTJ4WklINnZvTzUwNXdnR3NvcElWejJoUUdyNFVxM1B1YkZtQTd5TEZ3czBzUnFna0s2ZVRqREFGRTJJU0UwX1Nwc0RGSzFNbUhWVUtjd21WSS1ST0lRLTEzZF9SR1cxd3ZidHdsa21TZFJ4QXZPdktMS1dQZmlFWkpad21yTDdaaXl0ZTlxbTN5aTJTbGVpSVExc2xMWjdrQ2Z5WXfSAdgBQVVfeXFMUEVIT0cxaU0wdkhsa2ZFUjJteTBzM1E4SV9wODhmblYwMjZfX3g3VkpvazlEemVPNmVQSFpnZGJibnQ5aUZGdmIzX293em5Wd2lRZVdQWTdPVGJXcWluNWh3WjN4aXZOTExKdXQ2ejU3V1UyaWVZWmhNZU1JWTBteG9sQkN5cW1nOFJ0ODdUUnBpckN0bXd3MGRmclJYVGxsakhENHZMMTVMZzBHZGRlcDhoell4dTN3ZEZKcmRubzBfN1ZJNXJvd0dSNmZBcFE0VlZZOWV5akxz?oc=5",
+      "source": "BusinessLine",
+      "publishedAt": "2026-11-17T02:22:10.000Z",
+      "latestAt": "2026-11-17T02:22:10.000Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "outlets": 1,
+      "outletNames": [
+        "BusinessLine"
       ],
       "score": 0.97
     },
@@ -2114,6 +2043,22 @@
       "score": 0.87
     },
     {
+      "id": "71fa591b08de",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Sun blasts powerful X3.3-class solar flare - see stunning spacecraft views",
+      "url": "https://www.msn.com/en-us/news/other/sun-blasts-powerful-x33-class-solar-flare-see-stunning-spacecraft-views/vi-AA2hDMQo",
+      "source": "Dailymotion on MSN",
+      "publishedAt": "2026-11-17T12:01:56.000Z",
+      "latestAt": "2026-11-17T12:01:56.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "Dailymotion on MSN"
+      ],
+      "score": 0.86
+    },
+    {
       "id": "fc6c351fbf01",
       "cat": "space",
       "kind": "news",
@@ -2144,6 +2089,22 @@
         "Times Now"
       ],
       "score": 0.85
+    },
+    {
+      "id": "207f8d0cfa9d",
+      "cat": "weather",
+      "kind": "news",
+      "title": "'Stretched to the limit': Heat wave prompts US electrical grid emergency",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQWR6SWxnZk5VYWhkc0t2X0RmV1VIS3RPS1ZuTHN5c0tGcmoxcXBJR2t1N0tDS0dhQUNzcFZ3c1NmVVdqN0hFUmdHdGZmMGNlSFFMVG44WnBLbjl4RXlEbDlORGZQQ3Q0TjNkbVF2V3dSOGRHZ09XQ2dRWWNDMWpDd081Q0g2cUZjMFIzV0xTZF93bGhUN19zSFJB0gGfAUFVX3lxTE81RGtaZ1dyZ2t6U1dKc1NKZzg5dm5qNTI1S1h5cmNzNkpCaWVYbGFuZlRWNzM5UmZCSDhaSEhmZlc2Z1luRU4wd3NaRkNJNC1qalpuYXJrWlVCR2tYY3F5WUgxUHZBYjhWc1VvV3hWNjc3QXNfaHdPcVFBVnM4d05vUTJiNUV2SW1xRlA5SWoyRHJPQVltOUdnTlVodWVJYw?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-17T08:27:13.000Z",
+      "latestAt": "2026-11-17T08:27:13.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "score": 0.8
     }
   ]
 }
