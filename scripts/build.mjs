@@ -38,7 +38,7 @@ import { NOT_FOUND_LINE, QUIET_LINE, subline } from './templates/copy.mjs';
 import { aboutPage, almanacPage } from './templates/pages.mjs';
 import { feedXml } from './templates/feed.mjs';
 import { faviconSvg, fontFilesIn, ogSvg, renderPng } from './templates/graphics.mjs';
-import { pageHtml } from './templates/home.mjs';
+import { pageHtml, splitHeadlines } from './templates/home.mjs';
 import { notFoundPage } from './templates/layout.mjs';
 import { manifestJson, robotsTxt, sitemapXml } from './templates/seo.mjs';
 
@@ -116,16 +116,22 @@ function readDays(p, firstEdition, gk, variety) {
 }
 
 // A page stays under 100 KB raw, CSS included. A normal page is about 60 KB; if a
-// very busy one would go over, the last items of its list (the lowest-ranked
-// headlines of a day page, the oldest days of the homepage and then the lowest of
-// today's other headlines) are left off the page (api/today.json still has every story).
+// very busy one would go over, the last items of its list are left off the page
+// (api/today.json still has every story): the lowest-ranked headlines of a day page, and on
+// the homepage today's other headlines from the end of the rest (the editor's picks never
+// go) and only then the oldest days.
 export const PAGE_BUDGET = 96 * 1000;
 
-function fitPage(render, list, budget = PAGE_BUDGET) {
+// The most of today's other headlines the homepage lists besides the editor's picks. The day page lists them all.
+export const HOME_REST_MAX = 50;
+
+// The page with as much of `list` as fits the budget: the whole list, or when that is over, 5% less at a time (at least
+// one) until it fits or only `least` items are left. render gets the items that stay.
+function fitPage(render, list, budget = PAGE_BUDGET, least = 1) {
   let keep = list.length;
   let html = render(list);
-  while (Buffer.byteLength(html) > budget && keep > 1) {
-    keep = Math.max(1, keep - Math.max(1, Math.ceil(keep * 0.05)));
+  while (Buffer.byteLength(html) > budget && keep > least) {
+    keep = Math.max(least, keep - Math.max(1, Math.ceil(keep * 0.05)));
     html = render(list.slice(0, keep));
   }
   return html;
@@ -246,14 +252,16 @@ export function build(rootOrOpts, maybeOpts) {
   fs.mkdirSync(p.dist, { recursive: true });
 
   // ---- the homepage: today, then up to six earlier days ---------------------------------
-  // Today's See more holds every other headline of the day. A page over its budget gives up its earlier days
-  // first, and only then the lowest of those headlines.
+  // Today's See more holds the editor's picks and then the rest of the day's other headlines, at most HOME_REST_MAX
+  // of the rest. A page over its budget gives up, in this order: the rest of today's headlines, from the end (the
+  // picks never go), and only when none of the rest is left, its earlier days, the oldest first.
   const feed = [todayView, ...filed.filter((v) => v.date < today)];
   const feedDays = feed.slice(0, cfg.edition.homeDays);
-  const homeHtml = (days, stories) => pageHtml({ ...shared, root: './', kind: 'home', day: todayView, days: [{ ...todayView, stories }, ...days.slice(1)], olderDays: feed.length - days.length });
+  const homeHtml = (days, restMax) => pageHtml({ ...shared, root: './', kind: 'home', day: todayView, days: [todayView, ...days.slice(1)], restMax, olderDays: feed.length - days.length });
   const homeBudget = opts.pageBudget ?? PAGE_BUDGET;
-  let home = fitPage((days) => homeHtml(days, todayView.stories), feedDays, homeBudget);
-  if (Buffer.byteLength(home) > homeBudget) home = fitPage((stories) => homeHtml(feedDays.slice(0, 1), stories), todayView.stories, homeBudget);
+  const rest = splitHeadlines(todayView).rest.slice(0, HOME_REST_MAX);
+  let home = fitPage((kept) => homeHtml(feedDays, kept.length), rest, homeBudget, 0);
+  if (Buffer.byteLength(home) > homeBudget) home = fitPage((days) => homeHtml(days, 0), feedDays, homeBudget);
   write('index.html', home);
 
   // ---- one page per stored day -------------------------------------------------------------

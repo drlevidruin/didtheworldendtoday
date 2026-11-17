@@ -233,15 +233,15 @@ test('editor: quiet mode, by the switch or by the automatic check, means no call
   assert.equal((await run(s, client)).status, 'written');
 });
 
-test('editor: after the daily cap of 20 calls it stops, and a new day starts at zero', async () => {
-  assert.equal(EDITOR_DAILY_CAP, 20);
-  assert.equal(cfg.editor.dailyCap, 20);
+test('editor: after the daily cap of 24 calls it stops, and a new day starts at zero', async () => {
+  assert.equal(EDITOR_DAILY_CAP, 24);
+  assert.equal(cfg.editor.dailyCap, 24);
   const s = setup({ state: { date: DATE, calls: EDITOR_DAILY_CAP, usd: 0.5, lastWriteAt: null, lastIdsHash: null } });
   const client = fakeClient(answer(GOOD));
   const r = await run(s, client);
   assert.equal(r.status, 'skipped');
   assert.equal(client.calls.length, 0);
-  assert.match(r.lines[0], /already called the API 20 times today \(the cap is 20\)/);
+  assert.match(r.lines[0], /already called the API 24 times today \(the cap is 24\)/);
   // one call under the cap still goes through
   const under = setup({ state: { date: DATE, calls: EDITOR_DAILY_CAP - 1, usd: 0.5, lastWriteAt: null, lastIdsHash: null } });
   const last = fakeClient(answer(GOOD));
@@ -372,7 +372,7 @@ test('editor: the day\'s money is spread until midnight: the gap is the minutes 
 
 test('editor: with less than one call of regular money left there is no regular call, and the log says the rest is saved for breaking news', async () => {
   const at = (usd, calls = 12) => setup({ state: stateFor({ calls, usd, lastCallAt: et(5, 0) }) }); // the last call was 5 hours ago
-  for (const usd of [1.2, 1.15, 1.07, 1.3999]) {
+  for (const usd of [1.2, 1.15, 1.07]) {
     const s = at(usd);
     const client = fakeClient(answer(GOOD));
     const r = await run(s, client);
@@ -440,8 +440,8 @@ test('editor: a state file from before lastCallAt still works: the gap is counte
   assert.deepEqual(Object.keys(JSON.parse(s.read('data/state/editor.json'))), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash'], 'a skip writes nothing');
   const on = await run(s, client, { now: et(11, 0) });
   assert.equal(on.status, 'written', on.lines.join(' | '));
-  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent']);
-  assert.deepEqual([stateOf(s).calls, stateOf(s).lastCallAt, stateOf(s).breakingCalls, stateOf(s).bigSent], [3, et(11, 0), 0, []]);
+  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent', 'bigTerms', 'failStreak']);
+  assert.deepEqual([stateOf(s).calls, stateOf(s).lastCallAt, stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).bigTerms, stateOf(s).failStreak], [3, et(11, 0), 0, [], [], 0]);
   // a lastCallAt that is not a time is ignored, and the last write stands in
   const odd = setup({ state: { ...old, lastCallAt: 'sometime' } });
   assert.equal((await run(odd, fakeClient(answer(GOOD)), { now: et(10, 0) })).status, 'skipped');
@@ -648,10 +648,10 @@ test('editor: a good answer is written as today\'s edition, with the lead story\
   const checked = validateEdition(e, { date: DATE, used: new Set(), byId: new Map(), excluder });
   assert.equal(checked.ok, true);
   assert.deepEqual(checked.dropped, []);
-  // the state: eight keys, one call, today's spend, the write time, the hash of the stories it read, when the call was made, no breaking call and no big story sent
-  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent']);
+  // the state: ten keys, one call, today's spend, the write time, the hash of the stories it read, when the call was made, no breaking call, no big story sent and no failed call
+  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent', 'bigTerms', 'failStreak']);
   assert.deepEqual([stateOf(s).date, stateOf(s).calls, stateOf(s).usd, stateOf(s).lastWriteAt], [DATE, 1, 0.0108, NOW]);
-  assert.deepEqual([stateOf(s).lastCallAt, stateOf(s).breakingCalls, stateOf(s).bigSent], [NOW, 0, []]);
+  assert.deepEqual([stateOf(s).lastCallAt, stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).bigTerms, stateOf(s).failStreak], [NOW, 0, [], [], 0]);
   assert.match(stateOf(s).lastIdsHash, /^[0-9a-f]{16}$/);
 });
 
@@ -1355,7 +1355,9 @@ test('editor: the budget and the prices are in the config: $1.40 a day, and Opus
   assert.deepEqual(EDITOR_PRICES, { input: 4, output: 20, cacheWrite: 5, cacheRead: 0.2 });
   assert.equal(cfg.editor.dailyBudgetUsd, 1.4);
   assert.deepEqual(cfg.editor.prices, EDITOR_PRICES);
-  assert.equal(cfg.editor.dailyCap, 20);
+  assert.equal(cfg.editor.dailyCap, 24);
+  assert.equal(cfg.editor.bigTermsMax, 50, 'the searches of the big stories sent today');
+  assert.equal(cfg.editor.failWaitMinutes, 15, 'the wait after a failed call is 15 minutes times 2 for each one in a row');
   assert.equal(cfg.editor.minGapMinutes, 60);
   assert.equal(cfg.editor.model, EDITOR_MODEL);
   assert.equal(cfg.editor.maxStories, 80);
@@ -1442,16 +1444,18 @@ test('editor: at or over $1.40 it makes no call and says so in one line, and it 
     assert.deepEqual(listFiles(path.join(s.dataDir, 'editions')), [], `${usd}: no edition`);
     assert.equal(stateOf(s).calls, 3, `${usd}: nothing is counted`);
   }
-  // just under the budget, breaking news still calls (the last $0.25 is its reserve), and the call may end over the budget
-  const under = setup({ stories: [...dayStories(), trendingStory()], state: { date: DATE, calls: 3, usd: 1.3999, lastWriteAt: '2026-11-17T10:00:00.000Z', lastIdsHash: 'older' } });
+  // just under the budget, not even breaking news calls: a call that could end over the budget is not made
+  const under = setup({ stories: [...dayStories(), trendingStory()], state: { date: DATE, calls: 15, usd: 1.3999, lastWriteAt: '2026-11-17T10:00:00.000Z', lastIdsHash: 'older' } });
   const c1 = fakeClient(answer(GOOD, { usage: usageOf(1000, 100) }));
-  assert.equal((await run(under, c1)).status, 'written');
-  assert.equal(c1.calls.length, 1);
-  assert.equal(stateOf(under).usd, 1.4059, '1.3999 + 0.006');
+  const r1 = await run(under, c1);
+  assert.equal(r1.status, 'skipped');
+  assert.deepEqual(r1.lines, ['editor: $1.40 spent today, and the next call is reckoned at $0.09, which could pass the $1.40 cap']);
+  assert.equal(c1.calls.length, 0);
+  assert.equal(stateOf(under).usd, 1.3999, 'nothing is added');
   // a state from before this existed has no usd: it counts as zero, and the file gains it
   const old = setup({ state: { date: DATE, calls: 2, lastWriteAt: null, lastIdsHash: null } });
   assert.equal((await run(old, fakeClient(answer(GOOD)))).status, 'written');
-  assert.deepEqual(Object.keys(stateOf(old)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent']);
+  assert.deepEqual(Object.keys(stateOf(old)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent', 'bigTerms', 'failStreak']);
   // a spend that is not a number counts as zero too
   for (const usd of ['lots', null, -4, NaN, {}]) {
     const odd = at(usd);
@@ -1469,16 +1473,16 @@ test('editor: at or over $1.40 it makes no call and says so in one line, and it 
   assert.equal(stateOf(priced).usd, 4, 'and the prices fall back too');
 });
 
-test('editor: the day\'s spend stops the day: a breaking call may start under $1.40 and end over it, then every later run skips, and tomorrow starts at zero', async () => {
-  const s = setup({ stories: [...dayStories(), trendingStory()], state: { date: DATE, calls: 17, usd: 1.35, lastWriteAt: null, lastIdsHash: null } });
+test('editor: the day\'s spend stops the day: a call that could end over $1.40 is not made, every later run skips, and tomorrow starts at zero', async () => {
+  const s = setup({ stories: [...dayStories(), trendingStory()], state: { date: DATE, calls: 17, usd: 1.3, lastWriteAt: null, lastIdsHash: null } });
   const costly = () => fakeClient(answer(GOOD, { usage: usageOf(7735, 2413) }));
-  assert.equal((await run(s, costly())).status, 'written');
-  assert.equal(stateOf(s).usd, 1.4292, 'a call that starts under the budget may end over it');
+  assert.equal((await run(s, costly())).status, 'written', '$1.30 and a call reckoned at $0.09 is $1.39');
+  assert.equal(stateOf(s).usd, 1.3792);
   withExtra(s, 2);
   const blocked = costly();
   const next = await run(s, blocked, { now: hoursBefore(-2) });
   assert.equal(next.status, 'skipped');
-  assert.deepEqual(next.lines, ['editor: already spent $1.43 today (the cap is $1.40)']);
+  assert.deepEqual(next.lines, ['editor: $1.38 spent today, and the next call is reckoned at $0.09, which could pass the $1.40 cap']);
   assert.equal(blocked.calls.length, 0);
   // the next morning: a new day, a new budget, and new stories (yesterday's ids are used up)
   const newDay = dayStories().map((st) => ({ ...st, id: st.id.replace(/^s/, 'n') }));
@@ -1762,7 +1766,7 @@ test('editor: a breaking call may spend the reserve and ignores the pacing, but 
   // the call cap stops it too
   const capped = await go(day, lately({ calls: EDITOR_DAILY_CAP, usd: 0.5 }));
   assert.equal(capped.client.calls.length, 0);
-  assert.match(capped.r.lines[0], /^editor: already called the API 20 times today \(the cap is 20\)$/);
+  assert.match(capped.r.lines[0], /^editor: already called the API 24 times today \(the cap is 24\)$/);
   // pacing does not apply: $0.95 spent and the last call 20 minutes ago, and a regular call waits for hours
   const wait = await go(calmDay(), lately({ calls: 11, usd: 0.95 }));
   assert.equal(wait.r.status, 'skipped');
@@ -1889,12 +1893,12 @@ test('editor: at most 6 breaking calls a day: the sixth is made, the seventh is 
   assert.equal(seventh.client.calls.length, 0);
   assert.match(seventh.r.lines[0], /^editor: next regular call after \d+:\d\d [AP]M ET \(\d+-minute gap; \$0\.\d\d left for \d+ calls?\), and today's 6 breaking calls are used$/);
   assert.equal(stateOf(seventh.s).breakingCalls, 6);
-  // with no regular money either, the line is the saved one, and it still says the six are used
+  // the six are made, so the $0.25 reserve is free for regular calls: $1.20 spent leaves $0.20, which is 2 calls, and the line still says the six are used
   const poor = await go(stories, lately({ calls: 12, usd: 1.2, breakingCalls: 6 }));
-  assert.equal(poor.r.lines[0], "editor: no regular call, the rest of today's money is saved for breaking news ($1.20 spent of $1.40), and today's 6 breaking calls are used");
+  assert.match(poor.r.lines[0], /^editor: next regular call after \d+:\d\d [AP]M ET \(\d+-minute gap; \$0\.20 left for 2 calls\), and today's 6 breaking calls are used$/);
   // a day with no big story says nothing about it
   const calm = await go(calmDay(), lately({ calls: 12, usd: 1.2, breakingCalls: 6 }));
-  assert.equal(calm.r.lines[0], "editor: no regular call, the rest of today's money is saved for breaking news ($1.20 spent of $1.40)");
+  assert.match(calm.r.lines[0], /^editor: next regular call after \d+:\d\d [AP]M ET \(\d+-minute gap; \$0\.20 left for 2 calls\)$/);
   // the six are a day's: a new day starts at none
   const yesterday = await go(stories, lately({ date: '2026-11-16', calls: 9, usd: 1, breakingCalls: 6, lastCallAt: '2026-11-17T04:00:00.000Z' }));
   assert.equal(yesterday.r.lines[0], `editor: breaking news: ${BIG_TITLE}`);
@@ -1949,7 +1953,7 @@ test('editor: a call that is not a breaking call sends big stories first too, an
   assert.deepEqual([stateOf(s).breakingCalls, stateOf(s).bigSent], [0, ['big1']]);
 });
 
-test('editor: a breaking call that threw read nothing and is tried again 15 minutes later, and one that was answered but kept is not', async () => {
+test('editor: a breaking call that threw read nothing and is no breaking call: it is tried again 30 minutes later, and one that was answered but kept is not', async () => {
   const stories = withBig(trendingStory());
   const s = setup({ stories, state: lately() });
   const throwing = fakeClient(() => {
@@ -1958,13 +1962,13 @@ test('editor: a breaking call that threw read nothing and is tried again 15 minu
   const first = await run(s, throwing);
   assert.equal(first.status, 'failed');
   assert.deepEqual(first.lines, [`editor: breaking news: ${BIG_TITLE}`, 'editor: the call failed (overloaded), kept the current edition']);
-  assert.deepEqual([stateOf(s).calls, stateOf(s).breakingCalls, stateOf(s).bigSent], [2, 1, []]);
-  const soon = await run(s, throwing, { now: minutesAfter(10) });
-  assert.deepEqual(soon.lines, [`editor: next breaking call after 10:15 AM ET (15-minute gap): ${BIG_TITLE}`]);
+  assert.deepEqual([stateOf(s).calls, stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).failStreak], [2, 0, [], 1], 'it counts as a call, not as a breaking call');
+  const soon = await run(s, throwing, { now: minutesAfter(15) });
+  assert.deepEqual(soon.lines, ['editor: waiting until 10:30 AM ET after a failed call'], 'the breaking gap of 15 minutes is not enough after a failure');
   const good = fakeClient(answer(GOOD));
-  const retry = await run(s, good, { now: minutesAfter(15) });
+  const retry = await run(s, good, { now: minutesAfter(30) });
   assert.equal(retry.status, 'written', retry.lines.join(' | '));
-  assert.deepEqual([stateOf(s).calls, stateOf(s).breakingCalls, stateOf(s).bigSent], [3, 2, ['big1']]);
+  assert.deepEqual([stateOf(s).calls, stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).failStreak], [3, 1, ['big1'], 0]);
   // an answer that broke the checks was read, so the big story is not news again
   const t = setup({ stories, state: lately() });
   const kept = fakeClient(answer('not json'));
@@ -2098,4 +2102,203 @@ test('editor: isBig is 20000 searches, a signal scoring 5, or 8 outlets that fir
   assert.equal(isBig(seen(5, 1), now, { breakingOutlets: 5 }), true);
   assert.equal(isBig(seen(9, 5), now, { breakingNewHours: 6 }), true);
   assert.equal(isBig(mk({ trending: 50000 }), now, { breakingTrending: 60000 }), false);
+});
+
+// ---- phase 15: fixes from the review of phases 11 to 13 -------------------------------------------------------------
+
+// A client whose every call throws, the way an API outage looks.
+const failing = () =>
+  fakeClient(() => {
+    throw new Error('overloaded');
+  });
+
+// A whole day of runs, one every `step` minutes from midnight ET, and the minutes since midnight at which the client was called.
+async function wholeDay(s, client, { step = 5, from = 0, to = 24 * 60 } = {}) {
+  const made = [];
+  for (let m = from; m < to; m += step) {
+    const before = client.calls.length;
+    await run(s, client, { now: et(0, m) });
+    if (client.calls.length > before) made.push(m);
+  }
+  return made;
+}
+
+// A big story about one Google search: each new article is a new id, as the real feed files them.
+const article = (n, term = 'apple outage', over = {}) => trendingStory({ id: `big${n}`, title: `Apple outage, take ${n}: iCloud is back for some users`, trendTerm: term, ...over });
+
+test('editor: no call of any kind unless today\'s spend plus the call\'s reckoned cost is at most the budget, so a call cannot start at $1.39 and end at $1.48', async () => {
+  const day = withBig(trendingStory());
+  // $1.39 spent in 15 calls: a breaking call is reckoned at the $0.09 guess and could end at $1.48
+  const over = await go(day, lately({ calls: 15, usd: 1.39 }));
+  assert.equal(over.r.status, 'skipped');
+  assert.deepEqual(over.r.lines, ['editor: $1.39 spent today, and the next call is reckoned at $0.09, which could pass the $1.40 cap']);
+  assert.equal(over.client.calls.length, 0);
+  assert.deepEqual([stateOf(over.s).calls, stateOf(over.s).usd, stateOf(over.s).breakingCalls], [15, 1.39, 0], 'a skip counts nothing');
+  // a call costs today's average when that is more than the guess: $1.25 in 6 calls is $0.21 a call
+  const dear = await go(day, lately({ calls: 6, usd: 1.25 }));
+  assert.equal(dear.r.status, 'skipped');
+  assert.deepEqual(dear.r.lines, ['editor: $1.25 spent today, and the next call is reckoned at $0.21, which could pass the $1.40 cap']);
+  assert.equal(dear.client.calls.length, 0);
+  // the same state with the money to spare, and a call that is reckoned to end exactly on the budget, is made
+  const fits = await go(day, lately({ calls: 6, usd: 1.2 }));
+  assert.equal(fits.r.status, 'written', fits.r.lines.join(' | '));
+  const exact = await go(day, lately({ calls: 19, usd: 1.31 }));
+  assert.equal(exact.r.status, 'written', exact.r.lines.join(' | '));
+  assert.ok(stateOf(exact.s).usd <= 1.4);
+  // a regular call has the same rule: nothing is left over for it once the six breaking calls are made
+  const regular = await go(calmDay(), lately({ calls: 19, usd: 1.35, breakingCalls: 6, lastCallAt: et(2) }));
+  assert.equal(regular.r.status, 'skipped');
+  assert.equal(regular.client.calls.length, 0);
+});
+
+test('editor: one event is one breaking call: a new article about a Google search already sent today is not breaking, and a different search is', async () => {
+  const s = setup({ stories: withBig(article(1)), state: lately() });
+  const client = fakeClient(answer(GOOD));
+  const first = await run(s, client);
+  assert.equal(first.status, 'written', first.lines.join(' | '));
+  assert.deepEqual([stateOf(s).breakingCalls, stateOf(s).bigSent], [1, ['big1']]);
+  // 20 minutes later the feed files a new article about the same search: a new id, and not breaking again
+  putDay(s, withBig(article(1), article(2, 'Apple  OUTAGE')));
+  const second = await run(s, client, { now: minutesAfter(20) });
+  assert.equal(second.status, 'skipped', second.lines.join(' | '));
+  assert.match(second.lines[0], /^editor: next regular call after /);
+  assert.equal(client.calls.length, 1, 'no second breaking call for the same event');
+  assert.deepEqual([stateOf(s).breakingCalls, stateOf(s).bigTerms], [1, ['apple outage']], 'the search is remembered, spelled the way it first came');
+  // a different search is a different event
+  putDay(s, withBig(article(1), article(2), article(3, 'pixel outage')));
+  const third = await run(s, client, { now: minutesAfter(40) });
+  assert.equal(third.status, 'written', third.lines.join(' | '));
+  assert.deepEqual([stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).bigTerms], [2, ['big1', 'big2', 'big3'], ['apple outage', 'pixel outage']], 'every big story sent is remembered, each search once');
+  assert.deepEqual(sentAt(client, 1).slice(0, 3).map((x) => x.id), ['big1', 'big2', 'big3'], 'the big stories go first');
+  assert.ok(!JSON.stringify(sentAt(client, 1)).includes('trendTerm'), 'the search is the editor\'s own bookkeeping and is not sent');
+  // a big story with no search is judged by its id alone, and adds nothing to the searches
+  const plain = setup({ stories: withBig(trendingStory()), state: lately() });
+  assert.equal((await run(plain, fakeClient(answer(GOOD)))).status, 'written');
+  assert.deepEqual([stateOf(plain).bigSent, stateOf(plain).bigTerms], [['big1'], []]);
+  // an answer that was kept, not written, was still read: its searches are remembered too
+  const kept = setup({ stories: withBig(article(1)), state: lately() });
+  const refused = await run(kept, fakeClient(answer('', { stop_reason: 'refusal', usage: usageOf(5000, 0) })));
+  assert.equal(refused.status, 'kept');
+  assert.deepEqual(stateOf(kept).bigTerms, ['apple outage']);
+});
+
+test('editor: the searches of the big stories sent are kept for today only, at most 50, the oldest dropped, and a call that threw remembers none', async () => {
+  const terms = Array.from({ length: 50 }, (_, i) => `search ${i}`);
+  const s = setup({ stories: withBig(article(9, 'new search')), state: lately({ bigTerms: terms }) });
+  assert.equal((await run(s, fakeClient(answer(GOOD)))).status, 'written');
+  const kept = stateOf(s).bigTerms;
+  assert.equal(kept.length, 50);
+  assert.deepEqual([kept[0], kept[49]], ['search 1', 'new search'], 'the oldest one is dropped to make room');
+  // a call that threw has read nothing, so it remembers nothing and the story is tried again
+  const down = setup({ stories: withBig(article(1)), state: lately() });
+  assert.equal((await run(down, failing())).status, 'failed');
+  assert.deepEqual([stateOf(down).bigSent, stateOf(down).bigTerms], [[], []]);
+  // a state file with odd searches in it is cleaned, and a new day starts with none: yesterday's search is breaking again today
+  const odd = setup({ stories: withBig(article(1)), state: lately({ bigTerms: ['ok term', 7, null, '', '  ok   TERM ', { a: 1 }] }) });
+  await run(odd, fakeClient(answer(GOOD)));
+  assert.deepEqual(stateOf(odd).bigTerms, ['ok term', 'apple outage']);
+  const next = setup({ stories: withBig(article(1)), state: lately({ date: '2026-11-16', bigTerms: ['apple outage'], bigSent: ['big1'], breakingCalls: 6 }) });
+  const nextClient = fakeClient(answer(GOOD));
+  assert.equal((await run(next, nextClient)).status, 'written');
+  assert.equal(nextClient.calls.length, 1);
+  assert.deepEqual([stateOf(next).bigSent, stateOf(next).bigTerms, stateOf(next).breakingCalls], [['big1'], ['apple outage'], 1]);
+});
+
+test('editor: the $0.25 reserve is free once the day\'s breaking calls are made, and held back until then', async () => {
+  const at = (hour, minute = 0) => Date.parse(et(hour, minute));
+  const used = regularPlan(at(10), { usd: 1.2, calls: 12, lastCallMs: NaN, breakingCalls: 6 });
+  assert.deepEqual([used.saved, used.left, used.callsLeft], [false, 0.2, 2], 'six breaking calls made: $1.20 spent leaves $0.20');
+  const held = regularPlan(at(10), { usd: 1.2, calls: 12, lastCallMs: NaN, breakingCalls: 5 });
+  assert.deepEqual([held.saved, held.left, held.callsLeft], [true, -0.05, 0], 'five made: one more could come, so the reserve stays');
+  assert.deepEqual(regularPlan(at(10), { usd: 1.2, calls: 12, lastCallMs: NaN }), held, 'no breakingCalls reads as none');
+  assert.equal(regularPlan(at(10), { usd: 1.2, calls: 12, lastCallMs: NaN, breakingCalls: 2 }, { breakingMax: 2 }).saved, false, 'the number of breaking calls is a setting');
+  // the whole run: with all six made, a regular call spends the money the reserve was holding
+  const s = setup({ stories: calmDay(), state: lately({ calls: 12, usd: 1.2, breakingCalls: 6, lastCallAt: et(2) }) });
+  const client = fakeClient(answer(GOOD));
+  const r = await run(s, client);
+  assert.equal(r.status, 'written', r.lines.join(' | '));
+  assert.equal(client.calls.length, 1);
+  assert.equal(stateOf(s).usd, 1.2108);
+  // with five made, the same state still saves the money for breaking news
+  const five = await go(calmDay(), lately({ calls: 12, usd: 1.2, breakingCalls: 5, lastCallAt: et(2) }));
+  assert.equal(five.client.calls.length, 0);
+  assert.equal(five.r.lines[0], "editor: no regular call, the rest of today's money is saved for breaking news ($1.20 spent of $1.40)");
+});
+
+test('editor: after a failed call the next call of any kind waits 30 minutes, then 60, then 120, from the last call, and the skip line says until when', async () => {
+  const s = setup({ stories: withBig(trendingStory()), state: lately() });
+  const down = failing();
+  const later = (minutes) => ({ now: minutesAfter(minutes) });
+  assert.equal((await run(s, down)).status, 'failed');
+  assert.equal(stateOf(s).failStreak, 1);
+  assert.deepEqual((await run(s, down, later(29))).lines, ['editor: waiting until 10:30 AM ET after a failed call']);
+  assert.equal(down.calls.length, 1, 'nothing is called while it waits');
+  assert.equal((await run(s, down, later(30))).status, 'failed', '30 minutes is enough after the first');
+  assert.equal(stateOf(s).failStreak, 2);
+  assert.deepEqual((await run(s, down, later(89))).lines, ['editor: waiting until 11:30 AM ET after a failed call (2 in a row)']);
+  assert.equal((await run(s, down, later(90))).status, 'failed', '60 more minutes after the second');
+  assert.equal(stateOf(s).failStreak, 3);
+  assert.deepEqual((await run(s, down, later(209))).lines, ['editor: waiting until 1:30 PM ET after a failed call (3 in a row)']);
+  assert.equal(down.calls.length, 3);
+  // answered at last: the streak is over, and no call was a breaking call until now
+  const up = fakeClient(answer(GOOD));
+  const back = await run(s, up, later(210));
+  assert.equal(back.status, 'written', back.lines.join(' | '));
+  assert.deepEqual([stateOf(s).failStreak, stateOf(s).calls, stateOf(s).breakingCalls], [0, 5, 1], 'the three that threw count as calls, not as breaking calls');
+  // an answer that was kept, not written, ends the streak too
+  const kept = setup({ stories: withBig(trendingStory()), state: lately({ failStreak: 2, lastCallAt: minutesAfter(-61) }) });
+  assert.equal((await run(kept, fakeClient(answer('', { stop_reason: 'refusal', usage: usageOf(5000, 0) })))).status, 'kept');
+  assert.equal(stateOf(kept).failStreak, 0);
+});
+
+test('editor: a regular call waits after a failed call too, and a day with no failed call waits for nothing', async () => {
+  // three failed calls in a row, the last 100 minutes ago: 20 minutes short of the 120
+  const wait = await go(calmDay(), lately({ calls: 4, usd: 0.3, lastCallAt: minutesAfter(-100), failStreak: 3 }));
+  assert.equal(wait.r.status, 'skipped');
+  assert.deepEqual(wait.r.lines, ['editor: waiting until 10:20 AM ET after a failed call (3 in a row)']);
+  assert.equal(wait.client.calls.length, 0);
+  // the same state with no failed call is a regular call as usual
+  const fine = await go(calmDay(), lately({ calls: 4, usd: 0.3, lastCallAt: minutesAfter(-100) }));
+  assert.equal(fine.r.status, 'written', fine.r.lines.join(' | '));
+  // a streak that is not a number is none, and a huge one is capped, so the time is still a time
+  for (const failStreak of ['x', -3, null, NaN, [], {}]) {
+    const odd = await go(withBig(trendingStory()), lately({ failStreak }));
+    assert.equal(odd.client.calls.length, 1, `a failStreak of ${JSON.stringify(failStreak)} is none`);
+  }
+  const huge = await go(withBig(trendingStory()), lately({ failStreak: 1e9 }));
+  assert.equal(huge.r.status, 'skipped');
+  assert.match(huge.r.lines[0], /^editor: waiting until .+ ET after a failed call \(30 in a row\)$/);
+});
+
+test('editor: an API outage all day makes 6 calls, not the 24 the cap allows, and none of them is a breaking call', async () => {
+  const s = setup({ stories: withBig(trendingStory()) });
+  const down = failing();
+  const made = await wholeDay(s, down);
+  assert.deepEqual(made, [0, 30, 90, 210, 450, 930], 'the wait doubles each time: 30, 60, 120, 240 and 480 minutes');
+  const st = stateOf(s);
+  assert.deepEqual([st.calls, st.breakingCalls, st.failStreak, st.bigSent, st.bigTerms], [6, 0, 6, [], []]);
+  assert.ok(st.calls < EDITOR_DAILY_CAP);
+});
+
+test('editor: a call that a fallback model answered is priced from every attempt in usage.iterations, and no attempt is counted twice', async () => {
+  const declined = { type: 'message', model: 'claude-opus-5-5', input_tokens: 800, output_tokens: 50 };
+  const served = { type: 'fallback_message', model: 'claude-sonnet-5-5', input_tokens: 1000, output_tokens: 100 };
+  // the top-level counts hold only the attempt that answered: the declined attempt is added ($0.0042 + $0.006)
+  assert.ok(near(costOf({ input_tokens: 1000, output_tokens: 100, iterations: [declined, served] }), 0.0102));
+  // the top-level counts already hold both: the same price, never twice
+  assert.ok(near(costOf({ input_tokens: 1800, output_tokens: 150, iterations: [declined, served] }), 0.0102));
+  // every kind of token in an attempt is priced
+  const cached = { type: 'message', input_tokens: 0, output_tokens: 0, cache_creation_input_tokens: 2000, cache_read_input_tokens: 10000 };
+  assert.ok(near(costOf({ input_tokens: 1000, output_tokens: 100, iterations: [cached, served] }), 0.006 + 0.012));
+  // no fallback in the list: the top-level counts are the price, whatever else is listed
+  assert.ok(near(costOf({ input_tokens: 1000, output_tokens: 100, iterations: [declined] }), 0.006));
+  assert.ok(near(costOf({ input_tokens: 1000, output_tokens: 100, iterations: [{ type: 'compaction', input_tokens: 5000, output_tokens: 500 }] }), 0.006));
+  assert.ok(near(costOf({ input_tokens: 1000, output_tokens: 100, iterations: [{ type: 'compaction', input_tokens: 5000, output_tokens: 500 }, served] }), 0.006), 'a compaction entry is not an attempt');
+  for (const odd of [null, 'x', 7, {}, [null, 'x', 7]]) assert.ok(near(costOf({ input_tokens: 1000, output_tokens: 100, iterations: odd }), 0.006), JSON.stringify(odd));
+  assert.ok(near(costOf({ iterations: [null, declined, 'x', served] }), 0.0102), 'an odd entry is skipped, the others are priced');
+  // an answered call adds that price to the day
+  const s = setup({ state: stateFor({ calls: 1, usd: 0.09 }) });
+  const r = await run(s, fakeClient(answer(GOOD, { usage: { input_tokens: 1000, output_tokens: 100, iterations: [declined, served] } })), { now: et(14) });
+  assert.equal(r.status, 'written', r.lines.join(' | '));
+  assert.equal(stateOf(s).usd, 0.1002);
 });

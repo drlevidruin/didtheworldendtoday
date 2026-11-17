@@ -1820,7 +1820,7 @@ const CATS5 = ['internet', 'grid', 'hacks', 'markets', 'flights'];
 
 // A copy of the seeded site where each given day has `near` stories that its edition names as its near misses, and
 // `other` stories that nothing names. A day with no near misses has no edition, so it shows plain headlines.
-function crowdedSite(days) {
+function crowdedSite(days, buildOpts = {}) {
   const r = copyRoot(root);
   const editions = {};
   for (const { date, near = 0, other = 0, more = null } of days) {
@@ -1863,7 +1863,7 @@ function crowdedSite(days) {
     }
   }
   writeEditions(r, editions);
-  return { root: r, ...buildAt(r) };
+  return { root: r, ...build(r, { siteUrl: SITE, config: EARLY, ...buildOpts }) };
 }
 
 // The <details> that starts at `from`, down to the </details> that closes it, with any details inside it.
@@ -2192,6 +2192,106 @@ test('phase 13: a day whose edition fails, and quiet mode, show the plain list a
     return read('index.html', buildAt(r).dist);
   };
   assert.equal(quietPage([pick.id]), quietPage(null), 'quiet mode ignores the picks');
+});
+
+// ---- phase 15: the homepage cuts today's hidden headlines before it drops an earlier day -----------------------------
+//
+// A homepage over its size budget gives up today's other headlines from the end of the rest (the ones behind the "Show N more
+// headlines" fold) first, never the editor's picks, and an earlier day, the oldest first, only when none of the rest is left.
+// The rest is capped at 50 on the homepage; the day page lists every headline.
+
+// today has `other` headlines, the editor's picks the first five of them (in a shuffled order), and three earlier days of plain rows
+const PICKED15 = [3, 0, 4, 1, 2];
+const PICKS15 = PICKED15.map(otherId);
+const PICK_TITLES15 = PICKED15.map(otherTitle);
+const site15 = (other, buildOpts = {}) =>
+  crowdedSite(
+    [{ date: SEEN_DAY, near: 8, other, more: PICKS15 }, ...['2026-11-15', '2026-11-14', '2026-11-13'].map((date) => ({ date, near: 0, other: 4 }))],
+    { config: LONG_RUN, ...buildOpts },
+  );
+const homeOf = (site) => read('index.html', site.dist);
+const todayOf = (site) => blocksOf(homeOf(site))[0];
+
+test('phase 15: otherHeadlines(day, restMax) keeps every pick and the first restMax of the rest', () => {
+  const story = (id) => ({ id, kind: 'news', cat: 'internet', title: `Title ${id}`, url: `https://pub.example/${id}`, source: 'Pub A', outlets: 2 });
+  const day = { rows: [{ ids: ['n1'] }], stories: ['n1', 'o1', 'o2', 'o3', 'o4', 'o5', 'o6'].map(story), more: ['o5', 'o2'] };
+  assert.deepEqual(otherHeadlines(day, 2).others.map((s) => s.id), ['o5', 'o2', 'o1', 'o3'], 'two picks, then the first 2 of the rest');
+  assert.deepEqual(otherHeadlines(day, 0).others.map((s) => s.id), ['o5', 'o2'], 'no rest at all: the picks stay');
+  assert.deepEqual(otherHeadlines(day, 2).shown, 2, 'the picks show, the rest is behind the fold');
+  assert.deepEqual(otherHeadlines(day).others.map((s) => s.id), ['o5', 'o2', 'o1', 'o3', 'o4', 'o6'], 'no limit is the whole rest');
+  assert.deepEqual(otherHeadlines({ ...day, more: [] }, 3).others.map((s) => s.id), ['o1', 'o2', 'o3'], 'with no picks, the first 3 of the rest');
+});
+
+test('phase 15: the homepage lists at most 50 of today\'s other headlines behind the fold, the picks besides wherever they sit, and the day page lists every one', () => {
+  const picked = [66, 3, 72, 0, 9]; // two of them from beyond the first 50
+  const site = crowdedSite([{ date: SEEN_DAY, near: 8, other: 80, more: picked.map(otherId) }]);
+  const more = seeMoreIn(blocksOf(homeOf(site))[0]);
+  assert.equal(summaryOf(more), 'See 58 more', 'three near misses, five picks and the fifty of the rest');
+  const inside = insideOf(more);
+  assert.deepEqual(titlesIn(pickedPart(inside)), picked.map(otherTitle), 'the picks are never cut, wherever they sit in the day');
+  const fold = foldPart(inside);
+  assert.equal(summaryOf(fold), 'Show 50 more headlines');
+  // the day page lists all of them, in the page's order, and the fold is the start of that order less the picks
+  const day = read(`day/${SEEN_DAY}/index.html`, site.dist);
+  const all = titlesIn(day.slice(day.indexOf('<section id="all">')));
+  assert.equal(all.length, 88, 'every headline of the day, the near misses too');
+  const restOnPage = all.filter((t) => t.startsWith('Other headline') && !picked.map(otherTitle).includes(t));
+  assert.equal(restOnPage.length, 75);
+  assert.deepEqual(titlesIn(fold), restOnPage.slice(0, 50), 'the first 50 of the rest, in the page\'s order');
+  assert.equal(readJson(path.join(site.dist, 'api', 'today.json')).stories.length, 88, 'and the data file keeps every story');
+  // 50 or fewer are all there: the cap cuts nothing it should not
+  const fifty = crowdedSite([{ date: SEEN_DAY, near: 8, other: 55, more: PICKS15 }]);
+  assert.equal(summaryOf(seeMoreIn(blocksOf(homeOf(fifty))[0])), 'See 58 more', 'three near misses, five picks, and exactly 50 left');
+  assert.equal(summaryOf(foldPart(insideOf(seeMoreIn(blocksOf(homeOf(fifty))[0])))), 'Show 50 more headlines');
+  // no picks: the fold is capped the same way, the first ten still show
+  const none = crowdedSite([{ date: SEEN_DAY, near: 8, other: 80 }]);
+  assert.equal(summaryOf(seeMoreIn(blocksOf(homeOf(none))[0])), 'See 53 more', 'three near misses and 50 headlines');
+  auditSite(site.dist, { label: 'a day with 80 other headlines' });
+});
+
+test('phase 15: a homepage over its size budget cuts the end of today\'s rest first, never the picks, and drops an earlier day, the oldest first, only when none of the rest is left', () => {
+  const bytes = (site) => Buffer.byteLength(homeOf(site));
+  const noRest = site15(5); // five picks and nothing else behind them: the least today can show
+  const full = site15(40); // and 35 headlines in the rest
+  assert.equal(blocksOf(homeOf(full)).length, 4, 'today and three earlier days');
+  const fullFold = foldPart(insideOf(seeMoreIn(todayOf(full))));
+  assert.equal(summaryOf(fullFold), 'Show 35 more headlines');
+  const fullRest = titlesIn(fullFold);
+  assert.ok(bytes(full) > bytes(noRest) + 5000, 'the 35 headlines are what the page has to give up');
+
+  // one byte over: a few headlines go from the END of the rest, and every earlier day stays
+  const slim = site15(40, { pageBudget: bytes(full) - 1 });
+  assert.ok(bytes(slim) <= bytes(full) - 1, 'it fits');
+  assert.equal(blocksOf(homeOf(slim)).length, 4, 'no day is dropped while the rest can give');
+  const slimInside = insideOf(seeMoreIn(todayOf(slim)));
+  assert.deepEqual(titlesIn(pickedPart(slimInside)), PICK_TITLES15, 'the picks stay, in the editor\'s order');
+  const slimRest = titlesIn(foldPart(slimInside));
+  assert.ok(slimRest.length > 0 && slimRest.length < 35, `${slimRest.length} of 35 are left`);
+  assert.deepEqual(slimRest, fullRest.slice(0, slimRest.length), 'what went is the end of the rest');
+
+  // half the rest has to go: the rest is cut to fit, and the days still stay
+  const half = site15(40, { pageBudget: Math.round((bytes(full) + bytes(noRest)) / 2) });
+  assert.equal(blocksOf(homeOf(half)).length, 4, 'still no day dropped');
+  const halfRest = titlesIn(foldPart(insideOf(seeMoreIn(todayOf(half)))));
+  assert.ok(halfRest.length > 0 && halfRest.length < slimRest.length, `${halfRest.length} left`);
+  assert.deepEqual(halfRest, fullRest.slice(0, halfRest.length));
+  assert.ok(bytes(half) <= Math.round((bytes(full) + bytes(noRest)) / 2));
+
+  // under what today needs even with no rest: the fold is gone, the picks stay, and the OLDEST day goes
+  const tight = site15(40, { pageBudget: bytes(noRest) - 100 });
+  const tightHome = homeOf(tight);
+  const [tightToday] = blocksOf(tightHome);
+  assert.ok(!tightToday.includes('Show ') && (tightToday.match(/<details/g) || []).length === 1, 'no fold is left, only the See more');
+  assert.deepEqual(titlesIn(insideOf(seeMoreIn(tightToday))), PICK_TITLES15, 'the five picks are all that is left of the other headlines');
+  assert.equal(blocksOf(tightHome).length, 3, 'one day is dropped');
+  assert.ok(tightHome.includes('./day/2026-11-15/') && tightHome.includes('./day/2026-11-14/'), 'yesterday and the day before stay');
+  assert.ok(!tightHome.includes('./day/2026-11-13/'), 'the oldest goes');
+  assert.ok(bytes(tight) <= bytes(noRest) - 100);
+
+  // a budget nothing can meet: today alone, and its picks are still there
+  const none = site15(40, { pageBudget: 1000 });
+  assert.equal(blocksOf(homeOf(none)).length, 1);
+  assert.deepEqual(titlesIn(insideOf(seeMoreIn(todayOf(none)))), PICK_TITLES15, 'the picks are never cut');
 });
 
 test('phase 12: a refresh swaps the whole page, so a See more that closes again is all that changes', () => {

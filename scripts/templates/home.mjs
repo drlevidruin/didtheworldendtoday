@@ -147,16 +147,23 @@ ${board(d.score, cap)}
 const noRows = (isToday) => `<p class="empty">${esc(isToday ? NOTHING_YET : NOTHING_FILED)}</p>`;
 
 // The headlines of today that are not already one of its near misses (a near miss holds the ids of every story
-// it was made from). They wait behind today's See more. The editor's picks (d.more, ids, best first) come first, in
-// its order, and all of them show; a pick that is no longer one of the day's stories is skipped. The rest of the
-// headlines follow in the page's order behind the fold. With no picks the first ten show, as before.
-export function otherHeadlines(d) {
+// it was made from), split in two: the editor's picks (d.more, ids, best first), in its order, and the rest, in the
+// page's order. A pick that is no longer one of the day's stories is skipped.
+export function splitHeadlines(d) {
   const told = new Set(d.rows.flatMap((r) => (Array.isArray(r.ids) ? r.ids : [])));
   const left = (Array.isArray(d.stories) ? d.stories : []).filter((s) => !told.has(s.id));
   const byId = new Map(left.map((s) => [s.id, s]));
   const picks = [...new Set(Array.isArray(d.more) ? d.more : [])].map((id) => byId.get(id)).filter(Boolean);
   const picked = new Set(picks);
-  return { others: [...picks, ...left.filter((s) => !picked.has(s))], shown: picks.length || HEADLINES_SHOWN };
+  return { picks, rest: left.filter((s) => !picked.has(s)) };
+}
+
+// The headlines that wait behind today's See more. The editor's picks come first, in its order, and all of them show.
+// The rest of the headlines follow in the page's order behind the fold, at most restMax of them (the homepage cuts the
+// rest from its end, never the picks). With no picks the first ten show, as before.
+export function otherHeadlines(d, restMax = Infinity) {
+  const { picks, rest } = splitHeadlines(d);
+  return { others: [...picks, ...rest.slice(0, restMax)], shown: picks.length || HEADLINES_SHOWN };
 }
 
 // Today's block starts with the line over its rows and ends with the one share button of the page. Its
@@ -169,7 +176,7 @@ function dayBlock(d, v) {
   const ranked = isRanked(d, v);
   const ctx = rowContext(d, v);
   if (isToday) {
-    const body = d.rows.length ? `<h2 class="sec">${esc(sectionLine({ today: true, ranked }))}</h2>\n${rowsMore(d.rows, ctx, { ranked, ...otherHeadlines(d) })}` : noRows(true);
+    const body = d.rows.length ? `<h2 class="sec">${esc(sectionLine({ today: true, ranked }))}</h2>\n${rowsMore(d.rows, ctx, { ranked, ...otherHeadlines(d, v.restMax) })}` : noRows(true);
     return `<section class="day" id="today">
 ${body}
 <div class="df">

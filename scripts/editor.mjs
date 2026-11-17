@@ -18,8 +18,11 @@
 //   - ANTHROPIC_API_KEY is empty;
 //   - quiet mode is on (the switch or the automatic check);
 //   - today's edition is hand-written (by: "hand"): it is never replaced;
-//   - it already called the API EDITOR_DAILY_CAP times today;
-//   - it already spent EDITOR_DAILY_BUDGET_USD today;
+//   - it already called the API EDITOR_DAILY_CAP times today (a call that failed counts);
+//   - it already spent EDITOR_DAILY_BUDGET_USD today, or one more call could take the day past it: the next call is
+//     reckoned at the larger of EDITOR_COST_GUESS and today's average cost, and no call of any kind is made unless
+//     what is spent plus that is at most the budget;
+//   - the last call failed and its wait is not over yet (see "When the API fails");
 //   - it is not time for a call yet (see "When it calls");
 //   - or the stories it would read are the same as at its last call (a breaking call does not mind).
 //
@@ -31,23 +34,35 @@
 //   - the paced gap, which spreads the money until midnight. The regular money left is the daily budget minus
 //     EDITOR_BREAKING_RESERVE_USD minus what is spent. A call is reckoned at the larger of EDITOR_COST_GUESS
 //     and today's average cost. The paced gap is the minutes to midnight divided by the calls that money buys.
-//     With less than one call's worth left there is no regular call: the rest is saved for breaking news.
+//     With less than one call's worth left there is no regular call: the rest is saved for breaking news. Once
+//     the day's EDITOR_BREAKING_MAX breaking calls are made there is no breaking news left to save it for, so the
+//     reserve is 0 and the regular calls may spend it.
 //
 // Big news. A story is big when it is in what the editor reads and its trending is at least
 // EDITOR_BREAKING_TRENDING, or it is a signal scoring at least EDITOR_BREAKING_SIGNAL_SCORE, or it is in at least
 // EDITOR_BREAKING_OUTLETS outlets and first reached our feeds in the last EDITOR_BREAKING_NEW_HOURS hours. A big
-// story is breaking when today's edition does not have it and the editor has not been sent it while big today.
+// story is breaking when today's edition does not have it, the editor has not been sent it while big today, and the
+// editor has not been sent a big story with the same Google search (trendTerm) today: each new Google article about
+// one trend is a new story id, and one event must not use up the day's breaking calls.
 // A breaking story makes the call a breaking call: it needs only EDITOR_BREAKING_GAP_MINUTES since the last call,
 // pacing does not apply, it may spend the reserve (the daily budget and the daily cap still stop it), and it is
 // made even when the stories are the same ids as at the last call, because a story that grew big changes no id.
 // At most EDITOR_BREAKING_MAX a day. It says "breaking news: <title>" before the call. Every call, breaking or
-// regular, sends every big story first, and afterwards remembers them in bigSent.
+// regular, sends every big story first, and afterwards remembers them in bigSent, and their searches in bigTerms.
+//
+// When the API fails. A call that throws (an outage, an overload) counts in calls, because it was made, but not in
+// breakingCalls, and it adds no cost. failStreak counts the calls that threw in a row; a call that is answered,
+// whatever the answer says, sets it back to 0. After a call that threw, the next call of any kind, breaking or
+// regular, waits since the last call EDITOR_FAIL_WAIT_MINUTES times 2 to the power of failStreak: 30, 60, 120
+// minutes and so on. The skip line says "waiting until 4:05 PM ET after a failed call".
 //
 // It writes only today's file in data/editions/. Past days are never rewritten.
 // Its own state is data/state/editor.json: { date, calls, usd, lastWriteAt, lastIdsHash, lastCallAt,
-// breakingCalls, bigSent }. usd is today's spend in dollars: every answered call adds what its usage costs at
-// EDITOR_PRICES. lastCallAt is when the last call was made, breakingCalls counts the breaking calls, and bigSent
-// holds the ids of the big stories already sent (at most EDITOR_BIG_SENT_MAX). All of it starts again with the Eastern day.
+// breakingCalls, bigSent, bigTerms, failStreak }. usd is today's spend in dollars: every answered call adds what its
+// usage costs at EDITOR_PRICES. lastCallAt is when the last call was made, breakingCalls counts the breaking calls
+// that were answered, bigSent holds the ids of the big stories already sent (at most EDITOR_BIG_SENT_MAX), bigTerms
+// their Google searches (at most EDITOR_BIG_TERMS_MAX) and failStreak the calls that threw in a row. All of it starts
+// again with the Eastern day.
 //
 // Env: ANTHROPIC_API_KEY (read by the SDK), DTWET_ROOT and DTWET_NOW for dry runs.
 import path from 'node:path';
@@ -55,6 +70,7 @@ import { pathToFileURL } from 'node:url';
 import {
   config as loadConfig,
   EDITOR_BIG_SENT_MAX,
+  EDITOR_BIG_TERMS_MAX,
   EDITOR_BREAKING_GAP_MINUTES,
   EDITOR_BREAKING_MAX,
   EDITOR_BREAKING_NEW_HOURS,
@@ -64,6 +80,7 @@ import {
   EDITOR_BREAKING_TRENDING,
   EDITOR_COST_GUESS,
   EDITOR_DAILY_BUDGET_USD,
+  EDITOR_FAIL_WAIT_MINUTES,
   EDITOR_FRESH_HOURS,
   EDITOR_FRESH_MAX,
   EDITOR_MAX_STORIES,
@@ -154,9 +171,9 @@ function tokensOf(response) {
   return `${n(u && u.input_tokens)} in, ${n(u && u.output_tokens)} out`;
 }
 
-// What one answered call cost, in dollars: the tokens of each kind the API reports, times that kind's
-// price per million. A kind the answer does not report counts as zero.
-export function costOf(usage, prices = EDITOR_PRICES) {
+// What the tokens of one usage object cost, in dollars: the tokens of each kind it reports, times that kind's price
+// per million. A kind it does not report counts as zero.
+function tokenCost(usage, prices) {
   const u = usage && typeof usage === 'object' ? usage : {};
   const n = (v) => (Number.isFinite(Number(v)) && Number(v) > 0 ? Number(v) : 0);
   return (
@@ -166,6 +183,28 @@ export function costOf(usage, prices = EDITOR_PRICES) {
       n(u.cache_read_input_tokens) * prices.cacheRead) /
     1e6
   );
+}
+
+// What one answered call cost, in dollars: the tokens of each kind the API reports, times that kind's price per
+// million. A kind the answer does not report counts as zero.
+// A request that asks for a server-side fallback can be answered by another model after the first one declined. Then
+// usage.iterations lists every attempt with its own token counts: an attempt that was declined is a "message" entry
+// and the one that answered is a "fallback_message" entry (the SDK's types, BetaFallbackMessageIterationUsage). The
+// types do not say whether the top-level counts already hold the declined attempt, so a call that a fallback answered
+// costs the larger of the top-level counts and all its attempts added up: the declined attempt is counted once, never
+// twice. Every attempt is priced at the editor's own prices, because no other model's are on file.
+export function costOf(usage, prices = EDITOR_PRICES) {
+  const top = tokenCost(usage, prices);
+  const attempts = Array.isArray(usage && usage.iterations) ? usage.iterations.filter((it) => it && typeof it === 'object') : [];
+  if (!attempts.some((it) => it.type === 'fallback_message')) return top;
+  const all = attempts.filter((it) => it.type === 'message' || it.type === 'fallback_message').reduce((sum, it) => sum + tokenCost(it, prices), 0);
+  return Math.max(top, all);
+}
+
+// What the next call is reckoned to cost, in dollars: the larger of costGuess and today's average cost of a call
+// (usd over calls, as far as there are calls).
+export function callCostGuess({ usd, calls }, costGuess = EDITOR_COST_GUESS) {
+  return Math.max(costGuess > 0 ? costGuess : EDITOR_COST_GUESS, calls > 0 ? usd / calls : 0);
 }
 
 // A time as milliseconds, or null when it is not one.
@@ -241,9 +280,11 @@ export function isBig(story, nowMs, rules = {}) {
   return Number(story.outlets) >= breakingOutlets && seen !== null && nowMs - Math.min(seen, nowMs) < breakingNewHours * HOUR_MS;
 }
 
-// What a regular call needs, as of nowMs, from today's spend, today's calls and the time of the last call (NaN
-// when there was none). It returns { left, callsLeft, saved, dueMs, gapMinutes }:
-//   left       the regular money left, in dollars: the budget, less the reserve for breaking news, less the spend;
+// What a regular call needs, as of nowMs, from today's spend, today's calls, the time of the last call (NaN
+// when there was none) and today's breaking calls. It returns { left, callsLeft, saved, dueMs, gapMinutes }:
+//   left       the regular money left, in dollars: the budget, less the reserve for breaking news, less the spend.
+//              The reserve is there for breaking news only: once breakingCalls has reached breakingMax there is no
+//              more of it to come, so the reserve is 0;
 //   callsLeft  how many calls that buys, each reckoned at the larger of costGuess and today's average cost;
 //   saved      true when callsLeft is under 1: there is no regular call, the rest is for breaking news;
 //   dueMs      the earliest moment the next regular call may be made, or null with no last call (the first call of
@@ -253,17 +294,19 @@ export function isBig(story, nowMs, rules = {}) {
 //              gap worked out exactly: the gap shrinks as midnight comes nearer, and a regular call is made as soon
 //              as the time since the last call has caught up with it. A clock-change day is an hour off, ignored;
 //   gapMinutes the gap between the last call and dueMs, to the minute, or null with dueMs.
-export function regularPlan(nowMs, { usd, calls, lastCallMs }, settings = {}) {
+export function regularPlan(nowMs, { usd, calls, lastCallMs, breakingCalls = 0 }, settings = {}) {
   const {
     minGapMinutes = EDITOR_MIN_GAP_MINUTES,
     nightGapMinutes = EDITOR_NIGHT_GAP_MINUTES,
     nightEndHour = EDITOR_NIGHT_END_HOUR,
     dailyBudgetUsd = EDITOR_DAILY_BUDGET_USD,
     breakingReserveUsd = EDITOR_BREAKING_RESERVE_USD,
+    breakingMax = EDITOR_BREAKING_MAX,
     costGuess = EDITOR_COST_GUESS,
   } = settings;
-  const left = Math.round((dailyBudgetUsd - breakingReserveUsd - usd) * 1e4) / 1e4;
-  const cost = Math.max(costGuess > 0 ? costGuess : EDITOR_COST_GUESS, calls > 0 ? usd / calls : 0);
+  const reserve = breakingCalls >= breakingMax ? 0 : breakingReserveUsd;
+  const left = Math.round((dailyBudgetUsd - reserve - usd) * 1e4) / 1e4;
+  const cost = callCostGuess({ usd, calls }, costGuess);
   // 1e-9: money a hair under a whole call, from floating point, is a whole call.
   const callsLeft = Math.floor(left / cost + 1e-9);
   if (callsLeft < 1) return { left, callsLeft: Math.max(0, callsLeft), saved: true, dueMs: null, gapMinutes: null };
@@ -306,6 +349,29 @@ export function toldBefore(editions, today) {
   return told.slice(0, TOLD_MAX);
 }
 
+// The longest streak of failed calls that is kept. A day holds far fewer calls than this, so it only keeps an odd state
+// file from making the wait after a failed call endless.
+const MAX_FAIL_STREAK = 30;
+
+// A Google search (trendTerm) as it is compared: control characters gone, spaces collapsed, no capitals. Anything that
+// is not a search is ''.
+const termKey = (term) => (typeof term === 'string' ? clean(term).toLowerCase() : '');
+
+// The searches in `have` and then `more`, each once however it is spelled (the first spelling stays), oldest first, and
+// the newest `max` of them.
+function withTerms(have, more, max) {
+  const seen = new Set();
+  const out = [];
+  for (const term of [...have, ...more]) {
+    const key = termKey(term);
+    if (key && !seen.has(key)) {
+      seen.add(key);
+      out.push(clean(term));
+    }
+  }
+  return out.slice(-max);
+}
+
 // runEditor({ client, now, dataDir, env, log, config })
 //   client   a Claude client (tests pass a fake); built from the SDK when missing
 //   now      the clock, as a Date, a number or an ISO string
@@ -346,6 +412,8 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
       breakingGapMinutes = EDITOR_BREAKING_GAP_MINUTES,
       breakingMax = EDITOR_BREAKING_MAX,
       bigSentMax = EDITOR_BIG_SENT_MAX,
+      bigTermsMax = EDITOR_BIG_TERMS_MAX,
+      failWaitMinutes = EDITOR_FAIL_WAIT_MINUTES,
     } = cfg.editor;
 
     if (!key) return done('skipped', 'no ANTHROPIC_API_KEY, so no edition written');
@@ -373,11 +441,28 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
             lastCallAt: asTime(saved.lastCallAt) || asTime(saved.lastWriteAt),
             breakingCalls: Math.max(0, Math.floor(Number(saved.breakingCalls) || 0)),
             bigSent: Array.isArray(saved.bigSent) ? saved.bigSent.filter((id) => typeof id === 'string').slice(-bigSentMax) : [],
+            bigTerms: Array.isArray(saved.bigTerms) ? withTerms(saved.bigTerms, [], bigTermsMax) : [],
+            failStreak: Math.min(MAX_FAIL_STREAK, Math.max(0, Math.floor(Number(saved.failStreak) || 0))),
           }
-        : { date: today, calls: 0, usd: 0, lastWriteAt: null, lastIdsHash: null, lastCallAt: null, breakingCalls: 0, bigSent: [] };
+        : { date: today, calls: 0, usd: 0, lastWriteAt: null, lastIdsHash: null, lastCallAt: null, breakingCalls: 0, bigSent: [], bigTerms: [], failStreak: 0 };
 
     if (state.calls >= dailyCap) return done('skipped', `already called the API ${state.calls} times today (the cap is ${dailyCap})`);
     if (state.usd >= dailyBudgetUsd) return done('skipped', `already spent $${state.usd.toFixed(2)} today (the cap is $${dailyBudgetUsd.toFixed(2)})`);
+    // No call of any kind unless what is spent plus what the call is reckoned to cost is at most the budget, so a call
+    // cannot start under the budget and end over it. 1e-9 forgives floating point: a call that lands exactly on the budget is made.
+    const nextCost = callCostGuess(state, costGuess);
+    if (state.usd + nextCost > dailyBudgetUsd + 1e-9) {
+      return done('skipped', `$${state.usd.toFixed(2)} spent today, and the next call is reckoned at $${nextCost.toFixed(2)}, which could pass the $${dailyBudgetUsd.toFixed(2)} cap`);
+    }
+
+    // After a call that threw, the next call of any kind waits failWaitMinutes times 2 for each failed call in a row, counted from the last call.
+    const lastCallMs = state.lastCallAt ? Date.parse(state.lastCallAt) : NaN;
+    // A time the way the pages write it ("4:05 PM ET"), rounded up to the minute so that no run before it is allowed.
+    const at = (ms) => etClock(Math.ceil(ms / 60000) * 60000);
+    if (state.failStreak > 0 && Number.isFinite(lastCallMs)) {
+      const failDueMs = lastCallMs + failWaitMinutes * 2 ** state.failStreak * 60000;
+      if (nowMs < failDueMs) return done('skipped', `waiting until ${at(failDueMs)} after a failed call${state.failStreak > 1 ? ` (${state.failStreak} in a row)` : ''}`);
+    }
 
     // ---- what the editor reads ----------------------------------------------------
     const day = readJsonLenient(f.day(today), null);
@@ -420,11 +505,11 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
     for (const item of Array.isArray(onFile && onFile.items) ? onFile.items : []) {
       for (const id of Array.isArray(item && item.ids) ? item.ids : []) if (typeof id === 'string') inEdition.add(id);
     }
+    // Nor is a big story whose Google search was already sent today: a new article about the same trend is a new id.
     const sentBefore = new Set(state.bigSent);
-    const breaking = big.filter((s) => !inEdition.has(s.id) && !sentBefore.has(s.id));
-    const lastCallMs = state.lastCallAt ? Date.parse(state.lastCallAt) : NaN;
-    // A time the way the pages write it ("4:05 PM ET"), rounded up to the minute so that no run before it is allowed.
-    const at = (ms) => etClock(Math.ceil(ms / 60000) * 60000);
+    const termsBefore = new Set(state.bigTerms.map(termKey));
+    const termSent = (s) => termKey(s.trendTerm) !== '' && termsBefore.has(termKey(s.trendTerm));
+    const breaking = big.filter((s) => !inEdition.has(s.id) && !sentBefore.has(s.id) && !termSent(s));
 
     let breakingCall = false;
     let breakingDueMs = null; // when a breaking call is held back only by its short gap: the moment it may go
@@ -435,7 +520,7 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
     }
 
     if (!breakingCall) {
-      const plan = regularPlan(nowMs, { usd: state.usd, calls: state.calls, lastCallMs }, { minGapMinutes, nightGapMinutes, nightEndHour, dailyBudgetUsd, breakingReserveUsd, costGuess });
+      const plan = regularPlan(nowMs, { usd: state.usd, calls: state.calls, lastCallMs, breakingCalls: state.breakingCalls }, { minGapMinutes, nightGapMinutes, nightEndHour, dailyBudgetUsd, breakingReserveUsd, breakingMax, costGuess });
       const notYet = plan.dueMs !== null && nowMs < plan.dueMs;
       if (plan.saved || notYet) {
         // The line says when the next call can be. Big news waiting on its short gap is the sooner call, so it is the one named.
@@ -464,14 +549,23 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
       const api = client || (await makeClient());
       response = await askEditor(api, { model, date: today, now: etClock(nowMs), score: day.score, told, stories });
     } catch (err) {
+      // The API did not answer. The call still counts in calls, because it was made, but it is no breaking call, and
+      // the wait before the next call of any kind doubles.
+      if (breakingCall) state.breakingCalls = Math.max(0, state.breakingCalls - 1);
+      state.failStreak = Math.min(MAX_FAIL_STREAK, state.failStreak + 1);
+      writeJsonIfChanged(f.state, state);
       return done('failed', `the call failed (${oneLine(err && err.message ? err.message : err, key)}), kept the current edition`);
     }
 
-    // An answered call is paid for, whatever the answer says, so its cost is added at once. It has also read the big
-    // stories it was sent, so they are not breaking again today. A call that threw has read nothing: it is tried again.
+    // An answered call is paid for, whatever the answer says, so its cost is added at once, and it ends a streak of
+    // failed calls. It has also read the big stories it was sent, so they are not breaking again today, and neither
+    // is another story about the same Google search. A call that threw has read nothing: it is tried again.
     const cost = costOf(response && response.usage, prices);
     state.usd = Math.round((state.usd + cost) * 1e4) / 1e4;
-    state.bigSent = [...new Set([...state.bigSent, ...chosen.filter((s) => bigSet.has(s)).map((s) => s.id)])].slice(-bigSentMax);
+    state.failStreak = 0;
+    const sentBig = chosen.filter((s) => bigSet.has(s));
+    state.bigSent = [...new Set([...state.bigSent, ...sentBig.map((s) => s.id)])].slice(-bigSentMax);
+    state.bigTerms = withTerms(state.bigTerms, sentBig.map((s) => s.trendTerm), bigTermsMax);
     writeJsonIfChanged(f.state, state);
 
     if (!response || response.stop_reason !== 'end_turn') {

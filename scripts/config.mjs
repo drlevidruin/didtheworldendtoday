@@ -867,14 +867,15 @@ export const EDITION = {
   homeDays: 7, // day blocks on the homepage: today and up to 6 earlier days
 };
 
-// The editor. It calls the Claude API at most EDITOR_DAILY_CAP times a day. A regular call waits until the
-// stories it would read have changed and a gap has passed since its last call: EDITOR_MIN_GAP_MINUTES by day,
-// EDITOR_NIGHT_GAP_MINUTES from midnight until EDITOR_NIGHT_END_HOUR, and longer when the day's money must be
-// spread to last until midnight. Big news (the EDITOR_BREAKING_* settings below) jumps the line: it needs only
-// EDITOR_BREAKING_GAP_MINUTES, and it may spend the reserve. The editor stops for the day once it has spent
-// EDITOR_DAILY_BUDGET_USD. The owner's cap is $2 a day for the whole site: 1.40 here and 0.60 for X (X.dailyBudgetUsd above).
+// The editor. It calls the Claude API at most EDITOR_DAILY_CAP times a day, a call that failed included. A regular
+// call waits until the stories it would read have changed and a gap has passed since its last call:
+// EDITOR_MIN_GAP_MINUTES by day, EDITOR_NIGHT_GAP_MINUTES from midnight until EDITOR_NIGHT_END_HOUR, and longer when
+// the day's money must be spread to last until midnight. Big news (the EDITOR_BREAKING_* settings below) jumps the
+// line: it needs only EDITOR_BREAKING_GAP_MINUTES, and it may spend the reserve. The editor makes no call, of any
+// kind, that could take the day past EDITOR_DAILY_BUDGET_USD. The owner's cap is $2 a day for the whole site: 1.40
+// here and 0.60 for X (X.dailyBudgetUsd above).
 export const EDITOR_MODEL = 'claude-opus-5-5';
-export const EDITOR_DAILY_CAP = 20;
+export const EDITOR_DAILY_CAP = 24;
 export const EDITOR_MIN_GAP_MINUTES = 60; // between regular calls, from EDITOR_NIGHT_END_HOUR until midnight ET
 export const EDITOR_NIGHT_GAP_MINUTES = 180; // between regular calls, from midnight until EDITOR_NIGHT_END_HOUR ET
 export const EDITOR_NIGHT_END_HOUR = 6; // the night gap ends at this hour ET (6 is 6:00 AM)
@@ -899,6 +900,10 @@ export const EDITOR_BREAKING_NEW_HOURS = 3; // how recently a many-outlet story 
 export const EDITOR_BREAKING_GAP_MINUTES = 15; // a breaking call waits only this long after the last call
 export const EDITOR_BREAKING_MAX = 6; // breaking calls a day
 export const EDITOR_BIG_SENT_MAX = 200; // big story ids kept for today, so one story is not breaking twice
+export const EDITOR_BIG_TERMS_MAX = 50; // Google searches (trendTerm) of the big stories sent today, so one trend is not breaking twice
+// When a call fails (the API did not answer), the next call of any kind waits this many minutes since it, times 2
+// for each failed call in a row: 30, 60, 120 and so on.
+export const EDITOR_FAIL_WAIT_MINUTES = 15;
 
 export function config() {
   return {
@@ -940,6 +945,8 @@ export function config() {
       breakingGapMinutes: EDITOR_BREAKING_GAP_MINUTES,
       breakingMax: EDITOR_BREAKING_MAX,
       bigSentMax: EDITOR_BIG_SENT_MAX,
+      bigTermsMax: EDITOR_BIG_TERMS_MAX,
+      failWaitMinutes: EDITOR_FAIL_WAIT_MINUTES,
     },
   };
 }
