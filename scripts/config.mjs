@@ -701,6 +701,12 @@ export const EXCLUDE_FAMILIES = [
     ],
   },
   {
+    // Old stories a feed dated again today, by their headline. Add one when it reaches the page: the event is
+    // months old, so nothing real is lost. July's heat wave came back on Nov 17, 2026.
+    name: 'stale',
+    terms: ['Heat wave prompts US electrical grid emergency'],
+  },
+  {
     // A headline that is a question is rarely an incident report. "Is X down?"
     // style headlines are the exception.
     name: 'question',

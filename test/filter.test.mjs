@@ -749,6 +749,8 @@ const NOT_A_NEAR_MISS = [
   // the same story as AP titled it later in the day, with no sport named, and his next one
   ['Mullin defends use of government plane to go to LSU-Texas game after ground stop', 'politics', 'Mullin'],
   ['Mullin: No one getting fired over nationwide ground stop', 'politics', 'Mullin'],
+  // July's heat wave, which a feed dated Nov 17
+  ["'Stretched to the limit': Heat wave prompts US electrical grid emergency", 'stale', 'Heat wave prompts US electrical grid emergency'],
   // someone defending what they did is the reaction, not the near miss (made up, in the form of the AP headline)
   ['Airline chief defends canceling every flight after ground stop', 'format', 'defends'],
   // a game called off, not a power grid
