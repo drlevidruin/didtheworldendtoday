@@ -669,7 +669,7 @@ test('phase 6 taste: animal culls, "the best" and photo archives are dropped, an
 });
 
 test('phase 6 taste: a story from a press-release wire is dropped by the news site, whatever its headline says', () => {
-  assert.deepEqual(EXCLUDE_SOURCES, ['EIN Presswire', 'EIN News', 'PR Newswire', 'Business Wire', 'GlobeNewswire', 'Accesswire', 'openPR', 'PRWeb', 'Newsfile']);
+  assert.deepEqual(EXCLUDE_SOURCES.slice(0, 9), ['EIN Presswire', 'EIN News', 'PR Newswire', 'Business Wire', 'GlobeNewswire', 'Accesswire', 'openPR', 'PRWeb', 'Newsfile']);
   const title = 'Cloudflare outage knocks thousands of sites offline';
   assert.equal(verdict(title, { source: 'EIN Presswire' })?.family, 'press release');
   assert.deepEqual(verdict(title, { source: 'EIN Presswire' }), { family: 'press release', term: 'EIN Presswire' });
@@ -681,6 +681,34 @@ test('phase 6 taste: a story from a press-release wire is dropped by the news si
   for (const source of ['The Verge', 'Open Prairie Reporter', 'Press Democrat', 'Einstein Weekly', 'Wired', 'Presswire Daily Review', 'openprairie.com', 'prwebdesign.com', 'newsfiles.com', 'seinnews.com', 'businesswired.com', '', null, undefined, 42]) assert.equal(verdict(title, { source }), null, String(source));
   // with no source given, a headline is read alone, as it always was
   assert.equal(verdict(title), null);
+});
+
+test('phase 10c: a story from a satire site is dropped by the news site, and one from Reuters is not', () => {
+  const satire = ['The Onion', 'The Babylon Bee', 'Babylon Bee', 'ClickHole', 'The Beaverton', 'Reductress', 'The Hard Times', 'Duffel Blog', 'The Daily Mash', 'NewsThump', 'Waterford Whispers News'];
+  assert.deepEqual(EXCLUDE_SOURCES.slice(9), satire, 'after the press-release wires');
+  const title = 'Cloudflare outage knocks thousands of sites offline';
+  assert.deepEqual(verdict(title, { source: 'The Onion' }), { family: 'press release', term: 'The Onion' });
+  assert.equal(verdict(title, { source: 'Reuters' }), null);
+  // every site, by its name, in any case, with extra words after it, and by its web address
+  for (const source of satire) {
+    assert.equal(verdict(title, { source })?.family, 'press release', source);
+    assert.equal(verdict(title, { source: source.toUpperCase() })?.family, 'press release', `${source}, upper case`);
+    assert.equal(verdict(title, { source: `${source} (satire)` })?.family, 'press release', `${source} (satire)`);
+  }
+  for (const source of ['theonion.com', 'www.babylonbee.com', 'clickhole.com', 'thebeaverton.com', 'reductress.com', 'thehardtimes.net', 'duffelblog.com', 'thedailymash.co.uk', 'newsthump.com', 'waterfordwhispersnews.com', 'the-onion', 'Babylon Bee (satire)']) {
+    assert.equal(verdict(title, { source })?.family, 'press release', source);
+  }
+  // real news sites are news sites, including ones that share a word with a satire site
+  for (const source of ['Reuters', 'The Verge', 'Associated Press', 'Daily Mail', 'Onion Creek Gazette', 'Hard Times Gazette', 'Waterford News & Star', 'Beaverton Valley Times', 'Mash Daily']) assert.equal(verdict(title, { source }), null, source);
+  // at the door and in a story already stored
+  const gk = createGatekeeper(cfg);
+  const now = Date.parse('2026-11-17T15:00:00Z');
+  const raw = (over = {}) => ({ kind: 'news', cat: 'internet', title, url: 'https://pub.example/a', source: 'Reuters', publishedAt: now - 3600e3, ...over });
+  assert.equal(gk.admit(raw(), now).keep?.title, title);
+  assert.deepEqual(gk.admit(raw({ source: 'The Onion' }), now), { drop: 'excluded:press release', detail: 'The Onion' });
+  const stored = { ...raw(), id: 'abc123abc123', firstSeenAt: '2026-11-17T12:00:00.000Z', outlets: 1, outletNames: ['Reuters'] };
+  assert.ok(gk.recheck(stored).keep, 'a Reuters story stays');
+  assert.deepEqual(gk.recheck({ ...stored, source: 'The Onion', outletNames: ['The Onion'] }), { drop: 'excluded:press release', detail: 'The Onion' }, 'a stored story is cleaned on the next run');
 });
 
 test('phase 6 taste: a headline hidden by hand is dropped by a lowercase piece of its title', () => {

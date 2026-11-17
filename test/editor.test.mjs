@@ -9,7 +9,7 @@ import { config, EDITOR_DAILY_BUDGET_USD, EDITOR_DAILY_CAP, EDITOR_FRESH_HOURS, 
 import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
 import { listingOrder, publishableStories, validateEdition } from '../scripts/lib/editions.mjs';
 import { EDITOR_SYSTEM_PROMPT } from '../scripts/lib/editor-prompt.mjs';
-import { EDITION_SCHEMA, askEditor, costOf, hoursAgo, newestAt, pickStories, runEditor, toldBefore } from '../scripts/editor.mjs';
+import { EDITION_SCHEMA, askEditor, costOf, hoursAgo, newestAt, pickStories, runEditor, startedHoursAgo, toldBefore } from '../scripts/editor.mjs';
 import { readJson, REPO, tmpRoot } from './helpers.mjs';
 
 const cfg = config();
@@ -298,7 +298,7 @@ test('editor: nothing filed yet, or nothing new to say, means no call', async ()
 
 // ---- what it asks ------------------------------------------------------------------------------------
 
-test('editor: the request has the shape the API wants, and each story is sent with seven plain fields', async () => {
+test('editor: the request has the shape the API wants, and each story is sent with eight plain fields', async () => {
   const s = setup();
   const client = fakeClient(answer(GOOD));
   await run(s, client);
@@ -317,12 +317,14 @@ test('editor: the request has the shape the API wants, and each story is sent wi
   assert.equal(req.messages.length, 1);
   assert.equal(req.messages[0].role, 'user');
   const sent = JSON.parse(req.messages[0].content);
-  assert.deepEqual(Object.keys(sent), ['date', 'score', 'told', 'stories']);
+  assert.deepEqual(Object.keys(sent), ['date', 'now', 'score', 'told', 'stories']);
   assert.equal(sent.date, DATE);
+  assert.equal(sent.now, '10:00 AM ET', 'the time in New York, written the way the page writes it');
   assert.equal(sent.score, 62);
   assert.deepEqual(sent.told, [], 'no earlier edition, so nothing was told');
-  for (const one of sent.stories) assert.deepEqual(Object.keys(one), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo']);
+  for (const one of sent.stories) assert.deepEqual(Object.keys(one), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo', 'startedHoursAgo']);
   for (const one of sent.stories) assert.equal(one.hoursAgo, 3, 'published at 12:00 UTC, read at 15:00 UTC');
+  for (const one of sent.stories) assert.equal(one.startedHoursAgo, 3, 'its first headline is its only one');
   const want = listingOrder(publishableStories(excluder, dayStories()), cfg.variety).map((x) => x.id);
   assert.deepEqual(sent.stories.map((x) => x.id), want, 'in the order the page lists them');
   assert.equal(sent.stories.find((x) => x.id === 'sig:quake:q9').serious, true, 'a quiet card is serious');
@@ -445,15 +447,15 @@ test('editor: the prompt asks for a label, a line and a one-sentence headline, i
   const p = EDITOR_SYSTEM_PROMPT;
   assert.ok(
     p.includes(
-      '\nInput: one day\'s headlines as JSON: {date, score, told, stories: [{id, cat, title, source, outlets, serious, hoursAgo, trending}]}. Many headlines describe the same event. hoursAgo is how many hours ago the story came out. trending, when present, is how many people in the US searched for the story on Google lately: it is what people are talking about right now. told lists the items of the last two days, as "label: line".\n',
+      '\nInput: one day\'s headlines as JSON: {date, now, score, told, stories: [{id, cat, title, source, outlets, serious, hoursAgo, startedHoursAgo, trending}]}. now is the time in New York. Many headlines describe the same event. hoursAgo is how many hours ago the story\'s newest headline came out, and startedHoursAgo how many hours ago its first one did. trending, when present, is how many people in the US searched for the story on Google lately: it is what people are talking about right now. told lists the items of the last two days, as "label: line".\n',
     ),
-    'the input paragraph names told, hoursAgo and trending',
+    'the input paragraph names now, told, hoursAgo, startedHoursAgo and trending',
   );
   assert.ok(
     p.includes(
-      '\n2. Pick 4 to 6 events (3 on a quiet day). Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics. Pick the newest: take events from the last 12 hours first (hoursAgo 12 or less), and an older one only when that leaves fewer than 4. A trending event that is a near miss always makes the list. Skip any event already in told, unless something new and bigger happened to it, and then the line says what is new.\n',
+      '\n2. Pick 4 to 6 events (3 on a quiet day). Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics. Pick the newest: take events from the last 12 hours first (hoursAgo 12 or less), and an older one only when that leaves fewer than 4. Only today counts: skip an event that was over before today began, even when today\'s headlines are about it (its cause, an investigation, the cleanup, what changes now, how people coped). startedHoursAgo and now show when it began, and the headlines show whether it is still going on. An event still going on today counts, and so does one that happened again today. Only real events: each needs two or more outlets, one outlet everybody knows, or an official reading (USGS, NOAA, NASA, the FAA, a status page, Downdetector). Skip a lone claim from a site people don\'t know. A trending event that is a near miss always makes the list. Skip any event already in told, unless something new and bigger happened to it, and then the line says what is new.\n',
     ),
-    'rule 2 asks for the newest events, always the trending near misses, and no repeats',
+    'rule 2 asks for the newest events, only today, only real events, always the trending near misses, and no repeats',
   );
   assert.ok(p.includes('\n1. Group the headlines into events. One item per event, with all of its ids, the best headline\'s id first.\n'), 'rule 1 is as it was');
   assert.match(
@@ -769,11 +771,13 @@ test('editor: the same answer written twice gives the same file, so a repeat com
 test('editor: askEditor passes its client the request unchanged and hands back what the client says', async () => {
   const seen = [];
   const client = { beta: { messages: { create: async (r) => (seen.push(r), { ok: true }) } } };
-  const out = await askEditor(client, { model: 'm', date: DATE, score: 12, told: ['Label: A line.'], stories: [{ id: 'x' }] });
+  const out = await askEditor(client, { model: 'm', date: DATE, now: '2:17 PM ET', score: 12, told: ['Label: A line.'], stories: [{ id: 'x' }] });
   assert.deepEqual(out, { ok: true });
   assert.equal(seen.length, 1);
   assert.equal(seen[0].model, 'm');
   assert.equal(JSON.parse(seen[0].messages[0].content).score, 12);
+  assert.equal(JSON.parse(seen[0].messages[0].content).now, '2:17 PM ET');
+  assert.deepEqual(Object.keys(JSON.parse(seen[0].messages[0].content)), ['date', 'now', 'score', 'told', 'stories']);
   assert.deepEqual(JSON.parse(seen[0].messages[0].content).told, ['Label: A line.']);
   // told is always there, even when the caller has nothing to say
   await askEditor(client, { model: 'm', date: DATE, score: 12, stories: [] });
@@ -845,6 +849,110 @@ test('editor: every story it sends has hoursAgo, from the later of publishedAt a
   const c2 = fakeClient(answer(GOOD));
   await run(t, c2, { now: hoursBefore(-1) });
   assert.equal(JSON.parse(c2.calls[0].messages[0].content).stories.find((x) => x.id === 't1').hoursAgo, 2);
+});
+
+// ---- when the event began: startedHoursAgo -----------------------------------------------------------------
+
+test('editor: startedHoursAgo is whole hours back from publishedAt, from firstSeenAt when publishedAt is missing or ahead of the clock, never under hoursAgo, and null when there is no moment', () => {
+  const now = Date.parse(NOW);
+  const ahead = hoursBefore(-2);
+  // from publishedAt, the first headline, rounded down
+  assert.equal(startedHoursAgo({ publishedAt: hoursBefore(3) }, now), 3);
+  assert.equal(startedHoursAgo({ publishedAt: hoursBefore(3, 59) }, now), 3, '3 hours 59 minutes is still 3');
+  assert.equal(startedHoursAgo({ publishedAt: hoursBefore(0, 30) }, now), 0);
+  assert.equal(startedHoursAgo({ publishedAt: NOW }, now), 0, 'this very moment');
+  assert.equal(startedHoursAgo({ publishedAt: hoursBefore(30) }, now), 30, 'more than a day is still counted in hours');
+  // publishedAt is the start, whatever firstSeenAt says
+  assert.equal(startedHoursAgo({ publishedAt: hoursBefore(5), firstSeenAt: hoursBefore(1) }, now), 5);
+  assert.equal(startedHoursAgo({ publishedAt: hoursBefore(2), firstSeenAt: hoursBefore(6) }, now), 2);
+  // the FAA ground stop: 3:00 PM ET on 11/16, with follow-ups still coming at 2:25 PM ET on 11/17
+  const ground = { publishedAt: '2026-11-16T20:00:00.000Z', latestAt: '2026-11-17T19:10:00.000Z', firstSeenAt: '2026-11-16T20:15:00.000Z' };
+  const afternoon = Date.parse('2026-11-17T19:25:00.000Z');
+  assert.equal(hoursAgo(ground, afternoon), 0, 'its newest headline is minutes old');
+  assert.equal(startedHoursAgo(ground, afternoon), 23, 'the event is a day old');
+  // publishedAt missing, empty, not a time or in the future: firstSeenAt is the start
+  for (const [name, publishedAt] of [['missing', undefined], ['null', null], ['empty', ''], ['not a time', 'sometime yesterday'], ['in the future', ahead]]) {
+    assert.equal(startedHoursAgo({ publishedAt, firstSeenAt: hoursBefore(5, 30) }, now), 5, name);
+  }
+  assert.equal(startedHoursAgo({ firstSeenAt: hoursBefore(5) }, now), 5);
+  assert.equal(startedHoursAgo({ firstSeenAt: ahead }, now), 0, 'a firstSeenAt in the future counts as now');
+  assert.equal(startedHoursAgo({ publishedAt: ahead, firstSeenAt: ahead }, now), 0);
+  // with only a newest headline to go on, the event began at least that long ago
+  assert.equal(startedHoursAgo({ latestAt: hoursBefore(3) }, now), 3);
+  assert.equal(startedHoursAgo({ publishedAt: ahead, latestAt: hoursBefore(3, 20) }, now), 3);
+  assert.equal(startedHoursAgo({ publishedAt: 'x', latestAt: hoursBefore(3, 20), firstSeenAt: 'y' }, now), 3);
+  // no moment at all: null, as hoursAgo
+  assert.equal(startedHoursAgo({}, now), null);
+  assert.equal(startedHoursAgo(null, now), null);
+  assert.equal(startedHoursAgo(undefined, now), null);
+  assert.equal(startedHoursAgo({ publishedAt: ahead }, now), null, 'a future publishedAt and nothing else');
+  assert.equal(startedHoursAgo({ publishedAt: 'x', firstSeenAt: 'y' }, now), null);
+  // every mix of the three times: a number exactly when hoursAgo is a number, and never under it
+  const times = [undefined, null, 'x', ahead, hoursBefore(0, 10), hoursBefore(2), hoursBefore(17), hoursBefore(30)];
+  for (const publishedAt of times) {
+    for (const latestAt of times) {
+      for (const firstSeenAt of times) {
+        const one = { publishedAt, latestAt, firstSeenAt };
+        const newest = hoursAgo(one, now);
+        const started = startedHoursAgo(one, now);
+        if (newest === null) assert.equal(started, null, JSON.stringify(one));
+        else assert.ok(Number.isInteger(started) && started >= newest, JSON.stringify(one));
+      }
+    }
+  }
+});
+
+test('editor: what it sends has now, the time in New York, and startedHoursAgo on every story, right after hoursAgo', async () => {
+  const at = '2026-11-17T19:17:00.000Z'; // 2:17 PM Eastern
+  const stories = [
+    // the FAA ground stop of 11/16: follow-ups all through 11/17
+    story('g1', 'flights', 'United Airlines system outage delays departing flights', { score: 90, publishedAt: '2026-11-16T20:00:00.000Z', latestAt: '2026-11-17T19:10:00.000Z', firstSeenAt: '2026-11-16T20:15:00.000Z' }),
+    // the Apple outage: began overnight and is still going
+    story('g2', 'internet', 'Cloudflare outage takes down thousands of websites', { score: 88, publishedAt: '2026-11-17T01:00:00.000Z', latestAt: '2026-11-17T19:00:00.000Z', firstSeenAt: '2026-11-17T01:30:00.000Z' }),
+    story('g3', 'hacks', 'Chase online banking outage lasts for hours', { score: 86, publishedAt: hoursBefore(-1, 0, at), firstSeenAt: hoursBefore(6, 0, at) }),
+    story('g4', 'markets', 'Nasdaq falls into a correction after a tech sell-off', { score: 80, publishedAt: undefined, firstSeenAt: hoursBefore(9, 59, at) }),
+    story('g5', 'space', 'Bus-sized asteroid passes between Earth and the Moon', { score: 78, publishedAt: undefined, firstSeenAt: undefined }),
+    story('g6', 'grid', 'Rolling blackouts hit regional grid as demand spikes', { score: 70, publishedAt: hoursBefore(2, 0, at), firstSeenAt: hoursBefore(2, 0, at) }),
+  ];
+  const s = setup({ stories });
+  const client = fakeClient(answer(GOOD));
+  await run(s, client, { now: at });
+  const sent = JSON.parse(client.calls[0].messages[0].content);
+  assert.deepEqual(Object.keys(sent), ['date', 'now', 'score', 'told', 'stories']);
+  assert.equal(sent.now, '2:17 PM ET');
+  const byId = Object.fromEntries(sent.stories.map((x) => [x.id, x]));
+  assert.deepEqual(Object.keys(byId.g1), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo', 'startedHoursAgo']);
+  assert.deepEqual(
+    Object.fromEntries(Object.entries(byId).map(([id, x]) => [id, [x.hoursAgo, x.startedHoursAgo]])),
+    { g1: [0, 23], g2: [0, 18], g3: [6, 6], g4: [9, 9], g5: [null, null], g6: [2, 2] },
+    'g1 began yesterday afternoon and has a headline from minutes ago',
+  );
+  for (const one of sent.stories) assert.ok('startedHoursAgo' in one, `${one.id} has the key, even when it is null`);
+  // the clock reads the same way in the morning and after noon, and the day's other hours
+  for (const [iso, want] of [['2026-11-17T05:05:00.000Z', '12:05 AM ET'], ['2026-11-17T17:00:00.000Z', '12:00 PM ET'], ['2026-11-17T23:59:00.000Z', '6:59 PM ET']]) {
+    const t = setup({ stories });
+    const c = fakeClient(answer(GOOD));
+    await run(t, c, { now: iso });
+    assert.equal(JSON.parse(c.calls[0].messages[0].content).now, want, iso);
+  }
+});
+
+test('editor: the prompt tells it when an event began and what the time is, that only today counts, and that an event must be real, word for word', () => {
+  const p = EDITOR_SYSTEM_PROMPT;
+  const shape = '{date, now, score, told, stories: [{id, cat, title, source, outlets, serious, hoursAgo, startedHoursAgo, trending}]}.';
+  assert.ok(p.includes(`Input: one day's headlines as JSON: ${shape} now is the time in New York. Many headlines describe the same event.`), 'the shape, then what now is');
+  const hours = "hoursAgo is how many hours ago the story's newest headline came out, and startedHoursAgo how many hours ago its first one did.";
+  assert.equal(p.split(hours).length, 2, 'once');
+  assert.ok(p.includes(`Many headlines describe the same event. ${hours} trending, when present,`), 'where the old hoursAgo sentence was');
+  assert.ok(!p.includes('hoursAgo is how many hours ago the story came out.'), 'the old hoursAgo sentence is gone');
+  const today =
+    "Only today counts: skip an event that was over before today began, even when today's headlines are about it (its cause, an investigation, the cleanup, what changes now, how people coped). startedHoursAgo and now show when it began, and the headlines show whether it is still going on. An event still going on today counts, and so does one that happened again today.";
+  const real =
+    "Only real events: each needs two or more outlets, one outlet everybody knows, or an official reading (USGS, NOAA, NASA, the FAA, a status page, Downdetector). Skip a lone claim from a site people don't know.";
+  assert.equal(p.split(today).length, 2, 'once');
+  assert.equal(p.split(real).length, 2, 'once');
+  assert.ok(p.includes(`and an older one only when that leaves fewer than 4. ${today} ${real} A trending event that is a near miss always makes the list.`), 'in rule 2, after "fewer than 4.", today first and then real events, before the trending rule');
+  assert.ok(!p.includes(EM) && !p.includes(String.fromCharCode(0x2013)), 'still no em or en dash');
 });
 
 // ---- no repeats: told -------------------------------------------------------------------------------------
@@ -1212,10 +1320,10 @@ test('editor: a story that trended is sent with trending as a number, and every 
   assert.equal(byId.tr1.trending, 50000);
   assert.equal(typeof byId.tr1.trending, 'number');
   assert.equal(byId.tr2.trending, 500);
-  assert.deepEqual(Object.keys(byId.tr1), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo', 'trending'], 'trending is the eighth field, as the prompt says');
+  assert.deepEqual(Object.keys(byId.tr1), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo', 'startedHoursAgo', 'trending'], 'trending is the ninth field, as the prompt says');
   for (const id of ['tr3', 'tr4', 'tr5', 'tr6']) {
     assert.ok(!('trending' in byId[id]), `${id} has no trending key`);
-    assert.deepEqual(Object.keys(byId[id]), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo']);
+    assert.deepEqual(Object.keys(byId[id]), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo', 'startedHoursAgo']);
   }
   assert.ok(!client.calls[0].messages[0].content.includes('"trending":null'), 'never a null');
 });
@@ -1224,10 +1332,10 @@ test('editor: the prompt tells it what trending is, and that a trending near mis
   const p = EDITOR_SYSTEM_PROMPT;
   const sentence = 'trending, when present, is how many people in the US searched for the story on Google lately: it is what people are talking about right now.';
   assert.equal(p.split(sentence).length, 2, 'once');
-  assert.ok(p.includes(`hoursAgo is how many hours ago the story came out. ${sentence} told lists`), 'right after the hoursAgo sentence');
-  assert.ok(p.includes('stories: [{id, cat, title, source, outlets, serious, hoursAgo, trending}]'), 'the stories list names trending');
+  assert.ok(p.includes(`startedHoursAgo how many hours ago its first one did. ${sentence} told lists`), 'right after the hoursAgo sentences');
+  assert.ok(p.includes('stories: [{id, cat, title, source, outlets, serious, hoursAgo, startedHoursAgo, trending}]'), 'the stories list names trending');
   const rule = 'A trending event that is a near miss always makes the list.';
   assert.equal(p.split(rule).length, 2, 'once');
-  assert.ok(p.includes(`and an older one only when that leaves fewer than 4. ${rule} Skip any event already in told`), 'in rule 2, after "fewer than 4."');
+  assert.ok(p.includes(`Skip a lone claim from a site people don't know. ${rule} Skip any event already in told`), 'in rule 2, after the real-events rule and before the told rule');
   assert.ok(!p.includes(EM) && !p.includes(String.fromCharCode(0x2013)), 'still no em or en dash');
 });

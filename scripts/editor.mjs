@@ -7,8 +7,9 @@
 //
 // It reads the newest news first and does not tell the same event twice. It sends the stories of the
 // last EDITOR_FRESH_HOURS hours first, newest first (at most EDITOR_FRESH_MAX), then the rest in the
-// page's order, up to EDITOR_MAX_STORIES. Every story it sends has hoursAgo (whole hours since it came
-// out) and, when people searched for it on Google lately, trending (how many). The input also has told:
+// page's order, up to EDITOR_MAX_STORIES. Every story it sends has hoursAgo (whole hours since its newest
+// headline came out), startedHoursAgo (since its first one did) and, when people searched for it on Google
+// lately, trending (how many). The input also has now (the time in New York, like "2:17 PM ET") and told:
 // the items of the last two editions before today, as "label: line".
 //
 // It does nothing, and says why in one line, when
@@ -37,6 +38,7 @@ import { readQuietFile } from './lib/quietmode.mjs';
 import { REPO_ROOT } from './lib/paths.mjs';
 import { clean } from './lib/text.mjs';
 import { HOUR_MS, etDate } from './lib/time.mjs';
+import { etClock } from './templates/copy.mjs';
 
 // What the model must send back. Counts are checked in code (the schema cannot say
 // "4 to 6"), and every object lists all of its keys.
@@ -71,7 +73,7 @@ async function makeClient() {
 }
 
 // One request. A safety decline is retried on another model by the API itself.
-export function askEditor(client, { model, date, score, told = [], stories }) {
+export function askEditor(client, { model, date, now, score, told = [], stories }) {
   return client.beta.messages.create({
     model,
     max_tokens: 16000,
@@ -79,7 +81,7 @@ export function askEditor(client, { model, date, score, told = [], stories }) {
     fallbacks: 'default',
     output_config: { effort: 'medium', format: { type: 'json_schema', schema: EDITION_SCHEMA } },
     system: EDITOR_SYSTEM_PROMPT,
-    messages: [{ role: 'user', content: JSON.stringify({ date, score, told, stories }) }],
+    messages: [{ role: 'user', content: JSON.stringify({ date, now, score, told, stories }) }],
   });
 }
 
@@ -143,6 +145,18 @@ export function newestAt(story, nowMs) {
 export function hoursAgo(story, nowMs) {
   const at = newestAt(story, nowMs);
   return at === null ? null : Math.floor((nowMs - at) / HOUR_MS);
+}
+
+// Whole hours from the moment a story began to now, rounded down: from its publishedAt, which is its first
+// headline, or from its firstSeenAt when publishedAt is missing, not a time or in the future (a firstSeenAt in
+// the future counts as now). Never below hoursAgo, and null when the story has no moment. hoursAgo says how new
+// its newest headline is, this says how old the event is: the FAA ground stop of 11/16 kept getting follow-ups on
+// 11/17, so its hoursAgo was 0 while the event was about a day old. It reads times the way newestAt does.
+export function startedHoursAgo(story, nowMs) {
+  const newest = hoursAgo(story, nowMs);
+  if (newest === null) return null;
+  const first = newestAt({ publishedAt: story.publishedAt }, nowMs) ?? newestAt({ firstSeenAt: story.firstSeenAt }, nowMs);
+  return first === null ? newest : Math.max(newest, Math.floor((nowMs - first) / HOUR_MS));
 }
 
 // The stories the editor reads, from the ones the page lists in its order. First the new ones: every story with
@@ -255,6 +269,7 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
       outlets: Number(s.outlets) || 1,
       serious: Boolean(s.quiet) || Boolean(quietCard(s)),
       hoursAgo: hoursAgo(s, nowMs),
+      startedHoursAgo: startedHoursAgo(s, nowMs),
       // Only a story people searched for on Google has the key.
       ...(Number.isFinite(s.trending) && s.trending > 0 ? { trending: s.trending } : {}),
     }));
@@ -271,7 +286,7 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
     let response;
     try {
       const api = client || (await makeClient());
-      response = await askEditor(api, { model, date: today, score: day.score, told, stories });
+      response = await askEditor(api, { model, date: today, now: etClock(nowMs), score: day.score, told, stories });
     } catch (err) {
       return done('failed', `the call failed (${oneLine(err && err.message ? err.message : err, key)}), kept the current edition`);
     }

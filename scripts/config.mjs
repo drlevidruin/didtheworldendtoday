@@ -481,9 +481,14 @@ const NAMED_DRUGS = [
   'insulin', 'Ozempic', 'Wegovy', 'Zepbound', 'Mounjaro', 'amoxicillin', 'fentanyl', 'oxycodone', 'opioid', 'opioids',
 ];
 
-// News sites that only repost press releases. A story whose source is one of these is left out.
-// Matched on the source's name, ignoring case and punctuation.
-export const EXCLUDE_SOURCES = ['EIN Presswire', 'EIN News', 'PR Newswire', 'Business Wire', 'GlobeNewswire', 'Accesswire', 'openPR', 'PRWeb', 'Newsfile'];
+// News sites that only repost press releases, and satire sites whose jokes read like headlines. A story whose
+// source is one of these is left out. Matched on the source's name, ignoring case and punctuation, as whole words.
+export const EXCLUDE_SOURCES = [
+  'EIN Presswire', 'EIN News', 'PR Newswire', 'Business Wire', 'GlobeNewswire', 'Accesswire', 'openPR', 'PRWeb', 'Newsfile',
+  // satire
+  'The Onion', 'The Babylon Bee', 'Babylon Bee', 'ClickHole', 'The Beaverton', 'Reductress', 'The Hard Times', 'Duffel Blog',
+  'The Daily Mash', 'NewsThump', 'Waterford Whispers News',
+];
 
 // Headlines we have seen and do not want, by hand. Lowercase pieces of a title; a title that
 // holds one is left out. Add a line here when a headline slips through the families below.
