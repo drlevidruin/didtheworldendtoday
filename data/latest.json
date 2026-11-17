@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T16:47:02.425Z",
+  "buildTime": "2026-11-17T17:01:56.287Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 11:47 ET",
+  "etStamp": "2026-11-17 12:01 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -54,17 +54,17 @@
     "date": "2026-11-17",
     "score": 92
   },
-  "headlinesRead": 868,
-  "lastSuccessAt": "2026-11-17T16:47:02.425Z",
+  "headlinesRead": 300,
+  "lastSuccessAt": "2026-11-17T17:01:56.287Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
     "space": 3,
     "earth": 4,
-    "hacks": 39,
+    "hacks": 38,
     "grid": 8,
+    "internet": 11,
     "germs": 4,
-    "internet": 10,
     "markets": 4,
     "animals": 4,
     "ai": 1,
@@ -190,58 +190,58 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 570,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 15 of 26 queries)",
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-17T16:47:02.425Z"
     },
     "bing": {
       "ok": true,
-      "count": 287,
+      "count": 288,
       "error": null,
-      "lastOkAt": "2026-11-17T16:47:02.425Z"
+      "lastOkAt": "2026-11-17T17:01:56.287Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": null
     },
     "hn": {
       "ok": true,
-      "count": 11,
+      "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-17T16:47:02.425Z"
+      "lastOkAt": "2026-11-17T17:01:56.287Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T16:47:02.425Z"
+      "lastOkAt": "2026-11-17T17:01:56.287Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T16:47:02.425Z"
+      "lastOkAt": "2026-11-17T17:01:56.287Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T16:47:02.425Z"
+      "lastOkAt": "2026-11-17T17:01:56.287Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T16:47:02.425Z"
+      "lastOkAt": "2026-11-17T17:01:56.287Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T16:47:02.425Z"
+      "lastOkAt": "2026-11-17T17:01:56.287Z"
     },
     "x": {
       "ok": true,
@@ -254,7 +254,7 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T16:47:02.425Z"
+      "lastOkAt": "2026-11-17T17:01:56.287Z"
     }
   },
   "stories": [
@@ -439,6 +439,23 @@
       "score": 3.57
     },
     {
+      "id": "e57fc73d6ac8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft identifies months-old bug as a root cause of global outage",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVDY1RTlKWmV4MmlUd3MxZ3hyNmozcVd4dURkdVpMX0htZXJ5ZXNYTXhzWXUzcWNwRWNkVnJRLWFsY0ExelNZSnBBbnc3dl9ZWnBmX25UeThva2RZWXVkeGo3SVJQbkZfcWl2QjV2NVRyck5NSUtqTmxxX2xBR3ZRQVp5RUNDcnM?oc=5",
+      "source": "The Guardian",
+      "publishedAt": "2026-11-16T20:23:00.000Z",
+      "firstSeenAt": "2026-11-17T04:41:57.645Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Guardian",
+        "Information Age | ACS",
+        "weareiowa.com"
+      ],
+      "score": 3.12
+    },
+    {
       "id": "35860456c9f1",
       "cat": "flights",
       "kind": "news",
@@ -508,25 +525,6 @@
         "Eastern Washington University Athletics"
       ],
       "score": 2.33
-    },
-    {
-      "id": "1f758b82249b",
-      "cat": "earth",
-      "kind": "news",
-      "title": "No tsunami threat to Sri Lanka after 6.6-magnitude earthquake near Indonesia",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQUVJQVUNpay1ianNsa1B4MHprRGxibXhuRWlPOTNNY2pzQnE4TUJjMWtQTXgydHRYMXpfU1VpcWpvdVU2QWM5QmpCZEtDLUdVRjMwNGlDY3hqZThVWC1XWWtlRG5yTmhVY0hYZEhhWERUS0RBWVFNRF82TkpVNWRlcEFLQV9POTRjeEloR0lTaFZkejVENElZd3AzSWQ3Ui1TeENTdjFwSWs2Vl9scWVRWA?oc=5",
-      "source": "Hiru News",
-      "publishedAt": "2026-11-17T02:15:00.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 3,
-      "outletNames": [
-        "Hiru News",
-        "Daily Mirror - Sri Lanka",
-        "Newswire"
-      ],
-      "score": 2.24,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "8feb10e23b97",
@@ -614,6 +612,25 @@
         "Yahoo"
       ],
       "score": 2.43
+    },
+    {
+      "id": "1f758b82249b",
+      "cat": "earth",
+      "kind": "news",
+      "title": "No tsunami threat to Sri Lanka after 6.6-magnitude earthquake near Indonesia",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQUVJQVUNpay1ianNsa1B4MHprRGxibXhuRWlPOTNNY2pzQnE4TUJjMWtQTXgydHRYMXpfU1VpcWpvdVU2QWM5QmpCZEtDLUdVRjMwNGlDY3hqZThVWC1XWWtlRG5yTmhVY0hYZEhhWERUS0RBWVFNRF82TkpVNWRlcEFLQV9POTRjeEloR0lTaFZkejVENElZd3AzSWQ3Ui1TeENTdjFwSWs2Vl9scWVRWA?oc=5",
+      "source": "Hiru News",
+      "publishedAt": "2026-11-17T02:15:00.000Z",
+      "firstSeenAt": "2026-11-17T10:15:25.360Z",
+      "outlets": 3,
+      "outletNames": [
+        "Hiru News",
+        "Daily Mirror - Sri Lanka",
+        "Newswire"
+      ],
+      "score": 2.24,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "2f33be5de347",
@@ -774,21 +791,6 @@
       "score": 1.39
     },
     {
-      "id": "95fc0522f486",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
-      "source": "CyberSecurityNews",
-      "publishedAt": "2026-11-17T15:52:11.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "CyberSecurityNews"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "fd99c05c1347",
       "cat": "germs",
       "kind": "news",
@@ -867,22 +869,22 @@
       "score": 2.36
     },
     {
-      "id": "8768494a176d",
+      "id": "08abbe2cfb4e",
       "cat": "hacks",
       "kind": "news",
-      "title": "Chase Down? Thousands of Customers Report Login and Account Problems Monday, Downdetector Shows",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNWU90UC1MMGxjbVBOeVdBTlE5dl9yVE1ISjViYnRwclRqSFRqZGxLOGd4eFFEYVZiS3ZxamNpd1ZxNXZfZS1pNnNtNXZoQXJPWmxha3RZWm9JNTVFeXNVMEl1Vm5BczY5U3VjUUJFQU5OVlFRWVp3MEFkWnhyR1JrQm1NSFA?oc=5",
-      "source": "Men's Journal",
-      "publishedAt": "2026-11-16T17:01:33.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
+      "title": "Cyberattack hits 178 organizations: Credit cards, crypto, other data at risk",
+      "url": "https://www.nj.com/news/2026/11/cyberattack-hits-178-organizations-credit-cards-crypto-other-data-at-risk.html",
+      "source": "NJ.com",
+      "publishedAt": "2026-11-17T01:57:00.000Z",
+      "firstSeenAt": "2026-11-17T15:16:40.034Z",
       "outlets": 4,
       "outletNames": [
-        "Men's Journal",
+        "NJ.com",
+        "Syracuse.com",
         "Yahoo",
-        "Yardbarker",
-        "Nacionale"
+        "mlive"
       ],
-      "score": 2.36
+      "score": 2.33
     },
     {
       "id": "7505a12e583b",
@@ -950,23 +952,6 @@
         "Newswav"
       ],
       "score": 2.04
-    },
-    {
-      "id": "08abbe2cfb4e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack hits 178 organizations: Credit cards, crypto, other data at risk",
-      "url": "https://www.nj.com/news/2026/11/cyberattack-hits-178-organizations-credit-cards-crypto-other-data-at-risk.html",
-      "source": "NJ.com",
-      "publishedAt": "2026-11-17T01:57:00.000Z",
-      "firstSeenAt": "2026-11-17T15:16:40.034Z",
-      "outlets": 3,
-      "outletNames": [
-        "NJ.com",
-        "Syracuse.com",
-        "Yahoo"
-      ],
-      "score": 2.01
     },
     {
       "id": "e06bc2e7ff05",
@@ -1362,6 +1347,21 @@
         "News-Talk 1480 WHBC"
       ],
       "score": 1.4
+    },
+    {
+      "id": "95fc0522f486",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
+      "source": "CyberSecurityNews",
+      "publishedAt": "2026-11-17T15:52:11.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 1,
+      "outletNames": [
+        "CyberSecurityNews"
+      ],
+      "score": 1.39
     },
     {
       "id": "4703fdc3b0b6",
