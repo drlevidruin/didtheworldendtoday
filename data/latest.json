@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T21:00:55.981Z",
+  "buildTime": "2026-11-17T21:04:09.279Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 16:00 ET",
-  "score": 92,
+  "etStamp": "2026-11-17 16:04 ET",
+  "score": 98,
   "fired": [
     "flights",
     "hacks",
@@ -12,6 +12,7 @@
     "sun",
     "earth",
     "markets",
+    "ai",
     "grid",
     "germs",
     "weather",
@@ -34,7 +35,7 @@
       "points": 6
     }
   ],
-  "change": 12,
+  "change": 18,
   "yesterday": {
     "date": "2026-11-16",
     "score": 80,
@@ -52,21 +53,21 @@
   },
   "record": {
     "date": "2026-11-17",
-    "score": 92
+    "score": 98
   },
-  "headlinesRead": 823,
-  "lastSuccessAt": "2026-11-17T21:00:55.981Z",
+  "headlinesRead": 1664,
+  "lastSuccessAt": "2026-11-17T21:04:09.279Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 17,
+    "flights": 18,
     "space": 3,
     "earth": 4,
-    "internet": 13,
-    "hacks": 38,
+    "internet": 12,
+    "hacks": 37,
     "germs": 4,
     "grid": 4,
     "animals": 3,
-    "ai": 2,
+    "ai": 3,
     "weather": 4,
     "markets": 4,
     "sun": 4
@@ -81,9 +82,9 @@
       "tsunami": false
     },
     "kp": {
-      "value": 1.67,
-      "time": "2026-11-17T15:00:00.000Z",
-      "max24": 1.67
+      "value": 2,
+      "time": "2026-11-17T18:00:00.000Z",
+      "max24": 2
     },
     "asteroid": {
       "des": "2026 WA",
@@ -191,57 +192,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 500,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "count": 1333,
+      "error": null,
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     },
     "bing": {
       "ok": true,
-      "count": 282,
+      "count": 290,
       "error": null,
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     },
     "x": {
       "ok": true,
@@ -254,13 +255,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T21:00:55.981Z"
+      "lastOkAt": "2026-11-17T21:04:09.279Z"
     }
   },
   "stories": [
@@ -272,7 +273,7 @@
       "url": "https://www.msn.com/en-us/technology/aviation/faa-pauses-router-installations-after-nationwide-ground-stop/ar-AA2hCCT7",
       "source": "The Wall Street Journal on MSN",
       "publishedAt": "2026-11-16T22:34:39.000Z",
-      "latestAt": "2026-11-17T20:32:00.000Z",
+      "latestAt": "2026-11-17T21:00:00.000Z",
       "firstSeenAt": "2026-11-17T14:10:18.338Z",
       "outlets": 32,
       "outletNames": [
@@ -1128,6 +1129,23 @@
       "score": 2.43
     },
     {
+      "id": "5f4b0eabb2f5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI Dallas office warns that AI is helping hackers launch faster global cyberattacks",
+      "url": "https://www.dallasnews.com/business/technology/article/fbi-dallas-hackers-warning-22535909.php",
+      "source": "The Dallas Morning News",
+      "publishedAt": "2026-11-17T12:31:00.000Z",
+      "latestAt": "2026-11-17T20:37:43.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 2,
+      "outletNames": [
+        "Dallas News",
+        "The Dallas Morning News"
+      ],
+      "score": 2.42
+    },
+    {
       "id": "0e76c1ec0e00",
       "cat": "hacks",
       "kind": "news",
@@ -1544,23 +1562,6 @@
       "score": 1.71
     },
     {
-      "id": "ea194cee54b9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Massive U.S. Banking Outage! Chase, Wells Fargo, Bank Of America Hit After FAA & Microsoft Chaos",
-      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNWG11QXdtN0NiTHNqdHNaMkJkZkRkTmswQm5MSEtTN3FMYmhaWlNSSEFSM1J3T19lMFhzOHlaYkJ0UkdPSTBQeE8yTGdQVGVXYnFGN1RmWThOR1FEZzdUaFd6Ui1BXzZ0T2lRU1liTHhZcGt0UTJIczE5UWZDSU96c1BSU3hQUTdEUFdiSzFSbGtzZkprdWNraUU2Y2d1UThrWVhyY3ptSmNnTlNzbjRxbVBWbE82MjJRSUtEaGJwajgzbVRGQkI4RU1ubnVDbEZVbFBzUmtRQmZoVS1IVU0xUUpzZjlnRE4xblBmTGxhZy1nTWtGTWdVZVdraEM0bEd00gGGAkFVX3lxTE1tdkJwdWs1QjRYMlJ4MEJEUXFmVEpjVWZoZERjZXlaakh0VUdNYmdrQ083Yl9mX0VLLTVfNUd0bEg1ZmtRSl9YVzNKVHFpQXRwT3Zpc1Yxbjk5aENtZVlvanlfZ3E1MTN6anVNM2F4YTFGb0lfNml3R0NobFNNRHRXZHJaaGVzTHl6aEdLS0Vvak9pYm9seVZrYkFYelROV2t0Vzlyb2xvTG5YSVBwVFJXYkVoMUgzWnEzcWJJNzgwSXMzVU9ZMDI2RjNmT1FwZERZdkFGMUl2bFhiSmh5ZExCdnd2dnZaUWtUWHBYOEZnbkJBQ19DMDNHbndReXdJcXd1dk5oWlE?oc=5",
-      "source": "The Times of India",
-      "publishedAt": "2026-11-16T21:01:16.000Z",
-      "latestAt": "2026-11-17T08:35:07.000Z",
-      "firstSeenAt": "2026-11-17T20:47:50.440Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Times of India",
-        "Convergence Now"
-      ],
-      "score": 1.69
-    },
-    {
       "id": "e0bd7656430d",
       "cat": "hacks",
       "kind": "news",
@@ -1646,18 +1647,18 @@
       "score": 1.57
     },
     {
-      "id": "5f4b0eabb2f5",
-      "cat": "hacks",
+      "id": "ac8fef0be9f1",
+      "cat": "flights",
       "kind": "news",
-      "title": "FBI warns that AI is helping hackers launch faster global cyberattacks",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOV0NvNEZRRmpvdTdsbk5ndHZUeHU4azVNQmtSOEV2NU1yYlNZenlBbDNMZ3g3aWZCN3EycGM0VE9JeUlUVzZ0cW5EdExveC1XWkQ4WEFFUTQ0NnhCVkFiMVczQ09RSEgtVHRSY0dXVkdsX1VKY3YxdkxBYXhOZ2x6N1g2amNqZGYyQ0lta0RMaHJ6M19LaWRHcWV3?oc=5",
-      "source": "Dallas News",
-      "publishedAt": "2026-11-17T20:37:09.000Z",
-      "latestAt": "2026-11-17T20:37:43.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "title": "FAA ground stop put focus on air traffic controller shortages at Phoenix Sky Harbor, nationwide",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNN0M4VVlicmhPUWRXODF6XzVqaFE3Tk9qSW9qcTFiZ1JyZk9jMFBzb1p6U0g5bWlqUzY4aDlkMU1jcVdVai1nWEE1dXhoWmRxenRSR09zQkQybF9VSUUyNWxNc1ZkWG5kR2tSN1N0MDNQejdjRkhnUEZ5NFVUbE9mbGpXZ25HSWs?oc=5",
+      "source": "Cronkite News",
+      "publishedAt": "2026-11-17T20:58:11.000Z",
+      "latestAt": "2026-11-17T20:58:11.000Z",
+      "firstSeenAt": "2026-11-17T21:04:09.279Z",
       "outlets": 1,
       "outletNames": [
-        "Dallas News"
+        "Cronkite News"
       ],
       "score": 1.4
     },
@@ -1788,22 +1789,6 @@
         "news8000.com"
       ],
       "score": 1.37
-    },
-    {
-      "id": "853d1e48989d",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Major outage hits US spy agency's classified communication system: Report",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPeDBfUUNzN19aQmpQTzRaR3M2LUVSbXdESzBQTFB1WDdTWGZhb0tLTEVEdzdpdnZsQTJmSUhQVDVzN3BBQVlXR0IwMmtiRTdMZHV5cUQ0dm9aekcxa2YySDE4LU14eHYwOEx6ZlhGbmJyYTVaRlhPbFRtcjZFbDRqUTkwY3BkelQwc1dLVG95a0ZBSGVqc25WMVhJVDhxa0JhUDQ2NzlEWmtrUFNqZnc0cERDcTVWYXZMcGp1MUxxTHBfbUNkM1Z1RHZ5N1cxeDZldHh1OG9kWkhjOGFvVHNBQTZKaElxaUFMYkstN2lRZzBQT3pWV3fSAfsBQVVfeXFMTWhfdk5NUVY2T09yQUJQMUlEamdVOW5iQVQtNFpOUF9SX2EtSldCZEJIQk01MEJTNjFwTmxYZjRjTUN0Rl9VTS1SdlJ2NGJuUnZ0VEZ3LXJHY3F1MkptbjJVbWpZR3VuRUhMZDdsTU5JcW9pQ0dlVktZLWFtRU80WndtX25IV2tiRUVuVTJJcFprdThGckRnbXV5XzlSWWxkdThRZktXN1c5VE5QYm5tVkNOZzFnbzdCYlpiT0I5WEozLXJoWlA4bzYxRkR6VzhmaTM5U2hjVWhXUUtpNlB0cG5XdmhBM3UzWEZGbDR5Y1FpYTZwaHgzMzl0NkU?oc=5",
-      "source": "India Today",
-      "publishedAt": "2026-11-17T19:21:13.000Z",
-      "latestAt": "2026-11-17T19:21:13.000Z",
-      "firstSeenAt": "2026-11-17T21:00:55.981Z",
-      "outlets": 1,
-      "outletNames": [
-        "India Today"
-      ],
-      "score": 1.36
     },
     {
       "id": "bf15eaf85e48",
@@ -2068,22 +2053,6 @@
       "score": 0.87
     },
     {
-      "id": "71fa591b08de",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Sun blasts powerful X3.3-class solar flare - see stunning spacecraft views",
-      "url": "https://www.msn.com/en-us/news/other/sun-blasts-powerful-x33-class-solar-flare-see-stunning-spacecraft-views/vi-AA2hDMQo",
-      "source": "Dailymotion on MSN",
-      "publishedAt": "2026-11-17T12:01:56.000Z",
-      "latestAt": "2026-11-17T12:01:56.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
-      "outlets": 1,
-      "outletNames": [
-        "Dailymotion on MSN"
-      ],
-      "score": 0.86
-    },
-    {
       "id": "fc6c351fbf01",
       "cat": "space",
       "kind": "news",
@@ -2114,6 +2083,38 @@
         "Times Now"
       ],
       "score": 0.85
+    },
+    {
+      "id": "486a9cd54266",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Cyprus Unveils First Home-Built Satellites and AI Space Weather Centre",
+      "url": "https://en.politis.com.cy/life/1070007/cyprus-unveils-first-home-built-satellites-and-ai-space-weather-centre",
+      "source": "en.politis.com.cy",
+      "publishedAt": "2026-11-17T05:06:00.000Z",
+      "latestAt": "2026-11-17T05:06:00.000Z",
+      "firstSeenAt": "2026-11-17T21:04:09.279Z",
+      "outlets": 1,
+      "outletNames": [
+        "en.politis.com.cy"
+      ],
+      "score": 0.73
+    },
+    {
+      "id": "82527a27d4cb",
+      "cat": "ai",
+      "kind": "news",
+      "title": "FBI Warns of New AI Hacking Tool as More Outages Occur",
+      "url": "https://www.nextbigfuture.com/2026/11/fbi-warns-of-new-ai-hacking-tool-as-more-outages-occur.html",
+      "source": "NextBigFuture",
+      "publishedAt": "2026-11-17T03:50:00.000Z",
+      "latestAt": "2026-11-17T03:50:00.000Z",
+      "firstSeenAt": "2026-11-17T21:04:09.279Z",
+      "outlets": 1,
+      "outletNames": [
+        "NextBigFuture"
+      ],
+      "score": 0.71
     }
   ]
 }
