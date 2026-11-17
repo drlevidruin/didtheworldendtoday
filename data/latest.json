@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T11:15:33.124Z",
+  "buildTime": "2026-11-17T11:45:41.326Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 06:15 ET",
+  "etStamp": "2026-11-17 06:45 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -54,17 +54,17 @@
     "date": "2026-11-17",
     "score": 92
   },
-  "headlinesRead": 1603,
-  "lastSuccessAt": "2026-11-17T11:15:33.124Z",
+  "headlinesRead": 900,
+  "lastSuccessAt": "2026-11-17T11:45:41.326Z",
   "rollingFallback": false,
   "cats": {
     "flights": 21,
-    "internet": 6,
+    "internet": 7,
     "space": 3,
     "earth": 5,
-    "hacks": 38,
+    "hacks": 36,
     "markets": 6,
-    "grid": 6,
+    "grid": 7,
     "germs": 4,
     "ai": 2,
     "weather": 4,
@@ -98,7 +98,7 @@
       "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
-      "closures": 1,
+      "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -191,57 +191,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1315,
-      "error": null,
-      "lastOkAt": "2026-11-17T11:15:33.124Z"
+      "count": 626,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
+      "lastOkAt": "2026-11-17T11:45:41.326Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
-      "error": null,
-      "lastOkAt": "2026-11-17T11:15:33.124Z"
+      "count": 264,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-17T11:45:41.326Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": null
     },
     "hn": {
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-17T11:15:33.124Z"
+      "lastOkAt": "2026-11-17T11:45:41.326Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T11:15:33.124Z"
+      "lastOkAt": "2026-11-17T11:45:41.326Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T11:15:33.124Z"
+      "lastOkAt": "2026-11-17T11:45:41.326Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T11:15:33.124Z"
+      "lastOkAt": "2026-11-17T11:45:41.326Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T11:15:33.124Z"
+      "lastOkAt": "2026-11-17T11:45:41.326Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T11:15:33.124Z"
+      "lastOkAt": "2026-11-17T11:45:41.326Z"
     },
     "x": {
       "ok": true,
@@ -254,7 +254,7 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T11:15:33.124Z"
+      "lastOkAt": "2026-11-17T11:45:41.326Z"
     }
   },
   "stories": [
@@ -506,6 +506,23 @@
       "score": 3.74
     },
     {
+      "id": "e57fc73d6ac8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft identifies months-old bug as a root cause of global outage",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVDY1RTlKWmV4MmlUd3MxZ3hyNmozcVd4dURkdVpMX0htZXJ5ZXNYTXhzWXUzcWNwRWNkVnJRLWFsY0ExelNZSnBBbnc3dl9ZWnBmX25UeThva2RZWXVkeGo3SVJQbkZfcWl2QjV2NVRyck5NSUtqTmxxX2xBR3ZRQVp5RUNDcnM?oc=5",
+      "source": "The Guardian",
+      "publishedAt": "2026-11-16T20:23:00.000Z",
+      "firstSeenAt": "2026-11-17T04:41:57.645Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Guardian",
+        "Information Age | ACS",
+        "weareiowa.com"
+      ],
+      "score": 3.12
+    },
+    {
       "id": "9c193d6b9dcb",
       "cat": "earth",
       "kind": "news",
@@ -569,23 +586,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "fb672cb8c121",
-      "cat": "markets",
-      "kind": "news",
-      "title": "China Leading Smart Circuit Breaker Specialist: MLELE's Impact on IoT Electrical Systems",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMV9vUExWVUNRbzE3aFlobmNiWWFSaGgzcFZFSlhXc244UGFsdVh3dGRacVN6dHRVazFLb1FFeklCSkZyM3RGS295YmQtaFBnQVZxNHJDYVVNVnItQjhfLW9jS0FjekwxYjlvM0ZyMWVEVGRkWlQ4eDA0dFlYVE1PVUVZNW93SUEtT3c4aHRjVk03aWZHd0pFYjVwQlg1SU8tZUF2R3R1SjlsVFJ0c1Z3WGFvVU15U2t5U3Y3Y0RTNFdheVhoTHMybQ?oc=5",
-      "source": "EIN News",
-      "publishedAt": "2026-11-17T09:34:46.000Z",
-      "firstSeenAt": "2026-11-17T09:45:21.244Z",
-      "outlets": 3,
-      "outletNames": [
-        "EIN News",
-        "openPR.com",
-        "The National Law Review"
-      ],
-      "score": 2.58
-    },
-    {
       "id": "8c903b55d699",
       "cat": "hacks",
       "kind": "news",
@@ -641,6 +641,22 @@
       "score": 3.31
     },
     {
+      "id": "af6bc72c8b91",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Nationwide UK blackout explained after viral November 19 power cut claims",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPWnZRQ3hXLU5hOTZLVTA2Y2pIeXhoQXg2OHVjbk90eURnYUZwQl9QQUVVaUQxdnlSSUV3Y2Zwb3dEamcyZWxqaEQxOHFWNDlJbXZTdUlnTFhjbXhBcklBcGhmQjQxbzZUbjRtRklsOUtwM2VLeXZLdUhKYTFKZ3ZvVVpzSDk0WkhpOFdXN2VnRHNVSTA?oc=5",
+      "source": "malverngazette.co.uk",
+      "publishedAt": "2026-11-17T10:24:40.000Z",
+      "firstSeenAt": "2026-11-17T11:45:41.326Z",
+      "outlets": 2,
+      "outletNames": [
+        "malverngazette.co.uk",
+        "The Worcester News"
+      ],
+      "score": 2.74
+    },
+    {
       "id": "8483e8dca843",
       "cat": "hacks",
       "kind": "news",
@@ -675,6 +691,23 @@
         "WWLP"
       ],
       "score": 2.67
+    },
+    {
+      "id": "fb672cb8c121",
+      "cat": "markets",
+      "kind": "news",
+      "title": "China Leading Smart Circuit Breaker Specialist: MLELE's Impact on IoT Electrical Systems",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMV9vUExWVUNRbzE3aFlobmNiWWFSaGgzcFZFSlhXc244UGFsdVh3dGRacVN6dHRVazFLb1FFeklCSkZyM3RGS295YmQtaFBnQVZxNHJDYVVNVnItQjhfLW9jS0FjekwxYjlvM0ZyMWVEVGRkWlQ4eDA0dFlYVE1PVUVZNW93SUEtT3c4aHRjVk03aWZHd0pFYjVwQlg1SU8tZUF2R3R1SjlsVFJ0c1Z3WGFvVU15U2t5U3Y3Y0RTNFdheVhoTHMybQ?oc=5",
+      "source": "EIN News",
+      "publishedAt": "2026-11-17T09:34:46.000Z",
+      "firstSeenAt": "2026-11-17T09:45:21.244Z",
+      "outlets": 3,
+      "outletNames": [
+        "EIN News",
+        "openPR.com",
+        "The National Law Review"
+      ],
+      "score": 2.58
     },
     {
       "id": "cab3e4329fac",
@@ -865,38 +898,6 @@
         "The Cool Down"
       ],
       "score": 1.64
-    },
-    {
-      "id": "89764bc4c344",
-      "cat": "ai",
-      "kind": "news",
-      "title": "ChatGPT Down? OpenAI Users Report Hours of Problems Since Afternoon as Outage Complaints Linger Into Night",
-      "url": "https://www.ibtimes.com.au/openai-users-report-chatgpt-service-problems-1878735",
-      "source": "International Business Times AU",
-      "publishedAt": "2026-11-16T15:24:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 2,
-      "outletNames": [
-        "International Business Times AU",
-        "International Business Times Australia"
-      ],
-      "score": 1.57
-    },
-    {
-      "id": "b9700eccc306",
-      "cat": "markets",
-      "kind": "news",
-      "title": "This Isn’t a Crypto Crash. Fed Hike Bets Are Hitting Everything",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/isn-t-crypto-crash-fed-224146944.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-16T14:42:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "BeInCrypto"
-      ],
-      "score": 1.55
     },
     {
       "id": "95dc0e6331b3",
@@ -1271,6 +1272,22 @@
       "score": 1.57
     },
     {
+      "id": "89764bc4c344",
+      "cat": "ai",
+      "kind": "news",
+      "title": "ChatGPT Down? OpenAI Users Report Hours of Problems Since Afternoon as Outage Complaints Linger Into Night",
+      "url": "https://www.ibtimes.com.au/openai-users-report-chatgpt-service-problems-1878735",
+      "source": "International Business Times AU",
+      "publishedAt": "2026-11-16T15:24:00.000Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "outlets": 2,
+      "outletNames": [
+        "International Business Times AU",
+        "International Business Times Australia"
+      ],
+      "score": 1.57
+    },
+    {
       "id": "b698fb63aeae",
       "cat": "hacks",
       "kind": "news",
@@ -1285,6 +1302,22 @@
         "fish4news.co.uk"
       ],
       "score": 1.56
+    },
+    {
+      "id": "b9700eccc306",
+      "cat": "markets",
+      "kind": "news",
+      "title": "This Isn’t a Crypto Crash. Fed Hike Bets Are Hitting Everything",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/isn-t-crypto-crash-fed-224146944.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-16T14:42:00.000Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Finance",
+        "BeInCrypto"
+      ],
+      "score": 1.55
     },
     {
       "id": "51781829651f",
@@ -1349,6 +1382,22 @@
         "The New Stack"
       ],
       "score": 1.48
+    },
+    {
+      "id": "27764044bd6b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "All banks down? What is going on with Bank of America, Chase, JP Morgan, Wells Fargo and Zelle and their accounts",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPbThxRktUM1FpdldUWTFuUGd0TEZfazRMZkdUWHBEclBNQlh5b21mdWV3MlljQl9pc2NGdkFtZFBKQTluNl83cElOQ3Z4ZFFENDlMYlhLTU40ekpZbm0ycGJWZm5MMERwOThHQWNRbnQ1M01vNnlka2hwb2VYRGZ3MVB2TjNiX2RySHVqdEw3dUpBclhZdm1PODNFSjJ4a0ZzcVNFWmZfXzR2WjNyS3ZXWnpaVE1qWldiTjd3Tklqb3hTbTBReXNNNGhzZ25wSFB2eG4wdkdkaUJ0RGZjUTlr?oc=5",
+      "source": "El Cronista",
+      "publishedAt": "2026-11-16T19:02:34.000Z",
+      "firstSeenAt": "2026-11-17T11:45:41.326Z",
+      "outlets": 2,
+      "outletNames": [
+        "El Cronista",
+        "Bergen Record"
+      ],
+      "score": 1.44
     },
     {
       "id": "d4ad867ccde3",
@@ -1700,51 +1749,6 @@
         "Sur in English"
       ],
       "score": 1.32
-    },
-    {
-      "id": "f79deeab2a17",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Use Claude Code to Develop Phantom53 Malware for ClickFix Attacks Targeting Global Organizations",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0ekU2V2Vjbk9aNUw5Wk4zcWNCbXBPQnFERFNxSGNDbGUyMXd0MGRTdVphYzBPVXl0ZUNtMTZJUzNpVUNYTlN1NFd5X2labHJJUnp4Y2JtdFZMSGfSAWBBVV95cUxNSWVNclZqUkhEcDBQcUlWQ0V5YVhzSTRHYXB1OGxjUENGTXlLdGRyVHJGN0hZMXk5eDFJVV82cU5UOWNiUUQtdVRVZ2hQUy1GMEU1RGJVc3dVU2QxbTNUMHI?oc=5",
-      "source": "GBHackers News",
-      "publishedAt": "2026-11-17T06:22:48.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 1,
-      "outletNames": [
-        "GBHackers News"
-      ],
-      "score": 1.31
-    },
-    {
-      "id": "463e54d6c013",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major US Bank Software Bug Triggers Widepsread Outage",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9IeURiVURmbDNzT01LTEN3aG5LZ1F2YkxLRVZjUVd0TGJTM1Bfbk9rTGRXdVItT0pFdWEzTFNnX3dJRzlyUHdfSlVNcUFZcWV0SHplS1FJNzgwNmo1TGw5M0RSdHdvWTk3OUNBVGVFdUVUX1F6NFE?oc=5",
-      "source": "TechJuice",
-      "publishedAt": "2026-11-17T06:02:56.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 1,
-      "outletNames": [
-        "TechJuice"
-      ],
-      "score": 1.3
-    },
-    {
-      "id": "9a625706dd54",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Widespread bank outage affects major financial institutions in the U.S.",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNnFremtnN1NzUkhYNUl4MDlnbUZkUjZiLWxQZWQ4Vkw1bWtfekx6TC0taEc2OHdjNl9vZ0tFMnJGdU00TzVZUzVMSHF0MEFXQnFOV1pUNEk4eVE4bExOWEpNdDNHMEliSDloc0Z3UDFCMno4bG5NOG5WaTU4bmVJME9obVVMaFRfWEtNQWZudGFyczZfanM1VUJaQlVDRERUTmxMUnBucmlpVUM4WkF3Ylpn?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-17T05:28:00.000Z",
-      "firstSeenAt": "2026-11-17T11:15:33.124Z",
-      "outlets": 1,
-      "outletNames": [
-        "CBS News"
-      ],
-      "score": 1.26
     },
     {
       "id": "8c9c973ed1e7",
