@@ -1,9 +1,11 @@
 // npm run edit
 //
 // Writes today's edition with the Claude API: a one-sentence headline and 5 to 10 items,
-// one per near miss, each with a label, an emoji and a line, from the headlines the update
+// one per near miss, each with a label, an emoji and a line, and up to EDITION.moreMax more
+// stories worth a look (ids only, for "More from today"), from the headlines the update
 // step just filed. It runs after `npm run update` and before `npm run build`, and it never
 // fails the run: every problem becomes one log line, and the edition already on file stays.
+// A missing or bad list of more stories is an empty list and never costs the edition.
 //
 // It reads the newest news first and does not tell the same event twice. It sends the big stories first (see
 // "Big news" below), then the stories of the last EDITOR_FRESH_HOURS hours, newest first (at most EDITOR_FRESH_MAX),
@@ -102,8 +104,9 @@ export const EDITION_SCHEMA = {
         additionalProperties: false,
       },
     },
+    more: { type: 'array', items: { type: 'string' } },
   },
-  required: ['date', 'headline', 'items'],
+  required: ['date', 'headline', 'items', 'more'],
   additionalProperties: false,
 };
 
@@ -517,7 +520,7 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
       };
     });
 
-    const raw = { date: today, by: 'editor', writtenAt: nowIso, headline: parsed.headline, items };
+    const raw = { date: today, by: 'editor', writtenAt: nowIso, headline: parsed.headline, items, more: parsed.more };
     const checked = validateEdition(raw, { date: today, used, byId, excluder: gk.excluder });
     if (!checked.ok) return done('kept', `the edition failed its checks (${checked.reason}), kept the current edition (${tokensOf(response)})`);
 

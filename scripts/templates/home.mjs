@@ -8,12 +8,12 @@
 // page, right after the rows it shares.
 //
 // A list of near misses shows its first five and keeps the rest behind a See more. Today's See more also
-// holds the day's other headlines, so the share button is under all of it. A day page keeps every headline
-// in its own list further down.
+// holds the day's other headlines (the editor's picks first), so the share button is under all of it. A day
+// page keeps every headline in its own list further down.
 //
 // A day is what resolveDays() hands over (scripts/lib/editions.mjs), plus the
 // numbers the build adds:
-//   { date, score, change, fired, headline, by, rows[], stories[], total, byId }
+//   { date, score, change, fired, headline, by, rows[], more[], stories[], total, byId }
 import {
   ALL_HEADLINES,
   ALMANAC_LINK,
@@ -23,6 +23,7 @@ import {
   FEED_END_QUIET,
   FOLLOW_QUIET,
   FOLLOW_TEXT,
+  HEADLINES_SHOWN,
   NOTHING_FILED,
   NOTHING_YET,
   OLDER_DAYS,
@@ -146,10 +147,16 @@ ${board(d.score, cap)}
 const noRows = (isToday) => `<p class="empty">${esc(isToday ? NOTHING_YET : NOTHING_FILED)}</p>`;
 
 // The headlines of today that are not already one of its near misses (a near miss holds the ids of every story
-// it was made from). They wait behind today's See more.
-function otherHeadlines(d) {
+// it was made from). They wait behind today's See more. The editor's picks (d.more, ids, best first) come first, in
+// its order, and all of them show; a pick that is no longer one of the day's stories is skipped. The rest of the
+// headlines follow in the page's order behind the fold. With no picks the first ten show, as before.
+export function otherHeadlines(d) {
   const told = new Set(d.rows.flatMap((r) => (Array.isArray(r.ids) ? r.ids : [])));
-  return (Array.isArray(d.stories) ? d.stories : []).filter((s) => !told.has(s.id));
+  const left = (Array.isArray(d.stories) ? d.stories : []).filter((s) => !told.has(s.id));
+  const byId = new Map(left.map((s) => [s.id, s]));
+  const picks = [...new Set(Array.isArray(d.more) ? d.more : [])].map((id) => byId.get(id)).filter(Boolean);
+  const picked = new Set(picks);
+  return { others: [...picks, ...left.filter((s) => !picked.has(s))], shown: picks.length || HEADLINES_SHOWN };
 }
 
 // Today's block starts with the line over its rows and ends with the one share button of the page. Its
@@ -162,7 +169,7 @@ function dayBlock(d, v) {
   const ranked = isRanked(d, v);
   const ctx = rowContext(d, v);
   if (isToday) {
-    const body = d.rows.length ? `<h2 class="sec">${esc(sectionLine({ today: true, ranked }))}</h2>\n${rowsMore(d.rows, ctx, { ranked, others: otherHeadlines(d) })}` : noRows(true);
+    const body = d.rows.length ? `<h2 class="sec">${esc(sectionLine({ today: true, ranked }))}</h2>\n${rowsMore(d.rows, ctx, { ranked, ...otherHeadlines(d) })}` : noRows(true);
     return `<section class="day" id="today">
 ${body}
 <div class="df">

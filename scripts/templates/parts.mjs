@@ -116,13 +116,14 @@ export function headlines(stories, ctx, shown = HEADLINES_SHOWN) {
 // The first ROWS_SHOWN rows show. The rest wait behind one "See N more" and carry on from the next rank, in the
 // same markup (only the first row of all is the closest call). Today's block also hands over the day's other
 // headlines: they wait behind the same door, under a small heading, in the list the day page shows.
-// ranked: the rows are near misses (an edition), not plain headlines. others: headlines to put behind the door.
+// ranked: the rows are near misses (an edition), not plain headlines. others: headlines to put behind the door,
+// of which the first `shown` show and the rest wait behind "Show N more headlines".
 
-export function rowsMore(items, ctx, { ranked = true, others = [] } = {}) {
+export function rowsMore(items, ctx, { ranked = true, others = [], shown = HEADLINES_SHOWN } = {}) {
   const first = rows(items.slice(0, ROWS_SHOWN), ctx);
   const rest = items.slice(ROWS_SHOWN);
   if (!rest.length && !others.length) return first;
-  const inside = [rest.length ? rows(rest, ctx, ROWS_SHOWN) : '', others.length ? `<h3 class="sub">${esc(MORE_TODAY)}</h3>\n${headlines(others, ctx)}` : ''].filter(Boolean).join('\n');
+  const inside = [rest.length ? rows(rest, ctx, ROWS_SHOWN) : '', others.length ? `<h3 class="sub">${esc(MORE_TODAY)}</h3>\n${headlines(others, ctx, shown)}` : ''].filter(Boolean).join('\n');
   return `${first}\n<details class="more">\n<summary>${esc(seeMore(rest.length, others.length, ranked))}</summary>\n${inside}\n</details>`;
 }
 

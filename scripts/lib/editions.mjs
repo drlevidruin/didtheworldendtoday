@@ -1,6 +1,6 @@
 // Editions: what each day says about itself.
 //
-// data/editions/YYYY-MM-DD.json   { date, by, writtenAt, headline, items[] }
+// data/editions/YYYY-MM-DD.json   { date, by, writtenAt, headline, items[], more[] }
 //
 // by is "hand" or "editor". The headline is one plain sentence and then "Still
 // here.", 110 characters at most. The share card shows the sentence alone.
@@ -10,6 +10,8 @@
 // ids[0] is the lead story. cat, title, url, source and outlets are copied from
 // the lead when the edition is written, so an edition never depends on a story
 // still being in the rolling window.
+// more is the editor's other picks for today's "More from today": story ids, best first, at most
+// EDITION.moreMax. An edition with no more (a hand one, an old one) has an empty list.
 //
 // One function (validateEdition) decides whether an edition can be used. The
 // build calls it for every day and the editor calls it before it writes. An
@@ -208,6 +210,22 @@ function checkItem(raw, { used, taken, byId, excluder }) {
   };
 }
 
+// "More from today": the ids the editor picked besides the items, best first. Only ids of the stories in byId
+// stay (the editor's own list when it writes, the day's stories when the build checks), never an id an item
+// already holds, never a repeat, and no more than EDITION.moreMax. A list that is missing or bad is an empty one.
+export function checkMore(raw, { itemIds = [], byId = new Map() } = {}) {
+  if (!Array.isArray(raw)) return [];
+  const seen = new Set(itemIds);
+  const more = [];
+  for (const id of raw) {
+    if (more.length >= EDITION.moreMax) break;
+    if (typeof id !== 'string' || !byId.has(id) || seen.has(id)) continue;
+    seen.add(id);
+    more.push(id);
+  }
+  return more;
+}
+
 // raw: an edition as read from a file or as the editor built it.
 // ctx: { date, used: Set of ids from earlier days, byId: Map of the day's stories, excluder }
 // Returns { ok: true, edition, dropped } or { ok: false, reason, dropped }.
@@ -259,6 +277,7 @@ export function validateEdition(raw, { date, used = new Set(), byId = new Map(),
       writtenAt: typeof raw.writtenAt === 'string' ? raw.writtenAt : '',
       headline,
       items: ordered.map((item) => orderKeys(item)),
+      more: checkMore(raw.more, { itemIds: ordered.flatMap((item) => item.ids), byId }),
     },
   };
 }
@@ -343,7 +362,8 @@ export function usedIdsBefore({ days, editions, excluder, date }) {
 
 // What each day shows: its edition, or its plain headlines.
 // fallbackHeadline(day) is the line over the plain headlines (the ladder line, or the quiet line).
-// Returns a Map of date -> { date, by: 'hand' | 'editor' | 'fallback', headline, rows, byId, edition }.
+// Returns a Map of date -> { date, by: 'hand' | 'editor' | 'fallback', headline, rows, more, byId, edition }.
+// more is the ids of the editor's other picks (always empty for plain headlines).
 export function resolveDays({ days, editions, excluder, quietMode = false, fallbackHeadline, emojiByCat }) {
   const out = new Map();
   for (const step of walk({ days, editions, excluder }).steps) {
@@ -351,13 +371,14 @@ export function resolveDays({ days, editions, excluder, quietMode = false, fallb
     const usable = step.checked && step.checked.ok && !quietMode;
     if (usable) {
       const { edition } = step.checked;
-      out.set(step.date, { date: step.date, by: edition.by, headline: edition.headline, rows: edition.items, byId: step.byId, edition });
+      out.set(step.date, { date: step.date, by: edition.by, headline: edition.headline, rows: edition.items, more: edition.more, byId: step.byId, edition });
     } else {
       out.set(step.date, {
         date: step.date,
         by: 'fallback',
         headline: fallbackHeadline(step.day),
         rows: fallbackRows({ stories: step.stories, used: step.used, emojiByCat }),
+        more: [],
         byId: step.byId,
         edition: step.checked && step.checked.ok ? step.checked.edition : null,
       });

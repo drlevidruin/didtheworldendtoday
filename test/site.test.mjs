@@ -17,6 +17,7 @@ import { runUpdate } from '../scripts/update.mjs';
 import { createServer, resolveStatic, SUBFOLDER } from '../scripts/serve.mjs';
 import * as copy from '../scripts/templates/copy.mjs';
 import { almanacRows, headline as headlineRow, headlines as headlineRows, row as dayRow, rows as dayRows, rowsMore } from '../scripts/templates/parts.mjs';
+import { otherHeadlines } from '../scripts/templates/home.mjs';
 import { CSP } from '../scripts/templates/layout.mjs';
 import { QUIPS, QUIP_CSP, QUIP_SCRIPT, quipFor } from '../scripts/templates/quips.mjs';
 import { feedXml } from '../scripts/templates/feed.mjs';
@@ -1822,7 +1823,7 @@ const CATS5 = ['internet', 'grid', 'hacks', 'markets', 'flights'];
 function crowdedSite(days) {
   const r = copyRoot(root);
   const editions = {};
-  for (const { date, near = 0, other = 0 } of days) {
+  for (const { date, near = 0, other = 0, more = null } of days) {
     const make = (kind, words, n) =>
       Array.from({ length: n }, (_, i) => ({
         id: `${date}:${kind}${i}`,
@@ -1857,6 +1858,7 @@ function crowdedSite(days) {
         writtenAt: `${date}T23:00:00.000Z`,
         headline: 'A busy day of near misses came and went. Still here.',
         items: nears.map((s, i) => itemOf(s, EMOJI8[i % EMOJI8.length], `Near miss ${i + 1}`, `Close call ${i + 1} passed without a scratch.`)),
+        ...(more ? { more } : {}),
       };
     }
   }
@@ -2044,6 +2046,152 @@ test('phase 12: the words and the list of a See more: near misses, plain top sto
   assert.deepEqual(ranksIn(ranked), ['1', '2', '3', '4', '5', '6', '7']);
   assert.deepEqual(rowsOf(ranked).map((r) => rowFacts(r).best), [true, false, false, false, false, false, false]);
   assert.deepEqual(ranksIn(dayRows(plainRows(2), { ...ctx, plain: false }, 5)), ['6', '7'], 'rows(items, ctx, from) carries the rank on');
+});
+
+// ---- phase 13: the editor picks "More from today" ------------------------------------------------------
+//
+// An edition may list `more`: story ids, best first. Today's "More from today" opens with those stories, all showing, in
+// the editor's order, and the rest of the day's headlines follow behind the "Show N more headlines" fold.
+
+const SEEN_DAY = '2026-11-16';
+const otherId = (i) => `${SEEN_DAY}:o${i}`;
+const otherTitle = (i) => `Other headline number ${i + 1} of ${SEEN_DAY} with a headline of its own`;
+// the part of a See more that shows (from the small heading to the fold), and the fold itself
+const pickedPart = (inside) => inside.slice(inside.indexOf('<h3 class="sub">'), inside.indexOf('<details class="more">'));
+const foldPart = (inside) => detailsAt(inside, inside.indexOf('<details class="more">'));
+
+test('phase 13: More from today lists the editor\'s picks first, in its order, each with its own title, source and link, then the rest behind the fold, and no story twice', () => {
+  const picks = [7, 3, 15, 0, 19];
+  const base = crowdedSite([{ date: SEEN_DAY, near: 8, other: 20 }]);
+  const site = crowdedSite([{ date: SEEN_DAY, near: 8, other: 20, more: picks.map(otherId) }]);
+  const [today] = blocksOf(read('index.html', site.dist));
+  const more = seeMoreIn(today);
+  assert.equal(summaryOf(more), 'See 23 more', 'it counts everything it opens: three near misses and twenty headlines');
+  const inside = insideOf(more);
+  assert.deepEqual(ranksIn(inside), ['6', '7', '8'], 'the other near misses come first, as before');
+  assert.equal((today.match(/<h3 class="sub">More from today<\/h3>/g) || []).length, 1, 'one small heading');
+  assert.ok(inside.lastIndexOf('<li class="row') < inside.indexOf('<h3 class="sub">'), 'near misses, then the heading');
+  // the picks: plain headline rows, all showing, in the editor's order, each with its own title, source and link
+  const shown = pickedPart(inside);
+  assert.ok(!shown.includes('<details'), 'no fold among the picks');
+  assert.deepEqual(titlesIn(shown), picks.map(otherTitle), "the editor's order, not the page's");
+  headsOf(shown).map(headFacts).forEach((f, k) => {
+    const i = picks[k];
+    assert.equal(f.href, `https://pub${i}.example/${SEEN_DAY}/o/${i}`, `pick ${k + 1} links to its own story`);
+    assert.ok(f.source.startsWith(`${PUBS[i % PUBS.length]} `), `pick ${k + 1} names its own source: ${f.source}`);
+  });
+  // the rest: behind the existing fold, in the page's order, without the picks and without the near misses
+  const fold = foldPart(inside);
+  assert.equal(summaryOf(fold), 'Show 15 more headlines', 'the fold counts the rest');
+  assert.equal((today.match(/<details/g) || []).length, 2, 'the See more and the fold inside it');
+  const baseInside = insideOf(seeMoreIn(blocksOf(read('index.html', base.dist))[0]));
+  const baseOrder = titlesIn(baseInside); // the day's headlines in the page's order, with no picks
+  assert.equal(baseOrder.length, 20);
+  assert.deepEqual(titlesIn(fold), baseOrder.filter((t) => !picks.map(otherTitle).includes(t)), 'the rest keep the page\'s order');
+  // no story twice, and none lost: the picks and the rest are the same twenty headlines
+  const all = titlesIn(inside);
+  assert.equal(all.length, 20);
+  assert.equal(new Set(all).size, 20, 'each once');
+  assert.deepEqual([...all].sort(), [...baseOrder].sort());
+  assert.ok(!today.includes('Near miss number'), "the near misses' own headlines are not repeated below them");
+  // the first five rows and the share button are where they were
+  const door = today.indexOf('<details class="more">');
+  assert.deepEqual(ranksIn(today.slice(0, door)), ['1', '2', '3', '4', '5']);
+  assert.ok(today.indexOf('data-act="share"') > today.lastIndexOf('</details>'), 'the share button is under it all');
+  auditSite(site.dist, { label: 'a day with picks' });
+});
+
+test('phase 13: thirty picks all show, and a pick the day no longer has is skipped', () => {
+  // 40 other stories: thirty picks (the 20 lowest, then ten more, so the page order and the editor's order differ), and one id that is not a story
+  const thirty = [...Array.from({ length: 20 }, (_, k) => 39 - k), ...Array.from({ length: 10 }, (_, k) => k)];
+  const site = crowdedSite([{ date: SEEN_DAY, near: 5, other: 40, more: thirty.map(otherId) }]);
+  const [today] = blocksOf(read('index.html', site.dist));
+  const more = seeMoreIn(today);
+  assert.equal(summaryOf(more), 'See 40 more headlines');
+  const inside = insideOf(more);
+  assert.deepEqual(titlesIn(pickedPart(inside)), thirty.map(otherTitle), 'all thirty show');
+  assert.equal(summaryOf(foldPart(inside)), 'Show 10 more headlines');
+  assert.equal(new Set(titlesIn(inside)).size, 40);
+  // a vanished id, one the day never had: it is skipped, and the others keep their places
+  const gone = crowdedSite([{ date: SEEN_DAY, near: 5, other: 12, more: [otherId(4), `${SEEN_DAY}:gone`, otherId(9), 'not-a-story', otherId(1)] }]);
+  const [goneToday] = blocksOf(read('index.html', gone.dist));
+  const goneMore = seeMoreIn(goneToday);
+  assert.equal(summaryOf(goneMore), 'See 12 more headlines', 'the count is of what is there');
+  const goneInside = insideOf(goneMore);
+  assert.deepEqual(titlesIn(pickedPart(goneInside)), [4, 9, 1].map(otherTitle));
+  assert.equal(summaryOf(foldPart(goneInside)), 'Show 9 more headlines');
+  assert.ok(!goneToday.includes('gone') && !goneToday.includes('not-a-story'));
+  // every pick gone: the list is the one it was
+  const none = crowdedSite([{ date: SEEN_DAY, near: 5, other: 12, more: [`${SEEN_DAY}:gone`] }]);
+  const plain = crowdedSite([{ date: SEEN_DAY, near: 5, other: 12 }]);
+  assert.equal(read('index.html', none.dist), read('index.html', plain.dist), 'a list of picks that are all gone changes nothing');
+});
+
+test('phase 13: the page skips a pick that is no longer one of the day\'s stories, a near miss\'s story, and a repeat, and shows the editor\'s picks first with the rest behind', () => {
+  const story = (id) => ({ id, kind: 'news', cat: 'internet', title: `Title ${id}`, url: `https://pub.example/${id}`, source: 'Pub A', outlets: 2 });
+  const day = {
+    rows: [{ ids: ['n1', 'n2'] }, { ids: ['n3'] }],
+    stories: ['n1', 'n2', 'n3', 'o1', 'o2', 'o3', 'o4', 'o5', 'o6'].map(story),
+    more: ['o5', 'gone', 'o2', 'n1', 'o5', 'n3', 7, null, 'o2'],
+  };
+  const { others, shown } = otherHeadlines(day);
+  assert.deepEqual(others.map((s) => s.id), ['o5', 'o2', 'o1', 'o3', 'o4', 'o6'], 'the picks in the editor\'s order, then the rest in the page\'s order, each once');
+  assert.equal(shown, 2, 'the picks show, the rest wait behind the fold');
+  // no picks: every headline that is not a near miss, ten shown, as before
+  for (const more of [undefined, null, [], 'o5', ['gone']]) {
+    const plain = otherHeadlines({ ...day, more });
+    assert.deepEqual(plain.others.map((s) => s.id), ['o1', 'o2', 'o3', 'o4', 'o5', 'o6'], `more ${JSON.stringify(more)}`);
+    assert.equal(plain.shown, copy.HEADLINES_SHOWN, 'ten show');
+  }
+  assert.equal(copy.HEADLINES_SHOWN, 10);
+  assert.deepEqual(otherHeadlines({ rows: [], stories: undefined, more: ['o1'] }), { others: [], shown: 10 }, 'no stories is no headlines');
+});
+
+test('phase 13: an edition with no more, or an empty more, renders exactly as before, and day pages and earlier days do not change', () => {
+  const day = '2026-11-16';
+  const plainDays = [{ date: day, near: 8, other: 20 }, { date: '2026-11-15', near: 8, other: 4 }, { date: '2026-11-14', near: 8, other: 4 }];
+  const base = crowdedSite(plainDays);
+  const empty = crowdedSite(plainDays.map((d) => ({ ...d, more: [] })));
+  assert.equal(read('index.html', empty.dist), read('index.html', base.dist), 'an empty more changes nothing on the homepage');
+  const picked = crowdedSite(plainDays.map((d, i) => ({ ...d, more: [otherId(5), otherId(1)].map((id) => id.replace(day, d.date)).concat(i ? [] : [otherId(12)]) })));
+  const a = read('index.html', base.dist);
+  const b = read('index.html', picked.dist);
+  assert.notEqual(a, b, 'the picks do change today\'s See more');
+  // before the See more, and after it, today's block is the same; so are yesterday's block and the day before's
+  const [todayA, yesterdayA, olderA] = blocksOf(a);
+  const [todayB, yesterdayB, olderB] = blocksOf(b);
+  assert.equal(todayB.slice(0, todayB.indexOf('<details')), todayA.slice(0, todayA.indexOf('<details')), "today's first five rows are as they were");
+  assert.equal(todayB.slice(todayB.lastIndexOf('</details>')), todayA.slice(todayA.lastIndexOf('</details>')), 'and so is the share button under them');
+  assert.equal(yesterdayB, yesterdayA, "yesterday's block is the same");
+  assert.equal(olderB, olderA, "and so is the day before's");
+  assert.ok(!yesterdayB.includes('<li class="hd') && !yesterdayB.includes('More from today'), 'an earlier day has no headlines in its See more');
+  for (const d of ['2026-11-16', '2026-11-15', '2026-11-14']) assert.equal(read(`day/${d}/index.html`, picked.dist), read(`day/${d}/index.html`, base.dist), `the day page for ${d} is the same`);
+  // the data file and the feed do not carry the picks either
+  assert.equal(read('api/today.json', picked.dist), read('api/today.json', base.dist));
+  assert.equal(read('feed.xml', picked.dist), read('feed.xml', base.dist));
+  auditSite(picked.dist, { label: 'picks on three days' });
+});
+
+test('phase 13: a day whose edition fails, and quiet mode, show the plain list and never the picks', () => {
+  const pick = storyOf(stored16, 'Hackers breach customer database');
+  assert.ok(!ED16.items.some((i) => i.ids.includes(pick.id)), 'the pick is not a near miss');
+  // a valid edition puts it first in More from today
+  const good = copyRoot(root);
+  writeEditions(good, { '2026-11-16': { ...ED16, more: [pick.id] } });
+  const [shows] = blocksOf(read('index.html', buildAt(good).dist));
+  assert.deepEqual(titlesIn(pickedPart(insideOf(seeMoreIn(shows)))), [pick.title], 'the pick opens the list');
+  // an edition that fails its checks (a headline with no "Still here.") is a day with no edition, whatever its more says
+  const failing = copyRoot(root);
+  writeEditions(failing, { '2026-11-16': { ...ED16, headline: 'No ending at all on this headline', more: [pick.id] } });
+  assert.equal(read('index.html', buildAt(failing).dist), read('index.html'), 'a failed edition shows what no edition shows');
+  // quiet mode puts every day on plain headlines: the same page with or without picks
+  const quietPage = (more) => {
+    const r = copyRoot(root);
+    writeEditions(r, { '2026-11-16': { ...ED16, ...(more ? { more } : {}) } });
+    edit(latestFile(r), (l) => (l.quiet = { ...l.quiet, quiet: true, note: '' }));
+    return read('index.html', buildAt(r).dist);
+  };
+  assert.equal(quietPage([pick.id]), quietPage(null), 'quiet mode ignores the picks');
 });
 
 test('phase 12: a refresh swaps the whole page, so a See more that closes again is all that changes', () => {

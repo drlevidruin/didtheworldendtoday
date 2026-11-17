@@ -816,7 +816,8 @@ export const HN = {
 
 // ---------------------------------------------------------------------------
 // The daily edition: a one-sentence headline and 3 to 10 items for every day, each with
-// a label, an emoji and a line, written by hand or by the editor (scripts/editor.mjs).
+// a label, an emoji and a line, and up to 30 more stories picked by id for "More from today",
+// written by hand or by the editor (scripts/editor.mjs).
 // One set of rules checks both. An edition that breaks them is not used, and the day
 // shows plain headlines.
 // ---------------------------------------------------------------------------
@@ -831,6 +832,7 @@ export const EDITION = {
   emojiMax: 8, // UTF-16 units
   minItems: 3,
   maxItems: 10,
+  moreMax: 30, // story ids the editor picks for "More from today"
   fallbackRows: 5, // plain headlines shown for a day with no edition
   fallbackPerCategory: 2,
   homeDays: 7, // day blocks on the homepage: today and up to 6 earlier days

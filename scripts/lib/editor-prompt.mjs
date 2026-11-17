@@ -9,6 +9,7 @@ Input: one day's headlines as JSON: {date, now, score, told, stories: [{id, cat,
 4. label: 1 to 4 words that name the thing in the story, not what happened to it: the object, company, place or event, written like a name (Asteroid 2026 WA, FAA outage, Card skimmers). Nouns only, no verb, no joke, no period, and the label must not repeat the first words of the line.
 5. line: what happened, in 12 words or fewer, at most two short sentences. The label already names the thing, so don't repeat it. emoji: one emoji that names the thing, an object or a place, never a face or a skull. A serious story gets a plain one (🌏 for an earthquake).
 6. headline: one sentence about item 1 and how it missed us, with one real detail from its line (a size, a time like 2:59 AM ET, a number) and no period inside it (write US, not U.S.), then "Still here." At most 15 words in all, and only facts already in your items.
+7. more: up to 30 more stories worth a look today, by id, best first. Use the same tests as rule 2: today, real, and the kind of thing this site is about. Each one a different event from the items and from each other. Pick the newest and the most talked about first.
 
 Voice:
 - The label says who or what. The line says how big, how long, how it ended. Numbers beat adjectives: "an hour and a half", "80% of its servers".

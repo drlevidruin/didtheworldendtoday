@@ -576,8 +576,10 @@ test('editor: the schema lists every key, allows nothing extra, and uses no keyw
     assert.deepEqual([...o.required].sort(), Object.keys(o.properties).sort(), 'every key is required');
     assert.equal(o.additionalProperties, false);
   }
-  assert.deepEqual(Object.keys(EDITION_SCHEMA.properties).sort(), ['date', 'headline', 'items']);
-  assert.deepEqual([...EDITION_SCHEMA.required].sort(), ['date', 'headline', 'items']);
+  assert.deepEqual(Object.keys(EDITION_SCHEMA.properties).sort(), ['date', 'headline', 'items', 'more']);
+  assert.deepEqual([...EDITION_SCHEMA.required].sort(), ['date', 'headline', 'items', 'more']);
+  // more is a list of story ids, asked for on every call
+  assert.deepEqual(EDITION_SCHEMA.properties.more, { type: 'array', items: { type: 'string' } });
   assert.ok(!('best' in EDITION_SCHEMA.properties), 'the order of the items is the rank, so there is no best id to ask for');
   assert.deepEqual(Object.keys(EDITION_SCHEMA.properties.items.items.properties).sort(), ['emoji', 'ids', 'label', 'line']);
   // the label is asked for on every item, as a string
@@ -627,7 +629,8 @@ test('editor: a good answer is written as today\'s edition, with the lead story\
   assert.equal(r.written, 5);
   assert.deepEqual(r.lines, ['editor: wrote 5 items for 2026-11-17 (1200 in, 300 out, $0.011)'], 'one line: items, tokens in, tokens out, what the call cost');
   const e = readJson(editionPath(s));
-  assert.deepEqual(Object.keys(e), ['date', 'by', 'writtenAt', 'headline', 'items']);
+  assert.deepEqual(Object.keys(e), ['date', 'by', 'writtenAt', 'headline', 'items', 'more']);
+  assert.deepEqual(e.more, [], 'an answer with no more stores an empty list');
   assert.equal(e.date, DATE);
   assert.equal(e.by, 'editor');
   assert.equal(e.writtenAt, NOW);
@@ -708,6 +711,14 @@ test('editor: the prompt asks for a label, a line and a one-sentence headline, i
     ),
     'rule 6 asks for one sentence and then Still here.',
   );
+  assert.ok(
+    p.includes(
+      '\n7. more: up to 30 more stories worth a look today, by id, best first. Use the same tests as rule 2: today, real, and the kind of thing this site is about. Each one a different event from the items and from each other. Pick the newest and the most talked about first.\n',
+    ),
+    'rule 7 asks for up to 30 more stories, by id',
+  );
+  assert.ok(p.indexOf('\n6. headline:') < p.indexOf('\n7. more:') && p.indexOf('\n7. more:') < p.indexOf('\nVoice:'), 'rule 7 comes after rule 6 and before the voice');
+  assert.equal(cfg.edition.moreMax, 30, 'the 30 in rule 7 is the limit the code keeps');
   assert.ok(!/two full sentences/.test(p) && !p.includes('25 words or fewer'), 'the phase 7 rules are gone');
   assert.ok(!p.includes('the whole day in 12 words or fewer'), 'the old rule 5 is gone');
   assert.ok(!/\bbest:/.test(p) && !/the id of the closest call/.test(p), 'no best step');
@@ -766,6 +777,81 @@ test('editor: ids that are not stories it sent are dropped, and an item left wit
   const e = readJson(editionPath(s));
   assert.deepEqual(e.items.map((i) => i.ids), [['s01'], ['s02'], ['s03', 's07'], ['s08'], ['s09']], 'in the order the editor listed them, unknown ids gone, the invented item gone');
   assert.ok(!JSON.stringify(e).includes('made-up'));
+});
+
+// ---- more: the best of the rest -------------------------------------------------------------------------
+
+// The ten stories above and fifty more (m00 to m49), and one the editor is never sent because of its topic.
+const MORE_EXTRA = Array.from({ length: 50 }, (_, i) =>
+  story(`m${String(i).padStart(2, '0')}`, ['flights', 'hacks', 'internet', 'markets'][i % 4], `Cloudflare outage number ${i} knocks thousands of sites offline`, { score: 40 - (i % 30) }),
+);
+const MORE_DAY = () => [...dayStories(), ...MORE_EXTRA, story('x1', 'internet', 'Trump says the outage was fixed')];
+const mIds = (from, to) => Array.from({ length: to - from }, (_, i) => `m${String(from + i).padStart(2, '0')}`);
+const withMore = (more) => ({ ...GOOD, more });
+
+test('editor: more is stored as the editor listed it, best first, and keeps only ids it was sent that no item holds, each once, at most 30', async () => {
+  assert.equal(cfg.edition.moreMax, 30);
+  const s = setup({ stories: MORE_DAY() });
+  // s01 leads an item, s07 is the second id of another, nope was never a story, x1 is a story it is never sent,
+  // m05 is listed twice, 12 and null are not ids, and the long tail runs past 30
+  const picks = ['m05', 'nope', 's01', 'm02', 'm05', 's07', 'x1', 12, null, ...mIds(10, 50)];
+  const client = fakeClient(answer(withMore(picks)));
+  const r = await run(s, client);
+  assert.equal(r.status, 'written');
+  const sent = JSON.parse(client.calls[0].messages[0].content).stories.map((x) => x.id);
+  assert.ok(!sent.includes('x1'), 'x1 is not one of the stories it was sent');
+  for (const id of [...mIds(0, 50), 's01', 's07']) assert.ok(sent.includes(id), `${id} was sent`);
+  const e = readJson(editionPath(s));
+  assert.deepEqual(e.more, ['m05', 'm02', ...mIds(10, 38)], "in the editor's order, thirty of them: not the page's order, no repeat, no unknown id, nothing an item holds");
+  assert.equal(e.more.length, 30);
+  assert.deepEqual(e.items.map((i) => i.ids), [['s01'], ['s02'], ['s03', 's07'], ['s04'], ['s05']], 'the items are as they were');
+  for (const id of e.more) assert.ok(!e.items.some((i) => i.ids.includes(id)), `${id} is in more and in an item`);
+  assert.deepEqual(Object.keys(e), ['date', 'by', 'writtenAt', 'headline', 'items', 'more']);
+  // the build checks the stored file again against the day's stories and keeps the same list
+  const byId = new Map(MORE_DAY().map((st) => [st.id, st]));
+  const again = validateEdition(e, { date: DATE, byId, excluder });
+  assert.equal(again.ok, true);
+  assert.deepEqual(again.edition.more, e.more);
+  // and the log line is still the one line it always was
+  assert.deepEqual(r.lines, ['editor: wrote 5 items for 2026-11-17 (1200 in, 300 out, $0.011)']);
+});
+
+test('editor: a missing more, or one that is not a list, is an empty list, and the edition is still written', async () => {
+  for (const [label, body] of [
+    ['missing', GOOD],
+    ['null', withMore(null)],
+    ['a string', withMore('m05')],
+    ['an object', withMore({ 0: 'm05' })],
+    ['a number', withMore(7)],
+    ['numbers in a list', withMore([1, 2, 3])],
+    ['nothing a story', withMore(['nope', 's01', 's02'])],
+    ['an empty list', withMore([])],
+  ]) {
+    const s = setup({ stories: MORE_DAY() });
+    const r = await run(s, fakeClient(answer(body)));
+    assert.equal(r.status, 'written', `${label}: the edition is not lost`);
+    assert.equal(r.written, 5, label);
+    assert.deepEqual(readJson(editionPath(s)).more, [], `${label}: more is an empty list`);
+  }
+  // the same answer with a good list in it keeps the list, so the empty ones above are the checks at work
+  const good = setup({ stories: MORE_DAY() });
+  await run(good, fakeClient(answer(withMore(['m03', 'm01']))));
+  assert.deepEqual(readJson(editionPath(good)).more, ['m03', 'm01']);
+});
+
+test('editor: an edition that has no more, a hand one or an old one, is read as it was and shows no more', async () => {
+  // today's file from before more, and a hand one, are never rewritten and still pass the check with an empty more
+  for (const old of [OLD, HAND]) {
+    const byId = new Map(MORE_DAY().map((st) => [st.id, st]));
+    const checked = validateEdition(old, { date: DATE, byId, excluder });
+    assert.equal(checked.ok, true);
+    assert.deepEqual(checked.edition.more, []);
+  }
+  const hand = setup({ stories: MORE_DAY(), editions: { [DATE]: HAND } });
+  const client = fakeClient(answer(withMore(['m01'])));
+  await run(hand, client);
+  assert.equal(client.calls.length, 0, 'a hand edition is left alone');
+  assert.equal(JSON.parse(hand.read('data/editions/2026-11-17.json')).more, undefined, 'and is not given a more');
 });
 
 test('editor: ids an earlier day already told are never sent, and an answer that uses them anyway is dropped', async () => {

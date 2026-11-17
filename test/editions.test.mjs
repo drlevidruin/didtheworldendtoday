@@ -10,6 +10,7 @@ import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
 import {
   STILL_HERE,
   badText,
+  checkMore,
   dedupeById,
   editionFile,
   fallbackRows,
@@ -98,6 +99,68 @@ test('validation: a good edition passes, the first row is the closest call, and 
   assert.deepEqual(Object.keys(r.edition.items[1]), ['emoji', 'line', 'ids', 'quiet', 'cat', 'title', 'url', 'source', 'outlets', 'label']);
   assert.equal(r.edition.items[0].label, 'Service outage');
   assert.equal(STILL_HERE, 'Still here.');
+});
+
+// ---- more: the editor's other picks for "More from today" ------------------------------------------
+
+test('validation: more keeps the ids of the day\'s stories in the editor\'s order, and leaves out unknown ids, ids an item holds, repeats, and anything past 30', () => {
+  assert.equal(EDITION.moreMax, 30);
+  const stories = [...'abcd', 'c2', ...Array.from({ length: 50 }, (_, i) => `m${i}`)].map((id) => story(id));
+  const byId = byIdOf(stories);
+  const run = (more, over = {}) => validateEdition(edition(TODAY, ['a', 'b', 'c', 'd'], { more, ...over }), ctx({ byId }));
+  const base = edition(TODAY, ['a', 'b', 'c', 'd']);
+  base.items[2].ids = ['c', 'c2']; // the third item is made of two stories
+  const withItems = (more) => validateEdition({ ...base, more }, ctx({ byId }));
+  // in the editor's order, not the day's
+  assert.deepEqual(run(['m9', 'm2', 'm5']).edition.more, ['m9', 'm2', 'm5']);
+  // an id that is not one of the day's stories (the stories the editor was sent)
+  assert.deepEqual(run(['m1', 'nope', 'm2']).edition.more, ['m1', 'm2'], 'unknown ids');
+  assert.deepEqual(run(['m1', 'nope', 'm2'], {}).dropped, [], 'and nothing is logged as dropped');
+  // an id an item already holds, the lead or a later one
+  assert.deepEqual(run(['a', 'm1', 'd', 'b']).edition.more, ['m1'], 'the lead ids of the items');
+  assert.deepEqual(withItems(['c2', 'm1', 'c']).edition.more, ['m1'], 'the second id of an item');
+  // repeats
+  assert.deepEqual(run(['m1', 'm2', 'm1', 'm2', 'm3']).edition.more, ['m1', 'm2', 'm3'], 'each id once');
+  // at most EDITION.moreMax, the best first
+  const forty = Array.from({ length: 40 }, (_, i) => `m${i}`);
+  assert.deepEqual(run(forty).edition.more, forty.slice(0, 30), 'the first 30');
+  assert.deepEqual(run(Array.from({ length: 30 }, (_, i) => `m${i}`)).edition.more.length, 30, 'exactly 30 stay');
+  const padded = ['nope', 'a', 'm0', 'm0', ...forty];
+  assert.deepEqual(run(padded).edition.more, forty.slice(0, 30), 'the limit counts only what stays');
+  // ids that are not strings
+  assert.deepEqual(run([1, null, undefined, {}, [], 'm1', true]).edition.more, ['m1']);
+  // the stored edition has it last, and the input is never changed
+  const raw = edition(TODAY, ['a', 'b', 'c', 'd'], { more: ['m1', 'a', 'm1', 'nope'] });
+  const before = JSON.stringify(raw);
+  const r = validateEdition(raw, ctx({ byId }));
+  assert.deepEqual(Object.keys(r.edition), ['date', 'by', 'writtenAt', 'headline', 'items', 'more']);
+  assert.equal(JSON.stringify(raw), before);
+  // an id the items cut (an eleventh item is over the limit) is not in the items, so it can stay in more
+  const eleven = Array.from({ length: 11 }, (_, i) => `i${i}`);
+  const crowded = validateEdition(edition(TODAY, eleven, { more: ['i10', 'i0', 'm1'] }), ctx({ byId: byIdOf([...eleven, 'm1'].map((id) => story(id))) }));
+  assert.deepEqual(crowded.edition.more, ['i10', 'm1']);
+});
+
+test('validation: a missing more, or one that is not a list, is an empty list and never fails the edition', () => {
+  const byId = byIdOf(['a', 'b', 'c', 'm1'].map((id) => story(id)));
+  const raw = edition(TODAY, ['a', 'b', 'c']);
+  assert.ok(!('more' in raw), 'a hand or an old edition has no more');
+  const none = validateEdition(raw, ctx({ byId }));
+  assert.equal(none.ok, true);
+  assert.deepEqual(none.edition.more, []);
+  assert.deepEqual(none.dropped, []);
+  for (const odd of [undefined, null, 'm1', 7, true, {}, { 0: 'm1' }, new Set(['m1']), []]) {
+    const r = validateEdition({ ...raw, more: odd }, ctx({ byId }));
+    assert.equal(r.ok, true, `${JSON.stringify(odd)} does not fail the edition`);
+    assert.deepEqual(r.edition.more, [], `${JSON.stringify(odd)} is an empty list`);
+  }
+  // with no stories to check against, nothing can be kept
+  assert.deepEqual(validateEdition({ ...raw, more: ['m1'] }, ctx()).edition.more, []);
+  // the same check on its own
+  assert.deepEqual(checkMore(['m1', 'm2'], { byId: byIdOf([story('m1'), story('m2')]) }), ['m1', 'm2']);
+  assert.deepEqual(checkMore(['m1', 'm2'], { itemIds: ['m2'], byId: byIdOf([story('m1'), story('m2')]) }), ['m1']);
+  assert.deepEqual(checkMore(undefined), []);
+  assert.deepEqual(checkMore(['m1']), []);
 });
 
 test('validation: the edition must be for the day it is checked for, and the input is never changed', () => {
@@ -541,6 +604,18 @@ test('days: a day with no edition shows its plain headline from the ladder, and 
     assert.ok(quiet.get(date).rows.length >= 1 && quiet.get(date).rows.every((r) => r.line === r.title), `${date}: plain rows`);
   }
   assert.equal(quiet.get('2026-11-16').edition.by, 'editor', 'the edition is kept, ready for when quiet mode ends');
+});
+
+test('days: a usable edition hands over its more, and plain headlines never have any, even in quiet mode', () => {
+  const days = threeDays();
+  const editions = new Map([['2026-11-16', edition('2026-11-16', ['a', 'b', 'c'], { more: ['d', 'e', 'a', 'zzz'] })]]);
+  const out = resolve(days, editions);
+  assert.deepEqual(out.get('2026-11-16').more, ['d', 'e'], 'the editor\'s order, with the ids an item holds and the unknown ones left out');
+  assert.deepEqual(out.get('2026-11-16').edition.more, ['d', 'e']);
+  assert.deepEqual(out.get('2026-11-15').more, [], 'a day with no edition has none');
+  const quiet = resolve(days, editions, { quietMode: true, fallbackHeadline: () => QUIET_LINE });
+  assert.deepEqual(quiet.get('2026-11-16').more, [], 'quiet mode shows plain headlines, and no picks');
+  assert.deepEqual(resolve(days, new Map([['2026-11-16', edition('2026-11-16', ['a', 'b', 'c'])]])).get('2026-11-16').more, [], 'an edition with no more has none');
 });
 
 test('days: a date with an edition and no stories is skipped, an edition for nothing breaks nothing, and odd input is safe', () => {
