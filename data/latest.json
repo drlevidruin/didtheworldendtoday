@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T18:55:24.881Z",
+  "buildTime": "2026-11-17T19:17:12.554Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 13:55 ET",
+  "etStamp": "2026-11-17 14:17 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -55,20 +55,20 @@
     "score": 92
   },
   "headlinesRead": 1629,
-  "lastSuccessAt": "2026-11-17T18:55:24.881Z",
+  "lastSuccessAt": "2026-11-17T19:17:12.554Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 19,
-    "space": 3,
+    "flights": 18,
+    "space": 4,
     "earth": 4,
-    "hacks": 41,
+    "hacks": 37,
     "grid": 5,
-    "internet": 8,
+    "internet": 11,
     "germs": 4,
     "weather": 4,
     "markets": 4,
     "animals": 3,
-    "ai": 1,
+    "ai": 2,
     "sun": 4
   },
   "vital": {
@@ -95,7 +95,13 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "TEB",
+          "hub": false,
+          "reason": "airport volume"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 0,
       "closures": 0,
@@ -186,78 +192,114 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1329,
+      "count": 1330,
       "error": null,
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     },
     "bing": {
       "ok": true,
-      "count": 289,
+      "count": 285,
       "error": null,
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     },
     "gdelt": {
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-17T18:55:24.881Z"
     },
     "hn": {
       "ok": true,
-      "count": 11,
+      "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-17T17:56:49.781Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T18:55:24.881Z"
+      "lastOkAt": "2026-11-17T19:17:12.554Z"
     }
   },
   "stories": [
+    {
+      "id": "821774b08b76",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA pauses router installations after nationwide ground stop",
+      "url": "https://www.msn.com/en-us/technology/aviation/faa-pauses-router-installations-after-nationwide-ground-stop/ar-AA2hCCT7",
+      "source": "The Wall Street Journal on MSN",
+      "publishedAt": "2026-11-17T08:20:00.000Z",
+      "firstSeenAt": "2026-11-17T17:17:00.109Z",
+      "outlets": 23,
+      "outletNames": [
+        "The Wall Street Journal on MSN",
+        "WSJ",
+        "TradingView",
+        "CNN",
+        "marketscreener.com",
+        "Quartz",
+        "CNBC",
+        "LiveNOW from FOX",
+        "Chicago Tribune",
+        "Associated Press News",
+        "MLQ.ai",
+        "KTVN",
+        "Eagle-Tribune",
+        "Black Hills Pioneer",
+        "Goshen News",
+        "Ottumwa Courier",
+        "NewsNation",
+        "The Independent",
+        "The Killeen Daily Herald",
+        "Oskaloosa Herald",
+        "@AP on X",
+        "Shaw Local",
+        "Axios"
+      ],
+      "score": 6.58
+    },
     {
       "id": "b1a6a57f4f9b",
       "cat": "flights",
@@ -267,7 +309,7 @@
       "source": "Dakota News Now",
       "publishedAt": "2026-11-16T23:46:00.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 23,
+      "outlets": 24,
       "outletNames": [
         "Dakota News Now",
         "WSAZ",
@@ -291,9 +333,10 @@
         "WBRC 6 News",
         "WSMV",
         "WBKO",
-        "WTVM.com"
+        "WTVM.com",
+        "WALB.com"
       ],
-      "score": 4.97
+      "score": 5.02
     },
     {
       "id": "sig:faa-stop:PHX:2026-11-17",
@@ -338,28 +381,6 @@
         "sizeM": 5.3,
         "size": "a bus",
         "at": "2026-11-17T07:59:00.000Z"
-      }
-    },
-    {
-      "id": "sig:faa-stop:SFO:2026-11-16",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at SFO (low ceilings)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T04:14:48.722Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "SFO",
-        "hub": true,
-        "nationwide": false,
-        "reason": "low ceilings"
       }
     },
     {
@@ -426,26 +447,6 @@
       "score": 4.28
     },
     {
-      "id": "cbd367eb929f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Downdetector reports outages at major US banks",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNSHpmUGkzZ3A4blFxaTFRM1lhOHpBWmJJUEtWQlVsbFloQTBySm10WGZ3OVZJVmNLWV9Da18wNzU0U1pUSzVURDRIYldQSFpKQmZja25INWdpUHJpclFnOFJRQXZoX3pWbjNsc2tPb3o3bnkyT3d0SWdndnVDQmUwaDdmTDU0LWdjbmF6ZEJKWFlON2pvU3ZEQUJROGVETXNFSzRmRWtrcEo0OTg5VzlTdUFxaWhYOHRsV3dRYWtYUVFDQ1k5SU11VmRnTExyODJzYU93YlZqT09kVV9pS0Z3?oc=5",
-      "source": "The Lufkin Daily News",
-      "publishedAt": "2026-11-16T19:12:38.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 6,
-      "outletNames": [
-        "The Lufkin Daily News",
-        "The Korea Times",
-        "Khaleej Times",
-        "WTVB",
-        "The News International",
-        "Wichita Eagle"
-      ],
-      "score": 4.13
-    },
-    {
       "id": "af6bc72c8b91",
       "cat": "grid",
       "kind": "news",
@@ -462,6 +463,27 @@
         "Ledbury Reporter"
       ],
       "score": 4.11
+    },
+    {
+      "id": "8feb10e23b97",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Bank outage leaves southern Arizona customers unable to access accounts",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPcEppVTRLRzhQWF93VUFDclRacUpFYm51b3ZVeHE0czJhQ0ZSa00wQTlKMlE4SmhwVnhidTBicm1WdFdKTExWVmQ0ZFk5Y25SZml3dnlsSjdSU2RYbjZiRzNUeEVzSXNiMkltUWJFMEwyQ0tSVUpqUXpUb093WVNfSmlyVnpFckVmZ09PZDlRSVlwX0ZKdnBiVWtaSmpzQW4xeUV4ZTAzd010SW9GcTZ4US1VTnUzV1A5OFJjZA?oc=5",
+      "source": "Alaska's News Source",
+      "publishedAt": "2026-11-17T05:10:59.000Z",
+      "firstSeenAt": "2026-11-17T05:48:47.183Z",
+      "outlets": 7,
+      "outletNames": [
+        "Alaska's News Source",
+        "KOLD",
+        "WSMV",
+        "KCRG",
+        "FOX Carolina News",
+        "WCAX",
+        "WCTV"
+      ],
+      "score": 3.77
     },
     {
       "id": "e57fc73d6ac8",
@@ -490,7 +512,7 @@
       "source": "Digital Trends",
       "publishedAt": "2026-11-17T01:51:00.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 12,
+      "outlets": 16,
       "outletNames": [
         "Digital Trends",
         "The Independent on MSN",
@@ -503,9 +525,13 @@
         "Gulf News",
         "MySA",
         "Outlook India",
-        "UG Diplomat"
+        "UG Diplomat",
+        "TechCrunch",
+        "9to5mac.com",
+        "CTV News",
+        "CP24"
       ],
-      "score": 3.31
+      "score": 3.61
     },
     {
       "id": "1b105ba34662",
@@ -516,7 +542,7 @@
       "source": "Oklahoma Voice",
       "publishedAt": "2026-11-16T19:37:35.000Z",
       "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 8,
+      "outlets": 9,
       "outletNames": [
         "Oklahoma Voice",
         "The Oklahoman",
@@ -525,9 +551,10 @@
         "Successful Farming",
         "Duncan Banner",
         "Norman Transcript",
-        "News On 6"
+        "News On 6",
+        "News 9"
       ],
-      "score": 3.02
+      "score": 3.15
     },
     {
       "id": "9c79c7379d15",
@@ -546,24 +573,26 @@
       "score": 2.8
     },
     {
-      "id": "821774b08b76",
+      "id": "sig:faa-stop:SFO:2026-11-16",
       "cat": "flights",
-      "kind": "news",
-      "title": "FAA pauses router installations after nationwide ground stop",
-      "url": "https://www.msn.com/en-us/technology/aviation/faa-pauses-router-installations-after-nationwide-ground-stop/ar-AA2hCCT7",
-      "source": "The Wall Street Journal on MSN",
-      "publishedAt": "2026-11-17T08:20:00.000Z",
-      "firstSeenAt": "2026-11-17T17:17:00.109Z",
-      "outlets": 6,
+      "kind": "signal",
+      "title": "FAA ground stop at SFO (low ceilings)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T04:14:48.722Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "outlets": 1,
       "outletNames": [
-        "The Wall Street Journal on MSN",
-        "WSJ",
-        "TradingView",
-        "CNN",
-        "marketscreener.com",
-        "Quartz"
+        "FAA"
       ],
-      "score": 4.27
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SFO",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low ceilings"
+      }
     },
     {
       "id": "13311d6c0ac1",
@@ -572,9 +601,9 @@
       "title": "Mullin defends use of government plane to go to college football game after ground stop",
       "url": "https://www.baltimoresun.com/2026/11/17/mullin-nationwide-ground-stop/",
       "source": "The Baltimore Sun",
-      "publishedAt": "2026-11-17T09:16:00.000Z",
+      "publishedAt": "2026-11-17T04:10:00.000Z",
       "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 12,
+      "outlets": 14,
       "outletNames": [
         "The Baltimore Sun",
         "KTVN",
@@ -587,9 +616,11 @@
         "Around Prague",
         "ABC News - Breaking News, Latest News and Videos",
         "AP News",
-        "Ottumwa Courier"
+        "Ottumwa Courier",
+        "Boston Herald",
+        "CTV News"
       ],
-      "score": 3.95
+      "score": 3.74
     },
     {
       "id": "918c99de455a",
@@ -610,44 +641,6 @@
       "score": 3.69
     },
     {
-      "id": "8c903b55d699",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major banking outage linked to Chase, impacted Wells Fargo and BofA",
-      "url": "https://www.indystar.com/story/money/2026/11/16/bank-outage-nationwide-chase-bofa--live/92814152007/",
-      "source": "The Indianapolis Star",
-      "publishedAt": "2026-11-16T19:15:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 4,
-      "outletNames": [
-        "The Indianapolis Star",
-        "Milwaukee Journal Sentinel",
-        "USA TODAY",
-        "Yahoo"
-      ],
-      "score": 3.57
-    },
-    {
-      "id": "8feb10e23b97",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Bank outage leaves southern Arizona customers unable to access accounts",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPcEppVTRLRzhQWF93VUFDclRacUpFYm51b3ZVeHE0czJhQ0ZSa00wQTlKMlE4SmhwVnhidTBicm1WdFdKTExWVmQ0ZFk5Y25SZml3dnlsSjdSU2RYbjZiRzNUeEVzSXNiMkltUWJFMEwyQ0tSVUpqUXpUb093WVNfSmlyVnpFckVmZ09PZDlRSVlwX0ZKdnBiVWtaSmpzQW4xeUV4ZTAzd010SW9GcTZ4US1VTnUzV1A5OFJjZA?oc=5",
-      "source": "Alaska's News Source",
-      "publishedAt": "2026-11-17T05:10:59.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 6,
-      "outletNames": [
-        "Alaska's News Source",
-        "KOLD",
-        "WSMV",
-        "KCRG",
-        "FOX Carolina News",
-        "WCAX"
-      ],
-      "score": 3.55
-    },
-    {
       "id": "27502feaa440",
       "cat": "hacks",
       "kind": "news",
@@ -666,6 +659,22 @@
       "score": 2.98
     },
     {
+      "id": "ba9b4d40eedf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
+      "source": "Click2Houston",
+      "publishedAt": "2026-11-17T16:12:55.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 2,
+      "outletNames": [
+        "Click2Houston",
+        "News4JAX"
+      ],
+      "score": 2.8
+    },
+    {
       "id": "c9aaf37c3d99",
       "cat": "internet",
       "kind": "news",
@@ -680,6 +689,29 @@
         "Beinsure"
       ],
       "score": 2.73
+    },
+    {
+      "id": "483804f87cec",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "'Software bug' blamed for online banking outage | Morning in America",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNGlCSUJhTFl1Rmk5ZEZhTEowQUhKTnVNQ3JZeDlaY1BGZEVRM2VCWTVqNUpEX1hJSUR1OW5jOVYycnVOMXBhRUVYc1ZDNjk0SG9YMTdMaGpJSElWaFRUWXNwWHROQTIzcXZXZEtoNTF0dzI1WXlNeGU3eVJ5V1UzM0dqRTRtd1FpTGdZ?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-16T20:37:58.000Z",
+      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "outlets": 9,
+      "outletNames": [
+        "Yahoo",
+        "KGET.com",
+        "NEWS10 ABC",
+        "WKRN News 2",
+        "WFLA",
+        "NBC4 WCMH-TV",
+        "WJBF",
+        "NewsNation",
+        "WSPA 7News"
+      ],
+      "score": 2.72
     },
     {
       "id": "8fea1f91f5e5",
@@ -862,6 +894,28 @@
       "score": 1.39
     },
     {
+      "id": "sig:faa-stop:TEB:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T19:17:12.554Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
+    },
+    {
       "id": "3b49d5ddbc4f",
       "cat": "flights",
       "kind": "news",
@@ -899,22 +953,6 @@
         "Technology Org"
       ],
       "score": 3.01
-    },
-    {
-      "id": "ba9b4d40eedf",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
-      "source": "Click2Houston",
-      "publishedAt": "2026-11-17T16:12:55.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 2,
-      "outletNames": [
-        "Click2Houston",
-        "News4JAX"
-      ],
-      "score": 2.8
     },
     {
       "id": "bc84ae3870f8",
@@ -965,45 +1003,6 @@
         "WWLP"
       ],
       "score": 2.67
-    },
-    {
-      "id": "483804f87cec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "'Software bug' blamed for online banking outage | Morning in America",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNGlCSUJhTFl1Rmk5ZEZhTEowQUhKTnVNQ3JZeDlaY1BGZEVRM2VCWTVqNUpEX1hJSUR1OW5jOVYycnVOMXBhRUVYc1ZDNjk0SG9YMTdMaGpJSElWaFRUWXNwWHROQTIzcXZXZEtoNTF0dzI1WXlNeGU3eVJ5V1UzM0dqRTRtd1FpTGdZ?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-16T20:37:58.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 8,
-      "outletNames": [
-        "Yahoo",
-        "KGET.com",
-        "NEWS10 ABC",
-        "WKRN News 2",
-        "WFLA",
-        "NBC4 WCMH-TV",
-        "WJBF",
-        "NewsNation"
-      ],
-      "score": 2.61
-    },
-    {
-      "id": "267d69ca6fc3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA pauses installation of new routers after ground stop",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5lOUR5Z2FVYl9wcUNQU1VzNkN4LVk0d3lCMzQ2X1hPaEdFdVl1VkZnVk83cndNcjZzNExYdHJ1cVE1M3JtUVVJUUVaQjNueC1UZk9WbHBpQUhMZG1EeG9iVUEwQTFVVXQ0c0YyYtIBckFVX3lxTFAxcllCeTNjOS1HNXRaU2VOaW90eXdiZjF4S0ZjY3ZCRURfOG00WjhaU192Skk4QjlVM0pMaTl2RkdydjRSZWJQOE9meVhMTzhBNWdBd0JOZHFIYWYxczFmMHV3LWh1cWlBYjN3S1JPcVhYZw?oc=5",
-      "source": "CNBC",
-      "publishedAt": "2026-11-17T16:57:15.000Z",
-      "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 3,
-      "outletNames": [
-        "CNBC",
-        "LiveNOW from FOX",
-        "Chicago Tribune"
-      ],
-      "score": 2.52
     },
     {
       "id": "f65c9d1eaa32",
@@ -1122,6 +1121,23 @@
       "score": 2.23
     },
     {
+      "id": "0d7eab61dcdd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor detects ongoing cyberattack, output unaffected",
+      "url": "https://www.aol.com/articles/equinor-detects-ongoing-cyberattack-output-181620000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-17T10:27:00.000Z",
+      "firstSeenAt": "2026-11-17T18:55:24.881Z",
+      "outlets": 3,
+      "outletNames": [
+        "Euronext Markets: Real-time Stock Market Data | live",
+        "Reuters",
+        "AOL"
+      ],
+      "score": 2.22
+    },
+    {
       "id": "5757daefe85e",
       "cat": "hacks",
       "kind": "news",
@@ -1202,22 +1218,6 @@
         "Outlook India"
       ],
       "score": 2
-    },
-    {
-      "id": "0d7eab61dcdd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor detects ongoing cyberattack, output unaffected",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOYVRMbDZwVzNkYWE2ZS1ZQUhqMDlva1RYREtiazlQdkN2M0NIa3Z1d015YzlCd3hKQVdVdVRzaU9jZGIxbWJTS1ZfVzlPUFpaa3VPU2JraFNKLW1RRzdMNUZnSFJRSHZYVGRmOGxOXzVXaVdnRVJVNERRaExxdzFKTnlxcEl5UmhUWm5aWlEtNzlsMXoyTzdIcTkyOTFOdw?oc=5",
-      "source": "Euronext Markets: Real-time Stock Market Data | live",
-      "publishedAt": "2026-11-17T18:22:21.000Z",
-      "firstSeenAt": "2026-11-17T18:55:24.881Z",
-      "outlets": 2,
-      "outletNames": [
-        "Euronext Markets: Real-time Stock Market Data | live",
-        "Reuters"
-      ],
-      "score": 1.98
     },
     {
       "id": "a1d54db27e7a",
@@ -1315,6 +1315,22 @@
         "KGET.com"
       ],
       "score": 1.85
+    },
+    {
+      "id": "d279c18cda1a",
+      "cat": "internet",
+      "kind": "news",
+      "title": "The US government's highly classified national security communications network is reportedly experiencing a major outage",
+      "url": "https://www.xda-developers.com/us-highly-classfied-national-security-communications-network-reportedly-down-right-now/",
+      "source": "XDA Developers",
+      "publishedAt": "2026-11-16T22:38:00.000Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 2,
+      "outletNames": [
+        "XDA Developers",
+        "Townhall"
+      ],
+      "score": 1.84
     },
     {
       "id": "ea194cee54b9",
@@ -1443,6 +1459,22 @@
         "Coinpedia"
       ],
       "score": 1.72
+    },
+    {
+      "id": "ed3814122990",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Apple, Gmail, Marriott and more services down in latest wave of widespread outages",
+      "url": "https://www.nbcnewyork.com/news/national-international/apple-gmail-marriott-and-more-services-down-in-latest-wave-of-widespread-outages/6573469/",
+      "source": "NBC New York",
+      "publishedAt": "2026-11-17T10:29:00.000Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 2,
+      "outletNames": [
+        "NBC New York",
+        "NBC10 Philadelphia"
+      ],
+      "score": 1.71
     },
     {
       "id": "3e6d8add8bf4",
@@ -1589,20 +1621,20 @@
       "score": 1.56
     },
     {
-      "id": "381e30d0b92e",
-      "cat": "hacks",
+      "id": "339c02e7c1ed",
+      "cat": "internet",
       "kind": "news",
-      "title": "Chase Bank Blames Outages On ‘Software Bug’",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPOUNHRWlIcjNZR3l0eERtcnliME9IUEUta28wN2VSTlRsM05HUnRlRjJjM3JLS2RJaUl6VVVJcEtJT0NQNW55REpHdjM0WFNyNFczMXhDdFZ6eVRIeGt1eFBvYV9aaTIzSEZBLU4tS3NWTnNrZFE5dnpyanEzU2FFRE5kQW5fU0FjSFh2UlIzZkdCa2hJbTdmTHVOS2ZmVHF5X0E0YVlNc2I2YTFCSU9aZVJRYU9ZdngtLXR0QU9RTzBYOTIzSXVBOEtvb05uNThw?oc=5",
-      "source": "Forbes",
-      "publishedAt": "2026-11-16T19:06:02.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
+      "title": "Gmail, Apple Pay and iCloud hit by outage reports: What’s happening today?",
+      "url": "https://www.oregonlive.com/nation/2026/11/gmail-apple-pay-and-icloud-hit-by-outage-reports-whats-happening-today.html",
+      "source": "OregonLive.com",
+      "publishedAt": "2026-11-17T02:58:00.000Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 2,
       "outletNames": [
-        "Forbes",
-        "New York Post"
+        "OregonLive.com",
+        "NJ.com"
       ],
-      "score": 1.49
+      "score": 1.46
     },
     {
       "id": "a364888d95be",
@@ -1621,6 +1653,21 @@
       "score": 1.44
     },
     {
+      "id": "c1ba18a0ec75",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA gives update on router installation after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNenctUkhhbUpTeXEyT0tJZUZ6SXcwZ21QQXd5T0RDb3BkbTM3M0hEdnBINmNVbU1XcU8zbG5VZ3V4QTVCRm95Z25iRHB3TVY1VHNvVV93eUplakJnY2dTTUo2MThOQVgtUFd0NjQ3cnlLRFVLd2hybTBuSFMxSEFkc2NlamxxN1l5Tm00M1dCWDBrdEZ5UHB4N3l3cDNDNm1mRTk4?oc=5",
+      "source": "The Independent",
+      "publishedAt": "2026-11-17T19:05:00.000Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Independent"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "95fc0522f486",
       "cat": "internet",
       "kind": "news",
@@ -1632,51 +1679,6 @@
       "outlets": 1,
       "outletNames": [
         "CyberSecurityNews"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "4b911f5c55a4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Massive Kik data breach exposes more than 150 million images — experts say popular messaging app may have leaked incredibly sensitive material",
-      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNSTFxcHhBY24xUUZwVkZOUWlpbV9qOGl1dEpsT2FDdFAtUHlxaUVDRmNjWjNGQjdFclJiaklXa1NCVWFXTFVyQW1oSUpBSlk0M2JrZDlFZXhibUZUbkVlWGVsNmpqcWtEQy0wejl6V05HOFg2NVl2RUlTbXRFcngwcXUtZzZDT3pta1I1dktTWkE0dG1rd2NjWDhGVUxHaHV4SGUtQVRTMG9yY2E5aDFqUnpma2xVZW5BUHdwYmVwWjFtU2gtSnV1cGpycDZTT2E1YUQzYjNnME5yNVRfbnRqY2sxS1puTUNNbWR6ZE41bnhSMFV4ZDIzNXdUSlFOMkJvcHJmUVlkZ3dMTG8?oc=5",
-      "source": "TechRadar",
-      "publishedAt": "2026-11-17T18:20:00.000Z",
-      "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 1,
-      "outletNames": [
-        "TechRadar"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "ec84b027a2ac",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Update on flights in Maine following last week's nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOdTNYeVpyakpFa2g0UUZwYm12OTZ0YngwTEtBa09uTDJyRHA4ZDVBbE1uaThrbXJHZjhyelhsY1dwZFNxTHI2T0hzQUd4cEFNaVJ1UGtON1F6bzVwSllRS1lXOGV5ZktoNUt1RVRmejdwcVNDdUVOdFNaZjNjdDZZTWJvZmlVVWFvM284cDVhTWdDTVhaakJtTV9ncXRvcHpiazdSQzdMTVJYMEJTR2x0bUVXUVg0Yml5R0xZeFQ3T1BjSnRTNkl2NWhxNC1FaEtTVHdmN3JqWDhNcUdWckhqODJVNy04Qlc3bzJmY1lDSU8?oc=5",
-      "source": "newscentermaine.com",
-      "publishedAt": "2026-11-17T17:51:00.000Z",
-      "firstSeenAt": "2026-11-17T17:56:49.781Z",
-      "outlets": 1,
-      "outletNames": [
-        "newscentermaine.com"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "25e7953d1253",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA investigates Amarillo radar site after data disruption triggers nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxQeEhqMzBYME9SdEtrZXNLejRGckE0N1ozRXpRN0xKc1pwUHhYRDFaR0ZjaFRyYlliS0xCZTZnMmpNQWFUUExIM3c2UWVYRXBBZjZ2UU1UNGtOX0s2UkxwSm5TNEJOUmlzX1d3ZFNHTno3TXlSdEd5SFNuS1B3NTFrb2J6OXVyQ2pGa0RvU1l0djhwMEdSV1dWZ2lGQWJFZ0xjeEFURVZWZTFSVTdiWC15MDMtOVAyMkZfaUlveURTMVJtZXpESmd5Rzl4eXlNeXdnZTA4N2dHV2NuT3hiY1lxX0hEY2dEQ3NlRmt5NmIzTjFnTk1uOEZXMGNKMHpLSmFDcjYzV29rS3FsUXlkRnFQQXk0bFFoaGd3eWpzYVozZWtRWkkyTnliRGhvV2dSTUtlbUs3TzZtbjRoZUNSYWxJZUJEOGdvU1FXWXlNMmJGT3NXVUU0cFFCWA?oc=5",
-      "source": "KVII",
-      "publishedAt": "2026-11-17T17:50:43.000Z",
-      "firstSeenAt": "2026-11-17T17:56:49.781Z",
-      "outlets": 1,
-      "outletNames": [
-        "KVII"
       ],
       "score": 1.4
     },
@@ -1724,6 +1726,21 @@
         "News24"
       ],
       "score": 1.05
+    },
+    {
+      "id": "72e57d137721",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Oregon becomes the 22nd state to confirm bird flu in dairy cattle",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZzQyQ2VkQUpEcmpFMUFzX0ppRVdTQjZsQURaN1U3SF9GcHpCS1hCV0d1UUhOMEJ0YnM0cVBTVGFZdk1Pb1Eyb2lVZ3B2dHNmeFpTTUtsWE1vZElib0cyR0YweDhESkU0ZmE1Mmc4RDJfRXg4U1pIVmZOTjktLWpFd1kteFRVc1h1T1AtbnpYTWtRT2VaeGhv?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T19:00:00.000Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yahoo"
+      ],
+      "score": 1
     },
     {
       "id": "b47a68c32a95",
@@ -1812,21 +1829,6 @@
       "outlets": 1,
       "outletNames": [
         "Breakingthenews.net"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "6033c1d90689",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu scare hits Namakkal egg exports, pushes prices below production cost",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQY05EeEZuQkc1bmdlYUlLMmp0bU1PazZCZU9NcGt5WGZlRjNjU052RGlXVDNRZkkxWjEzSzZzVzVrSy0xaEFWLWxISDh0dnZDUnBlQmN3dDFaVU5wZlpLNm45NDZudkQ3Z2daMmVTY2VsYmhWcEoxM2lDQ3RiSkNWWC1iaDNKeGVQb3FzVGpQZFI2NVVOV2dXRmtuREZNTE1TeVQwSGdhSkozZ2hTNVBfZlo4Sm5BSkpRcUxJ?oc=5",
-      "source": "TripuraTimes.com",
-      "publishedAt": "2026-11-17T14:52:52.000Z",
-      "firstSeenAt": "2026-11-17T15:31:45.442Z",
-      "outlets": 1,
-      "outletNames": [
-        "TripuraTimes.com"
       ],
       "score": 0.99
     },
@@ -1925,6 +1927,36 @@
       "quietReason": "headline mentions tornado"
     },
     {
+      "id": "12ae11536682",
+      "cat": "space",
+      "kind": "news",
+      "title": "Airplane-size asteroid 2024 BJ flies closer than the moon in orbit animation",
+      "url": "https://www.msn.com/en-us/news/other/airplane-size-asteroid-2024-bj-flies-closer-than-the-moon-in-orbit-animation/vi-AA2hDF9W",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-17T10:50:00.000Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 1,
+      "outletNames": [
+        "Space on MSN"
+      ],
+      "score": 0.86
+    },
+    {
+      "id": "6cce963e1f51",
+      "cat": "sun",
+      "kind": "news",
+      "title": "X9 time-lapse: Sun unleashes the largest solar flare since 2017",
+      "url": "https://www.msn.com/en-us/news/other/x9-time-lapse-sun-unleashes-the-largest-solar-flare-since-2017/vi-AA2hDCA5",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-17T10:50:00.000Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 1,
+      "outletNames": [
+        "Space on MSN"
+      ],
+      "score": 0.86
+    },
+    {
       "id": "486a9cd54266",
       "cat": "sun",
       "kind": "news",
@@ -1940,17 +1972,17 @@
       "score": 0.86
     },
     {
-      "id": "90ad96fae449",
-      "cat": "sun",
+      "id": "678696b77fc0",
+      "cat": "ai",
       "kind": "news",
-      "title": "Aurora alert: NOAA reveals where northern lights could be visible this week",
-      "url": "https://www.msn.com/en-ca/science/astronomy/aurora-alert-noaa-reveals-where-northern-lights-could-be-visible-this-week/ar-AA2hCbVK",
-      "source": "The Daily Galaxy on MSN",
-      "publishedAt": "2026-11-17T03:25:00.000Z",
-      "firstSeenAt": "2026-11-17T12:15:44.284Z",
+      "title": "FBI Issues AI Cyberattack Warning As US Outages Pile Up: Hackers Can Breach Systems In 3 Hours",
+      "url": "https://www.timesnownews.com/world/us/us-news/fbi-issues-cyber-warning-cyberattack-us-outage-microsoft-faa-nsa-banks-artex-ai-article-156526858",
+      "source": "Times Now",
+      "publishedAt": "2026-11-17T10:20:00.000Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 1,
       "outletNames": [
-        "The Daily Galaxy"
+        "Times Now"
       ],
       "score": 0.85
     },
