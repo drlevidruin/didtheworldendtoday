@@ -1,6 +1,6 @@
 // npm run edit
 //
-// Writes today's edition with the Claude API: a one-sentence headline and 4 to 6 items,
+// Writes today's edition with the Claude API: a one-sentence headline and 5 to 10 items,
 // one per near miss, each with a label, an emoji and a line, from the headlines the update
 // step just filed. It runs after `npm run update` and before `npm run build`, and it never
 // fails the run: every problem becomes one log line, and the edition already on file stays.
@@ -82,7 +82,7 @@ import { etClock } from './templates/copy.mjs';
 import { HOUR_MS, etDate, etParts } from './lib/time.mjs';
 
 // What the model must send back. Counts are checked in code (the schema cannot say
-// "4 to 6"), and every object lists all of its keys.
+// "5 to 10"), and every object lists all of its keys.
 export const EDITION_SCHEMA = {
   type: 'object',
   properties: {

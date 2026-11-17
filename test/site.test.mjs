@@ -671,7 +671,7 @@ test('the editions this file writes pass the same check the build and the editor
     assert.equal(checked.edition.items.length, raw.items.length);
   }
   assert.ok(ED16.headline.length <= cfg.edition.headlineMax && ED16.headline.endsWith('Still here.'));
-  assert.equal(ED16.items.length, cfg.edition.maxItems, 'the closest call and five more');
+  assert.equal(ED16.items.length, 6, 'the closest call and five more');
   for (const ed of [ED15, ED16]) for (const item of ed.items) assert.ok(item.label && item.label.split(' ').length <= cfg.edition.labelMaxWords, `${ed.date}: "${item.label}" is a label of one to four words`);
   // The two builds really differ: one reads the editions, one reads the plain headlines.
   assert.equal(todayHeadline(edDist), ED16.headline);

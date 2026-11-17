@@ -317,9 +317,9 @@ test('validation: an item needs an emoji of a sensible size, at least one id and
   assert.equal(r.dropped.length, items.length - 3);
 });
 
-test('validation: fewer than 3 usable items fails, 3 passes, and only 6 are kept', () => {
+test('validation: fewer than 3 usable items fails, 3 passes, 10 pass, and an eleventh is cut', () => {
   assert.equal(EDITION.minItems, 3);
-  assert.equal(EDITION.maxItems, 6);
+  assert.equal(EDITION.maxItems, 10);
   const two = validateEdition(edition(TODAY, ['a', 'b']), ctx());
   assert.deepEqual([two.ok, two.reason], [false, 'only 2 usable items']);
   assert.equal(validateEdition(edition(TODAY, ['a']), ctx()).reason, 'only 1 usable item');
@@ -327,9 +327,13 @@ test('validation: fewer than 3 usable items fails, 3 passes, and only 6 are kept
   const bad = [item('a'), item('b'), item('c', { line: `bad ${EM} line` })];
   assert.equal(validateEdition(edition(TODAY, [], { items: bad }), ctx()).ok, false, 'two good items and one bad one is two');
   assert.equal(validateEdition(edition(TODAY, ['a', 'b', 'c']), ctx()).ok, true);
-  const many = validateEdition(edition(TODAY, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']), ctx());
-  assert.equal(many.ok, true);
-  assert.deepEqual(many.edition.items.map((i) => i.ids[0]), ['a', 'b', 'c', 'd', 'e', 'f']);
+  const ids = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'];
+  const ten = validateEdition(edition(TODAY, ids.slice(0, 10)), ctx());
+  assert.equal(ten.ok, true, 'an edition of 10 items passes');
+  assert.deepEqual(ten.edition.items.map((i) => i.ids[0]), ids.slice(0, 10));
+  const eleven = validateEdition(edition(TODAY, ids), ctx());
+  assert.equal(eleven.ok, true);
+  assert.deepEqual(eleven.edition.items.map((i) => i.ids[0]), ids.slice(0, 10), 'an eleventh is cut, the closest ten stay in order');
 });
 
 test('validation: an item whose first id an earlier day used is dropped whole, a later id that was told is left out, and a story shows once a day', () => {
