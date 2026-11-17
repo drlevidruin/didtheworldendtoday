@@ -10,9 +10,10 @@
 // not join them all into one story. Merged stories keep the earliest time
 // (publishedAt), know the newest (latestAt) and count distinct outlets. Stored
 // stories keep their id and first-seen time, so nothing is ever lost or
-// re-dated.
+// re-dated. A story that is not an X post itself but holds one keeps the post's
+// link as xUrl (see xUrlOf), so a row can link to the post as well.
 import { createHash } from 'node:crypto';
-import { titleKey, urlKey, tokens, publisherKey, hostOf } from './text.mjs';
+import { titleKey, urlKey, tokens, publisherKey, hostOf, xPost } from './text.mjs';
 import { newsRank, MAX_OUTLETS } from './rank.mjs';
 
 export const FUZZY = { minShared: 4, minOverlap: 0.75 };
@@ -57,6 +58,11 @@ function termOf(v) {
   return typeof v === 'string' && v ? v : null;
 }
 
+// The link of an X post, as a stored story keeps it: only a real one stays, anything else in a file is dropped.
+function postLinkOf(v) {
+  return xPost(v)?.href ?? null;
+}
+
 function fromStory(s) {
   return {
     stored: true,
@@ -71,6 +77,7 @@ function fromStory(s) {
     latestAt: toMs(s.latestAt),
     trending: trendOf(s.trending),
     trendTerm: termOf(s.trendTerm),
+    xUrl: postLinkOf(s.xUrl),
     firstSeenAt: toMs(s.firstSeenAt) ?? 0,
     signal: s.signal,
     score: s.score,
@@ -91,6 +98,7 @@ function fromItem(item, now) {
     latestAt: null,
     trending: trendOf(item.trending),
     trendTerm: termOf(item.trendTerm),
+    xUrl: null,
     firstSeenAt: now,
     signal: item.signal,
     score: item.rank,
@@ -154,6 +162,22 @@ function latestOf(members, nowMs, firstSeenAt) {
   return maxOf(times) ?? firstSeenAt;
 }
 
+// The link of the X post a story holds, for a story that is not itself the post: when its own link is a post there
+// is nothing to add. A stored story keeps the link it has (the oldest stored story's, when two came together), so it
+// never changes from run to run. With none stored, it is the earliest post among the members, and between two posts
+// of the same moment the link that sorts first. A story with no post has none.
+function xUrlOf(members, stored, ownUrl) {
+  if (xPost(ownUrl)) return null;
+  const kept = stored.find((m) => m.xUrl);
+  if (kept) return kept.xUrl;
+  const posts = members
+    .filter((m) => m.kind === 'x')
+    .map((m) => ({ at: m.publishedAt ?? Infinity, href: postLinkOf(m.url) }))
+    .filter((p) => p.href)
+    .sort((a, b) => a.at - b.at || (a.href < b.href ? -1 : a.href > b.href ? 1 : 0));
+  return posts.length ? posts[0].href : null;
+}
+
 function buildNews(members, now) {
   const stored = members.filter((m) => m.stored).sort((a, b) => a.firstSeenAt - b.firstSeenAt || (a.id < b.id ? -1 : 1));
   const rep = [...members].sort(
@@ -189,6 +213,9 @@ function buildNews(members, now) {
     outlets,
     outletNames: names,
   };
+  // A story that holds an X post and is not that post keeps the post's link. One with no post has no such key.
+  const xUrl = xUrlOf(members, stored, rep.url);
+  if (xUrl) base.xUrl = xUrl;
   // A story that was ever a Google trend keeps the biggest number it had, for as long as it lives. One that
   // never trended has no such key.
   if (trending !== null) base.trending = trending;

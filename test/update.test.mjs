@@ -701,3 +701,41 @@ test('Downdetector posts about different services are different stories in the d
   assert.deepEqual(posted(), expected, 'stored side by side, none takes in another');
   assert.equal(second.report.xTrace.inAll, 4);
 });
+
+// ---- a post that joins a news story ------------------------------------------------------------------------------
+test('an X post that joins a news story leaves its link on the story in the day file and in latest.json, and every later run keeps it', async () => {
+  const root = tmpRoot();
+  const title = 'Cloudflare outage knocks thousands of sites offline';
+  const news = newsItem({ cat: 'internet', title, source: 'Reuters', url: 'https://reuters.example/cloudflare', publishedAt: Date.parse('2026-11-17T19:00:00Z') });
+  const posts = [{ id: '7001', author_id: '105', created_at: '2026-11-17T19:30:00.000Z', text: title }];
+  const xFeed = (items) => fakeSource('x', { enabled: true, count: items.length, items });
+  const day = () => readJson(dayPath(root, '2026-11-17')).stories;
+
+  // The news is stored first, with no post to link.
+  await go(root, '2026-11-17T19:40:00Z', [feed([news])]);
+  assert.equal(day().length, 1);
+  assert.ok(!('xUrl' in day()[0]));
+
+  // An hour on, AP posts the same headline. It joins the story: the news link stays the story's, and the post's link is kept beside it.
+  const joined = await go(root, '2026-11-17T20:45:00Z', [feed([news]), xFeed(xsrc.postsToItems(posts, { 105: 'AP' }, cfg.x))]);
+  assert.equal(joined.report.xTrace.passed, 1);
+  assert.equal(day().length, 1, 'one story, not two');
+  const [story] = day();
+  assert.equal(story.url, 'https://reuters.example/cloudflare');
+  assert.deepEqual(story.outletNames, ['Reuters', '@AP on X']);
+  assert.equal(story.xUrl, 'https://x.com/AP/status/7001');
+  assert.equal(latestOf(root).stories[0].xUrl, 'https://x.com/AP/status/7001', 'latest.json has it too');
+
+  // The post leaves X's window and a later run reads the story back from the file: the link is still there, the story the same.
+  await go(root, '2026-11-17T22:05:00Z', [feed([news]), xFeed([])]);
+  assert.deepEqual(day(), [story]);
+  await go(root, '2026-11-17T23:10:00Z', [feed([]), xFeed([])]);
+  assert.equal(JSON.stringify(day()[0]), JSON.stringify(story), 'byte for byte, key order included');
+
+  // A bad link in the file is dropped when the story is read back.
+  const file = readJson(dayPath(root, '2026-11-17'));
+  file.stories[0].xUrl = 'https://example.com/AP/status/7001';
+  fs.writeFileSync(dayPath(root, '2026-11-17'), JSON.stringify(file));
+  await go(root, '2026-11-17T23:40:00Z', [feed([]), xFeed([])]);
+  assert.ok(!('xUrl' in day()[0]));
+});

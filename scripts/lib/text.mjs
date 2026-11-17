@@ -155,6 +155,19 @@ export function safeUrl(u) {
   }
 }
 
+// The address of an X post: https on x.com or twitter.com, like https://x.com/AP/status/123. Gives the link as
+// safeUrl cleans it and the account the post is from, or null for anything else: not a string, another site, plain
+// http, a port, an address with no account or no post in it (x.com/i/status/123 has no account to read).
+export function xPost(u) {
+  const href = typeof u === 'string' ? safeUrl(u) : null;
+  if (!href) return null;
+  const url = new URL(href);
+  const host = hostOf(href);
+  if (url.protocol !== 'https:' || url.port || (host !== 'x.com' && host !== 'twitter.com')) return null;
+  const m = /^\/([A-Za-z0-9_]{1,15})\/status\/\d+(?:\/|$)/.exec(url.pathname);
+  return m && m[1].toLowerCase() !== 'i' ? { href, handle: m[1] } : null;
+}
+
 // ---- sentences ---------------------------------------------------------------
 
 // Words that end in a period without ending a sentence ("Gov. Healey", "Acme Inc. said").

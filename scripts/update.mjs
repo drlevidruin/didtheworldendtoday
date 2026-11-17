@@ -36,6 +36,7 @@
 //   latestAt (its newest member's, never in the future), firstSeenAt, outlets, outletNames[],
 //   trending? (the most Google searches any trend about it drew, kept while the story lives),
 //   trendTerm? (the Google search of the trend it came from, kept while the story lives),
+//   xUrl? (the link of the X post a story holds when the story is not that post itself, kept while the story lives),
 //   score, signal?, quiet?, quietReason? }
 // Headlines are third-party text: stored as published, escaped when rendered.
 import fs from 'node:fs';

@@ -2549,3 +2549,32 @@ test('editor: a big story only sent again starts no quiet hours, so an outage th
   assert.equal(late.lines[0], 'editor: breaking news: Apple outage, take 2: iCloud is back for some users', late.lines.join(' | '));
   assert.deepEqual(stateOf(s).bigCats, { internet: minutesAfter(181) });
 });
+
+// ---- Phase 17d: the link of an X post is for the page, never for the model ---------------------------------------
+// A story that holds an X post keeps its link as xUrl so the row can show it. The editor picks the fields of each story one
+// by one, so the key stays out of the request. This says so, and keeps it so.
+
+test('editor: the link of an X post a story holds (xUrl) is never sent to the model, nor is the address of a story that is a post', async () => {
+  const held = story('n1', 'internet', 'Equinor says it will cut gas output to Europe', { outlets: 3, xUrl: 'https://x.com/AP/status/7001' });
+  const post = story('x1', 'internet', 'Gas output cut by Equinor, says Breaking911', {
+    kind: 'x',
+    url: 'https://x.com/Breaking911/status/5501',
+    source: '@Breaking911 on X',
+    outlets: 1,
+    outletNames: ['@Breaking911 on X'],
+  });
+  const s = setup({ stories: [...dayStories(), held, post] });
+  const client = fakeClient(answer(GOOD));
+  const r = await run(s, client);
+  assert.equal(r.status, 'written', r.lines.join(' | '));
+  assert.equal(client.calls.length, 1);
+  const req = client.calls[0];
+  const sent = JSON.parse(req.messages[0].content);
+  // both stories went to the model, each with the same eight fields as every other story
+  assert.deepEqual(sent.stories.map((x) => x.id).filter((id) => id === 'n1' || id === 'x1').sort(), ['n1', 'x1']);
+  for (const one of sent.stories) assert.deepEqual(Object.keys(one), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo', 'startedHoursAgo'], one.id);
+  const stories = req.messages[0].content;
+  for (const word of ['xUrl', 'x.com', 'twitter.com', '/status/', '7001', '5501', 'https://']) assert.ok(!stories.includes(word), `the stories sent hold "${word}"`);
+  assert.ok(!JSON.stringify(req).includes('xUrl'), 'the request, prompt and all, never names the key');
+  assert.ok(!EDITOR_SYSTEM_PROMPT.includes('xUrl'));
+});

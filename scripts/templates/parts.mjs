@@ -4,15 +4,17 @@
 //
 // One story, one link. A row is a card whose link is stretched over the whole row by
 // the stylesheet, so the whole row opens the story. The donate link of a quiet row sits
-// next to the card, never inside it, so a link never holds another link.
+// next to the card, never inside it, so a link never holds another link. So does the small
+// link to an X post, when the story has one and the card does not already open it.
 //
 // A row of near misses, left to right: its rank (red for the closest call), its emoji, then the
 // label, the line and the source. A day that has no edition is not ranked: its rows have no rank and
 // show the publisher's own headline in place of a label. In quiet mode no emoji is drawn at all.
-import { HELP_INTL, HELP_US, HEADLINES_SHOWN, MORE_TODAY, ROWS_SHOWN, headlineMeta, moreHeadlines, rowDate, rowSource, seeMore } from './copy.mjs';
+import { HELP_INTL, HELP_US, HEADLINES_SHOWN, MORE_TODAY, ROWS_SHOWN, headlineMeta, moreHeadlines, rowDate, rowSource, seeMore, xPostText } from './copy.mjs';
 import { esc, num, url } from './esc.mjs';
 import { quietCard } from '../lib/quietcards.mjs';
 import { quietLinkFor } from '../lib/editions.mjs';
+import { xPost } from '../lib/text.mjs';
 
 const REL = 'noopener';
 
@@ -30,6 +32,20 @@ function quietNote(which, ctx) {
   const caption = `<p class="cap">${esc(ctx.quietCaption)}</p>`;
   const help = quietHelp(which, ctx);
   return help ? `${caption}\n${help}` : caption;
+}
+
+// The X post a row links to besides its card. The card opens the lead story, and when that is not an X post, the
+// first story of the row (in the order of its ids) that is one, or that holds one (its xUrl), gives the link. A row
+// whose card already opens a post has nothing extra: its source line says whose post it is. Only a story still in
+// the day's stories can be looked through, and only a post address on x.com or twitter.com counts (see xPost).
+function xPostFor(item, byId) {
+  if (!item || xPost(item.url) || !Array.isArray(item.ids) || !byId || typeof byId.get !== 'function') return null;
+  for (const id of item.ids) {
+    const story = byId.get(id);
+    const post = story ? xPost(story.url) || xPost(story.xUrl) : null;
+    if (post) return post;
+  }
+  return null;
 }
 
 // ---- the rows of a day -----------------------------------------------------------
@@ -66,13 +82,16 @@ export function row(item, index, ctx) {
     .join(' ');
   // A story whose link is not safe still reads; it just has nothing to open.
   const card = href ? `<a class="card" href="${href}" target="_blank" rel="${REL}">${text}</a>` : `<div class="card">${text}</div>`;
+  // The link to the story's X post is its own link after the card, never inside it, and so is the donate link.
+  const post = xPostFor(item, ctx.byId);
+  const xlink = post ? `<a class="xp" href="${url(post.href)}" target="_blank" rel="${REL}">${esc(xPostText(post.handle))}</a>` : '';
   const help = quiet ? quietHelp(quietLinkFor(item, ctx.byId), ctx) : '';
   const emoji = !ctx.quietMode && item.emoji ? `<span class="em" aria-hidden="true">${esc(item.emoji)}</span>\n` : '';
   const rankCell = plain ? '' : `<span class="rn" aria-hidden="true">${rank}</span>\n`;
   const cls = ['row', !plain && index === 0 ? 'best' : '', plain ? 'plain' : '', quiet ? 'quiet' : ''].filter(Boolean).join(' ');
   return `<li class="${cls}">
 ${rankCell}${emoji}<div class="rb">
-${card}${help ? `\n${help}` : ''}
+${card}${xlink ? `\n${xlink}` : ''}${help ? `\n${help}` : ''}
 </div>
 </li>`;
 }

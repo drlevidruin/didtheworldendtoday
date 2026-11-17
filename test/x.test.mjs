@@ -696,3 +696,128 @@ test('today\'s live day file (11/17) goes through the merge with the boilerplate
     assert.equal(same.outlets, s.outlets, s.title);
   }
 });
+
+// ---- Phase 17d: a story keeps its X post's link --------------------------------------------------------------------
+// On 11/17 at 5:11 PM ET the editor put Breaking911's Equinor post in a row with three news stories. A row is one link,
+// so the post was hidden, and a post that joins a news story left only "@AP on X" in its outlet names: its link was
+// lost. A story that is not itself a post but holds one keeps the post's link as xUrl.
+
+const CLOUDFLARE = 'Cloudflare outage knocks thousands of sites offline';
+const AP_POST = 'https://x.com/AP/status/7001';
+const apPost = (over = {}) => ({ via: 'x', kind: 'x', cat: 'internet', title: CLOUDFLARE, url: AP_POST, source: '@AP on X', publishedAt: NOW - 20 * MIN, ...over });
+const wire = (over = {}) => newsItem({ cat: 'internet', title: CLOUDFLARE, url: 'https://reuters.example/cloudflare', source: 'Reuters', publishedAt: NOW - 30 * MIN, ...over });
+const bnoPost = (over = {}) => apPost({ url: 'https://x.com/BNONews/status/6001', source: '@BNONews on X', ...over });
+const mergeOne = (stored, fresh) => {
+  const out = cluster.mergeStories(stored, fresh, MERGE);
+  assert.equal(out.length, 1, out.map((s) => s.title).join(' | '));
+  return out[0];
+};
+
+test('a news story that takes in an X post keeps the post\'s link as xUrl, and nothing else about the merge changes', () => {
+  const joined = mergeOne([], [wire(), apPost()]);
+  const alone = mergeOne([], [wire()]);
+  assert.equal(joined.xUrl, AP_POST);
+  assert.equal(joined.kind, 'news');
+  assert.equal(joined.url, 'https://reuters.example/cloudflare', 'the story still opens the news link');
+  assert.equal(joined.url, alone.url);
+  assert.equal(joined.title, alone.title);
+  assert.equal(joined.id, alone.id);
+  assert.equal(joined.source, 'Reuters');
+  assert.equal(joined.outlets, 2);
+  assert.deepEqual(joined.outletNames, ['Reuters', '@AP on X']);
+  assert.deepEqual(Object.keys(joined).filter((k) => k !== 'xUrl'), Object.keys(alone), 'one more key and no other');
+});
+
+test('the post\'s own story, a story whose own link is the post, and a story with no post have no xUrl key at all', () => {
+  assert.equal(mergeOne([], [wire(), apPost()]).xUrl, AP_POST, 'the story that takes a post in has the link, so the none below are not just a missing feature');
+  const own = mergeOne([], [apPost()]);
+  assert.equal(own.kind, 'x');
+  assert.equal(own.url, AP_POST);
+  assert.ok(!('xUrl' in own), 'a post is not given its own link twice');
+  const none = mergeOne([], [wire()]);
+  assert.ok(!('xUrl' in none), 'no post, no key');
+  // The post is the older one, so it is the story's own link and there is nothing to add.
+  const early = mergeOne([], [apPost({ publishedAt: NOW - 40 * MIN }), wire()]);
+  assert.equal(early.url, AP_POST);
+  assert.ok(!('xUrl' in early));
+  assert.equal(early.outlets, 2);
+  // Four unrelated stories and a signal: none has the key.
+  const many = cluster.mergeStories([], [wire(), wire({ title: 'Major AWS outage disrupts popular apps', url: 'https://wsj.example/aws' }), apPost({ title: 'Uber is down for thousands of users', url: 'https://x.com/DownDetector/status/8001', source: '@DownDetector on X' })], MERGE);
+  assert.equal(many.length, 3);
+  assert.deepEqual(many.filter((s) => 'xUrl' in s).map((s) => s.title), [], 'a post that stands alone is its own story, and no one else holds it');
+});
+
+test('the link stays across runs: a stored story keeps the one it has, and nothing a later run finds takes it away or changes it', () => {
+  const first = mergeOne([], [wire(), apPost()]);
+  assert.equal(first.xUrl, AP_POST);
+  // a run that finds nothing, a run that finds the same two again, and a run after that
+  const second = mergeOne([first], []);
+  assert.deepEqual(second, first, 'a run with nothing new leaves the story as it was');
+  const third = mergeOne([second], [wire(), apPost()]);
+  assert.equal(third.xUrl, AP_POST);
+  assert.equal(third.id, first.id);
+  assert.equal(third.url, first.url);
+  assert.equal(third.outlets, 2);
+  assert.deepEqual(mergeOne([third], []), first);
+  // a post from an earlier moment that arrives later does not replace the link the story has
+  const later = mergeOne([first], [bnoPost({ publishedAt: NOW - 90 * MIN })]);
+  assert.equal(later.xUrl, AP_POST, 'a stored story keeps the one it has');
+  assert.deepEqual(later.outletNames, ['Reuters', '@AP on X', '@BNONews on X']);
+  assert.equal(later.url, first.url);
+  // two stored stories that come together keep the link of the one first seen
+  const older = { ...first, id: 'older', firstSeenAt: new Date(NOW - 5 * 3600000).toISOString(), xUrl: 'https://x.com/Reuters/status/1' };
+  const newer = { ...first, id: 'newer', firstSeenAt: new Date(NOW - 3 * 3600000).toISOString(), xUrl: 'https://x.com/cnnbrk/status/2' };
+  assert.equal(mergeOne([newer, older], []).xUrl, 'https://x.com/Reuters/status/1');
+  assert.equal(mergeOne([older, newer], []).xUrl, 'https://x.com/Reuters/status/1');
+});
+
+test('a news story stored before the link was kept gets it from the next post it takes in', () => {
+  const [story] = cluster.mergeStories([], [wire()], MERGE);
+  const old = { ...story, outlets: 2, outletNames: ['Reuters', '@AP on X'] };
+  assert.ok(!('xUrl' in old));
+  assert.ok(!('xUrl' in mergeOne([old], [])), 'with no post to read it from, there is none');
+  assert.equal(mergeOne([old], [apPost()]).xUrl, AP_POST);
+});
+
+test('of several posts in one story the earliest is its link, in whatever order they arrive, and the same moment goes by the link', () => {
+  const a = apPost({ publishedAt: NOW - 20 * MIN });
+  const b = bnoPost({ publishedAt: NOW - 25 * MIN });
+  const c = bnoPost({ url: 'https://x.com/Reuters/status/6002', source: '@Reuters on X', publishedAt: NOW - 25 * MIN });
+  for (const order of [[wire(), a, b, c], [c, b, a, wire()], [a, wire(), c, b], [b, c, wire(), a]]) {
+    const story = mergeOne([], order);
+    assert.equal(story.xUrl, b.url, 'the earliest post; two from the same moment go by their links');
+    assert.equal(story.url, 'https://reuters.example/cloudflare');
+  }
+  // A post with no time of its own comes after one that has a time.
+  const untimed = apPost({ url: 'https://x.com/cnnbrk/status/1', source: '@cnnbrk on X', publishedAt: null });
+  assert.equal(mergeOne([], [wire(), untimed, a]).xUrl, a.url);
+});
+
+test('a bad xUrl in a stored file is dropped, a good one is read back, and a new post still gives the story its link', () => {
+  const good = mergeOne([], [wire(), apPost()]);
+  for (const bad of [
+    'javascript:alert(1)',
+    'http://x.com/AP/status/7001',
+    'https://example.com/AP/status/7001',
+    'https://x.com.evil.example/AP/status/7001',
+    'https://user:pass@x.com/AP/status/7001',
+    'https://x.com/AP',
+    'https://x.com/i/status/7001',
+    '',
+    null,
+    42,
+    {},
+    ['https://x.com/AP/status/7001'],
+  ]) {
+    const kept = mergeOne([{ ...good, xUrl: bad }], []);
+    assert.ok(!('xUrl' in kept), `${JSON.stringify(bad)} is dropped`);
+    assert.equal(mergeOne([{ ...good, xUrl: bad }], [apPost()]).xUrl, AP_POST, `${JSON.stringify(bad)} does not stop the post from giving the link`);
+  }
+  assert.equal(mergeOne([{ ...good, xUrl: ' https://twitter.com/AP/status/7001 ' }], []).xUrl, 'https://twitter.com/AP/status/7001', 'a good one is read back, cleaned the way safeUrl cleans it');
+  // A story whose own link is a post has none, even when a file says it has.
+  const own = mergeOne([], [apPost()]);
+  assert.ok(!('xUrl' in mergeOne([{ ...own, xUrl: 'https://x.com/BNONews/status/6001' }], [])));
+  // A signal has none either, whatever a file says.
+  const signal = { id: 'sig:asteroid:1', kind: 'signal', cat: 'space', title: 'Asteroid 2026 WA passes at 0.33 lunar distances', url: 'https://ssd.jpl.nasa.gov/x', source: 'NASA/JPL', publishedAt: new Date(NOW).toISOString(), firstSeenAt: new Date(NOW).toISOString(), score: 4, xUrl: AP_POST };
+  assert.ok(!cluster.mergeStories([signal], [], MERGE).some((s) => 'xUrl' in s));
+});

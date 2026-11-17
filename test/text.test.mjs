@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { ABBREVIATIONS, clean, decodeEntities, firstSentence, isAbbreviation, safeUrl, tokens, truncate, wordCount } from '../scripts/lib/text.mjs';
+import { ABBREVIATIONS, clean, decodeEntities, firstSentence, isAbbreviation, safeUrl, tokens, truncate, wordCount, xPost } from '../scripts/lib/text.mjs';
 
 test('clean strips control characters, zero-width and bidi tricks, and squeezes spaces', () => {
   assert.equal(clean('  Big\u0000 outage\u0007\u001b[31m   today​  '), 'Big outage [31m today');
@@ -56,6 +56,46 @@ test('safeUrl accepts http and https only', () => {
 
 test('safeUrl rejects absurdly long links', () => {
   assert.equal(safeUrl(`https://example.com/${'a'.repeat(2100)}`), null);
+});
+
+test('xPost reads the account from an https post address on x.com or twitter.com, and gives nothing for anything else', () => {
+  assert.deepEqual(xPost('https://x.com/AP/status/123'), { href: 'https://x.com/AP/status/123', handle: 'AP' });
+  assert.deepEqual(xPost('https://twitter.com/Breaking911/status/1234567890123456789'), { href: 'https://twitter.com/Breaking911/status/1234567890123456789', handle: 'Breaking911' });
+  assert.deepEqual(xPost('  https://www.x.com/BNONews/status/9001?s=20#top  '), { href: 'https://www.x.com/BNONews/status/9001?s=20#top', handle: 'BNONews' });
+  assert.deepEqual(xPost('https://X.COM/spectatorindex/status/5/photo/1'), { href: 'https://x.com/spectatorindex/status/5/photo/1', handle: 'spectatorindex' });
+  assert.equal(xPost('https://x.com/unusual_whales/status/77/').handle, 'unusual_whales');
+  for (const bad of [
+    'http://x.com/AP/status/123',
+    'https://example.com/AP/status/123',
+    'https://x.com.evil.example/AP/status/123',
+    'https://evilx.com/AP/status/123',
+    'https://notx.com/AP/status/123',
+    'https://mobile.twitter.com.example/AP/status/123',
+    'https://user:pass@x.com/AP/status/123',
+    'https://x.com:8443/AP/status/123',
+    'https://x.com/',
+    'https://x.com/AP',
+    'https://x.com/AP/status/',
+    'https://x.com/AP/status/abc',
+    'https://x.com/AP/status/123abc',
+    'https://x.com/AP/likes/123',
+    'https://x.com/i/status/123',
+    'https://x.com/i/web/status/123',
+    'https://x.com/a-b/status/123',
+    'https://x.com/sixteencharacter1/status/123',
+    'javascript:alert(1)',
+    'data:text/html,hi',
+    '//x.com/AP/status/123',
+    'x.com/AP/status/123',
+    '',
+    null,
+    undefined,
+    42,
+    {},
+    ['https://x.com/AP/status/123'],
+  ]) {
+    assert.equal(xPost(bad), null, String(bad));
+  }
 });
 
 test('tokens drop short words and stop words', () => {

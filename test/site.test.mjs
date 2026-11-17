@@ -3805,3 +3805,196 @@ test('our own copy has no arrows: neither font has one, so no page, script or te
   const copyText = fs.readFileSync(path.join(REPO, 'scripts', 'templates', 'copy.mjs'), 'utf8');
   assert.deepEqual(copyText.split('\n').filter((l) => ARROW.test(l)).map((l) => l.trim()), ['if (n > 0) return `↑${n}`;', 'if (n < 0) return `↓${Math.abs(n)}`;'], 'only the two lines of the change mark');
 });
+
+// ---- Phase 17d: a row links to its story's X post --------------------------------------------------------------------
+// A row is one link, so an X post that sits in a row of news stories (11/17, 5:11 PM ET, Breaking911's Equinor post) was
+// hidden. When the card does not already open a post, the row gets one small link after it, "𝕏 @account", read from
+// the post's address. It stands beside the card, never inside it, the way the donate link of a quiet row does.
+
+const SIGN = '\u{1D54F}';
+const BREAKING_POST = 'https://x.com/Breaking911/status/5501';
+const postStory = (over = {}) => ({ id: 'x1', kind: 'x', cat: 'markets', title: 'Equinor says it will cut gas output', url: BREAKING_POST, source: '@Breaking911 on X', outlets: 1, ...over });
+const newsStory = (id, over = {}) => ({ id, kind: 'news', cat: 'markets', title: `News story ${id}`, url: `https://news.example/${id}`, source: 'Reuters', outlets: 2, ...over });
+const xRowCtx = (...stories) => ({ byId: new Map(stories.map((s) => [s.id, s])), quietMode: false, quietCaption: 'No jokes on this one.', quietLink: cfg.quiet.quietLink, quietLinkIntl: cfg.quiet.quietLinkIntl });
+const xRowItem = (ids, over = {}) => ({ emoji: '🛢️', label: 'Equinor cut', line: 'Europe\'s gas supplier is cutting output.', ids, quiet: false, cat: 'markets', title: 'News story a1', url: 'https://news.example/a1', source: 'Reuters', outlets: 3, ...over });
+const xLinkIn = (html) => html.match(/<a class="xp" href="([^"]*)" target="_blank" rel="noopener">([^<]*)<\/a>/);
+const xTextIn = (html) => (xLinkIn(html) || [])[2] ?? null;
+
+test('phase 17d: the row of an item whose ids hold an X story shows "𝕏 @Breaking911" linking to the post, after the card closes and never inside it', () => {
+  assert.equal('𝕏'.codePointAt(0), 0x1d54f, 'the sign is the double-struck X');
+  assert.equal(copy.X_SIGN, SIGN);
+  assert.equal(copy.xPostText('Breaking911'), '𝕏 @Breaking911');
+  const ctx = xRowCtx(newsStory('a1'), newsStory('a2'), postStory());
+  const html = dayRow(xRowItem(['a1', 'a2', 'x1']), 1, ctx);
+  const link = xLinkIn(html);
+  assert.ok(link, html);
+  assert.equal(link[1], BREAKING_POST);
+  assert.equal(link[2], '𝕏 @Breaking911');
+  const card = html.match(/<a class="card" [^>]*>([\s\S]*?)<\/a>/);
+  assert.ok(card && !card[1].includes('class="xp"') && !card[1].includes('<a') && !card[1].includes('Breaking911'), 'nothing of it is inside the card');
+  assert.ok(html.indexOf('</a>') < html.indexOf('class="xp"'), 'the card closes before the link opens');
+  assert.ok(html.includes(`</a>\n<a class="xp" href="${BREAKING_POST}" target="_blank" rel="noopener">𝕏 @Breaking911</a>\n</div>`), 'right after the card, in the same box, opening in a new tab like the card');
+  assert.deepEqual(anchorDepth(html), { deepest: 1, end: 0 });
+  assert.equal((html.match(/class="xp"/g) || []).length, 1, 'one link');
+  // Taking the link out leaves the row a row of the same story without the post.
+  const without = dayRow(xRowItem(['a1', 'a2']), 1, xRowCtx(newsStory('a1'), newsStory('a2')));
+  assert.equal(html.replace(/\n<a class="xp"[^>]*>[^<]*<\/a>/, ''), without, 'the card, the rank and the emoji are what they were');
+  assert.ok(!without.includes('class="xp"'), 'a row with no post has none');
+});
+
+test('phase 17d: the row of an item whose lead story is the post shows no extra link', () => {
+  const ctx = xRowCtx(postStory(), newsStory('a1', { xUrl: 'https://x.com/AP/status/42' }), postStory({ id: 'x2', url: 'https://x.com/BNONews/status/9' }));
+  const html = dayRow(xRowItem(['x1', 'a1', 'x2'], { url: BREAKING_POST, source: '@Breaking911 on X', outlets: 1 }), 0, ctx);
+  assert.ok(!html.includes('class="xp"'), html);
+  assert.ok(html.includes(`<a class="card" href="${BREAKING_POST}" target="_blank" rel="noopener">`), 'the card opens the post');
+  assert.ok(html.includes('<span class="src">@Breaking911 on X</span>'), 'and the source line already names the account');
+  // the same post under a card that opens a news link does show, so the nothing above is the rule at work and not a missing feature
+  const under = dayRow(xRowItem(['x1']), 0, ctx);
+  assert.equal(xTextIn(under), '𝕏 @Breaking911', 'a row whose card is not the post shows it');
+  // the same on twitter.com, and in a row of plain headlines
+  const old = dayRow(xRowItem(['x1'], { url: 'https://twitter.com/Breaking911/status/5501', source: '@Breaking911 on X' }), 0, { ...xRowCtx(postStory({ url: 'https://twitter.com/Breaking911/status/5501' })), plain: true });
+  assert.ok(!old.includes('class="xp"'));
+});
+
+test('phase 17d: a story with an xUrl gives its row the link, and the first story in the order of the ids that has a post wins', () => {
+  const lead = newsStory('a1', { xUrl: 'https://x.com/AP/status/42' });
+  const html = dayRow(xRowItem(['a1']), 0, xRowCtx(lead));
+  assert.deepEqual([xLinkIn(html)[1], xTextIn(html)], ['https://x.com/AP/status/42', '𝕏 @AP']);
+  assert.ok(html.indexOf('</a>') < html.indexOf('class="xp"'));
+  assert.deepEqual(anchorDepth(html), { deepest: 1, end: 0 });
+  // three stories that hold a post, in three orders of the ids
+  const ctx = xRowCtx(newsStory('a1'), newsStory('a2', { xUrl: 'https://x.com/Reuters/status/2' }), postStory(), newsStory('a3', { xUrl: 'https://x.com/AP/status/3' }));
+  assert.equal(xTextIn(dayRow(xRowItem(['a1', 'a2', 'x1', 'a3']), 0, ctx)), '𝕏 @Reuters');
+  assert.equal(xTextIn(dayRow(xRowItem(['a1', 'x1', 'a2', 'a3']), 0, ctx)), '𝕏 @Breaking911');
+  assert.equal(xTextIn(dayRow(xRowItem(['a3', 'x1', 'a2']), 0, ctx)), '𝕏 @AP');
+  // a story that is itself a post gives that post, and an id that is no longer in the day's stories is passed over
+  assert.equal(xTextIn(dayRow(xRowItem(['gone', 'a1', 'a2']), 0, ctx)), '𝕏 @Reuters');
+  assert.equal(xTextIn(dayRow(xRowItem(['gone', 'a1']), 0, ctx)), null);
+  const both = xRowCtx(newsStory('a1', { url: 'https://x.com/BNONews/status/9', xUrl: 'https://x.com/AP/status/42' }));
+  assert.equal(xTextIn(dayRow(xRowItem(['a1']), 0, both)), '𝕏 @BNONews', 'its own link is a post, so that is the post');
+  // a row of plain headlines (a day with no edition) has it too, and so has a row whose card has nothing to open
+  assert.equal(xTextIn(dayRow(xRowItem(['a1']), 0, { ...xRowCtx(lead), plain: true })), '𝕏 @AP');
+  const shut = dayRow(xRowItem(['a1'], { url: 'javascript:alert(1)' }), 0, xRowCtx(lead));
+  assert.ok(shut.includes('<div class="card">') && xTextIn(shut) === '𝕏 @AP');
+});
+
+test('phase 17d: a link that is not https on x.com or twitter.com gives nothing, whether it is the story\'s url or its xUrl', () => {
+  const bad = [
+    'http://x.com/AP/status/1',
+    'http://twitter.com/AP/status/1',
+    'https://example.com/AP/status/1',
+    'https://x.com.evil.example/AP/status/1',
+    'https://evilx.com/AP/status/1',
+    'https://twitter.com.example/AP/status/1',
+    'https://user:pass@x.com/AP/status/1',
+    'javascript:alert(1)',
+    'data:text/html,<b>x</b>',
+    '//x.com/AP/status/1',
+    'https://x.com/',
+    'https://x.com/AP',
+    '',
+    null,
+    42,
+    { href: 'https://x.com/AP/status/1' },
+  ];
+  for (const value of bad) {
+    for (const field of ['xUrl', 'url']) {
+      const html = dayRow(xRowItem(['a1']), 0, xRowCtx(newsStory('a1', { [field]: value })));
+      assert.ok(!html.includes('class="xp"'), `${field} ${JSON.stringify(value)}`);
+      assert.ok(!html.includes('javascript:'), `${field} ${JSON.stringify(value)}`);
+    }
+  }
+  // the item's own link is not the post, so a bad xUrl does not turn the card into one either
+  const html = dayRow(xRowItem(['a1'], { url: 'http://x.com/AP/status/1' }), 0, xRowCtx(newsStory('a1', { xUrl: 'http://x.com/AP/status/1' })));
+  assert.ok(!html.includes('class="xp"') && html.includes('<a class="card" href="http://x.com/AP/status/1"'));
+  // the good forms
+  for (const [good, said] of [
+    ['https://twitter.com/AP/status/1', '𝕏 @AP'],
+    ['https://www.x.com/BNONews/status/22', '𝕏 @BNONews'],
+    ['https://X.com/unusual_whales/status/333/', '𝕏 @unusual_whales'],
+    ['https://x.com/AP/status/1?s=20&t=a%20b', '𝕏 @AP'],
+  ]) {
+    const out = dayRow(xRowItem(['a1']), 0, xRowCtx(newsStory('a1', { xUrl: good })));
+    assert.equal(xTextIn(out), said, good);
+    assert.equal(unesc(xLinkIn(out)[1]), new URL(good).href, 'the link is the post, written the way the card writes its own');
+  }
+  // an address is escaped like every other link on the page
+  const escaped = dayRow(xRowItem(['a1']), 0, xRowCtx(newsStory('a1', { xUrl: 'https://x.com/AP/status/1?a=1&b="2"' })));
+  assert.ok(escaped.includes('class="xp" href="https://x.com/AP/status/1?a=1&amp;b=%222%22"'), escaped);
+  assert.deepEqual(anchorDepth(escaped), { deepest: 1, end: 0 });
+  // a row made with no stories at all, or with ids that are not a list, is the row it was
+  for (const ctx of [{ ...xRowCtx(), byId: undefined }, { ...xRowCtx(), byId: null }, xRowCtx()]) assert.ok(!dayRow(xRowItem(['a1']), 0, ctx).includes('class="xp"'));
+  assert.ok(!dayRow(xRowItem('a1'), 0, xRowCtx(newsStory('a1', { xUrl: AP_URL_FOR_ROWS }))).includes('class="xp"'));
+});
+
+test('phase 17d: a quiet row keeps its donate link, and the X link comes right after the card, before it, each its own link', () => {
+  const lead = newsStory('q1', { cat: 'weather', title: 'Tornado destroys homes in Oklahoma town', quiet: true, xUrl: 'https://x.com/AP/status/42' });
+  const item = { emoji: '🌪️', label: 'Oklahoma tornado', line: 'A tornado hit Oklahoma.', ids: ['q1'], quiet: true, url: 'https://news.example/q1', source: 'Reuters', outlets: 3 };
+  const html = dayRow(item, 1, xRowCtx(lead));
+  assert.ok(html.includes('</a>\n<a class="xp" href="https://x.com/AP/status/42" target="_blank" rel="noopener">𝕏 @AP</a>\n<a class="help" href="https://www.redcross.org/donate" target="_blank" rel="noopener">Donate to the Red Cross</a>\n</div>'), html);
+  assert.deepEqual(anchorDepth(html), { deepest: 1, end: 0 });
+  assert.ok(/^<li class="row quiet">/.test(html));
+  const card = html.match(/<a class="card" [^>]*>([\s\S]*?)<\/a>/)[1];
+  assert.ok(card.includes('<span class="cap">No jokes on this one.</span>') && !card.includes('class="xp"') && !card.includes('class="help"'));
+  // a page that is quiet as a whole draws no emoji and still has the link
+  const hushed = dayRow(item, 1, { ...xRowCtx(lead), quietMode: true });
+  assert.ok(!hushed.includes('class="em"') && xTextIn(hushed) === '𝕏 @AP');
+});
+
+test('phase 17d: the X link is small and quiet like the source line, stands above the card, and is a tap target a thumb can hit', () => {
+  for (const quiet of [false, true]) {
+    const sheet = css('./', { quiet });
+    const xp = ruleFor(sheet, '.xp');
+    const px = (prop) => Number((xp.match(new RegExp(`(?:^|;)${prop}:([\\d.]+)px`)) || [])[1] || 0);
+    assert.ok(px('min-height') >= 48 && px('min-width') >= 48, 'at least 48px each way');
+    assert.match(xp, /(?:^|;)position:relative;z-index:1(?:;|$)/, 'above the stretched link of the card, like the donate link');
+    assert.match(xp, /(?:^|;)display:inline-flex;align-items:center(?:;|$)/, 'beside the card, centered in its box');
+    assert.equal(xp.match(/(?:^|;)(font:[^;]*)/)[1], ruleFor(sheet, '.src').match(/(?:^|;)(font:[^;]*)/)[1], 'the size and weight of the source line');
+    assert.match(xp, /(?:^|;)color:var\(--ink\)(?:;|$)/, 'ink, the one colour of the page');
+    assert.match(xp, /(?:^|;)text-decoration:underline;text-underline-offset:\.2em(?:;|$)/, 'underlined like every other link');
+    assert.match(xp, /(?:^|;)overflow-wrap:anywhere(?:;|$)/);
+  }
+  assert.match(ruleFor(css('./'), '.card::after'), /content:"";position:absolute;inset:0/, 'the stretched link it has to stand above');
+});
+
+// The seeded pages with an X post on some of the stories their editions name.
+const AP_URL_FOR_ROWS = 'https://x.com/AP/status/1';
+const AWS_POST = { id: 'x:aws', kind: 'x', cat: 'internet', title: 'Major AWS outage knocks apps offline, says Breaking911', url: BREAKING_POST, source: '@Breaking911 on X', publishedAt: '2026-11-16T20:40:00.000Z', firstSeenAt: '2026-11-16T20:45:00.000Z', outlets: 1, outletNames: ['@Breaking911 on X'], score: 20 };
+const WITH_POSTS = { ...EDITIONS, '2026-11-16': { ...ED16, items: ED16.items.map((item, i) => (i === 1 ? { ...item, ids: [AWS.id, AWS_POST.id] } : item)) } };
+const putPosts = (r) => {
+  const hold = (stories) => {
+    stories.find((s) => s.id === AIRLINES.id).xUrl = 'https://x.com/AP/status/7001';
+    stories.push(AWS_POST);
+  };
+  edit(latestFile(r), (l) => hold(l.stories));
+  edit(dayFile(r, '2026-11-16'), (d) => hold(d.stories));
+  edit(dayFile(r, '2026-11-15'), (d) => {
+    d.stories.find((s) => s.id === SUBSTATION.id).xUrl = 'https://x.com/Reuters/status/8001';
+  });
+};
+
+test('phase 17d: the built pages carry the link on the rows of today, of an earlier day and of every day page, and the site still passes its audit', () => {
+  const out = withEditions(WITH_POSTS, putPosts);
+  auditSite(out.dist, { label: 'x links' });
+  const linksOf = (html) => rowsOf(html).map((row) => xTextIn(row));
+  const today = read('day/2026-11-16/index.html', out.dist);
+  assert.deepEqual(linksOf(today), ['𝕏 @AP', '𝕏 @Breaking911', null, null, null, null], 'the first row holds a story with an xUrl, the second a story that is a post');
+  assert.deepEqual(linksOf(read('day/2026-11-15/index.html', out.dist)), ['𝕏 @Reuters', null, null]);
+  const home = read('index.html', out.dist);
+  assert.deepEqual(blocksOf(home).map(linksOf), [['𝕏 @AP', '𝕏 @Breaking911', null, null, null, null], ['𝕏 @Reuters', null, null]], 'today and yesterday on the homepage');
+  for (const html of [today, home]) {
+    assert.deepEqual(anchorDepth(html), { deepest: 1, end: 0 }, 'no link holds another');
+    for (const row of rowsOf(html)) if (xLinkIn(row)) assert.ok(row.indexOf('</a>') < row.indexOf('class="xp"'), 'the card closes first');
+    assert.ok(html.includes('<a class="xp" href="https://x.com/AP/status/7001" target="_blank" rel="noopener">𝕏 @AP</a>'));
+  }
+  // the second row's card is the news story's, and the post is its own link beside it
+  const second = rowsOf(today)[1];
+  assert.equal(rowFacts(second).href, AWS.url);
+  assert.equal(xLinkIn(second)[1], BREAKING_POST);
+  // the data file still holds the stories as they are, with the key where there is one
+  const api = readJson(path.join(out.dist, 'api', 'today.json'));
+  assert.equal(api.stories.find((s) => s.id === AIRLINES.id).xUrl, 'https://x.com/AP/status/7001');
+  assert.ok(!('xUrl' in api.stories.find((s) => s.id === AWS.id)));
+  // and with the stories as they were, no page has the link
+  for (const html of [read('index.html', edDist), read('day/2026-11-16/index.html', edDist), read('day/2026-11-15/index.html', edDist)]) assert.ok(!html.includes('class="xp"'));
+});

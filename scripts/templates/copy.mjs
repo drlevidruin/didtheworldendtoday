@@ -207,6 +207,9 @@ export const FOLLOW_QUIET = `Follow ${CREDIT_HANDLE}`;
 export const READ_IT = 'Read it';
 export const HELP_US = 'Donate to the Red Cross';
 export const HELP_INTL = 'Support the Red Cross and Red Crescent';
+// The small link after a row whose story has an X post: the sign X uses for itself, then the account ("𝕏 @AP").
+export const X_SIGN = '\u{1D54F}';
+export const xPostText = (handle) => `${X_SIGN} @${handle}`;
 
 // The About page
 export const ET_NOTE = 'Days run midnight to midnight, Eastern time. Every time on this site is Eastern.';

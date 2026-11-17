@@ -99,6 +99,7 @@ a.band{text-decoration:none}
 .src{display:block;margin-top:8px;font:400 14px/1.4 var(--text);color:var(--ink);text-decoration:underline;text-underline-offset:.2em;overflow-wrap:anywhere}
 .cap{display:block;margin-top:8px;font:600 15px/1.4 var(--text);overflow-wrap:anywhere;color:var(--ink)}
 .help{position:relative;z-index:1;display:inline-flex;align-items:center;min-height:48px;font:600 15px/1.4 var(--text);color:var(--ink);text-decoration:underline;text-underline-offset:.2em}
+.xp{position:relative;z-index:1;display:inline-flex;align-items:center;min-width:48px;min-height:48px;font:400 14px/1.4 var(--text);color:var(--ink);text-decoration:underline;text-underline-offset:.2em;overflow-wrap:anywhere}
 .df{margin-top:24px;display:flex;flex-direction:column;align-items:flex-start}
 .df .btn{margin-top:0}
 .follow{display:inline-flex;align-items:center;min-height:48px;margin-top:8px;font:600 16px/1.4 var(--text);color:var(--ink);text-decoration:underline;text-underline-offset:.2em;text-wrap:balance}
