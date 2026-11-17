@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T17:32:03.215Z",
+  "buildTime": "2026-11-17T17:47:06.855Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 12:32 ET",
+  "etStamp": "2026-11-17 12:47 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -54,17 +54,17 @@
     "date": "2026-11-17",
     "score": 92
   },
-  "headlinesRead": 1606,
-  "lastSuccessAt": "2026-11-17T17:32:03.215Z",
+  "headlinesRead": 1595,
+  "lastSuccessAt": "2026-11-17T17:47:06.855Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 13,
+    "flights": 14,
     "space": 4,
     "earth": 4,
-    "hacks": 41,
-    "grid": 7,
+    "hacks": 42,
+    "grid": 6,
     "germs": 4,
-    "internet": 10,
+    "internet": 9,
     "weather": 4,
     "markets": 4,
     "animals": 4,
@@ -119,8 +119,8 @@
         {
           "id": "openai",
           "name": "OpenAI",
-          "indicator": "none",
-          "description": "All Systems Operational"
+          "indicator": "minor",
+          "description": "Partial System Degradation"
         },
         {
           "id": "claude",
@@ -191,57 +191,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1311,
+      "count": 1307,
       "error": null,
-      "lastOkAt": "2026-11-17T17:32:03.215Z"
+      "lastOkAt": "2026-11-17T17:47:06.855Z"
     },
     "bing": {
       "ok": true,
-      "count": 284,
+      "count": 277,
       "error": null,
-      "lastOkAt": "2026-11-17T17:32:03.215Z"
+      "lastOkAt": "2026-11-17T17:47:06.855Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": null
     },
     "hn": {
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-17T17:32:03.215Z"
+      "lastOkAt": "2026-11-17T17:47:06.855Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T17:32:03.215Z"
+      "lastOkAt": "2026-11-17T17:47:06.855Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T17:32:03.215Z"
+      "lastOkAt": "2026-11-17T17:47:06.855Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T17:32:03.215Z"
+      "lastOkAt": "2026-11-17T17:47:06.855Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T17:32:03.215Z"
+      "lastOkAt": "2026-11-17T17:47:06.855Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T17:32:03.215Z"
+      "lastOkAt": "2026-11-17T17:47:06.855Z"
     },
     "x": {
       "ok": true,
@@ -254,7 +254,7 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T17:32:03.215Z"
+      "lastOkAt": "2026-11-17T17:47:06.855Z"
     }
   },
   "stories": [
@@ -365,6 +365,26 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "681e458a3f27",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Breach 178 Websites, Including BBC, CNN, and Zoom, in Major Cyberattack",
+      "url": "https://www.techjuice.pk/hackers-breach-178-websites-including-bbc-cnn-and-zoom-in-major-cyberattack/",
+      "source": "TechJuice",
+      "publishedAt": "2026-11-17T03:27:00.000Z",
+      "firstSeenAt": "2026-11-17T12:15:44.284Z",
+      "outlets": 6,
+      "outletNames": [
+        "TechJuice",
+        "Cryptonews",
+        "New York Post",
+        "TMZ on MSN",
+        "Black America Web",
+        "FOX5 Vegas"
+      ],
+      "score": 4.28
+    },
+    {
       "id": "bff7f3c221f9",
       "cat": "hacks",
       "kind": "news",
@@ -422,25 +442,6 @@
       "score": 4.11
     },
     {
-      "id": "681e458a3f27",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Breach 178 Websites, Including BBC, CNN, and Zoom, in Major Cyberattack",
-      "url": "https://www.techjuice.pk/hackers-breach-178-websites-including-bbc-cnn-and-zoom-in-major-cyberattack/",
-      "source": "TechJuice",
-      "publishedAt": "2026-11-17T03:27:00.000Z",
-      "firstSeenAt": "2026-11-17T12:15:44.284Z",
-      "outlets": 5,
-      "outletNames": [
-        "TechJuice",
-        "Cryptonews",
-        "New York Post",
-        "TMZ on MSN",
-        "Black America Web"
-      ],
-      "score": 3.97
-    },
-    {
       "id": "821774b08b76",
       "cat": "flights",
       "kind": "news",
@@ -449,13 +450,14 @@
       "source": "The Wall Street Journal on MSN",
       "publishedAt": "2026-11-17T08:20:00.000Z",
       "firstSeenAt": "2026-11-17T17:17:00.109Z",
-      "outlets": 3,
+      "outlets": 4,
       "outletNames": [
         "The Wall Street Journal on MSN",
         "WSJ",
-        "TradingView"
+        "TradingView",
+        "CNN"
       ],
-      "score": 3.08
+      "score": 3.57
     },
     {
       "id": "1b105ba34662",
@@ -477,6 +479,22 @@
         "Norman Transcript"
       ],
       "score": 2.88
+    },
+    {
+      "id": "9c79c7379d15",
+      "cat": "internet",
+      "kind": "news",
+      "title": "US National Security Agency's internal communications network hit by major outage: Report",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNbmt4NVZXeFVObWRVbGF2ZEs1X2ZqdXVGVXNXMXhmcDYwbVJWRm9BTXdTUnpTZWlrUGNJSmtCRGgwLUM3R213WDhqU3UyVHk1c1dza3dkbERIUUlkZUZyMTR6NEkwclVlNzN0UXI0SUpINTVMQWE3RW85dW1yM3VlZjhUTkNhMEZfY3ktZ2ZCdzZZZEk1YWh2N2VjeTZndkRrNXpNY09JTHlMWndyb21sWExoaU5NREVRdGs2OUhyblFoQmJabkJScGsxelU?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-17T16:41:26.000Z",
+      "firstSeenAt": "2026-11-17T16:47:02.425Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "TRT World"
+      ],
+      "score": 2.8
     },
     {
       "id": "6fe2b0ca1078",
@@ -510,25 +528,6 @@
         "Eastern Washington University Athletics"
       ],
       "score": 2.33
-    },
-    {
-      "id": "1f758b82249b",
-      "cat": "earth",
-      "kind": "news",
-      "title": "No tsunami threat to Sri Lanka after 6.6-magnitude earthquake near Indonesia",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQUVJQVUNpay1ianNsa1B4MHprRGxibXhuRWlPOTNNY2pzQnE4TUJjMWtQTXgydHRYMXpfU1VpcWpvdVU2QWM5QmpCZEtDLUdVRjMwNGlDY3hqZThVWC1XWWtlRG5yTmhVY0hYZEhhWERUS0RBWVFNRF82TkpVNWRlcEFLQV9POTRjeEloR0lTaFZkejVENElZd3AzSWQ3Ui1TeENTdjFwSWs2Vl9scWVRWA?oc=5",
-      "source": "Hiru News",
-      "publishedAt": "2026-11-17T02:15:00.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 3,
-      "outletNames": [
-        "Hiru News",
-        "Daily Mirror - Sri Lanka",
-        "Newswire"
-      ],
-      "score": 2.24,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "8c903b55d699",
@@ -569,6 +568,26 @@
       "score": 3.55
     },
     {
+      "id": "13311d6c0ac1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Mullin defends use of government plane to go to college football game after ground stop",
+      "url": "https://www.baltimoresun.com/2026/11/17/mullin-nationwide-ground-stop/",
+      "source": "The Baltimore Sun",
+      "publishedAt": "2026-11-17T09:16:00.000Z",
+      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "outlets": 6,
+      "outletNames": [
+        "The Baltimore Sun",
+        "KTVN",
+        "News4JAX",
+        "Associated Press News",
+        "Toronto Star",
+        "The Washington Post"
+      ],
+      "score": 3.09
+    },
+    {
       "id": "35860456c9f1",
       "cat": "flights",
       "kind": "news",
@@ -602,38 +621,39 @@
       "score": 2.8
     },
     {
-      "id": "2186efaefb2e",
+      "id": "bc84ae3870f8",
       "cat": "flights",
       "kind": "news",
-      "title": "‘A nightmare’: Travelers describe canceled flights, added costs after FAA ground stop",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNS1pwak5BeWNwZUZhSE1CRFU4alVBZ3RjUGQwZ2cyS2FGZUhvdjlremR0NjdtT3BYYmdGeV9MT2VPYl9mUHpVejFRRVBoN3Q0NW1SVTJVaFJIZm02RU5tY3BjdWYxNTROTEpoLWZKbF9ZeVRUYlFSTFc0Wkd6QVAxcFhRWDFVb09sbDdXV3JMbU95TnNjY1dtY0J5Xzh1bUhPcUI3THl3UGpERUJXTXI3YXlqeVpfSy01?oc=5",
-      "source": "FOX5 Vegas",
-      "publishedAt": "2026-11-17T05:45:00.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 4,
-      "outletNames": [
-        "FOX5 Vegas",
-        "WSMV",
-        "KTTC",
-        "WFSB"
-      ],
-      "score": 2.77
-    },
-    {
-      "id": "f5687d1cb6f5",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Laredo travelers face delays after nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYU96bFczd05HSUxFZndWOWZ4Z0p0RnZLMGgzVmVEejhicXY2NVdxZElhWUhlNk11blBEOUdlSXViY0I3b3cxRFF6eW9ZY0xnUlllTXh5YmdVdkNPbENoS0dQTnRuaEsweU5ESUhYeTZHY1hQWmh4WGQzb2diWFZEQ0tNLS1oRWUtckMwZEpFdFZoS3ptdTM3MWRtTQ?oc=5",
-      "source": "KGNS",
-      "publishedAt": "2026-11-17T03:43:54.000Z",
-      "firstSeenAt": "2026-11-17T06:35:21.637Z",
+      "title": "Federal Agencies Join Forces to Prevent Another Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10UTB4dS1kNlYzbkJzQUZhTUk0eFVOM1JCWTkwREhXRml2eTl2d2FDX3ZVd0NrWjNUdjZ2dU5obzhnV1Y5eUdpc3NlOHRicjNFSzh4N1lCQmtGU2tPV3FzNGdiQmNQY1dPVjVaN2ZEYVlOUnlIM2MwZmxCMjBDWnc?oc=5",
+      "source": "FLYING Magazine",
+      "publishedAt": "2026-11-17T17:00:00.000Z",
+      "firstSeenAt": "2026-11-17T17:32:03.215Z",
       "outlets": 2,
       "outletNames": [
-        "KGNS",
-        "WWLP"
+        "FLYING Magazine",
+        "Yahoo"
       ],
-      "score": 2.67
+      "score": 2.78
+    },
+    {
+      "id": "1f758b82249b",
+      "cat": "earth",
+      "kind": "news",
+      "title": "No tsunami threat to Sri Lanka after 6.6-magnitude earthquake near Indonesia",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQUVJQVUNpay1ianNsa1B4MHprRGxibXhuRWlPOTNNY2pzQnE4TUJjMWtQTXgydHRYMXpfU1VpcWpvdVU2QWM5QmpCZEtDLUdVRjMwNGlDY3hqZThVWC1XWWtlRG5yTmhVY0hYZEhhWERUS0RBWVFNRF82TkpVNWRlcEFLQV9POTRjeEloR0lTaFZkejVENElZd3AzSWQ3Ui1TeENTdjFwSWs2Vl9scWVRWA?oc=5",
+      "source": "Hiru News",
+      "publishedAt": "2026-11-17T02:15:00.000Z",
+      "firstSeenAt": "2026-11-17T10:15:25.360Z",
+      "outlets": 3,
+      "outletNames": [
+        "Hiru News",
+        "Daily Mirror - Sri Lanka",
+        "Newswire"
+      ],
+      "score": 2.24,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "4896fd2b975f",
@@ -666,6 +686,22 @@
         "The National Tribune"
       ],
       "score": 2
+    },
+    {
+      "id": "8fea1f91f5e5",
+      "cat": "earth",
+      "kind": "news",
+      "title": "3.6 magnitude earthquake hits city in southeastern S. Korea: weather agency",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1TeHl0ZGNfLWs1TmRENUhHR0VrVGw2SHdwTW12OG5ULVJWcXR3ODVKRHhrZEFHVGxLU190cDhuanBxbjBZQjNTcVBUWnFWQXRXSTJxb2htakFJdzTSAVZBVV95cUxOTFhCY2RxaUd2dmQyZ3A4MFM1aU1iZjdueWpQNlZvTG5BNzFoZlUzaXduSFNlZGppc1lXU2tXUjM0UWxsQzdYYnVKVEZzOWZKVFlSdXRRdw?oc=5",
+      "source": "K-VIBE",
+      "publishedAt": "2026-11-17T14:52:34.000Z",
+      "firstSeenAt": "2026-11-17T17:47:06.855Z",
+      "outlets": 2,
+      "outletNames": [
+        "K-VIBE",
+        "The Korea Times"
+      ],
+      "score": 1.9
     },
     {
       "id": "d19cad8945c9",
@@ -765,32 +801,17 @@
       "score": 1.45
     },
     {
-      "id": "848864efaa83",
+      "id": "22d2ffc54f3b",
       "cat": "internet",
       "kind": "news",
-      "title": "Major Brokerage Suffers Widespread Outage In Yet Another Tech Disruption",
-      "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxOTUw3Z0RfQWZpNHFOTThZMS1uMUdVamZmN3RfMl9jdlYyYTcyNXNXZUotdHdjenpxcEVfRHRkMlE1RzZNVWozbVl2SjJCekgxU1FtVVlRc1FrTWJhWUFUMDRUemg2aGNtNzE0MGttaDViY09hU1VrMm04VFRCYjdtZHRtQjNFU0dxVTZVUXM2bUhKSVdzcnRjWGJ5d19melFzOENUYTNrNHFpOEd2cmJvTzJtdmU3WHFUczNNMlRUenNEZVdXUWRzNGlucG9PekRNY25JekVrVHB2alJkYVFCZ25ZSnhvWm5KOGY0WmNNNmNHTHRlemsyclo4MzZxVURiUG5oU0F0UUNzYUhxZElPWHktdkVTdVdBZ3YxYVpuYXVmQ2NsZ3F2ckpSU3g1T3E4VXREOWJWSThOa1NPZVRnai1NWmN3Zk1ZNjM0UmFDMEpzQkhFU3dzbmVrVU1DQWJKNlpkQUZKMlp4dkU1UGpzdTZCNTA3Ync4QlBRenFvREJzanA5OTRhNDJianY0S1lMYzBtSG91Zi1IVVNuYjk4QnBxTHMwcVhXUVJqS09ZSXk5YmZG?oc=5",
-      "source": "The Daily Wire",
-      "publishedAt": "2026-11-17T17:25:58.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "title": "Highly classified US national security communications network is down - days after global Microsoft outage caused 'carnage'",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS296SGk1V2Z1OVFTNkxFRlBycU5iVnlna0pPM00tQk0wbGVtZVlzN3ZBLWVrYlN5WUJYZko2WmFrX0hxckJfTk5nRGF4bGpNU3B5ZXpPMzlYRHY4dGM1ckdHTFlkQy1DWHAtMWhFWnVjcnV4M1F5elo3cmRGTFZyV1RxSHZUTTFBek9FRTFNQVIteFI2NzVMRmVybmY3aS0wb1A3U3JnUVhMNkxpbUFZRVU1ZUQ1VE5keGc?oc=5",
+      "source": "www.lbc.co.uk",
+      "publishedAt": "2026-11-17T17:43:48.000Z",
+      "firstSeenAt": "2026-11-17T17:47:06.855Z",
       "outlets": 1,
       "outletNames": [
-        "The Daily Wire"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "9c79c7379d15",
-      "cat": "internet",
-      "kind": "news",
-      "title": "US National Security Agency's internal communications network hit by major outage: Report",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNbmt4NVZXeFVObWRVbGF2ZEs1X2ZqdXVGVXNXMXhmcDYwbVJWRm9BTXdTUnpTZWlrUGNJSmtCRGgwLUM3R213WDhqU3UyVHk1c1dza3dkbERIUUlkZUZyMTR6NEkwclVlNzN0UXI0SUpINTVMQWE3RW85dW1yM3VlZjhUTkNhMEZfY3ktZ2ZCdzZZZEk1YWh2N2VjeTZndkRrNXpNY09JTHlMWndyb21sWExoaU5NREVRdGs2OUhyblFoQmJabkJScGsxelU?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-17T16:41:26.000Z",
-      "firstSeenAt": "2026-11-17T16:47:02.425Z",
-      "outlets": 1,
-      "outletNames": [
-        "Anadolu Ajansı"
+        "www.lbc.co.uk"
       ],
       "score": 1.4
     },
@@ -810,19 +831,38 @@
       "score": 1.39
     },
     {
-      "id": "fd99c05c1347",
-      "cat": "germs",
+      "id": "2186efaefb2e",
+      "cat": "flights",
       "kind": "news",
-      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
-      "source": "Global Agriculture",
-      "publishedAt": "2026-11-17T15:14:39.000Z",
-      "firstSeenAt": "2026-11-17T15:31:45.442Z",
-      "outlets": 1,
+      "title": "‘A nightmare’: Travelers describe canceled flights, added costs after FAA ground stop",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNS1pwak5BeWNwZUZhSE1CRFU4alVBZ3RjUGQwZ2cyS2FGZUhvdjlremR0NjdtT3BYYmdGeV9MT2VPYl9mUHpVejFRRVBoN3Q0NW1SVTJVaFJIZm02RU5tY3BjdWYxNTROTEpoLWZKbF9ZeVRUYlFSTFc0Wkd6QVAxcFhRWDFVb09sbDdXV3JMbU95TnNjY1dtY0J5Xzh1bUhPcUI3THl3UGpERUJXTXI3YXlqeVpfSy01?oc=5",
+      "source": "FOX5 Vegas",
+      "publishedAt": "2026-11-17T05:45:00.000Z",
+      "firstSeenAt": "2026-11-17T10:15:25.360Z",
+      "outlets": 4,
       "outletNames": [
-        "Global Agriculture"
+        "FOX5 Vegas",
+        "WSMV",
+        "KTTC",
+        "WFSB"
       ],
-      "score": 1.39
+      "score": 2.77
+    },
+    {
+      "id": "f5687d1cb6f5",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Laredo travelers face delays after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYU96bFczd05HSUxFZndWOWZ4Z0p0RnZLMGgzVmVEejhicXY2NVdxZElhWUhlNk11blBEOUdlSXViY0I3b3cxRFF6eW9ZY0xnUlllTXh5YmdVdkNPbENoS0dQTnRuaEsweU5ESUhYeTZHY1hQWmh4WGQzb2diWFZEQ0tNLS1oRWUtckMwZEpFdFZoS3ptdTM3MWRtTQ?oc=5",
+      "source": "KGNS",
+      "publishedAt": "2026-11-17T03:43:54.000Z",
+      "firstSeenAt": "2026-11-17T06:35:21.637Z",
+      "outlets": 2,
+      "outletNames": [
+        "KGNS",
+        "WWLP"
+      ],
+      "score": 2.67
     },
     {
       "id": "f65c9d1eaa32",
@@ -839,6 +879,23 @@
         "TRT World"
       ],
       "score": 2.49
+    },
+    {
+      "id": "483804f87cec",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "'Software bug' blamed for online banking outage | Morning in America",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNGlCSUJhTFl1Rmk5ZEZhTEowQUhKTnVNQ3JZeDlaY1BGZEVRM2VCWTVqNUpEX1hJSUR1OW5jOVYycnVOMXBhRUVYc1ZDNjk0SG9YMTdMaGpJSElWaFRUWXNwWHROQTIzcXZXZEtoNTF0dzI1WXlNeGU3eVJ5V1UzM0dqRTRtd1FpTGdZ?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T14:19:28.000Z",
+      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "KGET.com",
+        "NEWS10 ABC"
+      ],
+      "score": 2.45
     },
     {
       "id": "3dabbffba2e3",
@@ -906,23 +963,6 @@
         "mlive"
       ],
       "score": 2.33
-    },
-    {
-      "id": "13311d6c0ac1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Mullin defends use of government plane to go to college football game after ground stop",
-      "url": "https://www.baltimoresun.com/2026/11/17/mullin-nationwide-ground-stop/",
-      "source": "The Baltimore Sun",
-      "publishedAt": "2026-11-17T09:28:00.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Baltimore Sun",
-        "KTVN",
-        "News4JAX"
-      ],
-      "score": 2.24
     },
     {
       "id": "7505a12e583b",
@@ -1024,22 +1064,6 @@
       "score": 1.91
     },
     {
-      "id": "483804f87cec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "'Software bug' blamed for online banking outage | Morning in America",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNGlCSUJhTFl1Rmk5ZEZhTEowQUhKTnVNQ3JZeDlaY1BGZEVRM2VCWTVqNUpEX1hJSUR1OW5jOVYycnVOMXBhRUVYc1ZDNjk0SG9YMTdMaGpJSElWaFRUWXNwWHROQTIzcXZXZEtoNTF0dzI1WXlNeGU3eVJ5V1UzM0dqRTRtd1FpTGdZ?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T14:19:28.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "KGET.com"
-      ],
-      "score": 1.89
-    },
-    {
       "id": "91ba416bdff4",
       "cat": "hacks",
       "kind": "news",
@@ -1087,6 +1111,22 @@
         "KGET.com"
       ],
       "score": 1.85
+    },
+    {
+      "id": "ea194cee54b9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Massive U.S. Banking Outage! Chase, Wells Fargo, Bank Of America Hit After FAA & Microsoft Chaos",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNWG11QXdtN0NiTHNqdHNaMkJkZkRkTmswQm5MSEtTN3FMYmhaWlNSSEFSM1J3T19lMFhzOHlaYkJ0UkdPSTBQeE8yTGdQVGVXYnFGN1RmWThOR1FEZzdUaFd6Ui1BXzZ0T2lRU1liTHhZcGt0UTJIczE5UWZDSU96c1BSU3hQUTdEUFdiSzFSbGtzZkprdWNraUU2Y2d1UThrWVhyY3ptSmNnTlNzbjRxbVBWbE82MjJRSUtEaGJwajgzbVRGQkI4RU1ubnVDbEZVbFBzUmtRQmZoVS1IVU0xUUpzZjlnRE4xblBmTGxhZy1nTWtGTWdVZVdraEM0bEd00gGGAkFVX3lxTE1tdkJwdWs1QjRYMlJ4MEJEUXFmVEpjVWZoZERjZXlaakh0VUdNYmdrQ083Yl9mX0VLLTVfNUd0bEg1ZmtRSl9YVzNKVHFpQXRwT3Zpc1Yxbjk5aENtZVlvanlfZ3E1MTN6anVNM2F4YTFGb0lfNml3R0NobFNNRHRXZHJaaGVzTHl6aEdLS0Vvak9pYm9seVZrYkFYelROV2t0Vzlyb2xvTG5YSVBwVFJXYkVoMUgzWnEzcWJJNzgwSXMzVU9ZMDI2RjNmT1FwZERZdkFGMUl2bFhiSmh5ZExCdnd2dnZaUWtUWHBYOEZnbkJBQ19DMDNHbndReXdJcXd1dk5oWlE?oc=5",
+      "source": "The Times of India",
+      "publishedAt": "2026-11-16T21:01:16.000Z",
+      "firstSeenAt": "2026-11-17T17:47:06.855Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Times of India",
+        "Convergence Now"
+      ],
+      "score": 1.83
     },
     {
       "id": "e3fdce1d5385",
@@ -1185,6 +1225,22 @@
       "score": 1.72
     },
     {
+      "id": "3e6d8add8bf4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Georgia county announces it was target of cyberattack just before Halloween",
+      "url": "https://www.yahoo.com/news/articles/georgia-county-announces-target-cyberattack-171451675.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T09:14:00.000Z",
+      "firstSeenAt": "2026-11-17T17:47:06.855Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "WSB-TV"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "69e4547d532e",
       "cat": "hacks",
       "kind": "news",
@@ -1199,6 +1255,22 @@
         "CBS News"
       ],
       "score": 1.71
+    },
+    {
+      "id": "2c349bb9af10",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Charles Schwab website briefly goes down as brokerage becomes latest financial service to encounter issues",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/charles-schwab-website-briefly-goes-161241571.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-17T08:13:00.000Z",
+      "firstSeenAt": "2026-11-17T17:47:06.855Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Finance",
+        "Business Insider"
+      ],
+      "score": 1.68
     },
     {
       "id": "e0bd7656430d",
@@ -1329,6 +1401,21 @@
       "score": 1.44
     },
     {
+      "id": "848864efaa83",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Major Brokerage Suffers Widespread Outage In Yet Another Tech Disruption",
+      "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxOTUw3Z0RfQWZpNHFOTThZMS1uMUdVamZmN3RfMl9jdlYyYTcyNXNXZUotdHdjenpxcEVfRHRkMlE1RzZNVWozbVl2SjJCekgxU1FtVVlRc1FrTWJhWUFUMDRUemg2aGNtNzE0MGttaDViY09hU1VrMm04VFRCYjdtZHRtQjNFU0dxVTZVUXM2bUhKSVdzcnRjWGJ5d19melFzOENUYTNrNHFpOEd2cmJvTzJtdmU3WHFUczNNMlRUenNEZVdXUWRzNGlucG9PekRNY25JekVrVHB2alJkYVFCZ25ZSnhvWm5KOGY0WmNNNmNHTHRlemsyclo4MzZxVURiUG5oU0F0UUNzYUhxZElPWHktdkVTdVdBZ3YxYVpuYXVmQ2NsZ3F2ckpSU3g1T3E4VXREOWJWSThOa1NPZVRnai1NWmN3Zk1ZNjM0UmFDMEpzQkhFU3dzbmVrVU1DQWJKNlpkQUZKMlp4dkU1UGpzdTZCNTA3Ync4QlBRenFvREJzanA5OTRhNDJianY0S1lMYzBtSG91Zi1IVVNuYjk4QnBxTHMwcVhXUVJqS09ZSXk5YmZG?oc=5",
+      "source": "The Daily Wire",
+      "publishedAt": "2026-11-17T17:25:58.000Z",
+      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Daily Wire"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "171a08cb5889",
       "cat": "hacks",
       "kind": "news",
@@ -1404,17 +1491,32 @@
       "score": 1.4
     },
     {
-      "id": "bc84ae3870f8",
+      "id": "0335e5b7852b",
       "cat": "flights",
       "kind": "news",
-      "title": "Federal Agencies Join Forces to Prevent Another Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10UTB4dS1kNlYzbkJzQUZhTUk0eFVOM1JCWTkwREhXRml2eTl2d2FDX3ZVd0NrWjNUdjZ2dU5obzhnV1Y5eUdpc3NlOHRicjNFSzh4N1lCQmtGU2tPV3FzNGdiQmNQY1dPVjVaN2ZEYVlOUnlIM2MwZmxCMjBDWnc?oc=5",
-      "source": "FLYING Magazine",
-      "publishedAt": "2026-11-17T17:00:00.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "title": "Boise Airport offers holiday travel tips following nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNHpuUFFTVW9FeTRsZDJ4Wjd6MzVkUkdSX18xSkt1ZmFmWThrRnp6SzlHTFVGQXpibGJmbVBaM3pXY2FPS3Raa2h5NG9YUEJseFRncWpuNDBDT2dGZy1UR1UxcGRjUGlOVnptY3F1T3VrR2lRcnB5cFJSQnQzR29WTlhtR1VSSUV5Y29aNmJJcE90MUxwZUhkbzREWVpMR3lzalVLNFlDM2czcGJDMHVnbw?oc=5",
+      "source": "KIVI-TV",
+      "publishedAt": "2026-11-17T17:32:37.000Z",
+      "firstSeenAt": "2026-11-17T17:47:06.855Z",
       "outlets": 1,
       "outletNames": [
-        "FLYING Magazine"
+        "KIVI-TV"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "6b5af415d535",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta CEO Ed Bastian Calls for Air Traffic Control Investment After Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5WMzdJcmhfSlZhaEZrWE5UTnZ6d0ZEbmYxQ01ZbDRUa0ZrLWs2NG1panF5ck4wcFRwSkVoTDlvaXQtZ3NvaDdHZlhNeTduTnN1bkk0ZGRVNFQ3NHRVZDI3N0ZIaEgwQlNRd0NyT3U2YlcwZDA?oc=5",
+      "source": "Avi-Go",
+      "publishedAt": "2026-11-17T17:18:04.000Z",
+      "firstSeenAt": "2026-11-17T17:47:06.855Z",
+      "outlets": 1,
+      "outletNames": [
+        "Avi-Go"
       ],
       "score": 1.39
     },
@@ -1479,92 +1581,17 @@
       "score": 1.39
     },
     {
-      "id": "95fc0522f486",
-      "cat": "internet",
+      "id": "fd99c05c1347",
+      "cat": "germs",
       "kind": "news",
-      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
-      "source": "CyberSecurityNews",
-      "publishedAt": "2026-11-17T15:52:11.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
+      "source": "Global Agriculture",
+      "publishedAt": "2026-11-17T15:14:39.000Z",
+      "firstSeenAt": "2026-11-17T15:31:45.442Z",
       "outlets": 1,
       "outletNames": [
-        "CyberSecurityNews"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "4703fdc3b0b6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Major outage hits NSA's secret communications network",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRldrYTh2NzJrQU9DeVJPQVAtT1VRMG92LTBheVpXZnVSZ0pibjdTeGNSNmU0UlBFaWZ5eFlEY19OT21MZ0xtczV2NHkzOUxwTUZLZjVqZVhOaGcxWjFQZ0JOMHpCaGFWRTQzM3ZYYmpXb1BrWWpWVzRvcXNHZmkzMXBVVEsxaS1tZjFocFAzVGxHRTdnVEtVV2pXMmliVzVQbkHSAbQBQVVfeXFMTVM1ckFHb3VqVjh5SEFLSl8wZnozR01BWWN4QmpfX2otTTYzQUFvMmx2RlhyTGMwRnBvUzIzcFRFNGxEbFkxekZrVWVPWUJJVzRVTVJzbEdzZ2Y2ZnVOdWVVRXd3S2hpQVBkR19XWEY1ZFdtclZSc2I3UDQ2alRmS3FlczFpMUx0Tm95bGlzLWlDNjZ1M3BfRnNFWHNvRFNhMTEzZTZ1UTlFMFU4Y01ZZ1prZERk?oc=5",
-      "source": "Gulf News",
-      "publishedAt": "2026-11-17T15:50:25.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "Gulf News"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "1eb0fb1ad21c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Telecommunications and Radar Disruptions Trigger Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPa0Jubks1empqcENsM2wzZXVpaGJtT1A4Y1RFc0luR0VKWHN1VFdDMzJud1Y0ZDdxTHpGLTktQWN6MzZhMU5TUlE5UjVKZGoxUmFJbjJSV1otRDlwWFNHSjVCYU0ycWRYTXlRb0FOcWxyZ182alVadFhTMzRZZThoR0RhTVlBN3VJRmVVNjFCMEV6d2Q2aUlEWmlvaWFwYUZuQ2Rz?oc=5",
-      "source": "Inside Towers",
-      "publishedAt": "2026-11-17T14:29:33.000Z",
-      "firstSeenAt": "2026-11-17T14:46:34.896Z",
-      "outlets": 1,
-      "outletNames": [
-        "Inside Towers"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "74a90a7a7621",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Japan’s monthly cyber incidents hit record high",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNajdweUlkemJPelA1TUZjY2tZNlJqZkowb3U2bE5wMlVzVkFzNmNtWFBJQnM5UkV0enZVT29MVkdXYUUwVV84WFQ5d2hWX2ZNYjNubzBfZ0xtNzN1T19Gc1ppbjBleUVzR3hsdEdreF9DVktRbU5VVU1tX21YOWVrdmNSNW5Fa2ZT?oc=5",
-      "source": "Business Insurance",
-      "publishedAt": "2026-11-17T14:24:46.000Z",
-      "firstSeenAt": "2026-11-17T14:46:34.896Z",
-      "outlets": 1,
-      "outletNames": [
-        "Business Insurance"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "882af3df3a6f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "FEMA nationwide emergency alert test sparks blackout fears",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbVZsM0tSS2J5aEQ0NktoTVIyVmNvc1NWZ2NoQl9aYi1wbUxuT1piZW1RWXpDU1N5ak9LUF9HMTF6ZGhuWnJlWDJHdHhXMEFycDc2d0dQa1p6MUlnTUg4TWZiRkp5am9Ecl9rTks5RmpPOHJzeEduQ2ZnSUxOa0lNV2RjeTJKVnhLelJxRGt3?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-17T14:18:55.000Z",
-      "firstSeenAt": "2026-11-17T14:46:34.896Z",
-      "outlets": 1,
-      "outletNames": [
-        "Beinsure"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "a68232644b38",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Hide Malware in Optimizely Code, Hit 178 Major Websites",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQ2RKY25sVG9YRkFkemhpMkJLbnVER2h5Sm9yWmFOOTdWYmY3WUt3Yjh0dGFMbW82UHVFSUFkWS1FOGNpbFRMZzZ1QlI4RGh2WTllQ1VqSWJTQTN3RnRyb1JRbFFFcEZNdF85NnVfOUNYZU1pbFVZXzVpUU9yd2hoQk9VaVdrNHFMSjRtUDdZaWt0MG9sOFBXaXdmRkRVQS13MG5Z?oc=5",
-      "source": "Security Boulevard",
-      "publishedAt": "2026-11-17T14:03:05.000Z",
-      "firstSeenAt": "2026-11-17T14:31:37.066Z",
-      "outlets": 1,
-      "outletNames": [
-        "Security Boulevard"
+        "Global Agriculture"
       ],
       "score": 1.39
     },
@@ -1614,23 +1641,6 @@
       "score": 1.05
     },
     {
-      "id": "42bf52d37cd0",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Japan Meteorological Agency Fixes System After False M9.9 Earthquake Alert",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1RMm9GWmMxWWR0Wmg5N3o4bTUyY21lclhya1dycWsyLXE5WTVWeV9kTkhyUGhRclBNakZSdTJVWDd1V1hrcHg3U2NkSHZtY3o2T2t0Vw?oc=5",
-      "source": "News On Japan",
-      "publishedAt": "2026-11-17T16:05:22.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "News On Japan"
-      ],
-      "score": 1,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "b47a68c32a95",
       "cat": "weather",
       "kind": "news",
@@ -1674,6 +1684,21 @@
         "East Greenwich News"
       ],
       "score": 1
+    },
+    {
+      "id": "8f0fe62a9eba",
+      "cat": "germs",
+      "kind": "news",
+      "title": "USDA detects bird flu in Indiana dairy cattle herd",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMmtpTFlNc1F5c09XYm1RMmpTUVh3RWlBNFVqWU1pZ2luNm5QTmFhLW9ZTm1IOVk0cGU1Ni1FNWctV0s5RGs2OVVFQ1NWV0VramJ3eXo2Tm5iMWpTRmI5bzhSNGJlbzllVC02Y0VsajhUS1Z4VXZaWXloYlJlVExpWmJFOHJHY0Y1Z19USVc2bHJwM1JONDJWazVDXzBnTjBILXNqTEpFTHMteHNDNzA3QkpJdzhvdkE?oc=5",
+      "source": "Farmers' Advance",
+      "publishedAt": "2026-11-17T17:26:00.000Z",
+      "firstSeenAt": "2026-11-17T17:47:06.855Z",
+      "outlets": 1,
+      "outletNames": [
+        "Farmers' Advance"
+      ],
+      "score": 0.99
     },
     {
       "id": "18738847d020",
@@ -1734,21 +1759,6 @@
         "BusinessLine"
       ],
       "score": 0.97
-    },
-    {
-      "id": "9cb00eae0c9e",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Delaware urges poultry owners to take precautions as bird flu concerns rise",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNVWFnSTlvb094c2ZtRC1fV2w5amZkaEJ1azNFUW9CU2xOdGtoRDNaaHBJdzhZYlNJNXp0MnpiZlJEdk8tQWd1VkticUNOaFlBakt1SldpeTdycUxxRVV2Z2FkS3cxSjM3TGFZay1ONUQzOEVORGp6Q3oxRUgxdU1KWFVQUkp0bERoVXN6OU9ibE5ZLU1BRjJPeVc1cmZnWmoybTRxVGZWT2tRdm1ScHdsR2p2cWZieU93NmRxdWtzS3pJMEw1V1hsc2I4R0lwNHZGVk8zYTZwaVRCQnFqNG1Lcg?oc=5",
-      "source": "CoastTV",
-      "publishedAt": "2026-11-17T15:26:00.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 1,
-      "outletNames": [
-        "CoastTV"
-      ],
-      "score": 0.96
     },
     {
       "id": "9af8d53d2ba6",
