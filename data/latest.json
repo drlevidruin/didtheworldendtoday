@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T06:35:21.637Z",
+  "buildTime": "2026-11-17T07:17:02.622Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 01:35 ET",
-  "score": 80,
+  "etStamp": "2026-11-17 02:17 ET",
+  "score": 74,
   "fired": [
     "flights",
     "hacks",
@@ -12,8 +12,7 @@
     "sun",
     "earth",
     "markets",
-    "ai",
-    "germs"
+    "ai"
   ],
   "bumps": [
     {
@@ -32,7 +31,7 @@
       "points": 6
     }
   ],
-  "change": 0,
+  "change": -6,
   "yesterday": {
     "date": "2026-11-16",
     "score": 80,
@@ -52,22 +51,22 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 581,
-  "lastSuccessAt": "2026-11-17T06:35:21.637Z",
+  "headlinesRead": 381,
+  "lastSuccessAt": "2026-11-17T07:17:02.622Z",
   "rollingFallback": false,
   "cats": {
     "flights": 43,
     "space": 4,
     "earth": 4,
-    "hacks": 24,
+    "hacks": 25,
     "internet": 9,
-    "ai": 2,
-    "germs": 3,
+    "ai": 3,
     "markets": 4,
     "sun": 3,
     "animals": 2,
     "grid": 1,
-    "weather": 1
+    "weather": 1,
+    "germs": 1
   },
   "vital": {
     "quake": {
@@ -95,7 +94,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 1,
+      "groundDelays": 0,
       "closures": 1,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -141,8 +140,8 @@
         {
           "id": "zoom",
           "name": "Zoom",
-          "indicator": "maintenance",
-          "description": "Service Under Maintenance"
+          "indicator": "minor",
+          "description": "Partially Degraded Service"
         },
         {
           "id": "coinbase",
@@ -160,11 +159,11 @@
     }
   },
   "quiet": {
-    "quiet": true,
-    "why": "manual",
+    "quiet": false,
+    "why": null,
     "note": "",
     "manual": {
-      "quiet": true,
+      "quiet": false,
       "note": "",
       "problem": null
     },
@@ -180,7 +179,7 @@
       "matches": []
     },
     "holdUntil": null,
-    "reason": "quiet.json says quiet"
+    "reason": null
   },
   "x": {
     "enabled": false,
@@ -189,15 +188,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 300,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
-      "lastOkAt": "2026-11-17T06:35:21.637Z"
+      "count": 100,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
+      "lastOkAt": "2026-11-17T07:17:02.622Z"
     },
     "bing": {
       "ok": true,
       "count": 270,
       "error": null,
-      "lastOkAt": "2026-11-17T06:35:21.637Z"
+      "lastOkAt": "2026-11-17T07:17:02.622Z"
     },
     "gdelt": {
       "ok": false,
@@ -209,37 +208,37 @@
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-17T06:35:21.637Z"
+      "lastOkAt": "2026-11-17T07:17:02.622Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T06:35:21.637Z"
+      "lastOkAt": "2026-11-17T07:17:02.622Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T06:35:21.637Z"
+      "lastOkAt": "2026-11-17T07:17:02.622Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T06:35:21.637Z"
+      "lastOkAt": "2026-11-17T07:17:02.622Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T06:35:21.637Z"
+      "lastOkAt": "2026-11-17T07:17:02.622Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T06:35:21.637Z"
+      "lastOkAt": "2026-11-17T07:17:02.622Z"
     },
     "x": {
       "ok": true,
@@ -252,7 +251,7 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T06:35:21.637Z"
+      "lastOkAt": "2026-11-17T07:17:02.622Z"
     }
   },
   "stories": [
@@ -289,52 +288,6 @@
         "WBRC 6 News"
       ],
       "score": 4.79
-    },
-    {
-      "id": "99cd329f37d5",
-      "cat": "flights",
-      "kind": "news",
-      "title": "1.5-hour-long system outage forces United Airlines to delay departing flights",
-      "url": "https://apnews.com/article/united-airlines-outage-5a5e5f75bb07f11ffb8750901f0076ff",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-16T14:13:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 32,
-      "outletNames": [
-        "Associated Press News",
-        "Fox News",
-        "HuffPost",
-        "Insider",
-        "The Verge",
-        "Gizmodo",
-        "Chicago Tribune",
-        "USA TODAY on MSN",
-        "cnn.com",
-        "apnews.com",
-        "TIME",
-        "WFLA",
-        "Mediaite",
-        "Yahoo",
-        "Denver Gazette",
-        "NBC News",
-        "Yahoo News UK",
-        "NDTV",
-        "Modern Ghana",
-        "Shelby News",
-        "North Penn Now",
-        "The Independent",
-        "Free Malaysia Today",
-        "CBS News",
-        "The Mirror",
-        "Boston Herald",
-        "MySA",
-        "Spectrum News",
-        "AOL",
-        "Avi-Go",
-        "TriYakNews.com",
-        "NBC 5 Chicago"
-      ],
-      "score": 4.6
     },
     {
       "id": "sig:asteroid:2026-WA:2026-11-17",
@@ -404,6 +357,52 @@
       },
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "99cd329f37d5",
+      "cat": "flights",
+      "kind": "news",
+      "title": "1.5-hour-long system outage forces United Airlines to delay departing flights",
+      "url": "https://apnews.com/article/united-airlines-outage-5a5e5f75bb07f11ffb8750901f0076ff",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-16T10:44:00.000Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "outlets": 32,
+      "outletNames": [
+        "Associated Press News",
+        "Fox News",
+        "HuffPost",
+        "Insider",
+        "The Verge",
+        "Gizmodo",
+        "Chicago Tribune",
+        "USA TODAY on MSN",
+        "cnn.com",
+        "apnews.com",
+        "TIME",
+        "WFLA",
+        "Mediaite",
+        "Yahoo",
+        "Denver Gazette",
+        "NBC News",
+        "Yahoo News UK",
+        "NDTV",
+        "Modern Ghana",
+        "Shelby News",
+        "North Penn Now",
+        "The Independent",
+        "Free Malaysia Today",
+        "CBS News",
+        "The Mirror",
+        "Boston Herald",
+        "MySA",
+        "Spectrum News",
+        "AOL",
+        "Avi-Go",
+        "TriYakNews.com",
+        "NBC 5 Chicago"
+      ],
+      "score": 4.25
     },
     {
       "id": "a7c950a94a75",
@@ -520,6 +519,24 @@
       "score": 2.43
     },
     {
+      "id": "9c193d6b9dcb",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Darwin rocked by tremors as powerful 6.6-magnitude earthquake strikes Indonesia and sends shockwaves across the Northern Territory",
+      "url": "https://www.dailymail.com/news/article-16298127/Darwin-rocked-tremors-powerful-6-6-magnitude-earthquake-strikes-Indonesia-sends-shockwaves-Northern-Territory.html",
+      "source": "Daily Mail",
+      "publishedAt": "2026-11-16T15:54:00.000Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "outlets": 2,
+      "outletNames": [
+        "Daily Mail",
+        "Emirates News Agency"
+      ],
+      "score": 1.59,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "89764bc4c344",
       "cat": "ai",
       "kind": "news",
@@ -534,22 +551,6 @@
         "International Business Times Australia"
       ],
       "score": 1.57
-    },
-    {
-      "id": "9aea52c41e4a",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Blood pressure pills recalled over potential contamination with metal, laceration risk",
-      "url": "https://www.ksn.com/news/business/recalls/blood-pressure-pills-recalled-over-potential-contamination-with-metal-laceration-risk/",
-      "source": "KSN-TV",
-      "publishedAt": "2026-11-16T15:04:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 2,
-      "outletNames": [
-        "KSN-TV",
-        "KFOR on MSN"
-      ],
-      "score": 1.56
     },
     {
       "id": "e34e9cd5b071",
@@ -728,6 +729,22 @@
       "score": 1.55
     },
     {
+      "id": "128f2aa379ae",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Lighter and Aster blame outsiders after $15.5M drain, ASTER flash crash",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4tRlZveUQ5NFFFX0k1NVR5NWhLVDlDdThMbFI2QWJQNFI0Q20zQU51dDI5alFoemkzb0RZX3NNZ0FQU0hWMEVlWktNSnpzZUZxM0FSSk1BcnFrY2R0RThvalF4SjhPR01kSFR4c0NNOFFhazBEdE9R?oc=5",
+      "source": "Cryptopolitan",
+      "publishedAt": "2026-11-16T14:08:25.000Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "outlets": 2,
+      "outletNames": [
+        "Cryptopolitan",
+        "CryptoRank"
+      ],
+      "score": 1.53
+    },
+    {
       "id": "d2eea42cb5d3",
       "cat": "ai",
       "kind": "news",
@@ -829,21 +846,6 @@
       "outlets": 1,
       "outletNames": [
         "El Cronista"
-      ],
-      "score": 0.84
-    },
-    {
-      "id": "4ee4e22b5039",
-      "cat": "sun",
-      "kind": "news",
-      "title": "☀️ Solar Activity: Kp Index, Solar Wind, Flares and Aurora Forecast",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tXzFhTUtNbHNxTU9TY3RzNlVLVFVpYklvRnZnS3BEcE5NSWlwNm1BUWJJbi1iTnluTkJiWVBaT1dGOTdLTTFIdXBldHlMZ3FfT0ptQ1FPUWZ4M05tSGJONEdLVTdEbU8w?oc=5",
-      "source": "notre-planete.info",
-      "publishedAt": "2026-11-16T19:59:15.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 1,
-      "outletNames": [
-        "notre-planete.info"
       ],
       "score": 0.84
     },
@@ -1173,21 +1175,6 @@
       "score": 1.39
     },
     {
-      "id": "9a625706dd54",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Widespread bank outage affects major financial institutions in the U.S.",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNnFremtnN1NzUkhYNUl4MDlnbUZkUjZiLWxQZWQ4Vkw1bWtfekx6TC0taEc2OHdjNl9vZ0tFMnJGdU00TzVZUzVMSHF0MEFXQnFOV1pUNEk4eVE4bExOWEpNdDNHMEliSDloc0Z3UDFCMno4bG5NOG5WaTU4bmVJME9obVVMaFRfWEtNQWZudGFyczZfanM1VUJaQlVDRERUTmxMUnBucmlpVUM4WkF3Ylpn?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-17T05:28:00.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 1,
-      "outletNames": [
-        "CBS News"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "3e01458e9bb6",
       "cat": "flights",
       "kind": "news",
@@ -1259,21 +1246,6 @@
       "outlets": 1,
       "outletNames": [
         "NBC 6 South Florida"
-      ],
-      "score": 1.34
-    },
-    {
-      "id": "405f378b01a6",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Following Nationwide Ground Stop, Schmitt Joins Fox News to Push for Bill to Modernize Aviation Systems",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxONEVvZzJoWGQ1Qk5zdU8xZlViWG9GUGM1Wk5kOGxlTE1kMjBNWnVxdzRpWXdwUXJDemxRRWJCQVVvRXRtaUp6Z1RSOXpvb1VOampELTJOQjZlc2xuMlJraUZrNkxDSlRrbzFwbDZ5NGZQSEI3VHFyQWV2YkZkMzhWSnlsTlMxVW9wSHBwRkg3bkZqTFNEU2hiZXpSSzRqVnhwUlR4LU9ITU5rYmIyV2ZZWmZkUnBzaWlxYldIM1NlM3EyR0pKMVltMTVaR2RtcTd4TFNBcDZRWkpncWVOOVpmeUlKVG5NRUxFVkFPQkdiN2RwQQ?oc=5",
-      "source": "Park Hills Daily Journal",
-      "publishedAt": "2026-11-17T03:49:54.000Z",
-      "firstSeenAt": "2026-11-17T06:35:21.637Z",
-      "outlets": 1,
-      "outletNames": [
-        "Park Hills Daily Journal"
       ],
       "score": 1.34
     },
@@ -1608,6 +1580,21 @@
       "score": 1.21
     },
     {
+      "id": "9a625706dd54",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Widespread bank outage affects major financial institutions in the US",
+      "url": "https://www.msn.com/en-us/money/other/widespread-bank-outage-affects-major-financial-institutions-in-the-us/vi-AA2hAGtS",
+      "source": "CBS News on MSN",
+      "publishedAt": "2026-11-16T21:28:00.000Z",
+      "firstSeenAt": "2026-11-17T05:48:47.183Z",
+      "outlets": 1,
+      "outletNames": [
+        "CBS News"
+      ],
+      "score": 1.21
+    },
+    {
       "id": "829ea24d8df5",
       "cat": "hacks",
       "kind": "news",
@@ -1713,6 +1700,21 @@
       "score": 1.09
     },
     {
+      "id": "407581a3c5ba",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Over 170 Organisations, Including BBC, CNN and Zoom, Hit by Malicious Code in Major Cyberattack",
+      "url": "https://www.ibtimes.sg/over-170-organisations-including-bbc-cnn-zoom-hit-by-malicious-code-major-cyberattack-96307",
+      "source": "International Business Times Singapore",
+      "publishedAt": "2026-11-16T16:53:00.000Z",
+      "firstSeenAt": "2026-11-17T07:17:02.622Z",
+      "outlets": 1,
+      "outletNames": [
+        "International Business Times Singapore"
+      ],
+      "score": 1.06
+    },
+    {
       "id": "bd3b95100c6e",
       "cat": "flights",
       "kind": "news",
@@ -1741,6 +1743,36 @@
         "WSB-TV"
       ],
       "score": 1.03
+    },
+    {
+      "id": "79d9920f0f9f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Mullin: No one getting fired over nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNOG1idWtialhpNTNhVWtWQzFmLW9aN0hnc3JkcnEyNXBSMEZmSUpQa0JqRjV1RWtmNzA1NUdiOXZlc1diN29XcWRYd1M2aEM1Sml3NGh5VDVFRG9sTmNMT1hrUms0ekRiYzBtZkdZaXFqVzJ0Nk9GSkJoZG5UbnpUaGNoWUtXdkc4THpBTnJic9IBlAFBVV95cUxQTVE0em1IbU9HUGFuOEtZVndEMGNLc2J1Y0hvSzhOU0Z0ZkY2TzFvVDN1Wmh6UG9iTWtvY0NSSHRoZFJaMi1PUmlyaGpmTDRvaEFJX1JmODJXR3RNMkVHd3ZKUlYyaHFiTFpBd2xoSXFlTVpjbDNHTXBnTWNPclc2MXpyRFllZ2VFMDBMZUVZVnlxOWp6?oc=5",
+      "source": "The Hill",
+      "publishedAt": "2026-11-16T13:13:00.000Z",
+      "firstSeenAt": "2026-11-17T07:17:02.622Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Hill"
+      ],
+      "score": 0.98
+    },
+    {
+      "id": "4ee4e22b5039",
+      "cat": "sun",
+      "kind": "news",
+      "title": "☀️ Solar Activity: Kp Index, Solar Wind, Flares and Aurora Forecast",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tXzFhTUtNbHNxTU9TY3RzNlVLVFVpYklvRnZnS3BEcE5NSWlwNm1BUWJJbi1iTnluTkJiWVBaT1dGOTdLTTFIdXBldHlMZ3FfT0ptQ1FPUWZ4M05tSGJONEdLVTdEbU8w?oc=5",
+      "source": "notre-planete.info",
+      "publishedAt": "2026-11-16T19:59:15.000Z",
+      "firstSeenAt": "2026-11-17T05:48:47.183Z",
+      "outlets": 1,
+      "outletNames": [
+        "notre-planete.info"
+      ],
+      "score": 0.84
     },
     {
       "id": "face21a56b69",
@@ -1773,36 +1805,6 @@
       "score": 0.84
     },
     {
-      "id": "b17e2d25e873",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Popular blood pressure medicine propranolol recalled in the US over possible metal contamination",
-      "url": "https://www.msn.com/en-in/news/other/popular-blood-pressure-medicine-propranolol-recalled-in-the-us-over-possible-metal-contamination/ar-AA2hzyWG",
-      "source": "Health and Me on MSN",
-      "publishedAt": "2026-11-16T17:47:08.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 1,
-      "outletNames": [
-        "Health and Me on MSN"
-      ],
-      "score": 0.83
-    },
-    {
-      "id": "91f0befa6f61",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Asian shares decline following stocks tumbled on Wall Street",
-      "url": "https://www.msn.com/en-us/news/other/asian-shares-decline-following-stocks-tumbled-on-wall-street/ar-AA2hAgsq",
-      "source": "Associated Press News on MSN",
-      "publishedAt": "2026-11-16T20:01:48.000Z",
-      "firstSeenAt": "2026-11-17T06:35:21.637Z",
-      "outlets": 1,
-      "outletNames": [
-        "Associated Press News on MSN"
-      ],
-      "score": 0.82
-    },
-    {
       "id": "2b1288013e98",
       "cat": "space",
       "kind": "news",
@@ -1831,23 +1833,6 @@
         "The Brussels Times"
       ],
       "score": 0.8
-    },
-    {
-      "id": "9c193d6b9dcb",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Darwin rocked by tremors as powerful 6.6-magnitude earthquake strikes Indonesia and sends shockwaves across the Northern Territory",
-      "url": "https://www.dailymail.com/news/article-16298127/Darwin-rocked-tremors-powerful-6-6-magnitude-earthquake-strikes-Indonesia-sends-shockwaves-Northern-Territory.html",
-      "source": "Daily Mail",
-      "publishedAt": "2026-11-16T15:54:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Mail"
-      ],
-      "score": 0.79,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "a2cf99615a28",
@@ -1895,6 +1880,21 @@
         "EL DEBER"
       ],
       "score": 0.73
+    },
+    {
+      "id": "c460001faef4",
+      "cat": "ai",
+      "kind": "news",
+      "title": "ChatGPT or Claude down? The best backup AI to use",
+      "url": "https://applescoop.org/story/chatgpt-claude-down-backup-ai-alternatives",
+      "source": "applescoop.org",
+      "publishedAt": "2026-11-16T11:15:00.000Z",
+      "firstSeenAt": "2026-11-17T07:17:02.622Z",
+      "outlets": 1,
+      "outletNames": [
+        "applescoop.org"
+      ],
+      "score": 0.67
     },
     {
       "id": "1224fccbfdbf",
