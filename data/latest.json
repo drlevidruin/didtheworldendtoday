@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T22:47:29.296Z",
+  "buildTime": "2026-11-17T22:50:37.479Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 17:47 ET",
+  "etStamp": "2026-11-17 17:50 ET",
   "score": 93,
   "fired": [
     "flights",
@@ -50,12 +50,12 @@
     "date": "2026-11-17",
     "score": 93
   },
-  "headlinesRead": 1625,
-  "lastSuccessAt": "2026-11-17T22:47:29.296Z",
+  "headlinesRead": 862,
+  "lastSuccessAt": "2026-11-17T22:50:37.479Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 17,
-    "hacks": 38,
+    "flights": 18,
+    "hacks": 37,
     "space": 3,
     "internet": 11,
     "germs": 4,
@@ -198,15 +198,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1295,
-      "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "count": 532,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 14 of 26 queries)",
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     },
     "bing": {
       "ok": true,
       "count": 291,
       "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     },
     "gdelt": {
       "ok": false,
@@ -218,37 +218,37 @@
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     },
     "faa": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     },
     "x": {
       "ok": true,
@@ -261,16 +261,54 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T22:47:29.296Z"
+      "lastOkAt": "2026-11-17T22:50:37.479Z"
     }
   },
   "stories": [
+    {
+      "id": "e6ee5b1d9f7c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Exclusive | FAA Pauses Router Installations After Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQM0N2dk5BU0xvZWZZQkZ1SFZGYWNvNWJKTHh5bnpHU21pLXdkb3BIVmlieUlKQkpYZHJqcGVWMmQteWNtaVJydDdhYmpNVG5nMks3NW5FYkNhT0h2cmJDcmcyWERLb040Vk41SV9GMUlFWkYtY2ZmckkyQXNfdXEzX0RPMFNkbzF6SkNGbGJfX3FCUV9VRFBqMTgzVGsxYU02Qm9HVFF6WFhTYXc?oc=5",
+      "source": "WSJ",
+      "publishedAt": "2026-11-17T16:21:22.000Z",
+      "latestAt": "2026-11-17T22:17:13.000Z",
+      "firstSeenAt": "2026-11-17T22:50:37.479Z",
+      "outlets": 23,
+      "outletNames": [
+        "WSJ",
+        "CNBC",
+        "Channel 3000",
+        "CNN",
+        "Quartz",
+        "Yahoo",
+        "NewsNation",
+        "Shaw Local",
+        "MPR News",
+        "The Independent",
+        "Axios",
+        "Yahoo Life UK",
+        "WPDE",
+        "The Center Square",
+        "KSL",
+        "Washington Times",
+        "ABC News - Breaking News, Latest News and Videos",
+        "Fox Business",
+        "PCMag UK",
+        "Al Jazeera",
+        "ABC7 New York",
+        "Washington Examiner",
+        "CBC"
+      ],
+      "score": 6.9
+    },
     {
       "id": "b1a6a57f4f9b",
       "cat": "flights",
@@ -354,29 +392,6 @@
         "hub": true,
         "nationwide": false,
         "reason": "low ceilings"
-      }
-    },
-    {
-      "id": "sig:faa-stop:PHX:2026-11-17",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at PHX (thunderstorms)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T18:32:06.239Z",
-      "latestAt": "2026-11-17T18:32:06.239Z",
-      "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "PHX",
-        "hub": true,
-        "nationwide": false,
-        "reason": "thunderstorms"
       }
     },
     {
@@ -596,6 +611,29 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "sig:faa-stop:PHX:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at PHX (thunderstorms)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T18:32:06.239Z",
+      "latestAt": "2026-11-17T18:32:06.239Z",
+      "firstSeenAt": "2026-11-17T18:32:06.239Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "PHX",
+        "hub": true,
+        "nationwide": false,
+        "reason": "thunderstorms"
+      }
+    },
+    {
       "id": "sig:faa-stop:SFO:2026-11-16",
       "cat": "flights",
       "kind": "signal",
@@ -660,35 +698,6 @@
         "WCTV"
       ],
       "score": 3.77
-    },
-    {
-      "id": "3b49d5ddbc4f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Outage Math at the Airport: When a Four-Hour Uber Beats Waiting Out a Ground Stop",
-      "url": "https://www.usnews.com/news/business/articles/2026-11-17/outage-math-at-the-airport-when-a-four-hour-uber-beats-waiting-out-a-ground-stop",
-      "source": "U.S. News & World Report",
-      "publishedAt": "2026-11-17T04:10:00.000Z",
-      "latestAt": "2026-11-17T22:17:35.000Z",
-      "firstSeenAt": "2026-11-17T17:56:49.781Z",
-      "outlets": 14,
-      "outletNames": [
-        "U.S. News & World Report",
-        "WPLG Local 10",
-        "News4JAX",
-        "Rocky Mount Telegram",
-        "The Mercury News",
-        "Orange County Register",
-        "Boston Herald",
-        "The Baltimore Sun",
-        "WTOP News",
-        "Associated Press News",
-        "Orlando Sentinel",
-        "AP News",
-        "Chicago Tribune",
-        "Pioneer Press"
-      ],
-      "score": 3.7
     },
     {
       "id": "136ab8542f66",
@@ -932,6 +941,35 @@
         "Refindustry"
       ],
       "score": 1.06
+    },
+    {
+      "id": "3b49d5ddbc4f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Outage Math at the Airport: When a Four-Hour Uber Beats Waiting Out a Ground Stop",
+      "url": "https://www.usnews.com/news/business/articles/2026-11-17/outage-math-at-the-airport-when-a-four-hour-uber-beats-waiting-out-a-ground-stop",
+      "source": "U.S. News & World Report",
+      "publishedAt": "2026-11-17T04:10:00.000Z",
+      "latestAt": "2026-11-17T22:17:35.000Z",
+      "firstSeenAt": "2026-11-17T17:56:49.781Z",
+      "outlets": 14,
+      "outletNames": [
+        "U.S. News & World Report",
+        "WPLG Local 10",
+        "News4JAX",
+        "Rocky Mount Telegram",
+        "The Mercury News",
+        "Orange County Register",
+        "Boston Herald",
+        "The Baltimore Sun",
+        "WTOP News",
+        "Associated Press News",
+        "Orlando Sentinel",
+        "AP News",
+        "Chicago Tribune",
+        "Pioneer Press"
+      ],
+      "score": 3.7
     },
     {
       "id": "1f4000ce7c19",
@@ -1532,23 +1570,6 @@
       "score": 1.64
     },
     {
-      "id": "6d960feb6e43",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "South Portland residents react to cyberattack that impacted city operations",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdm9TZHEwdGdreFFXRGM1aGRqMVU0TTZBN29fd015ZFl6RjR4ZHg2QnB3WnVKZm4wZzZDLUFWR0YyX0hsOHJ6TEMxTG1JaW1WMXppcG5YQXBaQTdzcTJtNVJnSXd1WnJXd0lZci14bFhHR09ueXVMSkdlNjYtNFpoY0ROS1UwN1VQZ1AzUlMzMWZwQQ?oc=5",
-      "source": "WMTW",
-      "publishedAt": "2026-11-16T22:48:00.000Z",
-      "latestAt": "2026-11-16T22:48:00.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 2,
-      "outletNames": [
-        "WMTW",
-        "WABI"
-      ],
-      "score": 1.62
-    },
-    {
       "id": "0b5c6ad77021",
       "cat": "hacks",
       "kind": "news",
@@ -1598,6 +1619,22 @@
         "Yahoo Finance"
       ],
       "score": 1.52
+    },
+    {
+      "id": "0eb545c5aed3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "What a Nationwide FAA Ground Stop Teaches Perishable Food Suppliers About Holiday Resilience",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPYk53U284MU5aNk1oTXNpU0pXN0UzZUxKVDRRNGhrZXM1eWdIazA5bGRmWDBOdFZiNG5GdjAxNEhLQzV3SF93MU5uR0ZLWDdkOFlyYkdBT1JLWTg1RUYwVnVqdFQ4bWo5RDRkQUdoeWNyTF9DX3hTNmtCdjNwbThCbDlLVzJFNEVXbHE1MzRucXp6eWJTZFVXaV9GeVNvdWlHUlo0Mmd2MjZZcTMzV2lvTmRzZ3ZGOXNlY1NhSkZn?oc=5",
+      "source": "The Packer",
+      "publishedAt": "2026-11-17T22:38:00.000Z",
+      "latestAt": "2026-11-17T22:38:00.000Z",
+      "firstSeenAt": "2026-11-17T22:50:37.479Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Packer"
+      ],
+      "score": 1.4
     },
     {
       "id": "2909186dd5c7",
@@ -1742,22 +1779,6 @@
         "News24"
       ],
       "score": 1.38
-    },
-    {
-      "id": "c09b095751a7",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Air Traffic Controllers Still Haven’t Been Briefed On Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTDBMaVFPdHFuX2QzSEpfSU9XWDFVTkZEb1U5eGVDMHZFZG9CLTFUbklXRDk2OVd6ZC1SVTIxNlRzSC1MQVZWM3ppRkZCWFhKUmc2MWVtVWpCdGN2Wm9TcFNxU1A0RGNKOWZJV1dBZkZkbGV1Qml2LU9STjg4ejFDYkNWWVdMUzJuRlpSOFZxT1ZwQ1hXSHNneHRxZ19lZFlfNnBmXzVuQTF6M09RRGdOOHUzSDZVYTBvbUhSaQ?oc=5",
-      "source": "Forbes",
-      "publishedAt": "2026-11-17T20:19:21.000Z",
-      "latestAt": "2026-11-17T20:19:21.000Z",
-      "firstSeenAt": "2026-11-17T22:47:29.296Z",
-      "outlets": 1,
-      "outletNames": [
-        "Forbes"
-      ],
-      "score": 1.34
     },
     {
       "id": "abcd2cdb9e9d",
