@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T17:47:06.855Z",
+  "buildTime": "2026-11-17T17:56:49.781Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 12:47 ET",
+  "etStamp": "2026-11-17 12:56 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -54,17 +54,17 @@
     "date": "2026-11-17",
     "score": 92
   },
-  "headlinesRead": 1595,
-  "lastSuccessAt": "2026-11-17T17:47:06.855Z",
+  "headlinesRead": 1608,
+  "lastSuccessAt": "2026-11-17T17:56:49.781Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
+    "flights": 17,
     "space": 4,
     "earth": 4,
     "hacks": 42,
-    "grid": 6,
+    "grid": 5,
     "germs": 4,
-    "internet": 9,
+    "internet": 7,
     "weather": 4,
     "markets": 4,
     "animals": 4,
@@ -185,76 +185,75 @@
     "reason": null
   },
   "x": {
-    "enabled": false,
-    "skipped": "off"
+    "enabled": true,
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1307,
+      "count": 1309,
       "error": null,
-      "lastOkAt": "2026-11-17T17:47:06.855Z"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 278,
       "error": null,
-      "lastOkAt": "2026-11-17T17:47:06.855Z"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": null
     },
     "hn": {
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-17T17:47:06.855Z"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T17:47:06.855Z"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T17:47:06.855Z"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T17:47:06.855Z"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T17:47:06.855Z"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T17:47:06.855Z"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 10,
       "error": null,
-      "lastOkAt": null,
-      "skipped": "off"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T17:47:06.855Z"
+      "lastOkAt": "2026-11-17T17:56:49.781Z"
     }
   },
   "stories": [
@@ -450,14 +449,15 @@
       "source": "The Wall Street Journal on MSN",
       "publishedAt": "2026-11-17T08:20:00.000Z",
       "firstSeenAt": "2026-11-17T17:17:00.109Z",
-      "outlets": 4,
+      "outlets": 5,
       "outletNames": [
         "The Wall Street Journal on MSN",
         "WSJ",
         "TradingView",
-        "CNN"
+        "CNN",
+        "marketscreener.com"
       ],
-      "score": 3.57
+      "score": 3.96
     },
     {
       "id": "1b105ba34662",
@@ -528,6 +528,23 @@
         "Eastern Washington University Athletics"
       ],
       "score": 2.33
+    },
+    {
+      "id": "918c99de455a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide ground stop prompts traveler to buy a Bronco, another to rent a U-Haul",
+      "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxNSk9ZTXJpSUJORXNPRkkzT2VLall0MTZPc3Y1RXRUQmFlTFh1MllwSV9UaVl2UTZXbERlNWhBRE9WaVRXYWY5TVoxTGxTZmhWVDBlcnM3WF94Z0dHbWZtRGgyMjV5LUlmTTNzN2RfdDFEbWNOQ2xfaG45UjVucG9VUF9UV3NLNXM0RExGYWJoZ0tNWFFPYWFGZnpmc1A2MmNpTFJ3UXdyMnlKYTh0SXJQUEFCYnlsNXVzT0R0RVg0endHQXpGX052MVNfWldiWlY0UUx5WVN1SURuNExPTlAzVTlNTFlKSURKdmhMcVVRTUhGM3IwUEl6bDNBMTRSdjFLNU5HUHlrTlpzM2tPVHBGVDJqQWFHZC1IcjZzb0UtZ1U3WHBfMWQ0VlhCejg?oc=5",
+      "source": "13WHAM-TV",
+      "publishedAt": "2026-11-17T17:52:23.000Z",
+      "firstSeenAt": "2026-11-17T17:56:49.781Z",
+      "outlets": 3,
+      "outletNames": [
+        "13WHAM-TV",
+        "KVAL",
+        "WSMH"
+      ],
+      "score": 3.61
     },
     {
       "id": "8c903b55d699",
@@ -605,36 +622,22 @@
       "score": 3.01
     },
     {
-      "id": "ba9b4d40eedf",
+      "id": "483804f87cec",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
-      "source": "Click2Houston",
-      "publishedAt": "2026-11-17T16:12:55.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 2,
-      "outletNames": [
-        "Click2Houston",
-        "News4JAX"
-      ],
-      "score": 2.8
-    },
-    {
-      "id": "bc84ae3870f8",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Federal Agencies Join Forces to Prevent Another Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10UTB4dS1kNlYzbkJzQUZhTUk0eFVOM1JCWTkwREhXRml2eTl2d2FDX3ZVd0NrWjNUdjZ2dU5obzhnV1Y5eUdpc3NlOHRicjNFSzh4N1lCQmtGU2tPV3FzNGdiQmNQY1dPVjVaN2ZEYVlOUnlIM2MwZmxCMjBDWnc?oc=5",
-      "source": "FLYING Magazine",
-      "publishedAt": "2026-11-17T17:00:00.000Z",
+      "title": "'Software bug' blamed for online banking outage | Morning in America",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNGlCSUJhTFl1Rmk5ZEZhTEowQUhKTnVNQ3JZeDlaY1BGZEVRM2VCWTVqNUpEX1hJSUR1OW5jOVYycnVOMXBhRUVYc1ZDNjk0SG9YMTdMaGpJSElWaFRUWXNwWHROQTIzcXZXZEtoNTF0dzI1WXlNeGU3eVJ5V1UzM0dqRTRtd1FpTGdZ?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T14:19:28.000Z",
       "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 2,
+      "outlets": 4,
       "outletNames": [
-        "FLYING Magazine",
-        "Yahoo"
+        "Yahoo",
+        "KGET.com",
+        "NEWS10 ABC",
+        "WKRN News 2"
       ],
-      "score": 2.78
+      "score": 2.84
     },
     {
       "id": "1f758b82249b",
@@ -816,19 +819,51 @@
       "score": 1.4
     },
     {
-      "id": "2bd37ab7e95f",
-      "cat": "grid",
+      "id": "fd99c05c1347",
+      "cat": "germs",
       "kind": "news",
-      "title": "Fake National Grid warning about ‘major blackout’ shared online",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbkRLOXprdzRBZDFyUjAxSXhJeGFXSU9OTVQtYjhtMGRPa1p4WjYyTzZsRzBCVml1Q2kwUFBTS3BPNlp4dkI1RnlMZ29HeUtSLU50YjB2eFVvQUZjYmJqS181ZWJLVjRtQmtrNGJma1NCZG5LRDJTay1uT0FERjlVRmNDWHhTY00?oc=5",
-      "source": "Full Fact",
-      "publishedAt": "2026-11-17T16:14:35.000Z",
-      "firstSeenAt": "2026-11-17T16:27:30.704Z",
+      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
+      "source": "Global Agriculture",
+      "publishedAt": "2026-11-17T15:14:39.000Z",
+      "firstSeenAt": "2026-11-17T15:31:45.442Z",
       "outlets": 1,
       "outletNames": [
-        "Full Fact"
+        "Global Agriculture"
       ],
       "score": 1.39
+    },
+    {
+      "id": "ba9b4d40eedf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
+      "source": "Click2Houston",
+      "publishedAt": "2026-11-17T16:12:55.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 2,
+      "outletNames": [
+        "Click2Houston",
+        "News4JAX"
+      ],
+      "score": 2.8
+    },
+    {
+      "id": "bc84ae3870f8",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Federal Agencies Join Forces to Prevent Another Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10UTB4dS1kNlYzbkJzQUZhTUk0eFVOM1JCWTkwREhXRml2eTl2d2FDX3ZVd0NrWjNUdjZ2dU5obzhnV1Y5eUdpc3NlOHRicjNFSzh4N1lCQmtGU2tPV3FzNGdiQmNQY1dPVjVaN2ZEYVlOUnlIM2MwZmxCMjBDWnc?oc=5",
+      "source": "FLYING Magazine",
+      "publishedAt": "2026-11-17T17:00:00.000Z",
+      "firstSeenAt": "2026-11-17T17:32:03.215Z",
+      "outlets": 2,
+      "outletNames": [
+        "FLYING Magazine",
+        "Yahoo"
+      ],
+      "score": 2.78
     },
     {
       "id": "2186efaefb2e",
@@ -881,23 +916,6 @@
       "score": 2.49
     },
     {
-      "id": "483804f87cec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "'Software bug' blamed for online banking outage | Morning in America",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPNGlCSUJhTFl1Rmk5ZEZhTEowQUhKTnVNQ3JZeDlaY1BGZEVRM2VCWTVqNUpEX1hJSUR1OW5jOVYycnVOMXBhRUVYc1ZDNjk0SG9YMTdMaGpJSElWaFRUWXNwWHROQTIzcXZXZEtoNTF0dzI1WXlNeGU3eVJ5V1UzM0dqRTRtd1FpTGdZ?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T14:19:28.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "KGET.com",
-        "NEWS10 ABC"
-      ],
-      "score": 2.45
-    },
-    {
       "id": "3dabbffba2e3",
       "cat": "hacks",
       "kind": "news",
@@ -929,6 +947,22 @@
         "AOL"
       ],
       "score": 2.42
+    },
+    {
+      "id": "5ee7940c9abc",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Targeted 178 Major Websites With Malware to Steal Visitors’ Personal and Financial Information",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-targeted-178-major-websites-173238143.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-17T09:32:00.000Z",
+      "firstSeenAt": "2026-11-17T17:56:49.781Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "Yahoo Tech"
+      ],
+      "score": 2.41
     },
     {
       "id": "95dc0e6331b3",
@@ -1046,6 +1080,23 @@
         "Newswav"
       ],
       "score": 2.04
+    },
+    {
+      "id": "3b49d5ddbc4f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Outage Math at the Airport: When a Four-Hour Uber Beats Waiting Out a Ground Stop",
+      "url": "https://www.usnews.com/news/business/articles/2026-11-17/outage-math-at-the-airport-when-a-four-hour-uber-beats-waiting-out-a-ground-stop",
+      "source": "U.S. News & World Report",
+      "publishedAt": "2026-11-17T04:38:00.000Z",
+      "firstSeenAt": "2026-11-17T17:56:49.781Z",
+      "outlets": 3,
+      "outletNames": [
+        "U.S. News & World Report",
+        "WPLG Local 10",
+        "News4JAX"
+      ],
+      "score": 2.01
     },
     {
       "id": "e06bc2e7ff05",
@@ -1401,6 +1452,36 @@
       "score": 1.44
     },
     {
+      "id": "ec84b027a2ac",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Update on flights in Maine following last week's nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOdTNYeVpyakpFa2g0UUZwYm12OTZ0YngwTEtBa09uTDJyRHA4ZDVBbE1uaThrbXJHZjhyelhsY1dwZFNxTHI2T0hzQUd4cEFNaVJ1UGtON1F6bzVwSllRS1lXOGV5ZktoNUt1RVRmejdwcVNDdUVOdFNaZjNjdDZZTWJvZmlVVWFvM284cDVhTWdDTVhaakJtTV9ncXRvcHpiazdSQzdMTVJYMEJTR2x0bUVXUVg0Yml5R0xZeFQ3T1BjSnRTNkl2NWhxNC1FaEtTVHdmN3JqWDhNcUdWckhqODJVNy04Qlc3bzJmY1lDSU8?oc=5",
+      "source": "newscentermaine.com",
+      "publishedAt": "2026-11-17T17:51:00.000Z",
+      "firstSeenAt": "2026-11-17T17:56:49.781Z",
+      "outlets": 1,
+      "outletNames": [
+        "newscentermaine.com"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "25e7953d1253",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA investigates Amarillo radar site after data disruption triggers nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxQeEhqMzBYME9SdEtrZXNLejRGckE0N1ozRXpRN0xKc1pwUHhYRDFaR0ZjaFRyYlliS0xCZTZnMmpNQWFUUExIM3c2UWVYRXBBZjZ2UU1UNGtOX0s2UkxwSm5TNEJOUmlzX1d3ZFNHTno3TXlSdEd5SFNuS1B3NTFrb2J6OXVyQ2pGa0RvU1l0djhwMEdSV1dWZ2lGQWJFZ0xjeEFURVZWZTFSVTdiWC15MDMtOVAyMkZfaUlveURTMVJtZXpESmd5Rzl4eXlNeXdnZTA4N2dHV2NuT3hiY1lxX0hEY2dEQ3NlRmt5NmIzTjFnTk1uOEZXMGNKMHpLSmFDcjYzV29rS3FsUXlkRnFQQXk0bFFoaGd3eWpzYVozZWtRWkkyTnliRGhvV2dSTUtlbUs3TzZtbjRoZUNSYWxJZUJEOGdvU1FXWXlNMmJGT3NXVUU0cFFCWA?oc=5",
+      "source": "KVII",
+      "publishedAt": "2026-11-17T17:50:43.000Z",
+      "firstSeenAt": "2026-11-17T17:56:49.781Z",
+      "outlets": 1,
+      "outletNames": [
+        "KVII"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "848864efaa83",
       "cat": "internet",
       "kind": "news",
@@ -1491,6 +1572,21 @@
       "score": 1.4
     },
     {
+      "id": "fdcd657d0e55",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "iPhone users targeted in cyberattack involving Zoom, CNN and other major sites",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1DLVNsME1NaGo2dWk0U3NzU0dSa211aExsVFJsYWdmMTBWamFjWjdYano0NUtnRG5TdGZCeXg4bURoTGZ2dHh2LWt3VzJLbGNCUFBhYWFzeE1jQWtCX1FzeXhQTVBfZ9IBa0FVX3lxTFBkMHV2dXUwRk1jekpIYVFTZjQxVF93SzhDV3l4RU8zcEp0aHBNLUFOMF9fSlhuaWdEUEdkb2YtX2k5M2JlTDM2c0kwbF90TENVRkhWZWtZODRVZTh4SmNPSVNRb0NpLWQ2SldB?oc=5",
+      "source": "FOX 32 Chicago",
+      "publishedAt": "2026-11-17T17:35:15.000Z",
+      "firstSeenAt": "2026-11-17T17:56:49.781Z",
+      "outlets": 1,
+      "outletNames": [
+        "FOX 32 Chicago"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "0335e5b7852b",
       "cat": "flights",
       "kind": "news",
@@ -1502,96 +1598,6 @@
       "outlets": 1,
       "outletNames": [
         "KIVI-TV"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "6b5af415d535",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta CEO Ed Bastian Calls for Air Traffic Control Investment After Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5WMzdJcmhfSlZhaEZrWE5UTnZ6d0ZEbmYxQ01ZbDRUa0ZrLWs2NG1panF5ck4wcFRwSkVoTDlvaXQtZ3NvaDdHZlhNeTduTnN1bkk0ZGRVNFQ3NHRVZDI3N0ZIaEgwQlNRd0NyT3U2YlcwZDA?oc=5",
-      "source": "Avi-Go",
-      "publishedAt": "2026-11-17T17:18:04.000Z",
-      "firstSeenAt": "2026-11-17T17:47:06.855Z",
-      "outlets": 1,
-      "outletNames": [
-        "Avi-Go"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "062841cf451f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Major Outage Hits America’s Most Secretive Intelligence Agency",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE84S3NZWjJhUy1vVnJvNHVVbkk5NDgzMGI5Y0lhTGJIUHg1THpybk5zeG52aGIwcmRDU05FVXVwRXJBRmVxNDFDYTJvREVkZnp1d2FfTV9CQ3lIcVJZbVVJclVYNzc1Rk0xNTNmdA?oc=5",
-      "source": "97.3 KKRC",
-      "publishedAt": "2026-11-17T16:56:48.000Z",
-      "firstSeenAt": "2026-11-17T17:17:00.109Z",
-      "outlets": 1,
-      "outletNames": [
-        "97.3 KKRC"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "03c1fed6e340",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "ALLEGED RANSOMWARE LEADER EXTRADITED TO TENNESSEE TO FACE CHARGES IN MASSIVE HEALTHCARE DATA BREACH",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdGlQSVhFSHBsRFJrS3ctYmlSM09JRzF5S1l6S2M5QlM5RXlqU3M4QTJ4TjQ4MmVvUnRrVjEwSWFrLXJhTXlTanI4Yl9ZY3FyTndRRU5VMHJkSkdIQkhYcWhrdFp0a1NHOWtDQ3M5RFl2TEJpcFFXLTZrZFBSbmd5Snd5TGZQWUR4enpYZzAzRXJCOXFTdlhvbkZGN3EzZkt5dzh0TnNzUVl6TF9xNzRmbjE0ZldyVDRaMlhVRG9RZ0h1bGJX?oc=5",
-      "source": "3B Media News",
-      "publishedAt": "2026-11-17T16:44:42.000Z",
-      "firstSeenAt": "2026-11-17T17:17:00.109Z",
-      "outlets": 1,
-      "outletNames": [
-        "3B Media News"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "e49371453baf",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyber Attacks in 2026: Major Websites Targeted as Ransomware and Data Breaches Shake the US",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQjhpNzJIaHZObFFoQWJJR1FkcV9pcmFFTUVySWtsODMtMlZFV3ZPcEJaNks4RDRNblRWNHVUbUVibm8teklDT0VfbXdaSDV5cnVFLUl3MUZDR0NJOTU0VzBlbjRRQ1BFd2xVWVRGMldaSjRUamZ1UGRVRWNRWUw0NC1TX3A5QXgyd3pFZw?oc=5",
-      "source": "Aktualita.co",
-      "publishedAt": "2026-11-17T16:39:47.000Z",
-      "firstSeenAt": "2026-11-17T17:17:00.109Z",
-      "outlets": 1,
-      "outletNames": [
-        "Aktualita.co"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "80d893c5d2e9",
-      "cat": "internet",
-      "kind": "news",
-      "title": "National Security Agency Reportedly Experiencing Major Outage",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ1FBWUJNSTg2OFoxUkROQzBXR0FpQUxGYzUtUXd4b1Blbnl4S3NBeHBpWm0tX0J2SWd5am1Pd0NIRlJFOVZDQUI0a0VSY0tVamIxMXFXRkRPZGdJaGlaWk9fdm43X3pwUlFEWXZPNXhOTjVoUWluZjdMYUladHY4MW1BRVc5ZEZfN0hWQ19uRGhsWC10Rk1VdmVVekJaNFJzeWlCRWRBd2M0eEpWbnZzUjNldWN6cTc0NW1zM193OA?oc=5",
-      "source": "Townhall",
-      "publishedAt": "2026-11-17T16:10:00.000Z",
-      "firstSeenAt": "2026-11-17T16:27:30.704Z",
-      "outlets": 1,
-      "outletNames": [
-        "Townhall"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "fd99c05c1347",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
-      "source": "Global Agriculture",
-      "publishedAt": "2026-11-17T15:14:39.000Z",
-      "firstSeenAt": "2026-11-17T15:31:45.442Z",
-      "outlets": 1,
-      "outletNames": [
-        "Global Agriculture"
       ],
       "score": 1.39
     },
