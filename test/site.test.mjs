@@ -202,7 +202,7 @@ function thirdPartyStrings(dataRoot) {
 const without = (text, strings) => strings.reduce((rest, one) => (rest.includes(one) ? rest.split(one).join(' ') : rest), text);
 
 function isInternal(ref) {
-  return ref !== '' && !/^(?:[a-z][a-z0-9+.-]*:|#|\/\/)/i.test(ref);
+  return ref.trim() !== '' && !/^(?:[a-z][a-z0-9+.-]*:|#|\/\/)/i.test(ref);
 }
 
 function refsIn(html) {
@@ -281,9 +281,10 @@ function auditSite(base, { label = 'site', needDay = true, live = null } = {}) {
       assert.ok(/target="_blank"/.test(m[0]) && /rel="noopener"/.test(m[0]), `${where}: ${m[1]} opens in a new tab with noopener`);
     }
 
-    // every relative reference lands on a file, from the root and from a subfolder
+    // every relative reference lands on a file, from the root and from a subfolder.
+    // Read from `html`, the page without the publishers' words: a headline that says "url(x)" is text, not a reference.
     const pagePath = `/${rel.replace(/index\.html$/, '')}`;
-    for (const ref of refsIn(raw).filter(isInternal)) {
+    for (const ref of refsIn(html).filter(isInternal)) {
       assert.ok(!ref.startsWith('/'), `${where}: ${ref} is root-absolute`);
       for (const prefix of ['', SUBFOLDER]) {
         const target = new URL(ref, `http://example.test${prefix}${pagePath}`);
@@ -357,6 +358,32 @@ test('a live headline that links github.com, says javascript: or holds a long da
   auditSite(out.dist, { label: 'live', live: strings });
   // The word rules are for a build of text we wrote. Held against this build they do refuse it, which proves the two are kept apart.
   assert.throws(() => auditSite(out.dist, { label: 'words' }), /long dash|repository|javascript/);
+});
+
+test('a live headline that says url(x) is text, not a reference, so it cannot block a deploy', () => {
+  const r = copyRoot(root);
+  const odd = {
+    id: 'live:css',
+    kind: 'news',
+    cat: 'internet',
+    title: 'Outage hits video sites as error page shows url(x) and url( ) in the banner',
+    url: 'https://example.test/status/css',
+    source: 'example.test',
+    publishedAt: '2026-11-16T21:30:00.000Z',
+    firstSeenAt: '2026-11-16T21:30:00.000Z',
+    outlets: 3,
+    outletNames: ['example.test', 'Pub B', 'Pub C'],
+    score: 90,
+  };
+  edit(latestFile(r), (l) => l.stories.unshift(odd));
+  edit(dayFile(r, '2026-11-16'), (d) => d.stories.unshift(odd));
+  const out = build(r, { siteUrl: SITE, config: EARLY });
+  const home = read('index.html', out.dist);
+  assert.ok(home.includes('url(x)') && home.includes('url( )'), 'the page really carries the headline');
+  // The live audit reads the page with the publishers' words taken out, so the headline is not a reference.
+  auditSite(out.dist, { label: 'live url(x)', live: thirdPartyStrings(r) });
+  // Held against the whole page, the same words would read as a missing file, which is what the live audit must not do.
+  assert.throws(() => auditSite(out.dist, { label: 'words' }), /url|is 404|is a file/);
 });
 
 test('with no data at all the build still writes a whole site that says ALMOST.', () => {
@@ -655,6 +682,77 @@ test('a category joke never repeats on two cards in a row of the same category',
     seen.set(cat, cap);
   }
   assert.ok(seen.size >= 3, 'several categories had a joke');
+});
+
+// ---- item 4: a joke is only for a near miss ---------------------------------------------
+
+const NEAR = {
+  flights: 'Nationwide ground stop halts flights across the US',
+  hacks: 'Hackers steal customer data in breach at retailer',
+  internet: 'Cloudflare outage takes down thousands of websites',
+  space: 'Asteroid passes Earth at 0.3 lunar distances',
+  sun: 'Northern lights alert issued as solar storm hits',
+  earth: 'Tsunami warning issued after offshore quake',
+  markets: 'Bitcoin plunges in a crypto crash',
+  ai: 'ChatGPT down for thousands of users',
+  grid: 'Citywide blackout leaves downtown dark',
+  germs: 'Bird flu detected in Oklahoma dairy herd',
+  weather: 'Freak hailstorm batters the valley',
+  animals: 'Bear breaks into suburban kitchen',
+};
+const PLAIN = 'City council meets Tuesday to talk over the harbor budget';
+const capText = (html) => (html.match(/<p class="cap">([^<]*)<\/p>/) || [])[1];
+const cardCtx = (over = {}) => ({ cats: new Map(cfg.categories.map((c) => [c.id, c])), nowMs: Date.parse(BUILD_AT), live: true, quietMode: false, quietCaption: 'No jokes on this one.', quietLink: 'https://www.redcross.org/donate', quietLinkIntl: 'https://www.ifrc.org/', used: new Map(), ...over });
+const nearStory = (cat, title, over = {}) => ({ id: `nm:${cat}`, cat, kind: 'news', title, url: 'https://example.com/story', source: 'Example', publishedAt: BUILD_AT, outlets: 2, outletNames: ['Example', 'Other'], score: 50, ...over });
+
+test('item 4: a card carries its category joke only when its headline holds a near-miss word', () => {
+  for (const c of cfg.categories) {
+    const joked = card(nearStory(c.id, NEAR[c.id]), cardCtx());
+    assert.ok(c.captions.map(esc).includes(capText(joked)), `${c.id}: a near miss gets one of its own jokes`);
+    const plain = card(nearStory(c.id, PLAIN), cardCtx());
+    assert.ok(!plain.includes('class="cap"'), `${c.id}: no caption at all on a headline with no near-miss word`);
+    assert.ok(plain.includes(`<h3><a href="https://example.com/story"`) && plain.includes(PLAIN) && plain.includes('Example'), `${c.id}: the card itself is unchanged`);
+  }
+  // another category's near-miss word does not count: a hack headline filed under Weather
+  assert.ok(!card(nearStory('weather', NEAR.hacks), cardCtx()).includes('class="cap"'));
+  // a category the config does not know has no near-miss words, so no caption
+  assert.ok(!card(nearStory('zzz', NEAR.hacks), cardCtx()).includes('class="cap"'));
+});
+
+test('item 4: quiet cards and quiet mode are unchanged', () => {
+  // a quiet card keeps its plain line and its link, near-miss word or not
+  for (const title of [NEAR.earth, PLAIN]) {
+    const q = card(nearStory('earth', title, { quiet: true, kind: 'signal', signal: { type: 'quake', mag: 6.8, place: '20 km S of Somewhere, Chile', pager: 'orange', tsunami: false } }), cardCtx());
+    assert.ok(q.includes('<p class="cap">No jokes on this one. <a href="https://www.ifrc.org/"'), `quiet card: ${title}`);
+  }
+  const bare = card(nearStory('earth', PLAIN, { quiet: true, kind: 'signal', signal: { type: 'quake', mag: 6.8, place: '20 km S of Somewhere, Chile', pager: 'green', tsunami: false } }), cardCtx());
+  assert.ok(bare.includes('<p class="cap">No jokes on this one.</p>'));
+  // quiet mode: no category joke even on a near miss
+  for (const c of cfg.categories) assert.ok(!card(nearStory(c.id, NEAR[c.id]), cardCtx({ quietMode: true })).includes('class="cap"'), c.id);
+});
+
+test('item 4: on a built page the near miss has its joke and its neighbour has none, today and on a frozen day', () => {
+  const r = copyRoot(root);
+  const base = { kind: 'news', cat: 'hacks', url: 'https://pub0.example/nm', source: 'Pub A', publishedAt: '2026-11-16T21:10:00.000Z', firstSeenAt: '2026-11-16T21:10:00.000Z', outlets: 3, outletNames: PUBS, score: 95 };
+  const joke = { ...base, id: 'nm:joke', title: 'Hackers leak customer passwords in breach at a retailer', url: 'https://pub0.example/nm/joke' };
+  const none = { ...base, id: 'nm:none', title: 'Major banking outage linked to Chase impacts Wells Fargo and BofA customers', url: 'https://pub0.example/nm/none' };
+  edit(latestFile(r), (l) => l.stories.unshift(joke, none));
+  edit(dayFile(r, '2026-11-16'), (d) => d.stories.unshift(joke, none));
+  const out = build(r, { siteUrl: SITE, config: EARLY });
+  const hackedJokes = cfg.categories.find((c) => c.id === 'hacks').captions.map(esc);
+  for (const rel of ['index.html', 'day/2026-11-16/index.html']) {
+    const cards = read(rel, out.dist).split('<li class="card').slice(1);
+    const jokeCard = cards.find((c) => c.includes('pub0.example/nm/joke'));
+    const noneCard = cards.find((c) => c.includes('pub0.example/nm/none'));
+    assert.ok(jokeCard && noneCard, `${rel}: both stories are on the page`);
+    assert.ok(hackedJokes.includes(capText(jokeCard)), `${rel}: the hack has a Hacked joke`);
+    assert.ok(!noneCard.includes('class="cap"'), `${rel}: the bank outage has no caption`);
+  }
+  // the jokes are chosen when the page is built, never stored with the story
+  for (const file of [latestFile(r), dayFile(r, '2026-11-16')]) {
+    const stored = fs.readFileSync(file, 'utf8');
+    for (const c of cfg.categories) for (const caption of c.captions) assert.ok(!stored.includes(caption), `${caption} is not in the data`);
+  }
 });
 
 test('Doom Bingo shows the fired categories in grid order, and the math adds up', () => {

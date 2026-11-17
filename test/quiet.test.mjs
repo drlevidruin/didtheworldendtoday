@@ -30,13 +30,29 @@ test('manual: a missing file is off', () => {
 
 test('manual: true is on, false is off, and the note comes along', () => {
   assert.deepEqual(readQuietFile(quietFile('{"quiet": true, "note": "A hard day"}')), { quiet: true, note: 'A hard day', problem: null });
-  assert.equal(readQuietFile(quietFile('{"quiet": false, "note": ""}')).quiet, false);
-  assert.equal(readQuietFile(quietFile('{"note": "no switch"}')).quiet, false);
+  assert.deepEqual(readQuietFile(quietFile('{"quiet": false, "note": ""}')), { quiet: false, note: '', problem: null });
 });
 
-test('manual: words people might type', () => {
-  for (const v of ['"true"', '"yes"', '"on"', '"1"', '1', '" TRUE "']) assert.equal(readQuietFile(quietFile(`{"quiet": ${v}}`)).quiet, true, v);
-  for (const v of ['"false"', '"no"', '"off"', '"0"', '0', '""']) assert.equal(readQuietFile(quietFile(`{"quiet": ${v}}`)).quiet, false, v);
+// item 3: only an explicit "quiet": false means off. Anything else means ON, with a warning.
+test('item 3: an empty file object, a misspelled key and a missing setting all mean ON, with a warning', () => {
+  for (const content of ['{}', '{"quite": true}', '{"quite": false}', '{"Quiet": false}', '{"note": "no switch"}']) {
+    const r = readQuietFile(quietFile(content));
+    assert.equal(r.quiet, true, content);
+    assert.match(r.problem, /no "quiet" setting/, content);
+  }
+});
+
+test('item 3: null or the wrong type for the switch means ON, with a warning (words and numbers are not true or false)', () => {
+  for (const v of ['null', '"false"', '"true"', '"yes"', '"no"', '"on"', '"off"', '"0"', '"1"', '0', '1', '""', '"maybe"', '[]', '[false]', '{"x": 1}']) {
+    const r = readQuietFile(quietFile(`{"quiet": ${v}}`));
+    assert.equal(r.quiet, true, v);
+    assert.match(r.problem, /not true or false/, v);
+  }
+});
+
+test('item 3: the note still comes along when the switch is broken, and only a missing file is off', () => {
+  assert.equal(readQuietFile(quietFile('{"quite": true, "note": "A hard day"}')).note, 'A hard day');
+  assert.deepEqual(readQuietFile(quietFile()), { quiet: false, note: '', problem: null });
 });
 
 test('manual: a broken switch means quiet (fail-safe), with the reason', () => {
@@ -46,6 +62,9 @@ test('manual: a broken switch means quiet (fail-safe), with the reason', () => {
     ['[]', /not an object/],
     ['null', /not an object/],
     ['7', /not an object/],
+    ['{}', /no "quiet" setting/],
+    ['{"quite": true}', /no "quiet" setting/],
+    ['{"quiet": null}', /not true or false/],
     ['{"quiet": "maybe"}', /not true or false/],
     ['{"quiet": {"x": 1}}', /not true or false/],
   ];
@@ -99,6 +118,30 @@ test('auto: each spec term is recognized', () => {
     assert.equal(evalTitles([t]).matched, 1, t);
   }
   for (const t of ['Fed holds rates steady', 'Mass transit strike ends', 'Dozens of flights canceled', 'Hundreds of sites offline']) {
+    assert.equal(evalTitles([t]).matched, 0, t);
+  }
+});
+
+test('item 9: a toll in numbers is recognized however it is said: "5 people dead", "5 people killed", "kills 8"', () => {
+  for (const t of [
+    '5 people dead after the storm',
+    '5 people killed in the blast',
+    'Blast kills 8 in market',
+    'Storm kills at least 12 along the coast',
+    'Attack kills dozens',
+    '12 dead',
+    '5 killed',
+    '1,200 people were killed',
+    'Floods leave 14 more dead',
+  ]) {
+    assert.equal(evalTitles([t]).matched, 1, t);
+  }
+  // Three of them in the top 30 trip quiet mode, which is the whole point.
+  const tripped = evalTitles(['5 people dead after the storm', '5 people killed in the blast', calm, 'Blast kills 8 in market']);
+  assert.equal(tripped.tripped, true);
+  assert.equal(tripped.matched, 3);
+  // Words that only look like a toll do not match.
+  for (const t of ['Apple kills the headphone jack', 'Netflix kills its basic plan', 'Killer whale spotted off coast', 'Dead Space remake review', 'Fed holds rates steady', 'Outage kills 8 percent of traffic', 'New rule kills 8% of listings', 'Fee change kills 30 per cent of orders']) {
     assert.equal(evalTitles([t]).matched, 0, t);
   }
 });

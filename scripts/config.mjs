@@ -52,6 +52,8 @@ export const DOOM = {
 // keywords: a headline must match one entry (an array entry needs all of its
 //           regexes). Only headlines count, never descriptions.
 // reject: regexes that veto the category even when a keyword matched.
+// nearMiss: a joke goes on a story only when its headline holds one of these words,
+//           so a headline that merely lands in the category gets no caption at all.
 // captions: category-level jokes, picked by a hash of the story id.
 // ---------------------------------------------------------------------------
 const OUTAGE = 'outages?|glitch(?:es)?|failures?|meltdown|malfunctions?|shut ?down|disruptions?';
@@ -118,6 +120,9 @@ export const CATEGORIES = [
       /\b(?:United|Delta|American Airlines|Southwest|JetBlue|Alaska Airlines|Spirit|Frontier|Ryanair|easyJet|Lufthansa|British Airways|Qantas|Air Canada|airlines?)\b[^.]{0,60}\b(?:outages?|technical (?:issues?|problems?)|tech issues?|technology issues?|computer (?:issues?|problems?)|delay(?:s|ed)? (?:departing )?flights)\b/i,
     ],
     reject: [],
+    nearMiss: [
+      /\b(?:ground stops?|ground(?:ed|ing|s)|delay(?:s|ed)?|outages?|glitch(?:es)?|failures?|meltdowns?|malfunctions?|halted|cancel{1,2}ed|(?:technical|technology|tech|computer|IT|system) (?:issues?|problems?))\b/i,
+    ],
     captions: [
       "Nobody's going anywhere, which is technically safe.",
       'The sky is open. The airlines would like a moment.',
@@ -166,6 +171,9 @@ export const CATEGORIES = [
       // Threat reports and policy warnings are not incidents.
       /\bQ[1-4]\s+20\d\d\b|\b(?:underprepared|unprepared)\b/i,
     ],
+    nearMiss: [
+      /\b(?:hack(?:ed|ers?|ing|s)?|breach(?:es|ed)?|leak(?:s|ed|ing)?|ransomware|cyber ?attacks?|(?:security|cyber|cybersecurity) incidents?|malware|infostealer|botnet|DDoS|zero-?days?|exposed|stolen|compromised)\b/i,
+    ],
     captions: [
       'Your data is out there, making friends.',
       'Your password is having the busiest week of its life.',
@@ -202,6 +210,10 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\bpower outages?\b/i, /\belectricity\b/i, /\bblackouts?\b/i],
+    nearMiss: [
+      /\b(?:outages?|down|offline|glitch(?:es)?|not working|disruptions?|failures?|(?:undersea|subsea|submarine) cables?|DNS|false (?:emergency |missile |tsunami |nuclear |amber )?alerts?)\b/i,
+      /\balerts?\b[^.]{0,40}\b(?:errors?|mistakes?|glitch(?:es)?|in error|accidental(?:ly)?)\b/i,
+    ],
     captions: [
       'Half the internet is down. You found the other half.',
       'Have you tried turning the planet off and on again?',
@@ -226,6 +238,9 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\bmeteor showers?\b/i, /\bbuy\b/i],
+    nearMiss: [
+      /\b(?:asteroids?|near[- ]Earth|flybys?|fly-by|close approach|near miss|fireballs?|bolides?|meteorites?|space rocks?|mini-?moons?|potentially hazardous|planetary defen[cs]e)\b/i,
+    ],
     captions: [
       'It missed. They always miss. So far.',
       'A very large rock just waved from a safe distance.',
@@ -249,6 +264,9 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [],
+    nearMiss: [
+      /\b(?:solar (?:flares?|storms?|eruptions?|outbursts?)|flares?|auroras?|northern lights|(?:geo)?magnetic|coronal mass ejections?|CMEs?|space weather|radio blackouts?|X-?class)\b/i,
+    ],
     captions: [
       'The sun is having a moment.',
       'The nearest star would like your attention.',
@@ -276,6 +294,9 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\bstock|\bmarkets?\b/i],
+    nearMiss: [
+      /\b(?:earthquakes?|quakes?|tremors?|temblors?|volcan(?:o(?:es)?|ic)|erupt(?:s|ed|ing|ion|ions)?)\b/i,
+    ],
     captions: [
       'The ground has opinions today.',
       'The planet shrugged. Everything on it noticed.',
@@ -310,6 +331,13 @@ export const CATEGORIES = [
       /\b(?:drug|clinical|trial|phase [123]|FDA|biotech|therapeutics|pharma\w*)\b/i,
       /\bmarket (?:size|share|research|report|outlook|analysis|trends?|to \d{4})\b|\b(?:to|by) 20[3-9]\d\b|\bCAGR\b/i,
     ],
+    nearMiss: [
+      /\b(?:plunge[sd]?|plummet(?:s|ed)?|sell-?offs?|tumble[sd]?|tank(?:s|ed)?|rout|meltdown|free ?fall|nosedive|circuit breakers?|wipes? out|erases?|evaporates?|trading (?:halt(?:ed|s)?|suspended|paused)|halts? trading)\b/i,
+      /\b(?:loses|lose)\b[^.]{0,30}\$\s?\d[\d.,]*\s?(?:billion|trillion)\b/i,
+      // a crash counts only when it is a market, crypto or digital one
+      /\b(?:flash|market|stock|crypto|bitcoin|digital)\s+crash(?:es|ed)?\b/i,
+      /\b(?:stocks|stock markets?|markets?|Dow|Nasdaq|S&P|Wall Street|crypto|bitcoin|ether|ethereum)\b[^.]{0,40}\bcrash(?:es|ed)?\b/i,
+    ],
     captions: [
       'Line go down. Line usually comes back.',
       'Somewhere, a chart is having a very dramatic afternoon.',
@@ -327,16 +355,19 @@ export const CATEGORIES = [
     gdelt: '("AI outage" OR "chatbot glitch" OR "ChatGPT down" OR "robot malfunction")',
     keywords: [
       /\bAI\b[^.]{0,60}\b(?:outages?|glitch(?:es)?|meltdown|malfunctions?|goes? (?:rogue|wrong|haywire)|gone wrong|hallucinat\w*|chaos|fiasco|blunder|bug)\b/i,
-      /\b(?:ChatGPT|Claude|Gemini|Copilot|Grok|OpenAI|Anthropic|chatbots?|Alexa|Siri)\b[^.]{0,60}\b(?:down|outages?|glitch(?:es)?|disruptions?|failures?|meltdown|malfunctions?|goes? (?:rogue|wrong|haywire)|bug|not working|offline)\b/i,
+      /\b(?:ChatGPT|Claude|Gemini|Copilot|Grok|OpenAI|Anthropic|chatbots?|Alexa|Siri)\b[^.]{0,60}\b(?:down|outages?|glitch(?:es)?|disruptions?|failures?|meltdown|malfunctions?|crash(?:es|ed)?|goes? (?:rogue|wrong|haywire)|bug|not working|offline)\b/i,
       /\brogue (?:AI|chatbot|robot|agent)\b|\bAI (?:agents?|assistants?|bots?)\b[^.]{0,40}\b(?:delet(?:es?|ed|ing)|wipes?|wiped|erases?|erased|ran amok|went rogue|goes rogue)\b/i,
       /\brobots?\b[^.]{0,40}\b(?:malfunction(?:s|ed)?|goes? (?:rogue|haywire|wrong)|glitch(?:es)?|runs? amok)\b/i,
       /\bdeepfakes?\b[^.]{0,60}\b(?:chaos|panic|fooled|viral)\b/i,
       /\b(?:self-driving|robotaxis?|Waymo|autonomous vehicles?)\b[^.]{0,50}\b(?:glitch(?:es)?|stuck|stalls?|stalled|malfunction(?:s|ed)?|outage|blocks?|gridlock)\b/i,
     ],
     claim: [
-      /\b(?:ChatGPT|Claude|Gemini|Copilot|Grok|OpenAI|Anthropic)\b[^.]{0,60}\b(?:down|outages?|glitch(?:es)?|disruptions?|failures?|not working|offline)\b/i,
+      /\b(?:ChatGPT|Claude|Gemini|Copilot|Grok|OpenAI|Anthropic)\b[^.]{0,60}\b(?:down|outages?|glitch(?:es)?|disruptions?|failures?|crash(?:es|ed)?|not working|offline)\b/i,
     ],
     reject: [],
+    nearMiss: [
+      /\b(?:outages?|down|offline|glitch(?:es)?|failures?|disruptions?|malfunction(?:s|ed)?|crash(?:es|ed)?|rogue|haywire|meltdown|fiasco|blunder|not working|gone wrong|goes wrong|bugs?|stuck|stalled?|hallucinat\w*|amok|deletes?|deleted|wipes?|wiped)\b/i,
+    ],
     captions: [
       'The machines are learning. Slowly, we hope.',
       'The robot was asked to be helpful. It has questions.',
@@ -364,6 +395,9 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\b(?:media|TV|news|internet|social media|sports?) blackout\b/i, /\b90-day blackout\b/i],
+    nearMiss: [
+      /\b(?:blackouts?|power outages?|power (?:cuts?|failures?)|without (?:power|electricity)|(?:lose|loses|lost) power|grid (?:failure|collapse|emergency|alert|strain)|in the dark|outages?)\b/i,
+    ],
     captions: [
       'Somewhere, a very dark neighborhood.',
       'Have you tried candles? People used to love candles.',
@@ -391,6 +425,9 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\bhospitali[sz]\w*\b/i, /\bmistakes?\b|\btips\b|\bprotect\b/i],
+    nearMiss: [
+      /\b(?:viruses|virus|variants?|strains?|bird flu|H5N1|avian (?:flu|influenza)|pathogens?|superbugs?)\b/i,
+    ],
     captions: [
       'Something is spreading. Possibly just headlines.',
       'Wash your hands. Also, your feed.',
@@ -418,6 +455,9 @@ export const CATEGORIES = [
     ],
     claim: [],
     reject: [/\bawareness week\b/i, /\bwhat (?:watches|advisories|warnings)\b/i, /\bunderstanding\b/i, /\bstocks?\b|\bshares\b|\bsales\b/i],
+    nearMiss: [
+      /\b(?:record|freak|unseasonabl[ey]|hail(?:storms?|stones?)?|heat dome|cold snap|polar vortex|thundersnow|haboob|dust storm|waterspout)\b/i,
+    ],
     captions: [
       'The sky is doing a bit.',
       'The atmosphere is just showing off now.',
@@ -450,6 +490,11 @@ export const CATEGORIES = [
       // Team nicknames (Bears, Lions, Tigers, Sharks, Bulls) in a game report.
       /\b(?:NFL|NBA|NHL|MLB|NCAA|MLS|playoffs?|quarterback|touchdowns?|overtime|vs\.?|defeats?|beats?|wins?|loses?|scores?|rookie|coach)\b/i,
     ],
+    nearMiss: [
+      /\b(?:swarm(?:s|ing)?|infestation|escaped|escapes|loose|orcas?|wildlife)\b/i,
+      /\b(?:break\w*|broke|walk\w*|wander\w*|stroll\w*|sneak\w*|enter\w*|barg\w*|climb\w*)\s+into\b/i,
+      /\braid(?:s|ed)?\b|\bin (?:a |the )?(?:house|kitchen|garage|pool|school|grocery|store|home|car)\b/i,
+    ],
     captions: [
       "The animals know something. They're not saying.",
       'The animals have formed a committee.',
@@ -466,22 +511,55 @@ export const CATEGORIES = [
 // politics), so place and politics families are skipped for signals only.
 // ---------------------------------------------------------------------------
 // A crash with people in it is excluded; a market, crypto, app, site or server
-// crash is the kind of thing this site is about. A headline with a crash word
-// is dropped when it names a vehicle or an airline, and also when it names no
-// market or computer word at all ("after Air India crash"), because an unknown
-// crash is far more likely to be a human one than a software one.
-const CRASH_WORD = /\b(?:crash(?:es|ed|ing)?|wreck(?:age)?|derail(?:s|ed|ment|ments)?)\b/i;
-const VEHICLE_WORD =
-  /\b(?:planes?|airplanes?|aircraft|airliners?|jets?|flights?|helicopters?|choppers?|copters?|trains?|rail|railway|trams?|subway|buses|bus|cars?|trucks?|vans?|vehicles?|motorcycles?|motorbikes?|cyclists?|boats?|ferry|ships?|vessels?|yachts?|pilots?|passengers?|drivers?|runway|highway|freeway|interstate|cockpit|airlines?|airways|aviation|Boeing|Airbus|Cessna|Embraer)\b/i;
-const DIGITAL_WORD =
-  /\b(?:markets?|stocks?|shares|equities|bitcoin|btc|ethereum|crypto\w*|coins?|tokens?|dow|nasdaq|s&p|selloff|sell-off|prices?|index|bonds?|yields?|trading|traders?|exchange|apps?|sites?|websites?|servers?|software|browser|systems?|network|computers?|pcs?|phones?|iphones?|android|ios|windows|games?|gaming|platforms?|cloud|login|database|ai|chatbot|bots?|algorithm|code)\b/i;
+// crash is the kind of thing this site is about. The words touching the crash
+// word say which kind it is: "computer system crashes", "ChatGPT crashes" and
+// "flash crash" are digital, "plane crash" and "bus crash" are not. The nearer
+// word wins, even when the rest of the headline names an airline ("Delta
+// flights grounded after computer system crashes"). With no such word beside it,
+// a headline that names a vehicle or an airline is dropped, and so is one that
+// names no market or computer word at all ("after Air India crash"), because an
+// unknown crash is far more likely to be a human one than a software one.
+const CRASH_WORDS = /\b(?:crash(?:es|ed|ing)?|wreck(?:age)?|derail(?:s|ed|ment|ments)?)\b/gi;
+const VEHICLE =
+  'planes?|airplanes?|aircraft|airliners?|jets?|flights?|helicopters?|choppers?|copters?|trains?|rail|railway|trams?|subway|buses|bus|cars?|trucks?|vans?|vehicles?|motorcycles?|motorbikes?|cyclists?|boats?|ferry|ships?|vessels?|yachts?|pilots?|passengers?|drivers?|runway|highway|freeway|interstate|cockpit|airlines?|airways|aviation|Boeing|Airbus|Cessna|Embraer';
+const DIGITAL =
+  'markets?|stocks?|shares|equities|bitcoin|btc|ethereum|crypto\\w*|coins?|tokens?|dow|nasdaq|s&p|selloff|sell-off|prices?|index|bonds?|yields?|trading|traders?|exchange|apps?|sites?|websites?|servers?|software|browser|systems?|network|computers?|pcs?|phones?|iphones?|android|ios|windows|games?|gaming|platforms?|cloud|login|database|ai|chatbot|bots?|algorithm|code|' +
+  'chatgpt|openai|claude|gemini|copilot|grok|anthropic|alexa|siri|youtube|facebook|instagram|whatsapp|tiktok|snapchat|netflix|spotify|xbox|playstation|outlook|gmail|zoom|slack|discord|reddit|github|aws|azure|cloudflare|icloud';
+const VEHICLE_WORD = new RegExp(`\\b(?:${VEHICLE})\\b`, 'i');
+const DIGITAL_WORD = new RegExp(`\\b(?:${DIGITAL})\\b`, 'i');
+// "flash" only counts beside the crash word: "flash crash" is a market, "flash flood" is not.
+const DIGITAL_BESIDE = new RegExp(`\\b(?:${DIGITAL}|flash)\\b`, 'i');
+const WORD_RUNS = /[\p{L}\p{N}&]+/gu;
+
+// 'vehicle', 'digital' or null: what the words touching one crash word say it is,
+// nearest first (the word before it, the word after it, then the one before that).
+function crashKind(title, match) {
+  const before = title.slice(0, match.index).match(WORD_RUNS) || [];
+  const after = title.slice(match.index + match[0].length).match(WORD_RUNS) || [];
+  for (const word of [before[before.length - 1], after[0], before[before.length - 2]]) {
+    if (!word) continue;
+    if (VEHICLE_WORD.test(word)) return 'vehicle';
+    if (DIGITAL_BESIDE.test(word)) return 'digital';
+  }
+  return null;
+}
 
 export function crashWithPeople(title) {
   const t = String(title ?? '');
-  if (!CRASH_WORD.test(t)) return false;
+  const kinds = [...t.matchAll(CRASH_WORDS)].map((m) => crashKind(t, m));
+  if (!kinds.length) return false;
+  if (kinds.includes('vehicle')) return true;
+  if (kinds.includes('digital')) return false;
   if (VEHICLE_WORD.test(t)) return true;
   return !DIGITAL_WORD.test(t);
 }
+
+// Drugs that turn up in recalls. Named so that a recall of one is a health story even when the headline says nothing else.
+const NAMED_DRUGS = [
+  'propranolol', 'metformin', 'lisinopril', 'atorvastatin', 'amlodipine', 'losartan', 'valsartan', 'metoprolol',
+  'gabapentin', 'sertraline', 'levothyroxine', 'ibuprofen', 'acetaminophen', 'Tylenol', 'Advil', 'aspirin',
+  'insulin', 'Ozempic', 'Wegovy', 'Zepbound', 'Mounjaro', 'amoxicillin', 'fentanyl', 'oxycodone', 'opioid', 'opioids',
+];
 
 export const EXCLUDE_FAMILIES = [
   {
@@ -503,6 +581,10 @@ export const EXCLUDE_FAMILIES = [
       'wounded', 'missing',
       // extended
       'trapped', 'critical condition',
+      // "leaves 10 hurt" (not "hurtles", which is an asteroid). "hurts" and "hurting" are also what a price or a
+      // service does ("hurts earnings", "hurting small businesses"), so they count only with people or a number after them.
+      'hurt',
+      { pattern: 'hurt(?:s|ing)\\s+(?:(?:at least|more than|over|nearly|about)\\s+)?(?:\\d[\\d,]*|dozens|scores|hundreds|several|many|people|passengers|workers|residents|travell?ers|fans|drivers|riders|officers|firefighters|soldiers)', label: 'hurts people' },
       // hospitalized, hospitalised, hospitalizations; not hospitality
       { pattern: 'hospitali[sz]\\w*', label: 'hospitalized' },
     ],
@@ -518,12 +600,22 @@ export const EXCLUDE_FAMILIES = [
       { term: 'abus', prefix: true }, 'sexually', 'assault', 'assaulted', 'trafficking', 'molest', 'molested',
       'pedophile', 'hate crime',
       // gunfire and people being shot ("shot" alone is a camera, a vaccine and a rocket launch)
-      'gunfire', 'gunfight', 'shootout', 'opened fire', 'open fire', 'shots fired', 'mauled',
+      'gunfire', 'gunfight', 'shootout', { pattern: 'open(?:s|ed|ing)?\\s+fire', label: 'opens fire' }, 'shots fired', 'mauled',
       {
         pattern:
           '(?:man|woman|men|women|person|people|suspect|driver|officer|officers|passenger|passengers|guard|worker|workers|teen|boy|girl|pilot)\\b[^.]{0,40}\\bshot\\b|\\bshot (?:dead|and (?:killed|wounded)|by police)',
         label: 'shot',
       },
+    ],
+  },
+  {
+    // Nude photos, porn and the like: this is a site for all ages, so none of it is shown, joke or no joke.
+    name: 'explicit',
+    terms: [
+      'nude', 'nudes', 'nudity', 'topless', 'porn', 'pornography', 'pornographic', 'sextortion', 'sexting', 'sex', 'OnlyFans',
+      // "naked eye" is astronomy and stays
+      { pattern: 'naked(?!\\s+eyes?)', label: 'naked' },
+      { pattern: 'explicit\\s+(?:photos?|images?|videos?|content|material)', label: 'explicit content' },
     ],
   },
   {
@@ -576,6 +668,11 @@ export const EXCLUDE_FAMILIES = [
       'Legionnaires', 'Legionella', 'listeria', 'salmonella', { pattern: 'E\\.?\\s?coli', label: 'E. coli' }, 'botulism',
       'foodborne', 'food poisoning', 'covid', 'coronavirus',
       { term: 'vaccin', prefix: true }, 'immunization', 'immunisation', 'antivax', 'anti-vax',
+      // Medicine: a pill, a prescription or a recalled drug is a health story, whatever else the headline says.
+      'pill', 'pills', 'medication', 'medications', 'medicine', 'medicines', 'prescription', 'prescriptions',
+      'laceration', 'lacerations', 'blood pressure',
+      { pattern: 'drugs?\\b[^.]{0,40}\\brecall\\w*|\\brecall\\w*[^.]{0,40}\\bdrugs?', label: 'drug recall' },
+      ...NAMED_DRUGS,
     ],
   },
   {
@@ -604,6 +701,8 @@ export const EXCLUDE_FAMILIES = [
       'Elon Musk', { term: 'Musk', caseSensitive: true },
       // government officials commenting on an outage are still politics
       { term: 'DHS', caseSensitive: true }, 'Homeland Security', 'Pentagon', 'Capitol Hill',
+      // heads of government and the places they speak, here and abroad; "Fox News" in a headline, never the source field
+      'Fox News', 'prime minister', 'minister', 'ministers', 'chancellor', 'parliament', 'parliamentary',
     ],
   },
   {
@@ -734,7 +833,10 @@ export const QUIET = {
     /\bmassacres?\b/i,
     /\b(?:dozens|scores|hundreds)\b[^.]{0,20}\b(?:killed|dead)\b/i,
     /\bdeath tolls?\b/i,
-    /\b\d+\s+(?:killed|dead)\b/i,
+    // A toll in numbers, said any of the usual ways: "12 dead", "5 people killed", "5 more dead", "kills 8".
+    /\b\d[\d,]*\s+(?:[\w'’-]+\s+){0,2}(?:killed|dead)\b/i,
+    // "kills 8", "kills at least 12", "kills dozens" (but not "kills 8 percent of traffic")
+    /\bkills?\s+(?:at least\s+|more than\s+|over\s+|nearly\s+|about\s+)?(?:\d[\d,]*(?!\d)(?!\s*(?:%|percent\b|per ?cent\b))|dozens\b|scores\b|hundreds\b)/i,
   ],
   // Used only when Google News top stories refuses us, so the kill switch
   // still has a pair of eyes. An addition to the spec; it costs one request

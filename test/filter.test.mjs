@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { config } from '../scripts/config.mjs';
+import { config, crashWithPeople } from '../scripts/config.mjs';
 import { compileExcluder, compileGate } from '../scripts/lib/filter.mjs';
+import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
+import { hasNearMiss } from '../scripts/lib/nearmiss.mjs';
 
 const cfg = config();
 const ex = compileExcluder(cfg.exclude);
@@ -346,4 +348,203 @@ test('animals: loose animals are kept, team nicknames in a game report are not',
   for (const t of ['Bears escaped with a win over the Lions', 'Tigers vs Sharks: escaped loose ball sparks overtime', 'Woman hospitalised after being stung by hundreds of bees']) {
     assert.equal(gate.pick(t, 'animals'), null, t);
   }
+});
+
+// ---- phase 4: what the second review found, with its exact headlines ---------------------
+
+test('item 1: "opens fire", "hurt" and "nude" are excluded', () => {
+  assert.equal(verdict('Ground stop at JFK after man opens fire in terminal')?.family, 'violence');
+  assert.equal(verdict('Turbulence leaves 10 hurt as flights grounded')?.family, 'injury');
+  assert.equal(verdict('Hackers leak nude photos stolen in breach')?.family, 'explicit');
+  // every way of saying it
+  for (const t of ['Gunman opens fire at the airport', 'Man opened fire near the gate', 'Person opening fire on a crowd', 'Suspect will open fire during the outage']) {
+    assert.equal(verdict(t)?.family, 'violence', t);
+  }
+  for (const t of ['Turbulence hurts 10 passengers on a grounded flight', 'Dozens hurt as outage strands riders', 'Storm hurting dozens as flights are grounded', 'Blast hurts at least 12 near the airport', 'Turbulence hurt several passengers']) {
+    assert.equal(verdict(t)?.family, 'injury', t);
+  }
+  // as a verb for what a price or a service does, hurts and hurting are not about people
+  for (const t of ['Weak jobs report hurts stocks as Wall Street tumbles', 'Cloudflare outage hurting small businesses and thousands of sites', 'Strong dollar hurts earnings as Nasdaq plunges']) {
+    assert.equal(verdict(t), null, t);
+  }
+  for (const t of ['Nudes leaked in app breach', 'Hackers expose nudity filter data', 'Naked photos exposed in cloud breach', 'Porn site breach exposes members', 'Sextortion ring hacked a messaging app', 'Hackers leak explicit photos from a cloud account']) {
+    assert.equal(verdict(t)?.family, 'explicit', t);
+  }
+});
+
+test('item 1: the new words do not catch a hurtling asteroid, the naked eye, an open firewall or a pillow', () => {
+  for (const t of [
+    'Asteroid hurtles past Earth at 0.3 lunar distances',
+    'Solar flare lights up auroras visible to the naked eye',
+    'Open firewall rules caused the Cloudflare outage',
+    'Pillow maker confirms data breach',
+  ]) {
+    assert.equal(verdict(t), null, t);
+  }
+});
+
+test('item 2: pills, medication, medicine, drug recalls, lacerations and named drugs are excluded', () => {
+  assert.equal(verdict('Blood pressure pills recalled over potential contamination with metal, laceration risk')?.family, 'illness');
+  assert.equal(verdict('Popular blood pressure medicine propranolol recalled in the US over possible metal contamination')?.family, 'illness');
+  for (const t of [
+    'Pills recalled after metal found in bottles',
+    'Medication recalled over mislabeled bottles',
+    'Cough medicine recalled over glass pieces',
+    'Drug recall expands to three more lots',
+    'Recall of a generic drug over contamination',
+    'Laceration risk prompts product recall',
+    'Metformin recalled in the US over possible metal contamination',
+    'Ozempic counterfeits turn up in pharmacies',
+    'Prescription app breach exposes records',
+  ]) {
+    assert.ok(verdict(t), `"${t}" should be excluded`);
+  }
+  // a recall of cheese, and a breach at a pillow maker, are not medicine
+  for (const t of ['Cheese recalled over metal pieces', 'Pillow maker confirms data breach']) assert.equal(verdict(t), null, t);
+});
+
+test('item 5: Fox News in a headline, a prime minister, a minister, a chancellor and a parliament are politics', () => {
+  assert.equal(verdict('Schmitt Joins Fox News to Push for Bill')?.family, 'politics');
+  assert.equal(verdict('Following Nationwide Ground Stop, Schmitt Joins Fox News to Push for Bill to Modernize Aviation Systems')?.family, 'politics');
+  for (const t of [
+    'Prime minister blames the airline outage',
+    'Transport minister grilled over the ground stop',
+    'German chancellor visits an airport hit by an outage',
+    'Parliament debates the blackout response',
+  ]) {
+    assert.equal(verdict(t)?.family, 'politics', t);
+  }
+});
+
+test('item 5: Fox News as the source of a story is not a reason to drop it, only the headline is read', () => {
+  const gk = createGatekeeper(cfg);
+  const now = Date.parse('2026-11-17T15:00:00Z');
+  const item = { kind: 'news', cat: 'internet', title: 'Cloudflare outage knocks thousands of sites offline', url: 'https://example.com/a', source: 'Fox News', publishedAt: now - 3600e3 };
+  assert.ok(gk.admit(item, now).keep, 'a clean headline from Fox News is kept');
+  assert.ok(gk.admit({ ...item, title: 'Schmitt Joins Fox News to Push for Bill on the Cloudflare outage' }, now).drop, 'the same words in the headline are not');
+});
+
+test('item 6: a digital or financial word next to the crash word wins, even beside an airline', () => {
+  const gk = createGatekeeper(cfg);
+  for (const [title, cat] of [
+    ['Delta flights grounded after computer system crashes', 'flights'],
+    ['ChatGPT crashes for millions', 'ai'],
+    ['ASTER flash crash', 'markets'],
+  ]) {
+    assert.equal(crashWithPeople(title), false, title);
+    assert.equal(verdict(title), null, `${title} passes the taste filter`);
+    assert.equal(gate.pick(title), cat, `${title} files under ${cat}`);
+    assert.equal(gk.admit({ kind: 'news', title, url: 'https://example.com/x', source: 'S', publishedAt: Date.parse('2026-11-17T14:00:00Z') }, Date.parse('2026-11-17T15:00:00Z')).keep?.cat, cat, `${title} is stored`);
+  }
+});
+
+test('item 6: a crash with people in it still goes, and the word next to the crash decides it', () => {
+  for (const t of ['after Air India crash', 'plane crash', 'bus crash', 'Plane crash sends Nasdaq tumbling', 'Crash of a Boeing 737 sends airline stocks tumbling', 'Wreckage of the crashed plane found']) {
+    assert.equal(crashWithPeople(t), true, t);
+    assert.equal(verdict(t)?.family, 'crash', t);
+  }
+  // and the crashes the site is about stay
+  for (const t of ['Market crash wipes billions from tech stocks', 'Server crashes knock thousands of sites offline', 'Instagram crashes for users across the US', 'Crypto crash: Bitcoin plunges below 60,000']) {
+    assert.equal(crashWithPeople(t), false, t);
+  }
+});
+
+// ---- phase 4, item 4: a joke is only for a near miss -------------------------------------
+//
+// The second safety net. A story that passes every filter still gets its category's joke only
+// when its headline holds one of that category's near-miss words. The tables below are headlines
+// that pass the filter and the gate: the first table has a near-miss word, the second does not.
+
+const byId = Object.fromEntries(cfg.categories.map((c) => [c.id, c]));
+
+const JOKE = {
+  flights: ['Nationwide ground stop halts flights across the US', 'United Airlines system outage delays departing flights', 'Delta flights grounded after computer system crashes', 'United Airlines says it resolved a technology issue that affected departing flights'],
+  hacks: ['Hackers steal customer data in breach at retailer', 'Ransomware attack knocks out payment systems', 'Retailer confirms security incident after passwords leak'],
+  internet: ['Cloudflare outage takes down thousands of websites', 'Slack is down for users across the US', '911 outage hits several counties'],
+  space: ['Asteroid passes Earth at 0.3 lunar distances', 'Fireball seen across the Midwest', 'Near-Earth object flyby surprises astronomers'],
+  sun: ['G3 geomagnetic storm underway after solar flare', 'Northern lights alert issued as solar storm hits', 'Magnetic storm watch issued for the weekend'],
+  earth: ['Volcano erupts and ash cloud closes airspace', 'Tsunami warning issued after offshore quake', 'Powerful 6.6-magnitude earthquake strikes off the coast'],
+  markets: ['Flash crash briefly wipes out billions in stocks', 'Trading halted as circuit breakers trigger', 'Bitcoin plunges in a crypto crash', 'Tech giants lose $300 billion in market value in a day'],
+  ai: ['ChatGPT down for thousands of users', 'Waymo robotaxis stuck in gridlock after glitch', 'Rogue AI agent deletes company database', 'AI blunder at a car dealer sells a truck for a dollar'],
+  grid: ['Rolling blackouts hit regional grid', 'Thousands without power after substation failure', 'Citywide blackout leaves downtown dark'],
+  germs: ['Bird flu detected in Oklahoma dairy herd', 'Scientists find new virus in bats'],
+  weather: ['Record heat sets all-time highs for November', 'Freak hailstorm batters the valley', 'Giant hail pummels the Texas panhandle'],
+  animals: ['Bear breaks into suburban kitchen', 'Orcas ram sailboat off the coast', 'Three goats on the loose downtown', 'Bear found in a garage after the family left the door open'],
+};
+
+// Real headlines that land in a category and are not near misses: a bank outage is not a hack,
+// a recall is not a germ, a hurricane watch is not a freak of weather.
+const NO_JOKE = {
+  flights: ['Airspace closed over the northern coast for a rocket launch', 'Air traffic control radar problem slows arrivals at the hub'],
+  hacks: ['Major banking outage linked to Chase, impacted Wells Fargo and BofA', 'Chase Bank recovering after widespread outage'],
+  internet: ['Downdetector shows a spike in reports for Spotify'],
+  earth: ['Tsunami warning lifted along the Pacific coast'],
+  ai: ['Deepfake chaos spreads as a fake video goes viral'],
+  germs: ['Cheese recalled over metal pieces'],
+  weather: ['Derecho knocks down trees across the region', 'Hurricane watch posted along the coast'],
+};
+
+test('item 4: every category has a short nearMiss list of plain regexes', () => {
+  for (const c of cfg.categories) {
+    assert.ok(Array.isArray(c.nearMiss) && c.nearMiss.length >= 1 && c.nearMiss.length <= 4, `${c.id} has 1 to 4 near-miss patterns`);
+    for (const re of c.nearMiss) {
+      assert.ok(re instanceof RegExp, `${c.id}: a pattern`);
+      // a global or sticky pattern answers differently the second time it is asked
+      assert.ok(!re.global && !re.sticky, `${c.id}: no g or y flag`);
+    }
+  }
+});
+
+test('item 4: the words the brief names are near misses in their category', () => {
+  const NAMED = {
+    flights: ['outage', 'glitch', 'delay', 'grounded', 'ground stop'],
+    internet: ['outage', 'down', 'glitch'],
+    hacks: ['hack', 'breach', 'leak', 'ransomware', 'cyberattack'],
+    markets: ['plunge', 'sell-off', 'flash crash', 'market crash', 'crypto crash', 'bitcoin crash', 'digital crash'],
+    space: ['asteroid'],
+    sun: ['solar storm', 'flare', 'aurora'],
+    grid: ['blackout', 'power outage'],
+  };
+  for (const [id, words] of Object.entries(NAMED)) {
+    for (const word of words) {
+      assert.equal(hasNearMiss(byId[id], `Report says a ${word} was seen today`), true, `${id}: ${word}`);
+      assert.equal(hasNearMiss(byId[id], `REPORT SAYS A ${word.toUpperCase()} WAS SEEN TODAY`), true, `${id}: ${word} in capitals`);
+    }
+  }
+});
+
+test('item 4: words that mean someone may be hurt, or that belong to another category, are not near misses', () => {
+  const NOT = {
+    hacks: ['outage', 'bank down', 'delay'],
+    markets: ['crash', 'bus crash', 'plane crash', 'car crash on the highway'],
+    germs: ['outbreak', 'recall', 'listeria', 'measles', 'salmonella', 'E. coli'],
+    weather: ['tornado', 'hurricane', 'blizzard', 'derecho', 'heat wave', 'ice storm'],
+    animals: ['attack', 'bite'],
+  };
+  for (const [id, words] of Object.entries(NOT)) {
+    for (const word of words) assert.equal(hasNearMiss(byId[id], `Report says a ${word} was seen today`), false, `${id}: ${word}`);
+  }
+});
+
+for (const c of cfg.categories) {
+  test(`item 4: "${c.id}" headlines with a near-miss word are kept, filed and joked`, () => {
+    for (const t of JOKE[c.id]) {
+      assert.equal(verdict(t), null, `${t} passes the taste filter`);
+      assert.equal(gate.pick(t, c.id), c.id, `${t} files under ${c.id}`);
+      assert.equal(hasNearMiss(c, t), true, `${t} is a near miss`);
+    }
+    for (const t of NO_JOKE[c.id] || []) {
+      assert.equal(verdict(t), null, `${t} passes the taste filter`);
+      assert.equal(gate.pick(t, c.id), c.id, `${t} files under ${c.id}`);
+      assert.equal(hasNearMiss(c, t), false, `${t} is kept, with no joke`);
+    }
+  });
+}
+
+test('item 4: hasNearMiss is steady and safe on odd input', () => {
+  const c = byId.flights;
+  const title = 'Nationwide ground stop halts flights';
+  assert.deepEqual([1, 2, 3, 4].map(() => hasNearMiss(c, title)), [true, true, true, true], 'the same answer every time it is asked');
+  for (const odd of [undefined, null, '', 42, {}, [], 'no such words here']) assert.equal(hasNearMiss(c, odd), false, String(odd));
+  for (const noCategory of [undefined, null, {}, { nearMiss: 'outage' }, { nearMiss: [] }, { nearMiss: ['outage'] }, { id: 'zzz' }]) assert.equal(hasNearMiss(noCategory, title), false, JSON.stringify(noCategory));
 });

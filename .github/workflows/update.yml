@@ -68,18 +68,18 @@ jobs:
             git config user.email "bot@didtheworldendtoday.com"
             git add data
             git commit -m "$msg"
+            this_run="$(git rev-parse HEAD)"
             if [ "$GITHUB_REF" = "refs/heads/main" ]; then
               for attempt in 1 2 3; do
                 if git fetch --depth=50 origin main; then
                   if ! git rebase origin/main; then
-                    # Only data/ can conflict. This run's files are the newest reading, so they win and the commit is kept.
-                    # They go on top of what is already there, so nothing another run added is lost.
+                    # Only data/ can conflict. The files this run changed are the newest reading, so they win. Every other
+                    # file stays as the other run left it, so nothing it added or changed is lost.
                     git rebase --abort
-                    mine="$(mktemp -d)"
-                    cp -R data/. "$mine"
                     git reset --hard origin/main
-                    cp -R "$mine"/. data
-                    git add data
+                    git diff-tree --no-commit-id --name-status -r "$this_run" | while IFS=$'\t' read -r change file; do
+                      if [ "$change" = "D" ]; then git rm -q --ignore-unmatch -- "$file"; else git checkout "$this_run" -- "$file"; fi
+                    done
                     git commit -m "$msg" || true
                   fi
                   if git push; then

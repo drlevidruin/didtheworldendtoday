@@ -253,11 +253,15 @@ test('item 12: every stored story is checked again on every run, and a frozen da
   assert.equal(fs.readFileSync(dayPath(root, '2026-11-16'), 'utf8'), frozenBefore, 'a day that has passed is never rewritten');
 });
 
-test('item 19: a malformed quiet.json means quiet ON, the problem is named in latest.json and the run summary, and the run still succeeds', async () => {
+test('items 19 and 3: a malformed or unclear quiet.json means quiet ON, the problem is named in latest.json and the run summary, and the run still succeeds', async () => {
   const shapes = [
     ['{ "quiet": tru', /not valid JSON/],
     ['', /not valid JSON/],
     ['[]', /not an object/],
+    ['{}', /no "quiet" setting/],
+    ['{"quite": true}', /no "quiet" setting/],
+    ['{"quiet": null}', /not true or false/],
+    ['{"quiet": "false"}', /not true or false/],
     ['{"quiet": "maybe"}', /not true or false/],
     ['{"quiet": {"x": 1}}', /not true or false/],
   ];

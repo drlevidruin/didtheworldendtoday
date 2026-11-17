@@ -56,9 +56,11 @@ When something terrible is dominating the news, the site drops the jokes and say
 
 To turn it on by hand, open `quiet.json` in the GitHub app, change `false` to `true`, optionally add a short `note`, and commit. Within 15 minutes the site goes plain. Change it back the same way.
 
-If `quiet.json` is ever unreadable (a stray comma from a phone, say), the site goes quiet and the run logs the problem. It never guesses the other way.
+Only an explicit `false` turns quiet mode off. If `quiet.json` is unreadable (a stray comma from a phone, say), or the `quiet` setting is missing, misspelled, empty, or anything other than `true` or `false`, the site goes quiet and the run logs a warning that says why. It never guesses the other way. A missing file counts as off.
 
 It also turns on by itself when 3 or more of the top 30 Google News headlines are about a mass-casualty event, or name a toll such as "12 dead", and then stays on for at least 6 hours. Separately, any story about a big quake, a flood, a fire or a storm that could hurt people gets a quiet card with no joke. When people are likely hurt it also links to the Red Cross (the international Red Cross and Red Crescent for a quake abroad); a quake that is only big gets the caption alone.
+
+Even on an ordinary day, a joke goes only on a near miss. A story gets its category's joke when its headline holds one of that category's near-miss words, such as an outage, a glitch, a delay, a hack, a breach, a market plunge, an asteroid, a solar flare or a blackout. Any other story that passes the filters is listed with no caption at all. The words are the `nearMiss` lists in `scripts/config.mjs`.
 
 ## Turn on X
 

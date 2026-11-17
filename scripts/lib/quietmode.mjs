@@ -1,16 +1,17 @@
 // Quiet mode: the kill switch for jokes.
 //
 // 1. Manual: quiet.json at the repo root, { "quiet": false, "note": "" }.
-//    A missing file means off. A file that cannot be read means ON, because
-//    when the switch is broken the safe answer is no jokes.
+//    Only an explicit "quiet": false means off, and a missing file means off.
+//    Everything else means ON, with a warning in the run log: an empty object,
+//    a misspelled key ({"quite": true}), null, a word or a number instead of
+//    true or false, broken JSON, a file that cannot be read. When the switch is
+//    broken the safe answer is no jokes, and someone typing on a phone is far
+//    more likely to be trying to turn it on than off.
 // 2. Automatic: when 3 or more of the top 30 headlines match mass-casualty
 //    terms, quiet mode trips for this run, and stays on for a few hours
 //    (the "hold") so the site does not flicker as the news cycle moves.
 import fs from 'node:fs';
 import { HOUR_MS } from './time.mjs';
-
-const TRUE_WORDS = new Set(['true', '1', 'yes', 'on']);
-const FALSE_WORDS = new Set(['false', '0', 'no', 'off', '']);
 
 export function readQuietFile(file) {
   let raw;
@@ -30,12 +31,11 @@ export function readQuietFile(file) {
     return { quiet: true, note: '', problem: 'quiet.json is not an object, staying quiet' };
   }
   const note = typeof json.note === 'string' ? json.note.slice(0, 300) : '';
-  const v = json.quiet;
-  if (v === true) return { quiet: true, note, problem: null };
-  if (v === false || v === undefined || v === null) return { quiet: false, note, problem: null };
-  const word = String(v).trim().toLowerCase();
-  if (TRUE_WORDS.has(word)) return { quiet: true, note, problem: null };
-  if (FALSE_WORDS.has(word)) return { quiet: false, note, problem: null };
+  if (json.quiet === false) return { quiet: false, note, problem: null };
+  if (json.quiet === true) return { quiet: true, note, problem: null };
+  if (!Object.hasOwn(json, 'quiet')) {
+    return { quiet: true, note, problem: 'quiet.json has no "quiet" setting (is it spelled quiet?), staying quiet' };
+  }
   return { quiet: true, note, problem: 'quiet.json "quiet" is not true or false, staying quiet' };
 }
 

@@ -142,6 +142,11 @@ test('workflow: the data commit has the bot author, a dated message, and a push 
   assert.match(workflow, /git rebase --abort/);
   assert.match(workflow, /git reset --hard origin\/main/);
   assert.match(workflow, /refs\/heads\/main/);
+  // the recovery puts back only the files this run's own commit changed, found with git, and never copies the whole folder
+  assert.match(workflow, /this_run="\$\(git rev-parse HEAD\)"/);
+  assert.match(workflow, /git diff-tree --no-commit-id --name-status -r "\$this_run"/);
+  assert.match(workflow, /git checkout "\$this_run" -- "\$file"/);
+  assert.ok(!/cp -R data/.test(workflow), 'no copy of the whole data folder');
 });
 
 // The commit step is run for real, against a local stand-in for the remote, so the
@@ -192,12 +197,13 @@ function runCommitStep(cwd, root) {
 
 const gitAvailable = spawnSync('git', ['--version']).status === 0 && spawnSync('bash', ['--version']).status === 0;
 
-test('workflow: a data push that races another run keeps this run\'s files and loses nothing the other run added', { skip: !gitAvailable }, () => {
+test('workflow: a data push that races another run keeps this run\'s files and loses nothing the other run added or changed', { skip: !gitAvailable }, () => {
   const { root, url, runA, runB } = remoteWithTwoRuns();
-  // Run B finishes first and pushes, touching latest.json and adding a day file.
+  // Run B finishes first and pushes, touching latest.json, changing a day file run A never touches, and adding a new day file.
   git(runB, 'config', 'user.name', 'b');
   git(runB, 'config', 'user.email', 'b@example.com');
   fs.writeFileSync(path.join(runB, 'data', 'latest.json'), '{"from":"B"}\n');
+  fs.writeFileSync(path.join(runB, 'data', 'days', '2026-11-16.json'), '{"from":"B"}\n');
   fs.writeFileSync(path.join(runB, 'data', 'days', '2026-11-17.json'), '{"from":"B"}\n');
   git(runB, 'add', 'data');
   git(runB, 'commit', '-q', '-m', 'data: run B');
@@ -210,9 +216,34 @@ test('workflow: a data push that races another run keeps this run\'s files and l
   git(root, 'clone', '-q', url, check);
   assert.equal(fs.readFileSync(path.join(check, 'data', 'latest.json'), 'utf8'), '{"from":"A"}\n', 'this run\'s file wins');
   assert.equal(fs.readFileSync(path.join(check, 'data', 'days', '2026-11-17.json'), 'utf8'), '{"from":"B"}\n', 'the other run\'s new file is kept');
+  assert.equal(fs.readFileSync(path.join(check, 'data', 'days', '2026-11-16.json'), 'utf8'), '{"from":"B"}\n', 'a file this run did not change keeps the other run\'s newer version, not this run\'s old copy');
   const subjects = git(check, 'log', '--format=%s').split('\n');
   assert.equal(subjects.length, 3, 'seed, run B and this run: the commit was not dropped');
   assert.match(subjects[0], /^data: \d{4}-\d\d-\d\d \d\d:\d\d ET$/);
+  assert.deepEqual(git(check, 'diff-tree', '--no-commit-id', '--name-only', '-r', 'HEAD').split('\n'), ['data/latest.json'], 'this run\'s commit holds only the file this run changed');
+});
+
+test('workflow: a file this run deleted stays deleted after a race, and the other run\'s changes are kept', { skip: !gitAvailable }, () => {
+  const { root, url, runA, runB } = remoteWithTwoRuns();
+  git(runB, 'config', 'user.name', 'b');
+  git(runB, 'config', 'user.email', 'b@example.com');
+  fs.writeFileSync(path.join(runB, 'data', 'latest.json'), '{"from":"B"}\n');
+  fs.writeFileSync(path.join(runB, 'data', 'days', '2026-11-16.json'), '{"from":"B"}\n');
+  fs.writeFileSync(path.join(runB, 'data', 'days', '2026-11-17.json'), '{"from":"B"}\n');
+  git(runB, 'add', 'data');
+  git(runB, 'commit', '-q', '-m', 'data: run B');
+  git(runB, 'push', '-q', 'origin', 'main');
+  // Run A wrote latest.json and removed the 16th's file, all in one commit.
+  fs.writeFileSync(path.join(runA, 'data', 'latest.json'), '{"from":"A"}\n');
+  fs.rmSync(path.join(runA, 'data', 'days', '2026-11-16.json'));
+  const r = runCommitStep(runA, root);
+  assert.equal(r.status, 0, `${r.stdout}\n${r.stderr}`);
+  const check = path.join(root, 'check');
+  git(root, 'clone', '-q', url, check);
+  assert.equal(fs.readFileSync(path.join(check, 'data', 'latest.json'), 'utf8'), '{"from":"A"}\n');
+  assert.ok(!fs.existsSync(path.join(check, 'data', 'days', '2026-11-16.json')), 'the file this run removed is gone');
+  assert.equal(fs.readFileSync(path.join(check, 'data', 'days', '2026-11-17.json'), 'utf8'), '{"from":"B"}\n', 'the other run\'s new file is kept');
+  assert.equal(git(check, 'log', '--format=%s').split('\n').length, 3);
 });
 
 test('workflow: a data push with no race goes straight through', { skip: !gitAvailable }, () => {

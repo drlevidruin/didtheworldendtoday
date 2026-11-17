@@ -5,6 +5,7 @@ import { ago, etClock, hashOf, plural, rowDate, shortDate } from './copy.mjs';
 import { esc, num, url } from './esc.mjs';
 import { capFirst, joinNames } from '../lib/text.mjs';
 import { quietCard } from '../lib/quietcards.mjs';
+import { hasNearMiss } from '../lib/nearmiss.mjs';
 
 const REL = 'noopener';
 const HELP_US = 'Donate to the Red Cross';
@@ -44,7 +45,8 @@ export function card(story, ctx, { lead = false } = {}) {
     const q = quietCard(story);
     const help = q && q.link === 'ifrc' ? link(ctx.quietLinkIntl, HELP_INTL) : q && q.link === 'redcross' ? link(ctx.quietLink, HELP_US) : '';
     caption = `<p class="cap">${esc(ctx.quietCaption)}${help ? ` ${help}` : ''}</p>`;
-  } else if (!ctx.quietMode) {
+  } else if (!ctx.quietMode && hasNearMiss(cat, story.title)) {
+    // A joke only goes on a near miss (an outage, a glitch, a hack, a rock that missed). Any other story shows with no caption.
     const text = captionFor(cat, story.id, ctx);
     if (text) caption = `<p class="cap">${esc(text)}</p>`;
   }

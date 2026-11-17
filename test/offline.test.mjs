@@ -102,8 +102,8 @@ test('--verbose prints the kept and dropped lists and still exits 0', () => {
   assert.match(r.stdout, /DROPPED/);
 });
 
-test('a malformed quiet.json is read as quiet ON, the run says so out loud, and it still exits 0', () => {
-  for (const content of ['{ "quiet": tru', '', '[]', '{"quiet": "maybe"}']) {
+test('a malformed or unclear quiet.json is read as quiet ON, the run says so out loud, and it still exits 0', () => {
+  for (const content of ['{ "quiet": tru', '', '[]', '{}', '{"quite": true}', '{"quiet": null}', '{"quiet": "maybe"}']) {
     const root = tmpRoot();
     fs.writeFileSync(path.join(root, 'quiet.json'), content);
     const r = cli('scripts/update.mjs', root, '2026-11-16T22:30:00Z');
