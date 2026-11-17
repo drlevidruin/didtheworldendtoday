@@ -1,0 +1,90 @@
+name: update
+
+on:
+  schedule:
+    - cron: '4,19,34,49 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: site
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+env:
+  SITE_URL: https://didtheworldendtoday.com
+  X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+  X_DAILY_BUDGET_USD: ${{ vars.X_DAILY_BUDGET_USD }}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Update data
+        run: npm run update
+
+      - name: Build site
+        run: npm run build
+
+      - name: Test
+        run: npm test
+
+      - name: Commit data if it changed
+        run: |
+          set +e
+          node scripts/data-changed.mjs
+          status=$?
+          set -e
+          if [ "$status" -eq 0 ]; then
+            git config user.name "thelpdrive bot"
+            git config user.email "bot@didtheworldendtoday.com"
+            git add data
+            git commit -m "data: $(TZ=America/New_York date '+%Y-%m-%d %H:%M') ET"
+            if [ "$GITHUB_REF" = "refs/heads/main" ]; then
+              for attempt in 1 2 3; do
+                if git pull --rebase && git push; then
+                  exit 0
+                fi
+                git rebase --abort 2>/dev/null || true
+                sleep 5
+              done
+              echo "::warning::Could not push the data commit after 3 tries. The site still deploys from this run."
+            else
+              echo "Not on main, data commit stays local."
+            fi
+          elif [ "$status" -ne 3 ]; then
+            echo "::warning::Could not tell whether data changed (exit $status). Skipping the data commit."
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+      - name: Deploy
+        id: deploy
+        uses: actions/deploy-pages@v5
