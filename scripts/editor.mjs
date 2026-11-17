@@ -41,14 +41,23 @@
 // Big news. A story is big when it is in what the editor reads and its trending is at least
 // EDITOR_BREAKING_TRENDING, or it is a signal scoring at least EDITOR_BREAKING_SIGNAL_SCORE, or it is in at least
 // EDITOR_BREAKING_OUTLETS outlets and first reached our feeds in the last EDITOR_BREAKING_NEW_HOURS hours. A big
-// story is breaking when today's edition does not have it, the editor has not been sent it while big today, and the
-// editor has not been sent a big story with the same Google search (trendTerm) today: each new Google article about
-// one trend is a new story id, and one event must not use up the day's breaking calls.
+// story is breaking when today's edition does not have it, the editor has not been sent it while big today, the
+// editor has not been sent a big story with the same Google search (trendTerm) today, and the editor has not been
+// sent a big story of its category (cat) in the last EDITOR_BREAKING_CAT_HOURS hours. One event is one breaking call:
+// each new Google article about a trend is a new story id, one event draws several Google searches ("apple outage",
+// "icloud down", "is apple down") and several FAA signals (one per airport), and none of them may use up the day's
+// breaking calls. The category rule is the wide one. It holds back every big story of the category for those hours,
+// even an event that is really new, and a big story of any other category still breaks. A trend story keeps its
+// search whether its own headline or the search filed it, so the search rule sees every trend story.
 // A breaking story makes the call a breaking call: it needs only EDITOR_BREAKING_GAP_MINUTES since the last call,
 // pacing does not apply, it may spend the reserve (the daily budget and the daily cap still stop it), and it is
 // made even when the stories are the same ids as at the last call, because a story that grew big changes no id.
 // At most EDITOR_BREAKING_MAX a day. It says "breaking news: <title>" before the call. Every call, breaking or
-// regular, sends every big story first, and afterwards remembers them in bigSent, and their searches in bigTerms.
+// regular, sends every big story first, and afterwards remembers them in bigSent and their searches in bigTerms.
+// The first time a call sends a big story (its id and its search were not sent before), the time of the call goes
+// against its category in bigCats, and that starts the category's quiet hours. A big story that is only sent again,
+// as every regular call does while it stays big, starts nothing: an outage that trends all day does not keep its
+// category quiet all day. The search and the category are the editor's own bookkeeping: neither is sent to the model.
 //
 // When the API fails. A call that throws (an outage, an overload) counts in calls, because it was made, but not in
 // breakingCalls, and it adds no cost. failStreak counts the calls that threw in a row; a call that is answered,
@@ -58,11 +67,13 @@
 //
 // It writes only today's file in data/editions/. Past days are never rewritten.
 // Its own state is data/state/editor.json: { date, calls, usd, lastWriteAt, lastIdsHash, lastCallAt,
-// breakingCalls, bigSent, bigTerms, failStreak }. usd is today's spend in dollars: every answered call adds what its
-// usage costs at EDITOR_PRICES. lastCallAt is when the last call was made, breakingCalls counts the breaking calls
-// that were answered, bigSent holds the ids of the big stories already sent (at most EDITOR_BIG_SENT_MAX), bigTerms
-// their Google searches (at most EDITOR_BIG_TERMS_MAX) and failStreak the calls that threw in a row. All of it starts
-// again with the Eastern day.
+// breakingCalls, bigSent, bigTerms, bigCats, failStreak }. usd is today's spend in dollars: every answered call adds
+// what its usage costs at EDITOR_PRICES. lastCallAt is when the last call was made, breakingCalls counts the breaking
+// calls that were answered, bigSent holds the ids of the big stories already sent (at most EDITOR_BIG_SENT_MAX),
+// bigTerms their Google searches (at most EDITOR_BIG_TERMS_MAX), bigCats each category a big story was first sent in,
+// with the time of the last answered call that first sent one ({ "internet": "2026-11-17T15:00:00.000Z" }), and failStreak the
+// calls that threw in a row. All of it starts again with the Eastern day. A bigCats that is not an object is read as
+// empty, and an entry whose time is not a time as no entry.
 //
 // Env: ANTHROPIC_API_KEY (read by the SDK), DTWET_ROOT and DTWET_NOW for dry runs.
 import path from 'node:path';
@@ -71,6 +82,7 @@ import {
   config as loadConfig,
   EDITOR_BIG_SENT_MAX,
   EDITOR_BIG_TERMS_MAX,
+  EDITOR_BREAKING_CAT_HOURS,
   EDITOR_BREAKING_GAP_MINUTES,
   EDITOR_BREAKING_MAX,
   EDITOR_BREAKING_NEW_HOURS,
@@ -372,6 +384,20 @@ function withTerms(have, more, max) {
   return out.slice(-max);
 }
 
+// The categories of the big stories the editor was sent, as a state file holds them: each category with the time of the
+// last call that sent it. A value that is not an object is empty, and an entry whose time is not a time is no entry.
+function readCats(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
+  return Object.fromEntries(Object.entries(value).filter(([cat, at]) => cat !== '' && typeof at === 'string' && Number.isFinite(Date.parse(at))));
+}
+
+// The categories in `have`, and the category of every story in `sent` at the time `at`: a category in both takes the
+// new time.
+function withCats(have, sent, at) {
+  const cats = sent.map((s) => s.cat).filter((cat) => typeof cat === 'string' && cat !== '');
+  return { ...have, ...Object.fromEntries(cats.map((cat) => [cat, at])) };
+}
+
 // runEditor({ client, now, dataDir, env, log, config })
 //   client   a Claude client (tests pass a fake); built from the SDK when missing
 //   now      the clock, as a Date, a number or an ISO string
@@ -411,6 +437,7 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
       breakingNewHours = EDITOR_BREAKING_NEW_HOURS,
       breakingGapMinutes = EDITOR_BREAKING_GAP_MINUTES,
       breakingMax = EDITOR_BREAKING_MAX,
+      breakingCatHours = EDITOR_BREAKING_CAT_HOURS,
       bigSentMax = EDITOR_BIG_SENT_MAX,
       bigTermsMax = EDITOR_BIG_TERMS_MAX,
       failWaitMinutes = EDITOR_FAIL_WAIT_MINUTES,
@@ -442,9 +469,10 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
             breakingCalls: Math.max(0, Math.floor(Number(saved.breakingCalls) || 0)),
             bigSent: Array.isArray(saved.bigSent) ? saved.bigSent.filter((id) => typeof id === 'string').slice(-bigSentMax) : [],
             bigTerms: Array.isArray(saved.bigTerms) ? withTerms(saved.bigTerms, [], bigTermsMax) : [],
+            bigCats: readCats(saved.bigCats),
             failStreak: Math.min(MAX_FAIL_STREAK, Math.max(0, Math.floor(Number(saved.failStreak) || 0))),
           }
-        : { date: today, calls: 0, usd: 0, lastWriteAt: null, lastIdsHash: null, lastCallAt: null, breakingCalls: 0, bigSent: [], bigTerms: [], failStreak: 0 };
+        : { date: today, calls: 0, usd: 0, lastWriteAt: null, lastIdsHash: null, lastCallAt: null, breakingCalls: 0, bigSent: [], bigTerms: [], bigCats: {}, failStreak: 0 };
 
     if (state.calls >= dailyCap) return done('skipped', `already called the API ${state.calls} times today (the cap is ${dailyCap})`);
     if (state.usd >= dailyBudgetUsd) return done('skipped', `already spent $${state.usd.toFixed(2)} today (the cap is $${dailyBudgetUsd.toFixed(2)})`);
@@ -509,7 +537,10 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
     const sentBefore = new Set(state.bigSent);
     const termsBefore = new Set(state.bigTerms.map(termKey));
     const termSent = (s) => termKey(s.trendTerm) !== '' && termsBefore.has(termKey(s.trendTerm));
-    const breaking = big.filter((s) => !inEdition.has(s.id) && !sentBefore.has(s.id) && !termSent(s));
+    // Nor is a big story of a category the editor was sent a big story of less than breakingCatHours ago: one event draws
+    // several Google searches, and several signals (a ground stop for each airport), each a new term or id.
+    const catQuiet = (s) => typeof s.cat === 'string' && Object.hasOwn(state.bigCats, s.cat) && nowMs - Date.parse(state.bigCats[s.cat]) < breakingCatHours * HOUR_MS;
+    const breaking = big.filter((s) => !inEdition.has(s.id) && !sentBefore.has(s.id) && !termSent(s) && !catQuiet(s));
 
     let breakingCall = false;
     let breakingDueMs = null; // when a breaking call is held back only by its short gap: the moment it may go
@@ -558,14 +589,17 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
     }
 
     // An answered call is paid for, whatever the answer says, so its cost is added at once, and it ends a streak of
-    // failed calls. It has also read the big stories it was sent, so they are not breaking again today, and neither
-    // is another story about the same Google search. A call that threw has read nothing: it is tried again.
+    // failed calls. It has also read the big stories it was sent, so they are not breaking again today, neither is
+    // another story about the same Google search, and no other big story of their categories is breaking for
+    // breakingCatHours. A call that threw has read nothing: it is tried again.
     const cost = costOf(response && response.usage, prices);
     state.usd = Math.round((state.usd + cost) * 1e4) / 1e4;
     state.failStreak = 0;
     const sentBig = chosen.filter((s) => bigSet.has(s));
     state.bigSent = [...new Set([...state.bigSent, ...sentBig.map((s) => s.id)])].slice(-bigSentMax);
     state.bigTerms = withTerms(state.bigTerms, sentBig.map((s) => s.trendTerm), bigTermsMax);
+    // Only a big story sent for the first time starts its category's quiet hours: one sent again starts nothing.
+    state.bigCats = withCats(state.bigCats, sentBig.filter((s) => !sentBefore.has(s.id) && !termSent(s)), nowIso);
     writeJsonIfChanged(f.state, state);
 
     if (!response || response.stop_reason !== 'end_turn') {

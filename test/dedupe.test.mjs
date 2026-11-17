@@ -327,7 +327,7 @@ test('trending: the highest number of any member, kept while the story lives, an
   assert.ok(!('trending' in merge([stored(CF, { cat: 'internet', trending: 0 })], [], NOW)[0]), 'a stored zero is no number');
 });
 
-test('trendTerm: the Google search a story was filed by is kept with it, the stored one first, and a story that was not filed by a search has no key', () => {
+test('trendTerm: the Google search a trend story came from is kept with it, the stored one first, and a story that did not come from a trend has no key', () => {
   const [plain] = merge([], [from('A', '2026-11-16T19:00:00Z')]);
   assert.ok(!('trendTerm' in plain));
   const [one] = merge([], [from('A', '2026-11-16T19:00:00Z', { trendTerm: 'cloudflare outage', trending: 2000 })]);

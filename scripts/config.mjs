@@ -893,13 +893,17 @@ export const EDITOR_FRESH_MAX = 30;
 // Big news. A story is big when its trending is at least EDITOR_BREAKING_TRENDING, or it is a signal scoring at least
 // EDITOR_BREAKING_SIGNAL_SCORE, or it is in at least EDITOR_BREAKING_OUTLETS outlets and first reached our feeds in
 // the last EDITOR_BREAKING_NEW_HOURS hours. A big story the edition does not have and the editor has not been
-// sent while big today is breaking, and it gets a breaking call.
+// sent while big today is breaking, and it gets a breaking call. One event is one breaking call, so a big story is
+// not breaking when the editor was already sent a big story with the same Google search today, or a big story of
+// the same category less than EDITOR_BREAKING_CAT_HOURS hours ago: each new article is a new story id, one event
+// draws several Google searches, and the FAA files a ground stop for each airport.
 export const EDITOR_BREAKING_TRENDING = 20000; // Google searches
 export const EDITOR_BREAKING_SIGNAL_SCORE = 5; // a nationwide ground stop, a quake of 7 or more, a G3 storm, an X5 flare
 export const EDITOR_BREAKING_OUTLETS = 8; // outlets that carry the story
 export const EDITOR_BREAKING_NEW_HOURS = 3; // how recently a many-outlet story must have first reached our feeds
 export const EDITOR_BREAKING_GAP_MINUTES = 15; // a breaking call waits only this long after the last call
 export const EDITOR_BREAKING_MAX = 6; // breaking calls a day
+export const EDITOR_BREAKING_CAT_HOURS = 3; // after a call sent a big story, no other big story of its category is breaking for this long
 export const EDITOR_BIG_SENT_MAX = 200; // big story ids kept for today, so one story is not breaking twice
 export const EDITOR_BIG_TERMS_MAX = 50; // Google searches (trendTerm) of the big stories sent today, so one trend is not breaking twice
 // When a call fails (the API did not answer), the next call of any kind waits this many minutes since it, times 2
@@ -945,6 +949,7 @@ export function config() {
       breakingNewHours: EDITOR_BREAKING_NEW_HOURS,
       breakingGapMinutes: EDITOR_BREAKING_GAP_MINUTES,
       breakingMax: EDITOR_BREAKING_MAX,
+      breakingCatHours: EDITOR_BREAKING_CAT_HOURS,
       bigSentMax: EDITOR_BIG_SENT_MAX,
       bigTermsMax: EDITOR_BIG_TERMS_MAX,
       failWaitMinutes: EDITOR_FAIL_WAIT_MINUTES,

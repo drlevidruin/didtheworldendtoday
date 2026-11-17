@@ -35,7 +35,7 @@
 // A story: { id, cat, kind: news|signal|x, title, url, source, publishedAt (its oldest member's),
 //   latestAt (its newest member's, never in the future), firstSeenAt, outlets, outletNames[],
 //   trending? (the most Google searches any trend about it drew, kept while the story lives),
-//   trendTerm? (the Google search it was filed by, only when its headline alone fitted no category),
+//   trendTerm? (the Google search of the trend it came from, kept while the story lives),
 //   score, signal?, quiet?, quietReason? }
 // Headlines are third-party text: stored as published, escaped when rendered.
 import fs from 'node:fs';

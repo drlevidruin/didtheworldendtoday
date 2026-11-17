@@ -44,18 +44,16 @@ export function createGatekeeper(cfg) {
     if (raw.kind === 'signal') {
       return { keep: { ...raw, title, url, publishedAt: publishedAt ?? nowMs } };
     }
-    // A Google Trends headline that fits no category on its own is filed by the search it came from
-    // ("apple outage" is internet). The headline itself has already been judged above. The search stays on
-    // the item only when it was needed, so recheck can file the story the same way.
+    // A Google Trends headline is filed by its own headline first. One that fits no category on its own is
+    // filed by the search it came from ("apple outage" is internet). The headline itself has already been
+    // judged above. The search stays on every trend story, whichever of the two filed it: recheck files a
+    // story that needs it the same way, and the editor tells one event from another by it.
     const { trendTerm, ...item } = raw;
+    const search = typeof trendTerm === 'string' && trendTerm ? trendTerm : null;
     let cat = gate.pick(title, item.cat);
-    let filedBy = null;
-    if (!cat && typeof trendTerm === 'string' && trendTerm) {
-      cat = gate.pick(trendTerm, null);
-      if (cat) filedBy = trendTerm;
-    }
+    if (!cat && search) cat = gate.pick(search, null);
     if (!cat) return { drop: 'off-topic' };
-    return { keep: { ...item, cat, title, url, publishedAt, ...(filedBy ? { trendTerm: filedBy } : {}) } };
+    return { keep: { ...item, cat, title, url, publishedAt, ...(search ? { trendTerm: search } : {}) } };
   }
 
   // Re-check a stored story against the current rules (so tightening the
@@ -68,7 +66,8 @@ export function createGatekeeper(cfg) {
     if (hit) return { drop: `excluded:${hit.family}`, detail: hit.term };
     if (story.kind === 'signal') return { keep: story };
     let cat = gate.pick(story.title, story.cat);
-    // A story filed by its Google search keeps being filed by it.
+    // A story whose headline fits no category is filed by its Google search, the way admit files it. The story
+    // keeps the search either way.
     if (!cat && typeof story.trendTerm === 'string' && story.trendTerm) cat = gate.pick(story.trendTerm, story.cat);
     if (!cat) return { drop: 'off-topic' };
     let next = cat === story.cat ? story : { ...story, cat };

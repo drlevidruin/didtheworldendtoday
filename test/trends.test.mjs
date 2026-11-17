@@ -337,13 +337,13 @@ test('trends: a headline the gate files nothing for is filed by its search, and 
   assert.equal(gk.admit(bare, nowMs).drop, 'off-topic');
   assert.equal(gk.admit(trendItem({ trendTerm: 'pennsylvania lottery' }), nowMs).drop, 'off-topic');
   for (const bad of ['', '   ', 5, null, {}]) assert.equal(gk.admit(trendItem({ trendTerm: bad }), nowMs).drop, 'off-topic', String(bad));
-  // a headline that fits on its own keeps its own category and does not carry the search
+  // a headline that fits on its own keeps its own category, and keeps the search too
   const own = gk.admit(trendItem({ title: 'Apple outage knocks iCloud offline for thousands' }), nowMs).keep;
   assert.equal(own.cat, 'internet');
-  assert.ok(!('trendTerm' in own));
+  assert.equal(own.trendTerm, 'apple outage', 'the search stays with every trend story, not only one it filed');
   const gridTitle = gk.admit(trendItem({ title: 'Rolling blackouts hit regional grid as demand spikes' }), nowMs).keep;
   assert.equal(gridTitle.cat, 'grid', 'the headline decides first; the search is only for a headline that fits nothing');
-  assert.ok(!('trendTerm' in gridTitle));
+  assert.equal(gridTitle.trendTerm, 'apple outage', 'and it is kept although it filed nothing');
   // the exclusion filter and the quality checks still judge the headline itself
   assert.equal(gk.admit(trendItem({ title: "Can't sign in to your iCloud? Users report problems with several Apple services" }), nowMs).drop, 'excluded:question');
   assert.equal(gk.admit(trendItem({ title: `Trump says ${WOBBLE.toLowerCase()}` }), nowMs).drop, 'excluded:politics');
@@ -367,6 +367,55 @@ test('trends: a stored story filed by its search is kept by it, one without a se
   assert.equal(gk.recheck({ ...story, title: 'Apple outage knocks iCloud offline for thousands' }).keep.cat, 'internet');
 });
 
+test('trends: a trend story whose own headline files it keeps its search through admit, the store and recheck', async () => {
+  const gk = createGatekeeper(cfg);
+  const nowMs = NOW.getTime();
+  // admit: the headline files it, and the search stays with it all the same, whatever the search is
+  for (const search of ['apple outage', 'icloud down', 'is apple down']) {
+    const kept = gk.admit(trendItem({ title: 'Apple outage knocks iCloud offline for thousands', trendTerm: search }), nowMs).keep;
+    assert.equal(kept.cat, 'internet', search);
+    assert.equal(kept.trendTerm, search, 'the search is kept as it came');
+  }
+  // the filing itself is the same as before: the headline first, the search only for a headline that fits nothing
+  assert.equal(gk.admit(trendItem({ title: 'Rolling blackouts hit regional grid as demand spikes' }), nowMs).keep.cat, 'grid');
+  assert.equal(gk.admit(trendItem({ title: 'Rolling blackouts hit regional grid as demand spikes', trendTerm: 'pennsylvania lottery' }), nowMs).keep.cat, 'grid', 'a search that files nothing is kept for a headline that files');
+  assert.equal(gk.admit(trendItem({ trendTerm: 'pennsylvania lottery' }), nowMs).drop, 'off-topic', 'and a headline that fits nothing still needs a search that does');
+  // only a non-empty string is a search
+  for (const bad of ['', 5, null, undefined, {}, ['apple outage']]) {
+    const kept = gk.admit(trendItem({ title: 'Apple outage knocks iCloud offline for thousands', trendTerm: bad }), nowMs).keep;
+    assert.equal(kept.cat, 'internet', String(bad));
+    assert.ok(!('trendTerm' in kept), `${JSON.stringify(bad)} is no search`);
+  }
+  // an item that did not come from a trend has no search to keep
+  const plain = gk.admit(newsItem({ cat: 'internet', title: 'Cloudflare outage knocks thousands of sites offline', url: 'https://pub.example/cf', source: 'Pub A', publishedAt: nowMs - 3600e3 }), nowMs).keep;
+  assert.ok(!('trendTerm' in plain));
+
+  // the store: a whole run keeps the search in latest.json and in today's file, for both Apple stories, and gives none to the plain one
+  const w = world();
+  const isApple = (x) => /^Apple outage/.test(x.title);
+  const first = await w.go('2026-11-17T19:00:00Z');
+  const apple = first.latest.stories.filter(isApple);
+  assert.equal(apple.length, 2);
+  for (const x of apple) assert.equal(x.trendTerm, 'apple outage', 'in latest.json');
+  for (const x of w.day().stories.filter(isApple)) assert.equal(x.trendTerm, 'apple outage', 'and in today\'s file');
+  assert.ok(!('trendTerm' in first.latest.stories.find((x) => /^Cloudflare/.test(x.title))));
+
+  // recheck, on its own and in the next run (the trend has left the feed, and the stored stories are checked again)
+  for (const x of apple) {
+    const again = gk.recheck(x);
+    assert.equal(again.drop, undefined);
+    assert.equal(again.keep.trendTerm, 'apple outage', 'recheck keeps it');
+    assert.equal(again.keep.cat, 'internet');
+  }
+  w.body.now = feedXml();
+  const second = await w.go('2026-11-17T20:00:00Z');
+  const later = second.latest.stories.filter(isApple);
+  assert.equal(later.length, 2);
+  for (const x of later) assert.equal(x.trendTerm, 'apple outage', 'after the trend left the feed');
+  for (const x of w.day().stories.filter(isApple)) assert.equal(x.trendTerm, 'apple outage');
+  assert.deepEqual(second.report.cleaned ?? {}, {}, 'nothing was cleaned out of the archive');
+});
+
 test('trends: the sample feed gives two internet stories for the Apple trend, both with 50000, and the question stays out', async () => {
   const w = world();
   w.body.now = fixture('trends.xml');
@@ -376,7 +425,7 @@ test('trends: the sample feed gives two internet stories for the Apple trend, bo
   for (const s of apple) {
     assert.equal(s.cat, 'internet');
     assert.equal(s.publishedAt, '2026-11-17T17:20:00.000Z');
-    assert.ok(!('trendTerm' in s), 'they fit on their own headlines');
+    assert.equal(s.trendTerm, 'apple outage', 'they fit on their own headlines, and still keep the search');
   }
   assert.deepEqual(latest.stories.filter((s) => s.trending !== 50000).map((s) => s.title), ['Cloudflare outage knocks thousands of sites offline'], 'nothing else from the sample feed becomes a story');
   const gone = report.droppedList.filter((d) => d.via === 'trends');
@@ -396,7 +445,7 @@ test('trends: a story filed by its search is kept by it through every later run,
   assert.equal(wobble.trending, 50000);
   assert.equal(wobble.trendTerm, 'apple outage');
   assert.equal(w.day().stories.find((s) => s.title === WOBBLE).trendTerm, 'apple outage', 'and the file keeps the search');
-  assert.ok(!('trendTerm' in first.latest.stories.find((s) => /^Cloudflare/.test(s.title))), 'a story that was not filed by a search has no key');
+  assert.ok(!('trendTerm' in first.latest.stories.find((s) => /^Cloudflare/.test(s.title))), 'a story that did not come from a trend has no key');
 
   // the trend is gone from the feed
   w.body.now = feedXml();

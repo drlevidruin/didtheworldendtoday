@@ -39,7 +39,7 @@ function trendOf(v) {
   return typeof v === 'number' && Number.isFinite(v) && v > 0 ? v : null;
 }
 
-// The Google search a story was filed by, when its headline alone fitted no category: a non-empty string, else null.
+// The Google search a trend story came from: a non-empty string, else null.
 function termOf(v) {
   return typeof v === 'string' && v ? v : null;
 }
@@ -179,7 +179,8 @@ function buildNews(members, now) {
   // A story that was ever a Google trend keeps the biggest number it had, for as long as it lives. One that
   // never trended has no such key.
   if (trending !== null) base.trending = trending;
-  // A story filed by its Google search keeps the search, so the next run files it the same way.
+  // A trend story keeps its Google search, whether the search or its own headline filed it: the next run files it the
+  // same way, and the editor can tell that two stories are about one search.
   if (trendTerm !== null) base.trendTerm = trendTerm;
   base.score = newsRank({ outlets, title: rep.title, publishedAt, firstSeenAt });
   return base;

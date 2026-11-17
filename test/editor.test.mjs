@@ -8,6 +8,7 @@ import { spawnSync } from 'node:child_process';
 import {
   config,
   EDITOR_BIG_SENT_MAX,
+  EDITOR_BREAKING_CAT_HOURS,
   EDITOR_BREAKING_GAP_MINUTES,
   EDITOR_BREAKING_MAX,
   EDITOR_BREAKING_NEW_HOURS,
@@ -282,11 +283,12 @@ test('editor: the gaps, the reserve and the big news numbers are in the config, 
   assert.equal(EDITOR_BREAKING_NEW_HOURS, 3);
   assert.equal(EDITOR_BREAKING_GAP_MINUTES, 15);
   assert.equal(EDITOR_BREAKING_MAX, 6);
+  assert.equal(EDITOR_BREAKING_CAT_HOURS, 3);
   assert.equal(EDITOR_BIG_SENT_MAX, 200);
   const e = cfg.editor;
   assert.deepEqual(
-    [e.minGapMinutes, e.nightGapMinutes, e.nightEndHour, e.breakingReserveUsd, e.costGuess, e.breakingTrending, e.breakingSignalScore, e.breakingOutlets, e.breakingNewHours, e.breakingGapMinutes, e.breakingMax, e.bigSentMax],
-    [60, 180, 6, 0.25, 0.09, 20000, 5, 8, 3, 15, 6, 200],
+    [e.minGapMinutes, e.nightGapMinutes, e.nightEndHour, e.breakingReserveUsd, e.costGuess, e.breakingTrending, e.breakingSignalScore, e.breakingOutlets, e.breakingNewHours, e.breakingGapMinutes, e.breakingMax, e.breakingCatHours, e.bigSentMax],
+    [60, 180, 6, 0.25, 0.09, 20000, 5, 8, 3, 15, 6, 3, 200],
   );
 });
 
@@ -440,8 +442,8 @@ test('editor: a state file from before lastCallAt still works: the gap is counte
   assert.deepEqual(Object.keys(JSON.parse(s.read('data/state/editor.json'))), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash'], 'a skip writes nothing');
   const on = await run(s, client, { now: et(11, 0) });
   assert.equal(on.status, 'written', on.lines.join(' | '));
-  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent', 'bigTerms', 'failStreak']);
-  assert.deepEqual([stateOf(s).calls, stateOf(s).lastCallAt, stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).bigTerms, stateOf(s).failStreak], [3, et(11, 0), 0, [], [], 0]);
+  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent', 'bigTerms', 'bigCats', 'failStreak']);
+  assert.deepEqual([stateOf(s).calls, stateOf(s).lastCallAt, stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).bigTerms, stateOf(s).bigCats, stateOf(s).failStreak], [3, et(11, 0), 0, [], [], {}, 0]);
   // a lastCallAt that is not a time is ignored, and the last write stands in
   const odd = setup({ state: { ...old, lastCallAt: 'sometime' } });
   assert.equal((await run(odd, fakeClient(answer(GOOD)), { now: et(10, 0) })).status, 'skipped');
@@ -648,10 +650,10 @@ test('editor: a good answer is written as today\'s edition, with the lead story\
   const checked = validateEdition(e, { date: DATE, used: new Set(), byId: new Map(), excluder });
   assert.equal(checked.ok, true);
   assert.deepEqual(checked.dropped, []);
-  // the state: ten keys, one call, today's spend, the write time, the hash of the stories it read, when the call was made, no breaking call, no big story sent and no failed call
-  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent', 'bigTerms', 'failStreak']);
+  // the state: eleven keys, one call, today's spend, the write time, the hash of the stories it read, when the call was made, no breaking call, no big story sent and no failed call
+  assert.deepEqual(Object.keys(stateOf(s)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent', 'bigTerms', 'bigCats', 'failStreak']);
   assert.deepEqual([stateOf(s).date, stateOf(s).calls, stateOf(s).usd, stateOf(s).lastWriteAt], [DATE, 1, 0.0108, NOW]);
-  assert.deepEqual([stateOf(s).lastCallAt, stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).bigTerms, stateOf(s).failStreak], [NOW, 0, [], [], 0]);
+  assert.deepEqual([stateOf(s).lastCallAt, stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).bigTerms, stateOf(s).bigCats, stateOf(s).failStreak], [NOW, 0, [], [], {}, 0]);
   assert.match(stateOf(s).lastIdsHash, /^[0-9a-f]{16}$/);
 });
 
@@ -1455,7 +1457,7 @@ test('editor: at or over $1.40 it makes no call and says so in one line, and it 
   // a state from before this existed has no usd: it counts as zero, and the file gains it
   const old = setup({ state: { date: DATE, calls: 2, lastWriteAt: null, lastIdsHash: null } });
   assert.equal((await run(old, fakeClient(answer(GOOD)))).status, 'written');
-  assert.deepEqual(Object.keys(stateOf(old)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent', 'bigTerms', 'failStreak']);
+  assert.deepEqual(Object.keys(stateOf(old)), ['date', 'calls', 'usd', 'lastWriteAt', 'lastIdsHash', 'lastCallAt', 'breakingCalls', 'bigSent', 'bigTerms', 'bigCats', 'failStreak']);
   // a spend that is not a number counts as zero too
   for (const usd of ['lots', null, -4, NaN, {}]) {
     const odd = at(usd);
@@ -2152,32 +2154,34 @@ test('editor: no call of any kind unless today\'s spend plus the call\'s reckone
 });
 
 test('editor: one event is one breaking call: a new article about a Google search already sent today is not breaking, and a different search is', async () => {
+  // the category rule (phase 16) is off here, so that this is the rule about searches alone: all of these are internet stories
+  const noCat = { ...cfg, editor: { ...cfg.editor, breakingCatHours: 0 } };
   const s = setup({ stories: withBig(article(1)), state: lately() });
   const client = fakeClient(answer(GOOD));
-  const first = await run(s, client);
+  const first = await run(s, client, { config: noCat });
   assert.equal(first.status, 'written', first.lines.join(' | '));
   assert.deepEqual([stateOf(s).breakingCalls, stateOf(s).bigSent], [1, ['big1']]);
   // 20 minutes later the feed files a new article about the same search: a new id, and not breaking again
   putDay(s, withBig(article(1), article(2, 'Apple  OUTAGE')));
-  const second = await run(s, client, { now: minutesAfter(20) });
+  const second = await run(s, client, { now: minutesAfter(20), config: noCat });
   assert.equal(second.status, 'skipped', second.lines.join(' | '));
   assert.match(second.lines[0], /^editor: next regular call after /);
   assert.equal(client.calls.length, 1, 'no second breaking call for the same event');
   assert.deepEqual([stateOf(s).breakingCalls, stateOf(s).bigTerms], [1, ['apple outage']], 'the search is remembered, spelled the way it first came');
   // a different search is a different event
   putDay(s, withBig(article(1), article(2), article(3, 'pixel outage')));
-  const third = await run(s, client, { now: minutesAfter(40) });
+  const third = await run(s, client, { now: minutesAfter(40), config: noCat });
   assert.equal(third.status, 'written', third.lines.join(' | '));
   assert.deepEqual([stateOf(s).breakingCalls, stateOf(s).bigSent, stateOf(s).bigTerms], [2, ['big1', 'big2', 'big3'], ['apple outage', 'pixel outage']], 'every big story sent is remembered, each search once');
   assert.deepEqual(sentAt(client, 1).slice(0, 3).map((x) => x.id), ['big1', 'big2', 'big3'], 'the big stories go first');
   assert.ok(!JSON.stringify(sentAt(client, 1)).includes('trendTerm'), 'the search is the editor\'s own bookkeeping and is not sent');
   // a big story with no search is judged by its id alone, and adds nothing to the searches
   const plain = setup({ stories: withBig(trendingStory()), state: lately() });
-  assert.equal((await run(plain, fakeClient(answer(GOOD)))).status, 'written');
+  assert.equal((await run(plain, fakeClient(answer(GOOD)), { config: noCat })).status, 'written');
   assert.deepEqual([stateOf(plain).bigSent, stateOf(plain).bigTerms], [['big1'], []]);
   // an answer that was kept, not written, was still read: its searches are remembered too
   const kept = setup({ stories: withBig(article(1)), state: lately() });
-  const refused = await run(kept, fakeClient(answer('', { stop_reason: 'refusal', usage: usageOf(5000, 0) })));
+  const refused = await run(kept, fakeClient(answer('', { stop_reason: 'refusal', usage: usageOf(5000, 0) })), { config: noCat });
   assert.equal(refused.status, 'kept');
   assert.deepEqual(stateOf(kept).bigTerms, ['apple outage']);
 });
@@ -2301,4 +2305,247 @@ test('editor: a call that a fallback model answered is priced from every attempt
   const r = await run(s, fakeClient(answer(GOOD, { usage: { input_tokens: 1000, output_tokens: 100, iterations: [declined, served] } })), { now: et(14) });
   assert.equal(r.status, 'written', r.lines.join(' | '));
   assert.equal(stateOf(s).usd, 0.1002);
+});
+
+// ---- phase 16: one breaking call per category for a while --------------------------------------------------------------
+
+// A day like 11/17: from 9:00 AM Eastern a new big internet story every 15 minutes, each with a new id, about one of two Google
+// searches (or about none, which is how a story whose own headline filed it used to be stored). Runs come every 5 minutes from
+// midnight to midnight, and the minutes at which a breaking call was made are returned with the state at the end.
+async function appleDay(termOf) {
+  const s = setup({ stories: calmDay() });
+  const client = fakeClient(answer(GOOD));
+  const articles = [];
+  const breaking = [];
+  for (let m = 0; m < 24 * 60; m += 5) {
+    if (m >= 9 * 60 && (m - 9 * 60) % 15 === 0) {
+      const term = termOf(articles.length);
+      articles.push(article(articles.length + 1, term, term ? {} : { trendTerm: undefined }));
+    }
+    putDay(s, withBig(...articles));
+    const r = await run(s, client, { now: et(0, m) });
+    if (r.lines.some((l) => l.startsWith('editor: breaking news:'))) breaking.push(m);
+  }
+  return { s, client, breaking, articles };
+}
+
+test('editor: an Apple-style day, a new big internet story every 15 minutes about two searches, makes 1 breaking call, not one per search or per id', async () => {
+  // the first search for three stories, then the two alternate: the second search is new at 9:45 AM
+  const two = await appleDay((i) => (i < 3 || i % 2 === 0 ? 'apple outage' : 'icloud down'));
+  assert.equal(two.articles.length, 60, 'sixty stories, all of them big and all internet');
+  assert.deepEqual(two.breaking, [9 * 60], 'one breaking call, at 9:00 AM, when the first one came');
+  assert.equal(stateOf(two.s).breakingCalls, 1);
+  assert.deepEqual(stateOf(two.s).bigTerms, ['apple outage', 'icloud down'], 'both searches were sent, and neither made a call of its own');
+  assert.deepEqual(Object.keys(stateOf(two.s).bigCats), ['internet']);
+  assert.ok(two.client.calls.length >= 10, 'the regular calls go on all day');
+  // the same day with no search on any story, which is what a story whose own headline files it had: no call per id
+  const none = await appleDay(() => null);
+  assert.deepEqual(none.breaking, [9 * 60]);
+  assert.equal(stateOf(none.s).breakingCalls, 1);
+  assert.deepEqual(stateOf(none.s).bigTerms, []);
+  // the regular calls still send every big story, first: the last call of the day sent the big ones ahead of the rest
+  const ids = sentAt(none.client, none.client.calls.length - 1).map((x) => x.id);
+  const bigOnes = ids.filter((id) => id.startsWith('big'));
+  assert.ok(bigOnes.length >= 50, `${bigOnes.length} big stories in the last call`);
+  assert.deepEqual(ids.slice(0, bigOnes.length), bigOnes);
+});
+
+test('editor: a big quake 20 minutes after an Apple breaking call still breaks, because it is another category, and another Apple story does not', async () => {
+  const s = setup({ stories: withBig(article(1)), state: lately() });
+  const client = fakeClient(answer(GOOD));
+  const first = await run(s, client);
+  assert.equal(first.lines[0], 'editor: breaking news: Apple outage, take 1: iCloud is back for some users');
+  assert.deepEqual(stateOf(s).bigCats, { internet: NOW }, 'the call is remembered against the category of the story it sent');
+  // 20 minutes later: a quake of 7.4 (earth) and a second Apple story about another search (internet)
+  const day = withBig(article(1), article(2, 'icloud down'), quake7());
+  putDay(s, day);
+  const second = await run(s, client, { now: minutesAfter(20) });
+  assert.equal(second.status, 'written', second.lines.join(' | '));
+  assert.equal(second.lines[0], 'editor: breaking news: M 7.4 - 80 km SE of Somewhere, Japan', 'the quake is the breaking story, the Apple story is not');
+  assert.equal(second.lines.filter((l) => l.includes('breaking news')).length, 1);
+  assert.equal(client.calls.length, 2);
+  assert.deepEqual(stateOf(s).breakingCalls, 2);
+  assert.deepEqual(stateOf(s).bigCats, { internet: minutesAfter(20), earth: minutesAfter(20) }, 'both categories were sent in that call');
+  // without the quake the second Apple story brings no breaking call
+  const control = setup({ stories: withBig(article(1)), state: lately() });
+  const cc = fakeClient(answer(GOOD));
+  await run(control, cc);
+  putDay(control, withBig(article(1), article(2, 'icloud down')));
+  const held = await run(control, cc, { now: minutesAfter(20) });
+  assert.equal(held.status, 'skipped', held.lines.join(' | '));
+  assert.match(held.lines[0], /^editor: next regular call after /);
+  assert.equal(cc.calls.length, 1);
+  assert.equal(stateOf(control).breakingCalls, 1);
+});
+
+test('editor: a ground stop at a second airport is the same event and not breaking, and the first big story of another category still is', async () => {
+  const jfk = () => faaStop(8, { id: `sig:faa-stop:JFK:${DATE}`, title: 'FAA ground stop at JFK (nationwide)', signal: { type: 'faa-ground-stop', airport: 'JFK', hub: true, nationwide: true, reason: 'nationwide' } });
+  const s = setup({ stories: withBig(faaStop(8)), state: lately() });
+  const client = fakeClient(answer(GOOD));
+  assert.equal((await run(s, client)).lines[0], `editor: breaking news: ${FAA_TITLE}`);
+  assert.deepEqual(stateOf(s).bigCats, { flights: NOW });
+  // 20 minutes later the FAA has a ground stop at JFK too: a new id, a signal with no Google search, the same category
+  putDay(s, withBig(faaStop(8), jfk()));
+  const second = await run(s, client, { now: minutesAfter(20) });
+  assert.equal(second.status, 'skipped', second.lines.join(' | '));
+  assert.match(second.lines[0], /^editor: next regular call after /);
+  assert.equal(client.calls.length, 1);
+  assert.equal(stateOf(s).breakingCalls, 1);
+  // and an Apple outage at that moment is another event
+  putDay(s, withBig(faaStop(8), jfk(), article(1)));
+  const third = await run(s, client, { now: minutesAfter(20) });
+  assert.equal(third.lines[0], 'editor: breaking news: Apple outage, take 1: iCloud is back for some users');
+  assert.equal(stateOf(s).breakingCalls, 2);
+});
+
+test('editor: a big story of the same category breaks again when the last call that sent one is 3 hours old, and not before, and a regular call that sends one starts the 3 hours again', async () => {
+  // the editor was sent an Apple story (internet) at 10:00 AM, and now there is a second story about another search
+  const after = async (minutes) => {
+    const s = setup({ stories: withBig(article(1)), state: lately() });
+    const client = fakeClient(answer(GOOD));
+    await run(s, client);
+    putDay(s, withBig(article(1), article(2, 'icloud down')));
+    const r = await run(s, client, { now: minutesAfter(minutes) });
+    return { s, client, r };
+  };
+  const title2 = 'editor: breaking news: Apple outage, take 2: iCloud is back for some users';
+  // 2 hours 59 minutes: a regular call is due, and it is not a breaking call
+  const early = await after(179);
+  assert.equal(early.r.status, 'written', early.r.lines.join(' | '));
+  assert.ok(early.r.lines.every((l) => !l.includes('breaking news')), early.r.lines.join(' | '));
+  assert.equal(stateOf(early.s).breakingCalls, 1);
+  // exactly 3 hours is not under 3 hours: it breaks
+  const exact = await after(180);
+  assert.equal(exact.r.lines[0], title2);
+  assert.equal(stateOf(exact.s).breakingCalls, 2);
+  // 3 hours and 1 minute: it breaks, and the call remembers the category from now on
+  const late = await after(181);
+  assert.equal(late.r.status, 'written', late.r.lines.join(' | '));
+  assert.equal(late.r.lines[0], title2);
+  assert.deepEqual([late.client.calls.length, stateOf(late.s).breakingCalls], [2, 2]);
+  assert.deepEqual(stateOf(late.s).bigCats, { internet: minutesAfter(181) });
+  assert.equal(sentAt(late.client, 1)[0].id, 'big1', 'the stories already sent are sent again, first');
+  // the regular call at 2 hours 59 minutes sent a big internet story, so the 3 hours start again from it: a third story
+  // 2 hours 59 minutes after that is still not breaking, and 3 hours 1 minute after it is
+  assert.deepEqual(stateOf(early.s).bigCats, { internet: minutesAfter(179) });
+  putDay(early.s, withBig(article(1), article(2, 'icloud down'), article(3, 'pixel outage')));
+  const again = await run(early.s, early.client, { now: minutesAfter(179 + 179) });
+  assert.ok(again.lines.every((l) => !l.includes('breaking news')), again.lines.join(' | '));
+  assert.equal(stateOf(early.s).breakingCalls, 1);
+  putDay(early.s, withBig(article(1), article(2, 'icloud down'), article(3, 'pixel outage'), article(4, 'cloud down')));
+  const third = await run(early.s, early.client, { now: minutesAfter(179 + 179 + 181) });
+  assert.equal(third.lines[0], 'editor: breaking news: Apple outage, take 4: iCloud is back for some users');
+  assert.equal(stateOf(early.s).breakingCalls, 2);
+});
+
+test('editor: the hours are a setting, breakingCatHours in cfg.editor, and a config without it uses the 3 hours', async () => {
+  const day = withBig(article(1), article(2, 'icloud down'));
+  const breakingCallsOf = (x) => stateOf(x.s).breakingCalls;
+  const withHours = (hours) => ({ ...cfg, editor: { ...cfg.editor, breakingCatHours: hours } });
+  const at = async (minutes, config) => {
+    const s = setup({ stories: day, state: lately({ bigSent: ['big1'], bigTerms: ['apple outage'], bigCats: { internet: NOW }, breakingCalls: 1, lastCallAt: NOW, calls: 2 }) });
+    const client = fakeClient(answer(GOOD));
+    const r = await run(s, client, { now: minutesAfter(minutes), config });
+    return { s, client, r };
+  };
+  // one hour: breaks at 61 minutes, not at 59
+  assert.equal(breakingCallsOf(await at(59, withHours(1))), 1);
+  assert.equal(breakingCallsOf(await at(61, withHours(1))), 2);
+  // six hours: not at 5 hours 59 minutes
+  assert.equal(breakingCallsOf(await at(359, withHours(6))), 1);
+  assert.equal(breakingCallsOf(await at(361, withHours(6))), 2);
+  // none: the rule is off
+  assert.equal(breakingCallsOf(await at(16, withHours(0))), 2, 'with 0 hours the category never holds a story back');
+  // a config with none of the keys uses the constant, which is 3
+  const bare = { ...cfg, editor: { model: cfg.editor.model, dailyCap: cfg.editor.dailyCap, minGapMinutes: cfg.editor.minGapMinutes, maxStories: cfg.editor.maxStories } };
+  assert.equal(breakingCallsOf(await at(179, bare)), 1);
+  assert.equal(breakingCallsOf(await at(181, bare)), 2);
+});
+
+test('editor: bigCats is read leniently, starts again with the Eastern day, is set by an answered call that was kept too, and a call that threw sets nothing', async () => {
+  const stories = withBig(article(1));
+  // a value that is not an object is empty: the story breaks, and the file holds the new entry only
+  for (const bad of ['internet', 5, null, true, ['internet'], '']) {
+    const x = await go(stories, lately({ bigCats: bad }));
+    assert.equal(x.r.lines[0], 'editor: breaking news: Apple outage, take 1: iCloud is back for some users', JSON.stringify(bad));
+    assert.deepEqual(stateOf(x.s).bigCats, { internet: NOW }, JSON.stringify(bad));
+  }
+  // a time that is not a time is no entry, and the good ones stay as they were
+  const odd = await go(stories, lately({ bigCats: { internet: 'sometime', grid: 7, earth: null, flights: '', ai: {}, space: '2026-11-17T14:30:00.000Z' } }));
+  assert.equal(odd.r.lines[0], 'editor: breaking news: Apple outage, take 1: iCloud is back for some users', 'internet had no time, so it is no entry');
+  assert.deepEqual(stateOf(odd.s).bigCats, { space: '2026-11-17T14:30:00.000Z', internet: NOW });
+  // an entry that is 10 minutes old holds the story back, and the file keeps it
+  const recent = await go(stories, lately({ bigCats: { internet: minutesAfter(-10) } }));
+  assert.equal(recent.r.status, 'skipped');
+  assert.equal(recent.client.calls.length, 0);
+  assert.deepEqual(stateOf(recent.s).bigCats, { internet: minutesAfter(-10) }, 'a skip changes nothing');
+  // an old entry, from 4 hours ago, holds nothing back
+  const old = await go(stories, lately({ bigCats: { internet: minutesAfter(-240) } }));
+  assert.equal(old.r.lines[0], 'editor: breaking news: Apple outage, take 1: iCloud is back for some users');
+  // a new day starts with none: yesterday's entry does not hold today's story back, and the file holds today's only
+  const next = await go(stories, lately({ date: '2026-11-16', bigCats: { internet: minutesAfter(-10), grid: minutesAfter(-10) }, lastCallAt: '2026-11-17T04:00:00.000Z' }));
+  assert.equal(next.r.lines[0], 'editor: breaking news: Apple outage, take 1: iCloud is back for some users');
+  assert.deepEqual(stateOf(next.s).bigCats, { internet: NOW });
+  // an answer that was kept, not written, was read all the same
+  const kept = setup({ stories, state: lately() });
+  const refused = await run(kept, fakeClient(answer('', { stop_reason: 'refusal', usage: usageOf(5000, 0) })));
+  assert.equal(refused.status, 'kept');
+  assert.deepEqual(stateOf(kept).bigCats, { internet: NOW });
+  // a call that threw has read nothing: no entry is made, and the ones that were there stay
+  const down = setup({ stories, state: lately() });
+  assert.equal((await run(down, failing())).status, 'failed');
+  assert.deepEqual(stateOf(down).bigCats, {});
+  const downWith = setup({ stories: withBig(article(1), quake7()), state: lately({ bigCats: { internet: minutesAfter(-200) } }) });
+  assert.equal((await run(downWith, failing())).status, 'failed');
+  assert.deepEqual(stateOf(downWith).bigCats, { internet: minutesAfter(-200) });
+  // a call that sent no big story makes no entry
+  const calm = await go(calmDay(), lately({ lastCallAt: minutesAfter(-90) }));
+  assert.equal(calm.r.status, 'written', calm.r.lines.join(' | '));
+  assert.deepEqual(stateOf(calm.s).bigCats, {});
+});
+
+test('editor: the search and the categories are the editor\'s own bookkeeping, and neither a call that is breaking nor one that is regular sends them to the model', async () => {
+  const s = setup({ stories: withBig(article(1)), state: lately({ bigCats: { grid: minutesAfter(-30) }, bigTerms: ['older search'] }) });
+  const client = fakeClient(answer(GOOD));
+  assert.equal((await run(s, client)).lines[0], 'editor: breaking news: Apple outage, take 1: iCloud is back for some users');
+  putDay(s, withBig(article(1), article(2, 'icloud down'), quake7()));
+  assert.equal((await run(s, client, { now: minutesAfter(20) })).lines[0], 'editor: breaking news: M 7.4 - 80 km SE of Somewhere, Japan');
+  putDay(s, withBig(article(1), article(2, 'icloud down'), quake7(), article(3, 'pixel outage')));
+  const regular = await run(s, client, { now: minutesAfter(100) });
+  assert.equal(regular.status, 'written', regular.lines.join(' | '));
+  assert.ok(regular.lines.every((l) => !l.includes('breaking news')), 'the third call is a regular call');
+  assert.equal(client.calls.length, 3);
+  const allowed = ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo', 'startedHoursAgo', 'trending'];
+  for (const [n, call] of client.calls.entries()) {
+    const body = JSON.parse(call.messages[0].content);
+    assert.deepEqual(Object.keys(body), ['date', 'now', 'score', 'told', 'stories'], `call ${n}`);
+    for (const x of body.stories) assert.ok(Object.keys(x).every((k) => allowed.includes(k)), `call ${n}: ${Object.keys(x).join()}`);
+    const everything = JSON.stringify(call);
+    for (const word of ['trendTerm', 'bigCats', 'bigTerms', 'bigSent', 'apple outage', 'icloud down', 'pixel outage', 'older search']) assert.ok(!everything.includes(word), `call ${n} sends "${word}"`);
+    assert.ok(!everything.includes(NOW) && !everything.includes(minutesAfter(20)), `call ${n} sends a time from the state`);
+  }
+  // the three calls did leave the searches and the times in the state
+  assert.deepEqual(stateOf(s).bigTerms, ['older search', 'apple outage', 'icloud down', 'pixel outage']);
+  assert.deepEqual(Object.keys(stateOf(s).bigCats).sort(), ['earth', 'grid', 'internet']);
+});
+
+test('editor: a big story only sent again starts no quiet hours, so an outage that trends all day does not keep its category quiet all day', async () => {
+  const s = setup({ stories: withBig(article(1)), state: lately() });
+  const client = fakeClient(answer(GOOD));
+  const first = await run(s, client);
+  assert.equal(first.lines[0], 'editor: breaking news: Apple outage, take 1: iCloud is back for some users');
+  assert.deepEqual(stateOf(s).bigCats, { internet: NOW });
+  // two hours on, a regular call sends the same big story again, with one plain story new to the day
+  const plain = story('p1', 'flights', 'Ground stop at a small airport for low clouds');
+  putDay(s, [...withBig(article(1)), plain]);
+  const regular = await run(s, client, { now: minutesAfter(120) });
+  assert.equal(regular.status, 'written', regular.lines.join(' | '));
+  assert.ok(regular.lines.every((l) => !l.includes('breaking news')), regular.lines.join(' | '));
+  assert.equal(sentAt(client, 1)[0].id, 'big1', 'the big story was sent again, first');
+  assert.deepEqual(stateOf(s).bigCats, { internet: NOW }, 'sent again, not sent first: the quiet hours still count from the first call');
+  // 3 hours and 1 minute after the first call, a new big internet story about another search breaks
+  putDay(s, [...withBig(article(1), article(2, 'icloud down')), plain]);
+  const late = await run(s, client, { now: minutesAfter(181) });
+  assert.equal(late.lines[0], 'editor: breaking news: Apple outage, take 2: iCloud is back for some users', late.lines.join(' | '));
+  assert.deepEqual(stateOf(s).bigCats, { internet: minutesAfter(181) });
 });

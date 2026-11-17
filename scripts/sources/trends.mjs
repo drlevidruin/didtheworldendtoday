@@ -7,7 +7,7 @@
 // search as `trendTerm`. The search itself is never a headline. Everything after this (the exclusion filter,
 // the gate, the quality check, the clustering) treats these like any headline, so sports, celebrity and
 // lottery trends drop out there. One difference: a headline that fits no category is filed by its search
-// when that fits one ("apple outage" is internet), see lib/pipeline.mjs.
+// when that fits one ("apple outage" is internet), see lib/pipeline.mjs. Every trend story keeps its search.
 //
 // Like every source it fails soft: a bad answer, a timeout or a block is one line and no items.
 import { XMLParser } from 'fast-xml-parser';
