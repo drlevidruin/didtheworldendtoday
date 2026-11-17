@@ -156,7 +156,7 @@ test('workflow: the Anthropic key is visible to the edition step and to no other
   const names = steps.map((step) => step.split('\n')[0]);
   assert.deepEqual(steps.filter((step) => /ANTHROPIC_API_KEY/.test(step)).map((step) => step.split('\n')[0]), ["Write today's edition"]);
   const edit = steps.find((step) => step.startsWith("Write today's edition"));
-  assert.match(edit, /run: npm run edit\s*\n\s*env:\s*\n\s*ANTHROPIC_API_KEY: \$\{\{ secrets\.ANTHROPIC_API_KEY \}\}/);
+  assert.match(edit, /run: npm run edit\s*\n\s*env:\s*\n\s*ANTHROPIC_API_KEY: \$\{\{ secrets\.ANTHROPIC_API_KEY \|\| secrets\.NTHROPIC_API_KEY \}\}/);
   assert.ok(!/continue-on-error|if:/.test(edit), 'the editor catches its own errors, so the step needs no escape hatch');
   assert.equal(names.indexOf("Write today's edition"), names.indexOf('Update data') + 1, 'right after Update data');
   assert.equal(names.indexOf('Commit data if it changed'), names.indexOf("Write today's edition") + 1, 'the data and the editor state are saved right after the edition step');
@@ -296,7 +296,7 @@ test('workflow: current action versions, and no secret besides the optional X to
   const uses = [...workflow.matchAll(/uses: ([\w.-]+\/[\w.-]+)@(v\d+)/g)].map((m) => `${m[1]}@${m[2]}`);
   assert.deepEqual(uses, ['actions/checkout@v7', 'actions/setup-node@v7', 'actions/configure-pages@v6', 'actions/upload-pages-artifact@v5', 'actions/deploy-pages@v5']);
   const secrets = [...workflow.matchAll(/secrets\.(\w+)/g)].map((m) => m[1]);
-  assert.deepEqual(secrets, ['X_BEARER_TOKEN', 'ANTHROPIC_API_KEY']);
+  assert.deepEqual(secrets, ['X_BEARER_TOKEN', 'ANTHROPIC_API_KEY', 'NTHROPIC_API_KEY']);
   assert.ok(!/pull_request_target/.test(workflow));
   assert.ok(!/\$\{\{\s*github\.event\.(?:issue|pull_request|comment)/.test(workflow), 'no untrusted text is put into a script');
 });

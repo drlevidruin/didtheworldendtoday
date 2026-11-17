@@ -52,11 +52,12 @@ jobs:
           X_DAILY_BUDGET_USD: ${{ vars.X_DAILY_BUDGET_USD }}
 
       # The Anthropic key is visible to this step and no other. The editor catches
-      # everything and exits 0, so a bad night here never stops the build.
+      # everything and exits 0, so a bad night here never stops the build. The key was
+      # first saved as NTHROPIC_API_KEY, its A missing, so either name works.
       - name: Write today's edition
         run: npm run edit
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY || secrets.NTHROPIC_API_KEY }}
 
       # Saved before the build and the tests, so a run that fails there still keeps its data
       # and the editor's call count.
