@@ -453,7 +453,7 @@ test('editor: the prompt asks for a label, a line and a one-sentence headline, i
   );
   assert.ok(
     p.includes(
-      '\n2. Pick 4 to 6 events (3 on a quiet day). Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics. Pick the newest: take events from the last 12 hours first (hoursAgo 12 or less), and an older one only when that leaves fewer than 4. Only today counts: skip an event that was over before today began, even when today\'s headlines are about it (its cause, an investigation, the cleanup, what changes now, how people coped). startedHoursAgo and now show when it began, and the headlines show whether it is still going on. An event still going on today counts, and so does one that happened again today. Only real events: each needs two or more outlets, one outlet everybody knows, or an official reading (USGS, NOAA, NASA, the FAA, a status page, Downdetector). Skip a lone claim from a site people don\'t know. A trending event that is a near miss always makes the list. Skip any event already in told, unless something new and bigger happened to it, and then the line says what is new.\n',
+      '\n2. Pick 4 to 6 events (3 on a quiet day). Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics. Pick the newest: take events from the last 12 hours first (hoursAgo 12 or less), and an older one only when that leaves fewer than 4. Only today counts: skip an event that was over before today began, even when today\'s headlines are about it (its cause, an investigation, the cleanup, what changes now, how people coped). startedHoursAgo and now show when it began, and the headlines show whether it is still going on. An event still going on today counts, and so does one that happened again today. Only real events: each needs two or more outlets, one outlet everybody knows, or an official reading (USGS, NOAA, NASA, the FAA, a status page, Downdetector). Skip a lone claim from a site people don\'t know. Flares, solar storms, quakes and asteroids are measured. A headline about one counts only when the input also has a reading of it from NOAA SWPC, USGS or NASA/JPL. Without one, it is about an older one. A trending event that is a near miss always makes the list. Skip any event already in told, unless something new and bigger happened to it, and then the line says what is new.\n',
     ),
     'rule 2 asks for the newest events, only today, only real events, always the trending near misses, and no repeats',
   );
@@ -951,7 +951,10 @@ test('editor: the prompt tells it when an event began and what the time is, that
     "Only real events: each needs two or more outlets, one outlet everybody knows, or an official reading (USGS, NOAA, NASA, the FAA, a status page, Downdetector). Skip a lone claim from a site people don't know.";
   assert.equal(p.split(today).length, 2, 'once');
   assert.equal(p.split(real).length, 2, 'once');
-  assert.ok(p.includes(`and an older one only when that leaves fewer than 4. ${today} ${real} A trending event that is a near miss always makes the list.`), 'in rule 2, after "fewer than 4.", today first and then real events, before the trending rule');
+  const measured =
+    'Flares, solar storms, quakes and asteroids are measured. A headline about one counts only when the input also has a reading of it from NOAA SWPC, USGS or NASA/JPL. Without one, it is about an older one.';
+  assert.equal(p.split(measured).length, 2, 'once');
+  assert.ok(p.includes(`and an older one only when that leaves fewer than 4. ${today} ${real} ${measured} A trending event that is a near miss always makes the list.`), 'in rule 2, after "fewer than 4.": today, real events, measured events, then the trending rule');
   assert.ok(!p.includes(EM) && !p.includes(String.fromCharCode(0x2013)), 'still no em or en dash');
 });
 
@@ -1336,6 +1339,6 @@ test('editor: the prompt tells it what trending is, and that a trending near mis
   assert.ok(p.includes('stories: [{id, cat, title, source, outlets, serious, hoursAgo, startedHoursAgo, trending}]'), 'the stories list names trending');
   const rule = 'A trending event that is a near miss always makes the list.';
   assert.equal(p.split(rule).length, 2, 'once');
-  assert.ok(p.includes(`Skip a lone claim from a site people don't know. ${rule} Skip any event already in told`), 'in rule 2, after the real-events rule and before the told rule');
+  assert.ok(p.includes(`Without one, it is about an older one. ${rule} Skip any event already in told`), 'in rule 2, after the real and measured rules and before the told rule');
   assert.ok(!p.includes(EM) && !p.includes(String.fromCharCode(0x2013)), 'still no em or en dash');
 });
