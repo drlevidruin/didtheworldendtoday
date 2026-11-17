@@ -16,7 +16,7 @@ import { build, publicCopy } from '../scripts/build.mjs';
 import { runUpdate } from '../scripts/update.mjs';
 import { createServer, resolveStatic, SUBFOLDER } from '../scripts/serve.mjs';
 import * as copy from '../scripts/templates/copy.mjs';
-import { almanacRows, headline as headlineRow, headlines as headlineRows, row as dayRow, rows as dayRows } from '../scripts/templates/parts.mjs';
+import { almanacRows, headline as headlineRow, headlines as headlineRows, row as dayRow, rows as dayRows, rowsMore } from '../scripts/templates/parts.mjs';
 import { CSP } from '../scripts/templates/layout.mjs';
 import { QUIPS, QUIP_CSP, QUIP_SCRIPT, quipFor } from '../scripts/templates/quips.mjs';
 import { feedXml } from '../scripts/templates/feed.mjs';
@@ -539,6 +539,10 @@ test('a very busy day stays under 100 KB: the day page leaves its lowest headlin
   assert.ok(Buffer.byteLength(home) < 100 * 1000, `index.html is ${Buffer.byteLength(home)} bytes`);
   assert.equal((home.match(/<li class="row/g) || []).length, cfg.edition.fallbackRows, 'the homepage shows a handful of rows, not the day');
   assert.ok(home.includes('Every headline we read today (200)'), 'and the footer says how many there are, with a door to the day page that lists them');
+  // today's See more holds the other headlines, and a page over its budget gives up the lowest of them
+  const homeHeads = (home.match(/<li class="hd/g) || []).length;
+  assert.ok(homeHeads >= 10 && homeHeads < 195, `${homeHeads} of the other headlines are on the homepage`);
+  assert.ok(home.includes(`<summary>See ${homeHeads} more headlines</summary>`), 'and the See more counts the ones that are there');
   const day = read('day/2026-11-16/index.html', out.dist);
   assert.ok(Buffer.byteLength(day) < 100 * 1000, `the day page is ${Buffer.byteLength(day)} bytes`);
   const shown = (day.match(/<li class="hd/g) || []).length;
@@ -548,6 +552,8 @@ test('a very busy day stays under 100 KB: the day page leaves its lowest headlin
   const small = build(busy, { siteUrl: SITE, config: EARLY, pageBudget: 50 * 1000 });
   assert.ok(fs.statSync(path.join(small.dist, 'day', '2026-11-16', 'index.html')).size <= 50 * 1000, 'a smaller budget trims the day page further');
   assert.ok(fs.statSync(path.join(small.dist, 'index.html')).size <= 50 * 1000, 'and the homepage stays inside it');
+  const smallHeads = (read('index.html', small.dist).match(/<li class="hd/g) || []).length;
+  assert.ok(smallHeads >= 1 && smallHeads < homeHeads, `a smaller budget trims the homepage's headlines too: ${smallHeads}`);
 });
 
 
@@ -973,13 +979,13 @@ test('no page says chip, Doom Bingo, Vital signs, The receipts or Check again, a
 
 // ---- the share text -----------------------------------------------------------------------------------------
 
-test('the share text is the question, the emoji of the rows in order, the Doom Score with ten squares, and the day address', () => {
+test('the share text is the question, the emoji of the first five rows in order, the Doom Score with ten squares, and the day address', () => {
   const home = read('index.html', edDist);
   const squares = (n) => '⬛'.repeat(n) + '🟨'.repeat(10 - n);
   const full = attr(home, 'data-share-full').split('\n');
   assert.deepEqual(full, [
     'Did the world end today? ALMOST.',
-    ED16.items.map((i) => i.emoji).join(' '),
+    ED16.items.slice(0, 5).map((i) => i.emoji).join(' '),
     `Doom Score ${latest.score} ${squares(Math.round(latest.score / 10))}`,
     'didtheworldendtoday.com/day/2026-11-16/',
   ]);
@@ -1803,6 +1809,250 @@ test('the homepage shows today and up to six earlier days, yesterday open and th
   auditSite(nine.dist, { label: 'nine days' });
 });
 
+// ---- phase 12: five rows, then a See more -----------------------------------------------------------
+//
+// A list of rows shows its first five and keeps the rest behind one See more, numbered on. Today's See more also holds
+// the day's other headlines, so today's share button sits under all of it.
+
+const EMOJI8 = ['✈️', '🖥️', '🔓', '📉', '☄️', '🌋', '⚡', '🔌'];
+const CATS5 = ['internet', 'grid', 'hacks', 'markets', 'flights'];
+
+// A copy of the seeded site where each given day has `near` stories that its edition names as its near misses, and
+// `other` stories that nothing names. A day with no near misses has no edition, so it shows plain headlines.
+function crowdedSite(days) {
+  const r = copyRoot(root);
+  const editions = {};
+  for (const { date, near = 0, other = 0 } of days) {
+    const make = (kind, words, n) =>
+      Array.from({ length: n }, (_, i) => ({
+        id: `${date}:${kind}${i}`,
+        kind: 'news',
+        cat: CATS5[i % CATS5.length],
+        title: `${words} number ${i + 1} of ${date} with a headline of its own`,
+        url: `https://pub${i}.example/${date}/${kind}/${i}`,
+        source: PUBS[i % PUBS.length],
+        publishedAt: `${date}T20:00:00.000Z`,
+        firstSeenAt: `${date}T20:00:00.000Z`,
+        outlets: 2,
+        outletNames: ['a', 'b'],
+        score: 100 - i - (kind === 'o' ? 50 : 0),
+      }));
+    const nears = make('n', 'Near miss', near);
+    const stories = [...nears, ...make('o', 'Other headline', other)];
+    const file = dayFile(r, date);
+    if (fs.existsSync(file)) {
+      edit(file, (d) => {
+        d.stories = stories;
+      });
+    } else fs.writeFileSync(file, JSON.stringify({ date, score: 20, fired: ['internet'], bumps: [], change: null, updatedAt: `${date}T23:59:00.000Z`, stories }));
+    if (date === latest.etDate) {
+      edit(latestFile(r), (l) => {
+        l.stories = stories;
+      });
+    }
+    if (near) {
+      editions[date] = {
+        date,
+        by: 'hand',
+        writtenAt: `${date}T23:00:00.000Z`,
+        headline: 'A busy day of near misses came and went. Still here.',
+        items: nears.map((s, i) => itemOf(s, EMOJI8[i % EMOJI8.length], `Near miss ${i + 1}`, `Close call ${i + 1} passed without a scratch.`)),
+      };
+    }
+  }
+  writeEditions(r, editions);
+  return { root: r, ...buildAt(r) };
+}
+
+// The <details> that starts at `from`, down to the </details> that closes it, with any details inside it.
+function detailsAt(html, from) {
+  let depth = 0;
+  for (const m of html.slice(from).matchAll(/<details\b|<\/details>/g)) {
+    depth += m[0] === '</details>' ? -1 : 1;
+    if (depth === 0) return html.slice(from, from + m.index + m[0].length);
+  }
+  return null;
+}
+const seeMoreIn = (html) => {
+  const at = html.indexOf('<details class="more">');
+  return at < 0 ? null : detailsAt(html, at);
+};
+const summaryOf = (details) => unesc((details.match(/<summary>([^<]*)<\/summary>/) || [])[1]);
+const ranksIn = (html) => rowsOf(html).map((r) => rowFacts(r).rank);
+const titlesIn = (html) => headsOf(html).map((h) => headFacts(h).title);
+const insideOf = (details) => details.slice(details.indexOf('</summary>') + '</summary>'.length);
+
+test('phase 12: today shows five near misses, then a See more with the rest and the day\'s other headlines, and the share button is under all of it', () => {
+  const site = crowdedSite([{ date: '2026-11-16', near: 8, other: 20 }]);
+  const home = read('index.html', site.dist);
+  assert.equal(readJson(path.join(site.dist, 'api', 'today.json')).stories.length, 28, 'the day has 8 near misses and 20 other stories');
+  const [today] = blocksOf(home);
+  // the first five rows, as they were, then the See more
+  const door = today.indexOf('<details class="more">');
+  assert.ok(door > 0, 'a See more');
+  assert.deepEqual(ranksIn(today.slice(0, door)), ['1', '2', '3', '4', '5']);
+  assert.ok(today.slice(0, door).trimEnd().endsWith('</ol>'), 'right after row 5');
+  const more = seeMoreIn(today);
+  assert.equal(summaryOf(more), 'See 23 more', 'it counts all it opens: three near misses and twenty headlines');
+  // inside: rows 6 to 8 in the same markup, and only the first row of the day is the closest call
+  const inside = insideOf(more);
+  assert.deepEqual(ranksIn(inside), ['6', '7', '8']);
+  assert.deepEqual(rowsOf(inside).map((r) => rowFacts(r).label), ['Near miss 6', 'Near miss 7', 'Near miss 8']);
+  assert.ok(rowsOf(today).map(rowFacts).every((f, i) => f.best === (i === 0) && !f.plain), 'only #1 is the closest call');
+  // then a small heading and the day's other headlines, without the stories the near misses are made of
+  assert.equal((today.match(/<h3 class="sub">More from today<\/h3>/g) || []).length, 1, 'one small heading');
+  assert.ok(inside.lastIndexOf('<li class="row') < inside.indexOf('<h3 class="sub">') && inside.indexOf('<h3 class="sub">') < inside.indexOf('<li class="hd'), 'near misses, the heading, then the headlines');
+  const titles = titlesIn(inside);
+  assert.equal(titles.length, 20, 'the twenty other headlines');
+  assert.equal(new Set(titles).size, 20, 'each once');
+  assert.ok(titles.every((t) => t.startsWith('Other headline number ')), `not one of the eight near misses' stories: ${titles}`);
+  assert.ok(!today.includes('Near miss number'), "the near misses' own headlines are not repeated below them");
+  // the list is the one a day page shows: ten show, the rest wait behind their own fold
+  const fold = detailsAt(inside, inside.indexOf('<details class="more">'));
+  assert.equal(summaryOf(fold), 'Show 10 more headlines');
+  assert.equal(titlesIn(inside.slice(0, inside.indexOf('<details'))).length, 10, 'ten shown first');
+  assert.equal(titlesIn(fold).length, 10, 'and ten in the fold');
+  assert.equal((today.match(/<details/g) || []).length, 2, 'the See more and the fold inside it');
+  // the share button is under all of it, and the way to every headline is the footer's alone
+  assert.equal((today.match(/data-act="share"/g) || []).length, 1);
+  assert.ok(today.indexOf('data-act="share"') > today.lastIndexOf('</details>'), 'the share button comes after the See more');
+  assert.ok(!today.includes('class="all"') && !today.includes('#all'), "today's block has no link of its own to every headline");
+  has(home, '<p class="all"><a href="./day/2026-11-16/#all">Every headline we read today (28)</a></p>');
+  assert.equal((home.match(/More from today/g) || []).length, 1, 'said once on the page');
+  auditSite(site.dist, { label: 'a crowded day' });
+});
+
+test('phase 12: eight near misses and nothing else read "See 3 more near misses" with rows 6 to 8, and one left reads "See 1 more near miss"', () => {
+  for (const [near, summary, ranks] of [[8, 'See 3 more near misses', ['6', '7', '8']], [6, 'See 1 more near miss', ['6']]]) {
+    const [today] = blocksOf(read('index.html', crowdedSite([{ date: '2026-11-16', near }]).dist));
+    assert.deepEqual(ranksIn(today.slice(0, today.indexOf('<details'))), ['1', '2', '3', '4', '5'], `${near} near misses: five rows first`);
+    const more = seeMoreIn(today);
+    assert.equal(summaryOf(more), summary);
+    assert.deepEqual(ranksIn(insideOf(more)), ranks, `${near} near misses: numbered on from 6`);
+    assert.ok(!more.includes('<h3') && !more.includes('<li class="hd') && !more.includes('<details', 10), 'only rows are in it: no heading, no headlines, no fold');
+    assert.ok(today.indexOf('data-act="share"') > today.lastIndexOf('</details>'), 'the share button is under it');
+  }
+});
+
+test('phase 12: exactly five near misses, or fewer, have no See more at all', () => {
+  for (const near of [3, 5]) {
+    const [today] = blocksOf(read('index.html', crowdedSite([{ date: '2026-11-16', near }]).dist));
+    assert.equal(rowsOf(today).length, near);
+    assert.ok(!today.includes('<details') && !today.includes('See ') && !today.includes('More from today'), `${near} near misses and no other headline: nothing to open`);
+  }
+});
+
+test('phase 12: five near misses and other headlines make a See more of headlines alone, and one headline reads "See 1 more headline"', () => {
+  for (const [other, summary, fold] of [[12, 'See 12 more headlines', 'Show 2 more headlines'], [1, 'See 1 more headline', null]]) {
+    const [today] = blocksOf(read('index.html', crowdedSite([{ date: '2026-11-16', near: 5, other }]).dist));
+    assert.equal(rowsOf(today).length, 5, 'the five near misses, and no others');
+    const more = seeMoreIn(today);
+    assert.equal(summaryOf(more), summary);
+    const inside = insideOf(more);
+    assert.equal(rowsOf(inside).length, 0, 'no near miss is left to list');
+    assert.ok(inside.trimStart().startsWith('<h3 class="sub">More from today</h3>'), 'the small heading, then the headlines');
+    assert.equal(titlesIn(inside).length, other);
+    assert.equal(inside.includes('<details'), Boolean(fold));
+    if (fold) assert.equal(summaryOf(detailsAt(inside, inside.indexOf('<details'))), fold);
+  }
+});
+
+test('phase 12: a day with no edition works the same way: five plain rows, then a See more of the day\'s other headlines', () => {
+  const home = read('index.html');
+  const [today] = blocksOf(home);
+  const left = stored16.stories.length - cfg.edition.fallbackRows;
+  assert.equal(rowsOf(today.slice(0, today.indexOf('<details'))).length, cfg.edition.fallbackRows, 'five plain rows first, as before');
+  const more = seeMoreIn(today);
+  assert.equal(summaryOf(more), `See ${left} more headlines`, 'only headlines are left');
+  const inside = insideOf(more);
+  assert.equal(rowsOf(inside).length, 0);
+  assert.equal(titlesIn(inside).length, left);
+  const rowTitles = factsIn(today).map((f) => f.label);
+  assert.ok(rowTitles.every((t) => !titlesIn(inside).includes(t)), 'a story that is a plain row is not listed again');
+  assert.ok(today.indexOf('data-act="share"') > today.lastIndexOf('</details>'), 'the share button is under it');
+  has(home, `Every headline we read today (${stored16.stories.length})`);
+});
+
+test('phase 12: the share text names the emoji of the first five rows only, so it stays one short line', () => {
+  const site = crowdedSite([{ date: '2026-11-16', near: 8, other: 20 }]);
+  for (const page of ['index.html', 'day/2026-11-16/index.html']) {
+    const lines = attr(read(page, site.dist), 'data-share-full').split('\n');
+    assert.equal(lines.length, 4, page);
+    assert.equal(lines[1], EMOJI8.slice(0, 5).join(' '), `${page}: five emoji when there are eight items`);
+    assert.equal(attr(read(page, site.dist), 'data-share-text').split('\n')[1], lines[1], `${page}: and the share sheet gets the same line`);
+  }
+});
+
+test('phase 12: a day page and the earlier days on the homepage show five near misses and a See more, and the day page keeps every headline in its own list', () => {
+  const site = crowdedSite([
+    { date: '2026-11-16', near: 8, other: 20 },
+    { date: '2026-11-15', near: 8, other: 4 },
+    { date: '2026-11-14', near: 8, other: 4 },
+  ]);
+  // the day page: the rows, five and a See more of the other three near misses, and then every headline in its own list
+  const day = read('day/2026-11-16/index.html', site.dist);
+  const rowsPart = day.slice(day.indexOf('<section class="day" id="rows">'), day.indexOf('<section id="all">'));
+  assert.deepEqual(ranksIn(rowsPart.slice(0, rowsPart.indexOf('<details'))), ['1', '2', '3', '4', '5']);
+  const dayMore = seeMoreIn(rowsPart);
+  assert.equal(summaryOf(dayMore), 'See 3 more near misses', 'rows only: the day page lists the headlines below');
+  assert.deepEqual(ranksIn(insideOf(dayMore)), ['6', '7', '8']);
+  assert.ok(!dayMore.includes('<li class="hd') && !day.includes('More from today'), 'no headlines in it');
+  assert.ok(rowsPart.indexOf('data-act="share"') > rowsPart.lastIndexOf('</details>'), 'the share button is under it');
+  const all = day.slice(day.indexOf('<section id="all">'));
+  assert.equal(titlesIn(all).length, 28, 'every headline of the day, the near misses too, in the list that was always there');
+  assert.equal(summaryOf(seeMoreIn(all)), 'Show 18 more headlines', 'with its own fold');
+  // the homepage: yesterday open, the day before folded, and the same five and See more in both
+  const home = read('index.html', site.dist);
+  const [, yesterday, older] = blocksOf(home);
+  assert.ok(!yesterday.includes('<details class="dd">'), "yesterday's rows are open");
+  assert.deepEqual(ranksIn(yesterday.slice(0, yesterday.indexOf('<details'))), ['1', '2', '3', '4', '5']);
+  assert.equal(summaryOf(seeMoreIn(yesterday)), 'See 3 more near misses', 'an earlier day has no headlines in its See more');
+  assert.ok(!yesterday.includes('<li class="hd') && !yesterday.includes('More from today'));
+  const dd = detailsAt(older, older.indexOf('<details class="dd">'));
+  assert.equal(summaryOf(dd), 'Show the 8 near misses', 'the fold keeps its button');
+  const olderBody = insideOf(dd);
+  assert.deepEqual(ranksIn(olderBody.slice(0, olderBody.indexOf('<details'))), ['1', '2', '3', '4', '5'], 'inside the fold: five rows');
+  const olderMore = seeMoreIn(olderBody);
+  assert.equal(summaryOf(olderMore), 'See 3 more near misses', 'and the See more');
+  assert.deepEqual(ranksIn(insideOf(olderMore)), ['6', '7', '8']);
+  // only the first row of a day is the closest call, wherever the row sits
+  for (const block of blocksOf(home)) assert.deepEqual(rowsOf(block).map((r) => rowFacts(r).best), rowsOf(block).map((_, i) => i === 0), 'only #1 is red');
+});
+
+test('phase 12: the words and the list of a See more: near misses, plain top stories, and what is left to count', () => {
+  assert.equal(copy.ROWS_SHOWN, 5);
+  assert.equal(copy.MORE_TODAY, 'More from today');
+  assert.deepEqual(
+    [copy.seeMore(3, 0, true), copy.seeMore(1, 0, true), copy.seeMore(3, 0, false), copy.seeMore(1, 0, false), copy.seeMore(0, 84, true), copy.seeMore(0, 1, false), copy.seeMore(3, 84, true), copy.seeMore(1, 1, false)],
+    ['See 3 more near misses', 'See 1 more near miss', 'See 3 more top stories', 'See 1 more top story', 'See 84 more headlines', 'See 1 more headline', 'See 87 more', 'See 2 more'],
+  );
+  const ctx = { byId: new Map(), quietMode: false, quietCaption: '', quietLink: '', quietLinkIntl: '', plain: true };
+  const plainRows = (n) => Array.from({ length: n }, (_, i) => ({ emoji: '📰', label: '', line: `Headline ${i + 1}`, ids: [`p${i}`], quiet: false, title: `Headline ${i + 1}`, url: `https://pub.example/${i}`, source: 'Pub A', outlets: 1 }));
+  // plain rows: no rank, "top stories", and the rows after the fifth are in the See more
+  const eight = rowsMore(plainRows(8), ctx, { ranked: false });
+  assert.equal(summaryOf(seeMoreIn(eight)), 'See 3 more top stories');
+  assert.equal(rowsOf(eight.slice(0, eight.indexOf('<details'))).length, 5);
+  assert.equal(rowsOf(insideOf(seeMoreIn(eight))).length, 3);
+  assert.ok(!eight.includes('class="rn"') && rowsOf(eight).every((r) => rowFacts(r).plain && !rowFacts(r).best), 'no rank and no closest call');
+  assert.ok(!rowsMore(plainRows(5), ctx, { ranked: false }).includes('<details'), 'five plain rows are all there is');
+  // plain rows with other headlines: both are counted
+  const both = rowsMore(plainRows(7), ctx, { ranked: false, others: [{ id: 'x', title: 'Other one', url: 'https://pub.example/x', source: 'Pub B', outlets: 1 }, { id: 'y', title: 'Other two', url: 'https://pub.example/y', source: 'Pub B', outlets: 1 }] });
+  assert.equal(summaryOf(seeMoreIn(both)), 'See 4 more');
+  // ranked rows number on from 6 and mark nothing red but the first
+  const ranked = rowsMore(plainRows(7), { ...ctx, plain: false }, { ranked: true });
+  assert.equal(summaryOf(seeMoreIn(ranked)), 'See 2 more near misses');
+  assert.deepEqual(ranksIn(ranked), ['1', '2', '3', '4', '5', '6', '7']);
+  assert.deepEqual(rowsOf(ranked).map((r) => rowFacts(r).best), [true, false, false, false, false, false, false]);
+  assert.deepEqual(ranksIn(dayRows(plainRows(2), { ...ctx, plain: false }, 5)), ['6', '7'], 'rows(items, ctx, from) carries the rank on');
+});
+
+test('phase 12: a refresh swaps the whole page, so a See more that closes again is all that changes', () => {
+  const code = fs.readFileSync(path.join(REPO, 'assets', 'app.js'), 'utf8');
+  assert.ok(code.includes("old.replaceWith(doc.adoptNode(fresh))") && code.includes("next.querySelector('#main')"), 'the new #main replaces the old one');
+  assert.ok(code.includes("doc.addEventListener('click', onClick)") && code.includes("closest('[data-act]')"), 'taps are heard by the document, so a swapped page needs no new listeners');
+  for (const token of ['details', 'summary', '.more', '.rows', '.heads']) assert.ok(!code.includes(token), `the script never touches ${token}, so it cannot be broken by a See more`);
+});
+
 test('a new day with nothing filed yet shows "Nothing new yet today." and stays out of the Almanac and the feed', () => {
   const r = copyRoot(edRoot);
   edit(latestFile(r), (l) => {
@@ -2152,13 +2402,12 @@ test('the red is used in two places only: the Doom Score number on the board and
   assert.ok(!plain.includes('class="rn"') && !plain.includes('class="row best') && !plain.includes('CLOSEST CALL'), 'a plain day has nothing numbered and nothing red');
   const plainDay = read('day/2026-11-16/index.html');
   assert.ok(!plainDay.includes('class="rn"') && !plainDay.includes('class="row best'), 'and neither does its day page');
-  // a ranked day marks one row, the first; the page holds two ranked days, so two lists
+  // a ranked day marks one row, the first. The page holds two ranked days: today's six rows are five and then the sixth
+  // in its See more, which marks none, and yesterday's three are one list.
   const lists = read('index.html', edDist).match(/<ol class="rows" role="list">[\s\S]*?<\/ol>/g) || [];
-  assert.equal(lists.length, 2, 'today and yesterday, both ranked');
-  for (const list of lists) {
-    assert.equal((list.match(/class="row best/g) || []).length, 1, 'one closest call in a ranked list');
-    assert.ok(list.startsWith('<ol class="rows" role="list">\n<li class="row best'), 'and it is the first row');
-  }
+  assert.equal(lists.length, 3, "today's five, today's sixth in its See more, and yesterday's three");
+  assert.deepEqual(lists.map((list) => (list.match(/class="row best/g) || []).length), [1, 0, 1], 'one closest call a day, and none in a list that carries on');
+  for (const list of [lists[0], lists[2]]) assert.ok(list.startsWith('<ol class="rows" role="list">\n<li class="row best'), 'it is the first row');
 });
 
 // Every file we wrote that draws or styles something, read as text.

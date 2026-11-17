@@ -9,7 +9,7 @@
 // A row of near misses, left to right: its rank (red for the closest call), its emoji, then the
 // label, the line and the source. A day that has no edition is not ranked: its rows have no rank and
 // show the publisher's own headline in place of a label. In quiet mode no emoji is drawn at all.
-import { HELP_INTL, HELP_US, HEADLINES_SHOWN, headlineMeta, moreHeadlines, rowDate, rowSource } from './copy.mjs';
+import { HELP_INTL, HELP_US, HEADLINES_SHOWN, MORE_TODAY, ROWS_SHOWN, headlineMeta, moreHeadlines, rowDate, rowSource, seeMore } from './copy.mjs';
 import { esc, num, url } from './esc.mjs';
 import { quietCard } from '../lib/quietcards.mjs';
 import { quietLinkFor } from '../lib/editions.mjs';
@@ -77,8 +77,9 @@ ${card}${help ? `\n${help}` : ''}
 </li>`;
 }
 
-export function rows(items, ctx) {
-  return `<ol class="rows" role="list">\n${items.map((item, i) => row(item, i, ctx)).join('\n')}\n</ol>`;
+// from is how many rows came before these, so a list that carries on from row 5 starts at rank 6.
+export function rows(items, ctx, from = 0) {
+  return `<ol class="rows" role="list">\n${items.map((item, i) => row(item, from + i, ctx)).join('\n')}\n</ol>`;
 }
 
 // ---- the board of ten squares -------------------------------------------------------------
@@ -109,6 +110,20 @@ export function headlines(stories, ctx, shown = HEADLINES_SHOWN) {
   const rest = stories.slice(shown);
   if (!rest.length) return list(stories);
   return `${list(stories.slice(0, shown))}\n<details class="more">\n<summary>${esc(moreHeadlines(rest.length))}</summary>\n${list(rest)}\n</details>`;
+}
+
+// ---- a list of rows with its See more ---------------------------------------------------
+// The first ROWS_SHOWN rows show. The rest wait behind one "See N more" and carry on from the next rank, in the
+// same markup (only the first row of all is the closest call). Today's block also hands over the day's other
+// headlines: they wait behind the same door, under a small heading, in the list the day page shows.
+// ranked: the rows are near misses (an edition), not plain headlines. others: headlines to put behind the door.
+
+export function rowsMore(items, ctx, { ranked = true, others = [] } = {}) {
+  const first = rows(items.slice(0, ROWS_SHOWN), ctx);
+  const rest = items.slice(ROWS_SHOWN);
+  if (!rest.length && !others.length) return first;
+  const inside = [rest.length ? rows(rest, ctx, ROWS_SHOWN) : '', others.length ? `<h3 class="sub">${esc(MORE_TODAY)}</h3>\n${headlines(others, ctx)}` : ''].filter(Boolean).join('\n');
+  return `${first}\n<details class="more">\n<summary>${esc(seeMore(rest.length, others.length, ranked))}</summary>\n${inside}\n</details>`;
 }
 
 // ---- the Almanac -------------------------------------------------------------------

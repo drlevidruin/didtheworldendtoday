@@ -125,7 +125,8 @@ a.band{text-decoration:none}
 .hd .help{margin-bottom:8px}
 .hd .cap:last-child{margin-bottom:16px}
 .more{margin-top:12px}
-.more .heads{margin-top:12px}
+.more .rows,.more .heads{margin-top:12px}
+.sub{margin-top:24px;font:400 20px/1.1 var(--disp);text-transform:uppercase;color:var(--ink)}
 .dnav{margin-top:32px;display:flex;justify-content:space-between;gap:16px}
 .dnav a{display:inline-flex;align-items:center;min-height:48px;font:600 16px/1.4 var(--text);color:var(--ink);text-decoration:underline;text-underline-offset:.2em}
 

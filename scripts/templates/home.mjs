@@ -7,6 +7,10 @@
 // for another day, that day's near misses, and every headline we read that day. One share button a
 // page, right after the rows it shares.
 //
+// A list of near misses shows its first five and keeps the rest behind a See more. Today's See more also
+// holds the day's other headlines, so the share button is under all of it. A day page keeps every headline
+// in its own list further down.
+//
 // A day is what resolveDays() hands over (scripts/lib/editions.mjs), plus the
 // numbers the build adds:
 //   { date, score, change, fired, headline, by, rows[], stories[], total, byId }
@@ -23,6 +27,7 @@ import {
   NOTHING_YET,
   OLDER_DAYS,
   QUIET_DESCRIPTION,
+  ROWS_SHOWN,
   SHARE_DAY,
   SHARE_TODAY,
   STALE_AFTER_HOURS,
@@ -46,7 +51,7 @@ import {
 } from './copy.mjs';
 import { esc, num } from './esc.mjs';
 import { footer, page } from './layout.mjs';
-import { headlines, rows, squares } from './parts.mjs';
+import { headlines, rowsMore, squares } from './parts.mjs';
 import { QUIP_SCRIPT, quipFor } from './quips.mjs';
 import { HOUR_MS, addDays } from '../lib/time.mjs';
 
@@ -78,7 +83,7 @@ function shareAttrs(d, v) {
     categories: v.categories,
     host: v.siteHost,
     quiet: v.quiet.quiet,
-    emojis: d.rows.map((r) => r.emoji),
+    emojis: d.rows.slice(0, ROWS_SHOWN).map((r) => r.emoji),
     cap: num(v.doomCap, 99),
   };
   return ` data-share-text="${esc(shareText({ ...args, withUrl: false }))}" data-share-full="${esc(shareText(args))}" data-share-url="${esc(`${v.siteUrl}/day/${d.date}/`)}"`;
@@ -140,15 +145,24 @@ ${board(d.score, cap)}
 
 const noRows = (isToday) => `<p class="empty">${esc(isToday ? NOTHING_YET : NOTHING_FILED)}</p>`;
 
-// Today's block starts with the line over its rows and ends with the one share button of the page. An
-// earlier day keeps its kicker, its date, its headline and its score (today's are in the sign above).
-// Yesterday's rows show; the days before it fold their rows behind a button.
+// The headlines of today that are not already one of its near misses (a near miss holds the ids of every story
+// it was made from). They wait behind today's See more.
+function otherHeadlines(d) {
+  const told = new Set(d.rows.flatMap((r) => (Array.isArray(r.ids) ? r.ids : [])));
+  return (Array.isArray(d.stories) ? d.stories : []).filter((s) => !told.has(s.id));
+}
+
+// Today's block starts with the line over its rows and ends with the one share button of the page. Its
+// first five rows show; the rest of the near misses and then the day's other headlines wait behind a See more
+// above the button. An earlier day keeps its kicker, its date, its headline and its score (today's are in the
+// sign above). Yesterday's rows show; the days before it fold their rows behind a button. Any list of more than
+// five rows keeps the rest behind its own See more.
 function dayBlock(d, v) {
   const isToday = d.date === v.today;
   const ranked = isRanked(d, v);
   const ctx = rowContext(d, v);
   if (isToday) {
-    const body = d.rows.length ? `<h2 class="sec">${esc(sectionLine({ today: true, ranked }))}</h2>\n${rows(d.rows, ctx)}` : noRows(true);
+    const body = d.rows.length ? `<h2 class="sec">${esc(sectionLine({ today: true, ranked }))}</h2>\n${rowsMore(d.rows, ctx, { ranked, others: otherHeadlines(d) })}` : noRows(true);
     return `<section class="day" id="today">
 ${body}
 <div class="df">
@@ -165,8 +179,8 @@ ${body}
 <p class="ds">Doom Score ${score} <span class="sq" aria-hidden="true">${squares(filledSquares(score))}</span></p>`;
   let body;
   if (!d.rows.length) body = noRows(false);
-  else if (open) body = rows(d.rows, ctx);
-  else body = `<details class="dd">\n<summary>${esc(showRows(d.rows.length, ranked))}</summary>\n${rows(d.rows, ctx)}\n</details>`;
+  else if (open) body = rowsMore(d.rows, ctx, { ranked });
+  else body = `<details class="dd">\n<summary>${esc(showRows(d.rows.length, ranked))}</summary>\n${rowsMore(d.rows, ctx, { ranked })}\n</details>`;
   return `<section class="day" id="day-${esc(d.date)}">
 ${head}
 ${body}
@@ -195,7 +209,8 @@ function dayBody(v) {
   const live = d.date === v.today;
   const ctx = rowContext(d, v);
   const parts = [];
-  const list = d.rows.length ? `<h2 class="sec">${esc(sectionLine({ today: false, ranked: isRanked(d, v) }))}</h2>\n${rows(d.rows, ctx)}` : noRows(false);
+  const ranked = isRanked(d, v);
+  const list = d.rows.length ? `<h2 class="sec">${esc(sectionLine({ today: false, ranked }))}</h2>\n${rowsMore(d.rows, ctx, { ranked })}` : noRows(false);
   const follow = `<a class="follow" href="${esc(CREDIT_URL)}" target="_blank" rel="noopener">${esc(quiet ? FOLLOW_QUIET : FOLLOW_TEXT)}</a>`;
   parts.push(`<section class="day" id="rows">\n${list}\n<div class="df">\n<button class="btn" type="button" data-act="share">${esc(SHARE_DAY)}</button>\n${follow}\n</div>\n</section>`);
   if (d.stories.length) {

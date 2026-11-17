@@ -117,8 +117,8 @@ function readDays(p, firstEdition, gk, variety) {
 
 // A page stays under 100 KB raw, CSS included. A normal page is about 60 KB; if a
 // very busy one would go over, the last items of its list (the lowest-ranked
-// headlines of a day page, the oldest days of the homepage) are left off the page
-// (api/today.json still has every story).
+// headlines of a day page, the oldest days of the homepage and then the lowest of
+// today's other headlines) are left off the page (api/today.json still has every story).
 export const PAGE_BUDGET = 96 * 1000;
 
 function fitPage(render, list, budget = PAGE_BUDGET) {
@@ -244,15 +244,15 @@ export function build(rootOrOpts, maybeOpts) {
   fs.mkdirSync(p.dist, { recursive: true });
 
   // ---- the homepage: today, then up to six earlier days ---------------------------------
+  // Today's See more holds every other headline of the day. A page over its budget gives up its earlier days
+  // first, and only then the lowest of those headlines.
   const feed = [todayView, ...filed.filter((v) => v.date < today)];
-  write(
-    'index.html',
-    fitPage(
-      (shown) => pageHtml({ ...shared, root: './', kind: 'home', day: todayView, days: shown, olderDays: feed.length - shown.length }),
-      feed.slice(0, cfg.edition.homeDays),
-      opts.pageBudget,
-    ),
-  );
+  const feedDays = feed.slice(0, cfg.edition.homeDays);
+  const homeHtml = (days, stories) => pageHtml({ ...shared, root: './', kind: 'home', day: todayView, days: [{ ...todayView, stories }, ...days.slice(1)], olderDays: feed.length - days.length });
+  const homeBudget = opts.pageBudget ?? PAGE_BUDGET;
+  let home = fitPage((days) => homeHtml(days, todayView.stories), feedDays, homeBudget);
+  if (Buffer.byteLength(home) > homeBudget) home = fitPage((stories) => homeHtml(feedDays.slice(0, 1), stories), todayView.stories, homeBudget);
+  write('index.html', home);
 
   // ---- one page per stored day -------------------------------------------------------------
   const dates = views.map((v) => v.date);

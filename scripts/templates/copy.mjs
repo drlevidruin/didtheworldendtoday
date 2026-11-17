@@ -249,6 +249,22 @@ export function dayLabel(date, today) {
 // with no edition.
 export const showRows = (n, ranked) => (ranked ? `Show the ${n} near ${n === 1 ? 'miss' : 'misses'}` : `Show the ${n} top ${n === 1 ? 'story' : 'stories'}`);
 
+// A list of rows shows its first 5, and the share text names the emoji of those 5. The rest wait behind "See N more".
+export const ROWS_SHOWN = 5;
+
+// The door to what a list keeps back. Only rows are left: "See 3 more near misses", or "See 3 more top stories" for
+// rows that make no claim about order. Only today's other headlines are left: "See 84 more headlines". Both are
+// left: "See 87 more", counting everything it opens.
+export function seeMore(rows, headlines, ranked) {
+  if (rows > 0 && headlines > 0) return `See ${rows + headlines} more`;
+  if (headlines > 0) return `See ${headlines} more ${headlines === 1 ? 'headline' : 'headlines'}`;
+  const [one, many] = ranked ? ['near miss', 'near misses'] : ['top story', 'top stories'];
+  return `See ${rows} more ${rows === 1 ? one : many}`;
+}
+
+// The small heading, inside today's See more, over the headlines that are not near misses.
+export const MORE_TODAY = 'More from today';
+
 // The footer's door to the day page that lists every headline read.
 export const everyHeadline = (n) => `Every headline we read today (${n})`;
 
