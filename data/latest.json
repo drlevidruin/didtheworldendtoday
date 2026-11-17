@@ -1,15 +1,14 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T07:17:02.622Z",
+  "buildTime": "2026-11-17T08:03:06.837Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 02:17 ET",
-  "score": 74,
+  "etStamp": "2026-11-17 03:03 ET",
+  "score": 68,
   "fired": [
     "flights",
     "hacks",
     "internet",
     "space",
-    "sun",
     "earth",
     "markets",
     "ai"
@@ -31,7 +30,7 @@
       "points": 6
     }
   ],
-  "change": -6,
+  "change": -12,
   "yesterday": {
     "date": "2026-11-16",
     "score": 80,
@@ -51,18 +50,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 381,
-  "lastSuccessAt": "2026-11-17T07:17:02.622Z",
+  "headlinesRead": 210,
+  "lastSuccessAt": "2026-11-17T08:03:06.837Z",
   "rollingFallback": false,
   "cats": {
     "flights": 43,
     "space": 4,
     "earth": 4,
-    "hacks": 25,
+    "hacks": 26,
     "internet": 9,
     "ai": 3,
     "markets": 4,
-    "sun": 3,
+    "sun": 2,
     "animals": 2,
     "grid": 1,
     "weather": 1,
@@ -89,7 +88,7 @@
       "sizeM": 5.3,
       "size": "a bus",
       "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WA",
-      "upcoming": true
+      "upcoming": false
     },
     "faa": {
       "groundStops": [],
@@ -169,14 +168,16 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -187,16 +188,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 100,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-17T07:17:02.622Z"
     },
     "bing": {
       "ok": true,
-      "count": 270,
-      "error": null,
-      "lastOkAt": "2026-11-17T07:17:02.622Z"
+      "count": 198,
+      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-17T08:03:06.837Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,39 +207,39 @@
     },
     "hn": {
       "ok": true,
-      "count": 11,
+      "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-17T07:17:02.622Z"
+      "lastOkAt": "2026-11-17T08:03:06.837Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T07:17:02.622Z"
+      "lastOkAt": "2026-11-17T08:03:06.837Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T07:17:02.622Z"
+      "lastOkAt": "2026-11-17T08:03:06.837Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T07:17:02.622Z"
+      "lastOkAt": "2026-11-17T08:03:06.837Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T07:17:02.622Z"
+      "lastOkAt": "2026-11-17T08:03:06.837Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T07:17:02.622Z"
+      "lastOkAt": "2026-11-17T08:03:06.837Z"
     },
     "x": {
       "ok": true,
@@ -251,7 +252,7 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T07:17:02.622Z"
+      "lastOkAt": "2026-11-17T08:03:06.837Z"
     }
   },
   "stories": [
@@ -820,21 +821,6 @@
       "score": 0.89
     },
     {
-      "id": "711601cf4921",
-      "cat": "sun",
-      "kind": "news",
-      "title": "India’s Maitri research station in Antarctica records massive plunge in cosmic radiation following colossal solar storm",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPV3lsUlFMb3M1VXlXYUM2Q3c2Z0JnR1BjTkdEZW1HSDFWVFNBU0Z4a216MVRzWWpNTEJ5Vi1Ud00xZWZJOE5RMFpTR3V1bTZKNXJhaVR1LVVlaFJlVjJSaG1EQVkyMlVwR3p4VEJaQUZVTkRhQndaaF9RQVNBUWVzaWQ2QW9ycEFGb1FtV1NyNzVSSzR6ZnljRG1HSTZ6WnJjU3RIUmY2dVdGcy1QM0lNY0xjekJYbzRhR1R1NU5sdF84ZDVYZUI5OVhfN2NjRFUyaHVYVkNYWGN2YUl6ZGhsWmNkZmo?oc=5",
-      "source": "Research Matters",
-      "publishedAt": "2026-11-16T07:31:45.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 1,
-      "outletNames": [
-        "Research Matters"
-      ],
-      "score": 0.88
-    },
-    {
       "id": "80a53a14d464",
       "cat": "space",
       "kind": "news",
@@ -846,6 +832,21 @@
       "outlets": 1,
       "outletNames": [
         "El Cronista"
+      ],
+      "score": 0.84
+    },
+    {
+      "id": "4ee4e22b5039",
+      "cat": "sun",
+      "kind": "news",
+      "title": "☀️ Solar Activity: Kp Index, Solar Wind, Flares and Aurora Forecast",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tXzFhTUtNbHNxTU9TY3RzNlVLVFVpYklvRnZnS3BEcE5NSWlwNm1BUWJJbi1iTnluTkJiWVBaT1dGOTdLTTFIdXBldHlMZ3FfT0ptQ1FPUWZ4M05tSGJONEdLVTdEbU8w?oc=5",
+      "source": "notre-planete.info",
+      "publishedAt": "2026-11-16T19:59:15.000Z",
+      "firstSeenAt": "2026-11-17T05:48:47.183Z",
+      "outlets": 1,
+      "outletNames": [
+        "notre-planete.info"
       ],
       "score": 0.84
     },
@@ -1093,22 +1094,6 @@
       "outletNames": [
         "NewsCord",
         "NDTV"
-      ],
-      "score": 1.78
-    },
-    {
-      "id": "2f94d1c96686",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft says services are now fully restored after global outage",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbDdYNE1OSkg5TENWX0ZPZHBXYUNyWnBGSURDUnVSdEJBN1ZPRjRNU2Iza0oyVW9lazkzVVJpdGdveTJmNjZtSlNkOGxrLTlwMFVIREc3LVM1VnpQUVNQZXItNXBvSEZFODVjdUdhS1VtTkRQVlM1TTk4YWd5MHdWOWtmbw?oc=5",
-      "source": "WTAE",
-      "publishedAt": "2026-11-16T07:54:02.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 2,
-      "outletNames": [
-        "WTAE",
-        "Asaase Radio"
       ],
       "score": 1.78
     },
@@ -1595,6 +1580,21 @@
       "score": 1.21
     },
     {
+      "id": "7cba57265556",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Widespread service outages at major U.S. banks appear to be over",
+      "url": "https://www.cbsnews.com/news/banks-online-service-outages-jpmorgan-chase-bank-of-america-wells-fargo/",
+      "source": "CBS News",
+      "publishedAt": "2026-11-16T23:22:00.000Z",
+      "firstSeenAt": "2026-11-17T08:03:06.837Z",
+      "outlets": 1,
+      "outletNames": [
+        "CBS News"
+      ],
+      "score": 1.2
+    },
+    {
       "id": "829ea24d8df5",
       "cat": "hacks",
       "kind": "news",
@@ -1730,6 +1730,21 @@
       "score": 1.06
     },
     {
+      "id": "29efaeffa89d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Infect 178 Major Websites With Malware Through Optimizely Supply Chain Attack",
+      "url": "https://cyberpress.org/hackers-infect-178-major-websites/",
+      "source": "cyberpress",
+      "publishedAt": "2026-11-16T16:00:00.000Z",
+      "firstSeenAt": "2026-11-17T08:03:06.837Z",
+      "outlets": 1,
+      "outletNames": [
+        "cyberpress"
+      ],
+      "score": 1.03
+    },
+    {
       "id": "71e44dec3a02",
       "cat": "flights",
       "kind": "news",
@@ -1758,21 +1773,6 @@
         "The Hill"
       ],
       "score": 0.98
-    },
-    {
-      "id": "4ee4e22b5039",
-      "cat": "sun",
-      "kind": "news",
-      "title": "☀️ Solar Activity: Kp Index, Solar Wind, Flares and Aurora Forecast",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tXzFhTUtNbHNxTU9TY3RzNlVLVFVpYklvRnZnS3BEcE5NSWlwNm1BUWJJbi1iTnluTkJiWVBaT1dGOTdLTTFIdXBldHlMZ3FfT0ptQ1FPUWZ4M05tSGJONEdLVTdEbU8w?oc=5",
-      "source": "notre-planete.info",
-      "publishedAt": "2026-11-16T19:59:15.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 1,
-      "outletNames": [
-        "notre-planete.info"
-      ],
-      "score": 0.84
     },
     {
       "id": "face21a56b69",
