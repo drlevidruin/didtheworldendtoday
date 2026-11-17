@@ -640,9 +640,16 @@ export const EXCLUDE_FAMILIES = [
       'Elon Musk', { term: 'Musk', caseSensitive: true },
       // government officials commenting on an outage are still politics
       { term: 'DHS', caseSensitive: true }, 'Homeland Security', 'Pentagon', 'Capitol Hill',
+      // FEMA's own alerts and tests are agency news ("FEMA to send test alert"), not an incident
+      'FEMA',
       // heads of government and the places they speak, here and abroad; "Fox News" in a headline, never the source field
       'Fox News', 'prime minister', 'minister', 'ministers', 'chancellor', 'parliament', 'parliamentary',
     ],
+  },
+  {
+    // Games. A game called off by a blackout is a sports story, and this site does not run those.
+    name: 'sports',
+    terms: ['football', 'basketball', 'baseball', 'soccer', 'hockey'],
   },
   {
     name: 'format',
@@ -655,6 +662,21 @@ export const EXCLUDE_FAMILIES = [
       'prediction', 'predictions', 'horoscope', 'is there going to be', 'will there be', 'emergency supply',
       'supply list', 'prepare for', 'preparedness', 'survival guide', 'sponsored', 'press release',
       { pattern: "here['\\u2019]?s what" },
+      // a piece that explains, predicts or looks back is not the near miss. "Unexplained" is a near miss and stays, and
+      // so do the questions a reader types in the middle of an outage ("What's happening today?", "What caused the outage?")
+      'explained', 'what we know', 'predicting', { term: 'anniversar', prefix: true },
+      // "How travel advisors responded to the ground stop": a feature about the reaction, not the near miss
+      // (the exact forms, so "reactor", "responsible" and "handler" do not count)
+      { pattern: 'how\\b[^.?!]{0,50}\\b(?:respon(?:d|ds|ded|ding|se|ses)|react(?:s|ed|ing|ion|ions)?|handle|handles|handled|handling)', label: 'how they responded' },
+      // someone defending what they did after the near miss (a senator's plane ride to a game) is the reaction, not the news
+      'defends', 'defended',
+      // clips and animations, often an old one a news site dated again today
+      { pattern: 'time-?lapse|animation', label: 'video feature' },
+      // a planned outage is a utility notice, not an incident ("unplanned" and "unscheduled" are not caught)
+      {
+        pattern: '(?:scheduled|planned)\\s+(?:power\\s+)?outages?|outages?\\s+(?:(?:is|are|will be)\\s+)?(?:scheduled|planned)',
+        label: 'planned outage',
+      },
       // a photo-archive tag ("April 15. Archives." or "Photo archive: ..."): the word has to end the headline or a clause.
       // The National Archives, Archive of Our Own and the Wayback Machine's archives are sites with real outages and
       // breaches, and the Internet Archive is one too
@@ -669,12 +691,13 @@ export const EXCLUDE_FAMILIES = [
     ],
   },
   {
-    // Shopping and clickbait that borrow our keywords ("Black Friday hack").
+    // Shopping, adverts and money advice that borrow our keywords ("Black Friday hack", "at the PV Expo", a 401(k) column).
     name: 'junk',
     terms: [
       'must know', 'black friday', 'cyber monday', 'promo code', 'coupon', 'coupons', 'life hack', 'life hacks',
       'hack you', 'hacks for', 'hacks to', 'travel hack', 'travel hacks', 'money hack', 'money hacks', 'best deals',
       '% off', 'the best',
+      'expo', { pattern: '401\\(?k\\)?', label: '401(k)' },
     ],
   },
   {
