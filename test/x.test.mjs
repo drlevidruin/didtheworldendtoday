@@ -270,3 +270,82 @@ test('X posts go through the same exclusion filter as any headline', () => {
   assert.match(verdicts[2].drop, /^excluded:politics/);
   assert.equal(verdicts[3].drop, 'off-topic');
 });
+
+// ---- Downdetector: every post counts -------------------------------------------------------------------------------
+
+const DD = users.find((u) => u.username === 'DownDetector').id;
+const DD_POSTS = [
+  'User reports indicate problems at Apple since 12:20 PM EST.',
+  'User reports indicate Instagram is having problems since 9:02 AM EST.',
+  'User reports indicate possible problems at Verizon Wireless since 3:15 PM EST.',
+];
+
+test('the search asks for every Downdetector post besides the watched accounts with keywords, and the filters cover the whole query', async () => {
+  const q = x.buildQuery(cfg.x);
+  assert.ok(q.includes(' OR (from:DownDetector)'), 'the Downdetector clause, spelled as in the accounts list');
+  assert.ok(q.startsWith('(((from:BNONews OR '), 'the whole OR sits inside one more pair of parentheses');
+  assert.ok(q.endsWith(') -is:retweet -is:reply lang:en'), 'so the three filters apply to every part of it');
+  assert.equal(q.split('-is:retweet').length, 2, 'once');
+  assert.ok(q.length <= 512, `${q.length} chars`);
+  // the parentheses are balanced and the keywords are still in
+  assert.equal(q.split('(').length, q.split(')').length);
+  assert.match(q, /\(outage OR /);
+  // and it is the query the search call really sends
+  const m = xApi();
+  await x.run(ctxFor(m));
+  assert.equal(new URL(m.calls[1].url).searchParams.get('query'), q);
+});
+
+test('a long keyword list is trimmed from the end and the Downdetector clause and the filters stay', () => {
+  const huge = { ...cfg.x, keywords: Array.from({ length: 200 }, (_, i) => `keyword${i}`) };
+  const q = x.buildQuery(huge);
+  assert.ok(q.length <= 512, `${q.length} chars`);
+  assert.match(q, /keyword0\b/);
+  assert.ok(q.includes(' OR (from:DownDetector)'));
+  assert.ok(q.endsWith(') -is:retweet -is:reply lang:en'));
+  assert.ok(!q.includes('keyword199'), 'the tail of the list was dropped');
+});
+
+test('with no every-post accounts there is no extra clause, and the query is the old one inside one pair of parentheses', () => {
+  for (const none of [{ ...cfg.x, everyPost: [] }, { ...cfg.x, everyPost: undefined }]) {
+    const q = x.buildQuery(none);
+    assert.ok(!q.includes('OR (from:'), q);
+    assert.ok(q.startsWith('(((from:BNONews OR '));
+    assert.ok(q.endsWith(')) -is:retweet -is:reply lang:en'));
+  }
+  const two = x.buildQuery({ ...cfg.x, everyPost: ['DownDetector', 'BNONews'] });
+  assert.ok(two.includes(' OR (from:DownDetector) OR (from:BNONews)) -is:retweet'));
+});
+
+test('every account in everyPost is also in accounts, in the same spelling, so its posts can be told apart', () => {
+  assert.deepEqual(cfg.x.everyPost, ['DownDetector']);
+  for (const handle of cfg.x.everyPost) assert.ok(cfg.x.accounts.includes(handle), handle);
+});
+
+test('Downdetector posts from the search become internet stories that nothing excludes', () => {
+  const gk = createGatekeeper(cfg);
+  const items = x.postsToItems(
+    DD_POSTS.map((text, i) => post(7000 + i, DD, text, 10 + i)),
+    { [DD]: 'DownDetector' },
+    cfg.x,
+  );
+  assert.equal(items.length, 3);
+  assert.equal(items[0].title, DD_POSTS[0]);
+  assert.equal(items[0].url, 'https://x.com/DownDetector/status/7000');
+  assert.equal(items[0].source, '@DownDetector on X');
+  for (const item of items) {
+    assert.equal(gk.excluder.test(item.title, { signal: false, source: item.source }), null, `${item.title}: not excluded`);
+    const verdict = gk.admit(item, NOW);
+    assert.equal(verdict.drop, undefined, `${item.title}: ${verdict.drop}`);
+    assert.equal(verdict.keep?.cat, 'internet', item.title);
+    assert.equal(verdict.keep.kind, 'x');
+  }
+});
+
+test('the Downdetector keyword is narrow: other reports of "user reports" do not slip in as outages', () => {
+  const gk = createGatekeeper(cfg);
+  for (const text of ['Nice weather in the park today', 'New survey of user reports shows people like dogs', 'Customers report great service at the new cafe']) {
+    const [item] = x.postsToItems([post(7100, 101, text)], { 101: 'BNONews' }, cfg.x);
+    assert.equal(gk.admit(item, NOW).drop, 'off-topic', text);
+  }
+});

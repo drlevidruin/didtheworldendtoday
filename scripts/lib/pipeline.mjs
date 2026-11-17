@@ -44,9 +44,18 @@ export function createGatekeeper(cfg) {
     if (raw.kind === 'signal') {
       return { keep: { ...raw, title, url, publishedAt: publishedAt ?? nowMs } };
     }
-    const cat = gate.pick(title, raw.cat);
+    // A Google Trends headline that fits no category on its own is filed by the search it came from
+    // ("apple outage" is internet). The headline itself has already been judged above. The search stays on
+    // the item only when it was needed, so recheck can file the story the same way.
+    const { trendTerm, ...item } = raw;
+    let cat = gate.pick(title, item.cat);
+    let filedBy = null;
+    if (!cat && typeof trendTerm === 'string' && trendTerm) {
+      cat = gate.pick(trendTerm, null);
+      if (cat) filedBy = trendTerm;
+    }
     if (!cat) return { drop: 'off-topic' };
-    return { keep: { ...raw, cat, title, url, publishedAt } };
+    return { keep: { ...item, cat, title, url, publishedAt, ...(filedBy ? { trendTerm: filedBy } : {}) } };
   }
 
   // Re-check a stored story against the current rules (so tightening the
@@ -58,7 +67,9 @@ export function createGatekeeper(cfg) {
     const hit = excluder.test(story.title, { signal: story.kind === 'signal', source: story.source });
     if (hit) return { drop: `excluded:${hit.family}`, detail: hit.term };
     if (story.kind === 'signal') return { keep: story };
-    const cat = gate.pick(story.title, story.cat);
+    let cat = gate.pick(story.title, story.cat);
+    // A story filed by its Google search keeps being filed by it.
+    if (!cat && typeof story.trendTerm === 'string' && story.trendTerm) cat = gate.pick(story.trendTerm, story.cat);
     if (!cat) return { drop: 'off-topic' };
     let next = cat === story.cat ? story : { ...story, cat };
     // A story told by several outlets keeps only the ones we would publish.

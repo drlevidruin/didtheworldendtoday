@@ -32,8 +32,11 @@
 //   data/state/x.json          since_id, cached user ids, usage and estimated spend per UTC day
 //   data/state/quiet.json      the automatic quiet mode hold
 //
-// A story: { id, cat, kind: news|signal|x, title, url, source, publishedAt,
-//   firstSeenAt, outlets, outletNames[], score, signal?, quiet?, quietReason? }
+// A story: { id, cat, kind: news|signal|x, title, url, source, publishedAt (its oldest member's),
+//   latestAt (its newest member's, never in the future), firstSeenAt, outlets, outletNames[],
+//   trending? (the most Google searches any trend about it drew, kept while the story lives),
+//   trendTerm? (the Google search it was filed by, only when its headline alone fitted no category),
+//   score, signal?, quiet?, quietReason? }
 // Headlines are third-party text: stored as published, escaped when rendered.
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
@@ -61,9 +64,10 @@ import * as jpl from './sources/jpl.mjs';
 import * as faa from './sources/faa.mjs';
 import * as status from './sources/status.mjs';
 import * as xsrc from './sources/x.mjs';
+import * as trends from './sources/trends.mjs';
 import * as topstories from './sources/topstories.mjs';
 
-export const SOURCES = [google, bing, gdelt, hn, usgs, swpc, jpl, faa, status, xsrc, topstories];
+export const SOURCES = [google, bing, gdelt, hn, usgs, swpc, jpl, faa, status, xsrc, trends, topstories];
 
 // Sources whose success counts as "the feeds are alive".
 const FEED_IDS = ['google', 'bing', 'gdelt', 'hn', 'usgs', 'swpc', 'jpl', 'faa', 'status'];

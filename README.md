@@ -16,7 +16,8 @@ Every 15 minutes a GitHub Action reads the feeds, saves what it found as plain J
 - NASA/JPL: asteroid close approaches
 - FAA: ground stops
 - Status pages of big services: "is the internet down"
-- X: only when turned on (see below)
+- Google Trends: what people in the US are searching for right now (one read per run, no key). Each trend's news stories become headlines and go through the same filters as any other, and a story that was a trend carries how many searches it drew, so the editor can see what people are talking about. A headline that fits no category on its own is filed by its search instead ("apple outage" is internet), and the headline itself is still judged by the exclusion filter and the quality checks
+- X: only when turned on (see below). Every post from Downdetector always counts, whatever it says
 
 Headlines are stored as published, escaped when a page is built, and linked only if the link is http or https.
 
@@ -89,7 +90,7 @@ The site works without X. To add live posts from breaking-news accounts:
 2. Under Secrets, add a repository secret named `X_BEARER_TOKEN` with your X API bearer token.
 3. Optional: under Variables, add `X_DAILY_BUDGET_USD` to cap daily spend. The default is 0.60.
 
-X runs at most once an hour and skips the call when it could go over the daily cap. The token is never printed. Remove the secret and X is off again.
+X runs at most once an hour and skips the call when it could go over the daily cap. A post from the breaking-news accounts has to match one of the keywords in `X` in `scripts/config.mjs`. Every post from Downdetector (`X.everyPost`) always counts, with or without a keyword, and is filed as an internet outage. The token is never printed. Remove the secret and X is off again.
 
 ## Turn on the editor
 

@@ -5,8 +5,9 @@
 // the same story when they share a normalized title key (lowercase, no
 // punctuation, first 12 words) or the same URL; a conservative word-overlap
 // check also joins near-verbatim rewrites of one headline. Merged stories
-// keep the earliest time and count distinct outlets. Stored stories keep
-// their id and first-seen time, so nothing is ever lost or re-dated.
+// keep the earliest time (publishedAt), know the newest (latestAt) and count
+// distinct outlets. Stored stories keep their id and first-seen time, so
+// nothing is ever lost or re-dated.
 import { createHash } from 'node:crypto';
 import { titleKey, urlKey, tokens, publisherKey, hostOf } from './text.mjs';
 import { newsRank, MAX_OUTLETS } from './rank.mjs';
@@ -33,6 +34,16 @@ function toMs(v) {
   return Number.isFinite(ms) ? ms : null;
 }
 
+// How many people searched for a story on Google lately: a number above zero, else null.
+function trendOf(v) {
+  return typeof v === 'number' && Number.isFinite(v) && v > 0 ? v : null;
+}
+
+// The Google search a story was filed by, when its headline alone fitted no category: a non-empty string, else null.
+function termOf(v) {
+  return typeof v === 'string' && v ? v : null;
+}
+
 function fromStory(s) {
   return {
     stored: true,
@@ -44,6 +55,9 @@ function fromStory(s) {
     source: s.source,
     names: Array.isArray(s.outletNames) && s.outletNames.length ? s.outletNames : [s.source],
     publishedAt: toMs(s.publishedAt),
+    latestAt: toMs(s.latestAt),
+    trending: trendOf(s.trending),
+    trendTerm: termOf(s.trendTerm),
     firstSeenAt: toMs(s.firstSeenAt) ?? 0,
     signal: s.signal,
     score: s.score,
@@ -61,6 +75,9 @@ function fromItem(item, now) {
     source: item.source,
     names: [item.source],
     publishedAt: toMs(item.publishedAt),
+    latestAt: null,
+    trending: trendOf(item.trending),
+    trendTerm: termOf(item.trendTerm),
     firstSeenAt: now,
     signal: item.signal,
     score: item.rank,
@@ -110,6 +127,20 @@ function minOf(values) {
   return v.length ? Math.min(...v) : null;
 }
 
+function maxOf(values) {
+  const v = values.filter((x) => Number.isFinite(x));
+  return v.length ? Math.max(...v) : null;
+}
+
+// The newest time a story has been dated, for the editor. The newest member time that is not in the
+// future: a member's publishedAt, or for a stored story the latestAt it was saved with (a story is only
+// stored as its oldest time, so without this a run that no longer sees the newest article would take
+// the date back). With none, when we first saw the story.
+function latestOf(members, nowMs, firstSeenAt) {
+  const times = members.flatMap((m) => [m.latestAt, m.publishedAt]).filter((t) => Number.isFinite(t) && t <= nowMs);
+  return maxOf(times) ?? firstSeenAt;
+}
+
 function buildNews(members, now) {
   const stored = members.filter((m) => m.stored).sort((a, b) => a.firstSeenAt - b.firstSeenAt || (a.id < b.id ? -1 : 1));
   const rep = [...members].sort(
@@ -122,6 +153,11 @@ function buildNews(members, now) {
   const names = distinctNames([...stored, ...members.filter((m) => !m.stored)]);
   const firstSeenAt = stored.length ? Math.min(...stored.map((s) => s.firstSeenAt)) : now;
   const publishedAt = minOf(members.map((m) => m.publishedAt)) ?? firstSeenAt;
+  const latestAt = latestOf(members, now, firstSeenAt);
+  const trending = maxOf(members.map((m) => m.trending));
+  // The stored search stays; with none stored, the first of the new ones in alphabetical order, so the
+  // story does not change from run to run with the order of the feeds.
+  const trendTerm = members.filter((m) => m.trendTerm).sort((a, b) => Number(b.stored) - Number(a.stored) || (a.trendTerm < b.trendTerm ? -1 : a.trendTerm > b.trendTerm ? 1 : 0))[0]?.trendTerm ?? null;
   const earliest = [...members].sort(
     (a, b) => (a.publishedAt ?? Infinity) - (b.publishedAt ?? Infinity) || (titleKey(a.title) < titleKey(b.title) ? -1 : 1),
   )[0];
@@ -135,10 +171,16 @@ function buildNews(members, now) {
     url: rep.url,
     source: rep.source,
     publishedAt: iso(publishedAt),
+    latestAt: iso(latestAt),
     firstSeenAt: iso(firstSeenAt),
     outlets,
     outletNames: names,
   };
+  // A story that was ever a Google trend keeps the biggest number it had, for as long as it lives. One that
+  // never trended has no such key.
+  if (trending !== null) base.trending = trending;
+  // A story filed by its Google search keeps the search, so the next run files it the same way.
+  if (trendTerm !== null) base.trendTerm = trendTerm;
   base.score = newsRank({ outlets, title: rep.title, publishedAt, firstSeenAt });
   return base;
 }
@@ -149,6 +191,10 @@ function buildSignal(members, now) {
   const best = members.reduce((a, b) => (b.score > a.score ? b : a));
   const publishedAt = minOf(members.map((m) => m.publishedAt)) ?? (stored ? stored.firstSeenAt : now);
   const firstSeenAt = stored ? stored.firstSeenAt : now;
+  // A signal is one instrument reading, dated by when the reading began. The FAA and the status pages date
+  // every run with the moment of the run, so the newest of them would move this on every run and rewrite
+  // the day for nothing.
+  const latestAt = publishedAt <= now ? publishedAt : firstSeenAt;
   return {
     id: members[0].id,
     cat: best.cat,
@@ -157,6 +203,7 @@ function buildSignal(members, now) {
     url: best.url,
     source: best.source,
     publishedAt: iso(publishedAt),
+    latestAt: iso(latestAt),
     firstSeenAt: iso(firstSeenAt),
     outlets: 1,
     outletNames: [best.source],

@@ -5,9 +5,11 @@
 // step just filed. It runs after `npm run update` and before `npm run build`, and it never
 // fails the run: every problem becomes one log line, and the edition already on file stays.
 //
-// It reads the newest news first and does not tell the same event twice. Every story it sends
-// has hoursAgo (whole hours since it came out), and the input has told: the items of the last two
-// editions before today, as "label: line".
+// It reads the newest news first and does not tell the same event twice. It sends the stories of the
+// last EDITOR_FRESH_HOURS hours first, newest first (at most EDITOR_FRESH_MAX), then the rest in the
+// page's order, up to EDITOR_MAX_STORIES. Every story it sends has hoursAgo (whole hours since it came
+// out) and, when people searched for it on Google lately, trending (how many). The input also has told:
+// the items of the last two editions before today, as "label: line".
 //
 // It does nothing, and says why in one line, when
 //   - ANTHROPIC_API_KEY is empty;
@@ -25,7 +27,7 @@
 // Env: ANTHROPIC_API_KEY (read by the SDK), DTWET_ROOT and DTWET_NOW for dry runs.
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { config as loadConfig, EDITOR_DAILY_BUDGET_USD, EDITOR_PRICES } from './config.mjs';
+import { config as loadConfig, EDITOR_DAILY_BUDGET_USD, EDITOR_FRESH_HOURS, EDITOR_FRESH_MAX, EDITOR_MAX_STORIES, EDITOR_PRICES } from './config.mjs';
 import { createGatekeeper } from './lib/pipeline.mjs';
 import { editionFile, idsHash, listingOrder, publishableStories, readEditions, usedIdsBefore, validateEdition } from './lib/editions.mjs';
 import { EDITOR_SYSTEM_PROMPT } from './lib/editor-prompt.mjs';
@@ -120,20 +122,42 @@ export function costOf(usage, prices = EDITOR_PRICES) {
   );
 }
 
-// Whole hours from the moment a story came out to now, rounded down and never below zero. The moment is the
-// later of publishedAt and firstSeenAt; with neither it is null. A publishedAt in the future is a feed mistake
-// and is skipped, and a firstSeenAt in the future counts as now. The later one, because a story's publishedAt
-// is its lead headline's, and a story that first reached our feeds an hour ago is new news even when its lead
-// says last night (the Apple outage of 11/17 did that).
-export function hoursAgo(story, nowMs) {
+// The moment a story came out, in milliseconds: the latest of its latestAt, its publishedAt and its firstSeenAt,
+// or null with none of them. A latestAt or publishedAt in the future is a feed mistake and is skipped, and a
+// firstSeenAt in the future counts as now. The latest one, because a story's publishedAt is its oldest member's
+// and a story that first reached our feeds an hour ago is new news even when its lead says last night (the
+// Apple outage of 11/17 did that). latestAt is its newest member's time.
+export function newestAt(story, nowMs) {
   const ms = (v) => {
     const t = typeof v === 'number' ? v : Date.parse(v);
     return Number.isFinite(t) ? t : null;
   };
-  const published = ms(story && story.publishedAt);
   const seen = ms(story && story.firstSeenAt);
-  const times = [published !== null && published <= nowMs ? published : null, seen === null ? null : Math.min(seen, nowMs)].filter((t) => t !== null);
-  return times.length ? Math.floor((nowMs - Math.max(...times)) / HOUR_MS) : null;
+  const times = [ms(story && story.latestAt), ms(story && story.publishedAt)].filter((t) => t !== null && t <= nowMs);
+  if (seen !== null) times.push(Math.min(seen, nowMs));
+  return times.length ? Math.max(...times) : null;
+}
+
+// Whole hours from the moment a story came out (newestAt) to now, rounded down and never below zero; null when
+// it has no moment.
+export function hoursAgo(story, nowMs) {
+  const at = newestAt(story, nowMs);
+  return at === null ? null : Math.floor((nowMs - at) / HOUR_MS);
+}
+
+// The stories the editor reads, from the ones the page lists in its order. First the new ones: every story with
+// hoursAgo of freshHours or less, newest first (the page's order breaks a tie), at most freshMax. Then all the
+// others in the page's order. At most maxStories in all, and each story once. So a busy day of old, well covered
+// news cannot push out something that broke an hour ago and has one outlet so far.
+export function pickStories(listed, nowMs, { maxStories = EDITOR_MAX_STORIES, freshHours = EDITOR_FRESH_HOURS, freshMax = EDITOR_FRESH_MAX } = {}) {
+  const fresh = listed
+    .map((story, index) => ({ story, index, at: newestAt(story, nowMs), hours: hoursAgo(story, nowMs) }))
+    .filter((x) => x.hours !== null && x.hours <= freshHours)
+    .sort((a, b) => b.at - a.at || a.index - b.index)
+    .slice(0, freshMax)
+    .map((x) => x.story);
+  const first = new Set(fresh);
+  return [...fresh, ...listed.filter((story) => !first.has(story))].slice(0, maxStories);
 }
 
 // What the last two editions before today told, newest edition first, as "label: line" (just the line
@@ -177,7 +201,7 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
     const nowIso = new Date(nowMs).toISOString();
     const today = etDate(nowMs);
     const f = dataFiles(dataDir);
-    const { model, dailyCap, minGapMinutes, maxStories, dailyBudgetUsd = EDITOR_DAILY_BUDGET_USD, prices = EDITOR_PRICES } = cfg.editor;
+    const { model, dailyCap, minGapMinutes, maxStories, freshHours, freshMax, dailyBudgetUsd = EDITOR_DAILY_BUDGET_USD, prices = EDITOR_PRICES } = cfg.editor;
 
     if (!key) return done('skipped', 'no ANTHROPIC_API_KEY, so no edition written');
 
@@ -217,7 +241,11 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
     const editions = readEditions({ editions: f.editions });
     const used = usedIdsBefore({ days: [], editions, excluder: gk.excluder, date: today });
     const listed = listingOrder(publishableStories(gk.excluder, day.stories), cfg.variety);
-    const chosen = listed.filter((s) => s.id && clean(s.title) && !used.has(s.id)).slice(0, maxStories);
+    const chosen = pickStories(
+      listed.filter((s) => s.id && clean(s.title) && !used.has(s.id)),
+      nowMs,
+      { maxStories, freshHours, freshMax },
+    );
     if (!chosen.length) return done('skipped', 'no new stories to write about');
     const stories = chosen.map((s) => ({
       id: s.id,
@@ -227,6 +255,8 @@ export async function runEditor({ client, now = Date.now(), dataDir, env = proce
       outlets: Number(s.outlets) || 1,
       serious: Boolean(s.quiet) || Boolean(quietCard(s)),
       hoursAgo: hoursAgo(s, nowMs),
+      // Only a story people searched for on Google has the key.
+      ...(Number.isFinite(s.trending) && s.trending > 0 ? { trending: s.trending } : {}),
     }));
     const told = toldBefore(editions, today);
     const hash = idsHash(stories.map((s) => s.id));

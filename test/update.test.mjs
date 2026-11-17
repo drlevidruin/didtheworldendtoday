@@ -583,6 +583,7 @@ function pretendInternet() {
     ['swpc.noaa.gov/products/alerts.json', () => ({ body: fixture('alerts.json') })],
     ['ssd-api.jpl.nasa.gov', () => ({ body: fixture('jpl.json') })],
     ['nasstatus.faa.gov', () => ({ body: fixture('faa-stops.xml') })],
+    ['trends.google.com', () => ({ body: fixture('trends.xml') })],
     ['githubstatus.com', () => ({ body: fixture('status-major.json') })],
     [/status/, () => ({ body: fixture('status-none.json') })],
   ]);
@@ -595,6 +596,8 @@ test('end to end with the real sources reading fixtures: every source answers, t
   const { latest, report } = await runUpdate({ root, now: '2026-11-16T22:30:00Z', env: {}, http });
   for (const r of report.results) assert.ok(r.ok, `${r.id}: ${r.error}`);
   assert.equal(latest.sources.x.ok, true);
+  assert.equal(latest.sources.trends.ok, true);
+  assert.equal(report.results.find((r) => r.id === 'trends').count, 29, 'the sample feed has 29 news stories');
   assert.deepEqual(latest.x, { enabled: false, skipped: 'off' });
   assert.ok(latest.score >= 11 && latest.score <= 99);
   for (const cat of ['flights', 'space', 'sun', 'earth', 'internet']) assert.ok(latest.fired.includes(cat), `${cat} should fire from its instrument`);

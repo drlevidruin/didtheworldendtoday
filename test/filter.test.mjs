@@ -303,6 +303,45 @@ test('internet: "AWS down" and "took down Microsoft 365" are kept, "Apple down 3
   }
 });
 
+test('internet: Apple\'s services, "Is Apple down?", "experiencing issues" and "users report problems" are kept, and a share price is not', () => {
+  for (const t of [
+    'Is Apple down? Thousands report problems accessing services',
+    'Apple Accounts, App Store and Apple Music Experiencing Issues',
+    'Users report problems with several Apple services',
+    'iMessage and FaceTime are having issues for some users',
+    'Apple Pay and Apple TV experiencing problems this afternoon',
+    'Why is Google down? Gmail users report outages across the US',
+    'Is X down? Thousands of users reporting problems',
+    'Is Twitter down for you too',
+    'Customers report issues with Verizon service in several states',
+    'Thousands report problems with Netflix streaming',
+  ]) {
+    assert.equal(gate.pick(t, null), 'internet', t);
+    assert.equal(verdict(t), null, `${t}: nothing excludes it`);
+  }
+  for (const t of ['Apple down 3% after earnings', 'Apple shares down by 2% in early trading', 'Is the stock market down today', 'Is Apple down 3%?', 'Is Amazon down by 2% today', 'Apple reports record services revenue']) {
+    assert.equal(gate.matches('internet', t), false, t);
+    assert.equal(gate.pick(t, null), null, t);
+  }
+});
+
+test('internet: ChatGPT is a service the internet gate takes, and Robots still claims its outages', () => {
+  const t = 'ChatGPT is down for thousands of users';
+  assert.equal(gate.matches('internet', t), true);
+  assert.equal(gate.pick(t, null), 'ai', 'the claim of a category comes first');
+  assert.equal(gate.pick(t, 'internet'), 'ai');
+  assert.equal(gate.matches('internet', 'ChatGPT outage leaves users locked out'), true);
+});
+
+test('internet: a question that asks whether a service is down is kept, and one that only asks something is not', () => {
+  assert.equal(verdict('Is Apple down? Thousands report problems accessing services'), null);
+  assert.equal(verdict("Can't sign in to your iCloud? Users report problems with several Apple services")?.family, 'question');
+  // "down" before the question mark lets a question through the exclusion filter; the gate then files only a service
+  assert.equal(verdict('Is the stock market down today?'), null);
+  assert.equal(gate.pick('Is the stock market down today?', null), null);
+  assert.equal(verdict('Why did the stock market fall today?')?.family, 'question');
+});
+
 test('recall: an AI agent that deletes things, a bear in a kitchen and a new COVID variant are kept', () => {
   assert.equal(gate.pick('AI agent deletes company production database', 'ai'), 'ai');
   assert.equal(gate.pick('Bear walks into suburban kitchen, eats groceries', 'animals'), 'animals');

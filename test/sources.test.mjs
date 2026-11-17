@@ -13,6 +13,7 @@ import * as swpc from '../scripts/sources/swpc.mjs';
 import * as jpl from '../scripts/sources/jpl.mjs';
 import * as faa from '../scripts/sources/faa.mjs';
 import * as status from '../scripts/sources/status.mjs';
+import * as trends from '../scripts/sources/trends.mjs';
 import { fixture, fixtureJson, mockFetch, noSleep } from './helpers.mjs';
 
 const cfg = config();
@@ -407,7 +408,7 @@ test('status: run() fails only when no page answers', async () => {
 });
 
 test('every source module has an id and a run() that returns instead of throwing', async () => {
-  const all = { google, bing, gdelt, hn, usgs, swpc, jpl, faa, status };
+  const all = { google, bing, gdelt, hn, usgs, swpc, jpl, faa, status, trends };
   const { fetch } = mockFetch([[/./, () => { throw new Error('everything is on fire'); }]]);
   for (const [name, mod] of Object.entries(all)) {
     assert.equal(mod.id, name);

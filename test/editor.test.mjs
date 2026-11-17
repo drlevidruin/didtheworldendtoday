@@ -5,11 +5,11 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { config, EDITOR_DAILY_BUDGET_USD, EDITOR_DAILY_CAP, EDITOR_MAX_STORIES, EDITOR_MIN_GAP_MINUTES, EDITOR_MODEL, EDITOR_PRICES } from '../scripts/config.mjs';
+import { config, EDITOR_DAILY_BUDGET_USD, EDITOR_DAILY_CAP, EDITOR_FRESH_HOURS, EDITOR_FRESH_MAX, EDITOR_MAX_STORIES, EDITOR_MIN_GAP_MINUTES, EDITOR_MODEL, EDITOR_PRICES } from '../scripts/config.mjs';
 import { createGatekeeper } from '../scripts/lib/pipeline.mjs';
 import { listingOrder, publishableStories, validateEdition } from '../scripts/lib/editions.mjs';
 import { EDITOR_SYSTEM_PROMPT } from '../scripts/lib/editor-prompt.mjs';
-import { EDITION_SCHEMA, askEditor, costOf, hoursAgo, runEditor, toldBefore } from '../scripts/editor.mjs';
+import { EDITION_SCHEMA, askEditor, costOf, hoursAgo, newestAt, pickStories, runEditor, toldBefore } from '../scripts/editor.mjs';
 import { readJson, REPO, tmpRoot } from './helpers.mjs';
 
 const cfg = config();
@@ -445,15 +445,15 @@ test('editor: the prompt asks for a label, a line and a one-sentence headline, i
   const p = EDITOR_SYSTEM_PROMPT;
   assert.ok(
     p.includes(
-      '\nInput: one day\'s headlines as JSON: {date, score, told, stories: [{id, cat, title, source, outlets, serious, hoursAgo}]}. Many headlines describe the same event. hoursAgo is how many hours ago the story came out. told lists the items of the last two days, as "label: line".\n',
+      '\nInput: one day\'s headlines as JSON: {date, score, told, stories: [{id, cat, title, source, outlets, serious, hoursAgo, trending}]}. Many headlines describe the same event. hoursAgo is how many hours ago the story came out. trending, when present, is how many people in the US searched for the story on Google lately: it is what people are talking about right now. told lists the items of the last two days, as "label: line".\n',
     ),
-    'the input paragraph names told and hoursAgo',
+    'the input paragraph names told, hoursAgo and trending',
   );
   assert.ok(
     p.includes(
-      '\n2. Pick 4 to 6 events (3 on a quiet day). Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics. Pick the newest: take events from the last 12 hours first (hoursAgo 12 or less), and an older one only when that leaves fewer than 4. Skip any event already in told, unless something new and bigger happened to it, and then the line says what is new.\n',
+      '\n2. Pick 4 to 6 events (3 on a quiet day). Skip anything that is not a near miss: charity runs, explainers, opinion, advice, lawsuits, politics. Pick the newest: take events from the last 12 hours first (hoursAgo 12 or less), and an older one only when that leaves fewer than 4. A trending event that is a near miss always makes the list. Skip any event already in told, unless something new and bigger happened to it, and then the line says what is new.\n',
     ),
-    'rule 2 asks for the newest events and no repeats',
+    'rule 2 asks for the newest events, always the trending near misses, and no repeats',
   );
   assert.ok(p.includes('\n1. Group the headlines into events. One item per event, with all of its ids, the best headline\'s id first.\n'), 'rule 1 is as it was');
   assert.match(
@@ -1064,4 +1064,170 @@ test('editor: the day\'s spend stops the day: calls go on until the total passes
   assert.equal(stateOf(s).date, '2026-11-18');
   assert.equal(stateOf(s).usd, 0.0792, 'only the new day\'s call');
   assert.equal(stateOf(s).calls, 1);
+});
+
+// ---- latestAt: a story is as new as its newest headline ------------------------------------------------------------
+
+test('editor: hoursAgo and newestAt take the latest of latestAt, publishedAt and firstSeenAt, skip a latestAt or publishedAt in the future, and ignore one that is not a time', () => {
+  const now = Date.parse(NOW);
+  const ahead = hoursBefore(-2);
+  // the Apple outage of 11/17: lead and first sighting say last night, the newest headline is from half an hour ago
+  const apple = { publishedAt: hoursBefore(17), latestAt: hoursBefore(0, 30), firstSeenAt: hoursBefore(16) };
+  assert.equal(hoursAgo(apple, now), 0);
+  assert.equal(newestAt(apple, now), now - 30 * 60000);
+  assert.equal(hoursAgo({ ...apple, latestAt: undefined }, now), 16, 'with no latestAt it is as before');
+  // the latest of the three wins, whichever it is
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(4), latestAt: hoursBefore(2), firstSeenAt: hoursBefore(3) }, now), 2);
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(4), latestAt: hoursBefore(6), firstSeenAt: hoursBefore(5) }, now), 4);
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(9), latestAt: hoursBefore(8), firstSeenAt: hoursBefore(1) }, now), 1);
+  // a latestAt or publishedAt ahead of the clock is skipped, a firstSeenAt ahead counts as now
+  assert.equal(hoursAgo({ publishedAt: hoursBefore(5), latestAt: ahead }, now), 5);
+  assert.equal(hoursAgo({ publishedAt: ahead, latestAt: hoursBefore(3) }, now), 3);
+  assert.equal(hoursAgo({ latestAt: hoursBefore(3), firstSeenAt: ahead }, now), 0);
+  assert.equal(hoursAgo({ latestAt: ahead }, now), null, 'a future latestAt and nothing else');
+  // not a time: ignored
+  for (const bad of [null, '', 'last night', {}, NaN]) assert.equal(hoursAgo({ publishedAt: hoursBefore(5), latestAt: bad }, now), 5, String(bad));
+  assert.equal(hoursAgo({ latestAt: hoursBefore(3, 59) }, now), 3, 'whole hours, rounded down');
+  assert.equal(hoursAgo({}, now), null);
+  assert.equal(newestAt({}, now), null);
+  assert.equal(newestAt(null, now), null);
+  assert.equal(newestAt({ firstSeenAt: ahead }, now), now);
+});
+
+// ---- the new first, and what is trending -------------------------------------------------------------------------
+
+const CATS = ['flights', 'hacks', 'internet', 'space', 'sun', 'earth', 'markets', 'ai', 'grid', 'germs', 'weather', 'animals'];
+const busyDay = (n, over = (i) => ({})) =>
+  Array.from({ length: n }, (_, i) =>
+    story(`o${String(i).padStart(3, '0')}`, CATS[i % CATS.length], `Cloudflare outage number ${i} knocks thousands of sites offline`, {
+      score: 200 - i,
+      outlets: 9,
+      publishedAt: hoursBefore(10),
+      firstSeenAt: hoursBefore(10),
+      ...over(i),
+    }),
+  );
+const sentOf = (client) => JSON.parse(client.calls[0].messages[0].content).stories;
+
+test('editor: the new are sent first, and the numbers for it are in the config: 6 hours, 30 stories, 80 in all', () => {
+  assert.equal(EDITOR_FRESH_HOURS, 6);
+  assert.equal(EDITOR_FRESH_MAX, 30);
+  assert.equal(cfg.editor.freshHours, 6);
+  assert.equal(cfg.editor.freshMax, 30);
+  assert.equal(cfg.editor.maxStories, 80);
+});
+
+test('editor: a story with one outlet from 2 hours ago is sent, and sent first, even when 80 older stories outrank it', async () => {
+  const fresh = story('new1', 'ai', 'ChatGPT is down for thousands of users', { score: 1, outlets: 1, publishedAt: hoursBefore(2), firstSeenAt: hoursBefore(2) });
+  const stories = [...busyDay(85), fresh];
+  const before = listingOrder(publishableStories(excluder, stories), cfg.variety);
+  assert.ok(before.findIndex((x) => x.id === 'new1') >= 80, 'in the page\'s order it is past the 80');
+  const s = setup({ stories });
+  const client = fakeClient(answer(GOOD));
+  await run(s, client);
+  const sent = sentOf(client);
+  assert.equal(sent.length, 80);
+  assert.equal(sent[0].id, 'new1');
+  assert.equal(sent[0].hoursAgo, 2);
+  assert.equal(sent[0].outlets, 1);
+  assert.deepEqual(sent.slice(1).map((x) => x.id), before.filter((x) => x.id !== 'new1').slice(0, 79).map((x) => x.id), 'then the rest in the order the page lists them');
+  assert.equal(new Set(sent.map((x) => x.id)).size, 80, 'each story once');
+});
+
+test('editor: the new are every story of 6 hours or less, newest first, at most 30, and the rest come after in the page\'s order, each story once', async () => {
+  // 40 stories that came out between 5 minutes and 6 hours ago (none older than 6:59), listed out of order, and 60 older ones
+  const fresh = Array.from({ length: 40 }, (_, i) => {
+    const minutesAgo = ((i * 17) % 40) * 9 + 5; // 5 .. 356 minutes, every one different
+    return story(`f${String(i).padStart(2, '0')}`, CATS[i % CATS.length], `Slack outage number ${i} cuts off thousands of workers`, { score: 10 + i, outlets: 2, publishedAt: hoursBefore(0, minutesAgo), firstSeenAt: hoursBefore(0, minutesAgo) });
+  });
+  const old = busyDay(60);
+  const stories = [...old, ...fresh];
+  const listed = listingOrder(publishableStories(excluder, stories), cfg.variety);
+  const s = setup({ stories });
+  const client = fakeClient(answer(GOOD));
+  await run(s, client);
+  const sent = sentOf(client);
+  const newestFirst = [...fresh].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt)).map((x) => x.id);
+  assert.deepEqual(sent.slice(0, 30).map((x) => x.id), newestFirst.slice(0, 30), 'the 30 newest, newest first');
+  for (let i = 1; i < 30; i += 1) assert.ok(sent[i - 1].hoursAgo <= sent[i].hoursAgo, 'never older before newer');
+  assert.ok(sent.slice(0, 30).every((x) => x.hoursAgo <= 6));
+  const taken = new Set(newestFirst.slice(0, 30));
+  assert.deepEqual(sent.slice(30).map((x) => x.id), listed.filter((x) => !taken.has(x.id)).slice(0, 50).map((x) => x.id), 'the other 10 new ones and the old ones, in the page\'s order');
+  assert.equal(sent.length, 80);
+  assert.equal(new Set(sent.map((x) => x.id)).size, 80);
+});
+
+test('editor: a story is new when its newest headline is, whatever its lead says, and a story that was used, has no title or breaks a rule is never sent as new', async () => {
+  const apple = story('apple', 'internet', 'Apple outage knocks iCloud and the App Store offline', {
+    score: 1,
+    outlets: 10,
+    publishedAt: hoursBefore(17),
+    latestAt: hoursBefore(0, 20),
+    firstSeenAt: hoursBefore(17),
+  });
+  const used = story('usedfresh', 'hacks', 'Chase online banking outage lasts for hours', { publishedAt: hoursBefore(1), firstSeenAt: hoursBefore(1) });
+  const rule = story('rulefresh', 'hacks', 'Gunman killed two people in a bank', { publishedAt: hoursBefore(1), firstSeenAt: hoursBefore(1) });
+  const blank = story('blankfresh', 'internet', '   ', { publishedAt: hoursBefore(1), firstSeenAt: hoursBefore(1) });
+  const earlier = { ...OLD, date: '2026-11-16', items: [{ ...OLD.items[0], ids: ['usedfresh'], best: undefined, line: 'Used line.' }, OLD.items[1], OLD.items[2]].map((x, i) => ({ ...x, ids: i === 0 ? ['usedfresh'] : [`x${i}`] })) };
+  const s = setup({ stories: [...busyDay(85), apple, used, rule, blank], editions: { '2026-11-16': earlier } });
+  const client = fakeClient(answer(GOOD));
+  await run(s, client);
+  const sent = sentOf(client);
+  assert.equal(sent[0].id, 'apple', 'the newest headline was 20 minutes ago');
+  assert.equal(sent[0].hoursAgo, 0);
+  for (const gone of ['usedfresh', 'rulefresh', 'blankfresh']) assert.ok(!sent.some((x) => x.id === gone), `${gone} is not sent`);
+  assert.equal(sent.length, 80);
+});
+
+test('editor: pickStories keeps the page\'s order for a day with nothing new, honours its limits, and never sends a story twice', () => {
+  const now = Date.parse(NOW);
+  const list = busyDay(100);
+  assert.deepEqual(pickStories(list, now).map((x) => x.id), list.slice(0, 80).map((x) => x.id), 'nothing new: the first 80, in the order given');
+  assert.equal(pickStories(list, now, { maxStories: 5 }).length, 5);
+  assert.deepEqual(pickStories([], now), []);
+  const mixed = [list[0], list[1], story('n1', 'ai', 'ChatGPT is down for thousands of users', { publishedAt: hoursBefore(1), firstSeenAt: hoursBefore(1) }), story('n2', 'ai', 'Slack is down for thousands of users', { publishedAt: hoursBefore(0, 10), firstSeenAt: hoursBefore(0, 10) }), story('n3', 'ai', 'Zoom is down for thousands of users', { publishedAt: hoursBefore(7), firstSeenAt: hoursBefore(7) })];
+  assert.deepEqual(pickStories(mixed, now).map((x) => x.id), ['n2', 'n1', 'o000', 'o001', 'n3'], 'n3 is 7 hours old: not new');
+  assert.deepEqual(pickStories(mixed, now, { freshHours: 7 }).map((x) => x.id), ['n2', 'n1', 'n3', 'o000', 'o001'], 'the hours are a setting');
+  assert.deepEqual(pickStories(mixed, now, { freshMax: 1 }).map((x) => x.id), ['n2', 'o000', 'o001', 'n1', 'n3'], 'so is the count: the others wait in the page\'s order');
+  // two new stories from the same minute keep the page's order
+  const twins = [story('t1', 'ai', 'ChatGPT is down for thousands of users', { publishedAt: hoursBefore(2), firstSeenAt: hoursBefore(2) }), story('t2', 'ai', 'Slack is down for thousands of users', { publishedAt: hoursBefore(2), firstSeenAt: hoursBefore(2) })];
+  assert.deepEqual(pickStories(twins, now).map((x) => x.id), ['t1', 't2']);
+  assert.deepEqual(pickStories([...twins].reverse(), now).map((x) => x.id), ['t2', 't1']);
+});
+
+test('editor: a story that trended is sent with trending as a number, and every other story is sent without the key', async () => {
+  const stories = [
+    story('tr1', 'internet', 'Apple outage knocks iCloud and the App Store offline', { score: 90, trending: 50000 }),
+    story('tr2', 'hacks', 'Chase online banking outage lasts for hours', { score: 80, trending: 500 }),
+    story('tr3', 'flights', 'United Airlines system outage delays departing flights', { score: 70 }),
+    story('tr4', 'grid', 'Rolling blackouts hit regional grid as demand spikes', { score: 60, trending: 0 }),
+    story('tr5', 'space', 'Bus-sized asteroid passes between Earth and the Moon', { score: 50, trending: '50000' }),
+    story('tr6', 'sun', 'Solar flare knocks out radio across the Pacific', { score: 40, trending: null }),
+  ];
+  const s = setup({ stories });
+  const client = fakeClient(answer(GOOD));
+  await run(s, client);
+  const sent = sentOf(client);
+  const byId = Object.fromEntries(sent.map((x) => [x.id, x]));
+  assert.equal(byId.tr1.trending, 50000);
+  assert.equal(typeof byId.tr1.trending, 'number');
+  assert.equal(byId.tr2.trending, 500);
+  assert.deepEqual(Object.keys(byId.tr1), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo', 'trending'], 'trending is the eighth field, as the prompt says');
+  for (const id of ['tr3', 'tr4', 'tr5', 'tr6']) {
+    assert.ok(!('trending' in byId[id]), `${id} has no trending key`);
+    assert.deepEqual(Object.keys(byId[id]), ['id', 'cat', 'title', 'source', 'outlets', 'serious', 'hoursAgo']);
+  }
+  assert.ok(!client.calls[0].messages[0].content.includes('"trending":null'), 'never a null');
+});
+
+test('editor: the prompt tells it what trending is, and that a trending near miss always makes the list, word for word', () => {
+  const p = EDITOR_SYSTEM_PROMPT;
+  const sentence = 'trending, when present, is how many people in the US searched for the story on Google lately: it is what people are talking about right now.';
+  assert.equal(p.split(sentence).length, 2, 'once');
+  assert.ok(p.includes(`hoursAgo is how many hours ago the story came out. ${sentence} told lists`), 'right after the hoursAgo sentence');
+  assert.ok(p.includes('stories: [{id, cat, title, source, outlets, serious, hoursAgo, trending}]'), 'the stories list names trending');
+  const rule = 'A trending event that is a near miss always makes the list.';
+  assert.equal(p.split(rule).length, 2, 'once');
+  assert.ok(p.includes(`and an older one only when that leaves fewer than 4. ${rule} Skip any event already in told`), 'in rule 2, after "fewer than 4."');
+  assert.ok(!p.includes(EM) && !p.includes(String.fromCharCode(0x2013)), 'still no em or en dash');
 });

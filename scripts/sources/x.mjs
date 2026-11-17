@@ -1,8 +1,9 @@
 // X (Twitter) API v2, optional and budget-capped.
 //
 // Off unless X_BEARER_TOKEN is set. With a token it makes at most one search
-// per 60 minutes: curated breaking-news accounts AND doom keywords, no
-// retweets or replies, English, newest first since the last seen id. Author
+// per 60 minutes: curated breaking-news accounts AND doom keywords, or any post
+// at all from the accounts in X.everyPost (Downdetector), no retweets or
+// replies, English, newest first since the last seen id. Author
 // ids become handles through one cached users lookup, refreshed weekly. Every
 // call is costed ($0.005 per post read, $0.01 per user read) against a daily
 // cap (UTC day); a call that could push past the cap is skipped. The token is
@@ -64,13 +65,18 @@ export function pruneUsage(state, nowMs, keepDays) {
   for (const day of Object.keys(state.usage)) if (day < cutoff) delete state.usage[day];
 }
 
-// Accounts AND keywords, trimmed so the whole query fits the API limit.
+// (Accounts AND keywords) OR every post from the everyPost accounts, trimmed so the whole query fits the
+// API limit by dropping keywords from the end. X reads a space (AND) before OR, so the whole OR sits in
+// one more pair of parentheses: without it the retweet, reply and English filters would reach only the
+// last part.
 export function buildQuery(cfg) {
   const from = `(${cfg.accounts.map((a) => `from:${a}`).join(' OR ')})`;
+  const every = (cfg.everyPost || []).map((a) => `(from:${a})`);
   const tail = '-is:retweet -is:reply lang:en';
   const words = [...cfg.keywords];
   for (;;) {
-    const q = `${from} (${words.join(' OR ')}) ${tail}`;
+    const watched = `(${from} (${words.join(' OR ')}))`;
+    const q = `(${[watched, ...every].join(' OR ')}) ${tail}`;
     if (q.length <= MAX_QUERY_CHARS || words.length <= 1) return q;
     words.pop();
   }

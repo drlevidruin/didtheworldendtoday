@@ -71,7 +71,18 @@ const NO_ACCESS =
 const SERVICES_STRICT =
   'AWS|Amazon Web Services|Azure|Google Cloud|Cloudflare|Microsoft|Office 365|Microsoft 365|Outlook|Teams|Gmail|' +
   'YouTube|Facebook|Instagram|WhatsApp|Slack|Zoom|Discord|Reddit|GitHub|Netflix|Spotify|Verizon|AT&T|T-Mobile|' +
-  'Comcast|Xfinity|Starlink|PlayStation|Xbox|Steam|Roblox|Fortnite|Snapchat|TikTok|iCloud';
+  'Comcast|Xfinity|Starlink|PlayStation|Xbox|Steam|Roblox|Fortnite|Snapchat|TikTok|iCloud|' +
+  'App Store|Apple Music|Apple Pay|Apple TV|iMessage|FaceTime|Apple Accounts?|Apple services|ChatGPT';
+// The big names that are also ordinary words or stock tickers: they count only where an outage word is close.
+const SERVICES_LOOSE = `${SERVICES_STRICT}|Apple|Google|Amazon|X|Twitter`;
+// "Thousands report problems": people saying it broke.
+const PEOPLE_REPORT = '(?:users|customers|people|thousands|millions) (?:report|reports|reporting|reported) (?:issues|problems|outages?)';
+// What a service does, or what is said of it, when it breaks.
+const SERVICE_BROKE =
+  'outages?|is down|are down|went down|goes down|down for|not working|disruptions?|glitch(?:es)?|offline|' +
+  `experiencing (?:issues|problems|an outage|outages|disruptions)|(?:having|reporting) (?:issues|problems)|${PEOPLE_REPORT}`;
+// "Apple down 3%", "Microsoft down by 2%": a share price, not an outage.
+const NOT_A_PRICE = '(?!\\s+(?:\\d|by\\b|from\\b|to\\b|about\\b|nearly\\b|over\\b|more\\b|less\\b|\\$))';
 const BANKS =
   'banks?|banking|JPMorgan|Chase|Wells Fargo|Bank of America|BofA|Citi(?:bank|group)?|Capital One|PayPal|' +
   'Venmo|Zelle|Cash App|Visa|Mastercard|Coinbase|Binance|Robinhood|Fidelity|Schwab|Vanguard|payments?|ATMs?|' +
@@ -182,13 +193,19 @@ export const CATEGORIES = [
     gdelt: '("global outage" OR "widespread outage" OR "Cloudflare outage" OR "AWS outage")',
     keywords: [
       /\b(?:global|worldwide|widespread|massive|major|nationwide|big|huge)\b[^.]{0,40}\b(?:outages?|disruptions?|failures?)\b/i,
-      /\b(?:AWS|Amazon Web Services|Azure|Google Cloud|Cloudflare|Microsoft|Office 365|Microsoft 365|Outlook|Teams|Gmail|YouTube|Facebook|Instagram|WhatsApp|Slack|Zoom|Discord|Reddit|GitHub|Netflix|Spotify|Verizon|AT&T|T-Mobile|Comcast|Xfinity|Starlink|PlayStation|Xbox|Steam|Roblox|Fortnite|Snapchat|TikTok|iCloud|Apple|Google|Amazon|X|Twitter)\b[^.]{0,60}\b(?:outages?|is down|are down|went down|goes down|down for|not working|disruptions?|glitch(?:es)?|offline)\b/i,
+      new RegExp(`\\b(?:${SERVICES_LOOSE})\\b[^.]{0,60}\\b(?:${SERVICE_BROKE})\\b`, 'i'),
       /\b(?:is|are|was|were|went|goes|going) down (?:for|again|across|worldwide|globally|nationwide)\b/i,
       // "AWS down in US-EAST-1", "Outlook Down Again?" (but not "Apple down 3%")
-      new RegExp(`\\b(?:${SERVICES_STRICT})\\s+(?:(?:is|are|was|went|goes|now|again|still)\\s+)*down\\b(?!\\s+(?:\\d|by\\b|from\\b|to\\b|about\\b|nearly\\b|over\\b|more\\b|less\\b|\\$))`, 'i'),
+      new RegExp(`\\b(?:${SERVICES_STRICT})\\s+(?:(?:is|are|was|went|goes|now|again|still)\\s+)*down\\b${NOT_A_PRICE}`, 'i'),
+      // "Is Apple down? Thousands report problems accessing services" (but not "Is Apple down 3%")
+      new RegExp(`\\bis\\s+(?:${SERVICES_LOOSE})\\s+down\\b${NOT_A_PRICE}`, 'i'),
+      // "Users report problems with several Apple services": the people come first, the service after
+      new RegExp(`\\b${PEOPLE_REPORT}\\b[^.]{0,60}\\b(?:${SERVICES_STRICT})\\b`, 'i'),
       // "took down Microsoft 365", "knocked out Outlook"
       new RegExp(`\\b(?:took|take|taken|taking|brought|brings?|knock(?:ed|s)?)\\s+(?:down|out)\\s+(?:the\\s+)?(?:${SERVICES_STRICT})\\b`, 'i'),
       /\bdown(?: ?detector)\b|\bdown for (?:thousands|millions|many|users|customers)\b/i,
+      // Downdetector's own posts: "User reports indicate problems at Apple since 12:20 PM EST."
+      /\buser reports indicate\b/i,
       /\binternet (?:outages?|blackouts?|shutdowns?|disruptions?|down)\b/i,
       /\b(?:undersea|subsea|submarine) cables?\b/i,
       /\bDNS (?:outage|failure|issues?|problems?)\b/i,
@@ -727,6 +744,9 @@ export const X = {
     'BNONews', 'spectatorindex', 'Breaking911', 'unusual_whales', 'FlightRadar24', 'AP', 'Reuters',
     'BBCBreaking', 'cnnbrk', 'DownDetector',
   ],
+  // Every post from these counts, with or without a keyword. Each one must also be in accounts, in the same
+  // spelling, so its posts can be told from its author id.
+  everyPost: ['DownDetector'],
   keywords: [
     'outage', '"ground stop"', 'grounded', 'hacked', 'breach', 'blackout', '"power outage"', 'cyberattack',
     'ransomware', '"is down"', 'earthquake', '"solar flare"', 'asteroid', '"flash crash"', '"trading halted"',
@@ -823,6 +843,10 @@ export const EDITOR_DAILY_BUDGET_USD = 1.4;
 // What a call costs, in dollars per million tokens, for Opus 5.5 (Anthropic's pricing page, 2026-11-17).
 export const EDITOR_PRICES = { input: 4, output: 20, cacheWrite: 5, cacheRead: 0.2 };
 export const EDITOR_MAX_STORIES = 80;
+// The editor reads the new stories first: every story that came out in the last EDITOR_FRESH_HOURS hours,
+// newest first, at most EDITOR_FRESH_MAX of them, and then the rest in the page's order up to the 80.
+export const EDITOR_FRESH_HOURS = 6;
+export const EDITOR_FRESH_MAX = 30;
 
 export function config() {
   return {
@@ -851,6 +875,8 @@ export function config() {
       dailyBudgetUsd: EDITOR_DAILY_BUDGET_USD,
       prices: EDITOR_PRICES,
       maxStories: EDITOR_MAX_STORIES,
+      freshHours: EDITOR_FRESH_HOURS,
+      freshMax: EDITOR_FRESH_MAX,
     },
   };
 }
