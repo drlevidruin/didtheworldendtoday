@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-17T10:55:10.909Z",
+  "buildTime": "2026-11-17T11:15:33.124Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 05:55 ET",
+  "etStamp": "2026-11-17 06:15 ET",
   "score": 92,
   "fired": [
     "flights",
@@ -54,21 +54,21 @@
     "date": "2026-11-17",
     "score": 92
   },
-  "headlinesRead": 1605,
-  "lastSuccessAt": "2026-11-17T10:55:10.909Z",
+  "headlinesRead": 1603,
+  "lastSuccessAt": "2026-11-17T11:15:33.124Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 20,
-    "internet": 7,
+    "flights": 21,
+    "internet": 6,
     "space": 3,
     "earth": 5,
     "hacks": 38,
     "markets": 6,
     "grid": 6,
     "germs": 4,
-    "ai": 3,
+    "ai": 2,
     "weather": 4,
-    "sun": 3,
+    "sun": 4,
     "animals": 2
   },
   "vital": {
@@ -191,57 +191,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1322,
+      "count": 1315,
       "error": null,
-      "lastOkAt": "2026-11-17T10:55:10.909Z"
+      "lastOkAt": "2026-11-17T11:15:33.124Z"
     },
     "bing": {
       "ok": true,
-      "count": 272,
+      "count": 278,
       "error": null,
-      "lastOkAt": "2026-11-17T10:55:10.909Z"
+      "lastOkAt": "2026-11-17T11:15:33.124Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": null
     },
     "hn": {
       "ok": true,
-      "count": 11,
+      "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-17T10:55:10.909Z"
+      "lastOkAt": "2026-11-17T11:15:33.124Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T10:55:10.909Z"
+      "lastOkAt": "2026-11-17T11:15:33.124Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T10:55:10.909Z"
+      "lastOkAt": "2026-11-17T11:15:33.124Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-17T10:55:10.909Z"
+      "lastOkAt": "2026-11-17T11:15:33.124Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T10:55:10.909Z"
+      "lastOkAt": "2026-11-17T11:15:33.124Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-17T10:55:10.909Z"
+      "lastOkAt": "2026-11-17T11:15:33.124Z"
     },
     "x": {
       "ok": true,
@@ -254,7 +254,7 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-17T10:55:10.909Z"
+      "lastOkAt": "2026-11-17T11:15:33.124Z"
     }
   },
   "stories": [
@@ -529,6 +529,24 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "76cac740da8b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "China Advanced Smart Circuit Breaker Solution Provider MLELE at Yiwu PV Expo: Solar Energy Integration",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNbUhqRHhJNUI4d29nSkR1b1hFQXlzWFg0aWEyeHBGMmNKVjE0LUI5T3BtWUo0SmJQWnA3b2dZd2RRd0FZYnJ4NVpuTjVwMWtzdEN1NVVqWDN1dkptdXRTcjJIdU5tRzF1ZUdGYzNOajVDVWtiUmFmQXNGdjdMeWszNWRLZHBfVzJicTYzOXhiN1p5TVdYQVdzeFoxM21ORTc3cTJ6c3ZRaDhuZk1kbjU1TkZEOU9nU0M5VndCREkyWThsSUppVFRVMEtYTE5VNEhOSUUxUDJuaU9iN0JfQktleDFR?oc=5",
+      "source": "EIN Presswire",
+      "publishedAt": "2026-11-17T09:35:05.000Z",
+      "firstSeenAt": "2026-11-17T09:45:21.244Z",
+      "outlets": 4,
+      "outletNames": [
+        "EIN Presswire",
+        "openPR.com",
+        "The Des Moines Register",
+        "The Detroit News"
+      ],
+      "score": 2.99
+    },
+    {
       "id": "8277025a75d7",
       "cat": "earth",
       "kind": "news",
@@ -551,38 +569,21 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "76cac740da8b",
+      "id": "fb672cb8c121",
       "cat": "markets",
       "kind": "news",
-      "title": "China Advanced Smart Circuit Breaker Solution Provider MLELE at Yiwu PV Expo: Solar Energy Integration",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNbUhqRHhJNUI4d29nSkR1b1hFQXlzWFg0aWEyeHBGMmNKVjE0LUI5T3BtWUo0SmJQWnA3b2dZd2RRd0FZYnJ4NVpuTjVwMWtzdEN1NVVqWDN1dkptdXRTcjJIdU5tRzF1ZUdGYzNOajVDVWtiUmFmQXNGdjdMeWszNWRLZHBfVzJicTYzOXhiN1p5TVdYQVdzeFoxM21ORTc3cTJ6c3ZRaDhuZk1kbjU1TkZEOU9nU0M5VndCREkyWThsSUppVFRVMEtYTE5VNEhOSUUxUDJuaU9iN0JfQktleDFR?oc=5",
-      "source": "EIN Presswire",
-      "publishedAt": "2026-11-17T09:35:05.000Z",
+      "title": "China Leading Smart Circuit Breaker Specialist: MLELE's Impact on IoT Electrical Systems",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMV9vUExWVUNRbzE3aFlobmNiWWFSaGgzcFZFSlhXc244UGFsdVh3dGRacVN6dHRVazFLb1FFeklCSkZyM3RGS295YmQtaFBnQVZxNHJDYVVNVnItQjhfLW9jS0FjekwxYjlvM0ZyMWVEVGRkWlQ4eDA0dFlYVE1PVUVZNW93SUEtT3c4aHRjVk03aWZHd0pFYjVwQlg1SU8tZUF2R3R1SjlsVFJ0c1Z3WGFvVU15U2t5U3Y3Y0RTNFdheVhoTHMybQ?oc=5",
+      "source": "EIN News",
+      "publishedAt": "2026-11-17T09:34:46.000Z",
       "firstSeenAt": "2026-11-17T09:45:21.244Z",
       "outlets": 3,
       "outletNames": [
-        "EIN Presswire",
+        "EIN News",
         "openPR.com",
-        "The Des Moines Register"
+        "The National Law Review"
       ],
       "score": 2.58
-    },
-    {
-      "id": "00b1d089730c",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft reveals what triggered global outage that left 80% of servers unresponsive",
-      "url": "https://tech.yahoo.com/computing/articles/microsoft-reveals-triggered-global-outage-210101182.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-16T11:13:37.000Z",
-      "firstSeenAt": "2026-11-17T04:41:57.645Z",
-      "outlets": 3,
-      "outletNames": [
-        "BW Businessworld",
-        "Yahoo Tech",
-        "YAHOO!"
-      ],
-      "score": 2.57
     },
     {
       "id": "8c903b55d699",
@@ -643,26 +644,21 @@
       "id": "8483e8dca843",
       "cat": "hacks",
       "kind": "news",
-      "title": "Uber Data Breach Impacts 150,000 People",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9GTWI4ZFJkRFlkZU5RTU11ckkxZTlhYjBuY0JvT3FIN3E1cWs4ZFNZZWtWbUpBc2h0czEzLWlRSk9WMUZPV0lRNUR0dFhrYWxwSWxuOUFteEFyUllNTFU1ZHhzTlVGQ2ZONHZhT0hxd2IwRHJaaV9V?oc=5",
-      "source": "SecurityWeek",
-      "publishedAt": "2026-11-16T11:02:48.000Z",
+      "title": "Uber Says Drivers’ License Data Stolen in Data Breach",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB6Vmd5Rnp0SGpETUJiUWpMdGhqMXFVUFF0a1o0TXltdHJDZ3hHdjV0MEhmUk15N1hYaHFjc083RDNsMlJrSjdXZVlVYnp3MTcxQnJqRDRPV2M3aWtnNm13YzBReF9HYVJOMDBiMkttTnF3R2YycEdv?oc=5",
+      "source": "Insurance Journal",
+      "publishedAt": "2026-11-16T14:35:41.000Z",
       "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 11,
+      "outlets": 6,
       "outletNames": [
         "Insurance Journal",
         "Homeland Security Today",
         "Beinsure",
         "TechRadar",
         "The National CIO Review",
-        "eGamers.io",
-        "SecurityWeek",
-        "TechCrunch",
-        "Escudo Digital",
-        "BleepingComputer",
-        "The Daily Hodl"
+        "eGamers.io"
       ],
-      "score": 3.06
+      "score": 2.68
     },
     {
       "id": "f5687d1cb6f5",
@@ -756,20 +752,20 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "b001dd083f19",
+      "id": "720f7d751998",
       "cat": "flights",
       "kind": "news",
-      "title": "Houston Flight Delays Ease After Massive FAA Ground Stop Disruption",
-      "url": "https://www.yahoo.com/news/videos/houston-flight-delays-ease-massive-051140887.html",
-      "source": "Yahoo",
+      "title": "Nationwide ground stop lifted after over 4 hours",
+      "url": "https://www.foxnews.com/video/6408479513112",
+      "source": "Fox News",
       "publishedAt": "2026-11-16T16:00:00.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
       "outlets": 2,
       "outletNames": [
-        "Yahoo",
-        "FOX 26 Houston"
+        "Fox News",
+        "NewsCord"
       ],
-      "score": 2.16
+      "score": 2.23
     },
     {
       "id": "2ec395da2d54",
@@ -795,22 +791,6 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPY0Z0X0NySFNrczMtSXg4QTNJNzBaNjgxeG9OSm42N3U0Ty0xMWdxUk5NcV9qNURGTUdmS04wN21rajNHajVaZE5GaFdRbERGdGJlR2o4dm4wckZYb3Ffa0dqQ3hhaEtrazdqRWFFLTBFM2xDSHQ4blFpc21aTkZ5VTVWd2dhM08yaFdWZzVBVWJDOGt3UG4zMllCNFhOY1pIR3BxUkluNXEteUxwUHdCZC1VNGJ2Y3RxRjNxTzE1RGxZMHMwZFRqeVJTUTJSajFpbE1DZQ?oc=5",
       "source": "EIN News",
       "publishedAt": "2026-11-17T09:35:22.000Z",
-      "firstSeenAt": "2026-11-17T09:45:21.244Z",
-      "outlets": 2,
-      "outletNames": [
-        "EIN News",
-        "openPR.com"
-      ],
-      "score": 1.99
-    },
-    {
-      "id": "fb672cb8c121",
-      "cat": "markets",
-      "kind": "news",
-      "title": "China Leading Smart Circuit Breaker Specialist: MLELE's Impact on IoT Electrical Systems",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMV9vUExWVUNRbzE3aFlobmNiWWFSaGgzcFZFSlhXc244UGFsdVh3dGRacVN6dHRVazFLb1FFeklCSkZyM3RGS295YmQtaFBnQVZxNHJDYVVNVnItQjhfLW9jS0FjekwxYjlvM0ZyMWVEVGRkWlQ4eDA0dFlYVE1PVUVZNW93SUEtT3c4aHRjVk03aWZHd0pFYjVwQlg1SU8tZUF2R3R1SjlsVFJ0c1Z3WGFvVU15U2t5U3Y3Y0RTNFdheVhoTHMybQ?oc=5",
-      "source": "EIN News",
-      "publishedAt": "2026-11-17T09:34:46.000Z",
       "firstSeenAt": "2026-11-17T09:45:21.244Z",
       "outlets": 2,
       "outletNames": [
@@ -903,24 +883,20 @@
       "score": 1.57
     },
     {
-      "id": "8483e8dca843",
-      "cat": "hacks",
+      "id": "b9700eccc306",
+      "cat": "markets",
       "kind": "news",
-      "title": "Uber Says Drivers’ License Data Stolen in Data Breach",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB6Vmd5Rnp0SGpETUJiUWpMdGhqMXFVUFF0a1o0TXltdHJDZ3hHdjV0MEhmUk15N1hYaHFjc083RDNsMlJrSjdXZVlVYnp3MTcxQnJqRDRPV2M3aWtnNm13YzBReF9HYVJOMDBiMkttTnF3R2YycEdv?oc=5",
-      "source": "Insurance Journal",
-      "publishedAt": "2026-11-16T14:35:41.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 6,
+      "title": "This Isn’t a Crypto Crash. Fed Hike Bets Are Hitting Everything",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/isn-t-crypto-crash-fed-224146944.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-16T14:42:00.000Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "outlets": 2,
       "outletNames": [
-        "Insurance Journal",
-        "Homeland Security Today",
-        "Beinsure",
-        "TechRadar",
-        "The National CIO Review",
-        "eGamers.io"
+        "Yahoo Finance",
+        "BeInCrypto"
       ],
-      "score": 2.68
+      "score": 1.55
     },
     {
       "id": "95dc0e6331b3",
@@ -985,6 +961,22 @@
       "outletNames": [
         "Yahoo",
         "FOX 7 Austin"
+      ],
+      "score": 2.16
+    },
+    {
+      "id": "b001dd083f19",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Houston Flight Delays Ease After Massive FAA Ground Stop Disruption",
+      "url": "https://www.yahoo.com/news/videos/houston-flight-delays-ease-massive-051140887.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-16T16:00:00.000Z",
+      "firstSeenAt": "2026-11-17T05:48:47.183Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 26 Houston"
       ],
       "score": 2.16
     },
@@ -1293,22 +1285,6 @@
         "fish4news.co.uk"
       ],
       "score": 1.56
-    },
-    {
-      "id": "b9700eccc306",
-      "cat": "markets",
-      "kind": "news",
-      "title": "This Isn’t a Crypto Crash. Fed Hike Bets Are Hitting Everything",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/isn-t-crypto-crash-fed-224146944.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-16T14:42:00.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "BeInCrypto"
-      ],
-      "score": 1.55
     },
     {
       "id": "51781829651f",
@@ -1756,6 +1732,21 @@
       "score": 1.3
     },
     {
+      "id": "9a625706dd54",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Widespread bank outage affects major financial institutions in the U.S.",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNnFremtnN1NzUkhYNUl4MDlnbUZkUjZiLWxQZWQ4Vkw1bWtfekx6TC0taEc2OHdjNl9vZ0tFMnJGdU00TzVZUzVMSHF0MEFXQnFOV1pUNEk4eVE4bExOWEpNdDNHMEliSDloc0Z3UDFCMno4bG5NOG5WaTU4bmVJME9obVVMaFRfWEtNQWZudGFyczZfanM1VUJaQlVDRERUTmxMUnBucmlpVUM4WkF3Ylpn?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-17T05:28:00.000Z",
+      "firstSeenAt": "2026-11-17T11:15:33.124Z",
+      "outlets": 1,
+      "outletNames": [
+        "CBS News"
+      ],
+      "score": 1.26
+    },
+    {
       "id": "8c9c973ed1e7",
       "cat": "germs",
       "kind": "news",
@@ -1986,19 +1977,19 @@
       "score": 0.8
     },
     {
-      "id": "c460001faef4",
-      "cat": "ai",
+      "id": "486a9cd54266",
+      "cat": "sun",
       "kind": "news",
-      "title": "ChatGPT or Claude down? The best backup AI to use",
-      "url": "https://applescoop.org/story/chatgpt-claude-down-backup-ai-alternatives",
-      "source": "applescoop.org",
-      "publishedAt": "2026-11-16T11:15:00.000Z",
-      "firstSeenAt": "2026-11-17T07:17:02.622Z",
+      "title": "Cyprus Unveils First Home-Built Satellites and AI Space Weather Centre",
+      "url": "https://en.politis.com.cy/life/1070007/cyprus-unveils-first-home-built-satellites-and-ai-space-weather-centre",
+      "source": "en.politis.com.cy",
+      "publishedAt": "2026-11-16T15:06:00.000Z",
+      "firstSeenAt": "2026-11-17T11:15:33.124Z",
       "outlets": 1,
       "outletNames": [
-        "applescoop.org"
+        "en.politis.com.cy"
       ],
-      "score": 0.67
+      "score": 0.66
     }
   ]
 }
