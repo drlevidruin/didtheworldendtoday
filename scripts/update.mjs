@@ -100,6 +100,18 @@ function validStoredStory(s) {
   );
 }
 
+// What became of this run's X posts, for the run's summary: how many passed the filters, the ones that did not and
+// why, and how many stories hold an X post, in all and in today's list. The owner wants X posts on the page.
+export function xTrace(kept, droppedList, merged, rolling) {
+  const fromX = (s) => s.kind === 'x' || (Array.isArray(s.outletNames) && s.outletNames.some((n) => / on X$/.test(String(n))));
+  return {
+    passed: kept.filter((i) => i.kind === 'x').length,
+    dropped: droppedList.filter((d) => d.via === 'x'),
+    inAll: merged.filter(fromX).length,
+    onList: rolling.filter(fromX).length,
+  };
+}
+
 function bump(map, key, n = 1) {
   map[key] = (map[key] || 0) + n;
 }
@@ -325,6 +337,7 @@ export async function runUpdate(opts = {}) {
     quiet: quietOut,
     kept: rolling,
     droppedList,
+    xTrace: xTrace(kept, droppedList, merged, rolling),
   };
   return { latest, report, results };
 }
@@ -342,6 +355,11 @@ export function formatSummary(report) {
     .map(([k, n]) => `${k} ${n}`)
     .join(', ');
   lines.push(`  read ${report.headlinesRead} headlines, kept ${report.keptCount}, dropped: ${reasons || 'none'}`);
+  const xt = report.xTrace;
+  if (xt && (xt.passed || xt.dropped.length)) {
+    lines.push(`  x posts: ${xt.passed} passed the filters, ${xt.dropped.length} dropped; stories that hold one: ${xt.inAll} in all, ${xt.onList} in today's list`);
+    for (const d of xt.dropped.slice(0, 10)) lines.push(`    dropped ${d.reason}${d.detail ? ` [${d.detail}]` : ''}: ${String(d.title).slice(0, 90)}`);
+  }
   const cleaned = Object.entries(report.cleaned)
     .map(([k, n]) => `${k} ${n}`)
     .join(', ');

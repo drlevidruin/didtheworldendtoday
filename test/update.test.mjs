@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { config } from '../scripts/config.mjs';
 import { createHttp } from '../scripts/lib/http.mjs';
-import { formatSummary, formatVerbose, runUpdate } from '../scripts/update.mjs';
+import { formatSummary, formatVerbose, runUpdate, xTrace } from '../scripts/update.mjs';
 import { sameWithoutVolatile } from '../scripts/data-changed.mjs';
 import * as usgs from '../scripts/sources/usgs.mjs';
 import * as faa from '../scripts/sources/faa.mjs';
@@ -625,4 +625,23 @@ test('end to end with every real source getting a 404: the run still finishes an
   assert.equal(latest.quiet.auto.checked, false);
   assert.equal(latest.vital.quake, null);
   assert.match(formatSummary(report), /FAIL/);
+});
+
+// ---- X posts in the run's summary ----------------------------------------------------------------------------------
+test('summary: one line says what became of the X posts, the drops listed with their reason, and nothing when there were none', () => {
+  const kept = [{ kind: 'x', title: 'User reports indicate problems at Apple since 12:20 PM EST.' }, { kind: 'news', title: 'A headline' }];
+  const droppedList = [
+    { reason: 'excluded:violence', detail: 'shooting', via: 'x', title: 'BREAKING: Shooting at a mall', source: '@BNONews on X' },
+    { reason: 'off-topic', detail: null, via: 'google', title: 'Not from X', source: 'Example News' },
+  ];
+  const own = { kind: 'x', outletNames: ['@DownDetector on X'] };
+  const inside = { kind: 'news', outletNames: ['Reuters', '@AP on X'] };
+  const plain = { kind: 'news', outletNames: ['Reuters'] };
+  const t = xTrace(kept, droppedList, [own, inside, plain], [inside, plain]);
+  assert.deepEqual({ ...t, dropped: t.dropped.length }, { passed: 1, dropped: 1, inAll: 2, onList: 1 });
+  const base = { now: '2026-11-17T21:00:00.000Z', results: [], headlinesRead: 0, keptCount: 0, dropped: {}, cleaned: {}, rollingCount: 0, score: 0, fired: [], quiet: { quiet: false, auto: { checked: false, error: 'x' } } };
+  const lines = formatSummary({ ...base, xTrace: t }).split('\n');
+  assert.ok(lines.includes("  x posts: 1 passed the filters, 1 dropped; stories that hold one: 2 in all, 1 in today's list"));
+  assert.ok(lines.includes('    dropped excluded:violence [shooting]: BREAKING: Shooting at a mall'));
+  assert.ok(!formatSummary({ ...base, xTrace: xTrace([], [], [], []) }).includes('x posts'), 'no X posts, no line');
 });
