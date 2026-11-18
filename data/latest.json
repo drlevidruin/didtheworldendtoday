@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T04:03:16.400Z",
+  "buildTime": "2026-11-18T04:08:38.306Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 23:03 ET",
+  "etStamp": "2026-11-17 23:08 ET",
   "score": 93,
   "fired": [
     "flights",
@@ -50,8 +50,8 @@
     "date": "2026-11-17",
     "score": 93
   },
-  "headlinesRead": 1580,
-  "lastSuccessAt": "2026-11-18T04:03:16.400Z",
+  "headlinesRead": 1574,
+  "lastSuccessAt": "2026-11-18T04:08:38.306Z",
   "rollingFallback": false,
   "cats": {
     "flights": 24,
@@ -60,9 +60,9 @@
     "space": 2,
     "hacks": 35,
     "germs": 4,
-    "grid": 4,
-    "earth": 4,
     "markets": 4,
+    "earth": 4,
+    "grid": 4,
     "ai": 4,
     "animals": 3,
     "sun": 3
@@ -73,7 +73,7 @@
       "place": "99 km ESE of Madang, Papua New Guinea",
       "time": "2026-11-18T03:42:34.269Z",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyx2",
-      "pager": null,
+      "pager": "green",
       "tsunami": false
     },
     "kp": {
@@ -189,55 +189,55 @@
       "ok": true,
       "count": 1247,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     },
     "bing": {
       "ok": true,
-      "count": 293,
+      "count": 287,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T04:03:16.400Z"
+      "lastOkAt": "2026-11-18T04:08:38.306Z"
     }
   },
   "stories": [
@@ -268,7 +268,7 @@
       "url": "https://www.msn.com/en-us/news/other/the-latest-faa-ground-stop-results-in-pause-in-router-installations-nationwide/ar-AA2hCmr5",
       "source": "The Edwardsville Intelligencer on MSN",
       "publishedAt": "2026-11-17T09:34:57.000Z",
-      "latestAt": "2026-11-18T01:57:49.000Z",
+      "latestAt": "2026-11-18T02:03:57.000Z",
       "firstSeenAt": "2026-11-17T22:50:37.479Z",
       "outlets": 32,
       "outletNames": [
@@ -335,7 +335,7 @@
       "title": "Apple services restored after outage impacted thousands",
       "url": "https://www.msn.com/en-us/news/technology/apple-services-restored-after-outage-impacted-thousands/ar-AA2hDfJb",
       "source": "USA TODAY on MSN",
-      "publishedAt": "2026-11-17T13:48:06.000Z",
+      "publishedAt": "2026-11-17T13:03:10.000Z",
       "latestAt": "2026-11-18T01:33:53.000Z",
       "firstSeenAt": "2026-11-18T03:48:15.310Z",
       "outlets": 32,
@@ -373,7 +373,7 @@
         "The Independent",
         "XDA"
       ],
-      "score": 4.6
+      "score": 4.52
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-17",
@@ -753,6 +753,42 @@
       "score": 2.21
     },
     {
+      "id": "5fd7905903f5",
+      "cat": "markets",
+      "kind": "news",
+      "title": "'We believe it is time for a circuit breaker': Cricket Australia announces independent ‘sandpaper gate’ forum",
+      "url": "https://www.sportingnews.com/au/cricket/news/cricket-australia-announces-independent-sandpaper-gate-forum/8d51667c073c0f5a802f0ca1",
+      "source": "Sporting News",
+      "publishedAt": "2026-11-17T16:00:00.000Z",
+      "latestAt": "2026-11-18T04:02:12.000Z",
+      "firstSeenAt": "2026-11-18T03:18:19.210Z",
+      "outlets": 3,
+      "outletNames": [
+        "Sporting News",
+        "Sporting News AU",
+        "Herald Sun"
+      ],
+      "score": 2.1
+    },
+    {
+      "id": "f5d897957c48",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6 earthquake strikes Papua New Guinea, GFZ says",
+      "url": "https://www.yahoo.com/news/world/articles/magnitude-6-earthquake-strikes-papua-035657207.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T16:00:00.000Z",
+      "latestAt": "2026-11-18T03:57:00.000Z",
+      "firstSeenAt": "2026-11-18T04:03:16.400Z",
+      "outlets": 3,
+      "outletNames": [
+        "Reuters",
+        "Yahoo",
+        "TradingView"
+      ],
+      "score": 2.07
+    },
+    {
       "id": "7cdd050ea28b",
       "cat": "grid",
       "kind": "news",
@@ -827,23 +863,6 @@
       "score": 1.67
     },
     {
-      "id": "5fd7905903f5",
-      "cat": "markets",
-      "kind": "news",
-      "title": "'We believe it is time for a circuit breaker': Cricket Australia announces independent ‘sandpaper gate’ forum",
-      "url": "https://www.sportingnews.com/au/cricket/news/cricket-australia-announces-independent-sandpaper-gate-forum/8d51667c073c0f5a802f0ca1",
-      "source": "Sporting News",
-      "publishedAt": "2026-11-17T16:00:00.000Z",
-      "latestAt": "2026-11-18T03:01:08.000Z",
-      "firstSeenAt": "2026-11-18T03:18:19.210Z",
-      "outlets": 2,
-      "outletNames": [
-        "Sporting News",
-        "Sporting News AU"
-      ],
-      "score": 1.62
-    },
-    {
       "id": "8c083e71a179",
       "cat": "ai",
       "kind": "news",
@@ -904,22 +923,6 @@
       "outlets": 1,
       "outletNames": [
         "RBC-Ukraine"
-      ],
-      "score": 1.3
-    },
-    {
-      "id": "2bd37ab7e95f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Fake National Grid warning about ‘major blackout’ shared online",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbkRLOXprdzRBZDFyUjAxSXhJeGFXSU9OTVQtYjhtMGRPa1p4WjYyTzZsRzBCVml1Q2kwUFBTS3BPNlp4dkI1RnlMZ29HeUtSLU50YjB2eFVvQUZjYmJqS181ZWJLVjRtQmtrNGJma1NCZG5LRDJTay1uT0FERjlVRmNDWHhTY00?oc=5",
-      "source": "Full Fact",
-      "publishedAt": "2026-11-17T16:14:35.000Z",
-      "latestAt": "2026-11-17T16:14:35.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
-      "outlets": 1,
-      "outletNames": [
-        "Full Fact"
       ],
       "score": 1.3
     },
@@ -1795,6 +1798,22 @@
       "score": 1.3
     },
     {
+      "id": "2bd37ab7e95f",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Fake National Grid warning about ‘major blackout’ shared online",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbkRLOXprdzRBZDFyUjAxSXhJeGFXSU9OTVQtYjhtMGRPa1p4WjYyTzZsRzBCVml1Q2kwUFBTS3BPNlp4dkI1RnlMZ29HeUtSLU50YjB2eFVvQUZjYmJqS181ZWJLVjRtQmtrNGJma1NCZG5LRDJTay1uT0FERjlVRmNDWHhTY00?oc=5",
+      "source": "Full Fact",
+      "publishedAt": "2026-11-17T16:14:35.000Z",
+      "latestAt": "2026-11-17T16:14:35.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "Full Fact"
+      ],
+      "score": 1.3
+    },
+    {
       "id": "e8dd29d897f1",
       "cat": "grid",
       "kind": "news",
@@ -1857,22 +1876,6 @@
         "The Seattle Times"
       ],
       "score": 1.02
-    },
-    {
-      "id": "f5d897957c48",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6 earthquake strikes Papua New Guinea, GFZ says",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWU1GYUNEX0tIOUhHR2IxTnZMMS1SSVhJeTZCdzJ1aGVYQnVsSmtyQm55c0c5VnhKb0JnQmItYk54ZWhsQndMWG5nTUdHVGRELXd4SXNOWFN0d29xNjFGSC1PMGtxQV8xaTBKWl9nMExZZldjOGxSRmNCUnNFdXpGOUg5SkJmZW9sX3hELVByU0pmby0wYVdTQzZjWXRibDdQTTNzb0U4NUVOS0QwOTJJOThlNA?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-11-18T03:57:00.000Z",
-      "latestAt": "2026-11-18T03:57:00.000Z",
-      "firstSeenAt": "2026-11-18T04:03:16.400Z",
-      "outlets": 1,
-      "outletNames": [
-        "Reuters"
-      ],
-      "score": 1
     },
     {
       "id": "814650ab5eb0",
