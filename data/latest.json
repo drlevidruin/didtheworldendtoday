@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T01:17:52.631Z",
+  "buildTime": "2026-11-18T01:32:52.277Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 20:17 ET",
+  "etStamp": "2026-11-17 20:32 ET",
   "score": 93,
   "fired": [
     "flights",
@@ -50,8 +50,8 @@
     "date": "2026-11-17",
     "score": 93
   },
-  "headlinesRead": 1604,
-  "lastSuccessAt": "2026-11-18T01:17:52.631Z",
+  "headlinesRead": 1584,
+  "lastSuccessAt": "2026-11-18T01:32:52.277Z",
   "rollingFallback": false,
   "cats": {
     "flights": 19,
@@ -182,20 +182,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1270,
+      "count": 1264,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     },
     "bing": {
       "ok": true,
-      "count": 290,
-      "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "count": 278,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,55 +207,56 @@
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     },
     "x": {
       "ok": true,
-      "count": 2,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:17:52.631Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T01:17:52.631Z"
+      "lastOkAt": "2026-11-18T01:32:52.277Z"
     }
   },
   "stories": [
@@ -1477,23 +1478,6 @@
       "score": 1.89
     },
     {
-      "id": "581d7c66b446",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Banking outage leaves local business owner unable to pay employees",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNd2lRLUUwd01jLVFwXy1NZlB4SHZRNU9EZjJGdWFBanBTOTFkNVc3VzctYnNzUkFtOU1jLXhiSVVKY3A0M0lidXNDS2FFbEp3azJSM0tjVGFwaE96Z2M4eUZPOWZqWFN3c1JvMFpCVzhCNFZUN0xuQ3hPd1g2aUhOcnlnTTh2T2xBUjZKdVZ3?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T01:23:20.000Z",
-      "latestAt": "2026-11-17T01:27:11.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WSB-TV"
-      ],
-      "score": 1.85
-    },
-    {
       "id": "e3fdce1d5385",
       "cat": "hacks",
       "kind": "news",
@@ -1666,6 +1650,22 @@
       "score": 1.57
     },
     {
+      "id": "b8ed9b7f73ec",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Optimizely confirms massive cyberattack on customer websites injected stealer malware",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPR0R0ODQ0eDFUYUtjODExbWZrd3hfYjlXN1dxVHBzeTlTUnc3ODI5bXVvOE93SXEzZ3RMY2ZYNGpNWjhRZWpsWkRReW5vVVp0V0N5Q3J2RS1xWW01VExhNm55TUZOeURYYVdqNXhBYXJmOUhvT05OU0JwVnAtaHl4YzdsUUVnQ0FTV2hlVEFBclhNZkZQc09KdURPbTJHZHVRX1RsTnR0RU00WFV4dm56TmM0OVFNVkxLU3g3bjJCcEVlRTVlT2hOQy1GbEw?oc=5",
+      "source": "CSO Online",
+      "publishedAt": "2026-11-18T01:24:27.000Z",
+      "latestAt": "2026-11-18T01:24:27.000Z",
+      "firstSeenAt": "2026-11-18T01:32:52.277Z",
+      "outlets": 1,
+      "outletNames": [
+        "CSO Online"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "a39541a3b1c3",
       "cat": "flights",
       "kind": "news",
@@ -1762,20 +1762,20 @@
       "score": 1.39
     },
     {
-      "id": "ebd2e51d2c83",
+      "id": "fb892141ebc5",
       "cat": "flights",
       "kind": "news",
-      "title": "Carmel Valley woman describes ‘chaos’ getting home after nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOTVMM0doMnhqSmVWakU1bWs2VFh0RGpRc3FBNkFxeXJDbXBqc1dqV2FxZzVkcDA5U1NhRll6eFdBTGxtQUNVdzJzVDg2OGFCLWVBSTNrUzRrbVAzR1lKTVRlUk9WNzVXU1V2XzhIY0c5OEtpcGZlQVdOTW96X0Z6RHRiZmpFa3kwdkVMQ1N0Q0gyVUk2V0tuZm1aY3dZNDJuZTdtaHNoSmUwT1ltLTdFcXZ3aUFNZmM?oc=5",
-      "source": "10News.com",
-      "publishedAt": "2026-11-17T23:59:42.000Z",
-      "latestAt": "2026-11-17T23:59:42.000Z",
-      "firstSeenAt": "2026-11-18T01:17:52.631Z",
+      "title": "No exact cause for malfunction that led to nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcHgtMW5RNU9ZMmNUS3ZRVS1uR0NkS01zN1QzelU1RC04allqbi1XdldvSkpQbmlXczNKVGpMc1psRXNwdHVDUGN6X29yaFNPV0pPOEpWSWU1VjVNUjZPSkZJWW4xbWdDVGpiWkV1S3NHRHFhUmhyRmZsODlzTS04R3NFXy14d0dkRS1jNVBaM29IUFM3NXJFOFNNU1ZZZVgyVC10bVRkYWY4d2RUMDNnQWJrUTBWeXBTZTg4QmR30gHDAUFVX3lxTFBOd2t3OWdjV2FSVHJydk01SHRhekJMQ2Y2bE8xc3Rzc3RqWjAxVnFwaXlGMXhESUlZRW1BX2w4cjNra09ZNDJ0cDJieU16TFA0OTQtdjc0ZEdMT1cwa1ZRY1hLOHNkUU1uQ2pJR3J1VlViMVlXYXdlU0l5Q19SR0xubmtlYl9nLVJDM3pGRmFsQjZfM2p1MjA1ZWREaFcyS29faHNIS3hyUHNtcXpYNUdFTENtU0ZlOEVPam5zMmlwTDFqaw?oc=5",
+      "source": "NewsNation",
+      "publishedAt": "2026-11-18T00:42:41.000Z",
+      "latestAt": "2026-11-18T00:42:41.000Z",
+      "firstSeenAt": "2026-11-18T01:32:52.277Z",
       "outlets": 1,
       "outletNames": [
-        "10News.com"
+        "NewsNation"
       ],
-      "score": 1.37
+      "score": 1.38
     },
     {
       "id": "915d66a0face",
@@ -1954,18 +1954,18 @@
       "score": 0.98
     },
     {
-      "id": "ee8406b79e09",
+      "id": "0f307bcd6dfe",
       "cat": "markets",
       "kind": "news",
-      "title": "US stocks fall as Nvidia-led sell-off pushes Nasdaq into correction",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZ3FLcEtFQkFRLWlra2RsR1Vtc1Z1YTU4cEpLNGlVOEVwTnM2Z1lvVlJ2UmNNTTJ4WklINnZvTzUwNXdnR3NvcElWejJoUUdyNFVxM1B1YkZtQTd5TEZ3czBzUnFna0s2ZVRqREFGRTJJU0UwX1Nwc0RGSzFNbUhWVUtjd21WSS1ST0lRLTEzZF9SR1cxd3ZidHdsa21TZFJ4QXZPdktMS1dQZmlFWkpad21yTDdaaXl0ZTlxbTN5aTJTbGVpSVExc2xMWjdrQ2Z5WXfSAdgBQVVfeXFMUEVIT0cxaU0wdkhsa2ZFUjJteTBzM1E4SV9wODhmblYwMjZfX3g3VkpvazlEemVPNmVQSFpnZGJibnQ5aUZGdmIzX293em5Wd2lRZVdQWTdPVGJXcWluNWh3WjN4aXZOTExKdXQ2ejU3V1UyaWVZWmhNZU1JWTBteG9sQkN5cW1nOFJ0ODdUUnBpckN0bXd3MGRmclJYVGxsakhENHZMMTVMZzBHZGRlcDhoell4dTN3ZEZKcmRubzBfN1ZJNXJvd0dSNmZBcFE0VlZZOWV5akxz?oc=5",
-      "source": "BusinessLine",
-      "publishedAt": "2026-11-17T02:22:10.000Z",
-      "latestAt": "2026-11-17T02:22:10.000Z",
-      "firstSeenAt": "2026-11-17T04:14:48.722Z",
+      "title": "Stocks plunge after Nvidia CEO resigns over affair",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNWjBiaG9uOHUxeGhBb1hVYmF2ek52ZXJKSlJMUGV2MjB0Y1NYVTBuclFhQjNlZzJ2aE5TWmpva3VYSFFOZW94WWppSEpudGF3YV9Lbm5FS1RIbEw3T2o1dkxBWk9SdWowTGhZOXpZa09NaVR1R2s0eEJlNm1MWnV3dkNVUkJzWExfczFTVmt30gGiAUFVX3lxTE9sY01aQmlZNUdZcU9zSkljSktKRmVka2RBblU5MjdGcDc1ZmlOMkR3cTJlMENLa21fX215X0VlUVVXYURkeVpKZEkxQXNGMGVaTU5va2lPMlZtM0p6ZXhlc1IyRHNZUVJ2UVRSalAyN0taMDNGd3BsRGgtemRIYXdVS1hEME8ycXJUYWt3a3F0NUw5MHZsZ1ZGVE9DdW8tb2dCdw?oc=5",
+      "source": "KFYR-TV",
+      "publishedAt": "2026-11-17T23:32:00.000Z",
+      "latestAt": "2026-11-17T23:32:00.000Z",
+      "firstSeenAt": "2026-11-18T01:32:52.277Z",
       "outlets": 1,
       "outletNames": [
-        "BusinessLine"
+        "KFYR-TV"
       ],
       "score": 0.97
     },
