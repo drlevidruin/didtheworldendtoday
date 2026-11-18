@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T14:35:04.258Z",
+  "buildTime": "2026-11-18T14:50:09.235Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 09:35 ET",
+  "etStamp": "2026-11-18 09:50 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,14 +44,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1537,
-  "lastSuccessAt": "2026-11-18T14:35:04.258Z",
+  "headlinesRead": 1540,
+  "lastSuccessAt": "2026-11-18T14:50:09.235Z",
   "rollingFallback": false,
   "cats": {
-    "internet": 11,
     "weather": 4,
     "flights": 27,
-    "hacks": 30,
+    "hacks": 31,
+    "internet": 10,
     "earth": 4,
     "markets": 4,
     "grid": 6,
@@ -181,20 +181,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1205,
+      "count": 1208,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     },
     "bing": {
       "ok": true,
-      "count": 287,
+      "count": 291,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     },
     "gdelt": {
       "ok": false,
@@ -204,90 +204,61 @@
     },
     "hn": {
       "ok": true,
-      "count": 12,
+      "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     },
     "x": {
       "ok": true,
-      "count": 3,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:35:04.258Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T14:35:04.258Z"
+      "lastOkAt": "2026-11-18T14:50:09.235Z"
     }
   },
   "stories": [
-    {
-      "id": "2909186dd5c7",
-      "cat": "internet",
-      "kind": "news",
-      "title": "NSA’s classified communications network hit by major outage in US",
-      "url": "https://www.news9live.com/world/nsas-classified-communications-network-hit-by-major-outage-in-us-3025586",
-      "source": "News9Live",
-      "publishedAt": "2026-11-17T14:40:00.000Z",
-      "latestAt": "2026-11-18T07:10:13.000Z",
-      "firstSeenAt": "2026-11-17T22:28:17.129Z",
-      "outlets": 15,
-      "outletNames": [
-        "One America News Network",
-        "News9Live",
-        "Townhall",
-        "Digit",
-        "SuaraGarut.ID",
-        "Beinsure",
-        "WCBM",
-        "XDA",
-        "WAOW",
-        "KITV",
-        "inkl",
-        "Anadolu Ajansı",
-        "LBC",
-        "@Reuters on X",
-        "oann.com"
-      ],
-      "score": 5.98
-    },
     {
       "id": "4f4b5cd393d6",
       "cat": "weather",
@@ -320,7 +291,7 @@
       "publishedAt": "2026-11-17T16:57:15.000Z",
       "latestAt": "2026-11-18T11:43:42.000Z",
       "firstSeenAt": "2026-11-17T21:14:13.908Z",
-      "outlets": 18,
+      "outlets": 19,
       "outletNames": [
         "news8000.com",
         "heysocal.com",
@@ -339,9 +310,10 @@
         "6abc Philadelphia",
         "ABC News - Breaking News, Latest News and Videos",
         "Aviation Pros",
-        "FOX 13 Seattle"
+        "FOX 13 Seattle",
+        "MPR News"
       ],
-      "score": 4.8
+      "score": 4.87
     },
     {
       "id": "sig:faa-stop:MIA:2026-11-18",
@@ -560,6 +532,27 @@
       "score": 2.34
     },
     {
+      "id": "8b74d869f960",
+      "cat": "earth",
+      "kind": "news",
+      "title": "New Zealand disaster agency cancels tsunami warning after threat passes",
+      "url": "https://www.msn.com/en-my/news/news/new-zealand-disaster-agency-cancels-tsunami-warning-after-threat-passes/ar-AA2hF8zV",
+      "source": "Free Malaysia Today on MSN",
+      "publishedAt": "2026-11-17T16:07:00.000Z",
+      "latestAt": "2026-11-17T22:31:00.000Z",
+      "firstSeenAt": "2026-11-18T06:18:41.048Z",
+      "outlets": 4,
+      "outletNames": [
+        "Free Malaysia Today on MSN",
+        "Hindustan Times",
+        "The Star",
+        "IOL on MSN"
+      ],
+      "score": 2.29,
+      "quiet": true,
+      "quietReason": "headline mentions tsunami"
+    },
+    {
       "id": "sig:faa-stop:SFO:2026-11-17",
       "cat": "flights",
       "kind": "signal",
@@ -606,26 +599,25 @@
       }
     },
     {
-      "id": "a39541a3b1c3",
+      "id": "fb0465e3999d",
       "cat": "flights",
       "kind": "news",
-      "title": "FAA official oversaw router work just before nationwide ground stop, report claims",
-      "url": "https://mashable.com/tech/faa-ground-stop-router-work",
-      "source": "Mashable",
-      "publishedAt": "2026-11-17T17:38:00.000Z",
-      "latestAt": "2026-11-18T11:10:00.000Z",
-      "firstSeenAt": "2026-11-18T00:17:39.985Z",
-      "outlets": 5,
+      "title": "Editorial: Nationwide ground stop highlights vulnerable air traffic systems",
+      "url": "https://www.dailypress.com/2026/11/17/editorial-nationwide-ground-stop-highlights-vulnerable-air-traffic-systems/",
+      "source": "Daily Press",
+      "publishedAt": "2026-11-17T15:15:00.000Z",
+      "latestAt": "2026-11-18T14:15:00.000Z",
+      "firstSeenAt": "2026-11-17T23:17:37.630Z",
+      "outlets": 6,
       "outletNames": [
-        "The Washington Post",
-        "Mashable",
-        "Mashable SEA",
-        "Red Lake Nation News",
-        "Seeking Alpha"
+        "The Virginian-Pilot",
+        "Daily Press",
+        "Wisconsin State Journal",
+        "Elko Daily Free Press",
+        "Buffalo News",
+        "Roanoke Times"
       ],
-      "trending": 500,
-      "trendTerm": "today's news",
-      "score": 4.13
+      "score": 4.35
     },
     {
       "id": "c0d51c75ee4d",
@@ -677,27 +669,6 @@
         "Yahoo"
       ],
       "score": 2.4
-    },
-    {
-      "id": "8b74d869f960",
-      "cat": "earth",
-      "kind": "news",
-      "title": "New Zealand disaster agency cancels tsunami warning after threat passes",
-      "url": "https://www.msn.com/en-my/news/news/new-zealand-disaster-agency-cancels-tsunami-warning-after-threat-passes/ar-AA2hF8zV",
-      "source": "Free Malaysia Today on MSN",
-      "publishedAt": "2026-11-17T16:07:00.000Z",
-      "latestAt": "2026-11-17T22:31:00.000Z",
-      "firstSeenAt": "2026-11-18T06:18:41.048Z",
-      "outlets": 4,
-      "outletNames": [
-        "Free Malaysia Today on MSN",
-        "Hindustan Times",
-        "The Star",
-        "IOL on MSN"
-      ],
-      "score": 2.29,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
     },
     {
       "id": "0f7714f17187",
@@ -889,6 +860,45 @@
       "score": 1.64
     },
     {
+      "id": "a659f36b49e7",
+      "cat": "earth",
+      "kind": "news",
+      "title": "3.8-magnitude earthquake strikes near San Clemente area",
+      "url": "https://www.yahoo.com/news/science/articles/3-8-magnitude-earthquake-strikes-055915020.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T16:00:00.000Z",
+      "latestAt": "2026-11-18T07:41:30.000Z",
+      "firstSeenAt": "2026-11-18T06:33:43.173Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "ABC7 Los Angeles"
+      ],
+      "score": 1.51
+    },
+    {
+      "id": "a39541a3b1c3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA official oversaw router work just before nationwide ground stop, report claims",
+      "url": "https://mashable.com/tech/faa-ground-stop-router-work",
+      "source": "Mashable",
+      "publishedAt": "2026-11-17T17:38:00.000Z",
+      "latestAt": "2026-11-18T11:10:00.000Z",
+      "firstSeenAt": "2026-11-18T00:17:39.985Z",
+      "outlets": 5,
+      "outletNames": [
+        "The Washington Post",
+        "Mashable",
+        "Mashable SEA",
+        "Red Lake Nation News",
+        "Seeking Alpha"
+      ],
+      "trending": 500,
+      "trendTerm": "today's news",
+      "score": 4.13
+    },
+    {
       "id": "1f4000ce7c19",
       "cat": "flights",
       "kind": "news",
@@ -906,26 +916,6 @@
         "THV11"
       ],
       "score": 4.07
-    },
-    {
-      "id": "fb0465e3999d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Editorial: Nationwide ground stop highlights vulnerable air traffic systems",
-      "url": "https://www.dailypress.com/2026/11/17/editorial-nationwide-ground-stop-highlights-vulnerable-air-traffic-systems/",
-      "source": "Daily Press",
-      "publishedAt": "2026-11-17T15:15:00.000Z",
-      "latestAt": "2026-11-18T14:15:00.000Z",
-      "firstSeenAt": "2026-11-17T23:17:37.630Z",
-      "outlets": 5,
-      "outletNames": [
-        "The Virginian-Pilot",
-        "Daily Press",
-        "Wisconsin State Journal",
-        "Elko Daily Free Press",
-        "Buffalo News"
-      ],
-      "score": 4.03
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-17",
@@ -1181,6 +1171,23 @@
       "score": 1.95
     },
     {
+      "id": "1435774e9dc5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US spy chief sees no sign of 'coordinated cyberattack' amid tech outages",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9IQ2g2LWxHXzA1eGNVR1lFN2IxV1ZQanh2YldBOUhsR1EyUTRmMHBVeG9yNnR2NVVuaUN1QWVFWlhiVEZzTmhSWWNXbDZxbE9zWXg4aDZ5RWN4LVhwaHotQ2ZOcmFaUkIwZ2hPOEwwUllhLXZqVWZsamRjY3NCWXM?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T22:29:35.000Z",
+      "latestAt": "2026-11-17T23:37:00.000Z",
+      "firstSeenAt": "2026-11-18T00:02:40.227Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "USA Today"
+      ],
+      "score": 1.95
+    },
+    {
       "id": "a1d54db27e7a",
       "cat": "hacks",
       "kind": "news",
@@ -1315,23 +1322,6 @@
         "kare11.com"
       ],
       "score": 1.62
-    },
-    {
-      "id": "a659f36b49e7",
-      "cat": "earth",
-      "kind": "news",
-      "title": "3.8-magnitude earthquake strikes near San Clemente area",
-      "url": "https://www.yahoo.com/news/science/articles/3-8-magnitude-earthquake-strikes-055915020.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T16:00:00.000Z",
-      "latestAt": "2026-11-18T07:41:30.000Z",
-      "firstSeenAt": "2026-11-18T06:33:43.173Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "ABC7 Los Angeles"
-      ],
-      "score": 1.51
     },
     {
       "id": "7d17f91fdf18",
