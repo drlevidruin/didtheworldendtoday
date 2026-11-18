@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T12:19:53.508Z",
+  "buildTime": "2026-11-18T12:34:56.272Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 07:19 ET",
+  "etStamp": "2026-11-18 07:34 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,16 +45,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 603,
-  "lastSuccessAt": "2026-11-18T12:19:53.508Z",
+  "headlinesRead": 1558,
+  "lastSuccessAt": "2026-11-18T12:34:56.272Z",
   "rollingFallback": false,
   "cats": {
     "weather": 4,
     "flights": 28,
     "hacks": 31,
     "internet": 10,
-    "markets": 4,
     "earth": 4,
+    "markets": 4,
     "germs": 4,
     "grid": 5,
     "ai": 3,
@@ -176,20 +176,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 268,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 7 of 26 queries)",
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "count": 1223,
+      "error": null,
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "bing": {
       "ok": true,
       "count": 293,
       "error": null,
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,56 +201,55 @@
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T11:34:34.583Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T12:19:53.508Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z"
     }
   },
   "stories": [
@@ -284,7 +283,7 @@
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5lOUR5Z2FVYl9wcUNQU1VzNkN4LVk0d3lCMzQ2X1hPaEdFdVl1VkZnVk83cndNcjZzNExYdHJ1cVE1M3JtUVVJUUVaQjNueC1UZk9WbHBpQUhMZG1EeG9iVUEwQTFVVXQ0c0YyYtIBckFVX3lxTFAxcllCeTNjOS1HNXRaU2VOaW90eXdiZjF4S0ZjY3ZCRURfOG00WjhaU192Skk4QjlVM0pMaTl2RkdydjRSZWJQOE9meVhMTzhBNWdBd0JOZHFIYWYxczFmMHV3LWh1cWlBYjN3S1JPcVhYZw?oc=5",
       "source": "CNBC",
       "publishedAt": "2026-11-17T16:57:15.000Z",
-      "latestAt": "2026-11-18T09:30:01.000Z",
+      "latestAt": "2026-11-18T11:43:42.000Z",
       "firstSeenAt": "2026-11-17T21:14:13.908Z",
       "outlets": 18,
       "outletNames": [
@@ -426,22 +425,29 @@
       "score": 3.62
     },
     {
-      "id": "5f4b0eabb2f5",
-      "cat": "hacks",
+      "id": "f5d897957c48",
+      "cat": "earth",
       "kind": "news",
-      "title": "FBI Dallas office warns that AI is helping hackers launch faster global cyberattacks",
-      "url": "https://www.dallasnews.com/business/technology/article/fbi-dallas-hackers-warning-22535909.php",
-      "source": "The Dallas Morning News",
-      "publishedAt": "2026-11-17T12:31:00.000Z",
-      "latestAt": "2026-11-17T20:37:57.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
-      "outlets": 3,
+      "title": "Magnitude 6 earthquake strikes Papua New Guinea, GFZ says",
+      "url": "https://www.yahoo.com/news/world/articles/magnitude-6-earthquake-strikes-papua-035657207.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T16:00:00.000Z",
+      "latestAt": "2026-11-18T09:00:40.000Z",
+      "firstSeenAt": "2026-11-18T04:03:16.400Z",
+      "outlets": 10,
       "outletNames": [
-        "Dallas News",
-        "The Dallas Morning News",
-        "Yahoo"
+        "Reuters",
+        "Yahoo",
+        "TradingView",
+        "The Vibes",
+        "Emirates News Agency",
+        "Newswav",
+        "Gulf News",
+        "UrduPoint",
+        "azərtac",
+        "Sharjah24"
       ],
-      "score": 3.13
+      "score": 3.45
     },
     {
       "id": "5fd7905903f5",
@@ -465,24 +471,22 @@
       "score": 2.91
     },
     {
-      "id": "f5d897957c48",
-      "cat": "earth",
+      "id": "cd727588fafd",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Magnitude 6 earthquake strikes Papua New Guinea, GFZ says",
-      "url": "https://www.yahoo.com/news/world/articles/magnitude-6-earthquake-strikes-papua-035657207.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T16:00:00.000Z",
-      "latestAt": "2026-11-18T04:32:00.000Z",
-      "firstSeenAt": "2026-11-18T04:03:16.400Z",
-      "outlets": 5,
+      "title": "Chase Bank outage sparks issues for customers at several major US banks",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMUdtOWppRUF4RGN4cm10aU1PRTZZaWRVVGpoUFJjRFpFeW9BV3hEYm9zV0NMQ0djNDhIY2V6Mm9Zb3pWOXp0cHVjVUljQUdxeFhqdnhJRDRHNklJb0tWOWRoc1dNc1VoLW80Rm1tVl9vaHBjTTBFTGM1T1pIUzVUUW9JN1Q2Vm9aMGRaamdNalRnUQ?oc=5",
+      "source": "The Independent",
+      "publishedAt": "2026-11-17T13:58:00.000Z",
+      "latestAt": "2026-11-17T13:58:33.000Z",
+      "firstSeenAt": "2026-11-18T02:18:11.119Z",
+      "outlets": 3,
       "outletNames": [
-        "Reuters",
-        "Yahoo",
-        "TradingView",
-        "The Vibes",
-        "Emirates News Agency"
+        "The Independent",
+        "Yahoo Finance UK",
+        "AOL.com"
       ],
-      "score": 2.65
+      "score": 2.87
     },
     {
       "id": "2909186dd5c7",
@@ -605,24 +609,6 @@
       }
     },
     {
-      "id": "cd727588fafd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank outage sparks issues for customers at several major US banks",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMUdtOWppRUF4RGN4cm10aU1PRTZZaWRVVGpoUFJjRFpFeW9BV3hEYm9zV0NMQ0djNDhIY2V6Mm9Zb3pWOXp0cHVjVUljQUdxeFhqdnhJRDRHNklJb0tWOWRoc1dNc1VoLW80Rm1tVl9vaHBjTTBFTGM1T1pIUzVUUW9JN1Q2Vm9aMGRaamdNalRnUQ?oc=5",
-      "source": "The Independent",
-      "publishedAt": "2026-11-17T13:58:00.000Z",
-      "latestAt": "2026-11-17T13:58:33.000Z",
-      "firstSeenAt": "2026-11-18T02:18:11.119Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Independent",
-        "Yahoo Finance UK",
-        "AOL.com"
-      ],
-      "score": 2.87
-    },
-    {
       "id": "ba9b4d40eedf",
       "cat": "hacks",
       "kind": "news",
@@ -655,6 +641,23 @@
         "Yahoo"
       ],
       "score": 2.58
+    },
+    {
+      "id": "b8ed9b7f73ec",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Optimizely confirms massive cyberattack on customer websites injected stealer malware",
+      "url": "https://www.computerworld.com/article/4249960/optimizely-confirms-massive-cyberattack-on-customer-websites-injected-stealer-malware-2.html",
+      "source": "Computerworld",
+      "publishedAt": "2026-11-17T17:39:00.000Z",
+      "latestAt": "2026-11-18T01:24:27.000Z",
+      "firstSeenAt": "2026-11-18T01:32:52.277Z",
+      "outlets": 2,
+      "outletNames": [
+        "CSO Online",
+        "Computerworld"
+      ],
+      "score": 2.43
     },
     {
       "id": "06f8e53677fb",
@@ -761,6 +764,23 @@
       "score": 1.67
     },
     {
+      "id": "75fadd89e3ff",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power cut hits 1,100 homes in North West England after unexpected incident",
+      "url": "https://www.msn.com/en-nz/news/other/power-cut-hits-1-100-homes-in-north-west-england-after-unexpected-incident/ar-AA2hH2pV",
+      "source": "Metro on MSN",
+      "publishedAt": "2026-11-18T01:53:44.000Z",
+      "latestAt": "2026-11-18T11:55:00.000Z",
+      "firstSeenAt": "2026-11-18T12:34:56.272Z",
+      "outlets": 2,
+      "outletNames": [
+        "Metro on MSN",
+        "streamlinefeed.co.ke"
+      ],
+      "score": 1.64
+    },
+    {
       "id": "a659f36b49e7",
       "cat": "earth",
       "kind": "news",
@@ -843,22 +863,6 @@
       "score": 1.39
     },
     {
-      "id": "d4338533eb30",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Super El Niño-Powered Record Heat Made Energy Costs Surge. 2027 May Be Worse",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZTZNZ3V5ODJydGhSWVl3elVvQmVoRlRTelcxRWR5WHUzRWJrd3E3QzI2UUxGZU8yV2ozei1jNWNTSktyNVplcXU4Wm5vUUl4cjU1ampFa3A3Qno1eGRBa3NBSjlfQmRadEVQOEJibHBkRS1VRGlGYXRpeUxxWWFEakNPU1NBNDZJSEZUTFl3Y0oxTUNSanBpUlViVDU4WVJiTGQ4NF9WY3E2UVoyNkRHZnlrVlBIYUJ2?oc=5",
-      "source": "The Equation - Union of Concerned Scientists",
-      "publishedAt": "2026-11-17T22:57:19.000Z",
-      "latestAt": "2026-11-17T22:57:19.000Z",
-      "firstSeenAt": "2026-11-17T23:17:37.630Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Equation - Union of Concerned Scientists"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "2db880a1742d",
       "cat": "flights",
       "kind": "news",
@@ -895,23 +899,6 @@
       "score": 2.78
     },
     {
-      "id": "b8ed9b7f73ec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Optimizely confirms massive cyberattack on customer websites injected stealer malware",
-      "url": "https://www.computerworld.com/article/4249960/optimizely-confirms-massive-cyberattack-on-customer-websites-injected-stealer-malware-2.html",
-      "source": "Computerworld",
-      "publishedAt": "2026-11-17T17:39:00.000Z",
-      "latestAt": "2026-11-18T01:24:27.000Z",
-      "firstSeenAt": "2026-11-18T01:32:52.277Z",
-      "outlets": 2,
-      "outletNames": [
-        "CSO Online",
-        "Computerworld"
-      ],
-      "score": 2.43
-    },
-    {
       "id": "fb0465e3999d",
       "cat": "flights",
       "kind": "news",
@@ -944,6 +931,24 @@
         "Yahoo"
       ],
       "score": 2.4
+    },
+    {
+      "id": "754ee7b9cc1c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor reports cyberattack on IT systems with production unaffected",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE83aFFYZzRyd2dySHk4dW1wNUxySG03bXY3U1ZNbGF6RDdPa2tvTkI4aDhDZlRUUDltZ0xOT3huRWpmU25mV01xbjJQSGdzM2s1XzBLeGRRMTAxQTFXeThxXzVpMkZSS0lUUlk4UEthWGR0LW8?oc=5",
+      "source": "Mugglehead Investment Magazine",
+      "publishedAt": "2026-11-17T22:34:02.000Z",
+      "latestAt": "2026-11-18T11:50:33.000Z",
+      "firstSeenAt": "2026-11-18T04:48:36.329Z",
+      "outlets": 3,
+      "outletNames": [
+        "Mugglehead Investment Magazine",
+        "marketscreener.com",
+        "IndexBox"
+      ],
+      "score": 2.32
     },
     {
       "id": "fdcd657d0e55",
@@ -1134,23 +1139,6 @@
         "FOX 8 News"
       ],
       "score": 1.81
-    },
-    {
-      "id": "754ee7b9cc1c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor reports cyberattack on IT systems with production unaffected",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE83aFFYZzRyd2dySHk4dW1wNUxySG03bXY3U1ZNbGF6RDdPa2tvTkI4aDhDZlRUUDltZ0xOT3huRWpmU25mV01xbjJQSGdzM2s1XzBLeGRRMTAxQTFXeThxXzVpMkZSS0lUUlk4UEthWGR0LW8?oc=5",
-      "source": "Mugglehead Investment Magazine",
-      "publishedAt": "2026-11-17T22:34:02.000Z",
-      "latestAt": "2026-11-18T04:23:21.000Z",
-      "firstSeenAt": "2026-11-18T04:48:36.329Z",
-      "outlets": 2,
-      "outletNames": [
-        "Mugglehead Investment Magazine",
-        "marketscreener.com"
-      ],
-      "score": 1.79
     },
     {
       "id": "c6f54e3d0077",
@@ -1365,6 +1353,22 @@
       "score": 1.4
     },
     {
+      "id": "d26557cf2595",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Keeper Security Launches Global Emergency Breach Response Service for Organisations Under Cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQTmNuNUZmeWFVbEQ3NHlpVG9NNXFiLWJ6Q2N2V2ltU3R3TC1nTzQwRDNKZ2VVdE1ueXJnNFFwVEw5LVpFZXQ2WHdDQlNieXRjUlB3WW14ODFWakFOVGZMZUlDNHRUUmtfdkRFcGVSaU51T2dfM3RzMG1yX0NlXzN6cWs2V2dlOGJ2cjhBNzdFSmFiWmJ0eXd5Q0lic0Y5a3B6dXRiNVEwTXp6VE5hNFROZ1ZpSWtWZWlmRHRnSWVVSnBrWkYzQy1ZX3hKODVzYjRCODFzSTRSUzJHVWdo?oc=5",
+      "source": "IT Security Guru",
+      "publishedAt": "2026-11-18T12:18:59.000Z",
+      "latestAt": "2026-11-18T12:18:59.000Z",
+      "firstSeenAt": "2026-11-18T12:34:56.272Z",
+      "outlets": 1,
+      "outletNames": [
+        "IT Security Guru"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "ffe871da3da9",
       "cat": "hacks",
       "kind": "news",
@@ -1447,6 +1451,22 @@
       "outlets": 1,
       "outletNames": [
         "CyberSecurityNews"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "d4338533eb30",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Super El Niño-Powered Record Heat Made Energy Costs Surge. 2027 May Be Worse",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZTZNZ3V5ODJydGhSWVl3elVvQmVoRlRTelcxRWR5WHUzRWJrd3E3QzI2UUxGZU8yV2ozei1jNWNTSktyNVplcXU4Wm5vUUl4cjU1ampFa3A3Qno1eGRBa3NBSjlfQmRadEVQOEJibHBkRS1VRGlGYXRpeUxxWWFEakNPU1NBNDZJSEZUTFl3Y0oxTUNSanBpUlViVDU4WVJiTGQ4NF9WY3E2UVoyNkRHZnlrVlBIYUJ2?oc=5",
+      "source": "The Equation - Union of Concerned Scientists",
+      "publishedAt": "2026-11-17T22:57:19.000Z",
+      "latestAt": "2026-11-17T22:57:19.000Z",
+      "firstSeenAt": "2026-11-17T23:17:37.630Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Equation - Union of Concerned Scientists"
       ],
       "score": 1.39
     },
@@ -1619,7 +1639,7 @@
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOTVMM0doMnhqSmVWakU1bWs2VFh0RGpRc3FBNkFxeXJDbXBqc1dqV2FxZzVkcDA5U1NhRll6eFdBTGxtQUNVdzJzVDg2OGFCLWVBSTNrUzRrbVAzR1lKTVRlUk9WNzVXU1V2XzhIY0c5OEtpcGZlQVdOTW96X0Z6RHRiZmpFa3kwdkVMQ1N0Q0gyVUk2V0tuZm1aY3dZNDJuZTdtaHNoSmUwT1ltLTdFcXZ3aUFNZmM?oc=5",
       "source": "10News.com",
       "publishedAt": "2026-11-17T23:59:42.000Z",
-      "latestAt": "2026-11-17T23:59:42.000Z",
+      "latestAt": "2026-11-18T11:16:44.000Z",
       "firstSeenAt": "2026-11-18T01:47:58.451Z",
       "outlets": 1,
       "outletNames": [
@@ -1732,7 +1752,7 @@
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRzFodllTUEJBMUFBR0xnenBYSEFWdmZvQURGVW5zUnBlaWptSmMtbDlDZUw4ODlTVlhUQ2RlS1hCaTY4ajhzN3NYbVBFTlJXUmlJS3VvN2xvVFBES01GN1pFaE9CYl94U19kejFUbnRHbkV0MWg5clMxSmEyS2ZQWEJPOG9QTEppTV8zVDQyOGxDTFVzZFdocVYyTWZoMzVaZTMzVg?oc=5",
       "source": "Scripps News",
       "publishedAt": "2026-11-17T23:36:02.000Z",
-      "latestAt": "2026-11-17T23:36:02.000Z",
+      "latestAt": "2026-11-18T11:19:44.000Z",
       "firstSeenAt": "2026-11-18T04:03:16.400Z",
       "outlets": 1,
       "outletNames": [
@@ -1787,22 +1807,6 @@
         "news8000.com"
       ],
       "score": 1.28
-    },
-    {
-      "id": "e8dd29d897f1",
-      "cat": "grid",
-      "kind": "news",
-      "title": "No global blackout expected, Luxembourg grid operator says",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMFB3aldoUkFNbDZUTmZrekRrX0M5bFEzMXMtS1ZIUlJGWDdGcTdrdFNoSWtvR2VWcDdMX0VBcHR4TVZZcjF1V01ucFV3cnFpdXRmZHhpQW8wanhwNGU4Q2V2ZTVqMlg1R3Z0YzdiUGJ1bV9uU2xFaVFiWkQ5ZExKckQ0alZqaXNqbV9kS29BMkx2NDZ1SzQwUHdUV2xxMzZhSXJuVUJoaUlMU1E?oc=5",
-      "source": "Luxembourg Times",
-      "publishedAt": "2026-11-17T13:35:23.000Z",
-      "latestAt": "2026-11-17T22:30:00.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
-      "outlets": 1,
-      "outletNames": [
-        "Luxembourg Times"
-      ],
-      "score": 1.24
     },
     {
       "id": "b7d06225aecd",
