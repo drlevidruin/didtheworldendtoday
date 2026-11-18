@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T07:18:56.877Z",
+  "buildTime": "2026-11-18T07:33:53.055Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 02:18 ET",
+  "etStamp": "2026-11-18 02:33 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,8 +44,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 338,
-  "lastSuccessAt": "2026-11-18T07:18:56.877Z",
+  "headlinesRead": 1546,
+  "lastSuccessAt": "2026-11-18T07:33:53.055Z",
   "rollingFallback": false,
   "cats": {
     "flights": 25,
@@ -162,7 +162,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -176,81 +176,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "ok": true,
+      "count": 1243,
+      "error": null,
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "bing": {
       "ok": true,
-      "count": 296,
-      "error": null,
-      "lastOkAt": "2026-11-18T07:18:56.877Z"
+      "count": 260,
+      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T07:18:56.877Z"
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:18:56.877Z"
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:18:56.877Z"
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T07:18:56.877Z"
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:18:56.877Z"
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:18:56.877Z"
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T07:18:56.877Z"
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T07:18:56.877Z"
+      "lastOkAt": "2026-11-18T07:33:53.055Z"
     }
   },
   "stories": [
@@ -512,9 +511,9 @@
       "url": "https://www.yahoo.com/news/world/articles/magnitude-6-earthquake-strikes-papua-035657207.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T11:56:00.000Z",
-      "latestAt": "2026-11-18T06:00:05.000Z",
+      "latestAt": "2026-11-18T06:24:00.000Z",
       "firstSeenAt": "2026-11-18T04:03:16.400Z",
-      "outlets": 8,
+      "outlets": 9,
       "outletNames": [
         "Reuters",
         "Yahoo",
@@ -523,9 +522,10 @@
         "Newswav",
         "Gulf News",
         "UrduPoint",
-        "Emirates News Agency"
+        "Emirates News Agency",
+        "Azərtac"
       ],
-      "score": 2.93
+      "score": 3.05
     },
     {
       "id": "70eecf50dbad",
@@ -644,6 +644,26 @@
       "score": 3.73
     },
     {
+      "id": "bc3b5863194f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Hijack Websites of CNN, BBC and Major Banks",
+      "url": "https://www.thedailybeast.com/hackers-hijack-websites-of-cnn-bbc-and-major-banks",
+      "source": "The Daily Beast",
+      "publishedAt": "2026-11-17T08:01:01.000Z",
+      "latestAt": "2026-11-18T01:56:00.000Z",
+      "firstSeenAt": "2026-11-18T03:48:15.310Z",
+      "outlets": 5,
+      "outletNames": [
+        "Cryptonews",
+        "The Daily Beast",
+        "FOX5 Vegas",
+        "New York Post",
+        "geekspin"
+      ],
+      "score": 3.12
+    },
+    {
       "id": "ba9b4d40eedf",
       "cat": "hacks",
       "kind": "news",
@@ -681,21 +701,21 @@
       "score": 2.65
     },
     {
-      "id": "c0d51c75ee4d",
-      "cat": "hacks",
+      "id": "2909186dd5c7",
+      "cat": "internet",
       "kind": "news",
-      "title": "US National Security Agency’s comms down amid global cyber attack",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVWxyYnpMbVBRbDVSYzIydnZWQ3M0NWh2ZW42c1phdkltZmpRanZVSTBmZDRUOUdoUExlckFrcmluTlQxTEZ3SDQ0WTB4T2pHdDYyOFZaWjlNTU9hQ2pLbWlmQ0Z3STVmaWt3eXFfTnF4azE3d0hQWHV1SjB3MGt6cHhrc1lCT2phOHFfWk11bHBsYWdtUDRkam5ON3ptM0pfcUtqZUIwTlBZdWc?oc=5",
-      "source": "The Telegraph",
-      "publishedAt": "2026-11-17T17:22:00.000Z",
-      "latestAt": "2026-11-17T17:22:06.000Z",
-      "firstSeenAt": "2026-11-17T22:09:54.219Z",
+      "title": "NSA’s classified communications network hit by major outage in US",
+      "url": "https://www.news9live.com/world/nsas-classified-communications-network-hit-by-major-outage-in-us-3025586",
+      "source": "News9Live",
+      "publishedAt": "2026-11-17T14:40:00.000Z",
+      "latestAt": "2026-11-18T07:10:13.000Z",
+      "firstSeenAt": "2026-11-17T22:28:17.129Z",
       "outlets": 2,
       "outletNames": [
-        "The Telegraph",
-        "Yahoo"
+        "One America News Network",
+        "News9Live"
       ],
-      "score": 2.58
+      "score": 2.44
     },
     {
       "id": "6fe2b0ca1078",
@@ -806,23 +826,6 @@
       "score": 1.73,
       "quiet": true,
       "quietReason": "headline mentions tornadoes"
-    },
-    {
-      "id": "f1b04bbb1361",
-      "cat": "internet",
-      "kind": "news",
-      "title": "‘Put lives at risk’: Man arrested in Eugene for copper wire theft that caused 911 outage",
-      "url": "https://www.yahoo.com/news/articles/put-lives-risk-man-arrested-020222863.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T18:02:00.000Z",
-      "latestAt": "2026-11-18T02:02:22.000Z",
-      "firstSeenAt": "2026-11-18T03:48:15.310Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "KOIN.com"
-      ],
-      "score": 1.67
     },
     {
       "id": "a659f36b49e7",
@@ -964,6 +967,23 @@
         "Yahoo"
       ],
       "score": 2.78
+    },
+    {
+      "id": "c0d51c75ee4d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US National Security Agency’s comms down amid global cyber attack",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVWxyYnpMbVBRbDVSYzIydnZWQ3M0NWh2ZW42c1phdkltZmpRanZVSTBmZDRUOUdoUExlckFrcmluTlQxTEZ3SDQ0WTB4T2pHdDYyOFZaWjlNTU9hQ2pLbWlmQ0Z3STVmaWt3eXFfTnF4azE3d0hQWHV1SjB3MGt6cHhrc1lCT2phOHFfWk11bHBsYWdtUDRkam5ON3ptM0pfcUtqZUIwTlBZdWc?oc=5",
+      "source": "The Telegraph",
+      "publishedAt": "2026-11-17T17:22:00.000Z",
+      "latestAt": "2026-11-17T17:22:06.000Z",
+      "firstSeenAt": "2026-11-17T22:09:54.219Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Telegraph",
+        "Yahoo"
+      ],
+      "score": 2.58
     },
     {
       "id": "0d7eab61dcdd",
@@ -1259,23 +1279,6 @@
       "score": 1.89
     },
     {
-      "id": "bc3b5863194f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Hijack Websites of CNN, BBC and Major Banks",
-      "url": "https://www.thedailybeast.com/hackers-hijack-websites-of-cnn-bbc-and-major-banks",
-      "source": "The Daily Beast",
-      "publishedAt": "2026-11-17T08:01:01.000Z",
-      "latestAt": "2026-11-18T01:56:00.000Z",
-      "firstSeenAt": "2026-11-18T03:48:15.310Z",
-      "outlets": 2,
-      "outletNames": [
-        "Cryptonews",
-        "The Daily Beast"
-      ],
-      "score": 1.88
-    },
-    {
       "id": "e3fdce1d5385",
       "cat": "hacks",
       "kind": "news",
@@ -1379,6 +1382,23 @@
       "score": 1.69
     },
     {
+      "id": "f1b04bbb1361",
+      "cat": "internet",
+      "kind": "news",
+      "title": "‘Put lives at risk’: Man arrested in Eugene for copper wire theft that caused 911 outage",
+      "url": "https://www.yahoo.com/news/articles/put-lives-risk-man-arrested-020222863.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T18:02:00.000Z",
+      "latestAt": "2026-11-18T02:02:22.000Z",
+      "firstSeenAt": "2026-11-18T03:48:15.310Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "KOIN.com"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "c6f54e3d0077",
       "cat": "hacks",
       "kind": "news",
@@ -1428,6 +1448,23 @@
         "Bring Me The News"
       ],
       "score": 1.53
+    },
+    {
+      "id": "048c69692975",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Sky Harbor leaders praise ground stop response while passengers call experience ‘horrific’",
+      "url": "https://www.azfamily.com/2026/11/18/sky-harbor-leaders-praise-ground-stop-response-while-passengers-call-experience-horrific/",
+      "source": "AZ Family",
+      "publishedAt": "2026-11-17T16:00:00.000Z",
+      "latestAt": "2026-11-18T01:16:00.000Z",
+      "firstSeenAt": "2026-11-18T07:33:53.055Z",
+      "outlets": 2,
+      "outletNames": [
+        "AZ Family",
+        "KOLD"
+      ],
+      "score": 1.48
     },
     {
       "id": "9d9b747573b4",
@@ -1556,22 +1593,6 @@
       "outlets": 1,
       "outletNames": [
         "The Packer"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "2909186dd5c7",
-      "cat": "internet",
-      "kind": "news",
-      "title": "NSA’s classified communications network hit by major outage",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSnI4Z2lfenh6RFJyaUdJWFQwNmpCOWlUWlVfeVozRHQ0Z3JYejRhVG91c3U4MlAtZDA5RTRHRFJOUk9XOGk0SGd2cEJLcVB4RHZ4b2ZNVVhEa2dyQ0xPQmpRUUk0T2ZheF9Gc1FYNUlOenhnRlAyRk15enhyb1Fhek0zdHVZV0h0eFk0OEViaWIxeHc?oc=5",
-      "source": "One America News Network",
-      "publishedAt": "2026-11-17T22:24:42.000Z",
-      "latestAt": "2026-11-18T01:00:57.000Z",
-      "firstSeenAt": "2026-11-17T22:28:17.129Z",
-      "outlets": 1,
-      "outletNames": [
-        "One America News Network"
       ],
       "score": 1.4
     },
@@ -1800,22 +1821,6 @@
         "Full Fact"
       ],
       "score": 1.3
-    },
-    {
-      "id": "318794e76328",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Questions Remain After Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWHNqX0ZiV21vSTJueXdtc1pkYkJ0RHFjTXctNU1PbGZFcUFOdXFRMG9lTFpmS0NNcjJseFJSbTM5YTBEeExXQkpJRDVSM0ZBRVhIQVBscENJX203T1FuQmhPYWt4cENNQ0twbjN2ZVpmSk0zN3EwaWp6ako4VnBpejExdHZDX1dQSUlUTVlrYU1KV2xoSVpqcXdZSmFHOTF2c3dxMExDSmEtaXhJaU1BdGI4MWdoWk5rYy15VEhKeWg?oc=5",
-      "source": "news8000.com",
-      "publishedAt": "2026-11-17T23:20:00.000Z",
-      "latestAt": "2026-11-17T23:20:00.000Z",
-      "firstSeenAt": "2026-11-18T04:33:27.789Z",
-      "outlets": 1,
-      "outletNames": [
-        "news8000.com"
-      ],
-      "score": 1.28
     },
     {
       "id": "e8dd29d897f1",
