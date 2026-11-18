@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T06:03:37.165Z",
+  "buildTime": "2026-11-18T06:18:41.048Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 01:03 ET",
+  "etStamp": "2026-11-18 01:18 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,17 +44,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1563,
-  "lastSuccessAt": "2026-11-18T06:03:37.165Z",
+  "headlinesRead": 1567,
+  "lastSuccessAt": "2026-11-18T06:18:41.048Z",
   "rollingFallback": false,
   "cats": {
     "flights": 25,
     "weather": 4,
-    "internet": 10,
     "hacks": 34,
+    "internet": 10,
+    "earth": 4,
     "markets": 4,
     "germs": 4,
-    "earth": 4,
     "grid": 4,
     "ai": 4,
     "animals": 4,
@@ -71,9 +71,9 @@
       "tsunami": false
     },
     "kp": {
-      "value": 2.33,
-      "time": "2026-11-18T00:00:00.000Z",
-      "max24": 3
+      "value": 3.33,
+      "time": "2026-11-18T03:00:00.000Z",
+      "max24": 3.33
     },
     "asteroid": {
       "des": "2026 WA",
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1233,
+      "count": 1240,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     },
     "bing": {
       "ok": true,
-      "count": 288,
+      "count": 285,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T06:03:37.165Z"
+      "lastOkAt": "2026-11-18T06:18:41.048Z"
     }
   },
   "stories": [
@@ -370,13 +370,38 @@
       }
     },
     {
+      "id": "27502feaa440",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor detects cyberattack against some IT systems",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUTdVUVVtcmFYWms2YkJuU3lxZ05RakxKbndJakRORnJVLVRSQ0ItMnVSR2RaaGRRZmJsYzRkYlZrYkl0NGJ4LWdUcW5UOUsxa1F2LWw5LTBWc1VhdHlsZGFWM0VXdGZ0aWxMeGg4Vk9JdGYweGQ4NjVteVpQR2ZjSF9vbWRrTW42c2h1bkhEX2RSQ1VxWlVsRHhrNkJnUjQ?oc=5",
+      "source": "Reuters",
+      "publishedAt": "2026-11-17T18:06:21.000Z",
+      "latestAt": "2026-11-17T21:49:05.000Z",
+      "firstSeenAt": "2026-11-17T18:32:06.239Z",
+      "outlets": 10,
+      "outletNames": [
+        "Reuters",
+        "WTVB",
+        "CNA",
+        "Euronext Markets: Real-time Stock Market Data | live",
+        "Gulf News",
+        "marketscreener.com",
+        "Yahoo! Finance Canada",
+        "Toronto Star",
+        "CBC",
+        "WHTC"
+      ],
+      "score": 4.29
+    },
+    {
       "id": "674968697699",
       "cat": "internet",
       "kind": "news",
       "title": "Apple services restored after outage impacted thousands",
       "url": "https://www.msn.com/en-us/news/technology/apple-services-restored-after-outage-impacted-thousands/ar-AA2hDfJb",
       "source": "USA TODAY on MSN",
-      "publishedAt": "2026-11-17T10:46:00.000Z",
+      "publishedAt": "2026-11-17T10:24:00.000Z",
       "latestAt": "2026-11-18T04:46:37.000Z",
       "firstSeenAt": "2026-11-18T03:48:15.310Z",
       "outlets": 32,
@@ -414,32 +439,7 @@
         "The Independent",
         "XDA"
       ],
-      "score": 4.3
-    },
-    {
-      "id": "27502feaa440",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor detects cyberattack against some IT systems",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUTdVUVVtcmFYWms2YkJuU3lxZ05RakxKbndJakRORnJVLVRSQ0ItMnVSR2RaaGRRZmJsYzRkYlZrYkl0NGJ4LWdUcW5UOUsxa1F2LWw5LTBWc1VhdHlsZGFWM0VXdGZ0aWxMeGg4Vk9JdGYweGQ4NjVteVpQR2ZjSF9vbWRrTW42c2h1bkhEX2RSQ1VxWlVsRHhrNkJnUjQ?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-11-17T18:06:21.000Z",
-      "latestAt": "2026-11-17T21:49:05.000Z",
-      "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 10,
-      "outletNames": [
-        "Reuters",
-        "WTVB",
-        "CNA",
-        "Euronext Markets: Real-time Stock Market Data | live",
-        "Gulf News",
-        "marketscreener.com",
-        "Yahoo! Finance Canada",
-        "Toronto Star",
-        "CBC",
-        "WHTC"
-      ],
-      "score": 4.29
+      "score": 4.26
     },
     {
       "id": "80d893c5d2e9",
@@ -469,38 +469,6 @@
       "score": 4.04
     },
     {
-      "id": "483804f87cec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "'Software bug' blamed for online banking outage | Morning in America",
-      "url": "https://www.yahoo.com/news/videos/software-bug-blamed-online-banking-141928009.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T06:06:27.000Z",
-      "latestAt": "2026-11-17T17:12:50.000Z",
-      "firstSeenAt": "2026-11-17T20:42:21.741Z",
-      "outlets": 17,
-      "outletNames": [
-        "Yahoo",
-        "KGET.com",
-        "WFLA",
-        "WKRN News 2",
-        "WSPA 7News",
-        "NBC4 WCMH-TV",
-        "NEWS10 ABC",
-        "NewsNation",
-        "KARK",
-        "UKNIP",
-        "WJBF",
-        "KELOLAND.com",
-        "KSN.com",
-        "KXAN Austin",
-        "FOX21 News Colorado",
-        "mypanhandle.com",
-        "KTALnews.com"
-      ],
-      "score": 3.85
-    },
-    {
       "id": "136ab8542f66",
       "cat": "hacks",
       "kind": "news",
@@ -517,6 +485,45 @@
         "A News"
       ],
       "score": 3.62
+    },
+    {
+      "id": "ba9b4d40eedf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
+      "source": "Click2Houston",
+      "publishedAt": "2026-11-17T16:12:55.000Z",
+      "latestAt": "2026-11-17T17:10:12.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 2,
+      "outletNames": [
+        "Click2Houston",
+        "News4JAX"
+      ],
+      "score": 2.8
+    },
+    {
+      "id": "f5d897957c48",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6 earthquake strikes Papua New Guinea, GFZ says",
+      "url": "https://www.yahoo.com/news/world/articles/magnitude-6-earthquake-strikes-papua-035657207.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T11:56:00.000Z",
+      "latestAt": "2026-11-18T06:00:05.000Z",
+      "firstSeenAt": "2026-11-18T04:03:16.400Z",
+      "outlets": 7,
+      "outletNames": [
+        "Reuters",
+        "Yahoo",
+        "TradingView",
+        "The Vibes",
+        "Newswav",
+        "Gulf News",
+        "UrduPoint"
+      ],
+      "score": 2.78
     },
     {
       "id": "70eecf50dbad",
@@ -574,24 +581,6 @@
         "News On 6"
       ],
       "score": 2.7
-    },
-    {
-      "id": "3cec50796970",
-      "cat": "germs",
-      "kind": "news",
-      "title": "PegLyte Powder recalled over possible contamination",
-      "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/18/peglyte-powder-recalled-over-possible-contamination/",
-      "source": "BNN Bloomberg",
-      "publishedAt": "2026-11-17T16:00:00.000Z",
-      "latestAt": "2026-11-18T00:50:00.000Z",
-      "firstSeenAt": "2026-11-18T01:02:54.429Z",
-      "outlets": 3,
-      "outletNames": [
-        "CTV News",
-        "BNN Bloomberg",
-        "CP24"
-      ],
-      "score": 2.2
     },
     {
       "id": "918c99de455a",
@@ -653,23 +642,6 @@
       "score": 3.73
     },
     {
-      "id": "ba9b4d40eedf",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
-      "source": "Click2Houston",
-      "publishedAt": "2026-11-17T16:12:55.000Z",
-      "latestAt": "2026-11-17T17:10:12.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 2,
-      "outletNames": [
-        "Click2Houston",
-        "News4JAX"
-      ],
-      "score": 2.8
-    },
-    {
       "id": "0b5c6ad77021",
       "cat": "hacks",
       "kind": "news",
@@ -703,6 +675,25 @@
       "outletNames": [
         "The Telegraph",
         "Yahoo"
+      ],
+      "score": 2.58
+    },
+    {
+      "id": "0d7eab61dcdd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor detects ongoing cyberattack, output unaffected",
+      "url": "https://www.aol.com/articles/equinor-detects-ongoing-cyberattack-output-181620000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-17T10:27:00.000Z",
+      "latestAt": "2026-11-17T23:21:17.000Z",
+      "firstSeenAt": "2026-11-17T18:55:24.881Z",
+      "outlets": 4,
+      "outletNames": [
+        "Euronext Markets: Real-time Stock Market Data | live",
+        "Reuters",
+        "AOL",
+        "marketscreener.com"
       ],
       "score": 2.58
     },
@@ -742,39 +733,22 @@
       "score": 2.21
     },
     {
-      "id": "f5d897957c48",
-      "cat": "earth",
+      "id": "3cec50796970",
+      "cat": "germs",
       "kind": "news",
-      "title": "Magnitude 6 earthquake strikes Papua New Guinea, GFZ says",
-      "url": "https://www.yahoo.com/news/world/articles/magnitude-6-earthquake-strikes-papua-035657207.html",
-      "source": "Yahoo",
+      "title": "PegLyte Powder recalled over possible contamination",
+      "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/18/peglyte-powder-recalled-over-possible-contamination/",
+      "source": "BNN Bloomberg",
       "publishedAt": "2026-11-17T16:00:00.000Z",
-      "latestAt": "2026-11-18T03:57:00.000Z",
-      "firstSeenAt": "2026-11-18T04:03:16.400Z",
+      "latestAt": "2026-11-18T00:50:00.000Z",
+      "firstSeenAt": "2026-11-18T01:02:54.429Z",
       "outlets": 3,
       "outletNames": [
-        "Reuters",
-        "Yahoo",
-        "TradingView"
+        "CTV News",
+        "BNN Bloomberg",
+        "CP24"
       ],
-      "score": 2.07
-    },
-    {
-      "id": "ad90ac6660a6",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Shallow 6.0-magnitude earthquake hits Papua New Guinea region",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQcmdrTjg2Uzdkc0U1bjZVcGoxNGlVTEtVZmJ3WlBpOEtEYV9lV3cxbDU3LVIxX09nQ1hmcTVzczN4aVRzZEZPUjg3Wjl6Y0U1M3Q4bFBOSXBlR3FaUVBWd0FPcnkxNDYzRDZQaS1BaTVDTHF2OVhmQVZjWnhQZmFIQ281NnRnSW1Ob3Z4WmFBcVQ5dTZMYVNzNGNHcHFDSjlWTTdnU2tEV3V1QXJU?oc=5",
-      "source": "The Vibes",
-      "publishedAt": "2026-11-18T04:32:00.000Z",
-      "latestAt": "2026-11-18T04:32:00.000Z",
-      "firstSeenAt": "2026-11-18T04:48:36.329Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Vibes",
-        "Newswav"
-      ],
-      "score": 1.99
+      "score": 2.2
     },
     {
       "id": "7cdd050ea28b",
@@ -813,6 +787,25 @@
       "quietReason": "headline mentions tornadoes"
     },
     {
+      "id": "8b74d869f960",
+      "cat": "earth",
+      "kind": "news",
+      "title": "New Zealand disaster agency cancels tsunami warning after threat passes",
+      "url": "https://www.msn.com/en-my/news/news/new-zealand-disaster-agency-cancels-tsunami-warning-after-threat-passes/ar-AA2hF8zV",
+      "source": "Free Malaysia Today on MSN",
+      "publishedAt": "2026-11-17T21:46:00.000Z",
+      "latestAt": "2026-11-17T21:47:00.000Z",
+      "firstSeenAt": "2026-11-18T06:18:41.048Z",
+      "outlets": 2,
+      "outletNames": [
+        "Free Malaysia Today on MSN",
+        "Hindustan Times"
+      ],
+      "score": 1.72,
+      "quiet": true,
+      "quietReason": "headline mentions tsunami"
+    },
+    {
       "id": "0f7714f17187",
       "cat": "markets",
       "kind": "news",
@@ -845,6 +838,22 @@
         "KOIN.com"
       ],
       "score": 1.67
+    },
+    {
+      "id": "1f76878e7527",
+      "cat": "earth",
+      "kind": "news",
+      "title": "The strong earthquake that rattled much of the South Island overnight is unlikely to have increased the risk of a major Alpine Fault rupture - 18-Nov-2026 - NZ Environment news",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcmc4WThXYlN2ODFTNXpxZFZCWnQ1NmVQM0xQYTlQR2pMS3N2ME1GMjJ3RFNqd1dOa0Q2RWhPV0V0anBzOU1helNoQV9RTDhwNkIzS0tHaDg2YWl3aUl4SDE3eGpvakZhSmZ4NVpiOHlKWUhhUDJLbVVxODE4amhIa0FKZ0ttd092?oc=5",
+      "source": "NZCity",
+      "publishedAt": "2026-11-18T06:02:26.000Z",
+      "latestAt": "2026-11-18T06:02:26.000Z",
+      "firstSeenAt": "2026-11-18T06:18:41.048Z",
+      "outlets": 1,
+      "outletNames": [
+        "NZCity"
+      ],
+      "score": 1.39
     },
     {
       "id": "8c083e71a179",
@@ -893,22 +902,6 @@
         "Global Agriculture"
       ],
       "score": 1.39
-    },
-    {
-      "id": "f55fab65399c",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Apple, OpenAI and other major services hit by global outages",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbWN5Zm93bjdsNVV4UkZpaGtIb1FfMWFnNnpyQzlFdHA3bU1PUVo2VG9abFpMNTVlOVhhalhKclJzNzVwQmdGM1FQd1NmUVM0TzR3U2dsWlFLTkN4clVCSUQ0Yk1FRnMtZ2NHRVFWMGlWRlNXTlIycE5qNjJuTG51R040ZXdlMXI5Yi1YeHREUDNHaTA?oc=5",
-      "source": "RBC-Ukraine",
-      "publishedAt": "2026-11-17T21:30:00.000Z",
-      "latestAt": "2026-11-17T21:30:00.000Z",
-      "firstSeenAt": "2026-11-18T01:47:58.451Z",
-      "outlets": 1,
-      "outletNames": [
-        "RBC-Ukraine"
-      ],
-      "score": 1.3
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-17",
@@ -968,25 +961,6 @@
         "Yahoo"
       ],
       "score": 2.78
-    },
-    {
-      "id": "0d7eab61dcdd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor detects ongoing cyberattack, output unaffected",
-      "url": "https://www.aol.com/articles/equinor-detects-ongoing-cyberattack-output-181620000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-17T10:27:00.000Z",
-      "latestAt": "2026-11-17T23:21:17.000Z",
-      "firstSeenAt": "2026-11-17T18:55:24.881Z",
-      "outlets": 4,
-      "outletNames": [
-        "Euronext Markets: Real-time Stock Market Data | live",
-        "Reuters",
-        "AOL",
-        "marketscreener.com"
-      ],
-      "score": 2.58
     },
     {
       "id": "f65c9d1eaa32",
@@ -1485,6 +1459,22 @@
       "score": 1.45
     },
     {
+      "id": "ee520203c651",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers hit 178 major websites via optimizely platform in supply-chain attack",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVlJJMjB0V082YXdSVGItWHRCUFhkQVBaWDZVRHo2enZLWExCVkJLZmZxX3o3TmVUQU5YMm5TMzFOMWFfZUZ4SERrX1V5RktTVF9aVkRMcC1qOXhKdG02b0hJU3ZhQ0Z6RVczbUNkYU5vZXVHY2pkWmoxWnozNWZEeUJabm5wRGpvZk5mOGhfUjJqQQ?oc=5",
+      "source": "Wocult",
+      "publishedAt": "2026-11-18T06:14:34.000Z",
+      "latestAt": "2026-11-18T06:14:34.000Z",
+      "firstSeenAt": "2026-11-18T06:18:41.048Z",
+      "outlets": 1,
+      "outletNames": [
+        "Wocult"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "145206126cc9",
       "cat": "flights",
       "kind": "news",
@@ -1663,6 +1653,22 @@
       "score": 1.38
     },
     {
+      "id": "8c660ed73321",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Rakuten Securities account information compromised in major data breach",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPOW40TmN1X0NzaFVvc3NKVy1zbXotb2stR1FPMW8zWHJ5eUZFdzdTdE9KZDlGRU9lYzZKUHVlMTZGZ3hxMk1lS2ZkVjh1NXg4QzRxRDhXNG95Y1JFcDVfZnhYYzl3ak5SVlc4WFN2a3hZWmdSN0loOTNYWG1uYjkyMTdFRjRzTldXTnN5T2gwU3JfVUYzY0xOdjV4YXMzdTQ?oc=5",
+      "source": "The Japan Times",
+      "publishedAt": "2026-11-18T04:50:00.000Z",
+      "latestAt": "2026-11-18T04:50:00.000Z",
+      "firstSeenAt": "2026-11-18T06:18:41.048Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Japan Times"
+      ],
+      "score": 1.37
+    },
+    {
       "id": "ebd2e51d2c83",
       "cat": "flights",
       "kind": "news",
@@ -1727,6 +1733,22 @@
       "score": 1.3
     },
     {
+      "id": "f55fab65399c",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Apple, OpenAI and other major services hit by global outages",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbWN5Zm93bjdsNVV4UkZpaGtIb1FfMWFnNnpyQzlFdHA3bU1PUVo2VG9abFpMNTVlOVhhalhKclJzNzVwQmdGM1FQd1NmUVM0TzR3U2dsWlFLTkN4clVCSUQ0Yk1FRnMtZ2NHRVFWMGlWRlNXTlIycE5qNjJuTG51R040ZXdlMXI5Yi1YeHREUDNHaTA?oc=5",
+      "source": "RBC-Ukraine",
+      "publishedAt": "2026-11-17T21:30:00.000Z",
+      "latestAt": "2026-11-17T21:30:00.000Z",
+      "firstSeenAt": "2026-11-18T01:47:58.451Z",
+      "outlets": 1,
+      "outletNames": [
+        "RBC-Ukraine"
+      ],
+      "score": 1.3
+    },
+    {
       "id": "2bd37ab7e95f",
       "cat": "grid",
       "kind": "news",
@@ -1773,22 +1795,6 @@
         "Your Valley"
       ],
       "score": 1.26
-    },
-    {
-      "id": "947ad977c205",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "iPhones targeted as hackers plant code on websites worldwide",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeXp2Zks1a2tvZEIyWHhNOWNfemlrTG5GQXdJTTh5RldUOWxZTzJMeHRMVGw5MmRfVHBpQXE2NHJRbWRKOTlickRLNzNQMHpHMTBuMk1nZnBaQVlnNVJQZEkydVc0OTBpN2l5Q1dpM24xVklPTlRST2lQOFp2bnBhYndpQVR4ZHQ5?oc=5",
-      "source": "InDaily South Australia",
-      "publishedAt": "2026-11-17T22:57:05.000Z",
-      "latestAt": "2026-11-17T22:57:05.000Z",
-      "firstSeenAt": "2026-11-18T05:33:38.722Z",
-      "outlets": 1,
-      "outletNames": [
-        "InDaily South Australia"
-      ],
-      "score": 1.25
     },
     {
       "id": "e8dd29d897f1",
@@ -1855,34 +1861,18 @@
       "score": 1.02
     },
     {
-      "id": "5593a2a7bd61",
+      "id": "ef5691b35639",
       "cat": "earth",
       "kind": "news",
-      "title": "Aftershocks are expected over the coming days following a strong earthquake near Canterbury's Arthur's Pass overnight",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZE5KRUNidHFxN3lMaGs3NW1CUXJwcW5vYThnSGxVM3VLRjdkckxxcWJwNEVBc1FrN0FxNXVNNHEzaUhJblpHOG1sWk5xQkpVdW1YT3JrSFlONXMxS2VrbEdnRmFNN2lfbEQ0ejRoZ1NsLS1VcTYwd1NZNWp3djVkaS04VDBmaVlE?oc=5",
-      "source": "NZCity",
-      "publishedAt": "2026-11-18T06:02:26.000Z",
-      "latestAt": "2026-11-18T06:02:26.000Z",
-      "firstSeenAt": "2026-11-18T06:03:37.165Z",
+      "title": "5.9-magnitude quake hits Flores Region, Indonesia",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYmtGRVdOSl9hZC1PR2hSVl9JVXhrT3dvU2xUVm80azdVODBZdGZWTkdZWmhLMzBBLTNEalZUUTZvY0hRZDZHck4wQXZGOHFfSWZsalJUTk1qdURleGVxRk9tcm4tTWkzWnlKbEROMWxvQVY4YzhqbEJiRTZKNnc3clFraWZEMkJBYjBB?oc=5",
+      "source": "Azərtac",
+      "publishedAt": "2026-11-18T06:04:00.000Z",
+      "latestAt": "2026-11-18T06:04:00.000Z",
+      "firstSeenAt": "2026-11-18T06:18:41.048Z",
       "outlets": 1,
       "outletNames": [
-        "NZCity"
-      ],
-      "score": 1
-    },
-    {
-      "id": "8e4dddf11480",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Cantabrians say last night's strong earthquake is a good reminder to always be prepared",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMnBDcHVNSmNMRkhXUVFHWXhNQnVRdnVfandJc2dkazBaQzZuZ1BVV0I0ZXpfWmY3WlVFSmNfSjlXRkgyd0JBaXJtWXFNMFRid3hZVzIyVnpMSzMwRjR1QU9WRVFFcnIteUU1bTUtRHM5b0s2dFV4T0xCU3phaW83bHlyWjhtZDdYbGc?oc=5",
-      "source": "NZCity",
-      "publishedAt": "2026-11-18T06:02:16.000Z",
-      "latestAt": "2026-11-18T06:02:16.000Z",
-      "firstSeenAt": "2026-11-18T06:03:37.165Z",
-      "outlets": 1,
-      "outletNames": [
-        "NZCity"
+        "Azərtac"
       ],
       "score": 1
     },
