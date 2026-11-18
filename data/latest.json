@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T06:33:43.173Z",
+  "buildTime": "2026-11-18T06:48:50.949Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 01:33 ET",
+  "etStamp": "2026-11-18 01:48 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,8 +44,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 680,
-  "lastSuccessAt": "2026-11-18T06:33:43.173Z",
+  "headlinesRead": 1569,
+  "lastSuccessAt": "2026-11-18T06:48:50.949Z",
   "rollingFallback": false,
   "cats": {
     "flights": 25,
@@ -176,20 +176,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 350,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 11 of 26 queries)",
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "count": 1240,
+      "error": null,
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     },
     "bing": {
       "ok": true,
-      "count": 286,
+      "count": 287,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,55 +201,56 @@
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     },
     "x": {
       "ok": true,
-      "count": 2,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:33:43.173Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T06:33:43.173Z"
+      "lastOkAt": "2026-11-18T06:48:50.949Z"
     }
   },
   "stories": [
@@ -486,6 +487,24 @@
       "score": 3.62
     },
     {
+      "id": "5f4b0eabb2f5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI Dallas office warns that AI is helping hackers launch faster global cyberattacks",
+      "url": "https://www.dallasnews.com/business/technology/article/fbi-dallas-hackers-warning-22535909.php",
+      "source": "The Dallas Morning News",
+      "publishedAt": "2026-11-17T12:31:00.000Z",
+      "latestAt": "2026-11-17T20:37:57.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 3,
+      "outletNames": [
+        "Dallas News",
+        "The Dallas Morning News",
+        "Yahoo"
+      ],
+      "score": 3.13
+    },
+    {
       "id": "f5d897957c48",
       "cat": "earth",
       "kind": "news",
@@ -507,23 +526,6 @@
         "Emirates News Agency"
       ],
       "score": 2.93
-    },
-    {
-      "id": "ba9b4d40eedf",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
-      "source": "Click2Houston",
-      "publishedAt": "2026-11-17T16:12:55.000Z",
-      "latestAt": "2026-11-17T17:10:12.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 2,
-      "outletNames": [
-        "Click2Houston",
-        "News4JAX"
-      ],
-      "score": 2.8
     },
     {
       "id": "70eecf50dbad",
@@ -630,7 +632,7 @@
       "url": "https://mashable.com/tech/faa-ground-stop-router-work",
       "source": "Mashable",
       "publishedAt": "2026-11-17T17:38:00.000Z",
-      "latestAt": "2026-11-18T05:48:56.000Z",
+      "latestAt": "2026-11-18T06:23:31.000Z",
       "firstSeenAt": "2026-11-18T00:17:39.985Z",
       "outlets": 4,
       "outletNames": [
@@ -640,6 +642,23 @@
         "Red Lake Nation News"
       ],
       "score": 3.73
+    },
+    {
+      "id": "ba9b4d40eedf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers target iPhones, payment information through websites used by millions, researchers say",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOVzRSTXhyaG5TZUNnNXVZNWotR1pKdXRPYW1HaWVlX0hIdWtuZjlGd3E5UVNjSy1KUzV6clRyVHB5aTh5UTVSd3dfVzZOdFdZeFh4YUZuQkxGOHljWm9maGxrYnNXZWhBUlkzNXI5OGIybUVKU1J0SHlvUmFua2c0R3BHVUFrRG1XYzVfUWVYaXVDZDRBUXR6dGdXc19PMzlFTnc5Yl82RnVQNWtETU1kai03WFFuaFpVTDZ5Ulp3eFJBS0RONThsd00zOXRCc01JRU12UWN2MnBMVlBfVWc?oc=5",
+      "source": "Click2Houston",
+      "publishedAt": "2026-11-17T16:12:55.000Z",
+      "latestAt": "2026-11-17T17:10:12.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 2,
+      "outletNames": [
+        "Click2Houston",
+        "News4JAX"
+      ],
+      "score": 2.8
     },
     {
       "id": "0b5c6ad77021",
@@ -675,25 +694,6 @@
       "outletNames": [
         "The Telegraph",
         "Yahoo"
-      ],
-      "score": 2.58
-    },
-    {
-      "id": "0d7eab61dcdd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor detects ongoing cyberattack, output unaffected",
-      "url": "https://www.aol.com/articles/equinor-detects-ongoing-cyberattack-output-181620000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-17T10:27:00.000Z",
-      "latestAt": "2026-11-17T23:21:17.000Z",
-      "firstSeenAt": "2026-11-17T18:55:24.881Z",
-      "outlets": 4,
-      "outletNames": [
-        "Euronext Markets: Real-time Stock Market Data | live",
-        "Reuters",
-        "AOL",
-        "marketscreener.com"
       ],
       "score": 2.58
     },
@@ -965,6 +965,25 @@
       "score": 2.78
     },
     {
+      "id": "0d7eab61dcdd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor detects ongoing cyberattack, output unaffected",
+      "url": "https://www.aol.com/articles/equinor-detects-ongoing-cyberattack-output-181620000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-17T10:27:00.000Z",
+      "latestAt": "2026-11-17T23:21:17.000Z",
+      "firstSeenAt": "2026-11-17T18:55:24.881Z",
+      "outlets": 4,
+      "outletNames": [
+        "Euronext Markets: Real-time Stock Market Data | live",
+        "Reuters",
+        "AOL",
+        "marketscreener.com"
+      ],
+      "score": 2.58
+    },
+    {
       "id": "f65c9d1eaa32",
       "cat": "hacks",
       "kind": "news",
@@ -1012,23 +1031,6 @@
       "outletNames": [
         "The Virginian-Pilot",
         "Daily Press"
-      ],
-      "score": 2.42
-    },
-    {
-      "id": "5f4b0eabb2f5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI Dallas office warns that AI is helping hackers launch faster global cyberattacks",
-      "url": "https://www.dallasnews.com/business/technology/article/fbi-dallas-hackers-warning-22535909.php",
-      "source": "The Dallas Morning News",
-      "publishedAt": "2026-11-17T12:31:00.000Z",
-      "latestAt": "2026-11-17T20:37:57.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
-      "outlets": 2,
-      "outletNames": [
-        "Dallas News",
-        "The Dallas Morning News"
       ],
       "score": 2.42
     },
@@ -1393,24 +1395,6 @@
       "score": 1.66
     },
     {
-      "id": "dcd73a6fa597",
-      "cat": "flights",
-      "kind": "news",
-      "title": "United Airlines Had a “Widespread System Outage,” 3 Days After the FAA Ground Stop",
-      "url": "https://247wallst.com/investing/2026/11/17/united-airlines-had-a-widespread-system-outage-3-days-after-the-faa-ground-stop/",
-      "source": "24/7 Wall St.",
-      "publishedAt": "2026-11-17T07:45:12.000Z",
-      "latestAt": "2026-11-17T18:48:53.000Z",
-      "firstSeenAt": "2026-11-18T06:33:43.173Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Black Chronicle",
-        "24/7 Wall St.",
-        "Hoodline"
-      ],
-      "score": 1.6
-    },
-    {
       "id": "27149818813b",
       "cat": "hacks",
       "kind": "news",
@@ -1671,6 +1655,22 @@
         "Global Agriculture"
       ],
       "score": 1.39
+    },
+    {
+      "id": "eae32f04b08e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Unclaimed luggage piles up after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOdWNwOFI2UlBDVUhrdmRXZlVaZ2JkZjVsVzVNT3JZamZOTDY2ZGU2d09UbDAtSE11ZWJzVmhJQTd3aGZWTU92dkJ0QUg2NElRODNrczZZalVNY1RiZmhJdU9tSEpnMzFVRlVvdklnbFVidmhDQ2NZVGFOR3F4X1BubGVZemM3MVd6aU9sSS03dGRfUkNvOW1WdkJwYUdwY21WVEMtYzBpRl9WRjhWbGJqbdIBtgFBVV95cUxQa1J3NFE0aGlLTDhSNmFIYnpmYUs0eF8wd3VwY29TNkJESEJPOXBudzlCQTVVbDJSbW04YnpBYXIwclkzZFVwc2lZTEVGZC1MeDctbDBQd1NNWm9CTm5qSkdna3FySFdtUGk1RVhqQU42WVluY1l1S05BNEdsQUxPUzMwcUdad2pNS0xRcTVXdWJYa00zc1hnUFVVRlo0eEM2SGQtR25OVkMyYy1uLW9iNGVrQmlWUQ?oc=5",
+      "source": "NewsNation",
+      "publishedAt": "2026-11-18T05:50:12.000Z",
+      "latestAt": "2026-11-18T05:50:12.000Z",
+      "firstSeenAt": "2026-11-18T06:48:50.949Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsNation"
+      ],
+      "score": 1.38
     },
     {
       "id": "fb892141ebc5",
