@@ -47,30 +47,6 @@
       "score": 5.82
     },
     {
-      "id": "a39541a3b1c3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA official oversaw router work just before nationwide ground stop, report claims",
-      "url": "https://mashable.com/tech/faa-ground-stop-router-work",
-      "source": "Mashable",
-      "publishedAt": "2026-11-17T17:38:00.000Z",
-      "latestAt": "2026-11-18T16:52:11.000Z",
-      "firstSeenAt": "2026-11-18T00:17:39.985Z",
-      "outlets": 7,
-      "outletNames": [
-        "The Washington Post",
-        "Mashable",
-        "Mashable SEA",
-        "Red Lake Nation News",
-        "Seeking Alpha",
-        "TMZ",
-        "The American Bazaar"
-      ],
-      "trending": 500,
-      "trendTerm": "today's news",
-      "score": 4.74
-    },
-    {
       "id": "sig:faa-stop:SFO:2026-11-18",
       "cat": "flights",
       "kind": "signal",
@@ -114,6 +90,29 @@
         "hub": true,
         "nationwide": false,
         "reason": "low visibility"
+      }
+    },
+    {
+      "id": "sig:faa-stop:FLL:2026-11-18",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at FLL (thunderstorms)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-18T13:35:01.133Z",
+      "latestAt": "2026-11-18T13:35:01.133Z",
+      "firstSeenAt": "2026-11-18T13:35:01.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "FLL",
+        "hub": true,
+        "nationwide": false,
+        "reason": "thunderstorms"
       }
     },
     {
@@ -199,23 +198,22 @@
       "score": 2.8
     },
     {
-      "id": "ffe871da3da9",
+      "id": "3af276c6d1c6",
       "cat": "hacks",
       "kind": "news",
-      "title": "Cyber Attack Hits 178 Major Websites: Full List of Affected Organizations",
-      "url": "https://www.newsweek.com/cyber-attack-websites-affected-12725863",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-18T07:08:00.000Z",
-      "latestAt": "2026-11-18T11:50:00.000Z",
-      "firstSeenAt": "2026-11-18T12:04:44.262Z",
-      "outlets": 2,
+      "title": "Expedia investigates cyberattack after hackers claim theft of nearly 1 billion customer records",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRVg4c3h1a3ZYUXdPRVlqMDVrOVhLSGxMamRGU3lESFBlc1pOUFd3S1VlVHpSR1FxWUU2eHI5U3VKS1Y0WWwxZXh5WWNnV1ZpU1BnUXBQM0htN0podUdJRlBpMFlzRmtNQ0doUkN2aW5OeWd1S20zMDZWUEFVY2xubG1nQmwxbW9rVzJkbEZyNVpyRWdNWmtoZEh2WEpLTEZhelVrUmVDSnh2czQ?oc=5",
+      "source": "cbs8.com",
+      "publishedAt": "2026-11-18T17:22:00.000Z",
+      "latestAt": "2026-11-18T17:26:22.000Z",
+      "firstSeenAt": "2026-11-18T17:35:37.400Z",
+      "outlets": 3,
       "outletNames": [
-        "Newsweek",
-        "TechStory"
+        "cbs8.com",
+        "weareiowa.com",
+        "KVUE"
       ],
-      "trending": 1000,
-      "trendTerm": "exploit kit",
-      "score": 2.57
+      "score": 2.58
     },
     {
       "id": "4db48258ed66",
@@ -289,29 +287,6 @@
       "score": 2
     },
     {
-      "id": "sig:faa-stop:FLL:2026-11-18",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at FLL (thunderstorms)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-18T13:35:01.133Z",
-      "latestAt": "2026-11-18T13:35:01.133Z",
-      "firstSeenAt": "2026-11-18T13:35:01.133Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "FLL",
-        "hub": true,
-        "nationwide": false,
-        "reason": "thunderstorms"
-      }
-    },
-    {
       "id": "sig:faa-stop:SFO:2026-11-17",
       "cat": "flights",
       "kind": "signal",
@@ -358,6 +333,62 @@
       }
     },
     {
+      "id": "1f4000ce7c19",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Fallout over nationwide ground stop continues",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNVzctQzRoaEpKUWxKaG5JeE94eV9DSXBTVnh4M19tQ0E1a1U3andFR3YydU9WS09XRzhCZDlQV3RqSUswZFdhMkVaVmRGQnB0Snp0aDFVTVA2SGVmNjBvcFNnUm44SzNOTkQxcWFwd05IcjRHU2ZpZ1V5cl9vQUFDQ3gwNmhITWtVaEtHMmkxYzA4SUV5SkdnSlpVYXMweXdaWEpNYWp6a2RkRWJ6MkVyaWc5Tng1OTJJNkJCeEU0U3I4LTVPdzc3RHQxWXU?oc=5",
+      "source": "news8000.com",
+      "publishedAt": "2026-11-17T19:27:00.000Z",
+      "latestAt": "2026-11-18T00:25:53.000Z",
+      "firstSeenAt": "2026-11-17T21:14:13.908Z",
+      "outlets": 4,
+      "outletNames": [
+        "news8000.com",
+        "heysocal.com",
+        "Hey SoCal. Change is our intention.",
+        "THV11"
+      ],
+      "score": 4.07
+    },
+    {
+      "id": "9f11549139fa",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor working to restore IT systems after cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUjVUaUp3Y2JQalJXQkZWWHhfWlV0OGtwR0M2Sm15OFhSOC1sVzg5M2VxcHUtRDhzeWVuQU8yZk83cGZtckFhemM5NXlDTWpfcVRNRGpZVGMwcmJiZEpwWUNWSkRIcHBucGw4OEIyTnotbHVJelRFaUNyZFlhZ0tuZ3oyUFBuSWZBZGxPX0NKZTZLc3o1aFRxTUg5T1B2eTJxR1FfLTVlTFZ6MGU1NVRYTVdvRmxDSG1MbGh3ZVJiSXQzQW1qVTBxNFRDSVQ2S28tWldkZDkzQWU?oc=5",
+      "source": "Toronto Star",
+      "publishedAt": "2026-11-18T15:41:33.000Z",
+      "latestAt": "2026-11-18T17:01:51.000Z",
+      "firstSeenAt": "2026-11-18T16:05:29.833Z",
+      "outlets": 3,
+      "outletNames": [
+        "Toronto Star",
+        "Yahoo! Finance Canada",
+        "EnergyNow"
+      ],
+      "score": 2.57
+    },
+    {
+      "id": "ffe871da3da9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyber Attack Hits 178 Major Websites: Full List of Affected Organizations",
+      "url": "https://www.newsweek.com/cyber-attack-websites-affected-12725863",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-18T07:08:00.000Z",
+      "latestAt": "2026-11-18T11:50:00.000Z",
+      "firstSeenAt": "2026-11-18T12:04:44.262Z",
+      "outlets": 2,
+      "outletNames": [
+        "Newsweek",
+        "TechStory"
+      ],
+      "trending": 1000,
+      "trendTerm": "exploit kit",
+      "score": 2.57
+    },
+    {
       "id": "106829ca41b5",
       "cat": "hacks",
       "kind": "news",
@@ -376,43 +407,6 @@
         "The Straits Times"
       ],
       "score": 2.45
-    },
-    {
-      "id": "b8ed9b7f73ec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Optimizely confirms massive cyberattack on customer websites injected stealer malware",
-      "url": "https://www.computerworld.com/article/4249960/optimizely-confirms-massive-cyberattack-on-customer-websites-injected-stealer-malware-2.html",
-      "source": "Computerworld",
-      "publishedAt": "2026-11-17T17:39:00.000Z",
-      "latestAt": "2026-11-18T01:24:27.000Z",
-      "firstSeenAt": "2026-11-18T01:32:52.277Z",
-      "outlets": 2,
-      "outletNames": [
-        "CSO Online",
-        "Computerworld"
-      ],
-      "score": 2.43
-    },
-    {
-      "id": "ce8c11435f3c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack on 178 organizations: Take these 5 steps to protect your credit card info",
-      "url": "https://www.oregonlive.com/nation/2026/11/cyberattack-on-178-organizations-take-these-5-steps-to-protect-your-credit-card-info.html",
-      "source": "OregonLive.com",
-      "publishedAt": "2026-11-17T21:11:00.000Z",
-      "latestAt": "2026-11-18T13:11:00.000Z",
-      "firstSeenAt": "2026-11-18T13:35:01.133Z",
-      "outlets": 5,
-      "outletNames": [
-        "OregonLive.com",
-        "NJ.com",
-        "cleveland.com",
-        "Syracuse.com",
-        "mlive"
-      ],
-      "score": 2.41
     },
     {
       "id": "ee5091b344ef",
@@ -617,25 +611,6 @@
       "score": 1.39
     },
     {
-      "id": "1f4000ce7c19",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Fallout over nationwide ground stop continues",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNVzctQzRoaEpKUWxKaG5JeE94eV9DSXBTVnh4M19tQ0E1a1U3andFR3YydU9WS09XRzhCZDlQV3RqSUswZFdhMkVaVmRGQnB0Snp0aDFVTVA2SGVmNjBvcFNnUm44SzNOTkQxcWFwd05IcjRHU2ZpZ1V5cl9vQUFDQ3gwNmhITWtVaEtHMmkxYzA4SUV5SkdnSlpVYXMweXdaWEpNYWp6a2RkRWJ6MkVyaWc5Tng1OTJJNkJCeEU0U3I4LTVPdzc3RHQxWXU?oc=5",
-      "source": "news8000.com",
-      "publishedAt": "2026-11-17T19:27:00.000Z",
-      "latestAt": "2026-11-18T00:25:53.000Z",
-      "firstSeenAt": "2026-11-17T21:14:13.908Z",
-      "outlets": 4,
-      "outletNames": [
-        "news8000.com",
-        "heysocal.com",
-        "Hey SoCal. Change is our intention.",
-        "THV11"
-      ],
-      "score": 4.07
-    },
-    {
       "id": "sig:faa-stop:TEB:2026-11-17",
       "cat": "flights",
       "kind": "signal",
@@ -677,6 +652,26 @@
         "Yahoo"
       ],
       "score": 2.84
+    },
+    {
+      "id": "ce8c11435f3c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack on 178 organizations: Take these 5 steps to protect your credit card info",
+      "url": "https://www.oregonlive.com/nation/2026/11/cyberattack-on-178-organizations-take-these-5-steps-to-protect-your-credit-card-info.html",
+      "source": "OregonLive.com",
+      "publishedAt": "2026-11-17T21:11:00.000Z",
+      "latestAt": "2026-11-18T13:11:00.000Z",
+      "firstSeenAt": "2026-11-18T13:35:01.133Z",
+      "outlets": 5,
+      "outletNames": [
+        "OregonLive.com",
+        "NJ.com",
+        "cleveland.com",
+        "Syracuse.com",
+        "mlive"
+      ],
+      "score": 2.41
     },
     {
       "id": "e656cdb7432f",
@@ -822,40 +817,6 @@
       "trending": 1000,
       "trendTerm": "exploit kit",
       "score": 2.04
-    },
-    {
-      "id": "3af276c6d1c6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Expedia investigates cyberattack after hackers claim theft of nearly 1 billion customer records",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRVg4c3h1a3ZYUXdPRVlqMDVrOVhLSGxMamRGU3lESFBlc1pOUFd3S1VlVHpSR1FxWUU2eHI5U3VKS1Y0WWwxZXh5WWNnV1ZpU1BnUXBQM0htN0podUdJRlBpMFlzRmtNQ0doUkN2aW5OeWd1S20zMDZWUEFVY2xubG1nQmwxbW9rVzJkbEZyNVpyRWdNWmtoZEh2WEpLTEZhelVrUmVDSnh2czQ?oc=5",
-      "source": "cbs8.com",
-      "publishedAt": "2026-11-18T17:22:00.000Z",
-      "latestAt": "2026-11-18T17:22:00.000Z",
-      "firstSeenAt": "2026-11-18T17:35:37.400Z",
-      "outlets": 2,
-      "outletNames": [
-        "cbs8.com",
-        "weareiowa.com"
-      ],
-      "score": 1.99
-    },
-    {
-      "id": "9f11549139fa",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor working to restore IT systems after cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUjVUaUp3Y2JQalJXQkZWWHhfWlV0OGtwR0M2Sm15OFhSOC1sVzg5M2VxcHUtRDhzeWVuQU8yZk83cGZtckFhemM5NXlDTWpfcVRNRGpZVGMwcmJiZEpwWUNWSkRIcHBucGw4OEIyTnotbHVJelRFaUNyZFlhZ0tuZ3oyUFBuSWZBZGxPX0NKZTZLc3o1aFRxTUg5T1B2eTJxR1FfLTVlTFZ6MGU1NVRYTVdvRmxDSG1MbGh3ZVJiSXQzQW1qVTBxNFRDSVQ2S28tWldkZDkzQWU?oc=5",
-      "source": "Toronto Star",
-      "publishedAt": "2026-11-18T15:41:33.000Z",
-      "latestAt": "2026-11-18T15:41:33.000Z",
-      "firstSeenAt": "2026-11-18T16:05:29.833Z",
-      "outlets": 2,
-      "outletNames": [
-        "Toronto Star",
-        "Yahoo! Finance Canada"
-      ],
-      "score": 1.99
     },
     {
       "id": "e82c3d981838",
@@ -1531,6 +1492,38 @@
       "score": 1.38
     },
     {
+      "id": "ebd2e51d2c83",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Carmel Valley woman describes ‘chaos’ getting home after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOTVMM0doMnhqSmVWakU1bWs2VFh0RGpRc3FBNkFxeXJDbXBqc1dqV2FxZzVkcDA5U1NhRll6eFdBTGxtQUNVdzJzVDg2OGFCLWVBSTNrUzRrbVAzR1lKTVRlUk9WNzVXU1V2XzhIY0c5OEtpcGZlQVdOTW96X0Z6RHRiZmpFa3kwdkVMQ1N0Q0gyVUk2V0tuZm1aY3dZNDJuZTdtaHNoSmUwT1ltLTdFcXZ3aUFNZmM?oc=5",
+      "source": "10News.com",
+      "publishedAt": "2026-11-17T23:59:42.000Z",
+      "latestAt": "2026-11-17T23:59:42.000Z",
+      "firstSeenAt": "2026-11-18T01:47:58.451Z",
+      "outlets": 1,
+      "outletNames": [
+        "10News.com"
+      ],
+      "score": 1.36
+    },
+    {
+      "id": "02104fe6cf9d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Post-ground stop and major outages, assessing Thanksgiving travel concerns",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWU4tWHVKRnNHOHY1ZTc1UjJ1UDRPcGpFMEo2dWZrQ01RSTBYZEdDVXYzRDNpOXRSckRmMXMwM1NFQmRHTkMtYWNPQTZwTU5qR0dPSHliMkp6UmtOUkxxZjNNNG11bkJDM05ITU9jWEhnSmRRZ3p2T29OdG1xb2YyUmp5c2NoMDVjbWxoZFhVT0VmVTBJZ0ZHdnFaQk5idC10eWxUeGRnWTRfczNtNXdJ?oc=5",
+      "source": "WTNH.com",
+      "publishedAt": "2026-11-18T00:44:39.000Z",
+      "latestAt": "2026-11-18T00:44:39.000Z",
+      "firstSeenAt": "2026-11-18T03:33:11.967Z",
+      "outlets": 1,
+      "outletNames": [
+        "WTNH.com"
+      ],
+      "score": 1.33
+    },
+    {
       "id": "1f76878e7527",
       "cat": "earth",
       "kind": "news",
@@ -1771,5 +1764,5 @@
       "score": 0.86
     }
   ],
-  "updatedAt": "2026-11-18T17:35:37.400Z"
+  "updatedAt": "2026-11-18T17:50:39.224Z"
 }
