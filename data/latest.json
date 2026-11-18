@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T22:51:30.426Z",
+  "buildTime": "2026-11-18T23:06:31.636Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 17:51 ET",
+  "etStamp": "2026-11-18 18:06 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,15 +49,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1361,
-  "lastSuccessAt": "2026-11-18T22:51:30.426Z",
+  "headlinesRead": 1376,
+  "lastSuccessAt": "2026-11-18T23:06:31.636Z",
   "rollingFallback": false,
   "cats": {
-    "weather": 5,
+    "weather": 4,
     "internet": 13,
-    "flights": 24,
-    "grid": 8,
-    "hacks": 27,
+    "flights": 25,
+    "grid": 9,
+    "hacks": 26,
     "earth": 4,
     "markets": 4,
     "germs": 4,
@@ -181,80 +181,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1036,
+      "count": 1044,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "bing": {
       "ok": true,
-      "count": 288,
+      "count": 290,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
-      "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-18T21:21:17.183Z"
+      "ok": true,
+      "count": 5,
+      "error": "timeout",
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T22:51:30.426Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T22:51:30.426Z"
+      "lastOkAt": "2026-11-18T23:06:31.636Z"
     }
   },
   "stories": [
@@ -398,6 +399,27 @@
       "score": 3.78
     },
     {
+      "id": "72ec3e8b1316",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Here are all of the recent major outages, national disruptions",
+      "url": "https://www.detroitnews.com/story/tech/2026/11/18/tech-outages-full-list-outlook-faa/92841844007/",
+      "source": "The Detroit News",
+      "publishedAt": "2026-11-18T04:22:00.000Z",
+      "latestAt": "2026-11-18T19:30:07.000Z",
+      "firstSeenAt": "2026-11-18T20:06:04.908Z",
+      "outlets": 6,
+      "outletNames": [
+        "The Detroit News",
+        "USA TODAY",
+        "Miami Herald",
+        "azcentral.com",
+        "Detroit Free Press",
+        "The Tennessean"
+      ],
+      "score": 3.7
+    },
+    {
       "id": "3af276c6d1c6",
       "cat": "hacks",
       "kind": "news",
@@ -442,24 +464,27 @@
       }
     },
     {
-      "id": "72ec3e8b1316",
-      "cat": "internet",
+      "id": "e656cdb7432f",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Here are all of the recent major outages, national disruptions",
-      "url": "https://www.detroitnews.com/story/tech/2026/11/18/tech-outages-full-list-outlook-faa/92841844007/",
-      "source": "The Detroit News",
-      "publishedAt": "2026-11-18T04:22:00.000Z",
-      "latestAt": "2026-11-18T19:30:07.000Z",
-      "firstSeenAt": "2026-11-18T20:06:04.908Z",
-      "outlets": 5,
+      "title": "Governments warn Java flaw leaves computer systems open to hackers",
+      "url": "https://www.msn.com/en-us/technology/software/governments-warn-java-flaw-leaves-computer-systems-open-to-hackers/ar-AA2hIId7",
+      "source": "Reuters on MSN",
+      "publishedAt": "2026-11-18T00:51:00.000Z",
+      "latestAt": "2026-11-18T18:36:34.000Z",
+      "firstSeenAt": "2026-11-18T13:10:22.004Z",
+      "outlets": 8,
       "outletNames": [
-        "The Detroit News",
-        "USA TODAY",
-        "Miami Herald",
-        "azcentral.com",
-        "Detroit Free Press"
+        "Insurance Journal",
+        "The Edge Malaysia",
+        "The Lufkin Daily News",
+        "Reuters",
+        "Investing.com",
+        "The Straits Times",
+        "The Jerusalem Post",
+        "Bellingham Herald"
       ],
-      "score": 3.43
+      "score": 3.18
     },
     {
       "id": "381bcabdef19",
@@ -485,28 +510,6 @@
       "score": 3.11
     },
     {
-      "id": "e656cdb7432f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Governments warn Java flaw leaves computer systems open to hackers",
-      "url": "https://www.msn.com/en-us/technology/software/governments-warn-java-flaw-leaves-computer-systems-open-to-hackers/ar-AA2hIId7",
-      "source": "Reuters on MSN",
-      "publishedAt": "2026-11-18T00:51:00.000Z",
-      "latestAt": "2026-11-18T18:36:34.000Z",
-      "firstSeenAt": "2026-11-18T13:10:22.004Z",
-      "outlets": 7,
-      "outletNames": [
-        "Insurance Journal",
-        "The Edge Malaysia",
-        "The Lufkin Daily News",
-        "Reuters",
-        "Investing.com",
-        "The Straits Times",
-        "The Jerusalem Post"
-      ],
-      "score": 3.03
-    },
-    {
       "id": "eda2da9f4b79",
       "cat": "internet",
       "kind": "news",
@@ -516,7 +519,7 @@
       "publishedAt": "2026-11-18T00:29:14.000Z",
       "latestAt": "2026-11-18T15:26:53.000Z",
       "firstSeenAt": "2026-11-18T22:36:33.829Z",
-      "outlets": 13,
+      "outlets": 14,
       "outletNames": [
         "NDTV",
         "India TV News",
@@ -530,9 +533,10 @@
         "news8000.com",
         "Qazinform",
         "ColombiaOne.com",
-        "Tech Edition"
+        "Tech Edition",
+        "Operativ Media"
       ],
-      "score": 2.97
+      "score": 3.03
     },
     {
       "id": "4db48258ed66",
@@ -580,7 +584,7 @@
       "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQZ3AzRnJRN3NHOU10Tk16Y1FzMHQ2QmNPQjZDMElyRHN1dDRTQzNFbVpLN01paFVNUlIybjVPR19FS1o3TkdVZjdBcUszdi1kQzZRNWh5LUY4WlhTbGp3M2lXdTg2RG9rY1h2N3c1SzVTel9CQ3BnaGM3X1NubWp4dGVlQ2wwQTQzby1yLVQ4WWJtdEJ3UEZMYW5tTHMwYS1mQUcwMExGNTZ3WXl6U3poSndLY3FVaGZWYzUtUkJFX1lidkRzUktST0gyMkdkR3BNZjlyMnczY2UwWHJkaVdMZGRFTVJpd0QtMGNva0ZGYmo5bVZaeGprTjh3VVhCeEJJTnVpRWZZak5adjQ5dlE?oc=5",
       "source": "WPEC",
       "publishedAt": "2026-11-18T19:24:19.000Z",
-      "latestAt": "2026-11-18T21:21:26.000Z",
+      "latestAt": "2026-11-18T22:49:19.000Z",
       "firstSeenAt": "2026-11-18T19:35:58.704Z",
       "outlets": 7,
       "outletNames": [
@@ -844,6 +848,23 @@
       "score": 1.72
     },
     {
+      "id": "2651d76e7c57",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Costco recalls whipped cream over possible cleaning chemical contamination",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT0ZoR3ZMaW1QVENidEpCUHpBbDJGZjVKV1RSNkRza0F6LW0yNFhWQlJuRUFRcE5POHBEdFZXbmhEYmtXanpvcEZ0dXJ0YkI0R1J5ck14YXdYWXAxS0dtcEpJckl1U0FfM2d5ZHFNVGIwb2xJclJSNmt0U0QwWUh6ZmZSRzdaZE9FeWpHUm9seFdHT1ExT0FLY3k1a1RqdE1TdDRNdDRVbXRXcWc2ckFjWkZWM1ZyUQ?oc=5",
+      "source": "Scripps News",
+      "publishedAt": "2026-11-18T14:27:19.000Z",
+      "latestAt": "2026-11-18T21:06:25.000Z",
+      "firstSeenAt": "2026-11-18T23:06:31.636Z",
+      "outlets": 2,
+      "outletNames": [
+        "Scripps News",
+        "Health.com"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "58f205ec8049",
       "cat": "earth",
       "kind": "news",
@@ -862,23 +883,6 @@
       "score": 1.71,
       "quiet": true,
       "quietReason": "headline mentions tsunami"
-    },
-    {
-      "id": "e783ec869177",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Total debt to NES from ice storm down to $5M",
-      "url": "https://www.msn.com/en-us/money/economy/total-debt-to-nes-from-ice-storm-down-to-5m/vi-AA2hHUIB",
-      "source": "WKRN Nashville on MSN",
-      "publishedAt": "2026-11-18T09:12:55.000Z",
-      "latestAt": "2026-11-18T17:12:55.000Z",
-      "firstSeenAt": "2026-11-18T18:35:48.656Z",
-      "outlets": 2,
-      "outletNames": [
-        "WKRN Nashville on MSN",
-        "WKRN News 2"
-      ],
-      "score": 1.69
     },
     {
       "id": "sig:faa-stop:DJT:2026-11-18",
@@ -1074,7 +1078,7 @@
       "url": "https://www.pcmag.com/news/nvidia-probes-breach-of-partner-as-ransomware-group-claims-it-stole-data",
       "source": "PCMag",
       "publishedAt": "2026-11-18T14:18:00.000Z",
-      "latestAt": "2026-11-18T22:18:37.000Z",
+      "latestAt": "2026-11-18T22:18:50.000Z",
       "firstSeenAt": "2026-11-18T22:36:33.829Z",
       "outlets": 2,
       "outletNames": [
@@ -1133,6 +1137,23 @@
         "BBC"
       ],
       "score": 1.71
+    },
+    {
+      "id": "e783ec869177",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Total debt to NES from ice storm down to $5M",
+      "url": "https://www.msn.com/en-us/money/economy/total-debt-to-nes-from-ice-storm-down-to-5m/vi-AA2hHUIB",
+      "source": "WKRN Nashville on MSN",
+      "publishedAt": "2026-11-18T09:12:55.000Z",
+      "latestAt": "2026-11-18T17:12:55.000Z",
+      "firstSeenAt": "2026-11-18T18:35:48.656Z",
+      "outlets": 2,
+      "outletNames": [
+        "WKRN Nashville on MSN",
+        "WKRN News 2"
+      ],
+      "score": 1.69
     },
     {
       "id": "711e5e78a7e4",
@@ -1220,20 +1241,21 @@
       "score": 1.62
     },
     {
-      "id": "2142471a8559",
-      "cat": "hacks",
+      "id": "29bb93651abb",
+      "cat": "grid",
       "kind": "news",
-      "title": "Inside the Cyberattack That Used a Single Third-Party Script to Hit 178 Global Brands in One Day",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQcXlVMEFQZFZzSjNfNV9PTE1UQkZLU1JTRWZDejdtRjBKb3NkdGVrc3JwWlM1U2xSUzZkbFgyMHVtWXlVdTRGQkRUOC1IUGtuc29YS1pEWjljMEdQejItbkI5eTdsM1VIcHpiNDdFNnBNVktYX3J1NFVqUldia1U0LUdmc0x6RjZvcWc?oc=5",
-      "source": "Latin Times",
-      "publishedAt": "2026-11-18T22:44:53.000Z",
-      "latestAt": "2026-11-18T22:44:53.000Z",
-      "firstSeenAt": "2026-11-18T22:51:30.426Z",
-      "outlets": 1,
+      "title": "Power outage impacting over 32,000 SMUD customers throughout Sacramento | Update",
+      "url": "https://www.yahoo.com/news/weather-news/articles/thousands-experience-power-outages-downtown-141859442.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T06:18:00.000Z",
+      "latestAt": "2026-11-18T14:18:00.000Z",
+      "firstSeenAt": "2026-11-18T23:06:31.636Z",
+      "outlets": 2,
       "outletNames": [
-        "Latin Times"
+        "Yahoo",
+        "ABC10"
       ],
-      "score": 1.4
+      "score": 1.44
     },
     {
       "id": "5027ebb7af70",
@@ -1750,22 +1772,6 @@
       "score": 1.39
     },
     {
-      "id": "d4338533eb30",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Super El Niño-Powered Record Heat Made Energy Costs Surge. 2027 May Be Worse",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZTZNZ3V5ODJydGhSWVl3elVvQmVoRlRTelcxRWR5WHUzRWJrd3E3QzI2UUxGZU8yV2ozei1jNWNTSktyNVplcXU4Wm5vUUl4cjU1ampFa3A3Qno1eGRBa3NBSjlfQmRadEVQOEJibHBkRS1VRGlGYXRpeUxxWWFEakNPU1NBNDZJSEZUTFl3Y0oxTUNSanBpUlViVDU4WVJiTGQ4NF9WY3E2UVoyNkRHZnlrVlBIYUJ2?oc=5",
-      "source": "The Equation - Union of Concerned Scientists",
-      "publishedAt": "2026-11-17T22:57:19.000Z",
-      "latestAt": "2026-11-17T22:57:19.000Z",
-      "firstSeenAt": "2026-11-17T23:17:37.630Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Equation - Union of Concerned Scientists"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "02a34453cf86",
       "cat": "internet",
       "kind": "x",
@@ -1798,6 +1804,22 @@
       "score": 1.38
     },
     {
+      "id": "fb892141ebc5",
+      "cat": "flights",
+      "kind": "news",
+      "title": "No exact cause for malfunction that led to nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcHgtMW5RNU9ZMmNUS3ZRVS1uR0NkS01zN1QzelU1RC04allqbi1XdldvSkpQbmlXczNKVGpMc1psRXNwdHVDUGN6X29yaFNPV0pPOEpWSWU1VjVNUjZPSkZJWW4xbWdDVGpiWkV1S3NHRHFhUmhyRmZsODlzTS04R3NFXy14d0dkRS1jNVBaM29IUFM3NXJFOFNNU1ZZZVgyVC10bVRkYWY4d2RUMDNnQWJrUTBWeXBTZTg4QmR30gHDAUFVX3lxTFBOd2t3OWdjV2FSVHJydk01SHRhekJMQ2Y2bE8xc3Rzc3RqWjAxVnFwaXlGMXhESUlZRW1BX2w4cjNra09ZNDJ0cDJieU16TFA0OTQtdjc0ZEdMT1cwa1ZRY1hLOHNkUU1uQ2pJR3J1VlViMVlXYXdlU0l5Q19SR0xubmtlYl9nLVJDM3pGRmFsQjZfM2p1MjA1ZWREaFcyS29faHNIS3hyUHNtcXpYNUdFTENtU0ZlOEVPam5zMmlwTDFqaw?oc=5",
+      "source": "NewsNation",
+      "publishedAt": "2026-11-18T00:42:41.000Z",
+      "latestAt": "2026-11-18T00:42:41.000Z",
+      "firstSeenAt": "2026-11-18T01:32:52.277Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsNation"
+      ],
+      "score": 1.38
+    },
+    {
       "id": "1f76878e7527",
       "cat": "earth",
       "kind": "news",
@@ -1812,6 +1834,22 @@
         "NZCity"
       ],
       "score": 1.31
+    },
+    {
+      "id": "b85b9e675ae6",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Crypto Markets Battered as Bitcoin Plunges Below $63,000 in Wednesday Evening Sell-Off",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVlk2V0xuUjFLcVRQNzVoUkJXak1zWGxvejVPcHhHSThLRDdtUWU0MTJyOW1UdFBKby1Cd0FOWTBsbnE1YkVjWWpBcnBRMndiOWJhZklzcmQtYjJiOXIzcnZYbnZ5blc0Q0RCaHVsZnRrWTJ0MFJrNm0yUG1sSVNrZXZCRmVITE1nQnhYWHRYSm8yQTg2dmdnOG5ONkhGOEtOcC1DdlY4Q1BvMExXTGdSWUdhU01Fdk9FalpsbUxfUlNhWm01dDVhODY4UUYyT2JYUnpudWxOVUcyUQ?oc=5",
+      "source": "Business Upturn",
+      "publishedAt": "2026-11-18T22:55:00.000Z",
+      "latestAt": "2026-11-18T22:55:00.000Z",
+      "firstSeenAt": "2026-11-18T23:06:31.636Z",
+      "outlets": 1,
+      "outletNames": [
+        "Business Upturn"
+      ],
+      "score": 1
     },
     {
       "id": "f6e446346278",
@@ -1842,22 +1880,6 @@
       "outlets": 1,
       "outletNames": [
         "Irish Farmers Journal"
-      ],
-      "score": 1
-    },
-    {
-      "id": "b5a2e66bb3c1",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Review Finds Windborne Avian Influenza Transmission Plausible Over Several Kilometers",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOWd5Uy1QZGVkd3JKenJXRXFWblRtVmJDZ1pHMlJVRy1MRk00bkhqZjRYQnljSWxvZzJoQ0Rrb0x3SGZsM0g2c1dXeFIxRE5DalM2ekhsNlctcVVCdmt2dTdSLXkyMGUwUThLZ3ZlN1BnUzdiVTVIbEllSk41N3VSODg5XzVNbHZraWFZMHdma21nd19pa2VUQ2dKMUZ6YjBiZWNRZzFVSVozS3J5bDRz?oc=5",
-      "source": "Bioengineer.org",
-      "publishedAt": "2026-11-18T19:31:26.000Z",
-      "latestAt": "2026-11-18T19:31:26.000Z",
-      "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 1,
-      "outletNames": [
-        "Bioengineer.org"
       ],
       "score": 1
     },
@@ -2006,22 +2028,6 @@
         "Insider on MSN"
       ],
       "score": 0.86
-    },
-    {
-      "id": "613d42f33040",
-      "cat": "markets",
-      "kind": "news",
-      "title": "NATEN.E Trading Suspended Under Circuit Breaker",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPX0xJeEt4eU9qTXdxMTdVeS13N00yWUw0dlFFQkpHQVBHZWpWVFF0MDZ1MHlpWFRaN0ZraFpvYWJvVGVrTV9wMFlTNmJxeFpjRHE5WjJBOTZMRklaSHJYVG85eEEyZjVSTE5rUjl6cDduZy1RTWJSWHc1QkIxRnE3YXViNGJIa0tnZTBuVkNSRTFGQWlUcTljUTNWNV92MzdEWFhB?oc=5",
-      "source": "TipRanks",
-      "publishedAt": "2026-11-18T12:44:45.000Z",
-      "latestAt": "2026-11-18T14:45:14.000Z",
-      "firstSeenAt": "2026-11-18T22:36:33.829Z",
-      "outlets": 1,
-      "outletNames": [
-        "TipRanks"
-      ],
-      "score": 0.84
     }
   ]
 }
