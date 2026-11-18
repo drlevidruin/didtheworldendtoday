@@ -1,38 +1,38 @@
 {
   "google": {
     "ok": true,
-    "count": 1081,
-    "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z"
+    "count": 229,
+    "error": "1 of 26 queries failed: HTTP 429 (blocked after 10 of 26 queries)",
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z"
   },
   "bing": {
     "ok": true,
-    "count": 285,
+    "count": 284,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z"
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z"
   },
   "gdelt": {
     "ok": false,
     "count": 0,
-    "error": "rate limited (HTTP 429)",
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
+    "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
     "lastOkAt": "2026-11-18T12:49:51.661Z"
   },
   "hn": {
     "ok": true,
     "count": 4,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z"
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z"
   },
   "usgs": {
     "ok": true,
     "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z",
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z",
     "vital": {
       "quake": {
         "mag": 6.1,
@@ -48,8 +48,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z",
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z",
     "vital": {
       "kp": {
         "value": 2.67,
@@ -62,8 +62,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z",
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z",
     "vital": {
       "asteroid": {
         "des": "2026 WH",
@@ -78,18 +78,13 @@
   },
   "faa": {
     "ok": true,
-    "count": 2,
+    "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z",
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z",
     "vital": {
       "faa": {
         "groundStops": [
-          {
-            "airport": "DJT",
-            "hub": false,
-            "reason": "airport volume"
-          },
           {
             "airport": "TEB",
             "hub": false,
@@ -107,8 +102,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z",
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z",
     "vital": {
       "status": {
         "worst": "minor",
@@ -170,21 +165,21 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
     "lastOkAt": "2026-11-18T19:35:58.704Z"
   },
   "trends": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z"
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z"
   },
   "topstories": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-18T20:06:04.908Z",
-    "lastOkAt": "2026-11-18T20:06:04.908Z"
+    "lastTryAt": "2026-11-18T20:21:04.359Z",
+    "lastOkAt": "2026-11-18T20:21:04.359Z"
   }
 }

@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T20:06:04.908Z",
+  "buildTime": "2026-11-18T20:21:04.359Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 15:06 ET",
+  "etStamp": "2026-11-18 15:21 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,12 +49,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1400,
-  "lastSuccessAt": "2026-11-18T20:06:04.908Z",
+  "headlinesRead": 547,
+  "lastSuccessAt": "2026-11-18T20:21:04.359Z",
   "rollingFallback": false,
   "cats": {
     "weather": 5,
-    "flights": 28,
+    "flights": 27,
     "grid": 7,
     "earth": 4,
     "hacks": 26,
@@ -64,7 +64,7 @@
     "sun": 4,
     "ai": 4,
     "animals": 1,
-    "space": 1
+    "space": 2
   },
   "vital": {
     "quake": {
@@ -91,11 +91,6 @@
     },
     "faa": {
       "groundStops": [
-        {
-          "airport": "DJT",
-          "hub": false,
-          "reason": "airport volume"
-        },
         {
           "airport": "TEB",
           "hub": false,
@@ -197,57 +192,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1081,
-      "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "count": 229,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 10 of 26 queries)",
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     },
     "bing": {
       "ok": true,
-      "count": 285,
+      "count": 284,
       "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     },
     "faa": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     },
     "x": {
       "ok": true,
@@ -260,13 +255,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T20:06:04.908Z"
+      "lastOkAt": "2026-11-18T20:21:04.359Z"
     }
   },
   "stories": [
@@ -450,6 +445,24 @@
       "score": 2.99
     },
     {
+      "id": "72ec3e8b1316",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Here are all of the recent major outages, national disruptions",
+      "url": "https://www.detroitnews.com/story/tech/2026/11/18/tech-outages-full-list-outlook-faa/92841844007/",
+      "source": "The Detroit News",
+      "publishedAt": "2026-11-18T06:41:00.000Z",
+      "latestAt": "2026-11-18T19:30:07.000Z",
+      "firstSeenAt": "2026-11-18T20:06:04.908Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Detroit News",
+        "USA TODAY",
+        "Miami Herald"
+      ],
+      "score": 2.81
+    },
+    {
       "id": "2909186dd5c7",
       "cat": "internet",
       "kind": "news",
@@ -500,23 +513,6 @@
         "Axios"
       ],
       "score": 2.44
-    },
-    {
-      "id": "72ec3e8b1316",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Here are all of the recent major outages, national disruptions",
-      "url": "https://www.detroitnews.com/story/tech/2026/11/18/tech-outages-full-list-outlook-faa/92841844007/",
-      "source": "The Detroit News",
-      "publishedAt": "2026-11-18T11:22:00.000Z",
-      "latestAt": "2026-11-18T19:30:00.000Z",
-      "firstSeenAt": "2026-11-18T20:06:04.908Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Detroit News",
-        "USA TODAY"
-      ],
-      "score": 2.39
     },
     {
       "id": "4db48258ed66",
@@ -664,22 +660,22 @@
       "score": 2.32
     },
     {
-      "id": "0f7714f17187",
-      "cat": "markets",
+      "id": "8edb9785ec88",
+      "cat": "internet",
       "kind": "news",
-      "title": "Cricket-Cricket Australia attempts Sandpapergate circuit breaker through player forum",
-      "url": "https://www.msn.com/en-gb/sport/cricket/cricket-cricket-australia-attempts-sandpapergate-circuit-breaker-through-player-forum/ar-AA2hF106",
-      "source": "Reuters on MSN",
-      "publishedAt": "2026-11-17T20:16:57.000Z",
-      "latestAt": "2026-11-18T12:19:58.000Z",
-      "firstSeenAt": "2026-11-18T04:48:36.329Z",
+      "title": "Apple Hit by Major Outage as iCloud, Apple Pay Remain Unresponsive to Users Worldwide",
+      "url": "https://www.techjuice.pk/apple-hit-by-major-outage-as-icloud-apple-pay-remain-unresponsive-to-users-worldwide/",
+      "source": "TechJuice",
+      "publishedAt": "2026-11-17T20:42:00.000Z",
+      "latestAt": "2026-11-17T22:18:33.000Z",
+      "firstSeenAt": "2026-11-18T20:21:04.359Z",
       "outlets": 3,
       "outletNames": [
-        "Reuters on MSN",
-        "CNA",
-        "Fanatik"
+        "TechJuice",
+        "The Independent",
+        "Manila Bulletin"
       ],
-      "score": 2.22
+      "score": 2.19
     },
     {
       "id": "06f8e53677fb",
@@ -892,6 +888,24 @@
       }
     },
     {
+      "id": "c0f7b49b2b66",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Company behind FAA shutdown is a major defense contractor in Hampton Roads",
+      "url": "https://www.dailypress.com/2026/11/18/hampton-roads-company-defense-contractor-faa-shutdown/",
+      "source": "Daily Press",
+      "publishedAt": "2026-11-18T11:23:00.000Z",
+      "latestAt": "2026-11-18T19:25:51.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 3,
+      "outletNames": [
+        "Daily Press",
+        "The Virginian-Pilot",
+        "Yahoo Finance"
+      ],
+      "score": 3.12
+    },
+    {
       "id": "57fac22f9dc3",
       "cat": "flights",
       "kind": "news",
@@ -942,23 +956,6 @@
         "The American Bazaar"
       ],
       "score": 2.59
-    },
-    {
-      "id": "c0f7b49b2b66",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Company behind FAA shutdown is a major defense contractor in Hampton Roads",
-      "url": "https://www.dailypress.com/2026/11/18/hampton-roads-company-defense-contractor-faa-shutdown/",
-      "source": "Daily Press",
-      "publishedAt": "2026-11-18T11:23:00.000Z",
-      "latestAt": "2026-11-18T19:25:51.000Z",
-      "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 2,
-      "outletNames": [
-        "Daily Press",
-        "The Virginian-Pilot"
-      ],
-      "score": 2.42
     },
     {
       "id": "82c364362378",
@@ -1734,38 +1731,6 @@
       "score": 1.39
     },
     {
-      "id": "d984facd99be",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Pakistanis Face Slow Internet After Major Undersea Cable Fault",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZ0N6QlNIOE9mSDdDUnBlM24yWUwwaWJPUVhvb2ZqWEU0WWV4Zk5YT1V6WThTZWtDTU8ycEh0ZmpEb2RnSUNkSVhxVGwxYU4tak9pVWNmZ2VYN3JHNDB3SHVOa1Z3N1ZMRjZvUnRRdDEzUVhrdEplanVkd3F6OFo5VU5sdw?oc=5",
-      "source": "Bloom Pakistan",
-      "publishedAt": "2026-11-18T16:41:16.000Z",
-      "latestAt": "2026-11-18T16:41:16.000Z",
-      "firstSeenAt": "2026-11-18T17:35:37.400Z",
-      "outlets": 1,
-      "outletNames": [
-        "Bloom Pakistan"
-      ],
-      "score": 1.38
-    },
-    {
-      "id": "82218d53aaad",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Timeline of the FAA nationwide ground stop: How it developed",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSGtmU3BzdllUMng4SXBOQzk1TWdnOFRTLUZQNkJManhIb1RQNXFNRWh3b3JNZnlhcVhydlNUa1VCWDc2Z01Lem5vOVZ3eFhKRUt0ZmdjLV9rbTFjRUNjLVJOSTBycmlGbVRZMjRodUhWWVpfaEt1Ny1jUWQybW5kd0U4MVZEYUdZa3dhT0d0NlfSAZYBQVVfeXFMTzhqZl81M2hodnN2dl8xYjFWay01bXNZRnF1aWdTejdKZUxGZ2lWa3pNWldIdlAwMC1YVjhZSUFHaTNHdnozUmZ0YkI0OHZJOFNmRVYtU1BneldYTHZTclZ4d0NZR1ZSdlhMbnJrY3VFd0pGUXNBdEw2T05relZIbFRDbkJ3UGYyNDhwTS1naEt3WDBTR1h3?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-18T09:10:08.000Z",
-      "latestAt": "2026-11-18T11:12:02.000Z",
-      "firstSeenAt": "2026-11-18T09:49:16.682Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos"
-      ],
-      "score": 1.38
-    },
-    {
       "id": "1f76878e7527",
       "cat": "earth",
       "kind": "news",
@@ -1924,6 +1889,38 @@
         "News.com.au"
       ],
       "score": 0.99
+    },
+    {
+      "id": "3e8a11fcbb51",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Dow Jones Industrial Average Falls 1.5% in Tuesday Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBCbG5XRzVLRnFkMUZLTnpoZkJhQnJsNG9tTXZOUElvV0R2djA3Q3N1cjlYZUNlblZZWFlrNU4xQk80RUJxS1M1d0RqV051NUZadUV3VXN1eWladw?oc=5",
+      "source": "www.tokenpost.com",
+      "publishedAt": "2026-11-17T21:15:08.000Z",
+      "latestAt": "2026-11-17T21:15:08.000Z",
+      "firstSeenAt": "2026-11-17T21:47:22.431Z",
+      "outlets": 1,
+      "outletNames": [
+        "www.tokenpost.com"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "e992d2c7c73a",
+      "cat": "space",
+      "kind": "news",
+      "title": "Hayabusa2's New Mission: Turning a Setback into an Opportunity for Planetary Defence",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB5VHhVTmJnSEJXVXdhT0gwaG0xejdxZ056eHhaQ3pocnZnV0JrQ3JJZlUyYVctRmQzSVdTMmR4QnAtblU2Z0VOVkktWlNIQzJnaFRIRmp2cWI?oc=5",
+      "source": "Asgardia - The Space Nation",
+      "publishedAt": "2026-11-18T18:56:04.000Z",
+      "latestAt": "2026-11-18T18:56:04.000Z",
+      "firstSeenAt": "2026-11-18T20:21:04.359Z",
+      "outlets": 1,
+      "outletNames": [
+        "Asgardia - The Space Nation"
+      ],
+      "score": 0.98
     },
     {
       "id": "4ad2e1cda1b2",
