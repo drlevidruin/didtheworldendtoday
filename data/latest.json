@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T05:48:35.248Z",
+  "buildTime": "2026-11-18T06:03:37.165Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 00:48 ET",
+  "etStamp": "2026-11-18 01:03 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,8 +44,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1291,
-  "lastSuccessAt": "2026-11-18T05:48:35.248Z",
+  "headlinesRead": 1563,
+  "lastSuccessAt": "2026-11-18T06:03:37.165Z",
   "rollingFallback": false,
   "cats": {
     "flights": 25,
@@ -88,7 +88,7 @@
       "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
-      "closures": 0,
+      "closures": 1,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1226,
+      "count": 1233,
       "error": null,
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     },
     "bing": {
       "ok": true,
-      "count": 24,
-      "error": "6 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "count": 288,
+      "error": null,
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     },
     "x": {
       "ok": true,
@@ -242,15 +242,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T05:48:35.248Z"
+      "lastOkAt": "2026-11-18T06:03:37.165Z"
     }
   },
   "stories": [
@@ -641,7 +641,7 @@
       "url": "https://mashable.com/tech/faa-ground-stop-router-work",
       "source": "Mashable",
       "publishedAt": "2026-11-17T17:38:00.000Z",
-      "latestAt": "2026-11-18T04:53:31.000Z",
+      "latestAt": "2026-11-18T05:48:56.000Z",
       "firstSeenAt": "2026-11-18T00:17:39.985Z",
       "outlets": 4,
       "outletNames": [
@@ -1331,6 +1331,24 @@
       "score": 1.79
     },
     {
+      "id": "3b49d5ddbc4f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Outage math at the airport: When a four-hour Uber beats waiting out a ground stop",
+      "url": "https://apnews.com/article/ground-stop-flights-delays-frustration-2f56c7e73199635c32f744941fff3792",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-17T09:38:00.000Z",
+      "latestAt": "2026-11-17T20:45:00.000Z",
+      "firstSeenAt": "2026-11-18T04:48:36.329Z",
+      "outlets": 3,
+      "outletNames": [
+        "Associated Press News",
+        "The Baltimore Sun",
+        "AP News"
+      ],
+      "score": 1.76
+    },
+    {
       "id": "3ef6675edcf0",
       "cat": "hacks",
       "kind": "news",
@@ -1645,22 +1663,6 @@
       "score": 1.38
     },
     {
-      "id": "b10123451d1b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "F.A.A. Shelves Routers Like the One Linked to the Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9XSTQ1SzFhY1JSYzRWN0RYMnFncVgtUHZScFNHaFA5NVctZzhyZXNxZmg0NUdGdk9ScGpmeUVLYWZKNUVDSzJIdk96aXFOcHliQklIMDdJMHFBS19aNl9pdnEtRk5PTFZkLW5zdDR1cDQzd005?oc=5",
-      "source": "The New York Times",
-      "publishedAt": "2026-11-18T01:27:04.000Z",
-      "latestAt": "2026-11-18T01:27:04.000Z",
-      "firstSeenAt": "2026-11-18T03:18:19.210Z",
-      "outlets": 1,
-      "outletNames": [
-        "The New York Times"
-      ],
-      "score": 1.36
-    },
-    {
       "id": "ebd2e51d2c83",
       "cat": "flights",
       "kind": "news",
@@ -1673,23 +1675,6 @@
       "outlets": 1,
       "outletNames": [
         "10News.com"
-      ],
-      "score": 1.36
-    },
-    {
-      "id": "3b49d5ddbc4f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Outage math at the airport: When a four-hour Uber beats waiting out a ground stop",
-      "url": "https://apnews.com/article/ground-stop-flights-delays-frustration-2f56c7e73199635c32f744941fff3792",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-17T09:38:00.000Z",
-      "latestAt": "2026-11-17T09:56:00.000Z",
-      "firstSeenAt": "2026-11-18T04:48:36.329Z",
-      "outlets": 2,
-      "outletNames": [
-        "Associated Press News",
-        "The Baltimore Sun"
       ],
       "score": 1.36
     },
@@ -1708,6 +1693,22 @@
         "WTNH.com"
       ],
       "score": 1.33
+    },
+    {
+      "id": "b10123451d1b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "F.A.A. Shelves Routers Like the One Linked to the Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9XSTQ1SzFhY1JSYzRWN0RYMnFncVgtUHZScFNHaFA5NVctZzhyZXNxZmg0NUdGdk9ScGpmeUVLYWZKNUVDSzJIdk96aXFOcHliQklIMDdJMHFBS19aNl9pdnEtRk5PTFZkLW5zdDR1cDQzd005?oc=5",
+      "source": "The New York Times",
+      "publishedAt": "2026-11-17T23:46:10.000Z",
+      "latestAt": "2026-11-18T01:27:04.000Z",
+      "firstSeenAt": "2026-11-18T03:18:19.210Z",
+      "outlets": 1,
+      "outletNames": [
+        "The New York Times"
+      ],
+      "score": 1.32
     },
     {
       "id": "0a41d341cd16",
@@ -1854,6 +1855,38 @@
       "score": 1.02
     },
     {
+      "id": "5593a2a7bd61",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Aftershocks are expected over the coming days following a strong earthquake near Canterbury's Arthur's Pass overnight",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZE5KRUNidHFxN3lMaGs3NW1CUXJwcW5vYThnSGxVM3VLRjdkckxxcWJwNEVBc1FrN0FxNXVNNHEzaUhJblpHOG1sWk5xQkpVdW1YT3JrSFlONXMxS2VrbEdnRmFNN2lfbEQ0ejRoZ1NsLS1VcTYwd1NZNWp3djVkaS04VDBmaVlE?oc=5",
+      "source": "NZCity",
+      "publishedAt": "2026-11-18T06:02:26.000Z",
+      "latestAt": "2026-11-18T06:02:26.000Z",
+      "firstSeenAt": "2026-11-18T06:03:37.165Z",
+      "outlets": 1,
+      "outletNames": [
+        "NZCity"
+      ],
+      "score": 1
+    },
+    {
+      "id": "8e4dddf11480",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Cantabrians say last night's strong earthquake is a good reminder to always be prepared",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMnBDcHVNSmNMRkhXUVFHWXhNQnVRdnVfandJc2dkazBaQzZuZ1BVV0I0ZXpfWmY3WlVFSmNfSjlXRkgyd0JBaXJtWXFNMFRid3hZVzIyVnpMSzMwRjR1QU9WRVFFcnIteUU1bTUtRHM5b0s2dFV4T0xCU3phaW83bHlyWjhtZDdYbGc?oc=5",
+      "source": "NZCity",
+      "publishedAt": "2026-11-18T06:02:16.000Z",
+      "latestAt": "2026-11-18T06:02:16.000Z",
+      "firstSeenAt": "2026-11-18T06:03:37.165Z",
+      "outlets": 1,
+      "outletNames": [
+        "NZCity"
+      ],
+      "score": 1
+    },
+    {
       "id": "814650ab5eb0",
       "cat": "weather",
       "kind": "news",
@@ -1950,22 +1983,6 @@
       "score": 0.99
     },
     {
-      "id": "2dfd740f171b",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Strong 5.9 magnitude earthquake hits Indonesia's Flores region",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQdUtXLWlXY093Q3g1bDU2TFpoUFVkU2NfYXI4Rmx1VGJnZ3cwMHRxaUxkd0hxZDRhYVJmb2hYQUFoVGtpQ2ZxbnkzYUsxSFlLRkxqS09aWjNyY1pzUGFEdDBGS1h5ek1zN3JlOWEzRTNQVXNncUJMR1NZTE1aM2dhbkxlRGptSDhack03NS1QOWkwQW5zMW4yQWw3cU8zVS1lQTU2dUZCX2lvaUNGT2NoZGRZMHg0TGQzVkZOX3JqaXJ5cWNOTVo4aDVtNFVCTTVzSTlSOEphQlNSemfSAeABQVVfeXFMT01qUmlKSk11ZUJFNEs0M1oxaWlVM0hIU18yaWQ0c2hkWU4xdzdwRU9YVGdDUWFqSy1weUNsMG1BU2xGVy1nX3lxSnNxYjJqWHI5YTRkeEdta1dEcTVYYkFGamNEcC1vNnZIN1huU3doR1djV015S2N0OGNIWXVTdW1ISi05MXgxdndUR3d6QlM4M2tPQm8xa0dJUEhqaG1NX200MTFzbjZBdW5odXIxenJKUTFBeUtQX0h0M0c2RzB1NG9aOGJVeDBENVBacEpETlhjc2c2UlMwaFhXcm44OGM?oc=5",
-      "source": "The Times of India",
-      "publishedAt": "2026-11-18T04:59:00.000Z",
-      "latestAt": "2026-11-18T04:59:00.000Z",
-      "firstSeenAt": "2026-11-18T05:48:35.248Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Times of India"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "cd4f9106b2fa",
       "cat": "animals",
       "kind": "news",
@@ -1978,22 +1995,6 @@
       "outlets": 1,
       "outletNames": [
         "Vietnam.vn"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "ed117b9cf796",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Grave fears as huge quake rocks 17 countries",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNQXl1VGg2a2c2aVNpcVdrY3lDeWxiREhrWHFocERxNDBlUGNEUHUzZHZlRlF6cDhaRXJqTGlYc0sycnlYaXVHNU0zc2x6NXhwcHpXMndTbzFNbXFsanlReTN3Zmh5d3ZXTkxEUUYzRW5lSmlmUVNaNE83SVBsLWlxMWNfbkRkWnlIZi1FZGxneHJxMTFKWUw2b3dJQTQ3a2lQVERwWFlXYkhuYXhNb2lOMU9lV2VMUWRDX1ZmLXRXbThmeDlBdUo3OXQ1SjRodGNGME9DdWZHYXBpX1c5QVJlVDA0cS0xU0NRcWhlUnE0SlhhRG1hTkl2TVRjdU3SAYICQVVfeXFMTmV4ckllREJYdllYY214emtPU1VXaTY4TVNzdEVoWE1IZVVIOFNXSXV1R1NYLWFYbGxmd3BjcGVhbnp0WV8wV0RGbUlnTHR1NGJnei1pZDdsckFIUTdQVl9FN3dKUGVNNDIxSThkcWFDcVJobkVPcjlPaTFFUnlpZWVvSl9oQVpQcmtTR2dXVW5oRjR5ZTd6VGUwMGhBTHNiS1JVOXN1dnl5VW5hcTdYTGF1YXJvdDJCcXVHSjlXWlA4NEZwZXRWQzc1YnRCVjM1SlhnRnhjS0tRb05jYW1RYmkyYU50NGpwUHJvTHlWbW54LTRvSTRQYTRBQTBQWjA4ZVlR?oc=5",
-      "source": "News.com.au",
-      "publishedAt": "2026-11-18T03:14:20.000Z",
-      "latestAt": "2026-11-18T03:19:35.000Z",
-      "firstSeenAt": "2026-11-18T03:33:11.967Z",
-      "outlets": 1,
-      "outletNames": [
-        "News.com.au"
       ],
       "score": 0.99
     },
