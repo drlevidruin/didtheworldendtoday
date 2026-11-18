@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T21:51:28.079Z",
+  "buildTime": "2026-11-18T22:06:23.492Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 16:51 ET",
+  "etStamp": "2026-11-18 17:06 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,16 +49,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 321,
-  "lastSuccessAt": "2026-11-18T21:51:28.079Z",
+  "headlinesRead": 1380,
+  "lastSuccessAt": "2026-11-18T22:06:23.492Z",
   "rollingFallback": false,
   "cats": {
     "weather": 5,
-    "flights": 27,
     "internet": 12,
+    "flights": 26,
     "grid": 8,
     "earth": 4,
-    "hacks": 26,
+    "hacks": 27,
     "markets": 4,
     "germs": 4,
     "sun": 4,
@@ -90,13 +90,7 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "TEB",
-          "hub": false,
-          "reason": "airport volume"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
       "groundDelays": 1,
       "closures": 0,
@@ -173,9 +167,9 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
-      "headlines": 29,
+      "headlines": 30,
       "matched": 0,
       "tripAt": 3,
       "tripped": false,
@@ -187,20 +181,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "ok": true,
+      "count": 1060,
+      "error": null,
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     },
     "bing": {
       "ok": true,
       "count": 285,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     },
     "gdelt": {
       "ok": false,
@@ -212,55 +206,56 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     },
     "faa": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T21:51:28.079Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     },
     "topstories": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T21:51:28.079Z"
+      "lastOkAt": "2026-11-18T22:06:23.492Z"
     }
   },
   "stories": [
@@ -287,6 +282,29 @@
         "My East Kootenay Now"
       ],
       "score": 5.82
+    },
+    {
+      "id": "21bac8019d5f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "PlayStation suffers major outage hours before \"GTA VI\" launch",
+      "url": "https://www.axios.com/2026/11/18/gta-6-playstation-psn-servers",
+      "source": "Axios",
+      "publishedAt": "2026-11-18T11:28:00.000Z",
+      "latestAt": "2026-11-18T21:25:32.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 8,
+      "outletNames": [
+        "LADbible",
+        "Axios",
+        "Hindustan Times",
+        "New Haven Register",
+        "Android Authority",
+        "News-Times",
+        "Norwalk Hour",
+        "Stamford Advocate"
+      ],
+      "score": 4.84
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-18",
@@ -358,27 +376,6 @@
       }
     },
     {
-      "id": "21bac8019d5f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "PlayStation suffers major outage hours before \"GTA VI\" launch",
-      "url": "https://www.axios.com/2026/11/18/gta-6-playstation-psn-servers",
-      "source": "Axios",
-      "publishedAt": "2026-11-18T11:28:00.000Z",
-      "latestAt": "2026-11-18T21:25:32.000Z",
-      "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 6,
-      "outletNames": [
-        "LADbible",
-        "Axios",
-        "Hindustan Times",
-        "New Haven Register",
-        "Android Authority",
-        "News-Times"
-      ],
-      "score": 4.34
-    },
-    {
       "id": "2ed538459272",
       "cat": "grid",
       "kind": "news",
@@ -424,6 +421,26 @@
       }
     },
     {
+      "id": "3af276c6d1c6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Expedia investigates cyberattack after hackers claim theft of nearly 1 billion customer records",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRVg4c3h1a3ZYUXdPRVlqMDVrOVhLSGxMamRGU3lESFBlc1pOUFd3S1VlVHpSR1FxWUU2eHI5U3VKS1Y0WWwxZXh5WWNnV1ZpU1BnUXBQM0htN0podUdJRlBpMFlzRmtNQ0doUkN2aW5OeWd1S20zMDZWUEFVY2xubG1nQmwxbW9rVzJkbEZyNVpyRWdNWmtoZEh2WEpLTEZhelVrUmVDSnh2czQ?oc=5",
+      "source": "cbs8.com",
+      "publishedAt": "2026-11-18T17:22:00.000Z",
+      "latestAt": "2026-11-18T17:26:22.000Z",
+      "firstSeenAt": "2026-11-18T17:35:37.400Z",
+      "outlets": 5,
+      "outletNames": [
+        "cbs8.com",
+        "weareiowa.com",
+        "KVUE",
+        "9News",
+        "10TV"
+      ],
+      "score": 3.31
+    },
+    {
       "id": "72ec3e8b1316",
       "cat": "internet",
       "kind": "news",
@@ -446,9 +463,9 @@
       "id": "e656cdb7432f",
       "cat": "hacks",
       "kind": "news",
-      "title": "Java Flaw Leaves Systems Open to Hackers, Say US, South Korea, China’s Tencent",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA3RUQ3WmJoSzhwMDVQWHJtcU5JZzltZWQ3Vkt4Rl94UHBMS19HU3dfXzhsTXFyaTVSYXQyZWVxeVpDSUFzUU45UTRoczQ3ZU1VX2JxQ2pNSEZSUlp1VTJaeXFJUG5TQkpCOFNHaEoyZFlYNUkwSHZUSGoxWkl2dw?oc=5",
-      "source": "Insurance Journal",
+      "title": "Governments warn Java flaw leaves computer systems open to hackers",
+      "url": "https://www.msn.com/en-us/technology/software/governments-warn-java-flaw-leaves-computer-systems-open-to-hackers/ar-AA2hIId7",
+      "source": "Reuters on MSN",
       "publishedAt": "2026-11-18T00:51:00.000Z",
       "latestAt": "2026-11-18T18:36:34.000Z",
       "firstSeenAt": "2026-11-18T13:10:22.004Z",
@@ -463,25 +480,6 @@
         "The Jerusalem Post"
       ],
       "score": 3.03
-    },
-    {
-      "id": "3af276c6d1c6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Expedia investigates cyberattack after hackers claim theft of nearly 1 billion customer records",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRVg4c3h1a3ZYUXdPRVlqMDVrOVhLSGxMamRGU3lESFBlc1pOUFd3S1VlVHpSR1FxWUU2eHI5U3VKS1Y0WWwxZXh5WWNnV1ZpU1BnUXBQM0htN0podUdJRlBpMFlzRmtNQ0doUkN2aW5OeWd1S20zMDZWUEFVY2xubG1nQmwxbW9rVzJkbEZyNVpyRWdNWmtoZEh2WEpLTEZhelVrUmVDSnh2czQ?oc=5",
-      "source": "cbs8.com",
-      "publishedAt": "2026-11-18T17:22:00.000Z",
-      "latestAt": "2026-11-18T17:26:22.000Z",
-      "firstSeenAt": "2026-11-18T17:35:37.400Z",
-      "outlets": 4,
-      "outletNames": [
-        "cbs8.com",
-        "weareiowa.com",
-        "KVUE",
-        "9News"
-      ],
-      "score": 2.99
     },
     {
       "id": "2909186dd5c7",
@@ -587,18 +585,19 @@
       "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQZ3AzRnJRN3NHOU10Tk16Y1FzMHQ2QmNPQjZDMElyRHN1dDRTQzNFbVpLN01paFVNUlIybjVPR19FS1o3TkdVZjdBcUszdi1kQzZRNWh5LUY4WlhTbGp3M2lXdTg2RG9rY1h2N3c1SzVTel9CQ3BnaGM3X1NubWp4dGVlQ2wwQTQzby1yLVQ4WWJtdEJ3UEZMYW5tTHMwYS1mQUcwMExGNTZ3WXl6U3poSndLY3FVaGZWYzUtUkJFX1lidkRzUktST0gyMkdkR3BNZjlyMnczY2UwWHJkaVdMZGRFTVJpd0QtMGNva0ZGYmo5bVZaeGprTjh3VVhCeEJJTnVpRWZZak5adjQ5dlE?oc=5",
       "source": "WPEC",
       "publishedAt": "2026-11-18T19:24:19.000Z",
-      "latestAt": "2026-11-18T20:39:39.000Z",
+      "latestAt": "2026-11-18T21:21:26.000Z",
       "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "WPEC",
         "cw34.com",
         "WSMH",
         "KVII",
         "WJLA",
-        "KDNL"
+        "KDNL",
+        "13WHAM-TV"
       ],
-      "score": 3.57
+      "score": 3.8
     },
     {
       "id": "ffe871da3da9",
@@ -638,6 +637,24 @@
       "score": 2.32
     },
     {
+      "id": "381bcabdef19",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Client files at KPMG Canada compromised in data breach, The Globe and Mail reports",
+      "url": "https://www.reuters.com/world/americas/client-files-kpmg-canada-compromised-data-breach-globe-mail-reports-2026-11-18/",
+      "source": "Reuters",
+      "publishedAt": "2026-11-18T13:41:00.000Z",
+      "latestAt": "2026-11-18T22:04:03.000Z",
+      "firstSeenAt": "2026-11-18T22:06:23.492Z",
+      "outlets": 3,
+      "outletNames": [
+        "Reuters",
+        "Investing.com",
+        "WNWN-FM"
+      ],
+      "score": 2.22
+    },
+    {
       "id": "4223afa583f9",
       "cat": "grid",
       "kind": "news",
@@ -654,24 +671,6 @@
         "The Cool Down"
       ],
       "score": 2.21
-    },
-    {
-      "id": "82c364362378",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "China-linked hackers using AI model ARTEX to infiltrate banks, FBI warns",
-      "url": "https://www.yahoo.com/news/world/articles/china-linked-hackers-using-ai-153501063.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T07:35:00.000Z",
-      "latestAt": "2026-11-18T17:03:33.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 3,
-      "outletNames": [
-        "New York Post",
-        "AOL.com",
-        "Yahoo"
-      ],
-      "score": 2.2
     },
     {
       "id": "06f8e53677fb",
@@ -964,6 +963,42 @@
         "The American Bazaar"
       ],
       "score": 2.59
+    },
+    {
+      "id": "82c364362378",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "China-linked hackers using AI model ARTEX to infiltrate banks, FBI warns",
+      "url": "https://www.yahoo.com/news/world/articles/china-linked-hackers-using-ai-153501063.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T07:35:00.000Z",
+      "latestAt": "2026-11-18T17:03:33.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 3,
+      "outletNames": [
+        "New York Post",
+        "AOL.com",
+        "Yahoo"
+      ],
+      "score": 2.2
+    },
+    {
+      "id": "645c1ca57fd1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA halts router installation following nationwide ground stop, root cause of issue unknown",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONGZFMWZBV3FMSHk0UFdRSkVjeUd5NUE0NGhUTU9UcjJwRE1YdXBPTkxYZmFpOEtnWjBWR0IyeXhoYjVXdTlrOG5FQjUxMHR3dEtwY3o3X1RvZ0FTOG5OVmxSUVZnUk5jMjVsVFUxSHh6VVc4OWN6RVdWdU9VZzNLakJtZkZrRGpuUlZha2FpbWNRcmstOFdXNW80RQ?oc=5",
+      "source": "ABC7 Los Angeles",
+      "publishedAt": "2026-11-17T22:18:01.000Z",
+      "latestAt": "2026-11-18T18:37:28.000Z",
+      "firstSeenAt": "2026-11-18T22:06:23.492Z",
+      "outlets": 3,
+      "outletNames": [
+        "ABC7 Los Angeles",
+        "People.com",
+        "WFXB"
+      ],
+      "score": 2.18
     },
     {
       "id": "d6ded3c90ab3",
@@ -1736,38 +1771,6 @@
       "score": 1.39
     },
     {
-      "id": "fb892141ebc5",
-      "cat": "flights",
-      "kind": "news",
-      "title": "No exact cause for malfunction that led to nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcHgtMW5RNU9ZMmNUS3ZRVS1uR0NkS01zN1QzelU1RC04allqbi1XdldvSkpQbmlXczNKVGpMc1psRXNwdHVDUGN6X29yaFNPV0pPOEpWSWU1VjVNUjZPSkZJWW4xbWdDVGpiWkV1S3NHRHFhUmhyRmZsODlzTS04R3NFXy14d0dkRS1jNVBaM29IUFM3NXJFOFNNU1ZZZVgyVC10bVRkYWY4d2RUMDNnQWJrUTBWeXBTZTg4QmR30gHDAUFVX3lxTFBOd2t3OWdjV2FSVHJydk01SHRhekJMQ2Y2bE8xc3Rzc3RqWjAxVnFwaXlGMXhESUlZRW1BX2w4cjNra09ZNDJ0cDJieU16TFA0OTQtdjc0ZEdMT1cwa1ZRY1hLOHNkUU1uQ2pJR3J1VlViMVlXYXdlU0l5Q19SR0xubmtlYl9nLVJDM3pGRmFsQjZfM2p1MjA1ZWREaFcyS29faHNIS3hyUHNtcXpYNUdFTENtU0ZlOEVPam5zMmlwTDFqaw?oc=5",
-      "source": "NewsNation",
-      "publishedAt": "2026-11-18T00:42:41.000Z",
-      "latestAt": "2026-11-18T00:42:41.000Z",
-      "firstSeenAt": "2026-11-18T01:32:52.277Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsNation"
-      ],
-      "score": 1.38
-    },
-    {
-      "id": "b10123451d1b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "F.A.A. Shelves Routers Like the One Linked to the Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9XSTQ1SzFhY1JSYzRWN0RYMnFncVgtUHZScFNHaFA5NVctZzhyZXNxZmg0NUdGdk9ScGpmeUVLYWZKNUVDSzJIdk96aXFOcHliQklIMDdJMHFBS19aNl9pdnEtRk5PTFZkLW5zdDR1cDQzd005?oc=5",
-      "source": "The New York Times",
-      "publishedAt": "2026-11-18T01:27:04.000Z",
-      "latestAt": "2026-11-18T01:27:04.000Z",
-      "firstSeenAt": "2026-11-18T03:18:19.210Z",
-      "outlets": 1,
-      "outletNames": [
-        "The New York Times"
-      ],
-      "score": 1.36
-    },
-    {
       "id": "1f76878e7527",
       "cat": "earth",
       "kind": "news",
@@ -1876,22 +1879,6 @@
       "outlets": 1,
       "outletNames": [
         "Decrypt"
-      ],
-      "score": 1
-    },
-    {
-      "id": "187d67132596",
-      "cat": "markets",
-      "kind": "news",
-      "title": "ServiceNow (NOW) Shares Drop 6.5% Amid Market Selloff, Trading W",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbW5tM2VURy1hUHBJZEJrc0U5bmRrdVNCX2xHVVZZM2tDMkRhYUVnVFRqNkN4Z0RnMnFoNXVLa3ZKbnJFZjRpcUUtUUtmVktqaW1WTlM4Q29Sc2tIOElUeE5kZm1KV3ZidGVVZldOTWluYzdFM3RlalY5TUJmOWY3N1pmeXRFZnpUWmR4Y043bFoxOVVlcVQ3Smw5ZzAyUnd2R2FmZHVyX1FkY1g4Sy16VTRFQ3pKTkk?oc=5",
-      "source": "GuruFocus",
-      "publishedAt": "2026-11-17T22:03:41.000Z",
-      "latestAt": "2026-11-17T22:03:41.000Z",
-      "firstSeenAt": "2026-11-17T22:09:54.219Z",
-      "outlets": 1,
-      "outletNames": [
-        "GuruFocus"
       ],
       "score": 1
     },
@@ -2006,6 +1993,22 @@
         "Insider on MSN"
       ],
       "score": 0.86
+    },
+    {
+      "id": "613d42f33040",
+      "cat": "markets",
+      "kind": "news",
+      "title": "NATEN.E Trading Suspended Under Circuit Breaker",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPX0xJeEt4eU9qTXdxMTdVeS13N00yWUw0dlFFQkpHQVBHZWpWVFF0MDZ1MHlpWFRaN0ZraFpvYWJvVGVrTV9wMFlTNmJxeFpjRHE5WjJBOTZMRklaSHJYVG85eEEyZjVSTE5rUjl6cDduZy1RTWJSWHc1QkIxRnE3YXViNGJIa0tnZTBuVkNSRTFGQWlUcTljUTNWNV92MzdEWFhB?oc=5",
+      "source": "TipRanks",
+      "publishedAt": "2026-11-18T12:44:45.000Z",
+      "latestAt": "2026-11-18T14:45:14.000Z",
+      "firstSeenAt": "2026-11-18T22:06:23.492Z",
+      "outlets": 1,
+      "outletNames": [
+        "TipRanks"
+      ],
+      "score": 0.84
     }
   ]
 }
