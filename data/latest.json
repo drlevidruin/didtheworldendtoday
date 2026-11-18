@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T18:20:45.957Z",
+  "buildTime": "2026-11-18T18:35:48.656Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 13:20 ET",
+  "etStamp": "2026-11-18 13:35 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,15 +44,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 747,
-  "lastSuccessAt": "2026-11-18T18:20:45.957Z",
+  "headlinesRead": 1058,
+  "lastSuccessAt": "2026-11-18T18:35:48.656Z",
   "rollingFallback": false,
   "cats": {
-    "weather": 4,
-    "flights": 28,
-    "hacks": 30,
+    "weather": 5,
+    "flights": 26,
+    "hacks": 32,
     "grid": 7,
-    "internet": 10,
+    "internet": 9,
     "markets": 4,
     "germs": 4,
     "sun": 4,
@@ -181,81 +181,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 418,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 11 of 26 queries)",
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "count": 731,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 16 of 26 queries)",
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "bing": {
       "ok": true,
-      "count": 293,
+      "count": 289,
       "error": null,
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-18T17:35:37.400Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T18:20:45.957Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z"
     }
   },
   "stories": [
@@ -393,6 +392,25 @@
       "score": 3.56
     },
     {
+      "id": "3af276c6d1c6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Expedia investigates cyberattack after hackers claim theft of nearly 1 billion customer records",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRVg4c3h1a3ZYUXdPRVlqMDVrOVhLSGxMamRGU3lESFBlc1pOUFd3S1VlVHpSR1FxWUU2eHI5U3VKS1Y0WWwxZXh5WWNnV1ZpU1BnUXBQM0htN0podUdJRlBpMFlzRmtNQ0doUkN2aW5OeWd1S20zMDZWUEFVY2xubG1nQmwxbW9rVzJkbEZyNVpyRWdNWmtoZEh2WEpLTEZhelVrUmVDSnh2czQ?oc=5",
+      "source": "cbs8.com",
+      "publishedAt": "2026-11-18T17:22:00.000Z",
+      "latestAt": "2026-11-18T17:26:22.000Z",
+      "firstSeenAt": "2026-11-18T17:35:37.400Z",
+      "outlets": 4,
+      "outletNames": [
+        "cbs8.com",
+        "weareiowa.com",
+        "KVUE",
+        "9News"
+      ],
+      "score": 2.99
+    },
+    {
       "id": "2909186dd5c7",
       "cat": "internet",
       "kind": "news",
@@ -408,41 +426,6 @@
         "News9live"
       ],
       "score": 2.8
-    },
-    {
-      "id": "70eecf50dbad",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple reporting major outage impacting Apple Pay, App Store",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQlpsQV9ZUmlHS2FEbmJ2a2IwLWZkd0twV1h2TzhVNjZGWnkyb2N6b3ZNaExFcG9MYU9RWmdBN1owQzVja0J5X3UzX0JkV1RNcGc2U2gyaDBJbU1IcDd5c1NyRXR1SVoyUWhOTWNTNk9ldmpRcXduVG1GUzRxUzlvODRUQWNQUTA?oc=5",
-      "source": "MySA",
-      "publishedAt": "2026-11-17T18:33:49.000Z",
-      "latestAt": "2026-11-17T18:49:23.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
-      "outlets": 2,
-      "outletNames": [
-        "MySA",
-        "cedarnews.net"
-      ],
-      "score": 2.7
-    },
-    {
-      "id": "3af276c6d1c6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Expedia investigates cyberattack after hackers claim theft of nearly 1 billion customer records",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRVg4c3h1a3ZYUXdPRVlqMDVrOVhLSGxMamRGU3lESFBlc1pOUFd3S1VlVHpSR1FxWUU2eHI5U3VKS1Y0WWwxZXh5WWNnV1ZpU1BnUXBQM0htN0podUdJRlBpMFlzRmtNQ0doUkN2aW5OeWd1S20zMDZWUEFVY2xubG1nQmwxbW9rVzJkbEZyNVpyRWdNWmtoZEh2WEpLTEZhelVrUmVDSnh2czQ?oc=5",
-      "source": "cbs8.com",
-      "publishedAt": "2026-11-18T17:22:00.000Z",
-      "latestAt": "2026-11-18T17:26:22.000Z",
-      "firstSeenAt": "2026-11-18T17:35:37.400Z",
-      "outlets": 3,
-      "outletNames": [
-        "cbs8.com",
-        "weareiowa.com",
-        "KVUE"
-      ],
-      "score": 2.58
     },
     {
       "id": "9f11549139fa",
@@ -517,6 +500,23 @@
       "score": 2.16
     },
     {
+      "id": "e6ad68ef594c",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Thunderstorms and hail forecast for Essex as cold snap set to continue",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG03NllxV0VibWlwY2c5a3lERzYzOG55cHdMRmtnNzlPMm9lay1LdTJjUjlqdVRPRGEzWnM4X0lSVXJBdElRcWlNYjlSVEFLeXNobHI0QTd4OTV4ekIxZGpHWG1UR1dsSTBpWkFiYWEwNjBlMkxTZmxpWTRvYV8zVE1vbm1NUVc0QlgzVXFTa1l3eVJTN2Z2cGhlUXV3TkJOSWo4YU5OQ0UzSGZLUWJuY0stbw?oc=5",
+      "source": "Harwich and Manningtree Standard",
+      "publishedAt": "2026-11-18T16:30:00.000Z",
+      "latestAt": "2026-11-18T16:30:00.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 2,
+      "outletNames": [
+        "Harwich and Manningtree Standard",
+        "Thurrock Gazette"
+      ],
+      "score": 2
+    },
+    {
       "id": "sig:faa-stop:SFO:2026-11-17",
       "cat": "flights",
       "kind": "signal",
@@ -540,29 +540,6 @@
       }
     },
     {
-      "id": "sig:faa-stop:PHX:2026-11-17",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at PHX (thunderstorms)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T18:32:06.239Z",
-      "latestAt": "2026-11-17T18:32:06.239Z",
-      "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "PHX",
-        "hub": true,
-        "nationwide": false,
-        "reason": "thunderstorms"
-      }
-    },
-    {
       "id": "1f4000ce7c19",
       "cat": "flights",
       "kind": "news",
@@ -580,6 +557,29 @@
         "THV11"
       ],
       "score": 4.07
+    },
+    {
+      "id": "sig:faa-stop:TEB:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T19:17:12.554Z",
+      "latestAt": "2026-11-17T19:17:12.554Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
     },
     {
       "id": "ffe871da3da9",
@@ -638,23 +638,6 @@
         "Reuters"
       ],
       "score": 2.38
-    },
-    {
-      "id": "e6ad68ef594c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Thunderstorms and hail forecast for Essex as cold snap set to continue",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG03NllxV0VibWlwY2c5a3lERzYzOG55cHdMRmtnNzlPMm9lay1LdTJjUjlqdVRPRGEzWnM4X0lSVXJBdElRcWlNYjlSVEFLeXNobHI0QTd4OTV4ekIxZGpHWG1UR1dsSTBpWkFiYWEwNjBlMkxTZmxpWTRvYV8zVE1vbm1NUVc0QlgzVXFTa1l3eVJTN2Z2cGhlUXV3TkJOSWo4YU5OQ0UzSGZLUWJuY0stbw?oc=5",
-      "source": "Harwich and Manningtree Standard",
-      "publishedAt": "2026-11-18T16:30:00.000Z",
-      "latestAt": "2026-11-18T16:30:00.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 2,
-      "outletNames": [
-        "Harwich and Manningtree Standard",
-        "Thurrock Gazette"
-      ],
-      "score": 2
     },
     {
       "id": "ee5091b344ef",
@@ -759,6 +742,23 @@
       "score": 1.72
     },
     {
+      "id": "e783ec869177",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Total debt to NES from ice storm down to $5M",
+      "url": "https://www.msn.com/en-us/money/economy/total-debt-to-nes-from-ice-storm-down-to-5m/vi-AA2hHUIB",
+      "source": "WKRN Nashville on MSN",
+      "publishedAt": "2026-11-18T09:12:55.000Z",
+      "latestAt": "2026-11-18T17:12:55.000Z",
+      "firstSeenAt": "2026-11-18T18:35:48.656Z",
+      "outlets": 2,
+      "outletNames": [
+        "WKRN Nashville on MSN",
+        "WKRN News 2"
+      ],
+      "score": 1.69
+    },
+    {
       "id": "711e5e78a7e4",
       "cat": "grid",
       "kind": "news",
@@ -841,27 +841,24 @@
       "score": 1.39
     },
     {
-      "id": "sig:faa-stop:TEB:2026-11-17",
+      "id": "471798c23cac",
       "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T19:17:12.554Z",
-      "latestAt": "2026-11-17T19:17:12.554Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
-      "outlets": 1,
+      "kind": "news",
+      "title": "After the longest ground stop since 9/11, 7 ways to protect your holiday flights",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVEh1SzVSeGY5VWdZRk5GNk5INi1TSk5kQzVza0o0eDRvNDNHVnYwUzNsaGhZX0R3UkdUeFF2UmIyczZqemluQmhTTmo2WElpM05XVVY4bGpIYjJ5OFpoNXVsS19IVVRCWGZVVnBKUzE5Z2lfdWxZNmZ4S3VVdDBzVDNaV3FGVUpFd0RqeHpOX1FTZU9pY05DcjNNN1paek5wdzd2bFZRbk5XNFh4OHp4WjNxV1Q?oc=5",
+      "source": "The Bristol Herald Courier",
+      "publishedAt": "2026-11-18T17:35:06.000Z",
+      "latestAt": "2026-11-18T17:54:09.000Z",
+      "firstSeenAt": "2026-11-18T18:05:38.239Z",
+      "outlets": 5,
       "outletNames": [
-        "FAA"
+        "The Bristol Herald Courier",
+        "Charlotte Observer",
+        "Caledonian Record",
+        "Wisconsin State Journal",
+        "Buffalo News"
       ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
+      "score": 3.29
     },
     {
       "id": "754ee7b9cc1c",
@@ -1007,23 +1004,6 @@
       "score": 1.99
     },
     {
-      "id": "471798c23cac",
-      "cat": "flights",
-      "kind": "news",
-      "title": "After the longest ground stop since 9/11, 7 ways to protect your holiday flights",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVEh1SzVSeGY5VWdZRk5GNk5INi1TSk5kQzVza0o0eDRvNDNHVnYwUzNsaGhZX0R3UkdUeFF2UmIyczZqemluQmhTTmo2WElpM05XVVY4bGpIYjJ5OFpoNXVsS19IVVRCWGZVVnBKUzE5Z2lfdWxZNmZ4S3VVdDBzVDNaV3FGVUpFd0RqeHpOX1FTZU9pY05DcjNNN1paek5wdzd2bFZRbk5XNFh4OHp4WjNxV1Q?oc=5",
-      "source": "The Bristol Herald Courier",
-      "publishedAt": "2026-11-18T17:35:06.000Z",
-      "latestAt": "2026-11-18T17:54:09.000Z",
-      "firstSeenAt": "2026-11-18T18:05:38.239Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Bristol Herald Courier",
-        "Charlotte Observer"
-      ],
-      "score": 1.98
-    },
-    {
       "id": "ebbcae13fefd",
       "cat": "hacks",
       "kind": "news",
@@ -1143,6 +1123,24 @@
       "score": 1.91
     },
     {
+      "id": "106829ca41b5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Governments warn Java flaw leaves computer systems open to hackers",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRE5uQWVHVHVQV19VTmJrT29QT1lKV0xQQzhUZWp6Wk5aSWZCV3ZKbHNKZ3NBMmlhYzNsT1J6V1AxQjBxR2QzWWk2ODlfaTBEU1JCLXFVWE1adHFQU0M2Rk1fZXhYYzQ5bmczU1lyWHc5WjNFVi1SLXF0NkJSaWlMQUNGdmZfX1ZETWtxZ05UUER6VVpxRDZBaUkzUTZMSGRsWVRacEJkSTUxYkRyeVc2dGJvWUpSNVNPbGc?oc=5",
+      "source": "Reuters",
+      "publishedAt": "2026-11-18T00:51:00.000Z",
+      "latestAt": "2026-11-18T17:15:00.000Z",
+      "firstSeenAt": "2026-11-18T18:35:48.656Z",
+      "outlets": 3,
+      "outletNames": [
+        "Reuters",
+        "Investing.com",
+        "The Straits Times"
+      ],
+      "score": 1.82
+    },
+    {
       "id": "33855d636d61",
       "cat": "hacks",
       "kind": "news",
@@ -1245,6 +1243,22 @@
       "score": 1.62
     },
     {
+      "id": "bde8e0051e6b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Expert say string of major outages not likely a cyberattack, cite aging systems",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNV2E2eWN6WE1ZSTM2VGM1QWpCOXJDc1JqQUZDVkQ5UHpiajlRbkEtSjJ5Q0RfMHdTMG55VXZoR1QwMWNvd0lobVVEem1MNXZCMnE4Z0ktVUdzU1dkcENudktkdHBXSkFENWNkU1pjRzZTRGFqY3RJX3V3MkdlbElsdFdJZFlrd0luMXF6OXdIOWRkREdHSGk1WW5BSEEtd1ZLZmpWTVVtX2tzb25xZWpaakdmMVNnWjQ?oc=5",
+      "source": "KBAK",
+      "publishedAt": "2026-11-18T18:26:14.000Z",
+      "latestAt": "2026-11-18T18:29:40.000Z",
+      "firstSeenAt": "2026-11-18T18:35:48.656Z",
+      "outlets": 1,
+      "outletNames": [
+        "KBAK"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "1ab889aa6973",
       "cat": "flights",
       "kind": "news",
@@ -1252,7 +1266,7 @@
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxONGY5RVJxSFJWSWdtWjB3OE9UcThueTZYbTZOZHBwNl9FZktxNmhyNFlHS0pGYkdQa0pVc0szN1lUNUxkZUVQLTRreG9WYmZidWZQVWZneFBaM1pFSXA2bnllYzA0WnJXRjJoY2M5UlBLRENKaVB6NGpua3E5NGFsUklJSmY1Y1I2SzZwRnB1andUbVl2bDBj?oc=5",
       "source": "KCCR-AM",
       "publishedAt": "2026-11-18T18:03:55.000Z",
-      "latestAt": "2026-11-18T18:03:55.000Z",
+      "latestAt": "2026-11-18T18:04:46.000Z",
       "firstSeenAt": "2026-11-18T18:05:38.239Z",
       "outlets": 1,
       "outletNames": [
@@ -1453,6 +1467,22 @@
       "score": 1.4
     },
     {
+      "id": "b953e02c7f86",
+      "cat": "flights",
+      "kind": "news",
+      "title": "AOPA Urges FAA to Clarify Ground Stop Rules for GA Pilots After Nov. 13 Nationwide Halt",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5aX1ktM3dMYkZpRVNxOEtRQ096RHdOY1JENjRZd28xd1dMQW5IR1BwcElfT2FMUnozX0Y3SkQtQlJMTlNCQXp2aTRHdGhTV1FDYnpYSXdCSjZlY0JUZWh4OGtUc2dRYk1XNzdqeXBjQkNNU0E?oc=5",
+      "source": "Avi-Go",
+      "publishedAt": "2026-11-18T18:19:37.000Z",
+      "latestAt": "2026-11-18T18:19:37.000Z",
+      "firstSeenAt": "2026-11-18T18:35:48.656Z",
+      "outlets": 1,
+      "outletNames": [
+        "Avi-Go"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "11e6006e8ea3",
       "cat": "flights",
       "kind": "news",
@@ -1508,7 +1538,7 @@
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQTmNuNUZmeWFVbEQ3NHlpVG9NNXFiLWJ6Q2N2V2ltU3R3TC1nTzQwRDNKZ2VVdE1ueXJnNFFwVEw5LVpFZXQ2WHdDQlNieXRjUlB3WW14ODFWakFOVGZMZUlDNHRUUmtfdkRFcGVSaU51T2dfM3RzMG1yX0NlXzN6cWs2V2dlOGJ2cjhBNzdFSmFiWmJ0eXd5Q0lic0Y5a3B6dXRiNVEwTXp6VE5hNFROZ1ZpSWtWZWlmRHRnSWVVSnBrWkYzQy1ZX3hKODVzYjRCODFzSTRSUzJHVWdo?oc=5",
       "source": "IT Security Guru",
       "publishedAt": "2026-11-18T12:18:59.000Z",
-      "latestAt": "2026-11-18T12:18:59.000Z",
+      "latestAt": "2026-11-18T12:54:48.000Z",
       "firstSeenAt": "2026-11-18T12:34:56.272Z",
       "outlets": 1,
       "outletNames": [
@@ -1695,38 +1725,6 @@
         "NewsNation"
       ],
       "score": 1.38
-    },
-    {
-      "id": "fb892141ebc5",
-      "cat": "flights",
-      "kind": "news",
-      "title": "No exact cause for malfunction that led to nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcHgtMW5RNU9ZMmNUS3ZRVS1uR0NkS01zN1QzelU1RC04allqbi1XdldvSkpQbmlXczNKVGpMc1psRXNwdHVDUGN6X29yaFNPV0pPOEpWSWU1VjVNUjZPSkZJWW4xbWdDVGpiWkV1S3NHRHFhUmhyRmZsODlzTS04R3NFXy14d0dkRS1jNVBaM29IUFM3NXJFOFNNU1ZZZVgyVC10bVRkYWY4d2RUMDNnQWJrUTBWeXBTZTg4QmR30gHDAUFVX3lxTFBOd2t3OWdjV2FSVHJydk01SHRhekJMQ2Y2bE8xc3Rzc3RqWjAxVnFwaXlGMXhESUlZRW1BX2w4cjNra09ZNDJ0cDJieU16TFA0OTQtdjc0ZEdMT1cwa1ZRY1hLOHNkUU1uQ2pJR3J1VlViMVlXYXdlU0l5Q19SR0xubmtlYl9nLVJDM3pGRmFsQjZfM2p1MjA1ZWREaFcyS29faHNIS3hyUHNtcXpYNUdFTENtU0ZlOEVPam5zMmlwTDFqaw?oc=5",
-      "source": "NewsNation",
-      "publishedAt": "2026-11-18T00:42:41.000Z",
-      "latestAt": "2026-11-18T00:42:41.000Z",
-      "firstSeenAt": "2026-11-18T01:32:52.277Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsNation"
-      ],
-      "score": 1.38
-    },
-    {
-      "id": "ee6bcf48e08d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Network Failure Could Cost Four Major Airlines $345 Million",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTFVNT2tBelJwWnpQdDRza1ZBYkJROTREWFFSUDZjNnQxZGxGQ2ZYWUlodWxmb1BJMFIzWGRhM0FyajczZDI0eFl2RDNQMEFWdEZ0bU5IdDZFYS01Q0RsUWs0d09QSmtXYllkVjYzVWNkdGFlczR4U2NxYU1nLUM2cEhXYnRJN1NuV0FTRjZUOV9GZHV1aXNYVTZPR2dzQ2ZscXI3WnFfaE1TWVF4NFNJcXdRYXJYRkx0VG80czBuTkFDZw?oc=5",
-      "source": "NewsBreak: Local News & Alerts",
-      "publishedAt": "2026-11-18T16:50:47.000Z",
-      "latestAt": "2026-11-18T16:50:47.000Z",
-      "firstSeenAt": "2026-11-18T18:05:38.239Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 1.37
     },
     {
       "id": "1f76878e7527",
