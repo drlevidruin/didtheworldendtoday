@@ -23,53 +23,6 @@
   "change": 0,
   "stories": [
     {
-      "id": "fb7f4a3ae024",
-      "cat": "flights",
-      "kind": "news",
-      "title": "The latest: FAA ground stop results in pause in router installations nationwide",
-      "url": "https://www.msn.com/en-us/news/other/the-latest-faa-ground-stop-results-in-pause-in-router-installations-nationwide/ar-AA2hCmr5",
-      "source": "The Edwardsville Intelligencer on MSN",
-      "publishedAt": "2026-11-17T09:34:57.000Z",
-      "latestAt": "2026-11-18T09:16:00.000Z",
-      "firstSeenAt": "2026-11-17T21:14:13.908Z",
-      "outlets": 32,
-      "outletNames": [
-        "news8000.com",
-        "heysocal.com",
-        "Hey SoCal. Change is our intention.",
-        "THV11",
-        "WSJ",
-        "CNBC",
-        "Channel 3000",
-        "CNN",
-        "Quartz",
-        "Yahoo",
-        "NewsNation",
-        "Shaw Local",
-        "MPR News",
-        "The Independent",
-        "Axios",
-        "Yahoo Life UK",
-        "WPDE",
-        "The Center Square",
-        "KSL",
-        "Washington Times",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Fox Business",
-        "PCMag UK",
-        "Al Jazeera",
-        "ABC7 New York",
-        "Washington Examiner",
-        "CBC",
-        "Good Morning America",
-        "IndexBox",
-        "PCMag",
-        "KTVN",
-        "Marietta Daily Journal"
-      ],
-      "score": 6.77
-    },
-    {
       "id": "1f4000ce7c19",
       "cat": "flights",
       "kind": "news",
@@ -79,7 +32,7 @@
       "publishedAt": "2026-11-17T16:57:15.000Z",
       "latestAt": "2026-11-18T09:30:01.000Z",
       "firstSeenAt": "2026-11-17T21:14:13.908Z",
-      "outlets": 14,
+      "outlets": 16,
       "outletNames": [
         "news8000.com",
         "heysocal.com",
@@ -94,9 +47,11 @@
         "People.com",
         "FOX 4 News Dallas-Fort Worth",
         "PBS",
-        "Tech Xplore"
+        "Tech Xplore",
+        "6abc Philadelphia",
+        "ABC News - Breaking News, Latest News and Videos"
       ],
-      "score": 6.25
+      "score": 6.5
     },
     {
       "id": "4f4b5cd393d6",
@@ -128,7 +83,7 @@
       "url": "https://www.msn.com/en-us/news/technology/apple-services-restored-after-outage-impacted-thousands/ar-AA2hDfJb",
       "source": "USA TODAY on MSN",
       "publishedAt": "2026-11-17T10:46:00.000Z",
-      "latestAt": "2026-11-18T08:45:00.000Z",
+      "latestAt": "2026-11-18T09:47:04.000Z",
       "firstSeenAt": "2026-11-17T20:39:00.012Z",
       "outlets": 32,
       "outletNames": [
@@ -188,6 +143,29 @@
         "hub": true,
         "nationwide": false,
         "reason": "low ceilings"
+      }
+    },
+    {
+      "id": "sig:faa-stop:PHX:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at PHX (thunderstorms)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T18:32:06.239Z",
+      "latestAt": "2026-11-17T18:32:06.239Z",
+      "firstSeenAt": "2026-11-17T18:32:06.239Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "PHX",
+        "hub": true,
+        "nationwide": false,
+        "reason": "thunderstorms"
       }
     },
     {
@@ -361,29 +339,6 @@
       "score": 2.44
     },
     {
-      "id": "sig:faa-stop:PHX:2026-11-17",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at PHX (thunderstorms)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T18:32:06.239Z",
-      "latestAt": "2026-11-17T18:32:06.239Z",
-      "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "PHX",
-        "hub": true,
-        "nationwide": false,
-        "reason": "thunderstorms"
-      }
-    },
-    {
       "id": "918c99de455a",
       "cat": "flights",
       "kind": "news",
@@ -412,16 +367,40 @@
       "url": "https://mashable.com/tech/faa-ground-stop-router-work",
       "source": "Mashable",
       "publishedAt": "2026-11-17T17:38:00.000Z",
-      "latestAt": "2026-11-18T06:50:43.000Z",
+      "latestAt": "2026-11-18T09:34:19.000Z",
       "firstSeenAt": "2026-11-18T00:17:39.985Z",
-      "outlets": 4,
+      "outlets": 5,
       "outletNames": [
         "The Washington Post",
         "Mashable",
         "Mashable SEA",
-        "Red Lake Nation News"
+        "Red Lake Nation News",
+        "Seeking Alpha"
       ],
-      "score": 3.73
+      "score": 4.13
+    },
+    {
+      "id": "sig:faa-stop:TEB:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T19:17:12.554Z",
+      "latestAt": "2026-11-17T19:17:12.554Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
     },
     {
       "id": "cd727588fafd",
@@ -686,29 +665,6 @@
         "The Equation - Union of Concerned Scientists"
       ],
       "score": 1.39
-    },
-    {
-      "id": "sig:faa-stop:TEB:2026-11-17",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T19:17:12.554Z",
-      "latestAt": "2026-11-17T19:17:12.554Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
     },
     {
       "id": "2db880a1742d",
@@ -1022,24 +978,6 @@
       "score": 1.79
     },
     {
-      "id": "3b49d5ddbc4f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Outage math at the airport: When a four-hour Uber beats waiting out a ground stop",
-      "url": "https://apnews.com/article/ground-stop-flights-delays-frustration-2f56c7e73199635c32f744941fff3792",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-17T09:38:00.000Z",
-      "latestAt": "2026-11-17T20:45:00.000Z",
-      "firstSeenAt": "2026-11-18T04:48:36.329Z",
-      "outlets": 3,
-      "outletNames": [
-        "Associated Press News",
-        "The Baltimore Sun",
-        "AP News"
-      ],
-      "score": 1.76
-    },
-    {
       "id": "6d9825c096f8",
       "cat": "flights",
       "kind": "news",
@@ -1149,7 +1087,7 @@
       "url": "https://abcnews.com/US/national-intelligence-director-signs-cyberattack-amid-tech-outage/story?id=138229967",
       "source": "ABC News",
       "publishedAt": "2026-11-17T10:50:00.000Z",
-      "latestAt": "2026-11-18T02:47:57.000Z",
+      "latestAt": "2026-11-18T09:29:24.000Z",
       "firstSeenAt": "2026-11-18T03:03:14.805Z",
       "outlets": 2,
       "outletNames": [
@@ -1352,6 +1290,22 @@
         "Global Agriculture"
       ],
       "score": 1.39
+    },
+    {
+      "id": "82218d53aaad",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Timeline of the FAA nationwide ground stop: How it developed",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSGtmU3BzdllUMng4SXBOQzk1TWdnOFRTLUZQNkJManhIb1RQNXFNRWh3b3JNZnlhcVhydlNUa1VCWDc2Z01Lem5vOVZ3eFhKRUt0ZmdjLV9rbTFjRUNjLVJOSTBycmlGbVRZMjRodUhWWVpfaEt1Ny1jUWQybW5kd0U4MVZEYUdZa3dhT0d0NlfSAZYBQVVfeXFMTzhqZl81M2hodnN2dl8xYjFWay01bXNZRnF1aWdTejdKZUxGZ2lWa3pNWldIdlAwMC1YVjhZSUFHaTNHdnozUmZ0YkI0OHZJOFNmRVYtU1BneldYTHZTclZ4d0NZR1ZSdlhMbnJrY3VFd0pGUXNBdEw2T05relZIbFRDbkJ3UGYyNDhwTS1naEt3WDBTR1h3?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-18T09:10:08.000Z",
+      "latestAt": "2026-11-18T09:10:08.000Z",
+      "firstSeenAt": "2026-11-18T09:49:16.682Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "score": 1.38
     },
     {
       "id": "eae32f04b08e",
@@ -1610,6 +1564,23 @@
       "score": 1.24
     },
     {
+      "id": "99368bd5bcdf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI warns hackers weaponizing ARTEX AI framework to automate attacks on energy, manufacturing, telecom",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPTVJWX0dmMTJScDVMTFpLOUx2ZDRaUldIYzM0NllCV3lfNjI5NVctZ1hVbVNPRHNFeDN0VW1jZ01uYVBUUWVDd3oxcVVNNGk0UElOUzd2bW53dVQzLXhoX0pnam1OTFNtTjlreVVqa2NyUTFNMTBRNktlbDF6eUJ3czF4N2xTd3I0ck5KSWlLdlhaMGc0aTg5MFZtQ3VacU9xa3M2bVhDQUZJUjNESjZqUVBUVUk3a29MUU5GSVk0cFQzMnViaGczcnR1V3ozYlZaN0tpUGQ1VHAtRFgwZkZ2dW9KZlY3UkRS?oc=5",
+      "source": "Industrial Cyber",
+      "publishedAt": "2026-11-17T10:50:58.000Z",
+      "latestAt": "2026-11-18T09:33:51.000Z",
+      "firstSeenAt": "2026-11-18T09:49:16.682Z",
+      "outlets": 2,
+      "outletNames": [
+        "Industrial Cyber",
+        "Yeni Safak English"
+      ],
+      "score": 1.23
+    },
+    {
       "id": "1d5ce9d699b1",
       "cat": "grid",
       "kind": "news",
@@ -1834,5 +1805,5 @@
       "score": 0.85
     }
   ],
-  "updatedAt": "2026-11-18T09:34:15.097Z"
+  "updatedAt": "2026-11-18T09:49:16.682Z"
 }
