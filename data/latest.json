@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T21:27:52.181Z",
+  "buildTime": "2026-11-18T21:51:28.079Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 16:27 ET",
+  "etStamp": "2026-11-18 16:51 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,20 +49,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1329,
-  "lastSuccessAt": "2026-11-18T21:27:52.181Z",
+  "headlinesRead": 321,
+  "lastSuccessAt": "2026-11-18T21:51:28.079Z",
   "rollingFallback": false,
   "cats": {
-    "weather": 4,
+    "weather": 5,
     "flights": 27,
-    "internet": 11,
+    "internet": 12,
     "grid": 8,
     "earth": 4,
-    "hacks": 27,
+    "hacks": 26,
     "markets": 4,
     "germs": 4,
     "sun": 4,
-    "ai": 4,
+    "ai": 3,
     "animals": 1,
     "space": 2
   },
@@ -173,9 +173,9 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
-      "headlines": 30,
+      "headlines": 29,
       "matched": 0,
       "tripAt": 3,
       "tripped": false,
@@ -187,20 +187,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 1059,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-18T21:27:52.181Z"
     },
     "bing": {
       "ok": true,
-      "count": 235,
-      "error": "5 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "count": 285,
+      "error": null,
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     },
     "gdelt": {
       "ok": false,
@@ -212,56 +212,55 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T20:36:11.081Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     },
     "topstories": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-18T21:27:52.181Z"
+      "lastOkAt": "2026-11-18T21:51:28.079Z"
     }
   },
   "stories": [
@@ -425,6 +424,25 @@
       }
     },
     {
+      "id": "72ec3e8b1316",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Here are all of the recent major outages, national disruptions",
+      "url": "https://www.detroitnews.com/story/tech/2026/11/18/tech-outages-full-list-outlook-faa/92841844007/",
+      "source": "The Detroit News",
+      "publishedAt": "2026-11-18T04:22:00.000Z",
+      "latestAt": "2026-11-18T19:30:07.000Z",
+      "firstSeenAt": "2026-11-18T20:06:04.908Z",
+      "outlets": 4,
+      "outletNames": [
+        "The Detroit News",
+        "USA TODAY",
+        "Miami Herald",
+        "azcentral.com"
+      ],
+      "score": 3.1
+    },
+    {
       "id": "e656cdb7432f",
       "cat": "hacks",
       "kind": "news",
@@ -464,24 +482,6 @@
         "9News"
       ],
       "score": 2.99
-    },
-    {
-      "id": "72ec3e8b1316",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Here are all of the recent major outages, national disruptions",
-      "url": "https://www.detroitnews.com/story/tech/2026/11/18/tech-outages-full-list-outlook-faa/92841844007/",
-      "source": "The Detroit News",
-      "publishedAt": "2026-11-18T06:41:00.000Z",
-      "latestAt": "2026-11-18T19:30:07.000Z",
-      "firstSeenAt": "2026-11-18T20:06:04.908Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Detroit News",
-        "USA TODAY",
-        "Miami Herald"
-      ],
-      "score": 2.81
     },
     {
       "id": "2909186dd5c7",
@@ -580,28 +580,25 @@
       "score": 4.17
     },
     {
-      "id": "471798c23cac",
+      "id": "11f81094de77",
       "cat": "flights",
       "kind": "news",
-      "title": "After the longest ground stop since 9/11, 7 ways to protect your holiday flights",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVEh1SzVSeGY5VWdZRk5GNk5INi1TSk5kQzVza0o0eDRvNDNHVnYwUzNsaGhZX0R3UkdUeFF2UmIyczZqemluQmhTTmo2WElpM05XVVY4bGpIYjJ5OFpoNXVsS19IVVRCWGZVVnBKUzE5Z2lfdWxZNmZ4S3VVdDBzVDNaV3FGVUpFd0RqeHpOX1FTZU9pY05DcjNNN1paek5wdzd2bFZRbk5XNFh4OHp4WjNxV1Q?oc=5",
-      "source": "The Bristol Herald Courier",
-      "publishedAt": "2026-11-18T17:35:06.000Z",
-      "latestAt": "2026-11-18T19:11:21.000Z",
-      "firstSeenAt": "2026-11-18T18:05:38.239Z",
-      "outlets": 9,
+      "title": "FAA issues ground stop for flights headed to DJT Airport in West Palm Beach",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQZ3AzRnJRN3NHOU10Tk16Y1FzMHQ2QmNPQjZDMElyRHN1dDRTQzNFbVpLN01paFVNUlIybjVPR19FS1o3TkdVZjdBcUszdi1kQzZRNWh5LUY4WlhTbGp3M2lXdTg2RG9rY1h2N3c1SzVTel9CQ3BnaGM3X1NubWp4dGVlQ2wwQTQzby1yLVQ4WWJtdEJ3UEZMYW5tTHMwYS1mQUcwMExGNTZ3WXl6U3poSndLY3FVaGZWYzUtUkJFX1lidkRzUktST0gyMkdkR3BNZjlyMnczY2UwWHJkaVdMZGRFTVJpd0QtMGNva0ZGYmo5bVZaeGprTjh3VVhCeEJJTnVpRWZZak5adjQ5dlE?oc=5",
+      "source": "WPEC",
+      "publishedAt": "2026-11-18T19:24:19.000Z",
+      "latestAt": "2026-11-18T20:39:39.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 6,
       "outletNames": [
-        "The Bristol Herald Courier",
-        "Charlotte Observer",
-        "Caledonian Record",
-        "Wisconsin State Journal",
-        "Buffalo News",
-        "Rome Sentinel",
-        "KRDO",
-        "Roanoke Times",
-        "Arizona Daily Star"
+        "WPEC",
+        "cw34.com",
+        "WSMH",
+        "KVII",
+        "WJLA",
+        "KDNL"
       ],
-      "score": 4.13
+      "score": 3.57
     },
     {
       "id": "ffe871da3da9",
@@ -864,27 +861,6 @@
       "score": 1.69
     },
     {
-      "id": "11f81094de77",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA issues ground stop for flights headed to DJT Airport in West Palm Beach",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQZ3AzRnJRN3NHOU10Tk16Y1FzMHQ2QmNPQjZDMElyRHN1dDRTQzNFbVpLN01paFVNUlIybjVPR19FS1o3TkdVZjdBcUszdi1kQzZRNWh5LUY4WlhTbGp3M2lXdTg2RG9rY1h2N3c1SzVTel9CQ3BnaGM3X1NubWp4dGVlQ2wwQTQzby1yLVQ4WWJtdEJ3UEZMYW5tTHMwYS1mQUcwMExGNTZ3WXl6U3poSndLY3FVaGZWYzUtUkJFX1lidkRzUktST0gyMkdkR3BNZjlyMnczY2UwWHJkaVdMZGRFTVJpd0QtMGNva0ZGYmo5bVZaeGprTjh3VVhCeEJJTnVpRWZZak5adjQ5dlE?oc=5",
-      "source": "WPEC",
-      "publishedAt": "2026-11-18T19:24:19.000Z",
-      "latestAt": "2026-11-18T20:39:39.000Z",
-      "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 6,
-      "outletNames": [
-        "WPEC",
-        "cw34.com",
-        "WSMH",
-        "KVII",
-        "WJLA",
-        "KDNL"
-      ],
-      "score": 3.57
-    },
-    {
       "id": "sig:faa-stop:TEB:2026-11-18",
       "cat": "flights",
       "kind": "signal",
@@ -931,6 +907,30 @@
       }
     },
     {
+      "id": "471798c23cac",
+      "cat": "flights",
+      "kind": "news",
+      "title": "After the longest ground stop since 9/11, 7 ways to protect your holiday flights",
+      "url": "https://www.charlotteobserver.com/living/travel/article318140257.html",
+      "source": "Charlotte Observer",
+      "publishedAt": "2026-11-18T04:54:00.000Z",
+      "latestAt": "2026-11-18T19:11:21.000Z",
+      "firstSeenAt": "2026-11-18T18:05:38.239Z",
+      "outlets": 9,
+      "outletNames": [
+        "The Bristol Herald Courier",
+        "Charlotte Observer",
+        "Caledonian Record",
+        "Wisconsin State Journal",
+        "Buffalo News",
+        "Rome Sentinel",
+        "KRDO",
+        "Roanoke Times",
+        "Arizona Daily Star"
+      ],
+      "score": 3.25
+    },
+    {
       "id": "c0f7b49b2b66",
       "cat": "flights",
       "kind": "news",
@@ -966,24 +966,6 @@
       "score": 2.59
     },
     {
-      "id": "645c1ca57fd1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA halts router installation following nationwide ground stop, root cause of issue unknown",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOWhrZWRiZnFKQ0dsVGxXS1NYV2J5Z1FPTFc4Q09VSmRXcGdFbTNIZDVqRmt6MVNtWkRnaVczYW5RX2pnLTZsY3NFbHhhc3N0TjMxd1FHUlhQcTdpSmxFd1FxWndwRk5sMk1pWi1XZkRHZ0d1cXc2V0xzZW03TjljVVlEMklyVnpzOTZDSHczWEhvdjhWbHVzcG1B0gGfAUFVX3lxTFA0RHV1NVV6TUFxM2hpUlRfWDBWM0luMjBrVG1UVFlxY1hlSXZBd2tNaF9nVGprVXRhVVJOY0YtNmtKMkhuV05fcUFMRllEem4zSklMd1AyZjBDZWlrRUZFRDRmTnRKX3FjTWl3ZGg1NmNXbkYzbG84RTk3YjZPNkNROGtEX0VrWGRBbWpUUUVzRVFiTnNXX0lXai1wN0FlRQ?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-17T21:34:02.000Z",
-      "latestAt": "2026-11-18T18:37:28.000Z",
-      "firstSeenAt": "2026-11-18T21:27:52.181Z",
-      "outlets": 3,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "6abc Philadelphia",
-        "WFXB"
-      ],
-      "score": 2.18
-    },
-    {
       "id": "d6ded3c90ab3",
       "cat": "hacks",
       "kind": "news",
@@ -1000,23 +982,6 @@
         "TechRadar"
       ],
       "score": 2.15
-    },
-    {
-      "id": "ac8fef0be9f1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA ground stop spotlights controller shortages at PHX , nationwide",
-      "url": "https://cronkitenews.azpbs.org/2026/11/17/faa-shortages-air-traffic-controllers/",
-      "source": "cronkitenews.azpbs.org",
-      "publishedAt": "2026-11-17T21:37:17.000Z",
-      "latestAt": "2026-11-18T01:15:00.000Z",
-      "firstSeenAt": "2026-11-18T12:49:51.661Z",
-      "outlets": 2,
-      "outletNames": [
-        "Cronkite News",
-        "cronkitenews.azpbs.org"
-      ],
-      "score": 2.09
     },
     {
       "id": "e82c3d981838",
@@ -1085,23 +1050,6 @@
         "USA Today"
       ],
       "score": 1.95
-    },
-    {
-      "id": "1951663dfaae",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "IIHF confirms cyberattack after website goes offline",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBLNWhxbURmT1Y0Yzl3ZFF3REVrYWxWWXp5R2hWRE1xRmYxNExSYXVwRmJnaVQtdjFOMnNzYk9lNDR0YTRNUWREejhYVlJhY3cxakRudC1qcXV5V081dEN5aXpxZkM2eEVZcEUtWkllSlVSbUtO?oc=5",
-      "source": "CBC",
-      "publishedAt": "2026-11-17T21:44:00.000Z",
-      "latestAt": "2026-11-17T23:32:10.000Z",
-      "firstSeenAt": "2026-11-18T00:02:40.227Z",
-      "outlets": 2,
-      "outletNames": [
-        "CBC",
-        "NewsCord"
-      ],
-      "score": 1.92
     },
     {
       "id": "db0b05b7fb92",
@@ -1740,6 +1688,22 @@
       "score": 1.39
     },
     {
+      "id": "95fc0522f486",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
+      "source": "CyberSecurityNews",
+      "publishedAt": "2026-11-18T00:49:15.000Z",
+      "latestAt": "2026-11-18T00:49:15.000Z",
+      "firstSeenAt": "2026-11-18T01:02:54.429Z",
+      "outlets": 1,
+      "outletNames": [
+        "CyberSecurityNews"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "8c083e71a179",
       "cat": "ai",
       "kind": "news",
@@ -1756,6 +1720,54 @@
       "score": 1.39
     },
     {
+      "id": "d4338533eb30",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Super El Niño-Powered Record Heat Made Energy Costs Surge. 2027 May Be Worse",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZTZNZ3V5ODJydGhSWVl3elVvQmVoRlRTelcxRWR5WHUzRWJrd3E3QzI2UUxGZU8yV2ozei1jNWNTSktyNVplcXU4Wm5vUUl4cjU1ampFa3A3Qno1eGRBa3NBSjlfQmRadEVQOEJibHBkRS1VRGlGYXRpeUxxWWFEakNPU1NBNDZJSEZUTFl3Y0oxTUNSanBpUlViVDU4WVJiTGQ4NF9WY3E2UVoyNkRHZnlrVlBIYUJ2?oc=5",
+      "source": "The Equation - Union of Concerned Scientists",
+      "publishedAt": "2026-11-17T22:57:19.000Z",
+      "latestAt": "2026-11-17T22:57:19.000Z",
+      "firstSeenAt": "2026-11-17T23:17:37.630Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Equation - Union of Concerned Scientists"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "fb892141ebc5",
+      "cat": "flights",
+      "kind": "news",
+      "title": "No exact cause for malfunction that led to nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPcHgtMW5RNU9ZMmNUS3ZRVS1uR0NkS01zN1QzelU1RC04allqbi1XdldvSkpQbmlXczNKVGpMc1psRXNwdHVDUGN6X29yaFNPV0pPOEpWSWU1VjVNUjZPSkZJWW4xbWdDVGpiWkV1S3NHRHFhUmhyRmZsODlzTS04R3NFXy14d0dkRS1jNVBaM29IUFM3NXJFOFNNU1ZZZVgyVC10bVRkYWY4d2RUMDNnQWJrUTBWeXBTZTg4QmR30gHDAUFVX3lxTFBOd2t3OWdjV2FSVHJydk01SHRhekJMQ2Y2bE8xc3Rzc3RqWjAxVnFwaXlGMXhESUlZRW1BX2w4cjNra09ZNDJ0cDJieU16TFA0OTQtdjc0ZEdMT1cwa1ZRY1hLOHNkUU1uQ2pJR3J1VlViMVlXYXdlU0l5Q19SR0xubmtlYl9nLVJDM3pGRmFsQjZfM2p1MjA1ZWREaFcyS29faHNIS3hyUHNtcXpYNUdFTENtU0ZlOEVPam5zMmlwTDFqaw?oc=5",
+      "source": "NewsNation",
+      "publishedAt": "2026-11-18T00:42:41.000Z",
+      "latestAt": "2026-11-18T00:42:41.000Z",
+      "firstSeenAt": "2026-11-18T01:32:52.277Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsNation"
+      ],
+      "score": 1.38
+    },
+    {
+      "id": "b10123451d1b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "F.A.A. Shelves Routers Like the One Linked to the Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9XSTQ1SzFhY1JSYzRWN0RYMnFncVgtUHZScFNHaFA5NVctZzhyZXNxZmg0NUdGdk9ScGpmeUVLYWZKNUVDSzJIdk96aXFOcHliQklIMDdJMHFBS19aNl9pdnEtRk5PTFZkLW5zdDR1cDQzd005?oc=5",
+      "source": "The New York Times",
+      "publishedAt": "2026-11-18T01:27:04.000Z",
+      "latestAt": "2026-11-18T01:27:04.000Z",
+      "firstSeenAt": "2026-11-18T03:18:19.210Z",
+      "outlets": 1,
+      "outletNames": [
+        "The New York Times"
+      ],
+      "score": 1.36
+    },
+    {
       "id": "1f76878e7527",
       "cat": "earth",
       "kind": "news",
@@ -1770,22 +1782,6 @@
         "NZCity"
       ],
       "score": 1.31
-    },
-    {
-      "id": "f55fab65399c",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Apple, OpenAI and other major services hit by global outages",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbWN5Zm93bjdsNVV4UkZpaGtIb1FfMWFnNnpyQzlFdHA3bU1PUVo2VG9abFpMNTVlOVhhalhKclJzNzVwQmdGM1FQd1NmUVM0TzR3U2dsWlFLTkN4clVCSUQ0Yk1FRnMtZ2NHRVFWMGlWRlNXTlIycE5qNjJuTG51R040ZXdlMXI5Yi1YeHREUDNHaTA?oc=5",
-      "source": "RBC-Ukraine",
-      "publishedAt": "2026-11-17T21:30:00.000Z",
-      "latestAt": "2026-11-17T21:30:00.000Z",
-      "firstSeenAt": "2026-11-18T01:47:58.451Z",
-      "outlets": 1,
-      "outletNames": [
-        "RBC-Ukraine"
-      ],
-      "score": 1.3
     },
     {
       "id": "4bd6ee47e88c",
