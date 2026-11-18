@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T07:03:47.570Z",
+  "buildTime": "2026-11-18T07:18:56.877Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 02:03 ET",
+  "etStamp": "2026-11-18 02:18 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,8 +44,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1574,
-  "lastSuccessAt": "2026-11-18T07:03:47.570Z",
+  "headlinesRead": 338,
+  "lastSuccessAt": "2026-11-18T07:18:56.877Z",
   "rollingFallback": false,
   "cats": {
     "flights": 25,
@@ -162,7 +162,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -180,58 +180,58 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 1242,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "bing": {
       "ok": true,
-      "count": 290,
+      "count": 296,
       "error": null,
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "lastOkAt": "2026-11-18T07:18:56.877Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "lastOkAt": "2026-11-18T07:18:56.877Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "lastOkAt": "2026-11-18T07:18:56.877Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "lastOkAt": "2026-11-18T07:18:56.877Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "lastOkAt": "2026-11-18T07:18:56.877Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "lastOkAt": "2026-11-18T07:18:56.877Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "lastOkAt": "2026-11-18T07:18:56.877Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "lastOkAt": "2026-11-18T07:18:56.877Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T07:03:47.570Z"
+      "lastOkAt": "2026-11-18T07:18:56.877Z"
     }
   },
   "stories": [
