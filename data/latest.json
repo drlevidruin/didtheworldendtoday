@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T06:48:50.949Z",
+  "buildTime": "2026-11-18T07:03:47.570Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 01:48 ET",
+  "etStamp": "2026-11-18 02:03 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,8 +44,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1569,
-  "lastSuccessAt": "2026-11-18T06:48:50.949Z",
+  "headlinesRead": 1574,
+  "lastSuccessAt": "2026-11-18T07:03:47.570Z",
   "rollingFallback": false,
   "cats": {
     "flights": 25,
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1240,
+      "count": 1242,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "bing": {
       "ok": true,
-      "count": 287,
+      "count": 290,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T06:48:50.949Z"
+      "lastOkAt": "2026-11-18T07:03:47.570Z"
     }
   },
   "stories": [
@@ -402,7 +402,7 @@
       "url": "https://www.msn.com/en-us/news/technology/apple-services-restored-after-outage-impacted-thousands/ar-AA2hDfJb",
       "source": "USA TODAY on MSN",
       "publishedAt": "2026-11-17T10:24:00.000Z",
-      "latestAt": "2026-11-18T06:21:29.000Z",
+      "latestAt": "2026-11-18T06:49:15.000Z",
       "firstSeenAt": "2026-11-18T03:48:15.310Z",
       "outlets": 32,
       "outletNames": [
@@ -715,6 +715,27 @@
       "score": 2.41
     },
     {
+      "id": "8b74d869f960",
+      "cat": "earth",
+      "kind": "news",
+      "title": "New Zealand disaster agency cancels tsunami warning after threat passes",
+      "url": "https://www.msn.com/en-my/news/news/new-zealand-disaster-agency-cancels-tsunami-warning-after-threat-passes/ar-AA2hF8zV",
+      "source": "Free Malaysia Today on MSN",
+      "publishedAt": "2026-11-17T16:07:00.000Z",
+      "latestAt": "2026-11-17T22:31:00.000Z",
+      "firstSeenAt": "2026-11-18T06:18:41.048Z",
+      "outlets": 4,
+      "outletNames": [
+        "Free Malaysia Today on MSN",
+        "Hindustan Times",
+        "The Star",
+        "IOL on MSN"
+      ],
+      "score": 2.29,
+      "quiet": true,
+      "quietReason": "headline mentions tsunami"
+    },
+    {
       "id": "ed3814122990",
       "cat": "internet",
       "kind": "news",
@@ -749,26 +770,6 @@
         "CP24"
       ],
       "score": 2.2
-    },
-    {
-      "id": "8b74d869f960",
-      "cat": "earth",
-      "kind": "news",
-      "title": "New Zealand disaster agency cancels tsunami warning after threat passes",
-      "url": "https://www.msn.com/en-my/news/news/new-zealand-disaster-agency-cancels-tsunami-warning-after-threat-passes/ar-AA2hF8zV",
-      "source": "Free Malaysia Today on MSN",
-      "publishedAt": "2026-11-17T16:07:00.000Z",
-      "latestAt": "2026-11-17T21:47:00.000Z",
-      "firstSeenAt": "2026-11-18T06:18:41.048Z",
-      "outlets": 3,
-      "outletNames": [
-        "Free Malaysia Today on MSN",
-        "Hindustan Times",
-        "The Star"
-      ],
-      "score": 1.97,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
     },
     {
       "id": "7cdd050ea28b",
@@ -1632,7 +1633,7 @@
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
       "source": "CyberSecurityNews",
       "publishedAt": "2026-11-18T00:49:15.000Z",
-      "latestAt": "2026-11-18T00:49:15.000Z",
+      "latestAt": "2026-11-18T06:43:21.000Z",
       "firstSeenAt": "2026-11-18T01:02:54.429Z",
       "outlets": 1,
       "outletNames": [
