@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T20:21:04.359Z",
+  "buildTime": "2026-11-18T20:36:11.081Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 15:21 ET",
+  "etStamp": "2026-11-18 15:36 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,15 +49,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 547,
-  "lastSuccessAt": "2026-11-18T20:21:04.359Z",
+  "headlinesRead": 1402,
+  "lastSuccessAt": "2026-11-18T20:36:11.081Z",
   "rollingFallback": false,
   "cats": {
-    "weather": 5,
+    "weather": 4,
     "flights": 27,
     "grid": 7,
     "earth": 4,
-    "hacks": 26,
+    "hacks": 27,
     "internet": 12,
     "markets": 4,
     "germs": 4,
@@ -187,81 +187,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 229,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 10 of 26 queries)",
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "count": 1073,
+      "error": null,
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "bing": {
       "ok": true,
-      "count": 284,
+      "count": 293,
       "error": null,
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "hn": {
       "ok": true,
-      "count": 4,
+      "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T19:35:58.704Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T20:21:04.359Z"
+      "lastOkAt": "2026-11-18T20:36:11.081Z"
     }
   },
   "stories": [
@@ -580,27 +579,22 @@
       "score": 3.97
     },
     {
-      "id": "sig:faa-stop:TEB:2026-11-18",
+      "id": "57fac22f9dc3",
       "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-18T20:06:04.908Z",
-      "latestAt": "2026-11-18T20:06:04.908Z",
-      "firstSeenAt": "2026-11-18T20:06:04.908Z",
-      "outlets": 1,
+      "kind": "news",
+      "title": "FAA Chief Takes Responsibility For Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPalNORWZ3eFkwSDhMZkFDWHNwbXVQSmRvR2lHR3FZU1lwVlRnMDJQWTFwUFpZWHJDTDJpdzBoNzVqcDcyUGs0ZE9vZDN1RUQ1UHBUQVNpaEIzN2xQX09fZWcxYWF1RWNUWmF1aUFEWGpTODdpOHVSaGZjTU44bHdXclA3N05oSlh3bjhRR1hsTTFURWw4aldCRmFUTVpoN3dPUXfSAaoBQVVfeXFMT1lIb0pCTmVwNkpvUlBIZWJ4Zkx1N0prNTYtZWdvNjh2RkNDcHRhdl96VkxYd3BxYkV4YlFUeXlCN2VIRVQ2aXBtRHNUcG1aaGJjbVl0S3lTaXZVZEFkb2dFbl96RWRDNGZpNjhqSkJnRWJhblM4bzRBOFZyVGxfeUd5eWV0RDJfZFpyZlZwZGlxQUdna2hJWm01SDh0ZEZ6aVdiWVBNMDJCRGc?oc=5",
+      "source": "iHeart",
+      "publishedAt": "2026-11-18T19:28:00.000Z",
+      "latestAt": "2026-11-18T19:35:48.000Z",
+      "firstSeenAt": "2026-11-18T19:50:59.365Z",
+      "outlets": 3,
       "outletNames": [
-        "FAA"
+        "iHeart",
+        "94.5 WPTI",
+        "1490 WMRN"
       ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
+      "score": 3.6
     },
     {
       "id": "ffe871da3da9",
@@ -658,24 +652,6 @@
         "IndexBox"
       ],
       "score": 2.32
-    },
-    {
-      "id": "8edb9785ec88",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple Hit by Major Outage as iCloud, Apple Pay Remain Unresponsive to Users Worldwide",
-      "url": "https://www.techjuice.pk/apple-hit-by-major-outage-as-icloud-apple-pay-remain-unresponsive-to-users-worldwide/",
-      "source": "TechJuice",
-      "publishedAt": "2026-11-17T20:42:00.000Z",
-      "latestAt": "2026-11-17T22:18:33.000Z",
-      "firstSeenAt": "2026-11-18T20:21:04.359Z",
-      "outlets": 3,
-      "outletNames": [
-        "TechJuice",
-        "The Independent",
-        "Manila Bulletin"
-      ],
-      "score": 2.19
     },
     {
       "id": "06f8e53677fb",
@@ -865,6 +841,46 @@
       "score": 1.69
     },
     {
+      "id": "7d17f91fdf18",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Cybersecurity expert sounds alarm over US infrastructure vulnerabilities amid widespread outages",
+      "url": "https://www.aol.com/articles/cybersecurity-expert-sounds-alarm-over-064822000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-17T22:48:00.000Z",
+      "latestAt": "2026-11-17T22:48:00.000Z",
+      "firstSeenAt": "2026-11-18T13:49:55.122Z",
+      "outlets": 2,
+      "outletNames": [
+        "AOL",
+        "Fox Business"
+      ],
+      "score": 1.5
+    },
+    {
+      "id": "sig:faa-stop:TEB:2026-11-18",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-18T20:06:04.908Z",
+      "latestAt": "2026-11-18T20:06:04.908Z",
+      "firstSeenAt": "2026-11-18T20:06:04.908Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
+    },
+    {
       "id": "sig:faa-stop:DJT:2026-11-18",
       "cat": "flights",
       "kind": "signal",
@@ -904,23 +920,6 @@
         "Yahoo Finance"
       ],
       "score": 3.12
-    },
-    {
-      "id": "57fac22f9dc3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Chief Takes Responsibility For Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPalNORWZ3eFkwSDhMZkFDWHNwbXVQSmRvR2lHR3FZU1lwVlRnMDJQWTFwUFpZWHJDTDJpdzBoNzVqcDcyUGs0ZE9vZDN1RUQ1UHBUQVNpaEIzN2xQX09fZWcxYWF1RWNUWmF1aUFEWGpTODdpOHVSaGZjTU44bHdXclA3N05oSlh3bjhRR1hsTTFURWw4aldCRmFUTVpoN3dPUXfSAaoBQVVfeXFMT1lIb0pCTmVwNkpvUlBIZWJ4Zkx1N0prNTYtZWdvNjh2RkNDcHRhdl96VkxYd3BxYkV4YlFUeXlCN2VIRVQ2aXBtRHNUcG1aaGJjbVl0S3lTaXZVZEFkb2dFbl96RWRDNGZpNjhqSkJnRWJhblM4bzRBOFZyVGxfeUd5eWV0RDJfZFpyZlZwZGlxQUdna2hJWm01SDh0ZEZ6aVdiWVBNMDJCRGc?oc=5",
-      "source": "iHeart",
-      "publishedAt": "2026-11-18T19:28:00.000Z",
-      "latestAt": "2026-11-18T19:35:48.000Z",
-      "firstSeenAt": "2026-11-18T19:50:59.365Z",
-      "outlets": 2,
-      "outletNames": [
-        "iHeart",
-        "94.5 WPTI"
-      ],
-      "score": 2.78
     },
     {
       "id": "645c1ca57fd1",
@@ -1044,23 +1043,6 @@
       "score": 1.97
     },
     {
-      "id": "db0b05b7fb92",
-      "cat": "hacks",
-      "kind": "x",
-      "title": "Director of National Intelligence Jay Clayton said recent service outages stemmed from maintenance and technical changes, with no evidence of a coordinated cyberattack.",
-      "url": "https://x.com/Breaking911/status/2123085407026118890",
-      "source": "@Breaking911 on X",
-      "publishedAt": "2026-11-18T14:57:31.000Z",
-      "latestAt": "2026-11-18T16:39:28.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 2,
-      "outletNames": [
-        "CNBC",
-        "@Breaking911 on X"
-      ],
-      "score": 1.95
-    },
-    {
       "id": "60d350a5297d",
       "cat": "hacks",
       "kind": "news",
@@ -1110,6 +1092,23 @@
         "NewsCord"
       ],
       "score": 1.92
+    },
+    {
+      "id": "db0b05b7fb92",
+      "cat": "hacks",
+      "kind": "x",
+      "title": "Director of National Intelligence Jay Clayton said recent service outages stemmed from maintenance and technical changes, with no evidence of a coordinated cyberattack.",
+      "url": "https://x.com/Breaking911/status/2123085407026118890",
+      "source": "@Breaking911 on X",
+      "publishedAt": "2026-11-18T12:40:06.000Z",
+      "latestAt": "2026-11-18T16:39:28.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 2,
+      "outletNames": [
+        "CNBC",
+        "@Breaking911 on X"
+      ],
+      "score": 1.87
     },
     {
       "id": "33855d636d61",
@@ -1180,6 +1179,23 @@
       "score": 1.68
     },
     {
+      "id": "d6ded3c90ab3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers target big brands like McDonald’s, Bayer, CarMax in new phishing scam",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-target-big-brands-mcdonald-182500594.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-18T10:25:00.000Z",
+      "latestAt": "2026-11-18T18:25:00.000Z",
+      "firstSeenAt": "2026-11-18T20:36:11.081Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "Yahoo Tech"
+      ],
+      "score": 1.66
+    },
+    {
       "id": "75fadd89e3ff",
       "cat": "grid",
       "kind": "news",
@@ -1212,23 +1228,6 @@
         "kare11.com"
       ],
       "score": 1.62
-    },
-    {
-      "id": "7d17f91fdf18",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Cybersecurity expert sounds alarm over US infrastructure vulnerabilities amid widespread outages",
-      "url": "https://www.aol.com/articles/cybersecurity-expert-sounds-alarm-over-064822000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-17T22:48:00.000Z",
-      "latestAt": "2026-11-17T22:48:00.000Z",
-      "firstSeenAt": "2026-11-18T13:49:55.122Z",
-      "outlets": 2,
-      "outletNames": [
-        "AOL",
-        "Fox Business"
-      ],
-      "score": 1.5
     },
     {
       "id": "31be995c85e2",
@@ -1487,6 +1486,22 @@
       "score": 1.4
     },
     {
+      "id": "e37fbe670dbe",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is Playstation Network down? Global outages to servers during GTA6 launch",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZVFRaW9STDZhU3g2Z2hEVnV5T29HaUIzX1lIY1JNMmU5c0hSaVVDS2RaaFZ1NDRHN2lGX3RFaGRWN3c5aXEzRWE4QXVzdE4wTFNLZ1hrd2dOa2JqY3hjM0JKRU9LWkdnZmVoWjhCbUREaWloVlc5d0N5aERoY3JZSDVlaXVMMXo0TFdaU0tKVXhpaXpQcDFOeGdZdw?oc=5",
+      "source": "The Independent",
+      "publishedAt": "2026-11-18T20:13:00.000Z",
+      "latestAt": "2026-11-18T20:13:00.000Z",
+      "firstSeenAt": "2026-11-18T20:36:11.081Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Independent"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "b953e02c7f86",
       "cat": "flights",
       "kind": "news",
@@ -1715,22 +1730,6 @@
       "score": 1.39
     },
     {
-      "id": "d4338533eb30",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Super El Niño-Powered Record Heat Made Energy Costs Surge. 2027 May Be Worse",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZTZNZ3V5ODJydGhSWVl3elVvQmVoRlRTelcxRWR5WHUzRWJrd3E3QzI2UUxGZU8yV2ozei1jNWNTSktyNVplcXU4Wm5vUUl4cjU1ampFa3A3Qno1eGRBa3NBSjlfQmRadEVQOEJibHBkRS1VRGlGYXRpeUxxWWFEakNPU1NBNDZJSEZUTFl3Y0oxTUNSanBpUlViVDU4WVJiTGQ4NF9WY3E2UVoyNkRHZnlrVlBIYUJ2?oc=5",
-      "source": "The Equation - Union of Concerned Scientists",
-      "publishedAt": "2026-11-17T22:57:19.000Z",
-      "latestAt": "2026-11-17T22:57:19.000Z",
-      "firstSeenAt": "2026-11-17T23:17:37.630Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Equation - Union of Concerned Scientists"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "1f76878e7527",
       "cat": "earth",
       "kind": "news",
@@ -1859,6 +1858,22 @@
       "score": 1
     },
     {
+      "id": "591e001439b8",
+      "cat": "sun",
+      "kind": "news",
+      "title": "A Solar Eruption Reveals the Hidden Forces Behind the Sun’s Explosive Power",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYWd6bG1FODVQUXh3cjhkSjlZVnplNzRUcmFzOUFQY2toSW1LLWNMc2VRNjJKMUlSTnpzU0VIQ3JiV2tRYThKS3NKWkZWeUJQdy11ckU0ZUk0MGtpUDAtQ3BqMHRXTnltOTFFNnQzLXZOMzJudlpfNlc4Vk16dGpEaA?oc=5",
+      "source": "The Daily Galaxy",
+      "publishedAt": "2026-11-18T20:15:00.000Z",
+      "latestAt": "2026-11-18T20:15:00.000Z",
+      "firstSeenAt": "2026-11-18T20:36:11.081Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Daily Galaxy"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "cd4f9106b2fa",
       "cat": "animals",
       "kind": "news",
@@ -1907,6 +1922,24 @@
       "score": 0.99
     },
     {
+      "id": "a15d7e78fba1",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Featured Groups: 2026 CME Group Tour Championship",
+      "url": "https://www.lpga.com/news/2026/featured-groups-2026-cme-group-tour-championship",
+      "source": "LPGA",
+      "publishedAt": "2026-11-18T19:40:00.000Z",
+      "latestAt": "2026-11-18T19:40:00.000Z",
+      "firstSeenAt": "2026-11-18T20:36:11.081Z",
+      "outlets": 1,
+      "outletNames": [
+        "LPGA"
+      ],
+      "trending": 500,
+      "trendTerm": "golf",
+      "score": 0.98
+    },
+    {
       "id": "e992d2c7c73a",
       "cat": "space",
       "kind": "news",
@@ -1937,38 +1970,6 @@
         "WION"
       ],
       "score": 0.96
-    },
-    {
-      "id": "f963fa9ff28f",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Surrey University secures £400,000 for space weather sensor",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMk5abk1KLW1BNmNBU2VGTzh4cnJFRzBuVy0zWXc5UlhtSG1acWVBVHlIMkJWeC1LUDUyTFMyMTNBQmRHUTRtLV9XUWJOaG51eE96TldocGVQTDVJNW9xek5zdFhldFk2T1pPazlLMnh1MDM5T05oZ0RPR2hhcEE2a3dZMkRoMlpmc1dqdFFQeDFkVDJvTk1OdE9zTlpudw?oc=5",
-      "source": "The Engineer",
-      "publishedAt": "2026-11-18T10:31:15.000Z",
-      "latestAt": "2026-11-18T10:31:15.000Z",
-      "firstSeenAt": "2026-11-18T17:20:37.889Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Engineer"
-      ],
-      "score": 0.89
-    },
-    {
-      "id": "2f4da1b34abf",
-      "cat": "sun",
-      "kind": "news",
-      "title": "University of Surrey secures £400,000 ESA contract to advance solar storm monitoring",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQUxfTld2UjE0ZWtsT1ZBYmlucFVER2ppYVg4dWJjZ29LR3Z6X2ptZTgxUlVtWUtvTjJlSWFBWE1CTGhaTm5Kakd1aW03aDFXOE4ycEJxTmY2a21kTnBxS3pST0Joekd2UmJQeW5udjJyZ0RqdXFRcUJhYkpIV29oYTdFdElsdUFWcmNObG9aeW1zRDhjcmZsaEZmTTdYcWgxbFZMRjhzOEZlRHdtWEFfdUVwd2dwZVBIdWdVVDBJczBpWFBpaWc?oc=5",
-      "source": "Innovation News Network",
-      "publishedAt": "2026-11-18T10:02:58.000Z",
-      "latestAt": "2026-11-18T10:02:58.000Z",
-      "firstSeenAt": "2026-11-18T17:35:37.400Z",
-      "outlets": 1,
-      "outletNames": [
-        "Innovation News Network"
-      ],
-      "score": 0.87
     },
     {
       "id": "480bb3968fed",
