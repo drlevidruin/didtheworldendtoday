@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T17:05:32.181Z",
+  "buildTime": "2026-11-18T17:20:37.889Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 12:05 ET",
+  "etStamp": "2026-11-18 12:20 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,15 +44,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1460,
-  "lastSuccessAt": "2026-11-18T17:05:32.181Z",
+  "headlinesRead": 1496,
+  "lastSuccessAt": "2026-11-18T17:20:37.889Z",
   "rollingFallback": false,
   "cats": {
     "weather": 4,
-    "flights": 24,
+    "flights": 26,
     "hacks": 33,
-    "grid": 8,
-    "internet": 10,
+    "grid": 7,
+    "internet": 9,
     "markets": 4,
     "germs": 4,
     "ai": 4,
@@ -108,8 +108,8 @@
         {
           "id": "openai",
           "name": "OpenAI",
-          "indicator": "minor",
-          "description": "Partial System Degradation"
+          "indicator": "none",
+          "description": "All Systems Operational"
         },
         {
           "id": "claude",
@@ -164,11 +164,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Senate AI hearings in works after platforms planned U.S. terror attack when asked to: \"We need to act now\""
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -180,57 +182,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1156,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 25 of 26 queries)",
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "count": 1179,
+      "error": null,
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     },
     "bing": {
       "ok": true,
-      "count": 268,
-      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "count": 281,
+      "error": null,
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     },
     "x": {
       "ok": true,
@@ -243,13 +245,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T17:05:32.181Z"
+      "lastOkAt": "2026-11-18T17:20:37.889Z"
     }
   },
   "stories": [
@@ -602,6 +604,26 @@
       "score": 2.57
     },
     {
+      "id": "106829ca41b5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Governments warn Java flaw leaves computer systems open to hackers",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRE5uQWVHVHVQV19VTmJrT29QT1lKV0xQQzhUZWp6Wk5aSWZCV3ZKbHNKZ3NBMmlhYzNsT1J6V1AxQjBxR2QzWWk2ODlfaTBEU1JCLXFVWE1adHFQU0M2Rk1fZXhYYzQ5bmczU1lyWHc5WjNFVi1SLXF0NkJSaWlMQUNGdmZfX1ZETWtxZ05UUER6VVpxRDZBaUkzUTZMSGRsWVRacEJkSTUxYkRyeVc2dGJvWUpSNVNPbGc?oc=5",
+      "source": "Reuters",
+      "publishedAt": "2026-11-18T00:51:00.000Z",
+      "latestAt": "2026-11-18T17:15:00.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 5,
+      "outletNames": [
+        "Reuters",
+        "The Korea Times",
+        "StreetInsider",
+        "Investing.com",
+        "The Straits Times"
+      ],
+      "score": 2.45
+    },
+    {
       "id": "b8ed9b7f73ec",
       "cat": "hacks",
       "kind": "news",
@@ -617,26 +639,6 @@
         "Computerworld"
       ],
       "score": 2.43
-    },
-    {
-      "id": "ce8c11435f3c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack on 178 organizations: Take these 5 steps to protect your credit card info",
-      "url": "https://www.oregonlive.com/nation/2026/11/cyberattack-on-178-organizations-take-these-5-steps-to-protect-your-credit-card-info.html",
-      "source": "OregonLive.com",
-      "publishedAt": "2026-11-17T21:11:00.000Z",
-      "latestAt": "2026-11-18T13:11:00.000Z",
-      "firstSeenAt": "2026-11-18T13:35:01.133Z",
-      "outlets": 5,
-      "outletNames": [
-        "OregonLive.com",
-        "NJ.com",
-        "cleveland.com",
-        "Syracuse.com",
-        "mlive"
-      ],
-      "score": 2.41
     },
     {
       "id": "4aa2c778927e",
@@ -862,6 +864,46 @@
       }
     },
     {
+      "id": "579acc0275d2",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA halting installation of new routers after communications failure caused nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9TOThfcE43NHZwT0tCR3lfWmVFMUNDVDF2NmRqWVpMeHhHa1lRMnN6X2VUTEVmLVVtZDh1M1l0Q2k5YWdSS1Q2eTRTRFZYamViZEVSZzM3bWNXVFhES05IcjZ2czJXNTlDWDhMdkdOOWtIZjZlYzk4?oc=5",
+      "source": "LiveNOW from FOX",
+      "publishedAt": "2026-11-17T18:00:24.000Z",
+      "latestAt": "2026-11-17T18:00:24.000Z",
+      "firstSeenAt": "2026-11-18T17:20:37.889Z",
+      "outlets": 5,
+      "outletNames": [
+        "LiveNOW from FOX",
+        "FOX 13 Tampa Bay",
+        "FOX 4 News Dallas-Fort Worth",
+        "FOX 13 Seattle",
+        "Yahoo"
+      ],
+      "score": 2.84
+    },
+    {
+      "id": "ce8c11435f3c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack on 178 organizations: Take these 5 steps to protect your credit card info",
+      "url": "https://www.oregonlive.com/nation/2026/11/cyberattack-on-178-organizations-take-these-5-steps-to-protect-your-credit-card-info.html",
+      "source": "OregonLive.com",
+      "publishedAt": "2026-11-17T21:11:00.000Z",
+      "latestAt": "2026-11-18T13:11:00.000Z",
+      "firstSeenAt": "2026-11-18T13:35:01.133Z",
+      "outlets": 5,
+      "outletNames": [
+        "OregonLive.com",
+        "NJ.com",
+        "cleveland.com",
+        "Syracuse.com",
+        "mlive"
+      ],
+      "score": 2.41
+    },
+    {
       "id": "e656cdb7432f",
       "cat": "hacks",
       "kind": "news",
@@ -899,25 +941,6 @@
       "score": 2.32
     },
     {
-      "id": "106829ca41b5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Governments warn Java flaw leaves computer systems open to hackers",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRE5uQWVHVHVQV19VTmJrT29QT1lKV0xQQzhUZWp6Wk5aSWZCV3ZKbHNKZ3NBMmlhYzNsT1J6V1AxQjBxR2QzWWk2ODlfaTBEU1JCLXFVWE1adHFQU0M2Rk1fZXhYYzQ5bmczU1lyWHc5WjNFVi1SLXF0NkJSaWlMQUNGdmZfX1ZETWtxZ05UUER6VVpxRDZBaUkzUTZMSGRsWVRacEJkSTUxYkRyeVc2dGJvWUpSNVNPbGc?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-11-18T00:51:00.000Z",
-      "latestAt": "2026-11-18T16:22:00.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 4,
-      "outletNames": [
-        "Reuters",
-        "The Korea Times",
-        "StreetInsider",
-        "Investing.com"
-      ],
-      "score": 2.21
-    },
-    {
       "id": "82c364362378",
       "cat": "hacks",
       "kind": "news",
@@ -925,7 +948,7 @@
       "url": "https://www.yahoo.com/news/world/articles/china-linked-hackers-using-ai-153501063.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-18T07:35:00.000Z",
-      "latestAt": "2026-11-18T16:24:13.000Z",
+      "latestAt": "2026-11-18T17:03:33.000Z",
       "firstSeenAt": "2026-11-18T16:35:22.943Z",
       "outlets": 3,
       "outletNames": [
@@ -966,6 +989,26 @@
       "outletNames": [
         "Cronkite News",
         "cronkitenews.azpbs.org"
+      ],
+      "score": 2.09
+    },
+    {
+      "id": "e1b89983efcd",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA halts installation of routers that led to ground stop",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUlRxOExVakwyRHpUQzUtYW9XTzkzRFlCOTFDbElvMXFiMXotN0Iyek8tS1hjTEh4bXhjc1RoZDZKZlpxNDRFWmxMSjBKdXhmMFY1ejY5eXA3OGtyUHJ4dzc0SnlNcy1uLTVuTi1rR1cweDAwS1hibHZmVGM4aGJsWndON2NSMGtlREJiZk1jdWR2cEVtTGhoYmtLNGxHVk0?oc=5",
+      "source": "MPR News",
+      "publishedAt": "2026-11-17T19:05:00.000Z",
+      "latestAt": "2026-11-18T09:30:01.000Z",
+      "firstSeenAt": "2026-11-18T17:20:37.889Z",
+      "outlets": 5,
+      "outletNames": [
+        "MPR News",
+        "PBS",
+        "CRN",
+        "People.com",
+        "Tech Xplore"
       ],
       "score": 2.09
     },
@@ -1055,6 +1098,23 @@
         "EnergyWatch"
       ],
       "score": 1.98
+    },
+    {
+      "id": "09dd38a6fe2c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Lyko has addressed a data breach in a limited part of its system",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVURBamVZSG9lMUNmYTRwd0VseVoydTM4YlluYlRiZlhsQ2ZVM292X0hBZ1FscVFXaGxMdVRic2xlM2ZNWE4zZm95SGJXQUo4eERYbi1tUU95c2JCNmdnV2IzOWZrbTFHRVY1WWJ5cWRJTU1lMmVCZTNOSmFDQVdCTUVKcUxtbGhFZ0U4aWJvb0dWWHVCcWtCcEd5YTdzRGpuaExldVVPTFdsd2VuaWdlWkVLaWxfSDZUZ3IxMnFucXY0S3ZtOG9iZnBn?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-18T16:28:00.000Z",
+      "latestAt": "2026-11-18T16:33:14.000Z",
+      "firstSeenAt": "2026-11-18T17:20:37.889Z",
+      "outlets": 2,
+      "outletNames": [
+        "TradingView",
+        "www.marketscreener.com"
+      ],
+      "score": 1.97
     },
     {
       "id": "db0b05b7fb92",
@@ -1191,23 +1251,6 @@
         "Cybersecurity Dive"
       ],
       "score": 1.68
-    },
-    {
-      "id": "c6f54e3d0077",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Are Using AI to Speed Through Cyberattacks, FBI Warns",
-      "url": "https://www.cnet.com/tech/hackers-artex-ai-cyberattacks-fbi-warning/",
-      "source": "CNET",
-      "publishedAt": "2026-11-17T17:15:00.000Z",
-      "latestAt": "2026-11-18T03:15:00.000Z",
-      "firstSeenAt": "2026-11-18T03:33:11.967Z",
-      "outlets": 2,
-      "outletNames": [
-        "CNET",
-        "WFMZ.com"
-      ],
-      "score": 1.66
     },
     {
       "id": "75fadd89e3ff",
@@ -1696,22 +1739,6 @@
       "score": 1.31
     },
     {
-      "id": "0a41d341cd16",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple becomes latest major company hit by service outages",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRzFodllTUEJBMUFBR0xnenBYSEFWdmZvQURGVW5zUnBlaWptSmMtbDlDZUw4ODlTVlhUQ2RlS1hCaTY4ajhzN3NYbVBFTlJXUmlJS3VvN2xvVFBES01GN1pFaE9CYl94U19kejFUbnRHbkV0MWg5clMxSmEyS2ZQWEJPOG9QTEppTV8zVDQyOGxDTFVzZFdocVYyTWZoMzVaZTMzVg?oc=5",
-      "source": "Scripps News",
-      "publishedAt": "2026-11-17T23:36:02.000Z",
-      "latestAt": "2026-11-18T11:19:44.000Z",
-      "firstSeenAt": "2026-11-18T04:03:16.400Z",
-      "outlets": 1,
-      "outletNames": [
-        "Scripps News"
-      ],
-      "score": 1.3
-    },
-    {
       "id": "f55fab65399c",
       "cat": "ai",
       "kind": "news",
@@ -1728,20 +1755,20 @@
       "score": 1.3
     },
     {
-      "id": "4bb3256e6505",
-      "cat": "grid",
+      "id": "3abcec4ef547",
+      "cat": "germs",
       "kind": "news",
-      "title": "Heathrow and Gatwick flights could face chaos in major power blackout",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbVYyM3pQdEFvMS1xaW8taGYwbzdzNFZjZVotWml3Zk03VlFkWjVoT3Yyc19lMlg5d1JTYW5URFNYZ1ZSenJzWnYyQi1IQmJRenZScTE4M3E4VEltX2xwR2JVU0ZpbTRyZlJUUnlWbXpaUkJxQlpHV2dGSXFVTzVyTzF3?oc=5",
-      "source": "Yahoo News UK",
-      "publishedAt": "2026-11-18T12:28:20.000Z",
-      "latestAt": "2026-11-18T12:28:20.000Z",
-      "firstSeenAt": "2026-11-18T17:05:32.181Z",
+      "title": "Bird flu turkey prices: 10 ways H5N1 still shapes costs",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBIdmZuOXpDQW5UX2FMQjdIMVpsVXFXblJLSkhzTjB6SnZxX1Y3UURpbTF2UFBkSERZNEs0bkNpWFVkUFFFNElGYWY1anQ1SFJuVllyNEJIVjA?oc=5",
+      "source": "qz.com",
+      "publishedAt": "2026-11-18T17:10:23.000Z",
+      "latestAt": "2026-11-18T17:10:23.000Z",
+      "firstSeenAt": "2026-11-18T17:20:37.889Z",
       "outlets": 1,
       "outletNames": [
-        "Yahoo News UK"
+        "qz.com"
       ],
-      "score": 1.29
+      "score": 1
     },
     {
       "id": "475fda7fc79e",
@@ -1888,20 +1915,20 @@
       "score": 0.98
     },
     {
-      "id": "2651d76e7c57",
-      "cat": "germs",
+      "id": "f963fa9ff28f",
+      "cat": "sun",
       "kind": "news",
-      "title": "Costco recalls whipped cream over possible cleaning chemical contamination",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT0ZoR3ZMaW1QVENidEpCUHpBbDJGZjVKV1RSNkRza0F6LW0yNFhWQlJuRUFRcE5POHBEdFZXbmhEYmtXanpvcEZ0dXJ0YkI0R1J5ck14YXdYWXAxS0dtcEpJckl1U0FfM2d5ZHFNVGIwb2xJclJSNmt0U0QwWUh6ZmZSRzdaZE9FeWpHUm9seFdHT1ExT0FLY3k1a1RqdE1TdDRNdDRVbXRXcWc2ckFjWkZWM1ZyUQ?oc=5",
-      "source": "Scripps News",
-      "publishedAt": "2026-11-18T14:27:19.000Z",
-      "latestAt": "2026-11-18T14:27:19.000Z",
-      "firstSeenAt": "2026-11-18T16:05:29.833Z",
+      "title": "Surrey University secures £400,000 for space weather sensor",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMk5abk1KLW1BNmNBU2VGTzh4cnJFRzBuVy0zWXc5UlhtSG1acWVBVHlIMkJWeC1LUDUyTFMyMTNBQmRHUTRtLV9XUWJOaG51eE96TldocGVQTDVJNW9xek5zdFhldFk2T1pPazlLMnh1MDM5T05oZ0RPR2hhcEE2a3dZMkRoMlpmc1dqdFFQeDFkVDJvTk1OdE9zTlpudw?oc=5",
+      "source": "The Engineer",
+      "publishedAt": "2026-11-18T10:31:15.000Z",
+      "latestAt": "2026-11-18T10:31:15.000Z",
+      "firstSeenAt": "2026-11-18T17:20:37.889Z",
       "outlets": 1,
       "outletNames": [
-        "Scripps News"
+        "The Engineer"
       ],
-      "score": 0.97
+      "score": 0.89
     },
     {
       "id": "a2aef555ee3c",
@@ -1964,22 +1991,6 @@
       "outlets": 1,
       "outletNames": [
         "MARCA"
-      ],
-      "score": 0.86
-    },
-    {
-      "id": "2f4da1b34abf",
-      "cat": "sun",
-      "kind": "news",
-      "title": "University of Surrey secures £400,000 ESA contract to advance solar storm monitoring",
-      "url": "https://www.innovationnewsnetwork.com/university-of-surrey-secures-400000-esa-contract-to-advance-solar-storm-monitoring/75987/",
-      "source": "Innovation News Network",
-      "publishedAt": "2026-11-18T02:02:00.000Z",
-      "latestAt": "2026-11-18T10:02:58.000Z",
-      "firstSeenAt": "2026-11-18T10:19:29.699Z",
-      "outlets": 1,
-      "outletNames": [
-        "Innovation News Network"
       ],
       "score": 0.86
     }
