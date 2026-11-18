@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T19:05:52.949Z",
+  "buildTime": "2026-11-18T19:20:53.657Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 14:05 ET",
+  "etStamp": "2026-11-18 14:20 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,13 +44,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1275,
-  "lastSuccessAt": "2026-11-18T19:05:52.949Z",
+  "headlinesRead": 1332,
+  "lastSuccessAt": "2026-11-18T19:20:53.657Z",
   "rollingFallback": false,
   "cats": {
     "weather": 5,
-    "flights": 28,
-    "hacks": 29,
+    "flights": 29,
+    "hacks": 28,
     "grid": 7,
     "internet": 10,
     "markets": 4,
@@ -191,15 +191,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 952,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 20 of 26 queries)",
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "count": 1011,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 25 of 26 queries)",
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     },
     "bing": {
       "ok": true,
-      "count": 289,
+      "count": 287,
       "error": null,
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     },
     "gdelt": {
       "ok": false,
@@ -211,37 +211,37 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     },
     "faa": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     },
     "x": {
       "ok": true,
@@ -254,13 +254,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T19:05:52.949Z"
+      "lastOkAt": "2026-11-18T19:20:53.657Z"
     }
   },
   "stories": [
@@ -577,18 +577,19 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVEh1SzVSeGY5VWdZRk5GNk5INi1TSk5kQzVza0o0eDRvNDNHVnYwUzNsaGhZX0R3UkdUeFF2UmIyczZqemluQmhTTmo2WElpM05XVVY4bGpIYjJ5OFpoNXVsS19IVVRCWGZVVnBKUzE5Z2lfdWxZNmZ4S3VVdDBzVDNaV3FGVUpFd0RqeHpOX1FTZU9pY05DcjNNN1paek5wdzd2bFZRbk5XNFh4OHp4WjNxV1Q?oc=5",
       "source": "The Bristol Herald Courier",
       "publishedAt": "2026-11-18T17:35:06.000Z",
-      "latestAt": "2026-11-18T17:54:09.000Z",
+      "latestAt": "2026-11-18T19:11:21.000Z",
       "firstSeenAt": "2026-11-18T18:05:38.239Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "The Bristol Herald Courier",
         "Charlotte Observer",
         "Caledonian Record",
         "Wisconsin State Journal",
         "Buffalo News",
-        "Rome Sentinel"
+        "Rome Sentinel",
+        "KRDO"
       ],
-      "score": 3.55
+      "score": 3.78
     },
     {
       "id": "9f11549139fa",
@@ -872,29 +873,6 @@
       }
     },
     {
-      "id": "sig:faa-stop:TEB:2026-11-17",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T19:17:12.554Z",
-      "latestAt": "2026-11-17T19:17:12.554Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
-    },
-    {
       "id": "645c1ca57fd1",
       "cat": "flights",
       "kind": "news",
@@ -1100,23 +1078,6 @@
         "NewsCord"
       ],
       "score": 1.92
-    },
-    {
-      "id": "beb0c43d8c59",
-      "cat": "hacks",
-      "kind": "x",
-      "title": "Norway-based Equinor, Europe’s largest natural gas supplier, says it is responding to an ongoing cyberattack and has notified authorities. The company says it has seen no data theft or impa…",
-      "url": "https://x.com/Breaking911/status/2122768452276634063",
-      "source": "@Breaking911 on X",
-      "publishedAt": "2026-11-17T19:06:52.000Z",
-      "latestAt": "2026-11-17T19:33:00.000Z",
-      "firstSeenAt": "2026-11-17T21:51:55.733Z",
-      "outlets": 2,
-      "outletNames": [
-        "@Breaking911 on X",
-        "Natural Gas Intelligence"
-      ],
-      "score": 1.91
     },
     {
       "id": "33855d636d61",
@@ -1735,6 +1696,38 @@
         "NewsNation"
       ],
       "score": 1.38
+    },
+    {
+      "id": "ebd2e51d2c83",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Carmel Valley woman describes ‘chaos’ getting home after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOTVMM0doMnhqSmVWakU1bWs2VFh0RGpRc3FBNkFxeXJDbXBqc1dqV2FxZzVkcDA5U1NhRll6eFdBTGxtQUNVdzJzVDg2OGFCLWVBSTNrUzRrbVAzR1lKTVRlUk9WNzVXU1V2XzhIY0c5OEtpcGZlQVdOTW96X0Z6RHRiZmpFa3kwdkVMQ1N0Q0gyVUk2V0tuZm1aY3dZNDJuZTdtaHNoSmUwT1ltLTdFcXZ3aUFNZmM?oc=5",
+      "source": "10News.com",
+      "publishedAt": "2026-11-17T23:59:42.000Z",
+      "latestAt": "2026-11-17T23:59:42.000Z",
+      "firstSeenAt": "2026-11-18T01:47:58.451Z",
+      "outlets": 1,
+      "outletNames": [
+        "10News.com"
+      ],
+      "score": 1.36
+    },
+    {
+      "id": "ee6bcf48e08d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Network Failure Could Cost Four Major Airlines $345 Million",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTFVNT2tBelJwWnpQdDRza1ZBYkJROTREWFFSUDZjNnQxZGxGQ2ZYWUlodWxmb1BJMFIzWGRhM0FyajczZDI0eFl2RDNQMEFWdEZ0bU5IdDZFYS01Q0RsUWs0d09QSmtXYllkVjYzVWNkdGFlczR4U2NxYU1nLUM2cEhXYnRJN1NuV0FTRjZUOV9GZHV1aXNYVTZPR2dzQ2ZscXI3WnFfaE1TWVF4NFNJcXdRYXJYRkx0VG80czBuTkFDZw?oc=5",
+      "source": "NewsBreak: Local News & Alerts",
+      "publishedAt": "2026-11-18T16:50:47.000Z",
+      "latestAt": "2026-11-18T16:50:47.000Z",
+      "firstSeenAt": "2026-11-18T19:20:53.657Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 1.34
     },
     {
       "id": "1f76878e7527",
