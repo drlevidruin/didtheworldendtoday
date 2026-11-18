@@ -109,6 +109,29 @@
       "score": 4.8
     },
     {
+      "id": "sig:faa-stop:FLL:2026-11-18",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at FLL (thunderstorms)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-18T13:35:01.133Z",
+      "latestAt": "2026-11-18T13:35:01.133Z",
+      "firstSeenAt": "2026-11-18T13:35:01.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "FLL",
+        "hub": true,
+        "nationwide": false,
+        "reason": "thunderstorms"
+      }
+    },
+    {
       "id": "sig:faa-stop:SFO:2026-11-17",
       "cat": "flights",
       "kind": "signal",
@@ -129,29 +152,6 @@
         "hub": true,
         "nationwide": false,
         "reason": "low ceilings"
-      }
-    },
-    {
-      "id": "sig:faa-stop:PHX:2026-11-17",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at PHX (thunderstorms)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T18:32:06.239Z",
-      "latestAt": "2026-11-17T18:32:06.239Z",
-      "firstSeenAt": "2026-11-17T18:32:06.239Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "PHX",
-        "hub": true,
-        "nationwide": false,
-        "reason": "thunderstorms"
       }
     },
     {
@@ -310,22 +310,45 @@
       "quietReason": "headline mentions tsunami"
     },
     {
-      "id": "0f7714f17187",
+      "id": "4db48258ed66",
       "cat": "markets",
       "kind": "news",
-      "title": "Cricket-Cricket Australia attempts Sandpapergate circuit breaker through player forum",
-      "url": "https://www.msn.com/en-gb/sport/cricket/cricket-cricket-australia-attempts-sandpapergate-circuit-breaker-through-player-forum/ar-AA2hF106",
-      "source": "Reuters on MSN",
-      "publishedAt": "2026-11-17T20:16:57.000Z",
-      "latestAt": "2026-11-18T12:19:58.000Z",
-      "firstSeenAt": "2026-11-18T04:48:36.329Z",
+      "title": "Stocks plunge amid Nvidia scandal",
+      "url": "https://www.msn.com/en-us/money/top-stocks/stocks-plunge-amid-nvidia-scandal/vi-AA2hGRpc",
+      "source": "ABC News on MSN",
+      "publishedAt": "2026-11-18T04:34:20.000Z",
+      "latestAt": "2026-11-18T12:39:49.000Z",
+      "firstSeenAt": "2026-11-18T12:49:51.661Z",
       "outlets": 3,
       "outletNames": [
-        "Reuters on MSN",
-        "CNA",
-        "Fanatik"
+        "ABC News - Breaking News, Latest News and Videos",
+        "ABC News on MSN",
+        "Good Morning America"
       ],
-      "score": 2.22
+      "score": 2.23
+    },
+    {
+      "id": "sig:faa-stop:PHX:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at PHX (thunderstorms)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T18:32:06.239Z",
+      "latestAt": "2026-11-17T18:32:06.239Z",
+      "firstSeenAt": "2026-11-17T18:32:06.239Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "PHX",
+        "hub": true,
+        "nationwide": false,
+        "reason": "thunderstorms"
+      }
     },
     {
       "id": "a39541a3b1c3",
@@ -369,29 +392,6 @@
       "score": 4.07
     },
     {
-      "id": "sig:faa-stop:TEB:2026-11-17",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T19:17:12.554Z",
-      "latestAt": "2026-11-17T19:17:12.554Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
-    },
-    {
       "id": "ba9b4d40eedf",
       "cat": "hacks",
       "kind": "news",
@@ -426,21 +426,40 @@
       "score": 2.58
     },
     {
-      "id": "b8ed9b7f73ec",
+      "id": "e656cdb7432f",
       "cat": "hacks",
       "kind": "news",
-      "title": "Optimizely confirms massive cyberattack on customer websites injected stealer malware",
-      "url": "https://www.computerworld.com/article/4249960/optimizely-confirms-massive-cyberattack-on-customer-websites-injected-stealer-malware-2.html",
-      "source": "Computerworld",
-      "publishedAt": "2026-11-17T17:39:00.000Z",
-      "latestAt": "2026-11-18T01:24:27.000Z",
-      "firstSeenAt": "2026-11-18T01:32:52.277Z",
-      "outlets": 2,
+      "title": "Java Flaw Leaves Systems Open to Hackers, Say US, South Korea, China’s Tencent",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA3RUQ3WmJoSzhwMDVQWHJtcU5JZzltZWQ3Vkt4Rl94UHBMS19HU3dfXzhsTXFyaTVSYXQyZWVxeVpDSUFzUU45UTRoczQ3ZU1VX2JxQ2pNSEZSUlp1VTJaeXFJUG5TQkpCOFNHaEoyZFlYNUkwSHZUSGoxWkl2dw?oc=5",
+      "source": "Insurance Journal",
+      "publishedAt": "2026-11-18T12:38:48.000Z",
+      "latestAt": "2026-11-18T13:01:02.000Z",
+      "firstSeenAt": "2026-11-18T13:10:22.004Z",
+      "outlets": 3,
       "outletNames": [
-        "CSO Online",
-        "Computerworld"
+        "Insurance Journal",
+        "The Edge Malaysia",
+        "The Lufkin Daily News"
       ],
-      "score": 2.43
+      "score": 2.56
+    },
+    {
+      "id": "0f7714f17187",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Cricket-Cricket Australia attempts Sandpapergate circuit breaker through player forum",
+      "url": "https://www.msn.com/en-gb/sport/cricket/cricket-cricket-australia-attempts-sandpapergate-circuit-breaker-through-player-forum/ar-AA2hF106",
+      "source": "Reuters on MSN",
+      "publishedAt": "2026-11-17T20:16:57.000Z",
+      "latestAt": "2026-11-18T12:19:58.000Z",
+      "firstSeenAt": "2026-11-18T04:48:36.329Z",
+      "outlets": 3,
+      "outletNames": [
+        "Reuters on MSN",
+        "CNA",
+        "Fanatik"
+      ],
+      "score": 2.22
     },
     {
       "id": "3cec50796970",
@@ -529,23 +548,6 @@
       "score": 1.8
     },
     {
-      "id": "4db48258ed66",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stocks plunge amid Nvidia scandal",
-      "url": "https://www.msn.com/en-us/money/top-stocks/stocks-plunge-amid-nvidia-scandal/vi-AA2hGRpc",
-      "source": "ABC News on MSN",
-      "publishedAt": "2026-11-18T04:34:20.000Z",
-      "latestAt": "2026-11-18T12:38:04.000Z",
-      "firstSeenAt": "2026-11-18T12:49:51.661Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "ABC News on MSN"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "f1b04bbb1361",
       "cat": "internet",
       "kind": "news",
@@ -597,6 +599,22 @@
       "score": 1.51
     },
     {
+      "id": "fefec93a8053",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Stock Loses Key Level Amid Global Outage; Is Microsoft A Buy Now?",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPU1ItRk5Ubm9qeE13bU4yVjRfeFZ2MVZUMlQ2Y0VGeC0ydDFqMk5YRUtUeFE3RHc5Y2YtYWFXRjNTRzdIWWh1eTItdnFsQmROZy1CblRIMDE3SGZ3NlpEX1QwUzFEUHpMQUl0SElwRWs1ajRQMG1CMXJNd1N4VGFIbnljdzdmbnBJeW42WmJR?oc=5",
+      "source": "Investor's Business Daily",
+      "publishedAt": "2026-11-18T13:00:00.000Z",
+      "latestAt": "2026-11-18T13:00:00.000Z",
+      "firstSeenAt": "2026-11-18T13:35:01.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "Investor's Business Daily"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "defcf7b7a0a8",
       "cat": "internet",
       "kind": "news",
@@ -609,22 +627,6 @@
       "outlets": 1,
       "outletNames": [
         "Dainik Jagran MP CG"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "2f2d0c363c00",
-      "cat": "internet",
-      "kind": "news",
-      "title": "NSAs Top-Secret Internal Network Hit By Major Outage After Software Update, Essential Staff Asked To Report",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPQXJ3QVpZOGtQV0E4M24zZWNOWllSRzEwemV4cWlRdVhXb2xPdjNNMGJxLWsycmw1dVpNcDBwaU5oSmg4MEdlMjlMdzdSczhwcmtRQmg5TzlKcFBpTWZuaVBKRWZZRl9Yc1hQdmZkcktqZElJVGFDQkFXeFhUZnBPVFFNcklmOVdoWE9SRzlwNXNXaWRCVWo4TUh3cnpxLVU0TVFwb2NYTzVVb2Q4MXR3NnZtNzVCR1JIWXlCN1VERHZQNzZQdm5tc00yVFhtZy1pdDF1bmI2VWtvS3pq0gHiAUFVX3lxTFBaUmROQVZObEZqa0pTdDk4VmhiMjByVzduSmRzbnQ4a3VoZnppNkw1QWx4TEpzWWVzV1lfcTFtUDZkSnBXSkQxSFc5Sm5SLVBpRHE0TDlQQWxNYzZXMXJKNlJhNkYxRmwxTnNydVM2Z01LXzZmXzBWeElCaWZSdFZzeGd2b29feXo1SWVoRVBuY2Q0VTEzRTJGYlZBM2tRTFVSc0g3ZDMxU1lvQ1JaQjM2S3NDY3M3UlEyVU51RUEzNnJXbkhndm02NmxydEdLY2Q0bmttR2JFSlpRQndxa05xZkE?oc=5",
-      "source": "Free Press Journal",
-      "publishedAt": "2026-11-18T05:31:53.000Z",
-      "latestAt": "2026-11-18T05:31:53.000Z",
-      "firstSeenAt": "2026-11-18T05:48:35.248Z",
-      "outlets": 1,
-      "outletNames": [
-        "Free Press Journal"
       ],
       "score": 1.39
     },
@@ -643,6 +645,29 @@
         "The Daily News | Texas' Oldest Newspaper"
       ],
       "score": 1.39
+    },
+    {
+      "id": "sig:faa-stop:TEB:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T19:17:12.554Z",
+      "latestAt": "2026-11-17T19:17:12.554Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
     },
     {
       "id": "2db880a1742d",
@@ -679,6 +704,23 @@
         "Yahoo"
       ],
       "score": 2.78
+    },
+    {
+      "id": "b8ed9b7f73ec",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Optimizely confirms massive cyberattack on customer websites injected stealer malware",
+      "url": "https://www.computerworld.com/article/4249960/optimizely-confirms-massive-cyberattack-on-customer-websites-injected-stealer-malware-2.html",
+      "source": "Computerworld",
+      "publishedAt": "2026-11-17T17:39:00.000Z",
+      "latestAt": "2026-11-18T01:24:27.000Z",
+      "firstSeenAt": "2026-11-18T01:32:52.277Z",
+      "outlets": 2,
+      "outletNames": [
+        "CSO Online",
+        "Computerworld"
+      ],
+      "score": 2.43
     },
     {
       "id": "fb0465e3999d",
@@ -836,23 +878,6 @@
       "trending": 1000,
       "trendTerm": "exploit kit",
       "score": 2.04
-    },
-    {
-      "id": "e656cdb7432f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Java Flaw Leaves Systems Open to Hackers, Say US, South Korea, China’s Tencent",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA3RUQ3WmJoSzhwMDVQWHJtcU5JZzltZWQ3Vkt4Rl94UHBMS19HU3dfXzhsTXFyaTVSYXQyZWVxeVpDSUFzUU45UTRoczQ3ZU1VX2JxQ2pNSEZSUlp1VTJaeXFJUG5TQkpCOFNHaEoyZFlYNUkwSHZUSGoxWkl2dw?oc=5",
-      "source": "Insurance Journal",
-      "publishedAt": "2026-11-18T13:00:25.000Z",
-      "latestAt": "2026-11-18T13:01:02.000Z",
-      "firstSeenAt": "2026-11-18T13:10:22.004Z",
-      "outlets": 2,
-      "outletNames": [
-        "Insurance Journal",
-        "The Edge Malaysia"
-      ],
-      "score": 1.99
     },
     {
       "id": "e82c3d981838",
@@ -1040,6 +1065,23 @@
         "KOLD"
       ],
       "score": 1.48
+    },
+    {
+      "id": "ce8c11435f3c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack on 178 organizations: Take these 5 steps to protect your credit card info",
+      "url": "https://www.oregonlive.com/nation/2026/11/cyberattack-on-178-organizations-take-these-5-steps-to-protect-your-credit-card-info.html",
+      "source": "OregonLive.com",
+      "publishedAt": "2026-11-17T21:11:00.000Z",
+      "latestAt": "2026-11-18T13:11:00.000Z",
+      "firstSeenAt": "2026-11-18T13:35:01.133Z",
+      "outlets": 2,
+      "outletNames": [
+        "OregonLive.com",
+        "NJ.com"
+      ],
+      "score": 1.45
     },
     {
       "id": "66c1c4fa702a",
@@ -1254,6 +1296,22 @@
       "score": 1.39
     },
     {
+      "id": "2f2d0c363c00",
+      "cat": "internet",
+      "kind": "news",
+      "title": "NSAs Top-Secret Internal Network Hit By Major Outage After Software Update, Essential Staff Asked To Report",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPQXJ3QVpZOGtQV0E4M24zZWNOWllSRzEwemV4cWlRdVhXb2xPdjNNMGJxLWsycmw1dVpNcDBwaU5oSmg4MEdlMjlMdzdSczhwcmtRQmg5TzlKcFBpTWZuaVBKRWZZRl9Yc1hQdmZkcktqZElJVGFDQkFXeFhUZnBPVFFNcklmOVdoWE9SRzlwNXNXaWRCVWo4TUh3cnpxLVU0TVFwb2NYTzVVb2Q4MXR3NnZtNzVCR1JIWXlCN1VERHZQNzZQdm5tc00yVFhtZy1pdDF1bmI2VWtvS3pq0gHiAUFVX3lxTFBaUmROQVZObEZqa0pTdDk4VmhiMjByVzduSmRzbnQ4a3VoZnppNkw1QWx4TEpzWWVzV1lfcTFtUDZkSnBXSkQxSFc5Sm5SLVBpRHE0TDlQQWxNYzZXMXJKNlJhNkYxRmwxTnNydVM2Z01LXzZmXzBWeElCaWZSdFZzeGd2b29feXo1SWVoRVBuY2Q0VTEzRTJGYlZBM2tRTFVSc0g3ZDMxU1lvQ1JaQjM2S3NDY3M3UlEyVU51RUEzNnJXbkhndm02NmxydEdLY2Q0bmttR2JFSlpRQndxa05xZkE?oc=5",
+      "source": "Free Press Journal",
+      "publishedAt": "2026-11-18T05:31:53.000Z",
+      "latestAt": "2026-11-18T05:31:53.000Z",
+      "firstSeenAt": "2026-11-18T05:48:35.248Z",
+      "outlets": 1,
+      "outletNames": [
+        "Free Press Journal"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "63f3e69e3827",
       "cat": "flights",
       "kind": "news",
@@ -1432,6 +1490,23 @@
       "score": 1.37
     },
     {
+      "id": "e68fed5fe738",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Apple outage causes service disruptions for users: Down detector",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPd3RZb1FkZ3dKQ2NjQ0R3Z0R2RU1HUmU3OURRNnpxMnVSOUNOZFNxU2E1S2pNZi1oV1Q3bG9mOE5ieUc3RDd0N2VmLXhDenNqU3ZuRk80MXlrTmFCR1d4UW5pY1FjSkFFOVUzMFczOVBGNEdHeXpDMElhbHZLbF94VGw3ZTZBQVpLVmFDcGt0dVJRa1k2QXh5ZFRMTmlPQ3hU0gGmAUFVX3lxTFBOb3k0cWNFeGtrdERXbGg0ZVVZWmwxWGM1WTRQV2NFUENWV1pKRFhkRTRmV3NMaXczUHdqcm93UWZfcFZpZkxtT1ZqeGZlRnY2N3l0YXRYbG5lNUlwWDBfcnZXNk5xRFlnYmkzY0tuWmp6UE93TnBYXzFIZzZnUF9mWklKb0w3Y1RQZG0xMFJoM28wTFVTa2tZY1k2a2x3REdaQUY3WEE?oc=5",
+      "source": "PIX11",
+      "publishedAt": "2026-11-17T18:39:11.000Z",
+      "latestAt": "2026-11-17T19:00:07.000Z",
+      "firstSeenAt": "2026-11-18T13:35:01.133Z",
+      "outlets": 2,
+      "outletNames": [
+        "PIX11",
+        "AOL.com"
+      ],
+      "score": 1.37
+    },
+    {
       "id": "14dcf92ef809",
       "cat": "hacks",
       "kind": "news",
@@ -1481,22 +1556,6 @@
       "score": 1.36
     },
     {
-      "id": "15cc85e3f16b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI warns AI tool aided in hackers gaining access to global organizations",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBzMThBU3l4aHhoQTBaczhDOHBsRkdZVHdRVlR4bVpEWC1JRUNHVWJ3Q0NuQkI1ZFZRVFZIdnBBQksxV2pNZy1iZ1c2cGpBR0ZnS2VLRGoxaVhQUjFQNENDbWFqNUZlUEh1MWVXQWNickVWWDNkUFFTbEFPWUxSdw?oc=5",
-      "source": "NewsNation",
-      "publishedAt": "2026-11-18T05:50:12.000Z",
-      "latestAt": "2026-11-18T05:50:12.000Z",
-      "firstSeenAt": "2026-11-18T08:04:00.818Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsNation"
-      ],
-      "score": 1.35
-    },
-    {
       "id": "a96a9750ee78",
       "cat": "grid",
       "kind": "news",
@@ -1512,54 +1571,6 @@
         "Twin Falls Times-News"
       ],
       "score": 1.35
-    },
-    {
-      "id": "02104fe6cf9d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Post-ground stop and major outages, assessing Thanksgiving travel concerns",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWU4tWHVKRnNHOHY1ZTc1UjJ1UDRPcGpFMEo2dWZrQ01RSTBYZEdDVXYzRDNpOXRSckRmMXMwM1NFQmRHTkMtYWNPQTZwTU5qR0dPSHliMkp6UmtOUkxxZjNNNG11bkJDM05ITU9jWEhnSmRRZ3p2T29OdG1xb2YyUmp5c2NoMDVjbWxoZFhVT0VmVTBJZ0ZHdnFaQk5idC10eWxUeGRnWTRfczNtNXdJ?oc=5",
-      "source": "WTNH.com",
-      "publishedAt": "2026-11-18T00:44:39.000Z",
-      "latestAt": "2026-11-18T00:44:39.000Z",
-      "firstSeenAt": "2026-11-18T03:33:11.967Z",
-      "outlets": 1,
-      "outletNames": [
-        "WTNH.com"
-      ],
-      "score": 1.33
-    },
-    {
-      "id": "78c744dd0df7",
-      "cat": "internet",
-      "kind": "news",
-      "title": "‘PHASE BLACK’: Global panic spreads amid catastrophic tech outages",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNZ05GNGRacUlzcU40bXlvOUZxaW1xeTgyWDRscHQ3ckpsSWpncHUzb0F4ZzZjbjVqTFFlV2dZZWItd3FMTld4UWRBRS1qRnl5em5GSmVUNnIyb2lFLTFKSHZEWlhaUmx2N0s2aEdFZzBRbEJBczh6TXZyR3IyTHA4Rlp4Ylh3RG51X1hkVTh0YlYzZktkMTluQUxVU0RaaExoZm1Eb3RTLVpDVnBYY2ZKRkVHVE5jX1BBNUZkRDg3UUNiOWc5a0ZUaFZCbnJyclc5LWI0NjBNQ2hhZ2VhVHdkYXB4Z0xmVVc3X2E2bUNTY2lBQTcwZmlHUnA5dUFmYVhyTnVxRkU3TGRhN3lT0gGSAkFVX3lxTE9TOFdBOVVpdlp1amhvSGJXQUJEZThCUEJTRS15NmV5VDYxaXNXbHZ1UFFfa3YzQ1l6by1tTC1rQVZTTWdLLUxuTVpQYVh0Sjg0U2RPT01fcXpSUGJyblkzRGxqNEppbHpUQ0FBQk9iRFp0X1BsWWlHX2lHdldCNVpJOVhyTldEMV9Nam5OWkViLWxBYmcwcmhSZC1Ub0c1Ym1jRG4tYU5SaG8wNDQ5V3hYeUljUnNsbEtBbkQ5YnpsWksxZUFSblVSMkoxYndZbkF1c3NfaGpCV3pjVEhJcnpEQ3UxSTFKQ2ZHYTEzY1d3XzA2QlNxYTdVVTVlcUtvQzZlbVlwZURFZ2ZLM1JEMWlZRkE?oc=5",
-      "source": "News.com.au",
-      "publishedAt": "2026-11-18T04:50:19.000Z",
-      "latestAt": "2026-11-18T04:50:19.000Z",
-      "firstSeenAt": "2026-11-18T08:04:00.818Z",
-      "outlets": 1,
-      "outletNames": [
-        "News.com.au"
-      ],
-      "score": 1.32
-    },
-    {
-      "id": "b10123451d1b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "F.A.A. Shelves Routers Like the One Linked to the Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9XSTQ1SzFhY1JSYzRWN0RYMnFncVgtUHZScFNHaFA5NVctZzhyZXNxZmg0NUdGdk9ScGpmeUVLYWZKNUVDSzJIdk96aXFOcHliQklIMDdJMHFBS19aNl9pdnEtRk5PTFZkLW5zdDR1cDQzd005?oc=5",
-      "source": "The New York Times",
-      "publishedAt": "2026-11-17T23:46:10.000Z",
-      "latestAt": "2026-11-18T01:27:04.000Z",
-      "firstSeenAt": "2026-11-18T03:18:19.210Z",
-      "outlets": 1,
-      "outletNames": [
-        "The New York Times"
-      ],
-      "score": 1.32
     },
     {
       "id": "1f76878e7527",
@@ -1788,5 +1799,5 @@
       "score": 0.77
     }
   ],
-  "updatedAt": "2026-11-18T13:10:22.004Z"
+  "updatedAt": "2026-11-18T13:35:01.133Z"
 }
