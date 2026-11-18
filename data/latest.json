@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T01:32:52.277Z",
+  "buildTime": "2026-11-18T01:47:58.451Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 20:32 ET",
+  "etStamp": "2026-11-17 20:47 ET",
   "score": 93,
   "fired": [
     "flights",
@@ -50,15 +50,15 @@
     "date": "2026-11-17",
     "score": 93
   },
-  "headlinesRead": 1584,
-  "lastSuccessAt": "2026-11-18T01:32:52.277Z",
+  "headlinesRead": 1596,
+  "lastSuccessAt": "2026-11-18T01:47:58.451Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 19,
-    "hacks": 37,
+    "flights": 20,
+    "hacks": 36,
+    "weather": 4,
     "space": 3,
     "internet": 10,
-    "weather": 4,
     "germs": 4,
     "earth": 4,
     "ai": 4,
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1264,
+      "count": 1267,
       "error": null,
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "count": 287,
+      "error": null,
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-17T19:21:36.686Z"
     },
     "hn": {
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T01:32:52.277Z"
+      "lastOkAt": "2026-11-18T01:47:58.451Z"
     }
   },
   "stories": [
@@ -268,7 +268,7 @@
       "url": "https://www.msn.com/en-us/news/other/the-latest-faa-ground-stop-results-in-pause-in-router-installations-nationwide/ar-AA2hCmr5",
       "source": "The Edwardsville Intelligencer on MSN",
       "publishedAt": "2026-11-17T09:34:57.000Z",
-      "latestAt": "2026-11-18T00:43:00.000Z",
+      "latestAt": "2026-11-18T01:28:45.000Z",
       "firstSeenAt": "2026-11-17T22:50:37.479Z",
       "outlets": 32,
       "outletNames": [
@@ -329,6 +329,26 @@
         "YAHOO!"
       ],
       "score": 4.78
+    },
+    {
+      "id": "4f4b5cd393d6",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Scientists say record-high ocean temperatures off B.C. coast signal arrival of \"Super El Niño\"",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOOFlQRmx2bG1MV19OQTFYM0MzcERkdzVjT3NiM1hVcDFzdUw5U3VuOFEyMFdqejFKakdrMDV5ZE9adUxXR3NHYXVwRGhja3JiVUhIWnVGRVRKTk84TFhzdkJOaFFDOVdfUmlsY180N2hMaXNQX25fZThqN0lLNHZtWmhDb0huM0NPTGU0X3VBdERuZDlIeFlEWjNfa0c4aWxxOUVLVlNIZ1NBazRMcElzX0VkcjE3dG9hZzg0QjZJZGVnWEZLWGlSUF9DUEdLa3FUTExXcTlFdnBCLTMxRGVn?oc=5",
+      "source": "My Prince George Now",
+      "publishedAt": "2026-11-17T23:35:49.000Z",
+      "latestAt": "2026-11-17T23:35:49.000Z",
+      "firstSeenAt": "2026-11-17T23:47:35.833Z",
+      "outlets": 5,
+      "outletNames": [
+        "My Prince George Now",
+        "My Nelson Now",
+        "My Comox Valley Now",
+        "My Campbell River Now",
+        "My Bulkley Lakes Now"
+      ],
+      "score": 4.64
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-17",
@@ -408,7 +428,7 @@
       "url": "https://www.digitaltrends.com/phones/apple-services-hit-by-widespread-outage-reports-users-flag-problems-with-icloud-app-store-and-apple-pay/",
       "source": "Digital Trends",
       "publishedAt": "2026-11-17T01:51:00.000Z",
-      "latestAt": "2026-11-17T23:35:06.000Z",
+      "latestAt": "2026-11-18T01:33:53.000Z",
       "firstSeenAt": "2026-11-17T18:32:06.239Z",
       "outlets": 32,
       "outletNames": [
@@ -471,25 +491,6 @@
         "WHTC"
       ],
       "score": 4.29
-    },
-    {
-      "id": "4f4b5cd393d6",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Scientists say record-high ocean temperatures off B.C. coast signal arrival of \"Super El Niño\"",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOOFlQRmx2bG1MV19OQTFYM0MzcERkdzVjT3NiM1hVcDFzdUw5U3VuOFEyMFdqejFKakdrMDV5ZE9adUxXR3NHYXVwRGhja3JiVUhIWnVGRVRKTk84TFhzdkJOaFFDOVdfUmlsY180N2hMaXNQX25fZThqN0lLNHZtWmhDb0huM0NPTGU0X3VBdERuZDlIeFlEWjNfa0c4aWxxOUVLVlNIZ1NBazRMcElzX0VkcjE3dG9hZzg0QjZJZGVnWEZLWGlSUF9DUEdLa3FUTExXcTlFdnBCLTMxRGVn?oc=5",
-      "source": "My Prince George Now",
-      "publishedAt": "2026-11-17T23:35:49.000Z",
-      "latestAt": "2026-11-17T23:35:49.000Z",
-      "firstSeenAt": "2026-11-17T23:47:35.833Z",
-      "outlets": 4,
-      "outletNames": [
-        "My Prince George Now",
-        "My Nelson Now",
-        "My Comox Valley Now",
-        "My Campbell River Now"
-      ],
-      "score": 4.19
     },
     {
       "id": "80d893c5d2e9",
@@ -900,6 +901,22 @@
       "score": 1.39
     },
     {
+      "id": "f55fab65399c",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Apple, OpenAI and other major services hit by global outages",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbWN5Zm93bjdsNVV4UkZpaGtIb1FfMWFnNnpyQzlFdHA3bU1PUVo2VG9abFpMNTVlOVhhalhKclJzNzVwQmdGM1FQd1NmUVM0TzR3U2dsWlFLTkN4clVCSUQ0Yk1FRnMtZ2NHRVFWMGlWRlNXTlIycE5qNjJuTG51R040ZXdlMXI5Yi1YeHREUDNHaTA?oc=5",
+      "source": "RBC-Ukraine",
+      "publishedAt": "2026-11-17T21:30:00.000Z",
+      "latestAt": "2026-11-17T21:30:00.000Z",
+      "firstSeenAt": "2026-11-18T01:47:58.451Z",
+      "outlets": 1,
+      "outletNames": [
+        "RBC-Ukraine"
+      ],
+      "score": 1.3
+    },
+    {
       "id": "2bd37ab7e95f",
       "cat": "grid",
       "kind": "news",
@@ -914,41 +931,6 @@
         "Full Fact"
       ],
       "score": 1.3
-    },
-    {
-      "id": "e8dd29d897f1",
-      "cat": "grid",
-      "kind": "news",
-      "title": "No global blackout expected, Luxembourg grid operator says",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMFB3aldoUkFNbDZUTmZrekRrX0M5bFEzMXMtS1ZIUlJGWDdGcTdrdFNoSWtvR2VWcDdMX0VBcHR4TVZZcjF1V01ucFV3cnFpdXRmZHhpQW8wanhwNGU4Q2V2ZTVqMlg1R3Z0YzdiUGJ1bV9uU2xFaVFiWkQ5ZExKckQ0alZqaXNqbV9kS29BMkx2NDZ1SzQwUHdUV2xxMzZhSXJuVUJoaUlMU1E?oc=5",
-      "source": "Luxembourg Times",
-      "publishedAt": "2026-11-17T13:35:23.000Z",
-      "latestAt": "2026-11-17T13:35:23.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
-      "outlets": 1,
-      "outletNames": [
-        "Luxembourg Times"
-      ],
-      "score": 1.24
-    },
-    {
-      "id": "2db880a1742d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Man rents U-Haul to drive home after nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNREtRSjNTUFFJalZ6S180SlF4Ykx2WURrRDRUMWpDRkFXXzlQX0hza0hadVlPTjFIUjlpMi1BeEozazN1Z2V0RlpVRnpMczdzOHB4cDcydlpBYmlqRzUyTU5oTGNFR05BQm0xbk5zSDNzb25DSGUzRWdUV0paYnQ1YXFYOFdlV2V2MFg3Ni15U2RuMUZrRWV4YjNGakVQN28?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-17T18:02:00.000Z",
-      "latestAt": "2026-11-18T00:56:25.000Z",
-      "firstSeenAt": "2026-11-17T19:52:32.015Z",
-      "outlets": 4,
-      "outletNames": [
-        "CBS News",
-        "FOX 9 Minneapolis-St. Paul",
-        "wandtv.com",
-        "kare11.com"
-      ],
-      "score": 4.07
     },
     {
       "id": "3b49d5ddbc4f",
@@ -1001,6 +983,25 @@
         "nationwide": false,
         "reason": "airport volume"
       }
+    },
+    {
+      "id": "2db880a1742d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Minnesota man documents U-Haul journey home after FAA outage stranded him in Texas",
+      "url": "https://www.cbsnews.com/minnesota/news/minnesota-man-uhaul-journey-faa-outage/",
+      "source": "CBS News",
+      "publishedAt": "2026-11-17T16:28:00.000Z",
+      "latestAt": "2026-11-18T00:56:25.000Z",
+      "firstSeenAt": "2026-11-17T19:52:32.015Z",
+      "outlets": 4,
+      "outletNames": [
+        "CBS News",
+        "FOX 9 Minneapolis-St. Paul",
+        "wandtv.com",
+        "kare11.com"
+      ],
+      "score": 2.83
     },
     {
       "id": "bc84ae3870f8",
@@ -1073,6 +1074,23 @@
         "marketscreener.com"
       ],
       "score": 2.58
+    },
+    {
+      "id": "a39541a3b1c3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA official oversaw router work just before nationwide ground stop, report claims",
+      "url": "https://mashable.com/tech/faa-ground-stop-router-work",
+      "source": "Mashable",
+      "publishedAt": "2026-11-17T17:38:00.000Z",
+      "latestAt": "2026-11-18T00:23:31.000Z",
+      "firstSeenAt": "2026-11-18T00:17:39.985Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Washington Post",
+        "Mashable"
+      ],
+      "score": 2.49
     },
     {
       "id": "f65c9d1eaa32",
@@ -1548,23 +1566,6 @@
       "score": 1.72
     },
     {
-      "id": "537a65baf0a4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "After Binance hack and Credit Mutuel Arkea attack, US bank outage sparks cyber fears",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNQmlkbjlvVF9OcG9qOGlsZGZIejQyQW9SemRpblFkVjE4YlVqY2lIVHdaMFBnenNjWTJzN0w3U0lmaEZqZ2xocENnd3ZsNG92LUNGMWlQcjdlRHRlbzB3bjAzZXVNVjM0SjhlU004WEVqRVEzb19nOENuNjRXN3lFMUpiTFg2NXZUaFJuTDBYbzZVTGZPeE9Wb3kzRFVEOHNHbWlyM01BdGZ6TF9zYVdYczZjTEVzVVJ2QVIwcDFCdS0tMFBZU2puZl9VejlzdXdUUnlDN9IB2gFBVV95cUxNYTNZX1pVUjdwb0w2WGtPejRNNlVwb1h6NWx6b05aNy1idzJUdHk5NFdQeFE0YmZ5T2lBRkhCTXhJSU9jV01lbjJUQURpTmh5MWhvVG5LaE5DMjgwQ2VlbFBhNzBiTkg4Z3pFQWM2dUVoTVZRNjhKT3k3NUt0N1FfX3RBbnFSQUR1N3ltS1pqdHpRTFhBQVZrVGxRR3cwV2xVcElWbDlOZGdCWTQxNHljOENSVkFYV1VxRjA0MGV2MFJwLWx1YjNPUVpGYTBQWG40QzhYTWZBdENWdw?oc=5",
-      "source": "Malay Mail",
-      "publishedAt": "2026-11-17T01:46:48.000Z",
-      "latestAt": "2026-11-17T06:05:00.000Z",
-      "firstSeenAt": "2026-11-17T10:15:25.360Z",
-      "outlets": 2,
-      "outletNames": [
-        "Malay Mail",
-        "Coinpedia"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "3e6d8add8bf4",
       "cat": "hacks",
       "kind": "news",
@@ -1666,22 +1667,6 @@
       "score": 1.4
     },
     {
-      "id": "a39541a3b1c3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA oversaw and signed off on repair work before nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOenpFMDBkbl9rLU03MFp3ME5qVDh5QWRIT0Y0RFBCS01kZS1aTzlIVmRUbGZHZEpQb0F0eXEtNTlKQVlWSTRhYU10NVZYQW1tUHZXbjRmVEMwS3dkeDc4d3l3c2EwVzhyWXVHdktSd0FmQ2lleDJOZkZHVTBPSGZyRnRrWENYLUtDWVVyaXMtbHRiUzB0Ri1VNnRRVGlCSlNsMHBNSUlFT1JRbUhKLVNqTXlhbVBGMEJnSDN4SlV0Zw?oc=5",
-      "source": "The Washington Post",
-      "publishedAt": "2026-11-18T00:05:44.000Z",
-      "latestAt": "2026-11-18T00:23:31.000Z",
-      "firstSeenAt": "2026-11-18T00:17:39.985Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Washington Post"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "15db25aa1ccd",
       "cat": "hacks",
       "kind": "news",
@@ -1776,6 +1761,38 @@
         "NewsNation"
       ],
       "score": 1.38
+    },
+    {
+      "id": "ebd2e51d2c83",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Carmel Valley woman describes ‘chaos’ getting home after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOTVMM0doMnhqSmVWakU1bWs2VFh0RGpRc3FBNkFxeXJDbXBqc1dqV2FxZzVkcDA5U1NhRll6eFdBTGxtQUNVdzJzVDg2OGFCLWVBSTNrUzRrbVAzR1lKTVRlUk9WNzVXU1V2XzhIY0c5OEtpcGZlQVdOTW96X0Z6RHRiZmpFa3kwdkVMQ1N0Q0gyVUk2V0tuZm1aY3dZNDJuZTdtaHNoSmUwT1ltLTdFcXZ3aUFNZmM?oc=5",
+      "source": "10News.com",
+      "publishedAt": "2026-11-17T23:59:42.000Z",
+      "latestAt": "2026-11-17T23:59:42.000Z",
+      "firstSeenAt": "2026-11-18T01:47:58.451Z",
+      "outlets": 1,
+      "outletNames": [
+        "10News.com"
+      ],
+      "score": 1.36
+    },
+    {
+      "id": "e8dd29d897f1",
+      "cat": "grid",
+      "kind": "news",
+      "title": "No global blackout expected, Luxembourg grid operator says",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMFB3aldoUkFNbDZUTmZrekRrX0M5bFEzMXMtS1ZIUlJGWDdGcTdrdFNoSWtvR2VWcDdMX0VBcHR4TVZZcjF1V01ucFV3cnFpdXRmZHhpQW8wanhwNGU4Q2V2ZTVqMlg1R3Z0YzdiUGJ1bV9uU2xFaVFiWkQ5ZExKckQ0alZqaXNqbV9kS29BMkx2NDZ1SzQwUHdUV2xxMzZhSXJuVUJoaUlMU1E?oc=5",
+      "source": "Luxembourg Times",
+      "publishedAt": "2026-11-17T13:35:23.000Z",
+      "latestAt": "2026-11-17T22:30:00.000Z",
+      "firstSeenAt": "2026-11-17T20:39:00.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "Luxembourg Times"
+      ],
+      "score": 1.24
     },
     {
       "id": "915d66a0face",
@@ -1954,18 +1971,18 @@
       "score": 0.98
     },
     {
-      "id": "0f307bcd6dfe",
+      "id": "ee8406b79e09",
       "cat": "markets",
       "kind": "news",
-      "title": "Stocks plunge after Nvidia CEO resigns over affair",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNWjBiaG9uOHUxeGhBb1hVYmF2ek52ZXJKSlJMUGV2MjB0Y1NYVTBuclFhQjNlZzJ2aE5TWmpva3VYSFFOZW94WWppSEpudGF3YV9Lbm5FS1RIbEw3T2o1dkxBWk9SdWowTGhZOXpZa09NaVR1R2s0eEJlNm1MWnV3dkNVUkJzWExfczFTVmt30gGiAUFVX3lxTE9sY01aQmlZNUdZcU9zSkljSktKRmVka2RBblU5MjdGcDc1ZmlOMkR3cTJlMENLa21fX215X0VlUVVXYURkeVpKZEkxQXNGMGVaTU5va2lPMlZtM0p6ZXhlc1IyRHNZUVJ2UVRSalAyN0taMDNGd3BsRGgtemRIYXdVS1hEME8ycXJUYWt3a3F0NUw5MHZsZ1ZGVE9DdW8tb2dCdw?oc=5",
-      "source": "KFYR-TV",
-      "publishedAt": "2026-11-17T23:32:00.000Z",
-      "latestAt": "2026-11-17T23:32:00.000Z",
-      "firstSeenAt": "2026-11-18T01:32:52.277Z",
+      "title": "US stocks fall as Nvidia-led sell-off pushes Nasdaq into correction",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZ3FLcEtFQkFRLWlra2RsR1Vtc1Z1YTU4cEpLNGlVOEVwTnM2Z1lvVlJ2UmNNTTJ4WklINnZvTzUwNXdnR3NvcElWejJoUUdyNFVxM1B1YkZtQTd5TEZ3czBzUnFna0s2ZVRqREFGRTJJU0UwX1Nwc0RGSzFNbUhWVUtjd21WSS1ST0lRLTEzZF9SR1cxd3ZidHdsa21TZFJ4QXZPdktMS1dQZmlFWkpad21yTDdaaXl0ZTlxbTN5aTJTbGVpSVExc2xMWjdrQ2Z5WXfSAdgBQVVfeXFMUEVIT0cxaU0wdkhsa2ZFUjJteTBzM1E4SV9wODhmblYwMjZfX3g3VkpvazlEemVPNmVQSFpnZGJibnQ5aUZGdmIzX293em5Wd2lRZVdQWTdPVGJXcWluNWh3WjN4aXZOTExKdXQ2ejU3V1UyaWVZWmhNZU1JWTBteG9sQkN5cW1nOFJ0ODdUUnBpckN0bXd3MGRmclJYVGxsakhENHZMMTVMZzBHZGRlcDhoell4dTN3ZEZKcmRubzBfN1ZJNXJvd0dSNmZBcFE0VlZZOWV5akxz?oc=5",
+      "source": "BusinessLine",
+      "publishedAt": "2026-11-17T02:22:10.000Z",
+      "latestAt": "2026-11-17T02:22:10.000Z",
+      "firstSeenAt": "2026-11-17T04:14:48.722Z",
       "outlets": 1,
       "outletNames": [
-        "KFYR-TV"
+        "BusinessLine"
       ],
       "score": 0.97
     },
@@ -2096,22 +2113,6 @@
         "en.politis.com.cy"
       ],
       "score": 0.73
-    },
-    {
-      "id": "82527a27d4cb",
-      "cat": "ai",
-      "kind": "news",
-      "title": "FBI Warns of New AI Hacking Tool as More Outages Occur",
-      "url": "https://www.nextbigfuture.com/2026/11/fbi-warns-of-new-ai-hacking-tool-as-more-outages-occur.html",
-      "source": "NextBigFuture",
-      "publishedAt": "2026-11-17T03:50:00.000Z",
-      "latestAt": "2026-11-17T03:50:00.000Z",
-      "firstSeenAt": "2026-11-17T21:04:09.279Z",
-      "outlets": 1,
-      "outletNames": [
-        "NextBigFuture"
-      ],
-      "score": 0.71
     }
   ]
 }
