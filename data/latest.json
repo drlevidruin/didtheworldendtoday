@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T12:49:51.661Z",
+  "buildTime": "2026-11-18T13:05:11.048Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 07:49 ET",
+  "etStamp": "2026-11-18 08:05 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,18 +45,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1468,
-  "lastSuccessAt": "2026-11-18T12:49:51.661Z",
+  "headlinesRead": 1552,
+  "lastSuccessAt": "2026-11-18T13:05:11.048Z",
   "rollingFallback": false,
   "cats": {
-    "internet": 9,
+    "internet": 10,
     "weather": 4,
     "flights": 29,
     "hacks": 31,
     "earth": 4,
     "markets": 4,
     "germs": 4,
-    "grid": 5,
+    "grid": 4,
     "ai": 3,
     "animals": 3,
     "sun": 4
@@ -181,19 +181,19 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1221,
+      "count": 1220,
       "error": null,
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     },
     "bing": {
       "ok": true,
-      "count": 175,
-      "error": "11 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "count": 291,
+      "error": null,
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 31,
+      "ok": false,
+      "count": 0,
       "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
@@ -201,37 +201,37 @@
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +244,13 @@
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "lastOkAt": "2026-11-18T13:05:11.048Z"
     }
   },
   "stories": [
@@ -411,6 +411,33 @@
       "score": 4.29
     },
     {
+      "id": "80d893c5d2e9",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Classified US national security communications network hit by outage, NSA says",
+      "url": "https://x.com/Reuters/status/2122859883443671515",
+      "source": "@Reuters on X",
+      "publishedAt": "2026-11-17T16:10:00.000Z",
+      "latestAt": "2026-11-18T01:10:11.000Z",
+      "firstSeenAt": "2026-11-17T23:17:37.630Z",
+      "outlets": 12,
+      "outletNames": [
+        "Townhall",
+        "Digit",
+        "SuaraGarut.ID",
+        "Beinsure",
+        "WCBM",
+        "XDA",
+        "WAOW",
+        "KITV",
+        "inkl",
+        "Anadolu Ajansı",
+        "LBC",
+        "@Reuters on X"
+      ],
+      "score": 4.04
+    },
+    {
       "id": "136ab8542f66",
       "cat": "hacks",
       "kind": "news",
@@ -514,39 +541,22 @@
       "quietReason": "headline mentions tsunami"
     },
     {
-      "id": "3cec50796970",
-      "cat": "germs",
+      "id": "0f7714f17187",
+      "cat": "markets",
       "kind": "news",
-      "title": "PegLyte Powder recalled over possible contamination",
-      "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/18/peglyte-powder-recalled-over-possible-contamination/",
-      "source": "BNN Bloomberg",
-      "publishedAt": "2026-11-17T16:00:00.000Z",
-      "latestAt": "2026-11-18T00:50:00.000Z",
-      "firstSeenAt": "2026-11-18T01:02:54.429Z",
+      "title": "Cricket-Cricket Australia attempts Sandpapergate circuit breaker through player forum",
+      "url": "https://www.msn.com/en-gb/sport/cricket/cricket-cricket-australia-attempts-sandpapergate-circuit-breaker-through-player-forum/ar-AA2hF106",
+      "source": "Reuters on MSN",
+      "publishedAt": "2026-11-17T20:16:57.000Z",
+      "latestAt": "2026-11-18T12:19:58.000Z",
+      "firstSeenAt": "2026-11-18T04:48:36.329Z",
       "outlets": 3,
       "outletNames": [
-        "CTV News",
-        "BNN Bloomberg",
-        "CP24"
+        "Reuters on MSN",
+        "CNA",
+        "Fanatik"
       ],
-      "score": 2.2
-    },
-    {
-      "id": "06f8e53677fb",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple reveals cause of worldwide outage",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdFh1eG13N1lMbUYzcVhOXzRGZGZlNzhkUGgzQk1fY2xtRjdKamhTTmpUekNpcWJqc1ZHbEVROXlNTUkySWJOM1pHMGpyWnRHNHNrYXhvM0tmUDRXenRDemtXbk51eEh4alFFWUdJS0dlUUdZY3FvN1c0WF9Zem1HaXVHZWVPQlE?oc=5",
-      "source": "The New Daily",
-      "publishedAt": "2026-11-17T22:32:34.000Z",
-      "latestAt": "2026-11-18T11:16:50.000Z",
-      "firstSeenAt": "2026-11-18T12:19:53.508Z",
-      "outlets": 2,
-      "outletNames": [
-        "The New Daily",
-        "TradingView"
-      ],
-      "score": 2.16
+      "score": 2.22
     },
     {
       "id": "a39541a3b1c3",
@@ -664,6 +674,41 @@
       "score": 2.43
     },
     {
+      "id": "3cec50796970",
+      "cat": "germs",
+      "kind": "news",
+      "title": "PegLyte Powder recalled over possible contamination",
+      "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/18/peglyte-powder-recalled-over-possible-contamination/",
+      "source": "BNN Bloomberg",
+      "publishedAt": "2026-11-17T16:00:00.000Z",
+      "latestAt": "2026-11-18T00:50:00.000Z",
+      "firstSeenAt": "2026-11-18T01:02:54.429Z",
+      "outlets": 3,
+      "outletNames": [
+        "CTV News",
+        "BNN Bloomberg",
+        "CP24"
+      ],
+      "score": 2.2
+    },
+    {
+      "id": "06f8e53677fb",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Apple reveals cause of worldwide outage",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdFh1eG13N1lMbUYzcVhOXzRGZGZlNzhkUGgzQk1fY2xtRjdKamhTTmpUekNpcWJqc1ZHbEVROXlNTUkySWJOM1pHMGpyWnRHNHNrYXhvM0tmUDRXenRDemtXbk51eEh4alFFWUdJS0dlUUdZY3FvN1c0WF9Zem1HaXVHZWVPQlE?oc=5",
+      "source": "The New Daily",
+      "publishedAt": "2026-11-17T22:32:34.000Z",
+      "latestAt": "2026-11-18T11:16:50.000Z",
+      "firstSeenAt": "2026-11-18T12:19:53.508Z",
+      "outlets": 2,
+      "outletNames": [
+        "The New Daily",
+        "TradingView"
+      ],
+      "score": 2.16
+    },
+    {
       "id": "4aa2c778927e",
       "cat": "grid",
       "kind": "news",
@@ -713,6 +758,23 @@
         "inkl"
       ],
       "score": 1.8
+    },
+    {
+      "id": "4db48258ed66",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Stocks plunge amid Nvidia scandal",
+      "url": "https://www.msn.com/en-us/money/top-stocks/stocks-plunge-amid-nvidia-scandal/vi-AA2hGRpc",
+      "source": "ABC News on MSN",
+      "publishedAt": "2026-11-18T04:34:20.000Z",
+      "latestAt": "2026-11-18T12:38:04.000Z",
+      "firstSeenAt": "2026-11-18T12:49:51.661Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos",
+        "ABC News on MSN"
+      ],
+      "score": 1.72
     },
     {
       "id": "f1b04bbb1361",
@@ -798,22 +860,6 @@
       "score": 1.39
     },
     {
-      "id": "95fc0522f486",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
-      "source": "CyberSecurityNews",
-      "publishedAt": "2026-11-18T00:49:15.000Z",
-      "latestAt": "2026-11-18T06:43:21.000Z",
-      "firstSeenAt": "2026-11-18T01:02:54.429Z",
-      "outlets": 1,
-      "outletNames": [
-        "CyberSecurityNews"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "8c083e71a179",
       "cat": "ai",
       "kind": "news",
@@ -826,38 +872,6 @@
       "outlets": 1,
       "outletNames": [
         "The Daily News | Texas' Oldest Newspaper"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "d4338533eb30",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Super El Niño-Powered Record Heat Made Energy Costs Surge. 2027 May Be Worse",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZTZNZ3V5ODJydGhSWVl3elVvQmVoRlRTelcxRWR5WHUzRWJrd3E3QzI2UUxGZU8yV2ozei1jNWNTSktyNVplcXU4Wm5vUUl4cjU1ampFa3A3Qno1eGRBa3NBSjlfQmRadEVQOEJibHBkRS1VRGlGYXRpeUxxWWFEakNPU1NBNDZJSEZUTFl3Y0oxTUNSanBpUlViVDU4WVJiTGQ4NF9WY3E2UVoyNkRHZnlrVlBIYUJ2?oc=5",
-      "source": "The Equation - Union of Concerned Scientists",
-      "publishedAt": "2026-11-17T22:57:19.000Z",
-      "latestAt": "2026-11-17T22:57:19.000Z",
-      "firstSeenAt": "2026-11-17T23:17:37.630Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Equation - Union of Concerned Scientists"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "fd99c05c1347",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
-      "source": "Global Agriculture",
-      "publishedAt": "2026-11-17T15:14:39.000Z",
-      "latestAt": "2026-11-17T15:14:39.000Z",
-      "firstSeenAt": "2026-11-17T15:31:45.442Z",
-      "outlets": 1,
-      "outletNames": [
-        "Global Agriculture"
       ],
       "score": 1.39
     },
@@ -1017,6 +1031,23 @@
         "cronkitenews.azpbs.org"
       ],
       "score": 2.09
+    },
+    {
+      "id": "645c1ca57fd1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA halts router installation following nationwide ground stop, root cause of issue unknown",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOWhrZWRiZnFKQ0dsVGxXS1NYV2J5Z1FPTFc4Q09VSmRXcGdFbTNIZDVqRmt6MVNtWkRnaVczYW5RX2pnLTZsY3NFbHhhc3N0TjMxd1FHUlhQcTdpSmxFd1FxWndwRk5sMk1pWi1XZkRHZ0d1cXc2V0xzZW03TjljVVlEMklyVnpzOTZDSHczWEhvdjhWbHVzcG1B0gGfAUFVX3lxTFA0RHV1NVV6TUFxM2hpUlRfWDBWM0luMjBrVG1UVFlxY1hlSXZBd2tNaF9nVGprVXRhVVJOY0YtNmtKMkhuV05fcUFMRllEem4zSklMd1AyZjBDZWlrRUZFRDRmTnRKX3FjTWl3ZGg1NmNXbkYzbG84RTk3YjZPNkNROGtEX0VrWGRBbWpUUUVzRVFiTnNXX0lXai1wN0FlRQ?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-17T21:34:02.000Z",
+      "latestAt": "2026-11-17T21:52:26.000Z",
+      "firstSeenAt": "2026-11-18T13:05:11.048Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos",
+        "6abc Philadelphia"
+      ],
+      "score": 2.08
     },
     {
       "id": "df0a412fb85c",
@@ -1455,6 +1486,54 @@
       "score": 1.39
     },
     {
+      "id": "95fc0522f486",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
+      "source": "CyberSecurityNews",
+      "publishedAt": "2026-11-18T00:49:15.000Z",
+      "latestAt": "2026-11-18T06:43:21.000Z",
+      "firstSeenAt": "2026-11-18T01:02:54.429Z",
+      "outlets": 1,
+      "outletNames": [
+        "CyberSecurityNews"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "d4338533eb30",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Super El Niño-Powered Record Heat Made Energy Costs Surge. 2027 May Be Worse",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZTZNZ3V5ODJydGhSWVl3elVvQmVoRlRTelcxRWR5WHUzRWJrd3E3QzI2UUxGZU8yV2ozei1jNWNTSktyNVplcXU4Wm5vUUl4cjU1ampFa3A3Qno1eGRBa3NBSjlfQmRadEVQOEJibHBkRS1VRGlGYXRpeUxxWWFEakNPU1NBNDZJSEZUTFl3Y0oxTUNSanBpUlViVDU4WVJiTGQ4NF9WY3E2UVoyNkRHZnlrVlBIYUJ2?oc=5",
+      "source": "The Equation - Union of Concerned Scientists",
+      "publishedAt": "2026-11-17T22:57:19.000Z",
+      "latestAt": "2026-11-17T22:57:19.000Z",
+      "firstSeenAt": "2026-11-17T23:17:37.630Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Equation - Union of Concerned Scientists"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "fd99c05c1347",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
+      "source": "Global Agriculture",
+      "publishedAt": "2026-11-17T15:14:39.000Z",
+      "latestAt": "2026-11-17T15:14:39.000Z",
+      "firstSeenAt": "2026-11-17T15:31:45.442Z",
+      "outlets": 1,
+      "outletNames": [
+        "Global Agriculture"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "82218d53aaad",
       "cat": "flights",
       "kind": "news",
@@ -1745,54 +1824,6 @@
       "score": 1.3
     },
     {
-      "id": "2bd37ab7e95f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Fake National Grid warning about ‘major blackout’ shared online",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbkRLOXprdzRBZDFyUjAxSXhJeGFXSU9OTVQtYjhtMGRPa1p4WjYyTzZsRzBCVml1Q2kwUFBTS3BPNlp4dkI1RnlMZ29HeUtSLU50YjB2eFVvQUZjYmJqS181ZWJLVjRtQmtrNGJma1NCZG5LRDJTay1uT0FERjlVRmNDWHhTY00?oc=5",
-      "source": "Full Fact",
-      "publishedAt": "2026-11-17T16:14:35.000Z",
-      "latestAt": "2026-11-17T16:14:35.000Z",
-      "firstSeenAt": "2026-11-17T20:39:00.012Z",
-      "outlets": 1,
-      "outletNames": [
-        "Full Fact"
-      ],
-      "score": 1.3
-    },
-    {
-      "id": "318794e76328",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Questions Remain After Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWHNqX0ZiV21vSTJueXdtc1pkYkJ0RHFjTXctNU1PbGZFcUFOdXFRMG9lTFpmS0NNcjJseFJSbTM5YTBEeExXQkpJRDVSM0ZBRVhIQVBscENJX203T1FuQmhPYWt4cENNQ0twbjN2ZVpmSk0zN3EwaWp6ako4VnBpejExdHZDX1dQSUlUTVlrYU1KV2xoSVpqcXdZSmFHOTF2c3dxMExDSmEtaXhJaU1BdGI4MWdoWk5rYy15VEhKeWg?oc=5",
-      "source": "news8000.com",
-      "publishedAt": "2026-11-17T23:20:00.000Z",
-      "latestAt": "2026-11-17T23:20:00.000Z",
-      "firstSeenAt": "2026-11-18T04:33:27.789Z",
-      "outlets": 1,
-      "outletNames": [
-        "news8000.com"
-      ],
-      "score": 1.28
-    },
-    {
-      "id": "4db48258ed66",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Video Stocks plunge amid Nvidia scandal",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLT01tX3otXy1xMWdwQjRHc2JSZkE0RUM2TDFwTU1xc1QyMk54UFExQng1VXQtdWlLTWM4cU5SSFdPeDJCTzR1T2FfRHk?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-18T12:38:04.000Z",
-      "latestAt": "2026-11-18T12:38:04.000Z",
-      "firstSeenAt": "2026-11-18T12:49:51.661Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos"
-      ],
-      "score": 1
-    },
-    {
       "id": "b7d06225aecd",
       "cat": "germs",
       "kind": "news",
@@ -1855,22 +1886,6 @@
       "outlets": 1,
       "outletNames": [
         "EurekAlert!"
-      ],
-      "score": 1
-    },
-    {
-      "id": "187d67132596",
-      "cat": "markets",
-      "kind": "news",
-      "title": "ServiceNow (NOW) Shares Drop 6.5% Amid Market Selloff, Trading W",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbW5tM2VURy1hUHBJZEJrc0U5bmRrdVNCX2xHVVZZM2tDMkRhYUVnVFRqNkN4Z0RnMnFoNXVLa3ZKbnJFZjRpcUUtUUtmVktqaW1WTlM4Q29Sc2tIOElUeE5kZm1KV3ZidGVVZldOTWluYzdFM3RlalY5TUJmOWY3N1pmeXRFZnpUWmR4Y043bFoxOVVlcVQ3Smw5ZzAyUnd2R2FmZHVyX1FkY1g4Sy16VTRFQ3pKTkk?oc=5",
-      "source": "GuruFocus",
-      "publishedAt": "2026-11-17T22:03:41.000Z",
-      "latestAt": "2026-11-17T22:03:41.000Z",
-      "firstSeenAt": "2026-11-17T22:09:54.219Z",
-      "outlets": 1,
-      "outletNames": [
-        "GuruFocus"
       ],
       "score": 1
     },
