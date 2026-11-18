@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T18:35:48.656Z",
+  "buildTime": "2026-11-18T18:50:47.462Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 13:35 ET",
+  "etStamp": "2026-11-18 13:50 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,15 +44,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1058,
-  "lastSuccessAt": "2026-11-18T18:35:48.656Z",
+  "headlinesRead": 1117,
+  "lastSuccessAt": "2026-11-18T18:50:47.462Z",
   "rollingFallback": false,
   "cats": {
     "weather": 5,
     "flights": 26,
-    "hacks": 32,
+    "hacks": 31,
     "grid": 7,
-    "internet": 9,
+    "internet": 10,
     "markets": 4,
     "germs": 4,
     "sun": 4,
@@ -181,80 +181,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 731,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 16 of 26 queries)",
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "count": 793,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 22 of 26 queries)",
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     },
     "bing": {
       "ok": true,
-      "count": 289,
+      "count": 288,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     },
     "x": {
       "ok": true,
-      "count": 2,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:35:48.656Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z"
+      "lastOkAt": "2026-11-18T18:50:47.462Z"
     }
   },
   "stories": [
@@ -378,18 +379,19 @@
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZlk4Q1U2Yi1RWXM0RE5EQ3cwcVVWYXNWalVpUm5oTzl6cS1oMGdHNFRtWDRpSEtzRDV5LVZPSUVXdXFOeGxSdTVIQTllQVFpdEhqUjNtODJsbndJSlc1UnBnTUoxV0kySzFGYnlIeElaSkRsaUI1WUVIamxfN1o5dVJCZ0RYVVowSVhBc0ZqU3hmM1VLeDdFSjRVVzdyNDZEMlR5cWsyMHdGcWFOY28tNVN4NnlHdXV0UkZnTDVGRlRPbnM1alZpNU5XM2lxSkxtTlN4bA?oc=5",
       "source": "KOMU 8",
       "publishedAt": "2026-11-18T13:28:00.000Z",
-      "latestAt": "2026-11-18T15:51:22.000Z",
+      "latestAt": "2026-11-18T17:45:00.000Z",
       "firstSeenAt": "2026-11-18T13:49:55.122Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "KOMU 8",
         "ABC17NEWS",
         "KRCG",
         "Columbia Missourian",
         "weareiowa.com",
-        "Daily Freeman"
+        "Daily Freeman",
+        "newsradio 1040 who"
       ],
-      "score": 3.56
+      "score": 3.78
     },
     {
       "id": "3af276c6d1c6",
@@ -559,27 +561,25 @@
       "score": 4.07
     },
     {
-      "id": "sig:faa-stop:TEB:2026-11-17",
+      "id": "471798c23cac",
       "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T19:17:12.554Z",
-      "latestAt": "2026-11-17T19:17:12.554Z",
-      "firstSeenAt": "2026-11-17T19:17:12.554Z",
-      "outlets": 1,
+      "kind": "news",
+      "title": "After the longest ground stop since 9/11, 7 ways to protect your holiday flights",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVEh1SzVSeGY5VWdZRk5GNk5INi1TSk5kQzVza0o0eDRvNDNHVnYwUzNsaGhZX0R3UkdUeFF2UmIyczZqemluQmhTTmo2WElpM05XVVY4bGpIYjJ5OFpoNXVsS19IVVRCWGZVVnBKUzE5Z2lfdWxZNmZ4S3VVdDBzVDNaV3FGVUpFd0RqeHpOX1FTZU9pY05DcjNNN1paek5wdzd2bFZRbk5XNFh4OHp4WjNxV1Q?oc=5",
+      "source": "The Bristol Herald Courier",
+      "publishedAt": "2026-11-18T17:35:06.000Z",
+      "latestAt": "2026-11-18T17:54:09.000Z",
+      "firstSeenAt": "2026-11-18T18:05:38.239Z",
+      "outlets": 6,
       "outletNames": [
-        "FAA"
+        "The Bristol Herald Courier",
+        "Charlotte Observer",
+        "Caledonian Record",
+        "Wisconsin State Journal",
+        "Buffalo News",
+        "Rome Sentinel"
       ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
+      "score": 3.55
     },
     {
       "id": "ffe871da3da9",
@@ -793,6 +793,22 @@
       "score": 1.5
     },
     {
+      "id": "31be995c85e2",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is Fortnite down? Yes, Epic reports a major outage hitting login and matchmaking",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMnA3MnA3OVNWdHZNQ0lYR1ByUlNab1VZT0xQWU9OQ3c3VlF2N21BTmtIZHU1bUotNGp3S2J1UXZEaWZwOHV6LVBsbkRjNHFZMHp4RWs0Wm1uLUY0eVVBSmdENFVIZFFCYS1rS3hEei1laXJPRlNxM0JfSTIxa3lSYzU3eVFmazNUNEl1cWtJMGNOMWlSdXc?oc=5",
+      "source": "Nacionale",
+      "publishedAt": "2026-11-18T18:46:05.000Z",
+      "latestAt": "2026-11-18T18:46:05.000Z",
+      "firstSeenAt": "2026-11-18T18:50:47.462Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nacionale"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "11b5c0bdeb6b",
       "cat": "internet",
       "kind": "news",
@@ -825,40 +841,45 @@
       "score": 1.39
     },
     {
-      "id": "d24e345e8c15",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Record high temperatures possible today (Wednesday) across the area",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQUHpXXy11dFFnUWpuUERPcDhUclVmdE1xMUU1WXhySmx1UGpGTUFxMy0xOTJZT2trMnJ1ajBqZGYxMEV4b0hpd09iRVAxUVZSbEF4OVlKSjRZNkJueVVOdDQxWThRT0wtVEVlVVZKQmZ0aG5vektoVDhPVkF5Z0JEVnlpdkJoQkl0NVJsVzJINTBvZ25vb0FsbTFuQUFEUk85bDlUakw4LUdSR3ZzU3AyNXVzZERxUnB2NTBUUUJYV3k0MlA0aGVvZnhubENVMkFrcDlBeHRkQXo5RVEtdkxZQ0RJbXBKZ0c3VXc?oc=5",
-      "source": "Voice of Alexandria",
-      "publishedAt": "2026-11-18T14:36:00.000Z",
-      "latestAt": "2026-11-18T14:36:00.000Z",
-      "firstSeenAt": "2026-11-18T15:05:21.855Z",
+      "id": "sig:faa-stop:TEB:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T19:17:12.554Z",
+      "latestAt": "2026-11-17T19:17:12.554Z",
+      "firstSeenAt": "2026-11-17T19:17:12.554Z",
       "outlets": 1,
       "outletNames": [
-        "Voice of Alexandria"
+        "FAA"
       ],
-      "score": 1.39
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
     },
     {
-      "id": "471798c23cac",
+      "id": "645c1ca57fd1",
       "cat": "flights",
       "kind": "news",
-      "title": "After the longest ground stop since 9/11, 7 ways to protect your holiday flights",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVEh1SzVSeGY5VWdZRk5GNk5INi1TSk5kQzVza0o0eDRvNDNHVnYwUzNsaGhZX0R3UkdUeFF2UmIyczZqemluQmhTTmo2WElpM05XVVY4bGpIYjJ5OFpoNXVsS19IVVRCWGZVVnBKUzE5Z2lfdWxZNmZ4S3VVdDBzVDNaV3FGVUpFd0RqeHpOX1FTZU9pY05DcjNNN1paek5wdzd2bFZRbk5XNFh4OHp4WjNxV1Q?oc=5",
-      "source": "The Bristol Herald Courier",
-      "publishedAt": "2026-11-18T17:35:06.000Z",
-      "latestAt": "2026-11-18T17:54:09.000Z",
-      "firstSeenAt": "2026-11-18T18:05:38.239Z",
-      "outlets": 5,
+      "title": "FAA halts router installation following nationwide ground stop, root cause of issue unknown",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOWhrZWRiZnFKQ0dsVGxXS1NYV2J5Z1FPTFc4Q09VSmRXcGdFbTNIZDVqRmt6MVNtWkRnaVczYW5RX2pnLTZsY3NFbHhhc3N0TjMxd1FHUlhQcTdpSmxFd1FxWndwRk5sMk1pWi1XZkRHZ0d1cXc2V0xzZW03TjljVVlEMklyVnpzOTZDSHczWEhvdjhWbHVzcG1B0gGfAUFVX3lxTFA0RHV1NVV6TUFxM2hpUlRfWDBWM0luMjBrVG1UVFlxY1hlSXZBd2tNaF9nVGprVXRhVVJOY0YtNmtKMkhuV05fcUFMRllEem4zSklMd1AyZjBDZWlrRUZFRDRmTnRKX3FjTWl3ZGg1NmNXbkYzbG84RTk3YjZPNkNROGtEX0VrWGRBbWpUUUVzRVFiTnNXX0lXai1wN0FlRQ?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-17T21:34:02.000Z",
+      "latestAt": "2026-11-18T18:34:37.000Z",
+      "firstSeenAt": "2026-11-18T13:05:11.048Z",
+      "outlets": 3,
       "outletNames": [
-        "The Bristol Herald Courier",
-        "Charlotte Observer",
-        "Caledonian Record",
-        "Wisconsin State Journal",
-        "Buffalo News"
+        "ABC News - Breaking News, Latest News and Videos",
+        "6abc Philadelphia",
+        "WFXB"
       ],
-      "score": 3.29
+      "score": 2.68
     },
     {
       "id": "754ee7b9cc1c",
@@ -897,23 +918,6 @@
       "score": 2.2
     },
     {
-      "id": "c57bcf1726af",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Global Cyberattack hits 178 major websites and the iPhone",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOcmtKeFFtQ2xuMFRnaUU3c19Td2FDanJscHRNS1Zsd1JJU2R0c1RjUHdzcUZGODYxUkVVMS1UN0ZhZVdKMXdaWU5jc01JMjVDTURlelhMOExPZmFIclJqZ3VyNmJ1d2lpX2xPSlAwdGlwMzVIOWpMRWNUV3NER1JXZmZ2VzZsaW83djZ3RVdBRFl0c2EzQnVXdG52blBVTHM?oc=5",
-      "source": "PhoneArena",
-      "publishedAt": "2026-11-17T18:41:15.000Z",
-      "latestAt": "2026-11-18T06:30:49.000Z",
-      "firstSeenAt": "2026-11-18T08:34:01.691Z",
-      "outlets": 2,
-      "outletNames": [
-        "PhoneArena",
-        "Cybersecurity Insiders"
-      ],
-      "score": 2.15
-    },
-    {
       "id": "ac8fef0be9f1",
       "cat": "flights",
       "kind": "news",
@@ -949,23 +953,6 @@
         "Tech Xplore"
       ],
       "score": 2.09
-    },
-    {
-      "id": "645c1ca57fd1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA halts router installation following nationwide ground stop, root cause of issue unknown",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOWhrZWRiZnFKQ0dsVGxXS1NYV2J5Z1FPTFc4Q09VSmRXcGdFbTNIZDVqRmt6MVNtWkRnaVczYW5RX2pnLTZsY3NFbHhhc3N0TjMxd1FHUlhQcTdpSmxFd1FxWndwRk5sMk1pWi1XZkRHZ0d1cXc2V0xzZW03TjljVVlEMklyVnpzOTZDSHczWEhvdjhWbHVzcG1B0gGfAUFVX3lxTFA0RHV1NVV6TUFxM2hpUlRfWDBWM0luMjBrVG1UVFlxY1hlSXZBd2tNaF9nVGprVXRhVVJOY0YtNmtKMkhuV05fcUFMRllEem4zSklMd1AyZjBDZWlrRUZFRDRmTnRKX3FjTWl3ZGg1NmNXbkYzbG84RTk3YjZPNkNROGtEX0VrWGRBbWpUUUVzRVFiTnNXX0lXai1wN0FlRQ?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-17T21:34:02.000Z",
-      "latestAt": "2026-11-17T21:52:26.000Z",
-      "firstSeenAt": "2026-11-18T13:05:11.048Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "6abc Philadelphia"
-      ],
-      "score": 2.08
     },
     {
       "id": "df0a412fb85c",
@@ -1531,6 +1518,22 @@
       "score": 1.39
     },
     {
+      "id": "d24e345e8c15",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Record high temperatures possible today (Wednesday) across the area",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQUHpXXy11dFFnUWpuUERPcDhUclVmdE1xMUU1WXhySmx1UGpGTUFxMy0xOTJZT2trMnJ1ajBqZGYxMEV4b0hpd09iRVAxUVZSbEF4OVlKSjRZNkJueVVOdDQxWThRT0wtVEVlVVZKQmZ0aG5vektoVDhPVkF5Z0JEVnlpdkJoQkl0NVJsVzJINTBvZ25vb0FsbTFuQUFEUk85bDlUakw4LUdSR3ZzU3AyNXVzZERxUnB2NTBUUUJYV3k0MlA0aGVvZnhubENVMkFrcDlBeHRkQXo5RVEtdkxZQ0RJbXBKZ0c3VXc?oc=5",
+      "source": "Voice of Alexandria",
+      "publishedAt": "2026-11-18T14:36:00.000Z",
+      "latestAt": "2026-11-18T14:36:00.000Z",
+      "firstSeenAt": "2026-11-18T15:05:21.855Z",
+      "outlets": 1,
+      "outletNames": [
+        "Voice of Alexandria"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "d26557cf2595",
       "cat": "hacks",
       "kind": "news",
@@ -1887,20 +1890,22 @@
       "score": 0.99
     },
     {
-      "id": "e413b11c014e",
+      "id": "7ea680722710",
       "cat": "earth",
       "kind": "news",
-      "title": "INCDFP announced a magnitude 2 earthquake in the Vrancea area, nearly 12 hours after the 5.7-magnitude earthquake that was also felt in Bucharest",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdHAwUk9IdkplUG9VMkVYcEUzUElINk1WLUUxanZIWnR3bklNSVN1S2h4SGdoZFFybVlyRVRGNGFZQ2VOXzlxZ3Y2S2JORXVjdXk1WVlhU19OV2tvVE9uWm1XdFJaWUhmTjFuMWlLY3V4cXJwaGY1czZhd21iYktGRWdvX1BZRmJULTlhTkJhcHNKUHMtRlNSLWNscmJxV2NhRFRua21wNm8xSnhDa1Y1LUpTOWg?oc=5",
-      "source": "Informat.ro",
-      "publishedAt": "2026-11-18T14:48:03.000Z",
-      "latestAt": "2026-11-18T14:48:03.000Z",
-      "firstSeenAt": "2026-11-18T16:05:29.833Z",
+      "title": "BREAKING NEWS: M5.7 quake strikes Japan's Kumamoto Prefecture, no tsunami warning issued",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WTlRJM0Ffd2xQLThoV1JteTRkaFAwVHBGN1AyeWF6R29US015SmFyb21ZdVMxOU9XM1Y3ZXM3NjBOZGNxaXJUSkFGeVVzMTM2M2NaRzROVmhXdw?oc=5",
+      "source": "Japan Wire by Kyodo News",
+      "publishedAt": "2026-11-18T17:41:14.000Z",
+      "latestAt": "2026-11-18T17:41:14.000Z",
+      "firstSeenAt": "2026-11-18T18:50:47.462Z",
       "outlets": 1,
       "outletNames": [
-        "Informat.ro"
+        "Japan Wire by Kyodo News"
       ],
-      "score": 0.98
+      "score": 0.98,
+      "quiet": true,
+      "quietReason": "headline mentions tsunami"
     },
     {
       "id": "f963fa9ff28f",
