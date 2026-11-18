@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T07:48:57.136Z",
+  "buildTime": "2026-11-18T08:04:00.818Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 02:48 ET",
+  "etStamp": "2026-11-18 03:04 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,13 +44,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1050,
-  "lastSuccessAt": "2026-11-18T07:48:57.136Z",
+  "headlinesRead": 1503,
+  "lastSuccessAt": "2026-11-18T08:04:00.818Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 27,
+    "flights": 26,
     "weather": 4,
-    "hacks": 33,
+    "hacks": 34,
     "internet": 10,
     "earth": 4,
     "markets": 4,
@@ -76,12 +76,12 @@
       "max24": 3.33
     },
     "asteroid": {
-      "des": "2026 WA",
-      "ld": 0.329,
-      "at": "2026-11-17T07:59:00.000Z",
-      "sizeM": 5.3,
-      "size": "a bus",
-      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WA",
+      "des": "2026 WH",
+      "ld": 4.571,
+      "at": "2026-11-18T01:52:00.000Z",
+      "sizeM": 14,
+      "size": "a house",
+      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WH",
       "upcoming": false
     },
     "faa": {
@@ -181,15 +181,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 714,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 10 of 26 queries)",
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "count": 1247,
+      "error": null,
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     },
     "bing": {
       "ok": true,
-      "count": 294,
-      "error": null,
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "count": 214,
+      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,37 +201,37 @@
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     },
     "jpl": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T07:48:57.136Z"
+      "lastOkAt": "2026-11-18T08:04:00.818Z"
     }
   },
   "stories": [
@@ -607,6 +607,30 @@
       "score": 4.41
     },
     {
+      "id": "267d69ca6fc3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Halts the Installation of Routers Similar to Ones Linked to the Nationwide Ground Stop",
+      "url": "https://people.com/faa-halts-the-installation-of-routers-similar-to-ones-linked-to-the-nationwide-ground-stop-12261814",
+      "source": "People",
+      "publishedAt": "2026-11-17T16:57:15.000Z",
+      "latestAt": "2026-11-18T04:39:12.000Z",
+      "firstSeenAt": "2026-11-18T08:04:00.818Z",
+      "outlets": 9,
+      "outletNames": [
+        "CNBC",
+        "LiveNOW from FOX",
+        "FOX 4 News Dallas-Fort Worth",
+        "Yahoo",
+        "6abc Philadelphia",
+        "People",
+        "ABC News - Breaking News, Latest News and Videos",
+        "CBC",
+        "CRN"
+      ],
+      "score": 4.37
+    },
+    {
       "id": "1f4000ce7c19",
       "cat": "flights",
       "kind": "news",
@@ -624,45 +648,6 @@
         "THV11"
       ],
       "score": 4.07
-    },
-    {
-      "id": "a39541a3b1c3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA official oversaw router work just before nationwide ground stop, report claims",
-      "url": "https://mashable.com/tech/faa-ground-stop-router-work",
-      "source": "Mashable",
-      "publishedAt": "2026-11-17T17:38:00.000Z",
-      "latestAt": "2026-11-18T06:23:31.000Z",
-      "firstSeenAt": "2026-11-18T00:17:39.985Z",
-      "outlets": 4,
-      "outletNames": [
-        "The Washington Post",
-        "Mashable",
-        "Mashable SEA",
-        "Red Lake Nation News"
-      ],
-      "score": 3.73
-    },
-    {
-      "id": "bc3b5863194f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Hijack Websites of CNN, BBC and Major Banks",
-      "url": "https://www.thedailybeast.com/hackers-hijack-websites-of-cnn-bbc-and-major-banks",
-      "source": "The Daily Beast",
-      "publishedAt": "2026-11-17T08:01:01.000Z",
-      "latestAt": "2026-11-18T01:56:00.000Z",
-      "firstSeenAt": "2026-11-18T03:48:15.310Z",
-      "outlets": 5,
-      "outletNames": [
-        "Cryptonews",
-        "The Daily Beast",
-        "FOX5 Vegas",
-        "New York Post",
-        "geekspin"
-      ],
-      "score": 3.12
     },
     {
       "id": "ba9b4d40eedf",
@@ -702,6 +687,23 @@
       "score": 2.65
     },
     {
+      "id": "c0d51c75ee4d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US National Security Agency’s comms down amid global cyber attack",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVWxyYnpMbVBRbDVSYzIydnZWQ3M0NWh2ZW42c1phdkltZmpRanZVSTBmZDRUOUdoUExlckFrcmluTlQxTEZ3SDQ0WTB4T2pHdDYyOFZaWjlNTU9hQ2pLbWlmQ0Z3STVmaWt3eXFfTnF4azE3d0hQWHV1SjB3MGt6cHhrc1lCT2phOHFfWk11bHBsYWdtUDRkam5ON3ptM0pfcUtqZUIwTlBZdWc?oc=5",
+      "source": "The Telegraph",
+      "publishedAt": "2026-11-17T17:22:00.000Z",
+      "latestAt": "2026-11-17T17:22:06.000Z",
+      "firstSeenAt": "2026-11-17T22:09:54.219Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Telegraph",
+        "Yahoo"
+      ],
+      "score": 2.58
+    },
+    {
       "id": "2909186dd5c7",
       "cat": "internet",
       "kind": "news",
@@ -717,23 +719,6 @@
         "News9Live"
       ],
       "score": 2.44
-    },
-    {
-      "id": "6fe2b0ca1078",
-      "cat": "internet",
-      "kind": "news",
-      "title": "NSA’s highly classified US national security comms network down in major outage",
-      "url": "https://www.themirror.com/news/us-news/nsa-comms-outage-network-down-2113689",
-      "source": "The Mirror US",
-      "publishedAt": "2026-11-17T07:54:00.000Z",
-      "latestAt": "2026-11-17T17:11:00.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Mirror US",
-        "AOL.com"
-      ],
-      "score": 2.41
     },
     {
       "id": "8b74d869f960",
@@ -829,6 +814,23 @@
       "quietReason": "headline mentions tornadoes"
     },
     {
+      "id": "f1b04bbb1361",
+      "cat": "internet",
+      "kind": "news",
+      "title": "‘Put lives at risk’: Man arrested in Eugene for copper wire theft that caused 911 outage",
+      "url": "https://www.yahoo.com/news/articles/put-lives-risk-man-arrested-020222863.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T18:02:00.000Z",
+      "latestAt": "2026-11-18T02:02:22.000Z",
+      "firstSeenAt": "2026-11-18T03:48:15.310Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "KOIN.com"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "a659f36b49e7",
       "cat": "earth",
       "kind": "news",
@@ -836,7 +838,7 @@
       "url": "https://www.yahoo.com/news/science/articles/3-8-magnitude-earthquake-strikes-055915020.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-17T16:00:00.000Z",
-      "latestAt": "2026-11-18T06:00:33.000Z",
+      "latestAt": "2026-11-18T07:30:00.000Z",
       "firstSeenAt": "2026-11-18T06:33:43.173Z",
       "outlets": 2,
       "outletNames": [
@@ -861,22 +863,6 @@
         "CNA"
       ],
       "score": 1.47
-    },
-    {
-      "id": "1f76878e7527",
-      "cat": "earth",
-      "kind": "news",
-      "title": "The strong earthquake that rattled much of the South Island overnight is unlikely to have increased the risk of a major Alpine Fault rupture - 18-Nov-2026 - NZ Environment news",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcmc4WThXYlN2ODFTNXpxZFZCWnQ1NmVQM0xQYTlQR2pMS3N2ME1GMjJ3RFNqd1dOa0Q2RWhPV0V0anBzOU1helNoQV9RTDhwNkIzS0tHaDg2YWl3aUl4SDE3eGpvakZhSmZ4NVpiOHlKWUhhUDJLbVVxODE4amhIa0FKZ0ttd092?oc=5",
-      "source": "NZCity",
-      "publishedAt": "2026-11-18T06:02:26.000Z",
-      "latestAt": "2026-11-18T06:02:26.000Z",
-      "firstSeenAt": "2026-11-18T06:18:41.048Z",
-      "outlets": 1,
-      "outletNames": [
-        "NZCity"
-      ],
-      "score": 1.39
     },
     {
       "id": "8c083e71a179",
@@ -909,6 +895,41 @@
         "The Equation - Union of Concerned Scientists"
       ],
       "score": 1.39
+    },
+    {
+      "id": "fd99c05c1347",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
+      "source": "Global Agriculture",
+      "publishedAt": "2026-11-17T15:14:39.000Z",
+      "latestAt": "2026-11-17T15:14:39.000Z",
+      "firstSeenAt": "2026-11-17T15:31:45.442Z",
+      "outlets": 1,
+      "outletNames": [
+        "Global Agriculture"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "a39541a3b1c3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA official oversaw router work just before nationwide ground stop, report claims",
+      "url": "https://mashable.com/tech/faa-ground-stop-router-work",
+      "source": "Mashable",
+      "publishedAt": "2026-11-17T17:38:00.000Z",
+      "latestAt": "2026-11-18T06:50:43.000Z",
+      "firstSeenAt": "2026-11-18T00:17:39.985Z",
+      "outlets": 4,
+      "outletNames": [
+        "The Washington Post",
+        "Mashable",
+        "Mashable SEA",
+        "Red Lake Nation News"
+      ],
+      "score": 3.73
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-17",
@@ -968,23 +989,6 @@
         "Yahoo"
       ],
       "score": 2.78
-    },
-    {
-      "id": "c0d51c75ee4d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US National Security Agency’s comms down amid global cyber attack",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVWxyYnpMbVBRbDVSYzIydnZWQ3M0NWh2ZW42c1phdkltZmpRanZVSTBmZDRUOUdoUExlckFrcmluTlQxTEZ3SDQ0WTB4T2pHdDYyOFZaWjlNTU9hQ2pLbWlmQ0Z3STVmaWt3eXFfTnF4azE3d0hQWHV1SjB3MGt6cHhrc1lCT2phOHFfWk11bHBsYWdtUDRkam5ON3ptM0pfcUtqZUIwTlBZdWc?oc=5",
-      "source": "The Telegraph",
-      "publishedAt": "2026-11-17T17:22:00.000Z",
-      "latestAt": "2026-11-17T17:22:06.000Z",
-      "firstSeenAt": "2026-11-17T22:09:54.219Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Telegraph",
-        "Yahoo"
-      ],
-      "score": 2.58
     },
     {
       "id": "0d7eab61dcdd",
@@ -1366,23 +1370,6 @@
       "score": 1.69
     },
     {
-      "id": "f1b04bbb1361",
-      "cat": "internet",
-      "kind": "news",
-      "title": "‘Put lives at risk’: Man arrested in Eugene for copper wire theft that caused 911 outage",
-      "url": "https://www.yahoo.com/news/articles/put-lives-risk-man-arrested-020222863.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T18:02:00.000Z",
-      "latestAt": "2026-11-18T02:02:22.000Z",
-      "firstSeenAt": "2026-11-18T03:48:15.310Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "KOIN.com"
-      ],
-      "score": 1.67
-    },
-    {
       "id": "c6f54e3d0077",
       "cat": "hacks",
       "kind": "news",
@@ -1647,22 +1634,6 @@
       "score": 1.39
     },
     {
-      "id": "fd99c05c1347",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
-      "source": "Global Agriculture",
-      "publishedAt": "2026-11-17T15:14:39.000Z",
-      "latestAt": "2026-11-17T15:14:39.000Z",
-      "firstSeenAt": "2026-11-17T15:31:45.442Z",
-      "outlets": 1,
-      "outletNames": [
-        "Global Agriculture"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "eae32f04b08e",
       "cat": "flights",
       "kind": "news",
@@ -1693,6 +1664,22 @@
         "NewsNation"
       ],
       "score": 1.38
+    },
+    {
+      "id": "1a0e80379c2f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "What if Google Gemini, Anthropic Claude and ChatGPT face Major Data Breaches Millions of Users could fall to Risks",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQQlNSMkhiRXB2aWRiV3pmZDMyOEpSLW1QcGdGOXhjUVpLdGhtMGhZSVlwR3cya01EUW9uV3d1R205T25KeTE4dlNyMWhkdEFLU2JBSGZwRmlTdmJyZWhFa2ZQZkhYVGJEYWRDWGZXQlNGbmpUcWczV3h1bFN6bWVCX1B2Umw4Y1drbHdTemtsTlZlVkhGb081WG4tMHJ6SS1KcnMtNjJZY2lNYjZET1B4NDVQZ3VNcWlxbVZsLUVxNWZrd01QM0VPaFZXbnJKUUhYVGZxclloSzlVbk1UeS1kSU5nUVpTaUFM?oc=5",
+      "source": "Cybersecurity Insiders",
+      "publishedAt": "2026-11-18T06:35:16.000Z",
+      "latestAt": "2026-11-18T06:35:16.000Z",
+      "firstSeenAt": "2026-11-18T08:04:00.818Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cybersecurity Insiders"
+      ],
+      "score": 1.37
     },
     {
       "id": "8c660ed73321",
@@ -1727,6 +1714,22 @@
       "score": 1.36
     },
     {
+      "id": "15cc85e3f16b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI warns AI tool aided in hackers gaining access to global organizations",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBzMThBU3l4aHhoQTBaczhDOHBsRkdZVHdRVlR4bVpEWC1JRUNHVWJ3Q0NuQkI1ZFZRVFZIdnBBQksxV2pNZy1iZ1c2cGpBR0ZnS2VLRGoxaVhQUjFQNENDbWFqNUZlUEh1MWVXQWNickVWWDNkUFFTbEFPWUxSdw?oc=5",
+      "source": "NewsNation",
+      "publishedAt": "2026-11-18T05:50:12.000Z",
+      "latestAt": "2026-11-18T05:50:12.000Z",
+      "firstSeenAt": "2026-11-18T08:04:00.818Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsNation"
+      ],
+      "score": 1.35
+    },
+    {
       "id": "02104fe6cf9d",
       "cat": "flights",
       "kind": "news",
@@ -1743,6 +1746,22 @@
       "score": 1.33
     },
     {
+      "id": "78c744dd0df7",
+      "cat": "internet",
+      "kind": "news",
+      "title": "‘PHASE BLACK’: Global panic spreads amid catastrophic tech outages",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNZ05GNGRacUlzcU40bXlvOUZxaW1xeTgyWDRscHQ3ckpsSWpncHUzb0F4ZzZjbjVqTFFlV2dZZWItd3FMTld4UWRBRS1qRnl5em5GSmVUNnIyb2lFLTFKSHZEWlhaUmx2N0s2aEdFZzBRbEJBczh6TXZyR3IyTHA4Rlp4Ylh3RG51X1hkVTh0YlYzZktkMTluQUxVU0RaaExoZm1Eb3RTLVpDVnBYY2ZKRkVHVE5jX1BBNUZkRDg3UUNiOWc5a0ZUaFZCbnJyclc5LWI0NjBNQ2hhZ2VhVHdkYXB4Z0xmVVc3X2E2bUNTY2lBQTcwZmlHUnA5dUFmYVhyTnVxRkU3TGRhN3lT0gGSAkFVX3lxTE9TOFdBOVVpdlp1amhvSGJXQUJEZThCUEJTRS15NmV5VDYxaXNXbHZ1UFFfa3YzQ1l6by1tTC1rQVZTTWdLLUxuTVpQYVh0Sjg0U2RPT01fcXpSUGJyblkzRGxqNEppbHpUQ0FBQk9iRFp0X1BsWWlHX2lHdldCNVpJOVhyTldEMV9Nam5OWkViLWxBYmcwcmhSZC1Ub0c1Ym1jRG4tYU5SaG8wNDQ5V3hYeUljUnNsbEtBbkQ5YnpsWksxZUFSblVSMkoxYndZbkF1c3NfaGpCV3pjVEhJcnpEQ3UxSTFKQ2ZHYTEzY1d3XzA2QlNxYTdVVTVlcUtvQzZlbVlwZURFZ2ZLM1JEMWlZRkE?oc=5",
+      "source": "News.com.au",
+      "publishedAt": "2026-11-18T04:50:19.000Z",
+      "latestAt": "2026-11-18T04:50:19.000Z",
+      "firstSeenAt": "2026-11-18T08:04:00.818Z",
+      "outlets": 1,
+      "outletNames": [
+        "News.com.au"
+      ],
+      "score": 1.32
+    },
+    {
       "id": "b10123451d1b",
       "cat": "flights",
       "kind": "news",
@@ -1757,6 +1776,22 @@
         "The New York Times"
       ],
       "score": 1.32
+    },
+    {
+      "id": "1f76878e7527",
+      "cat": "earth",
+      "kind": "news",
+      "title": "The strong earthquake that rattled much of the South Island overnight is unlikely to have increased the risk of a major Alpine Fault rupture - 18-Nov-2026 - NZ Environment news",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcmc4WThXYlN2ODFTNXpxZFZCWnQ1NmVQM0xQYTlQR2pMS3N2ME1GMjJ3RFNqd1dOa0Q2RWhPV0V0anBzOU1helNoQV9RTDhwNkIzS0tHaDg2YWl3aUl4SDE3eGpvakZhSmZ4NVpiOHlKWUhhUDJLbVVxODE4amhIa0FKZ0ttd092?oc=5",
+      "source": "NZCity",
+      "publishedAt": "2026-11-18T02:36:06.000Z",
+      "latestAt": "2026-11-18T06:02:26.000Z",
+      "firstSeenAt": "2026-11-18T06:18:41.048Z",
+      "outlets": 1,
+      "outletNames": [
+        "NZCity"
+      ],
+      "score": 1.31
     },
     {
       "id": "0a41d341cd16",
@@ -1807,22 +1842,6 @@
       "score": 1.3
     },
     {
-      "id": "318794e76328",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Questions Remain After Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWHNqX0ZiV21vSTJueXdtc1pkYkJ0RHFjTXctNU1PbGZFcUFOdXFRMG9lTFpmS0NNcjJseFJSbTM5YTBEeExXQkpJRDVSM0ZBRVhIQVBscENJX203T1FuQmhPYWt4cENNQ0twbjN2ZVpmSk0zN3EwaWp6ako4VnBpejExdHZDX1dQSUlUTVlrYU1KV2xoSVpqcXdZSmFHOTF2c3dxMExDSmEtaXhJaU1BdGI4MWdoWk5rYy15VEhKeWg?oc=5",
-      "source": "news8000.com",
-      "publishedAt": "2026-11-17T23:20:00.000Z",
-      "latestAt": "2026-11-17T23:20:00.000Z",
-      "firstSeenAt": "2026-11-18T04:33:27.789Z",
-      "outlets": 1,
-      "outletNames": [
-        "news8000.com"
-      ],
-      "score": 1.28
-    },
-    {
       "id": "e8dd29d897f1",
       "cat": "grid",
       "kind": "news",
@@ -1837,22 +1856,6 @@
         "Luxembourg Times"
       ],
       "score": 1.24
-    },
-    {
-      "id": "c2ad4d750b70",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA ground stop highlights air traffic controller shortages at Phoenix Sky Harbor, nationwide",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPQmEwSWZ0QmxDQVl2aXlQbVNwMkRTTzcwWGs2NEtnTW56c1czYVF4LXZOY0Z3Q1V4bkMyeExocDVsUlJWTTBfX3ozXzJpWjV1ZXNFN2FaN1ZuSzNxRDhVVXpnTm0xeGUwOHhoLWpJVDZqbnRxVjBwSE15Z09jMEUwS29iUl9hUkJldXJmSG1kZjBwUEVBMnQzamlMLW81NFAtcFFnM3lEcVhXQmY5eTM3TnZXem5oM2RDVkRRZmtzeUVuVjJHcFVDdFp1Yi15WUU?oc=5",
-      "source": "Your Valley",
-      "publishedAt": "2026-11-17T23:14:36.000Z",
-      "latestAt": "2026-11-17T23:14:36.000Z",
-      "firstSeenAt": "2026-11-18T07:48:57.136Z",
-      "outlets": 1,
-      "outletNames": [
-        "Your Valley"
-      ],
-      "score": 1.2
     },
     {
       "id": "1d5ce9d699b1",
@@ -1887,6 +1890,22 @@
       "score": 1.02
     },
     {
+      "id": "1241207470c2",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Lidl recalls Dutch UHT milk but rules out dairy farm contamination",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQeS1YMXAwcmNlZWZTYzJXeWJ0WnNsdzNVYkhIaU14dGVRd3oyajFtSEJ1RjR4OHB5WlBoTW5fdGNsdk4wTWJSdkxGZEstT1ZmLUhxV0FkVno2NHBEXzNRMWRHUU4zeXRURzVDUExpclgxOUc1Z0VzM1FzLU9FSV96aVhnUnFhVkVtb3ZVTXphVHhrV3A4cG53anVJRElUOGQ3ei12d0dVaw?oc=5",
+      "source": "All about feed",
+      "publishedAt": "2026-11-18T08:00:00.000Z",
+      "latestAt": "2026-11-18T08:00:00.000Z",
+      "firstSeenAt": "2026-11-18T08:04:00.818Z",
+      "outlets": 1,
+      "outletNames": [
+        "All about feed"
+      ],
+      "score": 1
+    },
+    {
       "id": "814650ab5eb0",
       "cat": "weather",
       "kind": "news",
@@ -1899,22 +1918,6 @@
       "outlets": 1,
       "outletNames": [
         "EurekAlert!"
-      ],
-      "score": 1
-    },
-    {
-      "id": "abcd2cdb9e9d",
-      "cat": "germs",
-      "kind": "news",
-      "title": "7 bird flu cases across Prairies linked to Saskatchewan poultry show",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOU2VYUmx1Z09JN0pMeTdKT2RNZVROQ0duWXdpZTBJYWJsNHg4YU1LalZ3dGVoLVhpdnFaRDktbjlYcE01bmd0MTVkU01lT1JhNjJObjNRMFA3ejFiME9tbTVqN3VzNUhXOW93ZHctX2NITUJpdXBkeGxOYW9MZG5BWDEzaw?oc=5",
-      "source": "Global News",
-      "publishedAt": "2026-11-17T22:15:33.000Z",
-      "latestAt": "2026-11-17T22:15:33.000Z",
-      "firstSeenAt": "2026-11-17T22:28:17.129Z",
-      "outlets": 1,
-      "outletNames": [
-        "Global News"
       ],
       "score": 1
     },
