@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T03:18:19.210Z",
+  "buildTime": "2026-11-18T03:33:11.967Z",
   "etDate": "2026-11-17",
-  "etStamp": "2026-11-17 22:18 ET",
+  "etStamp": "2026-11-17 22:33 ET",
   "score": 93,
   "fired": [
     "flights",
@@ -50,15 +50,15 @@
     "date": "2026-11-17",
     "score": 93
   },
-  "headlinesRead": 1585,
-  "lastSuccessAt": "2026-11-18T03:18:19.210Z",
+  "headlinesRead": 1586,
+  "lastSuccessAt": "2026-11-18T03:33:11.967Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
+    "flights": 25,
     "weather": 4,
-    "hacks": 36,
-    "internet": 9,
     "space": 2,
+    "hacks": 36,
+    "internet": 7,
     "germs": 4,
     "earth": 4,
     "grid": 4,
@@ -182,20 +182,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1250,
+      "count": 1252,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     },
     "bing": {
       "ok": true,
-      "count": 292,
+      "count": 293,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,55 +207,56 @@
       "ok": true,
       "count": 11,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     },
     "jpl": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     },
     "x": {
       "ok": true,
-      "count": 2,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:18:19.210Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T03:18:19.210Z"
+      "lastOkAt": "2026-11-18T03:33:11.967Z"
     }
   },
   "stories": [
@@ -326,77 +327,6 @@
         "My Cowichan Valley Now"
       ],
       "score": 5
-    },
-    {
-      "id": "681e458a3f27",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Breach 178 Websites, Including BBC, CNN, and Zoom, in Major Cyberattack",
-      "url": "https://www.techjuice.pk/hackers-breach-178-websites-including-bbc-cnn-and-zoom-in-major-cyberattack/",
-      "source": "TechJuice",
-      "publishedAt": "2026-11-17T03:27:00.000Z",
-      "latestAt": "2026-11-18T01:56:00.000Z",
-      "firstSeenAt": "2026-11-17T12:15:44.284Z",
-      "outlets": 9,
-      "outletNames": [
-        "TechJuice",
-        "Cryptonews",
-        "New York Post",
-        "TMZ on MSN",
-        "Black America Web",
-        "FOX5 Vegas",
-        "CNET",
-        "YAHOO!",
-        "The Daily Beast"
-      ],
-      "score": 4.98
-    },
-    {
-      "id": "7cb969af5f1e",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Is Apple down? Thousands report problems accessing services",
-      "url": "https://www.msn.com/en-us/news/technology/is-apple-down-thousands-report-problems-accessing-services/ar-AA2hDfJb",
-      "source": "USA TODAY on MSN",
-      "publishedAt": "2026-11-17T13:03:10.000Z",
-      "latestAt": "2026-11-18T02:00:53.000Z",
-      "firstSeenAt": "2026-11-18T02:18:11.119Z",
-      "outlets": 32,
-      "outletNames": [
-        "USA TODAY on MSN",
-        "The Sunday Guardian",
-        "NewsNation",
-        "9to5Mac",
-        "SSBCrack",
-        "The Apple Post",
-        "Digital Trends",
-        "The Spokesman-Review",
-        "Men's Journal",
-        "cedarnews.net",
-        "Outlook India",
-        "Daily Pakistan",
-        "Inquisitr",
-        "Gulf News",
-        "Haberler.com",
-        "KCRG",
-        "UG Diplomat",
-        "The Eastleigh Voice",
-        "Techloy",
-        "CTech",
-        "Engadget",
-        "The Daily Beast",
-        "KPTV",
-        "The Times of India",
-        "Neowin",
-        "UA.NEWS",
-        "NDTV Profit",
-        "The Peninsula Qatar",
-        "JFeed",
-        "The Independent",
-        "XDA",
-        "Manila Bulletin"
-      ],
-      "score": 4.67
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-17",
@@ -539,6 +469,34 @@
       "score": 3.62
     },
     {
+      "id": "483804f87cec",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "'Software bug' blamed for online banking outage | Morning in America",
+      "url": "https://www.yahoo.com/news/videos/software-bug-blamed-online-banking-141928009.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-17T06:06:27.000Z",
+      "latestAt": "2026-11-17T17:12:50.000Z",
+      "firstSeenAt": "2026-11-17T20:42:21.741Z",
+      "outlets": 13,
+      "outletNames": [
+        "Yahoo",
+        "KGET.com",
+        "WFLA",
+        "WKRN News 2",
+        "WSPA 7News",
+        "NBC4 WCMH-TV",
+        "NEWS10 ABC",
+        "NewsNation",
+        "KARK",
+        "UKNIP",
+        "WJBF",
+        "KELOLAND.com",
+        "KSN.com"
+      ],
+      "score": 3.56
+    },
+    {
       "id": "70eecf50dbad",
       "cat": "internet",
       "kind": "news",
@@ -574,6 +532,23 @@
         "News On 6"
       ],
       "score": 2.7
+    },
+    {
+      "id": "6fe2b0ca1078",
+      "cat": "internet",
+      "kind": "news",
+      "title": "NSA’s highly classified US national security comms network down in major outage",
+      "url": "https://www.themirror.com/news/us-news/nsa-comms-outage-network-down-2113689",
+      "source": "The Mirror US",
+      "publishedAt": "2026-11-17T07:54:00.000Z",
+      "latestAt": "2026-11-17T17:11:00.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Mirror US",
+        "AOL.com"
+      ],
+      "score": 2.41
     },
     {
       "id": "3cec50796970",
@@ -657,34 +632,6 @@
       "score": 4.07
     },
     {
-      "id": "483804f87cec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "'Software bug' blamed for online banking outage | Morning in America",
-      "url": "https://www.yahoo.com/news/videos/software-bug-blamed-online-banking-141928009.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T06:06:27.000Z",
-      "latestAt": "2026-11-17T17:12:50.000Z",
-      "firstSeenAt": "2026-11-17T20:42:21.741Z",
-      "outlets": 13,
-      "outletNames": [
-        "Yahoo",
-        "KGET.com",
-        "WFLA",
-        "WKRN News 2",
-        "WSPA 7News",
-        "NBC4 WCMH-TV",
-        "NEWS10 ABC",
-        "NewsNation",
-        "KARK",
-        "UKNIP",
-        "WJBF",
-        "KELOLAND.com",
-        "KSN.com"
-      ],
-      "score": 3.56
-    },
-    {
       "id": "ba9b4d40eedf",
       "cat": "hacks",
       "kind": "news",
@@ -719,21 +666,23 @@
       "score": 2.58
     },
     {
-      "id": "6fe2b0ca1078",
-      "cat": "internet",
+      "id": "0d7eab61dcdd",
+      "cat": "hacks",
       "kind": "news",
-      "title": "NSA’s highly classified US national security comms network down in major outage",
-      "url": "https://www.themirror.com/news/us-news/nsa-comms-outage-network-down-2113689",
-      "source": "The Mirror US",
-      "publishedAt": "2026-11-17T07:54:00.000Z",
-      "latestAt": "2026-11-17T17:11:00.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
-      "outlets": 2,
+      "title": "Equinor detects ongoing cyberattack, output unaffected",
+      "url": "https://www.aol.com/articles/equinor-detects-ongoing-cyberattack-output-181620000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-17T10:27:00.000Z",
+      "latestAt": "2026-11-17T23:21:17.000Z",
+      "firstSeenAt": "2026-11-17T18:55:24.881Z",
+      "outlets": 4,
       "outletNames": [
-        "The Mirror US",
-        "AOL.com"
+        "Euronext Markets: Real-time Stock Market Data | live",
+        "Reuters",
+        "AOL",
+        "marketscreener.com"
       ],
-      "score": 2.41
+      "score": 2.58
     },
     {
       "id": "ed3814122990",
@@ -752,23 +701,6 @@
         "NBC News"
       ],
       "score": 2.21
-    },
-    {
-      "id": "4896fd2b975f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Is NSA Down? America's Spy Agency Hit by Major Outage As Officials Scramble To Assess Damage",
-      "url": "https://www.ibtimes.sg/nsa-down-americas-spy-agency-hit-by-major-outage-officials-scramble-assess-damage-96333",
-      "source": "International Business Times Singapore",
-      "publishedAt": "2026-11-17T03:25:00.000Z",
-      "latestAt": "2026-11-17T17:25:20.000Z",
-      "firstSeenAt": "2026-11-17T17:32:03.215Z",
-      "outlets": 2,
-      "outletNames": [
-        "International Business Times Singapore",
-        "International Business Times, Singapore Edition"
-      ],
-      "score": 2.14
     },
     {
       "id": "8277025a75d7",
@@ -844,6 +776,39 @@
         "Sporting News AU"
       ],
       "score": 1.62
+    },
+    {
+      "id": "1e64ada53d46",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is Microsoft Outlook, Teams and Microsoft 365 Down Today Again?",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOUEdWZFVzanVISEY5WDU3Ql9ZTC1DV0E5a3pYS3d4Z0hQWUdmMmFubVVrOTEtV21kakRJeXZubWpGYXk2NV81NFhweXJJMENsYVJtVV9BeVpVcE96R01yRVlIYkRkcUhVSkJ4SWoxeTV3ajF4MF84cWlwbDAwc09uTXlKTUNPWUZuRWpRcEpYaGhLLTROOE4tczZoNnBGN2YtUGkw0gHfAUFVX3lxTFA2UlFPaXpuUFN0R29UODZvQUpZUS1xVjNMdTNQdGViMDl3OXBGOEtQWnotV0t0TldocHROeG15MnpHc2RWcDBRdjhiNGtXakxzV201dEwtSFprTm5iaWZMN2Ewbmt5cFJfZmw4Smh2cm5ZU0JSSXdFQ2p3Sm9tV3VWX0ZMRHljZHlGTDNnTzNnNm5qLS1zZklmTjlkQjdCa011ZjhtbkpnZGNVc2VjM256bFMyTlVNZGhmaHlwSU1OVVZPTTA1eHMzRVJXbFFfaS12YjlsLWEyekZEdnpxWVE?oc=5",
+      "source": "Coinpedia",
+      "publishedAt": "2026-11-17T03:48:47.000Z",
+      "latestAt": "2026-11-17T15:54:15.000Z",
+      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "outlets": 2,
+      "outletNames": [
+        "Coinpedia",
+        "The Sunday Guardian"
+      ],
+      "score": 1.58
+    },
+    {
+      "id": "2909186dd5c7",
+      "cat": "internet",
+      "kind": "news",
+      "title": "NSA’s classified communications network hit by major outage",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSnI4Z2lfenh6RFJyaUdJWFQwNmpCOWlUWlVfeVozRHQ0Z3JYejRhVG91c3U4MlAtZDA5RTRHRFJOUk9XOGk0SGd2cEJLcVB4RHZ4b2ZNVVhEa2dyQ0xPQmpRUUk0T2ZheF9Gc1FYNUlOenhnRlAyRk15enhyb1Fhek0zdHVZV0h0eFk0OEViaWIxeHc?oc=5",
+      "source": "One America News Network",
+      "publishedAt": "2026-11-17T22:24:42.000Z",
+      "latestAt": "2026-11-17T22:24:42.000Z",
+      "firstSeenAt": "2026-11-17T22:28:17.129Z",
+      "outlets": 1,
+      "outletNames": [
+        "One America News Network"
+      ],
+      "score": 1.4
     },
     {
       "id": "8c083e71a179",
@@ -963,7 +928,7 @@
       "url": "https://mashable.com/tech/faa-ground-stop-router-work",
       "source": "Mashable",
       "publishedAt": "2026-11-17T17:38:00.000Z",
-      "latestAt": "2026-11-18T03:10:36.000Z",
+      "latestAt": "2026-11-18T03:23:31.000Z",
       "firstSeenAt": "2026-11-18T00:17:39.985Z",
       "outlets": 4,
       "outletNames": [
@@ -1068,25 +1033,6 @@
         "WWLP"
       ],
       "score": 2.67
-    },
-    {
-      "id": "0d7eab61dcdd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor detects ongoing cyberattack, output unaffected",
-      "url": "https://www.aol.com/articles/equinor-detects-ongoing-cyberattack-output-181620000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-17T10:27:00.000Z",
-      "latestAt": "2026-11-17T23:21:17.000Z",
-      "firstSeenAt": "2026-11-17T18:55:24.881Z",
-      "outlets": 4,
-      "outletNames": [
-        "Euronext Markets: Real-time Stock Market Data | live",
-        "Reuters",
-        "AOL",
-        "marketscreener.com"
-      ],
-      "score": 2.58
     },
     {
       "id": "f65c9d1eaa32",
@@ -1423,23 +1369,6 @@
       "score": 1.92
     },
     {
-      "id": "3dabbffba2e3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Banking outage sparks concerns amid recent service disruptions",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUElWcUdPNWV5ZFVBRV83NFlpZlBkSkdoQ2FqUEU0cml1U09lbG5CMl9rOHVyaWhzUW5EMkJ2ZzAwN1dKbktKOGdtVHgzUmdXMXRaN0pyaTlFMmtIdFVQYVNNdm5QbFc0MkVza0NQSHluNlQwdm82OURqSnd0SG5vX0dsdjExQ1o5WHZ6ektjbVFTQTdVSHE1MWIyX1ZGNDRkY2c?oc=5",
-      "source": "WCVB",
-      "publishedAt": "2026-11-17T03:20:00.000Z",
-      "latestAt": "2026-11-17T10:28:00.000Z",
-      "firstSeenAt": "2026-11-17T05:48:47.183Z",
-      "outlets": 2,
-      "outletNames": [
-        "WCVB",
-        "cedarnews.net"
-      ],
-      "score": 1.92
-    },
-    {
       "id": "beb0c43d8c59",
       "cat": "hacks",
       "kind": "x",
@@ -1559,21 +1488,21 @@
       "score": 1.69
     },
     {
-      "id": "1e64ada53d46",
-      "cat": "internet",
+      "id": "c6f54e3d0077",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Is Microsoft Outlook, Teams and Microsoft 365 Down Today Again?",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOUEdWZFVzanVISEY5WDU3Ql9ZTC1DV0E5a3pYS3d4Z0hQWUdmMmFubVVrOTEtV21kakRJeXZubWpGYXk2NV81NFhweXJJMENsYVJtVV9BeVpVcE96R01yRVlIYkRkcUhVSkJ4SWoxeTV3ajF4MF84cWlwbDAwc09uTXlKTUNPWUZuRWpRcEpYaGhLLTROOE4tczZoNnBGN2YtUGkw0gHfAUFVX3lxTFA2UlFPaXpuUFN0R29UODZvQUpZUS1xVjNMdTNQdGViMDl3OXBGOEtQWnotV0t0TldocHROeG15MnpHc2RWcDBRdjhiNGtXakxzV201dEwtSFprTm5iaWZMN2Ewbmt5cFJfZmw4Smh2cm5ZU0JSSXdFQ2p3Sm9tV3VWX0ZMRHljZHlGTDNnTzNnNm5qLS1zZklmTjlkQjdCa011ZjhtbkpnZGNVc2VjM256bFMyTlVNZGhmaHlwSU1OVVZPTTA1eHMzRVJXbFFfaS12YjlsLWEyekZEdnpxWVE?oc=5",
-      "source": "Coinpedia",
-      "publishedAt": "2026-11-17T03:48:47.000Z",
-      "latestAt": "2026-11-17T15:54:15.000Z",
-      "firstSeenAt": "2026-11-17T16:16:49.463Z",
+      "title": "Hackers Are Using AI to Speed Through Cyberattacks, FBI Warns",
+      "url": "https://www.cnet.com/tech/hackers-artex-ai-cyberattacks-fbi-warning/",
+      "source": "CNET",
+      "publishedAt": "2026-11-17T17:15:00.000Z",
+      "latestAt": "2026-11-18T03:15:00.000Z",
+      "firstSeenAt": "2026-11-18T03:33:11.967Z",
       "outlets": 2,
       "outletNames": [
-        "Coinpedia",
-        "The Sunday Guardian"
+        "CNET",
+        "WFMZ.com"
       ],
-      "score": 1.58
+      "score": 1.66
     },
     {
       "id": "27149818813b",
@@ -1591,6 +1520,23 @@
         "The News-Press"
       ],
       "score": 1.57
+    },
+    {
+      "id": "bb1d9d770771",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop had Gophers-Penn State considering 2 other options",
+      "url": "https://sports.yahoo.com/articles/faa-ground-stop-had-gophers-213600931.html",
+      "source": "Yahoo Sports",
+      "publishedAt": "2026-11-17T13:36:00.000Z",
+      "latestAt": "2026-11-17T21:36:00.000Z",
+      "firstSeenAt": "2026-11-18T03:33:11.967Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Sports",
+        "Bring Me The News"
+      ],
+      "score": 1.53
     },
     {
       "id": "9d9b747573b4",
@@ -1707,22 +1653,6 @@
       "score": 1.4
     },
     {
-      "id": "2909186dd5c7",
-      "cat": "internet",
-      "kind": "news",
-      "title": "NSA’s classified communications network hit by major outage",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSnI4Z2lfenh6RFJyaUdJWFQwNmpCOWlUWlVfeVozRHQ0Z3JYejRhVG91c3U4MlAtZDA5RTRHRFJOUk9XOGk0SGd2cEJLcVB4RHZ4b2ZNVVhEa2dyQ0xPQmpRUUk0T2ZheF9Gc1FYNUlOenhnRlAyRk15enhyb1Fhek0zdHVZV0h0eFk0OEViaWIxeHc?oc=5",
-      "source": "One America News Network",
-      "publishedAt": "2026-11-17T22:24:42.000Z",
-      "latestAt": "2026-11-17T22:24:42.000Z",
-      "firstSeenAt": "2026-11-17T22:28:17.129Z",
-      "outlets": 1,
-      "outletNames": [
-        "One America News Network"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "895ec06c7b75",
       "cat": "flights",
       "kind": "news",
@@ -1801,6 +1731,39 @@
         "10News.com"
       ],
       "score": 1.36
+    },
+    {
+      "id": "02104fe6cf9d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Post-ground stop and major outages, assessing Thanksgiving travel concerns",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWU4tWHVKRnNHOHY1ZTc1UjJ1UDRPcGpFMEo2dWZrQ01RSTBYZEdDVXYzRDNpOXRSckRmMXMwM1NFQmRHTkMtYWNPQTZwTU5qR0dPSHliMkp6UmtOUkxxZjNNNG11bkJDM05ITU9jWEhnSmRRZ3p2T29OdG1xb2YyUmp5c2NoMDVjbWxoZFhVT0VmVTBJZ0ZHdnFaQk5idC10eWxUeGRnWTRfczNtNXdJ?oc=5",
+      "source": "WTNH.com",
+      "publishedAt": "2026-11-18T00:44:39.000Z",
+      "latestAt": "2026-11-18T00:44:39.000Z",
+      "firstSeenAt": "2026-11-18T03:33:11.967Z",
+      "outlets": 1,
+      "outletNames": [
+        "WTNH.com"
+      ],
+      "score": 1.33
+    },
+    {
+      "id": "85dac54cdf7a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase bank outage resolved after software bug delays US transactions",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYnFLRWNJcVFtVXpOLTRLSGgtRGc5SGg2WlBSQVNUT19EMVV0QUZRbWlIdVBIb1N5M1FLRDlQUXp5UFdpV0tOWkpoVWswMXB2SmptblVZbV9fRUhaVWh5UGJjVVVITHRVQTFqQk5DeG5BTU5iTGdLaF9xZkJNTXYwejdxTjVIRVBDbncwNVpjN090V3VSc0E?oc=5",
+      "source": "fish4news.co.uk",
+      "publishedAt": "2026-11-17T07:04:24.000Z",
+      "latestAt": "2026-11-17T10:34:36.000Z",
+      "firstSeenAt": "2026-11-18T03:33:11.967Z",
+      "outlets": 2,
+      "outletNames": [
+        "fish4news.co.uk",
+        "Yahoo Finance"
+      ],
+      "score": 1.32
     },
     {
       "id": "e8dd29d897f1",
@@ -1947,6 +1910,22 @@
       "score": 1
     },
     {
+      "id": "ed117b9cf796",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Grave fears as huge quake rocks 17 countries",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNQXl1VGg2a2c2aVNpcVdrY3lDeWxiREhrWHFocERxNDBlUGNEUHUzZHZlRlF6cDhaRXJqTGlYc0sycnlYaXVHNU0zc2x6NXhwcHpXMndTbzFNbXFsanlReTN3Zmh5d3ZXTkxEUUYzRW5lSmlmUVNaNE83SVBsLWlxMWNfbkRkWnlIZi1FZGxneHJxMTFKWUw2b3dJQTQ3a2lQVERwWFlXYkhuYXhNb2lOMU9lV2VMUWRDX1ZmLXRXbThmeDlBdUo3OXQ1SjRodGNGME9DdWZHYXBpX1c5QVJlVDA0cS0xU0NRcWhlUnE0SlhhRG1hTkl2TVRjdU3SAYICQVVfeXFMTmV4ckllREJYdllYY214emtPU1VXaTY4TVNzdEVoWE1IZVVIOFNXSXV1R1NYLWFYbGxmd3BjcGVhbnp0WV8wV0RGbUlnTHR1NGJnei1pZDdsckFIUTdQVl9FN3dKUGVNNDIxSThkcWFDcVJobkVPcjlPaTFFUnlpZWVvSl9oQVpQcmtTR2dXVW5oRjR5ZTd6VGUwMGhBTHNiS1JVOXN1dnl5VW5hcTdYTGF1YXJvdDJCcXVHSjlXWlA4NEZwZXRWQzc1YnRCVjM1SlhnRnhjS0tRb05jYW1RYmkyYU50NGpwUHJvTHlWbW54LTRvSTRQYTRBQTBQWjA4ZVlR?oc=5",
+      "source": "News.com.au",
+      "publishedAt": "2026-11-18T03:14:20.000Z",
+      "latestAt": "2026-11-18T03:14:20.000Z",
+      "firstSeenAt": "2026-11-18T03:33:11.967Z",
+      "outlets": 1,
+      "outletNames": [
+        "News.com.au"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "3e8a11fcbb51",
       "cat": "markets",
       "kind": "news",
@@ -2027,24 +2006,6 @@
         "open.kg"
       ],
       "score": 0.9
-    },
-    {
-      "id": "5e5696f8addd",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude-6.6 Indonesia earthquake felt across northern Australia, with no tsunami threat",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOb0RXX2Q2Q29MZUgyUkkxLTJJcklIOWx5OUd3d1hndVNsdFRSRkdNWDA3dDZiZlEtdTFySFFlUFBuLXI1UU1yVTZ6TFJQTnZhMV90eE5CVm0ycFAxOW83NlRXUzZqX2UtUlhSV2hSTkZnY19CZGNoSk5WRmhuZS0zOGkzZzBjTTZOU3NCZmZzX19uUGFtX3N1dG80WEpjQ0NLMUZWMWhNcFNSQXNVQ0dGY3R5Wk9xUQ?oc=5",
-      "source": "SSBCrack",
-      "publishedAt": "2026-11-17T20:27:15.000Z",
-      "latestAt": "2026-11-17T20:27:15.000Z",
-      "firstSeenAt": "2026-11-18T03:18:19.210Z",
-      "outlets": 1,
-      "outletNames": [
-        "SSBCrack"
-      ],
-      "score": 0.89,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
     },
     {
       "id": "90ad96fae449",
