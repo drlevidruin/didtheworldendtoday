@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T12:34:56.272Z",
+  "buildTime": "2026-11-18T12:49:51.661Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 07:34 ET",
+  "etStamp": "2026-11-18 07:49 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,14 +45,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1558,
-  "lastSuccessAt": "2026-11-18T12:34:56.272Z",
+  "headlinesRead": 1468,
+  "lastSuccessAt": "2026-11-18T12:49:51.661Z",
   "rollingFallback": false,
   "cats": {
+    "internet": 9,
     "weather": 4,
-    "flights": 28,
+    "flights": 29,
     "hacks": 31,
-    "internet": 10,
     "earth": 4,
     "markets": 4,
     "germs": 4,
@@ -176,83 +176,114 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1223,
+      "count": 1221,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "bing": {
       "ok": true,
-      "count": 293,
-      "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "count": 175,
+      "error": "11 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
-      "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-18T10:04:31.271Z"
+      "ok": true,
+      "count": 31,
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "hn": {
       "ok": true,
       "count": 12,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:34:56.272Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T12:34:56.272Z"
+      "lastOkAt": "2026-11-18T12:49:51.661Z"
     }
   },
   "stories": [
+    {
+      "id": "2909186dd5c7",
+      "cat": "internet",
+      "kind": "news",
+      "title": "NSA’s classified communications network hit by major outage in US",
+      "url": "https://www.news9live.com/world/nsas-classified-communications-network-hit-by-major-outage-in-us-3025586",
+      "source": "News9Live",
+      "publishedAt": "2026-11-17T14:40:00.000Z",
+      "latestAt": "2026-11-18T07:10:13.000Z",
+      "firstSeenAt": "2026-11-17T22:28:17.129Z",
+      "outlets": 15,
+      "outletNames": [
+        "One America News Network",
+        "News9Live",
+        "Townhall",
+        "Digit",
+        "SuaraGarut.ID",
+        "Beinsure",
+        "WCBM",
+        "XDA",
+        "WAOW",
+        "KITV",
+        "inkl",
+        "Anadolu Ajansı",
+        "LBC",
+        "@Reuters on X",
+        "oann.com"
+      ],
+      "score": 5.98
+    },
     {
       "id": "4f4b5cd393d6",
       "cat": "weather",
@@ -380,33 +411,6 @@
       "score": 4.29
     },
     {
-      "id": "80d893c5d2e9",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Classified US national security communications network hit by outage, NSA says",
-      "url": "https://x.com/Reuters/status/2122859883443671515",
-      "source": "@Reuters on X",
-      "publishedAt": "2026-11-17T16:10:00.000Z",
-      "latestAt": "2026-11-18T01:10:11.000Z",
-      "firstSeenAt": "2026-11-17T23:17:37.630Z",
-      "outlets": 12,
-      "outletNames": [
-        "Townhall",
-        "Digit",
-        "SuaraGarut.ID",
-        "Beinsure",
-        "WCBM",
-        "XDA",
-        "WAOW",
-        "KITV",
-        "inkl",
-        "Anadolu Ajansı",
-        "LBC",
-        "@Reuters on X"
-      ],
-      "score": 4.04
-    },
-    {
       "id": "136ab8542f66",
       "cat": "hacks",
       "kind": "news",
@@ -489,23 +493,6 @@
       "score": 2.87
     },
     {
-      "id": "2909186dd5c7",
-      "cat": "internet",
-      "kind": "news",
-      "title": "NSA’s classified communications network hit by major outage in US",
-      "url": "https://www.news9live.com/world/nsas-classified-communications-network-hit-by-major-outage-in-us-3025586",
-      "source": "News9Live",
-      "publishedAt": "2026-11-17T14:40:00.000Z",
-      "latestAt": "2026-11-18T07:10:13.000Z",
-      "firstSeenAt": "2026-11-17T22:28:17.129Z",
-      "outlets": 2,
-      "outletNames": [
-        "One America News Network",
-        "News9Live"
-      ],
-      "score": 2.44
-    },
-    {
       "id": "8b74d869f960",
       "cat": "earth",
       "kind": "news",
@@ -543,6 +530,23 @@
         "CP24"
       ],
       "score": 2.2
+    },
+    {
+      "id": "06f8e53677fb",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Apple reveals cause of worldwide outage",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdFh1eG13N1lMbUYzcVhOXzRGZGZlNzhkUGgzQk1fY2xtRjdKamhTTmpUekNpcWJqc1ZHbEVROXlNTUkySWJOM1pHMGpyWnRHNHNrYXhvM0tmUDRXenRDemtXbk51eEh4alFFWUdJS0dlUUdZY3FvN1c0WF9Zem1HaXVHZWVPQlE?oc=5",
+      "source": "The New Daily",
+      "publishedAt": "2026-11-17T22:32:34.000Z",
+      "latestAt": "2026-11-18T11:16:50.000Z",
+      "firstSeenAt": "2026-11-18T12:19:53.508Z",
+      "outlets": 2,
+      "outletNames": [
+        "The New Daily",
+        "TradingView"
+      ],
+      "score": 2.16
     },
     {
       "id": "a39541a3b1c3",
@@ -660,23 +664,6 @@
       "score": 2.43
     },
     {
-      "id": "06f8e53677fb",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple reveals cause of worldwide outage",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdFh1eG13N1lMbUYzcVhOXzRGZGZlNzhkUGgzQk1fY2xtRjdKamhTTmpUekNpcWJqc1ZHbEVROXlNTUkySWJOM1pHMGpyWnRHNHNrYXhvM0tmUDRXenRDemtXbk51eEh4alFFWUdJS0dlUUdZY3FvN1c0WF9Zem1HaXVHZWVPQlE?oc=5",
-      "source": "The New Daily",
-      "publishedAt": "2026-11-17T22:32:34.000Z",
-      "latestAt": "2026-11-18T11:16:50.000Z",
-      "firstSeenAt": "2026-11-18T12:19:53.508Z",
-      "outlets": 2,
-      "outletNames": [
-        "The New Daily",
-        "TradingView"
-      ],
-      "score": 2.16
-    },
-    {
       "id": "4aa2c778927e",
       "cat": "grid",
       "kind": "news",
@@ -726,25 +713,6 @@
         "inkl"
       ],
       "score": 1.8
-    },
-    {
-      "id": "bf15eaf85e48",
-      "cat": "weather",
-      "kind": "news",
-      "title": "'People were taking note': 13 years since six tornadoes struck northwest Ohio",
-      "url": "https://www.yahoo.com/news/weather-news/articles/people-were-taking-note-13-204624462.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-17T12:46:00.000Z",
-      "latestAt": "2026-11-17T20:46:00.000Z",
-      "firstSeenAt": "2026-11-17T20:49:02.542Z",
-      "outlets": 2,
-      "outletNames": [
-        "wtol.com",
-        "Yahoo"
-      ],
-      "score": 1.73,
-      "quiet": true,
-      "quietReason": "headline mentions tornadoes"
     },
     {
       "id": "f1b04bbb1361",
@@ -798,23 +766,6 @@
       "score": 1.51
     },
     {
-      "id": "0f7714f17187",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Cricket-Cricket Australia attempts Sandpapergate circuit breaker through player forum",
-      "url": "https://www.msn.com/en-gb/sport/cricket/cricket-cricket-australia-attempts-sandpapergate-circuit-breaker-through-player-forum/ar-AA2hF106",
-      "source": "Reuters on MSN",
-      "publishedAt": "2026-11-17T12:48:00.000Z",
-      "latestAt": "2026-11-18T04:24:25.000Z",
-      "firstSeenAt": "2026-11-18T04:48:36.329Z",
-      "outlets": 2,
-      "outletNames": [
-        "Reuters on MSN",
-        "CNA"
-      ],
-      "score": 1.47
-    },
-    {
       "id": "defcf7b7a0a8",
       "cat": "internet",
       "kind": "news",
@@ -847,6 +798,22 @@
       "score": 1.39
     },
     {
+      "id": "95fc0522f486",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
+      "source": "CyberSecurityNews",
+      "publishedAt": "2026-11-18T00:49:15.000Z",
+      "latestAt": "2026-11-18T06:43:21.000Z",
+      "firstSeenAt": "2026-11-18T01:02:54.429Z",
+      "outlets": 1,
+      "outletNames": [
+        "CyberSecurityNews"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "8c083e71a179",
       "cat": "ai",
       "kind": "news",
@@ -859,6 +826,38 @@
       "outlets": 1,
       "outletNames": [
         "The Daily News | Texas' Oldest Newspaper"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "d4338533eb30",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Super El Niño-Powered Record Heat Made Energy Costs Surge. 2027 May Be Worse",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZTZNZ3V5ODJydGhSWVl3elVvQmVoRlRTelcxRWR5WHUzRWJrd3E3QzI2UUxGZU8yV2ozei1jNWNTSktyNVplcXU4Wm5vUUl4cjU1ampFa3A3Qno1eGRBa3NBSjlfQmRadEVQOEJibHBkRS1VRGlGYXRpeUxxWWFEakNPU1NBNDZJSEZUTFl3Y0oxTUNSanBpUlViVDU4WVJiTGQ4NF9WY3E2UVoyNkRHZnlrVlBIYUJ2?oc=5",
+      "source": "The Equation - Union of Concerned Scientists",
+      "publishedAt": "2026-11-17T22:57:19.000Z",
+      "latestAt": "2026-11-17T22:57:19.000Z",
+      "firstSeenAt": "2026-11-17T23:17:37.630Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Equation - Union of Concerned Scientists"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "fd99c05c1347",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
+      "source": "Global Agriculture",
+      "publishedAt": "2026-11-17T15:14:39.000Z",
+      "latestAt": "2026-11-17T15:14:39.000Z",
+      "firstSeenAt": "2026-11-17T15:31:45.442Z",
+      "outlets": 1,
+      "outletNames": [
+        "Global Agriculture"
       ],
       "score": 1.39
     },
@@ -1001,6 +1000,23 @@
         "Cybersecurity Insiders"
       ],
       "score": 2.15
+    },
+    {
+      "id": "ac8fef0be9f1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop spotlights controller shortages at PHX , nationwide",
+      "url": "https://cronkitenews.azpbs.org/2026/11/17/faa-shortages-air-traffic-controllers/",
+      "source": "cronkitenews.azpbs.org",
+      "publishedAt": "2026-11-17T21:37:17.000Z",
+      "latestAt": "2026-11-18T01:15:00.000Z",
+      "firstSeenAt": "2026-11-18T12:49:51.661Z",
+      "outlets": 2,
+      "outletNames": [
+        "Cronkite News",
+        "cronkitenews.azpbs.org"
+      ],
+      "score": 2.09
     },
     {
       "id": "df0a412fb85c",
@@ -1439,54 +1455,6 @@
       "score": 1.39
     },
     {
-      "id": "95fc0522f486",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Reveals How a Hidden Windows Bug Took Down Microsoft 365 Services Worldwide",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabFRsVDdEUko3MlNxbm5TVFNmbVFWRzZKX25EckNDakc0aDVrNjhKcW9KS2E2WDVTM09NcE1XMEttWGRhYi1xNjNua3NuOVRlVVZHdUZpdmlhcklFZ013Y0FGNloxMkhXb3dlUGlHUFXSAXZBVV95cUxQeGhDQjI0d3Y5anpmRE14NlpKclVfRGFab2tDQ3V1UzZITnY5SmdLNTQ3WUFUWWtDMlZJN0lzOUc4UkowSFp5VWNJUXJHZU96UWVVU0RzekRzdXdMdXNhdmRqVFVoU1czcGg5bjdGVmV0UFNPV3B3?oc=5",
-      "source": "CyberSecurityNews",
-      "publishedAt": "2026-11-18T00:49:15.000Z",
-      "latestAt": "2026-11-18T06:43:21.000Z",
-      "firstSeenAt": "2026-11-18T01:02:54.429Z",
-      "outlets": 1,
-      "outletNames": [
-        "CyberSecurityNews"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "d4338533eb30",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Super El Niño-Powered Record Heat Made Energy Costs Surge. 2027 May Be Worse",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZTZNZ3V5ODJydGhSWVl3elVvQmVoRlRTelcxRWR5WHUzRWJrd3E3QzI2UUxGZU8yV2ozei1jNWNTSktyNVplcXU4Wm5vUUl4cjU1ampFa3A3Qno1eGRBa3NBSjlfQmRadEVQOEJibHBkRS1VRGlGYXRpeUxxWWFEakNPU1NBNDZJSEZUTFl3Y0oxTUNSanBpUlViVDU4WVJiTGQ4NF9WY3E2UVoyNkRHZnlrVlBIYUJ2?oc=5",
-      "source": "The Equation - Union of Concerned Scientists",
-      "publishedAt": "2026-11-17T22:57:19.000Z",
-      "latestAt": "2026-11-17T22:57:19.000Z",
-      "firstSeenAt": "2026-11-17T23:17:37.630Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Equation - Union of Concerned Scientists"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "fd99c05c1347",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Britain Orders Poultry Housed Nationwide as Bird Flu Risk Rises",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWHJ0X0xOeVJFcmVEOVhMRklWV1g1R3BNbWpKSGtKcTJnQWhRTGJsTTMyZDM4MnJQSzVhRVY0SWw4bTRnaUhoZGdmZ3o0YTJtN3pTTU1YUVhrTW1aT0ZoZklicGNVdklxTnQxTnVld0d2TVdHR205cVR6TldCWDVObFFNUE5tTG1vNEM4Vkpadjd1ZVVhVkx5UFdWRkVJa2piRHBsSDY4S3NKVHhGNzVJVk9BWS11RTRWbUxLUDV3?oc=5",
-      "source": "Global Agriculture",
-      "publishedAt": "2026-11-17T15:14:39.000Z",
-      "latestAt": "2026-11-17T15:14:39.000Z",
-      "firstSeenAt": "2026-11-17T15:31:45.442Z",
-      "outlets": 1,
-      "outletNames": [
-        "Global Agriculture"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "82218d53aaad",
       "cat": "flights",
       "kind": "news",
@@ -1635,9 +1603,9 @@
       "id": "ebd2e51d2c83",
       "cat": "flights",
       "kind": "news",
-      "title": "Carmel Valley woman describes ‘chaos’ getting home after nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOTVMM0doMnhqSmVWakU1bWs2VFh0RGpRc3FBNkFxeXJDbXBqc1dqV2FxZzVkcDA5U1NhRll6eFdBTGxtQUNVdzJzVDg2OGFCLWVBSTNrUzRrbVAzR1lKTVRlUk9WNzVXU1V2XzhIY0c5OEtpcGZlQVdOTW96X0Z6RHRiZmpFa3kwdkVMQ1N0Q0gyVUk2V0tuZm1aY3dZNDJuZTdtaHNoSmUwT1ltLTdFcXZ3aUFNZmM?oc=5",
-      "source": "10News.com",
+      "title": "Carmel Valley woman describes chao getting home after nationwide ground stop",
+      "url": "https://www.10news.com/news/local-news/carmel-valley-woman-describes-chaos-getting-home-after-nationwide-ground-stop",
+      "source": "10news.com",
       "publishedAt": "2026-11-17T23:59:42.000Z",
       "latestAt": "2026-11-18T11:16:44.000Z",
       "firstSeenAt": "2026-11-18T01:47:58.451Z",
@@ -1809,6 +1777,22 @@
       "score": 1.28
     },
     {
+      "id": "4db48258ed66",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Video Stocks plunge amid Nvidia scandal",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLT01tX3otXy1xMWdwQjRHc2JSZkE0RUM2TDFwTU1xc1QyMk54UFExQng1VXQtdWlLTWM4cU5SSFdPeDJCTzR1T2FfRHk?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-18T12:38:04.000Z",
+      "latestAt": "2026-11-18T12:38:04.000Z",
+      "firstSeenAt": "2026-11-18T12:49:51.661Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "score": 1
+    },
+    {
       "id": "b7d06225aecd",
       "cat": "germs",
       "kind": "news",
@@ -1855,6 +1839,22 @@
       "outlets": 1,
       "outletNames": [
         "All about feed"
+      ],
+      "score": 1
+    },
+    {
+      "id": "814650ab5eb0",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Mid-size mussels fared the worst during the 2021 Pacific Northwest heat dome",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5KU29mNk10WDlqbzlJYTZNRm1jRGRqTzc3dXpjUnluM21NajMtUlZqRng4cncwZTlocHdjRGV4MUd5UWIxdWtLRENSSU1CUWlXNVNhaEFaV0t2RXJY?oc=5",
+      "source": "EurekAlert!",
+      "publishedAt": "2026-11-18T03:00:26.000Z",
+      "latestAt": "2026-11-18T03:00:26.000Z",
+      "firstSeenAt": "2026-11-18T03:03:14.805Z",
+      "outlets": 1,
+      "outletNames": [
+        "EurekAlert!"
       ],
       "score": 1
     },
