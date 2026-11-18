@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T19:20:53.657Z",
+  "buildTime": "2026-11-18T19:35:58.704Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 14:20 ET",
-  "score": 66,
+  "etStamp": "2026-11-18 14:35 ET",
+  "score": 71,
   "fired": [
     "flights",
     "hacks",
@@ -18,12 +18,17 @@
   ],
   "bumps": [
     {
+      "key": "quake",
+      "label": "Quake M6 or more",
+      "points": 5
+    },
+    {
       "key": "faa",
       "label": "Ground stop at a major hub",
       "points": 6
     }
   ],
-  "change": 0,
+  "change": 5,
   "yesterday": {
     "date": "2026-11-17",
     "score": 66,
@@ -44,29 +49,30 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1332,
-  "lastSuccessAt": "2026-11-18T19:20:53.657Z",
+  "headlinesRead": 1418,
+  "lastSuccessAt": "2026-11-18T19:35:58.704Z",
   "rollingFallback": false,
   "cats": {
     "weather": 5,
     "flights": 29,
-    "hacks": 28,
     "grid": 7,
-    "internet": 10,
+    "earth": 4,
+    "hacks": 26,
+    "internet": 11,
     "markets": 4,
     "germs": 4,
     "sun": 4,
     "ai": 4,
-    "earth": 4,
-    "animals": 1
+    "animals": 1,
+    "space": 1
   },
   "vital": {
     "quake": {
-      "mag": 5.9,
-      "place": "85 km WNW of San Juan, Peru",
-      "time": "2026-11-18T06:07:42.780Z",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tyy8",
-      "pager": "green",
+      "mag": 6.1,
+      "place": "Pacific-Antarctic Ridge",
+      "time": "2026-11-18T19:14:23.713Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz37",
+      "pager": null,
       "tsunami": false
     },
     "kp": {
@@ -186,81 +192,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1011,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 25 of 26 queries)",
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "count": 1100,
+      "error": null,
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "bing": {
       "ok": true,
-      "count": 287,
+      "count": 282,
       "error": null,
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "timeout",
       "lastOkAt": "2026-11-18T12:49:51.661Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "usgs": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "faa": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-18T18:35:48.656Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T19:20:53.657Z"
+      "lastOkAt": "2026-11-18T19:35:58.704Z"
     }
   },
   "stories": [
@@ -358,25 +363,6 @@
       }
     },
     {
-      "id": "136ab8542f66",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI warns hackers using AI-powered tool to automate cyberattacks worldwide",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQaEs1Mm5GeXVFU1VLV3laRDF1cDhlX2JhUnI5Sy03UC13bC1INmlodUlMOE83RW1sSms2YVl3WFBaYXNFQzJ0NmVNUXVLNG0xYlU4bHBtZGtRZGZYVGU4NUF5VkFQS3M0blpvdEFIR2FwMHJidFZLak1sTExvZVRtZm5QSlB0alU3MEtYdFZES2EyQU5GNWJWSkJhMlFxZEJvd0tTMkxiTzlxM25jLUZ0SzlxakRpSlk?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-17T19:35:13.000Z",
-      "latestAt": "2026-11-18T15:12:25.000Z",
-      "firstSeenAt": "2026-11-17T19:37:30.113Z",
-      "outlets": 4,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi",
-        "A News",
-        "TechCentral.ie"
-      ],
-      "score": 4.2
-    },
-    {
       "id": "2ed538459272",
       "cat": "grid",
       "kind": "news",
@@ -397,6 +383,29 @@
         "newsradio 1040 who"
       ],
       "score": 3.78
+    },
+    {
+      "id": "sig:quake:us7000tz37",
+      "cat": "earth",
+      "kind": "signal",
+      "title": "M 6.1 - Pacific-Antarctic Ridge",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tz37",
+      "source": "USGS",
+      "publishedAt": "2026-11-18T19:14:23.713Z",
+      "latestAt": "2026-11-18T19:14:23.713Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 1,
+      "outletNames": [
+        "USGS"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "quake",
+        "mag": 6.1,
+        "place": "Pacific-Antarctic Ridge",
+        "pager": null,
+        "tsunami": false
+      }
     },
     {
       "id": "e656cdb7432f",
@@ -457,6 +466,24 @@
       "score": 2.8
     },
     {
+      "id": "9f11549139fa",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor working to restore IT systems after cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUjVUaUp3Y2JQalJXQkZWWHhfWlV0OGtwR0M2Sm15OFhSOC1sVzg5M2VxcHUtRDhzeWVuQU8yZk83cGZtckFhemM5NXlDTWpfcVRNRGpZVGMwcmJiZEpwWUNWSkRIcHBucGw4OEIyTnotbHVJelRFaUNyZFlhZ0tuZ3oyUFBuSWZBZGxPX0NKZTZLc3o1aFRxTUg5T1B2eTJxR1FfLTVlTFZ6MGU1NVRYTVdvRmxDSG1MbGh3ZVJiSXQzQW1qVTBxNFRDSVQ2S28tWldkZDkzQWU?oc=5",
+      "source": "Toronto Star",
+      "publishedAt": "2026-11-18T15:41:33.000Z",
+      "latestAt": "2026-11-18T17:01:51.000Z",
+      "firstSeenAt": "2026-11-18T16:05:29.833Z",
+      "outlets": 3,
+      "outletNames": [
+        "Toronto Star",
+        "Yahoo! Finance Canada",
+        "EnergyNow"
+      ],
+      "score": 2.57
+    },
+    {
       "id": "4db48258ed66",
       "cat": "markets",
       "kind": "news",
@@ -511,23 +538,6 @@
       "score": 2.16
     },
     {
-      "id": "e6ad68ef594c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Thunderstorms and hail forecast for Essex as cold snap set to continue",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG03NllxV0VibWlwY2c5a3lERzYzOG55cHdMRmtnNzlPMm9lay1LdTJjUjlqdVRPRGEzWnM4X0lSVXJBdElRcWlNYjlSVEFLeXNobHI0QTd4OTV4ekIxZGpHWG1UR1dsSTBpWkFiYWEwNjBlMkxTZmxpWTRvYV8zVE1vbm1NUVc0QlgzVXFTa1l3eVJTN2Z2cGhlUXV3TkJOSWo4YU5OQ0UzSGZLUWJuY0stbw?oc=5",
-      "source": "Harwich and Manningtree Standard",
-      "publishedAt": "2026-11-18T16:30:00.000Z",
-      "latestAt": "2026-11-18T16:30:00.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 2,
-      "outletNames": [
-        "Harwich and Manningtree Standard",
-        "Thurrock Gazette"
-      ],
-      "score": 2
-    },
-    {
       "id": "sig:faa-stop:SFO:2026-11-17",
       "cat": "flights",
       "kind": "signal",
@@ -549,25 +559,6 @@
         "nationwide": false,
         "reason": "low ceilings"
       }
-    },
-    {
-      "id": "1f4000ce7c19",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Fallout over nationwide ground stop continues",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNVzctQzRoaEpKUWxKaG5JeE94eV9DSXBTVnh4M19tQ0E1a1U3andFR3YydU9WS09XRzhCZDlQV3RqSUswZFdhMkVaVmRGQnB0Snp0aDFVTVA2SGVmNjBvcFNnUm44SzNOTkQxcWFwd05IcjRHU2ZpZ1V5cl9vQUFDQ3gwNmhITWtVaEtHMmkxYzA4SUV5SkdnSlpVYXMweXdaWEpNYWp6a2RkRWJ6MkVyaWc5Tng1OTJJNkJCeEU0U3I4LTVPdzc3RHQxWXU?oc=5",
-      "source": "news8000.com",
-      "publishedAt": "2026-11-17T19:27:00.000Z",
-      "latestAt": "2026-11-18T00:25:53.000Z",
-      "firstSeenAt": "2026-11-17T21:14:13.908Z",
-      "outlets": 4,
-      "outletNames": [
-        "news8000.com",
-        "heysocal.com",
-        "Hey SoCal. Change is our intention.",
-        "THV11"
-      ],
-      "score": 4.07
     },
     {
       "id": "471798c23cac",
@@ -592,22 +583,27 @@
       "score": 3.78
     },
     {
-      "id": "9f11549139fa",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor working to restore IT systems after cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUjVUaUp3Y2JQalJXQkZWWHhfWlV0OGtwR0M2Sm15OFhSOC1sVzg5M2VxcHUtRDhzeWVuQU8yZk83cGZtckFhemM5NXlDTWpfcVRNRGpZVGMwcmJiZEpwWUNWSkRIcHBucGw4OEIyTnotbHVJelRFaUNyZFlhZ0tuZ3oyUFBuSWZBZGxPX0NKZTZLc3o1aFRxTUg5T1B2eTJxR1FfLTVlTFZ6MGU1NVRYTVdvRmxDSG1MbGh3ZVJiSXQzQW1qVTBxNFRDSVQ2S28tWldkZDkzQWU?oc=5",
-      "source": "Toronto Star",
-      "publishedAt": "2026-11-18T15:41:33.000Z",
-      "latestAt": "2026-11-18T17:01:51.000Z",
-      "firstSeenAt": "2026-11-18T16:05:29.833Z",
-      "outlets": 3,
+      "id": "sig:faa-stop:DJT:2026-11-18",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at DJT (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-18T19:05:52.949Z",
+      "latestAt": "2026-11-18T19:05:52.949Z",
+      "firstSeenAt": "2026-11-18T19:05:52.949Z",
+      "outlets": 1,
       "outletNames": [
-        "Toronto Star",
-        "Yahoo! Finance Canada",
-        "EnergyNow"
+        "FAA"
       ],
-      "score": 2.57
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "DJT",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
     },
     {
       "id": "ffe871da3da9",
@@ -647,6 +643,41 @@
         "mlive"
       ],
       "score": 2.41
+    },
+    {
+      "id": "754ee7b9cc1c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor reports cyberattack on IT systems with production unaffected",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE83aFFYZzRyd2dySHk4dW1wNUxySG03bXY3U1ZNbGF6RDdPa2tvTkI4aDhDZlRUUDltZ0xOT3huRWpmU25mV01xbjJQSGdzM2s1XzBLeGRRMTAxQTFXeThxXzVpMkZSS0lUUlk4UEthWGR0LW8?oc=5",
+      "source": "Mugglehead Investment Magazine",
+      "publishedAt": "2026-11-17T22:34:02.000Z",
+      "latestAt": "2026-11-18T11:50:33.000Z",
+      "firstSeenAt": "2026-11-18T04:48:36.329Z",
+      "outlets": 3,
+      "outletNames": [
+        "Mugglehead Investment Magazine",
+        "marketscreener.com",
+        "IndexBox"
+      ],
+      "score": 2.32
+    },
+    {
+      "id": "e6ad68ef594c",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Thunderstorms and hail forecast for Essex as cold snap set to continue",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG03NllxV0VibWlwY2c5a3lERzYzOG55cHdMRmtnNzlPMm9lay1LdTJjUjlqdVRPRGEzWnM4X0lSVXJBdElRcWlNYjlSVEFLeXNobHI0QTd4OTV4ekIxZGpHWG1UR1dsSTBpWkFiYWEwNjBlMkxTZmxpWTRvYV8zVE1vbm1NUVc0QlgzVXFTa1l3eVJTN2Z2cGhlUXV3TkJOSWo4YU5OQ0UzSGZLUWJuY0stbw?oc=5",
+      "source": "Harwich and Manningtree Standard",
+      "publishedAt": "2026-11-18T16:30:00.000Z",
+      "latestAt": "2026-11-18T16:30:00.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 2,
+      "outletNames": [
+        "Harwich and Manningtree Standard",
+        "Thurrock Gazette"
+      ],
+      "score": 2
     },
     {
       "id": "ee5091b344ef",
@@ -734,6 +765,23 @@
       "score": 1.89
     },
     {
+      "id": "2f1dea9b0bc5",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Wow! Sun blasts impressive X1.9-class solar flare",
+      "url": "https://www.msn.com/en-us/science/astronomy/wow-sun-blasts-impressive-x1-9-class-solar-flare/vi-AA2hIO5j",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-18T10:40:00.000Z",
+      "latestAt": "2026-11-18T11:02:24.000Z",
+      "firstSeenAt": "2026-11-18T19:05:52.949Z",
+      "outlets": 2,
+      "outletNames": [
+        "Space on MSN",
+        "Dailymotion on MSN"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "3419a87137f5",
       "cat": "grid",
       "kind": "news",
@@ -802,75 +850,20 @@
       "score": 1.5
     },
     {
-      "id": "31be995c85e2",
+      "id": "21bac8019d5f",
       "cat": "internet",
       "kind": "news",
-      "title": "Is Fortnite down? Yes, Epic reports a major outage hitting login and matchmaking",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMnA3MnA3OVNWdHZNQ0lYR1ByUlNab1VZT0xQWU9OQ3c3VlF2N21BTmtIZHU1bUotNGp3S2J1UXZEaWZwOHV6LVBsbkRjNHFZMHp4RWs0Wm1uLUY0eVVBSmdENFVIZFFCYS1rS3hEei1laXJPRlNxM0JfSTIxa3lSYzU3eVFmazNUNEl1cWtJMGNOMWlSdXc?oc=5",
-      "source": "Nacionale",
-      "publishedAt": "2026-11-18T18:46:05.000Z",
-      "latestAt": "2026-11-18T18:46:05.000Z",
-      "firstSeenAt": "2026-11-18T18:50:47.462Z",
+      "title": "PlayStation hit by major outage hours before GTA 6 set to drop in UK",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOWnVVa1NZY09OQldZeHkwTWNDRkk0MHNEMXpVUUpvbjJtNG9MaVpuZWZhT3lRZkVEM0VULXhEblM2Y0xEQWpYSnNRRXNkYUJUWUZHdURjY2xMeXJRR0I0aFVxdU02YU5odHd3Z1ZBT2c0VkNKN3dBWmxXUDJhajM3TDZZWFNaTnpXYmVDY0dZSnBaMjY3VUo1RFRRNA?oc=5",
+      "source": "LADbible",
+      "publishedAt": "2026-11-18T19:26:32.000Z",
+      "latestAt": "2026-11-18T19:26:32.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
       "outlets": 1,
       "outletNames": [
-        "Nacionale"
+        "LADbible"
       ],
       "score": 1.4
-    },
-    {
-      "id": "11b5c0bdeb6b",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft apologises for global outage affecting millions of customers",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQLTlTbmJzSlVXMGoxalN5R19TUFQ4Rkh2N0dWYnVQY2U4MFFqaHpqb3EyeEFlR0ZnNmg2YlBmdnp4T0RobzlNY3hoS2xYVWUwWVMzMzl4SUlPNHF0MWpqeXJfWEpseXVfNDZrM1lOaGdRaUk3eFY5ekY1RXNRTlFBX2ZFNmVCUWRSZ3hmMnZ6Q1gtaFMwYXpLOFNMdno?oc=5",
-      "source": "News On AIR",
-      "publishedAt": "2026-11-18T13:44:29.000Z",
-      "latestAt": "2026-11-18T13:44:29.000Z",
-      "firstSeenAt": "2026-11-18T13:49:55.122Z",
-      "outlets": 1,
-      "outletNames": [
-        "News On AIR"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "5229e69716cf",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Patching in the AI age may underlie some of the major tech outages, experts say",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbG5MRktqdzhYemc3QU9Yd0xudG9uN1lSbkd4YTd3dG44VUlfcTRzcW5WQ19qb2JTX0o0QVV6VHNuV0oxRFNzYUZSX2wySm9WRmk1S2swN2djcWNJc3I0S0FqbzBrV09oZlAzbVFGQUI5bWktb2ZYU3ExYWdCd2hNOHZIei16QU9UZXJDQ0FNRkk0S0FjRG85UUlXX09KTmFtYzQ4SVZQOXBXcHY1VVlzcV9wdGxTR1Mw?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-11-18T17:12:09.000Z",
-      "latestAt": "2026-11-18T17:12:09.000Z",
-      "firstSeenAt": "2026-11-18T17:35:37.400Z",
-      "outlets": 1,
-      "outletNames": [
-        "Reuters"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "sig:faa-stop:DJT:2026-11-18",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at DJT (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-18T19:05:52.949Z",
-      "latestAt": "2026-11-18T19:05:52.949Z",
-      "firstSeenAt": "2026-11-18T19:05:52.949Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "DJT",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
     },
     {
       "id": "645c1ca57fd1",
@@ -880,7 +873,7 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOWhrZWRiZnFKQ0dsVGxXS1NYV2J5Z1FPTFc4Q09VSmRXcGdFbTNIZDVqRmt6MVNtWkRnaVczYW5RX2pnLTZsY3NFbHhhc3N0TjMxd1FHUlhQcTdpSmxFd1FxWndwRk5sMk1pWi1XZkRHZ0d1cXc2V0xzZW03TjljVVlEMklyVnpzOTZDSHczWEhvdjhWbHVzcG1B0gGfAUFVX3lxTFA0RHV1NVV6TUFxM2hpUlRfWDBWM0luMjBrVG1UVFlxY1hlSXZBd2tNaF9nVGprVXRhVVJOY0YtNmtKMkhuV05fcUFMRllEem4zSklMd1AyZjBDZWlrRUZFRDRmTnRKX3FjTWl3ZGg1NmNXbkYzbG84RTk3YjZPNkNROGtEX0VrWGRBbWpUUUVzRVFiTnNXX0lXai1wN0FlRQ?oc=5",
       "source": "ABC News - Breaking News, Latest News and Videos",
       "publishedAt": "2026-11-17T21:34:02.000Z",
-      "latestAt": "2026-11-18T18:34:37.000Z",
+      "latestAt": "2026-11-18T18:37:28.000Z",
       "firstSeenAt": "2026-11-18T13:05:11.048Z",
       "outlets": 3,
       "outletNames": [
@@ -908,22 +901,21 @@
       "score": 2.59
     },
     {
-      "id": "754ee7b9cc1c",
-      "cat": "hacks",
+      "id": "c0f7b49b2b66",
+      "cat": "flights",
       "kind": "news",
-      "title": "Equinor reports cyberattack on IT systems with production unaffected",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE83aFFYZzRyd2dySHk4dW1wNUxySG03bXY3U1ZNbGF6RDdPa2tvTkI4aDhDZlRUUDltZ0xOT3huRWpmU25mV01xbjJQSGdzM2s1XzBLeGRRMTAxQTFXeThxXzVpMkZSS0lUUlk4UEthWGR0LW8?oc=5",
-      "source": "Mugglehead Investment Magazine",
-      "publishedAt": "2026-11-17T22:34:02.000Z",
-      "latestAt": "2026-11-18T11:50:33.000Z",
-      "firstSeenAt": "2026-11-18T04:48:36.329Z",
-      "outlets": 3,
+      "title": "Company behind FAA shutdown is a major defense contractor in Hampton Roads",
+      "url": "https://www.dailypress.com/2026/11/18/hampton-roads-company-defense-contractor-faa-shutdown/",
+      "source": "Daily Press",
+      "publishedAt": "2026-11-18T11:23:00.000Z",
+      "latestAt": "2026-11-18T19:25:51.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 2,
       "outletNames": [
-        "Mugglehead Investment Magazine",
-        "marketscreener.com",
-        "IndexBox"
+        "Daily Press",
+        "The Virginian-Pilot"
       ],
-      "score": 2.32
+      "score": 2.42
     },
     {
       "id": "82c364362378",
@@ -961,6 +953,23 @@
       "score": 2.09
     },
     {
+      "id": "11f81094de77",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA issues ground stop for flights headed to DJT Airport in West Palm Beach",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQZ3AzRnJRN3NHOU10Tk16Y1FzMHQ2QmNPQjZDMElyRHN1dDRTQzNFbVpLN01paFVNUlIybjVPR19FS1o3TkdVZjdBcUszdi1kQzZRNWh5LUY4WlhTbGp3M2lXdTg2RG9rY1h2N3c1SzVTel9CQ3BnaGM3X1NubWp4dGVlQ2wwQTQzby1yLVQ4WWJtdEJ3UEZMYW5tTHMwYS1mQUcwMExGNTZ3WXl6U3poSndLY3FVaGZWYzUtUkJFX1lidkRzUktST0gyMkdkR3BNZjlyMnczY2UwWHJkaVdMZGRFTVJpd0QtMGNva0ZGYmo5bVZaeGprTjh3VVhCeEJJTnVpRWZZak5adjQ5dlE?oc=5",
+      "source": "WPEC",
+      "publishedAt": "2026-11-18T19:25:23.000Z",
+      "latestAt": "2026-11-18T19:33:38.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 2,
+      "outletNames": [
+        "WPEC",
+        "cw34.com"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "e82c3d981838",
       "cat": "flights",
       "kind": "news",
@@ -976,23 +985,6 @@
         "98.5 KYGO"
       ],
       "score": 1.99
-    },
-    {
-      "id": "ebbcae13fefd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor hit by ongoing cyberattack on IT systems; oil and gas production not affected",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSUJlN2VhU2lXS3lUSU4yVzJrQzlRZ2s2UHBSbXBpeW1Oc0xjYjhhSG9RUnBoZmxYWG1fd3RfcnBlUEV4dGVmUERub1o1d205d2tLZmx4c1Z3ZVFhbDZ3Vnd5V0owdWo4am5vZXJvSkk3MzBNYjc5M1VQaHVheXphQ0NwcHY3SEZ5YlBQM0JpbTMxQ0w2QjZySHktUnl3YTJjczhZVGdn?oc=5",
-      "source": "Nacionale",
-      "publishedAt": "2026-11-17T19:21:50.000Z",
-      "latestAt": "2026-11-17T19:37:02.000Z",
-      "firstSeenAt": "2026-11-17T19:52:32.015Z",
-      "outlets": 2,
-      "outletNames": [
-        "Nacionale",
-        "EnergyWatch"
-      ],
-      "score": 1.98
     },
     {
       "id": "09dd38a6fe2c",
@@ -1182,6 +1174,22 @@
       "score": 1.62
     },
     {
+      "id": "31be995c85e2",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is Fortnite down? Yes, Epic reports a major outage hitting login and matchmaking",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMnA3MnA3OVNWdHZNQ0lYR1ByUlNab1VZT0xQWU9OQ3c3VlF2N21BTmtIZHU1bUotNGp3S2J1UXZEaWZwOHV6LVBsbkRjNHFZMHp4RWs0Wm1uLUY0eVVBSmdENFVIZFFCYS1rS3hEei1laXJPRlNxM0JfSTIxa3lSYzU3eVFmazNUNEl1cWtJMGNOMWlSdXc?oc=5",
+      "source": "Nacionale",
+      "publishedAt": "2026-11-18T18:46:05.000Z",
+      "latestAt": "2026-11-18T18:46:05.000Z",
+      "firstSeenAt": "2026-11-18T18:50:47.462Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nacionale"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "bde8e0051e6b",
       "cat": "hacks",
       "kind": "news",
@@ -1221,7 +1229,7 @@
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOLTh6WHhvd1haalZDN2VqV3lFVEJnZ003c29GWjVqdW5QaGc0OXhLakhQQVBKTjQzbGxqYjRfZnlTOTYwTlRNd3haeTYtUWl4SmdlY19peGJtR1IwYVV3SUlMWFptRjlvZlNHZDNsUzVsR0pMTmR6VVhLWEtEc1hqamtZT1RpMEJYcUY4UXNnZGpyUjlMZHJNVUN3aG1NSUlLQTdHZ3VxUW4wOG5TanRNcC1FcFVBd1k?oc=5",
       "source": "Spiceworks",
       "publishedAt": "2026-11-18T14:56:45.000Z",
-      "latestAt": "2026-11-18T14:56:45.000Z",
+      "latestAt": "2026-11-18T14:58:19.000Z",
       "firstSeenAt": "2026-11-18T15:05:21.855Z",
       "outlets": 1,
       "outletNames": [
@@ -1242,6 +1250,22 @@
       "outlets": 1,
       "outletNames": [
         "The National CIO Review"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "11b5c0bdeb6b",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft apologises for global outage affecting millions of customers",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQLTlTbmJzSlVXMGoxalN5R19TUFQ4Rkh2N0dWYnVQY2U4MFFqaHpqb3EyeEFlR0ZnNmg2YlBmdnp4T0RobzlNY3hoS2xYVWUwWVMzMzl4SUlPNHF0MWpqeXJfWEpseXVfNDZrM1lOaGdRaUk3eFY5ekY1RXNRTlFBX2ZFNmVCUWRSZ3hmMnZ6Q1gtaFMwYXpLOFNMdno?oc=5",
+      "source": "News On AIR",
+      "publishedAt": "2026-11-18T13:44:29.000Z",
+      "latestAt": "2026-11-18T13:44:29.000Z",
+      "firstSeenAt": "2026-11-18T13:49:55.122Z",
+      "outlets": 1,
+      "outletNames": [
+        "News On AIR"
       ],
       "score": 1.4
     },
@@ -1450,6 +1474,22 @@
       "outlets": 1,
       "outletNames": [
         "KOLO | 8 News Now"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "5229e69716cf",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Patching in the AI age may underlie some of the major tech outages, experts say",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbG5MRktqdzhYemc3QU9Yd0xudG9uN1lSbkd4YTd3dG44VUlfcTRzcW5WQ19qb2JTX0o0QVV6VHNuV0oxRFNzYUZSX2wySm9WRmk1S2swN2djcWNJc3I0S0FqbzBrV09oZlAzbVFGQUI5bWktb2ZYU3ExYWdCd2hNOHZIei16QU9UZXJDQ0FNRkk0S0FjRG85UUlXX09KTmFtYzQ4SVZQOXBXcHY1VVlzcV9wdGxTR1Mw?oc=5",
+      "source": "Reuters",
+      "publishedAt": "2026-11-18T17:12:09.000Z",
+      "latestAt": "2026-11-18T17:12:09.000Z",
+      "firstSeenAt": "2026-11-18T17:35:37.400Z",
+      "outlets": 1,
+      "outletNames": [
+        "Reuters"
       ],
       "score": 1.39
     },
@@ -1714,22 +1754,6 @@
       "score": 1.36
     },
     {
-      "id": "ee6bcf48e08d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Network Failure Could Cost Four Major Airlines $345 Million",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTFVNT2tBelJwWnpQdDRza1ZBYkJROTREWFFSUDZjNnQxZGxGQ2ZYWUlodWxmb1BJMFIzWGRhM0FyajczZDI0eFl2RDNQMEFWdEZ0bU5IdDZFYS01Q0RsUWs0d09QSmtXYllkVjYzVWNkdGFlczR4U2NxYU1nLUM2cEhXYnRJN1NuV0FTRjZUOV9GZHV1aXNYVTZPR2dzQ2ZscXI3WnFfaE1TWVF4NFNJcXdRYXJYRkx0VG80czBuTkFDZw?oc=5",
-      "source": "NewsBreak: Local News & Alerts",
-      "publishedAt": "2026-11-18T16:50:47.000Z",
-      "latestAt": "2026-11-18T16:50:47.000Z",
-      "firstSeenAt": "2026-11-18T19:20:53.657Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 1.34
-    },
-    {
       "id": "1f76878e7527",
       "cat": "earth",
       "kind": "news",
@@ -1760,6 +1784,38 @@
         "RBC-Ukraine"
       ],
       "score": 1.3
+    },
+    {
+      "id": "b5a2e66bb3c1",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Review Finds Windborne Avian Influenza Transmission Plausible Over Several Kilometers",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOWd5Uy1QZGVkd3JKenJXRXFWblRtVmJDZ1pHMlJVRy1MRk00bkhqZjRYQnljSWxvZzJoQ0Rrb0x3SGZsM0g2c1dXeFIxRE5DalM2ekhsNlctcVVCdmt2dTdSLXkyMGUwUThLZ3ZlN1BnUzdiVTVIbEllSk41N3VSODg5XzVNbHZraWFZMHdma21nd19pa2VUQ2dKMUZ6YjBiZWNRZzFVSVozS3J5bDRz?oc=5",
+      "source": "Bioengineer.org",
+      "publishedAt": "2026-11-18T19:31:26.000Z",
+      "latestAt": "2026-11-18T19:31:26.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 1,
+      "outletNames": [
+        "Bioengineer.org"
+      ],
+      "score": 1
+    },
+    {
+      "id": "4a259418828e",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed at Lake Tye Park after more than 30 birds die; Washington pet owners told to avoid raw food",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOZF9oVUxJTlJJR1NtOTExckxybG05X01fS1FZUmxyY3dNX1YxUzgzMTk5QkpOSFRqQXlzYXZpTS1pMS1IRHZwdi0wOFpzRGg0MzVyazhDREYzbGNzcnlIb3JVM25GSkgzMmJHV3lwMHR3WWR3ZVBxbDlEUW5fTVA2Tg?oc=5",
+      "source": "Medical Daily",
+      "publishedAt": "2026-11-18T19:21:37.000Z",
+      "latestAt": "2026-11-18T19:21:37.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 1,
+      "outletNames": [
+        "Medical Daily"
+      ],
+      "score": 1
     },
     {
       "id": "3abcec4ef547",
@@ -1806,38 +1862,6 @@
       "outlets": 1,
       "outletNames": [
         "Decrypt"
-      ],
-      "score": 1
-    },
-    {
-      "id": "595e33219591",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Cal-Maine bird flu finding in Florida to impact 1.4M laying hens",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZmctczV2d05lc0Q4MkhDZ25aZWJ4TU5OcVA4NG1kRWZENlNuY2FkbFFPaS1ILUtZcHFBMU45aVBRRXhrVGRjOEJ6WFQ4X3JuZ2ZSbHZDTFl1Qk5jZUFCTUZkV3pqeVRzczV5RFJIVjVIMzU3cXllTXBjRW42d1dBWVYyRTg1MG9UdnZrQnM2MzhwOHdkUkJOMk11WHlTSjJGUVBtdUdOTkVMT1A2dkE?oc=5",
-      "source": "Feedstuffs",
-      "publishedAt": "2026-11-18T14:12:52.000Z",
-      "latestAt": "2026-11-18T14:12:52.000Z",
-      "firstSeenAt": "2026-11-18T14:20:15.679Z",
-      "outlets": 1,
-      "outletNames": [
-        "Feedstuffs"
-      ],
-      "score": 1
-    },
-    {
-      "id": "abcd2cdb9e9d",
-      "cat": "germs",
-      "kind": "news",
-      "title": "7 bird flu cases across Prairies linked to Saskatchewan poultry show",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOU2VYUmx1Z09JN0pMeTdKT2RNZVROQ0duWXdpZTBJYWJsNHg4YU1LalZ3dGVoLVhpdnFaRDktbjlYcE01bmd0MTVkU01lT1JhNjJObjNRMFA3ejFiME9tbTVqN3VzNUhXOW93ZHctX2NITUJpdXBkeGxOYW9MZG5BWDEzaw?oc=5",
-      "source": "Global News",
-      "publishedAt": "2026-11-17T22:15:33.000Z",
-      "latestAt": "2026-11-17T22:15:33.000Z",
-      "firstSeenAt": "2026-11-17T22:28:17.129Z",
-      "outlets": 1,
-      "outletNames": [
-        "Global News"
       ],
       "score": 1
     },
@@ -1890,22 +1914,20 @@
       "score": 0.99
     },
     {
-      "id": "7ea680722710",
-      "cat": "earth",
+      "id": "4ad2e1cda1b2",
+      "cat": "space",
       "kind": "news",
-      "title": "BREAKING NEWS: M5.7 quake strikes Japan's Kumamoto Prefecture, no tsunami warning issued",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WTlRJM0Ffd2xQLThoV1JteTRkaFAwVHBGN1AyeWF6R29US015SmFyb21ZdVMxOU9XM1Y3ZXM3NjBOZGNxaXJUSkFGeVVzMTM2M2NaRzROVmhXdw?oc=5",
-      "source": "Japan Wire by Kyodo News",
-      "publishedAt": "2026-11-18T17:41:14.000Z",
-      "latestAt": "2026-11-18T17:41:14.000Z",
-      "firstSeenAt": "2026-11-18T18:50:47.462Z",
+      "title": "Alien asteroid near Earth, Japan suddenly ends mission, NASA spars with Harvard prof",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdUV6VE1XZDVlcWRDbjl4X3IzY3Y3NkRZUjlnSWp2YkFaODJWTnI3MUc2cVkwSlFMNmtDeHFCZ0hVUnIyd3VjOWgzYW41Rm9ZNVZLaDh3UTZ3ajlLRDNWSHd4RkIzNzBXWEFiMkxMMUxTSFlJZlFMOHpKTnlKUXUtOVdJdWVoVlRFbGg4cnhNSWlNWDRTeXFJQWdReXVaaDNiYm1MaHJCSFhLUk9hQzQtVHNINkxJX2dta0hKWk1taVZHeE5QcFljTW5JVdIBywFBVV95cUxNdUV6VE1XZDVlcWRDbjl4X3IzY3Y3NkRZUjlnSWp2YkFaODJWTnI3MUc2cVkwSlFMNmtDeHFCZ0hVUnIyd3VjOWgzYW41Rm9ZNVZLaDh3UTZ3ajlLRDNWSHd4RkIzNzBXWEFiMkxMMUxTSFlJZlFMOHpKTnlKUXUtOVdJdWVoVlRFbGg4cnhNSWlNWDRTeXFJQWdReXVaaDNiYm1MaHJCSFhLUk9hQzQtVHNINkxJX2dta0hKWk1taVZHeE5QcFljTW5JVQ?oc=5",
+      "source": "WION",
+      "publishedAt": "2026-11-18T17:29:00.000Z",
+      "latestAt": "2026-11-18T17:29:00.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
       "outlets": 1,
       "outletNames": [
-        "Japan Wire by Kyodo News"
+        "WION"
       ],
-      "score": 0.98,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
+      "score": 0.96
     },
     {
       "id": "f963fa9ff28f",
@@ -1952,22 +1974,6 @@
       "outlets": 1,
       "outletNames": [
         "The Week"
-      ],
-      "score": 0.86
-    },
-    {
-      "id": "2f1dea9b0bc5",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Wow! Sun blasts impressive X1.9-class solar flare",
-      "url": "https://www.msn.com/en-us/science/astronomy/wow-sun-blasts-impressive-x1-9-class-solar-flare/vi-AA2hIO5j",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-18T10:40:00.000Z",
-      "latestAt": "2026-11-18T10:40:00.000Z",
-      "firstSeenAt": "2026-11-18T19:05:52.949Z",
-      "outlets": 1,
-      "outletNames": [
-        "Space on MSN"
       ],
       "score": 0.86
     },
