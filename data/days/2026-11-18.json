@@ -108,6 +108,29 @@
       "score": 4.8
     },
     {
+      "id": "sig:faa-stop:MIA:2026-11-18",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at MIA (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-18T14:20:15.679Z",
+      "latestAt": "2026-11-18T14:20:15.679Z",
+      "firstSeenAt": "2026-11-18T14:20:15.679Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "MIA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
+    },
+    {
       "id": "sig:faa-stop:FLL:2026-11-18",
       "cat": "flights",
       "kind": "signal",
@@ -128,29 +151,6 @@
         "hub": true,
         "nationwide": false,
         "reason": "thunderstorms"
-      }
-    },
-    {
-      "id": "sig:faa-stop:SFO:2026-11-17",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at SFO (low ceilings)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-17T22:47:29.296Z",
-      "latestAt": "2026-11-17T22:47:29.296Z",
-      "firstSeenAt": "2026-11-17T22:47:29.296Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "SFO",
-        "hub": true,
-        "nationwide": false,
-        "reason": "low ceilings"
       }
     },
     {
@@ -324,6 +324,29 @@
       "score": 2.34
     },
     {
+      "id": "sig:faa-stop:SFO:2026-11-17",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SFO (low ceilings)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-17T22:47:29.296Z",
+      "latestAt": "2026-11-17T22:47:29.296Z",
+      "firstSeenAt": "2026-11-17T22:47:29.296Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SFO",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low ceilings"
+      }
+    },
+    {
       "id": "sig:faa-stop:PHX:2026-11-17",
       "cat": "flights",
       "kind": "signal",
@@ -367,25 +390,6 @@
       "trending": 500,
       "trendTerm": "today's news",
       "score": 4.13
-    },
-    {
-      "id": "1f4000ce7c19",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Fallout over nationwide ground stop continues",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNVzctQzRoaEpKUWxKaG5JeE94eV9DSXBTVnh4M19tQ0E1a1U3andFR3YydU9WS09XRzhCZDlQV3RqSUswZFdhMkVaVmRGQnB0Snp0aDFVTVA2SGVmNjBvcFNnUm44SzNOTkQxcWFwd05IcjRHU2ZpZ1V5cl9vQUFDQ3gwNmhITWtVaEtHMmkxYzA4SUV5SkdnSlpVYXMweXdaWEpNYWp6a2RkRWJ6MkVyaWc5Tng1OTJJNkJCeEU0U3I4LTVPdzc3RHQxWXU?oc=5",
-      "source": "news8000.com",
-      "publishedAt": "2026-11-17T19:27:00.000Z",
-      "latestAt": "2026-11-18T00:25:53.000Z",
-      "firstSeenAt": "2026-11-17T21:14:13.908Z",
-      "outlets": 4,
-      "outletNames": [
-        "news8000.com",
-        "heysocal.com",
-        "Hey SoCal. Change is our intention.",
-        "THV11"
-      ],
-      "score": 4.07
     },
     {
       "id": "c0d51c75ee4d",
@@ -564,6 +568,23 @@
       "score": 1.8
     },
     {
+      "id": "3419a87137f5",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Teruaki Sato has the potential to help the Orioles OF power outage",
+      "url": "https://sports.yahoo.com/articles/teruaki-sato-potential-help-orioles-140000548.html",
+      "source": "Yahoo Sports",
+      "publishedAt": "2026-11-18T06:00:00.000Z",
+      "latestAt": "2026-11-18T14:00:00.000Z",
+      "firstSeenAt": "2026-11-18T14:20:15.679Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Sports",
+        "Camden Chat"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "f1b04bbb1361",
       "cat": "internet",
       "kind": "news",
@@ -632,20 +653,42 @@
       "score": 1.5
     },
     {
-      "id": "11b5c0bdeb6b",
-      "cat": "internet",
+      "id": "1f4000ce7c19",
+      "cat": "flights",
       "kind": "news",
-      "title": "Microsoft apologises for global outage affecting millions of customers",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQLTlTbmJzSlVXMGoxalN5R19TUFQ4Rkh2N0dWYnVQY2U4MFFqaHpqb3EyeEFlR0ZnNmg2YlBmdnp4T0RobzlNY3hoS2xYVWUwWVMzMzl4SUlPNHF0MWpqeXJfWEpseXVfNDZrM1lOaGdRaUk3eFY5ekY1RXNRTlFBX2ZFNmVCUWRSZ3hmMnZ6Q1gtaFMwYXpLOFNMdno?oc=5",
-      "source": "News On AIR",
-      "publishedAt": "2026-11-18T13:44:29.000Z",
-      "latestAt": "2026-11-18T13:44:29.000Z",
-      "firstSeenAt": "2026-11-18T13:49:55.122Z",
-      "outlets": 1,
+      "title": "Fallout over nationwide ground stop continues",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNVzctQzRoaEpKUWxKaG5JeE94eV9DSXBTVnh4M19tQ0E1a1U3andFR3YydU9WS09XRzhCZDlQV3RqSUswZFdhMkVaVmRGQnB0Snp0aDFVTVA2SGVmNjBvcFNnUm44SzNOTkQxcWFwd05IcjRHU2ZpZ1V5cl9vQUFDQ3gwNmhITWtVaEtHMmkxYzA4SUV5SkdnSlpVYXMweXdaWEpNYWp6a2RkRWJ6MkVyaWc5Tng1OTJJNkJCeEU0U3I4LTVPdzc3RHQxWXU?oc=5",
+      "source": "news8000.com",
+      "publishedAt": "2026-11-17T19:27:00.000Z",
+      "latestAt": "2026-11-18T00:25:53.000Z",
+      "firstSeenAt": "2026-11-17T21:14:13.908Z",
+      "outlets": 4,
       "outletNames": [
-        "News On AIR"
+        "news8000.com",
+        "heysocal.com",
+        "Hey SoCal. Change is our intention.",
+        "THV11"
       ],
-      "score": 1.4
+      "score": 4.07
+    },
+    {
+      "id": "fb0465e3999d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Editorial: Nationwide ground stop highlights vulnerable air traffic systems",
+      "url": "https://www.dailypress.com/2026/11/17/editorial-nationwide-ground-stop-highlights-vulnerable-air-traffic-systems/",
+      "source": "Daily Press",
+      "publishedAt": "2026-11-17T15:15:00.000Z",
+      "latestAt": "2026-11-18T14:15:00.000Z",
+      "firstSeenAt": "2026-11-17T23:17:37.630Z",
+      "outlets": 4,
+      "outletNames": [
+        "The Virginian-Pilot",
+        "Daily Press",
+        "Wisconsin State Journal",
+        "Elko Daily Free Press"
+      ],
+      "score": 3.64
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-17",
@@ -707,23 +750,6 @@
       "score": 2.78
     },
     {
-      "id": "fb0465e3999d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Editorial: Nationwide ground stop highlights vulnerable air traffic systems",
-      "url": "https://www.dailypress.com/2026/11/17/editorial-nationwide-ground-stop-highlights-vulnerable-air-traffic-systems/",
-      "source": "Daily Press",
-      "publishedAt": "2026-11-17T15:15:00.000Z",
-      "latestAt": "2026-11-17T23:15:43.000Z",
-      "firstSeenAt": "2026-11-17T23:17:37.630Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Virginian-Pilot",
-        "Daily Press"
-      ],
-      "score": 2.42
-    },
-    {
       "id": "e656cdb7432f",
       "cat": "hacks",
       "kind": "news",
@@ -776,6 +802,25 @@
         "FOX 32 Chicago"
       ],
       "score": 2.28
+    },
+    {
+      "id": "ce8c11435f3c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack on 178 organizations: Take these 5 steps to protect your credit card info",
+      "url": "https://www.oregonlive.com/nation/2026/11/cyberattack-on-178-organizations-take-these-5-steps-to-protect-your-credit-card-info.html",
+      "source": "OregonLive.com",
+      "publishedAt": "2026-11-17T21:11:00.000Z",
+      "latestAt": "2026-11-18T13:11:00.000Z",
+      "firstSeenAt": "2026-11-18T13:35:01.133Z",
+      "outlets": 4,
+      "outletNames": [
+        "OregonLive.com",
+        "NJ.com",
+        "cleveland.com",
+        "Syracuse.com"
+      ],
+      "score": 2.18
     },
     {
       "id": "1435774e9dc5",
@@ -900,6 +945,23 @@
       "score": 1.98
     },
     {
+      "id": "60d350a5297d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Intelligence Chief Jay Clayton Rejects Coordinated Cyberattack Fears Behind US Outages, Explains What Cou",
+      "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQNW5ia0lhVHNncTNGWm9DdzVXNlJTZWItU2M0UFNIRUlGVGQ5UXBMdU5FMmpOdEV0TnloX0dxNHdrTGc0YVg0bFM3ckFUeTE5OXh5Q2FKaV9aOU9rajMwTFZuNmI1UlI5ZTBabllMclJWZnVXNXFuYllLclBYQTliMEpsOENYRFB1Wkk3NWJMMzNfM3NRalVtLWplclF5U2NwdnRlRnNORE5RTE1LSFp4YXltamtDdjlZTVhWYW9Zd1lWVlNMX082MXB3R1Z2Z1pvaHRJenpTODJONUU0d2Fwa2otb3pZbHF0eDZxdjNkdHJtTWh3OUZZbF9naDdNbEN2NllvQ2tJNA?oc=5",
+      "source": "Benzinga",
+      "publishedAt": "2026-11-18T12:48:46.000Z",
+      "latestAt": "2026-11-18T12:48:46.000Z",
+      "firstSeenAt": "2026-11-18T14:20:15.679Z",
+      "outlets": 2,
+      "outletNames": [
+        "Benzinga",
+        "TradingView"
+      ],
+      "score": 1.95
+    },
+    {
       "id": "a1d54db27e7a",
       "cat": "hacks",
       "kind": "news",
@@ -966,24 +1028,6 @@
         "PIX11"
       ],
       "score": 1.89
-    },
-    {
-      "id": "ce8c11435f3c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack on 178 organizations: Take these 5 steps to protect your credit card info",
-      "url": "https://www.oregonlive.com/nation/2026/11/cyberattack-on-178-organizations-take-these-5-steps-to-protect-your-credit-card-info.html",
-      "source": "OregonLive.com",
-      "publishedAt": "2026-11-17T21:11:00.000Z",
-      "latestAt": "2026-11-18T13:11:00.000Z",
-      "firstSeenAt": "2026-11-18T13:35:01.133Z",
-      "outlets": 3,
-      "outletNames": [
-        "OregonLive.com",
-        "NJ.com",
-        "cleveland.com"
-      ],
-      "score": 1.88
     },
     {
       "id": "33855d636d61",
@@ -1069,6 +1113,22 @@
         "KOLD"
       ],
       "score": 1.48
+    },
+    {
+      "id": "11b5c0bdeb6b",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft apologises for global outage affecting millions of customers",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQLTlTbmJzSlVXMGoxalN5R19TUFQ4Rkh2N0dWYnVQY2U4MFFqaHpqb3EyeEFlR0ZnNmg2YlBmdnp4T0RobzlNY3hoS2xYVWUwWVMzMzl4SUlPNHF0MWpqeXJfWEpseXVfNDZrM1lOaGdRaUk3eFY5ekY1RXNRTlFBX2ZFNmVCUWRSZ3hmMnZ6Q1gtaFMwYXpLOFNMdno?oc=5",
+      "source": "News On AIR",
+      "publishedAt": "2026-11-18T13:44:29.000Z",
+      "latestAt": "2026-11-18T13:44:29.000Z",
+      "firstSeenAt": "2026-11-18T13:49:55.122Z",
+      "outlets": 1,
+      "outletNames": [
+        "News On AIR"
+      ],
+      "score": 1.4
     },
     {
       "id": "fd7178985b0a",
@@ -1525,56 +1585,6 @@
       "score": 1.37
     },
     {
-      "id": "8c660ed73321",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Rakuten Securities account information compromised in major data breach",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPOW40TmN1X0NzaFVvc3NKVy1zbXotb2stR1FPMW8zWHJ5eUZFdzdTdE9KZDlGRU9lYzZKUHVlMTZGZ3hxMk1lS2ZkVjh1NXg4QzRxRDhXNG95Y1JFcDVfZnhYYzl3ak5SVlc4WFN2a3hZWmdSN0loOTNYWG1uYjkyMTdFRjRzTldXTnN5T2gwU3JfVUYzY0xOdjV4YXMzdTQ?oc=5",
-      "source": "The Japan Times",
-      "publishedAt": "2026-11-18T04:50:00.000Z",
-      "latestAt": "2026-11-18T04:50:00.000Z",
-      "firstSeenAt": "2026-11-18T06:18:41.048Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Japan Times"
-      ],
-      "score": 1.37
-    },
-    {
-      "id": "e68fed5fe738",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple outage causes service disruptions for users: Down detector",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPd3RZb1FkZ3dKQ2NjQ0R3Z0R2RU1HUmU3OURRNnpxMnVSOUNOZFNxU2E1S2pNZi1oV1Q3bG9mOE5ieUc3RDd0N2VmLXhDenNqU3ZuRk80MXlrTmFCR1d4UW5pY1FjSkFFOVUzMFczOVBGNEdHeXpDMElhbHZLbF94VGw3ZTZBQVpLVmFDcGt0dVJRa1k2QXh5ZFRMTmlPQ3hU0gGmAUFVX3lxTFBOb3k0cWNFeGtrdERXbGg0ZVVZWmwxWGM1WTRQV2NFUENWV1pKRFhkRTRmV3NMaXczUHdqcm93UWZfcFZpZkxtT1ZqeGZlRnY2N3l0YXRYbG5lNUlwWDBfcnZXNk5xRFlnYmkzY0tuWmp6UE93TnBYXzFIZzZnUF9mWklKb0w3Y1RQZG0xMFJoM28wTFVTa2tZY1k2a2x3REdaQUY3WEE?oc=5",
-      "source": "PIX11",
-      "publishedAt": "2026-11-17T18:39:11.000Z",
-      "latestAt": "2026-11-17T19:00:07.000Z",
-      "firstSeenAt": "2026-11-18T13:35:01.133Z",
-      "outlets": 2,
-      "outletNames": [
-        "PIX11",
-        "AOL.com"
-      ],
-      "score": 1.37
-    },
-    {
-      "id": "14dcf92ef809",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Bank outage could open the door for scammers: What customers should watch for",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNnlHRlhfU0M4ODRabFM4bHFjaC1Kc3F5Ymx5Z0ljd19UUXdMSlcyZ05KQ0p1djdrdTVBeDZ4VlQteVE4RUNHSTJ1SS1XazhQcTNvYjRLOGVmMmphRnpyR0ZlZmVJYWM3QXczbkZZSkNiTVhoZTBmWV8zV1Z0M2tVd1BteWNNbWpQTm9tU2RfS2ZVOWk5LTVOengtTWxaam56RHV2ZU1aSkhyZjRIMUE?oc=5",
-      "source": "ktnv.com",
-      "publishedAt": "2026-11-17T17:31:30.000Z",
-      "latestAt": "2026-11-18T11:18:18.000Z",
-      "firstSeenAt": "2026-11-18T12:19:53.508Z",
-      "outlets": 2,
-      "outletNames": [
-        "ktnv.com",
-        "KTNV Las Vegas"
-      ],
-      "score": 1.37
-    },
-    {
       "id": "1f76878e7527",
       "cat": "earth",
       "kind": "news",
@@ -1607,21 +1617,35 @@
       "score": 1.3
     },
     {
-      "id": "b7d06225aecd",
+      "id": "ee5091b344ef",
       "cat": "germs",
       "kind": "news",
-      "title": "Paramore's Hayley Williams Makes Unexpected Move Into Hardcore, Recruits '90s Alternative Legends",
-      "url": "https://www.vice.com/en/article/paramores-hayley-williams-makes-unexpected-move-into-hardcore-recruits-90s-alternative-legends/",
-      "source": "VICE",
-      "publishedAt": "2026-11-18T11:50:00.000Z",
-      "latestAt": "2026-11-18T11:50:00.000Z",
-      "firstSeenAt": "2026-11-18T12:04:44.262Z",
+      "title": "New bird flu restrictions to come into force across Ireland as risk increases",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPMUpBWnpLaTBWNEs5VlcweUo1djNTMFZTRGZtUHJNeGk5d185RFBtMHZrTGM5dzgwZDlVckNXcVBWcjZ1N2VjQVY4NkNoTkxPV1BiZ1FZNnB5Z09UM2ZURmNHN0Z5V1N5bFFJd21QZ1pkR1JES1lpSlBwaGtScFRYQ0F6TzNrT19kNW5Wc2ZGRmRFTHJybUdjME9ZY1Z5YWh2OTl5c1NOSzVSSk1vbWVvSFdQTzdCemVuT1E?oc=5",
+      "source": "Ireland Live News",
+      "publishedAt": "2026-11-18T14:15:00.000Z",
+      "latestAt": "2026-11-18T14:15:00.000Z",
+      "firstSeenAt": "2026-11-18T14:20:15.679Z",
       "outlets": 1,
       "outletNames": [
-        "VICE"
+        "Ireland Live News"
       ],
-      "trending": 100,
-      "trendTerm": "hayley williams outbreak festival 2027",
+      "score": 1
+    },
+    {
+      "id": "595e33219591",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Cal-Maine bird flu finding in Florida to impact 1.4M laying hens",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZmctczV2d05lc0Q4MkhDZ25aZWJ4TU5OcVA4NG1kRWZENlNuY2FkbFFPaS1ILUtZcHFBMU45aVBRRXhrVGRjOEJ6WFQ4X3JuZ2ZSbHZDTFl1Qk5jZUFCTUZkV3pqeVRzczV5RFJIVjVIMzU3cXllTXBjRW42d1dBWVYyRTg1MG9UdnZrQnM2MzhwOHdkUkJOMk11WHlTSjJGUVBtdUdOTkVMT1A2dkE?oc=5",
+      "source": "Feedstuffs",
+      "publishedAt": "2026-11-18T14:12:52.000Z",
+      "latestAt": "2026-11-18T14:12:52.000Z",
+      "firstSeenAt": "2026-11-18T14:20:15.679Z",
+      "outlets": 1,
+      "outletNames": [
+        "Feedstuffs"
+      ],
       "score": 1
     },
     {
@@ -1637,22 +1661,6 @@
       "outlets": 1,
       "outletNames": [
         "Early Warning Network"
-      ],
-      "score": 1
-    },
-    {
-      "id": "1241207470c2",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Lidl recalls Dutch UHT milk but rules out dairy farm contamination",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQeS1YMXAwcmNlZWZTYzJXeWJ0WnNsdzNVYkhIaU14dGVRd3oyajFtSEJ1RjR4OHB5WlBoTW5fdGNsdk4wTWJSdkxGZEstT1ZmLUhxV0FkVno2NHBEXzNRMWRHUU4zeXRURzVDUExpclgxOUc1Z0VzM1FzLU9FSV96aVhnUnFhVkVtb3ZVTXphVHhrV3A4cG53anVJRElUOGQ3ei12d0dVaw?oc=5",
-      "source": "All about feed",
-      "publishedAt": "2026-11-18T08:00:00.000Z",
-      "latestAt": "2026-11-18T08:00:00.000Z",
-      "firstSeenAt": "2026-11-18T08:04:00.818Z",
-      "outlets": 1,
-      "outletNames": [
-        "All about feed"
       ],
       "score": 1
     },
@@ -1801,5 +1809,5 @@
       "score": 0.77
     }
   ],
-  "updatedAt": "2026-11-18T14:04:59.182Z"
+  "updatedAt": "2026-11-18T14:20:15.679Z"
 }
