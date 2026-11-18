@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-18T21:06:12.227Z",
+  "buildTime": "2026-11-18T21:21:17.183Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 16:06 ET",
+  "etStamp": "2026-11-18 16:21 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,16 +49,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1361,
-  "lastSuccessAt": "2026-11-18T21:06:12.227Z",
+  "headlinesRead": 1388,
+  "lastSuccessAt": "2026-11-18T21:21:17.183Z",
   "rollingFallback": false,
   "cats": {
     "weather": 4,
-    "flights": 27,
-    "grid": 7,
+    "flights": 26,
+    "grid": 8,
+    "internet": 12,
     "earth": 4,
     "hacks": 27,
-    "internet": 12,
     "markets": 4,
     "germs": 4,
     "sun": 4,
@@ -192,57 +192,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1066,
+      "count": 1073,
       "error": null,
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "bing": {
       "ok": true,
-      "count": 260,
-      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "count": 280,
+      "error": null,
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "gdelt": {
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "timeout",
-      "lastOkAt": "2026-11-18T12:49:51.661Z"
+      "error": "rate limited (HTTP 429)",
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "x": {
       "ok": true,
@@ -255,13 +255,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-18T21:06:12.227Z"
+      "lastOkAt": "2026-11-18T21:21:17.183Z"
     }
   },
   "stories": [
@@ -381,6 +381,25 @@
       "score": 3.78
     },
     {
+      "id": "21bac8019d5f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "PlayStation suffers major outage hours before \"GTA VI\" launch",
+      "url": "https://www.axios.com/2026/11/18/gta-6-playstation-psn-servers",
+      "source": "Axios",
+      "publishedAt": "2026-11-18T11:54:00.000Z",
+      "latestAt": "2026-11-18T21:19:11.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 4,
+      "outletNames": [
+        "LADbible",
+        "Axios",
+        "Hindustan Times",
+        "New Haven Register"
+      ],
+      "score": 3.66
+    },
+    {
       "id": "sig:quake:us7000tz37",
       "cat": "earth",
       "kind": "signal",
@@ -498,23 +517,6 @@
       "score": 2.57
     },
     {
-      "id": "21bac8019d5f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "PlayStation suffers major outage hours before \"GTA VI\" launch",
-      "url": "https://www.axios.com/2026/11/18/gta-6-playstation-psn-servers",
-      "source": "Axios",
-      "publishedAt": "2026-11-18T11:54:00.000Z",
-      "latestAt": "2026-11-18T20:27:08.000Z",
-      "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 2,
-      "outletNames": [
-        "LADbible",
-        "Axios"
-      ],
-      "score": 2.44
-    },
-    {
       "id": "4db48258ed66",
       "cat": "markets",
       "kind": "news",
@@ -566,7 +568,7 @@
       "publishedAt": "2026-11-18T17:35:06.000Z",
       "latestAt": "2026-11-18T19:11:21.000Z",
       "firstSeenAt": "2026-11-18T18:05:38.239Z",
-      "outlets": 8,
+      "outlets": 9,
       "outletNames": [
         "The Bristol Herald Courier",
         "Charlotte Observer",
@@ -575,9 +577,10 @@
         "Buffalo News",
         "Rome Sentinel",
         "KRDO",
-        "Roanoke Times"
+        "Roanoke Times",
+        "Arizona Daily Star"
       ],
-      "score": 3.97
+      "score": 4.13
     },
     {
       "id": "57fac22f9dc3",
@@ -617,26 +620,6 @@
       "score": 2.57
     },
     {
-      "id": "ce8c11435f3c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack on 178 organizations: Take these 5 steps to protect your credit card info",
-      "url": "https://www.oregonlive.com/nation/2026/11/cyberattack-on-178-organizations-take-these-5-steps-to-protect-your-credit-card-info.html",
-      "source": "OregonLive.com",
-      "publishedAt": "2026-11-17T21:11:00.000Z",
-      "latestAt": "2026-11-18T13:11:00.000Z",
-      "firstSeenAt": "2026-11-18T13:35:01.133Z",
-      "outlets": 5,
-      "outletNames": [
-        "OregonLive.com",
-        "NJ.com",
-        "cleveland.com",
-        "Syracuse.com",
-        "mlive"
-      ],
-      "score": 2.41
-    },
-    {
       "id": "754ee7b9cc1c",
       "cat": "hacks",
       "kind": "news",
@@ -653,6 +636,24 @@
         "IndexBox"
       ],
       "score": 2.32
+    },
+    {
+      "id": "82c364362378",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "China-linked hackers using AI model ARTEX to infiltrate banks, FBI warns",
+      "url": "https://www.yahoo.com/news/world/articles/china-linked-hackers-using-ai-153501063.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T07:35:00.000Z",
+      "latestAt": "2026-11-18T17:03:33.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 3,
+      "outletNames": [
+        "New York Post",
+        "AOL.com",
+        "Yahoo"
+      ],
+      "score": 2.2
     },
     {
       "id": "06f8e53677fb",
@@ -757,6 +758,23 @@
       "score": 1.89
     },
     {
+      "id": "480bb3968fed",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Are AI-driven outages the new normal?",
+      "url": "https://theweek.com/tech/are-ai-driven-outages-the-new-normal",
+      "source": "The Week",
+      "publishedAt": "2026-11-18T10:43:00.000Z",
+      "latestAt": "2026-11-18T10:43:00.000Z",
+      "firstSeenAt": "2026-11-18T19:05:52.949Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Week",
+        "YAHOO!"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "2f1dea9b0bc5",
       "cat": "sun",
       "kind": "news",
@@ -791,6 +809,23 @@
       "score": 1.72
     },
     {
+      "id": "4223afa583f9",
+      "cat": "grid",
+      "kind": "news",
+      "title": "San Francisco restaurant reopens with peanuts and battery lights as power outage drags on",
+      "url": "https://www.yahoo.com/news/articles/san-francisco-restaurant-reopens-peanuts-203900675.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T12:39:00.000Z",
+      "latestAt": "2026-11-18T20:39:00.000Z",
+      "firstSeenAt": "2026-11-18T21:21:17.183Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Yahoo News UK"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "e783ec869177",
       "cat": "weather",
       "kind": "news",
@@ -823,40 +858,6 @@
         "NEWS10 ABC"
       ],
       "score": 1.69
-    },
-    {
-      "id": "a8c964a8954b",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Falling tree causing Sandersville power outage, expected to last roughly 4 hours, city says",
-      "url": "https://www.yahoo.com/news/articles/falling-tree-causing-sandersville-power-141242121.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T06:12:00.000Z",
-      "latestAt": "2026-11-18T14:12:00.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 2,
-      "outletNames": [
-        "13WMAZ",
-        "Yahoo"
-      ],
-      "score": 1.65
-    },
-    {
-      "id": "7d17f91fdf18",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Cybersecurity expert sounds alarm over US infrastructure vulnerabilities amid widespread outages",
-      "url": "https://www.aol.com/articles/cybersecurity-expert-sounds-alarm-over-064822000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-17T22:48:00.000Z",
-      "latestAt": "2026-11-17T22:48:00.000Z",
-      "firstSeenAt": "2026-11-18T13:49:55.122Z",
-      "outlets": 2,
-      "outletNames": [
-        "AOL",
-        "Fox Business"
-      ],
-      "score": 1.5
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-18",
@@ -905,26 +906,6 @@
       }
     },
     {
-      "id": "645c1ca57fd1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA halts router installation following nationwide ground stop, root cause of issue unknown",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOWhrZWRiZnFKQ0dsVGxXS1NYV2J5Z1FPTFc4Q09VSmRXcGdFbTNIZDVqRmt6MVNtWkRnaVczYW5RX2pnLTZsY3NFbHhhc3N0TjMxd1FHUlhQcTdpSmxFd1FxWndwRk5sMk1pWi1XZkRHZ0d1cXc2V0xzZW03TjljVVlEMklyVnpzOTZDSHczWEhvdjhWbHVzcG1B0gGfAUFVX3lxTFA0RHV1NVV6TUFxM2hpUlRfWDBWM0luMjBrVG1UVFlxY1hlSXZBd2tNaF9nVGprVXRhVVJOY0YtNmtKMkhuV05fcUFMRllEem4zSklMd1AyZjBDZWlrRUZFRDRmTnRKX3FjTWl3ZGg1NmNXbkYzbG84RTk3YjZPNkNROGtEX0VrWGRBbWpUUUVzRVFiTnNXX0lXai1wN0FlRQ?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-17T21:10:00.000Z",
-      "latestAt": "2026-11-18T18:37:28.000Z",
-      "firstSeenAt": "2026-11-18T13:05:11.048Z",
-      "outlets": 5,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "6abc Philadelphia",
-        "WFXB",
-        "WMUR",
-        "CBC"
-      ],
-      "score": 3.42
-    },
-    {
       "id": "c0f7b49b2b66",
       "cat": "flights",
       "kind": "news",
@@ -943,6 +924,25 @@
       "score": 3.12
     },
     {
+      "id": "11f81094de77",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA issues ground stop for flights headed to DJT Airport in West Palm Beach",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQZ3AzRnJRN3NHOU10Tk16Y1FzMHQ2QmNPQjZDMElyRHN1dDRTQzNFbVpLN01paFVNUlIybjVPR19FS1o3TkdVZjdBcUszdi1kQzZRNWh5LUY4WlhTbGp3M2lXdTg2RG9rY1h2N3c1SzVTel9CQ3BnaGM3X1NubWp4dGVlQ2wwQTQzby1yLVQ4WWJtdEJ3UEZMYW5tTHMwYS1mQUcwMExGNTZ3WXl6U3poSndLY3FVaGZWYzUtUkJFX1lidkRzUktST0gyMkdkR3BNZjlyMnczY2UwWHJkaVdMZGRFTVJpd0QtMGNva0ZGYmo5bVZaeGprTjh3VVhCeEJJTnVpRWZZak5adjQ5dlE?oc=5",
+      "source": "WPEC",
+      "publishedAt": "2026-11-18T19:24:19.000Z",
+      "latestAt": "2026-11-18T20:37:10.000Z",
+      "firstSeenAt": "2026-11-18T19:35:58.704Z",
+      "outlets": 4,
+      "outletNames": [
+        "WPEC",
+        "cw34.com",
+        "WSMH",
+        "KVII"
+      ],
+      "score": 2.99
+    },
+    {
       "id": "2de833544a67",
       "cat": "flights",
       "kind": "news",
@@ -958,42 +958,6 @@
         "The American Bazaar"
       ],
       "score": 2.59
-    },
-    {
-      "id": "11f81094de77",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA issues ground stop for flights headed to DJT Airport in West Palm Beach",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQZ3AzRnJRN3NHOU10Tk16Y1FzMHQ2QmNPQjZDMElyRHN1dDRTQzNFbVpLN01paFVNUlIybjVPR19FS1o3TkdVZjdBcUszdi1kQzZRNWh5LUY4WlhTbGp3M2lXdTg2RG9rY1h2N3c1SzVTel9CQ3BnaGM3X1NubWp4dGVlQ2wwQTQzby1yLVQ4WWJtdEJ3UEZMYW5tTHMwYS1mQUcwMExGNTZ3WXl6U3poSndLY3FVaGZWYzUtUkJFX1lidkRzUktST0gyMkdkR3BNZjlyMnczY2UwWHJkaVdMZGRFTVJpd0QtMGNva0ZGYmo5bVZaeGprTjh3VVhCeEJJTnVpRWZZak5adjQ5dlE?oc=5",
-      "source": "WPEC",
-      "publishedAt": "2026-11-18T19:24:19.000Z",
-      "latestAt": "2026-11-18T20:36:26.000Z",
-      "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 3,
-      "outletNames": [
-        "WPEC",
-        "cw34.com",
-        "WSMH"
-      ],
-      "score": 2.58
-    },
-    {
-      "id": "82c364362378",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "China-linked hackers using AI model ARTEX to infiltrate banks, FBI warns",
-      "url": "https://www.yahoo.com/news/world/articles/china-linked-hackers-using-ai-153501063.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T07:35:00.000Z",
-      "latestAt": "2026-11-18T17:03:33.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 3,
-      "outletNames": [
-        "New York Post",
-        "AOL.com",
-        "Yahoo"
-      ],
-      "score": 2.2
     },
     {
       "id": "d6ded3c90ab3",
@@ -1140,7 +1104,7 @@
       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNUllSZGZ4MEo5cm5IODFIYUxrTFNKUU5EcFlMZ09TcVNxMHk3R3JkcHNTQ3R3cVVwaWhYWTFuQVczVWRYVHp1ZmFIbDllRDROTUQtUnp4SThiZkVsZk9QaldUcnhlV2lsdWtlWG00TTR1dW5hdkphQ3ZhaDN0RUJnX1IwVXRxVzR1YnBlSE5VSERUU2Rua1c3dkl0NXI2MDhFQWtKYmdjYmxqdW44bzNVTHJXVldmYUdCLXpVU2U0aTNpZVZiTF9ULTlRTDRlVUI3SFB4em41UXZiR200QnRia1hjckVfYjE0djRUOHJPaTdEQXdWNEFqM3lHQ0RqNGVCdm4wZGF0ZGU?oc=5",
       "source": "WKYC",
       "publishedAt": "2026-11-18T03:44:00.000Z",
-      "latestAt": "2026-11-18T09:10:29.000Z",
+      "latestAt": "2026-11-18T21:07:00.000Z",
       "firstSeenAt": "2026-11-18T09:19:10.968Z",
       "outlets": 2,
       "outletNames": [
@@ -1148,6 +1112,23 @@
         "FOX 8 News"
       ],
       "score": 1.81
+    },
+    {
+      "id": "2013f0dd5e3f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "A Scattered Spider hacker just got 6 years in a U.S. prison",
+      "url": "https://mashable.com/tech/scattered-spider-hacker-6-year-prison-sentence",
+      "source": "Mashable",
+      "publishedAt": "2026-11-18T12:35:00.000Z",
+      "latestAt": "2026-11-18T20:36:26.000Z",
+      "firstSeenAt": "2026-11-18T21:21:17.183Z",
+      "outlets": 2,
+      "outletNames": [
+        "Mashable",
+        "Mashable SEA"
+      ],
+      "score": 1.71
     },
     {
       "id": "67747255e4ae",
@@ -1201,6 +1182,23 @@
       "score": 1.68
     },
     {
+      "id": "a8c964a8954b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Falling tree causing Sandersville power outage, expected to last roughly 4 hours, city says",
+      "url": "https://www.yahoo.com/news/articles/falling-tree-causing-sandersville-power-141242121.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T06:12:00.000Z",
+      "latestAt": "2026-11-18T14:12:00.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 2,
+      "outletNames": [
+        "13WMAZ",
+        "Yahoo"
+      ],
+      "score": 1.65
+    },
+    {
       "id": "75fadd89e3ff",
       "cat": "grid",
       "kind": "news",
@@ -1233,6 +1231,23 @@
         "kare11.com"
       ],
       "score": 1.62
+    },
+    {
+      "id": "7d17f91fdf18",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Cybersecurity expert sounds alarm over US infrastructure vulnerabilities amid widespread outages",
+      "url": "https://www.aol.com/articles/cybersecurity-expert-sounds-alarm-over-064822000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-17T22:48:00.000Z",
+      "latestAt": "2026-11-17T22:48:00.000Z",
+      "firstSeenAt": "2026-11-18T13:49:55.122Z",
+      "outlets": 2,
+      "outletNames": [
+        "AOL",
+        "Fox Business"
+      ],
+      "score": 1.5
     },
     {
       "id": "31be995c85e2",
@@ -1927,22 +1942,6 @@
       "score": 0.99
     },
     {
-      "id": "3e8a11fcbb51",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Dow Jones Industrial Average Falls 1.5% in Tuesday Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBCbG5XRzVLRnFkMUZLTnpoZkJhQnJsNG9tTXZOUElvV0R2djA3Q3N1cjlYZUNlblZZWFlrNU4xQk80RUJxS1M1d0RqV051NUZadUV3VXN1eWladw?oc=5",
-      "source": "www.tokenpost.com",
-      "publishedAt": "2026-11-17T21:15:08.000Z",
-      "latestAt": "2026-11-17T21:15:08.000Z",
-      "firstSeenAt": "2026-11-17T21:47:22.431Z",
-      "outlets": 1,
-      "outletNames": [
-        "www.tokenpost.com"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "e992d2c7c73a",
       "cat": "space",
       "kind": "news",
@@ -1975,20 +1974,20 @@
       "score": 0.96
     },
     {
-      "id": "480bb3968fed",
-      "cat": "ai",
+      "id": "53d98e5bb450",
+      "cat": "markets",
       "kind": "news",
-      "title": "Are AI-driven outages the new normal?",
-      "url": "https://theweek.com/tech/are-ai-driven-outages-the-new-normal",
-      "source": "The Week",
-      "publishedAt": "2026-11-18T10:43:00.000Z",
-      "latestAt": "2026-11-18T10:43:00.000Z",
-      "firstSeenAt": "2026-11-18T19:05:52.949Z",
+      "title": "Citizens’ Assemblies may be political circuit breaker voters are looking for",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYllJeVdHYjB2Y3lMVmVwN1dkOUFGa3VjX1Uzckp3YTNMc051eUwxcEI3cF9TNWo4MHFnRGExVUpLNGoxWlJPUXR2eVl4aDlid0RtQ1l4N1NIVkRyRzVGYm1PZ2xrTDg3LVBLVGpkcnBYY3ItZWY2Wmk0WnhvWDhNU0xValBtWFFrT2lLV20zN2JxQ2RiWTlEajZUaE1CQzBnOUcyc21INVhwMlNCZkl3?oc=5",
+      "source": "Newsroom",
+      "publishedAt": "2026-11-18T16:00:00.000Z",
+      "latestAt": "2026-11-18T16:00:00.000Z",
+      "firstSeenAt": "2026-11-18T21:21:17.183Z",
       "outlets": 1,
       "outletNames": [
-        "The Week"
+        "Newsroom"
       ],
-      "score": 0.86
+      "score": 0.91
     },
     {
       "id": "f5c1e1351561",
