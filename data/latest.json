@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T01:37:01.007Z",
+  "buildTime": "2026-11-19T01:52:00.328Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 20:37 ET",
+  "etStamp": "2026-11-18 20:52 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,14 +49,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1335,
-  "lastSuccessAt": "2026-11-19T01:37:01.007Z",
+  "headlinesRead": 1334,
+  "lastSuccessAt": "2026-11-19T01:52:00.328Z",
   "rollingFallback": false,
   "cats": {
-    "internet": 9,
+    "internet": 10,
     "flights": 24,
     "hacks": 29,
-    "grid": 10,
+    "grid": 9,
     "earth": 4,
     "weather": 4,
     "germs": 4,
@@ -81,12 +81,12 @@
       "max24": 3.33
     },
     "asteroid": {
-      "des": "2026 WH",
-      "ld": 4.571,
-      "at": "2026-11-18T01:52:00.000Z",
-      "sizeM": 14,
-      "size": "a house",
-      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WH",
+      "des": "2026 WN",
+      "ld": 8.6,
+      "at": "2026-11-18T15:01:00.000Z",
+      "sizeM": 63.4,
+      "size": "a jumbo jet",
+      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WN",
       "upcoming": false
     },
     "faa": {
@@ -181,81 +181,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1021,
+      "count": 1020,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 278,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "hn": {
       "ok": true,
-      "count": 8,
+      "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T00:51:50.748Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "trends": {
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T01:37:01.007Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z"
     }
   },
   "stories": [
@@ -294,15 +293,16 @@
       "publishedAt": "2026-11-18T19:28:00.000Z",
       "latestAt": "2026-11-18T19:35:48.000Z",
       "firstSeenAt": "2026-11-18T19:50:59.365Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "iHeart",
         "94.5 WPTI",
         "1490 WMRN",
         "1430 KASI",
-        "570 WSYR"
+        "570 WSYR",
+        "Talk Radio 98.3 WLAC"
       ],
-      "score": 4.62
+      "score": 4.99
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-18",
@@ -448,7 +448,7 @@
       "publishedAt": "2026-11-18T08:41:00.000Z",
       "latestAt": "2026-11-18T22:13:56.000Z",
       "firstSeenAt": "2026-11-18T22:06:23.492Z",
-      "outlets": 9,
+      "outlets": 11,
       "outletNames": [
         "Reuters",
         "Investing.com",
@@ -458,9 +458,11 @@
         "The Lufkin Daily News",
         "WTVB",
         "U.S. News Money",
-        "WHTC"
+        "WHTC",
+        "Merced Sun-Star",
+        "Myrtle Beach Sun News"
       ],
-      "score": 3.24
+      "score": 3.46
     },
     {
       "id": "106829ca41b5",
@@ -470,17 +472,43 @@
       "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQWmlJbVZSUi0tbmxoYUMtVHhSbENpOEZ1UVdRS0ctaXlhazB1cmp1LXdHWWZkWmZrU1U0VWxKZHJuSElrSG51YmtkeUdCT0pqcFBrUWxuMGwwa2s1U0E1dVN2dXV3UkpCYUJUUmlULUFkcVhqeEJKOV9ubjhnOUFUSHE0LTNmM21INTZnU21MeFNWeVppMWJGeXdLRHh6R0RKZ000cS1Xc29sbHBLaHBET3lnYndSSGFSQ1B6dmdEQWExOXFjSGRqUGFzRHNWdzNZUE8xSndpVkNudW02bHVOS1dPclRIdWVBUWVucDJQa3kxRGJaWklZdkpn?oc=5",
       "source": "The Lufkin Daily News",
       "publishedAt": "2026-11-18T15:12:00.000Z",
-      "latestAt": "2026-11-19T00:22:54.000Z",
+      "latestAt": "2026-11-19T01:32:00.000Z",
       "firstSeenAt": "2026-11-19T01:07:01.471Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "The Lufkin Daily News",
         "The Straits Times",
         "The Jerusalem Post",
         "Insurance Journal",
-        "CNET"
+        "CNET",
+        "The Japan Times"
       ],
-      "score": 2.77
+      "score": 2.99
+    },
+    {
+      "id": "eab6cea32a4e",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Widespread outage hits Apple services, including Apple Pay, iCloud",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZnRYQzl5TXRuOHFmajVpaW01eHJBdVZSTHRRYVo3Zk40alVOb2hOeFZQaGcxUzd2Mzl1clJTSkZBWml3eDhQd2RVLUtwbEhMX082d3c3NGk4ZzdBU1Y3cmRDSGFRbFRHNFBFOXRfOG9jdTFSMTFnZF9aRTQ0aHhTd2N3TU16anFOazJ6YTFCdXdSby1CRERjSWhHMkxpYlNQdGhqM2NZekdJRF9UMF9F?oc=5",
+      "source": "KJCT",
+      "publishedAt": "2026-11-18T03:14:13.000Z",
+      "latestAt": "2026-11-18T15:26:53.000Z",
+      "firstSeenAt": "2026-11-19T01:52:00.328Z",
+      "outlets": 10,
+      "outletNames": [
+        "KJCT",
+        "Moneycontrol.com",
+        "Business Today",
+        "ETV Bharat",
+        "Analytics Insight",
+        "NDTV",
+        "news8000.com",
+        "Qazinform",
+        "ColombiaOne.com",
+        "Tech Edition"
+      ],
+      "score": 2.69
     },
     {
       "id": "4bd6ee47e88c",
@@ -517,23 +545,6 @@
         "The Cool Down"
       ],
       "score": 2.21
-    },
-    {
-      "id": "e6ad68ef594c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Thunderstorms and hail forecast for Essex as cold snap set to continue",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG03NllxV0VibWlwY2c5a3lERzYzOG55cHdMRmtnNzlPMm9lay1LdTJjUjlqdVRPRGEzWnM4X0lSVXJBdElRcWlNYjlSVEFLeXNobHI0QTd4OTV4ekIxZGpHWG1UR1dsSTBpWkFiYWEwNjBlMkxTZmxpWTRvYV8zVE1vbm1NUVc0QlgzVXFTa1l3eVJTN2Z2cGhlUXV3TkJOSWo4YU5OQ0UzSGZLUWJuY0stbw?oc=5",
-      "source": "Harwich and Manningtree Standard",
-      "publishedAt": "2026-11-18T16:30:00.000Z",
-      "latestAt": "2026-11-18T16:30:00.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 2,
-      "outletNames": [
-        "Harwich and Manningtree Standard",
-        "Thurrock Gazette"
-      ],
-      "score": 2
     },
     {
       "id": "sig:faa-stop:FLL:2026-11-18",
@@ -659,6 +670,23 @@
         "Yahoo"
       ],
       "score": 2.34
+    },
+    {
+      "id": "e6ad68ef594c",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Thunderstorms and hail forecast for Essex as cold snap set to continue",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG03NllxV0VibWlwY2c5a3lERzYzOG55cHdMRmtnNzlPMm9lay1LdTJjUjlqdVRPRGEzWnM4X0lSVXJBdElRcWlNYjlSVEFLeXNobHI0QTd4OTV4ekIxZGpHWG1UR1dsSTBpWkFiYWEwNjBlMkxTZmxpWTRvYV8zVE1vbm1NUVc0QlgzVXFTa1l3eVJTN2Z2cGhlUXV3TkJOSWo4YU5OQ0UzSGZLUWJuY0stbw?oc=5",
+      "source": "Harwich and Manningtree Standard",
+      "publishedAt": "2026-11-18T16:30:00.000Z",
+      "latestAt": "2026-11-18T16:30:00.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 2,
+      "outletNames": [
+        "Harwich and Manningtree Standard",
+        "Thurrock Gazette"
+      ],
+      "score": 2
     },
     {
       "id": "ee5091b344ef",
@@ -848,23 +876,6 @@
       "outletNames": [
         "WKRN Nashville on MSN",
         "WKRN News 2"
-      ],
-      "score": 1.69
-    },
-    {
-      "id": "711e5e78a7e4",
-      "cat": "grid",
-      "kind": "news",
-      "title": "8,000 customers lose power in Ulster County",
-      "url": "https://www.timesunion.com/news/article/power-woodstock-kingston-saugerties-22537071.php",
-      "source": "Times Union",
-      "publishedAt": "2026-11-18T05:18:00.000Z",
-      "latestAt": "2026-11-18T14:19:28.000Z",
-      "firstSeenAt": "2026-11-18T14:35:04.258Z",
-      "outlets": 2,
-      "outletNames": [
-        "Times Union",
-        "NEWS10 ABC"
       ],
       "score": 1.69
     },
@@ -1155,6 +1166,23 @@
       "outletNames": [
         "YAHOO!",
         "Yahoo Tech"
+      ],
+      "score": 1.69
+    },
+    {
+      "id": "711e5e78a7e4",
+      "cat": "grid",
+      "kind": "news",
+      "title": "8,000 customers lose power in Ulster County",
+      "url": "https://www.timesunion.com/news/article/power-woodstock-kingston-saugerties-22537071.php",
+      "source": "Times Union",
+      "publishedAt": "2026-11-18T05:18:00.000Z",
+      "latestAt": "2026-11-18T14:19:28.000Z",
+      "firstSeenAt": "2026-11-18T14:35:04.258Z",
+      "outlets": 2,
+      "outletNames": [
+        "Times Union",
+        "NEWS10 ABC"
       ],
       "score": 1.69
     },
@@ -1502,22 +1530,6 @@
       "score": 1.4
     },
     {
-      "id": "7cc661f95e2d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Target 178 Major Websites to Steal Cryptocurrency, Sensitive Data",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQWg2LVBIUEh6Um4xM3JNRmNoMEhlLURQLS1WSUo4aFVrMERickxOOUJPaVNhdTJKak9ibDZJeVR6UG50VGdtNFFMalk4cXNaeW9wOUF2algza0ZXeVdNVG8zZlo5LTVrWVB2X2twYWhRb3VUckJKNm4zUVpPX2ZDa2NzTU9CVC1QVzl5dUxWZUpCSVB1WDlzalZfWmd2Yk0yTUlpaWdSRUcteXhqbEprMURQYw?oc=5",
-      "source": "The Shillong Times",
-      "publishedAt": "2026-11-18T01:51:58.000Z",
-      "latestAt": "2026-11-18T01:51:58.000Z",
-      "firstSeenAt": "2026-11-18T02:03:02.134Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Shillong Times"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "81df56615633",
       "cat": "internet",
       "kind": "news",
@@ -1760,18 +1772,18 @@
       "score": 1.38
     },
     {
-      "id": "db973a5508b2",
-      "cat": "grid",
+      "id": "99346ea6e246",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Winds cause massive power outage across Casper",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQaGFDLWRsU0ZMaUtxSkRaSmhqbVRrbkp0cEljTXF2VDNsc3dVWmljSjJteWRER0JrTTEzQ1NpbmV3Y3htM2Y5YUZ5U3kySU9OZlBsaGhaRUVBNmNtN1FGaTJWTEtOTGczUjV6bi05Z1haV0M5bXNSM0lTZDM0Q285aXJjdW5vYWxmNHlXUDVHUi16NGNWanhQMFlBbVdRTmxHRE1lTkUtX1ZtZk0wN19mNGFZN2dHMURWR216bFhmb0xCYVdTVjZsS0hlN2E2elhSTEhFdUtR?oc=5",
-      "source": "Your Wyoming Link",
-      "publishedAt": "2026-11-18T22:39:00.000Z",
-      "latestAt": "2026-11-18T22:39:00.000Z",
-      "firstSeenAt": "2026-11-19T01:37:01.007Z",
+      "title": "Bank Glitches And A Massive Cyberattack Put Americans’ Money And Personal Data On Alert",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY214M3Y2QXJzZm82Wksya091R3J3T2JmRWhGcTk0dkc4Qk84QXd4LTVYOVpPZ2pwU0llQjg2dDNvazdVdGJQd0U1WERMaVZWSi1PU0N2V2pCU0gtbDVwSlZKRzAzbUY5cjFBSllWWnhnS1VVR0ZGSDVoaG41TkQxZ0xhcks?oc=5",
+      "source": "Black Enterprise",
+      "publishedAt": "2026-11-18T22:54:26.000Z",
+      "latestAt": "2026-11-18T22:54:26.000Z",
+      "firstSeenAt": "2026-11-19T01:52:00.328Z",
       "outlets": 1,
       "outletNames": [
-        "Your Wyoming Link"
+        "Black Enterprise"
       ],
       "score": 1.33
     },
