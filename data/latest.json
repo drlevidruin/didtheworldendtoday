@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T18:09:44.298Z",
+  "buildTime": "2026-11-19T18:24:46.059Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 13:09 ET",
+  "etStamp": "2026-11-19 13:24 ET",
   "score": 84,
   "fired": [
     "flights",
@@ -55,13 +55,13 @@
     "date": "2026-11-19",
     "score": 84
   },
-  "headlinesRead": 1220,
-  "lastSuccessAt": "2026-11-19T18:09:44.298Z",
+  "headlinesRead": 1188,
+  "lastSuccessAt": "2026-11-19T18:24:46.059Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 20,
+    "flights": 19,
     "hacks": 36,
-    "internet": 12,
+    "internet": 13,
     "sun": 4,
     "earth": 4,
     "germs": 4,
@@ -97,7 +97,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 2,
+      "groundDelays": 3,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -186,81 +186,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 962,
+      "count": 960,
       "error": null,
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "bing": {
       "ok": true,
-      "count": 226,
-      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "count": 194,
+      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-19T17:54:41.598Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-19T17:24:34.573Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "trends": {
       "ok": true,
       "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T18:09:44.298Z"
+      "lastOkAt": "2026-11-19T18:24:46.059Z"
     }
   },
   "stories": [
@@ -365,7 +364,7 @@
       "url": "https://www.reuters.com/legal/government/jpmorgan-says-third-party-vendors-targeted-cyberattack-2026-11-19/",
       "source": "Reuters",
       "publishedAt": "2026-11-19T00:53:00.000Z",
-      "latestAt": "2026-11-19T18:00:37.000Z",
+      "latestAt": "2026-11-19T18:23:27.000Z",
       "firstSeenAt": "2026-11-19T14:09:00.345Z",
       "outlets": 32,
       "outletNames": [
@@ -402,6 +401,7 @@
         "The Wall Street Journal",
         "WSJ"
       ],
+      "xUrl": "https://x.com/Reuters/status/2123471424249532531",
       "score": 4.67
     },
     {
@@ -439,26 +439,24 @@
       "score": 4.43
     },
     {
-      "id": "21ec90f1e9d6",
+      "id": "bab44e1adaa9",
       "cat": "flights",
       "kind": "news",
-      "title": "US Plans to Announce Cause of Outage That Led to Nationwide Ground Stop, FAA Says",
-      "url": "https://www.usnews.com/news/world/articles/2026-11-19/us-plans-to-announce-cause-of-outage-that-led-to-nationwide-ground-stop-faa-says",
-      "source": "U.S. News & World Report",
-      "publishedAt": "2026-11-18T23:59:00.000Z",
-      "latestAt": "2026-11-19T17:03:54.000Z",
-      "firstSeenAt": "2026-11-19T15:39:19.020Z",
-      "outlets": 7,
+      "title": "Sources dispute FAA’s account of oversight before nationwide ground stop",
+      "url": "https://www.scrippsnews.com/us-news/sources-dispute-faas-account-of-oversight-before-nationwide-ground-stop",
+      "source": "Scripps News",
+      "publishedAt": "2026-11-19T05:09:00.000Z",
+      "latestAt": "2026-11-19T15:38:32.000Z",
+      "firstSeenAt": "2026-11-19T13:23:53.347Z",
+      "outlets": 5,
       "outletNames": [
-        "Reuters",
-        "The Straits Times",
-        "U.S. News & World Report",
-        "Internazionale",
-        "www.marketscreener.com",
-        "Devdiscourse",
-        "The News Tribune"
+        "KPAX News",
+        "Scripps News",
+        "LEX 18 News",
+        "WTKR",
+        "WPTV"
       ],
-      "score": 3.94
+      "score": 4.01
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -649,23 +647,26 @@
       "score": 4.35
     },
     {
-      "id": "bab44e1adaa9",
+      "id": "21ec90f1e9d6",
       "cat": "flights",
       "kind": "news",
-      "title": "Sources dispute FAA’s account of oversight before nationwide ground stop",
-      "url": "https://www.scrippsnews.com/us-news/sources-dispute-faas-account-of-oversight-before-nationwide-ground-stop",
-      "source": "Scripps News",
-      "publishedAt": "2026-11-19T05:09:00.000Z",
-      "latestAt": "2026-11-19T15:38:32.000Z",
-      "firstSeenAt": "2026-11-19T13:23:53.347Z",
-      "outlets": 4,
+      "title": "US Plans to Announce Cause of Outage That Led to Nationwide Ground Stop, FAA Says",
+      "url": "https://www.usnews.com/news/world/articles/2026-11-19/us-plans-to-announce-cause-of-outage-that-led-to-nationwide-ground-stop-faa-says",
+      "source": "U.S. News & World Report",
+      "publishedAt": "2026-11-18T23:59:00.000Z",
+      "latestAt": "2026-11-19T17:03:54.000Z",
+      "firstSeenAt": "2026-11-19T15:39:19.020Z",
+      "outlets": 7,
       "outletNames": [
-        "KPAX News",
-        "Scripps News",
-        "LEX 18 News",
-        "WTKR"
+        "Reuters",
+        "The Straits Times",
+        "U.S. News & World Report",
+        "Internazionale",
+        "www.marketscreener.com",
+        "Devdiscourse",
+        "The News Tribune"
       ],
-      "score": 3.62
+      "score": 3.94
     },
     {
       "id": "f4a81b953bee",
@@ -740,7 +741,7 @@
       "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
       "source": "ABC News",
       "publishedAt": "2026-11-18T22:39:00.000Z",
-      "latestAt": "2026-11-19T18:01:25.000Z",
+      "latestAt": "2026-11-19T18:11:34.000Z",
       "firstSeenAt": "2026-11-19T14:54:09.172Z",
       "outlets": 13,
       "outletNames": [
@@ -1158,23 +1159,6 @@
       "score": 1.99
     },
     {
-      "id": "8849b7000e32",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ransomware attack exposes customer data linked to Visa, Mastercard, JPMorgan Chase: Report",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOb3Z2Rnd6TzRQVUpkYlFONEV5bS1qb201ekUzZ2JTUHNHZi1ldkg3RlFna3hUbFdQSzFHc3BJUzdGRE1kMmEySGNTWnRQMVI0LXVCenFqMEo2eEI2dWhZQjlUWWVnS3NVX3RJdXVZSmJFNk1pV1lJWnpGV3ZLNDRFeTd4MXhuZ3JWZW9Xa2M0aTRieUV2NXh4cmVrdjdvaEs0UThCQ3hKcWd3czNMOEdzS0JmMWtzXzJjNHlWdElERmQ4Zk9x?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-19T16:53:14.000Z",
-      "latestAt": "2026-11-19T17:45:00.000Z",
-      "firstSeenAt": "2026-11-19T17:54:41.598Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "TriYakNews.com"
-      ],
-      "score": 1.97
-    },
-    {
       "id": "25a50fff8a1a",
       "cat": "hacks",
       "kind": "news",
@@ -1233,7 +1217,7 @@
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVWFyajRZNkJBOUU3TUt4SkVpUzB3TTdrc09yUmlFc09yTmY3TVVPSXl1eW5DckFBcXBLRWhUUTNZbGdyVE54N294bGo5eVExeGlDWjdQTTNWN3ozcTR6TnlBQ1dxeGM5azZDZmhDUzRzRmtLRVA1cV9xZTZPTHFuZ283anVYWmfSAYwBQVVfeXFMUGZkRDcwNUc3NnN6RHJWVkd6R0xGcDl3QWptOXZhQ2ZhWm1hNy1FeVVfWDlEWWRxTUljdmRaVVhtYUstaFlyLUxRMDJsNDVvZG5meGR3RERGTzlnQjhGUzJzQl9hdFVjMzNTNVlpTV92djlGck1sWDVDZ1VFTGZfSlprR2ZpYTRWa0k1NHU?oc=5",
       "source": "NewsNation",
       "publishedAt": "2026-11-19T15:21:19.000Z",
-      "latestAt": "2026-11-19T15:23:13.000Z",
+      "latestAt": "2026-11-19T17:50:58.000Z",
       "firstSeenAt": "2026-11-19T17:39:41.337Z",
       "outlets": 2,
       "outletNames": [
@@ -1399,6 +1383,23 @@
       "score": 1.8
     },
     {
+      "id": "a336b1fb73df",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Leak Stolen JPMorgan Data Exposing Wealthy Clients’ Private Information",
+      "url": "https://www.gadgetreview.com/hackers-leak-stolen-jpmorgan-data-exposing-wealthy-clients-private-information",
+      "source": "Gadget Review",
+      "publishedAt": "2026-11-19T10:11:00.000Z",
+      "latestAt": "2026-11-19T18:11:54.000Z",
+      "firstSeenAt": "2026-11-19T18:24:46.059Z",
+      "outlets": 2,
+      "outletNames": [
+        "Gadget Review",
+        "Yahoo"
+      ],
+      "score": 1.73
+    },
+    {
       "id": "dd2857255f06",
       "cat": "hacks",
       "kind": "news",
@@ -1465,23 +1466,6 @@
         "Newser"
       ],
       "score": 1.7
-    },
-    {
-      "id": "0a1777a2bb26",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Governments Urge Immediate Patching of Critical Java Flaw That Could Let Hackers Take Over Servers",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQT2Z0cjdmakozNzRWU2lPUlZiRDFSQjd2ZEdGMldXdGhUb0lIMnJkRHQtYnh6ODZNWFhwamE3QXRHYm9TMnhKYV9MSVNaZjlvMW13ZXROX2NtTGxtVDY1TjVOOFZWUkdDNkwwanlmYjlBOHJUYnpSR1JxWXdzTktGSnp0OUttd3lmaGdMZms1YXZKdzBVVzVPTGFvcTBQeTdFNjE2dTVkY18?oc=5",
-      "source": "Yahoo Tech",
-      "publishedAt": "2026-11-18T18:24:10.000Z",
-      "latestAt": "2026-11-19T05:17:23.000Z",
-      "firstSeenAt": "2026-11-19T05:52:35.070Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Tech",
-        "TechCentral"
-      ],
-      "score": 1.62
     },
     {
       "id": "e358feae5cc2",
@@ -1757,22 +1741,6 @@
       "score": 1.39
     },
     {
-      "id": "b953e02c7f86",
-      "cat": "flights",
-      "kind": "news",
-      "title": "AOPA Urges FAA to Clarify Ground Stop Rules for GA Pilots After Nov. 13 Nationwide Halt",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5aX1ktM3dMYkZpRVNxOEtRQ096RHdOY1JENjRZd28xd1dMQW5IR1BwcElfT2FMUnozX0Y3SkQtQlJMTlNCQXp2aTRHdGhTV1FDYnpYSXdCSjZlY0JUZWh4OGtUc2dRYk1XNzdqeXBjQkNNU0E?oc=5",
-      "source": "Avi-Go",
-      "publishedAt": "2026-11-18T18:19:37.000Z",
-      "latestAt": "2026-11-18T18:19:37.000Z",
-      "firstSeenAt": "2026-11-18T18:35:48.656Z",
-      "outlets": 1,
-      "outletNames": [
-        "Avi-Go"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "4af7cf3b5655",
       "cat": "hacks",
       "kind": "news",
@@ -1835,6 +1803,38 @@
         "Techno-Science"
       ],
       "score": 1.32
+    },
+    {
+      "id": "99346ea6e246",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Bank Glitches And A Massive Cyberattack Put Americans’ Money And Personal Data On Alert",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY214M3Y2QXJzZm82Wksya091R3J3T2JmRWhGcTk0dkc4Qk84QXd4LTVYOVpPZ2pwU0llQjg2dDNvazdVdGJQd0U1WERMaVZWSi1PU0N2V2pCU0gtbDVwSlZKRzAzbUY5cjFBSllWWnhnS1VVR0ZGSDVoaG41TkQxZ0xhcks?oc=5",
+      "source": "Black Enterprise",
+      "publishedAt": "2026-11-18T22:54:26.000Z",
+      "latestAt": "2026-11-18T22:54:26.000Z",
+      "firstSeenAt": "2026-11-19T03:22:20.740Z",
+      "outlets": 1,
+      "outletNames": [
+        "Black Enterprise"
+      ],
+      "score": 1.3
+    },
+    {
+      "id": "38b03f3c32dc",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Does Outlook Reliability Remain a Concern for Microsoft (NASDAQ:MSFT) Following a Two-Day Worldwide Outage?",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQU2dyVUNYMUs1a3VZT19iMWpxT01TSm10Z2c0eHFkSWVINVVwRHVYemVnMWJ1VjRqS2ZXM292ZG5ldTR1MTFkaHdSWk15VDNGb0pHVGk4RnBwb2R2RzUyTDB4Yk8wOG9FbU1WWFp0c294R0RBXzlzTXZGRmtGdzBLcnc5RlBUbWdKNXpES2xZN3YwMFZFOWo1bnAtT1ZBZkw5ZWVJTzNXTG9VdnlDUTNTVXYtblFlc3g4S1piMXdwOUpwMDVvUEM3WXpkZ2pWY25NRjdmcQ?oc=5",
+      "source": "kalkine.ca",
+      "publishedAt": "2026-11-19T12:39:00.000Z",
+      "latestAt": "2026-11-19T12:39:00.000Z",
+      "firstSeenAt": "2026-11-19T18:24:46.059Z",
+      "outlets": 1,
+      "outletNames": [
+        "kalkine.ca"
+      ],
+      "score": 1.27
     },
     {
       "id": "0690304d1415",
