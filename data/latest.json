@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T03:37:16.857Z",
+  "buildTime": "2026-11-19T03:52:16.778Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 22:37 ET",
+  "etStamp": "2026-11-18 22:52 ET",
   "score": 76,
   "fired": [
     "flights",
@@ -54,13 +54,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1343,
-  "lastSuccessAt": "2026-11-19T03:37:16.857Z",
+  "headlinesRead": 1336,
+  "lastSuccessAt": "2026-11-19T03:52:16.778Z",
   "rollingFallback": false,
   "cats": {
     "internet": 10,
-    "flights": 25,
-    "hacks": 30,
+    "flights": 26,
+    "hacks": 29,
     "grid": 8,
     "sun": 4,
     "earth": 4,
@@ -175,11 +175,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Myanmar faces historic genocide verdict at UN court over Rohingya massacres"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -191,57 +193,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1027,
+      "count": 1025,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     },
     "bing": {
       "ok": true,
-      "count": 279,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-19T03:22:20.740Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     },
     "x": {
       "ok": true,
@@ -254,13 +256,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T03:37:16.857Z"
+      "lastOkAt": "2026-11-19T03:52:16.778Z"
     }
   },
   "stories": [
@@ -668,24 +670,6 @@
       "score": 2.57
     },
     {
-      "id": "33855d636d61",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cuyahoga County Library data breach latest",
-      "url": "https://www.yahoo.com/news/videos/cuyahoga-county-library-data-breach-234900489.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T03:44:00.000Z",
-      "latestAt": "2026-11-18T23:57:45.000Z",
-      "firstSeenAt": "2026-11-18T09:19:10.968Z",
-      "outlets": 3,
-      "outletNames": [
-        "WKYC",
-        "FOX 8 News",
-        "Yahoo"
-      ],
-      "score": 2.34
-    },
-    {
       "id": "4223afa583f9",
       "cat": "grid",
       "kind": "news",
@@ -702,6 +686,24 @@
         "The Cool Down"
       ],
       "score": 2.21
+    },
+    {
+      "id": "82c364362378",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "China-linked hackers using AI model ARTEX to infiltrate banks, FBI warns",
+      "url": "https://www.yahoo.com/news/world/articles/china-linked-hackers-using-ai-153501063.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T07:35:00.000Z",
+      "latestAt": "2026-11-18T17:03:33.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 3,
+      "outletNames": [
+        "New York Post",
+        "AOL.com",
+        "Yahoo"
+      ],
+      "score": 2.2
     },
     {
       "id": "b276a3beefeb",
@@ -1014,24 +1016,6 @@
       "score": 2.4
     },
     {
-      "id": "82c364362378",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "China-linked hackers using AI model ARTEX to infiltrate banks, FBI warns",
-      "url": "https://www.yahoo.com/news/world/articles/china-linked-hackers-using-ai-153501063.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T07:35:00.000Z",
-      "latestAt": "2026-11-18T17:03:33.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 3,
-      "outletNames": [
-        "New York Post",
-        "AOL.com",
-        "Yahoo"
-      ],
-      "score": 2.2
-    },
-    {
       "id": "d6ded3c90ab3",
       "cat": "hacks",
       "kind": "news",
@@ -1082,6 +1066,23 @@
         "TradingView"
       ],
       "score": 1.95
+    },
+    {
+      "id": "59439d3db686",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Sources: FAA let contractors work without approval ahead of ground stop",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNM3lpZ19MeDNOd2FmRWxwWkZacTVEdmhpNjNNWGN1NmdmMUk0UWV4WUdwOFotTjBhTVVZTkdsZTY0cmhaS2VDaThZRTVMdlBRdEwweGo5SHlLQWQ4TkRvZGlmUm00eEJVeVR5VnBoZUZNMWkxUG5wSkJraE5Ldml1b3ZnUFJTakhVd0ZobjRKUW1LMFByT3gyZl9WTVlXMF9LYWFHUjhGSWlhZlpMZWY4T0thWUYxX3J6dlE?oc=5",
+      "source": "CNN",
+      "publishedAt": "2026-11-19T01:50:56.000Z",
+      "latestAt": "2026-11-19T03:30:00.000Z",
+      "firstSeenAt": "2026-11-19T03:52:16.778Z",
+      "outlets": 2,
+      "outletNames": [
+        "CNN",
+        "Modern Ghana"
+      ],
+      "score": 1.93
     },
     {
       "id": "7cfffc06879c",
