@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T10:08:18.528Z",
+  "buildTime": "2026-11-19T10:23:24.394Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 05:08 ET",
+  "etStamp": "2026-11-19 05:23 ET",
   "score": 82,
   "fired": [
     "flights",
@@ -55,14 +55,14 @@
     "date": "2026-11-19",
     "score": 82
   },
-  "headlinesRead": 1324,
-  "lastSuccessAt": "2026-11-19T10:08:18.528Z",
+  "headlinesRead": 1322,
+  "lastSuccessAt": "2026-11-19T10:23:24.394Z",
   "rollingFallback": false,
   "cats": {
     "internet": 9,
     "flights": 26,
-    "hacks": 27,
-    "grid": 7,
+    "hacks": 28,
+    "grid": 6,
     "sun": 4,
     "earth": 4,
     "germs": 7,
@@ -186,80 +186,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1009,
+      "count": 1011,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-19T09:53:18.441Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T10:08:18.528Z"
+      "lastOkAt": "2026-11-19T10:23:24.394Z"
     }
   },
   "stories": [
@@ -664,22 +665,22 @@
       "score": 2.57
     },
     {
-      "id": "d6ded3c90ab3",
+      "id": "abe5c8e58707",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers target big brands like McDonald’s, Bayer, CarMax in new phishing scam",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-target-big-brands-mcdonald-182500594.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-18T10:25:00.000Z",
-      "latestAt": "2026-11-18T18:25:00.000Z",
-      "firstSeenAt": "2026-11-18T20:36:11.081Z",
+      "title": "Ethiopian Airlines investigates data breach affecting its loyalty programme",
+      "url": "https://www.yahoo.com/news/world/articles/ethiopian-airlines-investigates-data-breach-092452393.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T01:25:00.000Z",
+      "latestAt": "2026-11-19T09:25:15.000Z",
+      "firstSeenAt": "2026-11-19T09:38:12.118Z",
       "outlets": 3,
       "outletNames": [
-        "YAHOO!",
-        "Yahoo Tech",
-        "TechRadar"
+        "Yahoo",
+        "marketscreener.com",
+        "TradingView"
       ],
-      "score": 2.15
+      "score": 2.23
     },
     {
       "id": "764933f8df5d",
@@ -700,6 +701,25 @@
       "score": 2.1,
       "quiet": true,
       "quietReason": "headline mentions tsunami"
+    },
+    {
+      "id": "595e33219591",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu at Cal-Maine site",
+      "url": "https://finance.yahoo.com/healthcare/articles/bird-flu-cal-maine-092118961.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-18T14:13:04.000Z",
+      "latestAt": "2026-11-19T09:23:10.000Z",
+      "firstSeenAt": "2026-11-19T09:38:12.118Z",
+      "outlets": 4,
+      "outletNames": [
+        "Feedstuffs",
+        "Insurance Journal",
+        "www.just-food.com",
+        "Yahoo Finance"
+      ],
+      "score": 2.03
     },
     {
       "id": "e6ad68ef594c",
@@ -753,23 +773,6 @@
       "score": 1.98
     },
     {
-      "id": "4aa2c778927e",
-      "cat": "grid",
-      "kind": "news",
-      "title": "UK power outage fears quashed as National Grid addresses viral post",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONkFSY09OcjRhQmlzWkFIbmU3LV9odTh5VG5RemFWVHNjRmhUNWdRSGI2dW1KZWVxeXp5OUJwQU5lbDJpeWRsamhfOXBTQzVCYS1RSm9KeXBQdW9SOUprb2g2UXR4Wjlzd1M4TjBMLWN2NVlpU0lIUnc2ODNlQzNhc1JXUzZVM0lIeUpua3FYaFJCTU5WbWc?oc=5",
-      "source": "The Independent",
-      "publishedAt": "2026-11-18T10:12:00.000Z",
-      "latestAt": "2026-11-18T10:12:56.000Z",
-      "firstSeenAt": "2026-11-18T10:49:28.324Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Independent",
-        "Newswav"
-      ],
-      "score": 1.98
-    },
-    {
       "id": "2241af500213",
       "cat": "grid",
       "kind": "news",
@@ -803,24 +806,6 @@
         "San Mateo Daily Journal"
       ],
       "score": 1.79
-    },
-    {
-      "id": "595e33219591",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Cal-Maine bird flu finding in Florida to impact 1.4M laying hens",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZmctczV2d05lc0Q4MkhDZ25aZWJ4TU5OcVA4NG1kRWZENlNuY2FkbFFPaS1ILUtZcHFBMU45aVBRRXhrVGRjOEJ6WFQ4X3JuZ2ZSbHZDTFl1Qk5jZUFCTUZkV3pqeVRzczV5RFJIVjVIMzU3cXllTXBjRW42d1dBWVYyRTg1MG9UdnZrQnM2MzhwOHdkUkJOMk11WHlTSjJGUVBtdUdOTkVMT1A2dkE?oc=5",
-      "source": "Feedstuffs",
-      "publishedAt": "2026-11-18T14:13:04.000Z",
-      "latestAt": "2026-11-19T09:23:10.000Z",
-      "firstSeenAt": "2026-11-19T09:38:12.118Z",
-      "outlets": 3,
-      "outletNames": [
-        "Feedstuffs",
-        "Insurance Journal",
-        "www.just-food.com"
-      ],
-      "score": 1.75
     },
     {
       "id": "9108809b983f",
@@ -889,6 +874,23 @@
       "outletNames": [
         "Yahoo",
         "BBC"
+      ],
+      "score": 1.71
+    },
+    {
+      "id": "2651d76e7c57",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Costco recalls whipped cream over possible cleaning chemical contamination",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT0ZoR3ZMaW1QVENidEpCUHpBbDJGZjVKV1RSNkRza0F6LW0yNFhWQlJuRUFRcE5POHBEdFZXbmhEYmtXanpvcEZ0dXJ0YkI0R1J5ck14YXdYWXAxS0dtcEpJckl1U0FfM2d5ZHFNVGIwb2xJclJSNmt0U0QwWUh6ZmZSRzdaZE9FeWpHUm9seFdHT1ExT0FLY3k1a1RqdE1TdDRNdDRVbXRXcWc2ckFjWkZWM1ZyUQ?oc=5",
+      "source": "Scripps News",
+      "publishedAt": "2026-11-18T14:27:19.000Z",
+      "latestAt": "2026-11-19T06:18:31.000Z",
+      "firstSeenAt": "2026-11-18T23:06:31.636Z",
+      "outlets": 2,
+      "outletNames": [
+        "Scripps News",
+        "Health.com"
       ],
       "score": 1.71
     },
@@ -995,15 +997,34 @@
       "publishedAt": "2026-11-18T10:42:31.000Z",
       "latestAt": "2026-11-19T06:25:46.000Z",
       "firstSeenAt": "2026-11-19T08:38:02.032Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "NBC News",
         "Travel Radar",
         "The Lufkin Daily News",
         "National News Desk",
-        "KTEN"
+        "KTEN",
+        "WTNH.com"
       ],
-      "score": 2.11
+      "score": 2.27
+    },
+    {
+      "id": "d6ded3c90ab3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers target big brands like McDonald’s, Bayer, CarMax in new phishing scam",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-target-big-brands-mcdonald-182500594.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-18T10:25:00.000Z",
+      "latestAt": "2026-11-18T18:25:00.000Z",
+      "firstSeenAt": "2026-11-18T20:36:11.081Z",
+      "outlets": 3,
+      "outletNames": [
+        "YAHOO!",
+        "Yahoo Tech",
+        "TechRadar"
+      ],
+      "score": 2.15
     },
     {
       "id": "102728239744",
@@ -1143,23 +1164,6 @@
       "score": 1.82
     },
     {
-      "id": "abe5c8e58707",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ethiopian Airlines investigates data breach affecting its loyalty programme",
-      "url": "https://www.yahoo.com/news/world/articles/ethiopian-airlines-investigates-data-breach-092452393.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T01:25:00.000Z",
-      "latestAt": "2026-11-19T09:25:15.000Z",
-      "firstSeenAt": "2026-11-19T09:38:12.118Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "marketscreener.com"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "2c22a206b68e",
       "cat": "hacks",
       "kind": "news",
@@ -1226,23 +1230,6 @@
         "Yahoo"
       ],
       "score": 1.72
-    },
-    {
-      "id": "2651d76e7c57",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Costco recalls whipped cream over possible cleaning chemical contamination",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT0ZoR3ZMaW1QVENidEpCUHpBbDJGZjVKV1RSNkRza0F6LW0yNFhWQlJuRUFRcE5POHBEdFZXbmhEYmtXanpvcEZ0dXJ0YkI0R1J5ck14YXdYWXAxS0dtcEpJckl1U0FfM2d5ZHFNVGIwb2xJclJSNmt0U0QwWUh6ZmZSRzdaZE9FeWpHUm9seFdHT1ExT0FLY3k1a1RqdE1TdDRNdDRVbXRXcWc2ckFjWkZWM1ZyUQ?oc=5",
-      "source": "Scripps News",
-      "publishedAt": "2026-11-18T14:27:19.000Z",
-      "latestAt": "2026-11-19T06:18:31.000Z",
-      "firstSeenAt": "2026-11-18T23:06:31.636Z",
-      "outlets": 2,
-      "outletNames": [
-        "Scripps News",
-        "Health.com"
-      ],
-      "score": 1.71
     },
     {
       "id": "fac1b4f5b370",
@@ -1368,16 +1355,18 @@
       "cat": "hacks",
       "kind": "news",
       "title": "British hackers face prison for GTA 6 data breach and crypto thefts",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQTWo5REZBZlZsZjNhREs3WVN6TUlHRmgyZlpvMHVJcHBSYWVjV043dzNreHlPSG9VM2NManhWWmlTZmdqMFJRcHRJVFM0eHJCb1owYWhrMXZ5SmhJVVRaTlc0MnM3OEFqQldfdjhtZHdhdzF0bE9VLXh2R1JXQ1hBVlVNNVJpVlljM2FjOXl1c0I4amVKWUlIeUZGLWQwSVNXbUp0TQ?oc=5",
+      "url": "https://techcrunch.com/2026/11/18/british-hackers-face-prison-for-gta-6-data-breach-and-crypto-thefts/",
       "source": "TechCrunch",
       "publishedAt": "2026-11-18T14:55:13.000Z",
-      "latestAt": "2026-11-19T04:39:57.000Z",
+      "latestAt": "2026-11-19T09:50:00.000Z",
       "firstSeenAt": "2026-11-19T08:23:02.458Z",
       "outlets": 2,
       "outletNames": [
         "TechCrunch",
         "Computing UK"
       ],
+      "trending": 1000,
+      "trendTerm": "spider",
       "score": 1.42
     },
     {
@@ -1809,6 +1798,22 @@
       "outlets": 1,
       "outletNames": [
         "Voice of Alexandria"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "d26557cf2595",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Keeper Security Launches Global Emergency Breach Response Service for Organisations Under Cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQTmNuNUZmeWFVbEQ3NHlpVG9NNXFiLWJ6Q2N2V2ltU3R3TC1nTzQwRDNKZ2VVdE1ueXJnNFFwVEw5LVpFZXQ2WHdDQlNieXRjUlB3WW14ODFWakFOVGZMZUlDNHRUUmtfdkRFcGVSaU51T2dfM3RzMG1yX0NlXzN6cWs2V2dlOGJ2cjhBNzdFSmFiWmJ0eXd5Q0lic0Y5a3B6dXRiNVEwTXp6VE5hNFROZ1ZpSWtWZWlmRHRnSWVVSnBrWkYzQy1ZX3hKODVzYjRCODFzSTRSUzJHVWdo?oc=5",
+      "source": "IT Security Guru",
+      "publishedAt": "2026-11-18T12:18:59.000Z",
+      "latestAt": "2026-11-18T12:54:48.000Z",
+      "firstSeenAt": "2026-11-18T12:34:56.272Z",
+      "outlets": 1,
+      "outletNames": [
+        "IT Security Guru"
       ],
       "score": 1.39
     },
