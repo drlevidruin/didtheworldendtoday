@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T09:53:18.441Z",
+  "buildTime": "2026-11-19T10:08:18.528Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 04:53 ET",
+  "etStamp": "2026-11-19 05:08 ET",
   "score": 82,
   "fired": [
     "flights",
@@ -55,8 +55,8 @@
     "date": "2026-11-19",
     "score": 82
   },
-  "headlinesRead": 1081,
-  "lastSuccessAt": "2026-11-19T09:53:18.441Z",
+  "headlinesRead": 1324,
+  "lastSuccessAt": "2026-11-19T10:08:18.528Z",
   "rollingFallback": false,
   "cats": {
     "internet": 9,
@@ -186,24 +186,24 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1004,
+      "count": 1009,
       "error": null,
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "bing": {
       "ok": true,
-      "count": 34,
-      "error": "5 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "count": 276,
+      "error": null,
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-19T09:53:18.441Z"
     },
@@ -211,56 +211,55 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T09:08:08.466Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T09:53:18.441Z"
+      "lastOkAt": "2026-11-19T10:08:18.528Z"
     }
   },
   "stories": [
@@ -274,7 +273,7 @@
       "publishedAt": "2026-11-18T11:28:00.000Z",
       "latestAt": "2026-11-19T05:34:57.000Z",
       "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 12,
+      "outlets": 13,
       "outletNames": [
         "LADbible",
         "Axios",
@@ -287,9 +286,10 @@
         "CT Insider",
         "Greenwich Time",
         "Dublin Live",
-        "ARYnews.tv"
+        "ARYnews.tv",
+        "MLQ.ai"
       ],
-      "score": 5.55
+      "score": 5.69
     },
     {
       "id": "57fac22f9dc3",
@@ -465,7 +465,7 @@
       "publishedAt": "2026-11-19T00:03:00.000Z",
       "latestAt": "2026-11-19T09:27:07.000Z",
       "firstSeenAt": "2026-11-19T08:38:02.032Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "Reuters",
         "StreetInsider",
@@ -473,9 +473,11 @@
         "Mezha.net",
         "The News International",
         "Times Now",
-        "The Next Web"
+        "The Next Web",
+        "@Reuters on X"
       ],
-      "score": 3.26
+      "xUrl": "https://x.com/Reuters/status/2123343058611671245",
+      "score": 3.43
     },
     {
       "id": "106829ca41b5",
@@ -1578,7 +1580,7 @@
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5DVjU0Mm5rZk1VVzJqUzdQVEF3aGJrQmQ0azFxdnB5dGV3eWVhSVZtdm9hVkJNai1RQzhzTHNnR2lHSkc1NDVrdjNBUlhZODhIMjBheGR1TVh0a2ZCVnA4eEZ3eWxHMTUzekJBZFJR?oc=5",
       "source": "AutoSpies",
       "publishedAt": "2026-11-18T13:37:33.000Z",
-      "latestAt": "2026-11-18T19:06:26.000Z",
+      "latestAt": "2026-11-19T09:07:09.000Z",
       "firstSeenAt": "2026-11-18T13:49:55.122Z",
       "outlets": 1,
       "outletNames": [
@@ -1911,22 +1913,6 @@
       "score": 0.99
     },
     {
-      "id": "4dfec3adfdb3",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Taiwan stocks plunge 1,768 points, 7th-largest closing drop",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5MOU9QenRXM1ZEMEZnNkI2X1FTcV9vbURkZUgwanV0bWUwV09JYmpOTkNZYUdNVEc3R0tpNm16WUxQbkxrWl9KUDA1Q1FvYWZaTTd0cEk1WQ?oc=5",
-      "source": "Focus Taiwan",
-      "publishedAt": "2026-11-19T08:54:00.000Z",
-      "latestAt": "2026-11-19T08:54:00.000Z",
-      "firstSeenAt": "2026-11-19T09:53:18.441Z",
-      "outlets": 1,
-      "outletNames": [
-        "Focus Taiwan"
-      ],
-      "score": 0.98
-    },
-    {
       "id": "e992d2c7c73a",
       "cat": "space",
       "kind": "news",
@@ -1989,6 +1975,22 @@
         "cwibc.co.id"
       ],
       "score": 0.94
+    },
+    {
+      "id": "53d98e5bb450",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Citizens’ Assemblies may be political circuit breaker voters are looking for",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYllJeVdHYjB2Y3lMVmVwN1dkOUFGa3VjX1Uzckp3YTNMc051eUwxcEI3cF9TNWo4MHFnRGExVUpLNGoxWlJPUXR2eVl4aDlid0RtQ1l4N1NIVkRyRzVGYm1PZ2xrTDg3LVBLVGpkcnBYY3ItZWY2Wmk0WnhvWDhNU0xValBtWFFrT2lLV20zN2JxQ2RiWTlEajZUaE1CQzBnOUcyc21INVhwMlNCZkl3?oc=5",
+      "source": "Newsroom",
+      "publishedAt": "2026-11-18T16:00:00.000Z",
+      "latestAt": "2026-11-18T16:00:00.000Z",
+      "firstSeenAt": "2026-11-18T21:21:17.183Z",
+      "outlets": 1,
+      "outletNames": [
+        "Newsroom"
+      ],
+      "score": 0.91
     },
     {
       "id": "51cf92d58310",
