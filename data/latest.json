@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T20:55:08.363Z",
+  "buildTime": "2026-11-19T21:10:13.240Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 15:55 ET",
+  "etStamp": "2026-11-19 16:10 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -50,12 +50,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1237,
-  "lastSuccessAt": "2026-11-19T20:55:08.363Z",
+  "headlinesRead": 432,
+  "lastSuccessAt": "2026-11-19T21:10:13.240Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
-    "hacks": 40,
+    "flights": 17,
+    "hacks": 39,
     "internet": 11,
     "sun": 4,
     "germs": 5,
@@ -77,8 +77,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 2.67,
-      "time": "2026-11-19T15:00:00.000Z",
+      "value": 3,
+      "time": "2026-11-19T18:00:00.000Z",
       "max24": 5
     },
     "asteroid": {
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 950,
-      "error": null,
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "count": 125,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     },
     "bing": {
       "ok": true,
-      "count": 253,
-      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "count": 273,
+      "error": null,
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-19T17:54:41.598Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T20:55:08.363Z"
+      "lastOkAt": "2026-11-19T21:10:13.240Z"
     }
   },
   "stories": [
@@ -1477,23 +1477,6 @@
       "score": 1.73
     },
     {
-      "id": "2c22a206b68e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Fort Smith mayoral candidates address cyberattack after city warns personal information may be exposed",
-      "url": "https://www.5newsonline.com/article/news/politics/elections/fort-smith-mayoral-candidates-address-cyberattack-city-warns-personal-information-may-be-exposed/527-7fd032b3-8249-4c62-89dc-fe1ee6b57a17",
-      "source": "5NEWS",
-      "publishedAt": "2026-11-18T21:00:00.000Z",
-      "latestAt": "2026-11-19T05:01:31.000Z",
-      "firstSeenAt": "2026-11-19T05:07:33.416Z",
-      "outlets": 2,
-      "outletNames": [
-        "5NEWS",
-        "5newsonline.com"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "51c34a76762f",
       "cat": "hacks",
       "kind": "news",
@@ -1825,6 +1808,22 @@
       "score": 1.39,
       "quiet": true,
       "quietReason": "headline mentions tornadoes"
+    },
+    {
+      "id": "ac8fef0be9f1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop put focus on air traffic controller shortages at Phoenix Sky Harbor, nationwide",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNamp4azdfZUV1TzgtTV85NXhvamtFeXk2RFNyY3RYM3ZQeFBLRTNJaDAySE4tYTlRa2pCMi15QWZnRmw1clVCcTFqT0xXV094MVJWOUtFdFd0Vno0YmFGZmwxd0Zxa2JLX0owNE1LWDloaktRR1JsandJVFhLRWJtTllWaUQtMGJLOG5MT2RiQkl4VWZ1aVhjOEhMbmRvRnJtS1FNRVpUUmk4Qkdla3dHNG12ZHFQWkJIZXRPcngxelc0eFRQVEVRMWJSTHdmdnE0Q0lzZ0ZCY2lfblZWNnpLS3BhNFJZcDVtOGowQkdFUlZSRDltRzVsUGt0NWlvRGdvaEtWRnlON1dCQnJaM29tRlhud0w?oc=5",
+      "source": "PinalCentral.com",
+      "publishedAt": "2026-11-19T03:05:03.000Z",
+      "latestAt": "2026-11-19T03:05:03.000Z",
+      "firstSeenAt": "2026-11-19T03:22:20.740Z",
+      "outlets": 1,
+      "outletNames": [
+        "PinalCentral.com"
+      ],
+      "score": 1.39
     },
     {
       "id": "be4676c173da",
