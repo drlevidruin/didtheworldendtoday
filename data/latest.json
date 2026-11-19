@@ -1,13 +1,14 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T06:52:52.904Z",
+  "buildTime": "2026-11-19T07:07:50.226Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 01:52 ET",
-  "score": 76,
+  "etStamp": "2026-11-19 02:07 ET",
+  "score": 82,
   "fired": [
     "flights",
     "hacks",
     "internet",
+    "space",
     "sun",
     "earth",
     "markets",
@@ -33,7 +34,7 @@
       "points": 6
     }
   ],
-  "change": 0,
+  "change": 6,
   "yesterday": {
     "date": "2026-11-18",
     "score": 76,
@@ -51,24 +52,24 @@
     ]
   },
   "record": {
-    "date": "2026-11-16",
-    "score": 80
+    "date": "2026-11-19",
+    "score": 82
   },
-  "headlinesRead": 1336,
-  "lastSuccessAt": "2026-11-19T06:52:52.904Z",
+  "headlinesRead": 1340,
+  "lastSuccessAt": "2026-11-19T07:07:50.226Z",
   "rollingFallback": false,
   "cats": {
     "internet": 9,
     "flights": 27,
-    "hacks": 32,
+    "hacks": 31,
     "grid": 6,
     "sun": 4,
     "earth": 4,
     "weather": 4,
     "germs": 4,
     "ai": 4,
-    "markets": 4,
-    "space": 2
+    "space": 3,
+    "markets": 4
   },
   "vital": {
     "quake": {
@@ -185,81 +186,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1017,
+      "count": 1021,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "bing": {
       "ok": true,
       "count": 281,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "timeout",
       "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T06:52:52.904Z"
+      "lastOkAt": "2026-11-19T07:07:50.226Z"
     }
   },
   "stories": [
@@ -1309,23 +1309,6 @@
       "score": 1.6
     },
     {
-      "id": "40ccf46e0106",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Fayetteville Public Library suffers data breach; unsure what information was accessed",
-      "url": "https://www.arkansasonline.com/news/2026/nov/18/fayetteville-public-library-suffers-data-breach/",
-      "source": "Arkansas Democrat-Gazette",
-      "publishedAt": "2026-11-18T07:00:00.000Z",
-      "latestAt": "2026-11-18T23:36:00.000Z",
-      "firstSeenAt": "2026-11-18T23:51:40.642Z",
-      "outlets": 2,
-      "outletNames": [
-        "Arkansas Democrat-Gazette",
-        "Northwest Arkansas Democrat-Gazette"
-      ],
-      "score": 1.44
-    },
-    {
       "id": "462895e441c2",
       "cat": "hacks",
       "kind": "news",
@@ -1833,13 +1816,65 @@
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPb3RMZHBYeS1UWUVDT1puVTZnWXRoSjRoTU5mWG5BWDRhcUlNdElCTnc3UktCbGpKbG51aTVaR2ROdm9TWDBCd2VUNTBXVUhBaUV5V2c2U21zQ0lmUzdJSGhTQkwyejdhTW1zYVhoTTlvdGZtUXZrSEg1aTVfVzVueWF0NWNWa3dxUTdGTEg1Slk4YWE2T2EzZXFXMVdzMUFXRTNQT1NkaW45bG1oRVRXbkg0LTVkVUROUG5JUXhYWHVTVGt3dFc3NmJDM2hfT3VQZ1hJd1VTVF9Gc0FrWWdaMTdB?oc=5",
       "source": "WINK News",
       "publishedAt": "2026-11-19T05:17:40.000Z",
-      "latestAt": "2026-11-19T05:17:40.000Z",
+      "latestAt": "2026-11-19T05:45:58.000Z",
       "firstSeenAt": "2026-11-19T06:22:43.821Z",
       "outlets": 1,
       "outletNames": [
         "WINK News"
       ],
       "score": 1.37
+    },
+    {
+      "id": "3f1e30319875",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Mandatory housing order issued in Ireland as bird flu risk ‘increasing’",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZTFsTDZhd25VSXR6cVQ3RDJQZ0tMcFl1dkJIMnljNzNmSzFWWUk3am03YVpvb090cWk1LXRHSjBsTUl5emhQZmU2VnFyczM3M0NiUzFHaGdYUWF0al9GVzloVTFhNlYwNnNFekJraFVTTEV6bUQ1a1pVeDAtSm81dmZhQmQ0VzNnZlNUMTY2Y01VdzJsdldQUWI3Sm1lT3J2aVRTWVB5LV9CcXc?oc=5",
+      "source": "www.irishpost.com",
+      "publishedAt": "2026-11-19T07:05:11.000Z",
+      "latestAt": "2026-11-19T07:05:11.000Z",
+      "firstSeenAt": "2026-11-19T07:07:50.226Z",
+      "outlets": 1,
+      "outletNames": [
+        "www.irishpost.com"
+      ],
+      "score": 1
+    },
+    {
+      "id": "51cf92d58310",
+      "cat": "space",
+      "kind": "news",
+      "title": "Mile-Wide Asteroid To Make Rare Earth Flyby, Scientists Say",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOR1JKSmI3OTQwVEFPV3NzOWRvV3VzWlJKS2lNQ0NQdVgwZ2RCV0lKM2RHeW1jRmpZYlhEZXY3SWRqcExJTmlDT0hUNzJTUW5mUFJSRDBpWWcxRXlaLWpQZUV1U0NpbnlMcklnTk13S0ZUWkpCLWFQZVVzdkVfaVRVWUlwTE9CWURJdkgtTnNXejRjZEdEVVVlVFItYnNRQU1Kc1gtajlPXy10d0ZJT1VyMEZtVGNBSnVv?oc=5",
+      "source": "Forbes",
+      "publishedAt": "2026-11-19T07:00:00.000Z",
+      "latestAt": "2026-11-19T07:00:00.000Z",
+      "firstSeenAt": "2026-11-19T07:07:50.226Z",
+      "outlets": 1,
+      "outletNames": [
+        "Forbes"
+      ],
+      "score": 1
+    },
+    {
+      "id": "8fd20ba09afb",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Atmospheric river could drop an inch of rain per hour across Los Angeles County, flood watch issued",
+      "url": "https://ktla.com/news/local-news/atmospheric-river-could-drop-an-inch-of-rain-per-hour-across-los-angeles-county-flood-watch-issued/",
+      "source": "KTLA",
+      "publishedAt": "2026-11-19T06:50:00.000Z",
+      "latestAt": "2026-11-19T06:50:00.000Z",
+      "firstSeenAt": "2026-11-19T07:07:50.226Z",
+      "outlets": 1,
+      "outletNames": [
+        "KTLA"
+      ],
+      "trending": 1000,
+      "trendTerm": "weather los angeles",
+      "score": 1,
+      "quiet": true,
+      "quietReason": "headline mentions flood"
     },
     {
       "id": "9c3ac932c4c4",
@@ -1854,42 +1889,6 @@
       "outlets": 1,
       "outletNames": [
         "Investing.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "32b6a6e7f5a0",
-      "cat": "weather",
-      "kind": "news",
-      "title": "SoCal storm timeline: First atmospheric river brings rain, flood risk",
-      "url": "https://www.foxla.com/news/southern-california-storm-timeline-rain-flood-risk",
-      "source": "FOX 11 Los Angeles",
-      "publishedAt": "2026-11-19T05:50:00.000Z",
-      "latestAt": "2026-11-19T05:50:00.000Z",
-      "firstSeenAt": "2026-11-19T06:07:40.718Z",
-      "outlets": 1,
-      "outletNames": [
-        "FOX 11 Los Angeles"
-      ],
-      "trending": 500,
-      "trendTerm": "los angeles weather",
-      "score": 1,
-      "quiet": true,
-      "quietReason": "headline mentions flood"
-    },
-    {
-      "id": "85aa4ba56ee9",
-      "cat": "germs",
-      "kind": "news",
-      "title": "More than 3000 bird flu tests carried out since July",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVXY4TnZHOExIU1dxMmRkeDJJUjJYbjExb0h1VmlyRnRIRFJxSTA3dERQMmJfM3FRb2NhTlNFN3pnMUJOQ3h5LXJvc212OW5PX3IyMzJkU2pVbnI2enJSemJNdjVaMWZ0ZjZRaW40ZGplekhHTGVadFBKcG0xSFdldUhWT0RrdnhTSGUxeTZRX3dWLXZQZGVTQUZCNmxCN0ZD?oc=5",
-      "source": "RNZ",
-      "publishedAt": "2026-11-19T04:30:48.000Z",
-      "latestAt": "2026-11-19T04:30:48.000Z",
-      "firstSeenAt": "2026-11-19T04:37:28.583Z",
-      "outlets": 1,
-      "outletNames": [
-        "RNZ"
       ],
       "score": 1
     },
