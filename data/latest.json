@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T08:38:02.032Z",
+  "buildTime": "2026-11-19T08:53:02.366Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 03:38 ET",
+  "etStamp": "2026-11-19 03:53 ET",
   "score": 82,
   "fired": [
     "flights",
@@ -55,8 +55,8 @@
     "date": "2026-11-19",
     "score": 82
   },
-  "headlinesRead": 1316,
-  "lastSuccessAt": "2026-11-19T08:38:02.032Z",
+  "headlinesRead": 314,
+  "lastSuccessAt": "2026-11-19T08:53:02.366Z",
   "rollingFallback": false,
   "cats": {
     "internet": 9,
@@ -190,16 +190,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 1007,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-19T08:38:02.032Z"
     },
     "bing": {
       "ok": true,
-      "count": 271,
+      "count": 276,
       "error": null,
-      "lastOkAt": "2026-11-19T08:38:02.032Z"
+      "lastOkAt": "2026-11-19T08:53:02.366Z"
     },
     "gdelt": {
       "ok": false,
@@ -211,37 +211,37 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T08:38:02.032Z"
+      "lastOkAt": "2026-11-19T08:53:02.366Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T08:38:02.032Z"
+      "lastOkAt": "2026-11-19T08:53:02.366Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T08:38:02.032Z"
+      "lastOkAt": "2026-11-19T08:53:02.366Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T08:38:02.032Z"
+      "lastOkAt": "2026-11-19T08:53:02.366Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T08:38:02.032Z"
+      "lastOkAt": "2026-11-19T08:53:02.366Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T08:38:02.032Z"
+      "lastOkAt": "2026-11-19T08:53:02.366Z"
     },
     "x": {
       "ok": true,
@@ -254,13 +254,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T08:38:02.032Z"
+      "lastOkAt": "2026-11-19T08:53:02.366Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T08:38:02.032Z"
+      "lastOkAt": "2026-11-19T08:53:02.366Z"
     }
   },
   "stories": [
@@ -454,32 +454,6 @@
       }
     },
     {
-      "id": "381bcabdef19",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Client files at KPMG Canada compromised in data breach, The Globe and Mail reports",
-      "url": "https://www.reuters.com/world/americas/client-files-kpmg-canada-compromised-data-breach-globe-mail-reports-2026-11-18/",
-      "source": "Reuters",
-      "publishedAt": "2026-11-18T08:41:00.000Z",
-      "latestAt": "2026-11-18T22:13:56.000Z",
-      "firstSeenAt": "2026-11-18T22:06:23.492Z",
-      "outlets": 11,
-      "outletNames": [
-        "Reuters",
-        "Investing.com",
-        "WNWN-FM",
-        "93.3 The Drive",
-        "TradingView",
-        "The Lufkin Daily News",
-        "WTVB",
-        "U.S. News Money",
-        "WHTC",
-        "Merced Sun-Star",
-        "Myrtle Beach Sun News"
-      ],
-      "score": 3.46
-    },
-    {
       "id": "106829ca41b5",
       "cat": "hacks",
       "kind": "news",
@@ -503,6 +477,23 @@
         "Al Arabiya English"
       ],
       "score": 3.13
+    },
+    {
+      "id": "3223634bacce",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "UK cyber incidents hit near-record high in October",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOOVpaaF9WYWpIN2RleW9tNUQtMTNTNm43T0ZkT1hXQU43MEg2dzUxMzZGVlNPTUpsM1ZQdUJ1YUpfak9TMERTUlRQWFJaSEU3eFNjMEtSMnJlQ2tReHVWSVZEdWtvUk5BMkQxa1NGaDliWjRNMlkxdy1iUnBUTUpNVU5NYlJUWEFQLUs3OF8wZFV1ajd5a0EwcXZ5ZFlvMWRaenE4MERzcGVmQQ?oc=5",
+      "source": "Investing.com",
+      "publishedAt": "2026-11-19T05:47:43.000Z",
+      "latestAt": "2026-11-19T05:59:35.000Z",
+      "firstSeenAt": "2026-11-19T05:52:35.070Z",
+      "outlets": 2,
+      "outletNames": [
+        "Investing.com",
+        "Investing.com Canada"
+      ],
+      "score": 2.8
     },
     {
       "id": "4bd6ee47e88c",
@@ -629,23 +620,6 @@
       }
     },
     {
-      "id": "3223634bacce",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK cyber incidents hit near-record high in October",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOOVpaaF9WYWpIN2RleW9tNUQtMTNTNm43T0ZkT1hXQU43MEg2dzUxMzZGVlNPTUpsM1ZQdUJ1YUpfak9TMERTUlRQWFJaSEU3eFNjMEtSMnJlQ2tReHVWSVZEdWtvUk5BMkQxa1NGaDliWjRNMlkxdy1iUnBUTUpNVU5NYlJUWEFQLUs3OF8wZFV1ajd5a0EwcXZ5ZFlvMWRaenE4MERzcGVmQQ?oc=5",
-      "source": "Investing.com",
-      "publishedAt": "2026-11-19T05:47:43.000Z",
-      "latestAt": "2026-11-19T05:59:35.000Z",
-      "firstSeenAt": "2026-11-19T05:52:35.070Z",
-      "outlets": 2,
-      "outletNames": [
-        "Investing.com",
-        "Investing.com Canada"
-      ],
-      "score": 2.8
-    },
-    {
       "id": "9f11549139fa",
       "cat": "hacks",
       "kind": "news",
@@ -751,6 +725,23 @@
         "Newswav"
       ],
       "score": 1.98
+    },
+    {
+      "id": "09dd38a6fe2c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Lyko has addressed a data breach in a limited part of its system",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVURBamVZSG9lMUNmYTRwd0VseVoydTM4YlluYlRiZlhsQ2ZVM292X0hBZ1FscVFXaGxMdVRic2xlM2ZNWE4zZm95SGJXQUo4eERYbi1tUU95c2JCNmdnV2IzOWZrbTFHRVY1WWJ5cWRJTU1lMmVCZTNOSmFDQVdCTUVKcUxtbGhFZ0U4aWJvb0dWWHVCcWtCcEd5YTdzRGpuaExldVVPTFdsd2VuaWdlWkVLaWxfSDZUZ3IxMnFucXY0S3ZtOG9iZnBn?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-18T16:28:00.000Z",
+      "latestAt": "2026-11-18T16:33:14.000Z",
+      "firstSeenAt": "2026-11-18T17:20:37.889Z",
+      "outlets": 2,
+      "outletNames": [
+        "TradingView",
+        "www.marketscreener.com"
+      ],
+      "score": 1.97
     },
     {
       "id": "2241af500213",
@@ -1002,23 +993,6 @@
         "KTEN"
       ],
       "score": 2.11
-    },
-    {
-      "id": "09dd38a6fe2c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Lyko has addressed a data breach in a limited part of its system",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVURBamVZSG9lMUNmYTRwd0VseVoydTM4YlluYlRiZlhsQ2ZVM292X0hBZ1FscVFXaGxMdVRic2xlM2ZNWE4zZm95SGJXQUo4eERYbi1tUU95c2JCNmdnV2IzOWZrbTFHRVY1WWJ5cWRJTU1lMmVCZTNOSmFDQVdCTUVKcUxtbGhFZ0U4aWJvb0dWWHVCcWtCcEd5YTdzRGpuaExldVVPTFdsd2VuaWdlWkVLaWxfSDZUZ3IxMnFucXY0S3ZtOG9iZnBn?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-18T16:28:00.000Z",
-      "latestAt": "2026-11-18T16:33:14.000Z",
-      "firstSeenAt": "2026-11-18T17:20:37.889Z",
-      "outlets": 2,
-      "outletNames": [
-        "TradingView",
-        "www.marketscreener.com"
-      ],
-      "score": 1.97
     },
     {
       "id": "9dd677152476",
@@ -1825,6 +1799,22 @@
         "WSJ"
       ],
       "score": 1.33
+    },
+    {
+      "id": "99346ea6e246",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Bank Glitches And A Massive Cyberattack Put Americans’ Money And Personal Data On Alert",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY214M3Y2QXJzZm82Wksya091R3J3T2JmRWhGcTk0dkc4Qk84QXd4LTVYOVpPZ2pwU0llQjg2dDNvazdVdGJQd0U1WERMaVZWSi1PU0N2V2pCU0gtbDVwSlZKRzAzbUY5cjFBSllWWnhnS1VVR0ZGSDVoaG41TkQxZ0xhcks?oc=5",
+      "source": "Black Enterprise",
+      "publishedAt": "2026-11-18T22:54:26.000Z",
+      "latestAt": "2026-11-18T22:54:26.000Z",
+      "firstSeenAt": "2026-11-19T03:22:20.740Z",
+      "outlets": 1,
+      "outletNames": [
+        "Black Enterprise"
+      ],
+      "score": 1.3
     },
     {
       "id": "8fd20ba09afb",
