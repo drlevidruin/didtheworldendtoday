@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T01:52:00.328Z",
+  "buildTime": "2026-11-19T02:07:08.713Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 20:52 ET",
+  "etStamp": "2026-11-18 21:07 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,14 +49,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1334,
-  "lastSuccessAt": "2026-11-19T01:52:00.328Z",
+  "headlinesRead": 312,
+  "lastSuccessAt": "2026-11-19T02:07:08.713Z",
   "rollingFallback": false,
   "cats": {
     "internet": 10,
     "flights": 24,
-    "hacks": 29,
-    "grid": 9,
+    "hacks": 30,
+    "grid": 8,
     "earth": 4,
     "weather": 4,
     "germs": 4,
@@ -167,9 +167,9 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
-      "headlines": 30,
+      "headlines": 27,
       "matched": 0,
       "tripAt": 3,
       "tripped": false,
@@ -181,80 +181,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 1020,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-19T01:52:00.328Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
+      "count": 275,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T02:07:08.713Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T02:07:08.713Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T02:07:08.713Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T02:07:08.713Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T02:07:08.713Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T02:07:08.713Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T02:07:08.713Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T01:52:00.328Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T02:07:08.713Z"
     },
     "topstories": {
       "ok": true,
-      "count": 30,
+      "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z"
+      "lastOkAt": "2026-11-19T02:07:08.713Z"
     }
   },
   "stories": [
@@ -740,27 +741,6 @@
       "score": 1.98
     },
     {
-      "id": "58f205ec8049",
-      "cat": "earth",
-      "kind": "news",
-      "title": "M5.7 quake strikes Japan's Kumamoto Prefecture, no tsunami warning issued",
-      "url": "https://mainichi.jp/english/articles/20261119/p2g/00m/0na/002000c",
-      "source": "The Mainichi",
-      "publishedAt": "2026-11-18T01:59:00.000Z",
-      "latestAt": "2026-11-19T01:22:00.000Z",
-      "firstSeenAt": "2026-11-18T22:21:25.039Z",
-      "outlets": 4,
-      "outletNames": [
-        "The Mainichi",
-        "Japan Wire by Kyodo News",
-        "The Straits Times",
-        "The Japan Times"
-      ],
-      "score": 1.98,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
-    },
-    {
       "id": "480bb3968fed",
       "cat": "ai",
       "kind": "news",
@@ -876,6 +856,23 @@
       "outletNames": [
         "WKRN Nashville on MSN",
         "WKRN News 2"
+      ],
+      "score": 1.69
+    },
+    {
+      "id": "711e5e78a7e4",
+      "cat": "grid",
+      "kind": "news",
+      "title": "8,000 customers lose power in Ulster County",
+      "url": "https://www.timesunion.com/news/article/power-woodstock-kingston-saugerties-22537071.php",
+      "source": "Times Union",
+      "publishedAt": "2026-11-18T05:18:00.000Z",
+      "latestAt": "2026-11-18T14:19:28.000Z",
+      "firstSeenAt": "2026-11-18T14:35:04.258Z",
+      "outlets": 2,
+      "outletNames": [
+        "Times Union",
+        "NEWS10 ABC"
       ],
       "score": 1.69
     },
@@ -1170,23 +1167,6 @@
       "score": 1.69
     },
     {
-      "id": "711e5e78a7e4",
-      "cat": "grid",
-      "kind": "news",
-      "title": "8,000 customers lose power in Ulster County",
-      "url": "https://www.timesunion.com/news/article/power-woodstock-kingston-saugerties-22537071.php",
-      "source": "Times Union",
-      "publishedAt": "2026-11-18T05:18:00.000Z",
-      "latestAt": "2026-11-18T14:19:28.000Z",
-      "firstSeenAt": "2026-11-18T14:35:04.258Z",
-      "outlets": 2,
-      "outletNames": [
-        "Times Union",
-        "NEWS10 ABC"
-      ],
-      "score": 1.69
-    },
-    {
       "id": "a1299b175fd3",
       "cat": "hacks",
       "kind": "news",
@@ -1234,23 +1214,6 @@
       "outletNames": [
         "KCRA Channel 3 on MSN",
         "KCRA"
-      ],
-      "score": 1.64
-    },
-    {
-      "id": "75fadd89e3ff",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power cut hits 1,100 homes in North West England after unexpected incident",
-      "url": "https://www.msn.com/en-nz/news/other/power-cut-hits-1-100-homes-in-north-west-england-after-unexpected-incident/ar-AA2hH2pV",
-      "source": "Metro on MSN",
-      "publishedAt": "2026-11-18T01:53:44.000Z",
-      "latestAt": "2026-11-18T11:55:00.000Z",
-      "firstSeenAt": "2026-11-18T12:34:56.272Z",
-      "outlets": 2,
-      "outletNames": [
-        "Metro on MSN",
-        "streamlinefeed.co.ke"
       ],
       "score": 1.64
     },
@@ -1804,6 +1767,22 @@
       "score": 1.31
     },
     {
+      "id": "8d062f864de7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Major platform offering 10% cashback shuts down its Visa card",
+      "url": "https://www.thestreet.com/crypto/markets/major-crypto-exchange-shuts-down-its-visa-card",
+      "source": "TheStreet",
+      "publishedAt": "2026-11-18T13:38:00.000Z",
+      "latestAt": "2026-11-18T13:38:00.000Z",
+      "firstSeenAt": "2026-11-19T02:07:08.713Z",
+      "outlets": 1,
+      "outletNames": [
+        "TheStreet"
+      ],
+      "score": 1.11
+    },
+    {
       "id": "9a3d2ccfa649",
       "cat": "germs",
       "kind": "news",
@@ -1848,6 +1827,22 @@
       "outlets": 1,
       "outletNames": [
         "Decrypt"
+      ],
+      "score": 1
+    },
+    {
+      "id": "ad90ac6660a6",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Shallow 6.0-magnitude earthquake hits Papua New Guinea region",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQcmdrTjg2Uzdkc0U1bjZVcGoxNGlVTEtVZmJ3WlBpOEtEYV9lV3cxbDU3LVIxX09nQ1hmcTVzczN4aVRzZEZPUjg3Wjl6Y0U1M3Q4bFBOSXBlR3FaUVBWd0FPcnkxNDYzRDZQaS1BaTVDTHF2OVhmQVZjWnhQZmFIQ281NnRnSW1Ob3Z4WmFBcVQ5dTZMYVNzNGNHcHFDSjlWTTdnU2tEV3V1QXJU?oc=5",
+      "source": "The Vibes",
+      "publishedAt": "2026-11-18T04:32:00.000Z",
+      "latestAt": "2026-11-18T04:32:00.000Z",
+      "firstSeenAt": "2026-11-18T04:48:36.329Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Vibes"
       ],
       "score": 1
     },
