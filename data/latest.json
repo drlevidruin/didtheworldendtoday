@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T11:53:33.824Z",
+  "buildTime": "2026-11-19T12:08:40.978Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 06:53 ET",
+  "etStamp": "2026-11-19 07:08 ET",
   "score": 82,
   "fired": [
     "flights",
@@ -55,12 +55,12 @@
     "date": "2026-11-19",
     "score": 82
   },
-  "headlinesRead": 1310,
-  "lastSuccessAt": "2026-11-19T11:53:33.824Z",
+  "headlinesRead": 1227,
+  "lastSuccessAt": "2026-11-19T12:08:40.978Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 25,
-    "hacks": 30,
+    "flights": 24,
+    "hacks": 31,
     "grid": 6,
     "sun": 3,
     "earth": 4,
@@ -81,8 +81,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 1.67,
-      "time": "2026-11-19T06:00:00.000Z",
+      "value": 1.33,
+      "time": "2026-11-19T09:00:00.000Z",
       "max24": 5
     },
     "asteroid": {
@@ -175,35 +175,37 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Myanmar faces historic genocide verdict at UN court over Rohingya massacres"
+      ]
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 996,
+      "count": 1000,
       "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
-      "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "count": 189,
+      "error": "8 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 1,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-19T11:53:33.824Z"
     },
@@ -211,56 +213,55 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T11:53:33.824Z"
+      "lastOkAt": "2026-11-19T12:08:40.978Z"
     }
   },
   "stories": [
@@ -348,9 +349,9 @@
       "url": "https://www.reuters.com/legal/litigation/eu-commission-targeted-cyberattack-politico-reports-2026-11-19/",
       "source": "Reuters",
       "publishedAt": "2026-11-19T00:03:00.000Z",
-      "latestAt": "2026-11-19T11:12:01.000Z",
+      "latestAt": "2026-11-19T11:31:00.000Z",
       "firstSeenAt": "2026-11-19T08:38:02.032Z",
-      "outlets": 14,
+      "outlets": 15,
       "outletNames": [
         "Reuters",
         "StreetInsider",
@@ -365,10 +366,11 @@
         "The Verge",
         "Modern Diplomacy",
         "Hromadske",
-        "Hungarian Conservative"
+        "Hungarian Conservative",
+        "@unusual_whales on X"
       ],
       "xUrl": "https://x.com/Reuters/status/2123343058611671245",
-      "score": 4.12
+      "score": 4.2
     },
     {
       "id": "3af276c6d1c6",
@@ -688,6 +690,24 @@
       "score": 2.59
     },
     {
+      "id": "fac1b4f5b370",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Northern Lights May Be Visible Across Parts of the U.S. as Geomagnetic Storm Hits",
+      "url": "https://tech.yahoo.com/science/articles/northern-lights-may-visible-across-201116629.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-18T12:11:00.000Z",
+      "latestAt": "2026-11-18T20:11:16.000Z",
+      "firstSeenAt": "2026-11-18T20:51:10.072Z",
+      "outlets": 3,
+      "outletNames": [
+        "Men's Journal",
+        "YAHOO!",
+        "AOL.co.uk"
+      ],
+      "score": 2.21
+    },
+    {
       "id": "764933f8df5d",
       "cat": "earth",
       "kind": "news",
@@ -878,23 +898,6 @@
       "outletNames": [
         "Scripps News",
         "Health.com"
-      ],
-      "score": 1.71
-    },
-    {
-      "id": "fac1b4f5b370",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Northern Lights May Be Visible Across Parts of the U.S. as Geomagnetic Storm Hits",
-      "url": "https://tech.yahoo.com/science/articles/northern-lights-may-visible-across-201116629.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-18T12:11:00.000Z",
-      "latestAt": "2026-11-18T20:11:16.000Z",
-      "firstSeenAt": "2026-11-18T20:51:10.072Z",
-      "outlets": 2,
-      "outletNames": [
-        "Men's Journal",
-        "YAHOO!"
       ],
       "score": 1.71
     },
@@ -1578,22 +1581,6 @@
       "score": 1.4
     },
     {
-      "id": "66c1c4fa702a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Travelers still stranded at DJT airport days after nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQWU4tdlRlZlhOVm5OS1hMc3VBMlY0dUFBazg0NDJQazQ1UXh0Q1BVZzhVUTAyMk5Sa0U0ajVEU3hPaDJOYl83aTY2RHY1OTNRTXBIWkNzYl9KdkxEbXd5T0dNTWRpbHZCLUhOS3FWRDFvX1RlVk5fOEpVVzl4TUdwUm5INlUwWnMwT0lIbUhtcGpPR3V6TGlwejBXRERNa0RWVTR6Slpnb21pU1pIZVhZeXNTWTduUC1hN0dNOU1QWXIxSTVDNW83dXd6di0?oc=5",
-      "source": "National News Desk",
-      "publishedAt": "2026-11-18T11:56:14.000Z",
-      "latestAt": "2026-11-18T11:56:14.000Z",
-      "firstSeenAt": "2026-11-18T12:04:44.262Z",
-      "outlets": 1,
-      "outletNames": [
-        "National News Desk"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "c9f28657af43",
       "cat": "weather",
       "kind": "news",
@@ -1868,6 +1855,22 @@
         "Black Enterprise"
       ],
       "score": 1.3
+    },
+    {
+      "id": "2142471a8559",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Inside the Cyberattack That Used a Single Third-Party Script to Hit 178 Global Brands in One Day",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQcXlVMEFQZFZzSjNfNV9PTE1UQkZLU1JTRWZDejdtRjBKb3NkdGVrc3JwWlM1U2xSUzZkbFgyMHVtWXlVdTRGQkRUOC1IUGtuc29YS1pEWjljMEdQejItbkI5eTdsM1VIcHpiNDdFNnBNVktYX3J1NFVqUldia1U0LUdmc0x6RjZvcWc?oc=5",
+      "source": "Latin Times",
+      "publishedAt": "2026-11-18T22:44:53.000Z",
+      "latestAt": "2026-11-18T22:44:53.000Z",
+      "firstSeenAt": "2026-11-19T04:22:21.839Z",
+      "outlets": 1,
+      "outletNames": [
+        "Latin Times"
+      ],
+      "score": 1.27
     },
     {
       "id": "a9ec0b4cf2a0",
