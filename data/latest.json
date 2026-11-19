@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T01:07:01.471Z",
+  "buildTime": "2026-11-19T01:21:54.436Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 20:07 ET",
+  "etStamp": "2026-11-18 20:21 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,12 +49,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1346,
-  "lastSuccessAt": "2026-11-19T01:07:01.471Z",
+  "headlinesRead": 1343,
+  "lastSuccessAt": "2026-11-19T01:21:54.436Z",
   "rollingFallback": false,
   "cats": {
     "internet": 10,
-    "flights": 25,
+    "flights": 24,
     "hacks": 29,
     "grid": 9,
     "earth": 4,
@@ -63,7 +63,7 @@
     "sun": 4,
     "ai": 4,
     "markets": 4,
-    "animals": 1,
+    "animals": 2,
     "space": 2
   },
   "vital": {
@@ -170,13 +170,11 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "Myanmar faces historic genocide verdict at UN court over Rohingya massacres"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
@@ -188,57 +186,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1030,
+      "count": 1024,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
+      "count": 281,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-18T23:06:31.636Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +249,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T01:07:01.471Z"
+      "lastOkAt": "2026-11-19T01:21:54.436Z"
     }
   },
   "stories": [
@@ -465,6 +463,34 @@
       "score": 3.24
     },
     {
+      "id": "48d690f0abf8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Apple services hit by outage, including iCloud and App Pay; company rules out cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPZUF4aWs2WXVQQTIyRHFWR3dXTFU5am5HOGJmSDBBa1RTSG1zWXQ5R0RhN2xOZk9ZWEZyVUxYdE1uOTF3N0o0dTJvNTBRUnJ6aFFWWFpFMzZvd2RlRDhhTkVOUzUxSGdLcHJpZGlHY2xJcnlLMS1henM0MUtnMWJ1aHJldnVZQ3VVeUczLTFCOGlMaG5CMW9nU29IY0luRkpzOURrc3VMaFpwZHFxZlAxM0lEaUxoSDNqQWtyTkN3c01jU0lvcWpfa2NXR0pUNGtscFhkdlc0RncyV1Y2bTJtYk1RclhPV3lsTEVkd01SaEtsUjNaeWk4XzZNT1dod3pnTWlvSjJ5Y21SWVN1MURuSkNMelZlVjJ3TERHNdIBogJBVV95cUxPdEhRNGNOamV6YW1ZNWY2SzdqVUx3Y01hRkx2UXRPWHJxQmp6MHdlWUJ0Z0U0Y0dIUjZvenh5cmVlWUxySTNjVm5zcjc5N0t1cVFCRWtXVV9aR0ZGZDE4YnRPQWNIVDNIWWNSaUh1OGUtQ0RXalJPaGdXcDZ6eGNfZV9NeHh6ZXdPeWdQUXFSbHllUjlEeUNZenh2QzFPeG9SbWpxNDZRQnl2TkQwbl91b21jdi1aVUp4YUY1Ym5UNGg2a0JuNzFhZnA2S1ZpUlY0Wkp2c0NiNDNydFdVc3pZUTZTZmNKWndXSUNzaFI1cHJMZktYSnd2b3dCTjVqY2ZrbEl1WWtfZXAyczNOOGtiZTBVVlRZQXg3blBGdUNndDZqQQ?oc=5",
+      "source": "India TV News",
+      "publishedAt": "2026-11-18T01:33:53.000Z",
+      "latestAt": "2026-11-18T15:26:53.000Z",
+      "firstSeenAt": "2026-11-19T01:21:54.436Z",
+      "outlets": 13,
+      "outletNames": [
+        "India TV News",
+        "Techloy",
+        "KJCT",
+        "Moneycontrol.com",
+        "Gulf News",
+        "Business Today",
+        "ETV Bharat",
+        "Analytics Insight",
+        "NDTV",
+        "news8000.com",
+        "Qazinform",
+        "ColombiaOne.com",
+        "Tech Edition"
+      ],
+      "score": 2.84
+    },
+    {
       "id": "106829ca41b5",
       "cat": "hacks",
       "kind": "news",
@@ -521,23 +547,6 @@
       "score": 2.21
     },
     {
-      "id": "e6ad68ef594c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Thunderstorms and hail forecast for Essex as cold snap set to continue",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG03NllxV0VibWlwY2c5a3lERzYzOG55cHdMRmtnNzlPMm9lay1LdTJjUjlqdVRPRGEzWnM4X0lSVXJBdElRcWlNYjlSVEFLeXNobHI0QTd4OTV4ekIxZGpHWG1UR1dsSTBpWkFiYWEwNjBlMkxTZmxpWTRvYV8zVE1vbm1NUVc0QlgzVXFTa1l3eVJTN2Z2cGhlUXV3TkJOSWo4YU5OQ0UzSGZLUWJuY0stbw?oc=5",
-      "source": "Harwich and Manningtree Standard",
-      "publishedAt": "2026-11-18T16:30:00.000Z",
-      "latestAt": "2026-11-18T16:30:00.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 2,
-      "outletNames": [
-        "Harwich and Manningtree Standard",
-        "Thurrock Gazette"
-      ],
-      "score": 2
-    },
-    {
       "id": "sig:faa-stop:FLL:2026-11-18",
       "cat": "flights",
       "kind": "signal",
@@ -570,7 +579,7 @@
       "publishedAt": "2026-11-18T19:24:19.000Z",
       "latestAt": "2026-11-18T22:49:19.000Z",
       "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "WPEC",
         "cw34.com",
@@ -578,9 +587,10 @@
         "KVII",
         "WJLA",
         "KDNL",
-        "13WHAM-TV"
+        "13WHAM-TV",
+        "KFOX"
       ],
-      "score": 3.8
+      "score": 3.99
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-18",
@@ -659,6 +669,23 @@
         "Yahoo"
       ],
       "score": 2.34
+    },
+    {
+      "id": "e6ad68ef594c",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Thunderstorms and hail forecast for Essex as cold snap set to continue",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG03NllxV0VibWlwY2c5a3lERzYzOG55cHdMRmtnNzlPMm9lay1LdTJjUjlqdVRPRGEzWnM4X0lSVXJBdElRcWlNYjlSVEFLeXNobHI0QTd4OTV4ekIxZGpHWG1UR1dsSTBpWkFiYWEwNjBlMkxTZmxpWTRvYV8zVE1vbm1NUVc0QlgzVXFTa1l3eVJTN2Z2cGhlUXV3TkJOSWo4YU5OQ0UzSGZLUWJuY0stbw?oc=5",
+      "source": "Harwich and Manningtree Standard",
+      "publishedAt": "2026-11-18T16:30:00.000Z",
+      "latestAt": "2026-11-18T16:30:00.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 2,
+      "outletNames": [
+        "Harwich and Manningtree Standard",
+        "Thurrock Gazette"
+      ],
+      "score": 2
     },
     {
       "id": "ee5091b344ef",
@@ -817,6 +844,23 @@
       "quietReason": "headline mentions tsunami"
     },
     {
+      "id": "099f57543dfc",
+      "cat": "germs",
+      "kind": "news",
+      "title": "England orders turkey flocks of 50 or more indoors as bird flu spreads ahead of Christmas",
+      "url": "https://www.yahoo.com/news/world/articles/england-orders-turkey-flocks-50-003700300.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T16:01:00.000Z",
+      "latestAt": "2026-11-19T00:37:00.000Z",
+      "firstSeenAt": "2026-11-19T01:21:54.436Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "The Cool Down"
+      ],
+      "score": 1.69
+    },
+    {
       "id": "e783ec869177",
       "cat": "weather",
       "kind": "news",
@@ -832,40 +876,6 @@
         "WKRN News 2"
       ],
       "score": 1.69
-    },
-    {
-      "id": "711e5e78a7e4",
-      "cat": "grid",
-      "kind": "news",
-      "title": "8,000 customers lose power in Ulster County",
-      "url": "https://www.timesunion.com/news/article/power-woodstock-kingston-saugerties-22537071.php",
-      "source": "Times Union",
-      "publishedAt": "2026-11-18T05:18:00.000Z",
-      "latestAt": "2026-11-18T14:19:28.000Z",
-      "firstSeenAt": "2026-11-18T14:35:04.258Z",
-      "outlets": 2,
-      "outletNames": [
-        "Times Union",
-        "NEWS10 ABC"
-      ],
-      "score": 1.69
-    },
-    {
-      "id": "a8c964a8954b",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Falling tree causing Sandersville power outage, expected to last roughly 4 hours, city says",
-      "url": "https://www.yahoo.com/news/articles/falling-tree-causing-sandersville-power-141242121.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T06:12:00.000Z",
-      "latestAt": "2026-11-18T14:12:00.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 2,
-      "outletNames": [
-        "13WMAZ",
-        "Yahoo"
-      ],
-      "score": 1.65
     },
     {
       "id": "sig:faa-stop:DJT:2026-11-18",
@@ -1158,6 +1168,23 @@
       "score": 1.69
     },
     {
+      "id": "711e5e78a7e4",
+      "cat": "grid",
+      "kind": "news",
+      "title": "8,000 customers lose power in Ulster County",
+      "url": "https://www.timesunion.com/news/article/power-woodstock-kingston-saugerties-22537071.php",
+      "source": "Times Union",
+      "publishedAt": "2026-11-18T05:18:00.000Z",
+      "latestAt": "2026-11-18T14:19:28.000Z",
+      "firstSeenAt": "2026-11-18T14:35:04.258Z",
+      "outlets": 2,
+      "outletNames": [
+        "Times Union",
+        "NEWS10 ABC"
+      ],
+      "score": 1.69
+    },
+    {
       "id": "a1299b175fd3",
       "cat": "hacks",
       "kind": "news",
@@ -1173,6 +1200,23 @@
         "Cybersecurity Dive"
       ],
       "score": 1.68
+    },
+    {
+      "id": "a8c964a8954b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Falling tree causing Sandersville power outage, expected to last roughly 4 hours, city says",
+      "url": "https://www.yahoo.com/news/articles/falling-tree-causing-sandersville-power-141242121.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T06:12:00.000Z",
+      "latestAt": "2026-11-18T14:12:00.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 2,
+      "outletNames": [
+        "13WMAZ",
+        "Yahoo"
+      ],
+      "score": 1.65
     },
     {
       "id": "93bafe37467c",
@@ -1742,38 +1786,6 @@
       "score": 1.38
     },
     {
-      "id": "02a34453cf86",
-      "cat": "internet",
-      "kind": "x",
-      "title": "Consumers are panic-buying at Costco, snapping up generators and other emergency supplies after a string of major tech outages, according to Mizuho Securities. Mizuho analyst David Bellinger cited “i…",
-      "url": "https://x.com/unusual_whales/status/2123173904785236153",
-      "source": "@unusual_whales on X",
-      "publishedAt": "2026-11-18T21:58:00.000Z",
-      "latestAt": "2026-11-18T21:58:00.000Z",
-      "firstSeenAt": "2026-11-18T22:51:30.426Z",
-      "outlets": 1,
-      "outletNames": [
-        "@unusual_whales on X"
-      ],
-      "score": 1.38
-    },
-    {
-      "id": "b10123451d1b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "F.A.A. Shelves Routers Like the One Linked to the Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9XSTQ1SzFhY1JSYzRWN0RYMnFncVgtUHZScFNHaFA5NVctZzhyZXNxZmg0NUdGdk9ScGpmeUVLYWZKNUVDSzJIdk96aXFOcHliQklIMDdJMHFBS19aNl9pdnEtRk5PTFZkLW5zdDR1cDQzd005?oc=5",
-      "source": "The New York Times",
-      "publishedAt": "2026-11-18T01:27:04.000Z",
-      "latestAt": "2026-11-18T01:27:04.000Z",
-      "firstSeenAt": "2026-11-18T03:18:19.210Z",
-      "outlets": 1,
-      "outletNames": [
-        "The New York Times"
-      ],
-      "score": 1.36
-    },
-    {
       "id": "1f76878e7527",
       "cat": "earth",
       "kind": "news",
@@ -1934,22 +1946,6 @@
       "score": 0.96
     },
     {
-      "id": "e0a51da92e41",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Housing order in place after bird flu confirmed",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWWFFd1VmLXZ5bVBkclV5eUV6a05MY3d3TWNRYUtrVDJfSzVaaWdDR1hXdWtKN2JNbTRrWnozOHZCajYxSkh1WlJUbUdVQ2NuQU05aktlamZnRms1SHB1WU04dlMxWW9ZQV91OXp4YS1HUG9mUXNxd0toS3BncmV3aWoyWmIzWE9GZHdBT2IycEVkbXJPLTA0RzhIb3FsaV8wNjVTSHhQeVotQQ?oc=5",
-      "source": "Irish Farmers Journal",
-      "publishedAt": "2026-11-18T22:12:37.000Z",
-      "latestAt": "2026-11-18T22:12:37.000Z",
-      "firstSeenAt": "2026-11-19T01:07:01.471Z",
-      "outlets": 1,
-      "outletNames": [
-        "Irish Farmers Journal"
-      ],
-      "score": 0.95
-    },
-    {
       "id": "53d98e5bb450",
       "cat": "markets",
       "kind": "news",
@@ -2000,20 +1996,36 @@
       "score": 0.83
     },
     {
-      "id": "613d42f33040",
+      "id": "b263132c80b1",
       "cat": "markets",
       "kind": "news",
-      "title": "NATEN.E Trading Suspended Under Circuit Breaker",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPX0xJeEt4eU9qTXdxMTdVeS13N00yWUw0dlFFQkpHQVBHZWpWVFF0MDZ1MHlpWFRaN0ZraFpvYWJvVGVrTV9wMFlTNmJxeFpjRHE5WjJBOTZMRklaSHJYVG85eEEyZjVSTE5rUjl6cDduZy1RTWJSWHc1QkIxRnE3YXViNGJIa0tnZTBuVkNSRTFGQWlUcTljUTNWNV92MzdEWFhB?oc=5",
-      "source": "TipRanks",
-      "publishedAt": "2026-11-18T12:44:45.000Z",
-      "latestAt": "2026-11-18T14:45:14.000Z",
-      "firstSeenAt": "2026-11-19T01:07:01.471Z",
+      "title": "Tesla Unveils Powercore: Integrated Transformer, Inverter, and Circuit Breaker for 2027 Launch",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQmxwZV93ZjNueHkzc05uaDJRODZhaXZyYTFSLTBYTUNoSGlBNXhFNmZxVkdNNnpnZmpYY3hpeThwRGVkUTBRb1Y3dWM0YnVJZEFWcURQOVh0Ykw4NzVPWU5DcV85eVFrWHFSYk0tZ0ZQU191Zm51V0RyTjFxRGsyV1pwUXoyVEJNdm1MeGdPX096TmZIZHNET0RiZmdhb1Q2UUtEU2pnUnVUeG1xNWcxTHJzaUVSalVyZkFOV3I3RGgtZ3M?oc=5",
+      "source": "KuCoin",
+      "publishedAt": "2026-11-18T08:44:52.000Z",
+      "latestAt": "2026-11-18T08:44:52.000Z",
+      "firstSeenAt": "2026-11-19T01:21:54.436Z",
       "outlets": 1,
       "outletNames": [
-        "TipRanks"
+        "KuCoin"
       ],
-      "score": 0.79
+      "score": 0.72
+    },
+    {
+      "id": "a8c8a7bdda07",
+      "cat": "animals",
+      "kind": "news",
+      "title": "Loose cattle near Prineville safely recovered after highway incident",
+      "url": "https://katu.com/news/local/loose-cattle-near-prineville-safely-recovered-after-highway-incident-cow-livestock-trailer-oregon-department-of-transportation",
+      "source": "KATU",
+      "publishedAt": "2026-11-18T03:35:00.000Z",
+      "latestAt": "2026-11-18T03:35:00.000Z",
+      "firstSeenAt": "2026-11-19T01:21:54.436Z",
+      "outlets": 1,
+      "outletNames": [
+        "KATU"
+      ],
+      "score": 0.64
     }
   ]
 }
