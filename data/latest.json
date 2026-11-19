@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T20:40:10.941Z",
+  "buildTime": "2026-11-19T20:55:08.363Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 15:40 ET",
+  "etStamp": "2026-11-19 15:55 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -50,15 +50,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1284,
-  "lastSuccessAt": "2026-11-19T20:40:10.941Z",
+  "headlinesRead": 1237,
+  "lastSuccessAt": "2026-11-19T20:55:08.363Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
-    "hacks": 42,
+    "flights": 16,
+    "hacks": 40,
     "internet": 11,
     "sun": 4,
-    "germs": 4,
+    "germs": 5,
     "earth": 4,
     "grid": 4,
     "space": 4,
@@ -91,13 +91,7 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "AUS",
-          "hub": false,
-          "reason": "airspace volume"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
       "groundDelays": 2,
       "closures": 0,
@@ -188,20 +182,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 975,
+      "count": 950,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
-      "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "count": 253,
+      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     },
     "gdelt": {
       "ok": false,
@@ -213,55 +207,56 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     },
     "faa": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z"
+      "lastOkAt": "2026-11-19T20:55:08.363Z"
     }
   },
   "stories": [
@@ -275,7 +270,7 @@
       "publishedAt": "2026-11-19T19:32:00.000Z",
       "latestAt": "2026-11-19T19:41:00.000Z",
       "firstSeenAt": "2026-11-19T19:40:09.535Z",
-      "outlets": 24,
+      "outlets": 25,
       "outletNames": [
         "AZ Family",
         "KKTV",
@@ -300,9 +295,10 @@
         "WABI",
         "KOTA Territory News",
         "WTAP",
-        "Live 5 News"
+        "Live 5 News",
+        "WECT"
       ],
-      "score": 5.57
+      "score": 5.63
     },
     {
       "id": "bab44e1adaa9",
@@ -377,9 +373,9 @@
       "url": "https://brusselssignal.eu/2026/11/european-commission-confirms-ai-driven-cyberattack-weeks-after-detecting-it/",
       "source": "brusselssignal",
       "publishedAt": "2026-11-19T02:02:00.000Z",
-      "latestAt": "2026-11-19T18:05:24.000Z",
+      "latestAt": "2026-11-19T19:33:10.000Z",
       "firstSeenAt": "2026-11-19T11:23:37.429Z",
-      "outlets": 20,
+      "outlets": 22,
       "outletNames": [
         "Protos | Informed crypto news",
         "Protos",
@@ -400,9 +396,11 @@
         "Sharjah24",
         "Investing.com",
         "Yahoo",
-        "Superpower Daily"
+        "Superpower Daily",
+        "İlke Haber Ajansı",
+        "The Brussels Times"
       ],
-      "score": 4.49
+      "score": 4.61
     },
     {
       "id": "27975f1b5d1e",
@@ -412,7 +410,7 @@
       "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
       "source": "The Straits Times",
       "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-19T20:34:02.000Z",
+      "latestAt": "2026-11-19T20:41:33.000Z",
       "firstSeenAt": "2026-11-19T19:12:09.123Z",
       "outlets": 32,
       "outletNames": [
@@ -623,7 +621,7 @@
       "publishedAt": "2026-11-19T06:47:00.000Z",
       "latestAt": "2026-11-19T20:07:00.000Z",
       "firstSeenAt": "2026-11-19T19:55:03.493Z",
-      "outlets": 22,
+      "outlets": 26,
       "outletNames": [
         "Associated Press News",
         "The Joplin Globe",
@@ -646,9 +644,13 @@
         "Daily Local",
         "thereporteronline",
         "Whittier Daily News",
-        "Pittsburgh Post-Gazette"
+        "Pittsburgh Post-Gazette",
+        "The Press Democrat",
+        "AP News",
+        "couriernews.com",
+        "Bozeman Daily Chronicle"
       ],
-      "score": 4.26
+      "score": 4.45
     },
     {
       "id": "f4a81b953bee",
@@ -843,23 +845,6 @@
       "score": 1.99
     },
     {
-      "id": "e8264ac0b9b3",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Oregon confirms first human case of bird flu this year",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQRGRXVTBPVkVqS0t4c1dpV3ZKR3ZPVUFTaVIxNVdjQUU2WXd5M3pfalVfdnhidkRUU19JNHQ3azJmTkh4X2lOUUQ3OWRSMzVJV2NndkVpaU0waEQzNVlJWkxPM3RfZlZrMzlRdXhnT3FBbmpVQWcwcW9ZR29BZUo4dHhSUVVRYl9jVlBwcVYxUW5yU1dOS2g3c3A4UC0zWUJmaW91eXVSQ1VHdzhHYm9YcjF3RVRWSy1ERm5FOGEwanJYeTZ2TGdvVTBjX1JUNDYtU0hWbTdJb1g?oc=5",
-      "source": "KGW",
-      "publishedAt": "2026-11-19T20:05:00.000Z",
-      "latestAt": "2026-11-19T20:28:41.000Z",
-      "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 2,
-      "outletNames": [
-        "KGW",
-        "KTVZ"
-      ],
-      "score": 1.98
-    },
-    {
       "id": "2241af500213",
       "cat": "grid",
       "kind": "news",
@@ -875,6 +860,23 @@
         "Ratopati"
       ],
       "score": 1.95
+    },
+    {
+      "id": "68599968cfdb",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Human contracts bird flu at Morrow County dairy farm in Oregon",
+      "url": "https://www.yahoo.com/news/science/articles/human-contracts-bird-flu-morrow-200924654.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:09:00.000Z",
+      "latestAt": "2026-11-19T20:09:00.000Z",
+      "firstSeenAt": "2026-11-19T20:55:08.363Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Statesman Journal"
+      ],
+      "score": 1.71
     },
     {
       "id": "3cb2e1b41dd8",
@@ -928,6 +930,23 @@
       "score": 1.6
     },
     {
+      "id": "e8264ac0b9b3",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Oregon reports first human case of bird flu in 2026",
+      "url": "https://ktvz.com/news/2026/11/19/oregon-reports-first-human-case-of-bird-flu-in-2026/",
+      "source": "KTVZ",
+      "publishedAt": "2026-11-19T04:28:00.000Z",
+      "latestAt": "2026-11-19T20:30:13.000Z",
+      "firstSeenAt": "2026-11-19T20:40:10.941Z",
+      "outlets": 2,
+      "outletNames": [
+        "KGW",
+        "KTVZ"
+      ],
+      "score": 1.46
+    },
+    {
       "id": "918b4bfe13ed",
       "cat": "weather",
       "kind": "news",
@@ -942,26 +961,6 @@
         "FOX 9 Minneapolis-St. Paul"
       ],
       "score": 1.4
-    },
-    {
-      "id": "c9f28657af43",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Risk of tornadoes for the valley as a major storm rolls through Northern California",
-      "url": "https://www.abc10.com/article/weather/weather-impact/risk-of-tornadoes-for-the-valley-as-a-major-storm-rolls-through-northern-california/103-73a32110-5aac-4449-92f6-5446337cb8df",
-      "source": "ABC10",
-      "publishedAt": "2026-11-19T10:30:00.000Z",
-      "latestAt": "2026-11-19T10:30:00.000Z",
-      "firstSeenAt": "2026-11-19T10:47:59.692Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC10"
-      ],
-      "trending": 100,
-      "trendTerm": "weather near me",
-      "score": 1.39,
-      "quiet": true,
-      "quietReason": "headline mentions tornadoes"
     },
     {
       "id": "abe5c8e58707",
@@ -1000,6 +999,25 @@
         "Investing.com Canada"
       ],
       "score": 2.8
+    },
+    {
+      "id": "dd2857255f06",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase reveals data breach, but says it’s unrelated to this week’s banking outage",
+      "url": "https://www.theverge.com/tech/1037695/jpmorgan-chase-cyberattack",
+      "source": "The Verge",
+      "publishedAt": "2026-11-19T08:13:00.000Z",
+      "latestAt": "2026-11-19T20:41:14.000Z",
+      "firstSeenAt": "2026-11-19T16:24:23.412Z",
+      "outlets": 4,
+      "outletNames": [
+        "The Verge",
+        "Mezha.net",
+        "Gizmodo",
+        "CNET"
+      ],
+      "score": 2.59
     },
     {
       "id": "b6dcdf986663",
@@ -1063,24 +1081,6 @@
       "score": 2.41
     },
     {
-      "id": "504b2f0e2351",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission targeted in an AI-assisted cyberattack, spokesperson confirms",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
-      "source": "DW.com",
-      "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-19T19:33:10.000Z",
-      "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 3,
-      "outletNames": [
-        "DW.com",
-        "İlke Haber Ajansı",
-        "The Brussels Times"
-      ],
-      "score": 2.34
-    },
-    {
       "id": "e358feae5cc2",
       "cat": "hacks",
       "kind": "news",
@@ -1098,24 +1098,6 @@
         "Boston Herald"
       ],
       "score": 2.3
-    },
-    {
-      "id": "dd2857255f06",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase reveals data breach, but says it’s unrelated to this week’s banking outage",
-      "url": "https://www.theverge.com/tech/1037695/jpmorgan-chase-cyberattack",
-      "source": "The Verge",
-      "publishedAt": "2026-11-19T08:13:00.000Z",
-      "latestAt": "2026-11-19T18:34:50.000Z",
-      "firstSeenAt": "2026-11-19T16:24:23.412Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Verge",
-        "Mezha.net",
-        "Gizmodo"
-      ],
-      "score": 2.23
     },
     {
       "id": "424febfdf588",
@@ -1512,23 +1494,6 @@
       "score": 1.73
     },
     {
-      "id": "289b75cc95a6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Google warns hackers are using artificial intelligence to launch cyberattacks against companies",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1HWFN2aDJqZEdEbzdnMkNtbDlZNU42cXkzRHVQRHBGVHRsUFhwZVlvNWE5aFBldTVmcDU1TlA3bGQ4aUdoT0xkOHRpbzFyelgxeDVQd1Vn?oc=5",
-      "source": "Fox News",
-      "publishedAt": "2026-11-18T20:45:28.000Z",
-      "latestAt": "2026-11-18T23:15:02.000Z",
-      "firstSeenAt": "2026-11-19T04:52:24.568Z",
-      "outlets": 2,
-      "outletNames": [
-        "Fox News",
-        "Foundation for Defense of Democracies"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "51c34a76762f",
       "cat": "hacks",
       "kind": "news",
@@ -1544,6 +1509,23 @@
         "Yahoo Finance Singapore"
       ],
       "score": 1.72
+    },
+    {
+      "id": "51316edfd152",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase, Visa, and Mastercard say cyber incidents at vendors put customer data at risk",
+      "url": "https://www.msn.com/en-us/news/other/chase-visa-and-mastercard-say-cyber-incidents-at-vendors-put-customer-data-at-risk/ar-AA2hNshD",
+      "source": "Insider on MSN",
+      "publishedAt": "2026-11-19T12:17:13.000Z",
+      "latestAt": "2026-11-19T18:40:00.000Z",
+      "firstSeenAt": "2026-11-19T20:55:08.363Z",
+      "outlets": 2,
+      "outletNames": [
+        "Insider on MSN",
+        "Business Insider"
+      ],
+      "score": 1.71
     },
     {
       "id": "9e3071119d6d",
@@ -1578,23 +1560,6 @@
         "Newser"
       ],
       "score": 1.7
-    },
-    {
-      "id": "a8c2d1f8a2f6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ransomware group reportedly leaks Chase, Visa, and Mastercard customer data, but not credit card numbers",
-      "url": "https://mashable.com/tech/n0n-ransomware-group-leaks-chase-mastercard-visa-customer-data",
-      "source": "Mashable",
-      "publishedAt": "2026-11-19T10:38:00.000Z",
-      "latestAt": "2026-11-19T19:37:45.000Z",
-      "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 2,
-      "outletNames": [
-        "Mashable",
-        "Mashable SEA"
-      ],
-      "score": 1.67
     },
     {
       "id": "fe740af2b933",
@@ -1824,6 +1789,42 @@
         "AVweb"
       ],
       "score": 1.4
+    },
+    {
+      "id": "b0fc3c8f8eff",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide ground stop canceled several arrivals, departures at AVP",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaVdieWllQWpNVkFxbDljLWhLQUl4X25iNkw0UXVJUlRueUxFYmlHSFdpU2ZzbXVfRF9NdUFjOUN5MEVKQ1JXMDNUbGI1N3BKZ0plOUo2U1FSeFhPNGotQ0h2NTZ3c0RsYXBhOU4zODBvUjMzdk9RbEFmdkRqTUM5S051N1JTRjBGclFBam84LXUweDMza1Azak5nS1B0ZHg0SXZxZC0yc1JaVEU5U2cwbQ?oc=5",
+      "source": "Scranton Times-Tribune",
+      "publishedAt": "2026-11-19T20:41:07.000Z",
+      "latestAt": "2026-11-19T20:41:07.000Z",
+      "firstSeenAt": "2026-11-19T20:55:08.363Z",
+      "outlets": 1,
+      "outletNames": [
+        "Scranton Times-Tribune"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "c9f28657af43",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Risk of tornadoes for the valley as a major storm rolls through Northern California",
+      "url": "https://www.abc10.com/article/weather/weather-impact/risk-of-tornadoes-for-the-valley-as-a-major-storm-rolls-through-northern-california/103-73a32110-5aac-4449-92f6-5446337cb8df",
+      "source": "ABC10",
+      "publishedAt": "2026-11-19T10:30:00.000Z",
+      "latestAt": "2026-11-19T10:30:00.000Z",
+      "firstSeenAt": "2026-11-19T10:47:59.692Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC10"
+      ],
+      "trending": 100,
+      "trendTerm": "weather near me",
+      "score": 1.39,
+      "quiet": true,
+      "quietReason": "headline mentions tornadoes"
     },
     {
       "id": "be4676c173da",
