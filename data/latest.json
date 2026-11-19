@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T16:24:23.412Z",
+  "buildTime": "2026-11-19T16:39:41.729Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 11:24 ET",
+  "etStamp": "2026-11-19 11:39 ET",
   "score": 84,
   "fired": [
     "flights",
@@ -59,19 +59,19 @@
     "date": "2026-11-19",
     "score": 84
   },
-  "headlinesRead": 1307,
-  "lastSuccessAt": "2026-11-19T16:24:23.412Z",
+  "headlinesRead": 1273,
+  "lastSuccessAt": "2026-11-19T16:39:41.729Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 24,
+    "flights": 25,
     "hacks": 34,
-    "internet": 13,
+    "internet": 12,
     "sun": 4,
     "earth": 4,
     "germs": 4,
     "grid": 4,
-    "weather": 4,
     "space": 4,
+    "weather": 4,
     "markets": 4,
     "ai": 1
   },
@@ -117,8 +117,8 @@
         {
           "id": "github",
           "name": "GitHub",
-          "indicator": "minor",
-          "description": "Partially Degraded Service"
+          "indicator": "none",
+          "description": "All Systems Operational"
         },
         {
           "id": "cloudflare",
@@ -196,80 +196,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1000,
+      "count": 964,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "bing": {
       "ok": true,
-      "count": 272,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 1,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-19T15:24:14.837Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:24:23.412Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T16:24:23.412Z"
+      "lastOkAt": "2026-11-19T16:39:41.729Z"
     }
   },
   "stories": [
@@ -367,29 +368,6 @@
       "score": 4.68
     },
     {
-      "id": "sig:faa-stop:SFO:2026-11-18",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at SFO (wind)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-18T17:35:37.400Z",
-      "latestAt": "2026-11-18T17:35:37.400Z",
-      "firstSeenAt": "2026-11-18T17:35:37.400Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "SFO",
-        "hub": true,
-        "nationwide": false,
-        "reason": "wind"
-      }
-    },
-    {
       "id": "4c1c87e6d6fe",
       "cat": "hacks",
       "kind": "news",
@@ -399,7 +377,7 @@
       "publishedAt": "2026-11-19T00:53:00.000Z",
       "latestAt": "2026-11-19T15:59:04.000Z",
       "firstSeenAt": "2026-11-19T14:09:00.345Z",
-      "outlets": 27,
+      "outlets": 28,
       "outletNames": [
         "Reuters",
         "Investing.com",
@@ -427,9 +405,33 @@
         "KFGO",
         "THV11",
         "NBC10 Philadelphia",
-        "KGW"
+        "KGW",
+        "Seeking Alpha"
       ],
-      "score": 4.48
+      "score": 4.52
+    },
+    {
+      "id": "sig:faa-stop:SFO:2026-11-18",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SFO (wind)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-18T17:35:37.400Z",
+      "latestAt": "2026-11-18T17:35:37.400Z",
+      "firstSeenAt": "2026-11-18T17:35:37.400Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SFO",
+        "hub": true,
+        "nationwide": false,
+        "reason": "wind"
+      }
     },
     {
       "id": "307f16754e66",
@@ -441,7 +443,7 @@
       "publishedAt": "2026-11-18T20:30:00.000Z",
       "latestAt": "2026-11-19T14:34:00.000Z",
       "firstSeenAt": "2026-11-19T12:38:49.480Z",
-      "outlets": 26,
+      "outlets": 27,
       "outletNames": [
         "Associated Press News",
         "Temple Daily Telegram",
@@ -468,9 +470,10 @@
         "Oskaloosa Herald",
         "Tech Xplore",
         "KOCO",
-        "WCVB"
+        "WCVB",
+        "The Baltimore Sun"
       ],
-      "score": 4.17
+      "score": 4.21
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -688,6 +691,34 @@
       "score": 3.79
     },
     {
+      "id": "34f4a753c60c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Warns That Some Vendors Were Hit by a Cyberattack",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/jpmorgan-warns-that-some-vendors-were-hit-by-a-cyberattack",
+      "source": "Bloomberg",
+      "publishedAt": "2026-11-19T02:48:00.000Z",
+      "latestAt": "2026-11-19T16:04:11.000Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
+      "outlets": 13,
+      "outletNames": [
+        "Bloomberg",
+        "Insider on MSN",
+        "FOX 8 News",
+        "AOL.com",
+        "Yahoo",
+        "Washington Times",
+        "Insurance Journal",
+        "New Jersey 101.5",
+        "Business Insider",
+        "KFOX",
+        "WPBN",
+        "KATU",
+        "WHP Harrisburg"
+      ],
+      "score": 3.65
+    },
+    {
       "id": "bab44e1adaa9",
       "cat": "flights",
       "kind": "news",
@@ -705,33 +736,6 @@
         "WTKR"
       ],
       "score": 3.62
-    },
-    {
-      "id": "34f4a753c60c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Warns That Some Vendors Were Hit by a Cyberattack",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-19/jpmorgan-warns-that-some-vendors-were-hit-by-a-cyberattack",
-      "source": "Bloomberg",
-      "publishedAt": "2026-11-19T02:48:00.000Z",
-      "latestAt": "2026-11-19T16:04:11.000Z",
-      "firstSeenAt": "2026-11-19T16:09:24.808Z",
-      "outlets": 12,
-      "outletNames": [
-        "Bloomberg",
-        "Insider on MSN",
-        "FOX 8 News",
-        "AOL.com",
-        "Yahoo",
-        "Washington Times",
-        "Insurance Journal",
-        "New Jersey 101.5",
-        "Business Insider",
-        "KFOX",
-        "WPBN",
-        "KATU"
-      ],
-      "score": 3.56
     },
     {
       "id": "sig:faa-stop:AUS:2026-11-19",
@@ -772,23 +776,6 @@
         "Stourbridge News"
       ],
       "score": 2.5
-    },
-    {
-      "id": "e6ad68ef594c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Thunderstorms and hail forecast for Essex as cold snap set to continue",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZG03NllxV0VibWlwY2c5a3lERzYzOG55cHdMRmtnNzlPMm9lay1LdTJjUjlqdVRPRGEzWnM4X0lSVXJBdElRcWlNYjlSVEFLeXNobHI0QTd4OTV4ekIxZGpHWG1UR1dsSTBpWkFiYWEwNjBlMkxTZmxpWTRvYV8zVE1vbm1NUVc0QlgzVXFTa1l3eVJTN2Z2cGhlUXV3TkJOSWo4YU5OQ0UzSGZLUWJuY0stbw?oc=5",
-      "source": "Harwich and Manningtree Standard",
-      "publishedAt": "2026-11-18T16:30:00.000Z",
-      "latestAt": "2026-11-18T16:30:00.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 2,
-      "outletNames": [
-        "Harwich and Manningtree Standard",
-        "Thurrock Gazette"
-      ],
-      "score": 2
     },
     {
       "id": "d63ec2f9b833",
@@ -962,6 +949,41 @@
       "quietReason": "headline mentions tornadoes"
     },
     {
+      "id": "be4676c173da",
+      "cat": "weather",
+      "kind": "news",
+      "title": "🛰️ A space experiment created a record cold",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQVAxbnBId21mM1RveWxzM0xxYVVxX3Via1JOWEVtM2xGcHVJanhnWXk1Q19hSDVxaWlBS2M2NGZKbXJlLU5DUUdoT040UXdNdDJfOVVRZ2FVVVdrR2l5dzRiam1vMnhGa1lLcVlZekdpNWZDZjljbTZua29CX01xdDNDUnkyUTF5dHc?oc=5",
+      "source": "Techno-Science",
+      "publishedAt": "2026-11-19T12:00:00.000Z",
+      "latestAt": "2026-11-19T12:00:00.000Z",
+      "firstSeenAt": "2026-11-19T15:24:14.837Z",
+      "outlets": 1,
+      "outletNames": [
+        "Techno-Science"
+      ],
+      "score": 1.32
+    },
+    {
+      "id": "f4a81b953bee",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Major cyberattack disrupts European Commission pay and leave systems",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMmlENkZ0TGY2bVFBd2xIcnhMMlUwUHZ0aXZIQ3pRd3pIVWpWR1duOUR3MEZWUDluSHFIVDU2a0psYl9zQmJDbTNiYVJpS05hY2NkTDkzeXRJVzFJUXhfRF9hYkxhTm1tdHF5SENGcDBIOVhDMnYyTU51UHhqWTdnbmNrd1dFcmNnWkRuOGIwbldXZHVpRjVjSHhMTFNEdDA5dzZMcUU0NHhaNm5Q?oc=5",
+      "source": "Philenews",
+      "publishedAt": "2026-11-19T08:00:33.000Z",
+      "latestAt": "2026-11-19T15:44:00.000Z",
+      "firstSeenAt": "2026-11-19T16:39:41.729Z",
+      "outlets": 4,
+      "outletNames": [
+        "Philenews",
+        "Washington Examiner",
+        "The Portugal News",
+        "Notebookcheck"
+      ],
+      "score": 3.59
+    },
+    {
       "id": "sig:faa-stop:TEB:2026-11-18",
       "cat": "flights",
       "kind": "signal",
@@ -1091,6 +1113,25 @@
       "score": 2.59
     },
     {
+      "id": "0a4f69c262fb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
+      "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
+      "source": "The Wall Street Journal",
+      "publishedAt": "2026-11-19T07:51:00.000Z",
+      "latestAt": "2026-11-19T16:18:45.000Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
+      "outlets": 4,
+      "outletNames": [
+        "The Wall Street Journal",
+        "WSJ",
+        "Investing.com",
+        "Investing.com South Africa"
+      ],
+      "score": 2.58
+    },
+    {
       "id": "546e6e8eceae",
       "cat": "flights",
       "kind": "news",
@@ -1146,24 +1187,6 @@
       "score": 2.41
     },
     {
-      "id": "0a4f69c262fb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
-      "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
-      "source": "The Wall Street Journal",
-      "publishedAt": "2026-11-19T07:51:00.000Z",
-      "latestAt": "2026-11-19T16:11:17.000Z",
-      "firstSeenAt": "2026-11-19T16:09:24.808Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Wall Street Journal",
-        "WSJ",
-        "Investing.com"
-      ],
-      "score": 2.23
-    },
-    {
       "id": "4f7bd24c0dcb",
       "cat": "flights",
       "kind": "news",
@@ -1199,6 +1222,26 @@
       "score": 2.13
     },
     {
+      "id": "59122be818fb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Governments around the world warn Java flaw leaves computer systems open to hackers",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA1MWpBdk9JYnJuSHBrWWFjdUVuNWVCeFlmV1VLNkpsc3ZRNGgxeHkzNi1BWTFNV1BOVWlMel9VZXlmdTdFd2I3aS1ndktlUHlTSzNOWURNbm05eHpoYnI0?oc=5",
+      "source": "The Jerusalem Post",
+      "publishedAt": "2026-11-18T17:22:03.000Z",
+      "latestAt": "2026-11-19T01:28:00.000Z",
+      "firstSeenAt": "2026-11-19T16:39:41.729Z",
+      "outlets": 5,
+      "outletNames": [
+        "The Jerusalem Post",
+        "Insurance Journal",
+        "The Lufkin Daily News",
+        "Yahoo Tech",
+        "CNET"
+      ],
+      "score": 2.03
+    },
+    {
       "id": "102728239744",
       "cat": "hacks",
       "kind": "news",
@@ -1214,23 +1257,6 @@
         "Mezha.net"
       ],
       "score": 1.99
-    },
-    {
-      "id": "09dd38a6fe2c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Lyko has addressed a data breach in a limited part of its system",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVURBamVZSG9lMUNmYTRwd0VseVoydTM4YlluYlRiZlhsQ2ZVM292X0hBZ1FscVFXaGxMdVRic2xlM2ZNWE4zZm95SGJXQUo4eERYbi1tUU95c2JCNmdnV2IzOWZrbTFHRVY1WWJ5cWRJTU1lMmVCZTNOSmFDQVdCTUVKcUxtbGhFZ0U4aWJvb0dWWHVCcWtCcEd5YTdzRGpuaExldVVPTFdsd2VuaWdlWkVLaWxfSDZUZ3IxMnFucXY0S3ZtOG9iZnBn?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-18T16:28:00.000Z",
-      "latestAt": "2026-11-18T16:33:14.000Z",
-      "firstSeenAt": "2026-11-18T17:20:37.889Z",
-      "outlets": 2,
-      "outletNames": [
-        "TradingView",
-        "www.marketscreener.com"
-      ],
-      "score": 1.97
     },
     {
       "id": "0729c6a31949",
@@ -1299,6 +1325,23 @@
         "Beinsure"
       ],
       "score": 1.89
+    },
+    {
+      "id": "b09dc7a88fa9",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Video FAA administrator blames himself for the historic ground stop",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1ZV1M4TDhXeHB1clZuc1FuZEp6dHNCVkFhR3lmSFhRakNCYzlrdkRMTmp3Wi1IZ0lsZnFGanJmS1FodmpYQVltWHRDVlM?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-19T12:44:46.000Z",
+      "latestAt": "2026-11-19T13:20:00.000Z",
+      "firstSeenAt": "2026-11-19T16:39:41.729Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos",
+        "Modern Ghana"
+      ],
+      "score": 1.87
     },
     {
       "id": "899534eeb6c3",
@@ -1583,22 +1626,6 @@
       "score": 1.4
     },
     {
-      "id": "497408cf71f1",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple customers face major disruptions as widespread outage affects purchases, payments, activations",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQaVVzcFpzcWZKZVd2bjNDX2dPd2VIY2NHZEczNUxhWVRadjE5c3p4TjlydlJ2QW5jY0NZNTR5Y2pvNHV5TVRSN2U0V2ZjM0c4eWp3RHFQS0lvMWRkenZDc1pLaUdmNHI5blpBRlV1ZGNycTBKc096NjRwNWVqNWVzYnAtdDF2bmxoUHhneFNxVQ?oc=5",
-      "source": "The Cool Down",
-      "publishedAt": "2026-11-19T15:52:00.000Z",
-      "latestAt": "2026-11-19T15:52:00.000Z",
-      "firstSeenAt": "2026-11-19T16:09:24.808Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Cool Down"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "418ae06f44c0",
       "cat": "hacks",
       "kind": "news",
@@ -1686,7 +1713,7 @@
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPTmpycm9wOFJrUHVwNGxqakMzWlM4akExeW50VFg1VkhzaFNxbl84V2dEa1NteDZtQm5jVjZ5YW1KdUhYUGdlOURRazBMckgyb1M4a1R1UDBCdHlkUGh6T1lzV1FnMTVXc2hqVHN3dTJOeV9KTml1WmJWQVpNZjI3RklHUWlWS3NkVFVZODdmU0h3OU5Eei1WUENfSjdhS2xPLWl1TDhhREpYOXRFc3UwLTNmRmFzd2w5VXF1T3FiWk43dXVoYmNpdllYb2dNWWs?oc=5",
       "source": "WEEK | 25 News Now",
       "publishedAt": "2026-11-18T22:17:00.000Z",
-      "latestAt": "2026-11-18T22:17:00.000Z",
+      "latestAt": "2026-11-19T16:24:00.000Z",
       "firstSeenAt": "2026-11-18T22:36:33.829Z",
       "outlets": 1,
       "outletNames": [
@@ -1775,22 +1802,6 @@
       "score": 1.39
     },
     {
-      "id": "3e46297a733a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Rakuten Securities Suffers Massive Data Breach Affecting Millions of Accounts Following Test Server Intrusion",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPQ0ozLVUydWJtdnZIV1htZEh0OThmN3E0SWpQTU9PaGpMX1prcXV0Q3Q1UzdERm44Y2Z3VktocFdNZURLSjdITFU3WUFSTS1jQlRtaEJscWhKV1FMNmw5bENlMnptZ1Zzb0ZmNUV1OW5qbWQ2cmpqTkdmaHJ0VFE2LUVWTlhlMWNmX3FzaXVCc3ZrMXJGeVVIZTNDYUJEcWpCalhLRS1Db1FxUktjUzI0U0Y3eWJHbkNTXzRqRU05dmU0eG94MVpmX2dlZUNaVTNBR290N1dWT1pjVVpt?oc=5",
-      "source": "OODA Loop",
-      "publishedAt": "2026-11-18T16:36:13.000Z",
-      "latestAt": "2026-11-18T16:36:13.000Z",
-      "firstSeenAt": "2026-11-18T16:50:36.097Z",
-      "outlets": 1,
-      "outletNames": [
-        "OODA Loop"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "38b03f3c32dc",
       "cat": "internet",
       "kind": "news",
@@ -1821,22 +1832,6 @@
         "Every CRS Report"
       ],
       "score": 1.36
-    },
-    {
-      "id": "be4676c173da",
-      "cat": "weather",
-      "kind": "news",
-      "title": "🛰️ A space experiment created a record cold",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQVAxbnBId21mM1RveWxzM0xxYVVxX3Via1JOWEVtM2xGcHVJanhnWXk1Q19hSDVxaWlBS2M2NGZKbXJlLU5DUUdoT040UXdNdDJfOVVRZ2FVVVdrR2l5dzRiam1vMnhGa1lLcVlZekdpNWZDZjljbTZua29CX01xdDNDUnkyUTF5dHc?oc=5",
-      "source": "Techno-Science",
-      "publishedAt": "2026-11-19T12:00:00.000Z",
-      "latestAt": "2026-11-19T12:00:00.000Z",
-      "firstSeenAt": "2026-11-19T15:24:14.837Z",
-      "outlets": 1,
-      "outletNames": [
-        "Techno-Science"
-      ],
-      "score": 1.32
     },
     {
       "id": "99346ea6e246",
@@ -2114,6 +2109,22 @@
         "Volcano Discovery"
       ],
       "score": 0.94
+    },
+    {
+      "id": "101d121d2901",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Thousands of NES customers could lose power for overdue ice storm bills",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcEVxeU5xLXJSV1J1U2EwZHZVSXMyRjFrdDB5alIxZ3B3SmNPQnpndkE4dXJmR3lVRE4zM28xTm9CLVMxRUR6Q2VTRnctS1RXcF81WlE2T3pfOTRZa1hxZ3BPQktPMTdBblNRaV90clB4cExIRTVpX2NpXzgxemM1Q0xXR3lHUGdaT3JGUU9aV25sVXh4aDZMbzJGa3dpUQ?oc=5",
+      "source": "WSMV",
+      "publishedAt": "2026-11-18T22:44:00.000Z",
+      "latestAt": "2026-11-19T00:51:00.000Z",
+      "firstSeenAt": "2026-11-19T03:22:20.740Z",
+      "outlets": 1,
+      "outletNames": [
+        "WSMV"
+      ],
+      "score": 0.92
     },
     {
       "id": "8db65d17467b",
