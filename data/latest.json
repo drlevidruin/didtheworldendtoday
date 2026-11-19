@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T02:37:14.010Z",
+  "buildTime": "2026-11-19T03:07:10.355Z",
   "etDate": "2026-11-18",
-  "etStamp": "2026-11-18 21:37 ET",
-  "score": 71,
+  "etStamp": "2026-11-18 22:07 ET",
+  "score": 76,
   "fired": [
     "flights",
     "hacks",
@@ -18,6 +18,11 @@
   ],
   "bumps": [
     {
+      "key": "kp",
+      "label": "Kp 5 or more",
+      "points": 5
+    },
+    {
       "key": "quake",
       "label": "Quake M6 or more",
       "points": 5
@@ -28,7 +33,7 @@
       "points": 6
     }
   ],
-  "change": 5,
+  "change": 10,
   "yesterday": {
     "date": "2026-11-17",
     "score": 66,
@@ -49,18 +54,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1345,
-  "lastSuccessAt": "2026-11-19T02:37:14.010Z",
+  "headlinesRead": 311,
+  "lastSuccessAt": "2026-11-19T03:07:10.355Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 26,
+    "flights": 24,
     "internet": 10,
-    "hacks": 28,
+    "hacks": 30,
     "grid": 8,
+    "sun": 4,
     "earth": 4,
     "weather": 4,
     "germs": 4,
-    "sun": 4,
     "ai": 4,
     "markets": 4,
     "animals": 2,
@@ -76,9 +81,9 @@
       "tsunami": false
     },
     "kp": {
-      "value": 1.33,
-      "time": "2026-11-18T21:00:00.000Z",
-      "max24": 3.33
+      "value": 5,
+      "time": "2026-11-19T00:00:00.000Z",
+      "max24": 5
     },
     "asteroid": {
       "des": "2026 WN",
@@ -181,20 +186,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1023,
-      "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 2 of 26 queries)",
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "bing": {
       "ok": true,
-      "count": 285,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,56 +211,55 @@
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "swpc": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T01:52:00.328Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T02:37:14.010Z"
+      "lastOkAt": "2026-11-19T03:07:10.355Z"
     }
   },
   "stories": [
@@ -418,6 +422,27 @@
       "score": 3.7
     },
     {
+      "id": "sig:kp:2026-11-18",
+      "cat": "sun",
+      "kind": "signal",
+      "title": "Geomagnetic storm reaches Kp 5.0 (G1, minor)",
+      "url": "https://www.swpc.noaa.gov/products/planetary-k-index",
+      "source": "NOAA SWPC",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "latestAt": "2026-11-19T00:00:00.000Z",
+      "firstSeenAt": "2026-11-19T03:07:10.355Z",
+      "outlets": 1,
+      "outletNames": [
+        "NOAA SWPC"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "kp",
+        "kp": 5,
+        "scale": "G1"
+      }
+    },
+    {
       "id": "sig:quake:us7000tz37",
       "cat": "earth",
       "kind": "signal",
@@ -531,24 +556,6 @@
         "Apa.az"
       ],
       "score": 2.54
-    },
-    {
-      "id": "4223afa583f9",
-      "cat": "grid",
-      "kind": "news",
-      "title": "San Francisco restaurant reopens with peanuts and battery lights as power outage drags on",
-      "url": "https://www.yahoo.com/news/articles/san-francisco-restaurant-reopens-peanuts-203900675.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T12:39:00.000Z",
-      "latestAt": "2026-11-18T20:39:00.000Z",
-      "firstSeenAt": "2026-11-18T21:21:17.183Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "Yahoo News UK",
-        "The Cool Down"
-      ],
-      "score": 2.21
     },
     {
       "id": "sig:faa-stop:FLL:2026-11-18",
@@ -676,6 +683,24 @@
       "score": 2.34
     },
     {
+      "id": "4223afa583f9",
+      "cat": "grid",
+      "kind": "news",
+      "title": "San Francisco restaurant reopens with peanuts and battery lights as power outage drags on",
+      "url": "https://www.yahoo.com/news/articles/san-francisco-restaurant-reopens-peanuts-203900675.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T12:39:00.000Z",
+      "latestAt": "2026-11-18T20:39:00.000Z",
+      "firstSeenAt": "2026-11-18T21:21:17.183Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "Yahoo News UK",
+        "The Cool Down"
+      ],
+      "score": 2.21
+    },
+    {
       "id": "b276a3beefeb",
       "cat": "earth",
       "kind": "news",
@@ -727,23 +752,6 @@
       "outletNames": [
         "Ireland Live News",
         "Clare Live"
-      ],
-      "score": 2
-    },
-    {
-      "id": "814650ab5eb0",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Mid-size mussels fared the worst during the 2021 Pacific Northwest heat dome",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5KU29mNk10WDlqbzlJYTZNRm1jRGRqTzc3dXpjUnluM21NajMtUlZqRng4cncwZTlocHdjRGV4MUd5UWIxdWtLRENSSU1CUWlXNVNhaEFaV0t2RXJY?oc=5",
-      "source": "EurekAlert!",
-      "publishedAt": "2026-11-18T03:00:26.000Z",
-      "latestAt": "2026-11-18T22:20:08.000Z",
-      "firstSeenAt": "2026-11-18T03:03:14.805Z",
-      "outlets": 2,
-      "outletNames": [
-        "EurekAlert!",
-        "Phys.org"
       ],
       "score": 2
     },
@@ -951,23 +959,6 @@
       "score": 3.12
     },
     {
-      "id": "dfe665b68cbb",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Exclusive: ‘There was no monitoring.’ Sources say FAA had little oversight of work that led to nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNZ0x3T2Zwc3Rfb2l5czlmU0o4OTU3T0Z4TUdseHJrV0x1RkFzN29CeUZJYUg1QjZ5VEJQUzNMLTk5TUFPS1lXVWdkQkh5VUtsVF9SdnJqSjcxR3ZBaEJRZlBpUVVUMlFQYWZiOE5BZnZaazJ1MUsxX0pWQzJOZ2RoTkhR?oc=5",
-      "source": "CNN",
-      "publishedAt": "2026-11-19T00:01:00.000Z",
-      "latestAt": "2026-11-19T00:01:00.000Z",
-      "firstSeenAt": "2026-11-19T00:36:52.219Z",
-      "outlets": 2,
-      "outletNames": [
-        "CNN",
-        "Yahoo News Singapore"
-      ],
-      "score": 2.77
-    },
-    {
       "id": "2de833544a67",
       "cat": "flights",
       "kind": "news",
@@ -983,6 +974,23 @@
         "The American Bazaar"
       ],
       "score": 2.59
+    },
+    {
+      "id": "dfe665b68cbb",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Exclusive: 'There was no monitoring.' Sources say FAA had little oversight of work that led to nationwide ground stop",
+      "url": "https://www.msn.com/en-us/news/other/exclusive-there-was-no-monitoring-sources-say-faa-had-little-oversight-of-work-that-led-to-nationwide-ground-stop/ar-AA2hJoUr",
+      "source": "CNN on MSN",
+      "publishedAt": "2026-11-18T16:01:21.000Z",
+      "latestAt": "2026-11-19T00:01:00.000Z",
+      "firstSeenAt": "2026-11-19T00:36:52.219Z",
+      "outlets": 2,
+      "outletNames": [
+        "CNN",
+        "Yahoo News Singapore"
+      ],
+      "score": 2.4
     },
     {
       "id": "82c364362378",
@@ -1553,38 +1561,6 @@
       "score": 1.4
     },
     {
-      "id": "145206126cc9",
-      "cat": "flights",
-      "kind": "news",
-      "title": "APTOPIX US Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYzN5RUVVbWx1bFhQSXlhUjdyZDNfT1NHN2FZc3I1U0Iwa0puU3hmdFB1Z3FMdUExel9sdmhyMjFnd1VmY1duWkJ6RlJJLUVzLWt1QW93UVVNc3dSUzU0UHoxTFN6RzdvZDRrQ2NScllRQVJjS0xMcmh5Z0Vteks5c091THFDRERRdzlZQnVPWHJFSmtCOEE?oc=5",
-      "source": "TelegraphHerald.com",
-      "publishedAt": "2026-11-18T02:58:02.000Z",
-      "latestAt": "2026-11-18T02:58:02.000Z",
-      "firstSeenAt": "2026-11-18T03:03:14.805Z",
-      "outlets": 1,
-      "outletNames": [
-        "TelegraphHerald.com"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "992fd1a05944",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Nationwide Ground Stop El Dorado",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOOXM2alBxTVY5dlh4RjRBbjB6SVJsaThRdFpBbW1ncjI3RmN1b3lEQ01pZHpiYTVOYXNiQ2JTM3JteDJEeW5YbjRiSjFheUNudzZqNy1PZnNndDI2S3AtRTZua1lGZVNYTUdpeHlGU2VOMnpTc2VOVDF6MVV0T1h4YU81cmphdG9rb2ZPaFJBa3VIdjFIRUE?oc=5",
-      "source": "TelegraphHerald.com",
-      "publishedAt": "2026-11-18T02:58:02.000Z",
-      "latestAt": "2026-11-18T02:58:02.000Z",
-      "firstSeenAt": "2026-11-18T03:03:14.805Z",
-      "outlets": 1,
-      "outletNames": [
-        "TelegraphHerald.com"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "81df56615633",
       "cat": "internet",
       "kind": "news",
@@ -1811,6 +1787,38 @@
       "score": 1.39
     },
     {
+      "id": "b96d36e0b82d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SNAP Changes See Millions of Texans Go Hungry: Food Banks Are Crippled",
+      "url": "https://www.newsweek.com/snap-changes-snap-benefits-food-banks-texas-hungersee-millions-of-texans-go-hungry-food-banks-are-crippled-12736855",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-18T15:02:00.000Z",
+      "latestAt": "2026-11-18T15:02:00.000Z",
+      "firstSeenAt": "2026-11-19T03:07:10.355Z",
+      "outlets": 1,
+      "outletNames": [
+        "Newsweek"
+      ],
+      "score": 1.12
+    },
+    {
+      "id": "8d062f864de7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Major platform offering 10% cashback shuts down its Visa card",
+      "url": "https://www.thestreet.com/crypto/markets/major-crypto-exchange-shuts-down-its-visa-card",
+      "source": "TheStreet",
+      "publishedAt": "2026-11-18T13:38:00.000Z",
+      "latestAt": "2026-11-18T13:38:00.000Z",
+      "firstSeenAt": "2026-11-19T03:07:10.355Z",
+      "outlets": 1,
+      "outletNames": [
+        "TheStreet"
+      ],
+      "score": 1.09
+    },
+    {
       "id": "9a3d2ccfa649",
       "cat": "germs",
       "kind": "news",
@@ -1859,20 +1867,20 @@
       "score": 1
     },
     {
-      "id": "591e001439b8",
-      "cat": "sun",
+      "id": "ad90ac6660a6",
+      "cat": "earth",
       "kind": "news",
-      "title": "A Solar Eruption Reveals the Hidden Forces Behind the Sun’s Explosive Power",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYWd6bG1FODVQUXh3cjhkSjlZVnplNzRUcmFzOUFQY2toSW1LLWNMc2VRNjJKMUlSTnpzU0VIQ3JiV2tRYThKS3NKWkZWeUJQdy11ckU0ZUk0MGtpUDAtQ3BqMHRXTnltOTFFNnQzLXZOMzJudlpfNlc4Vk16dGpEaA?oc=5",
-      "source": "The Daily Galaxy",
-      "publishedAt": "2026-11-18T20:15:00.000Z",
-      "latestAt": "2026-11-18T20:15:00.000Z",
-      "firstSeenAt": "2026-11-18T20:36:11.081Z",
+      "title": "Shallow 6.0-magnitude earthquake hits Papua New Guinea region",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQcmdrTjg2Uzdkc0U1bjZVcGoxNGlVTEtVZmJ3WlBpOEtEYV9lV3cxbDU3LVIxX09nQ1hmcTVzczN4aVRzZEZPUjg3Wjl6Y0U1M3Q4bFBOSXBlR3FaUVBWd0FPcnkxNDYzRDZQaS1BaTVDTHF2OVhmQVZjWnhQZmFIQ281NnRnSW1Ob3Z4WmFBcVQ5dTZMYVNzNGNHcHFDSjlWTTdnU2tEV3V1QXJU?oc=5",
+      "source": "The Vibes",
+      "publishedAt": "2026-11-18T04:32:00.000Z",
+      "latestAt": "2026-11-18T04:32:00.000Z",
+      "firstSeenAt": "2026-11-18T04:48:36.329Z",
       "outlets": 1,
       "outletNames": [
-        "The Daily Galaxy"
+        "The Vibes"
       ],
-      "score": 0.99
+      "score": 1
     },
     {
       "id": "cd4f9106b2fa",
@@ -1887,22 +1895,6 @@
       "outlets": 1,
       "outletNames": [
         "Vietnam.vn"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "ed117b9cf796",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Grave fears as huge quake rocks 17 countries",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNQXl1VGg2a2c2aVNpcVdrY3lDeWxiREhrWHFocERxNDBlUGNEUHUzZHZlRlF6cDhaRXJqTGlYc0sycnlYaXVHNU0zc2x6NXhwcHpXMndTbzFNbXFsanlReTN3Zmh5d3ZXTkxEUUYzRW5lSmlmUVNaNE83SVBsLWlxMWNfbkRkWnlIZi1FZGxneHJxMTFKWUw2b3dJQTQ3a2lQVERwWFlXYkhuYXhNb2lOMU9lV2VMUWRDX1ZmLXRXbThmeDlBdUo3OXQ1SjRodGNGME9DdWZHYXBpX1c5QVJlVDA0cS0xU0NRcWhlUnE0SlhhRG1hTkl2TVRjdU3SAYICQVVfeXFMTmV4ckllREJYdllYY214emtPU1VXaTY4TVNzdEVoWE1IZVVIOFNXSXV1R1NYLWFYbGxmd3BjcGVhbnp0WV8wV0RGbUlnTHR1NGJnei1pZDdsckFIUTdQVl9FN3dKUGVNNDIxSThkcWFDcVJobkVPcjlPaTFFUnlpZWVvSl9oQVpQcmtTR2dXVW5oRjR5ZTd6VGUwMGhBTHNiS1JVOXN1dnl5VW5hcTdYTGF1YXJvdDJCcXVHSjlXWlA4NEZwZXRWQzc1YnRCVjM1SlhnRnhjS0tRb05jYW1RYmkyYU50NGpwUHJvTHlWbW54LTRvSTRQYTRBQTBQWjA4ZVlR?oc=5",
-      "source": "News.com.au",
-      "publishedAt": "2026-11-18T03:14:20.000Z",
-      "latestAt": "2026-11-18T05:17:24.000Z",
-      "firstSeenAt": "2026-11-18T03:33:11.967Z",
-      "outlets": 1,
-      "outletNames": [
-        "News.com.au"
       ],
       "score": 0.99
     },
@@ -2019,6 +2011,22 @@
         "KTLA"
       ],
       "score": 0.83
+    },
+    {
+      "id": "70af422e6c0b",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Bayesian superyacht crew never had a chance... they didn't know it was doomed to sink in freak storm: UK report at odds with inquiry by Italy",
+      "url": "https://www.dailymail.com/news/article-16304255/Bayesian-superyacht-crew-doomed-sink.html",
+      "source": "Daily Mail",
+      "publishedAt": "2026-11-18T16:01:00.000Z",
+      "latestAt": "2026-11-18T16:01:00.000Z",
+      "firstSeenAt": "2026-11-19T03:07:10.355Z",
+      "outlets": 1,
+      "outletNames": [
+        "Daily Mail"
+      ],
+      "score": 0.81
     },
     {
       "id": "a8c8a7bdda07",
