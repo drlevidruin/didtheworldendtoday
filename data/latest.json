@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T20:25:04.492Z",
+  "buildTime": "2026-11-19T20:40:10.941Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 15:25 ET",
+  "etStamp": "2026-11-19 15:40 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -50,8 +50,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1301,
-  "lastSuccessAt": "2026-11-19T20:25:04.492Z",
+  "headlinesRead": 1284,
+  "lastSuccessAt": "2026-11-19T20:40:10.941Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
@@ -91,7 +91,13 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "AUS",
+          "hub": false,
+          "reason": "airspace volume"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 2,
       "closures": 0,
@@ -182,20 +188,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 993,
+      "count": 975,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "bing": {
       "ok": true,
       "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,56 +213,55 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T19:40:09.535Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T20:25:04.492Z"
+      "lastOkAt": "2026-11-19T20:40:10.941Z"
     }
   },
   "stories": [
@@ -270,7 +275,7 @@
       "publishedAt": "2026-11-19T19:32:00.000Z",
       "latestAt": "2026-11-19T19:41:00.000Z",
       "firstSeenAt": "2026-11-19T19:40:09.535Z",
-      "outlets": 21,
+      "outlets": 24,
       "outletNames": [
         "AZ Family",
         "KKTV",
@@ -292,9 +297,12 @@
         "KCRG",
         "WEEK | 25 News Now",
         "WWBT",
-        "WABI"
+        "WABI",
+        "KOTA Territory News",
+        "WTAP",
+        "Live 5 News"
       ],
-      "score": 5.38
+      "score": 5.57
     },
     {
       "id": "bab44e1adaa9",
@@ -306,7 +314,7 @@
       "publishedAt": "2026-11-19T05:09:00.000Z",
       "latestAt": "2026-11-19T18:39:08.000Z",
       "firstSeenAt": "2026-11-19T13:23:53.347Z",
-      "outlets": 11,
+      "outlets": 12,
       "outletNames": [
         "KPAX News",
         "Scripps News",
@@ -318,9 +326,10 @@
         "WTVR.com",
         "News 5 Cleveland WEWS",
         "ktnv.com",
-        "WXYZ Channel 7"
+        "WXYZ Channel 7",
+        "WCPO 9 News"
       ],
-      "score": 5.38
+      "score": 5.54
     },
     {
       "id": "c3ddbca70630",
@@ -403,7 +412,7 @@
       "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
       "source": "The Straits Times",
       "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-19T20:15:32.000Z",
+      "latestAt": "2026-11-19T20:34:02.000Z",
       "firstSeenAt": "2026-11-19T19:12:09.123Z",
       "outlets": 32,
       "outletNames": [
@@ -440,6 +449,7 @@
         "KHOU",
         "marketscreener.com"
       ],
+      "xUrl": "https://x.com/unusual_whales/status/2123505841991270765",
       "trending": 5000,
       "trendTerm": "jpmorgan chase & co",
       "score": 4.48
@@ -604,52 +614,6 @@
       "score": 2.5
     },
     {
-      "id": "307f16754e66",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
-      "url": "https://apnews.com/article/cyberattack-european-union-artificial-intelligence-ai-79705095e8141cd650196dbff1cf3c70",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-18T20:30:00.000Z",
-      "latestAt": "2026-11-19T14:34:00.000Z",
-      "firstSeenAt": "2026-11-19T12:38:49.480Z",
-      "outlets": 31,
-      "outletNames": [
-        "Associated Press News",
-        "Temple Daily Telegram",
-        "ClickOnDetroit | WDIV Local 4",
-        "Newsday",
-        "Post Register",
-        "Goshen News",
-        "Toronto Star",
-        "The Herald Journal",
-        "ABC News",
-        "KCCI 8 News",
-        "Herald Bulletin",
-        "Bozeman Daily Chronicle",
-        "ABC News - Breaking News, Latest News and Videos",
-        "WTOP News",
-        "The Killeen Daily Herald",
-        "CTV News",
-        "AP News",
-        "Eagle-Tribune",
-        "The Globe and Mail",
-        "morning-times.com",
-        "The Spec",
-        "U.S. News & World Report",
-        "Oskaloosa Herald",
-        "Tech Xplore",
-        "KOCO",
-        "WCVB",
-        "The Baltimore Sun",
-        "The Mercury News",
-        "The Seattle Times",
-        "Boston Herald",
-        "eKathimerini.com"
-      ],
-      "score": 4.35
-    },
-    {
       "id": "609d5f00cba2",
       "cat": "hacks",
       "kind": "news",
@@ -657,9 +621,9 @@
       "url": "https://apnews.com/article/chase-data-leak-cyberattack-8470d475450721b66858bdace47091c0",
       "source": "Associated Press News",
       "publishedAt": "2026-11-19T06:47:00.000Z",
-      "latestAt": "2026-11-19T19:58:51.000Z",
+      "latestAt": "2026-11-19T20:07:00.000Z",
       "firstSeenAt": "2026-11-19T19:55:03.493Z",
-      "outlets": 16,
+      "outlets": 22,
       "outletNames": [
         "Associated Press News",
         "The Joplin Globe",
@@ -676,9 +640,15 @@
         "Toronto Star",
         "Orlando Sentinel",
         "U.S. News & World Report",
-        "Delco Times"
+        "Delco Times",
+        "The Boston Globe",
+        "Ottumwa Courier",
+        "Daily Local",
+        "thereporteronline",
+        "Whittier Daily News",
+        "Pittsburgh Post-Gazette"
       ],
-      "score": 3.91
+      "score": 4.26
     },
     {
       "id": "f4a81b953bee",
@@ -721,6 +691,31 @@
         "nationwide": false,
         "reason": "low ceilings"
       }
+    },
+    {
+      "id": "795c99d2f366",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers access financial and medical data of retired NYC government workers",
+      "url": "https://www.politico.com/news/2026/11/19/hackers-access-financial-and-medical-data-of-retired-nyc-government-workers-01174050",
+      "source": "Politico",
+      "publishedAt": "2026-11-18T22:06:00.000Z",
+      "latestAt": "2026-11-19T18:28:32.000Z",
+      "firstSeenAt": "2026-11-19T11:08:34.389Z",
+      "outlets": 10,
+      "outletNames": [
+        "Politico",
+        "StreetInsider",
+        "Reuters",
+        "Yahoo",
+        "TradingView",
+        "U.S. News & World Report",
+        "Investing.com",
+        "Breakingthenews.net",
+        "marketscreener.com",
+        "CNA"
+      ],
+      "score": 3.38
     },
     {
       "id": "546e6e8eceae",
@@ -848,6 +843,23 @@
       "score": 1.99
     },
     {
+      "id": "e8264ac0b9b3",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Oregon confirms first human case of bird flu this year",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQRGRXVTBPVkVqS0t4c1dpV3ZKR3ZPVUFTaVIxNVdjQUU2WXd5M3pfalVfdnhidkRUU19JNHQ3azJmTkh4X2lOUUQ3OWRSMzVJV2NndkVpaU0waEQzNVlJWkxPM3RfZlZrMzlRdXhnT3FBbmpVQWcwcW9ZR29BZUo4dHhSUVVRYl9jVlBwcVYxUW5yU1dOS2g3c3A4UC0zWUJmaW91eXVSQ1VHdzhHYm9YcjF3RVRWSy1ERm5FOGEwanJYeTZ2TGdvVTBjX1JUNDYtU0hWbTdJb1g?oc=5",
+      "source": "KGW",
+      "publishedAt": "2026-11-19T20:05:00.000Z",
+      "latestAt": "2026-11-19T20:28:41.000Z",
+      "firstSeenAt": "2026-11-19T20:40:10.941Z",
+      "outlets": 2,
+      "outletNames": [
+        "KGW",
+        "KTVZ"
+      ],
+      "score": 1.98
+    },
+    {
       "id": "2241af500213",
       "cat": "grid",
       "kind": "news",
@@ -952,47 +964,6 @@
       "quietReason": "headline mentions tornadoes"
     },
     {
-      "id": "be4676c173da",
-      "cat": "weather",
-      "kind": "news",
-      "title": "🛰️ A space experiment created a record cold",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQVAxbnBId21mM1RveWxzM0xxYVVxX3Via1JOWEVtM2xGcHVJanhnWXk1Q19hSDVxaWlBS2M2NGZKbXJlLU5DUUdoT040UXdNdDJfOVVRZ2FVVVdrR2l5dzRiam1vMnhGa1lLcVlZekdpNWZDZjljbTZua29CX01xdDNDUnkyUTF5dHc?oc=5",
-      "source": "Techno-Science",
-      "publishedAt": "2026-11-19T12:00:00.000Z",
-      "latestAt": "2026-11-19T12:00:00.000Z",
-      "firstSeenAt": "2026-11-19T15:24:14.837Z",
-      "outlets": 1,
-      "outletNames": [
-        "Techno-Science"
-      ],
-      "score": 1.32
-    },
-    {
-      "id": "795c99d2f366",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers access financial and medical data of retired NYC government workers",
-      "url": "https://www.politico.com/news/2026/11/19/hackers-access-financial-and-medical-data-of-retired-nyc-government-workers-01174050",
-      "source": "Politico",
-      "publishedAt": "2026-11-18T22:06:00.000Z",
-      "latestAt": "2026-11-19T18:28:32.000Z",
-      "firstSeenAt": "2026-11-19T11:08:34.389Z",
-      "outlets": 10,
-      "outletNames": [
-        "Politico",
-        "StreetInsider",
-        "Reuters",
-        "Yahoo",
-        "TradingView",
-        "U.S. News & World Report",
-        "Investing.com",
-        "Breakingthenews.net",
-        "marketscreener.com",
-        "CNA"
-      ],
-      "score": 3.38
-    },
-    {
       "id": "abe5c8e58707",
       "cat": "hacks",
       "kind": "news",
@@ -1029,6 +1000,25 @@
         "Investing.com Canada"
       ],
       "score": 2.8
+    },
+    {
+      "id": "b6dcdf986663",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase Bank announces cyberattack, says hackers may have obtained customers’ personal information",
+      "url": "https://www.azfamily.com/2026/11/19/chase-bank-announces-cyberattack-says-hackers-may-have-obtained-customers-personal-information/",
+      "source": "AZ Family",
+      "publishedAt": "2026-11-19T09:52:00.000Z",
+      "latestAt": "2026-11-19T17:52:00.000Z",
+      "firstSeenAt": "2026-11-19T18:39:49.132Z",
+      "outlets": 4,
+      "outletNames": [
+        "Western Mass News",
+        "AZ Family",
+        "KSWO 7News",
+        "News Channel 6 | Wichita Falls, TX"
+      ],
+      "score": 2.56
     },
     {
       "id": "a0791d5f481b",
@@ -1073,6 +1063,24 @@
       "score": 2.41
     },
     {
+      "id": "504b2f0e2351",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission targeted in an AI-assisted cyberattack, spokesperson confirms",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
+      "source": "DW.com",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-19T19:33:10.000Z",
+      "firstSeenAt": "2026-11-19T20:40:10.941Z",
+      "outlets": 3,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı",
+        "The Brussels Times"
+      ],
+      "score": 2.34
+    },
+    {
       "id": "e358feae5cc2",
       "cat": "hacks",
       "kind": "news",
@@ -1108,24 +1116,6 @@
         "Gizmodo"
       ],
       "score": 2.23
-    },
-    {
-      "id": "b6dcdf986663",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank announces cyberattack, says hackers may have obtained customers’ personal information",
-      "url": "https://www.azfamily.com/2026/11/19/chase-bank-announces-cyberattack-says-hackers-may-have-obtained-customers-personal-information/",
-      "source": "AZ Family",
-      "publishedAt": "2026-11-19T09:52:00.000Z",
-      "latestAt": "2026-11-19T17:52:00.000Z",
-      "firstSeenAt": "2026-11-19T18:39:49.132Z",
-      "outlets": 3,
-      "outletNames": [
-        "Western Mass News",
-        "AZ Family",
-        "KSWO 7News"
-      ],
-      "score": 2.21
     },
     {
       "id": "424febfdf588",
@@ -1590,6 +1580,23 @@
       "score": 1.7
     },
     {
+      "id": "a8c2d1f8a2f6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Ransomware group reportedly leaks Chase, Visa, and Mastercard customer data, but not credit card numbers",
+      "url": "https://mashable.com/tech/n0n-ransomware-group-leaks-chase-mastercard-visa-customer-data",
+      "source": "Mashable",
+      "publishedAt": "2026-11-19T10:38:00.000Z",
+      "latestAt": "2026-11-19T19:37:45.000Z",
+      "firstSeenAt": "2026-11-19T20:40:10.941Z",
+      "outlets": 2,
+      "outletNames": [
+        "Mashable",
+        "Mashable SEA"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "fe740af2b933",
       "cat": "hacks",
       "kind": "news",
@@ -1673,6 +1680,22 @@
         "Yahoo"
       ],
       "score": 1.56
+    },
+    {
+      "id": "2c3063035351",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Power restored in parts of Kenyan capital after major outage",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOUZyRmROLWs3dWdJNTZHQTdidDk5SGw4ZjhxbTMwRGpDZTBVUEpEZVQySzhCSzhNUFVhSVlUWlNYU1cyV2xSWDkxWE8xNWFEeThmMldPdDY5aTM3N2FMWGVvamV4SkVDamlLSmpXeExrRDlkYktOOTZpVkNscE5EM19YQzZQbGdLWDVHR0h3QllZMXp2LXNaak5PMWRSTTNt?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-19T20:27:41.000Z",
+      "latestAt": "2026-11-19T20:27:41.000Z",
+      "firstSeenAt": "2026-11-19T20:40:10.941Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yeni Safak English"
+      ],
+      "score": 1.4
     },
     {
       "id": "961693e43d52",
@@ -1803,36 +1826,20 @@
       "score": 1.4
     },
     {
-      "id": "3f115b968840",
-      "cat": "internet",
+      "id": "be4676c173da",
+      "cat": "weather",
       "kind": "news",
-      "title": "Microsoft reveals 80% server failure behind global outage",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZjZtRXdnNW1XcGtDSVpfTUtfVk1YMmNkbUtHQ3lnMG1YSXg4MzV6UlBTQjdaRzk3Z3hTV2JGdFVmOWNpN082SXVGbW5ZTVN5N3FEZzJhVENKbzRFelM3bTI5ZWVncjNXWDIxYlo1OTlJcWNTSmFmcEN0NkpYaFlMWldaUUJTT1FqV2xXeTR1aVBXeG0yYnAw?oc=5",
-      "source": "TheStreet",
-      "publishedAt": "2026-11-19T19:17:00.000Z",
-      "latestAt": "2026-11-19T19:17:00.000Z",
-      "firstSeenAt": "2026-11-19T19:40:09.535Z",
+      "title": "🛰️ A space experiment created a record cold",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQVAxbnBId21mM1RveWxzM0xxYVVxX3Via1JOWEVtM2xGcHVJanhnWXk1Q19hSDVxaWlBS2M2NGZKbXJlLU5DUUdoT040UXdNdDJfOVVRZ2FVVVdrR2l5dzRiam1vMnhGa1lLcVlZekdpNWZDZjljbTZua29CX01xdDNDUnkyUTF5dHc?oc=5",
+      "source": "Techno-Science",
+      "publishedAt": "2026-11-19T12:00:00.000Z",
+      "latestAt": "2026-11-19T12:00:00.000Z",
+      "firstSeenAt": "2026-11-19T15:24:14.837Z",
       "outlets": 1,
       "outletNames": [
-        "TheStreet"
+        "Techno-Science"
       ],
-      "score": 1.39
-    },
-    {
-      "id": "418ae06f44c0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Europe's biggest gas supplier battling cyberattack – with no timeline for recovery",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOc3dSZmpKdThqaGIzcUhuSUw5UUl1VHFoQnBkaWFyUklLRVYxUEtLTklNQ0EzeDhMOG9sUnota3psWFB1N21oeVphS0ItejlLMnFnN3BLSHI0TEFReHJLbk40MzN4ZXdRbG5mdDRObzZGOG50WnlVREJBVDgtcGEwejk3NVJ3Ui14SlNKcW9jNnBWcWtEcFFvTWNscHAzUktiTG4xS0k0TmI0RVdVa3hyckNPTzFQckJxUEJHZVhTUk5GcEl6QndQaWgyTTVTc1NyUF9ISw?oc=5",
-      "source": "The Register",
-      "publishedAt": "2026-11-19T15:37:00.000Z",
-      "latestAt": "2026-11-19T15:37:00.000Z",
-      "firstSeenAt": "2026-11-19T15:54:21.515Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Register"
-      ],
-      "score": 1.39
+      "score": 1.32
     },
     {
       "id": "0690304d1415",
@@ -1891,7 +1898,7 @@
       "title": "Large Bear Wanders Into California Grocery Store (Video)",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxON1VnaWNlQTFtZDBMYkV5MTE5akxNNzlPdi1ZWlVROXZFMVNycTRFVUo0X1NUaTU2bUNJNXczOGxsTFhJdGFxOWNnWjJrUlZYVElrbFYtYi1DS0dsRTMtMUlHcUFNZl81S3ctWE05ZVE0WDBrVVRwbWF1Mm1KNGlGamFB?oc=5",
       "source": "Outdoors with Bear Grylls",
-      "publishedAt": "2026-11-19T19:32:37.000Z",
+      "publishedAt": "2026-11-19T19:32:06.000Z",
       "latestAt": "2026-11-19T19:32:37.000Z",
       "firstSeenAt": "2026-11-19T19:40:09.535Z",
       "outlets": 1,
@@ -1977,22 +1984,6 @@
       "outlets": 1,
       "outletNames": [
         "kalkine.ca"
-      ],
-      "score": 1
-    },
-    {
-      "id": "85aa4ba56ee9",
-      "cat": "germs",
-      "kind": "news",
-      "title": "More than 3000 bird flu tests carried out since July",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVXY4TnZHOExIU1dxMmRkeDJJUjJYbjExb0h1VmlyRnRIRFJxSTA3dERQMmJfM3FRb2NhTlNFN3pnMUJOQ3h5LXJvc212OW5PX3IyMzJkU2pVbnI2enJSemJNdjVaMWZ0ZjZRaW40ZGplekhHTGVadFBKcG0xSFdldUhWT0RrdnhTSGUxeTZRX3dWLXZQZGVTQUZCNmxCN0ZD?oc=5",
-      "source": "RNZ",
-      "publishedAt": "2026-11-19T04:30:48.000Z",
-      "latestAt": "2026-11-19T04:30:48.000Z",
-      "firstSeenAt": "2026-11-19T04:37:28.583Z",
-      "outlets": 1,
-      "outletNames": [
-        "RNZ"
       ],
       "score": 1
     },
