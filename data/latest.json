@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T21:25:13.013Z",
+  "buildTime": "2026-11-19T21:40:15.738Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 16:25 ET",
+  "etStamp": "2026-11-19 16:40 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -50,8 +50,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1317,
-  "lastSuccessAt": "2026-11-19T21:25:13.013Z",
+  "headlinesRead": 1244,
+  "lastSuccessAt": "2026-11-19T21:40:15.738Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
@@ -182,81 +182,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1016,
+      "count": 994,
       "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "bing": {
       "ok": true,
-      "count": 267,
-      "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "count": 215,
+      "error": "5 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-19T17:54:41.598Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T20:40:10.941Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T21:25:13.013Z"
+      "lastOkAt": "2026-11-19T21:40:15.738Z"
     }
   },
   "stories": [
@@ -270,7 +269,7 @@
       "publishedAt": "2026-11-19T19:32:00.000Z",
       "latestAt": "2026-11-19T19:41:00.000Z",
       "firstSeenAt": "2026-11-19T19:40:09.535Z",
-      "outlets": 30,
+      "outlets": 31,
       "outletNames": [
         "AZ Family",
         "KKTV",
@@ -301,9 +300,10 @@
         "WBTV",
         "KOLD",
         "WDRB",
-        "Western Mass News"
+        "Western Mass News",
+        "WBNG"
       ],
-      "score": 5.89
+      "score": 5.94
     },
     {
       "id": "bab44e1adaa9",
@@ -315,7 +315,7 @@
       "publishedAt": "2026-11-19T05:09:00.000Z",
       "latestAt": "2026-11-19T18:39:08.000Z",
       "firstSeenAt": "2026-11-19T13:23:53.347Z",
-      "outlets": 12,
+      "outlets": 13,
       "outletNames": [
         "KPAX News",
         "Scripps News",
@@ -328,9 +328,10 @@
         "News 5 Cleveland WEWS",
         "ktnv.com",
         "WXYZ Channel 7",
-        "WCPO 9 News"
+        "WCPO 9 News",
+        "KBZK News"
       ],
-      "score": 5.54
+      "score": 5.68
     },
     {
       "id": "c3ddbca70630",
@@ -408,54 +409,46 @@
       "score": 4.61
     },
     {
-      "id": "27975f1b5d1e",
+      "id": "609d5f00cba2",
       "cat": "hacks",
       "kind": "news",
-      "title": "JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack",
-      "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
-      "source": "The Straits Times",
-      "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-19T21:05:00.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
-      "outlets": 32,
+      "title": "A cyberattack leaks thousands of Chase customer emails and some phone numbers",
+      "url": "https://apnews.com/article/chase-data-leak-cyberattack-8470d475450721b66858bdace47091c0",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-19T06:47:00.000Z",
+      "latestAt": "2026-11-19T20:07:00.000Z",
+      "firstSeenAt": "2026-11-19T19:55:03.493Z",
+      "outlets": 27,
       "outletNames": [
-        "Yahoo",
-        "Mashable",
-        "Mashable SEA",
-        "The Straits Times",
-        "Yahoo Finance",
-        "CBS News on MSN",
-        "The Washington Post on MSN",
-        "The Independent on MSN",
-        "FOX 8 News",
-        "AOL.com",
-        "THV11",
-        "cbs19.tv",
-        "100.7 WZLX - Boston's Classic Rock",
-        "Insurance Journal",
-        "WHP Harrisburg",
-        "Business Insider",
-        "WSJ",
-        "NBC10 Philadelphia",
-        "Investing.com",
-        "Gulf News",
-        "Bloomberg.com",
-        "Washington Times",
-        "Crypto News",
-        "NBC 5 Chicago",
-        "Quartz",
-        "Reuters",
-        "OFFGRID Survival",
-        "KMBC",
-        "Breitbart News",
-        "Click2Houston",
-        "KHOU",
-        "marketscreener.com"
+        "Associated Press News",
+        "The Joplin Globe",
+        "WTOP News",
+        "kens5.com",
+        "Newsday",
+        "Pioneer Press",
+        "Hartford Courant",
+        "Marietta Daily Journal",
+        "thedailystar.com",
+        "The Killeen Daily Herald",
+        "The Batesville Daily Guard",
+        "Idaho State Journal",
+        "Toronto Star",
+        "Orlando Sentinel",
+        "U.S. News & World Report",
+        "Delco Times",
+        "The Boston Globe",
+        "Ottumwa Courier",
+        "Daily Local",
+        "thereporteronline",
+        "Whittier Daily News",
+        "Pittsburgh Post-Gazette",
+        "The Press Democrat",
+        "AP News",
+        "couriernews.com",
+        "Bozeman Daily Chronicle",
+        "The Independent"
       ],
-      "xUrl": "https://x.com/unusual_whales/status/2123505841991270765",
-      "trending": 5000,
-      "trendTerm": "jpmorgan chase & co",
-      "score": 4.48
+      "score": 4.5
     },
     {
       "id": "21ec90f1e9d6",
@@ -601,62 +594,75 @@
       "score": 2.73
     },
     {
-      "id": "e498b9be28a4",
-      "cat": "internet",
+      "id": "e8264ac0b9b3",
+      "cat": "germs",
       "kind": "news",
-      "title": "LIVE - Water supply restored to 'vast majority' after major outage",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaEhlamV2bkN6WDJ6WHJQMUFCSzhGem1pT1drUmlqdS15T3NzOFJuTXVSV25QUktaeUlPeERxbjQ1c29VN181S0lrMkp2MFd2N2FHVE05dF95WVRrZV81Z0RQb0NhRFd4aVVvVGRBWnc2NTFlM1BweHQtYjBCaURsdGxpMklVeENoR3p3dUNMbUlyOW9qVU9HNFZ2TFMtTHlZbWJz?oc=5",
-      "source": "Halesowen News",
-      "publishedAt": "2026-11-19T07:37:27.000Z",
-      "latestAt": "2026-11-19T07:37:27.000Z",
-      "firstSeenAt": "2026-11-19T14:09:00.345Z",
-      "outlets": 2,
+      "title": "Oregon reports first human case of bird flu in 2026",
+      "url": "https://ktvz.com/news/2026/11/19/oregon-reports-first-human-case-of-bird-flu-in-2026/",
+      "source": "KTVZ",
+      "publishedAt": "2026-11-19T04:28:00.000Z",
+      "latestAt": "2026-11-19T21:25:00.000Z",
+      "firstSeenAt": "2026-11-19T20:40:10.941Z",
+      "outlets": 6,
       "outletNames": [
-        "Halesowen News",
-        "Stourbridge News"
+        "KGW",
+        "KTVZ",
+        "Yahoo",
+        "Statesman Journal",
+        "KATU",
+        "East Oregonian"
       ],
-      "score": 2.5
+      "score": 2.62
     },
     {
-      "id": "609d5f00cba2",
+      "id": "27975f1b5d1e",
       "cat": "hacks",
       "kind": "news",
-      "title": "A cyberattack leaks thousands of Chase customer emails and some phone numbers",
-      "url": "https://apnews.com/article/chase-data-leak-cyberattack-8470d475450721b66858bdace47091c0",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-19T06:47:00.000Z",
-      "latestAt": "2026-11-19T20:07:00.000Z",
-      "firstSeenAt": "2026-11-19T19:55:03.493Z",
-      "outlets": 26,
+      "title": "JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack",
+      "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
+      "source": "The Straits Times",
+      "publishedAt": "2026-11-19T03:58:00.000Z",
+      "latestAt": "2026-11-19T21:05:00.000Z",
+      "firstSeenAt": "2026-11-19T19:12:09.123Z",
+      "outlets": 32,
       "outletNames": [
-        "Associated Press News",
-        "The Joplin Globe",
-        "WTOP News",
-        "kens5.com",
-        "Newsday",
-        "Pioneer Press",
-        "Hartford Courant",
-        "Marietta Daily Journal",
-        "thedailystar.com",
-        "The Killeen Daily Herald",
-        "The Batesville Daily Guard",
-        "Idaho State Journal",
-        "Toronto Star",
-        "Orlando Sentinel",
-        "U.S. News & World Report",
-        "Delco Times",
-        "The Boston Globe",
-        "Ottumwa Courier",
-        "Daily Local",
-        "thereporteronline",
-        "Whittier Daily News",
-        "Pittsburgh Post-Gazette",
-        "The Press Democrat",
-        "AP News",
-        "couriernews.com",
-        "Bozeman Daily Chronicle"
+        "Yahoo",
+        "Mashable",
+        "Mashable SEA",
+        "The Straits Times",
+        "Yahoo Finance",
+        "CBS News on MSN",
+        "The Washington Post on MSN",
+        "The Independent on MSN",
+        "FOX 8 News",
+        "AOL.com",
+        "THV11",
+        "cbs19.tv",
+        "100.7 WZLX - Boston's Classic Rock",
+        "Insurance Journal",
+        "WHP Harrisburg",
+        "Business Insider",
+        "WSJ",
+        "NBC10 Philadelphia",
+        "Investing.com",
+        "Gulf News",
+        "Bloomberg.com",
+        "Washington Times",
+        "Crypto News",
+        "NBC 5 Chicago",
+        "Quartz",
+        "Reuters",
+        "OFFGRID Survival",
+        "KMBC",
+        "Breitbart News",
+        "Click2Houston",
+        "KHOU",
+        "marketscreener.com"
       ],
-      "score": 4.45
+      "xUrl": "https://x.com/unusual_whales/status/2123505841991270765",
+      "trending": 5000,
+      "trendTerm": "jpmorgan chase & co",
+      "score": 4.48
     },
     {
       "id": "f4a81b953bee",
@@ -748,24 +754,21 @@
       "score": 3.27
     },
     {
-      "id": "e8264ac0b9b3",
-      "cat": "germs",
+      "id": "e498b9be28a4",
+      "cat": "internet",
       "kind": "news",
-      "title": "Oregon reports first human case of bird flu in 2026",
-      "url": "https://ktvz.com/news/2026/11/19/oregon-reports-first-human-case-of-bird-flu-in-2026/",
-      "source": "KTVZ",
-      "publishedAt": "2026-11-19T04:28:00.000Z",
-      "latestAt": "2026-11-19T21:22:25.000Z",
-      "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 5,
+      "title": "LIVE - Water supply restored to 'vast majority' after major outage",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaEhlamV2bkN6WDJ6WHJQMUFCSzhGem1pT1drUmlqdS15T3NzOFJuTXVSV25QUktaeUlPeERxbjQ1c29VN181S0lrMkp2MFd2N2FHVE05dF95WVRrZV81Z0RQb0NhRFd4aVVvVGRBWnc2NTFlM1BweHQtYjBCaURsdGxpMklVeENoR3p3dUNMbUlyOW9qVU9HNFZ2TFMtTHlZbWJz?oc=5",
+      "source": "Halesowen News",
+      "publishedAt": "2026-11-19T07:37:27.000Z",
+      "latestAt": "2026-11-19T07:37:27.000Z",
+      "firstSeenAt": "2026-11-19T14:09:00.345Z",
+      "outlets": 2,
       "outletNames": [
-        "KGW",
-        "KTVZ",
-        "Yahoo",
-        "Statesman Journal",
-        "KATU"
+        "Halesowen News",
+        "Stourbridge News"
       ],
-      "score": 2.42
+      "score": 2.5
     },
     {
       "id": "7334ae663cbb",
@@ -1874,6 +1877,22 @@
       "quietReason": "headline mentions flooding"
     },
     {
+      "id": "22a06be19db9",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Stocks plunge as investors take cover amid growing uncertainty",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBVZjFqa0hNX2pnT1d4RGRQWEhNTDl6djZzd2sxOFZhOWE3UnUyZFpxWk1NVzJrNnpGbS02bDctT2FLMUNNdzV2ZW9lMjVrM01ZRHpBNmpycjBJSVRVaWVPdGlyazkxQWJLal9BSHo1Zw?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-19T21:25:11.000Z",
+      "latestAt": "2026-11-19T21:25:11.000Z",
+      "firstSeenAt": "2026-11-19T21:40:15.738Z",
+      "outlets": 1,
+      "outletNames": [
+        "CBS News"
+      ],
+      "score": 1
+    },
+    {
       "id": "d4ecff3a54bf",
       "cat": "markets",
       "kind": "news",
@@ -1970,20 +1989,20 @@
       "score": 1
     },
     {
-      "id": "76e023bde007",
-      "cat": "markets",
+      "id": "6345442a7a0d",
+      "cat": "sun",
       "kind": "news",
-      "title": "19th November 2026S&P/TSX Composite Index Poised for a Weak Opening Amid Broad Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNRWlyc1czUC1xeWFWYnBiX0hQU0VndEF0T0tsVmcwRV9oNldlYzFtUnNuRXJZcTJmbVVjeXh2cTJ1ZEF1RlpqeVQ1WWFmeFdlZW95bE1abGZsREpyR0FyZUFVMlhNZjNUM3V6NFdOeVZieWRGaUY4RjNlUF8xMk5aTzB6ZzlfOUoyX0pVSHJGTE96X2VWNXM3TVhhU21nSlZNWDN4Sk5sS1dQRURzNkNQbTZCVXpFQ3VqRmNKUTNrc3poWnlf?oc=5",
-      "source": "kalkine.ca",
-      "publishedAt": "2026-11-19T12:12:38.000Z",
-      "latestAt": "2026-11-19T12:12:38.000Z",
-      "firstSeenAt": "2026-11-19T12:23:43.299Z",
+      "title": "Astronomy Picture of the Day: A Medium-Sized Solar Flare.",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5DQk5jdXlnVUx1VDZ3b1dDYnhSa2VOcC1Jd0tnM3gxekllQ3VlTXhDcGU1TzZ5UFVpOVh5R2dhNUs0eEl0VUtlZkI0NTlJd1hEejdfaFJ6MTJNTTBOOXpneWVydGM1QU5VdVE?oc=5",
+      "source": "Kottke.org",
+      "publishedAt": "2026-11-19T21:20:00.000Z",
+      "latestAt": "2026-11-19T21:20:00.000Z",
+      "firstSeenAt": "2026-11-19T21:40:15.738Z",
       "outlets": 1,
       "outletNames": [
-        "kalkine.ca"
+        "Kottke.org"
       ],
-      "score": 1
+      "score": 0.99
     },
     {
       "id": "c8dd8b8dfe6b",
@@ -2034,22 +2053,6 @@
         "News24Online"
       ],
       "score": 0.98
-    },
-    {
-      "id": "7a6a0d89d70e",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Four Radiation Belts Form Around Earth Following Intense May 2024 Geomagnetic Storm",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQdWFSQWxjQ2x1WUxaNUx5S3FORllaUWI1UTlMYVlEczFEVVFpRGhOLTN5M080XzBsSUNCOHNIdWlKa0Nmei04NVYxY2d4bWRRM1c5azJFWDBQZ1hUc0l3cFZ0QjVZNlFrclRzM3VZU3VTU1BPVF9SVkg3NU1aSXZEV0ZFbHBXUzFUdk51Q1d4c3p3emtKVVZndlZXTmlUNFNmT0twWk9BUDMyNVBUd3hjVUJXbEp1LUxDa1luTTRHRTdJeFNZRXVTeG1XdUh3cDU20gHQAUFVX3lxTFB1YVJBbGNDbHVZTFo1THlLcU5GWVpRYjVROUxhWURzMURVUWlEaE4tM3kzTzRfMGxJQ0I4c0h1aUprQ2Z6LTg1VjFjZ3htZFEzVzlrMkVYMFBnWFRzSXdwVnRCNVk2UWtyVHMzdVlTdVNTUE9UX1JWSDc1TVpJdkRXRkVscFdTMVR2TnVDV3hzend6a0pVVmd2VldOaVQ0U2ZPS3BaT0FQMzI1UFR3eGNVQldsSnUtTENrWW5NNEdFN0l4U1lFdVN4bVd1SHdwNTY?oc=5",
-      "source": "Inkorr",
-      "publishedAt": "2026-11-19T16:00:39.000Z",
-      "latestAt": "2026-11-19T16:00:39.000Z",
-      "firstSeenAt": "2026-11-19T17:54:41.598Z",
-      "outlets": 1,
-      "outletNames": [
-        "Inkorr"
-      ],
-      "score": 0.97
     },
     {
       "id": "d1bfe0d98aab",
