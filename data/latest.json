@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T05:07:33.416Z",
+  "buildTime": "2026-11-19T05:22:29.733Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 00:07 ET",
+  "etStamp": "2026-11-19 00:22 ET",
   "score": 76,
   "fired": [
     "flights",
@@ -54,14 +54,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1329,
-  "lastSuccessAt": "2026-11-19T05:07:33.416Z",
+  "headlinesRead": 1131,
+  "lastSuccessAt": "2026-11-19T05:22:29.733Z",
   "rollingFallback": false,
   "cats": {
-    "internet": 9,
+    "internet": 10,
     "flights": 26,
     "hacks": 30,
-    "grid": 9,
+    "grid": 8,
     "sun": 4,
     "earth": 4,
     "weather": 4,
@@ -174,31 +174,33 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Myanmar faces historic genocide verdict at UN court over Rohingya massacres"
+      ]
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1017,
+      "count": 1016,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
-      "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "count": 77,
+      "error": "6 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     },
     "gdelt": {
       "ok": false,
@@ -210,55 +212,56 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:07:33.416Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z"
+      "lastOkAt": "2026-11-19T05:22:29.733Z"
     }
   },
   "stories": [
@@ -364,7 +367,7 @@
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRVg4c3h1a3ZYUXdPRVlqMDVrOVhLSGxMamRGU3lESFBlc1pOUFd3S1VlVHpSR1FxWUU2eHI5U3VKS1Y0WWwxZXh5WWNnV1ZpU1BnUXBQM0htN0podUdJRlBpMFlzRmtNQ0doUkN2aW5OeWd1S20zMDZWUEFVY2xubG1nQmwxbW9rVzJkbEZyNVpyRWdNWmtoZEh2WEpLTEZhelVrUmVDSnh2czQ?oc=5",
       "source": "cbs8.com",
       "publishedAt": "2026-11-18T17:22:00.000Z",
-      "latestAt": "2026-11-18T23:07:57.000Z",
+      "latestAt": "2026-11-18T23:09:38.000Z",
       "firstSeenAt": "2026-11-18T17:35:37.400Z",
       "outlets": 7,
       "outletNames": [
@@ -1204,23 +1207,6 @@
       "score": 1.71
     },
     {
-      "id": "0cb9658ecf93",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Some say hacks, others say AI - why have there been so many outages?",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/hacks-others-ai-why-many-131657048.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-18T05:16:00.000Z",
-      "latestAt": "2026-11-18T13:16:53.000Z",
-      "firstSeenAt": "2026-11-18T14:04:59.182Z",
-      "outlets": 2,
-      "outletNames": [
-        "YAHOO!",
-        "BBC"
-      ],
-      "score": 1.71
-    },
-    {
       "id": "d8430433284b",
       "cat": "hacks",
       "kind": "news",
@@ -1251,23 +1237,6 @@
       "outletNames": [
         "WKRN Nashville on MSN",
         "WKRN News 2"
-      ],
-      "score": 1.69
-    },
-    {
-      "id": "711e5e78a7e4",
-      "cat": "grid",
-      "kind": "news",
-      "title": "8,000 customers lose power in Ulster County",
-      "url": "https://www.timesunion.com/news/article/power-woodstock-kingston-saugerties-22537071.php",
-      "source": "Times Union",
-      "publishedAt": "2026-11-18T05:18:00.000Z",
-      "latestAt": "2026-11-18T14:19:28.000Z",
-      "firstSeenAt": "2026-11-18T14:35:04.258Z",
-      "outlets": 2,
-      "outletNames": [
-        "Times Union",
-        "NEWS10 ABC"
       ],
       "score": 1.69
     },
@@ -1844,6 +1813,38 @@
       "score": 1.39
     },
     {
+      "id": "3d06374d0a4c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack Hits 178 Major Websites, Exposes Growing Risks Of Third Party Software",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNd1pHMTB2dXdfY0FMcFFvcVVRcVd6YkY0V1dZQ2xVY2tLVEw3RjlnSlQ1MmowZUZMZW0zanRGZFpVMGlEcW1xNVBHbmRqdVhoUjlqZWc3dnkxLWgxanotM1daYUxsbC1zeWRZMnVGOHlVU1QzVGk5bGhwR3gySWJ6bkZfbUZUejd1S1ZJZFJzWU1Xc3M2UkowRjRyNXZ0RzNDb3NzbFdGekFVVVlvMHFReEdKMmFuWFRjNVpqeDZNV0V6OGEw?oc=5",
+      "source": "BusinessToday Malaysia",
+      "publishedAt": "2026-11-18T08:01:44.000Z",
+      "latestAt": "2026-11-18T08:01:44.000Z",
+      "firstSeenAt": "2026-11-18T08:18:58.475Z",
+      "outlets": 1,
+      "outletNames": [
+        "BusinessToday Malaysia"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "2f2d0c363c00",
+      "cat": "internet",
+      "kind": "news",
+      "title": "NSAs Top-Secret Internal Network Hit By Major Outage After Software Update, Essential Staff Asked To Report",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPQXJ3QVpZOGtQV0E4M24zZWNOWllSRzEwemV4cWlRdVhXb2xPdjNNMGJxLWsycmw1dVpNcDBwaU5oSmg4MEdlMjlMdzdSczhwcmtRQmg5TzlKcFBpTWZuaVBKRWZZRl9Yc1hQdmZkcktqZElJVGFDQkFXeFhUZnBPVFFNcklmOVdoWE9SRzlwNXNXaWRCVWo4TUh3cnpxLVU0TVFwb2NYTzVVb2Q4MXR3NnZtNzVCR1JIWXlCN1VERHZQNzZQdm5tc00yVFhtZy1pdDF1bmI2VWtvS3pq0gHiAUFVX3lxTFBaUmROQVZObEZqa0pTdDk4VmhiMjByVzduSmRzbnQ4a3VoZnppNkw1QWx4TEpzWWVzV1lfcTFtUDZkSnBXSkQxSFc5Sm5SLVBpRHE0TDlQQWxNYzZXMXJKNlJhNkYxRmwxTnNydVM2Z01LXzZmXzBWeElCaWZSdFZzeGd2b29feXo1SWVoRVBuY2Q0VTEzRTJGYlZBM2tRTFVSc0g3ZDMxU1lvQ1JaQjM2S3NDY3M3UlEyVU51RUEzNnJXbkhndm02NmxydEdLY2Q0bmttR2JFSlpRQndxa05xZkE?oc=5",
+      "source": "Free Press Journal",
+      "publishedAt": "2026-11-18T05:31:53.000Z",
+      "latestAt": "2026-11-18T05:31:53.000Z",
+      "firstSeenAt": "2026-11-18T05:48:35.248Z",
+      "outlets": 1,
+      "outletNames": [
+        "Free Press Journal"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "85aa4ba56ee9",
       "cat": "germs",
       "kind": "news",
@@ -1956,6 +1957,22 @@
       "score": 0.92
     },
     {
+      "id": "55f2d931fb32",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Dow plunges 550 points as losses near technical correction",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdHE1Um5tZjFxbWlUOWhZTDdXbDh0eHMwRHNvdHo3Z182MmFvbEN0RFd4NlAtZWp3R2Q5S3psSDV4V3Y4RE5QenFGVFpHRFpuYUZFZnhpQWtuLU9RRTVxbTNOcEhGLV82S1BVVnpMcFp4YmxWaWtKSjZJX2RMWm1QWG96MDJzZGI0Q0g4RGkyakJmLUpoeVhteG9zT2p2NkFHRDhwWi1CM2Vvdw?oc=5",
+      "source": "NewsBytes",
+      "publishedAt": "2026-11-19T00:00:22.000Z",
+      "latestAt": "2026-11-19T00:00:22.000Z",
+      "firstSeenAt": "2026-11-19T05:22:29.733Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsBytes"
+      ],
+      "score": 0.91
+    },
+    {
       "id": "53d98e5bb450",
       "cat": "markets",
       "kind": "news",
@@ -2020,22 +2037,6 @@
         "KTLA"
       ],
       "score": 0.83
-    },
-    {
-      "id": "9189d8608e76",
-      "cat": "markets",
-      "kind": "news",
-      "title": "GRNYO.E Continuous Trading Suspended; Circuit Breaker Order Collection Begins",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNWEZ4VXpvREp0UGcxbU1UV0FKbGtzR0NCSjlSQ1VoN29CV3FLWXhLZGR0bURybXZ4WjFiMXF0U3M3clZxNEpiMUx1eUFKem80LXl6SEltRmUtTm43SUVSYUZZQWRFNVpTYWpqZnljQkVIc2lWQUYwcnZPZERfdmhUSjFaLWU4LTg5VGNSeWxURXpIbWdwbnlVOFJONURnZEhLRlNIbU5iV3JBRWRTamFFZzI3LWd6YkU3eXR2ZXVGbmVlTl90b1VB?oc=5",
-      "source": "TipRanks",
-      "publishedAt": "2026-11-18T15:14:34.000Z",
-      "latestAt": "2026-11-18T15:14:34.000Z",
-      "firstSeenAt": "2026-11-19T04:52:24.568Z",
-      "outlets": 1,
-      "outletNames": [
-        "TipRanks"
-      ],
-      "score": 0.77
     }
   ]
 }
