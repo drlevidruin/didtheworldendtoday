@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T23:40:37.309Z",
+  "buildTime": "2026-11-19T23:55:37.476Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 18:40 ET",
+  "etStamp": "2026-11-19 18:55 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -50,12 +50,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1279,
-  "lastSuccessAt": "2026-11-19T23:40:37.309Z",
+  "headlinesRead": 1257,
+  "lastSuccessAt": "2026-11-19T23:55:37.476Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
-    "hacks": 39,
+    "flights": 16,
+    "hacks": 37,
     "internet": 12,
     "sun": 4,
     "germs": 5,
@@ -182,20 +182,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 968,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 24 of 26 queries)",
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "count": 951,
+      "error": null,
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 272,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,55 +207,56 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:40:37.309Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T23:40:37.309Z"
+      "lastOkAt": "2026-11-19T23:55:37.476Z"
     }
   },
   "stories": [
@@ -456,7 +457,7 @@
       "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
       "source": "The Straits Times",
       "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-19T23:31:20.000Z",
+      "latestAt": "2026-11-19T23:52:02.000Z",
       "firstSeenAt": "2026-11-19T17:39:41.337Z",
       "outlets": 32,
       "outletNames": [
@@ -551,7 +552,7 @@
       "publishedAt": "2026-11-19T04:28:00.000Z",
       "latestAt": "2026-11-19T23:36:45.000Z",
       "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 12,
+      "outlets": 13,
       "outletNames": [
         "KGW",
         "KTVZ",
@@ -564,9 +565,10 @@
         "Outbreak News Today",
         "KOIN.com",
         "KPTV",
-        "Oregon Capital Chronicle"
+        "Oregon Capital Chronicle",
+        "News From The States"
       ],
-      "score": 3.35
+      "score": 3.43
     },
     {
       "id": "91666724b933",
@@ -681,6 +683,29 @@
       "score": 4.61
     },
     {
+      "id": "41bda97d8bc2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase Bank customers may be affected after hackers access marketing data",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbmwtUUN6YzFYZzZ6Z2RQdFZVemJuR0hqVlpKZFluc25nSi1neVVka3phMDNVZDlkU0JhaGZ3Nmw4eW9SaXVlVUg1T3piakQ2Ty11TXdWeU1Hd1VmQTFnUUVObk5WUDZDRmVMU1MxSVJNdWRRbzY4eE5vNm1weE43UDRZU19ZbnktZW9ycXJ3OXA1Y01tX3lzY1E1T2ZVZWsySTc4Y00tZlV1NzU3dFRNZXNHaGZ2VDJJcFlZbU1aa2ZER015cWwxSHNSX3h4SHM5dVBqZElzS04?oc=5",
+      "source": "WCPO 9 Cincinnati",
+      "publishedAt": "2026-11-19T15:01:48.000Z",
+      "latestAt": "2026-11-19T21:44:00.000Z",
+      "firstSeenAt": "2026-11-19T20:10:12.029Z",
+      "outlets": 8,
+      "outletNames": [
+        "WCPO 9 Cincinnati",
+        "Scripps News",
+        "KPAX News",
+        "LEX 18 News",
+        "KJRH",
+        "KMTV 3 News Now Omaha",
+        "KXXV",
+        "KKTV"
+      ],
+      "score": 3.66
+    },
+    {
       "id": "f4a81b953bee",
       "cat": "hacks",
       "kind": "news",
@@ -721,28 +746,6 @@
         "nationwide": false,
         "reason": "low ceilings"
       }
-    },
-    {
-      "id": "41bda97d8bc2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank customers may be affected after hackers access marketing data",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbmwtUUN6YzFYZzZ6Z2RQdFZVemJuR0hqVlpKZFluc25nSi1neVVka3phMDNVZDlkU0JhaGZ3Nmw4eW9SaXVlVUg1T3piakQ2Ty11TXdWeU1Hd1VmQTFnUUVObk5WUDZDRmVMU1MxSVJNdWRRbzY4eE5vNm1weE43UDRZU19ZbnktZW9ycXJ3OXA1Y01tX3lzY1E1T2ZVZWsySTc4Y00tZlV1NzU3dFRNZXNHaGZ2VDJJcFlZbU1aa2ZER015cWwxSHNSX3h4SHM5dVBqZElzS04?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "publishedAt": "2026-11-19T15:01:48.000Z",
-      "latestAt": "2026-11-19T15:01:48.000Z",
-      "firstSeenAt": "2026-11-19T20:10:12.029Z",
-      "outlets": 7,
-      "outletNames": [
-        "WCPO 9 Cincinnati",
-        "Scripps News",
-        "KPAX News",
-        "LEX 18 News",
-        "KJRH",
-        "KMTV 3 News Now Omaha",
-        "KXXV"
-      ],
-      "score": 3.48
     },
     {
       "id": "546e6e8eceae",
@@ -838,23 +841,6 @@
       "score": 2.25
     },
     {
-      "id": "3f115b968840",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft reveals 80% server failure behind global outage",
-      "url": "https://finance.yahoo.com/technology/articles/microsoft-reveals-80-server-failure-221700934.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-19T11:17:00.000Z",
-      "latestAt": "2026-11-19T19:17:00.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "TheStreet"
-      ],
-      "score": 2.23
-    },
-    {
       "id": "696650dc6950",
       "cat": "markets",
       "kind": "news",
@@ -888,6 +874,23 @@
         "WINK News"
       ],
       "score": 2.17
+    },
+    {
+      "id": "53f2416310a2",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Satya Nadella admits Microsoft could have prevented global Outlook outage",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQS3NXcXpPMkRlZlV5QUppZ1U5aEVyeXZjTVVwMFQ5MG1jc2t1TVl4Z3AwOGt0RVpBcDFDR19uamRPeVFzTU8ySlkwZWZyZXFJSUVCa2ZFSnZ4NmotdXZkS0g4cGFEQi1kcVFLLUVCODJOYWIzWl9Sd2JvaXMwdGs3azJjY0VjZHZDV25IaW5PVlNkUzl3NjVhdmJnYndqT05qdUlMUDFFSFk3SzJ1NklaREUwbExUR01IWnZnNkFRWnFEcktuOUJNVVMtVS1XYk5KbnR1d1pYUl9Yd9IB2gFBVV95cUxQS3NXcXpPMkRlZlV5QUppZ1U5aEVyeXZjTVVwMFQ5MG1jc2t1TVl4Z3AwOGt0RVpBcDFDR19uamRPeVFzTU8ySlkwZWZyZXFJSUVCa2ZFSnZ4NmotdXZkS0g4cGFEQi1kcVFLLUVCODJOYWIzWl9Sd2JvaXMwdGs3azJjY0VjZHZDV25IaW5PVlNkUzl3NjVhdmJnYndqT05qdUlMUDFFSFk3SzJ1NklaREUwbExUR01IWnZnNkFRWnFEcktuOUJNVVMtVS1XYk5KbnR1d1pYUl9Ydw?oc=5",
+      "source": "Business Standard",
+      "publishedAt": "2026-11-19T06:39:10.000Z",
+      "latestAt": "2026-11-19T09:35:00.000Z",
+      "firstSeenAt": "2026-11-19T20:25:04.492Z",
+      "outlets": 2,
+      "outletNames": [
+        "Business Standard",
+        "The Times of India"
+      ],
+      "score": 2.16
     },
     {
       "id": "2911d0fcc2e7",
@@ -1030,30 +1033,25 @@
       "score": 2.8
     },
     {
-      "id": "a0791d5f481b",
+      "id": "e358feae5cc2",
       "cat": "hacks",
       "kind": "news",
-      "title": "JPMorganChase reports cyberattack on third-party service providers",
-      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
-      "source": "ABC News",
-      "publishedAt": "2026-11-18T23:43:00.000Z",
-      "latestAt": "2026-11-19T21:45:28.000Z",
-      "firstSeenAt": "2026-11-19T19:40:09.535Z",
-      "outlets": 9,
+      "title": "Supermarket refrigerators got hacked. Make sure your smart home devices are secure",
+      "url": "https://www.mcall.com/2026/11/19/smart-home-devices-security/",
+      "source": "The Morning Call",
+      "publishedAt": "2026-11-19T03:27:00.000Z",
+      "latestAt": "2026-11-19T09:00:00.000Z",
+      "firstSeenAt": "2026-11-19T17:24:34.573Z",
+      "outlets": 6,
       "outletNames": [
-        "ABC News",
-        "6abc Philadelphia",
-        "ABC News - Breaking News, Latest News and Videos",
-        "ABC Columbia",
-        "kaaltv.com",
-        "upi",
-        "KVIA",
-        "Everett Post",
-        "weisradio.com"
+        "The Morning Call",
+        "Orlando Sentinel",
+        "The Mercury News",
+        "Boston Herald",
+        "Pioneer Press",
+        "Orange County Register"
       ],
-      "trending": 5000,
-      "trendTerm": "jpmorgan chase & co",
-      "score": 2.78
+      "score": 2.75
     },
     {
       "id": "dd2857255f06",
@@ -1073,26 +1071,6 @@
         "CNET"
       ],
       "score": 2.59
-    },
-    {
-      "id": "e358feae5cc2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Supermarket refrigerators got hacked. Make sure your smart home devices are secure",
-      "url": "https://www.mcall.com/2026/11/19/smart-home-devices-security/",
-      "source": "The Morning Call",
-      "publishedAt": "2026-11-19T03:27:00.000Z",
-      "latestAt": "2026-11-19T09:00:00.000Z",
-      "firstSeenAt": "2026-11-19T17:24:34.573Z",
-      "outlets": 5,
-      "outletNames": [
-        "The Morning Call",
-        "Orlando Sentinel",
-        "The Mercury News",
-        "Boston Herald",
-        "Pioneer Press"
-      ],
-      "score": 2.55
     },
     {
       "id": "3e3e07455f30",
@@ -1130,23 +1108,6 @@
         "Orange County Register"
       ],
       "score": 2.34
-    },
-    {
-      "id": "53f2416310a2",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Satya Nadella admits Microsoft could have prevented global Outlook outage",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQS3NXcXpPMkRlZlV5QUppZ1U5aEVyeXZjTVVwMFQ5MG1jc2t1TVl4Z3AwOGt0RVpBcDFDR19uamRPeVFzTU8ySlkwZWZyZXFJSUVCa2ZFSnZ4NmotdXZkS0g4cGFEQi1kcVFLLUVCODJOYWIzWl9Sd2JvaXMwdGs3azJjY0VjZHZDV25IaW5PVlNkUzl3NjVhdmJnYndqT05qdUlMUDFFSFk3SzJ1NklaREUwbExUR01IWnZnNkFRWnFEcktuOUJNVVMtVS1XYk5KbnR1d1pYUl9Yd9IB2gFBVV95cUxQS3NXcXpPMkRlZlV5QUppZ1U5aEVyeXZjTVVwMFQ5MG1jc2t1TVl4Z3AwOGt0RVpBcDFDR19uamRPeVFzTU8ySlkwZWZyZXFJSUVCa2ZFSnZ4NmotdXZkS0g4cGFEQi1kcVFLLUVCODJOYWIzWl9Sd2JvaXMwdGs3azJjY0VjZHZDV25IaW5PVlNkUzl3NjVhdmJnYndqT05qdUlMUDFFSFk3SzJ1NklaREUwbExUR01IWnZnNkFRWnFEcktuOUJNVVMtVS1XYk5KbnR1d1pYUl9Ydw?oc=5",
-      "source": "Business Standard",
-      "publishedAt": "2026-11-19T06:39:10.000Z",
-      "latestAt": "2026-11-19T09:35:00.000Z",
-      "firstSeenAt": "2026-11-19T20:25:04.492Z",
-      "outlets": 2,
-      "outletNames": [
-        "Business Standard",
-        "The Times of India"
-      ],
-      "score": 2.16
     },
     {
       "id": "424febfdf588",
@@ -1252,6 +1213,23 @@
         "Modern Ghana"
       ],
       "score": 1.97
+    },
+    {
+      "id": "3f115b968840",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft reveals 80% server failure behind global outage",
+      "url": "https://finance.yahoo.com/technology/articles/microsoft-reveals-80-server-failure-221700934.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-19T05:30:00.000Z",
+      "latestAt": "2026-11-19T19:17:00.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Finance",
+        "TheStreet"
+      ],
+      "score": 1.96
     },
     {
       "id": "25a50fff8a1a",
@@ -1439,23 +1417,6 @@
         "EnergyWatch"
       ],
       "score": 1.85
-    },
-    {
-      "id": "8a645c2912ad",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cuyahoga County Library data breach latest",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPWTZabFRHLXBHUlcyWlFyN0ZvSDBYdFRiM01EVy1ndlNTQVB1XzdTZ1VoeDNoUzlBY2VKVFdvZ0ZvWmtURnN1aFIyRDJNV0JKbkpzdm4zSHlTbVJwakRhcDl5Z3Y4MXNRX0xwRXdiU2hORDdwNE1MUVZsT3JETGZLaQ?oc=5",
-      "source": "FOX 8 News",
-      "publishedAt": "2026-11-18T23:49:00.000Z",
-      "latestAt": "2026-11-19T04:24:00.000Z",
-      "firstSeenAt": "2026-11-19T05:07:33.416Z",
-      "outlets": 2,
-      "outletNames": [
-        "FOX 8 News",
-        "WKYC"
-      ],
-      "score": 1.82
     },
     {
       "id": "9043740c8f57",
@@ -1924,6 +1885,38 @@
       "score": 1.39,
       "quiet": true,
       "quietReason": "headline mentions tornadoes"
+    },
+    {
+      "id": "ac8fef0be9f1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop put focus on air traffic controller shortages at Phoenix Sky Harbor, nationwide",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNamp4azdfZUV1TzgtTV85NXhvamtFeXk2RFNyY3RYM3ZQeFBLRTNJaDAySE4tYTlRa2pCMi15QWZnRmw1clVCcTFqT0xXV094MVJWOUtFdFd0Vno0YmFGZmwxd0Zxa2JLX0owNE1LWDloaktRR1JsandJVFhLRWJtTllWaUQtMGJLOG5MT2RiQkl4VWZ1aVhjOEhMbmRvRnJtS1FNRVpUUmk4Qkdla3dHNG12ZHFQWkJIZXRPcngxelc0eFRQVEVRMWJSTHdmdnE0Q0lzZ0ZCY2lfblZWNnpLS3BhNFJZcDVtOGowQkdFUlZSRDltRzVsUGt0NWlvRGdvaEtWRnlON1dCQnJaM29tRlhud0w?oc=5",
+      "source": "PinalCentral.com",
+      "publishedAt": "2026-11-19T03:05:03.000Z",
+      "latestAt": "2026-11-19T03:05:03.000Z",
+      "firstSeenAt": "2026-11-19T03:22:20.740Z",
+      "outlets": 1,
+      "outletNames": [
+        "PinalCentral.com"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "5b08db75b6b4",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Local Wyoming airports back on track days after the nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQSGdBOExOUDJMckx3OFZoX2hsLTRqZXQzbXNrY25LX3F2RXJUQUZCV25LZ3c2SlFIR29vTGZOWjF3RlhIbmpCNkVMMlNtYjlwOHZLcjVRUFRpYnBqd1dUVG55VE40eEFOLWMyZlFXcG9aTjBjNnF2RDBSMk5WWk9fV29ZQmg5Zm5ObmxkNnV6bzFWVXZ3LXdxVGg0OERmNEJNemlKZlJmSnNYekg3Q2hfWnpsM0Q3M1FqQmpMZ0s4bGw1em4ycjBzV0dtUTZpcVZHYU9veG44NkR0bXBTQXdZTnNwcWU4SDY0UjJoeDc3NnU?oc=5",
+      "source": "wyomingnewsnow.tv",
+      "publishedAt": "2026-11-19T22:41:00.000Z",
+      "latestAt": "2026-11-19T22:41:00.000Z",
+      "firstSeenAt": "2026-11-19T23:55:37.476Z",
+      "outlets": 1,
+      "outletNames": [
+        "wyomingnewsnow.tv"
+      ],
+      "score": 1.37
     },
     {
       "id": "be4676c173da",
