@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T14:54:09.172Z",
+  "buildTime": "2026-11-19T15:09:10.079Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 09:54 ET",
+  "etStamp": "2026-11-19 10:09 ET",
   "score": 82,
   "fired": [
     "flights",
@@ -55,17 +55,17 @@
     "date": "2026-11-19",
     "score": 82
   },
-  "headlinesRead": 1295,
-  "lastSuccessAt": "2026-11-19T14:54:09.172Z",
+  "headlinesRead": 476,
+  "lastSuccessAt": "2026-11-19T15:09:10.079Z",
   "rollingFallback": false,
   "cats": {
     "flights": 24,
-    "hacks": 34,
+    "hacks": 32,
     "sun": 4,
     "earth": 4,
     "germs": 4,
     "grid": 4,
-    "internet": 12,
+    "internet": 14,
     "weather": 4,
     "space": 4,
     "ai": 2,
@@ -81,17 +81,17 @@
       "tsunami": false
     },
     "kp": {
-      "value": 1.33,
-      "time": "2026-11-19T09:00:00.000Z",
+      "value": 2,
+      "time": "2026-11-19T12:00:00.000Z",
       "max24": 5
     },
     "asteroid": {
-      "des": "2026 WN",
-      "ld": 8.596,
-      "at": "2026-11-18T15:01:00.000Z",
-      "sizeM": 62.4,
-      "size": "a jumbo jet",
-      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WN",
+      "des": "2026 VA11",
+      "ld": 8.723,
+      "at": "2026-11-19T11:26:00.000Z",
+      "sizeM": 12.7,
+      "size": "a bus",
+      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20VA11",
       "upcoming": false
     },
     "faa": {
@@ -197,57 +197,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 984,
-      "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "count": 222,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 11 of 26 queries)",
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     },
     "bing": {
       "ok": true,
-      "count": 271,
-      "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "count": 216,
+      "error": "5 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 1,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-19T14:54:09.172Z"
     },
     "hn": {
       "ok": true,
-      "count": 9,
+      "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     },
     "x": {
       "ok": true,
@@ -260,13 +260,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T14:54:09.172Z"
+      "lastOkAt": "2026-11-19T15:09:10.079Z"
     }
   },
   "stories": [
@@ -1384,25 +1384,6 @@
       "score": 1.46
     },
     {
-      "id": "0cdf311523f4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "British hackers face prison for GTA 6 data breach and crypto thefts",
-      "url": "https://techcrunch.com/2026/11/18/british-hackers-face-prison-for-gta-6-data-breach-and-crypto-thefts/",
-      "source": "TechCrunch",
-      "publishedAt": "2026-11-18T14:55:13.000Z",
-      "latestAt": "2026-11-19T09:50:00.000Z",
-      "firstSeenAt": "2026-11-19T08:23:02.458Z",
-      "outlets": 2,
-      "outletNames": [
-        "TechCrunch",
-        "Computing UK"
-      ],
-      "trending": 1000,
-      "trendTerm": "spider",
-      "score": 1.42
-    },
-    {
       "id": "0e6586ad0b52",
       "cat": "hacks",
       "kind": "news",
@@ -1560,22 +1541,6 @@
       "outlets": 1,
       "outletNames": [
         "KCCR-AM"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "4902c684f96e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Optimizely cyberattack hits major websites and what it means for security teams",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOLTh6WHhvd1haalZDN2VqV3lFVEJnZ003c29GWjVqdW5QaGc0OXhLakhQQVBKTjQzbGxqYjRfZnlTOTYwTlRNd3haeTYtUWl4SmdlY19peGJtR1IwYVV3SUlMWFptRjlvZlNHZDNsUzVsR0pMTmR6VVhLWEtEc1hqamtZT1RpMEJYcUY4UXNnZGpyUjlMZHJNVUN3aG1NSUlLQTdHZ3VxUW4wOG5TanRNcC1FcFVBd1k?oc=5",
-      "source": "Spiceworks",
-      "publishedAt": "2026-11-18T14:56:45.000Z",
-      "latestAt": "2026-11-18T14:58:19.000Z",
-      "firstSeenAt": "2026-11-18T15:05:21.855Z",
-      "outlets": 1,
-      "outletNames": [
-        "Spiceworks"
       ],
       "score": 1.4
     },
@@ -1870,6 +1835,38 @@
         "Latin Times"
       ],
       "score": 1.27
+    },
+    {
+      "id": "81c7020d920f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft battles major outage",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNd1IxYmVoNFNlbElyY1R1R29LZ1pTdklKZ290bkpBdnhqVVA0aFNXano0emFrd3NUd2RlczBOclJoSk9nUTRJMWgteTJXemdXZElCRDhtMWlKaDB3MzNydDM3WEd3elhPNXYwWGlLdDFwakxWNS1LX2pLenlZR2t0QzQ0ckVfVEVlZGtF?oc=5",
+      "source": "The Daily Star",
+      "publishedAt": "2026-11-19T08:17:27.000Z",
+      "latestAt": "2026-11-19T08:17:27.000Z",
+      "firstSeenAt": "2026-11-19T15:09:10.079Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Daily Star"
+      ],
+      "score": 1.24
+    },
+    {
+      "id": "ff1a8e6aa309",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft says services fully restored after hourslong global outage",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPb3RMZHBYeS1UWUVDT1puVTZnWXRoSjRoTU5mWG5BWDRhcUlNdElCTnc3UktCbGpKbG51aTVaR2ROdm9TWDBCd2VUNTBXVUhBaUV5V2c2U21zQ0lmUzdJSGhTQkwyejdhTW1zYVhoTTlvdGZtUXZrSEg1aTVfVzVueWF0NWNWa3dxUTdGTEg1Slk4YWE2T2EzZXFXMVdzMUFXRTNQT1NkaW45bG1oRVRXbkg0LTVkVUROUG5JUXhYWHVTVGt3dFc3NmJDM2hfT3VQZ1hJd1VTVF9Gc0FrWWdaMTdB?oc=5",
+      "source": "WINK News",
+      "publishedAt": "2026-11-19T05:45:58.000Z",
+      "latestAt": "2026-11-19T05:45:58.000Z",
+      "firstSeenAt": "2026-11-19T15:09:10.079Z",
+      "outlets": 1,
+      "outletNames": [
+        "WINK News"
+      ],
+      "score": 1.18
     },
     {
       "id": "0690304d1415",
