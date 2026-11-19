@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T06:07:40.718Z",
+  "buildTime": "2026-11-19T06:22:43.821Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 01:07 ET",
+  "etStamp": "2026-11-19 01:22 ET",
   "score": 76,
   "fired": [
     "flights",
@@ -54,14 +54,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1039,
-  "lastSuccessAt": "2026-11-19T06:07:40.718Z",
+  "headlinesRead": 1346,
+  "lastSuccessAt": "2026-11-19T06:22:43.821Z",
   "rollingFallback": false,
   "cats": {
-    "internet": 8,
+    "internet": 10,
     "flights": 26,
     "hacks": 32,
-    "grid": 8,
+    "grid": 6,
     "sun": 4,
     "earth": 4,
     "weather": 4,
@@ -174,93 +174,92 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "Myanmar faces historic genocide verdict at UN court over Rohingya massacres"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 718,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 14 of 26 queries)",
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "count": 1030,
+      "error": null,
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     },
     "bing": {
       "ok": true,
-      "count": 281,
+      "count": 278,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 1,
-      "error": "timeout",
+      "ok": false,
+      "count": 0,
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T06:07:40.718Z"
+      "lastOkAt": "2026-11-19T06:22:43.821Z"
     }
   },
   "stories": [
@@ -498,30 +497,6 @@
       "score": 3.13
     },
     {
-      "id": "f1a94c12d8ff",
-      "cat": "internet",
-      "kind": "news",
-      "title": "'Many Affected Services Already Restored': Apple Denies Cyberattack After Widespread Outage",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRVpSb2gtQzhfc3gwRUZkSTVzazg4dUZ4VGdZaEt2blAxcW5laGRYWWJTX0xvUUJHVUFRMVBKUENTb3Z6bkJhWm90M1k3TTRUcVNIR0VxUWFWVG1Pam8zQ0hqZTFldGNybjNvWXRoeXBzVmFsNXNscU0yOVltaW1tSzhmdkptME5DWEVuQVpneUZBWUw2azVvZVJDcHF3SndqX0NnWTh3UE9vbmlXcl8wadIBtgFBVV95cUxQenBMWTBjbi1NRE9sQzBPLUIxeVhRT29aNm1iRmM0cnVXMWdtWGdBb0xNSjcxYzJRTTFmcW1nbTZIRUlOVkhCaXZ3M2VQMGlja2dYV0RFS1UxeEx6bnVSbXQ4OFRrWTBMcEhSRXRhbHM2Nm5SRjlHRjQyLTVKZDF5T3JGdDdWNGpabDRPbFNyU2NoX01YaGdBYkVHamg3T3pTV3JRT0J3b1hjb0R2VUtmMXdSTXlXZw?oc=5",
-      "source": "ETV Bharat",
-      "publishedAt": "2026-11-18T06:21:29.000Z",
-      "latestAt": "2026-11-18T15:26:53.000Z",
-      "firstSeenAt": "2026-11-19T04:22:21.839Z",
-      "outlets": 9,
-      "outletNames": [
-        "ETV Bharat",
-        "Analytics Insight",
-        "NDTV",
-        "news8000.com",
-        "Qazinform",
-        "KJCT",
-        "ColombiaOne.com",
-        "Operativ Media",
-        "Tech Edition"
-      ],
-      "score": 2.64
-    },
-    {
       "id": "4bd6ee47e88c",
       "cat": "earth",
       "kind": "news",
@@ -556,6 +531,27 @@
         "The Cool Down"
       ],
       "score": 2.21
+    },
+    {
+      "id": "b276a3beefeb",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.7-magnitude quake strikes Japan’s Kumamoto prefecture, no tsunami warning issued",
+      "url": "https://www.straitstimes.com/asia/east-asia/5-7-magnitude-quake-strikes-japans-kumamoto-prefecture-no-tsunami-warning-issued",
+      "source": "The Straits Times",
+      "publishedAt": "2026-11-18T08:30:00.000Z",
+      "latestAt": "2026-11-19T03:21:22.000Z",
+      "firstSeenAt": "2026-11-19T02:22:04.767Z",
+      "outlets": 4,
+      "outletNames": [
+        "The Straits Times",
+        "The Mainichi",
+        "The Japan Times",
+        "Japan Wire by Kyodo News"
+      ],
+      "score": 2.11,
+      "quiet": true,
+      "quietReason": "headline mentions tsunami"
     },
     {
       "id": "sig:faa-stop:FLL:2026-11-18",
@@ -629,6 +625,23 @@
       }
     },
     {
+      "id": "3223634bacce",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "UK cyber incidents hit near-record high in October",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOOVpaaF9WYWpIN2RleW9tNUQtMTNTNm43T0ZkT1hXQU43MEg2dzUxMzZGVlNPTUpsM1ZQdUJ1YUpfak9TMERTUlRQWFJaSEU3eFNjMEtSMnJlQ2tReHVWSVZEdWtvUk5BMkQxa1NGaDliWjRNMlkxdy1iUnBUTUpNVU5NYlJUWEFQLUs3OF8wZFV1ajd5a0EwcXZ5ZFlvMWRaenE4MERzcGVmQQ?oc=5",
+      "source": "Investing.com",
+      "publishedAt": "2026-11-19T05:47:43.000Z",
+      "latestAt": "2026-11-19T05:59:35.000Z",
+      "firstSeenAt": "2026-11-19T05:52:35.070Z",
+      "outlets": 2,
+      "outletNames": [
+        "Investing.com",
+        "Investing.com Canada"
+      ],
+      "score": 2.8
+    },
+    {
       "id": "9f11549139fa",
       "cat": "hacks",
       "kind": "news",
@@ -664,45 +677,6 @@
       "trending": 1000,
       "trendTerm": "exploit kit",
       "score": 2.57
-    },
-    {
-      "id": "82c364362378",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "China-linked hackers using AI model ARTEX to infiltrate banks, FBI warns",
-      "url": "https://www.yahoo.com/news/world/articles/china-linked-hackers-using-ai-153501063.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T07:35:00.000Z",
-      "latestAt": "2026-11-18T17:03:33.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 3,
-      "outletNames": [
-        "New York Post",
-        "AOL.com",
-        "Yahoo"
-      ],
-      "score": 2.2
-    },
-    {
-      "id": "b276a3beefeb",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.7-magnitude quake strikes Japan’s Kumamoto prefecture, no tsunami warning issued",
-      "url": "https://www.straitstimes.com/asia/east-asia/5-7-magnitude-quake-strikes-japans-kumamoto-prefecture-no-tsunami-warning-issued",
-      "source": "The Straits Times",
-      "publishedAt": "2026-11-18T08:30:00.000Z",
-      "latestAt": "2026-11-19T03:21:22.000Z",
-      "firstSeenAt": "2026-11-19T02:22:04.767Z",
-      "outlets": 4,
-      "outletNames": [
-        "The Straits Times",
-        "The Mainichi",
-        "The Japan Times",
-        "Japan Wire by Kyodo News"
-      ],
-      "score": 2.11,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
     },
     {
       "id": "e6ad68ef594c",
@@ -892,6 +866,23 @@
       "score": 1.69
     },
     {
+      "id": "93bafe37467c",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands without power as heavy rain, snow and wind pass through California",
+      "url": "https://www.msn.com/en-us/news/other/thousands-without-power-as-heavy-rain-snow-and-wind-pass-through-california/ar-AA2hHQnY",
+      "source": "KCRA Channel 3 on MSN",
+      "publishedAt": "2026-11-18T13:11:00.000Z",
+      "latestAt": "2026-11-19T01:37:00.000Z",
+      "firstSeenAt": "2026-11-19T00:06:43.701Z",
+      "outlets": 2,
+      "outletNames": [
+        "KCRA Channel 3 on MSN",
+        "KCRA"
+      ],
+      "score": 1.64
+    },
+    {
       "id": "sig:faa-stop:DJT:2026-11-18",
       "cat": "flights",
       "kind": "signal",
@@ -985,6 +976,24 @@
       "score": 2.4
     },
     {
+      "id": "82c364362378",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "China-linked hackers using AI model ARTEX to infiltrate banks, FBI warns",
+      "url": "https://www.yahoo.com/news/world/articles/china-linked-hackers-using-ai-153501063.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-18T07:35:00.000Z",
+      "latestAt": "2026-11-18T17:03:33.000Z",
+      "firstSeenAt": "2026-11-18T16:35:22.943Z",
+      "outlets": 3,
+      "outletNames": [
+        "New York Post",
+        "AOL.com",
+        "Yahoo"
+      ],
+      "score": 2.2
+    },
+    {
       "id": "23d611374492",
       "cat": "flights",
       "kind": "news",
@@ -1038,6 +1047,24 @@
         "www.marketscreener.com"
       ],
       "score": 1.97
+    },
+    {
+      "id": "9dd677152476",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase faces fresh scrutiny after banking disruption",
+      "url": "https://finance.yahoo.com/technology/articles/jpmorgan-chase-faces-fresh-scrutiny-053700975.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-18T15:30:00.000Z",
+      "latestAt": "2026-11-18T16:01:00.000Z",
+      "firstSeenAt": "2026-11-19T06:07:40.718Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo Finance",
+        "TheStreet",
+        "AOL"
+      ],
+      "score": 1.95
     },
     {
       "id": "60d350a5297d",
@@ -1244,40 +1271,6 @@
       "score": 1.68
     },
     {
-      "id": "a8c964a8954b",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Falling tree causing Sandersville power outage, expected to last roughly 4 hours, city says",
-      "url": "https://www.yahoo.com/news/articles/falling-tree-causing-sandersville-power-141242121.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T06:12:00.000Z",
-      "latestAt": "2026-11-18T14:12:00.000Z",
-      "firstSeenAt": "2026-11-18T16:35:22.943Z",
-      "outlets": 2,
-      "outletNames": [
-        "13WMAZ",
-        "Yahoo"
-      ],
-      "score": 1.65
-    },
-    {
-      "id": "93bafe37467c",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands without power as heavy rain, snow and wind pass through California",
-      "url": "https://www.msn.com/en-us/news/other/thousands-without-power-as-heavy-rain-snow-and-wind-pass-through-california/ar-AA2hHQnY",
-      "source": "KCRA Channel 3 on MSN",
-      "publishedAt": "2026-11-18T13:11:00.000Z",
-      "latestAt": "2026-11-19T01:37:00.000Z",
-      "firstSeenAt": "2026-11-19T00:06:43.701Z",
-      "outlets": 2,
-      "outletNames": [
-        "KCRA Channel 3 on MSN",
-        "KCRA"
-      ],
-      "score": 1.64
-    },
-    {
       "id": "0a1777a2bb26",
       "cat": "hacks",
       "kind": "news",
@@ -1331,23 +1324,6 @@
       "score": 1.6
     },
     {
-      "id": "9dd677152476",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase faces fresh scrutiny after banking disruption",
-      "url": "https://finance.yahoo.com/technology/articles/jpmorgan-chase-faces-fresh-scrutiny-053700975.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-18T15:30:00.000Z",
-      "latestAt": "2026-11-18T16:01:00.000Z",
-      "firstSeenAt": "2026-11-19T06:07:40.718Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "TheStreet"
-      ],
-      "score": 1.51
-    },
-    {
       "id": "40ccf46e0106",
       "cat": "hacks",
       "kind": "news",
@@ -1361,23 +1337,6 @@
       "outletNames": [
         "Arkansas Democrat-Gazette",
         "Northwest Arkansas Democrat-Gazette"
-      ],
-      "score": 1.44
-    },
-    {
-      "id": "29bb93651abb",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage impacting over 32,000 SMUD customers throughout Sacramento | Update",
-      "url": "https://www.yahoo.com/news/weather-news/articles/thousands-experience-power-outages-downtown-141859442.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T06:18:00.000Z",
-      "latestAt": "2026-11-18T14:18:00.000Z",
-      "firstSeenAt": "2026-11-18T23:06:31.636Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "ABC10"
       ],
       "score": 1.44
     },
@@ -1397,22 +1356,6 @@
         "TradingView"
       ],
       "score": 1.42
-    },
-    {
-      "id": "3223634bacce",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK cyber incidents hit near-record high in October",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOOVpaaF9WYWpIN2RleW9tNUQtMTNTNm43T0ZkT1hXQU43MEg2dzUxMzZGVlNPTUpsM1ZQdUJ1YUpfak9TMERTUlRQWFJaSEU3eFNjMEtSMnJlQ2tReHVWSVZEdWtvUk5BMkQxa1NGaDliWjRNMlkxdy1iUnBUTUpNVU5NYlJUWEFQLUs3OF8wZFV1ajd5a0EwcXZ5ZFlvMWRaenE4MERzcGVmQQ?oc=5",
-      "source": "Investing.com",
-      "publishedAt": "2026-11-19T05:47:43.000Z",
-      "latestAt": "2026-11-19T05:47:43.000Z",
-      "firstSeenAt": "2026-11-19T05:52:35.070Z",
-      "outlets": 1,
-      "outletNames": [
-        "Investing.com"
-      ],
-      "score": 1.4
     },
     {
       "id": "271f5ed1e6a7",
@@ -1623,20 +1566,20 @@
       "score": 1.4
     },
     {
-      "id": "ee520203c651",
-      "cat": "hacks",
+      "id": "f8c9e7ac3e47",
+      "cat": "internet",
       "kind": "news",
-      "title": "Hackers hit 178 major websites via optimizely platform in supply-chain attack",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVlJJMjB0V082YXdSVGItWHRCUFhkQVBaWDZVRHo2enZLWExCVkJLZmZxX3o3TmVUQU5YMm5TMzFOMWFfZUZ4SERrX1V5RktTVF9aVkRMcC1qOXhKdG02b0hJU3ZhQ0Z6RVczbUNkYU5vZXVHY2pkWmoxWnozNWZEeUJabm5wRGpvZk5mOGhfUjJqQQ?oc=5",
-      "source": "Wocult",
-      "publishedAt": "2026-11-18T06:14:34.000Z",
-      "latestAt": "2026-11-18T06:14:34.000Z",
-      "firstSeenAt": "2026-11-18T06:18:41.048Z",
+      "title": "These memes survived a global outage",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNbDY2Y2xwRFE2d0ZpYXhoTnNYQzBzY09NeXd1WUMtQ0RJOWFHOE9EdU1UMEttS214N2duR0NqQkR5SVpYZUtWMmxiLUZKSFotbGFwRGYwd1R0MTRoNGxhMWlhbUpiUGNpcmNkMGpZSU5hS1RxeGVFYTZEZXd6QmhPbUZLNTI?oc=5",
+      "source": "Medical Republic",
+      "publishedAt": "2026-11-19T06:07:48.000Z",
+      "latestAt": "2026-11-19T06:07:48.000Z",
+      "firstSeenAt": "2026-11-19T06:22:43.821Z",
       "outlets": 1,
       "outletNames": [
-        "Wocult"
+        "Medical Republic"
       ],
-      "score": 1.4
+      "score": 1.39
     },
     {
       "id": "ac8fef0be9f1",
@@ -1848,6 +1791,54 @@
       "trending": 500,
       "trendTerm": "chase online",
       "score": 1.39
+    },
+    {
+      "id": "defcf7b7a0a8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Apple Rules Out Cyberattack After Major Global Service Outage",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcHhudjU5d21rVEF2ZVlxN0VIVWlrRHBGQzAxcHZqeGJCLV9oUzJ5cnBySmh4RV9oUy1MWXRiZzJyVEpmUHI5TmVuazR1TFYxNU84N2NxZjA5ZHdubk9helBoRUVleHhOWXM0NDJ3ZzBvTjlIRkZPaTBUYXhXaHlCY3BFQUpjbi1RYW01elE1Y2xtZEZ4cDJQcnd3ZDRTQWNQM0ZMeE9xT0dFTXIyQzVibU5LYS1nSlVqRjZKOF81SFhDYUVuSFhiVw?oc=5",
+      "source": "Dainik Jagran MP CG",
+      "publishedAt": "2026-11-18T10:36:57.000Z",
+      "latestAt": "2026-11-18T10:36:57.000Z",
+      "firstSeenAt": "2026-11-18T11:04:29.141Z",
+      "outlets": 1,
+      "outletNames": [
+        "Dainik Jagran MP CG"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "3d06374d0a4c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack Hits 178 Major Websites, Exposes Growing Risks Of Third Party Software",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNd1pHMTB2dXdfY0FMcFFvcVVRcVd6YkY0V1dZQ2xVY2tLVEw3RjlnSlQ1MmowZUZMZW0zanRGZFpVMGlEcW1xNVBHbmRqdVhoUjlqZWc3dnkxLWgxanotM1daYUxsbC1zeWRZMnVGOHlVU1QzVGk5bGhwR3gySWJ6bkZfbUZUejd1S1ZJZFJzWU1Xc3M2UkowRjRyNXZ0RzNDb3NzbFdGekFVVVlvMHFReEdKMmFuWFRjNVpqeDZNV0V6OGEw?oc=5",
+      "source": "BusinessToday Malaysia",
+      "publishedAt": "2026-11-18T08:01:44.000Z",
+      "latestAt": "2026-11-18T08:01:44.000Z",
+      "firstSeenAt": "2026-11-18T08:18:58.475Z",
+      "outlets": 1,
+      "outletNames": [
+        "BusinessToday Malaysia"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "ff1a8e6aa309",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft says services fully restored after hourslong global outage",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPb3RMZHBYeS1UWUVDT1puVTZnWXRoSjRoTU5mWG5BWDRhcUlNdElCTnc3UktCbGpKbG51aTVaR2ROdm9TWDBCd2VUNTBXVUhBaUV5V2c2U21zQ0lmUzdJSGhTQkwyejdhTW1zYVhoTTlvdGZtUXZrSEg1aTVfVzVueWF0NWNWa3dxUTdGTEg1Slk4YWE2T2EzZXFXMVdzMUFXRTNQT1NkaW45bG1oRVRXbkg0LTVkVUROUG5JUXhYWHVTVGt3dFc3NmJDM2hfT3VQZ1hJd1VTVF9Gc0FrWWdaMTdB?oc=5",
+      "source": "WINK News",
+      "publishedAt": "2026-11-19T05:17:40.000Z",
+      "latestAt": "2026-11-19T05:17:40.000Z",
+      "firstSeenAt": "2026-11-19T06:22:43.821Z",
+      "outlets": 1,
+      "outletNames": [
+        "WINK News"
+      ],
+      "score": 1.37
     },
     {
       "id": "32b6a6e7f5a0",
