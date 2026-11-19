@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T13:38:56.955Z",
+  "buildTime": "2026-11-19T13:54:00.391Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 08:38 ET",
+  "etStamp": "2026-11-19 08:54 ET",
   "score": 82,
   "fired": [
     "flights",
@@ -55,16 +55,16 @@
     "date": "2026-11-19",
     "score": 82
   },
-  "headlinesRead": 1258,
-  "lastSuccessAt": "2026-11-19T13:38:56.955Z",
+  "headlinesRead": 1313,
+  "lastSuccessAt": "2026-11-19T13:54:00.391Z",
   "rollingFallback": false,
   "cats": {
     "flights": 25,
-    "hacks": 29,
-    "germs": 7,
+    "hacks": 30,
     "sun": 4,
     "earth": 4,
-    "internet": 12,
+    "germs": 7,
+    "internet": 11,
     "weather": 4,
     "space": 4,
     "grid": 4,
@@ -97,7 +97,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 0,
+      "groundDelays": 1,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -191,19 +191,19 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 998,
+      "count": 1000,
       "error": null,
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     },
     "bing": {
       "ok": true,
-      "count": 217,
-      "error": "5 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "count": 275,
+      "error": null,
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-19T13:38:56.955Z"
     },
@@ -211,37 +211,37 @@
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     },
     "x": {
       "ok": true,
@@ -254,13 +254,13 @@
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T13:38:56.955Z"
+      "lastOkAt": "2026-11-19T13:54:00.391Z"
     }
   },
   "stories": [
@@ -296,7 +296,7 @@
       "publishedAt": "2026-11-18T19:24:19.000Z",
       "latestAt": "2026-11-19T06:30:16.000Z",
       "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 17,
+      "outlets": 18,
       "outletNames": [
         "WPEC",
         "cw34.com",
@@ -314,9 +314,10 @@
         "https://deeparrival.com/",
         "KFXL",
         "WBFF",
-        "WOAI"
+        "WOAI",
+        "KATU"
       ],
-      "score": 5.07
+      "score": 5.15
     },
     {
       "id": "c3ddbca70630",
@@ -326,9 +327,9 @@
       "url": "https://www.reuters.com/legal/litigation/eu-commission-targeted-cyberattack-politico-reports-2026-11-19/",
       "source": "Reuters",
       "publishedAt": "2026-11-19T00:03:00.000Z",
-      "latestAt": "2026-11-19T13:32:45.000Z",
+      "latestAt": "2026-11-19T13:43:07.000Z",
       "firstSeenAt": "2026-11-19T08:38:02.032Z",
-      "outlets": 19,
+      "outlets": 21,
       "outletNames": [
         "Reuters",
         "StreetInsider",
@@ -348,10 +349,12 @@
         "Firstpost",
         "Philenews",
         "Irish Independent",
-        "RTE.ie"
+        "RTE.ie",
+        "CNA",
+        "Washington Examiner"
       ],
       "xUrl": "https://x.com/Reuters/status/2123343058611671245",
-      "score": 4.5
+      "score": 4.62
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-18",
@@ -399,25 +402,35 @@
       "score": 3.79
     },
     {
-      "id": "91666724b933",
-      "cat": "germs",
+      "id": "307f16754e66",
+      "cat": "hacks",
       "kind": "news",
-      "title": "France raises bird flu risk level to high across mainland territory",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMkxzaWQwSFJWWDRIdVpVVGtETFdNZVVhNDNrV0ZnRTRwcXJ0a0o1QTNEekN6MlFZYlBrc1hLWDh0TWY2cE9NRVBDMnViQlpCYl9DUVRzWnFaWXlxOHRQSWtqQ1JQTnpJTW9jLUo1MTZyWDlMNmwya1lzVlhrT1lNMDNPWW9sLWUwX2R2a1AydzYxRTFsSFJ0T2l4WGJKZWZDWlV2LWVKQUlkTFU?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-19T08:40:30.000Z",
-      "latestAt": "2026-11-19T12:25:00.000Z",
-      "firstSeenAt": "2026-11-19T09:23:13.184Z",
-      "outlets": 6,
+      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
+      "url": "https://apnews.com/article/cyberattack-european-union-artificial-intelligence-ai-79705095e8141cd650196dbff1cf3c70",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-18T20:30:00.000Z",
+      "latestAt": "2026-11-19T13:30:35.000Z",
+      "firstSeenAt": "2026-11-19T12:38:49.480Z",
+      "outlets": 16,
       "outletNames": [
-        "Anadolu Ajansı",
-        "UA.NEWS",
-        "Yeni Safak English",
-        "TRT World",
-        "RFI",
-        "Modern Ghana"
+        "Associated Press News",
+        "Temple Daily Telegram",
+        "ClickOnDetroit | WDIV Local 4",
+        "Newsday",
+        "Post Register",
+        "Goshen News",
+        "Toronto Star",
+        "The Herald Journal",
+        "ABC News",
+        "KCCI 8 News",
+        "Herald Bulletin",
+        "Bozeman Daily Chronicle",
+        "ABC News - Breaking News, Latest News and Videos",
+        "WTOP News",
+        "The Killeen Daily Herald",
+        "CTV News"
       ],
-      "score": 3.54
+      "score": 3.65
     },
     {
       "id": "sig:kp:2026-11-18",
@@ -464,32 +477,26 @@
       }
     },
     {
-      "id": "307f16754e66",
-      "cat": "hacks",
+      "id": "91666724b933",
+      "cat": "germs",
       "kind": "news",
-      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
-      "url": "https://apnews.com/article/cyberattack-european-union-artificial-intelligence-ai-79705095e8141cd650196dbff1cf3c70",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-18T20:30:00.000Z",
-      "latestAt": "2026-11-19T13:30:35.000Z",
-      "firstSeenAt": "2026-11-19T12:38:49.480Z",
-      "outlets": 13,
+      "title": "France raises bird flu risk to high",
+      "url": "https://ijr.com/discover/france-raises-bird-flu-risk-to-high-98482822",
+      "source": "Independent Journal Review",
+      "publishedAt": "2026-11-19T01:09:00.000Z",
+      "latestAt": "2026-11-19T12:25:00.000Z",
+      "firstSeenAt": "2026-11-19T09:23:13.184Z",
+      "outlets": 7,
       "outletNames": [
-        "Associated Press News",
-        "Temple Daily Telegram",
-        "ClickOnDetroit | WDIV Local 4",
-        "Newsday",
-        "Post Register",
-        "Goshen News",
-        "Toronto Star",
-        "The Herald Journal",
-        "ABC News",
-        "KCCI 8 News",
-        "Herald Bulletin",
-        "Bozeman Daily Chronicle",
-        "ABC News - Breaking News, Latest News and Videos"
+        "Anadolu Ajansı",
+        "UA.NEWS",
+        "Yeni Safak English",
+        "TRT World",
+        "RFI",
+        "Modern Ghana",
+        "Independent Journal Review"
       ],
-      "score": 3.44
+      "score": 3.28
     },
     {
       "id": "61a204c4234d",
@@ -911,6 +918,24 @@
       "score": 1.49
     },
     {
+      "id": "bab44e1adaa9",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Sources dispute FAA’s account of oversight before nationwide ground stop",
+      "url": "https://www.scrippsnews.com/us-news/sources-dispute-faas-account-of-oversight-before-nationwide-ground-stop",
+      "source": "Scripps News",
+      "publishedAt": "2026-11-19T05:09:00.000Z",
+      "latestAt": "2026-11-19T13:03:19.000Z",
+      "firstSeenAt": "2026-11-19T13:23:53.347Z",
+      "outlets": 3,
+      "outletNames": [
+        "KPAX News",
+        "Scripps News",
+        "LEX 18 News"
+      ],
+      "score": 3.12
+    },
+    {
       "id": "abe5c8e58707",
       "cat": "hacks",
       "kind": "news",
@@ -1054,6 +1079,24 @@
       "score": 2.23
     },
     {
+      "id": "f3e5a21a5532",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission confirms AI-driven cyberattack weeks after detecting it",
+      "url": "https://brusselssignal.eu/2026/11/european-commission-confirms-ai-driven-cyberattack-weeks-after-detecting-it/",
+      "source": "brusselssignal",
+      "publishedAt": "2026-11-19T02:02:00.000Z",
+      "latestAt": "2026-11-19T12:20:00.000Z",
+      "firstSeenAt": "2026-11-19T13:23:53.347Z",
+      "outlets": 3,
+      "outletNames": [
+        "www.marketscreener.com",
+        "Irish Independent",
+        "brusselssignal"
+      ],
+      "score": 2.1
+    },
+    {
       "id": "102728239744",
       "cat": "hacks",
       "kind": "news",
@@ -1121,23 +1164,6 @@
         "AOL"
       ],
       "score": 1.95
-    },
-    {
-      "id": "f3e5a21a5532",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission confirms AI-linked cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa094dTlnMllBSWhQejRVZEtfaVJnZ2U3U0RHUVFqbFlnd0k1SGtLOXk3ZWw2OGhmYkVZMGZ0ZkJ5akRTaGVpTHVqNUd3a2ZjYk16eXZYblJTOG9BZWM2SUgwZHQ3d01KOWV4RmRnTm94SFBNLW9ZNVk3Qy1nY08xbnptUUJ4N014cVFHNE1wdGV0VEQzRTF6dDREc3UxckRkOXlLeDRB?oc=5",
-      "source": "www.marketscreener.com",
-      "publishedAt": "2026-11-19T11:44:45.000Z",
-      "latestAt": "2026-11-19T12:20:00.000Z",
-      "firstSeenAt": "2026-11-19T13:23:53.347Z",
-      "outlets": 2,
-      "outletNames": [
-        "www.marketscreener.com",
-        "Irish Independent"
-      ],
-      "score": 1.94
     },
     {
       "id": "59439d3db686",
@@ -1523,22 +1549,6 @@
       "score": 1.4
     },
     {
-      "id": "11b5c0bdeb6b",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft apologises for global outage affecting millions of customers",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQLTlTbmJzSlVXMGoxalN5R19TUFQ4Rkh2N0dWYnVQY2U4MFFqaHpqb3EyeEFlR0ZnNmg2YlBmdnp4T0RobzlNY3hoS2xYVWUwWVMzMzl4SUlPNHF0MWpqeXJfWEpseXVfNDZrM1lOaGdRaUk3eFY5ekY1RXNRTlFBX2ZFNmVCUWRSZ3hmMnZ6Q1gtaFMwYXpLOFNMdno?oc=5",
-      "source": "News On AIR",
-      "publishedAt": "2026-11-18T13:44:29.000Z",
-      "latestAt": "2026-11-18T13:44:29.000Z",
-      "firstSeenAt": "2026-11-18T13:49:55.122Z",
-      "outlets": 1,
-      "outletNames": [
-        "News On AIR"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "378a538aa856",
       "cat": "internet",
       "kind": "news",
@@ -1551,22 +1561,6 @@
       "outlets": 1,
       "outletNames": [
         "https://www.birmingham-now.co.uk/"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "bab44e1adaa9",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Sources dispute FAA’s account of oversight before nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbURheWRIN2xSSHJtN05Rb3E1VV9JOEMtRml1WE1CRzBnS1VFY0FxN29sNW0wUFU4MEtlYUw4UnZkNFdhZjI3enJZREY2cU5uMnpWWUhmTXdUQnRKU0hfUDZpeEpscVVRR1lDNC04N1BhbUx6dEk0dEVCdnBFakFkSVlwVnJwSndBNXdQYmdwVmpzcUVSUFNTZEJaNWhNb0NzbDdGZl9WakhPMkJWZmM0X0xiem41QXAxQ3c?oc=5",
-      "source": "KPAX News",
-      "publishedAt": "2026-11-19T13:03:19.000Z",
-      "latestAt": "2026-11-19T13:03:19.000Z",
-      "firstSeenAt": "2026-11-19T13:23:53.347Z",
-      "outlets": 1,
-      "outletNames": [
-        "KPAX News"
       ],
       "score": 1.39
     },
@@ -1845,6 +1839,22 @@
         "The Daily Star"
       ],
       "score": 1.33
+    },
+    {
+      "id": "99346ea6e246",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Bank Glitches And A Massive Cyberattack Put Americans’ Money And Personal Data On Alert",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY214M3Y2QXJzZm82Wksya091R3J3T2JmRWhGcTk0dkc4Qk84QXd4LTVYOVpPZ2pwU0llQjg2dDNvazdVdGJQd0U1WERMaVZWSi1PU0N2V2pCU0gtbDVwSlZKRzAzbUY5cjFBSllWWnhnS1VVR0ZGSDVoaG41TkQxZ0xhcks?oc=5",
+      "source": "Black Enterprise",
+      "publishedAt": "2026-11-18T22:54:26.000Z",
+      "latestAt": "2026-11-18T22:54:26.000Z",
+      "firstSeenAt": "2026-11-19T03:22:20.740Z",
+      "outlets": 1,
+      "outletNames": [
+        "Black Enterprise"
+      ],
+      "score": 1.3
     },
     {
       "id": "a198c7d34e2b",
