@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T05:52:35.070Z",
+  "buildTime": "2026-11-19T06:07:40.718Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 00:52 ET",
+  "etStamp": "2026-11-19 01:07 ET",
   "score": 76,
   "fired": [
     "flights",
@@ -54,14 +54,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1339,
-  "lastSuccessAt": "2026-11-19T05:52:35.070Z",
+  "headlinesRead": 1039,
+  "lastSuccessAt": "2026-11-19T06:07:40.718Z",
   "rollingFallback": false,
   "cats": {
     "internet": 8,
     "flights": 26,
-    "hacks": 31,
-    "grid": 9,
+    "hacks": 32,
+    "grid": 8,
     "sun": 4,
     "earth": 4,
     "weather": 4,
@@ -80,8 +80,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 5,
-      "time": "2026-11-19T00:00:00.000Z",
+      "value": 2.67,
+      "time": "2026-11-19T03:00:00.000Z",
       "max24": 5
     },
     "asteroid": {
@@ -96,8 +96,8 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 1,
-      "closures": 0,
+      "groundDelays": 0,
+      "closures": 1,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -187,81 +187,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1024,
-      "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "count": 718,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 14 of 26 queries)",
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
+      "count": 281,
       "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
-      "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-19T03:22:20.740Z"
+      "ok": true,
+      "count": 1,
+      "error": "timeout",
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T05:07:33.416Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T05:52:35.070Z"
+      "lastOkAt": "2026-11-19T06:07:40.718Z"
     }
   },
   "stories": [
@@ -825,23 +824,6 @@
       "score": 1.72
     },
     {
-      "id": "3419a87137f5",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Teruaki Sato has the potential to help the Orioles OF power outage",
-      "url": "https://sports.yahoo.com/articles/teruaki-sato-potential-help-orioles-140000548.html",
-      "source": "Yahoo Sports",
-      "publishedAt": "2026-11-18T06:00:00.000Z",
-      "latestAt": "2026-11-18T14:00:00.000Z",
-      "firstSeenAt": "2026-11-18T14:20:15.679Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Sports",
-        "Camden Chat"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "2651d76e7c57",
       "cat": "germs",
       "kind": "news",
@@ -889,6 +871,23 @@
       "outletNames": [
         "Yahoo",
         "The Cool Down"
+      ],
+      "score": 1.69
+    },
+    {
+      "id": "e783ec869177",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Total debt to NES from ice storm down to $5M",
+      "url": "https://www.msn.com/en-us/money/economy/total-debt-to-nes-from-ice-storm-down-to-5m/vi-AA2hHUIB",
+      "source": "WKRN Nashville on MSN",
+      "publishedAt": "2026-11-18T09:12:55.000Z",
+      "latestAt": "2026-11-18T17:12:55.000Z",
+      "firstSeenAt": "2026-11-18T18:35:48.656Z",
+      "outlets": 2,
+      "outletNames": [
+        "WKRN Nashville on MSN",
+        "WKRN News 2"
       ],
       "score": 1.69
     },
@@ -1228,23 +1227,6 @@
       "score": 1.69
     },
     {
-      "id": "e783ec869177",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Total debt to NES from ice storm down to $5M",
-      "url": "https://www.msn.com/en-us/money/economy/total-debt-to-nes-from-ice-storm-down-to-5m/vi-AA2hHUIB",
-      "source": "WKRN Nashville on MSN",
-      "publishedAt": "2026-11-18T09:12:55.000Z",
-      "latestAt": "2026-11-18T17:12:55.000Z",
-      "firstSeenAt": "2026-11-18T18:35:48.656Z",
-      "outlets": 2,
-      "outletNames": [
-        "WKRN Nashville on MSN",
-        "WKRN News 2"
-      ],
-      "score": 1.69
-    },
-    {
       "id": "a1299b175fd3",
       "cat": "hacks",
       "kind": "news",
@@ -1347,6 +1329,23 @@
         "Yahoo"
       ],
       "score": 1.6
+    },
+    {
+      "id": "9dd677152476",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase faces fresh scrutiny after banking disruption",
+      "url": "https://finance.yahoo.com/technology/articles/jpmorgan-chase-faces-fresh-scrutiny-053700975.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-18T15:30:00.000Z",
+      "latestAt": "2026-11-18T16:01:00.000Z",
+      "firstSeenAt": "2026-11-19T06:07:40.718Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Finance",
+        "TheStreet"
+      ],
+      "score": 1.51
     },
     {
       "id": "40ccf46e0106",
@@ -1851,6 +1850,26 @@
       "score": 1.39
     },
     {
+      "id": "32b6a6e7f5a0",
+      "cat": "weather",
+      "kind": "news",
+      "title": "SoCal storm timeline: First atmospheric river brings rain, flood risk",
+      "url": "https://www.foxla.com/news/southern-california-storm-timeline-rain-flood-risk",
+      "source": "FOX 11 Los Angeles",
+      "publishedAt": "2026-11-19T05:50:00.000Z",
+      "latestAt": "2026-11-19T05:50:00.000Z",
+      "firstSeenAt": "2026-11-19T06:07:40.718Z",
+      "outlets": 1,
+      "outletNames": [
+        "FOX 11 Los Angeles"
+      ],
+      "trending": 500,
+      "trendTerm": "los angeles weather",
+      "score": 1,
+      "quiet": true,
+      "quietReason": "headline mentions flood"
+    },
+    {
       "id": "85aa4ba56ee9",
       "cat": "germs",
       "kind": "news",
@@ -1945,22 +1964,6 @@
         "WION"
       ],
       "score": 0.96
-    },
-    {
-      "id": "101d121d2901",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Thousands of NES customers could lose power for overdue ice storm bills",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcEVxeU5xLXJSV1J1U2EwZHZVSXMyRjFrdDB5alIxZ3B3SmNPQnpndkE4dXJmR3lVRE4zM28xTm9CLVMxRUR6Q2VTRnctS1RXcF81WlE2T3pfOTRZa1hxZ3BPQktPMTdBblNRaV90clB4cExIRTVpX2NpXzgxemM1Q0xXR3lHUGdaT3JGUU9aV25sVXh4aDZMbzJGa3dpUQ?oc=5",
-      "source": "WSMV",
-      "publishedAt": "2026-11-18T22:44:00.000Z",
-      "latestAt": "2026-11-19T00:51:00.000Z",
-      "firstSeenAt": "2026-11-19T03:22:20.740Z",
-      "outlets": 1,
-      "outletNames": [
-        "WSMV"
-      ],
-      "score": 0.92
     },
     {
       "id": "53d98e5bb450",
