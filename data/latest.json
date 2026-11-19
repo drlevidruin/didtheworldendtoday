@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T11:08:34.389Z",
+  "buildTime": "2026-11-19T11:23:37.429Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 06:08 ET",
+  "etStamp": "2026-11-19 06:23 ET",
   "score": 82,
   "fired": [
     "flights",
@@ -55,13 +55,13 @@
     "date": "2026-11-19",
     "score": 82
   },
-  "headlinesRead": 1313,
-  "lastSuccessAt": "2026-11-19T11:08:34.389Z",
+  "headlinesRead": 625,
+  "lastSuccessAt": "2026-11-19T11:23:37.429Z",
   "rollingFallback": false,
   "cats": {
-    "internet": 9,
-    "flights": 27,
-    "hacks": 28,
+    "internet": 10,
+    "flights": 25,
+    "hacks": 29,
     "grid": 7,
     "sun": 3,
     "earth": 4,
@@ -186,20 +186,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1001,
-      "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "count": 312,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 6 of 26 queries)",
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
+      "count": 275,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     },
     "gdelt": {
       "ok": false,
@@ -211,55 +211,56 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:08:34.389Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T11:08:34.389Z"
+      "lastOkAt": "2026-11-19T11:23:37.429Z"
     }
   },
   "stories": [
@@ -375,9 +376,9 @@
       "url": "https://www.reuters.com/legal/litigation/eu-commission-targeted-cyberattack-politico-reports-2026-11-19/",
       "source": "Reuters",
       "publishedAt": "2026-11-19T00:03:00.000Z",
-      "latestAt": "2026-11-19T10:53:00.000Z",
+      "latestAt": "2026-11-19T11:12:01.000Z",
       "firstSeenAt": "2026-11-19T08:38:02.032Z",
-      "outlets": 13,
+      "outlets": 14,
       "outletNames": [
         "Reuters",
         "StreetInsider",
@@ -391,10 +392,11 @@
         "Metro Mode",
         "The Verge",
         "Modern Diplomacy",
-        "Hromadske"
+        "Hromadske",
+        "Hungarian Conservative"
       ],
       "xUrl": "https://x.com/Reuters/status/2123343058611671245",
-      "score": 4.03
+      "score": 4.12
     },
     {
       "id": "3af276c6d1c6",
@@ -634,6 +636,26 @@
       }
     },
     {
+      "id": "795c99d2f366",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers access financial and medical data of retired NYC government workers",
+      "url": "https://www.politico.com/news/2026/11/19/hackers-access-financial-and-medical-data-of-retired-nyc-government-workers-01174050",
+      "source": "Politico",
+      "publishedAt": "2026-11-19T02:55:00.000Z",
+      "latestAt": "2026-11-19T11:09:38.000Z",
+      "firstSeenAt": "2026-11-19T11:08:34.389Z",
+      "outlets": 5,
+      "outletNames": [
+        "Politico",
+        "StreetInsider",
+        "Reuters",
+        "Yahoo",
+        "TradingView"
+      ],
+      "score": 2.87
+    },
+    {
       "id": "3223634bacce",
       "cat": "hacks",
       "kind": "news",
@@ -668,24 +690,6 @@
         "SRN News"
       ],
       "score": 2.59
-    },
-    {
-      "id": "9f11549139fa",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Equinor working to restore IT systems after cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUjVUaUp3Y2JQalJXQkZWWHhfWlV0OGtwR0M2Sm15OFhSOC1sVzg5M2VxcHUtRDhzeWVuQU8yZk83cGZtckFhemM5NXlDTWpfcVRNRGpZVGMwcmJiZEpwWUNWSkRIcHBucGw4OEIyTnotbHVJelRFaUNyZFlhZ0tuZ3oyUFBuSWZBZGxPX0NKZTZLc3o1aFRxTUg5T1B2eTJxR1FfLTVlTFZ6MGU1NVRYTVdvRmxDSG1MbGh3ZVJiSXQzQW1qVTBxNFRDSVQ2S28tWldkZDkzQWU?oc=5",
-      "source": "Toronto Star",
-      "publishedAt": "2026-11-18T15:41:33.000Z",
-      "latestAt": "2026-11-18T17:01:51.000Z",
-      "firstSeenAt": "2026-11-18T16:05:29.833Z",
-      "outlets": 3,
-      "outletNames": [
-        "Toronto Star",
-        "Yahoo! Finance Canada",
-        "EnergyNow"
-      ],
-      "score": 2.57
     },
     {
       "id": "09bfbf9d8033",
@@ -925,24 +929,6 @@
       }
     },
     {
-      "id": "c0f7b49b2b66",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Company behind FAA shutdown is a major defense contractor in Hampton Roads",
-      "url": "https://www.dailypress.com/2026/11/18/hampton-roads-company-defense-contractor-faa-shutdown/",
-      "source": "Daily Press",
-      "publishedAt": "2026-11-18T11:23:00.000Z",
-      "latestAt": "2026-11-18T19:25:51.000Z",
-      "firstSeenAt": "2026-11-18T19:35:58.704Z",
-      "outlets": 3,
-      "outletNames": [
-        "Daily Press",
-        "The Virginian-Pilot",
-        "Yahoo Finance"
-      ],
-      "score": 3.12
-    },
-    {
       "id": "2de833544a67",
       "cat": "flights",
       "kind": "news",
@@ -958,6 +944,24 @@
         "The American Bazaar"
       ],
       "score": 2.59
+    },
+    {
+      "id": "9f11549139fa",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor working to restore IT systems after cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUjVUaUp3Y2JQalJXQkZWWHhfWlV0OGtwR0M2Sm15OFhSOC1sVzg5M2VxcHUtRDhzeWVuQU8yZk83cGZtckFhemM5NXlDTWpfcVRNRGpZVGMwcmJiZEpwWUNWSkRIcHBucGw4OEIyTnotbHVJelRFaUNyZFlhZ0tuZ3oyUFBuSWZBZGxPX0NKZTZLc3o1aFRxTUg5T1B2eTJxR1FfLTVlTFZ6MGU1NVRYTVdvRmxDSG1MbGh3ZVJiSXQzQW1qVTBxNFRDSVQ2S28tWldkZDkzQWU?oc=5",
+      "source": "Toronto Star",
+      "publishedAt": "2026-11-18T15:41:33.000Z",
+      "latestAt": "2026-11-18T17:01:51.000Z",
+      "firstSeenAt": "2026-11-18T16:05:29.833Z",
+      "outlets": 3,
+      "outletNames": [
+        "Toronto Star",
+        "Yahoo! Finance Canada",
+        "EnergyNow"
+      ],
+      "score": 2.57
     },
     {
       "id": "7334ae663cbb",
@@ -1011,27 +1015,6 @@
         "Yahoo"
       ],
       "score": 2.22
-    },
-    {
-      "id": "020abdf11fc0",
-      "cat": "flights",
-      "kind": "news",
-      "title": "United Airlines says it resolved ‘system outage’",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdjVQX1FIUFpVaVJ2Mk9yVmNYT25peEF2UGNFejRad2xzZ0V5cEtYTktaZ3RzYk9GNVdDaUtXQlhyQ3BOSjFINGNoemducmpBRDQ5RjJmNHJhRnFpWi02NTdpRmlWanE1emdvUEFJcDg3azZXblBjcHdwNGRKeFYwVlNWOXo2aGJBTTYtUjNldk9KRElNc1RpN3kyYng?oc=5",
-      "source": "NBC News",
-      "publishedAt": "2026-11-18T11:09:40.000Z",
-      "latestAt": "2026-11-19T06:25:46.000Z",
-      "firstSeenAt": "2026-11-19T11:08:34.389Z",
-      "outlets": 6,
-      "outletNames": [
-        "NBC News",
-        "Travel Radar",
-        "The Lufkin Daily News",
-        "National News Desk",
-        "WTNH.com",
-        "KTEN"
-      ],
-      "score": 2.15
     },
     {
       "id": "102728239744",
@@ -1186,23 +1169,6 @@
         "WKYC"
       ],
       "score": 1.82
-    },
-    {
-      "id": "795c99d2f366",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers access financial and medical data of retired NYC government workers",
-      "url": "https://www.politico.com/news/2026/11/19/hackers-access-financial-and-medical-data-of-retired-nyc-government-workers-01174050",
-      "source": "Politico",
-      "publishedAt": "2026-11-19T02:55:00.000Z",
-      "latestAt": "2026-11-19T11:06:37.000Z",
-      "firstSeenAt": "2026-11-19T11:08:34.389Z",
-      "outlets": 2,
-      "outletNames": [
-        "Politico",
-        "StreetInsider"
-      ],
-      "score": 1.73
     },
     {
       "id": "2c22a206b68e",
@@ -1426,6 +1392,22 @@
       "trending": 1000,
       "trendTerm": "spider",
       "score": 1.42
+    },
+    {
+      "id": "22c7080496e8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "LIVE: European Commission battles major cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5mN2NRazhpS3ZiZUVzckpBbnJuNXg4Zk9CTG1PVWtPT3ZxTk54eFhNcjlQaEdMUHVEMWR3TmRWQVk5bzRJdGpoc1dQWDNlN0diX2IyYkg2Y0tsVGIwS2p3NlBtM1lsbDI2ZlJ4d2VkX0tjbVdMZGJsMFRR?oc=5",
+      "source": "Protos | Informed crypto news",
+      "publishedAt": "2026-11-19T11:10:49.000Z",
+      "latestAt": "2026-11-19T11:10:49.000Z",
+      "firstSeenAt": "2026-11-19T11:23:37.429Z",
+      "outlets": 1,
+      "outletNames": [
+        "Protos | Informed crypto news"
+      ],
+      "score": 1.4
     },
     {
       "id": "7c2b2f3a0bbb",
@@ -1878,6 +1860,22 @@
         "IT Security Guru"
       ],
       "score": 1.39
+    },
+    {
+      "id": "81c7020d920f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft battles major outage",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNd1IxYmVoNFNlbElyY1R1R29LZ1pTdklKZ290bkpBdnhqVVA0aFNXano0emFrd3NUd2RlczBOclJoSk9nUTRJMWgteTJXemdXZElCRDhtMWlKaDB3MzNydDM3WEd3elhPNXYwWGlLdDFwakxWNS1LX2pLenlZR2t0QzQ0ckVfVEVlZGtF?oc=5",
+      "source": "The Daily Star",
+      "publishedAt": "2026-11-19T08:17:27.000Z",
+      "latestAt": "2026-11-19T08:17:27.000Z",
+      "firstSeenAt": "2026-11-19T11:23:37.429Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Daily Star"
+      ],
+      "score": 1.33
     },
     {
       "id": "a9ec0b4cf2a0",
