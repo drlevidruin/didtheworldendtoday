@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T10:23:24.394Z",
+  "buildTime": "2026-11-19T10:38:27.869Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 05:23 ET",
+  "etStamp": "2026-11-19 05:38 ET",
   "score": 82,
   "fired": [
     "flights",
@@ -55,13 +55,13 @@
     "date": "2026-11-19",
     "score": 82
   },
-  "headlinesRead": 1322,
-  "lastSuccessAt": "2026-11-19T10:23:24.394Z",
+  "headlinesRead": 1315,
+  "lastSuccessAt": "2026-11-19T10:38:27.869Z",
   "rollingFallback": false,
   "cats": {
     "internet": 9,
-    "flights": 26,
-    "hacks": 28,
+    "flights": 27,
+    "hacks": 27,
     "grid": 6,
     "sun": 4,
     "earth": 4,
@@ -191,57 +191,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1011,
+      "count": 1005,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     },
     "bing": {
       "ok": true,
-      "count": 273,
+      "count": 272,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-19T09:53:18.441Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     },
     "x": {
       "ok": true,
@@ -254,13 +254,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T10:23:24.394Z"
+      "lastOkAt": "2026-11-19T10:38:27.869Z"
     }
   },
   "stories": [
@@ -413,6 +413,32 @@
       "score": 3.78
     },
     {
+      "id": "c3ddbca70630",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "EU Commission targeted in cyberattack, Politico reports",
+      "url": "https://www.reuters.com/legal/litigation/eu-commission-targeted-cyberattack-politico-reports-2026-11-19/",
+      "source": "Reuters",
+      "publishedAt": "2026-11-19T00:03:00.000Z",
+      "latestAt": "2026-11-19T10:27:04.000Z",
+      "firstSeenAt": "2026-11-19T08:38:02.032Z",
+      "outlets": 10,
+      "outletNames": [
+        "Reuters",
+        "StreetInsider",
+        "AzerNews",
+        "Mezha.net",
+        "The News International",
+        "Times Now",
+        "The Next Web",
+        "@Reuters on X",
+        "Daily Sabah",
+        "Metro Mode"
+      ],
+      "xUrl": "https://x.com/Reuters/status/2123343058611671245",
+      "score": 3.7
+    },
+    {
       "id": "sig:kp:2026-11-18",
       "cat": "sun",
       "kind": "signal",
@@ -455,30 +481,6 @@
         "pager": null,
         "tsunami": false
       }
-    },
-    {
-      "id": "c3ddbca70630",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "EU Commission targeted in cyberattack, Politico reports",
-      "url": "https://www.reuters.com/legal/litigation/eu-commission-targeted-cyberattack-politico-reports-2026-11-19/",
-      "source": "Reuters",
-      "publishedAt": "2026-11-19T00:03:00.000Z",
-      "latestAt": "2026-11-19T09:27:07.000Z",
-      "firstSeenAt": "2026-11-19T08:38:02.032Z",
-      "outlets": 8,
-      "outletNames": [
-        "Reuters",
-        "StreetInsider",
-        "AzerNews",
-        "Mezha.net",
-        "The News International",
-        "Times Now",
-        "The Next Web",
-        "@Reuters on X"
-      ],
-      "xUrl": "https://x.com/Reuters/status/2123343058611671245",
-      "score": 3.43
     },
     {
       "id": "106829ca41b5",
@@ -1009,24 +1011,6 @@
       "score": 2.27
     },
     {
-      "id": "d6ded3c90ab3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers target big brands like McDonald’s, Bayer, CarMax in new phishing scam",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-target-big-brands-mcdonald-182500594.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-18T10:25:00.000Z",
-      "latestAt": "2026-11-18T18:25:00.000Z",
-      "firstSeenAt": "2026-11-18T20:36:11.081Z",
-      "outlets": 3,
-      "outletNames": [
-        "YAHOO!",
-        "Yahoo Tech",
-        "TechRadar"
-      ],
-      "score": 2.15
-    },
-    {
       "id": "102728239744",
       "cat": "hacks",
       "kind": "news",
@@ -1196,6 +1180,23 @@
         "Foundation for Defense of Democracies"
       ],
       "score": 1.73
+    },
+    {
+      "id": "546e6e8eceae",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Florida TODAY: Florida driving laws, FAA ground stop, Amendment 3",
+      "url": "https://www.usatoday.com/story/news/state/2026/11/19/florida-today-florida-driving-laws-faa-ground-stop-amendment-3/92845200007/",
+      "source": "USA TODAY",
+      "publishedAt": "2026-11-19T02:08:00.000Z",
+      "latestAt": "2026-11-19T10:08:00.000Z",
+      "firstSeenAt": "2026-11-19T10:38:27.869Z",
+      "outlets": 2,
+      "outletNames": [
+        "USA TODAY",
+        "Florida Today"
+      ],
+      "score": 1.72
     },
     {
       "id": "df7628fb3258",
