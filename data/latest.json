@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T15:54:21.515Z",
+  "buildTime": "2026-11-19T16:09:24.808Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 10:54 ET",
-  "score": 76,
+  "etStamp": "2026-11-19 11:09 ET",
+  "score": 84,
   "fired": [
     "flights",
     "hacks",
@@ -31,9 +31,14 @@
       "key": "faa",
       "label": "Ground stop at a major hub",
       "points": 6
+    },
+    {
+      "key": "status",
+      "label": "Big status page in major outage",
+      "points": 8
     }
   ],
-  "change": 0,
+  "change": 8,
   "yesterday": {
     "date": "2026-11-18",
     "score": 76,
@@ -51,20 +56,20 @@
     ]
   },
   "record": {
-    "date": "2026-11-16",
-    "score": 80
+    "date": "2026-11-19",
+    "score": 84
   },
-  "headlinesRead": 1262,
-  "lastSuccessAt": "2026-11-19T15:54:21.515Z",
+  "headlinesRead": 1274,
+  "lastSuccessAt": "2026-11-19T16:09:24.808Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 25,
-    "hacks": 31,
+    "flights": 24,
+    "hacks": 33,
+    "internet": 14,
     "sun": 4,
     "earth": 4,
-    "germs": 5,
+    "germs": 4,
     "grid": 4,
-    "internet": 14,
     "weather": 4,
     "space": 4,
     "markets": 4,
@@ -94,20 +99,26 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "AUS",
+          "hub": false,
+          "reason": "low visibility"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 1,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
-      "worst": "minor",
+      "worst": "major",
       "pages": [
         {
           "id": "github",
           "name": "GitHub",
-          "indicator": "none",
-          "description": "All Systems Operational"
+          "indicator": "minor",
+          "description": "Partially Degraded Service"
         },
         {
           "id": "cloudflare",
@@ -118,8 +129,8 @@
         {
           "id": "openai",
           "name": "OpenAI",
-          "indicator": "none",
-          "description": "All Systems Operational"
+          "indicator": "major",
+          "description": "Partial System Outage"
         },
         {
           "id": "claude",
@@ -192,13 +203,13 @@
       "ok": true,
       "count": 967,
       "error": null,
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     },
     "bing": {
       "ok": true,
-      "count": 257,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "count": 270,
+      "error": null,
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,39 +219,39 @@
     },
     "hn": {
       "ok": true,
-      "count": 8,
+      "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     },
     "status": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     },
     "x": {
       "ok": true,
@@ -253,13 +264,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T15:54:21.515Z"
+      "lastOkAt": "2026-11-19T16:09:24.808Z"
     }
   },
   "stories": [
@@ -387,9 +398,9 @@
       "url": "https://www.reuters.com/legal/government/jpmorgan-says-third-party-vendors-targeted-cyberattack-2026-11-19/",
       "source": "Reuters",
       "publishedAt": "2026-11-19T00:53:00.000Z",
-      "latestAt": "2026-11-19T15:52:00.000Z",
+      "latestAt": "2026-11-19T15:59:04.000Z",
       "firstSeenAt": "2026-11-19T14:09:00.345Z",
-      "outlets": 23,
+      "outlets": 26,
       "outletNames": [
         "Reuters",
         "Investing.com",
@@ -413,9 +424,12 @@
         "Business Insider",
         "fox61.com",
         "New Jersey 101.5",
-        "KRXI2"
+        "KRXI2",
+        "KFGO",
+        "THV11",
+        "NBC10 Philadelphia"
       ],
-      "score": 4.3
+      "score": 4.44
     },
     {
       "id": "22c7080496e8",
@@ -446,6 +460,28 @@
         "Notebookcheck"
       ],
       "score": 4.14
+    },
+    {
+      "id": "sig:status:openai:2026-11-19",
+      "cat": "internet",
+      "kind": "signal",
+      "title": "OpenAI reports a major outage on its status page",
+      "url": "https://status.openai.com/",
+      "source": "OpenAI status",
+      "publishedAt": "2026-11-19T16:09:24.808Z",
+      "latestAt": "2026-11-19T16:09:24.808Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
+      "outlets": 1,
+      "outletNames": [
+        "OpenAI status"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "status",
+        "indicator": "major",
+        "page": "openai",
+        "description": "Partial System Outage"
+      }
     },
     {
       "id": "sig:kp:2026-11-18",
@@ -567,24 +603,6 @@
       "score": 2.55
     },
     {
-      "id": "4bd6ee47e88c",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Strong 5.8-magnitude earthquake hits Pacific-Antarctic Ridge",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOai1PYmRsSXd3eklaUGNEV0VPNC1ZelY4VU9KVldHYmd2YzFuY3dUMFhyS1R0WlRrOEM1alEzWmJfbXdOb19lcVg4OTJDYUhuWU1oNlcxVk5UYmdRdWpwbnJ1NC1DRUNxajhfbTl2Rk9VTjAtcnRodkNuOFVSNEZxdXhsemNlSkE?oc=5",
-      "source": "Latest news from Azerbaijan",
-      "publishedAt": "2026-11-18T19:49:00.000Z",
-      "latestAt": "2026-11-18T23:10:00.000Z",
-      "firstSeenAt": "2026-11-18T20:51:10.072Z",
-      "outlets": 3,
-      "outletNames": [
-        "Latest news from Azerbaijan",
-        "Breakingthenews.net",
-        "Apa.az"
-      ],
-      "score": 2.54
-    },
-    {
       "id": "307f16754e66",
       "cat": "hacks",
       "kind": "news",
@@ -592,9 +610,9 @@
       "url": "https://apnews.com/article/cyberattack-european-union-artificial-intelligence-ai-79705095e8141cd650196dbff1cf3c70",
       "source": "Associated Press News",
       "publishedAt": "2026-11-18T20:30:00.000Z",
-      "latestAt": "2026-11-19T13:58:45.000Z",
+      "latestAt": "2026-11-19T14:34:00.000Z",
       "firstSeenAt": "2026-11-19T12:38:49.480Z",
-      "outlets": 23,
+      "outlets": 25,
       "outletNames": [
         "Associated Press News",
         "Temple Daily Telegram",
@@ -618,9 +636,11 @@
         "morning-times.com",
         "The Spec",
         "U.S. News & World Report",
-        "Oskaloosa Herald"
+        "Oskaloosa Herald",
+        "Tech Xplore",
+        "KOCO"
       ],
-      "score": 4.04
+      "score": 4.12
     },
     {
       "id": "3af276c6d1c6",
@@ -665,6 +685,31 @@
       "score": 3.63
     },
     {
+      "id": "34f4a753c60c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Warns That Some Vendors Were Hit by a Cyberattack",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/jpmorgan-warns-that-some-vendors-were-hit-by-a-cyberattack",
+      "source": "Bloomberg",
+      "publishedAt": "2026-11-19T06:28:00.000Z",
+      "latestAt": "2026-11-19T16:04:11.000Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
+      "outlets": 10,
+      "outletNames": [
+        "Bloomberg",
+        "Insider on MSN",
+        "FOX 8 News",
+        "AOL.com",
+        "Yahoo",
+        "Washington Times",
+        "Insurance Journal",
+        "New Jersey 101.5",
+        "Business Insider",
+        "KFOX"
+      ],
+      "score": 3.62
+    },
+    {
       "id": "bab44e1adaa9",
       "cat": "flights",
       "kind": "news",
@@ -707,29 +752,22 @@
       }
     },
     {
-      "id": "795c99d2f366",
-      "cat": "hacks",
+      "id": "4bd6ee47e88c",
+      "cat": "earth",
       "kind": "news",
-      "title": "Hackers access financial and medical data of retired NYC government workers",
-      "url": "https://www.politico.com/news/2026/11/19/hackers-access-financial-and-medical-data-of-retired-nyc-government-workers-01174050",
-      "source": "Politico",
-      "publishedAt": "2026-11-18T22:06:00.000Z",
-      "latestAt": "2026-11-19T11:41:00.000Z",
-      "firstSeenAt": "2026-11-19T11:08:34.389Z",
-      "outlets": 10,
+      "title": "Strong 5.8-magnitude earthquake hits Pacific-Antarctic Ridge",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOai1PYmRsSXd3eklaUGNEV0VPNC1ZelY4VU9KVldHYmd2YzFuY3dUMFhyS1R0WlRrOEM1alEzWmJfbXdOb19lcVg4OTJDYUhuWU1oNlcxVk5UYmdRdWpwbnJ1NC1DRUNxajhfbTl2Rk9VTjAtcnRodkNuOFVSNEZxdXhsemNlSkE?oc=5",
+      "source": "Latest news from Azerbaijan",
+      "publishedAt": "2026-11-18T19:49:00.000Z",
+      "latestAt": "2026-11-18T23:10:00.000Z",
+      "firstSeenAt": "2026-11-18T20:51:10.072Z",
+      "outlets": 3,
       "outletNames": [
-        "Politico",
-        "StreetInsider",
-        "Reuters",
-        "Yahoo",
-        "TradingView",
-        "U.S. News & World Report",
-        "Investing.com",
+        "Latest news from Azerbaijan",
         "Breakingthenews.net",
-        "marketscreener.com",
-        "CNA"
+        "Apa.az"
       ],
-      "score": 3.38
+      "score": 2.54
     },
     {
       "id": "e498b9be28a4",
@@ -747,46 +785,6 @@
         "Stourbridge News"
       ],
       "score": 2.5
-    },
-    {
-      "id": "09bfbf9d8033",
-      "cat": "germs",
-      "kind": "news",
-      "title": "France on high alert for bird flu as seasonal wave spreads",
-      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/france-high-alert-bird-flu-seasonal-wave-spreads-2026-11-19/",
-      "source": "Reuters",
-      "publishedAt": "2026-11-18T16:01:00.000Z",
-      "latestAt": "2026-11-19T11:38:21.000Z",
-      "firstSeenAt": "2026-11-19T08:07:59.915Z",
-      "outlets": 5,
-      "outletNames": [
-        "marketscreener.com",
-        "Reuters",
-        "Yahoo News Singapore",
-        "AOL.com",
-        "KFGO"
-      ],
-      "score": 2.43
-    },
-    {
-      "id": "764933f8df5d",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.3-Magnitude Earthquake Strikes Off Sumatra, No Tsunami Threat To Malaysia",
-      "url": "https://www.businesstoday.com.my/2026/11/19/5-3-magnitude-earthquake-strikes-off-sumatra-no-tsunami-threat-to-malaysia/",
-      "source": "BusinessToday",
-      "publishedAt": "2026-11-18T16:01:00.000Z",
-      "latestAt": "2026-11-19T05:47:00.000Z",
-      "firstSeenAt": "2026-11-19T03:22:20.740Z",
-      "outlets": 3,
-      "outletNames": [
-        "BusinessToday Malaysia",
-        "BusinessToday",
-        "The Vibes"
-      ],
-      "score": 2.1,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
     },
     {
       "id": "e6ad68ef594c",
@@ -874,23 +872,6 @@
       "score": 1.71
     },
     {
-      "id": "099f57543dfc",
-      "cat": "germs",
-      "kind": "news",
-      "title": "England orders turkey flocks of 50 or more indoors as bird flu spreads ahead of Christmas",
-      "url": "https://www.yahoo.com/news/world/articles/england-orders-turkey-flocks-50-003700300.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-18T16:01:00.000Z",
-      "latestAt": "2026-11-19T00:37:00.000Z",
-      "firstSeenAt": "2026-11-19T01:21:54.436Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "The Cool Down"
-      ],
-      "score": 1.69
-    },
-    {
       "id": "ec98dfd69f01",
       "cat": "internet",
       "kind": "news",
@@ -942,6 +923,42 @@
       "score": 1.49
     },
     {
+      "id": "51b1ecb63288",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Communities without power after massive storm fells transmission towers on South Australia’s Eyre Peninsula",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZGZOX0lvUnZPN21hRl8xMlczcjlBRllRYThqTkN5MU14cy00YVV2UHhleU5fN3RJTmZ4bGE3WnM5MTFMVG9fVnZJTEdvT3Y0RFdDTlpLcG5mTmFhX2lsVG5tdlBzb3pNVzRxcUxXUXpYZzdTTGh1emNkYzFLVHdScEticW9BOFNiUG5iSXF5ek1UZ1VERzB3bm9sQ1RaZjh5dkFyU1FhMUFpbGJyV09ad1oyTFk2dHJRVy1vVDlSMmh4YzZfcGVFTi1Ic1BVT1c5eEVVWVIwcDQ2eEo3UTRz0gHkAUFVX3lxTFBSdU1GTS1IZEZLNjB5VGNtOTVFOURuWEowbExuSnNPNzdCdjVqbnJ5cmhNTDU4WV9rcVV0UlVwODBxVVZmQXM4VTdSRXpYVW5HenNsUUFpekk3LUNCUUV3OXo2eDBuS0YyTVhoalJVdkM2ZmtOZkZvQ25CWXlFMlFHSVNiZjZjRkRmMFhJdEY5TEtZMllhVndMOUtORlgxNElkOGxldy14clcxbGtJOC1qcmxLYU1WSVRfeUNlRTRaTGpEOWczSlRCVWQtbWo0Wks4MzhTUTdzbWE0QUVnRnZKYURoZA?oc=5",
+      "source": "7NEWS",
+      "publishedAt": "2026-11-19T12:10:00.000Z",
+      "latestAt": "2026-11-19T12:10:00.000Z",
+      "firstSeenAt": "2026-11-19T12:23:43.299Z",
+      "outlets": 1,
+      "outletNames": [
+        "7NEWS"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "c9f28657af43",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Risk of tornadoes for the valley as a major storm rolls through Northern California",
+      "url": "https://www.abc10.com/article/weather/weather-impact/risk-of-tornadoes-for-the-valley-as-a-major-storm-rolls-through-northern-california/103-73a32110-5aac-4449-92f6-5446337cb8df",
+      "source": "ABC10",
+      "publishedAt": "2026-11-19T10:30:00.000Z",
+      "latestAt": "2026-11-19T10:30:00.000Z",
+      "firstSeenAt": "2026-11-19T10:47:59.692Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC10"
+      ],
+      "trending": 100,
+      "trendTerm": "weather near me",
+      "score": 1.39,
+      "quiet": true,
+      "quietReason": "headline mentions tornadoes"
+    },
+    {
       "id": "sig:faa-stop:TEB:2026-11-18",
       "cat": "flights",
       "kind": "signal",
@@ -986,6 +1003,31 @@
         "nationwide": false,
         "reason": "airport volume"
       }
+    },
+    {
+      "id": "795c99d2f366",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers access financial and medical data of retired NYC government workers",
+      "url": "https://www.politico.com/news/2026/11/19/hackers-access-financial-and-medical-data-of-retired-nyc-government-workers-01174050",
+      "source": "Politico",
+      "publishedAt": "2026-11-18T22:06:00.000Z",
+      "latestAt": "2026-11-19T11:41:00.000Z",
+      "firstSeenAt": "2026-11-19T11:08:34.389Z",
+      "outlets": 10,
+      "outletNames": [
+        "Politico",
+        "StreetInsider",
+        "Reuters",
+        "Yahoo",
+        "TradingView",
+        "U.S. News & World Report",
+        "Investing.com",
+        "Breakingthenews.net",
+        "marketscreener.com",
+        "CNA"
+      ],
+      "score": 3.38
     },
     {
       "id": "3223634bacce",
@@ -1085,21 +1127,58 @@
       "score": 2.41
     },
     {
-      "id": "dfe665b68cbb",
+      "id": "4f7bd24c0dcb",
       "cat": "flights",
       "kind": "news",
-      "title": "Exclusive: 'There was no monitoring.' Sources say FAA had little oversight of work that led to nationwide ground stop",
-      "url": "https://www.msn.com/en-us/news/other/exclusive-there-was-no-monitoring-sources-say-faa-had-little-oversight-of-work-that-led-to-nationwide-ground-stop/ar-AA2hJoUr",
-      "source": "CNN on MSN",
-      "publishedAt": "2026-11-18T16:01:21.000Z",
-      "latestAt": "2026-11-19T00:01:00.000Z",
-      "firstSeenAt": "2026-11-19T00:36:52.219Z",
+      "title": "United Airlines confirms widespread 'system outage' just days after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxNQUR3dWpVRTIzWXZHMG1XazhTZlcwdW1wOFN4NVRMQnhoQ2dnS0ZEQVN3XzVkTXc1SWpIYUJXVTFWdGgyTEZhTEtvODZDai1PTWRzX1VraENDNlNsckVNQmJ5YmZncldCSm1JdVUyR3FOWVhCTnlvS3cxYjFKdEdiTGptQl9EVFdxMG54TndqWHpTX3oyVXp1TGFlNU9BbkNCNjZIQ2VjYjAyenRIMjRJVEZVQy1DMG5PT0NpSHNnb2s3dnBhWndjc2o0Y0k0WGpudGVLSUZ5MzBmU2lROVF6RkxsVHlmYlNZRlZydUFNRVhfMVBZQ3dycEg5eTdrSVE3c3FEdHFtRWgySXp5S3RDd3dxMEZzUlFRMGZJVzA1UEZBZm83UC1rVE1majZlamJjYU5FZkw0RkxfWEhqV01wWWtMOVJwNGl4VTQ2c2N3?oc=5",
+      "source": "National News Desk",
+      "publishedAt": "2026-11-19T03:12:52.000Z",
+      "latestAt": "2026-11-19T13:32:00.000Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
       "outlets": 2,
       "outletNames": [
-        "CNN",
-        "Yahoo News Singapore"
+        "National News Desk",
+        "700WLW"
       ],
-      "score": 2.4
+      "score": 2.2
+    },
+    {
+      "id": "ce3b0f14cf6a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase reports cyberattack on third-party service providers",
+      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
+      "source": "ABC News",
+      "publishedAt": "2026-11-18T22:39:00.000Z",
+      "latestAt": "2026-11-19T15:50:17.000Z",
+      "firstSeenAt": "2026-11-19T14:54:09.172Z",
+      "outlets": 4,
+      "outletNames": [
+        "ABC News",
+        "ABC News - Breaking News, Latest News and Videos",
+        "ABC23",
+        "WSB-TV"
+      ],
+      "score": 2.19
+    },
+    {
+      "id": "424febfdf588",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "EU Commission hit by large-scale cyberattack with data leakage unknown",
+      "url": "https://www.yahoo.com/news/world/articles/eu-commission-hit-large-scale-122001475.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T04:20:00.000Z",
+      "latestAt": "2026-11-19T11:48:42.000Z",
+      "firstSeenAt": "2026-11-19T14:54:09.172Z",
+      "outlets": 3,
+      "outletNames": [
+        "Euronews.com",
+        "Yahoo News UK",
+        "Yahoo"
+      ],
+      "score": 2.13
     },
     {
       "id": "102728239744",
@@ -1204,21 +1283,21 @@
       "score": 1.9
     },
     {
-      "id": "424febfdf588",
+      "id": "7e853259d84f",
       "cat": "hacks",
       "kind": "news",
-      "title": "EU Commission hit by large-scale cyberattack with data leakage unknown",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTnc3TnFUdzNhcHR4Qnh4YkZRbGl1UWdLVE5sYXNXZV9LeTZrY2I3eUhoRi1DUFl2cHFmOG1zOXdBVWRFUnpwdHgycU5tVlNMUktURWVZS1dwc3k0THBRYVJhZ2cyNGp0YV9SX245MVZLY3dsUjI0WWhWWFRUcElLQy1LMk5SRDNrUmhqaWdVVlpBRGI0NlJEaHFLdzFCaEF4YndTUGNCVk5Wdw?oc=5",
-      "source": "Euronews.com",
-      "publishedAt": "2026-11-19T10:38:31.000Z",
-      "latestAt": "2026-11-19T11:48:42.000Z",
-      "firstSeenAt": "2026-11-19T14:54:09.172Z",
+      "title": "Visa data breach exposes premium cardholder data",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBfUUl2N3lyTjdmWEJDdUcyRlFBcnV4aWpJREZpa0tYN1l0aEI3MVFjN050SjhwcnRZa050MnZocHJIemVxb2prM21mQzFIU1cxcG9nZ2ItSTlSZHgxUjQtRkxqdw?oc=5",
+      "source": "Cybernews",
+      "publishedAt": "2026-11-19T12:49:09.000Z",
+      "latestAt": "2026-11-19T16:08:14.000Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
       "outlets": 2,
       "outletNames": [
-        "Euronews.com",
-        "Yahoo News UK"
+        "Cybernews",
+        "Beinsure"
       ],
-      "score": 1.86
+      "score": 1.89
     },
     {
       "id": "3e3e07455f30",
@@ -1238,6 +1317,23 @@
       "score": 1.86
     },
     {
+      "id": "899534eeb6c3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Equinor Says Cyberattack Still Ongoing",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVHVzRlJBajVpOFJpZ180T1VDeUxmYVB5dERFaEVHaTVLSm5RcnduS3hJVTlGQlRac3JWNjlwRktOY0UwOG9QcG1FQ0Y4bWRjaVFYNkgzTElQczFQOGlZR1BCNlBOb1d2Y2ozMXpNWnpaN0pNY2xkMExGc2VkdXBpamZrN2dvM1BvcTItR0h4V29jb3VGbGc?oc=5",
+      "source": "marketscreener.com",
+      "publishedAt": "2026-11-19T11:39:12.000Z",
+      "latestAt": "2026-11-19T14:58:00.000Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
+      "outlets": 2,
+      "outletNames": [
+        "marketscreener.com",
+        "EnergyWatch"
+      ],
+      "score": 1.85
+    },
+    {
       "id": "8a645c2912ad",
       "cat": "hacks",
       "kind": "news",
@@ -1251,6 +1347,24 @@
       "outletNames": [
         "FOX 8 News",
         "WKYC"
+      ],
+      "score": 1.82
+    },
+    {
+      "id": "0e6586ad0b52",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Data breach impacts 40 Irish credit unions in reported IT provider hack",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeFdFaDlfcDZNaWtVV3kyUW1RSGFaRVNfbGt4czBGbXk5Y2I0WGFqQ2cydmhVZ1lhRGRlUDIwbnVBUEhUUnNhcGc0TFFXalhkMWJsSE5VR3FlTHpOZVk0aV83bUxCYlFiMFZNdHdmWFVqSGxPcFhyQ1BtTUh1V09GQ0lnVTBCVUpqcUhoWG9QOWZweGFobWlNMHZvZ2RFNVZJc3RyQ2U3d0FnTTFNVVRDbEtwY3JnbktFd3Jn?oc=5",
+      "source": "BleepingComputer",
+      "publishedAt": "2026-11-18T19:39:33.000Z",
+      "latestAt": "2026-11-19T15:54:48.000Z",
+      "firstSeenAt": "2026-11-19T13:23:53.347Z",
+      "outlets": 3,
+      "outletNames": [
+        "BleepingComputer",
+        "IT Pro",
+        "The Paypers"
       ],
       "score": 1.82
     },
@@ -1306,22 +1420,21 @@
       "score": 1.73
     },
     {
-      "id": "dd46d6ecf2a1",
-      "cat": "flights",
+      "id": "0a4f69c262fb",
+      "cat": "hacks",
       "kind": "news",
-      "title": "FAA administrator blames himself for the historic ground stop",
-      "url": "https://abcnews.com/video/138284156/",
-      "source": "ABC News",
-      "publishedAt": "2026-11-18T16:01:00.000Z",
-      "latestAt": "2026-11-19T13:20:00.000Z",
-      "firstSeenAt": "2026-11-19T13:09:06.725Z",
-      "outlets": 3,
+      "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
+      "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
+      "source": "The Wall Street Journal",
+      "publishedAt": "2026-11-19T07:51:00.000Z",
+      "latestAt": "2026-11-19T15:52:00.000Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
+      "outlets": 2,
       "outletNames": [
-        "ABC News",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Modern Ghana"
+        "The Wall Street Journal",
+        "WSJ"
       ],
-      "score": 1.67
+      "score": 1.72
     },
     {
       "id": "0a1777a2bb26",
@@ -1339,40 +1452,6 @@
         "TechCentral"
       ],
       "score": 1.62
-    },
-    {
-      "id": "ce3b0f14cf6a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase reports cyberattack on third-party service providers",
-      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
-      "source": "ABC News",
-      "publishedAt": "2026-11-18T22:39:00.000Z",
-      "latestAt": "2026-11-19T14:47:05.000Z",
-      "firstSeenAt": "2026-11-19T14:54:09.172Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC News",
-        "ABC News - Breaking News, Latest News and Videos"
-      ],
-      "score": 1.46
-    },
-    {
-      "id": "0e6586ad0b52",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Data breach impacts 40 Irish credit unions in reported IT provider hack",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeFdFaDlfcDZNaWtVV3kyUW1RSGFaRVNfbGt4czBGbXk5Y2I0WGFqQ2cydmhVZ1lhRGRlUDIwbnVBUEhUUnNhcGc0TFFXalhkMWJsSE5VR3FlTHpOZVk0aV83bUxCYlFiMFZNdHdmWFVqSGxPcFhyQ1BtTUh1V09GQ0lnVTBCVUpqcUhoWG9QOWZweGFobWlNMHZvZ2RFNVZJc3RyQ2U3d0FnTTFNVVRDbEtwY3JnbktFd3Jn?oc=5",
-      "source": "BleepingComputer",
-      "publishedAt": "2026-11-18T19:39:33.000Z",
-      "latestAt": "2026-11-19T13:19:45.000Z",
-      "firstSeenAt": "2026-11-19T13:23:53.347Z",
-      "outlets": 2,
-      "outletNames": [
-        "BleepingComputer",
-        "IT Pro"
-      ],
-      "score": 1.41
     },
     {
       "id": "338803608316",
@@ -1519,6 +1598,22 @@
       "score": 1.4
     },
     {
+      "id": "497408cf71f1",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Apple customers face major disruptions as widespread outage affects purchases, payments, activations",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQaVVzcFpzcWZKZVd2bjNDX2dPd2VIY2NHZEczNUxhWVRadjE5c3p4TjlydlJ2QW5jY0NZNTR5Y2pvNHV5TVRSN2U0V2ZjM0c4eWp3RHFQS0lvMWRkenZDc1pLaUdmNHI5blpBRlV1ZGNycTBKc096NjRwNWVqNWVzYnAtdDF2bmxoUHhneFNxVQ?oc=5",
+      "source": "The Cool Down",
+      "publishedAt": "2026-11-19T15:52:00.000Z",
+      "latestAt": "2026-11-19T15:52:00.000Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Cool Down"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "418ae06f44c0",
       "cat": "hacks",
       "kind": "news",
@@ -1549,42 +1644,6 @@
         "https://www.birmingham-now.co.uk/"
       ],
       "score": 1.39
-    },
-    {
-      "id": "51b1ecb63288",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Communities without power after massive storm fells transmission towers on South Australia’s Eyre Peninsula",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZGZOX0lvUnZPN21hRl8xMlczcjlBRllRYThqTkN5MU14cy00YVV2UHhleU5fN3RJTmZ4bGE3WnM5MTFMVG9fVnZJTEdvT3Y0RFdDTlpLcG5mTmFhX2lsVG5tdlBzb3pNVzRxcUxXUXpYZzdTTGh1emNkYzFLVHdScEticW9BOFNiUG5iSXF5ek1UZ1VERzB3bm9sQ1RaZjh5dkFyU1FhMUFpbGJyV09ad1oyTFk2dHJRVy1vVDlSMmh4YzZfcGVFTi1Ic1BVT1c5eEVVWVIwcDQ2eEo3UTRz0gHkAUFVX3lxTFBSdU1GTS1IZEZLNjB5VGNtOTVFOURuWEowbExuSnNPNzdCdjVqbnJ5cmhNTDU4WV9rcVV0UlVwODBxVVZmQXM4VTdSRXpYVW5HenNsUUFpekk3LUNCUUV3OXo2eDBuS0YyTVhoalJVdkM2ZmtOZkZvQ25CWXlFMlFHSVNiZjZjRkRmMFhJdEY5TEtZMllhVndMOUtORlgxNElkOGxldy14clcxbGtJOC1qcmxLYU1WSVRfeUNlRTRaTGpEOWczSlRCVWQtbWo0Wks4MzhTUTdzbWE0QUVnRnZKYURoZA?oc=5",
-      "source": "7NEWS",
-      "publishedAt": "2026-11-19T12:10:00.000Z",
-      "latestAt": "2026-11-19T12:10:00.000Z",
-      "firstSeenAt": "2026-11-19T12:23:43.299Z",
-      "outlets": 1,
-      "outletNames": [
-        "7NEWS"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "c9f28657af43",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Risk of tornadoes for the valley as a major storm rolls through Northern California",
-      "url": "https://www.abc10.com/article/weather/weather-impact/risk-of-tornadoes-for-the-valley-as-a-major-storm-rolls-through-northern-california/103-73a32110-5aac-4449-92f6-5446337cb8df",
-      "source": "ABC10",
-      "publishedAt": "2026-11-19T10:30:00.000Z",
-      "latestAt": "2026-11-19T10:30:00.000Z",
-      "firstSeenAt": "2026-11-19T10:47:59.692Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC10"
-      ],
-      "trending": 100,
-      "trendTerm": "weather near me",
-      "score": 1.39,
-      "quiet": true,
-      "quietReason": "headline mentions tornadoes"
     },
     {
       "id": "f8c9e7ac3e47",
@@ -1827,22 +1886,6 @@
       "score": 1.27
     },
     {
-      "id": "2142471a8559",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Inside the Cyberattack That Used a Single Third-Party Script to Hit 178 Global Brands in One Day",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQcXlVMEFQZFZzSjNfNV9PTE1UQkZLU1JTRWZDejdtRjBKb3NkdGVrc3JwWlM1U2xSUzZkbFgyMHVtWXlVdTRGQkRUOC1IUGtuc29YS1pEWjljMEdQejItbkI5eTdsM1VIcHpiNDdFNnBNVktYX3J1NFVqUldia1U0LUdmc0x6RjZvcWc?oc=5",
-      "source": "Latin Times",
-      "publishedAt": "2026-11-18T22:44:53.000Z",
-      "latestAt": "2026-11-18T22:44:53.000Z",
-      "firstSeenAt": "2026-11-19T04:22:21.839Z",
-      "outlets": 1,
-      "outletNames": [
-        "Latin Times"
-      ],
-      "score": 1.27
-    },
-    {
       "id": "c937d90989ba",
       "cat": "germs",
       "kind": "news",
@@ -1860,38 +1903,6 @@
       "score": 1.25
     },
     {
-      "id": "81c7020d920f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft battles major outage",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNd1IxYmVoNFNlbElyY1R1R29LZ1pTdklKZ290bkpBdnhqVVA0aFNXano0emFrd3NUd2RlczBOclJoSk9nUTRJMWgteTJXemdXZElCRDhtMWlKaDB3MzNydDM3WEd3elhPNXYwWGlLdDFwakxWNS1LX2pLenlZR2t0QzQ0ckVfVEVlZGtF?oc=5",
-      "source": "The Daily Star",
-      "publishedAt": "2026-11-19T08:17:27.000Z",
-      "latestAt": "2026-11-19T08:17:27.000Z",
-      "firstSeenAt": "2026-11-19T15:09:10.079Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Daily Star"
-      ],
-      "score": 1.24
-    },
-    {
-      "id": "aace5fd12e3d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase says vendors hacked, emails stolen days after massive outage",
-      "url": "https://nypost.com/2026/11/19/business/jpmorgan-chase-says-vendors-hacked-emails-stolen-days-after-massive-outage/",
-      "source": "New York Post",
-      "publishedAt": "2026-11-19T07:20:00.000Z",
-      "latestAt": "2026-11-19T07:20:00.000Z",
-      "firstSeenAt": "2026-11-19T15:54:21.515Z",
-      "outlets": 1,
-      "outletNames": [
-        "New York Post"
-      ],
-      "score": 1.2
-    },
-    {
       "id": "0690304d1415",
       "cat": "sun",
       "kind": "news",
@@ -1906,22 +1917,6 @@
         "Practical Engineering on MSN"
       ],
       "score": 1.18
-    },
-    {
-      "id": "ff1a8e6aa309",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft says services fully restored after hourslong global outage",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPb3RMZHBYeS1UWUVDT1puVTZnWXRoSjRoTU5mWG5BWDRhcUlNdElCTnc3UktCbGpKbG51aTVaR2ROdm9TWDBCd2VUNTBXVUhBaUV5V2c2U21zQ0lmUzdJSGhTQkwyejdhTW1zYVhoTTlvdGZtUXZrSEg1aTVfVzVueWF0NWNWa3dxUTdGTEg1Slk4YWE2T2EzZXFXMVdzMUFXRTNQT1NkaW45bG1oRVRXbkg0LTVkVUROUG5JUXhYWHVTVGt3dFc3NmJDM2hfT3VQZ1hJd1VTVF9Gc0FrWWdaMTdB?oc=5",
-      "source": "WINK News",
-      "publishedAt": "2026-11-19T05:45:58.000Z",
-      "latestAt": "2026-11-19T05:45:58.000Z",
-      "firstSeenAt": "2026-11-19T15:39:19.020Z",
-      "outlets": 1,
-      "outletNames": [
-        "WINK News"
-      ],
-      "score": 1.17
     },
     {
       "id": "05bc44f3f8c7",
@@ -2022,6 +2017,22 @@
       "score": 1
     },
     {
+      "id": "85aa4ba56ee9",
+      "cat": "germs",
+      "kind": "news",
+      "title": "More than 3000 bird flu tests carried out since July",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVXY4TnZHOExIU1dxMmRkeDJJUjJYbjExb0h1VmlyRnRIRFJxSTA3dERQMmJfM3FRb2NhTlNFN3pnMUJOQ3h5LXJvc212OW5PX3IyMzJkU2pVbnI2enJSemJNdjVaMWZ0ZjZRaW40ZGplekhHTGVadFBKcG0xSFdldUhWT0RrdnhTSGUxeTZRX3dWLXZQZGVTQUZCNmxCN0ZD?oc=5",
+      "source": "RNZ",
+      "publishedAt": "2026-11-19T04:30:48.000Z",
+      "latestAt": "2026-11-19T04:30:48.000Z",
+      "firstSeenAt": "2026-11-19T04:37:28.583Z",
+      "outlets": 1,
+      "outletNames": [
+        "RNZ"
+      ],
+      "score": 1
+    },
+    {
       "id": "c8dd8b8dfe6b",
       "cat": "sun",
       "kind": "news",
@@ -2086,6 +2097,22 @@
         "WION"
       ],
       "score": 0.96
+    },
+    {
+      "id": "80f9357ea482",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Karangetang Volcano Volcanic Ash Advisory: ERUPTION REPORTED TO FL100 AT 19/1037Z EST VA DTG: 19/1130Z",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNN2ZqcGlpSEhrd192NEpPcnVJQTVvQ19uc2hpMHh3VzBNRjBFYXJJYmoxRDdHQkhBVmZYcWNicVJDejh0bVNWbG52aTNqM3Y3MEZxNFprNlNoa0ZIb2kzTXFhenVVYkVXR21NNDBEYm91T3o5dGU1dnROY2NiRFU0ZzJUcDFzRzA2R0pF?oc=5",
+      "source": "Volcano Discovery",
+      "publishedAt": "2026-11-19T12:25:13.000Z",
+      "latestAt": "2026-11-19T12:25:13.000Z",
+      "firstSeenAt": "2026-11-19T16:09:24.808Z",
+      "outlets": 1,
+      "outletNames": [
+        "Volcano Discovery"
+      ],
+      "score": 0.94
     },
     {
       "id": "8db65d17467b",
