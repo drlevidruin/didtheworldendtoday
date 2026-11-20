@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T14:58:12.038Z",
+  "buildTime": "2026-11-20T15:13:15.858Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 09:58 ET",
+  "etStamp": "2026-11-20 10:13 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,15 +51,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1324,
-  "lastSuccessAt": "2026-11-20T14:58:12.038Z",
+  "headlinesRead": 1305,
+  "lastSuccessAt": "2026-11-20T15:13:15.858Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 31,
-    "flights": 18,
+    "hacks": 28,
+    "flights": 20,
     "germs": 4,
-    "internet": 9,
-    "grid": 5,
+    "internet": 11,
+    "grid": 4,
     "earth": 4,
     "sun": 4,
     "weather": 7,
@@ -78,8 +78,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 0.67,
-      "time": "2026-11-20T09:00:00.000Z",
+      "value": 0.33,
+      "time": "2026-11-20T12:00:00.000Z",
       "max24": 3
     },
     "asteroid": {
@@ -94,7 +94,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 0,
+      "groundDelays": 1,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -188,19 +188,19 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 997,
+      "count": 1000,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     },
     "bing": {
       "ok": true,
-      "count": 273,
+      "count": 269,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 18,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T14:58:12.038Z"
     },
@@ -208,37 +208,37 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T14:58:12.038Z"
+      "lastOkAt": "2026-11-20T15:13:15.858Z"
     }
   },
   "stories": [
@@ -330,34 +330,6 @@
         "nationwide": false,
         "reason": "low visibility"
       }
-    },
-    {
-      "id": "41bda97d8bc2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank customers may be affected after hackers access marketing data",
-      "url": "https://www.yahoo.com/news/videos/chase-bank-customers-may-affected-140903368.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T15:01:48.000Z",
-      "latestAt": "2026-11-20T14:53:29.000Z",
-      "firstSeenAt": "2026-11-19T20:10:12.029Z",
-      "outlets": 13,
-      "outletNames": [
-        "WCPO 9 Cincinnati",
-        "Scripps News",
-        "KPAX News",
-        "LEX 18 News",
-        "KJRH",
-        "KMTV 3 News Now Omaha",
-        "KXXV",
-        "KKTV",
-        "TMJ4 News",
-        "10News.com",
-        "KSBY News",
-        "Tampa Bay 28",
-        "Yahoo"
-      ],
-      "score": 4.3
     },
     {
       "id": "6d7a6b3b2346",
@@ -459,6 +431,25 @@
         "Malwarebytes"
       ],
       "score": 3.11
+    },
+    {
+      "id": "fa6bdfc296d7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SLED opens criminal probe into Charleston County cyberattack after data copied",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRlJwZHVUTDlBQ3FHamFnZ0F1MEdCVzhvSHdpYm9aa1NFU2Vmc1lRVW5GNXlwNVdIYkkybWxUUm9DelFXdlprdHZzNEx1LXVhODhpcEs0dm5YaGZVNjhUa2xtWXVhWG94b1ZiajExeTVITDVtZkNleEZucXlzRl9hU0pfeEZqUnk3SS1EdmhvaVd5NXBmS3FVTlZJVFRoeUZiZ3JIZzRJVWhDaXFvT1RJ?oc=5",
+      "source": "WCIV",
+      "publishedAt": "2026-11-19T21:46:10.000Z",
+      "latestAt": "2026-11-20T14:02:00.000Z",
+      "firstSeenAt": "2026-11-19T22:40:25.650Z",
+      "outlets": 4,
+      "outletNames": [
+        "WCIV",
+        "WTMA-AM",
+        "South Carolina Public Radio",
+        "WCBD News 2"
+      ],
+      "score": 2.95
     },
     {
       "id": "8318992f830e",
@@ -565,25 +556,6 @@
       "score": 3.36
     },
     {
-      "id": "fa6bdfc296d7",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "SLED opens criminal probe into Charleston County cyberattack after data copied",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRlJwZHVUTDlBQ3FHamFnZ0F1MEdCVzhvSHdpYm9aa1NFU2Vmc1lRVW5GNXlwNVdIYkkybWxUUm9DelFXdlprdHZzNEx1LXVhODhpcEs0dm5YaGZVNjhUa2xtWXVhWG94b1ZiajExeTVITDVtZkNleEZucXlzRl9hU0pfeEZqUnk3SS1EdmhvaVd5NXBmS3FVTlZJVFRoeUZiZ3JIZzRJVWhDaXFvT1RJ?oc=5",
-      "source": "WCIV",
-      "publishedAt": "2026-11-19T21:46:10.000Z",
-      "latestAt": "2026-11-20T14:02:00.000Z",
-      "firstSeenAt": "2026-11-19T22:40:25.650Z",
-      "outlets": 4,
-      "outletNames": [
-        "WCIV",
-        "WTMA-AM",
-        "South Carolina Public Radio",
-        "WCBD News 2"
-      ],
-      "score": 2.95
-    },
-    {
       "id": "f54c54e006b3",
       "cat": "hacks",
       "kind": "news",
@@ -617,6 +589,23 @@
         "Yahoo"
       ],
       "score": 2.76
+    },
+    {
+      "id": "04c2e2acf99a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack targets major banking and card vendors",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T23:12:30.000Z",
+      "latestAt": "2026-11-19T23:12:30.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 13 Tampa Bay"
+      ],
+      "score": 2.6
     },
     {
       "id": "28b64844bc13",
@@ -774,23 +763,6 @@
       "score": 1.72
     },
     {
-      "id": "ce19c70c8cdf",
-      "cat": "grid",
-      "kind": "news",
-      "title": "More than 4,100 NV Energy customers without power in Washoe County",
-      "url": "https://www.2news.com/news/local/more-than-4-100-nv-energy-customers-without-power-in-washoe-county/article_a9d96884-e426-4393-8ef8-2952c4a7cf74.html",
-      "source": "2 News KTVN",
-      "publishedAt": "2026-11-19T15:00:00.000Z",
-      "latestAt": "2026-11-19T23:00:00.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 2,
-      "outletNames": [
-        "2 News KTVN",
-        "KTVN"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "c15e38407e0d",
       "cat": "markets",
       "kind": "news",
@@ -857,21 +829,20 @@
       "score": 1.4
     },
     {
-      "id": "04c2e2acf99a",
-      "cat": "hacks",
+      "id": "3a64d7cbe587",
+      "cat": "ai",
       "kind": "news",
-      "title": "Cyberattack targets major banking and card vendors",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:12:30.000Z",
-      "latestAt": "2026-11-19T23:12:30.000Z",
-      "firstSeenAt": "2026-11-20T03:26:28.712Z",
-      "outlets": 2,
+      "title": "Microsoft meltdown: Outlook, Teams and Copilot hit by global outage",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
+      "source": "IOL",
+      "publishedAt": "2026-11-20T06:15:43.000Z",
+      "latestAt": "2026-11-20T15:01:54.000Z",
+      "firstSeenAt": "2026-11-20T06:26:52.947Z",
+      "outlets": 1,
       "outletNames": [
-        "Yahoo",
-        "FOX 13 Tampa Bay"
+        "IOL"
       ],
-      "score": 2.6
+      "score": 1.4
     },
     {
       "id": "b6dcdf986663",
@@ -928,24 +899,6 @@
         "Yahoo"
       ],
       "score": 2.42
-    },
-    {
-      "id": "fea9c53a752c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission confirms AI-generated cyberattack disrupted its systems",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNckIzZmV5TldqaWNORGlSVl9lRUc3Yi1zQ1dJbXh4Wk9Iai1WV1U2RW1mRXM1YnlRempCeThFdFVUZ0ZmekoxSTc1c1JyTHo1VTJDV01uNHUtOVZjd0FzSUEtZnZ6M2J0SUs4ZnVmUVVpam13UmNNWTMtUjB5YVEtR05mQjhJS0E2M2paRTRIUFFkSTNRVjZjRUY1REhhR3puaUppTHhOYkdGZXA5SUZNRW5R?oc=5",
-      "source": "Help Net Security",
-      "publishedAt": "2026-11-20T08:52:29.000Z",
-      "latestAt": "2026-11-20T14:48:44.000Z",
-      "firstSeenAt": "2026-11-20T14:43:16.753Z",
-      "outlets": 3,
-      "outletNames": [
-        "Help Net Security",
-        "Intelligent CISO",
-        "IranWire"
-      ],
-      "score": 2.33
     },
     {
       "id": "c1708c8ee65b",
@@ -1067,6 +1020,23 @@
       "score": 1.73
     },
     {
+      "id": "353d539ee6da",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Britain secures commercial fridges from cyberattack in secret operation",
+      "url": "https://www.msn.com/en-us/news/other/britain-secures-commercial-fridges-from-cyberattack-in-secret-operation/ar-AA2hRFn6",
+      "source": "UPI on MSN",
+      "publishedAt": "2026-11-20T06:56:58.000Z",
+      "latestAt": "2026-11-20T15:00:05.000Z",
+      "firstSeenAt": "2026-11-20T15:13:15.858Z",
+      "outlets": 2,
+      "outletNames": [
+        "UPI on MSN",
+        "Yahoo"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "c77caedd2626",
       "cat": "hacks",
       "kind": "news",
@@ -1080,23 +1050,6 @@
       "outletNames": [
         "BleepingComputer",
         "Mezha.net"
-      ],
-      "score": 1.72
-    },
-    {
-      "id": "504b2f0e2351",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission targeted in an AI-assisted cyberattack, spokesperson confirms",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
-      "source": "DW.com",
-      "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-20T02:54:43.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 2,
-      "outletNames": [
-        "DW.com",
-        "İlke Haber Ajansı"
       ],
       "score": 1.72
     },
@@ -1134,23 +1087,6 @@
         "Newser"
       ],
       "score": 1.64
-    },
-    {
-      "id": "4aca0fcdb259",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Visa and Mastercard hit by huge cyberattack as personal data leaked",
-      "url": "https://www.mirror.co.uk/news/world-news/visa-mastercard-hack-information-leaked-37897033",
-      "source": "mirror.co.uk",
-      "publishedAt": "2026-11-19T23:39:00.000Z",
-      "latestAt": "2026-11-20T05:15:00.000Z",
-      "firstSeenAt": "2026-11-20T10:42:31.579Z",
-      "outlets": 2,
-      "outletNames": [
-        "Mirror",
-        "dailystar.co.uk"
-      ],
-      "score": 1.63
     },
     {
       "id": "6cc666037260",
@@ -1233,22 +1169,6 @@
       "outlets": 1,
       "outletNames": [
         "WHMI"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "3a64d7cbe587",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Microsoft meltdown: Outlook, Teams and Copilot hit by global outage",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-20T06:15:43.000Z",
-      "latestAt": "2026-11-20T14:03:38.000Z",
-      "firstSeenAt": "2026-11-20T06:26:52.947Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
       ],
       "score": 1.4
     },
@@ -1771,6 +1691,70 @@
       "score": 1.17
     },
     {
+      "id": "fe44ec24caee",
+      "cat": "internet",
+      "kind": "news",
+      "title": "It's been the worst week of major outages for 13 years, but don't blame AI",
+      "url": "https://www.msn.com/en-us/technology/cybersecurity/it-s-been-the-worst-week-of-major-outages-for-13-years-but-don-t-blame-ai/ar-AA2hS1Rm",
+      "source": "TechRadar on MSN",
+      "publishedAt": "2026-11-20T04:56:08.000Z",
+      "latestAt": "2026-11-20T04:56:08.000Z",
+      "firstSeenAt": "2026-11-20T15:13:15.858Z",
+      "outlets": 1,
+      "outletNames": [
+        "TechRadar on MSN"
+      ],
+      "score": 1.16
+    },
+    {
+      "id": "f82c59b1b46e",
+      "cat": "internet",
+      "kind": "news",
+      "title": "N-able says recent security breach led to major service outage",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
+      "source": "Bleeping Computer",
+      "publishedAt": "2026-11-20T00:18:00.000Z",
+      "latestAt": "2026-11-20T00:18:00.000Z",
+      "firstSeenAt": "2026-11-20T15:13:15.858Z",
+      "outlets": 1,
+      "outletNames": [
+        "Bleeping Computer"
+      ],
+      "score": 1.05
+    },
+    {
+      "id": "1ac4999a4493",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nearly half of Nov. 13 flights in Naples affected by national ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxORVpsVVNIM0dkdnQtbkpMTnFQbEtodDVZM25jdWJYSWdmZE4tVEJlZ285ZHhGM3BlNm45cF9Lc2R3MHhaV3lpU3FRZS1laGY5eHRkUnFEeG5fMGthV2huY1dxeF9DaXdxdWZyRGpXWm1oS3JsR1ozS1hWbWVxN3loYl9DMGlJbVc2TzZIMXlLenNwZmptVWtzV25YcTEwWTNoVXNjTnJtTVlsZzJna3dJVGdReEM2XzRYcWdtbG5IUkw3Q1YtX0hrOURwdVFNZDQyVmVIUDJmdks?oc=5",
+      "source": "Naples Daily News",
+      "publishedAt": "2026-11-20T15:06:00.000Z",
+      "latestAt": "2026-11-20T15:06:00.000Z",
+      "firstSeenAt": "2026-11-20T15:13:15.858Z",
+      "outlets": 1,
+      "outletNames": [
+        "Naples Daily News"
+      ],
+      "score": 1
+    },
+    {
+      "id": "7815d2ca14bb",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird Flu Found in Ducks at Delaware's Little Creek",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSXlJaVVBWmJTSnZRUmhHSVYzQnlzbW0tLW52X2RoTkFOa24weDdCZk94NTkxMXFGVGdYRmhrUDFZQllfVTNYeGZpRjJfdlpFeEx3SkdpdUVBWWVZcUF3UVFObGNjUkQ2YUdkM2NVRG1iM05IRkJXY1gyNE9aa2lFc3VpbGFkLXFOaHVyeE1oRUJFb0lTWUhxZnNtdV9mOU81eUE?oc=5",
+      "source": "Eastern Shore Undercover",
+      "publishedAt": "2026-11-20T15:00:00.000Z",
+      "latestAt": "2026-11-20T15:00:00.000Z",
+      "firstSeenAt": "2026-11-20T15:13:15.858Z",
+      "outlets": 1,
+      "outletNames": [
+        "Eastern Shore Undercover"
+      ],
+      "score": 1
+    },
+    {
       "id": "ea8a33cacf31",
       "cat": "earth",
       "kind": "news",
@@ -1869,18 +1853,18 @@
       "score": 1
     },
     {
-      "id": "08fe855d9fd4",
-      "cat": "germs",
+      "id": "f7c99884270c",
+      "cat": "flights",
       "kind": "news",
-      "title": "Bird flu detected in Delaware ducks ahead of waterfowl hunting season",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQM0RNdVZEQ1F3dzYzYWpxQ2Z0T1loWlZsdlVEaExUTEczUEFnTk4tcFNrMDl0WGhaT1ZtNVExcUVpOU55UEY0Y0I0VEtjUEJKX2hBVUE0d1NTNHl0TlRjVHVhSFBka3BWWFpSdG43RjBxcU5pY1FjcjB4cVota19XaU9QZDFSVWJ2RzdEVGp0MkY1MWhNVnl2MW55LXAzcmVIanJGM3JqV2M4T24xZnBhUHEyYkRWZnBPX0ZILUVZcnVqVkhwZGEzQnJaa3JHaVh0ODM2SjFjWnlEMHp4SjBPQlln?oc=5",
-      "source": "CoastTV",
-      "publishedAt": "2026-11-20T14:16:00.000Z",
-      "latestAt": "2026-11-20T14:16:00.000Z",
-      "firstSeenAt": "2026-11-20T14:43:16.753Z",
+      "title": "November 13 ground stop cost US airlines an estimated USD 377 million",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOdGV4amJ4Z3liMUdaZmZJbi1pR1dfUi0xbXB5UzNMWWpfd05DTkRQWGR2SktTc0tVODlfVmpJMGxobXNfck9sWXBxb2NYRF94bVRENkJQQWdJRGJzRUN0X241dFVqNEhRdzBZa1Q4OVIwMHlsRmUzdHVVZnFYNUM4clVJWVR3dlNGODRWU28tX29qaFN0eTZ4dG1YbHItUHpyMzFfQk1BZjhFYkozeGY2cUtyN19XSWQ1T0s4OXBzLXZsNkc5dUpxVm1pTHJGdGFQNzAyYUdFcnJrZ0o3dmNabl9LR1NOUEhSTVhVLXNqVzVQdDFkSXhlRmxR?oc=5",
+      "source": "Aviacionline",
+      "publishedAt": "2026-11-20T14:50:06.000Z",
+      "latestAt": "2026-11-20T14:50:06.000Z",
+      "firstSeenAt": "2026-11-20T15:13:15.858Z",
       "outlets": 1,
       "outletNames": [
-        "CoastTV"
+        "Aviacionline"
       ],
       "score": 0.99
     },
