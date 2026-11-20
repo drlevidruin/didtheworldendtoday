@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T20:14:19.215Z",
+  "buildTime": "2026-11-20T20:29:15.320Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 15:14 ET",
+  "etStamp": "2026-11-20 15:29 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -46,8 +46,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1304,
-  "lastSuccessAt": "2026-11-20T20:14:19.215Z",
+  "headlinesRead": 1329,
+  "lastSuccessAt": "2026-11-20T20:29:15.320Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
@@ -56,8 +56,8 @@
     "hacks": 29,
     "markets": 7,
     "earth": 4,
-    "weather": 5,
-    "internet": 9,
+    "weather": 4,
+    "internet": 10,
     "ai": 4,
     "sun": 4,
     "space": 4,
@@ -92,11 +92,6 @@
           "airport": "BFI",
           "hub": false,
           "reason": "other"
-        },
-        {
-          "airport": "AUS",
-          "hub": false,
-          "reason": "airport volume"
         }
       ],
       "nationwide": false,
@@ -189,81 +184,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 993,
+      "count": 1021,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "bing": {
       "ok": true,
-      "count": 273,
+      "count": 269,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "faa": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T19:29:07.128Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T20:14:19.215Z"
+      "lastOkAt": "2026-11-20T20:29:15.320Z"
     }
   },
   "stories": [
@@ -897,6 +891,29 @@
       "score": 3.12
     },
     {
+      "id": "0bb202264248",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Leak Personal Data Of Thousands Of Visa, Mastercard, And JPMorgan Chase Customers In Ransomware Attack",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMk1nNzllSlZnTHRWNEstME8wcnVCSm5TRjhQTFFQaTBmYTdpM0hRSGJ3Vkg0V2NaY3lWVjJiV3pxVDg5VjRTZzNNOWRyaUtyOEdkeUJqWjYxaUNxZU1oV1NXTEdYWU9SXzZzS2EzX0ZITkF6LUhPbS1pUUdlYi1wSmVteUhqNlBZZHgwWk5HemhaN1h0c1B3TUJ6dVg1RUgzY1dZOWk4U1BaaFpvOEZsUHRPVlFmOTlyN3FiUmNvVEQ1MG1uSmlJQlN30gHPAUFVX3lxTE1lamxjN2F3bm4wTTNXc0Q1Ym5jWXRUd3M0N2E0MkNISzN3Sk4tSUZ3YldkeGhwSzBWOTRXaUZOZWF6WE80TllLWmM0djFEdGJyOTF6NUJHT1RRb2V0S084YWFULWh4YUZCcUdwazFBczlRaXpiTkNTN2duTlptT2xwczNnNzF1ZXQ5UDBwNE5uYjJ5NDdsbHVpYXUzbnNpQTNMYkRmLWFNRE85SkhXYndOc2tLc1RUTUM4cWtTUUMwcDdGeXEwSWNjSEQ5VkZ5NA?oc=5",
+      "source": "Wccftech",
+      "publishedAt": "2026-11-19T21:01:11.000Z",
+      "latestAt": "2026-11-20T18:16:50.000Z",
+      "firstSeenAt": "2026-11-20T20:29:15.320Z",
+      "outlets": 8,
+      "outletNames": [
+        "Wccftech",
+        "Futurism",
+        "Techlicious",
+        "FOX 5 New York",
+        "Cryptonews.net",
+        "Euronews.com",
+        "Malwarebytes",
+        "Yahoo"
+      ],
+      "score": 2.44
+    },
+    {
       "id": "50e8bed5e3a2",
       "cat": "hacks",
       "kind": "news",
@@ -929,6 +946,26 @@
         "Yahoo"
       ],
       "score": 2.42
+    },
+    {
+      "id": "b6dcdf986663",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase Bank announces cyberattack, says hackers may have obtained customers’ personal information",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUnEta0RIZ2Y4aUNfU0hjT0REZ1czR1dVb0p5NnZPWUpuWWpuUHR1STd4SE01a25zZmw2eWZwU0c5ZTJXMWg4WjNtNEJNNC1Fa1NVdksxc0lTQ1N0TmVoVVpGcXN2OWhwZVBLX2NhcTVaZzU5VjNtN3JUY1Etb09tTG1DUVoyVUxIWkxxR1dzeW9kVUtpeVowcVZDSFlOMzBkbkRXa2l4VkIyS29jcVBrR3FRcWJVcXBfblBjZm0tS0hGLTVGU0JwcmVBcEQ3dnRN?oc=5",
+      "source": "wandtv.com",
+      "publishedAt": "2026-11-19T23:04:00.000Z",
+      "latestAt": "2026-11-20T09:41:34.000Z",
+      "firstSeenAt": "2026-11-20T18:13:51.591Z",
+      "outlets": 5,
+      "outletNames": [
+        "wandtv.com",
+        "FOX5 Vegas",
+        "WFLX",
+        "12News",
+        "WBBJ-TV"
+      ],
+      "score": 2.26
     },
     {
       "id": "4d14115377e9",
@@ -965,25 +1002,6 @@
         "AOL.com"
       ],
       "score": 2.12
-    },
-    {
-      "id": "b6dcdf986663",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank announces cyberattack, says hackers may have obtained customers’ personal information",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUnEta0RIZ2Y4aUNfU0hjT0REZ1czR1dVb0p5NnZPWUpuWWpuUHR1STd4SE01a25zZmw2eWZwU0c5ZTJXMWg4WjNtNEJNNC1Fa1NVdksxc0lTQ1N0TmVoVVpGcXN2OWhwZVBLX2NhcTVaZzU5VjNtN3JUY1Etb09tTG1DUVoyVUxIWkxxR1dzeW9kVUtpeVowcVZDSFlOMzBkbkRXa2l4VkIyS29jcVBrR3FRcWJVcXBfblBjZm0tS0hGLTVGU0JwcmVBcEQ3dnRN?oc=5",
-      "source": "wandtv.com",
-      "publishedAt": "2026-11-19T23:04:00.000Z",
-      "latestAt": "2026-11-20T03:03:37.000Z",
-      "firstSeenAt": "2026-11-20T18:13:51.591Z",
-      "outlets": 4,
-      "outletNames": [
-        "wandtv.com",
-        "FOX5 Vegas",
-        "WFLX",
-        "12News"
-      ],
-      "score": 2.04
     },
     {
       "id": "1ac4999a4493",
@@ -1062,7 +1080,7 @@
       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE50STdjMEhqZ2o4dGd2UlVyY2ZudXZkQ3FJMUhDdFlqNDB6aGl0cFZMZDJJRmNwSF9NT2p4ZUQtbm1LREhpM0JwTW8yY2Q?oc=5",
       "source": "ABC News - Breaking News, Latest News and Videos",
       "publishedAt": "2026-11-20T12:40:01.000Z",
-      "latestAt": "2026-11-20T16:58:59.000Z",
+      "latestAt": "2026-11-20T18:10:10.000Z",
       "firstSeenAt": "2026-11-20T16:58:32.799Z",
       "outlets": 2,
       "outletNames": [
@@ -1122,23 +1140,6 @@
         "nny360.com"
       ],
       "score": 1.83
-    },
-    {
-      "id": "7ecaf2b2bd2b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Huntington Bank outage today: Is Huntington Bank down or not working? Users report app, login and online banking issues; check Downdetector update",
-      "url": "https://www.msn.com/en-in/news/other/huntington-bank-outage-today-is-huntington-bank-down-or-not-working-users-report-app-login-and-online-banking-issues-check-downdetector-update/ar-AA2hPgKX",
-      "source": "The Sunday Guardian Live on MSN",
-      "publishedAt": "2026-11-19T20:15:00.000Z",
-      "latestAt": "2026-11-20T02:09:30.000Z",
-      "firstSeenAt": "2026-11-20T04:26:27.671Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Sunday Guardian Live on MSN",
-        "The Sunday Guardian"
-      ],
-      "score": 1.73
     },
     {
       "id": "8ae297aa1b0c",
@@ -1224,6 +1225,24 @@
         "TechRadar"
       ],
       "score": 1.63
+    },
+    {
+      "id": "0a4f69c262fb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
+      "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
+      "source": "wsj.com",
+      "publishedAt": "2026-11-19T21:56:00.000Z",
+      "latestAt": "2026-11-20T08:17:19.000Z",
+      "firstSeenAt": "2026-11-20T20:29:15.320Z",
+      "outlets": 3,
+      "outletNames": [
+        "WSJ",
+        "Tempo.co English",
+        "Incrypted"
+      ],
+      "score": 1.61
     },
     {
       "id": "6cc666037260",
@@ -1457,38 +1476,6 @@
       "score": 1.4
     },
     {
-      "id": "2c3063035351",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Power restored in parts of Kenyan capital after major outage",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOUZyRmROLWs3dWdJNTZHQTdidDk5SGw4ZjhxbTMwRGpDZTBVUEpEZVQySzhCSzhNUFVhSVlUWlNYU1cyV2xSWDkxWE8xNWFEeThmMldPdDY5aTM3N2FMWGVvamV4SkVDamlLSmpXeExrRDlkYktOOTZpVkNscE5EM19YQzZQbGdLWDVHR0h3QllZMXp2LXNaak5PMWRSTTNt?oc=5",
-      "source": "Yeni Safak English",
-      "publishedAt": "2026-11-19T20:27:41.000Z",
-      "latestAt": "2026-11-19T20:27:41.000Z",
-      "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yeni Safak English"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "918b4bfe13ed",
-      "cat": "weather",
-      "kind": "news",
-      "title": "MN weather: Quiet and nice day before potential record heat",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBKQVRPTjc1Y1VUWHpKSjJTaTJITlFpMGNUWlJ2aGRYWTN4QThKNUZoUnpNTThRLW4zbkJxRy0zclRHVGNPMGlubmNJT2x0OGZDMkwyQklkdXp1NlnSAWBBVV95cUxQdWJfMTQwS1lVWHlUeWlWdTZmYTlQeEhNQVpXcjlaWFp0Zy1ibHFfVjhuMUk0ZUtyRDI0cmx1dTB1d3VmRXJodE55aHppOUQ3UEp2b25rTElZNnplX19ZMEk?oc=5",
-      "source": "FOX 9 Minneapolis-St. Paul",
-      "publishedAt": "2026-11-19T20:17:30.000Z",
-      "latestAt": "2026-11-19T20:17:30.000Z",
-      "firstSeenAt": "2026-11-19T20:25:04.492Z",
-      "outlets": 1,
-      "outletNames": [
-        "FOX 9 Minneapolis-St. Paul"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "f48f8a58cf3f",
       "cat": "hacks",
       "kind": "news",
@@ -1715,23 +1702,6 @@
       "score": 1.36
     },
     {
-      "id": "302b7d6a8578",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Regions Bank outage today: Is Regions Bank down in the US? Users report online banking, mobile app login, account access and money transfer issues",
-      "url": "https://www.msn.com/en-in/news/other/regions-bank-outage-today-is-regions-bank-down-in-the-us-users-report-online-banking-mobile-app-login-account-access-and-money-transfer-issues/ar-AA2hRNzH",
-      "source": "The Sunday Guardian Live on MSN",
-      "publishedAt": "2026-11-19T21:09:00.000Z",
-      "latestAt": "2026-11-20T13:43:34.000Z",
-      "firstSeenAt": "2026-11-20T16:28:32.497Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Sunday Guardian Live on MSN",
-        "The Sunday Guardian"
-      ],
-      "score": 1.36
-    },
-    {
       "id": "b24aa71cf00e",
       "cat": "hacks",
       "kind": "news",
@@ -1797,6 +1767,22 @@
       "score": 1.33
     },
     {
+      "id": "68da327073af",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft outage frustrates communities worldwide",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQ2JNcGh3ekt4N01Wc1E4ZlQxdnEzbHpIbTF6aWxVdV9rV3BYM1Z3bm5ndmVTTldoVGRRR1NDdmdQTnA2X2JRQWJXdTh4c1hNQkN6THhkNWFRSWh3aWRHQW1IMFBuZEpRbklpV1UyVzM2V25aRzVDVkEyZWdfaE9NMGV6bFgyNUhEUHc?oc=5",
+      "source": "The Gatepost",
+      "publishedAt": "2026-11-20T10:17:45.000Z",
+      "latestAt": "2026-11-20T10:17:45.000Z",
+      "firstSeenAt": "2026-11-20T20:29:15.320Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Gatepost"
+      ],
+      "score": 1.16
+    },
+    {
       "id": "3a38015822b7",
       "cat": "sun",
       "kind": "news",
@@ -1811,6 +1797,22 @@
         "Yahoo Finance"
       ],
       "score": 1.16
+    },
+    {
+      "id": "672ce5b3caee",
+      "cat": "internet",
+      "kind": "news",
+      "title": "N-able links global service outage to security breach",
+      "url": "https://mezha.net/eng/news/mezha-4094fe3a451186e74634212b_n-able_links_global/",
+      "source": "Mezha",
+      "publishedAt": "2026-11-20T07:28:00.000Z",
+      "latestAt": "2026-11-20T07:28:00.000Z",
+      "firstSeenAt": "2026-11-20T20:29:15.320Z",
+      "outlets": 1,
+      "outletNames": [
+        "Mezha"
+      ],
+      "score": 1.1
     },
     {
       "id": "7ba0231ec718",
@@ -1982,7 +1984,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-20T09:36:00.000Z",
-      "latestAt": "2026-11-20T10:42:00.000Z",
+      "latestAt": "2026-11-20T12:20:00.000Z",
       "firstSeenAt": "2026-11-20T17:43:45.621Z",
       "outlets": 1,
       "outletNames": [
