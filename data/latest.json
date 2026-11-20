@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T12:57:50.352Z",
+  "buildTime": "2026-11-20T13:12:53.582Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 07:57 ET",
+  "etStamp": "2026-11-20 08:12 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,18 +51,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1296,
-  "lastSuccessAt": "2026-11-20T12:57:50.352Z",
+  "headlinesRead": 594,
+  "lastSuccessAt": "2026-11-20T13:12:53.582Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 28,
-    "flights": 20,
+    "hacks": 30,
+    "flights": 19,
     "germs": 4,
     "internet": 8,
     "grid": 7,
     "markets": 9,
     "earth": 4,
-    "sun": 4,
+    "sun": 3,
     "weather": 6,
     "ai": 4,
     "space": 4,
@@ -188,57 +188,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 997,
-      "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "count": 318,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     },
     "bing": {
       "ok": true,
-      "count": 261,
-      "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "count": 238,
+      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T12:57:50.352Z"
+      "lastOkAt": "2026-11-20T13:12:53.582Z"
     }
   },
   "stories": [
@@ -388,28 +388,31 @@
       "score": 3.95
     },
     {
-      "id": "504b2f0e2351",
+      "id": "ce3b0f14cf6a",
       "cat": "hacks",
       "kind": "news",
-      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
-      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
-      "source": "IranWire",
-      "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-20T10:52:30.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 9,
+      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
+      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-19T14:55:29.000Z",
+      "latestAt": "2026-11-20T02:07:53.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 10,
       "outletNames": [
-        "DW.com",
-        "İlke Haber Ajansı",
-        "The New Voice of Ukraine",
-        "Intelligent CISO",
-        "Computing UK",
-        "IranWire",
-        "Help Net Security",
-        "SecurityWeek",
-        "EU Today"
+        "6abc Philadelphia",
+        "ABC News - Breaking News, Latest News and Videos",
+        "kaaltv.com",
+        "ABC Columbia",
+        "upi",
+        "weisradio.com",
+        "Everett Post",
+        "ABC7 Chicago",
+        "LAmag",
+        "Rural Radio Network"
       ],
-      "score": 3.59
+      "trending": 10000,
+      "trendTerm": "jpmorgan chase cyber attack",
+      "score": 3.66
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -543,6 +546,30 @@
       "score": 1.99
     },
     {
+      "id": "bfba4b3925cd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
+      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
+      "source": "IranWire",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-20T10:52:30.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 9,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı",
+        "The New Voice of Ukraine",
+        "Intelligent CISO",
+        "Computing UK",
+        "IranWire",
+        "Help Net Security",
+        "SecurityWeek",
+        "EU Today"
+      ],
+      "score": 3.59
+    },
+    {
       "id": "b0fc3c8f8eff",
       "cat": "flights",
       "kind": "news",
@@ -559,32 +586,6 @@
         "The Standard-Speaker"
       ],
       "score": 3.36
-    },
-    {
-      "id": "bec04669a41a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Love isn't in the air, it's at baggage claim during ground stop at Denver International Airport",
-      "url": "https://www.wlky.com/article/couple-airport-wedding-flight-canceled-ground-stop/74456949",
-      "source": "WLKY",
-      "publishedAt": "2026-11-19T13:00:00.000Z",
-      "latestAt": "2026-11-20T06:15:00.000Z",
-      "firstSeenAt": "2026-11-20T05:26:39.748Z",
-      "outlets": 11,
-      "outletNames": [
-        "WLKY",
-        "WCVB",
-        "KOCO",
-        "KOAT Channel 7",
-        "WESH",
-        "WISN 12 News",
-        "KCRA Channel 3",
-        "KCRA",
-        "wxii12.com",
-        "wyff4.com",
-        "wlwt.com"
-      ],
-      "score": 3.24
     },
     {
       "id": "f54c54e006b3",
@@ -622,23 +623,6 @@
       "score": 2.76
     },
     {
-      "id": "04c2e2acf99a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack targets major banking and card vendors",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:12:30.000Z",
-      "latestAt": "2026-11-19T23:12:30.000Z",
-      "firstSeenAt": "2026-11-20T03:26:28.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX 13 Tampa Bay"
-      ],
-      "score": 2.6
-    },
-    {
       "id": "28b64844bc13",
       "cat": "flights",
       "kind": "news",
@@ -655,6 +639,23 @@
         "95.9 The RAT"
       ],
       "score": 2.47
+    },
+    {
+      "id": "f60e65cf388c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "US to announce cause of nationwide FAA outage that disrupted 18,000 flights",
+      "url": "https://www.msn.com/en-in/news/other/us-to-announce-cause-of-nationwide-faa-outage-that-disrupted-18-000-flights/ar-AA2hOuUJ",
+      "source": "The Times of India on MSN",
+      "publishedAt": "2026-11-19T20:54:00.000Z",
+      "latestAt": "2026-11-20T05:15:00.000Z",
+      "firstSeenAt": "2026-11-20T05:11:34.772Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Times of India",
+        "timesofindia.indiatimes.com"
+      ],
+      "score": 2.41
     },
     {
       "id": "2911d0fcc2e7",
@@ -862,21 +863,21 @@
       "score": 1.63
     },
     {
-      "id": "f60e65cf388c",
-      "cat": "flights",
+      "id": "04c2e2acf99a",
+      "cat": "hacks",
       "kind": "news",
-      "title": "US to announce cause of nationwide FAA outage that disrupted 18,000 flights",
-      "url": "https://www.msn.com/en-in/news/other/us-to-announce-cause-of-nationwide-faa-outage-that-disrupted-18-000-flights/ar-AA2hOuUJ",
-      "source": "The Times of India on MSN",
-      "publishedAt": "2026-11-19T20:54:00.000Z",
-      "latestAt": "2026-11-20T05:15:00.000Z",
-      "firstSeenAt": "2026-11-20T05:11:34.772Z",
+      "title": "Cyberattack targets major banking and card vendors",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T23:12:30.000Z",
+      "latestAt": "2026-11-19T23:12:30.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
       "outlets": 2,
       "outletNames": [
-        "The Times of India",
-        "timesofindia.indiatimes.com"
+        "Yahoo",
+        "FOX 13 Tampa Bay"
       ],
-      "score": 2.41
+      "score": 2.6
     },
     {
       "id": "fa6bdfc296d7",
@@ -1012,6 +1013,23 @@
       "outletNames": [
         "BleepingComputer",
         "Mezha.net"
+      ],
+      "score": 1.72
+    },
+    {
+      "id": "504b2f0e2351",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission targeted in an AI-assisted cyberattack, spokesperson confirms",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
+      "source": "DW.com",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-19T16:11:09.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 2,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı"
       ],
       "score": 1.72
     },
@@ -1908,24 +1926,6 @@
       "score": 0.99
     },
     {
-      "id": "c8dd8b8dfe6b",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Hye-Jin Choi finishes runner-up at The ANNIKA, looks ahead to CME Group Tour Championship",
-      "url": "https://www.lpga.com/news/2026/hye-jin-choi-finishes-runner-up-at-the-annika-looks-ahead-to-cme-group-tour-championship",
-      "source": "LPGA",
-      "publishedAt": "2026-11-19T13:10:00.000Z",
-      "latestAt": "2026-11-19T13:10:00.000Z",
-      "firstSeenAt": "2026-11-19T13:38:56.955Z",
-      "outlets": 1,
-      "outletNames": [
-        "LPGA"
-      ],
-      "trending": 200,
-      "trendTerm": "nelly korda",
-      "score": 0.99
-    },
-    {
       "id": "ac22a32c4dd9",
       "cat": "earth",
       "kind": "news",
@@ -1965,7 +1965,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-20T00:48:00.000Z",
-      "latestAt": "2026-11-20T04:41:00.000Z",
+      "latestAt": "2026-11-20T04:54:00.000Z",
       "firstSeenAt": "2026-11-20T09:27:15.197Z",
       "outlets": 1,
       "outletNames": [
