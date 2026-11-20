@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T10:42:31.579Z",
+  "buildTime": "2026-11-20T10:57:31.748Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 05:42 ET",
+  "etStamp": "2026-11-20 05:57 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,12 +51,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1345,
-  "lastSuccessAt": "2026-11-20T10:42:31.579Z",
+  "headlinesRead": 1268,
+  "lastSuccessAt": "2026-11-20T10:57:31.748Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 18,
-    "hacks": 33,
+    "flights": 19,
+    "hacks": 32,
     "germs": 4,
     "internet": 7,
     "grid": 8,
@@ -188,57 +188,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 984,
+      "count": 957,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
+      "count": 277,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 50,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "hn": {
       "ok": true,
-      "count": 5,
+      "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T10:57:31.748Z"
     }
   },
   "stories": [
@@ -307,6 +307,55 @@
         "KSWO 7News"
       ],
       "score": 5.2
+    },
+    {
+      "id": "ce3b0f14cf6a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan, Visa, and Mastercard disclose cyberattack on third-party vendors",
+      "url": "https://finance.yahoo.com/markets/article/jpmorgan-visa-and-mastercard-disclose-cyberattack-on-third-party-vendors-190314490.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-19T11:03:00.000Z",
+      "latestAt": "2026-11-20T10:42:37.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 32,
+      "outletNames": [
+        "6abc Philadelphia",
+        "ABC News - Breaking News, Latest News and Videos",
+        "kaaltv.com",
+        "ABC Columbia",
+        "upi",
+        "weisradio.com",
+        "Everett Post",
+        "ABC7 Chicago",
+        "LAmag",
+        "Rural Radio Network",
+        "WBAL News Radio",
+        "WWBT",
+        "wandtv.com",
+        "12News",
+        "FOX5 Vegas",
+        "NewsNation",
+        "KOLD",
+        "The Washington Post",
+        "FOX 8 News",
+        "LiveNOW from FOX",
+        "Newsweek",
+        "Yahoo",
+        "KHOU",
+        "NBC10 Philadelphia",
+        "NBC 5 Chicago",
+        "Quartz",
+        "OFFGRID Survival",
+        "WCVB",
+        "Click2Houston",
+        "CBS News",
+        "marketscreener.com",
+        "wtvcfox"
+      ],
+      "trending": 10000,
+      "trendTerm": "jpmorgan chase cyber attack",
+      "score": 4.69
     },
     {
       "id": "sig:faa-stop:LAS:2026-11-19",
@@ -362,17 +411,18 @@
       "url": "https://www.bbc.co.uk/news/articles/c6eq49zyx7p4o",
       "source": "BBC",
       "publishedAt": "2026-11-19T15:18:00.000Z",
-      "latestAt": "2026-11-20T10:20:08.000Z",
+      "latestAt": "2026-11-20T10:52:14.000Z",
       "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "Yahoo",
         "BBC",
         "Anadolu Agency",
         "The Telegraph",
-        "Anadolu Ajansı"
+        "Anadolu Ajansı",
+        "Arise News"
       ],
-      "score": 3.96
+      "score": 4.28
     },
     {
       "id": "41bda97d8bc2",
@@ -400,53 +450,6 @@
       "score": 3.95
     },
     {
-      "id": "b6dcdf986663",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack may have exposed Chase Bank and Mastercard customer data",
-      "url": "https://www.washingtonpost.com/nation/2026/11/19/cyberattack-may-have-exposed-chase-bank-mastercard-customer-data/",
-      "source": "The Washington Post",
-      "publishedAt": "2026-11-19T11:08:00.000Z",
-      "latestAt": "2026-11-20T08:52:01.000Z",
-      "firstSeenAt": "2026-11-20T07:57:00.397Z",
-      "outlets": 32,
-      "outletNames": [
-        "WWBT",
-        "wandtv.com",
-        "12News",
-        "FOX5 Vegas",
-        "NewsNation",
-        "KOLD",
-        "The Washington Post",
-        "FOX 8 News",
-        "LiveNOW from FOX",
-        "Newsweek",
-        "Yahoo",
-        "KHOU",
-        "NBC10 Philadelphia",
-        "NBC 5 Chicago",
-        "Quartz",
-        "OFFGRID Survival",
-        "WCVB",
-        "Click2Houston",
-        "CBS News",
-        "marketscreener.com",
-        "wtvcfox",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Yahoo Finance",
-        "Decrypt",
-        "Finextra Research",
-        "Reuters",
-        "Wccftech",
-        "WSJ",
-        "Futurism",
-        "FOX 5 New York",
-        "TRT World",
-        "Breitbart News"
-      ],
-      "score": 3.92
-    },
-    {
       "id": "6d7a6b3b2346",
       "cat": "germs",
       "kind": "news",
@@ -456,7 +459,7 @@
       "publishedAt": "2026-11-19T12:05:00.000Z",
       "latestAt": "2026-11-20T10:16:24.000Z",
       "firstSeenAt": "2026-11-20T04:56:32.174Z",
-      "outlets": 19,
+      "outlets": 20,
       "outletNames": [
         "Central Oregon Daily",
         "KGW",
@@ -476,9 +479,10 @@
         "PoultryMed",
         "Nature World News",
         "KCBY",
-        "en.edairynews.com"
+        "en.edairynews.com",
+        "https://en.edairynews.com/"
       ],
-      "score": 3.77
+      "score": 3.83
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -589,59 +593,6 @@
       "score": 1.99
     },
     {
-      "id": "90996f139013",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Access Data of 4,000 NYC Retirees",
-      "url": "https://www.newsmax.com/newsfront/atticus-administration-emblem-health-nyc/2026/11/19/id/1276973/",
-      "source": "Newsmax",
-      "publishedAt": "2026-11-19T10:55:00.000Z",
-      "latestAt": "2026-11-20T03:27:00.000Z",
-      "firstSeenAt": "2026-11-19T17:09:48.375Z",
-      "outlets": 10,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "Yeni Safak English",
-        "Politico",
-        "Breakingthenews.net",
-        "Reuters",
-        "SRN News",
-        "The Hill",
-        "Newsmax",
-        "SILive.com",
-        "Yahoo"
-      ],
-      "score": 3.87
-    },
-    {
-      "id": "ce3b0f14cf6a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
-      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-19T14:55:29.000Z",
-      "latestAt": "2026-11-20T05:36:05.000Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 11,
-      "outletNames": [
-        "6abc Philadelphia",
-        "ABC News - Breaking News, Latest News and Videos",
-        "kaaltv.com",
-        "ABC Columbia",
-        "upi",
-        "weisradio.com",
-        "Everett Post",
-        "ABC7 Chicago",
-        "LAmag",
-        "Rural Radio Network",
-        "WBAL News Radio"
-      ],
-      "trending": 10000,
-      "trendTerm": "jpmorgan chase cyber attack",
-      "score": 3.77
-    },
-    {
       "id": "sig:faa-stop:AUS:2026-11-19",
       "cat": "flights",
       "kind": "signal",
@@ -665,46 +616,6 @@
       }
     },
     {
-      "id": "1941e519481f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan, Visa, and Mastercard disclose cyberattack on third-party vendors",
-      "url": "https://finance.yahoo.com/markets/article/jpmorgan-visa-and-mastercard-disclose-cyberattack-on-third-party-vendors-190314490.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-19T11:03:00.000Z",
-      "latestAt": "2026-11-20T08:52:01.000Z",
-      "firstSeenAt": "2026-11-20T09:57:23.123Z",
-      "outlets": 25,
-      "outletNames": [
-        "Yahoo Finance",
-        "LiveNOW from FOX",
-        "Newsweek",
-        "Yahoo",
-        "Quartz",
-        "OFFGRID Survival",
-        "CBS News",
-        "marketscreener.com",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Decrypt",
-        "Finextra Research",
-        "Reuters",
-        "Wccftech",
-        "WSJ",
-        "Futurism",
-        "FOX 5 New York",
-        "iTnews",
-        "The SOFX Report",
-        "Storyboard18",
-        "Tempo.co English",
-        "Incrypted",
-        "Euronews.com",
-        "Techlicious",
-        "fox29.com",
-        "deccanchronicle.com"
-      ],
-      "score": 3.49
-    },
-    {
       "id": "b0fc3c8f8eff",
       "cat": "flights",
       "kind": "news",
@@ -721,6 +632,28 @@
         "The Standard-Speaker"
       ],
       "score": 3.36
+    },
+    {
+      "id": "504b2f0e2351",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
+      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
+      "source": "IranWire",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-20T10:52:29.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 7,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı",
+        "The New Voice of Ukraine",
+        "Intelligent CISO",
+        "Computing UK",
+        "IranWire",
+        "Help Net Security"
+      ],
+      "score": 3.28
     },
     {
       "id": "bec04669a41a",
@@ -747,6 +680,41 @@
         "wlwt.com"
       ],
       "score": 3.24
+    },
+    {
+      "id": "80b173a24678",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack exposes customer names and emails at major financial companies",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZHBxaGZLTXRuZFVoYTMzN2xCLWZpRFA1TUZ1cHhiemJaajRIT1FqMGV1dXI3QXpzYkJWUTU5LXNtWGM1V0FoLVZiek00RTVZUXlSdTRUNE9vckRrbW8tYlZ4Wm5qc0EwWUhzaUhNTzhzR0M0Zmt6WFNRaHBoaVdBYW56SldDOEVERnNZSmV3bXhXS1NxSGc0QVNwLXZTUzVkeGViTWk2NklWcExmTzZya2V2aw?oc=5",
+      "source": "ABC10",
+      "publishedAt": "2026-11-20T05:25:00.000Z",
+      "latestAt": "2026-11-20T05:25:00.000Z",
+      "firstSeenAt": "2026-11-20T06:11:44.716Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC10",
+        "Yahoo"
+      ],
+      "score": 2.76
+    },
+    {
+      "id": "f54c54e006b3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
+      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T11:04:00.000Z",
+      "latestAt": "2026-11-20T02:10:51.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "outlets": 3,
+      "outletNames": [
+        "KTNV Las Vegas",
+        "Yahoo",
+        "KTNV 13 Action News"
+      ],
+      "score": 2.65
     },
     {
       "id": "877d7417a818",
@@ -951,63 +919,6 @@
         "FOX 2"
       ],
       "score": 1.53
-    },
-    {
-      "id": "504b2f0e2351",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
-      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
-      "source": "IranWire",
-      "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-20T09:02:24.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 7,
-      "outletNames": [
-        "DW.com",
-        "İlke Haber Ajansı",
-        "The New Voice of Ukraine",
-        "Intelligent CISO",
-        "Computing UK",
-        "IranWire",
-        "Help Net Security"
-      ],
-      "score": 3.28
-    },
-    {
-      "id": "80b173a24678",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack exposes customer names and emails at major financial companies",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZHBxaGZLTXRuZFVoYTMzN2xCLWZpRFA1TUZ1cHhiemJaajRIT1FqMGV1dXI3QXpzYkJWUTU5LXNtWGM1V0FoLVZiek00RTVZUXlSdTRUNE9vckRrbW8tYlZ4Wm5qc0EwWUhzaUhNTzhzR0M0Zmt6WFNRaHBoaVdBYW56SldDOEVERnNZSmV3bXhXS1NxSGc0QVNwLXZTUzVkeGViTWk2NklWcExmTzZya2V2aw?oc=5",
-      "source": "ABC10",
-      "publishedAt": "2026-11-20T05:25:00.000Z",
-      "latestAt": "2026-11-20T05:25:00.000Z",
-      "firstSeenAt": "2026-11-20T06:11:44.716Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC10",
-        "Yahoo"
-      ],
-      "score": 2.76
-    },
-    {
-      "id": "f54c54e006b3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
-      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T11:04:00.000Z",
-      "latestAt": "2026-11-20T02:10:51.000Z",
-      "firstSeenAt": "2026-11-20T03:11:30.805Z",
-      "outlets": 3,
-      "outletNames": [
-        "KTNV Las Vegas",
-        "Yahoo",
-        "KTNV 13 Action News"
-      ],
-      "score": 2.65
     },
     {
       "id": "97f014fb3101",
@@ -2034,6 +1945,22 @@
       "score": 0.99
     },
     {
+      "id": "ed9b70eb0652",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Investigators ‘very close’ to finding cause of nationwide ground stop, FAA chief says, after some router installations paused",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWFFzMWwwQTUtMGo2QXVlUUgwMFc2ZnFuSUpzWWhaUU1tSURJXzFzMVNObVFyaDkwSHdMcm5lMV9xZnBRTi1KYnlCNVdhYXhIWmNfd2hXQ2dNUXp1Q0gzdG4tQjZCdk8wZDBVWkxIWThJR0IzRXJRNTdicS1rcmctemFlS2I5bTlVdnNnN2NUeTk2Vm5vY0ZUUVI5NGhxa0g3WllCZFpJaHpYRTJORENmWjd3SkkwM3JtMm1fcUVFNWM5bkZhTDd5cnN3?oc=5",
+      "source": "KRDO",
+      "publishedAt": "2026-11-19T17:32:05.000Z",
+      "latestAt": "2026-11-19T17:32:05.000Z",
+      "firstSeenAt": "2026-11-20T10:57:31.748Z",
+      "outlets": 1,
+      "outletNames": [
+        "KRDO"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "c8dd8b8dfe6b",
       "cat": "sun",
       "kind": "news",
@@ -2050,6 +1977,38 @@
       "trending": 200,
       "trendTerm": "nelly korda",
       "score": 0.99
+    },
+    {
+      "id": "9165b9f127b0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase vendor hack could fuel wave of phishing scams, expert warns",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOV1hXOThsY0lSbklSX0o5MW8wZXJBekgtNlQwaGRqWWx5ZW9uSG1lZGlrTG9zZ3h3VGVnXy1HWEpPVDV1SW1BRVVieXp2ZjhaaVNnSW5zZ2ZEZHNfeWFXVlNMbmxzOVhRZWR4UUJiT0VnS0lZb3RPX0R6eFlYUWVZYXpHMFRfWC1nX3lsVXNNONIBlAFBVV95cUxQU01MWVRHYk1PWVNxbzZTaWZrdmNwRkg4NllMVENmVzN1QVIxakZUZFZNT3FyX3BoRzJHQnJBSGQzdERSUmRCeEM0V3hpN2FzOEZZSk9VVTR3cnFyQnZPUGhQYTE1NG1ZMzVJd0JyUU04VHpzQ0NmYXU5QnhKVmdaY1dSYUJGY2tBVUJYMWsyLVVoaWM5?oc=5",
+      "source": "NewsNation",
+      "publishedAt": "2026-11-20T09:59:50.000Z",
+      "latestAt": "2026-11-20T09:59:50.000Z",
+      "firstSeenAt": "2026-11-20T10:57:31.748Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsNation"
+      ],
+      "score": 0.98
+    },
+    {
+      "id": "7e84222e62d2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan, Visa and Mastercard customers affected by vendor cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdnJxdW55N2dqS3M1cVZhQVA0cEVVcUoycmxUXzVXbmF4dWtyZE80Wl9NQzlQbk1TUVlIZHpEOXhIQXIyTWNJVWJGeU9BVGliNUV3MTNrelRCdS1mT0JMem96Q0daV3pUblIxSnJvZTJhNDdiN196emFiZHhTNUpLR3RleEFPa2hWcWhjTnVvakhkZEF3QTN5a0lpTk1oV1E?oc=5",
+      "source": "FStech",
+      "publishedAt": "2026-11-20T09:56:38.000Z",
+      "latestAt": "2026-11-20T09:56:38.000Z",
+      "firstSeenAt": "2026-11-20T10:57:31.748Z",
+      "outlets": 1,
+      "outletNames": [
+        "FStech"
+      ],
+      "score": 0.98
     },
     {
       "id": "6fe6c5aa1d9f",
