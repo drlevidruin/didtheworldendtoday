@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T23:14:38.391Z",
+  "buildTime": "2026-11-20T23:29:43.349Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 18:14 ET",
+  "etStamp": "2026-11-20 18:29 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -46,11 +46,11 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1288,
-  "lastSuccessAt": "2026-11-20T23:14:38.391Z",
+  "headlinesRead": 1251,
+  "lastSuccessAt": "2026-11-20T23:29:43.349Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
+    "flights": 22,
     "grid": 7,
     "germs": 5,
     "hacks": 27,
@@ -61,7 +61,7 @@
     "weather": 4,
     "sun": 4,
     "space": 4,
-    "animals": 2
+    "animals": 1
   },
   "vital": {
     "quake": {
@@ -178,20 +178,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 987,
+      "count": 982,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "bing": {
       "ok": true,
-      "count": 263,
+      "count": 227,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,58 +201,57 @@
     },
     "hn": {
       "ok": true,
-      "count": 8,
+      "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-20T22:29:32.024Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T23:14:38.391Z"
+      "lastOkAt": "2026-11-20T23:29:43.349Z"
     }
   },
   "stories": [
@@ -392,6 +391,27 @@
       "score": 3.28
     },
     {
+      "id": "0e3af96a9376",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Agriculture Department breached by hackers, sources say",
+      "url": "https://www.nbcnews.com/politics/national-security/agriculture-department-breached-hackers-sources-say-rcna610497",
+      "source": "NBC News",
+      "publishedAt": "2026-11-20T14:12:00.000Z",
+      "latestAt": "2026-11-20T22:54:52.000Z",
+      "firstSeenAt": "2026-11-20T22:44:29.793Z",
+      "outlets": 6,
+      "outletNames": [
+        "NBC News",
+        "marketscreener.com",
+        "StreetInsider",
+        "Reuters",
+        "CNA",
+        "Investing.com"
+      ],
+      "score": 3.07
+    },
+    {
       "id": "4aca0fcdb259",
       "cat": "hacks",
       "kind": "news",
@@ -417,23 +437,6 @@
         "KXAN Austin"
       ],
       "score": 2.95
-    },
-    {
-      "id": "80b173a24678",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack exposes customer names and emails at major financial companies",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZHBxaGZLTXRuZFVoYTMzN2xCLWZpRFA1TUZ1cHhiemJaajRIT1FqMGV1dXI3QXpzYkJWUTU5LXNtWGM1V0FoLVZiek00RTVZUXlSdTRUNE9vckRrbW8tYlZ4Wm5qc0EwWUhzaUhNTzhzR0M0Zmt6WFNRaHBoaVdBYW56SldDOEVERnNZSmV3bXhXS1NxSGc0QVNwLXZTUzVkeGViTWk2NklWcExmTzZya2V2aw?oc=5",
-      "source": "ABC10",
-      "publishedAt": "2026-11-20T05:25:00.000Z",
-      "latestAt": "2026-11-20T05:25:00.000Z",
-      "firstSeenAt": "2026-11-20T06:11:44.716Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC10",
-        "Yahoo"
-      ],
-      "score": 2.76
     },
     {
       "id": "6a48e452a3f3",
@@ -596,6 +599,23 @@
       }
     },
     {
+      "id": "80b173a24678",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack exposes customer names and emails at major financial companies",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZHBxaGZLTXRuZFVoYTMzN2xCLWZpRFA1TUZ1cHhiemJaajRIT1FqMGV1dXI3QXpzYkJWUTU5LXNtWGM1V0FoLVZiek00RTVZUXlSdTRUNE9vckRrbW8tYlZ4Wm5qc0EwWUhzaUhNTzhzR0M0Zmt6WFNRaHBoaVdBYW56SldDOEVERnNZSmV3bXhXS1NxSGc0QVNwLXZTUzVkeGViTWk2NklWcExmTzZya2V2aw?oc=5",
+      "source": "ABC10",
+      "publishedAt": "2026-11-20T05:25:00.000Z",
+      "latestAt": "2026-11-20T05:25:00.000Z",
+      "firstSeenAt": "2026-11-20T06:11:44.716Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC10",
+        "Yahoo"
+      ],
+      "score": 2.76
+    },
+    {
       "id": "717a4664be49",
       "cat": "hacks",
       "kind": "news",
@@ -619,46 +639,22 @@
       "score": 2.7
     },
     {
-      "id": "0e3af96a9376",
+      "id": "501df2603002",
       "cat": "hacks",
       "kind": "news",
-      "title": "Agriculture Department breached by hackers, sources say",
-      "url": "https://www.nbcnews.com/politics/national-security/agriculture-department-breached-hackers-sources-say-rcna610497",
-      "source": "NBC News",
-      "publishedAt": "2026-11-20T14:12:00.000Z",
-      "latestAt": "2026-11-20T22:41:16.000Z",
-      "firstSeenAt": "2026-11-20T22:44:29.793Z",
-      "outlets": 4,
+      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcFBfVV9yWmpNSFpEMTdwdmJha2t3aVFja1gzeUhTWUZfWTF4U0NaNXBmYlp3V1pwZlU5dk5XZ0F2YkVGWmpEOHJ5bXE5bjhseTlocldieHpUQXdtY0FUZ1A5RXRQMmtUbDdQVlFvMU9pZDduWFdySUZ6NVFFMjlXNHRnT0lIX3p5Umc?oc=5",
+      "source": "SecurityWeek",
+      "publishedAt": "2026-11-20T11:36:51.000Z",
+      "latestAt": "2026-11-20T17:37:22.000Z",
+      "firstSeenAt": "2026-11-20T13:42:59.984Z",
+      "outlets": 3,
       "outletNames": [
-        "NBC News",
-        "marketscreener.com",
-        "StreetInsider",
-        "Reuters"
+        "SecurityWeek",
+        "SC Media",
+        "Claim Depot"
       ],
-      "score": 2.57
-    },
-    {
-      "id": "4dbc52ba8817",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers leak Visa, Mastercard, & Chase customer data",
-      "url": "https://www.yahoo.com/news/videos/hackers-leak-visa-mastercard-chase-181650442.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:29:31.000Z",
-      "latestAt": "2026-11-20T18:16:50.000Z",
-      "firstSeenAt": "2026-11-20T21:29:15.463Z",
-      "outlets": 8,
-      "outletNames": [
-        "Techlicious",
-        "FOX 5 New York",
-        "Yahoo",
-        "wsj.com",
-        "CyberSecurityNews",
-        "Incrypted",
-        "Euronews.com",
-        "Malwarebytes"
-      ],
-      "score": 2.53
+      "score": 2.49
     },
     {
       "id": "5220352e97b0",
@@ -855,7 +851,7 @@
       "url": "https://www.insurancebusinessmag.com/au/news/cyber/apra-calls-microsoft-outage-a-near-miss-for-financial-system-598268.aspx",
       "source": "Insurance Business America",
       "publishedAt": "2026-11-20T06:56:00.000Z",
-      "latestAt": "2026-11-20T15:15:00.000Z",
+      "latestAt": "2026-11-20T15:28:00.000Z",
       "firstSeenAt": "2026-11-20T15:28:28.186Z",
       "outlets": 2,
       "outletNames": [
@@ -919,24 +915,6 @@
         "wlwt.com"
       ],
       "score": 2.56
-    },
-    {
-      "id": "501df2603002",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcFBfVV9yWmpNSFpEMTdwdmJha2t3aVFja1gzeUhTWUZfWTF4U0NaNXBmYlp3V1pwZlU5dk5XZ0F2YkVGWmpEOHJ5bXE5bjhseTlocldieHpUQXdtY0FUZ1A5RXRQMmtUbDdQVlFvMU9pZDduWFdySUZ6NVFFMjlXNHRnT0lIX3p5Umc?oc=5",
-      "source": "SecurityWeek",
-      "publishedAt": "2026-11-20T11:36:51.000Z",
-      "latestAt": "2026-11-20T17:37:22.000Z",
-      "firstSeenAt": "2026-11-20T13:42:59.984Z",
-      "outlets": 3,
-      "outletNames": [
-        "SecurityWeek",
-        "SC Media",
-        "Claim Depot"
-      ],
-      "score": 2.49
     },
     {
       "id": "ceb2408f55ce",
@@ -1080,6 +1058,24 @@
         "Yahoo Finance Australia"
       ],
       "score": 2.16
+    },
+    {
+      "id": "787be39d8478",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers leak data on 16,000 Visa, Mastercard & JPMorgan customers",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbkd6cHh4bXpleE1sNW9EckxqQXNBM2cxZXVBaUtnVnBWd2pBdnNqa1c1N3VVcHZHV25DS0JBSHlkR1A4MlpFRmNmRWpHZzF6WE5nMUhvS3EtM0pHX3oybXNPbUo0R0FoUzZHd05qV09LNExNZmY4QTlqZjh2dUdDT0xNZWlhSDFRZlRqamE5M3Y2T2ZZNWR1dmRBcXZDbEdjQzRPeGhFZGM1M2Nt?oc=5",
+      "source": "Euronews.com",
+      "publishedAt": "2026-11-20T08:52:01.000Z",
+      "latestAt": "2026-11-20T13:14:55.000Z",
+      "firstSeenAt": "2026-11-20T23:29:43.349Z",
+      "outlets": 3,
+      "outletNames": [
+        "Euronews.com",
+        "Saudi Gazette",
+        "Malwarebytes"
+      ],
+      "score": 1.95
     },
     {
       "id": "2e6adfd30f75",
@@ -1295,7 +1291,7 @@
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-anthropic-ipo-second-day-trading/card/chip-stocks-plunge-as-ai-trade-unwinds-LiGJcJtoyoLLTM1sGZ1n",
       "source": "MarketWatch",
       "publishedAt": "2026-11-20T00:45:00.000Z",
-      "latestAt": "2026-11-20T22:37:03.000Z",
+      "latestAt": "2026-11-20T22:44:36.000Z",
       "firstSeenAt": "2026-11-20T22:59:46.380Z",
       "outlets": 3,
       "outletNames": [
@@ -1798,6 +1794,22 @@
       "score": 1.37
     },
     {
+      "id": "76f09d0a5223",
+      "cat": "flights",
+      "kind": "news",
+      "title": "United Airlines says it has a widespread system outage just days after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQVm1MaUtob2FDQlBqVHBNX2V5bzg3blFKOEJvYURCdE9xdUxfSjF6R0thdDg4ZkJlR1JwUUFmVmt2NGVPaWlzTXhlenpZWjdibDFwQUhxbWVYd19uYUR4VndfQWkwaEd6SUJiN1VLMEZsU0pTWjQ1NldDR2lYa3RxQVVQN2EyN0VlS0c1OFJpQjBtcWFVRDAxQ3lFa0ZyRU1yaDYzQ1V4MDktdWVMQ2xPVE9WcFhpb2c0UGh3cmJiSjZTQ3Y4THVPN2VPQmxzLW51SG5uMDg2U0gtVV9kSThNXw?oc=5",
+      "source": "Trinidad Guardian",
+      "publishedAt": "2026-11-20T16:35:23.000Z",
+      "latestAt": "2026-11-20T16:35:23.000Z",
+      "firstSeenAt": "2026-11-20T23:29:43.349Z",
+      "outlets": 1,
+      "outletNames": [
+        "Trinidad Guardian"
+      ],
+      "score": 1.24
+    },
+    {
       "id": "3a38015822b7",
       "cat": "sun",
       "kind": "news",
@@ -1998,22 +2010,6 @@
         "JKN"
       ],
       "score": 0.86
-    },
-    {
-      "id": "be14a40275e2",
-      "cat": "animals",
-      "kind": "news",
-      "title": "A Washington County's Escaped Goat Could Spread a Disease to Others",
-      "url": "https://www.yahoo.com/news/articles/washington-countys-escaped-goat-could-072700965.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:27:00.000Z",
-      "latestAt": "2026-11-19T23:27:00.000Z",
-      "firstSeenAt": "2026-11-20T12:27:46.115Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yahoo"
-      ],
-      "score": 0.78
     },
     {
       "id": "1811f9cfb712",
