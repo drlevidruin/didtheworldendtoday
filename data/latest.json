@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T03:56:22.027Z",
+  "buildTime": "2026-11-20T04:11:25.421Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 22:56 ET",
+  "etStamp": "2026-11-19 23:11 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,8 +50,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1262,
-  "lastSuccessAt": "2026-11-20T03:56:22.027Z",
+  "headlinesRead": 398,
+  "lastSuccessAt": "2026-11-20T04:11:25.421Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
@@ -99,7 +99,7 @@
         }
       ],
       "nationwide": false,
-      "groundDelays": 3,
+      "groundDelays": 2,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -188,20 +188,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 963,
-      "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "count": 88,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 4 of 26 queries)",
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     },
     "bing": {
       "ok": true,
-      "count": 263,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "count": 275,
+      "error": null,
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     },
     "gdelt": {
       "ok": false,
@@ -213,55 +213,56 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "lastOkAt": "2026-11-20T03:56:22.027Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z"
+      "lastOkAt": "2026-11-20T04:11:25.421Z"
     }
   },
   "stories": [
@@ -340,56 +341,6 @@
         "KSWO 7News"
       ],
       "score": 5.2
-    },
-    {
-      "id": "12a74ab1488e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack",
-      "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
-      "source": "The Straits Times",
-      "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-20T03:48:11.000Z",
-      "firstSeenAt": "2026-11-19T17:39:41.337Z",
-      "outlets": 32,
-      "outletNames": [
-        "NewsNation",
-        "AOL.com",
-        "Western Mass News",
-        "AZ Family",
-        "KSWO 7News",
-        "News Channel 6 | Wichita Falls, TX",
-        "Yahoo",
-        "Mashable",
-        "Mashable SEA",
-        "The Straits Times",
-        "Yahoo Finance",
-        "CBS News on MSN",
-        "The Washington Post on MSN",
-        "The Independent on MSN",
-        "FOX 8 News",
-        "THV11",
-        "cbs19.tv",
-        "100.7 WZLX - Boston's Classic Rock",
-        "Insurance Journal",
-        "WHP Harrisburg",
-        "Business Insider",
-        "WSJ",
-        "NBC10 Philadelphia",
-        "Investing.com",
-        "Gulf News",
-        "Bloomberg.com",
-        "Washington Times",
-        "Crypto News",
-        "NBC 5 Chicago",
-        "Quartz",
-        "Reuters",
-        "OFFGRID Survival"
-      ],
-      "xUrl": "https://x.com/unusual_whales/status/2123505841991270765",
-      "trending": 10000,
-      "trendTerm": "jpmorgan chase & co",
-      "score": 4.63
     },
     {
       "id": "sig:faa-stop:LAS:2026-11-19",
@@ -491,6 +442,33 @@
         "KXXV",
         "KKTV"
       ],
+      "score": 3.66
+    },
+    {
+      "id": "ce3b0f14cf6a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
+      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-19T14:55:29.000Z",
+      "latestAt": "2026-11-20T02:07:53.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 10,
+      "outletNames": [
+        "6abc Philadelphia",
+        "ABC News - Breaking News, Latest News and Videos",
+        "kaaltv.com",
+        "ABC Columbia",
+        "upi",
+        "weisradio.com",
+        "Everett Post",
+        "ABC7 Chicago",
+        "LAmag",
+        "Rural Radio Network"
+      ],
+      "trending": 10000,
+      "trendTerm": "jpmorgan chase cyber attack",
       "score": 3.66
     },
     {
@@ -656,33 +634,6 @@
       "score": 4.19
     },
     {
-      "id": "ce3b0f14cf6a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
-      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-19T14:55:29.000Z",
-      "latestAt": "2026-11-20T02:07:53.000Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 10,
-      "outletNames": [
-        "6abc Philadelphia",
-        "ABC News - Breaking News, Latest News and Videos",
-        "kaaltv.com",
-        "ABC Columbia",
-        "upi",
-        "weisradio.com",
-        "Everett Post",
-        "ABC7 Chicago",
-        "LAmag",
-        "Rural Radio Network"
-      ],
-      "trending": 10000,
-      "trendTerm": "jpmorgan chase cyber attack",
-      "score": 3.66
-    },
-    {
       "id": "sig:faa-stop:AUS:2026-11-19",
       "cat": "flights",
       "kind": "signal",
@@ -744,6 +695,27 @@
         "KTNV 13 Action News"
       ],
       "score": 2.94
+    },
+    {
+      "id": "307f16754e66",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
+      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
+      "source": "Pioneer Press",
+      "publishedAt": "2026-11-19T08:16:00.000Z",
+      "latestAt": "2026-11-20T03:44:54.000Z",
+      "firstSeenAt": "2026-11-19T21:25:13.013Z",
+      "outlets": 6,
+      "outletNames": [
+        "Pioneer Press",
+        "ABC News - Breaking News, Latest News and Videos",
+        "KRCG",
+        "Orange County Register",
+        "The Baltimore Sun",
+        "Howl.Link"
+      ],
+      "score": 2.8
     },
     {
       "id": "497408cf71f1",
@@ -951,27 +923,6 @@
         "Yahoo Finance UK"
       ],
       "score": 1.71
-    },
-    {
-      "id": "307f16754e66",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
-      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
-      "source": "Pioneer Press",
-      "publishedAt": "2026-11-19T08:16:00.000Z",
-      "latestAt": "2026-11-20T03:44:54.000Z",
-      "firstSeenAt": "2026-11-19T21:25:13.013Z",
-      "outlets": 6,
-      "outletNames": [
-        "Pioneer Press",
-        "ABC News - Breaking News, Latest News and Videos",
-        "KRCG",
-        "Orange County Register",
-        "The Baltimore Sun",
-        "Howl.Link"
-      ],
-      "score": 2.8
     },
     {
       "id": "3223634bacce",
@@ -1610,6 +1561,23 @@
         "Honolulu Star-Advertiser"
       ],
       "score": 1.51
+    },
+    {
+      "id": "609d5f00cba2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "A cyberattack leaks thousands of Chase customer emails and some phone numbers",
+      "url": "https://www.dailynews.com/2026/11/19/chase-data-breach/",
+      "source": "Los Angeles Daily News",
+      "publishedAt": "2026-11-19T11:54:00.000Z",
+      "latestAt": "2026-11-19T11:57:00.000Z",
+      "firstSeenAt": "2026-11-20T04:11:25.421Z",
+      "outlets": 2,
+      "outletNames": [
+        "Los Angeles Daily News",
+        "The Baltimore Sun"
+      ],
+      "score": 1.46
     },
     {
       "id": "3d6a901a28ad",
