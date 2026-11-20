@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T01:19:38.890Z",
+  "buildTime": "2026-11-20T01:41:03.776Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 20:19 ET",
+  "etStamp": "2026-11-19 20:41 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,8 +50,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1280,
-  "lastSuccessAt": "2026-11-20T01:19:38.890Z",
+  "headlinesRead": 224,
+  "lastSuccessAt": "2026-11-20T01:41:03.776Z",
   "rollingFallback": false,
   "cats": {
     "flights": 17,
@@ -71,7 +71,7 @@
     "quake": {
       "mag": 5.6,
       "place": "southeast of the Loyalty Islands",
-      "time": "2026-11-20T00:49:13.772Z",
+      "time": "2026-11-20T00:49:14.102Z",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc4v",
       "pager": "green",
       "tsunami": false
@@ -168,7 +168,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -182,81 +182,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 968,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-20T01:19:38.890Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
-      "error": null,
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "count": 186,
+      "error": "7 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-20T00:55:55.472Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-20T00:40:48.102Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "lastOkAt": "2026-11-20T01:41:03.776Z"
     }
   },
   "stories": [
@@ -999,27 +998,6 @@
       "score": 3.22
     },
     {
-      "id": "abe5c8e58707",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ethiopian Airlines investigates data breach affecting its loyalty programme",
-      "url": "https://www.yahoo.com/news/world/articles/ethiopian-airlines-investigates-data-breach-092452393.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T01:25:00.000Z",
-      "latestAt": "2026-11-19T19:01:29.000Z",
-      "firstSeenAt": "2026-11-19T09:38:12.118Z",
-      "outlets": 6,
-      "outletNames": [
-        "Yahoo",
-        "marketscreener.com",
-        "TradingView",
-        "SRN News",
-        "Reuters",
-        "Airways Magazine"
-      ],
-      "score": 3.09
-    },
-    {
       "id": "e358feae5cc2",
       "cat": "hacks",
       "kind": "news",
@@ -1166,24 +1144,6 @@
         "Scientific American"
       ],
       "score": 2.28
-    },
-    {
-      "id": "0bf13d0d47a4",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA ground stop leads to surprise duet for Hobe Sound singer in Jupiter",
-      "url": "https://www.yahoo.com/news/videos/faa-ground-stop-leads-surprise-222213176.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T14:22:00.000Z",
-      "latestAt": "2026-11-19T22:01:08.000Z",
-      "firstSeenAt": "2026-11-20T00:55:55.472Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "WFLX",
-        "WPTV"
-      ],
-      "score": 2.13
     },
     {
       "id": "424febfdf588",
@@ -1477,6 +1437,24 @@
       "score": 1.8
     },
     {
+      "id": "0bf13d0d47a4",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop leads to surprise duet for Hobe Sound singer in Jupiter",
+      "url": "https://www.yahoo.com/news/videos/faa-ground-stop-leads-surprise-222213176.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T05:59:00.000Z",
+      "latestAt": "2026-11-19T22:01:08.000Z",
+      "firstSeenAt": "2026-11-20T00:55:55.472Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "WFLX",
+        "WPTV"
+      ],
+      "score": 1.77
+    },
+    {
       "id": "58150afce8bc",
       "cat": "internet",
       "kind": "news",
@@ -1713,6 +1691,23 @@
         "Yahoo"
       ],
       "score": 1.61
+    },
+    {
+      "id": "11aa103cfaf1",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack may have exposed Chase Bank and Mastercard customer data",
+      "url": "https://www.washingtonpost.com/nation/2026/11/19/cyberattack-may-have-exposed-chase-bank-mastercard-customer-data/",
+      "source": "The Washington Post",
+      "publishedAt": "2026-11-19T11:08:00.000Z",
+      "latestAt": "2026-11-19T16:03:00.000Z",
+      "firstSeenAt": "2026-11-20T01:41:03.776Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Washington Post",
+        "USA TODAY"
+      ],
+      "score": 1.51
     },
     {
       "id": "b58dc9dabd96",
