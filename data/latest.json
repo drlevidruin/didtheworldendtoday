@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T08:57:19.115Z",
+  "buildTime": "2026-11-20T09:05:59.848Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 03:57 ET",
+  "etStamp": "2026-11-20 04:05 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,18 +51,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1258,
-  "lastSuccessAt": "2026-11-20T08:57:19.115Z",
+  "headlinesRead": 481,
+  "lastSuccessAt": "2026-11-20T09:05:59.848Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
-    "hacks": 38,
+    "hacks": 39,
     "germs": 4,
     "internet": 8,
     "grid": 7,
     "markets": 5,
     "weather": 5,
-    "ai": 4,
+    "ai": 3,
     "sun": 4,
     "earth": 4,
     "space": 4,
@@ -78,8 +78,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 2,
-      "time": "2026-11-20T03:00:00.000Z",
+      "value": 1.33,
+      "time": "2026-11-20T06:00:00.000Z",
       "max24": 3
     },
     "asteroid": {
@@ -188,15 +188,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 960,
-      "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "count": 187,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 4 of 26 queries)",
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     },
     "bing": {
       "ok": true,
-      "count": 262,
-      "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "count": 259,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,39 +206,39 @@
     },
     "hn": {
       "ok": true,
-      "count": 6,
+      "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T08:57:19.115Z"
+      "lastOkAt": "2026-11-20T09:05:59.848Z"
     }
   },
   "stories": [
@@ -959,6 +959,38 @@
       "score": 1.63
     },
     {
+      "id": "1941e519481f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan, Visa, and Mastercard disclose cyberattack on third-party vendors",
+      "url": "https://finance.yahoo.com/markets/article/jpmorgan-visa-and-mastercard-disclose-cyberattack-on-third-party-vendors-190314490.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-19T11:03:00.000Z",
+      "latestAt": "2026-11-20T08:52:01.000Z",
+      "firstSeenAt": "2026-11-20T09:05:59.848Z",
+      "outlets": 17,
+      "outletNames": [
+        "Yahoo Finance",
+        "Newsweek",
+        "Yahoo",
+        "Quartz",
+        "CBS News",
+        "Decrypt",
+        "Finextra Research",
+        "Wccftech",
+        "WSJ",
+        "Futurism",
+        "Techlicious",
+        "CoinCentral",
+        "FOX 5 New York",
+        "The SOFX Report",
+        "Tempo.co English",
+        "Incrypted",
+        "Euronews.com"
+      ],
+      "score": 3.22
+    },
+    {
       "id": "80b173a24678",
       "cat": "hacks",
       "kind": "news",
@@ -1465,6 +1497,24 @@
       "score": 1.6
     },
     {
+      "id": "11aa103cfaf1",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack may have exposed Chase Bank and Mastercard customer data",
+      "url": "https://www.msn.com/en-us/money/general/cyberattack-may-have-exposed-chase-bank-and-mastercard-customer-data/ar-AA2hNyql",
+      "source": "The Washington Post on MSN",
+      "publishedAt": "2026-11-19T09:37:14.000Z",
+      "latestAt": "2026-11-19T23:30:00.000Z",
+      "firstSeenAt": "2026-11-20T09:05:59.848Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Washington Post on MSN",
+        "NBC 5 Chicago",
+        "Newser"
+      ],
+      "score": 1.57
+    },
+    {
       "id": "c98a8999b433",
       "cat": "sun",
       "kind": "news",
@@ -1871,22 +1921,6 @@
       "score": 1.11
     },
     {
-      "id": "6c5d5ea61729",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Hit Platform Used by CNN, BBC and Major Banks",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOTnRqUVQxaWI0SXprM0FZU2M4NFk4cWpnSkExeFBEbjZJa0c4cHVKU3cyQk4tVjhTREI5TVZMekdwNmxXVXF3eWFSb3RfdExGYVE1Mk1CYXVNVUdnZ1RMNE1qcUZlQVA2QjNNckZpNEFWSkY2a1pVcnE0Qnp2U3VqdWdFMWJGekE?oc=5",
-      "source": "The Daily Beast",
-      "publishedAt": "2026-11-19T19:37:56.000Z",
-      "latestAt": "2026-11-19T19:37:56.000Z",
-      "firstSeenAt": "2026-11-20T08:57:19.115Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Daily Beast"
-      ],
-      "score": 1.09
-    },
-    {
       "id": "5220352e97b0",
       "cat": "earth",
       "kind": "news",
@@ -2099,22 +2133,6 @@
         "News24Online"
       ],
       "score": 0.98
-    },
-    {
-      "id": "f4629284395c",
-      "cat": "ai",
-      "kind": "news",
-      "title": "AI likely to cause more outages after ‘perfect storm’ slammed Microsoft, CEO Satya Nadella warns",
-      "url": "https://nypost.com/2026/11/19/business/ai-makes-more-outages-likely-after-perfect-storm-slammed-microsoft-says-ceo-satya-nadella/",
-      "source": "New York Post",
-      "publishedAt": "2026-11-19T09:01:00.000Z",
-      "latestAt": "2026-11-19T09:01:51.000Z",
-      "firstSeenAt": "2026-11-19T17:09:48.375Z",
-      "outlets": 1,
-      "outletNames": [
-        "New York Post"
-      ],
-      "score": 0.86
     }
   ]
 }
