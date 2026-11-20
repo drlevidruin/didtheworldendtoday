@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T07:57:00.397Z",
+  "buildTime": "2026-11-20T08:12:04.806Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 02:57 ET",
+  "etStamp": "2026-11-20 03:12 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,20 +51,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1211,
-  "lastSuccessAt": "2026-11-20T07:57:00.397Z",
+  "headlinesRead": 484,
+  "lastSuccessAt": "2026-11-20T08:12:04.806Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
-    "hacks": 38,
-    "germs": 5,
+    "hacks": 37,
+    "germs": 4,
     "internet": 8,
-    "earth": 4,
     "grid": 8,
-    "markets": 5,
-    "weather": 4,
+    "markets": 6,
+    "weather": 5,
     "sun": 4,
     "ai": 4,
+    "earth": 4,
     "space": 4,
     "animals": 1
   },
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 934,
-      "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "count": 245,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "bing": {
       "ok": true,
-      "count": 241,
-      "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "count": 203,
+      "error": "6 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,56 +208,55 @@
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T06:57:06.365Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T07:57:00.397Z"
+      "lastOkAt": "2026-11-20T08:12:04.806Z"
     }
   },
   "stories": [
@@ -402,26 +401,6 @@
       "score": 4.08
     },
     {
-      "id": "f4a81b953bee",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major cyberattack disrupts European Commission pay and leave systems",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMmlENkZ0TGY2bVFBd2xIcnhMMlUwUHZ0aXZIQ3pRd3pIVWpWR1duOUR3MEZWUDluSHFIVDU2a0psYl9zQmJDbTNiYVJpS05hY2NkTDkzeXRJVzFJUXhfRF9hYkxhTm1tdHF5SENGcDBIOVhDMnYyTU51UHhqWTdnbmNrd1dFcmNnWkRuOGIwbldXZHVpRjVjSHhMTFNEdDA5dzZMcUU0NHhaNm5Q?oc=5",
-      "source": "Philenews",
-      "publishedAt": "2026-11-19T08:00:33.000Z",
-      "latestAt": "2026-11-20T01:18:10.000Z",
-      "firstSeenAt": "2026-11-19T16:39:41.729Z",
-      "outlets": 5,
-      "outletNames": [
-        "Philenews",
-        "Washington Examiner",
-        "The Portugal News",
-        "Notebookcheck",
-        "SC Media UK"
-      ],
-      "score": 3.98
-    },
-    {
       "id": "90996f139013",
       "cat": "hacks",
       "kind": "news",
@@ -445,6 +424,30 @@
         "Yahoo"
       ],
       "score": 3.87
+    },
+    {
+      "id": "41bda97d8bc2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase Bank customers may be affected after hackers access marketing data",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbmwtUUN6YzFYZzZ6Z2RQdFZVemJuR0hqVlpKZFluc25nSi1neVVka3phMDNVZDlkU0JhaGZ3Nmw4eW9SaXVlVUg1T3piakQ2Ty11TXdWeU1Hd1VmQTFnUUVObk5WUDZDRmVMU1MxSVJNdWRRbzY4eE5vNm1weE43UDRZU19ZbnktZW9ycXJ3OXA1Y01tX3lzY1E1T2ZVZWsySTc4Y00tZlV1NzU3dFRNZXNHaGZ2VDJJcFlZbU1aa2ZER015cWwxSHNSX3h4SHM5dVBqZElzS04?oc=5",
+      "source": "WCPO 9 Cincinnati",
+      "publishedAt": "2026-11-19T15:01:48.000Z",
+      "latestAt": "2026-11-19T21:44:00.000Z",
+      "firstSeenAt": "2026-11-19T20:10:12.029Z",
+      "outlets": 9,
+      "outletNames": [
+        "WCPO 9 Cincinnati",
+        "Scripps News",
+        "KPAX News",
+        "LEX 18 News",
+        "KJRH",
+        "KMTV 3 News Now Omaha",
+        "KXXV",
+        "KKTV",
+        "TMJ4 News"
+      ],
+      "score": 3.81
     },
     {
       "id": "6d7a6b3b2346",
@@ -498,46 +501,6 @@
         "page": "openai",
         "description": "Partial System Outage"
       }
-    },
-    {
-      "id": "61a204c4234d",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Japan urges vigilance after 5.7-magnitude quake hits southwestern prefecture",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcU03em9OTzgtYjBhelA1WHd3b1FaSUFDTWlYMTNac3dES04yVW1UNDR2STYtQmp5dW5aWExkbE9RdzRTSzJ6QVd0SjRhTEdMclVXOXh1OGRMaWtlbGo0bTFyYmxfY1pSbXRDa2EzRUdBVVRScWgxRkxLNWkwZjhJY0IxUnl0TjB3VzBxUU1sbUc0Y21Yd2o2YlZucGJqdTFtUXEzekhkc2pEUk9C0gG6AUFVX3lxTE1FbC1MakNpcUstQzN4YUJmQU1JOTlMb0NMWWhlN0RyeVVSMjctd2prWHNoYmNLS2lBdDlCdkJwa1pNcC1YdWVYTFRva3JoMEFOdjVRYkV5bGNiQURRZjhFckwtcnlacE1vT2tJVXgtdUl5X2drNE1LWTNvOU4zbXZJdEF3VFdZbU9KTTRYdjRqSHFJc3RleXFRNlh5RjluZ0ZSNmtsa1dQMm4xTmtJcVlvV3R6dUstbjdodw?oc=5",
-      "source": "DT Next",
-      "publishedAt": "2026-11-19T08:07:17.000Z",
-      "latestAt": "2026-11-19T12:18:16.000Z",
-      "firstSeenAt": "2026-11-19T08:38:02.032Z",
-      "outlets": 4,
-      "outletNames": [
-        "DT Next",
-        "Eastern Mirror",
-        "Social News XYZ",
-        "Myanmar Digital News"
-      ],
-      "score": 2.97
-    },
-    {
-      "id": "09bfbf9d8033",
-      "cat": "germs",
-      "kind": "news",
-      "title": "France on high alert for bird flu as seasonal wave spreads",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTnE2bzZTS1pzbzhMRFJ2QUo5Q190ZTJmY1J0QXVrSC0zbHlkbHFIaFY4RHFOQ0dkME5rSHB5V2xOQmdvMENiWXhVeGdfOFZxVnZaenNsSWVyOU9lR0ZJSThVQ3d3d1YwUFNpUUd5Y1FHRXB3Z0s5TGItVTNTTUJUbmZWeE43V1JZOVk1QTlYUVhQam1YbmdaTFk0YTZLemI0Z0hrOHBCdF9NRHJPUXdLQ3NyazlYempmQkdOdw?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-11-19T07:59:00.000Z",
-      "latestAt": "2026-11-19T17:58:52.000Z",
-      "firstSeenAt": "2026-11-19T19:55:03.493Z",
-      "outlets": 6,
-      "outletNames": [
-        "Reuters",
-        "SRN News",
-        "WNWN-FM",
-        "KFGO",
-        "WTVB",
-        "hi99.com"
-      ],
-      "score": 2.87
     },
     {
       "id": "7c2b2f3a0bbb",
@@ -594,28 +557,39 @@
       "score": 2.4
     },
     {
-      "id": "41bda97d8bc2",
-      "cat": "hacks",
+      "id": "8318992f830e",
+      "cat": "grid",
       "kind": "news",
-      "title": "Chase Bank customers may be affected after hackers access marketing data",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbmwtUUN6YzFYZzZ6Z2RQdFZVemJuR0hqVlpKZFluc25nSi1neVVka3phMDNVZDlkU0JhaGZ3Nmw4eW9SaXVlVUg1T3piakQ2Ty11TXdWeU1Hd1VmQTFnUUVObk5WUDZDRmVMU1MxSVJNdWRRbzY4eE5vNm1weE43UDRZU19ZbnktZW9ycXJ3OXA1Y01tX3lzY1E1T2ZVZWsySTc4Y00tZlV1NzU3dFRNZXNHaGZ2VDJJcFlZbU1aa2ZER015cWwxSHNSX3h4SHM5dVBqZElzS04?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "publishedAt": "2026-11-19T15:01:48.000Z",
-      "latestAt": "2026-11-19T21:44:00.000Z",
-      "firstSeenAt": "2026-11-19T20:10:12.029Z",
-      "outlets": 9,
+      "title": "Major blackout hits South Australia after storm",
+      "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/20/major-blackout-hits-south-australia-after-storm",
+      "source": "The Star",
+      "publishedAt": "2026-11-19T15:57:00.000Z",
+      "latestAt": "2026-11-20T07:42:21.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "outlets": 2,
       "outletNames": [
-        "WCPO 9 Cincinnati",
-        "Scripps News",
-        "KPAX News",
-        "LEX 18 News",
-        "KJRH",
-        "KMTV 3 News Now Omaha",
-        "KXXV",
-        "KKTV",
-        "TMJ4 News"
+        "Dimsum Daily",
+        "The Star"
       ],
-      "score": 3.81
+      "score": 2.26
+    },
+    {
+      "id": "696650dc6950",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Stock Market Today, Nov. 19: Dow Plunges 1,100 Points as the S&P 500 Suffers Its 6th Straight Day of Losses",
+      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/19/stock-market-today-nov-19-dow-plunges-1-100-points-as-the-s-and-p-500-suffers-its-6th-straight-day-of-losses/",
+      "source": "The Motley Fool",
+      "publishedAt": "2026-11-19T13:50:00.000Z",
+      "latestAt": "2026-11-19T22:28:51.000Z",
+      "firstSeenAt": "2026-11-19T22:25:24.498Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Motley Fool",
+        "The Globe and Mail",
+        "Yahoo Finance"
+      ],
+      "score": 2.21
     },
     {
       "id": "ce3b0f14cf6a",
@@ -697,6 +671,28 @@
       "score": 3.42
     },
     {
+      "id": "307f16754e66",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
+      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
+      "source": "Pioneer Press",
+      "publishedAt": "2026-11-19T08:16:00.000Z",
+      "latestAt": "2026-11-20T03:44:54.000Z",
+      "firstSeenAt": "2026-11-19T21:25:13.013Z",
+      "outlets": 7,
+      "outletNames": [
+        "Pioneer Press",
+        "ABC News - Breaking News, Latest News and Videos",
+        "KRCG",
+        "Orange County Register",
+        "The Baltimore Sun",
+        "Howl.Link",
+        "AP News"
+      ],
+      "score": 2.97
+    },
+    {
       "id": "97f014fb3101",
       "cat": "flights",
       "kind": "news",
@@ -731,41 +727,6 @@
         "thetimes-tribune.com"
       ],
       "score": 2.6
-    },
-    {
-      "id": "8318992f830e",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Major blackout hits South Australia after storm",
-      "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/20/major-blackout-hits-south-australia-after-storm",
-      "source": "The Star",
-      "publishedAt": "2026-11-19T15:57:00.000Z",
-      "latestAt": "2026-11-20T07:42:21.000Z",
-      "firstSeenAt": "2026-11-20T03:26:28.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "Dimsum Daily",
-        "The Star"
-      ],
-      "score": 2.26
-    },
-    {
-      "id": "696650dc6950",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stock Market Today, Nov. 19: Dow Plunges 1,100 Points as the S&P 500 Suffers Its 6th Straight Day of Losses",
-      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/19/stock-market-today-nov-19-dow-plunges-1-100-points-as-the-s-and-p-500-suffers-its-6th-straight-day-of-losses/",
-      "source": "The Motley Fool",
-      "publishedAt": "2026-11-19T13:50:00.000Z",
-      "latestAt": "2026-11-19T22:28:51.000Z",
-      "firstSeenAt": "2026-11-19T22:25:24.498Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Motley Fool",
-        "The Globe and Mail",
-        "Yahoo Finance"
-      ],
-      "score": 2.21
     },
     {
       "id": "b6ef820c3b0d",
@@ -938,44 +899,38 @@
       "score": 1.7
     },
     {
-      "id": "307f16754e66",
-      "cat": "hacks",
+      "id": "99ebf0a8e1a5",
+      "cat": "grid",
       "kind": "news",
-      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
-      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
-      "source": "Pioneer Press",
-      "publishedAt": "2026-11-19T08:16:00.000Z",
-      "latestAt": "2026-11-20T03:44:54.000Z",
-      "firstSeenAt": "2026-11-19T21:25:13.013Z",
-      "outlets": 7,
+      "title": "10,000 customers without power in Mariposa County, PG&E reports",
+      "url": "https://www.yahoo.com/news/videos/10-000-customers-without-power-202514666.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:25:00.000Z",
+      "latestAt": "2026-11-19T20:17:29.000Z",
+      "firstSeenAt": "2026-11-19T22:10:22.137Z",
+      "outlets": 2,
       "outletNames": [
-        "Pioneer Press",
-        "ABC News - Breaking News, Latest News and Videos",
-        "KRCG",
-        "Orange County Register",
-        "The Baltimore Sun",
-        "Howl.Link",
-        "AP News"
+        "Yahoo",
+        "YourCentralValley.com"
       ],
-      "score": 2.97
+      "score": 1.67
     },
     {
-      "id": "f54c54e006b3",
-      "cat": "hacks",
+      "id": "d1805d08d398",
+      "cat": "sun",
       "kind": "news",
-      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
-      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T16:00:00.000Z",
-      "latestAt": "2026-11-20T02:10:51.000Z",
-      "firstSeenAt": "2026-11-20T03:11:30.805Z",
-      "outlets": 3,
+      "title": "Study reveals how 2024 geomagnetic storm created unprecedented four electron bands in Earth’s Van Allen belts",
+      "url": "https://en.clickpetroleoegas.com.br/study-reveals-how-may-2024-geomagnetic-storm-created-four-unprecedented-electron-bands-within-earths-van-allen-belts-rmrm97/",
+      "source": "en.clickpetroleoegas",
+      "publishedAt": "2026-11-19T17:12:00.000Z",
+      "latestAt": "2026-11-20T04:12:00.000Z",
+      "firstSeenAt": "2026-11-20T04:26:27.671Z",
+      "outlets": 2,
       "outletNames": [
-        "KTNV Las Vegas",
-        "Yahoo",
-        "KTNV 13 Action News"
+        "en.clickpetroleoegas",
+        "CPG Click Oil and Gas"
       ],
-      "score": 2.94
+      "score": 1.63
     },
     {
       "id": "80b173a24678",
@@ -995,6 +950,24 @@
       "score": 2.76
     },
     {
+      "id": "f54c54e006b3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
+      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T11:04:00.000Z",
+      "latestAt": "2026-11-20T02:10:51.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "outlets": 3,
+      "outletNames": [
+        "KTNV Las Vegas",
+        "Yahoo",
+        "KTNV 13 Action News"
+      ],
+      "score": 2.65
+    },
+    {
       "id": "04c2e2acf99a",
       "cat": "hacks",
       "kind": "news",
@@ -1008,6 +981,27 @@
       "outletNames": [
         "Yahoo",
         "FOX 13 Tampa Bay"
+      ],
+      "score": 2.6
+    },
+    {
+      "id": "bec04669a41a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Love isn't in the air, it's at baggage claim during ground stop at Denver International Airport",
+      "url": "https://www.wlky.com/article/couple-airport-wedding-flight-canceled-ground-stop/74456949",
+      "source": "WLKY",
+      "publishedAt": "2026-11-19T13:00:00.000Z",
+      "latestAt": "2026-11-20T04:00:00.000Z",
+      "firstSeenAt": "2026-11-20T05:26:39.748Z",
+      "outlets": 6,
+      "outletNames": [
+        "WLKY",
+        "WCVB",
+        "KOCO",
+        "KOAT Channel 7",
+        "WESH",
+        "WISN 12 News"
       ],
       "score": 2.6
     },
@@ -1102,26 +1096,6 @@
         "BBC"
       ],
       "score": 2.42
-    },
-    {
-      "id": "bec04669a41a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Love isn't in the air, it's at baggage claim during ground stop at Denver International Airport",
-      "url": "https://www.wlky.com/article/couple-airport-wedding-flight-canceled-ground-stop/74456949",
-      "source": "WLKY",
-      "publishedAt": "2026-11-19T13:00:00.000Z",
-      "latestAt": "2026-11-20T04:00:00.000Z",
-      "firstSeenAt": "2026-11-20T05:26:39.748Z",
-      "outlets": 5,
-      "outletNames": [
-        "WLKY",
-        "WCVB",
-        "KOCO",
-        "KOAT Channel 7",
-        "WESH"
-      ],
-      "score": 2.41
     },
     {
       "id": "3e3e07455f30",
@@ -1381,23 +1355,6 @@
       "score": 1.72
     },
     {
-      "id": "99ebf0a8e1a5",
-      "cat": "grid",
-      "kind": "news",
-      "title": "10,000 customers without power in Mariposa County, PG&E reports",
-      "url": "https://www.yahoo.com/news/videos/10-000-customers-without-power-202514666.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T12:25:00.000Z",
-      "latestAt": "2026-11-19T20:17:29.000Z",
-      "firstSeenAt": "2026-11-19T22:10:22.137Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "YourCentralValley.com"
-      ],
-      "score": 1.67
-    },
-    {
       "id": "fe740af2b933",
       "cat": "hacks",
       "kind": "news",
@@ -1447,23 +1404,6 @@
         "The Hill"
       ],
       "score": 1.65
-    },
-    {
-      "id": "d1805d08d398",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Study reveals how 2024 geomagnetic storm created unprecedented four electron bands in Earth’s Van Allen belts",
-      "url": "https://en.clickpetroleoegas.com.br/study-reveals-how-may-2024-geomagnetic-storm-created-four-unprecedented-electron-bands-within-earths-van-allen-belts-rmrm97/",
-      "source": "en.clickpetroleoegas",
-      "publishedAt": "2026-11-19T17:12:00.000Z",
-      "latestAt": "2026-11-20T04:12:00.000Z",
-      "firstSeenAt": "2026-11-20T04:26:27.671Z",
-      "outlets": 2,
-      "outletNames": [
-        "en.clickpetroleoegas",
-        "CPG Click Oil and Gas"
-      ],
-      "score": 1.63
     },
     {
       "id": "acdf0a408a1a",
@@ -1860,6 +1800,22 @@
       "score": 1.2
     },
     {
+      "id": "5cbcb0193557",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Potential Record Warmth on Friday & Saturday",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5Oc2U0V3VZNkNZMHBiZlk1NFEzRHhoY3dqblFMMkoyLU1LMl9mS092RTNKeHEyNi1jdEFtRDBxRHdQR19vTW9QVlkwRmY3TVR2VW1WaDBfNzBXUGpzeGtweTJ4b0NmbDRDUE5ISU9ZNlZNWm5vYnF0SkJmMEXSAZABQVVfeXFMTVZjWWQyZ2EwOW1POWNtcWlHdlhqZGtNZWVld3czQ2VNTDYtVmk1NHdrSkMxU0gxVXo0RWZnNllva1oteThRbkhZXzgwR29OaS1uVlNlSTJQSjVEZkNYTEdMZTJyMjloX040QXFhSDVCSEJheXZPTmMyc3NCNFdmMGxocEJIVElhY1pKZ2ZOcDFB?oc=5",
+      "source": "WLFI",
+      "publishedAt": "2026-11-19T22:36:00.000Z",
+      "latestAt": "2026-11-19T22:36:00.000Z",
+      "firstSeenAt": "2026-11-20T08:12:04.806Z",
+      "outlets": 1,
+      "outletNames": [
+        "WLFI"
+      ],
+      "score": 1.18
+    },
+    {
       "id": "5218f43202f5",
       "cat": "grid",
       "kind": "news",
@@ -1890,6 +1846,22 @@
         "The Daily Beast"
       ],
       "score": 1.11
+    },
+    {
+      "id": "d76d54e96904",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Market hit by major stock selloff after Anthropic's record-breaking IPO",
+      "url": "https://www.yahoo.com/news/videos/market-hit-major-stock-selloff-004902005.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T16:49:00.000Z",
+      "latestAt": "2026-11-19T16:49:00.000Z",
+      "firstSeenAt": "2026-11-20T08:12:04.806Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yahoo"
+      ],
+      "score": 1.04
     },
     {
       "id": "279244b389fc",
@@ -2070,6 +2042,24 @@
         "News24Online"
       ],
       "score": 0.98
+    },
+    {
+      "id": "e92ac3b8a269",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Volcano erupts in southern Japan, no evacuation warning",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSVpWQVpVQUlwdDgwQTg3cHJpSnA3QVlra1ZwZjRRODBEUjM4X1Y4U2sxS1ItYkFzd3BDbFdlMEpvNDg1LVFyV2pXd295TE5vQTREdkI3YTJNcmhwczZyOVc2aHprLUdWeGdoVVhDRVI5YkhuZENLdTRzQ1J2WGdzS3FNbkpQbDRrQnFLYWRMLWUzb1FDRS1rTw?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-19T23:03:17.000Z",
+      "latestAt": "2026-11-19T23:03:17.000Z",
+      "firstSeenAt": "2026-11-20T00:40:48.102Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yeni Safak English"
+      ],
+      "score": 0.97,
+      "quiet": true,
+      "quietReason": "headline mentions evacuation"
     },
     {
       "id": "f4629284395c",
