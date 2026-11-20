@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T03:41:23.681Z",
+  "buildTime": "2026-11-20T03:56:22.027Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 22:41 ET",
+  "etStamp": "2026-11-19 22:56 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,14 +50,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 308,
-  "lastSuccessAt": "2026-11-20T03:41:23.681Z",
+  "headlinesRead": 1262,
+  "lastSuccessAt": "2026-11-20T03:56:22.027Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
+    "flights": 16,
     "hacks": 38,
     "germs": 4,
-    "internet": 12,
+    "internet": 11,
     "earth": 4,
     "grid": 7,
     "markets": 4,
@@ -82,12 +82,12 @@
       "max24": 3
     },
     "asteroid": {
-      "des": "2026 VN11",
-      "ld": 5.154,
-      "at": "2026-11-21T06:47:00.000Z",
-      "sizeM": 41.2,
-      "size": "a jumbo jet",
-      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20VN11",
+      "des": "2026 WA1",
+      "ld": 1.234,
+      "at": "2026-11-21T22:28:00.000Z",
+      "sizeM": 4.5,
+      "size": "a bus",
+      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WA1",
       "upcoming": true
     },
     "faa": {
@@ -188,20 +188,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "ok": true,
+      "count": 963,
+      "error": null,
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "bing": {
       "ok": true,
-      "count": 273,
-      "error": null,
-      "lastOkAt": "2026-11-20T03:41:23.681Z"
+      "count": 263,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "gdelt": {
       "ok": false,
@@ -213,56 +213,55 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T03:41:23.681Z"
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:41:23.681Z"
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T03:41:23.681Z"
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:41:23.681Z"
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T03:41:23.681Z"
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:41:23.681Z"
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T03:41:23.681Z"
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T03:41:23.681Z"
+      "lastOkAt": "2026-11-20T03:56:22.027Z"
     }
   },
   "stories": [
@@ -350,7 +349,7 @@
       "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
       "source": "The Straits Times",
       "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-20T03:07:40.000Z",
+      "latestAt": "2026-11-20T03:48:11.000Z",
       "firstSeenAt": "2026-11-19T17:39:41.337Z",
       "outlets": 32,
       "outletNames": [
@@ -416,51 +415,24 @@
       }
     },
     {
-      "id": "609d5f00cba2",
+      "id": "f4a81b953bee",
       "cat": "hacks",
       "kind": "news",
-      "title": "A cyberattack leaks thousands of Chase customer emails and some phone numbers",
-      "url": "https://apnews.com/article/chase-data-leak-cyberattack-8470d475450721b66858bdace47091c0",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-19T03:49:00.000Z",
-      "latestAt": "2026-11-20T01:26:58.000Z",
-      "firstSeenAt": "2026-11-19T19:55:03.493Z",
-      "outlets": 32,
+      "title": "Major cyberattack disrupts European Commission pay and leave systems",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMmlENkZ0TGY2bVFBd2xIcnhMMlUwUHZ0aXZIQ3pRd3pIVWpWR1duOUR3MEZWUDluSHFIVDU2a0psYl9zQmJDbTNiYVJpS05hY2NkTDkzeXRJVzFJUXhfRF9hYkxhTm1tdHF5SENGcDBIOVhDMnYyTU51UHhqWTdnbmNrd1dFcmNnWkRuOGIwbldXZHVpRjVjSHhMTFNEdDA5dzZMcUU0NHhaNm5Q?oc=5",
+      "source": "Philenews",
+      "publishedAt": "2026-11-19T08:00:33.000Z",
+      "latestAt": "2026-11-20T01:18:10.000Z",
+      "firstSeenAt": "2026-11-19T16:39:41.729Z",
+      "outlets": 5,
       "outletNames": [
-        "Associated Press News",
-        "The Joplin Globe",
-        "WTOP News",
-        "kens5.com",
-        "Newsday",
-        "Pioneer Press",
-        "Hartford Courant",
-        "Marietta Daily Journal",
-        "thedailystar.com",
-        "The Killeen Daily Herald",
-        "The Batesville Daily Guard",
-        "Idaho State Journal",
-        "Toronto Star",
-        "Orlando Sentinel",
-        "U.S. News & World Report",
-        "Delco Times",
-        "The Boston Globe",
-        "Ottumwa Courier",
-        "Daily Local",
-        "thereporteronline",
-        "Whittier Daily News",
-        "Pittsburgh Post-Gazette",
-        "The Press Democrat",
-        "AP News",
-        "couriernews.com",
-        "Bozeman Daily Chronicle",
-        "The Independent",
-        "Dayton Daily News",
-        "Times-Standard",
-        "The Fort Morgan Times",
-        "Broomfield Enterprise",
-        "Long Beach Press-Telegram"
+        "Philenews",
+        "Washington Examiner",
+        "The Portugal News",
+        "Notebookcheck",
+        "SC Media UK"
       ],
-      "score": 4.39
+      "score": 3.98
     },
     {
       "id": "e8264ac0b9b3",
@@ -470,9 +442,9 @@
       "url": "https://ktvz.com/news/2026/11/19/oregon-reports-first-human-case-of-bird-flu-in-2026/",
       "source": "KTVZ",
       "publishedAt": "2026-11-19T04:28:00.000Z",
-      "latestAt": "2026-11-20T02:38:04.000Z",
+      "latestAt": "2026-11-20T03:52:21.000Z",
       "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 18,
+      "outlets": 21,
       "outletNames": [
         "KGW",
         "KTVZ",
@@ -491,9 +463,12 @@
         "Oregon Public Broadcasting",
         "KPIC",
         "KMTR",
-        "KCBY"
+        "KCBY",
+        "Central Oregon Daily",
+        "KVAL",
+        "Capital Press"
       ],
-      "score": 3.77
+      "score": 3.94
     },
     {
       "id": "41bda97d8bc2",
@@ -578,6 +553,27 @@
       "score": 2.97
     },
     {
+      "id": "09bfbf9d8033",
+      "cat": "germs",
+      "kind": "news",
+      "title": "France on high alert for bird flu as seasonal wave spreads",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTnE2bzZTS1pzbzhMRFJ2QUo5Q190ZTJmY1J0QXVrSC0zbHlkbHFIaFY4RHFOQ0dkME5rSHB5V2xOQmdvMENiWXhVeGdfOFZxVnZaenNsSWVyOU9lR0ZJSThVQ3d3d1YwUFNpUUd5Y1FHRXB3Z0s5TGItVTNTTUJUbmZWeE43V1JZOVk1QTlYUVhQam1YbmdaTFk0YTZLemI0Z0hrOHBCdF9NRHJPUXdLQ3NyazlYempmQkdOdw?oc=5",
+      "source": "Reuters",
+      "publishedAt": "2026-11-19T07:59:00.000Z",
+      "latestAt": "2026-11-19T17:58:52.000Z",
+      "firstSeenAt": "2026-11-19T19:55:03.493Z",
+      "outlets": 6,
+      "outletNames": [
+        "Reuters",
+        "SRN News",
+        "WNWN-FM",
+        "KFGO",
+        "WTVB",
+        "hi99.com"
+      ],
+      "score": 2.87
+    },
+    {
       "id": "ff1a8e6aa309",
       "cat": "internet",
       "kind": "news",
@@ -613,26 +609,6 @@
       "score": 2.74
     },
     {
-      "id": "09bfbf9d8033",
-      "cat": "germs",
-      "kind": "news",
-      "title": "France on high alert for bird flu as seasonal wave spreads",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTnE2bzZTS1pzbzhMRFJ2QUo5Q190ZTJmY1J0QXVrSC0zbHlkbHFIaFY4RHFOQ0dkME5rSHB5V2xOQmdvMENiWXhVeGdfOFZxVnZaenNsSWVyOU9lR0ZJSThVQ3d3d1YwUFNpUUd5Y1FHRXB3Z0s5TGItVTNTTUJUbmZWeE43V1JZOVk1QTlYUVhQam1YbmdaTFk0YTZLemI0Z0hrOHBCdF9NRHJPUXdLQ3NyazlYempmQkdOdw?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-11-19T07:59:00.000Z",
-      "latestAt": "2026-11-19T12:03:24.000Z",
-      "firstSeenAt": "2026-11-19T19:55:03.493Z",
-      "outlets": 5,
-      "outletNames": [
-        "Reuters",
-        "SRN News",
-        "WNWN-FM",
-        "KFGO",
-        "WTVB"
-      ],
-      "score": 2.66
-    },
-    {
       "id": "sig:faa-stop:SAN:2026-11-19",
       "cat": "flights",
       "kind": "signal",
@@ -665,7 +641,7 @@
       "publishedAt": "2026-11-19T07:28:59.000Z",
       "latestAt": "2026-11-20T00:15:00.000Z",
       "firstSeenAt": "2026-11-20T00:25:42.458Z",
-      "outlets": 8,
+      "outlets": 9,
       "outletNames": [
         "Reuters on MSN",
         "Devdiscourse",
@@ -674,28 +650,10 @@
         "Avi-Go",
         "CNA",
         "sidneyherald.com",
-        "dl-online.com"
+        "dl-online.com",
+        "Investing.com"
       ],
-      "score": 4.02
-    },
-    {
-      "id": "f4a81b953bee",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major cyberattack disrupts European Commission pay and leave systems",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMmlENkZ0TGY2bVFBd2xIcnhMMlUwUHZ0aXZIQ3pRd3pIVWpWR1duOUR3MEZWUDluSHFIVDU2a0psYl9zQmJDbTNiYVJpS05hY2NkTDkzeXRJVzFJUXhfRF9hYkxhTm1tdHF5SENGcDBIOVhDMnYyTU51UHhqWTdnbmNrd1dFcmNnWkRuOGIwbldXZHVpRjVjSHhMTFNEdDA5dzZMcUU0NHhaNm5Q?oc=5",
-      "source": "Philenews",
-      "publishedAt": "2026-11-19T08:00:33.000Z",
-      "latestAt": "2026-11-19T15:44:00.000Z",
-      "firstSeenAt": "2026-11-19T16:39:41.729Z",
-      "outlets": 4,
-      "outletNames": [
-        "Philenews",
-        "Washington Examiner",
-        "The Portugal News",
-        "Notebookcheck"
-      ],
-      "score": 3.59
+      "score": 4.19
     },
     {
       "id": "ce3b0f14cf6a",
@@ -705,9 +663,9 @@
       "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
       "source": "ABC News - Breaking News, Latest News and Videos",
       "publishedAt": "2026-11-19T14:55:29.000Z",
-      "latestAt": "2026-11-20T01:19:21.000Z",
+      "latestAt": "2026-11-20T02:07:53.000Z",
       "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 9,
+      "outlets": 10,
       "outletNames": [
         "6abc Philadelphia",
         "ABC News - Breaking News, Latest News and Videos",
@@ -717,11 +675,12 @@
         "weisradio.com",
         "Everett Post",
         "ABC7 Chicago",
-        "LAmag"
+        "LAmag",
+        "Rural Radio Network"
       ],
       "trending": 10000,
       "trendTerm": "jpmorgan chase cyber attack",
-      "score": 3.53
+      "score": 3.66
     },
     {
       "id": "sig:faa-stop:AUS:2026-11-19",
@@ -767,6 +726,24 @@
         "The Hill"
       ],
       "score": 3.41
+    },
+    {
+      "id": "f54c54e006b3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
+      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T16:00:00.000Z",
+      "latestAt": "2026-11-20T02:10:51.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "outlets": 3,
+      "outletNames": [
+        "KTNV Las Vegas",
+        "Yahoo",
+        "KTNV 13 Action News"
+      ],
+      "score": 2.94
     },
     {
       "id": "497408cf71f1",
@@ -976,22 +953,25 @@
       "score": 1.71
     },
     {
-      "id": "f54c54e006b3",
+      "id": "307f16754e66",
       "cat": "hacks",
       "kind": "news",
-      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
-      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T16:00:00.000Z",
-      "latestAt": "2026-11-20T02:10:51.000Z",
-      "firstSeenAt": "2026-11-20T03:11:30.805Z",
-      "outlets": 3,
+      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
+      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
+      "source": "Pioneer Press",
+      "publishedAt": "2026-11-19T08:16:00.000Z",
+      "latestAt": "2026-11-20T03:44:54.000Z",
+      "firstSeenAt": "2026-11-19T21:25:13.013Z",
+      "outlets": 6,
       "outletNames": [
-        "KTNV Las Vegas",
-        "Yahoo",
-        "KTNV 13 Action News"
+        "Pioneer Press",
+        "ABC News - Breaking News, Latest News and Videos",
+        "KRCG",
+        "Orange County Register",
+        "The Baltimore Sun",
+        "Howl.Link"
       ],
-      "score": 2.94
+      "score": 2.8
     },
     {
       "id": "3223634bacce",
@@ -1030,6 +1010,23 @@
       "score": 2.64
     },
     {
+      "id": "04c2e2acf99a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack targets major banking and card vendors",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T23:12:30.000Z",
+      "latestAt": "2026-11-19T23:12:30.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 13 Tampa Bay"
+      ],
+      "score": 2.6
+    },
+    {
       "id": "b0fc3c8f8eff",
       "cat": "flights",
       "kind": "news",
@@ -1045,26 +1042,6 @@
         "thetimes-tribune.com"
       ],
       "score": 2.6
-    },
-    {
-      "id": "307f16754e66",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
-      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
-      "source": "Pioneer Press",
-      "publishedAt": "2026-11-19T08:16:00.000Z",
-      "latestAt": "2026-11-19T13:30:39.000Z",
-      "firstSeenAt": "2026-11-19T21:25:13.013Z",
-      "outlets": 5,
-      "outletNames": [
-        "Pioneer Press",
-        "ABC News - Breaking News, Latest News and Videos",
-        "KRCG",
-        "Orange County Register",
-        "The Baltimore Sun"
-      ],
-      "score": 2.59
     },
     {
       "id": "dd2857255f06",
@@ -1584,23 +1561,6 @@
       "score": 1.65
     },
     {
-      "id": "ec98dfd69f01",
-      "cat": "internet",
-      "kind": "news",
-      "title": "GTA 5 down today: Is GTA Online not working? Check Rockstar Games server status, login issues, gameplay problems & latest Downdetector update",
-      "url": "https://www.msn.com/en-in/gaming/general/gta-5-down-today-is-gta-online-not-working-check-rockstar-games-server-status-login-issues-gameplay-problems-latest-downdetector-update/ar-AA2hKg9k",
-      "source": "The Sunday Guardian Live on MSN",
-      "publishedAt": "2026-11-19T03:54:00.000Z",
-      "latestAt": "2026-11-19T06:44:03.000Z",
-      "firstSeenAt": "2026-11-19T14:24:11.067Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Sunday Guardian Live on MSN",
-        "The Sunday Guardian"
-      ],
-      "score": 1.65
-    },
-    {
       "id": "acdf0a408a1a",
       "cat": "grid",
       "kind": "news",
@@ -1813,6 +1773,22 @@
       "score": 1.4
     },
     {
+      "id": "74e770b8872d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Major US banks face cyberattack involving 16,000 customer details",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPXzN5UGVXd2tGT01aTFR6X1ZVNzM4N1BELVNVM052MTkwOEtUZGdKM1diVU1XUkZXWTBWTEMzdkhndGtPcEZwUnZ6QzBDZ3ZMaTJLM0FIQW1XMm5VVTF4MjJnOHI2X0FnaXVMNkpHZ3dkc0JtT0I0VGdqMC1MUmF1REVLUlJwVDZGVDRtaVhn?oc=5",
+      "source": "Interesting Engineering",
+      "publishedAt": "2026-11-20T03:42:00.000Z",
+      "latestAt": "2026-11-20T03:42:00.000Z",
+      "firstSeenAt": "2026-11-20T03:56:22.027Z",
+      "outlets": 1,
+      "outletNames": [
+        "Interesting Engineering"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "b48fee4b63eb",
       "cat": "markets",
       "kind": "news",
@@ -1882,20 +1858,20 @@
       "score": 1.35
     },
     {
-      "id": "04c2e2acf99a",
-      "cat": "hacks",
+      "id": "5b08db75b6b4",
+      "cat": "flights",
       "kind": "news",
-      "title": "Cyberattack targets major banking and card vendors",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:12:30.000Z",
-      "latestAt": "2026-11-19T23:12:30.000Z",
-      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "title": "Local Wyoming airports back on track days after the nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQSGdBOExOUDJMckx3OFZoX2hsLTRqZXQzbXNrY25LX3F2RXJUQUZCV25LZ3c2SlFIR29vTGZOWjF3RlhIbmpCNkVMMlNtYjlwOHZLcjVRUFRpYnBqd1dUVG55VE40eEFOLWMyZlFXcG9aTjBjNnF2RDBSMk5WWk9fV29ZQmg5Zm5ObmxkNnV6bzFWVXZ3LXdxVGg0OERmNEJNemlKZlJmSnNYekg3Q2hfWnpsM0Q3M1FqQmpMZ0s4bGw1em4ycjBzV0dtUTZpcVZHYU9veG44NkR0bXBTQXdZTnNwcWU4SDY0UjJoeDc3NnU?oc=5",
+      "source": "wyomingnewsnow.tv",
+      "publishedAt": "2026-11-19T22:41:00.000Z",
+      "latestAt": "2026-11-19T22:41:00.000Z",
+      "firstSeenAt": "2026-11-20T03:56:22.027Z",
       "outlets": 1,
       "outletNames": [
-        "Yahoo"
+        "wyomingnewsnow.tv"
       ],
-      "score": 1.3
+      "score": 1.28
     },
     {
       "id": "8838110540f0",
