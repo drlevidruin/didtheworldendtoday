@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T02:56:13.125Z",
+  "buildTime": "2026-11-20T03:11:30.805Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 21:56 ET",
+  "etStamp": "2026-11-19 22:11 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,16 +50,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 332,
-  "lastSuccessAt": "2026-11-20T02:56:13.125Z",
+  "headlinesRead": 1252,
+  "lastSuccessAt": "2026-11-20T03:11:30.805Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
-    "hacks": 37,
+    "flights": 15,
+    "hacks": 39,
     "germs": 4,
     "internet": 12,
     "earth": 4,
-    "grid": 7,
+    "grid": 6,
     "markets": 4,
     "space": 4,
     "weather": 4,
@@ -77,8 +77,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 1.33,
-      "time": "2026-11-19T21:00:00.000Z",
+      "value": 0.67,
+      "time": "2026-11-20T00:00:00.000Z",
       "max24": 3
     },
     "asteroid": {
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 34,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 2 of 26 queries)",
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "count": 942,
+      "error": null,
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     },
     "bing": {
       "ok": true,
-      "count": 263,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "count": 275,
+      "error": null,
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-20T00:55:55.472Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T02:56:13.125Z"
+      "lastOkAt": "2026-11-20T03:11:30.805Z"
     }
   },
   "stories": [
@@ -344,7 +344,7 @@
       "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
       "source": "The Straits Times",
       "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-20T02:15:00.000Z",
+      "latestAt": "2026-11-20T02:59:18.000Z",
       "firstSeenAt": "2026-11-19T17:39:41.337Z",
       "outlets": 32,
       "outletNames": [
@@ -756,21 +756,23 @@
       "score": 2.73
     },
     {
-      "id": "b0fc3c8f8eff",
+      "id": "97f014fb3101",
       "cat": "flights",
       "kind": "news",
-      "title": "Nationwide ground stop canceled several arrivals , departures at AVP",
-      "url": "https://www.thetimes-tribune.com/2026/11/19/nationwide-ground-stop-canceled-several-arrivals-departures-at-avp/",
-      "source": "thetimes-tribune.com",
-      "publishedAt": "2026-11-19T20:41:07.000Z",
-      "latestAt": "2026-11-19T23:30:00.000Z",
-      "firstSeenAt": "2026-11-20T00:55:55.472Z",
-      "outlets": 2,
+      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
+      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:02:50.000Z",
+      "latestAt": "2026-11-19T20:30:00.000Z",
+      "firstSeenAt": "2026-11-19T19:12:09.123Z",
+      "outlets": 4,
       "outletNames": [
-        "Scranton Times-Tribune",
-        "thetimes-tribune.com"
+        "KXAN Austin",
+        "13newsnow.com",
+        "Scientific American",
+        "Yahoo"
       ],
-      "score": 2.6
+      "score": 2.64
     },
     {
       "id": "a83b29445024",
@@ -912,23 +914,6 @@
       "score": 1.95
     },
     {
-      "id": "2241af500213",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power Outage in Kathmandu from Today to December 14",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPY1JycXFTUzF2N0p0dF9nWlVYYS1RaGRIT2JvbmdWMFpzdlFfR3NSQ2pQSHRQNkJRQmxhOUxPX1RGZmpieEpYY0k0M0Y4Q05SRmtVdVhvazZpOHVyUmZsQldVQ0RacTlCc01ZXzFNSjh6U0VNY1hzejRITFFpcHowODVhaEJUSnNocFp5VzNOTFpqWm56bmRueDhTNlhUZU42WGJCZ0hpM0s2UjgwT3B0ci1qcw?oc=5",
-      "source": "Hamro Patro",
-      "publishedAt": "2026-11-19T02:59:22.000Z",
-      "latestAt": "2026-11-19T03:00:57.000Z",
-      "firstSeenAt": "2026-11-19T04:37:28.583Z",
-      "outlets": 2,
-      "outletNames": [
-        "Hamro Patro",
-        "Ratopati"
-      ],
-      "score": 1.95
-    },
-    {
       "id": "30561ee764f6",
       "cat": "weather",
       "kind": "news",
@@ -961,6 +946,23 @@
         "KTVN"
       ],
       "score": 1.72
+    },
+    {
+      "id": "a5681a59de2f",
+      "cat": "germs",
+      "kind": "news",
+      "title": "A $4.30 carton of eggs could cost $7.50 if bird flu hits Australia's poultry farms",
+      "url": "https://www.thecooldown.com/sustainable-food/australia-bird-flu-egg-price-impact/",
+      "source": "The Cool Down",
+      "publishedAt": "2026-11-19T14:20:00.000Z",
+      "latestAt": "2026-11-19T22:20:00.000Z",
+      "firstSeenAt": "2026-11-19T23:10:44.004Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Cool Down",
+        "Yahoo Finance UK"
+      ],
+      "score": 1.71
     },
     {
       "id": "e358feae5cc2",
@@ -1000,6 +1002,23 @@
         "Investing.com Canada"
       ],
       "score": 2.8
+    },
+    {
+      "id": "b0fc3c8f8eff",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide ground stop canceled several arrivals , departures at AVP",
+      "url": "https://www.thetimes-tribune.com/2026/11/19/nationwide-ground-stop-canceled-several-arrivals-departures-at-avp/",
+      "source": "thetimes-tribune.com",
+      "publishedAt": "2026-11-19T20:41:07.000Z",
+      "latestAt": "2026-11-19T23:30:00.000Z",
+      "firstSeenAt": "2026-11-20T00:55:55.472Z",
+      "outlets": 2,
+      "outletNames": [
+        "Scranton Times-Tribune",
+        "thetimes-tribune.com"
+      ],
+      "score": 2.6
     },
     {
       "id": "307f16754e66",
@@ -1092,24 +1111,6 @@
         "A News"
       ],
       "score": 2.41
-    },
-    {
-      "id": "97f014fb3101",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA halts router upgrades after ground stop fuels infrastructure concerns",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOdERabWZHa3U1bVk5VFJ3bkRYNm1XbjVpdEVQQ0xYbE50eVg2bnFLQkRlN3U2V19CUmx3ckg5SHNabzZvdXh0cFZLUGIzR0tYQmNqZ1pHWFpBdG15Z0JrSWFlTFNKamc3UWJCMmlKN3VuaHNIZGFDdjZBSzFTaVJRQy1lTi12TjhzMDE4Wi1mVUVwT2c4UHdwdVBGeXA3SExVWGfSAacBQVVfeXFMTVI1NE5VU2Z2U0FIVTZnQjZpbXhfWkwyc3p5ZmNHaWNjLUJydkRWSWRVMXhFODA4OExmZ0hlelZZeUwxUkE3NV9sMlNERHBOUDNNSlNOZnJucmJ6eEhvN2xmOVp3VS1pYW5JQ1M3b2Z2dFlhM0xvV2U4WkZDYVRFeUtSb2VqazF4OS1uX2N0S3RuZTdINTV5ZHd4U3B1bVdyVDQ1cDJNazg?oc=5",
-      "source": "KXAN Austin",
-      "publishedAt": "2026-11-19T12:02:50.000Z",
-      "latestAt": "2026-11-19T20:30:00.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
-      "outlets": 3,
-      "outletNames": [
-        "KXAN Austin",
-        "13newsnow.com",
-        "Scientific American"
-      ],
-      "score": 2.28
     },
     {
       "id": "424febfdf588",
@@ -1387,6 +1388,23 @@
       "score": 1.77
     },
     {
+      "id": "3712e02a1b2c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16ejBjNzhGeUhBWnhVTkRHZ2sxRE4xUXZ3RVhiNTMwZlU4MUx1LUxVcG1xbi0zV1RFTzhVamxHOXd6MTFWVG5jVmctUDZQcF84U3UzcGNlbjFOQjlHX3lyQXFZYmdjNWM2UGtoM1ZVbkxzWFFDNHBwTTV5cW56UnfSAYQBQVVfeXFMUElHd25xekpscWFKV18xeHM0VUw4N1YyN0JRUFVOYmlSTGduZ0s1d2Jvc3ZFeXZBRzlDdlM1cnhuOXhCYWlid0ZSakZ2b1ljUTY2QmlaeXU0UXZrQzJISTYtWkF2Z0xMb3ZKRkg4aDlPQUhlNDdYR19pcWJtc0g2WnhQcW5W?oc=5",
+      "source": "upi",
+      "publishedAt": "2026-11-19T19:07:44.000Z",
+      "latestAt": "2026-11-20T01:19:21.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "outlets": 2,
+      "outletNames": [
+        "upi",
+        "LAmag"
+      ],
+      "score": 1.73
+    },
+    {
       "id": "58150afce8bc",
       "cat": "internet",
       "kind": "news",
@@ -1428,7 +1446,7 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
       "source": "DW.com",
       "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-19T15:45:07.000Z",
+      "latestAt": "2026-11-19T16:11:09.000Z",
       "firstSeenAt": "2026-11-19T23:25:35.730Z",
       "outlets": 2,
       "outletNames": [
@@ -1453,23 +1471,6 @@
         "Yahoo Finance Singapore"
       ],
       "score": 1.72
-    },
-    {
-      "id": "a5681a59de2f",
-      "cat": "germs",
-      "kind": "news",
-      "title": "A $4.30 carton of eggs could cost $7.50 if bird flu hits Australia's poultry farms",
-      "url": "https://www.thecooldown.com/sustainable-food/australia-bird-flu-egg-price-impact/",
-      "source": "The Cool Down",
-      "publishedAt": "2026-11-19T14:20:00.000Z",
-      "latestAt": "2026-11-19T22:20:00.000Z",
-      "firstSeenAt": "2026-11-19T23:10:44.004Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Cool Down",
-        "Yahoo Finance UK"
-      ],
-      "score": 1.71
     },
     {
       "id": "51316edfd152",
@@ -1872,20 +1873,20 @@
       "quietReason": "headline mentions tornadoes"
     },
     {
-      "id": "ac8fef0be9f1",
-      "cat": "flights",
+      "id": "f54c54e006b3",
+      "cat": "hacks",
       "kind": "news",
-      "title": "FAA ground stop put focus on air traffic controller shortages at Phoenix Sky Harbor, nationwide",
-      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNamp4azdfZUV1TzgtTV85NXhvamtFeXk2RFNyY3RYM3ZQeFBLRTNJaDAySE4tYTlRa2pCMi15QWZnRmw1clVCcTFqT0xXV094MVJWOUtFdFd0Vno0YmFGZmwxd0Zxa2JLX0owNE1LWDloaktRR1JsandJVFhLRWJtTllWaUQtMGJLOG5MT2RiQkl4VWZ1aVhjOEhMbmRvRnJtS1FNRVpUUmk4Qkdla3dHNG12ZHFQWkJIZXRPcngxelc0eFRQVEVRMWJSTHdmdnE0Q0lzZ0ZCY2lfblZWNnpLS3BhNFJZcDVtOGowQkdFUlZSRDltRzVsUGt0NWlvRGdvaEtWRnlON1dCQnJaM29tRlhud0w?oc=5",
-      "source": "PinalCentral.com",
-      "publishedAt": "2026-11-19T03:05:03.000Z",
-      "latestAt": "2026-11-19T03:05:03.000Z",
-      "firstSeenAt": "2026-11-19T03:22:20.740Z",
+      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPaEcxckxjR3Z3SE5QeE9KRXprVmtFSjB1T3F5MnZWVXc4aHdZRzhpLVc2LTYtTVZzQ2dGdDk4OW51Tzl4MnJsd01sZGV4THctRUk4VDRLbEpab2UxYVVFTGs2Xy1EdFVLLW5PLU9HYy04UkR5TGdlTG81eWNuMmZaVnlJdFJLc2ZObWNBT2Rjbk1fQXFRdTRLbC1WUjNORmpZOWN2RV9Wa3dOOVJ1d3BTNFVqNWZWQ1FzbmVvcE10WQ?oc=5",
+      "source": "KTNV Las Vegas",
+      "publishedAt": "2026-11-20T02:10:51.000Z",
+      "latestAt": "2026-11-20T02:10:51.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
       "outlets": 1,
       "outletNames": [
-        "PinalCentral.com"
+        "KTNV Las Vegas"
       ],
-      "score": 1.39
+      "score": 1.38
     },
     {
       "id": "8838110540f0",
