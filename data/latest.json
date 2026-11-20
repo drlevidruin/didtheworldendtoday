@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T11:42:39.182Z",
+  "buildTime": "2026-11-20T11:57:38.909Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 06:42 ET",
+  "etStamp": "2026-11-20 06:57 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,19 +51,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1231,
-  "lastSuccessAt": "2026-11-20T11:42:39.182Z",
+  "headlinesRead": 1035,
+  "lastSuccessAt": "2026-11-20T11:57:38.909Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 31,
-    "flights": 17,
+    "hacks": 29,
+    "flights": 18,
     "germs": 4,
-    "internet": 8,
+    "internet": 7,
     "grid": 8,
-    "markets": 10,
+    "markets": 11,
     "earth": 4,
     "sun": 4,
-    "weather": 5,
+    "weather": 6,
     "ai": 4,
     "space": 4,
     "animals": 1
@@ -188,15 +188,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 965,
+      "count": 988,
       "error": null,
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "bing": {
       "ok": true,
-      "count": 231,
-      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "count": 12,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,39 +206,39 @@
     },
     "hn": {
       "ok": true,
-      "count": 5,
+      "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "x": {
       "ok": true,
@@ -249,18 +249,67 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T11:42:39.182Z"
+      "lastOkAt": "2026-11-20T11:57:38.909Z"
     }
   },
   "stories": [
+    {
+      "id": "ce3b0f14cf6a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
+      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-19T14:11:21.000Z",
+      "latestAt": "2026-11-20T11:28:30.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 32,
+      "outletNames": [
+        "6abc Philadelphia",
+        "ABC News - Breaking News, Latest News and Videos",
+        "kaaltv.com",
+        "ABC Columbia",
+        "upi",
+        "weisradio.com",
+        "Everett Post",
+        "ABC7 Chicago",
+        "LAmag",
+        "Rural Radio Network",
+        "FOX 8 News",
+        "Newsweek",
+        "NBC10 Philadelphia",
+        "NBC 5 Chicago",
+        "Quartz",
+        "Click2Houston",
+        "CBS News",
+        "Yahoo Finance",
+        "Decrypt",
+        "Finextra Research",
+        "WBAL News Radio",
+        "Reuters",
+        "Wccftech",
+        "The New York Times",
+        "WSJ",
+        "Futurism",
+        "Techlicious",
+        "FOX 5 New York",
+        "Breitbart News",
+        "iTnews",
+        "The Washington Post",
+        "The SOFX Report"
+      ],
+      "trending": 10000,
+      "trendTerm": "jpmorgan chase cyber attack",
+      "score": 5
+    },
     {
       "id": "a658db7bfa93",
       "cat": "hacks",
@@ -365,7 +414,7 @@
       "publishedAt": "2026-11-19T12:05:00.000Z",
       "latestAt": "2026-11-20T10:16:24.000Z",
       "firstSeenAt": "2026-11-20T04:56:32.174Z",
-      "outlets": 20,
+      "outlets": 21,
       "outletNames": [
         "Central Oregon Daily",
         "KGW",
@@ -386,9 +435,10 @@
         "Nature World News",
         "KCBY",
         "en.edairynews.com",
-        "https://en.edairynews.com/"
+        "https://en.edairynews.com/",
+        "Your Oregon News"
       ],
-      "score": 3.83
+      "score": 3.88
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -434,29 +484,6 @@
         "nationwide": false,
         "reason": "low ceilings"
       }
-    },
-    {
-      "id": "504b2f0e2351",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
-      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
-      "source": "IranWire",
-      "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-20T10:52:30.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 8,
-      "outletNames": [
-        "DW.com",
-        "İlke Haber Ajansı",
-        "The New Voice of Ukraine",
-        "Intelligent CISO",
-        "Computing UK",
-        "IranWire",
-        "Help Net Security",
-        "SecurityWeek"
-      ],
-      "score": 3.44
     },
     {
       "id": "497408cf71f1",
@@ -543,6 +570,29 @@
         "cedarnews.net"
       ],
       "score": 1.99
+    },
+    {
+      "id": "504b2f0e2351",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
+      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
+      "source": "IranWire",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-20T10:52:30.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 8,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı",
+        "The New Voice of Ukraine",
+        "Intelligent CISO",
+        "Computing UK",
+        "IranWire",
+        "Help Net Security",
+        "SecurityWeek"
+      ],
+      "score": 3.44
     },
     {
       "id": "b0fc3c8f8eff",
@@ -643,23 +693,6 @@
       "score": 2.64
     },
     {
-      "id": "04c2e2acf99a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack targets major banking and card vendors",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:12:30.000Z",
-      "latestAt": "2026-11-19T23:12:30.000Z",
-      "firstSeenAt": "2026-11-20T03:26:28.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX 13 Tampa Bay"
-      ],
-      "score": 2.6
-    },
-    {
       "id": "2911d0fcc2e7",
       "cat": "grid",
       "kind": "news",
@@ -742,23 +775,6 @@
       "outletNames": [
         "The Motley Fool",
         "Yahoo Finance"
-      ],
-      "score": 1.73
-    },
-    {
-      "id": "58150afce8bc",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Users say Archive of Our Own (AO3) is down again today but it's not an outage",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNODEyM2hGLV9oMlh3Wm9XMS05MnRTaWZDbXRDOWVEejZRQWoyQ0RuNzNTN0tYR3dLRE1lbFMycXBYM01ES3loOENzWGJkQzZzVVVndHhpOXJjdEdpWEZtbmNSYklQUjJpRUtPY3hsTVNoY1hCWV81bnY3VkhtdU5xX1lESlBUaU1iUVE3T0JtVU5pQXZsTDlJMVJtSF85Tl9vU2pfTm53?oc=5",
-      "source": "Neowin",
-      "publishedAt": "2026-11-19T11:51:46.000Z",
-      "latestAt": "2026-11-19T19:43:45.000Z",
-      "firstSeenAt": "2026-11-19T19:55:03.493Z",
-      "outlets": 2,
-      "outletNames": [
-        "Neowin",
-        "The Sunday Guardian"
       ],
       "score": 1.73
     },
@@ -855,7 +871,7 @@
       "url": "https://www.yahoo.com/news/videos/10-000-customers-without-power-202514666.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-19T12:25:00.000Z",
-      "latestAt": "2026-11-19T20:17:29.000Z",
+      "latestAt": "2026-11-19T20:25:14.000Z",
       "firstSeenAt": "2026-11-19T22:10:22.137Z",
       "outlets": 2,
       "outletNames": [
@@ -863,6 +879,40 @@
         "YourCentralValley.com"
       ],
       "score": 1.67
+    },
+    {
+      "id": "d1805d08d398",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Study reveals how 2024 geomagnetic storm created unprecedented four electron bands in Earth’s Van Allen belts",
+      "url": "https://en.clickpetroleoegas.com.br/study-reveals-how-may-2024-geomagnetic-storm-created-four-unprecedented-electron-bands-within-earths-van-allen-belts-rmrm97/",
+      "source": "en.clickpetroleoegas",
+      "publishedAt": "2026-11-19T17:12:00.000Z",
+      "latestAt": "2026-11-20T04:12:00.000Z",
+      "firstSeenAt": "2026-11-20T04:26:27.671Z",
+      "outlets": 2,
+      "outletNames": [
+        "en.clickpetroleoegas",
+        "CPG Click Oil and Gas"
+      ],
+      "score": 1.63
+    },
+    {
+      "id": "04c2e2acf99a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack targets major banking and card vendors",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T23:12:30.000Z",
+      "latestAt": "2026-11-19T23:12:30.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 13 Tampa Bay"
+      ],
+      "score": 2.6
     },
     {
       "id": "28b64844bc13",
@@ -1123,23 +1173,6 @@
       "score": 1.63
     },
     {
-      "id": "d1805d08d398",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Study reveals how 2024 geomagnetic storm created unprecedented four electron bands in Earth’s Van Allen belts",
-      "url": "https://en.clickpetroleoegas.com.br/study-reveals-how-may-2024-geomagnetic-storm-created-four-unprecedented-electron-bands-within-earths-van-allen-belts-rmrm97/",
-      "source": "en.clickpetroleoegas",
-      "publishedAt": "2026-11-19T17:12:00.000Z",
-      "latestAt": "2026-11-20T04:12:00.000Z",
-      "firstSeenAt": "2026-11-20T04:26:27.671Z",
-      "outlets": 2,
-      "outletNames": [
-        "en.clickpetroleoegas",
-        "CPG Click Oil and Gas"
-      ],
-      "score": 1.63
-    },
-    {
       "id": "24a6ae77c3d5",
       "cat": "hacks",
       "kind": "news",
@@ -1174,6 +1207,40 @@
       "score": 1.56
     },
     {
+      "id": "b0797310a25f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "United Airlines says system outage affecting departing flights is resolved",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOW9PS1JGVVY0d2ZfVUliRjlMTTFsRkVhS3JNb1lub0lrd08yNUh4OVFoZUxhclN3dUgwdGlsSjNjSDJBUTYzNDZpWkxoNzFVSnR1Q0ZRZGo3X1NkUXU4aHlsZ01CdXVyY2RNNW9CNE9fdFZfS3ZLU3pSeFhMeFdvTU9CXzdvWWduNlNoSDQ2Y0V0NXdtMm9sSlFrNUZrbXA1MktLelIxaS1Rd1FFb1BwMHIwTFQ?oc=5",
+      "source": "Gothamist",
+      "publishedAt": "2026-11-19T22:09:00.000Z",
+      "latestAt": "2026-11-20T10:23:39.000Z",
+      "firstSeenAt": "2026-11-20T11:57:38.909Z",
+      "outlets": 2,
+      "outletNames": [
+        "Gothamist",
+        "Goshen News"
+      ],
+      "score": 1.54
+    },
+    {
+      "id": "3712e02a1b2c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16ejBjNzhGeUhBWnhVTkRHZ2sxRE4xUXZ3RVhiNTMwZlU4MUx1LUxVcG1xbi0zV1RFTzhVamxHOXd6MTFWVG5jVmctUDZQcF84U3UzcGNlbjFOQjlHX3lyQXFZYmdjNWM2UGtoM1ZVbkxzWFFDNHBwTTV5cW56UnfSAYQBQVVfeXFMUElHd25xekpscWFKV18xeHM0VUw4N1YyN0JRUFVOYmlSTGduZ0s1d2Jvc3ZFeXZBRzlDdlM1cnhuOXhCYWlid0ZSakZ2b1ljUTY2QmlaeXU0UXZrQzJISTYtWkF2Z0xMb3ZKRkg4aDlPQUhlNDdYR19pcWJtc0g2WnhQcW5W?oc=5",
+      "source": "upi",
+      "publishedAt": "2026-11-19T19:07:44.000Z",
+      "latestAt": "2026-11-20T01:19:21.000Z",
+      "firstSeenAt": "2026-11-20T11:57:38.909Z",
+      "outlets": 2,
+      "outletNames": [
+        "upi",
+        "LAmag"
+      ],
+      "score": 1.44
+    },
+    {
       "id": "60bf689c89a1",
       "cat": "internet",
       "kind": "news",
@@ -1181,7 +1248,7 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
       "source": "StoneWars.com",
       "publishedAt": "2026-11-20T11:37:19.000Z",
-      "latestAt": "2026-11-20T11:37:19.000Z",
+      "latestAt": "2026-11-20T11:37:30.000Z",
       "firstSeenAt": "2026-11-20T11:42:39.182Z",
       "outlets": 1,
       "outletNames": [
@@ -1366,6 +1433,22 @@
       "score": 1.4
     },
     {
+      "id": "83ef9fdc9f2a",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Weekend Outlook: Record heat followed by cold and snow",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVm9zMTBGLTBKZkx2QWNaNWs0eFBsQnpuSktOZ2FpdUpPOXRqVlp3VU05TDYxVXNXX3lETWxBZGtGLUxyQ3lTcWZacjIzVTRuTzc4VUEzblo3TW0xbW5NYUhQSVpJVjRqREs2UTZROFAtaTFmN2RZaFRfNEJjZC1kNWpybzZDNHc0UlhQcHZIaVloV21XLUtTQnZGVnl4b28?oc=5",
+      "source": "SooToday.com",
+      "publishedAt": "2026-11-20T11:40:50.000Z",
+      "latestAt": "2026-11-20T11:40:50.000Z",
+      "firstSeenAt": "2026-11-20T11:57:38.909Z",
+      "outlets": 1,
+      "outletNames": [
+        "SooToday.com"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "74e770b8872d",
       "cat": "hacks",
       "kind": "news",
@@ -1414,6 +1497,22 @@
       "trending": 100,
       "trendTerm": "stock market futures",
       "score": 1.38
+    },
+    {
+      "id": "abb190993a5a",
+      "cat": "markets",
+      "kind": "news",
+      "title": "AI spending fears overshadow record Anthropic IPO as Asian stocks plunge",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOM2t0WFFmQlh4RmV0SWUwb3ZVejRlNnhnMUdCYTVub2VhaUE2MTQ4bUhYMlFNc0FSSi11bUVBeU5yQXplc3AtN3lUX3dfcGpXQWdMZlZNTW5BNExsdXFpSktpTjZyVlVqbklVajZYX2ZVTklBMzQzZVBTQ0VRclJkRW1wUHRyTUJzRkVTM1FoeWE4WDVwc0dzYnhoSm9TUDhMQURMOFBsSG94QTZ6LWYyRnJfQ2ZEcUpac1Fqbks5UnNTMHE2ZEhKX0FXRWRIWW5WNk44?oc=5",
+      "source": "www.tmgm.com",
+      "publishedAt": "2026-11-20T10:28:10.000Z",
+      "latestAt": "2026-11-20T10:28:10.000Z",
+      "firstSeenAt": "2026-11-20T11:57:38.909Z",
+      "outlets": 1,
+      "outletNames": [
+        "www.tmgm.com"
+      ],
+      "score": 1.37
     },
     {
       "id": "5b812082b97b",
@@ -1673,6 +1772,22 @@
       "score": 1.08
     },
     {
+      "id": "ac22a32c4dd9",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Buildings shake in Los Angeles after it’s rocked by powerful earthquake",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQzFIMWRyVlRrb0gyUHpXcTl1elRob2oxZ2U5bkJDWVA3ck5wU084anNYdXllY19pMzhmdDVtV2pLTHNxdmVjLXp3b2NWWkJZWjNFU3hOZE5JTDBlLXZmalZtZ3hyWXYyeEhaLXVTTUtNR0ZCNUN0dllFRzJVQXhqSXprdUdrcURqSFpWUnVORndlT3k1bTBlRmlFWdIBoAFBVV95cUxQeTJJS0dlUENHaTBxODdFNThENWNZSkM5UXU1SFY0TTVmeHlsbndrNHN4bVNleTdXNjEwZDVscllyb3RZREhBNnJkUThaUVpBX2h4UkdWanI2a2c5RWhvN19FYXZiZy1DNHNjZ0p4THRESGh4ZjF5TGFNOE1paHdaMHJBNjc4LWFBZUtjcHFJZlJDeW9OTW5tU1dCUUlXS2Rm?oc=5",
+      "source": "Metro.co.uk",
+      "publishedAt": "2026-11-20T11:46:00.000Z",
+      "latestAt": "2026-11-20T11:46:00.000Z",
+      "firstSeenAt": "2026-11-20T11:57:38.909Z",
+      "outlets": 1,
+      "outletNames": [
+        "Metro.co.uk"
+      ],
+      "score": 1
+    },
+    {
       "id": "82d338b549d0",
       "cat": "markets",
       "kind": "news",
@@ -1733,38 +1848,6 @@
       "outlets": 1,
       "outletNames": [
         "Nairametrics"
-      ],
-      "score": 1
-    },
-    {
-      "id": "aa0de1545528",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "About 40 CUs in Ireland Affected by Data Breach Were Not Notified Until Weeks After Incident",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbTR1QkRxUms4dkU0QnI3ZlZRNzNwaGVKdlhYcEtOMU5aakZGZ3JGWFNkdFJ0dG5zN1ZtRl80NEFWdlpyNDBSalJKT3JFd1k1TlFFQ3R2Sk1Wc1VsZVRlU2FURFdmVzFvYTVtTGpiMFdQM2dFeGJFa0JEWGV4V3d2ekJVME91WXZDdWtuZTdTNDVqUmJBdEtObW5sWkVHNG1ZRkh3ZFd4aHk2WGhxSWlsYVBfNlBpU0U?oc=5",
-      "source": "Credit Union Daily",
-      "publishedAt": "2026-11-20T10:32:37.000Z",
-      "latestAt": "2026-11-20T10:32:37.000Z",
-      "firstSeenAt": "2026-11-20T10:42:31.579Z",
-      "outlets": 1,
-      "outletNames": [
-        "Credit Union Daily"
-      ],
-      "score": 1
-    },
-    {
-      "id": "bc10bbfc8a7c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Airline urges travelers to block cards after hackers breach ticket booking platform",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yWUd4al9Eakg3b2tKd2YzNE81U1U1ckJaQklPTmhyS1NCbVRGekVwTmNsZ0xnQnk5ZHhaVVZrdHlVYnVuRmRvbDY4S3J0VmVIU1VlZzlvY3U0RllnVVpBd0tpTVFsREl0UWpXQ0IzMXdsY0REMFAwbQ?oc=5",
-      "source": "Cybernews",
-      "publishedAt": "2026-11-20T10:31:46.000Z",
-      "latestAt": "2026-11-20T10:31:46.000Z",
-      "firstSeenAt": "2026-11-20T10:42:31.579Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cybernews"
       ],
       "score": 1
     },
@@ -1849,38 +1932,6 @@
       "score": 1
     },
     {
-      "id": "fb83add2f3bf",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ransomware incidents surged 38% in Q3",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeVpEZDNoSXlNaDdDOVhocy14b214UzZIc2ZDa3A2RVliUzhJZl9ZRlBZN0lFRm5OZE5GbGJhX2ZUWWRlQjdZa1hfTVdNQ0NBVXRpRWFlNzJQMnVPcmpuQzVGUzRNRVIwZHV0NnFsUGdjVm9ZLWUybllKZVdzNUlSV3Q1Wm9ILV9jdU54X0NkTnB2SjNYa0lDZU9BcG05UQ?oc=5",
-      "source": "StreetInsider",
-      "publishedAt": "2026-11-20T11:24:02.000Z",
-      "latestAt": "2026-11-20T11:24:02.000Z",
-      "firstSeenAt": "2026-11-20T11:42:39.182Z",
-      "outlets": 1,
-      "outletNames": [
-        "StreetInsider"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "ca8aa10330bd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Confirms Customer Data Breach Following Third-Party Compromis",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVjlTRjRxYlhOaVhULTB4NndBRkNlcFlCZ2duU1N6RUF6MGhNNklvaDlqSm1zUVJkUjZhSXVZU3Fhd2d4d2ZZaVZ2eUt2Wm1KMGJ0bDc5dXIwMWFQSkRWeG9SaDNOb2RUZXByM1JyUEtGS2lXOU4zYXlBRFRjcFluOFZ3?oc=5",
-      "source": "Infosecurity Magazine",
-      "publishedAt": "2026-11-20T11:15:00.000Z",
-      "latestAt": "2026-11-20T11:15:00.000Z",
-      "firstSeenAt": "2026-11-20T11:42:39.182Z",
-      "outlets": 1,
-      "outletNames": [
-        "Infosecurity Magazine"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "71507e8a4270",
       "cat": "earth",
       "kind": "news",
@@ -1945,22 +1996,6 @@
       "trending": 200,
       "trendTerm": "nelly korda",
       "score": 0.99
-    },
-    {
-      "id": "6fe6c5aa1d9f",
-      "cat": "earth",
-      "kind": "news",
-      "title": "2.6 magnitude earthquake shakes close to Pinnacles, CA on Nov. 20",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yWXVWVnlnR2tEZVBmQllya2NDUlZSQVNNdkl4WjEzbDZweGlQdDFhMTM5LUE0WjFsMWRLNnNYdXpGVW5XOXpDYXlYdFZGcjRHOFB6RW1qOF9oQ19RalNpTWNHZEN5S3RKNXVfTjcwLVFhanNqNWZneTBybTc?oc=5",
-      "source": "Sacramento Bee",
-      "publishedAt": "2026-11-20T08:43:05.000Z",
-      "latestAt": "2026-11-20T08:57:06.000Z",
-      "firstSeenAt": "2026-11-20T09:42:17.320Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sacramento Bee"
-      ],
-      "score": 0.98
     },
     {
       "id": "4bbee913a352",
