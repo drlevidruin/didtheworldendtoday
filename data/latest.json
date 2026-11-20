@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T10:27:27.401Z",
+  "buildTime": "2026-11-20T10:42:31.579Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 05:27 ET",
+  "etStamp": "2026-11-20 05:42 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,17 +51,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1279,
-  "lastSuccessAt": "2026-11-20T10:27:27.401Z",
+  "headlinesRead": 1345,
+  "lastSuccessAt": "2026-11-20T10:42:31.579Z",
   "rollingFallback": false,
   "cats": {
     "flights": 18,
     "hacks": 33,
     "germs": 4,
     "internet": 7,
-    "grid": 9,
-    "markets": 6,
-    "weather": 6,
+    "grid": 8,
+    "markets": 8,
+    "weather": 5,
     "ai": 4,
     "sun": 4,
     "earth": 4,
@@ -183,80 +183,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 975,
+      "count": 984,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "bing": {
       "ok": true,
-      "count": 269,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "count": 276,
+      "error": null,
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 50,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-20T00:55:55.472Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:27:27.401Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T10:27:27.401Z"
+      "lastOkAt": "2026-11-20T10:42:31.579Z"
     }
   },
   "stories": [
@@ -354,53 +355,6 @@
       }
     },
     {
-      "id": "a8c2d1f8a2f6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ransomware group reportedly leaks Chase, Visa, and Mastercard customer data, but not credit card numbers",
-      "url": "https://mashable.com/tech/n0n-ransomware-group-leaks-chase-mastercard-visa-customer-data",
-      "source": "Mashable",
-      "publishedAt": "2026-11-19T10:38:00.000Z",
-      "latestAt": "2026-11-20T04:02:21.000Z",
-      "firstSeenAt": "2026-11-20T04:26:27.671Z",
-      "outlets": 32,
-      "outletNames": [
-        "Mashable",
-        "Yahoo Finance",
-        "The Washington Post",
-        "Newsweek",
-        "FOX 8 News",
-        "Yahoo",
-        "KHOU",
-        "NBC10 Philadelphia",
-        "NBC 5 Chicago",
-        "Quartz",
-        "OFFGRID Survival",
-        "WCVB",
-        "KSWO 7News",
-        "Click2Houston",
-        "CBS News",
-        "marketscreener.com",
-        "wtvcfox",
-        "ABC News - Breaking News, Latest News and Videos",
-        "NTD News",
-        "Decrypt",
-        "Finextra Research",
-        "Reuters",
-        "Wccftech",
-        "WSJ",
-        "LiveNOW from FOX",
-        "Futurism",
-        "KVUE",
-        "wandtv.com",
-        "12News",
-        "Techlicious",
-        "NewsNation",
-        "FOX 5 New York"
-      ],
-      "score": 4.22
-    },
-    {
       "id": "a658db7bfa93",
       "cat": "hacks",
       "kind": "news",
@@ -444,6 +398,53 @@
         "10News.com"
       ],
       "score": 3.95
+    },
+    {
+      "id": "b6dcdf986663",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack may have exposed Chase Bank and Mastercard customer data",
+      "url": "https://www.washingtonpost.com/nation/2026/11/19/cyberattack-may-have-exposed-chase-bank-mastercard-customer-data/",
+      "source": "The Washington Post",
+      "publishedAt": "2026-11-19T11:08:00.000Z",
+      "latestAt": "2026-11-20T08:52:01.000Z",
+      "firstSeenAt": "2026-11-20T07:57:00.397Z",
+      "outlets": 32,
+      "outletNames": [
+        "WWBT",
+        "wandtv.com",
+        "12News",
+        "FOX5 Vegas",
+        "NewsNation",
+        "KOLD",
+        "The Washington Post",
+        "FOX 8 News",
+        "LiveNOW from FOX",
+        "Newsweek",
+        "Yahoo",
+        "KHOU",
+        "NBC10 Philadelphia",
+        "NBC 5 Chicago",
+        "Quartz",
+        "OFFGRID Survival",
+        "WCVB",
+        "Click2Houston",
+        "CBS News",
+        "marketscreener.com",
+        "wtvcfox",
+        "ABC News - Breaking News, Latest News and Videos",
+        "Yahoo Finance",
+        "Decrypt",
+        "Finextra Research",
+        "Reuters",
+        "Wccftech",
+        "WSJ",
+        "Futurism",
+        "FOX 5 New York",
+        "TRT World",
+        "Breitbart News"
+      ],
+      "score": 3.92
     },
     {
       "id": "6d7a6b3b2346",
@@ -588,53 +589,6 @@
       "score": 1.99
     },
     {
-      "id": "b6dcdf986663",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack may have exposed Chase Bank and Mastercard customer data",
-      "url": "https://www.washingtonpost.com/nation/2026/11/19/cyberattack-may-have-exposed-chase-bank-mastercard-customer-data/",
-      "source": "The Washington Post",
-      "publishedAt": "2026-11-19T11:08:00.000Z",
-      "latestAt": "2026-11-20T08:52:01.000Z",
-      "firstSeenAt": "2026-11-20T07:57:00.397Z",
-      "outlets": 32,
-      "outletNames": [
-        "WWBT",
-        "wandtv.com",
-        "12News",
-        "FOX5 Vegas",
-        "NewsNation",
-        "KOLD",
-        "The Washington Post",
-        "FOX 8 News",
-        "LiveNOW from FOX",
-        "Newsweek",
-        "Yahoo",
-        "KHOU",
-        "NBC10 Philadelphia",
-        "NBC 5 Chicago",
-        "Quartz",
-        "OFFGRID Survival",
-        "WCVB",
-        "Click2Houston",
-        "CBS News",
-        "marketscreener.com",
-        "wtvcfox",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Yahoo Finance",
-        "Decrypt",
-        "Finextra Research",
-        "Reuters",
-        "Wccftech",
-        "WSJ",
-        "Futurism",
-        "FOX 5 New York",
-        "TRT World",
-        "Breitbart News"
-      ],
-      "score": 3.92
-    },
-    {
       "id": "90996f139013",
       "cat": "hacks",
       "kind": "news",
@@ -711,6 +665,46 @@
       }
     },
     {
+      "id": "1941e519481f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan, Visa, and Mastercard disclose cyberattack on third-party vendors",
+      "url": "https://finance.yahoo.com/markets/article/jpmorgan-visa-and-mastercard-disclose-cyberattack-on-third-party-vendors-190314490.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-19T11:03:00.000Z",
+      "latestAt": "2026-11-20T08:52:01.000Z",
+      "firstSeenAt": "2026-11-20T09:57:23.123Z",
+      "outlets": 25,
+      "outletNames": [
+        "Yahoo Finance",
+        "LiveNOW from FOX",
+        "Newsweek",
+        "Yahoo",
+        "Quartz",
+        "OFFGRID Survival",
+        "CBS News",
+        "marketscreener.com",
+        "ABC News - Breaking News, Latest News and Videos",
+        "Decrypt",
+        "Finextra Research",
+        "Reuters",
+        "Wccftech",
+        "WSJ",
+        "Futurism",
+        "FOX 5 New York",
+        "iTnews",
+        "The SOFX Report",
+        "Storyboard18",
+        "Tempo.co English",
+        "Incrypted",
+        "Euronews.com",
+        "Techlicious",
+        "fox29.com",
+        "deccanchronicle.com"
+      ],
+      "score": 3.49
+    },
+    {
       "id": "b0fc3c8f8eff",
       "cat": "flights",
       "kind": "news",
@@ -736,9 +730,9 @@
       "url": "https://www.wlky.com/article/couple-airport-wedding-flight-canceled-ground-stop/74456949",
       "source": "WLKY",
       "publishedAt": "2026-11-19T13:00:00.000Z",
-      "latestAt": "2026-11-20T04:00:00.000Z",
+      "latestAt": "2026-11-20T06:15:00.000Z",
       "firstSeenAt": "2026-11-20T05:26:39.748Z",
-      "outlets": 8,
+      "outlets": 11,
       "outletNames": [
         "WLKY",
         "WCVB",
@@ -747,9 +741,12 @@
         "WESH",
         "WISN 12 News",
         "KCRA Channel 3",
-        "KCRA"
+        "KCRA",
+        "wxii12.com",
+        "wyff4.com",
+        "wlwt.com"
       ],
-      "score": 2.9
+      "score": 3.24
     },
     {
       "id": "877d7417a818",
@@ -956,92 +953,26 @@
       "score": 1.53
     },
     {
-      "id": "609d5f00cba2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "A cyberattack leaks thousands of Chase customer emails and some phone numbers",
-      "url": "https://www.dailynews.com/2026/11/19/chase-data-breach/",
-      "source": "Los Angeles Daily News",
-      "publishedAt": "2026-11-19T11:47:00.000Z",
-      "latestAt": "2026-11-20T01:26:58.000Z",
-      "firstSeenAt": "2026-11-20T04:11:25.421Z",
-      "outlets": 15,
-      "outletNames": [
-        "Los Angeles Daily News",
-        "The Baltimore Sun",
-        "AP News",
-        "niagara-gazette.com",
-        "Boston Herald",
-        "Chicago Tribune",
-        "Associated Press News",
-        "Reading Eagle",
-        "Daily Local",
-        "Marietta Daily Journal",
-        "The Batesville Daily Guard",
-        "Idaho State Journal",
-        "The Independent",
-        "104.5 WOKV",
-        "95.5 WSB"
-      ],
-      "score": 3.57
-    },
-    {
-      "id": "1941e519481f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan, Visa, and Mastercard disclose cyberattack on third-party vendors",
-      "url": "https://finance.yahoo.com/markets/article/jpmorgan-visa-and-mastercard-disclose-cyberattack-on-third-party-vendors-190314490.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-19T11:03:00.000Z",
-      "latestAt": "2026-11-20T08:52:01.000Z",
-      "firstSeenAt": "2026-11-20T09:57:23.123Z",
-      "outlets": 23,
-      "outletNames": [
-        "Yahoo Finance",
-        "LiveNOW from FOX",
-        "Newsweek",
-        "Yahoo",
-        "Quartz",
-        "OFFGRID Survival",
-        "CBS News",
-        "marketscreener.com",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Decrypt",
-        "Finextra Research",
-        "Reuters",
-        "Wccftech",
-        "WSJ",
-        "Futurism",
-        "FOX 5 New York",
-        "iTnews",
-        "The SOFX Report",
-        "Storyboard18",
-        "Tempo.co English",
-        "Incrypted",
-        "Euronews.com",
-        "Techlicious"
-      ],
-      "score": 3.41
-    },
-    {
       "id": "504b2f0e2351",
       "cat": "hacks",
       "kind": "news",
-      "title": "European Commission targeted in an AI-assisted cyberattack, spokesperson confirms",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
-      "source": "DW.com",
+      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
+      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
+      "source": "IranWire",
       "publishedAt": "2026-11-19T15:03:28.000Z",
       "latestAt": "2026-11-20T09:02:24.000Z",
       "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 5,
+      "outlets": 7,
       "outletNames": [
         "DW.com",
         "İlke Haber Ajansı",
         "The New Voice of Ukraine",
         "Intelligent CISO",
-        "Computing UK"
+        "Computing UK",
+        "IranWire",
+        "Help Net Security"
       ],
-      "score": 2.86
+      "score": 3.28
     },
     {
       "id": "80b173a24678",
@@ -1131,6 +1062,23 @@
         "95.9 The RAT"
       ],
       "score": 2.47
+    },
+    {
+      "id": "f60e65cf388c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "US to announce cause of nationwide FAA outage that disrupted 18,000 flights",
+      "url": "https://www.msn.com/en-in/news/other/us-to-announce-cause-of-nationwide-faa-outage-that-disrupted-18-000-flights/ar-AA2hOuUJ",
+      "source": "The Times of India on MSN",
+      "publishedAt": "2026-11-19T20:54:00.000Z",
+      "latestAt": "2026-11-20T05:15:00.000Z",
+      "firstSeenAt": "2026-11-20T05:11:34.772Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Times of India",
+        "timesofindia.indiatimes.com"
+      ],
+      "score": 2.41
     },
     {
       "id": "51316edfd152",
@@ -1353,6 +1301,23 @@
         "The Hill"
       ],
       "score": 1.65
+    },
+    {
+      "id": "4aca0fcdb259",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Visa and Mastercard hit by huge cyberattack as personal data leaked",
+      "url": "https://www.mirror.co.uk/news/world-news/visa-mastercard-hack-information-leaked-37897033",
+      "source": "mirror.co.uk",
+      "publishedAt": "2026-11-19T23:39:00.000Z",
+      "latestAt": "2026-11-20T05:15:00.000Z",
+      "firstSeenAt": "2026-11-20T10:42:31.579Z",
+      "outlets": 2,
+      "outletNames": [
+        "Mirror",
+        "dailystar.co.uk"
+      ],
+      "score": 1.63
     },
     {
       "id": "24a6ae77c3d5",
@@ -1581,26 +1546,6 @@
       "score": 1.39
     },
     {
-      "id": "c9f28657af43",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Risk of tornadoes for the valley as a major storm rolls through Northern California",
-      "url": "https://www.abc10.com/article/weather/weather-impact/risk-of-tornadoes-for-the-valley-as-a-major-storm-rolls-through-northern-california/103-73a32110-5aac-4449-92f6-5446337cb8df",
-      "source": "ABC10",
-      "publishedAt": "2026-11-19T10:30:00.000Z",
-      "latestAt": "2026-11-19T10:30:00.000Z",
-      "firstSeenAt": "2026-11-19T10:47:59.692Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC10"
-      ],
-      "trending": 100,
-      "trendTerm": "weather near me",
-      "score": 1.39,
-      "quiet": true,
-      "quietReason": "headline mentions tornadoes"
-    },
-    {
       "id": "5b812082b97b",
       "cat": "weather",
       "kind": "news",
@@ -1663,6 +1608,22 @@
         "TRT World"
       ],
       "score": 1.36
+    },
+    {
+      "id": "b24aa71cf00e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "A technical issue at JPMorgan Chase triggers online banking delays for major US banks",
+      "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQZzJoXzdNSmZTQnczczlzT3pSM2NZLVNZLWYyUGlnOURYM181NnFGU1lGX2o5cUhlTnR0dFQzNkVpN25IWVA3dFJyanB0N2FPV3A0NVBzMm51Q1g5Tl9OVFktUW9SY3pwMjE4LUZyeVlMd0RRbUtDMElmbFlTUllSRmFkR1RqRVJyY21pRWQ2VXlfYUVCY3JZaFdyWHUyTS1RVjVKZ3VOVnA5bkVRNkZ1dnhCS212a2NJejVTMGs4OXlxYVc4UUdXV0tfQnJHNng2eEREQzhicm96SzVfbTNIZWZiM1ExWVp4UkQ1WWRZTHh2RklzTTBiS00yVlV4eFU1TlZ6NDV6ejZFU2FmZUVVTw?oc=5",
+      "source": "Oskaloosa Herald",
+      "publishedAt": "2026-11-20T08:37:26.000Z",
+      "latestAt": "2026-11-20T08:37:26.000Z",
+      "firstSeenAt": "2026-11-20T10:42:31.579Z",
+      "outlets": 1,
+      "outletNames": [
+        "Oskaloosa Herald"
+      ],
+      "score": 1.35
     },
     {
       "id": "9c9946d9d13f",
@@ -1746,6 +1707,23 @@
       "score": 1.23
     },
     {
+      "id": "50a1337e0953",
+      "cat": "germs",
+      "kind": "news",
+      "title": "France raises bird flu alert to highest level as infections spread across Europe",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQcmpZNTZtM1dWVFA4aWZadVlpbDRUcXZHU3BCN2k4Ry1sdHVBcS1qU3NLSFNiTVI5Vk1OTXhiTTNXcjB0VGpCN1Y5NUpRcEdUaTJSTXVMX2dGcUdxUUFRNk9Uczl4UEJlTWdLbHpXVEttUWd0clREZzNVLUp2YXNZeW0ybTlpcXBMeVJxR002ZXMxazJYazlsRmhwdVVFczZKN3hvOUFZd2lhZFJBUEUzR2NaOU4ydklaMGc?oc=5",
+      "source": "RFI",
+      "publishedAt": "2026-11-19T11:12:37.000Z",
+      "latestAt": "2026-11-20T01:04:17.000Z",
+      "firstSeenAt": "2026-11-20T10:42:31.579Z",
+      "outlets": 2,
+      "outletNames": [
+        "RFI",
+        "The Poultry Site"
+      ],
+      "score": 1.22
+    },
+    {
       "id": "5b08db75b6b4",
       "cat": "flights",
       "kind": "news",
@@ -1758,22 +1736,6 @@
       "outlets": 1,
       "outletNames": [
         "wyomingnewsnow.tv"
-      ],
-      "score": 1.21
-    },
-    {
-      "id": "f60e65cf388c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US to announce cause of nationwide FAA outage that disrupted 18,000 flights",
-      "url": "https://www.msn.com/en-in/news/other/us-to-announce-cause-of-nationwide-faa-outage-that-disrupted-18-000-flights/ar-AA2hOuUJ",
-      "source": "The Times of India on MSN",
-      "publishedAt": "2026-11-19T20:54:00.000Z",
-      "latestAt": "2026-11-20T04:54:00.000Z",
-      "firstSeenAt": "2026-11-20T05:11:34.772Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Times of India"
       ],
       "score": 1.21
     },
@@ -1856,6 +1818,38 @@
         "The Daily Beast"
       ],
       "score": 1.08
+    },
+    {
+      "id": "aa0de1545528",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "About 40 CUs in Ireland Affected by Data Breach Were Not Notified Until Weeks After Incident",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbTR1QkRxUms4dkU0QnI3ZlZRNzNwaGVKdlhYcEtOMU5aakZGZ3JGWFNkdFJ0dG5zN1ZtRl80NEFWdlpyNDBSalJKT3JFd1k1TlFFQ3R2Sk1Wc1VsZVRlU2FURFdmVzFvYTVtTGpiMFdQM2dFeGJFa0JEWGV4V3d2ekJVME91WXZDdWtuZTdTNDVqUmJBdEtObW5sWkVHNG1ZRkh3ZFd4aHk2WGhxSWlsYVBfNlBpU0U?oc=5",
+      "source": "Credit Union Daily",
+      "publishedAt": "2026-11-20T10:32:37.000Z",
+      "latestAt": "2026-11-20T10:32:37.000Z",
+      "firstSeenAt": "2026-11-20T10:42:31.579Z",
+      "outlets": 1,
+      "outletNames": [
+        "Credit Union Daily"
+      ],
+      "score": 1
+    },
+    {
+      "id": "bc10bbfc8a7c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Airline urges travelers to block cards after hackers breach ticket booking platform",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yWUd4al9Eakg3b2tKd2YzNE81U1U1ckJaQklPTmhyS1NCbVRGekVwTmNsZ0xnQnk5ZHhaVVZrdHlVYnVuRmRvbDY4S3J0VmVIU1VlZzlvY3U0RllnVVpBd0tpTVFsREl0UWpXQ0IzMXdsY0REMFAwbQ?oc=5",
+      "source": "Cybernews",
+      "publishedAt": "2026-11-20T10:31:46.000Z",
+      "latestAt": "2026-11-20T10:31:46.000Z",
+      "firstSeenAt": "2026-11-20T10:42:31.579Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cybernews"
+      ],
+      "score": 1
     },
     {
       "id": "5220352e97b0",
@@ -1956,67 +1950,39 @@
       "score": 1
     },
     {
-      "id": "9165b9f127b0",
-      "cat": "hacks",
+      "id": "4c78b09d193c",
+      "cat": "markets",
       "kind": "news",
-      "title": "Chase vendor hack could fuel wave of phishing scams, expert warns",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOV1hXOThsY0lSbklSX0o5MW8wZXJBekgtNlQwaGRqWWx5ZW9uSG1lZGlrTG9zZ3h3VGVnXy1HWEpPVDV1SW1BRVVieXp2ZjhaaVNnSW5zZ2ZEZHNfeWFXVlNMbmxzOVhRZWR4UUJiT0VnS0lZb3RPX0R6eFlYUWVZYXpHMFRfWC1nX3lsVXNNONIBlAFBVV95cUxQU01MWVRHYk1PWVNxbzZTaWZrdmNwRkg4NllMVENmVzN1QVIxakZUZFZNT3FyX3BoRzJHQnJBSGQzdERSUmRCeEM0V3hpN2FzOEZZSk9VVTR3cnFyQnZPUGhQYTE1NG1ZMzVJd0JyUU04VHpzQ0NmYXU5QnhKVmdaY1dSYUJGY2tBVUJYMWsyLVVoaWM5?oc=5",
-      "source": "NewsNation",
-      "publishedAt": "2026-11-20T09:59:50.000Z",
-      "latestAt": "2026-11-20T09:59:50.000Z",
-      "firstSeenAt": "2026-11-20T10:27:27.401Z",
+      "title": "Stock Market Today: Anthropic Stock Drops Premarket as Tech Rout Intensifies",
+      "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-20-2026",
+      "source": "WSJ",
+      "publishedAt": "2026-11-20T10:20:00.000Z",
+      "latestAt": "2026-11-20T10:20:00.000Z",
+      "firstSeenAt": "2026-11-20T10:42:31.579Z",
       "outlets": 1,
       "outletNames": [
-        "NewsNation"
+        "WSJ"
       ],
+      "trending": 100,
+      "trendTerm": "stock market futures",
       "score": 0.99
     },
     {
-      "id": "7e84222e62d2",
-      "cat": "hacks",
+      "id": "dca877c9803b",
+      "cat": "markets",
       "kind": "news",
-      "title": "JPMorgan, Visa and Mastercard customers affected by vendor cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdnJxdW55N2dqS3M1cVZhQVA0cEVVcUoycmxUXzVXbmF4dWtyZE80Wl9NQzlQbk1TUVlIZHpEOXhIQXIyTWNJVWJGeU9BVGliNUV3MTNrelRCdS1mT0JMem96Q0daV3pUblIxSnJvZTJhNDdiN196emFiZHhTNUpLR3RleEFPa2hWcWhjTnVvakhkZEF3QTN5a0lpTk1oV1E?oc=5",
-      "source": "FStech",
-      "publishedAt": "2026-11-20T09:56:38.000Z",
-      "latestAt": "2026-11-20T09:56:38.000Z",
-      "firstSeenAt": "2026-11-20T10:27:27.401Z",
+      "title": "Stock market today: Dow, S&P 500, Nasdaq futures continue to sell-off after Anthropic IPO fails to quell AI worries",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-19-dow-sp-500-nasdaq-anthropic-nvidia-volatility-092827348.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-20T10:20:00.000Z",
+      "latestAt": "2026-11-20T10:20:00.000Z",
+      "firstSeenAt": "2026-11-20T10:42:31.579Z",
       "outlets": 1,
       "outletNames": [
-        "FStech"
+        "Yahoo Finance"
       ],
-      "score": 0.99
-    },
-    {
-      "id": "e0001b904cfd",
-      "cat": "grid",
-      "kind": "news",
-      "title": "16-Hour Power Outage in Karachi: K-Electric Releases List of Affected Areas",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYXpxNEYzVHdoS1FCWUlIVURleHZEc0FhbWhrS1BZSjJ2Y1o1V25CZUg4VGtSSFdlN3Q4dFFjVUcyQ1Fqbmp0dGVlMHJWazh6OUc3UmpWbG82Y09XUElIYjl2bkVGLTloUGhMSGFEVXFxWDdQLS1BUlRkZmFEZHBTVTdNZnIwVVpXMmgzRVRiR0NYdGwwVnBmcA?oc=5",
-      "source": "MM News",
-      "publishedAt": "2026-11-20T09:45:00.000Z",
-      "latestAt": "2026-11-20T09:45:00.000Z",
-      "firstSeenAt": "2026-11-20T10:27:27.401Z",
-      "outlets": 1,
-      "outletNames": [
-        "MM News"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "4bbee913a352",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Council urges not to feed wild birds amid confirmed Bird Flu cases in Caversham",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbENSY2xaaEFaWG1iVXVGZmhnV0NRUmQ5SEFrYnNoUmVhVmhPeWNwNnpYcHlyZkNZdjdtcko2UmJoQklXajM4WU5jWnZRMGdSQ2ZmMUpNT3hHaWJFZ3VrazJQdzNRUFpPVHdCUGR5OEt5anRYNlhqb1BaV3BuYi1nTlBXV1hGaEEzcE1ZYmZNMmNaVTRqUnd3VmJfMkdadDA?oc=5",
-      "source": "Reading Today Online",
-      "publishedAt": "2026-11-20T08:57:09.000Z",
-      "latestAt": "2026-11-20T09:02:38.000Z",
-      "firstSeenAt": "2026-11-20T09:27:15.197Z",
-      "outlets": 1,
-      "outletNames": [
-        "Reading Today Online"
-      ],
+      "trending": 100,
+      "trendTerm": "stock market futures",
       "score": 0.99
     },
     {
@@ -2093,7 +2059,7 @@
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8yWXVWVnlnR2tEZVBmQllya2NDUlZSQVNNdkl4WjEzbDZweGlQdDFhMTM5LUE0WjFsMWRLNnNYdXpGVW5XOXpDYXlYdFZGcjRHOFB6RW1qOF9oQ19RalNpTWNHZEN5S3RKNXVfTjcwLVFhanNqNWZneTBybTc?oc=5",
       "source": "Sacramento Bee",
       "publishedAt": "2026-11-20T08:43:05.000Z",
-      "latestAt": "2026-11-20T08:43:05.000Z",
+      "latestAt": "2026-11-20T08:57:06.000Z",
       "firstSeenAt": "2026-11-20T09:42:17.320Z",
       "outlets": 1,
       "outletNames": [
