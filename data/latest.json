@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T09:57:23.123Z",
+  "buildTime": "2026-11-20T10:12:37.265Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 04:57 ET",
+  "etStamp": "2026-11-20 05:12 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,20 +51,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1255,
-  "lastSuccessAt": "2026-11-20T09:57:23.123Z",
+  "headlinesRead": 311,
+  "lastSuccessAt": "2026-11-20T10:12:37.265Z",
   "rollingFallback": false,
   "cats": {
     "flights": 18,
-    "hacks": 33,
+    "hacks": 31,
     "germs": 4,
-    "internet": 8,
-    "grid": 8,
+    "internet": 7,
+    "grid": 9,
     "markets": 6,
     "weather": 6,
     "ai": 4,
     "sun": 4,
-    "earth": 4,
+    "earth": 6,
     "space": 4,
     "animals": 1
   },
@@ -140,8 +140,8 @@
         {
           "id": "zoom",
           "name": "Zoom",
-          "indicator": "none",
-          "description": "All Systems Operational"
+          "indicator": "maintenance",
+          "description": "Service Under Maintenance"
         },
         {
           "id": "coinbase",
@@ -169,7 +169,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -187,16 +187,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 948,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-20T09:57:23.123Z"
     },
     "bing": {
       "ok": true,
-      "count": 272,
+      "count": 276,
       "error": null,
-      "lastOkAt": "2026-11-20T09:57:23.123Z"
+      "lastOkAt": "2026-11-20T10:12:37.265Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,37 +208,37 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T09:57:23.123Z"
+      "lastOkAt": "2026-11-20T10:12:37.265Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T09:57:23.123Z"
+      "lastOkAt": "2026-11-20T10:12:37.265Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T09:57:23.123Z"
+      "lastOkAt": "2026-11-20T10:12:37.265Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T09:57:23.123Z"
+      "lastOkAt": "2026-11-20T10:12:37.265Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T09:57:23.123Z"
+      "lastOkAt": "2026-11-20T10:12:37.265Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T09:57:23.123Z"
+      "lastOkAt": "2026-11-20T10:12:37.265Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T09:57:23.123Z"
+      "lastOkAt": "2026-11-20T10:12:37.265Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T09:57:23.123Z"
+      "lastOkAt": "2026-11-20T10:12:37.265Z"
     }
   },
   "stories": [
@@ -739,23 +739,26 @@
       "score": 3.36
     },
     {
-      "id": "97f014fb3101",
+      "id": "bec04669a41a",
       "cat": "flights",
       "kind": "news",
-      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
-      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T12:02:50.000Z",
-      "latestAt": "2026-11-19T20:30:00.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
-      "outlets": 4,
+      "title": "Love isn't in the air, it's at baggage claim during ground stop at Denver International Airport",
+      "url": "https://www.wlky.com/article/couple-airport-wedding-flight-canceled-ground-stop/74456949",
+      "source": "WLKY",
+      "publishedAt": "2026-11-19T13:00:00.000Z",
+      "latestAt": "2026-11-20T04:00:00.000Z",
+      "firstSeenAt": "2026-11-20T05:26:39.748Z",
+      "outlets": 7,
       "outletNames": [
-        "KXAN Austin",
-        "13newsnow.com",
-        "Scientific American",
-        "Yahoo"
+        "WLKY",
+        "WCVB",
+        "KOCO",
+        "KOAT Channel 7",
+        "WESH",
+        "WISN 12 News",
+        "KCRA Channel 3"
       ],
-      "score": 2.64
+      "score": 2.76
     },
     {
       "id": "877d7417a818",
@@ -773,23 +776,6 @@
         "The Mercury News"
       ],
       "score": 1.95
-    },
-    {
-      "id": "9b9715506ba6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Internet services disrupted across Pakistan due to undersea cable fault",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQY25MT1kwVXhudUk1UlNybEpEa0lmNERtMFRkLXVOOGFqUjJ3VWVpb2hNakMxZmFUVVdGSGRvYUZvWnA0RVZkMWk0d19FRk1pUVNzQTN0cE5ET2hnRkNYYzdkQThxbWN1R05DdEpncFBkNzlEMnlRZHNMaUVjSUdNdFZmRTNEMkRFLThpdXF1cFlVYlJ5Q3NIYjdiRkNMN09EanBfa1h4SHlmd0HSAbABQVVfeXFMUFU0ZDJkZjE0YlNKREs1Y0pvUWQ1ZVVhZjUydERkNVFTTERPLWVucDRObFFBRGdScEh1UWtsSFBhX3BoRjhmck9YRko0azlQNDhMRkc0YXdQSzBoakEwa0lMRU1ZeGJ3Yl9Qc1gzVHFGeTJBbU9RUVZlVGVOYm9uWFI5VHRMTkZMVFZFUmFJZzNDVER0cUU1d2JEOXpUS3E5TV9kaERYUWVfRFNXbE0tXzc?oc=5",
-      "source": "Daily Ausaf",
-      "publishedAt": "2026-11-19T09:59:26.000Z",
-      "latestAt": "2026-11-19T11:29:31.000Z",
-      "firstSeenAt": "2026-11-19T11:53:33.824Z",
-      "outlets": 2,
-      "outletNames": [
-        "Daily Ausaf",
-        "Hamariweb.com"
-      ],
-      "score": 1.94
     },
     {
       "id": "35b14d6a8530",
@@ -962,6 +948,23 @@
       "score": 1.67
     },
     {
+      "id": "d1805d08d398",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Study reveals how 2024 geomagnetic storm created unprecedented four electron bands in Earth’s Van Allen belts",
+      "url": "https://en.clickpetroleoegas.com.br/study-reveals-how-may-2024-geomagnetic-storm-created-four-unprecedented-electron-bands-within-earths-van-allen-belts-rmrm97/",
+      "source": "en.clickpetroleoegas",
+      "publishedAt": "2026-11-19T17:12:00.000Z",
+      "latestAt": "2026-11-20T04:12:00.000Z",
+      "firstSeenAt": "2026-11-20T04:26:27.671Z",
+      "outlets": 2,
+      "outletNames": [
+        "en.clickpetroleoegas",
+        "CPG Click Oil and Gas"
+      ],
+      "score": 1.63
+    },
+    {
       "id": "1941e519481f",
       "cat": "hacks",
       "kind": "news",
@@ -1054,6 +1057,25 @@
       "score": 2.65
     },
     {
+      "id": "97f014fb3101",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
+      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:02:50.000Z",
+      "latestAt": "2026-11-19T20:30:00.000Z",
+      "firstSeenAt": "2026-11-19T19:12:09.123Z",
+      "outlets": 4,
+      "outletNames": [
+        "KXAN Austin",
+        "13newsnow.com",
+        "Scientific American",
+        "Yahoo"
+      ],
+      "score": 2.64
+    },
+    {
       "id": "04c2e2acf99a",
       "cat": "hacks",
       "kind": "news",
@@ -1067,27 +1089,6 @@
       "outletNames": [
         "Yahoo",
         "FOX 13 Tampa Bay"
-      ],
-      "score": 2.6
-    },
-    {
-      "id": "bec04669a41a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Love isn't in the air, it's at baggage claim during ground stop at Denver International Airport",
-      "url": "https://www.wlky.com/article/couple-airport-wedding-flight-canceled-ground-stop/74456949",
-      "source": "WLKY",
-      "publishedAt": "2026-11-19T13:00:00.000Z",
-      "latestAt": "2026-11-20T04:00:00.000Z",
-      "firstSeenAt": "2026-11-20T05:26:39.748Z",
-      "outlets": 6,
-      "outletNames": [
-        "WLKY",
-        "WCVB",
-        "KOCO",
-        "KOAT Channel 7",
-        "WESH",
-        "WISN 12 News"
       ],
       "score": 2.6
     },
@@ -1125,24 +1126,6 @@
         "BBC"
       ],
       "score": 2.42
-    },
-    {
-      "id": "3e3e07455f30",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Bulgaria says hackers stole 62M pages of government documents",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNS3o1NUpkdXRHaU82MmtwWjd5UXNkUHVOSjU3RWNENjlLa0NJaW5hdVJFQ284WFgtMWllNnVNR0NwX1AtQjEzLWJPalliX1gxakRTTHVwSV9ROUFyc0haQjQtMDRLSWRJdkdPbHhlYndDR1NzbVdoT1BSZkdQYzhkOFQycVlQZTBKQ1dMbGxJZkRUdkpFUC1EZ29WMGh3UQ?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-19T10:05:30.000Z",
-      "latestAt": "2026-11-19T11:46:10.000Z",
-      "firstSeenAt": "2026-11-19T14:09:00.345Z",
-      "outlets": 3,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "KOHA JONË",
-        "A News"
-      ],
-      "score": 2.41
     },
     {
       "id": "51316edfd152",
@@ -1316,23 +1299,6 @@
       "score": 1.73
     },
     {
-      "id": "a336b1fb73df",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Leak Stolen JPMorgan Data Exposing Wealthy Clients’ Private Information",
-      "url": "https://www.gadgetreview.com/hackers-leak-stolen-jpmorgan-data-exposing-wealthy-clients-private-information",
-      "source": "Gadget Review",
-      "publishedAt": "2026-11-19T10:11:00.000Z",
-      "latestAt": "2026-11-19T18:11:54.000Z",
-      "firstSeenAt": "2026-11-19T18:24:46.059Z",
-      "outlets": 2,
-      "outletNames": [
-        "Gadget Review",
-        "Yahoo"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "c77caedd2626",
       "cat": "hacks",
       "kind": "news",
@@ -1399,23 +1365,6 @@
         "The Hill"
       ],
       "score": 1.65
-    },
-    {
-      "id": "d1805d08d398",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Study reveals how 2024 geomagnetic storm created unprecedented four electron bands in Earth’s Van Allen belts",
-      "url": "https://en.clickpetroleoegas.com.br/study-reveals-how-may-2024-geomagnetic-storm-created-four-unprecedented-electron-bands-within-earths-van-allen-belts-rmrm97/",
-      "source": "en.clickpetroleoegas",
-      "publishedAt": "2026-11-19T17:12:00.000Z",
-      "latestAt": "2026-11-20T04:12:00.000Z",
-      "firstSeenAt": "2026-11-20T04:26:27.671Z",
-      "outlets": 2,
-      "outletNames": [
-        "en.clickpetroleoegas",
-        "CPG Click Oil and Gas"
-      ],
-      "score": 1.63
     },
     {
       "id": "acdf0a408a1a",
@@ -1889,6 +1838,22 @@
       "score": 1.11
     },
     {
+      "id": "b6dc7ce69b5b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Millions of Americans brace for possible power outages across FIVE states as households urged to prepare NOW",
+      "url": "https://www.the-sun.com/news/17331345/americans-prepare-emergency-power-cuts-five-states/",
+      "source": "The US Sun",
+      "publishedAt": "2026-11-19T21:02:00.000Z",
+      "latestAt": "2026-11-19T21:02:00.000Z",
+      "firstSeenAt": "2026-11-20T10:12:37.265Z",
+      "outlets": 1,
+      "outletNames": [
+        "The US Sun"
+      ],
+      "score": 1.09
+    },
+    {
       "id": "6c5d5ea61729",
       "cat": "hacks",
       "kind": "news",
@@ -2101,6 +2066,22 @@
       "score": 0.98
     },
     {
+      "id": "79439296a66d",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Update: 2.7 magnitude earthquake detected near Primo Tapia, B.C., MX on Nov. 18",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBDdTRzcERXdFdjZVd1Q2U2WnlLNEthTzR3UmdpXzQ5czMtR1RMcDBzTGtiTkQ4QUc1UENXbmJDb3JGRUViX1k3aEVVQXlvS1JUNE5vSUN3UzlJQmUtTDJiUFA1eF9ZbkZ4WkRQVE8tOUxJVGxwaWJSVTBEck4?oc=5",
+      "source": "Sacramento Bee",
+      "publishedAt": "2026-11-19T17:22:06.000Z",
+      "latestAt": "2026-11-19T17:22:06.000Z",
+      "firstSeenAt": "2026-11-19T18:39:49.132Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sacramento Bee"
+      ],
+      "score": 0.98
+    },
+    {
       "id": "2b7575e120a2",
       "cat": "space",
       "kind": "news",
@@ -2117,6 +2098,24 @@
       "score": 0.98
     },
     {
+      "id": "e92ac3b8a269",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Volcano erupts in southern Japan, no evacuation warning",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSVpWQVpVQUlwdDgwQTg3cHJpSnA3QVlra1ZwZjRRODBEUjM4X1Y4U2sxS1ItYkFzd3BDbFdlMEpvNDg1LVFyV2pXd295TE5vQTREdkI3YTJNcmhwczZyOVc2aHprLUdWeGdoVVhDRVI5YkhuZENLdTRzQ1J2WGdzS3FNbkpQbDRrQnFLYWRMLWUzb1FDRS1rTw?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-19T23:03:17.000Z",
+      "latestAt": "2026-11-19T23:03:17.000Z",
+      "firstSeenAt": "2026-11-20T00:40:48.102Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yeni Safak English"
+      ],
+      "score": 0.97,
+      "quiet": true,
+      "quietReason": "headline mentions evacuation"
+    },
+    {
       "id": "3f99b2a2a3e3",
       "cat": "ai",
       "kind": "news",
@@ -2124,7 +2123,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-20T00:48:00.000Z",
-      "latestAt": "2026-11-20T00:48:00.000Z",
+      "latestAt": "2026-11-20T01:51:00.000Z",
       "firstSeenAt": "2026-11-20T09:27:15.197Z",
       "outlets": 1,
       "outletNames": [
