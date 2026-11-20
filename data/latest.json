@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T11:27:35.190Z",
+  "buildTime": "2026-11-20T11:42:39.182Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 06:27 ET",
+  "etStamp": "2026-11-20 06:42 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,14 +51,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1020,
-  "lastSuccessAt": "2026-11-20T11:27:35.190Z",
+  "headlinesRead": 1231,
+  "lastSuccessAt": "2026-11-20T11:42:39.182Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 18,
     "hacks": 31,
+    "flights": 17,
     "germs": 4,
-    "internet": 7,
+    "internet": 8,
     "grid": 8,
     "markets": 10,
     "earth": 4,
@@ -172,33 +172,31 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "3 Kyiv bridges struck in massive Russian aerial assault on Ukraine, at least 8 dead"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 710,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 21 of 26 queries)",
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "count": 965,
+      "error": null,
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
-      "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "count": 231,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     },
     "gdelt": {
       "ok": false,
@@ -210,105 +208,59 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "lastOkAt": "2026-11-20T11:27:35.190Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T11:27:35.190Z"
+      "lastOkAt": "2026-11-20T11:42:39.182Z"
     }
   },
   "stories": [
-    {
-      "id": "f3287ab342cd",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Ground stop leads to airport wedding",
-      "url": "https://www.wctv.tv/2026/11/19/ground-stop-leads-airport-wedding/",
-      "source": "WCTV",
-      "publishedAt": "2026-11-19T11:41:00.000Z",
-      "latestAt": "2026-11-20T01:52:53.000Z",
-      "firstSeenAt": "2026-11-19T19:40:09.535Z",
-      "outlets": 32,
-      "outletNames": [
-        "AZ Family",
-        "KKTV",
-        "KY3",
-        "14 News",
-        "WNEM",
-        "KWQC",
-        "FOX19 | Cincinnati",
-        "WMTV 15 NEWS",
-        "WIFR",
-        "Upper Michigan's Source",
-        "WVLT",
-        "WTVA",
-        "WDBJ7",
-        "KFDA | NewsChannel 10",
-        "Atlanta News First",
-        "FOX5 Vegas",
-        "WAFB",
-        "KCRG",
-        "WEEK | 25 News Now",
-        "WWBT",
-        "WABI",
-        "KOTA Territory News",
-        "WTAP",
-        "Live 5 News",
-        "WECT",
-        "WTHI-TV",
-        "WBTV",
-        "KOLD",
-        "WDRB",
-        "Western Mass News",
-        "WBNG",
-        "KSWO 7News"
-      ],
-      "score": 5.2
-    },
     {
       "id": "a658db7bfa93",
       "cat": "hacks",
@@ -319,7 +271,7 @@
       "publishedAt": "2026-11-19T15:18:00.000Z",
       "latestAt": "2026-11-20T10:52:14.000Z",
       "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "Yahoo",
         "BBC",
@@ -327,9 +279,10 @@
         "The Telegraph",
         "Anadolu Ajansı",
         "Arise News",
-        "MyJoyOnline"
+        "MyJoyOnline",
+        "NewsCord"
       ],
-      "score": 4.54
+      "score": 4.77
     },
     {
       "id": "sig:faa-stop:LAS:2026-11-19",
@@ -438,33 +391,6 @@
       "score": 3.83
     },
     {
-      "id": "ce3b0f14cf6a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
-      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-19T14:55:29.000Z",
-      "latestAt": "2026-11-20T02:07:53.000Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 10,
-      "outletNames": [
-        "6abc Philadelphia",
-        "ABC News - Breaking News, Latest News and Videos",
-        "kaaltv.com",
-        "ABC Columbia",
-        "upi",
-        "weisradio.com",
-        "Everett Post",
-        "ABC7 Chicago",
-        "LAmag",
-        "Rural Radio Network"
-      ],
-      "trending": 10000,
-      "trendTerm": "jpmorgan chase cyber attack",
-      "score": 3.66
-    },
-    {
       "id": "sig:status:openai:2026-11-19",
       "cat": "internet",
       "kind": "signal",
@@ -485,6 +411,52 @@
         "page": "openai",
         "description": "Partial System Outage"
       }
+    },
+    {
+      "id": "sig:faa-stop:AUS:2026-11-19",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at AUS (low ceilings)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-19T14:24:11.067Z",
+      "latestAt": "2026-11-19T14:24:11.067Z",
+      "firstSeenAt": "2026-11-19T14:24:11.067Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "AUS",
+        "hub": false,
+        "nationwide": false,
+        "reason": "low ceilings"
+      }
+    },
+    {
+      "id": "504b2f0e2351",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
+      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
+      "source": "IranWire",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-20T10:52:30.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 8,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı",
+        "The New Voice of Ukraine",
+        "Intelligent CISO",
+        "Computing UK",
+        "IranWire",
+        "Help Net Security",
+        "SecurityWeek"
+      ],
+      "score": 3.44
     },
     {
       "id": "497408cf71f1",
@@ -573,29 +545,6 @@
       "score": 1.99
     },
     {
-      "id": "sig:faa-stop:AUS:2026-11-19",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at AUS (low ceilings)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-19T14:24:11.067Z",
-      "latestAt": "2026-11-19T14:24:11.067Z",
-      "firstSeenAt": "2026-11-19T14:24:11.067Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "AUS",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low ceilings"
-      }
-    },
-    {
       "id": "b0fc3c8f8eff",
       "cat": "flights",
       "kind": "news",
@@ -612,28 +561,6 @@
         "The Standard-Speaker"
       ],
       "score": 3.36
-    },
-    {
-      "id": "bfba4b3925cd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
-      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
-      "source": "IranWire",
-      "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-20T10:52:30.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 7,
-      "outletNames": [
-        "DW.com",
-        "İlke Haber Ajansı",
-        "The New Voice of Ukraine",
-        "Intelligent CISO",
-        "Computing UK",
-        "IranWire",
-        "Help Net Security"
-      ],
-      "score": 3.28
     },
     {
       "id": "bec04669a41a",
@@ -695,6 +622,42 @@
         "Yahoo"
       ],
       "score": 2.76
+    },
+    {
+      "id": "97f014fb3101",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
+      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:02:50.000Z",
+      "latestAt": "2026-11-19T20:30:00.000Z",
+      "firstSeenAt": "2026-11-19T19:12:09.123Z",
+      "outlets": 4,
+      "outletNames": [
+        "KXAN Austin",
+        "13newsnow.com",
+        "Scientific American",
+        "Yahoo"
+      ],
+      "score": 2.64
+    },
+    {
+      "id": "04c2e2acf99a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack targets major banking and card vendors",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T23:12:30.000Z",
+      "latestAt": "2026-11-19T23:12:30.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 13 Tampa Bay"
+      ],
+      "score": 2.6
     },
     {
       "id": "2911d0fcc2e7",
@@ -902,42 +865,6 @@
       "score": 1.67
     },
     {
-      "id": "97f014fb3101",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
-      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T12:02:50.000Z",
-      "latestAt": "2026-11-19T20:30:00.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
-      "outlets": 4,
-      "outletNames": [
-        "KXAN Austin",
-        "13newsnow.com",
-        "Scientific American",
-        "Yahoo"
-      ],
-      "score": 2.64
-    },
-    {
-      "id": "04c2e2acf99a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack targets major banking and card vendors",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:12:30.000Z",
-      "latestAt": "2026-11-19T23:12:30.000Z",
-      "firstSeenAt": "2026-11-20T03:26:28.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX 13 Tampa Bay"
-      ],
-      "score": 2.6
-    },
-    {
       "id": "28b64844bc13",
       "cat": "flights",
       "kind": "news",
@@ -1110,21 +1037,22 @@
       "score": 1.87
     },
     {
-      "id": "899534eeb6c3",
+      "id": "b6dcdf986663",
       "cat": "hacks",
       "kind": "news",
-      "title": "Equinor Says Cyberattack Still Ongoing",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVHVzRlJBajVpOFJpZ180T1VDeUxmYVB5dERFaEVHaTVLSm5RcnduS3hJVTlGQlRac3JWNjlwRktOY0UwOG9QcG1FQ0Y4bWRjaVFYNkgzTElQczFQOGlZR1BCNlBOb1d2Y2ozMXpNWnpaN0pNY2xkMExGc2VkdXBpamZrN2dvM1BvcTItR0h4V29jb3VGbGc?oc=5",
-      "source": "marketscreener.com",
-      "publishedAt": "2026-11-19T11:39:12.000Z",
-      "latestAt": "2026-11-19T14:58:00.000Z",
-      "firstSeenAt": "2026-11-19T16:09:24.808Z",
-      "outlets": 2,
+      "title": "Chase Bank announces cyberattack, says hackers may have obtained customers’ personal information",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQb2Q0ZE10Ykw4cVRzeTdqVTU2b01xTmtLUTNILVpZRGtOX2s4MDVqYi1HUjZiYmhucVl5Z2dFcjhSV0cyTXp4eGtCQUFWZldBcXNDNkZPR0Z3b09jRGR5YXdZWWRXay1UTGNQdE81U21CT1VaQ2Via0pQaTV4ZGloY1lhQTM0R1U5Q2RhZ05FTGJjQnVpc0UyQXY5d1Vwbmc4ZEthbGpzczY5dHJ6RjRBanJsb19ObjhyTzc0cHM1SG8zT2Z6RUHSAdoBQVVfeXFMTnR3SEw1UDVPaUFzM2JrT0JvTW1sMWFIRHN4OEdMV253UklleHpZZlRMaHUwTTJBNWVvS3NsTGw1Rjd0Q2RBdkpFUS1Gd3NKR2U3djZ0aW83T2ZQR3F6N3RVUG1teWlZSHpvX0l1cWdmcmVSZi0yb0lsaWpsN05qeXpXcV9SRzZNTWJJWXpOb0JSOC1ldjBXZmhyWEp0ZjJ3MkpKb3pya1ZwWTN6V21lNjNRdHB0T0JSb3NYdmpsOG9rUjZRM3VuaXlYRTZrb3YxYmhXaVYxT19Va3c?oc=5",
+      "source": "KOLD",
+      "publishedAt": "2026-11-19T17:52:00.000Z",
+      "latestAt": "2026-11-20T00:48:13.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 3,
       "outletNames": [
-        "marketscreener.com",
-        "EnergyWatch"
+        "KOLD",
+        "wandtv.com",
+        "FOX5 Vegas"
       ],
-      "score": 1.85
+      "score": 1.82
     },
     {
       "id": "7ecaf2b2bd2b",
@@ -1161,23 +1089,6 @@
       "score": 1.72
     },
     {
-      "id": "504b2f0e2351",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission targeted in an AI-assisted cyberattack, spokesperson confirms",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
-      "source": "DW.com",
-      "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-19T16:11:09.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 2,
-      "outletNames": [
-        "DW.com",
-        "İlke Haber Ajansı"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "82b3f3881601",
       "cat": "hacks",
       "kind": "news",
@@ -1193,23 +1104,6 @@
         "marketscreener.com"
       ],
       "score": 1.7
-    },
-    {
-      "id": "145bf1d3df58",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "O’Reilly suggests building technology like Iron Dome to prevent hackers: ‘They’re not going away’",
-      "url": "https://www.yahoo.com/news/politics/articles/o-reilly-suggests-building-technology-193211823.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T11:32:00.000Z",
-      "latestAt": "2026-11-19T19:32:00.000Z",
-      "firstSeenAt": "2026-11-19T21:55:23.506Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "The Hill"
-      ],
-      "score": 1.65
     },
     {
       "id": "4aca0fcdb259",
@@ -1278,6 +1172,38 @@
         "Insurance Business"
       ],
       "score": 1.56
+    },
+    {
+      "id": "60bf689c89a1",
+      "cat": "internet",
+      "kind": "news",
+      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
+      "source": "StoneWars.com",
+      "publishedAt": "2026-11-20T11:37:19.000Z",
+      "latestAt": "2026-11-20T11:37:19.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 1,
+      "outletNames": [
+        "StoneWars.com"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "3383e4bd7e29",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Gas supplier giant Equinor hit by cyberattack — Europe's biggest gas supplier says it has now restored services",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPeUZ4aGd6X1V4dmF3cGtwUDQ0ZUFRZHZEaENuNExzRVRDcGMwdjRlR21iU2NhbnN1X1gyWFBwS1gyUm40eXdhM091WWN6QWRpUmlQRFhNNWk1UEhSeEgyWmxlV0FtZHh5T2R2aG9IOU51THZBTHRuT09yMFh2MzVwRUNKX0dXVVZ4TGdSLVEtZ2VSdHBhUDFVWEpRVU12WGRyOWtnd1VpZC1GUU9rTndaUFllU1ZwMm9YMk45M0N1WF9PRFdOVFdPQnZkbFRFUzg2b2NhdWdMS2FnR0ZrT2N6SQ?oc=5",
+      "source": "TechRadar",
+      "publishedAt": "2026-11-20T11:30:33.000Z",
+      "latestAt": "2026-11-20T11:30:33.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 1,
+      "outletNames": [
+        "TechRadar"
+      ],
+      "score": 1.4
     },
     {
       "id": "1055221191c6",
@@ -1747,6 +1673,54 @@
       "score": 1.08
     },
     {
+      "id": "82d338b549d0",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Taiwan Stocks Plunge 2,393 Points; AI High-Flyers Elite Material, Unimicron, Asia Vital Components Hit Limit Down as Foreign Brokerage Says Valuation Overcorrected",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1oeDRXYlZOeHZOQ1FJVnlBdnI3V3BFR0NBbk1aRFlsNFFVSVBudlRaUUxmVFRJOTdMck44RXBwWTF0djdocTdIZHpyMTRkTzRhR2VNUGtGSlA5STNzenBuanJHRWFoOUoxYzViYXhhWHlaS1hibkE?oc=5",
+      "source": "finance.biggo.com",
+      "publishedAt": "2026-11-20T11:35:00.000Z",
+      "latestAt": "2026-11-20T11:35:00.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 1,
+      "outletNames": [
+        "finance.biggo.com"
+      ],
+      "score": 1
+    },
+    {
+      "id": "0a21a1aebb51",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Asian Stocks Plunge as Anthropic IPO Fails to Calm Markets",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9RMGQ4bHcwVTI4cW5DTU8tamZBbS1GakpCNklkSmsyUVFJTVN4M1BhcnN1cjlBOVhrM2ZmZEFxaTJBV2EwUFB5ay1pNzVlTDNKREUxVGJIb2dqWEFQNEllNVZTRGpSOVB3?oc=5",
+      "source": "Peradaban.id",
+      "publishedAt": "2026-11-20T11:28:42.000Z",
+      "latestAt": "2026-11-20T11:28:42.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 1,
+      "outletNames": [
+        "Peradaban.id"
+      ],
+      "score": 1
+    },
+    {
+      "id": "5db8d3d3123a",
+      "cat": "space",
+      "kind": "news",
+      "title": "Asteroid 2026 WJ to pass Earth at 1.7 lunar distances at 04:20 UTC on November 22, with 2026 WD following at 4.4 lunar distances on November 23",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQT0daU2Nwb2Zic2lXS2x0Ml9kN1ZwUUl5enVuVWM0NGR6QTc4MGRIOEMzZEMxY1BRRl9iWkxoOFlBNFc5NWZHWUotOEh1aE9id2FQQ0ZaSE9ka1lRS0JqZFZLb2hiS3JJVmlsVjZ1RFdSZmpkWTgxVUFLVWJzMlR0LUdfcGNreXdJSjVPcEVid0gtNkYxZ0NGYzl1b1JKZkVOMkR6dkE5NHNjclla?oc=5",
+      "source": "The Watchers - Watching the world evolve and transform",
+      "publishedAt": "2026-11-20T11:26:27.000Z",
+      "latestAt": "2026-11-20T11:26:27.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Watchers - Watching the world evolve and transform"
+      ],
+      "score": 1
+    },
+    {
       "id": "4112e5db8fa1",
       "cat": "markets",
       "kind": "news",
@@ -1875,39 +1849,35 @@
       "score": 1
     },
     {
-      "id": "4c78b09d193c",
-      "cat": "markets",
+      "id": "fb83add2f3bf",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Stock Market Today: Anthropic Stock Drops Premarket as Tech Rout Intensifies",
-      "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-20-2026",
-      "source": "WSJ",
-      "publishedAt": "2026-11-20T10:20:00.000Z",
-      "latestAt": "2026-11-20T10:20:00.000Z",
-      "firstSeenAt": "2026-11-20T10:42:31.579Z",
+      "title": "Ransomware incidents surged 38% in Q3",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeVpEZDNoSXlNaDdDOVhocy14b214UzZIc2ZDa3A2RVliUzhJZl9ZRlBZN0lFRm5OZE5GbGJhX2ZUWWRlQjdZa1hfTVdNQ0NBVXRpRWFlNzJQMnVPcmpuQzVGUzRNRVIwZHV0NnFsUGdjVm9ZLWUybllKZVdzNUlSV3Q1Wm9ILV9jdU54X0NkTnB2SjNYa0lDZU9BcG05UQ?oc=5",
+      "source": "StreetInsider",
+      "publishedAt": "2026-11-20T11:24:02.000Z",
+      "latestAt": "2026-11-20T11:24:02.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
       "outlets": 1,
       "outletNames": [
-        "WSJ"
+        "StreetInsider"
       ],
-      "trending": 100,
-      "trendTerm": "stock market futures",
       "score": 0.99
     },
     {
-      "id": "dca877c9803b",
-      "cat": "markets",
+      "id": "ca8aa10330bd",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Stock market today: Dow, S&P 500, Nasdaq futures continue to sell-off after Anthropic IPO fails to quell AI worries",
-      "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-19-dow-sp-500-nasdaq-anthropic-nvidia-volatility-092827348.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-20T10:20:00.000Z",
-      "latestAt": "2026-11-20T10:20:00.000Z",
-      "firstSeenAt": "2026-11-20T10:42:31.579Z",
+      "title": "JPMorgan Confirms Customer Data Breach Following Third-Party Compromis",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVjlTRjRxYlhOaVhULTB4NndBRkNlcFlCZ2duU1N6RUF6MGhNNklvaDlqSm1zUVJkUjZhSXVZU3Fhd2d4d2ZZaVZ2eUt2Wm1KMGJ0bDc5dXIwMWFQSkRWeG9SaDNOb2RUZXByM1JyUEtGS2lXOU4zYXlBRFRjcFluOFZ3?oc=5",
+      "source": "Infosecurity Magazine",
+      "publishedAt": "2026-11-20T11:15:00.000Z",
+      "latestAt": "2026-11-20T11:15:00.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
       "outlets": 1,
       "outletNames": [
-        "Yahoo Finance"
+        "Infosecurity Magazine"
       ],
-      "trending": 100,
-      "trendTerm": "stock market futures",
       "score": 0.99
     },
     {
@@ -1989,22 +1959,6 @@
       "outlets": 1,
       "outletNames": [
         "Sacramento Bee"
-      ],
-      "score": 0.98
-    },
-    {
-      "id": "2b7575e120a2",
-      "cat": "space",
-      "kind": "news",
-      "title": "5 asteroids racing towards Earth at 47,880 km: NASA tracks dangerous space rocks on November 19 and 20",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZk93VlFBV3Z1VUtCdHgxM3Q4eDlMaGhYbzBBNWUxVWdvclVseWxtYmtvbkpEN2J2dThKblNlVHNVQ2x1V2ZXclpSU2sxWjFzMnliSmpGSDhtTThwOUlMN3MzclBWYWYxU01GM0lfNkE0S2gzRF9uNks2TE1yTDhneFlqM3FfM2ZhRzJKTzVPTjFHR19uM0VwMG81VkRrT1RYeGZfUHM3QTktSVVqV1RHYjBvYXNJeUtmUXQ4Tl9QT2Etb1RMSGxVaGZQenhBNlZLYmF3eWc3UVY1UdIB2gFBVV95cUxQZk93VlFBV3Z1VUtCdHgxM3Q4eDlMaGhYbzBBNWUxVWdvclVseWxtYmtvbkpEN2J2dThKblNlVHNVQ2x1V2ZXclpSU2sxWjFzMnliSmpGSDhtTThwOUlMN3MzclBWYWYxU01GM0lfNkE0S2gzRF9uNks2TE1yTDhneFlqM3FfM2ZhRzJKTzVPTjFHR19uM0VwMG81VkRrT1RYeGZfUHM3QTktSVVqV1RHYjBvYXNJeUtmUXQ4Tl9QT2Etb1RMSGxVaGZQenhBNlZLYmF3eWc3UVY1UQ?oc=5",
-      "source": "News24Online",
-      "publishedAt": "2026-11-19T16:42:07.000Z",
-      "latestAt": "2026-11-19T16:42:07.000Z",
-      "firstSeenAt": "2026-11-19T18:09:44.298Z",
-      "outlets": 1,
-      "outletNames": [
-        "News24Online"
       ],
       "score": 0.98
     },
