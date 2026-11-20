@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T02:41:25.934Z",
+  "buildTime": "2026-11-20T02:56:13.125Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 21:41 ET",
+  "etStamp": "2026-11-19 21:56 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,12 +50,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1251,
-  "lastSuccessAt": "2026-11-20T02:41:25.934Z",
+  "headlinesRead": 332,
+  "lastSuccessAt": "2026-11-20T02:56:13.125Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
-    "hacks": 38,
+    "flights": 16,
+    "hacks": 37,
     "germs": 4,
     "internet": 12,
     "earth": 4,
@@ -182,20 +182,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 947,
-      "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "count": 34,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 2 of 26 queries)",
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     },
     "bing": {
       "ok": true,
-      "count": 268,
-      "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "count": 263,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,55 +207,56 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T02:41:25.934Z"
+      "lastOkAt": "2026-11-20T02:56:13.125Z"
     }
   },
   "stories": [
@@ -1386,23 +1387,6 @@
       "score": 1.77
     },
     {
-      "id": "3712e02a1b2c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16ejBjNzhGeUhBWnhVTkRHZ2sxRE4xUXZ3RVhiNTMwZlU4MUx1LUxVcG1xbi0zV1RFTzhVamxHOXd6MTFWVG5jVmctUDZQcF84U3UzcGNlbjFOQjlHX3lyQXFZYmdjNWM2UGtoM1ZVbkxzWFFDNHBwTTV5cW56UnfSAYQBQVVfeXFMUElHd25xekpscWFKV18xeHM0VUw4N1YyN0JRUFVOYmlSTGduZ0s1d2Jvc3ZFeXZBRzlDdlM1cnhuOXhCYWlid0ZSakZ2b1ljUTY2QmlaeXU0UXZrQzJISTYtWkF2Z0xMb3ZKRkg4aDlPQUhlNDdYR19pcWJtc0g2WnhQcW5W?oc=5",
-      "source": "upi",
-      "publishedAt": "2026-11-19T19:07:44.000Z",
-      "latestAt": "2026-11-20T01:19:21.000Z",
-      "firstSeenAt": "2026-11-20T02:41:25.934Z",
-      "outlets": 2,
-      "outletNames": [
-        "upi",
-        "LAmag"
-      ],
-      "score": 1.75
-    },
-    {
       "id": "58150afce8bc",
       "cat": "internet",
       "kind": "news",
@@ -1886,6 +1870,22 @@
       "score": 1.39,
       "quiet": true,
       "quietReason": "headline mentions tornadoes"
+    },
+    {
+      "id": "ac8fef0be9f1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop put focus on air traffic controller shortages at Phoenix Sky Harbor, nationwide",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNamp4azdfZUV1TzgtTV85NXhvamtFeXk2RFNyY3RYM3ZQeFBLRTNJaDAySE4tYTlRa2pCMi15QWZnRmw1clVCcTFqT0xXV094MVJWOUtFdFd0Vno0YmFGZmwxd0Zxa2JLX0owNE1LWDloaktRR1JsandJVFhLRWJtTllWaUQtMGJLOG5MT2RiQkl4VWZ1aVhjOEhMbmRvRnJtS1FNRVpUUmk4Qkdla3dHNG12ZHFQWkJIZXRPcngxelc0eFRQVEVRMWJSTHdmdnE0Q0lzZ0ZCY2lfblZWNnpLS3BhNFJZcDVtOGowQkdFUlZSRDltRzVsUGt0NWlvRGdvaEtWRnlON1dCQnJaM29tRlhud0w?oc=5",
+      "source": "PinalCentral.com",
+      "publishedAt": "2026-11-19T03:05:03.000Z",
+      "latestAt": "2026-11-19T03:05:03.000Z",
+      "firstSeenAt": "2026-11-19T03:22:20.740Z",
+      "outlets": 1,
+      "outletNames": [
+        "PinalCentral.com"
+      ],
+      "score": 1.39
     },
     {
       "id": "8838110540f0",
