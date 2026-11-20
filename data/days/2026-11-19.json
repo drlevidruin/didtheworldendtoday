@@ -155,15 +155,15 @@
       "score": 4.63
     },
     {
-      "id": "sig:faa-stop:SAN:2026-11-19",
+      "id": "sig:faa-stop:LAS:2026-11-19",
       "cat": "flights",
       "kind": "signal",
-      "title": "FAA ground stop at SAN (low visibility)",
+      "title": "FAA ground stop at LAS (low ceilings)",
       "url": "https://nasstatus.faa.gov/",
       "source": "FAA",
-      "publishedAt": "2026-11-20T00:10:40.191Z",
-      "latestAt": "2026-11-20T00:10:40.191Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "publishedAt": "2026-11-20T03:41:23.681Z",
+      "latestAt": "2026-11-20T03:41:23.681Z",
+      "firstSeenAt": "2026-11-20T03:41:23.681Z",
       "outlets": 1,
       "outletNames": [
         "FAA"
@@ -171,10 +171,10 @@
       "score": 4.5,
       "signal": {
         "type": "faa-ground-stop",
-        "airport": "SAN",
+        "airport": "LAS",
         "hub": true,
         "nationwide": false,
-        "reason": "low visibility"
+        "reason": "low ceilings"
       }
     },
     {
@@ -395,6 +395,29 @@
       "score": 2.66
     },
     {
+      "id": "sig:faa-stop:SAN:2026-11-19",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SAN (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-20T00:10:40.191Z",
+      "latestAt": "2026-11-20T00:10:40.191Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SAN",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
+    },
+    {
       "id": "21ec90f1e9d6",
       "cat": "flights",
       "kind": "news",
@@ -523,25 +546,6 @@
         "The Cool Down"
       ],
       "score": 2.73
-    },
-    {
-      "id": "97f014fb3101",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
-      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T12:02:50.000Z",
-      "latestAt": "2026-11-19T20:30:00.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
-      "outlets": 4,
-      "outletNames": [
-        "KXAN Austin",
-        "13newsnow.com",
-        "Scientific American",
-        "Yahoo"
-      ],
-      "score": 2.64
     },
     {
       "id": "a83b29445024",
@@ -752,28 +756,6 @@
       "score": 2.94
     },
     {
-      "id": "e358feae5cc2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Supermarket refrigerators got hacked. Make sure your smart home devices are secure",
-      "url": "https://www.mcall.com/2026/11/19/smart-home-devices-security/",
-      "source": "The Morning Call",
-      "publishedAt": "2026-11-19T03:27:00.000Z",
-      "latestAt": "2026-11-19T09:00:00.000Z",
-      "firstSeenAt": "2026-11-19T17:24:34.573Z",
-      "outlets": 7,
-      "outletNames": [
-        "The Morning Call",
-        "Orlando Sentinel",
-        "The Mercury News",
-        "Boston Herald",
-        "Pioneer Press",
-        "Orange County Register",
-        "The Baltimore Sun"
-      ],
-      "score": 2.92
-    },
-    {
       "id": "3223634bacce",
       "cat": "hacks",
       "kind": "news",
@@ -789,6 +771,25 @@
         "Investing.com Canada"
       ],
       "score": 2.8
+    },
+    {
+      "id": "97f014fb3101",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
+      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:02:50.000Z",
+      "latestAt": "2026-11-19T20:30:00.000Z",
+      "firstSeenAt": "2026-11-19T19:12:09.123Z",
+      "outlets": 4,
+      "outletNames": [
+        "KXAN Austin",
+        "13newsnow.com",
+        "Scientific American",
+        "Yahoo"
+      ],
+      "score": 2.64
     },
     {
       "id": "b0fc3c8f8eff",
@@ -1903,5 +1904,5 @@
       "score": 0.79
     }
   ],
-  "updatedAt": "2026-11-20T03:26:28.712Z"
+  "updatedAt": "2026-11-20T03:41:23.681Z"
 }

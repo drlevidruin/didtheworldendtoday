@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T03:26:28.712Z",
+  "buildTime": "2026-11-20T03:41:23.681Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 22:26 ET",
+  "etStamp": "2026-11-19 22:41 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,12 +50,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1257,
-  "lastSuccessAt": "2026-11-20T03:26:28.712Z",
+  "headlinesRead": 308,
+  "lastSuccessAt": "2026-11-20T03:41:23.681Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
-    "hacks": 39,
+    "flights": 15,
+    "hacks": 38,
     "germs": 4,
     "internet": 12,
     "earth": 4,
@@ -91,7 +91,13 @@
       "upcoming": true
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "LAS",
+          "hub": true,
+          "reason": "low ceilings"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 3,
       "closures": 0,
@@ -186,16 +192,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 946,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "lastOkAt": "2026-11-20T03:41:23.681Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,37 +213,37 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "lastOkAt": "2026-11-20T03:41:23.681Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "lastOkAt": "2026-11-20T03:41:23.681Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "lastOkAt": "2026-11-20T03:41:23.681Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "lastOkAt": "2026-11-20T03:41:23.681Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "lastOkAt": "2026-11-20T03:41:23.681Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "lastOkAt": "2026-11-20T03:41:23.681Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +256,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "lastOkAt": "2026-11-20T03:41:23.681Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T03:26:28.712Z"
+      "lastOkAt": "2026-11-20T03:41:23.681Z"
     }
   },
   "stories": [
@@ -387,15 +393,15 @@
       "score": 4.63
     },
     {
-      "id": "sig:faa-stop:SAN:2026-11-19",
+      "id": "sig:faa-stop:LAS:2026-11-19",
       "cat": "flights",
       "kind": "signal",
-      "title": "FAA ground stop at SAN (low visibility)",
+      "title": "FAA ground stop at LAS (low ceilings)",
       "url": "https://nasstatus.faa.gov/",
       "source": "FAA",
-      "publishedAt": "2026-11-20T00:10:40.191Z",
-      "latestAt": "2026-11-20T00:10:40.191Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "publishedAt": "2026-11-20T03:41:23.681Z",
+      "latestAt": "2026-11-20T03:41:23.681Z",
+      "firstSeenAt": "2026-11-20T03:41:23.681Z",
       "outlets": 1,
       "outletNames": [
         "FAA"
@@ -403,10 +409,10 @@
       "score": 4.5,
       "signal": {
         "type": "faa-ground-stop",
-        "airport": "SAN",
+        "airport": "LAS",
         "hub": true,
         "nationwide": false,
-        "reason": "low visibility"
+        "reason": "low ceilings"
       }
     },
     {
@@ -627,6 +633,29 @@
       "score": 2.66
     },
     {
+      "id": "sig:faa-stop:SAN:2026-11-19",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SAN (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-20T00:10:40.191Z",
+      "latestAt": "2026-11-20T00:10:40.191Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SAN",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
+    },
+    {
       "id": "21ec90f1e9d6",
       "cat": "flights",
       "kind": "news",
@@ -755,25 +784,6 @@
         "The Cool Down"
       ],
       "score": 2.73
-    },
-    {
-      "id": "97f014fb3101",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
-      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T12:02:50.000Z",
-      "latestAt": "2026-11-19T20:30:00.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
-      "outlets": 4,
-      "outletNames": [
-        "KXAN Austin",
-        "13newsnow.com",
-        "Scientific American",
-        "Yahoo"
-      ],
-      "score": 2.64
     },
     {
       "id": "a83b29445024",
@@ -984,28 +994,6 @@
       "score": 2.94
     },
     {
-      "id": "e358feae5cc2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Supermarket refrigerators got hacked. Make sure your smart home devices are secure",
-      "url": "https://www.mcall.com/2026/11/19/smart-home-devices-security/",
-      "source": "The Morning Call",
-      "publishedAt": "2026-11-19T03:27:00.000Z",
-      "latestAt": "2026-11-19T09:00:00.000Z",
-      "firstSeenAt": "2026-11-19T17:24:34.573Z",
-      "outlets": 7,
-      "outletNames": [
-        "The Morning Call",
-        "Orlando Sentinel",
-        "The Mercury News",
-        "Boston Herald",
-        "Pioneer Press",
-        "Orange County Register",
-        "The Baltimore Sun"
-      ],
-      "score": 2.92
-    },
-    {
       "id": "3223634bacce",
       "cat": "hacks",
       "kind": "news",
@@ -1021,6 +1009,25 @@
         "Investing.com Canada"
       ],
       "score": 2.8
+    },
+    {
+      "id": "97f014fb3101",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
+      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:02:50.000Z",
+      "latestAt": "2026-11-19T20:30:00.000Z",
+      "firstSeenAt": "2026-11-19T19:12:09.123Z",
+      "outlets": 4,
+      "outletNames": [
+        "KXAN Austin",
+        "13newsnow.com",
+        "Scientific American",
+        "Yahoo"
+      ],
+      "score": 2.64
     },
     {
       "id": "b0fc3c8f8eff",
