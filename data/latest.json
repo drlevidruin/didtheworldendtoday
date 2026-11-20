@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T10:57:31.748Z",
+  "buildTime": "2026-11-20T11:12:32.202Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 05:57 ET",
+  "etStamp": "2026-11-20 06:12 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,16 +51,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1268,
-  "lastSuccessAt": "2026-11-20T10:57:31.748Z",
+  "headlinesRead": 1184,
+  "lastSuccessAt": "2026-11-20T11:12:32.202Z",
   "rollingFallback": false,
   "cats": {
     "flights": 19,
-    "hacks": 32,
+    "hacks": 30,
     "germs": 4,
     "internet": 7,
     "grid": 8,
-    "markets": 8,
+    "markets": 10,
     "weather": 5,
     "ai": 4,
     "sun": 4,
@@ -95,7 +95,7 @@
       "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
-      "closures": 1,
+      "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -188,15 +188,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 957,
+      "count": 977,
       "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
-      "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "count": 173,
+      "error": "10 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,37 +208,37 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T10:57:31.748Z"
+      "lastOkAt": "2026-11-20T11:12:32.202Z"
     }
   },
   "stories": [
@@ -307,55 +307,6 @@
         "KSWO 7News"
       ],
       "score": 5.2
-    },
-    {
-      "id": "ce3b0f14cf6a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan, Visa, and Mastercard disclose cyberattack on third-party vendors",
-      "url": "https://finance.yahoo.com/markets/article/jpmorgan-visa-and-mastercard-disclose-cyberattack-on-third-party-vendors-190314490.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-19T11:03:00.000Z",
-      "latestAt": "2026-11-20T10:42:37.000Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 32,
-      "outletNames": [
-        "6abc Philadelphia",
-        "ABC News - Breaking News, Latest News and Videos",
-        "kaaltv.com",
-        "ABC Columbia",
-        "upi",
-        "weisradio.com",
-        "Everett Post",
-        "ABC7 Chicago",
-        "LAmag",
-        "Rural Radio Network",
-        "WBAL News Radio",
-        "WWBT",
-        "wandtv.com",
-        "12News",
-        "FOX5 Vegas",
-        "NewsNation",
-        "KOLD",
-        "The Washington Post",
-        "FOX 8 News",
-        "LiveNOW from FOX",
-        "Newsweek",
-        "Yahoo",
-        "KHOU",
-        "NBC10 Philadelphia",
-        "NBC 5 Chicago",
-        "Quartz",
-        "OFFGRID Survival",
-        "WCVB",
-        "Click2Houston",
-        "CBS News",
-        "marketscreener.com",
-        "wtvcfox"
-      ],
-      "trending": 10000,
-      "trendTerm": "jpmorgan chase cyber attack",
-      "score": 4.69
     },
     {
       "id": "sig:faa-stop:LAS:2026-11-19",
@@ -507,6 +458,28 @@
       }
     },
     {
+      "id": "504b2f0e2351",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
+      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
+      "source": "IranWire",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-20T10:52:30.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 7,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı",
+        "The New Voice of Ukraine",
+        "Intelligent CISO",
+        "Computing UK",
+        "IranWire",
+        "Help Net Security"
+      ],
+      "score": 3.28
+    },
+    {
       "id": "497408cf71f1",
       "cat": "internet",
       "kind": "news",
@@ -634,28 +607,6 @@
       "score": 3.36
     },
     {
-      "id": "504b2f0e2351",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
-      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
-      "source": "IranWire",
-      "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-20T10:52:29.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 7,
-      "outletNames": [
-        "DW.com",
-        "İlke Haber Ajansı",
-        "The New Voice of Ukraine",
-        "Intelligent CISO",
-        "Computing UK",
-        "IranWire",
-        "Help Net Security"
-      ],
-      "score": 3.28
-    },
-    {
       "id": "bec04669a41a",
       "cat": "flights",
       "kind": "news",
@@ -682,6 +633,29 @@
       "score": 3.24
     },
     {
+      "id": "609d5f00cba2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "A cyberattack leaks thousands of Chase customer emails and some phone numbers",
+      "url": "https://www.dailynews.com/2026/11/19/chase-data-breach/",
+      "source": "Los Angeles Daily News",
+      "publishedAt": "2026-11-19T11:47:00.000Z",
+      "latestAt": "2026-11-20T01:26:58.000Z",
+      "firstSeenAt": "2026-11-20T04:11:25.421Z",
+      "outlets": 8,
+      "outletNames": [
+        "Los Angeles Daily News",
+        "The Baltimore Sun",
+        "AP News",
+        "niagara-gazette.com",
+        "Boston Herald",
+        "Chicago Tribune",
+        "Associated Press News",
+        "95.5 WSB"
+      ],
+      "score": 2.91
+    },
+    {
       "id": "80b173a24678",
       "cat": "hacks",
       "kind": "news",
@@ -699,22 +673,21 @@
       "score": 2.76
     },
     {
-      "id": "f54c54e006b3",
+      "id": "04c2e2acf99a",
       "cat": "hacks",
       "kind": "news",
-      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
-      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
+      "title": "Cyberattack targets major banking and card vendors",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
       "source": "Yahoo",
-      "publishedAt": "2026-11-19T11:04:00.000Z",
-      "latestAt": "2026-11-20T02:10:51.000Z",
-      "firstSeenAt": "2026-11-20T03:11:30.805Z",
-      "outlets": 3,
+      "publishedAt": "2026-11-19T23:12:30.000Z",
+      "latestAt": "2026-11-19T23:12:30.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "outlets": 2,
       "outletNames": [
-        "KTNV Las Vegas",
         "Yahoo",
-        "KTNV 13 Action News"
+        "FOX 13 Tampa Bay"
       ],
-      "score": 2.65
+      "score": 2.6
     },
     {
       "id": "877d7417a818",
@@ -938,23 +911,6 @@
         "Yahoo"
       ],
       "score": 2.64
-    },
-    {
-      "id": "04c2e2acf99a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack targets major banking and card vendors",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:12:30.000Z",
-      "latestAt": "2026-11-19T23:12:30.000Z",
-      "firstSeenAt": "2026-11-20T03:26:28.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX 13 Tampa Bay"
-      ],
-      "score": 2.6
     },
     {
       "id": "28b64844bc13",
@@ -1304,7 +1260,7 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-20T06:15:43.000Z",
-      "latestAt": "2026-11-20T10:10:29.000Z",
+      "latestAt": "2026-11-20T11:08:35.000Z",
       "firstSeenAt": "2026-11-20T06:26:52.947Z",
       "outlets": 1,
       "outletNames": [
@@ -1455,6 +1411,24 @@
         "Crypto Briefing"
       ],
       "score": 1.39
+    },
+    {
+      "id": "79d7e7245b0b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Anthropic suffers steep decline overnight as Wall Street worries about depth of ‘correction’ amid global selloff",
+      "url": "https://fortune.com/2026/11/20/anthropic-stock-decline-overnight-correction-global-selloff/",
+      "source": "Fortune",
+      "publishedAt": "2026-11-20T10:20:00.000Z",
+      "latestAt": "2026-11-20T10:20:00.000Z",
+      "firstSeenAt": "2026-11-20T11:12:32.202Z",
+      "outlets": 1,
+      "outletNames": [
+        "Fortune"
+      ],
+      "trending": 100,
+      "trendTerm": "stock market futures",
+      "score": 1.38
     },
     {
       "id": "5b812082b97b",
@@ -1731,6 +1705,22 @@
       "score": 1.08
     },
     {
+      "id": "4112e5db8fa1",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Nigerian stocks plunge on heavy sell-offs in Dangote Cement, Aradel, and banks amid falling oil and weaker naira",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOZE52S3hmVzFURFVQeVpxMmd4bm9WZnBRR0VHYlNWaEtUc0VKelVwejZYOWpHc3N2MWZjbll5Vndzams2YjZyUHloclk4WmdkcG5OMDVlYndHUzl1RzJfcXJOQVVXU0NWMnVYNEpjbjk2S2RSTUxMU29RX2QxNGE0cE1uOE9JdEt1dnQ3MjdHN2ZuYTFBWFNjREVtREtEV1d6dFJNbm5TcmRIajBnMHRzSk1QdHlER0lUb1JfakVjWXZoa1otX0ppVFVpZkgtb3Q3SVlrS3RaS3d0U3IwMjQ1Yg?oc=5",
+      "source": "Nairametrics",
+      "publishedAt": "2026-11-20T11:04:55.000Z",
+      "latestAt": "2026-11-20T11:04:55.000Z",
+      "firstSeenAt": "2026-11-20T11:12:32.202Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nairametrics"
+      ],
+      "score": 1
+    },
+    {
       "id": "aa0de1545528",
       "cat": "hacks",
       "kind": "news",
@@ -1979,34 +1969,18 @@
       "score": 0.99
     },
     {
-      "id": "9165b9f127b0",
+      "id": "89c45d59ab74",
       "cat": "hacks",
       "kind": "news",
-      "title": "Chase vendor hack could fuel wave of phishing scams, expert warns",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOV1hXOThsY0lSbklSX0o5MW8wZXJBekgtNlQwaGRqWWx5ZW9uSG1lZGlrTG9zZ3h3VGVnXy1HWEpPVDV1SW1BRVVieXp2ZjhaaVNnSW5zZ2ZEZHNfeWFXVlNMbmxzOVhRZWR4UUJiT0VnS0lZb3RPX0R6eFlYUWVZYXpHMFRfWC1nX3lsVXNNONIBlAFBVV95cUxQU01MWVRHYk1PWVNxbzZTaWZrdmNwRkg4NllMVENmVzN1QVIxakZUZFZNT3FyX3BoRzJHQnJBSGQzdERSUmRCeEM0V3hpN2FzOEZZSk9VVTR3cnFyQnZPUGhQYTE1NG1ZMzVJd0JyUU04VHpzQ0NmYXU5QnhKVmdaY1dSYUJGY2tBVUJYMWsyLVVoaWM5?oc=5",
-      "source": "NewsNation",
-      "publishedAt": "2026-11-20T09:59:50.000Z",
-      "latestAt": "2026-11-20T09:59:50.000Z",
-      "firstSeenAt": "2026-11-20T10:57:31.748Z",
+      "title": "‘Staff deserve answers’ on Commission cyberattack, union says",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVDRJWllWRGVqN2MzUHY0X1otRWJvM3hsZXVtRVhTcnZMOExMNWtTdjZlT3loTHNuZlpLQ1U5UGtOc2lqVlREaWFycU9iQzdSZnNkMmxGZzdsMWYtcGMtb3NYSm9YT1dEd2tKa0g5Mkl6QS0zX1BjRGxkYnFJRnQtUHdwVEwtbUZWbTh4MkdxdVdPREpQV1E?oc=5",
+      "source": "POLITICO.eu",
+      "publishedAt": "2026-11-20T10:04:00.000Z",
+      "latestAt": "2026-11-20T10:04:00.000Z",
+      "firstSeenAt": "2026-11-20T11:12:32.202Z",
       "outlets": 1,
       "outletNames": [
-        "NewsNation"
-      ],
-      "score": 0.98
-    },
-    {
-      "id": "7e84222e62d2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan, Visa and Mastercard customers affected by vendor cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdnJxdW55N2dqS3M1cVZhQVA0cEVVcUoycmxUXzVXbmF4dWtyZE80Wl9NQzlQbk1TUVlIZHpEOXhIQXIyTWNJVWJGeU9BVGliNUV3MTNrelRCdS1mT0JMem96Q0daV3pUblIxSnJvZTJhNDdiN196emFiZHhTNUpLR3RleEFPa2hWcWhjTnVvakhkZEF3QTN5a0lpTk1oV1E?oc=5",
-      "source": "FStech",
-      "publishedAt": "2026-11-20T09:56:38.000Z",
-      "latestAt": "2026-11-20T09:56:38.000Z",
-      "firstSeenAt": "2026-11-20T10:57:31.748Z",
-      "outlets": 1,
-      "outletNames": [
-        "FStech"
+        "POLITICO.eu"
       ],
       "score": 0.98
     },
