@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T03:11:30.805Z",
+  "buildTime": "2026-11-20T03:26:28.712Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 22:11 ET",
+  "etStamp": "2026-11-19 22:26 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,16 +50,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1252,
-  "lastSuccessAt": "2026-11-20T03:11:30.805Z",
+  "headlinesRead": 1257,
+  "lastSuccessAt": "2026-11-20T03:26:28.712Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
+    "flights": 14,
     "hacks": 39,
     "germs": 4,
     "internet": 12,
     "earth": 4,
-    "grid": 6,
+    "grid": 7,
     "markets": 4,
     "space": 4,
     "weather": 4,
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 942,
+      "count": 946,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "bing": {
       "ok": true,
-      "count": 275,
+      "count": 276,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T00:55:55.472Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T03:11:30.805Z"
+      "lastOkAt": "2026-11-20T03:26:28.712Z"
     }
   },
   "stories": [
@@ -344,7 +344,7 @@
       "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
       "source": "The Straits Times",
       "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-20T02:59:18.000Z",
+      "latestAt": "2026-11-20T03:07:40.000Z",
       "firstSeenAt": "2026-11-19T17:39:41.337Z",
       "outlets": 32,
       "outletNames": [
@@ -466,7 +466,7 @@
       "publishedAt": "2026-11-19T04:28:00.000Z",
       "latestAt": "2026-11-20T02:38:04.000Z",
       "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 17,
+      "outlets": 18,
       "outletNames": [
         "KGW",
         "KTVZ",
@@ -484,9 +484,10 @@
         "Your Oregon News",
         "Oregon Public Broadcasting",
         "KPIC",
-        "KMTR"
+        "KMTR",
+        "KCBY"
       ],
-      "score": 3.71
+      "score": 3.77
     },
     {
       "id": "41bda97d8bc2",
@@ -965,6 +966,24 @@
       "score": 1.71
     },
     {
+      "id": "f54c54e006b3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
+      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T16:00:00.000Z",
+      "latestAt": "2026-11-20T02:10:51.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "outlets": 3,
+      "outletNames": [
+        "KTNV Las Vegas",
+        "Yahoo",
+        "KTNV 13 Action News"
+      ],
+      "score": 2.94
+    },
+    {
       "id": "e358feae5cc2",
       "cat": "hacks",
       "kind": "news",
@@ -1113,6 +1132,24 @@
       "score": 2.41
     },
     {
+      "id": "51316edfd152",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase, Visa, and Mastercard say cyber incidents at vendors put customer data at risk",
+      "url": "https://www.msn.com/en-us/news/other/chase-visa-and-mastercard-say-cyber-incidents-at-vendors-put-customer-data-at-risk/ar-AA2hNshD",
+      "source": "Insider on MSN",
+      "publishedAt": "2026-11-19T12:17:13.000Z",
+      "latestAt": "2026-11-19T20:17:00.000Z",
+      "firstSeenAt": "2026-11-19T20:55:08.363Z",
+      "outlets": 3,
+      "outletNames": [
+        "Insider on MSN",
+        "Business Insider",
+        "AOL"
+      ],
+      "score": 2.21
+    },
+    {
       "id": "424febfdf588",
       "cat": "hacks",
       "kind": "news",
@@ -1129,24 +1166,6 @@
         "Yahoo"
       ],
       "score": 2.13
-    },
-    {
-      "id": "4f7bd24c0dcb",
-      "cat": "flights",
-      "kind": "news",
-      "title": "United Airlines resolves 'widespread system outage'",
-      "url": "https://www.msn.com/en-us/weather/meteorology/united-airlines-resolves-widespread-system-outage/ar-AA2hzdBk",
-      "source": "NBC Chicago on MSN",
-      "publishedAt": "2026-11-19T03:12:52.000Z",
-      "latestAt": "2026-11-19T13:32:00.000Z",
-      "firstSeenAt": "2026-11-19T16:09:24.808Z",
-      "outlets": 3,
-      "outletNames": [
-        "National News Desk",
-        "700WLW",
-        "NBC Chicago on MSN"
-      ],
-      "score": 2.03
     },
     {
       "id": "fa6bdfc296d7",
@@ -1388,23 +1407,6 @@
       "score": 1.77
     },
     {
-      "id": "3712e02a1b2c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16ejBjNzhGeUhBWnhVTkRHZ2sxRE4xUXZ3RVhiNTMwZlU4MUx1LUxVcG1xbi0zV1RFTzhVamxHOXd6MTFWVG5jVmctUDZQcF84U3UzcGNlbjFOQjlHX3lyQXFZYmdjNWM2UGtoM1ZVbkxzWFFDNHBwTTV5cW56UnfSAYQBQVVfeXFMUElHd25xekpscWFKV18xeHM0VUw4N1YyN0JRUFVOYmlSTGduZ0s1d2Jvc3ZFeXZBRzlDdlM1cnhuOXhCYWlid0ZSakZ2b1ljUTY2QmlaeXU0UXZrQzJISTYtWkF2Z0xMb3ZKRkg4aDlPQUhlNDdYR19pcWJtc0g2WnhQcW5W?oc=5",
-      "source": "upi",
-      "publishedAt": "2026-11-19T19:07:44.000Z",
-      "latestAt": "2026-11-20T01:19:21.000Z",
-      "firstSeenAt": "2026-11-20T03:11:30.805Z",
-      "outlets": 2,
-      "outletNames": [
-        "upi",
-        "LAmag"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "58150afce8bc",
       "cat": "internet",
       "kind": "news",
@@ -1471,23 +1473,6 @@
         "Yahoo Finance Singapore"
       ],
       "score": 1.72
-    },
-    {
-      "id": "51316edfd152",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase, Visa, and Mastercard say cyber incidents at vendors put customer data at risk",
-      "url": "https://www.msn.com/en-us/news/other/chase-visa-and-mastercard-say-cyber-incidents-at-vendors-put-customer-data-at-risk/ar-AA2hNshD",
-      "source": "Insider on MSN",
-      "publishedAt": "2026-11-19T12:17:13.000Z",
-      "latestAt": "2026-11-19T20:17:00.000Z",
-      "firstSeenAt": "2026-11-19T20:55:08.363Z",
-      "outlets": 2,
-      "outletNames": [
-        "Insider on MSN",
-        "Business Insider"
-      ],
-      "score": 1.71
     },
     {
       "id": "9e3071119d6d",
@@ -1821,22 +1806,6 @@
       "score": 1.4
     },
     {
-      "id": "31e84602ff80",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "‘We’ve Got to Trust the Government’: Ex-CIA Cyber Chief Says US Wouldn’t Hide Major Cyberattack After Mic",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNczUyX3VFNHljZmlqeGdVYnZmbWdmMDZhSm9RLVNHcWFZNTh4ai1HMXQxcU1BYkNKdXFfQkJZNkJXanpPc3luenF5Q1pnZUdtNXNKb0VUWW1lTUl1QkpDVTRxTUd6Uks4TVE5UlRXY1hDcVEyRDZWRllaLVBLdnJrbW8xUWl2OEpmT3UyTWVPd3Q5aE5DSzBZeg?oc=5",
-      "source": "Benzinga",
-      "publishedAt": "2026-11-19T03:25:31.000Z",
-      "latestAt": "2026-11-19T03:25:31.000Z",
-      "firstSeenAt": "2026-11-19T03:37:16.857Z",
-      "outlets": 1,
-      "outletNames": [
-        "Benzinga"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "b48fee4b63eb",
       "cat": "markets",
       "kind": "news",
@@ -1873,20 +1842,53 @@
       "quietReason": "headline mentions tornadoes"
     },
     {
-      "id": "f54c54e006b3",
-      "cat": "hacks",
+      "id": "8318992f830e",
+      "cat": "grid",
       "kind": "news",
-      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPaEcxckxjR3Z3SE5QeE9KRXprVmtFSjB1T3F5MnZWVXc4aHdZRzhpLVc2LTYtTVZzQ2dGdDk4OW51Tzl4MnJsd01sZGV4THctRUk4VDRLbEpab2UxYVVFTGs2Xy1EdFVLLW5PLU9HYy04UkR5TGdlTG81eWNuMmZaVnlJdFJLc2ZObWNBT2Rjbk1fQXFRdTRLbC1WUjNORmpZOWN2RV9Wa3dOOVJ1d3BTNFVqNWZWQ1FzbmVvcE10WQ?oc=5",
-      "source": "KTNV Las Vegas",
-      "publishedAt": "2026-11-20T02:10:51.000Z",
-      "latestAt": "2026-11-20T02:10:51.000Z",
-      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "title": "Major blackout hits South Australia after severe storm topples transmission towers",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWER5aTRvUFNQT0x3c0lzcHFnNEQ1WlNNYmJoSHB4SmNvYndVdGVnUC1pTVh0cEt1Ml9TVTRoNHd3RjY5UEUwSnczZmNSaVJrazZXdkZna3JWLXhEVnU5ZHNoWkQtcVB4d3ZuZElocXNITXlVWmNnVkhubGtGMlFxQXNGbDlWZUt5WGFVYlFyaHhtVGlodXFVc2p1ZS1Ob05waG9xTnBReU9tRElFVUsw?oc=5",
+      "source": "Dimsum Daily",
+      "publishedAt": "2026-11-20T01:59:42.000Z",
+      "latestAt": "2026-11-20T01:59:42.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
       "outlets": 1,
       "outletNames": [
-        "KTNV Las Vegas"
+        "Dimsum Daily"
       ],
-      "score": 1.38
+      "score": 1.37
+    },
+    {
+      "id": "3712e02a1b2c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
+      "url": "https://www.upi.com/Top_News/US/2026/11/19/banking-jpmorgan/1031795113577/",
+      "source": "UPI",
+      "publishedAt": "2026-11-19T07:42:00.000Z",
+      "latestAt": "2026-11-20T01:19:21.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "outlets": 2,
+      "outletNames": [
+        "upi",
+        "LAmag"
+      ],
+      "score": 1.35
+    },
+    {
+      "id": "04c2e2acf99a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack targets major banking and card vendors",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T23:12:30.000Z",
+      "latestAt": "2026-11-19T23:12:30.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yahoo"
+      ],
+      "score": 1.3
     },
     {
       "id": "8838110540f0",
