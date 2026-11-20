@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T04:41:34.632Z",
+  "buildTime": "2026-11-20T04:56:32.174Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 23:41 ET",
+  "etStamp": "2026-11-19 23:56 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,15 +50,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1277,
-  "lastSuccessAt": "2026-11-20T04:41:34.632Z",
+  "headlinesRead": 1256,
+  "lastSuccessAt": "2026-11-20T04:56:32.174Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
-    "hacks": 38,
+    "hacks": 37,
+    "germs": 5,
     "internet": 12,
     "earth": 4,
-    "germs": 4,
     "grid": 7,
     "markets": 4,
     "space": 4,
@@ -93,7 +93,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 2,
+      "groundDelays": 1,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -182,20 +182,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 963,
+      "count": 954,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "bing": {
       "ok": true,
-      "count": 279,
+      "count": 267,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,56 +207,55 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T03:56:22.027Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T04:41:34.632Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z"
     }
   },
   "stories": [
@@ -268,9 +267,9 @@
       "url": "https://www.scrippsnews.com/us-news/sources-dispute-faas-account-of-oversight-before-nationwide-ground-stop",
       "source": "Scripps News",
       "publishedAt": "2026-11-19T05:09:00.000Z",
-      "latestAt": "2026-11-19T18:39:08.000Z",
+      "latestAt": "2026-11-20T04:53:31.000Z",
       "firstSeenAt": "2026-11-19T13:23:53.347Z",
-      "outlets": 14,
+      "outlets": 15,
       "outletNames": [
         "KPAX News",
         "Scripps News",
@@ -285,9 +284,10 @@
         "WXYZ Channel 7",
         "WCPO 9 News",
         "KBZK News",
-        "KSHB 41 Kansas City"
+        "KSHB 41 Kansas City",
+        "KOAA News 5"
       ],
-      "score": 5.81
+      "score": 5.93
     },
     {
       "id": "f3287ab342cd",
@@ -451,6 +451,34 @@
       "score": 3.81
     },
     {
+      "id": "6d7a6b3b2346",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Oregon confirms first human bird flu case of 2026",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxObzVKcUFMd0RMSVFrUzQ4M2t3d1Ffd0JEN29MUzlESnB3SklaMHo0U19pNk9Pa281OE5KeDVfZnBkM0dMVFFfN1h0UUl6WnVQREhfRFVZbGNkcEF4a2FFS0RQTHd4S0lobGppcnhVQkZzdEZKTGtETVBFVFBUV0ZqX1ZfLTYxMF9UOFBBa1c2T0kwU1VwSHpHY2xlc0xoZjdDRC14UmRvSHV4c2ZoVTljNGpNM1FHUXIyMVM3TEthT3phbFV3aDYtQkZwVHU5OVZxUjlEeEhxb3F0enprRUxjc1lB?oc=5",
+      "source": "Central Oregon Daily",
+      "publishedAt": "2026-11-19T16:58:17.000Z",
+      "latestAt": "2026-11-20T03:52:21.000Z",
+      "firstSeenAt": "2026-11-20T04:56:32.174Z",
+      "outlets": 13,
+      "outletNames": [
+        "Central Oregon Daily",
+        "KGW",
+        "Statesman Journal",
+        "KOIN.com",
+        "KTVZ",
+        "KATU",
+        "KVAL",
+        "TriYakNews.com",
+        "Outbreak News Today",
+        "KPTV",
+        "Oregon Capital Chronicle",
+        "KPIC",
+        "Capital Press"
+      ],
+      "score": 3.76
+    },
+    {
       "id": "sig:status:openai:2026-11-19",
       "cat": "internet",
       "kind": "signal",
@@ -564,24 +592,6 @@
         "Daily Post Nigeria"
       ],
       "score": 2.74
-    },
-    {
-      "id": "696650dc6950",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stock Market Today, Nov. 19: Dow Plunges 1,100 Points as the S&P 500 Suffers Its 6th Straight Day of Losses",
-      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/19/stock-market-today-nov-19-dow-plunges-1-100-points-as-the-s-and-p-500-suffers-its-6th-straight-day-of-losses/",
-      "source": "The Motley Fool",
-      "publishedAt": "2026-11-19T13:50:00.000Z",
-      "latestAt": "2026-11-19T22:28:51.000Z",
-      "firstSeenAt": "2026-11-19T22:25:24.498Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Motley Fool",
-        "The Globe and Mail",
-        "Yahoo Finance"
-      ],
-      "score": 2.21
     },
     {
       "id": "sig:faa-stop:SAN:2026-11-19",
@@ -758,6 +768,26 @@
       "score": 2.73
     },
     {
+      "id": "91666724b933",
+      "cat": "germs",
+      "kind": "news",
+      "title": "France raises bird flu risk level to high across mainland territory",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMkxzaWQwSFJWWDRIdVpVVGtETFdNZVVhNDNrV0ZnRTRwcXJ0a0o1QTNEekN6MlFZYlBrc1hLWDh0TWY2cE9NRVBDMnViQlpCYl9DUVRzWnFaWXlxOHRQSWtqQ1JQTnpJTW9jLUo1MTZyWDlMNmwya1lzVlhrT1lNMDNPWW9sLWUwX2R2a1AydzYxRTFsSFJ0T2l4WGJKZWZDWlV2LWVKQUlkTFU?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-19T08:40:30.000Z",
+      "latestAt": "2026-11-20T01:04:17.000Z",
+      "firstSeenAt": "2026-11-20T01:19:38.890Z",
+      "outlets": 5,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "Yeni Safak English",
+        "TRT World",
+        "RFI",
+        "The Poultry Site"
+      ],
+      "score": 2.4
+    },
+    {
       "id": "a83b29445024",
       "cat": "internet",
       "kind": "news",
@@ -775,23 +805,22 @@
       "score": 2.25
     },
     {
-      "id": "91666724b933",
-      "cat": "germs",
+      "id": "696650dc6950",
+      "cat": "markets",
       "kind": "news",
-      "title": "France raises bird flu risk level to high across mainland territory",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMkxzaWQwSFJWWDRIdVpVVGtETFdNZVVhNDNrV0ZnRTRwcXJ0a0o1QTNEekN6MlFZYlBrc1hLWDh0TWY2cE9NRVBDMnViQlpCYl9DUVRzWnFaWXlxOHRQSWtqQ1JQTnpJTW9jLUo1MTZyWDlMNmwya1lzVlhrT1lNMDNPWW9sLWUwX2R2a1AydzYxRTFsSFJ0T2l4WGJKZWZDWlV2LWVKQUlkTFU?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-19T08:40:30.000Z",
-      "latestAt": "2026-11-19T11:12:37.000Z",
-      "firstSeenAt": "2026-11-20T01:19:38.890Z",
-      "outlets": 4,
+      "title": "Stock Market Today, Nov. 19: Dow Plunges 1,100 Points as the S&P 500 Suffers Its 6th Straight Day of Losses",
+      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/19/stock-market-today-nov-19-dow-plunges-1-100-points-as-the-s-and-p-500-suffers-its-6th-straight-day-of-losses/",
+      "source": "The Motley Fool",
+      "publishedAt": "2026-11-19T13:50:00.000Z",
+      "latestAt": "2026-11-19T22:28:51.000Z",
+      "firstSeenAt": "2026-11-19T22:25:24.498Z",
+      "outlets": 3,
       "outletNames": [
-        "Anadolu Ajansı",
-        "Yeni Safak English",
-        "TRT World",
-        "RFI"
+        "The Motley Fool",
+        "The Globe and Mail",
+        "Yahoo Finance"
       ],
-      "score": 2.17
+      "score": 2.21
     },
     {
       "id": "b6ef820c3b0d",
@@ -818,7 +847,7 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQXzJUWVJocDNTcTJ1NmJtdEtTNk5XN2dRdmlvX1pjc3lPTTZSRUF3VURuQWg2MXV3aUdCT3NjbFNzeXd4ZzVyM2ZwUTFRX2FMbllMd3VocFJObU9uXzh5UkNCLWNOdERjb0dlajAtWndEa0dBSXctM192OV9kXzZnU21sNnUzaUpxbU1vdjRwM3hTdw?oc=5",
       "source": "KRCR",
       "publishedAt": "2026-11-19T16:51:17.000Z",
-      "latestAt": "2026-11-19T23:22:23.000Z",
+      "latestAt": "2026-11-20T04:28:47.000Z",
       "firstSeenAt": "2026-11-19T17:09:48.375Z",
       "outlets": 2,
       "outletNames": [
@@ -913,23 +942,6 @@
       "score": 1.72
     },
     {
-      "id": "a5681a59de2f",
-      "cat": "germs",
-      "kind": "news",
-      "title": "A $4.30 carton of eggs could cost $7.50 if bird flu hits Australia's poultry farms",
-      "url": "https://www.thecooldown.com/sustainable-food/australia-bird-flu-egg-price-impact/",
-      "source": "The Cool Down",
-      "publishedAt": "2026-11-19T14:20:00.000Z",
-      "latestAt": "2026-11-19T22:20:00.000Z",
-      "firstSeenAt": "2026-11-19T23:10:44.004Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Cool Down",
-        "Yahoo Finance UK"
-      ],
-      "score": 1.71
-    },
-    {
       "id": "307f16754e66",
       "cat": "hacks",
       "kind": "news",
@@ -968,6 +980,28 @@
       "score": 2.8
     },
     {
+      "id": "609d5f00cba2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "A cyberattack leaks thousands of Chase customer emails and some phone numbers",
+      "url": "https://www.dailynews.com/2026/11/19/chase-data-breach/",
+      "source": "Los Angeles Daily News",
+      "publishedAt": "2026-11-19T11:47:00.000Z",
+      "latestAt": "2026-11-20T01:26:58.000Z",
+      "firstSeenAt": "2026-11-20T04:11:25.421Z",
+      "outlets": 7,
+      "outletNames": [
+        "Los Angeles Daily News",
+        "The Baltimore Sun",
+        "AP News",
+        "niagara-gazette.com",
+        "Boston Herald",
+        "Chicago Tribune",
+        "Associated Press News"
+      ],
+      "score": 2.77
+    },
+    {
       "id": "97f014fb3101",
       "cat": "flights",
       "kind": "news",
@@ -985,27 +1019,6 @@
         "Yahoo"
       ],
       "score": 2.64
-    },
-    {
-      "id": "609d5f00cba2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "A cyberattack leaks thousands of Chase customer emails and some phone numbers",
-      "url": "https://www.dailynews.com/2026/11/19/chase-data-breach/",
-      "source": "Los Angeles Daily News",
-      "publishedAt": "2026-11-19T11:54:00.000Z",
-      "latestAt": "2026-11-20T01:26:58.000Z",
-      "firstSeenAt": "2026-11-20T04:11:25.421Z",
-      "outlets": 6,
-      "outletNames": [
-        "Los Angeles Daily News",
-        "The Baltimore Sun",
-        "AP News",
-        "niagara-gazette.com",
-        "Boston Herald",
-        "Chicago Tribune"
-      ],
-      "score": 2.61
     },
     {
       "id": "04c2e2acf99a",
@@ -1457,6 +1470,23 @@
       "score": 1.72
     },
     {
+      "id": "a5681a59de2f",
+      "cat": "germs",
+      "kind": "news",
+      "title": "A $4.30 carton of eggs could cost $7.50 if bird flu hits Australia's poultry farms",
+      "url": "https://www.thecooldown.com/sustainable-food/australia-bird-flu-egg-price-impact/",
+      "source": "The Cool Down",
+      "publishedAt": "2026-11-19T14:20:00.000Z",
+      "latestAt": "2026-11-19T22:20:00.000Z",
+      "firstSeenAt": "2026-11-19T23:10:44.004Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Cool Down",
+        "Yahoo Finance UK"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "9e3071119d6d",
       "cat": "internet",
       "kind": "news",
@@ -1772,22 +1802,6 @@
       "score": 1.4
     },
     {
-      "id": "271f5ed1e6a7",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack targets a major travel site",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOHR5VGtUbXBiQkFibEp3MmQxcGRNVkJ6NkNKaHN2UExQVnIyOUotdGdfRExvVUw3cXB6NkR1d1M5MTE1RkplZEVidTRwbzBMMmVoMG00LTNJRjdhMi1IZThwb2tiLWJRLVJPSlFDM25NVFh6NWRpbGg0eUNEbU1UNlNjUElkc18xYnNBNTJuVHM0cVJiWW5wQXN2MEJLVjZFZGczZDNlbGJJbjJNTUNQNnJVanRtYWxRUmtRZnNtVDFSVnM?oc=5",
-      "source": "WFAA",
-      "publishedAt": "2026-11-19T04:45:57.000Z",
-      "latestAt": "2026-11-19T04:45:57.000Z",
-      "firstSeenAt": "2026-11-19T04:52:24.568Z",
-      "outlets": 1,
-      "outletNames": [
-        "WFAA"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "74e770b8872d",
       "cat": "hacks",
       "kind": "news",
@@ -1911,7 +1925,7 @@
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMUQ5QXVaNkhKaGx5dVc5WFkxVWEzcWNwX3UwajVDNTlPcVFOdF9XMExoSlRjcUhxekZoUzJMc09pSE4wM2FjdGJNMmlMeEgtaVE4OWpjOGwxazRCR19OT0J3amREaTZJc0xfRTZZa29hNk42V1FjcWVPNC1hUEpvaXhCcDNSdEU?oc=5",
       "source": "Volcano Discovery",
       "publishedAt": "2026-11-19T22:40:20.000Z",
-      "latestAt": "2026-11-19T22:40:20.000Z",
+      "latestAt": "2026-11-20T04:50:19.000Z",
       "firstSeenAt": "2026-11-19T22:55:27.353Z",
       "outlets": 1,
       "outletNames": [
