@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T01:56:01.728Z",
+  "buildTime": "2026-11-20T02:11:06.020Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 20:56 ET",
+  "etStamp": "2026-11-19 21:11 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,16 +50,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 517,
-  "lastSuccessAt": "2026-11-20T01:56:01.728Z",
+  "headlinesRead": 1255,
+  "lastSuccessAt": "2026-11-20T02:11:06.020Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
-    "hacks": 37,
+    "hacks": 36,
     "germs": 4,
     "internet": 12,
     "earth": 4,
-    "grid": 7,
+    "grid": 8,
     "markets": 4,
     "space": 4,
     "weather": 4,
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 211,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "count": 948,
+      "error": null,
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     },
     "bing": {
       "ok": true,
-      "count": 271,
+      "count": 272,
       "error": null,
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-20T00:55:55.472Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T01:56:01.728Z"
+      "lastOkAt": "2026-11-20T02:11:06.020Z"
     }
   },
   "stories": [
@@ -344,7 +344,7 @@
       "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
       "source": "The Straits Times",
       "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-20T01:29:13.000Z",
+      "latestAt": "2026-11-20T01:58:52.000Z",
       "firstSeenAt": "2026-11-19T17:39:41.337Z",
       "outlets": 32,
       "outletNames": [
@@ -387,43 +387,6 @@
       "score": 4.63
     },
     {
-      "id": "22c7080496e8",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission confirms AI-driven cyberattack weeks after detecting it",
-      "url": "https://brusselssignal.eu/2026/11/european-commission-confirms-ai-driven-cyberattack-weeks-after-detecting-it/",
-      "source": "brusselssignal",
-      "publishedAt": "2026-11-19T02:02:00.000Z",
-      "latestAt": "2026-11-19T19:33:10.000Z",
-      "firstSeenAt": "2026-11-19T11:23:37.429Z",
-      "outlets": 22,
-      "outletNames": [
-        "Protos | Informed crypto news",
-        "Protos",
-        "www.marketscreener.com",
-        "Irish Independent",
-        "brusselssignal",
-        "Irish Examiner",
-        "The Copenhagen Post",
-        "DW.com",
-        "Metro Mode",
-        "RTE.ie",
-        "Philenews",
-        "Washington Examiner",
-        "The Portugal News",
-        "The Record from Recorded Future News",
-        "Notebookcheck",
-        "UPI on MSN",
-        "Sharjah24",
-        "Investing.com",
-        "Yahoo",
-        "Superpower Daily",
-        "İlke Haber Ajansı",
-        "The Brussels Times"
-      ],
-      "score": 4.61
-    },
-    {
       "id": "sig:faa-stop:SAN:2026-11-19",
       "cat": "flights",
       "kind": "signal",
@@ -454,7 +417,7 @@
       "url": "https://apnews.com/article/chase-data-leak-cyberattack-8470d475450721b66858bdace47091c0",
       "source": "Associated Press News",
       "publishedAt": "2026-11-19T03:49:00.000Z",
-      "latestAt": "2026-11-20T00:15:00.000Z",
+      "latestAt": "2026-11-20T01:26:58.000Z",
       "firstSeenAt": "2026-11-19T19:55:03.493Z",
       "outlets": 32,
       "outletNames": [
@@ -492,6 +455,29 @@
         "Long Beach Press-Telegram"
       ],
       "score": 4.39
+    },
+    {
+      "id": "41bda97d8bc2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase Bank customers may be affected after hackers access marketing data",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbmwtUUN6YzFYZzZ6Z2RQdFZVemJuR0hqVlpKZFluc25nSi1neVVka3phMDNVZDlkU0JhaGZ3Nmw4eW9SaXVlVUg1T3piakQ2Ty11TXdWeU1Hd1VmQTFnUUVObk5WUDZDRmVMU1MxSVJNdWRRbzY4eE5vNm1weE43UDRZU19ZbnktZW9ycXJ3OXA1Y01tX3lzY1E1T2ZVZWsySTc4Y00tZlV1NzU3dFRNZXNHaGZ2VDJJcFlZbU1aa2ZER015cWwxSHNSX3h4SHM5dVBqZElzS04?oc=5",
+      "source": "WCPO 9 Cincinnati",
+      "publishedAt": "2026-11-19T15:01:48.000Z",
+      "latestAt": "2026-11-19T21:44:00.000Z",
+      "firstSeenAt": "2026-11-19T20:10:12.029Z",
+      "outlets": 8,
+      "outletNames": [
+        "WCPO 9 Cincinnati",
+        "Scripps News",
+        "KPAX News",
+        "LEX 18 News",
+        "KJRH",
+        "KMTV 3 News Now Omaha",
+        "KXXV",
+        "KKTV"
+      ],
+      "score": 3.66
     },
     {
       "id": "e8264ac0b9b3",
@@ -583,6 +569,24 @@
       "score": 2.97
     },
     {
+      "id": "ff1a8e6aa309",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft says services fully restored after hourslong global outage",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZHlYRjJoX0RfREJ3UFBlQ3pacWMwMjBXeGJETGNBTFIzbHZMd1o0UFpMR00tQ25kb0x3YlBjZk4wd25hQTVoQ0FQdTVydERxenNBbkx0YVU5VGtnMUJwcW0tc2FFZ0tsMk0wbFc4TjRHWFhid01xWmljT0tZMVFicUVWRk1ueWdscFMyZXdHWGVJWjdSQ1ozLWJGdXpNMFRQdFc2Mw?oc=5",
+      "source": "AP News",
+      "publishedAt": "2026-11-19T05:45:58.000Z",
+      "latestAt": "2026-11-19T19:09:26.000Z",
+      "firstSeenAt": "2026-11-19T19:12:09.123Z",
+      "outlets": 3,
+      "outletNames": [
+        "AP News",
+        "WINK News",
+        "WINK News - Southwest Florida"
+      ],
+      "score": 2.81
+    },
+    {
       "id": "7c2b2f3a0bbb",
       "cat": "grid",
       "kind": "news",
@@ -598,23 +602,6 @@
         "Daily Post Nigeria"
       ],
       "score": 2.74
-    },
-    {
-      "id": "497408cf71f1",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple customers face major disruptions as widespread outage affects purchases, payments, activations",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQzhyT2Q0TkJpRXRselBSWjE4ejV2X0VHS2l1RXBlVE9feEtpTmgteVFWT28zOWZQeGlsYmlkaUxUR2R5MjVmTkp0VWJ2SS1meW1scDMxd0lHeEdJNGhUZXVQUkUwcGFGZWV0RGd5VktvZEo4VnQ0enFZTWR0SmZaYnBwNUNKdw?oc=5",
-      "source": "Yahoo News Canada",
-      "publishedAt": "2026-11-19T15:52:00.000Z",
-      "latestAt": "2026-11-19T15:52:00.000Z",
-      "firstSeenAt": "2026-11-19T17:24:34.573Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo News Canada",
-        "The Cool Down"
-      ],
-      "score": 2.73
     },
     {
       "id": "09bfbf9d8033",
@@ -660,29 +647,6 @@
       "score": 4.02
     },
     {
-      "id": "41bda97d8bc2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank customers may be affected after hackers access marketing data",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbmwtUUN6YzFYZzZ6Z2RQdFZVemJuR0hqVlpKZFluc25nSi1neVVka3phMDNVZDlkU0JhaGZ3Nmw4eW9SaXVlVUg1T3piakQ2Ty11TXdWeU1Hd1VmQTFnUUVObk5WUDZDRmVMU1MxSVJNdWRRbzY4eE5vNm1weE43UDRZU19ZbnktZW9ycXJ3OXA1Y01tX3lzY1E1T2ZVZWsySTc4Y00tZlV1NzU3dFRNZXNHaGZ2VDJJcFlZbU1aa2ZER015cWwxSHNSX3h4SHM5dVBqZElzS04?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "publishedAt": "2026-11-19T15:01:48.000Z",
-      "latestAt": "2026-11-19T21:44:00.000Z",
-      "firstSeenAt": "2026-11-19T20:10:12.029Z",
-      "outlets": 8,
-      "outletNames": [
-        "WCPO 9 Cincinnati",
-        "Scripps News",
-        "KPAX News",
-        "LEX 18 News",
-        "KJRH",
-        "KMTV 3 News Now Omaha",
-        "KXXV",
-        "KKTV"
-      ],
-      "score": 3.66
-    },
-    {
       "id": "f4a81b953bee",
       "cat": "hacks",
       "kind": "news",
@@ -700,6 +664,32 @@
         "Notebookcheck"
       ],
       "score": 3.59
+    },
+    {
+      "id": "ce3b0f14cf6a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
+      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-19T14:55:29.000Z",
+      "latestAt": "2026-11-20T01:19:21.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 9,
+      "outletNames": [
+        "6abc Philadelphia",
+        "ABC News - Breaking News, Latest News and Videos",
+        "kaaltv.com",
+        "ABC Columbia",
+        "upi",
+        "weisradio.com",
+        "Everett Post",
+        "ABC7 Chicago",
+        "LAmag"
+      ],
+      "trending": 10000,
+      "trendTerm": "jpmorgan chase cyber attack",
+      "score": 3.53
     },
     {
       "id": "sig:faa-stop:AUS:2026-11-19",
@@ -747,26 +737,38 @@
       "score": 3.41
     },
     {
-      "id": "546e6e8eceae",
+      "id": "497408cf71f1",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Apple customers face major disruptions as widespread outage affects purchases, payments, activations",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQzhyT2Q0TkJpRXRselBSWjE4ejV2X0VHS2l1RXBlVE9feEtpTmgteVFWT28zOWZQeGlsYmlkaUxUR2R5MjVmTkp0VWJ2SS1meW1scDMxd0lHeEdJNGhUZXVQUkUwcGFGZWV0RGd5VktvZEo4VnQ0enFZTWR0SmZaYnBwNUNKdw?oc=5",
+      "source": "Yahoo News Canada",
+      "publishedAt": "2026-11-19T15:52:00.000Z",
+      "latestAt": "2026-11-19T15:52:00.000Z",
+      "firstSeenAt": "2026-11-19T17:24:34.573Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo News Canada",
+        "The Cool Down"
+      ],
+      "score": 2.73
+    },
+    {
+      "id": "b0fc3c8f8eff",
       "cat": "flights",
       "kind": "news",
-      "title": "Florida TODAY: Florida driving laws, FAA ground stop, Amendment 3",
-      "url": "https://www.usatoday.com/story/news/state/2026/11/19/florida-today-florida-driving-laws-faa-ground-stop-amendment-3/92845200007/",
-      "source": "USA TODAY",
-      "publishedAt": "2026-11-19T02:08:00.000Z",
-      "latestAt": "2026-11-19T14:26:00.000Z",
-      "firstSeenAt": "2026-11-19T10:38:27.869Z",
-      "outlets": 7,
+      "title": "Nationwide ground stop canceled several arrivals , departures at AVP",
+      "url": "https://www.thetimes-tribune.com/2026/11/19/nationwide-ground-stop-canceled-several-arrivals-departures-at-avp/",
+      "source": "thetimes-tribune.com",
+      "publishedAt": "2026-11-19T20:41:07.000Z",
+      "latestAt": "2026-11-19T23:30:00.000Z",
+      "firstSeenAt": "2026-11-20T00:55:55.472Z",
+      "outlets": 2,
       "outletNames": [
-        "USA TODAY",
-        "Florida Today",
-        "Yahoo",
-        "Bradenton Herald",
-        "Gainesville Sun",
-        "The Destin Log",
-        "The Palm Beach Post"
+        "Scranton Times-Tribune",
+        "thetimes-tribune.com"
       ],
-      "score": 3.27
+      "score": 2.6
     },
     {
       "id": "a83b29445024",
@@ -819,23 +821,6 @@
         "Yeni Safak English",
         "TRT World",
         "RFI"
-      ],
-      "score": 2.17
-    },
-    {
-      "id": "ff1a8e6aa309",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft says services fully restored after hourslong global outage",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZHlYRjJoX0RfREJ3UFBlQ3pacWMwMjBXeGJETGNBTFIzbHZMd1o0UFpMR00tQ25kb0x3YlBjZk4wd25hQTVoQ0FQdTVydERxenNBbkx0YVU5VGtnMUJwcW0tc2FFZ0tsMk0wbFc4TjRHWFhid01xWmljT0tZMVFicUVWRk1ueWdscFMyZXdHWGVJWjdSQ1ozLWJGdXpNMFRQdFc2Mw?oc=5",
-      "source": "AP News",
-      "publishedAt": "2026-11-19T05:45:58.000Z",
-      "latestAt": "2026-11-19T19:09:26.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
-      "outlets": 2,
-      "outletNames": [
-        "AP News",
-        "WINK News"
       ],
       "score": 2.17
     },
@@ -976,31 +961,6 @@
       "score": 1.72
     },
     {
-      "id": "ce3b0f14cf6a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
-      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-19T14:55:29.000Z",
-      "latestAt": "2026-11-19T23:40:00.000Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 8,
-      "outletNames": [
-        "6abc Philadelphia",
-        "ABC News - Breaking News, Latest News and Videos",
-        "kaaltv.com",
-        "ABC Columbia",
-        "upi",
-        "weisradio.com",
-        "Everett Post",
-        "ABC7 Chicago"
-      ],
-      "trending": 10000,
-      "trendTerm": "jpmorgan chase cyber attack",
-      "score": 3.38
-    },
-    {
       "id": "e358feae5cc2",
       "cat": "hacks",
       "kind": "news",
@@ -1040,23 +1000,6 @@
       "score": 2.8
     },
     {
-      "id": "b0fc3c8f8eff",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Nationwide ground stop canceled several arrivals , departures at AVP",
-      "url": "https://www.thetimes-tribune.com/2026/11/19/nationwide-ground-stop-canceled-several-arrivals-departures-at-avp/",
-      "source": "thetimes-tribune.com",
-      "publishedAt": "2026-11-19T20:41:07.000Z",
-      "latestAt": "2026-11-19T23:30:00.000Z",
-      "firstSeenAt": "2026-11-20T00:55:55.472Z",
-      "outlets": 2,
-      "outletNames": [
-        "Scranton Times-Tribune",
-        "thetimes-tribune.com"
-      ],
-      "score": 2.6
-    },
-    {
       "id": "307f16754e66",
       "cat": "hacks",
       "kind": "news",
@@ -1094,6 +1037,24 @@
         "CNET"
       ],
       "score": 2.59
+    },
+    {
+      "id": "28b64844bc13",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Ground Stop Keeps Tom Morello From Iron Maiden Rock Hall Tribute",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVTd2VDlyaEJQX2xMc0ZOVzJLMVdHOVJYTGZnMG92aDlpcmJ6Z3pYRWZDUmlhcG1iN0FWY2ZOU1ZVNW9zbzNfWTlkX1R2ekNHTWxoQUo4bTB1bnRFdDVsc2NUakNuN3p2OUE3Sm9ycGxlVWpXSDRmRGU4UVFEbGo0ZnBlZDZoRDdiZUxxT0t4SDNmSENIeF9BejhkN2hhS2t3?oc=5",
+      "source": "WDHA FM",
+      "publishedAt": "2026-11-19T19:18:50.000Z",
+      "latestAt": "2026-11-19T19:18:50.000Z",
+      "firstSeenAt": "2026-11-19T21:55:23.506Z",
+      "outlets": 3,
+      "outletNames": [
+        "WDHA FM",
+        "Boston's ROCK 92.9",
+        "95.9 The RAT"
+      ],
+      "score": 2.47
     },
     {
       "id": "a658db7bfa93",
@@ -1321,23 +1282,6 @@
       "score": 1.93
     },
     {
-      "id": "28b64844bc13",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Ground Stop Keeps Tom Morello From Iron Maiden Rock Hall Tribute",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVTd2VDlyaEJQX2xMc0ZOVzJLMVdHOVJYTGZnMG92aDlpcmJ6Z3pYRWZDUmlhcG1iN0FWY2ZOU1ZVNW9zbzNfWTlkX1R2ekNHTWxoQUo4bTB1bnRFdDVsc2NUakNuN3p2OUE3Sm9ycGxlVWpXSDRmRGU4UVFEbGo0ZnBlZDZoRDdiZUxxT0t4SDNmSENIeF9BejhkN2hhS2t3?oc=5",
-      "source": "WDHA FM",
-      "publishedAt": "2026-11-19T19:18:50.000Z",
-      "latestAt": "2026-11-19T19:18:50.000Z",
-      "firstSeenAt": "2026-11-19T21:55:23.506Z",
-      "outlets": 2,
-      "outletNames": [
-        "WDHA FM",
-        "Boston's ROCK 92.9"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "7e853259d84f",
       "cat": "hacks",
       "kind": "news",
@@ -1421,23 +1365,6 @@
         "Law360"
       ],
       "score": 1.8
-    },
-    {
-      "id": "3712e02a1b2c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16ejBjNzhGeUhBWnhVTkRHZ2sxRE4xUXZ3RVhiNTMwZlU4MUx1LUxVcG1xbi0zV1RFTzhVamxHOXd6MTFWVG5jVmctUDZQcF84U3UzcGNlbjFOQjlHX3lyQXFZYmdjNWM2UGtoM1ZVbkxzWFFDNHBwTTV5cW56UnfSAYQBQVVfeXFMUElHd25xekpscWFKV18xeHM0VUw4N1YyN0JRUFVOYmlSTGduZ0s1d2Jvc3ZFeXZBRzlDdlM1cnhuOXhCYWlid0ZSakZ2b1ljUTY2QmlaeXU0UXZrQzJISTYtWkF2Z0xMb3ZKRkg4aDlPQUhlNDdYR19pcWJtc0g2WnhQcW5W?oc=5",
-      "source": "upi",
-      "publishedAt": "2026-11-19T19:07:44.000Z",
-      "latestAt": "2026-11-20T01:19:21.000Z",
-      "firstSeenAt": "2026-11-20T01:56:01.728Z",
-      "outlets": 2,
-      "outletNames": [
-        "upi",
-        "LAmag"
-      ],
-      "score": 1.77
     },
     {
       "id": "0bf13d0d47a4",
@@ -1696,6 +1623,23 @@
       "score": 1.61
     },
     {
+      "id": "24a6ae77c3d5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "‘The whole internet screams at once’: Downdetector logged 6.4 million U.S. outage reports in a week as Microsoft, the FAA, Chase, and Apple went down",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/whole-internet-screams-once-downdetector-221702494.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-19T14:17:00.000Z",
+      "latestAt": "2026-11-19T22:17:00.000Z",
+      "firstSeenAt": "2026-11-20T02:11:06.020Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "Fortune on MSN"
+      ],
+      "score": 1.6
+    },
+    {
       "id": "b58dc9dabd96",
       "cat": "markets",
       "kind": "news",
@@ -1873,6 +1817,22 @@
       "score": 1.4
     },
     {
+      "id": "8318992f830e",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Major blackout hits South Australia after severe storm topples transmission towers",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWER5aTRvUFNQT0x3c0lzcHFnNEQ1WlNNYmJoSHB4SmNvYndVdGVnUC1pTVh0cEt1Ml9TVTRoNHd3RjY5UEUwSnczZmNSaVJrazZXdkZna3JWLXhEVnU5ZHNoWkQtcVB4d3ZuZElocXNITXlVWmNnVkhubGtGMlFxQXNGbDlWZUt5WGFVYlFyaHhtVGlodXFVc2p1ZS1Ob05waG9xTnBReU9tRElFVUsw?oc=5",
+      "source": "Dimsum Daily",
+      "publishedAt": "2026-11-20T01:42:19.000Z",
+      "latestAt": "2026-11-20T01:42:19.000Z",
+      "firstSeenAt": "2026-11-20T02:11:06.020Z",
+      "outlets": 1,
+      "outletNames": [
+        "Dimsum Daily"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "b48fee4b63eb",
       "cat": "markets",
       "kind": "news",
@@ -1907,6 +1867,22 @@
       "score": 1.39,
       "quiet": true,
       "quietReason": "headline mentions tornadoes"
+    },
+    {
+      "id": "ac8fef0be9f1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop put focus on air traffic controller shortages at Phoenix Sky Harbor, nationwide",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNamp4azdfZUV1TzgtTV85NXhvamtFeXk2RFNyY3RYM3ZQeFBLRTNJaDAySE4tYTlRa2pCMi15QWZnRmw1clVCcTFqT0xXV094MVJWOUtFdFd0Vno0YmFGZmwxd0Zxa2JLX0owNE1LWDloaktRR1JsandJVFhLRWJtTllWaUQtMGJLOG5MT2RiQkl4VWZ1aVhjOEhMbmRvRnJtS1FNRVpUUmk4Qkdla3dHNG12ZHFQWkJIZXRPcngxelc0eFRQVEVRMWJSTHdmdnE0Q0lzZ0ZCY2lfblZWNnpLS3BhNFJZcDVtOGowQkdFUlZSRDltRzVsUGt0NWlvRGdvaEtWRnlON1dCQnJaM29tRlhud0w?oc=5",
+      "source": "PinalCentral.com",
+      "publishedAt": "2026-11-19T03:05:03.000Z",
+      "latestAt": "2026-11-19T03:05:03.000Z",
+      "firstSeenAt": "2026-11-19T03:22:20.740Z",
+      "outlets": 1,
+      "outletNames": [
+        "PinalCentral.com"
+      ],
+      "score": 1.39
     },
     {
       "id": "8838110540f0",
