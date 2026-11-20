@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T05:56:49.662Z",
+  "buildTime": "2026-11-20T06:11:44.716Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 00:56 ET",
+  "etStamp": "2026-11-20 01:11 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,15 +51,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 308,
-  "lastSuccessAt": "2026-11-20T05:56:49.662Z",
+  "headlinesRead": 1273,
+  "lastSuccessAt": "2026-11-20T06:11:44.716Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
+    "flights": 17,
     "hacks": 38,
-    "internet": 9,
     "germs": 5,
-    "earth": 5,
+    "internet": 9,
+    "earth": 4,
     "grid": 7,
     "markets": 4,
     "space": 4,
@@ -78,8 +78,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 0.67,
-      "time": "2026-11-20T00:00:00.000Z",
+      "value": 2,
+      "time": "2026-11-20T03:00:00.000Z",
       "max24": 3
     },
     "asteroid": {
@@ -95,7 +95,7 @@
       "groundStops": [],
       "nationwide": false,
       "groundDelays": 1,
-      "closures": 0,
+      "closures": 1,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "count": 974,
+      "error": null,
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     },
     "bing": {
       "ok": true,
-      "count": 273,
-      "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "count": 264,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,55 +208,56 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T05:56:49.662Z"
+      "lastOkAt": "2026-11-20T06:11:44.716Z"
     }
   },
   "stories": [
@@ -361,7 +362,7 @@
       "url": "https://mashable.com/tech/n0n-ransomware-group-leaks-chase-mastercard-visa-customer-data",
       "source": "Mashable",
       "publishedAt": "2026-11-19T10:38:00.000Z",
-      "latestAt": "2026-11-20T05:17:16.000Z",
+      "latestAt": "2026-11-20T05:59:20.000Z",
       "firstSeenAt": "2026-11-20T04:26:27.671Z",
       "outlets": 32,
       "outletNames": [
@@ -446,6 +447,36 @@
       "score": 3.87
     },
     {
+      "id": "6d7a6b3b2346",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Oregon confirms first human case of bird flu this year",
+      "url": "https://www.yahoo.com/news/science/articles/oregon-confirms-first-human-case-200500777.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:05:00.000Z",
+      "latestAt": "2026-11-20T03:52:21.000Z",
+      "firstSeenAt": "2026-11-20T04:56:32.174Z",
+      "outlets": 15,
+      "outletNames": [
+        "Central Oregon Daily",
+        "KGW",
+        "Statesman Journal",
+        "KOIN.com",
+        "KTVZ",
+        "KATU",
+        "KVAL",
+        "TriYakNews.com",
+        "Outbreak News Today",
+        "KPTV",
+        "Oregon Capital Chronicle",
+        "KPIC",
+        "Capital Press",
+        "Yahoo",
+        "Oregon Public Broadcasting - OPB"
+      ],
+      "score": 3.53
+    },
+    {
       "id": "sig:status:openai:2026-11-19",
       "cat": "internet",
       "kind": "signal",
@@ -466,35 +497,6 @@
         "page": "openai",
         "description": "Partial System Outage"
       }
-    },
-    {
-      "id": "6d7a6b3b2346",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Oregon confirms first human case of bird flu this year",
-      "url": "https://www.yahoo.com/news/science/articles/oregon-confirms-first-human-case-200500777.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T12:05:00.000Z",
-      "latestAt": "2026-11-20T03:52:21.000Z",
-      "firstSeenAt": "2026-11-20T04:56:32.174Z",
-      "outlets": 14,
-      "outletNames": [
-        "Central Oregon Daily",
-        "KGW",
-        "Statesman Journal",
-        "KOIN.com",
-        "KTVZ",
-        "KATU",
-        "KVAL",
-        "TriYakNews.com",
-        "Outbreak News Today",
-        "KPTV",
-        "Oregon Capital Chronicle",
-        "KPIC",
-        "Capital Press",
-        "Yahoo"
-      ],
-      "score": 3.46
     },
     {
       "id": "e498b9be28a4",
@@ -688,22 +690,26 @@
       }
     },
     {
-      "id": "f54c54e006b3",
+      "id": "307f16754e66",
       "cat": "hacks",
       "kind": "news",
-      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
-      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T16:00:00.000Z",
-      "latestAt": "2026-11-20T02:10:51.000Z",
-      "firstSeenAt": "2026-11-20T03:11:30.805Z",
-      "outlets": 3,
+      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
+      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
+      "source": "Pioneer Press",
+      "publishedAt": "2026-11-19T08:16:00.000Z",
+      "latestAt": "2026-11-20T03:44:54.000Z",
+      "firstSeenAt": "2026-11-19T21:25:13.013Z",
+      "outlets": 7,
       "outletNames": [
-        "KTNV Las Vegas",
-        "Yahoo",
-        "KTNV 13 Action News"
+        "Pioneer Press",
+        "ABC News - Breaking News, Latest News and Videos",
+        "KRCG",
+        "Orange County Register",
+        "The Baltimore Sun",
+        "Howl.Link",
+        "AP News"
       ],
-      "score": 2.94
+      "score": 2.97
     },
     {
       "id": "497408cf71f1",
@@ -933,25 +939,22 @@
       "score": 1.72
     },
     {
-      "id": "307f16754e66",
+      "id": "f54c54e006b3",
       "cat": "hacks",
       "kind": "news",
-      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
-      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
-      "source": "Pioneer Press",
-      "publishedAt": "2026-11-19T08:16:00.000Z",
-      "latestAt": "2026-11-20T03:44:54.000Z",
-      "firstSeenAt": "2026-11-19T21:25:13.013Z",
-      "outlets": 6,
+      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
+      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T16:00:00.000Z",
+      "latestAt": "2026-11-20T02:10:51.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "outlets": 3,
       "outletNames": [
-        "Pioneer Press",
-        "ABC News - Breaking News, Latest News and Videos",
-        "KRCG",
-        "Orange County Register",
-        "The Baltimore Sun",
-        "Howl.Link"
+        "KTNV Las Vegas",
+        "Yahoo",
+        "KTNV 13 Action News"
       ],
-      "score": 2.8
+      "score": 2.94
     },
     {
       "id": "609d5f00cba2",
@@ -1307,24 +1310,6 @@
       "score": 1.8
     },
     {
-      "id": "0bf13d0d47a4",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA ground stop leads to surprise duet for Hobe Sound singer in Jupiter",
-      "url": "https://www.yahoo.com/news/videos/faa-ground-stop-leads-surprise-222213176.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T05:59:00.000Z",
-      "latestAt": "2026-11-19T22:01:08.000Z",
-      "firstSeenAt": "2026-11-20T00:55:55.472Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "WFLX",
-        "WPTV"
-      ],
-      "score": 1.77
-    },
-    {
       "id": "7ecaf2b2bd2b",
       "cat": "hacks",
       "kind": "news",
@@ -1544,6 +1529,23 @@
         "Fortune on MSN"
       ],
       "score": 1.6
+    },
+    {
+      "id": "c98a8999b433",
+      "cat": "sun",
+      "kind": "news",
+      "title": "The silent vulnerability of high tech to intense solar storms",
+      "url": "https://www.yahoo.com/news/science/articles/silent-vulnerability-high-tech-intense-042002662.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T16:00:00.000Z",
+      "latestAt": "2026-11-19T22:20:02.000Z",
+      "firstSeenAt": "2026-11-20T06:11:44.716Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 2"
+      ],
+      "score": 1.53
     },
     {
       "id": "b58dc9dabd96",
@@ -1776,6 +1778,22 @@
       "quietReason": "headline mentions tornadoes"
     },
     {
+      "id": "80b173a24678",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack exposes customer names and emails at major financial companies",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZHBxaGZLTXRuZFVoYTMzN2xCLWZpRFA1TUZ1cHhiemJaajRIT1FqMGV1dXI3QXpzYkJWUTU5LXNtWGM1V0FoLVZiek00RTVZUXlSdTRUNE9vckRrbW8tYlZ4Wm5qc0EwWUhzaUhNTzhzR0M0Zmt6WFNRaHBoaVdBYW56SldDOEVERnNZSmV3bXhXS1NxSGc0QVNwLXZTUzVkeGViTWk2NklWcExmTzZya2V2aw?oc=5",
+      "source": "ABC10",
+      "publishedAt": "2026-11-20T05:25:00.000Z",
+      "latestAt": "2026-11-20T05:25:00.000Z",
+      "firstSeenAt": "2026-11-20T06:11:44.716Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC10"
+      ],
+      "score": 1.38
+    },
+    {
       "id": "00b1d089730c",
       "cat": "internet",
       "kind": "news",
@@ -1808,6 +1826,39 @@
       "score": 1.37
     },
     {
+      "id": "1faccbf6c8c7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "NIST scientists find quantum physics can verify a person’s location while keeping remote hackers out",
+      "url": "https://www.yahoo.com/news/science/articles/nist-scientists-quantum-physics-verify-170700019.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T09:07:00.000Z",
+      "latestAt": "2026-11-19T17:07:00.000Z",
+      "firstSeenAt": "2026-11-20T06:11:44.716Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "The Brighter Side of News"
+      ],
+      "score": 1.3
+    },
+    {
+      "id": "3f1eab354c5a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Blames Faulty Router in El Dorado, Arkansas for Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZ2xiRTFxQkhqVkV1Sk1qUDRQU0owYmVqbm1oRW5HbFgyZUdzYy00XzktMm4tanhuZE9neVhvVGdmdHhQdG9uc21LNzJLcEpSMDlibEI5MkJHVGhIVmxQdlhuX2p6MHZ5WVFNSkxER1NYMDZnWUYyUDhCc0ZtaE5NeVdqMA?oc=5",
+      "source": "PravdaReport",
+      "publishedAt": "2026-11-20T00:33:59.000Z",
+      "latestAt": "2026-11-20T00:33:59.000Z",
+      "firstSeenAt": "2026-11-20T06:11:44.716Z",
+      "outlets": 1,
+      "outletNames": [
+        "PravdaReport"
+      ],
+      "score": 1.27
+    },
+    {
       "id": "3712e02a1b2c",
       "cat": "hacks",
       "kind": "news",
@@ -1823,6 +1874,22 @@
         "LAmag"
       ],
       "score": 1.27
+    },
+    {
+      "id": "5b08db75b6b4",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Local Wyoming airports back on track days after the nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQSGdBOExOUDJMckx3OFZoX2hsLTRqZXQzbXNrY25LX3F2RXJUQUZCV25LZ3c2SlFIR29vTGZOWjF3RlhIbmpCNkVMMlNtYjlwOHZLcjVRUFRpYnBqd1dUVG55VE40eEFOLWMyZlFXcG9aTjBjNnF2RDBSMk5WWk9fV29ZQmg5Zm5ObmxkNnV6bzFWVXZ3LXdxVGg0OERmNEJNemlKZlJmSnNYekg3Q2hfWnpsM0Q3M1FqQmpMZ0s4bGw1em4ycjBzV0dtUTZpcVZHYU9veG44NkR0bXBTQXdZTnNwcWU4SDY0UjJoeDc3NnU?oc=5",
+      "source": "wyomingnewsnow.tv",
+      "publishedAt": "2026-11-19T22:41:00.000Z",
+      "latestAt": "2026-11-19T22:41:00.000Z",
+      "firstSeenAt": "2026-11-20T06:11:44.716Z",
+      "outlets": 1,
+      "outletNames": [
+        "wyomingnewsnow.tv"
+      ],
+      "score": 1.22
     },
     {
       "id": "8838110540f0",
@@ -2003,56 +2070,6 @@
       "score": 0.97
     },
     {
-      "id": "e92ac3b8a269",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Volcano erupts in southern Japan, no evacuation warning",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSVpWQVpVQUlwdDgwQTg3cHJpSnA3QVlra1ZwZjRRODBEUjM4X1Y4U2sxS1ItYkFzd3BDbFdlMEpvNDg1LVFyV2pXd295TE5vQTREdkI3YTJNcmhwczZyOVc2aHprLUdWeGdoVVhDRVI5YkhuZENLdTRzQ1J2WGdzS3FNbkpQbDRrQnFLYWRMLWUzb1FDRS1rTw?oc=5",
-      "source": "Yeni Safak English",
-      "publishedAt": "2026-11-19T23:03:17.000Z",
-      "latestAt": "2026-11-19T23:03:17.000Z",
-      "firstSeenAt": "2026-11-20T00:40:48.102Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yeni Safak English"
-      ],
-      "score": 0.97,
-      "quiet": true,
-      "quietReason": "headline mentions evacuation"
-    },
-    {
-      "id": "4af7cf3b5655",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Visa, Mastercard and Chase Bank customer data hacked — after string of major failures",
-      "url": "https://www.msn.com/en-us/money/general/visa-mastercard-and-chase-bank-customer-data-hacked-after-string-of-major-failures/ar-AA2hMjUE",
-      "source": "New York Post on MSN",
-      "publishedAt": "2026-11-19T08:48:44.000Z",
-      "latestAt": "2026-11-19T08:48:44.000Z",
-      "firstSeenAt": "2026-11-20T05:56:49.662Z",
-      "outlets": 1,
-      "outletNames": [
-        "New York Post on MSN"
-      ],
-      "score": 0.91
-    },
-    {
-      "id": "0a4f69c262fb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
-      "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
-      "source": "wsj.com",
-      "publishedAt": "2026-11-19T23:32:11.000Z",
-      "latestAt": "2026-11-19T23:32:11.000Z",
-      "firstSeenAt": "2026-11-20T05:56:49.662Z",
-      "outlets": 1,
-      "outletNames": [
-        "wsj.com"
-      ],
-      "score": 0.89
-    },
-    {
       "id": "f4629284395c",
       "cat": "ai",
       "kind": "news",
@@ -2067,22 +2084,6 @@
         "New York Post"
       ],
       "score": 0.86
-    },
-    {
-      "id": "f26454cbf8fe",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Ranking Member Foushee's Opening Statement at Space Weather Hearing",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMXJHRzJQRzdmaEpCQzFKYmhFcl9odDFNYkRMc1ZqeDBqRG1mZExGaHR4QjI1VkctUk5pX2o5WVlWbkhaV0gtU3VGXzV5bEFYX2NIMno3bmZLV3E4TFBFczZ2RUUwTWJ5UEJ2TjFubk5VQ2luV3NPLWJQb2VsQnFkaUhWV2ZuRXJhMW5hY3VXMmxTVWg3Z3BEaERrcG1WZTRuUkRKOVAtaDlWbW03ZkktRHhsSQ?oc=5",
-      "source": "Congresswoman Valerie Foushee (.gov)",
-      "publishedAt": "2026-11-19T18:05:40.000Z",
-      "latestAt": "2026-11-19T18:05:40.000Z",
-      "firstSeenAt": "2026-11-20T05:41:38.236Z",
-      "outlets": 1,
-      "outletNames": [
-        "Congresswoman Valerie Foushee (.gov)"
-      ],
-      "score": 0.81
     },
     {
       "id": "6b6b9ea66d26",
