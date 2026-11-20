@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T18:28:45.750Z",
+  "buildTime": "2026-11-20T18:44:25.116Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 13:28 ET",
+  "etStamp": "2026-11-20 13:44 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -46,18 +46,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1325,
-  "lastSuccessAt": "2026-11-20T18:28:45.750Z",
+  "headlinesRead": 1310,
+  "lastSuccessAt": "2026-11-20T18:44:25.116Z",
   "rollingFallback": false,
   "cats": {
     "flights": 21,
-    "germs": 4,
     "grid": 5,
-    "hacks": 30,
+    "germs": 4,
+    "hacks": 29,
     "markets": 7,
-    "internet": 9,
     "earth": 4,
     "weather": 6,
+    "internet": 10,
     "ai": 4,
     "sun": 4,
     "space": 4,
@@ -178,20 +178,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1016,
+      "count": 1003,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     },
     "bing": {
       "ok": true,
-      "count": 271,
+      "count": 269,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,57 +201,58 @@
     },
     "hn": {
       "ok": true,
-      "count": 7,
+      "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:28:45.750Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z"
+      "lastOkAt": "2026-11-20T18:44:25.116Z"
     }
   },
   "stories": [
@@ -302,31 +303,6 @@
       }
     },
     {
-      "id": "6909d0eab00e",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu spreads amid cuts to federal agency oversight",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTGFVcElaZjZhdVZ6Z1E1RklRNW1TVnduVWlFRV9rT080NTN2TGxTTE54SFFYeTJTZVVfWDhzTDVPMjdhQ1Bjdm1NYmprRHlkV0pRV0FqR3FsUGxJTnhrUVdHN1pkMkdxQ1dRc084czY2WEFsZFVxWWVIWFVYVVptaVAtYkl2aUJlZk1Bcy14cjBodw?oc=5",
-      "source": "knoxradio.com",
-      "publishedAt": "2026-11-20T15:00:07.000Z",
-      "latestAt": "2026-11-20T17:15:34.000Z",
-      "firstSeenAt": "2026-11-20T15:43:31.995Z",
-      "outlets": 10,
-      "outletNames": [
-        "knoxradio.com",
-        "The Mountaineer",
-        "Caledonian Record",
-        "The Daily Progress",
-        "Richmond Times-Dispatch",
-        "Roanoke Times",
-        "Wisconsin State Journal",
-        "Lexington Clipper-Herald",
-        "The Franklin News Post",
-        "The Bristol Herald Courier"
-      ],
-      "score": 4.27
-    },
-    {
       "id": "63f3e69e3827",
       "cat": "flights",
       "kind": "news",
@@ -365,6 +341,32 @@
       "score": 4.1
     },
     {
+      "id": "6909d0eab00e",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu spreads amid cuts to federal agency oversight",
+      "url": "https://www.aol.com/articles/bird-flu-spreads-amid-cuts-150007000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-20T06:59:00.000Z",
+      "latestAt": "2026-11-20T17:15:34.000Z",
+      "firstSeenAt": "2026-11-20T15:43:31.995Z",
+      "outlets": 11,
+      "outletNames": [
+        "knoxradio.com",
+        "The Mountaineer",
+        "Caledonian Record",
+        "The Daily Progress",
+        "Richmond Times-Dispatch",
+        "Roanoke Times",
+        "Wisconsin State Journal",
+        "Lexington Clipper-Herald",
+        "The Franklin News Post",
+        "The Bristol Herald Courier",
+        "AOL"
+      ],
+      "score": 3.81
+    },
+    {
       "id": "c77caedd2626",
       "cat": "hacks",
       "kind": "news",
@@ -387,36 +389,6 @@
       "score": 3.28
     },
     {
-      "id": "6f53426df1bb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
-      "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
-      "source": "wsj.com",
-      "publishedAt": "2026-11-19T18:38:00.000Z",
-      "latestAt": "2026-11-20T15:40:00.000Z",
-      "firstSeenAt": "2026-11-20T14:58:12.038Z",
-      "outlets": 13,
-      "outletNames": [
-        "CBS News",
-        "Decrypt",
-        "Yahoo Finance",
-        "Finextra Research",
-        "Wccftech",
-        "WSJ",
-        "Futurism",
-        "Techlicious",
-        "FOX 5 New York",
-        "Tempo.co English",
-        "Incrypted",
-        "Euronews.com",
-        "Malwarebytes"
-      ],
-      "trending": 10000,
-      "trendTerm": "jp morgan chase",
-      "score": 3.11
-    },
-    {
       "id": "fa6bdfc296d7",
       "cat": "hacks",
       "kind": "news",
@@ -436,6 +408,23 @@
       "score": 2.95
     },
     {
+      "id": "80b173a24678",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack exposes customer names and emails at major financial companies",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZHBxaGZLTXRuZFVoYTMzN2xCLWZpRFA1TUZ1cHhiemJaajRIT1FqMGV1dXI3QXpzYkJWUTU5LXNtWGM1V0FoLVZiek00RTVZUXlSdTRUNE9vckRrbW8tYlZ4Wm5qc0EwWUhzaUhNTzhzR0M0Zmt6WFNRaHBoaVdBYW56SldDOEVERnNZSmV3bXhXS1NxSGc0QVNwLXZTUzVkeGViTWk2NklWcExmTzZya2V2aw?oc=5",
+      "source": "ABC10",
+      "publishedAt": "2026-11-20T05:25:00.000Z",
+      "latestAt": "2026-11-20T05:25:00.000Z",
+      "firstSeenAt": "2026-11-20T06:11:44.716Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC10",
+        "Yahoo"
+      ],
+      "score": 2.76
+    },
+    {
       "id": "6a48e452a3f3",
       "cat": "markets",
       "kind": "news",
@@ -452,23 +441,6 @@
         "TradingView"
       ],
       "score": 2.23
-    },
-    {
-      "id": "4e52d86797e3",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Spartanburg Water continues restoration efforts after widespread outage",
-      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxNOWJfTzlnZUNoMTFTR3Z5cTc4djFMQ2pvMG1WdkJkMV9pRFkyLVdDRzdJZk1td0g4U3VFUFQ2ZW42Y0QtN1NiZUhVTGJET2t1SE1oZlRmOE53Mmw1bUtSWndqX0tZRy1VdHYtdzJfUWhFaFdBcmZVaHhJZ3B6Mm5fdVltQXNIbGNDU2xRWko1UjJjMHZCUEFkVmRhYWtpbUc4eUlZQTZiRzlTYlhUMVpRLXhLSkZJaUFsaEtpUFhfa19CWG80VHFVSlRwS1BZQVIwT0NLbFZROEVRX0hCeFNUYzBMV0xpVDdhMWdIMVdpLWl3b2dTemZ0aXNpYXh3M0dicUo5TDdCeGRmMFZmQ1JzVzNoa0wwM0hn?oc=5",
-      "source": "WLOS",
-      "publishedAt": "2026-11-20T18:17:35.000Z",
-      "latestAt": "2026-11-20T18:23:18.000Z",
-      "firstSeenAt": "2026-11-20T18:28:45.750Z",
-      "outlets": 2,
-      "outletNames": [
-        "WLOS",
-        "cedarnews"
-      ],
-      "score": 1.99
     },
     {
       "id": "acd1e0d2dcd8",
@@ -520,6 +492,23 @@
         "cedarnews.net"
       ],
       "score": 1.99
+    },
+    {
+      "id": "04fdbec0714b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Cause of widespread Wallowa County power outage remains under investigation, Pacific Power claims",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNYXlGMEdCUE9ITDdjMVpwX2pnZUw1SS00WU1sOWxEODFNWnV1Y3hqZDhkNjk3T1p4akJtOE1nX1k1U0l5c3NPX0pYenhIekZiZDZBaUNIMlMzZmtFRVpiQnlRbndfd2RHbEoyTk53UmQyd0luYV9La05oMnBnWEg3SUFuYm9mZm5DTkdVSHVMcHB2MHd6Y0hWakFZNVF2ZUQwYm1LcUM2ZHdCb01kZ1Y2SEpCRFdONUxQYzFORmtMNXQ0cXo0MWc?oc=5",
+      "source": "Elkhorn Media Group",
+      "publishedAt": "2026-11-20T14:37:41.000Z",
+      "latestAt": "2026-11-20T14:41:51.000Z",
+      "firstSeenAt": "2026-11-20T15:58:21.605Z",
+      "outlets": 2,
+      "outletNames": [
+        "Elkhorn Media Group",
+        "cedarnews"
+      ],
+      "score": 1.96
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-20",
@@ -581,23 +570,6 @@
       "score": 3.12
     },
     {
-      "id": "80b173a24678",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack exposes customer names and emails at major financial companies",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZHBxaGZLTXRuZFVoYTMzN2xCLWZpRFA1TUZ1cHhiemJaajRIT1FqMGV1dXI3QXpzYkJWUTU5LXNtWGM1V0FoLVZiek00RTVZUXlSdTRUNE9vckRrbW8tYlZ4Wm5qc0EwWUhzaUhNTzhzR0M0Zmt6WFNRaHBoaVdBYW56SldDOEVERnNZSmV3bXhXS1NxSGc0QVNwLXZTUzVkeGViTWk2NklWcExmTzZya2V2aw?oc=5",
-      "source": "ABC10",
-      "publishedAt": "2026-11-20T05:25:00.000Z",
-      "latestAt": "2026-11-20T05:25:00.000Z",
-      "firstSeenAt": "2026-11-20T06:11:44.716Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC10",
-        "Yahoo"
-      ],
-      "score": 2.76
-    },
-    {
       "id": "04c2e2acf99a",
       "cat": "hacks",
       "kind": "news",
@@ -633,21 +605,22 @@
       "score": 2.49
     },
     {
-      "id": "04fdbec0714b",
-      "cat": "grid",
+      "id": "d61f837abd4a",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Cause of widespread Wallowa County power outage remains under investigation, Pacific Power claims",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNYXlGMEdCUE9ITDdjMVpwX2pnZUw1SS00WU1sOWxEODFNWnV1Y3hqZDhkNjk3T1p4akJtOE1nX1k1U0l5c3NPX0pYenhIekZiZDZBaUNIMlMzZmtFRVpiQnlRbndfd2RHbEoyTk53UmQyd0luYV9La05oMnBnWEg3SUFuYm9mZm5DTkdVSHVMcHB2MHd6Y0hWakFZNVF2ZUQwYm1LcUM2ZHdCb01kZ1Y2SEpCRFdONUxQYzFORmtMNXQ0cXo0MWc?oc=5",
-      "source": "Elkhorn Media Group",
-      "publishedAt": "2026-11-20T14:37:41.000Z",
-      "latestAt": "2026-11-20T14:41:51.000Z",
-      "firstSeenAt": "2026-11-20T15:58:21.605Z",
-      "outlets": 2,
+      "title": "JPMorgan Chase confirms data breach affecting thousands of customers",
+      "url": "https://www.consumeraffairs.com/news/jpmorgan-chase-confirms-data-breach-affecting-thousands-of-customers-112026.html",
+      "source": "ConsumerAffairs",
+      "publishedAt": "2026-11-19T19:15:43.000Z",
+      "latestAt": "2026-11-20T13:38:41.000Z",
+      "firstSeenAt": "2026-11-19T21:25:13.013Z",
+      "outlets": 3,
       "outletNames": [
-        "Elkhorn Media Group",
-        "cedarnews"
+        "Rolling Out",
+        "Cryptonews.net",
+        "ConsumerAffairs"
       ],
-      "score": 1.96
+      "score": 2.49
     },
     {
       "id": "877d7417a818",
@@ -682,6 +655,23 @@
         "The Albertan"
       ],
       "score": 1.82
+    },
+    {
+      "id": "4e52d86797e3",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Spartanburg Water continues restoration efforts after widespread outage",
+      "url": "https://www.msn.com/en-us/news/other/spartanburg-water-continues-restoration-efforts-after-widespread-outage/ar-AA2hSHCT",
+      "source": "WLOS on MSN",
+      "publishedAt": "2026-11-20T10:16:26.000Z",
+      "latestAt": "2026-11-20T18:23:18.000Z",
+      "firstSeenAt": "2026-11-20T18:28:45.750Z",
+      "outlets": 2,
+      "outletNames": [
+        "WLOS",
+        "cedarnews"
+      ],
+      "score": 1.73
     },
     {
       "id": "75cfa403ab35",
@@ -754,6 +744,23 @@
       "score": 1.72
     },
     {
+      "id": "e4670ac78cbe",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft 365, Outlook down for thousands of US users, Downdetector shows",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBUZEd5RnNDbHZJR090MmM2T1A2QlUtX0JPNGJLWUczZHY0QllWMGpBTzRuVE0tLVM5WnBvT3RvSmk2Q0lzQzJ6Q2FIb1NZblFTN2NVVW5aQzg2WDZfYXhmNHBnOXZaekZIeEowcUFoTEhtaHBNdmc?oc=5",
+      "source": "Omaha World-Herald",
+      "publishedAt": "2026-11-20T10:03:24.000Z",
+      "latestAt": "2026-11-20T17:16:57.000Z",
+      "firstSeenAt": "2026-11-20T18:44:25.116Z",
+      "outlets": 2,
+      "outletNames": [
+        "Omaha World-Herald",
+        "The Sunday Guardian"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "ad9dfb453401",
       "cat": "grid",
       "kind": "news",
@@ -819,40 +826,6 @@
         "Chicago Sun-Times"
       ],
       "score": 1.4
-    },
-    {
-      "id": "60bf689c89a1",
-      "cat": "internet",
-      "kind": "news",
-      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
-      "source": "StoneWars.com",
-      "publishedAt": "2026-11-20T11:37:19.000Z",
-      "latestAt": "2026-11-20T11:40:12.000Z",
-      "firstSeenAt": "2026-11-20T11:42:39.182Z",
-      "outlets": 1,
-      "outletNames": [
-        "StoneWars.com"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "d61f837abd4a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase confirms data breach affecting thousands of customers",
-      "url": "https://www.consumeraffairs.com/news/jpmorgan-chase-confirms-data-breach-affecting-thousands-of-customers-112026.html",
-      "source": "ConsumerAffairs",
-      "publishedAt": "2026-11-19T19:15:43.000Z",
-      "latestAt": "2026-11-20T13:38:41.000Z",
-      "firstSeenAt": "2026-11-19T21:25:13.013Z",
-      "outlets": 3,
-      "outletNames": [
-        "Rolling Out",
-        "Cryptonews.net",
-        "ConsumerAffairs"
-      ],
-      "score": 2.49
     },
     {
       "id": "28b64844bc13",
@@ -945,6 +918,26 @@
       "score": 2.12
     },
     {
+      "id": "1941e519481f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan, Visa, and Mastercard disclose cyberattack on third-party vendors",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNS2R0aHc1VDVIQ3QxYjZFTmdYTktsYjBPdUFfUlY4UVZPekNOSTVwS1JWR1hoVkVlTXFIdFNwakdEMHlXWlpWNWhMdWlZNHZjSTczR2hFUm02M3BBOG1sRzhDVlE1cTlPa1ppNWRack1rMTNfelJpWlJleENsVGhwYlFwdWZUaGd2TjQ1OG9rMzh2TzlEVE1mZmhyQVI2RTFkN25BVnFLNjRlUHBma29Gc05WVHBrTjVhaGNlQzlSaXlDZm9sOGhNZw?oc=5",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-19T18:56:07.000Z",
+      "latestAt": "2026-11-20T15:22:30.000Z",
+      "firstSeenAt": "2026-11-20T18:13:51.591Z",
+      "outlets": 5,
+      "outletNames": [
+        "Yahoo Finance",
+        "iTnews",
+        "Intelligent CISO",
+        "Security Affairs",
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "score": 2.03
+    },
+    {
       "id": "1ac4999a4493",
       "cat": "flights",
       "kind": "news",
@@ -1020,7 +1013,7 @@
       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE50STdjMEhqZ2o4dGd2UlVyY2ZudXZkQ3FJMUhDdFlqNDB6aGl0cFZMZDJJRmNwSF9NT2p4ZUQtbm1LREhpM0JwTW8yY2Q?oc=5",
       "source": "ABC News - Breaking News, Latest News and Videos",
       "publishedAt": "2026-11-20T12:40:01.000Z",
-      "latestAt": "2026-11-20T16:53:31.000Z",
+      "latestAt": "2026-11-20T16:58:59.000Z",
       "firstSeenAt": "2026-11-20T16:58:32.799Z",
       "outlets": 2,
       "outletNames": [
@@ -1045,25 +1038,6 @@
         "Yahoo"
       ],
       "score": 1.85
-    },
-    {
-      "id": "1941e519481f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan, Visa, and Mastercard disclose cyberattack on third-party vendors",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNS2R0aHc1VDVIQ3QxYjZFTmdYTktsYjBPdUFfUlY4UVZPekNOSTVwS1JWR1hoVkVlTXFIdFNwakdEMHlXWlpWNWhMdWlZNHZjSTczR2hFUm02M3BBOG1sRzhDVlE1cTlPa1ppNWRack1rMTNfelJpWlJleENsVGhwYlFwdWZUaGd2TjQ1OG9rMzh2TzlEVE1mZmhyQVI2RTFkN25BVnFLNjRlUHBma29Gc05WVHBrTjVhaGNlQzlSaXlDZm9sOGhNZw?oc=5",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-19T19:03:14.000Z",
-      "latestAt": "2026-11-20T15:22:30.000Z",
-      "firstSeenAt": "2026-11-20T18:13:51.591Z",
-      "outlets": 4,
-      "outletNames": [
-        "Yahoo Finance",
-        "iTnews",
-        "Intelligent CISO",
-        "Security Affairs"
-      ],
-      "score": 1.84
     },
     {
       "id": "0e469f138088",
@@ -1271,6 +1245,22 @@
       "score": 1.54
     },
     {
+      "id": "1071b9a14747",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide Ground Stop Puts Air Traffic Modernization Under Scrutiny",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9RTWMtcHVTcjBONWZIZ1BkdXlKVEswdzZXNnNYRVdVRmRxZVViR0tYcWtubFMwMXE0aTZONWs4R2hBa3V2QnFXSHhCeXJFNlZjQ1BhcVpEeVRaTXhETE5NOUlkRS1KVnpWdXJ5Q2tkSzJ2ZW5KSHc?oc=5",
+      "source": "Legis1",
+      "publishedAt": "2026-11-20T18:33:45.000Z",
+      "latestAt": "2026-11-20T18:33:45.000Z",
+      "firstSeenAt": "2026-11-20T18:44:25.116Z",
+      "outlets": 1,
+      "outletNames": [
+        "Legis1"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "50e8bed5e3a2",
       "cat": "hacks",
       "kind": "news",
@@ -1283,6 +1273,22 @@
       "outlets": 1,
       "outletNames": [
         "TechRadar"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "60bf689c89a1",
+      "cat": "internet",
+      "kind": "news",
+      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
+      "source": "StoneWars.com",
+      "publishedAt": "2026-11-20T11:37:19.000Z",
+      "latestAt": "2026-11-20T11:40:12.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 1,
+      "outletNames": [
+        "StoneWars.com"
       ],
       "score": 1.4
     },
@@ -1714,7 +1720,7 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObFZzaU8tbVRBMmRpb0V5bUlKcmc1VWstampqcjRwbkUtX2ZCR2NwRGtpZXh3RkVPd2RZUUEtdlkzOHlqR2h5c1F4Ymx2R2x6SExiZjVaUm1qVHRkaG5kTVJMYWFsVHhRSUtKM2ttb25hbmlhb29YTVE1Zl81ZlNucGFySktmWEpNaWJlczFlbk50Vm96M25lTEJkc1p6d3dWQndiXzVuWS1aZ0psY3phMkZudVhpYUNINHpJ?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-20T03:41:56.000Z",
-      "latestAt": "2026-11-20T03:41:56.000Z",
+      "latestAt": "2026-11-20T10:12:14.000Z",
       "firstSeenAt": "2026-11-20T06:41:52.759Z",
       "outlets": 1,
       "outletNames": [
@@ -1737,22 +1743,6 @@
         "Stocktwits"
       ],
       "score": 1.32
-    },
-    {
-      "id": "5c44fad5234f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US ground stop has led to discussion of major overhaul to air traffic control systems",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNSUlDUXZrOTdmS0oxeWwtUUpSa2RRd19INnZwdjZxWFo3MjE1YzZLSERXRTRuZFpFV2RxVmp1ODM3MUxMdWRFS0FWWGlucTk0TWxnVnNWdTFwTnNvV0VTU19RU2c0OVMtbkstQ3RQY3RfUTc3dFFxSE5mY2xVam5zRkFXdWlENGc0WUc3QXUzdFFtbDJ5YzIwM0dZNUFVYzUtWVNlTDJsSnk5V210dktJdGdQZ1dqN3hIUGh6SVExUkVFNWlTZllNQ05qV2ROQ1l2UzBjdEktaV9RdTdTempiSlJ4ZzZVVlZYd1ZvaDVzMms0OFg2eTBTbm9XM09FUHPSAYQCQVVfeXFMTXJJVUpfRzhVdERVYUlVQnZWM3lVSkJIQ1NOc3RZbTNRZV82UGpFY2xSUEh0c0xCOUNiRnQ0ZmNJOFdRY1ZwaVJieVd2dElFTURxMm5UZ2JrQWpkM1lHaWNQWDl2NDlYS0MzSE42bjRMVllkVlpuMHRaQmhWVHYxeldGM3JLTjBQZlNLNVdMaGNZLTN5MXFPdWsxSUdPbmZlVmc1RGZqd1BmeWMwcjlIc0tnZDVmN2RNdkpjWl95TWJyZ3M0cDJvNXAwSDA3NnhhRWlpTTVyc2UxLVZqU1Z3MWRWejdIanNXa2FRYUVqMmRNMWx4VGVsOTlOaTNSc3Y5ZTZHM00?oc=5",
-      "source": "News24",
-      "publishedAt": "2026-11-20T04:46:00.000Z",
-      "latestAt": "2026-11-20T04:46:00.000Z",
-      "firstSeenAt": "2026-11-20T12:27:46.115Z",
-      "outlets": 1,
-      "outletNames": [
-        "News24"
-      ],
-      "score": 1.22
     },
     {
       "id": "3a38015822b7",
@@ -1901,6 +1891,22 @@
       "score": 0.99
     },
     {
+      "id": "4c618ec78151",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Launching an Investigation into Cannibal Coronal Mass Ejections",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQNWtQQmZUUDZpWTdjdlBPY3Zjb3BfZEtaSHR5cW80UTVpOHMzaThheDh0encyVlR2alZkV3NORFdXWENnRkVQN2JJSjZYNkZJODFudnkyY1kxRkVLZVBMd3E1ODFta09ubmgwcmNQU0JyZVNrNzA4Z2NRcm1lVXkzbDRYZmZGX1k0MW1MQVlkSllwUDVuQnN6ZlpVWQ?oc=5",
+      "source": "AAS Nova",
+      "publishedAt": "2026-11-20T17:00:16.000Z",
+      "latestAt": "2026-11-20T17:00:16.000Z",
+      "firstSeenAt": "2026-11-20T18:44:25.116Z",
+      "outlets": 1,
+      "outletNames": [
+        "AAS Nova"
+      ],
+      "score": 0.97
+    },
+    {
       "id": "8d5e8795626c",
       "cat": "sun",
       "kind": "news",
@@ -1929,22 +1935,6 @@
       "outlets": 1,
       "outletNames": [
         "JKN"
-      ],
-      "score": 0.86
-    },
-    {
-      "id": "d3f2123d2217",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Multiple Wavelengths Of Sun Blasts X1.2-Class Solar Flare",
-      "url": "https://www.yahoo.com/news/videos/multiple-wavelengths-sun-blasts-x1-000000447.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-20T09:00:00.000Z",
-      "latestAt": "2026-11-20T09:00:00.000Z",
-      "firstSeenAt": "2026-11-20T17:28:38.252Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yahoo"
       ],
       "score": 0.86
     },
