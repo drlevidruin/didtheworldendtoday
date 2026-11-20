@@ -129,17 +129,18 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTGFVcElaZjZhdVZ6Z1E1RklRNW1TVnduVWlFRV9rT080NTN2TGxTTE54SFFYeTJTZVVfWDhzTDVPMjdhQ1Bjdm1NYmprRHlkV0pRV0FqR3FsUGxJTnhrUVdHN1pkMkdxQ1dRc084czY2WEFsZFVxWWVIWFVYVVptaVAtYkl2aUJlZk1Bcy14cjBodw?oc=5",
       "source": "knoxradio.com",
       "publishedAt": "2026-11-20T15:00:07.000Z",
-      "latestAt": "2026-11-20T15:32:48.000Z",
+      "latestAt": "2026-11-20T15:54:59.000Z",
       "firstSeenAt": "2026-11-20T15:43:31.995Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "knoxradio.com",
         "The Mountaineer",
         "Caledonian Record",
         "The Daily Progress",
-        "Richmond Times-Dispatch"
+        "Richmond Times-Dispatch",
+        "Roanoke Times"
       ],
-      "score": 3.28
+      "score": 3.54
     },
     {
       "id": "6f53426df1bb",
@@ -293,6 +294,29 @@
       "score": 1.95
     },
     {
+      "id": "sig:faa-stop:TEB:2026-11-20",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-20T16:28:32.497Z",
+      "latestAt": "2026-11-20T16:28:32.497Z",
+      "firstSeenAt": "2026-11-20T16:28:32.497Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
+    },
+    {
       "id": "b0fc3c8f8eff",
       "cat": "flights",
       "kind": "news",
@@ -385,23 +409,6 @@
       "score": 2.47
     },
     {
-      "id": "f60e65cf388c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US to announce cause of nationwide FAA outage that disrupted 18,000 flights",
-      "url": "https://www.msn.com/en-in/news/other/us-to-announce-cause-of-nationwide-faa-outage-that-disrupted-18-000-flights/ar-AA2hOuUJ",
-      "source": "The Times of India on MSN",
-      "publishedAt": "2026-11-19T20:54:00.000Z",
-      "latestAt": "2026-11-20T05:15:00.000Z",
-      "firstSeenAt": "2026-11-20T05:11:34.772Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Times of India",
-        "timesofindia.indiatimes.com"
-      ],
-      "score": 2.41
-    },
-    {
       "id": "04fdbec0714b",
       "cat": "grid",
       "kind": "news",
@@ -436,23 +443,6 @@
       "score": 1.82
     },
     {
-      "id": "b1232520d389",
-      "cat": "internet",
-      "kind": "news",
-      "title": "APRA calls Microsoft outage a \"near miss\" for financial system",
-      "url": "https://www.insurancebusinessmag.com/au/news/cyber/apra-calls-microsoft-outage-a-near-miss-for-financial-system-598268.aspx",
-      "source": "Insurance Business America",
-      "publishedAt": "2026-11-20T07:28:00.000Z",
-      "latestAt": "2026-11-20T14:56:39.000Z",
-      "firstSeenAt": "2026-11-20T15:28:28.186Z",
-      "outlets": 2,
-      "outletNames": [
-        "Insurance Business America",
-        "Insurance Business"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "75cfa403ab35",
       "cat": "germs",
       "kind": "news",
@@ -485,6 +475,23 @@
         "Yahoo Finance"
       ],
       "score": 1.73
+    },
+    {
+      "id": "b1232520d389",
+      "cat": "internet",
+      "kind": "news",
+      "title": "APRA calls Microsoft outage a \"near miss\" for financial system",
+      "url": "https://www.insurancebusinessmag.com/au/news/cyber/apra-calls-microsoft-outage-a-near-miss-for-financial-system-598268.aspx",
+      "source": "Insurance Business America",
+      "publishedAt": "2026-11-20T06:56:00.000Z",
+      "latestAt": "2026-11-20T14:56:39.000Z",
+      "firstSeenAt": "2026-11-20T15:28:28.186Z",
+      "outlets": 2,
+      "outletNames": [
+        "Insurance Business America",
+        "Insurance Business"
+      ],
+      "score": 1.72
     },
     {
       "id": "fb2ea691c7d6",
@@ -620,6 +627,44 @@
       "score": 2.42
     },
     {
+      "id": "f60e65cf388c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "US to announce cause of nationwide FAA outage that disrupted 18,000 flights",
+      "url": "https://www.msn.com/en-in/news/other/us-to-announce-cause-of-nationwide-faa-outage-that-disrupted-18-000-flights/ar-AA2hOuUJ",
+      "source": "The Times of India on MSN",
+      "publishedAt": "2026-11-19T20:54:00.000Z",
+      "latestAt": "2026-11-20T05:15:00.000Z",
+      "firstSeenAt": "2026-11-20T05:11:34.772Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Times of India",
+        "timesofindia.indiatimes.com"
+      ],
+      "score": 2.41
+    },
+    {
+      "id": "1da502c155c4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase, Visa, Mastercard Customer Data Leaked In Cyberattack",
+      "url": "https://www.forbes.com/sites/maryroeloffs/2026/11/20/chase-visa-mastercard-customer-data-leaked-in-cyberattack/",
+      "source": "Forbes",
+      "publishedAt": "2026-11-19T17:07:52.000Z",
+      "latestAt": "2026-11-20T15:58:06.000Z",
+      "firstSeenAt": "2026-11-20T16:13:31.245Z",
+      "outlets": 6,
+      "outletNames": [
+        "NBC 5 Chicago",
+        "The Washington Post",
+        "Forbes",
+        "Newser",
+        "BleepingComputer",
+        "NBC Chicago"
+      ],
+      "score": 2.21
+    },
+    {
       "id": "4d14115377e9",
       "cat": "hacks",
       "kind": "news",
@@ -636,26 +681,6 @@
         "Yahoo Finance Australia"
       ],
       "score": 2.16
-    },
-    {
-      "id": "1da502c155c4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase, Visa, Mastercard Customer Data Leaked In Cyberattack",
-      "url": "https://www.forbes.com/sites/maryroeloffs/2026/11/20/chase-visa-mastercard-customer-data-leaked-in-cyberattack/",
-      "source": "Forbes",
-      "publishedAt": "2026-11-19T17:07:52.000Z",
-      "latestAt": "2026-11-20T15:58:06.000Z",
-      "firstSeenAt": "2026-11-20T16:13:31.245Z",
-      "outlets": 5,
-      "outletNames": [
-        "NBC 5 Chicago",
-        "The Washington Post",
-        "Forbes",
-        "Newser",
-        "BleepingComputer"
-      ],
-      "score": 2.04
     },
     {
       "id": "1ac4999a4493",
@@ -690,23 +715,6 @@
         "Modern Ghana"
       ],
       "score": 1.97
-    },
-    {
-      "id": "25a50fff8a1a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase says hackers targeted third-party companies and may have accessed customer data",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNR1ZScS1KOHZHeFdJa19KM1BfRTdsblRTTzVscWI3eGpsQkRHWGV0MW5oSDViN0tpeWV5bzdkR1RTMnVQdTcySkpoWTlWSnZMU1F1N0VNS0dOQ3hWMlNJVTRLNElVMGdQeHZYMkxqNTNkSkNPYjdlRFhueGhTT2Jlakp1QmxzMnhucEFWMkpqN3RldlZaWTVpWmpKQThLRTQ3N3RyYmhqMm5xVUtu?oc=5",
-      "source": "Houston Chronicle",
-      "publishedAt": "2026-11-19T16:21:27.000Z",
-      "latestAt": "2026-11-19T17:09:48.000Z",
-      "firstSeenAt": "2026-11-19T17:54:41.598Z",
-      "outlets": 2,
-      "outletNames": [
-        "Houston Chronicle",
-        "Yahoo"
-      ],
-      "score": 1.95
     },
     {
       "id": "501df2603002",
@@ -886,7 +894,7 @@
       "url": "https://www.insurancebusinessmag.com/us/news/cyber/cyberattack-tactics-are-outpacing-what-renewal-forms-ask-598220.aspx",
       "source": "Insurance Business America",
       "publishedAt": "2026-11-19T21:09:00.000Z",
-      "latestAt": "2026-11-20T14:34:36.000Z",
+      "latestAt": "2026-11-20T15:39:57.000Z",
       "firstSeenAt": "2026-11-20T10:27:27.401Z",
       "outlets": 2,
       "outletNames": [
@@ -1105,6 +1113,22 @@
       "score": 1.39
     },
     {
+      "id": "e2c866f07e13",
+      "cat": "flights",
+      "kind": "x",
+      "title": "On AvTalk, everything we know so far about last Friday’s nationwide ground stop. We discuss what we’ve learned about the cascading failure of the FTI network, what we don’t yet know, and what the DOT…",
+      "url": "https://x.com/flightradar24/status/2123803668814152081",
+      "source": "@flightradar24 on X",
+      "publishedAt": "2026-11-20T15:40:27.000Z",
+      "latestAt": "2026-11-20T15:40:27.000Z",
+      "firstSeenAt": "2026-11-20T16:28:32.497Z",
+      "outlets": 1,
+      "outletNames": [
+        "@flightradar24 on X"
+      ],
+      "score": 1.38
+    },
+    {
       "id": "cb91c9815031",
       "cat": "weather",
       "kind": "news",
@@ -1219,6 +1243,23 @@
       "score": 1.36
     },
     {
+      "id": "302b7d6a8578",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Regions Bank outage today: Is Regions Bank down in the US? Users report online banking, mobile app login, account access and money transfer issues",
+      "url": "https://www.msn.com/en-in/news/other/regions-bank-outage-today-is-regions-bank-down-in-the-us-users-report-online-banking-mobile-app-login-account-access-and-money-transfer-issues/ar-AA2hRNzH",
+      "source": "The Sunday Guardian Live on MSN",
+      "publishedAt": "2026-11-19T21:09:00.000Z",
+      "latestAt": "2026-11-20T13:43:34.000Z",
+      "firstSeenAt": "2026-11-20T16:28:32.497Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Sunday Guardian Live on MSN",
+        "The Sunday Guardian"
+      ],
+      "score": 1.36
+    },
+    {
       "id": "b24aa71cf00e",
       "cat": "hacks",
       "kind": "news",
@@ -1267,6 +1308,22 @@
         "Omaha World-Herald"
       ],
       "score": 1.34
+    },
+    {
+      "id": "f82c59b1b46e",
+      "cat": "internet",
+      "kind": "news",
+      "title": "N-able says recent security breach led to major service outage",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZ0ZVamhoZEJnekhrQmFyQ0ZPWm1wakxVZGF0bXQ3WXlQOXc5MksyWXNMdFdRTExFRXVOZXNUZ3Iyd1BJbTB3by14M091bDM1YUFVbV83VmNfUUdKMW93VU5aSkRaUUxwcTJGRjN2UUZiVC1ZWU5BUy12ZTRsTUZzNjhsWjNJREx0RUxXYkZpckhIRlBtQno2SkpUY3QyVHVObGhoSkdxa2pQZWtndllYTNIBtgFBVV95cUxPRzNidHFtYUdjaU90WUV4RkJmWmtBT0NJODBIcVdhdm9jSnJRamdKUGYwcjJnekNCQTgxOGpmQ3ZPUjJGaUZFUGJGTHZwYXZPWmZYSWpjTzdvM2VsRFQ4X0VFOGMzVFJwYXNpX0tDaVc0ODEycjhGeGdjQ1FPX0pjT0lVTEZxNUxoRk5KeEFzUEhrT1FodUFSWGVFVDk2Z3J1dXMtSnZiZnZCRThHTWg3U1RGQm8wZw?oc=5",
+      "source": "BleepingComputer",
+      "publishedAt": "2026-11-20T13:18:36.000Z",
+      "latestAt": "2026-11-20T13:18:36.000Z",
+      "firstSeenAt": "2026-11-20T16:28:32.497Z",
+      "outlets": 1,
+      "outletNames": [
+        "BleepingComputer"
+      ],
+      "score": 1.33
     },
     {
       "id": "5a3b028847ba",
@@ -1478,38 +1535,6 @@
       "score": 1.18
     },
     {
-      "id": "5cbcb0193557",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Potential Record Warmth on Friday & Saturday",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5Oc2U0V3VZNkNZMHBiZlk1NFEzRHhoY3dqblFMMkoyLU1LMl9mS092RTNKeHEyNi1jdEFtRDBxRHdQR19vTW9QVlkwRmY3TVR2VW1WaDBfNzBXUGpzeGtweTJ4b0NmbDRDUE5ISU9ZNlZNWm5vYnF0SkJmMEXSAZABQVVfeXFMTVZjWWQyZ2EwOW1POWNtcWlHdlhqZGtNZWVld3czQ2VNTDYtVmk1NHdrSkMxU0gxVXo0RWZnNllva1oteThRbkhZXzgwR29OaS1uVlNlSTJQSjVEZkNYTEdMZTJyMjloX040QXFhSDVCSEJheXZPTmMyc3NCNFdmMGxocEJIVElhY1pKZ2ZOcDFB?oc=5",
-      "source": "WLFI",
-      "publishedAt": "2026-11-19T22:36:00.000Z",
-      "latestAt": "2026-11-19T22:36:00.000Z",
-      "firstSeenAt": "2026-11-20T08:12:04.806Z",
-      "outlets": 1,
-      "outletNames": [
-        "WLFI"
-      ],
-      "score": 1.18
-    },
-    {
-      "id": "fe44ec24caee",
-      "cat": "internet",
-      "kind": "news",
-      "title": "It's been the worst week of major outages for 13 years, but don't blame AI",
-      "url": "https://www.msn.com/en-us/technology/cybersecurity/it-s-been-the-worst-week-of-major-outages-for-13-years-but-don-t-blame-ai/ar-AA2hS1Rm",
-      "source": "TechRadar on MSN",
-      "publishedAt": "2026-11-20T04:56:08.000Z",
-      "latestAt": "2026-11-20T04:56:08.000Z",
-      "firstSeenAt": "2026-11-20T16:13:31.245Z",
-      "outlets": 1,
-      "outletNames": [
-        "TechRadar on MSN"
-      ],
-      "score": 1.14
-    },
-    {
       "id": "7ba0231ec718",
       "cat": "ai",
       "kind": "x",
@@ -1624,22 +1649,6 @@
       "score": 1
     },
     {
-      "id": "ef5ca33cea92",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Tonawanda’s plane is in a permanent ground stop | The lighter side of The News",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQUVlKYkJKTFE5UGtrSVp5NW1rWjY0QlZuQ2htUVlXUTFBN0FocmdhZkFFR3VzYTlMd3ZiYjZfR0VHb1dIbWJiTXhYRnFmQnZLempmWko1YmdTMWRab1M0Sk40ZjE5aENmajMwY0ZDOHlZVXo5bGJtc0V5R1YzN04yeVlHdVhDSDUxTmVXeQ?oc=5",
-      "source": "Buffalo News",
-      "publishedAt": "2026-11-20T15:45:00.000Z",
-      "latestAt": "2026-11-20T15:45:00.000Z",
-      "firstSeenAt": "2026-11-20T16:13:31.245Z",
-      "outlets": 1,
-      "outletNames": [
-        "Buffalo News"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "de5252583060",
       "cat": "space",
       "kind": "news",
@@ -1736,5 +1745,5 @@
       "score": 0.63
     }
   ],
-  "updatedAt": "2026-11-20T16:13:31.245Z"
+  "updatedAt": "2026-11-20T16:28:32.497Z"
 }
