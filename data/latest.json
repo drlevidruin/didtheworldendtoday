@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T05:41:38.236Z",
+  "buildTime": "2026-11-20T05:56:49.662Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 00:41 ET",
+  "etStamp": "2026-11-20 00:56 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,15 +51,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1248,
-  "lastSuccessAt": "2026-11-20T05:41:38.236Z",
+  "headlinesRead": 308,
+  "lastSuccessAt": "2026-11-20T05:56:49.662Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
     "hacks": 38,
-    "internet": 10,
+    "internet": 9,
     "germs": 5,
-    "earth": 4,
+    "earth": 5,
     "grid": 7,
     "markets": 4,
     "space": 4,
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 940,
-      "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "bing": {
       "ok": true,
       "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,56 +208,55 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T05:41:38.236Z"
+      "lastOkAt": "2026-11-20T05:56:49.662Z"
     }
   },
   "stories": [
@@ -556,22 +555,22 @@
       "score": 2.87
     },
     {
-      "id": "ff1a8e6aa309",
+      "id": "53f2416310a2",
       "cat": "internet",
       "kind": "news",
-      "title": "Microsoft says services fully restored after hourslong global outage",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZHlYRjJoX0RfREJ3UFBlQ3pacWMwMjBXeGJETGNBTFIzbHZMd1o0UFpMR00tQ25kb0x3YlBjZk4wd25hQTVoQ0FQdTVydERxenNBbkx0YVU5VGtnMUJwcW0tc2FFZ0tsMk0wbFc4TjRHWFhid01xWmljT0tZMVFicUVWRk1ueWdscFMyZXdHWGVJWjdSQ1ozLWJGdXpNMFRQdFc2Mw?oc=5",
-      "source": "AP News",
-      "publishedAt": "2026-11-19T05:45:58.000Z",
-      "latestAt": "2026-11-19T19:09:26.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
+      "title": "Satya Nadella admits Microsoft could have prevented global Outlook outage",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQS3NXcXpPMkRlZlV5QUppZ1U5aEVyeXZjTVVwMFQ5MG1jc2t1TVl4Z3AwOGt0RVpBcDFDR19uamRPeVFzTU8ySlkwZWZyZXFJSUVCa2ZFSnZ4NmotdXZkS0g4cGFEQi1kcVFLLUVCODJOYWIzWl9Sd2JvaXMwdGs3azJjY0VjZHZDV25IaW5PVlNkUzl3NjVhdmJnYndqT05qdUlMUDFFSFk3SzJ1NklaREUwbExUR01IWnZnNkFRWnFEcktuOUJNVVMtVS1XYk5KbnR1d1pYUl9Yd9IB2gFBVV95cUxQS3NXcXpPMkRlZlV5QUppZ1U5aEVyeXZjTVVwMFQ5MG1jc2t1TVl4Z3AwOGt0RVpBcDFDR19uamRPeVFzTU8ySlkwZWZyZXFJSUVCa2ZFSnZ4NmotdXZkS0g4cGFEQi1kcVFLLUVCODJOYWIzWl9Sd2JvaXMwdGs3azJjY0VjZHZDV25IaW5PVlNkUzl3NjVhdmJnYndqT05qdUlMUDFFSFk3SzJ1NklaREUwbExUR01IWnZnNkFRWnFEcktuOUJNVVMtVS1XYk5KbnR1d1pYUl9Ydw?oc=5",
+      "source": "Business Standard",
+      "publishedAt": "2026-11-19T06:39:10.000Z",
+      "latestAt": "2026-11-19T09:46:13.000Z",
+      "firstSeenAt": "2026-11-19T20:25:04.492Z",
       "outlets": 3,
       "outletNames": [
-        "AP News",
-        "WINK News",
-        "WINK News - Southwest Florida"
+        "Business Standard",
+        "The Times of India",
+        "NewsBricks"
       ],
-      "score": 2.81
+      "score": 2.79
     },
     {
       "id": "7c2b2f3a0bbb",
@@ -705,24 +704,6 @@
         "KTNV 13 Action News"
       ],
       "score": 2.94
-    },
-    {
-      "id": "53f2416310a2",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Satya Nadella admits Microsoft could have prevented global Outlook outage",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQS3NXcXpPMkRlZlV5QUppZ1U5aEVyeXZjTVVwMFQ5MG1jc2t1TVl4Z3AwOGt0RVpBcDFDR19uamRPeVFzTU8ySlkwZWZyZXFJSUVCa2ZFSnZ4NmotdXZkS0g4cGFEQi1kcVFLLUVCODJOYWIzWl9Sd2JvaXMwdGs3azJjY0VjZHZDV25IaW5PVlNkUzl3NjVhdmJnYndqT05qdUlMUDFFSFk3SzJ1NklaREUwbExUR01IWnZnNkFRWnFEcktuOUJNVVMtVS1XYk5KbnR1d1pYUl9Yd9IB2gFBVV95cUxQS3NXcXpPMkRlZlV5QUppZ1U5aEVyeXZjTVVwMFQ5MG1jc2t1TVl4Z3AwOGt0RVpBcDFDR19uamRPeVFzTU8ySlkwZWZyZXFJSUVCa2ZFSnZ4NmotdXZkS0g4cGFEQi1kcVFLLUVCODJOYWIzWl9Sd2JvaXMwdGs3azJjY0VjZHZDV25IaW5PVlNkUzl3NjVhdmJnYndqT05qdUlMUDFFSFk3SzJ1NklaREUwbExUR01IWnZnNkFRWnFEcktuOUJNVVMtVS1XYk5KbnR1d1pYUl9Ydw?oc=5",
-      "source": "Business Standard",
-      "publishedAt": "2026-11-19T06:39:10.000Z",
-      "latestAt": "2026-11-19T09:46:13.000Z",
-      "firstSeenAt": "2026-11-19T20:25:04.492Z",
-      "outlets": 3,
-      "outletNames": [
-        "Business Standard",
-        "The Times of India",
-        "NewsBricks"
-      ],
-      "score": 2.79
     },
     {
       "id": "497408cf71f1",
@@ -901,6 +882,23 @@
       "score": 1.82
     },
     {
+      "id": "58150afce8bc",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Users say Archive of Our Own (AO3) is down again today but it's not an outage",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNODEyM2hGLV9oMlh3Wm9XMS05MnRTaWZDbXRDOWVEejZRQWoyQ0RuNzNTN0tYR3dLRE1lbFMycXBYM01ES3loOENzWGJkQzZzVVVndHhpOXJjdEdpWEZtbmNSYklQUjJpRUtPY3hsTVNoY1hCWV81bnY3VkhtdU5xX1lESlBUaU1iUVE3T0JtVU5pQXZsTDlJMVJtSF85Tl9vU2pfTm53?oc=5",
+      "source": "Neowin",
+      "publishedAt": "2026-11-19T11:51:46.000Z",
+      "latestAt": "2026-11-19T19:43:45.000Z",
+      "firstSeenAt": "2026-11-19T19:55:03.493Z",
+      "outlets": 2,
+      "outletNames": [
+        "Neowin",
+        "The Sunday Guardian"
+      ],
+      "score": 1.73
+    },
+    {
       "id": "30561ee764f6",
       "cat": "weather",
       "kind": "news",
@@ -952,23 +950,6 @@
         "Orange County Register",
         "The Baltimore Sun",
         "Howl.Link"
-      ],
-      "score": 2.8
-    },
-    {
-      "id": "3223634bacce",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK cyber incidents hit near-record high in October",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOOVpaaF9WYWpIN2RleW9tNUQtMTNTNm43T0ZkT1hXQU43MEg2dzUxMzZGVlNPTUpsM1ZQdUJ1YUpfak9TMERTUlRQWFJaSEU3eFNjMEtSMnJlQ2tReHVWSVZEdWtvUk5BMkQxa1NGaDliWjRNMlkxdy1iUnBUTUpNVU5NYlJUWEFQLUs3OF8wZFV1ajd5a0EwcXZ5ZFlvMWRaenE4MERzcGVmQQ?oc=5",
-      "source": "Investing.com",
-      "publishedAt": "2026-11-19T05:47:43.000Z",
-      "latestAt": "2026-11-19T06:00:47.000Z",
-      "firstSeenAt": "2026-11-19T05:52:35.070Z",
-      "outlets": 2,
-      "outletNames": [
-        "Investing.com",
-        "Investing.com Canada"
       ],
       "score": 2.8
     },
@@ -1143,14 +1124,15 @@
       "title": "Love isn't in the air, it's at baggage claim during ground stop at Denver International Airport",
       "url": "https://www.wlky.com/article/couple-airport-wedding-flight-canceled-ground-stop/74456949",
       "source": "WLKY",
-      "publishedAt": "2026-11-19T20:00:00.000Z",
+      "publishedAt": "2026-11-19T13:00:00.000Z",
       "latestAt": "2026-11-20T04:00:00.000Z",
       "firstSeenAt": "2026-11-20T05:26:39.748Z",
-      "outlets": 3,
+      "outlets": 4,
       "outletNames": [
         "WLKY",
         "WCVB",
-        "KOCO"
+        "KOCO",
+        "KOAT Channel 7"
       ],
       "score": 2.18
     },
@@ -1360,23 +1342,6 @@
       "score": 1.73
     },
     {
-      "id": "58150afce8bc",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Users say Archive of Our Own (AO3) is down again today but it's not an outage",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNODEyM2hGLV9oMlh3Wm9XMS05MnRTaWZDbXRDOWVEejZRQWoyQ0RuNzNTN0tYR3dLRE1lbFMycXBYM01ES3loOENzWGJkQzZzVVVndHhpOXJjdEdpWEZtbmNSYklQUjJpRUtPY3hsTVNoY1hCWV81bnY3VkhtdU5xX1lESlBUaU1iUVE3T0JtVU5pQXZsTDlJMVJtSF85Tl9vU2pfTm53?oc=5",
-      "source": "Neowin",
-      "publishedAt": "2026-11-19T11:51:46.000Z",
-      "latestAt": "2026-11-19T19:43:45.000Z",
-      "firstSeenAt": "2026-11-19T19:55:03.493Z",
-      "outlets": 2,
-      "outletNames": [
-        "Neowin",
-        "The Sunday Guardian"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "a336b1fb73df",
       "cat": "hacks",
       "kind": "news",
@@ -1458,23 +1423,6 @@
       "outletNames": [
         "Mashable",
         "Mashable India"
-      ],
-      "score": 1.7
-    },
-    {
-      "id": "1341aaafe41f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Breach Database Handling $53 Million in Payments to NYC Retirees",
-      "url": "https://www.yahoo.com/news/videos/hackers-breach-database-handling-53-134500401.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T05:45:00.000Z",
-      "latestAt": "2026-11-19T13:50:00.000Z",
-      "firstSeenAt": "2026-11-19T14:39:05.531Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Newser"
       ],
       "score": 1.7
     },
@@ -2053,6 +2001,56 @@
         "Mid-Day"
       ],
       "score": 0.97
+    },
+    {
+      "id": "e92ac3b8a269",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Volcano erupts in southern Japan, no evacuation warning",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSVpWQVpVQUlwdDgwQTg3cHJpSnA3QVlra1ZwZjRRODBEUjM4X1Y4U2sxS1ItYkFzd3BDbFdlMEpvNDg1LVFyV2pXd295TE5vQTREdkI3YTJNcmhwczZyOVc2aHprLUdWeGdoVVhDRVI5YkhuZENLdTRzQ1J2WGdzS3FNbkpQbDRrQnFLYWRMLWUzb1FDRS1rTw?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-19T23:03:17.000Z",
+      "latestAt": "2026-11-19T23:03:17.000Z",
+      "firstSeenAt": "2026-11-20T00:40:48.102Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yeni Safak English"
+      ],
+      "score": 0.97,
+      "quiet": true,
+      "quietReason": "headline mentions evacuation"
+    },
+    {
+      "id": "4af7cf3b5655",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Visa, Mastercard and Chase Bank customer data hacked — after string of major failures",
+      "url": "https://www.msn.com/en-us/money/general/visa-mastercard-and-chase-bank-customer-data-hacked-after-string-of-major-failures/ar-AA2hMjUE",
+      "source": "New York Post on MSN",
+      "publishedAt": "2026-11-19T08:48:44.000Z",
+      "latestAt": "2026-11-19T08:48:44.000Z",
+      "firstSeenAt": "2026-11-20T05:56:49.662Z",
+      "outlets": 1,
+      "outletNames": [
+        "New York Post on MSN"
+      ],
+      "score": 0.91
+    },
+    {
+      "id": "0a4f69c262fb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
+      "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
+      "source": "wsj.com",
+      "publishedAt": "2026-11-19T23:32:11.000Z",
+      "latestAt": "2026-11-19T23:32:11.000Z",
+      "firstSeenAt": "2026-11-20T05:56:49.662Z",
+      "outlets": 1,
+      "outletNames": [
+        "wsj.com"
+      ],
+      "score": 0.89
     },
     {
       "id": "f4629284395c",
