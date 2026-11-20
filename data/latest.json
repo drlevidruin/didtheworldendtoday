@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T02:26:21.072Z",
+  "buildTime": "2026-11-20T02:41:25.934Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 21:26 ET",
+  "etStamp": "2026-11-19 21:41 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,16 +50,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1255,
-  "lastSuccessAt": "2026-11-20T02:26:21.072Z",
+  "headlinesRead": 1251,
+  "lastSuccessAt": "2026-11-20T02:41:25.934Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
-    "hacks": 37,
+    "hacks": 38,
     "germs": 4,
     "internet": 12,
     "earth": 4,
-    "grid": 8,
+    "grid": 7,
     "markets": 4,
     "space": 4,
     "weather": 4,
@@ -182,81 +182,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 952,
+      "count": 947,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "bing": {
       "ok": true,
       "count": 268,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T00:55:55.472Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T02:26:21.072Z"
+      "lastOkAt": "2026-11-20T02:41:25.934Z"
     }
   },
   "stories": [
@@ -457,6 +456,38 @@
       "score": 4.39
     },
     {
+      "id": "e8264ac0b9b3",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Oregon reports first human case of bird flu in 2026",
+      "url": "https://ktvz.com/news/2026/11/19/oregon-reports-first-human-case-of-bird-flu-in-2026/",
+      "source": "KTVZ",
+      "publishedAt": "2026-11-19T04:28:00.000Z",
+      "latestAt": "2026-11-20T02:38:04.000Z",
+      "firstSeenAt": "2026-11-19T20:40:10.941Z",
+      "outlets": 17,
+      "outletNames": [
+        "KGW",
+        "KTVZ",
+        "Yahoo",
+        "Statesman Journal",
+        "KATU",
+        "East Oregonian",
+        "Hermiston Herald",
+        "TriYakNews.com",
+        "Outbreak News Today",
+        "KOIN.com",
+        "KPTV",
+        "Oregon Capital Chronicle",
+        "News From The States",
+        "Your Oregon News",
+        "Oregon Public Broadcasting",
+        "KPIC",
+        "KMTR"
+      ],
+      "score": 3.71
+    },
+    {
       "id": "41bda97d8bc2",
       "cat": "hacks",
       "kind": "news",
@@ -478,37 +509,6 @@
         "KKTV"
       ],
       "score": 3.66
-    },
-    {
-      "id": "e8264ac0b9b3",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Oregon reports first human case of bird flu in 2026",
-      "url": "https://ktvz.com/news/2026/11/19/oregon-reports-first-human-case-of-bird-flu-in-2026/",
-      "source": "KTVZ",
-      "publishedAt": "2026-11-19T04:28:00.000Z",
-      "latestAt": "2026-11-20T01:05:00.000Z",
-      "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 16,
-      "outletNames": [
-        "KGW",
-        "KTVZ",
-        "Yahoo",
-        "Statesman Journal",
-        "KATU",
-        "East Oregonian",
-        "Hermiston Herald",
-        "TriYakNews.com",
-        "Outbreak News Today",
-        "KOIN.com",
-        "KPTV",
-        "Oregon Capital Chronicle",
-        "News From The States",
-        "Your Oregon News",
-        "Oregon Public Broadcasting",
-        "KPIC"
-      ],
-      "score": 3.65
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -1386,6 +1386,23 @@
       "score": 1.77
     },
     {
+      "id": "3712e02a1b2c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16ejBjNzhGeUhBWnhVTkRHZ2sxRE4xUXZ3RVhiNTMwZlU4MUx1LUxVcG1xbi0zV1RFTzhVamxHOXd6MTFWVG5jVmctUDZQcF84U3UzcGNlbjFOQjlHX3lyQXFZYmdjNWM2UGtoM1ZVbkxzWFFDNHBwTTV5cW56UnfSAYQBQVVfeXFMUElHd25xekpscWFKV18xeHM0VUw4N1YyN0JRUFVOYmlSTGduZ0s1d2Jvc3ZFeXZBRzlDdlM1cnhuOXhCYWlid0ZSakZ2b1ljUTY2QmlaeXU0UXZrQzJISTYtWkF2Z0xMb3ZKRkg4aDlPQUhlNDdYR19pcWJtc0g2WnhQcW5W?oc=5",
+      "source": "upi",
+      "publishedAt": "2026-11-19T19:07:44.000Z",
+      "latestAt": "2026-11-20T01:19:21.000Z",
+      "firstSeenAt": "2026-11-20T02:41:25.934Z",
+      "outlets": 2,
+      "outletNames": [
+        "upi",
+        "LAmag"
+      ],
+      "score": 1.75
+    },
+    {
       "id": "58150afce8bc",
       "cat": "internet",
       "kind": "news",
@@ -1833,22 +1850,6 @@
         "Benzinga"
       ],
       "score": 1.4
-    },
-    {
-      "id": "8318992f830e",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Major blackout hits South Australia after severe storm topples transmission towers",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNWER5aTRvUFNQT0x3c0lzcHFnNEQ1WlNNYmJoSHB4SmNvYndVdGVnUC1pTVh0cEt1Ml9TVTRoNHd3RjY5UEUwSnczZmNSaVJrazZXdkZna3JWLXhEVnU5ZHNoWkQtcVB4d3ZuZElocXNITXlVWmNnVkhubGtGMlFxQXNGbDlWZUt5WGFVYlFyaHhtVGlodXFVc2p1ZS1Ob05waG9xTnBReU9tRElFVUsw?oc=5",
-      "source": "Dimsum Daily",
-      "publishedAt": "2026-11-20T01:42:19.000Z",
-      "latestAt": "2026-11-20T01:42:19.000Z",
-      "firstSeenAt": "2026-11-20T02:11:06.020Z",
-      "outlets": 1,
-      "outletNames": [
-        "Dimsum Daily"
-      ],
-      "score": 1.39
     },
     {
       "id": "b48fee4b63eb",
