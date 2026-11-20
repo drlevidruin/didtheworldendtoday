@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T04:56:32.174Z",
-  "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 23:56 ET",
+  "buildTime": "2026-11-20T05:11:34.772Z",
+  "etDate": "2026-11-20",
+  "etStamp": "2026-11-20 00:11 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -29,14 +29,15 @@
       "points": 8
     }
   ],
-  "change": 4,
+  "change": 0,
   "yesterday": {
-    "date": "2026-11-18",
-    "score": 76,
+    "date": "2026-11-19",
+    "score": 80,
     "fired": [
       "flights",
       "hacks",
       "internet",
+      "space",
       "sun",
       "earth",
       "markets",
@@ -50,14 +51,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1256,
-  "lastSuccessAt": "2026-11-20T04:56:32.174Z",
+  "headlinesRead": 1257,
+  "lastSuccessAt": "2026-11-20T05:11:34.772Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
     "hacks": 37,
-    "germs": 5,
     "internet": 12,
+    "germs": 5,
     "earth": 4,
     "grid": 7,
     "markets": 4,
@@ -182,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 954,
+      "count": 949,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     },
     "bing": {
       "ok": true,
-      "count": 267,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,88 +208,59 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T04:56:32.174Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T04:56:32.174Z"
+      "lastOkAt": "2026-11-20T05:11:34.772Z"
     }
   },
   "stories": [
-    {
-      "id": "bab44e1adaa9",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Sources dispute FAA’s account of oversight before nationwide ground stop",
-      "url": "https://www.scrippsnews.com/us-news/sources-dispute-faas-account-of-oversight-before-nationwide-ground-stop",
-      "source": "Scripps News",
-      "publishedAt": "2026-11-19T05:09:00.000Z",
-      "latestAt": "2026-11-20T04:53:31.000Z",
-      "firstSeenAt": "2026-11-19T13:23:53.347Z",
-      "outlets": 15,
-      "outletNames": [
-        "KPAX News",
-        "Scripps News",
-        "LEX 18 News",
-        "WTKR",
-        "WPTV",
-        "News Channel 5 Nashville",
-        "KTVQ",
-        "WTVR.com",
-        "News 5 Cleveland WEWS",
-        "ktnv.com",
-        "WXYZ Channel 7",
-        "WCPO 9 News",
-        "KBZK News",
-        "KSHB 41 Kansas City",
-        "KOAA News 5"
-      ],
-      "score": 5.93
-    },
     {
       "id": "f3287ab342cd",
       "cat": "flights",
@@ -360,6 +332,29 @@
       }
     },
     {
+      "id": "sig:faa-stop:SAN:2026-11-19",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SAN (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-20T00:10:40.191Z",
+      "latestAt": "2026-11-20T00:10:40.191Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SAN",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
+    },
+    {
       "id": "a8c2d1f8a2f6",
       "cat": "hacks",
       "kind": "news",
@@ -367,7 +362,7 @@
       "url": "https://mashable.com/tech/n0n-ransomware-group-leaks-chase-mastercard-visa-customer-data",
       "source": "Mashable",
       "publishedAt": "2026-11-19T10:38:00.000Z",
-      "latestAt": "2026-11-20T04:02:21.000Z",
+      "latestAt": "2026-11-20T04:29:19.000Z",
       "firstSeenAt": "2026-11-20T04:26:27.671Z",
       "outlets": 32,
       "outletNames": [
@@ -427,56 +422,29 @@
       "score": 3.98
     },
     {
-      "id": "41bda97d8bc2",
+      "id": "90996f139013",
       "cat": "hacks",
       "kind": "news",
-      "title": "Chase Bank customers may be affected after hackers access marketing data",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbmwtUUN6YzFYZzZ6Z2RQdFZVemJuR0hqVlpKZFluc25nSi1neVVka3phMDNVZDlkU0JhaGZ3Nmw4eW9SaXVlVUg1T3piakQ2Ty11TXdWeU1Hd1VmQTFnUUVObk5WUDZDRmVMU1MxSVJNdWRRbzY4eE5vNm1weE43UDRZU19ZbnktZW9ycXJ3OXA1Y01tX3lzY1E1T2ZVZWsySTc4Y00tZlV1NzU3dFRNZXNHaGZ2VDJJcFlZbU1aa2ZER015cWwxSHNSX3h4SHM5dVBqZElzS04?oc=5",
-      "source": "WCPO 9 Cincinnati",
-      "publishedAt": "2026-11-19T15:01:48.000Z",
-      "latestAt": "2026-11-19T21:44:00.000Z",
-      "firstSeenAt": "2026-11-19T20:10:12.029Z",
-      "outlets": 9,
+      "title": "Hackers Access Data of 4,000 NYC Retirees",
+      "url": "https://www.newsmax.com/newsfront/atticus-administration-emblem-health-nyc/2026/11/19/id/1276973/",
+      "source": "Newsmax",
+      "publishedAt": "2026-11-19T10:55:00.000Z",
+      "latestAt": "2026-11-20T03:27:00.000Z",
+      "firstSeenAt": "2026-11-19T17:09:48.375Z",
+      "outlets": 10,
       "outletNames": [
-        "WCPO 9 Cincinnati",
-        "Scripps News",
-        "KPAX News",
-        "LEX 18 News",
-        "KJRH",
-        "KMTV 3 News Now Omaha",
-        "KXXV",
-        "KKTV",
-        "TMJ4 News"
+        "Anadolu Ajansı",
+        "Yeni Safak English",
+        "Politico",
+        "Breakingthenews.net",
+        "Reuters",
+        "SRN News",
+        "The Hill",
+        "Newsmax",
+        "SILive.com",
+        "Yahoo"
       ],
-      "score": 3.81
-    },
-    {
-      "id": "6d7a6b3b2346",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Oregon confirms first human bird flu case of 2026",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxObzVKcUFMd0RMSVFrUzQ4M2t3d1Ffd0JEN29MUzlESnB3SklaMHo0U19pNk9Pa281OE5KeDVfZnBkM0dMVFFfN1h0UUl6WnVQREhfRFVZbGNkcEF4a2FFS0RQTHd4S0lobGppcnhVQkZzdEZKTGtETVBFVFBUV0ZqX1ZfLTYxMF9UOFBBa1c2T0kwU1VwSHpHY2xlc0xoZjdDRC14UmRvSHV4c2ZoVTljNGpNM1FHUXIyMVM3TEthT3phbFV3aDYtQkZwVHU5OVZxUjlEeEhxb3F0enprRUxjc1lB?oc=5",
-      "source": "Central Oregon Daily",
-      "publishedAt": "2026-11-19T16:58:17.000Z",
-      "latestAt": "2026-11-20T03:52:21.000Z",
-      "firstSeenAt": "2026-11-20T04:56:32.174Z",
-      "outlets": 13,
-      "outletNames": [
-        "Central Oregon Daily",
-        "KGW",
-        "Statesman Journal",
-        "KOIN.com",
-        "KTVZ",
-        "KATU",
-        "KVAL",
-        "TriYakNews.com",
-        "Outbreak News Today",
-        "KPTV",
-        "Oregon Capital Chronicle",
-        "KPIC",
-        "Capital Press"
-      ],
-      "score": 3.76
+      "score": 3.87
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -499,6 +467,35 @@
         "page": "openai",
         "description": "Partial System Outage"
       }
+    },
+    {
+      "id": "6d7a6b3b2346",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Oregon confirms first human case of bird flu this year",
+      "url": "https://www.yahoo.com/news/science/articles/oregon-confirms-first-human-case-200500777.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:05:00.000Z",
+      "latestAt": "2026-11-20T03:52:21.000Z",
+      "firstSeenAt": "2026-11-20T04:56:32.174Z",
+      "outlets": 14,
+      "outletNames": [
+        "Central Oregon Daily",
+        "KGW",
+        "Statesman Journal",
+        "KOIN.com",
+        "KTVZ",
+        "KATU",
+        "KVAL",
+        "TriYakNews.com",
+        "Outbreak News Today",
+        "KPTV",
+        "Oregon Capital Chronicle",
+        "KPIC",
+        "Capital Press",
+        "Yahoo"
+      ],
+      "score": 3.46
     },
     {
       "id": "e498b9be28a4",
@@ -594,29 +591,6 @@
       "score": 2.74
     },
     {
-      "id": "sig:faa-stop:SAN:2026-11-19",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at SAN (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-20T00:10:40.191Z",
-      "latestAt": "2026-11-20T00:10:40.191Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "SAN",
-        "hub": true,
-        "nationwide": false,
-        "reason": "low visibility"
-      }
-    },
-    {
       "id": "21ec90f1e9d6",
       "cat": "flights",
       "kind": "news",
@@ -641,28 +615,28 @@
       "score": 4.19
     },
     {
-      "id": "90996f139013",
+      "id": "41bda97d8bc2",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers Access Data of 4,000 NYC Retirees",
-      "url": "https://www.newsmax.com/newsfront/atticus-administration-emblem-health-nyc/2026/11/19/id/1276973/",
-      "source": "Newsmax",
-      "publishedAt": "2026-11-19T10:55:00.000Z",
-      "latestAt": "2026-11-20T00:55:00.000Z",
-      "firstSeenAt": "2026-11-19T17:09:48.375Z",
+      "title": "Chase Bank customers may be affected after hackers access marketing data",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbmwtUUN6YzFYZzZ6Z2RQdFZVemJuR0hqVlpKZFluc25nSi1neVVka3phMDNVZDlkU0JhaGZ3Nmw4eW9SaXVlVUg1T3piakQ2Ty11TXdWeU1Hd1VmQTFnUUVObk5WUDZDRmVMU1MxSVJNdWRRbzY4eE5vNm1weE43UDRZU19ZbnktZW9ycXJ3OXA1Y01tX3lzY1E1T2ZVZWsySTc4Y00tZlV1NzU3dFRNZXNHaGZ2VDJJcFlZbU1aa2ZER015cWwxSHNSX3h4SHM5dVBqZElzS04?oc=5",
+      "source": "WCPO 9 Cincinnati",
+      "publishedAt": "2026-11-19T15:01:48.000Z",
+      "latestAt": "2026-11-19T21:44:00.000Z",
+      "firstSeenAt": "2026-11-19T20:10:12.029Z",
       "outlets": 9,
       "outletNames": [
-        "Anadolu Ajansı",
-        "Yeni Safak English",
-        "Politico",
-        "Breakingthenews.net",
-        "Reuters",
-        "SRN News",
-        "The Hill",
-        "Newsmax",
-        "SILive.com"
+        "WCPO 9 Cincinnati",
+        "Scripps News",
+        "KPAX News",
+        "LEX 18 News",
+        "KJRH",
+        "KMTV 3 News Now Omaha",
+        "KXXV",
+        "KKTV",
+        "TMJ4 News"
       ],
-      "score": 3.74
+      "score": 3.81
     },
     {
       "id": "ce3b0f14cf6a",
@@ -766,6 +740,25 @@
         "The Cool Down"
       ],
       "score": 2.73
+    },
+    {
+      "id": "97f014fb3101",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
+      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T12:02:50.000Z",
+      "latestAt": "2026-11-19T20:30:00.000Z",
+      "firstSeenAt": "2026-11-19T19:12:09.123Z",
+      "outlets": 4,
+      "outletNames": [
+        "KXAN Austin",
+        "13newsnow.com",
+        "Scientific American",
+        "Yahoo"
+      ],
+      "score": 2.64
     },
     {
       "id": "91666724b933",
@@ -1000,25 +993,6 @@
         "Associated Press News"
       ],
       "score": 2.77
-    },
-    {
-      "id": "97f014fb3101",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
-      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T12:02:50.000Z",
-      "latestAt": "2026-11-19T20:30:00.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
-      "outlets": 4,
-      "outletNames": [
-        "KXAN Austin",
-        "13newsnow.com",
-        "Scientific American",
-        "Yahoo"
-      ],
-      "score": 2.64
     },
     {
       "id": "04c2e2acf99a",
@@ -1802,6 +1776,22 @@
       "score": 1.4
     },
     {
+      "id": "f60e65cf388c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "US to announce cause of nationwide FAA outage that disrupted 18,000 flights",
+      "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxNWmRzam1DRWNqQUhnMXFOMzFvYWpvaWhUQ0ZYV19mQ2dXLUlob1h5ZWVzY3ZiVC1jVTdGc1hCMkVFcGFIYkJqQXVSVVZ1T2d6Ui1MMmlvNWVFMS05SHNIalptN2tORlN1b3lScXREM0xMd0twNXpfVzhvdkZPay1ySkhHM1JGZUhaX2JoTmJPLUVTdDRrM0pZaFJvdlcwM0gyV1FlNXJXSk54TlVCZWNrS01uN3o0Y0RUaHpPalBLcVZWVGVMcWZXTlZ1MXlQWkxSXzd4MGJHbVZyeHZJMnNtdmoxMkxwaUVTWWZhSVNybmh6UzZ2RXYwMG1Sc0YxR1hFSWVJVHFwUW5oSUpiSmNQYkVSNE8xYWlQZW12SUFtZzhSLWYzMTVwdGt6UmpMUdIB4wFBVV95cUxPQURKZ1NEQk5TLVdjekNuYnotRU1Od3g3WE83eG9MOTNXNFlUdHJEa0FPcVcweW16dFFQNS1fWkdFYTJ4Y2FlUUVBM2VrMUdhaVhiSE5QSGhDTHIxdG1VYzJHSHFvMjVGN3E5dWZVNXdYeFlMVU9GVTZmaVBhRExhclVXaTJlcEktUXRtTGVvTFE3aFFlYWFYRXE2WExJblZ3TUxROWkzMnF6YnU2WVFyOUlrMXV4a3B3RHU2Rk5xOVdkdHpHOUo3VVljOUp1MEl3S0hRWWFZMHFLYTFqZ21MNFZtVQ?oc=5",
+      "source": "The Times of India",
+      "publishedAt": "2026-11-20T04:54:00.000Z",
+      "latestAt": "2026-11-20T04:54:00.000Z",
+      "firstSeenAt": "2026-11-20T05:11:34.772Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Times of India"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "74e770b8872d",
       "cat": "hacks",
       "kind": "news",
@@ -2064,22 +2054,20 @@
       "score": 0.98
     },
     {
-      "id": "e92ac3b8a269",
+      "id": "6476c381e115",
       "cat": "earth",
       "kind": "news",
-      "title": "Volcano erupts in southern Japan, no evacuation warning",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSVpWQVpVQUlwdDgwQTg3cHJpSnA3QVlra1ZwZjRRODBEUjM4X1Y4U2sxS1ItYkFzd3BDbFdlMEpvNDg1LVFyV2pXd295TE5vQTREdkI3YTJNcmhwczZyOVc2aHprLUdWeGdoVVhDRVI5YkhuZENLdTRzQ1J2WGdzS3FNbkpQbDRrQnFLYWRMLWUzb1FDRS1rTw?oc=5",
-      "source": "Yeni Safak English",
-      "publishedAt": "2026-11-19T23:03:17.000Z",
-      "latestAt": "2026-11-19T23:03:17.000Z",
-      "firstSeenAt": "2026-11-20T00:40:48.102Z",
+      "title": "Japan issues week-long alert after 5.7 magnitude quake hits Kumamoto",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOLVZnRHJWdURoMGtTaEV5RWNZNXRSLXRlcEcwNnQ2R1dKWjc0NWJpRVJXTXpGT1A0R0pYS2ZzOU1FcGNjMjVZUjVudjY1RDVTTGpPdS1XTmtqMlZ0d01mak1OLUpNS0x5QW5UaHVtV3U5UlNabWVaRDl1WXNBcnRFOFpndmk0QXkwZUVoZ3loMHEtNFYxSUd5RVgzMWNqbVVOOTBURUx5cFZfYzB0NHJIWEJ3TE1ReXpBcTk0VnlB?oc=5",
+      "source": "Mid-Day",
+      "publishedAt": "2026-11-20T03:25:00.000Z",
+      "latestAt": "2026-11-20T03:25:00.000Z",
+      "firstSeenAt": "2026-11-20T05:11:34.772Z",
       "outlets": 1,
       "outletNames": [
-        "Yeni Safak English"
+        "Mid-Day"
       ],
-      "score": 0.97,
-      "quiet": true,
-      "quietReason": "headline mentions evacuation"
+      "score": 0.97
     },
     {
       "id": "f4629284395c",
