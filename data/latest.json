@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T16:28:32.497Z",
+  "buildTime": "2026-11-20T16:43:32.956Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 11:28 ET",
+  "etStamp": "2026-11-20 11:43 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -46,18 +46,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1335,
-  "lastSuccessAt": "2026-11-20T16:28:32.497Z",
+  "headlinesRead": 1344,
+  "lastSuccessAt": "2026-11-20T16:43:32.956Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
+    "flights": 22,
     "germs": 4,
-    "hacks": 28,
+    "hacks": 29,
     "grid": 5,
     "earth": 4,
-    "weather": 7,
+    "weather": 6,
     "ai": 4,
-    "internet": 9,
+    "internet": 8,
     "markets": 8,
     "sun": 4,
     "space": 4,
@@ -147,8 +147,8 @@
         {
           "id": "coinbase",
           "name": "Coinbase",
-          "indicator": "none",
-          "description": "All Systems Operational"
+          "indicator": "minor",
+          "description": "Partially Degraded Service"
         }
       ],
       "unreachable": 0
@@ -184,20 +184,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1020,
+      "count": 1035,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     },
     "bing": {
       "ok": true,
       "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,57 +207,58 @@
     },
     "hn": {
       "ok": true,
-      "count": 6,
+      "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     },
     "x": {
       "ok": true,
-      "count": 5,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:28:32.497Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T16:28:32.497Z"
+      "lastOkAt": "2026-11-20T16:43:32.956Z"
     }
   },
   "stories": [
@@ -342,6 +343,28 @@
       "score": 4.2
     },
     {
+      "id": "6909d0eab00e",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu spreads amid cuts to federal agency oversight",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTGFVcElaZjZhdVZ6Z1E1RklRNW1TVnduVWlFRV9rT080NTN2TGxTTE54SFFYeTJTZVVfWDhzTDVPMjdhQ1Bjdm1NYmprRHlkV0pRV0FqR3FsUGxJTnhrUVdHN1pkMkdxQ1dRc084czY2WEFsZFVxWWVIWFVYVVptaVAtYkl2aUJlZk1Bcy14cjBodw?oc=5",
+      "source": "knoxradio.com",
+      "publishedAt": "2026-11-20T15:00:07.000Z",
+      "latestAt": "2026-11-20T15:54:59.000Z",
+      "firstSeenAt": "2026-11-20T15:43:31.995Z",
+      "outlets": 7,
+      "outletNames": [
+        "knoxradio.com",
+        "The Mountaineer",
+        "Caledonian Record",
+        "The Daily Progress",
+        "Richmond Times-Dispatch",
+        "Roanoke Times",
+        "Wisconsin State Journal"
+      ],
+      "score": 3.76
+    },
+    {
       "id": "63f3e69e3827",
       "cat": "flights",
       "kind": "news",
@@ -358,27 +381,6 @@
         "Goshen News"
       ],
       "score": 3.59
-    },
-    {
-      "id": "6909d0eab00e",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu spreads amid cuts to federal agency oversight",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTGFVcElaZjZhdVZ6Z1E1RklRNW1TVnduVWlFRV9rT080NTN2TGxTTE54SFFYeTJTZVVfWDhzTDVPMjdhQ1Bjdm1NYmprRHlkV0pRV0FqR3FsUGxJTnhrUVdHN1pkMkdxQ1dRc084czY2WEFsZFVxWWVIWFVYVVptaVAtYkl2aUJlZk1Bcy14cjBodw?oc=5",
-      "source": "knoxradio.com",
-      "publishedAt": "2026-11-20T15:00:07.000Z",
-      "latestAt": "2026-11-20T15:54:59.000Z",
-      "firstSeenAt": "2026-11-20T15:43:31.995Z",
-      "outlets": 6,
-      "outletNames": [
-        "knoxradio.com",
-        "The Mountaineer",
-        "Caledonian Record",
-        "The Daily Progress",
-        "Richmond Times-Dispatch",
-        "Roanoke Times"
-      ],
-      "score": 3.54
     },
     {
       "id": "6f53426df1bb",
@@ -749,23 +751,6 @@
       "score": 1.72
     },
     {
-      "id": "30561ee764f6",
-      "cat": "weather",
-      "kind": "news",
-      "title": "TIMELINE: Severe weather with wind, hail threat possible for Oklahoma Saturday",
-      "url": "https://www.koco.com/article/timeline-severe-weather-wind-hail-threat-possible-oklahoma-saturday/74483028",
-      "source": "KOCO 5 News",
-      "publishedAt": "2026-11-19T16:32:00.000Z",
-      "latestAt": "2026-11-20T00:37:17.000Z",
-      "firstSeenAt": "2026-11-20T00:55:55.472Z",
-      "outlets": 2,
-      "outletNames": [
-        "KOCO 5 News",
-        "KOCO"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "c15e38407e0d",
       "cat": "markets",
       "kind": "news",
@@ -823,7 +808,7 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
       "source": "StoneWars.com",
       "publishedAt": "2026-11-20T11:37:19.000Z",
-      "latestAt": "2026-11-20T11:37:30.000Z",
+      "latestAt": "2026-11-20T11:40:12.000Z",
       "firstSeenAt": "2026-11-20T11:42:39.182Z",
       "outlets": 1,
       "outletNames": [
@@ -844,6 +829,22 @@
       "outlets": 1,
       "outletNames": [
         "www.tokenpost.com"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "3a64d7cbe587",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Microsoft meltdown: Outlook, Teams and Copilot hit by global outage",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
+      "source": "IOL",
+      "publishedAt": "2026-11-20T06:15:43.000Z",
+      "latestAt": "2026-11-20T16:00:11.000Z",
+      "firstSeenAt": "2026-11-20T06:26:52.947Z",
+      "outlets": 1,
+      "outletNames": [
+        "IOL"
       ],
       "score": 1.4
     },
@@ -1091,6 +1092,23 @@
       "score": 1.7
     },
     {
+      "id": "1848abefd9f1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA routers at center of ground stop investigation",
+      "url": "https://www.foxnews.com/video/6408651447112",
+      "source": "Fox News",
+      "publishedAt": "2026-11-20T06:00:00.000Z",
+      "latestAt": "2026-11-20T13:59:57.000Z",
+      "firstSeenAt": "2026-11-20T16:43:32.956Z",
+      "outlets": 2,
+      "outletNames": [
+        "Fox News",
+        "Yahoo"
+      ],
+      "score": 1.64
+    },
+    {
       "id": "6cc666037260",
       "cat": "flights",
       "kind": "news",
@@ -1159,6 +1177,22 @@
       "score": 1.54
     },
     {
+      "id": "50e8bed5e3a2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Mastercard and Visa data leaked in breach — ransomware hackers leak information in latest major attack",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWTlmR05oUGZmZ0ZRc2EzY2xLR0x1dEh4NmdMeEZ0Y3dScno1M3lkcU15VEN0eXYySDBfOTBZUmNrcGpLRzVWNnBheHVLNU5SbGlvQWpTSEZUdXo3eUlOUWRDSzR1LUNNWEQ5bHMwM0tkM29fMEdQbVhtbloxNkVVbEpoQ3NxRkQ2d25BcGpTczM5NVQyUF9XTVRKdDhQT0VaN2Q2cThHZjh6Z0RySllMN0pUVGhpd0thYUVkbmZXbHNhRXFJUTM3M1pia1hmNTN4bWZ2eUd3?oc=5",
+      "source": "TechRadar",
+      "publishedAt": "2026-11-20T16:35:00.000Z",
+      "latestAt": "2026-11-20T16:35:00.000Z",
+      "firstSeenAt": "2026-11-20T16:43:32.956Z",
+      "outlets": 1,
+      "outletNames": [
+        "TechRadar"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "1055221191c6",
       "cat": "flights",
       "kind": "news",
@@ -1171,22 +1205,6 @@
       "outlets": 1,
       "outletNames": [
         "WHMI"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "3a64d7cbe587",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Microsoft meltdown: Outlook, Teams and Copilot hit by global outage",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-20T06:15:43.000Z",
-      "latestAt": "2026-11-20T16:00:11.000Z",
-      "firstSeenAt": "2026-11-20T06:26:52.947Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
       ],
       "score": 1.4
     },
@@ -1529,23 +1547,6 @@
         "LAmag"
       ],
       "score": 1.35
-    },
-    {
-      "id": "8e9f8b8aad67",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft 365 Outage Today: Is Microsoft 365 Down in the US? Users Report Word, Excel, Outlook, Teams, OneDrive and Login Issues | Check Latest Downdetector Status",
-      "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOcENiTmV5Vk9VMnRXNVY5dU5mbWREVXFpSWh0Z3ZickdpTUhLSktTNmt2RzRwNFdhMVFncGFweVo3RWNKa05MakdUdk9iblRqNU04ZGVySnJoX2NiNnVodmhWd01oS2tJUmEzS0g4NGVndEM1X2Z0UVExc2JDZmxMV0pLVWkyLWZMZjdqR2FYOWRBZE5MVTVPOHFReHd3VnI1MkJJbTQtS0tLUXdkY2dXWEVUZ3Y0SUJJVGxxX2YzS3RORUZFMm1hdjRGVWRiYTA1aUVlTk4yQnFxUnpMZDRNMFVKZ2dma3JoSk9ITm1pQjlVTkEyU1cxNU13UGc0ak1TaWc3MTBXMWZ6bUhZNHJsSEt4ZFJDOHlHT2RMTDI4UG1EZ2N5R1hVWDRXb9IBsAJBVV95cUxPLVNNUy1MTlRwb1JxQ2FucTJQc0tEZnJnTVFfNURXc2dJR2pDN0dnU2YtRlVvYUQ2eEFKbWVkTHZlU0FDQXAyWi0td1dES21MOGR1THVka2kzZEhJaEwtMzRiVS1XUXdmVFV0WWN4RzNTWXh0STNDaEktSzVBWFROZjVqOTFwa0x2YjFHdE9DY2tTNGhpYWM3ZXotdEkwTWlSbWNiTXpOUFlSVDEteUlVSVlSRlBKZ2Y1eDhnb1FPdnNOdUVZRzVpTkZTWXVfLUkzZFBwUlNwUk82QVQ4NS1VVlhWbHd2WWhjZkhqSXBOX05WZ2dmSnJjSHFSVWRfNzdqd29pUFVBRkV3WFZoaVY0MF84VnpUbUpYTW9YUDI5ajQ0cXBadC10eUVUa0Q3cjI4?oc=5",
-      "source": "The Sunday Guardian",
-      "publishedAt": "2026-11-19T16:42:18.000Z",
-      "latestAt": "2026-11-20T12:50:43.000Z",
-      "firstSeenAt": "2026-11-20T12:27:46.115Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Sunday Guardian",
-        "Omaha World-Herald"
-      ],
-      "score": 1.34
     },
     {
       "id": "f82c59b1b46e",
@@ -1919,22 +1920,6 @@
       "score": 0.99
     },
     {
-      "id": "2b7575e120a2",
-      "cat": "space",
-      "kind": "news",
-      "title": "5 asteroids racing towards Earth at 47,880 km: NASA tracks dangerous space rocks on November 19 and 20",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZk93VlFBV3Z1VUtCdHgxM3Q4eDlMaGhYbzBBNWUxVWdvclVseWxtYmtvbkpEN2J2dThKblNlVHNVQ2x1V2ZXclpSU2sxWjFzMnliSmpGSDhtTThwOUlMN3MzclBWYWYxU01GM0lfNkE0S2gzRF9uNks2TE1yTDhneFlqM3FfM2ZhRzJKTzVPTjFHR19uM0VwMG81VkRrT1RYeGZfUHM3QTktSVVqV1RHYjBvYXNJeUtmUXQ4Tl9QT2Etb1RMSGxVaGZQenhBNlZLYmF3eWc3UVY1UdIB2gFBVV95cUxQZk93VlFBV3Z1VUtCdHgxM3Q4eDlMaGhYbzBBNWUxVWdvclVseWxtYmtvbkpEN2J2dThKblNlVHNVQ2x1V2ZXclpSU2sxWjFzMnliSmpGSDhtTThwOUlMN3MzclBWYWYxU01GM0lfNkE0S2gzRF9uNks2TE1yTDhneFlqM3FfM2ZhRzJKTzVPTjFHR19uM0VwMG81VkRrT1RYeGZfUHM3QTktSVVqV1RHYjBvYXNJeUtmUXQ4Tl9QT2Etb1RMSGxVaGZQenhBNlZLYmF3eWc3UVY1UQ?oc=5",
-      "source": "News24Online",
-      "publishedAt": "2026-11-19T16:42:07.000Z",
-      "latestAt": "2026-11-19T16:42:07.000Z",
-      "firstSeenAt": "2026-11-19T18:09:44.298Z",
-      "outlets": 1,
-      "outletNames": [
-        "News24Online"
-      ],
-      "score": 0.98
-    },
-    {
       "id": "8d5e8795626c",
       "cat": "sun",
       "kind": "news",
@@ -1965,6 +1950,22 @@
         "Yahoo"
       ],
       "score": 0.78
+    },
+    {
+      "id": "1811f9cfb712",
+      "cat": "space",
+      "kind": "news",
+      "title": "Hayabusa2 Changes Course After Thruster Trouble, Targeting 2028 Asteroid Flyby",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQa05ZcU1KV1NnLW00T0xuM3Fkd0FzTHlGaTJvWklYZDQwSmZPbXB1MG5HUHdyUWM0OFh6aGF0VkdzUkZjekpQdkVkRlhGczFZbFp6RkRBQVE4bTE5QTlIYWdzTHZiUUl1bDNVY05UdzFvcU5nOEYzaHBIbVdYYmhBaXJGVXkxNVhPaEg5dWlwU0thV2d6NUJBT3lGTmZBRTFEckR2dTVHVQ?oc=5",
+      "source": "SSBCrack",
+      "publishedAt": "2026-11-20T02:22:14.000Z",
+      "latestAt": "2026-11-20T02:22:14.000Z",
+      "firstSeenAt": "2026-11-20T16:43:32.956Z",
+      "outlets": 1,
+      "outletNames": [
+        "SSBCrack"
+      ],
+      "score": 0.76
     },
     {
       "id": "f26454cbf8fe",
