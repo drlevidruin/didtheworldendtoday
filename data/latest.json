@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T12:42:47.538Z",
+  "buildTime": "2026-11-20T12:57:50.352Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 07:42 ET",
+  "etStamp": "2026-11-20 07:57 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,16 +51,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1256,
-  "lastSuccessAt": "2026-11-20T12:42:47.538Z",
+  "headlinesRead": 1296,
+  "lastSuccessAt": "2026-11-20T12:57:50.352Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 29,
+    "hacks": 28,
     "flights": 20,
     "germs": 4,
     "internet": 8,
     "grid": 7,
-    "markets": 8,
+    "markets": 9,
     "earth": 4,
     "sun": 4,
     "weather": 6,
@@ -188,15 +188,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1010,
+      "count": 997,
       "error": null,
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     },
     "bing": {
       "ok": true,
-      "count": 209,
-      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "count": 261,
+      "error": null,
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,39 +206,39 @@
     },
     "hn": {
       "ok": true,
-      "count": 7,
+      "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     },
     "x": {
       "ok": true,
@@ -251,65 +251,16 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T12:42:47.538Z"
+      "lastOkAt": "2026-11-20T12:57:50.352Z"
     }
   },
   "stories": [
-    {
-      "id": "ce3b0f14cf6a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
-      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-19T14:11:21.000Z",
-      "latestAt": "2026-11-20T11:28:30.000Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 32,
-      "outletNames": [
-        "6abc Philadelphia",
-        "ABC News - Breaking News, Latest News and Videos",
-        "kaaltv.com",
-        "ABC Columbia",
-        "upi",
-        "weisradio.com",
-        "Everett Post",
-        "ABC7 Chicago",
-        "LAmag",
-        "Rural Radio Network",
-        "FOX 8 News",
-        "Newsweek",
-        "NBC10 Philadelphia",
-        "Gulf News",
-        "NBC 5 Chicago",
-        "Quartz",
-        "Click2Houston",
-        "CBS News",
-        "Yahoo Finance",
-        "Decrypt",
-        "Finextra Research",
-        "WBAL News Radio",
-        "Reuters",
-        "Wccftech",
-        "The New York Times",
-        "WSJ",
-        "Futurism",
-        "Techlicious",
-        "FOX 5 New York",
-        "Breitbart News",
-        "iTnews",
-        "The Washington Post"
-      ],
-      "trending": 10000,
-      "trendTerm": "jpmorgan chase cyber attack",
-      "score": 5
-    },
     {
       "id": "a658db7bfa93",
       "cat": "hacks",
@@ -435,6 +386,30 @@
         "10News.com"
       ],
       "score": 3.95
+    },
+    {
+      "id": "504b2f0e2351",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
+      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
+      "source": "IranWire",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-20T10:52:30.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 9,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı",
+        "The New Voice of Ukraine",
+        "Intelligent CISO",
+        "Computing UK",
+        "IranWire",
+        "Help Net Security",
+        "SecurityWeek",
+        "EU Today"
+      ],
+      "score": 3.59
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -568,30 +543,6 @@
       "score": 1.99
     },
     {
-      "id": "504b2f0e2351",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
-      "url": "https://iranwire.com/en/news/160506-european-commission-confirms-cyberattack-that-disrupted-internal-systems-for-10-days/",
-      "source": "IranWire",
-      "publishedAt": "2026-11-19T15:03:28.000Z",
-      "latestAt": "2026-11-20T10:52:30.000Z",
-      "firstSeenAt": "2026-11-19T23:25:35.730Z",
-      "outlets": 9,
-      "outletNames": [
-        "DW.com",
-        "İlke Haber Ajansı",
-        "The New Voice of Ukraine",
-        "Intelligent CISO",
-        "Computing UK",
-        "IranWire",
-        "Help Net Security",
-        "SecurityWeek",
-        "EU Today"
-      ],
-      "score": 3.59
-    },
-    {
       "id": "b0fc3c8f8eff",
       "cat": "flights",
       "kind": "news",
@@ -669,6 +620,23 @@
         "Yahoo"
       ],
       "score": 2.76
+    },
+    {
+      "id": "04c2e2acf99a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack targets major banking and card vendors",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T23:12:30.000Z",
+      "latestAt": "2026-11-19T23:12:30.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 13 Tampa Bay"
+      ],
+      "score": 2.6
     },
     {
       "id": "28b64844bc13",
@@ -894,23 +862,6 @@
       "score": 1.63
     },
     {
-      "id": "04c2e2acf99a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack targets major banking and card vendors",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:12:30.000Z",
-      "latestAt": "2026-11-19T23:12:30.000Z",
-      "firstSeenAt": "2026-11-20T03:26:28.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX 13 Tampa Bay"
-      ],
-      "score": 2.6
-    },
-    {
       "id": "f60e65cf388c",
       "cat": "flights",
       "kind": "news",
@@ -935,7 +886,7 @@
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRlJwZHVUTDlBQ3FHamFnZ0F1MEdCVzhvSHdpYm9aa1NFU2Vmc1lRVW5GNXlwNVdIYkkybWxUUm9DelFXdlprdHZzNEx1LXVhODhpcEs0dm5YaGZVNjhUa2xtWXVhWG94b1ZiajExeTVITDVtZkNleEZucXlzRl9hU0pfeEZqUnk3SS1EdmhvaVd5NXBmS3FVTlZJVFRoeUZiZ3JIZzRJVWhDaXFvT1RJ?oc=5",
       "source": "WCIV",
       "publishedAt": "2026-11-19T22:19:17.000Z",
-      "latestAt": "2026-11-19T22:41:54.000Z",
+      "latestAt": "2026-11-20T02:43:14.000Z",
       "firstSeenAt": "2026-11-19T22:40:25.650Z",
       "outlets": 2,
       "outletNames": [
@@ -996,23 +947,6 @@
       "score": 1.93
     },
     {
-      "id": "7e853259d84f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Visa data breach exposes premium cardholder data",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBfUUl2N3lyTjdmWEJDdUcyRlFBcnV4aWpJREZpa0tYN1l0aEI3MVFjN050SjhwcnRZa050MnZocHJIemVxb2prM21mQzFIU1cxcG9nZ2ItSTlSZHgxUjQtRkxqdw?oc=5",
-      "source": "Cybernews",
-      "publishedAt": "2026-11-19T12:49:09.000Z",
-      "latestAt": "2026-11-19T16:08:14.000Z",
-      "firstSeenAt": "2026-11-19T16:09:24.808Z",
-      "outlets": 2,
-      "outletNames": [
-        "Cybernews",
-        "Beinsure"
-      ],
-      "score": 1.89
-    },
-    {
       "id": "683c71983e8b",
       "cat": "hacks",
       "kind": "news",
@@ -1026,23 +960,6 @@
       "outletNames": [
         "Technext24.com",
         "Australian Cyber Security Magazine"
-      ],
-      "score": 1.87
-    },
-    {
-      "id": "b09dc7a88fa9",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Video FAA administrator blames himself for the historic ground stop",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1ZV1M4TDhXeHB1clZuc1FuZEp6dHNCVkFhR3lmSFhRakNCYzlrdkRMTmp3Wi1IZ0lsZnFGanJmS1FodmpYQVltWHRDVlM?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-19T12:44:46.000Z",
-      "latestAt": "2026-11-19T18:00:00.000Z",
-      "firstSeenAt": "2026-11-19T16:39:41.729Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "Modern Ghana"
       ],
       "score": 1.87
     },
@@ -1305,7 +1222,7 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNclFrZko3ZWx4V0xrQjR6OGNya0hHQ00tRkZtbVp6b3lMdkptSG04d19WU0hwU0NSVzJmR29QWmtOdFdFTGJoUjBvNFQ3Vzlxb3ZxWGU4TVgyd3dqWWIxTUJqS0lrY0hzTUx4dDhuaEdqTEVROE1UQlNub21PVmhEcUJVTnh3aWJHVGtYeWRmMUF3ekdjS2N0cmpnc24?oc=5",
       "source": "ch-aviation",
       "publishedAt": "2026-11-19T21:57:33.000Z",
-      "latestAt": "2026-11-19T21:57:33.000Z",
+      "latestAt": "2026-11-19T21:57:58.000Z",
       "firstSeenAt": "2026-11-19T22:10:22.137Z",
       "outlets": 1,
       "outletNames": [
@@ -1547,7 +1464,7 @@
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XeTlLa3BVTnRZZ01yWnk4SGNVZnpaRXk0dV9KQWpLUGVWX0JSOTgtYXF5eDlTN1VnLVlGQnJ0UzJLSmRDa0VMbFNWb2ZtMVgyUjdSNExFZEE?oc=5",
       "source": "TRT World",
       "publishedAt": "2026-11-20T06:50:50.000Z",
-      "latestAt": "2026-11-20T06:50:50.000Z",
+      "latestAt": "2026-11-20T10:48:26.000Z",
       "firstSeenAt": "2026-11-20T08:27:10.550Z",
       "outlets": 1,
       "outletNames": [
@@ -1578,15 +1495,15 @@
       "title": "Microsoft 365 Outage Today: Is Microsoft 365 Down in the US? Users Report Word, Excel, Outlook, Teams, OneDrive and Login Issues | Check Latest Downdetector Status",
       "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOcENiTmV5Vk9VMnRXNVY5dU5mbWREVXFpSWh0Z3ZickdpTUhLSktTNmt2RzRwNFdhMVFncGFweVo3RWNKa05MakdUdk9iblRqNU04ZGVySnJoX2NiNnVodmhWd01oS2tJUmEzS0g4NGVndEM1X2Z0UVExc2JDZmxMV0pLVWkyLWZMZjdqR2FYOWRBZE5MVTVPOHFReHd3VnI1MkJJbTQtS0tLUXdkY2dXWEVUZ3Y0SUJJVGxxX2YzS3RORUZFMm1hdjRGVWRiYTA1aUVlTk4yQnFxUnpMZDRNMFVKZ2dma3JoSk9ITm1pQjlVTkEyU1cxNU13UGc0ak1TaWc3MTBXMWZ6bUhZNHJsSEt4ZFJDOHlHT2RMTDI4UG1EZ2N5R1hVWDRXb9IBsAJBVV95cUxPLVNNUy1MTlRwb1JxQ2FucTJQc0tEZnJnTVFfNURXc2dJR2pDN0dnU2YtRlVvYUQ2eEFKbWVkTHZlU0FDQXAyWi0td1dES21MOGR1THVka2kzZEhJaEwtMzRiVS1XUXdmVFV0WWN4RzNTWXh0STNDaEktSzVBWFROZjVqOTFwa0x2YjFHdE9DY2tTNGhpYWM3ZXotdEkwTWlSbWNiTXpOUFlSVDEteUlVSVlSRlBKZ2Y1eDhnb1FPdnNOdUVZRzVpTkZTWXVfLUkzZFBwUlNwUk82QVQ4NS1VVlhWbHd2WWhjZkhqSXBOX05WZ2dmSnJjSHFSVWRfNzdqd29pUFVBRkV3WFZoaVY0MF84VnpUbUpYTW9YUDI5ajQ0cXBadC10eUVUa0Q3cjI4?oc=5",
       "source": "The Sunday Guardian",
-      "publishedAt": "2026-11-19T17:02:26.000Z",
-      "latestAt": "2026-11-20T10:03:24.000Z",
+      "publishedAt": "2026-11-19T16:42:18.000Z",
+      "latestAt": "2026-11-20T12:50:31.000Z",
       "firstSeenAt": "2026-11-20T12:27:46.115Z",
       "outlets": 2,
       "outletNames": [
         "The Sunday Guardian",
         "Omaha World-Herald"
       ],
-      "score": 1.35
+      "score": 1.34
     },
     {
       "id": "9c9946d9d13f",
@@ -1636,6 +1553,23 @@
         "ProtoThema English"
       ],
       "score": 1.32
+    },
+    {
+      "id": "83b2e6066b85",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "New concerns on potential cyberattack over US food supply",
+      "url": "https://abcnews.com/video/138315997/",
+      "source": "ABC News",
+      "publishedAt": "2026-11-19T16:00:00.000Z",
+      "latestAt": "2026-11-20T12:40:01.000Z",
+      "firstSeenAt": "2026-11-20T12:57:50.352Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC News",
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "score": 1.3
     },
     {
       "id": "3f1eab354c5a",
@@ -1700,6 +1634,22 @@
         "wyomingnewsnow.tv"
       ],
       "score": 1.21
+    },
+    {
+      "id": "7246bd4d8ec7",
+      "cat": "flights",
+      "kind": "news",
+      "title": "US flights grounded nationwide as air traffic control communications fail",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNk9RQm1zelpFaTBsQklkZy14QVR4Y2V5ZkI3NGNKbzdQenlneDNtM09XNkxSeFMtalBlOXJOckI3Yk1RMUJGWGZGOU9fWU0wSGhQVkVjUzVKbklROFE5SmxJbHFkeXFrVVUzTzktZEFNWDlIc3N4VlpJZWthaTY1MVlObTVhXy1vX2hzVXdnSXVVVllFUzZ2dkVoSVlMdzF6ODNOdFlBN1N1S2h5Zmc?oc=5",
+      "source": "Herald.Wales",
+      "publishedAt": "2026-11-20T04:26:05.000Z",
+      "latestAt": "2026-11-20T04:26:05.000Z",
+      "firstSeenAt": "2026-11-20T12:57:50.352Z",
+      "outlets": 1,
+      "outletNames": [
+        "Herald.Wales"
+      ],
+      "score": 1.2
     },
     {
       "id": "8838110540f0",
@@ -1812,6 +1762,22 @@
         "Fox News"
       ],
       "score": 1.04
+    },
+    {
+      "id": "e3bc4b1f9a5f",
+      "cat": "markets",
+      "kind": "news",
+      "title": "PH stocks plunge 3.12% to lowest level since April 2020",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOLW9DVEpJck45OHpVWjI4UlFhbEptb0VtSlV4bFAzbXJ2Z2U5blhWVjlTNElFbTFRSkZUQ3RhR3pWSEJ1NUJBc3NDOUhiYUYtUEk5ZzNrdnBKTnhjNEQ4aVJZdER6cFRMSHBHT3QySEx5SVNZLTJMX1kxVXptRzc2Q2JGQjJPdFhCNC1EblJVNXAxTWJTalJqOS1BQkw4dUZoM1hRN0tyQ01LU2M1UG44WGpnM3R0WU9HcU1hcFln?oc=5",
+      "source": "Manila Standard",
+      "publishedAt": "2026-11-20T12:50:34.000Z",
+      "latestAt": "2026-11-20T12:50:34.000Z",
+      "firstSeenAt": "2026-11-20T12:57:50.352Z",
+      "outlets": 1,
+      "outletNames": [
+        "Manila Standard"
+      ],
+      "score": 1
     },
     {
       "id": "5db8d3d3123a",
@@ -1999,7 +1965,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-20T00:48:00.000Z",
-      "latestAt": "2026-11-20T04:06:00.000Z",
+      "latestAt": "2026-11-20T04:41:00.000Z",
       "firstSeenAt": "2026-11-20T09:27:15.197Z",
       "outlets": 1,
       "outletNames": [
