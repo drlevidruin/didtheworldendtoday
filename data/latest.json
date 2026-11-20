@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T11:57:38.909Z",
+  "buildTime": "2026-11-20T12:12:45.826Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 06:57 ET",
+  "etStamp": "2026-11-20 07:12 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,21 +51,21 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1035,
-  "lastSuccessAt": "2026-11-20T11:57:38.909Z",
+  "headlinesRead": 258,
+  "lastSuccessAt": "2026-11-20T12:12:45.826Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 29,
-    "flights": 18,
-    "germs": 4,
+    "flights": 17,
     "internet": 7,
     "grid": 8,
     "markets": 11,
-    "earth": 4,
+    "earth": 5,
     "sun": 4,
     "weather": 6,
+    "germs": 3,
     "ai": 4,
-    "space": 4,
+    "space": 5,
     "animals": 1
   },
   "vital": {
@@ -78,8 +78,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 1.33,
-      "time": "2026-11-20T06:00:00.000Z",
+      "value": 0.67,
+      "time": "2026-11-20T09:00:00.000Z",
       "max24": 3
     },
     "asteroid": {
@@ -187,16 +187,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 988,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-20T11:57:38.909Z"
     },
     "bing": {
       "ok": true,
-      "count": 12,
-      "error": "4 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-20T11:57:38.909Z"
+      "count": 223,
+      "error": "5 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-20T12:12:45.826Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,37 +208,37 @@
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-20T11:57:38.909Z"
+      "lastOkAt": "2026-11-20T12:12:45.826Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:57:38.909Z"
+      "lastOkAt": "2026-11-20T12:12:45.826Z"
     },
     "swpc": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:57:38.909Z"
+      "lastOkAt": "2026-11-20T12:12:45.826Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:57:38.909Z"
+      "lastOkAt": "2026-11-20T12:12:45.826Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:57:38.909Z"
+      "lastOkAt": "2026-11-20T12:12:45.826Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T11:57:38.909Z"
+      "lastOkAt": "2026-11-20T12:12:45.826Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-20T11:57:38.909Z"
+      "lastOkAt": "2026-11-20T12:12:45.826Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T11:57:38.909Z"
+      "lastOkAt": "2026-11-20T12:12:45.826Z"
     }
   },
   "stories": [
@@ -405,42 +405,6 @@
       "score": 3.95
     },
     {
-      "id": "6d7a6b3b2346",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Oregon confirms first human case of bird flu this year",
-      "url": "https://www.yahoo.com/news/science/articles/oregon-confirms-first-human-case-200500777.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T12:05:00.000Z",
-      "latestAt": "2026-11-20T10:16:24.000Z",
-      "firstSeenAt": "2026-11-20T04:56:32.174Z",
-      "outlets": 21,
-      "outletNames": [
-        "Central Oregon Daily",
-        "KGW",
-        "Statesman Journal",
-        "KOIN.com",
-        "KTVZ",
-        "KATU",
-        "KVAL",
-        "TriYakNews.com",
-        "Outbreak News Today",
-        "KPTV",
-        "Oregon Capital Chronicle",
-        "KPIC",
-        "Capital Press",
-        "Yahoo",
-        "Oregon Public Broadcasting - OPB",
-        "PoultryMed",
-        "Nature World News",
-        "KCBY",
-        "en.edairynews.com",
-        "https://en.edairynews.com/",
-        "Your Oregon News"
-      ],
-      "score": 3.88
-    },
-    {
       "id": "sig:status:openai:2026-11-19",
       "cat": "internet",
       "kind": "signal",
@@ -572,7 +536,24 @@
       "score": 1.99
     },
     {
-      "id": "504b2f0e2351",
+      "id": "2911d0fcc2e7",
+      "cat": "grid",
+      "kind": "news",
+      "title": "KRCR News Channel 7 broadcasts interrupted by power outage",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQXzJUWVJocDNTcTJ1NmJtdEtTNk5XN2dRdmlvX1pjc3lPTTZSRUF3VURuQWg2MXV3aUdCT3NjbFNzeXd4ZzVyM2ZwUTFRX2FMbllMd3VocFJObU9uXzh5UkNCLWNOdERjb0dlajAtWndEa0dBSXctM192OV9kXzZnU21sNnUzaUpxbU1vdjRwM3hTdw?oc=5",
+      "source": "KRCR",
+      "publishedAt": "2026-11-19T16:51:17.000Z",
+      "latestAt": "2026-11-20T10:36:01.000Z",
+      "firstSeenAt": "2026-11-19T17:09:48.375Z",
+      "outlets": 2,
+      "outletNames": [
+        "KRCR",
+        "cedarnews.net"
+      ],
+      "score": 1.99
+    },
+    {
+      "id": "bfba4b3925cd",
       "cat": "hacks",
       "kind": "news",
       "title": "European Commission Confirms Cyberattack That Disrupted Internal Systems for 10 Days",
@@ -674,40 +655,22 @@
       "score": 2.76
     },
     {
-      "id": "97f014fb3101",
+      "id": "28b64844bc13",
       "cat": "flights",
       "kind": "news",
-      "title": "FAA ground stop suggests how risky air traffic control upgrades can be",
-      "url": "https://www.yahoo.com/news/science/articles/faa-ground-stop-suggests-risky-203000389.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T12:02:50.000Z",
-      "latestAt": "2026-11-19T20:30:00.000Z",
-      "firstSeenAt": "2026-11-19T19:12:09.123Z",
-      "outlets": 4,
+      "title": "FAA Ground Stop Keeps Tom Morello From Iron Maiden Rock Hall Tribute",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVTd2VDlyaEJQX2xMc0ZOVzJLMVdHOVJYTGZnMG92aDlpcmJ6Z3pYRWZDUmlhcG1iN0FWY2ZOU1ZVNW9zbzNfWTlkX1R2ekNHTWxoQUo4bTB1bnRFdDVsc2NUakNuN3p2OUE3Sm9ycGxlVWpXSDRmRGU4UVFEbGo0ZnBlZDZoRDdiZUxxT0t4SDNmSENIeF9BejhkN2hhS2t3?oc=5",
+      "source": "WDHA FM",
+      "publishedAt": "2026-11-19T19:18:50.000Z",
+      "latestAt": "2026-11-19T19:18:50.000Z",
+      "firstSeenAt": "2026-11-19T21:55:23.506Z",
+      "outlets": 3,
       "outletNames": [
-        "KXAN Austin",
-        "13newsnow.com",
-        "Scientific American",
-        "Yahoo"
+        "WDHA FM",
+        "Boston's ROCK 92.9",
+        "95.9 The RAT"
       ],
-      "score": 2.64
-    },
-    {
-      "id": "2911d0fcc2e7",
-      "cat": "grid",
-      "kind": "news",
-      "title": "KRCR News Channel 7 broadcasts interrupted by power outage",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQXzJUWVJocDNTcTJ1NmJtdEtTNk5XN2dRdmlvX1pjc3lPTTZSRUF3VURuQWg2MXV3aUdCT3NjbFNzeXd4ZzVyM2ZwUTFRX2FMbllMd3VocFJObU9uXzh5UkNCLWNOdERjb0dlajAtWndEa0dBSXctM192OV9kXzZnU21sNnUzaUpxbU1vdjRwM3hTdw?oc=5",
-      "source": "KRCR",
-      "publishedAt": "2026-11-19T16:51:17.000Z",
-      "latestAt": "2026-11-20T10:36:01.000Z",
-      "firstSeenAt": "2026-11-19T17:09:48.375Z",
-      "outlets": 2,
-      "outletNames": [
-        "KRCR",
-        "cedarnews.net"
-      ],
-      "score": 1.99
+      "score": 2.47
     },
     {
       "id": "c98a8999b433",
@@ -898,6 +861,22 @@
       "score": 1.63
     },
     {
+      "id": "60bf689c89a1",
+      "cat": "internet",
+      "kind": "news",
+      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
+      "source": "StoneWars.com",
+      "publishedAt": "2026-11-20T11:37:19.000Z",
+      "latestAt": "2026-11-20T11:37:30.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 1,
+      "outletNames": [
+        "StoneWars.com"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "04c2e2acf99a",
       "cat": "hacks",
       "kind": "news",
@@ -913,24 +892,6 @@
         "FOX 13 Tampa Bay"
       ],
       "score": 2.6
-    },
-    {
-      "id": "28b64844bc13",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Ground Stop Keeps Tom Morello From Iron Maiden Rock Hall Tribute",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVTd2VDlyaEJQX2xMc0ZOVzJLMVdHOVJYTGZnMG92aDlpcmJ6Z3pYRWZDUmlhcG1iN0FWY2ZOU1ZVNW9zbzNfWTlkX1R2ekNHTWxoQUo4bTB1bnRFdDVsc2NUakNuN3p2OUE3Sm9ycGxlVWpXSDRmRGU4UVFEbGo0ZnBlZDZoRDdiZUxxT0t4SDNmSENIeF9BejhkN2hhS2t3?oc=5",
-      "source": "WDHA FM",
-      "publishedAt": "2026-11-19T19:18:50.000Z",
-      "latestAt": "2026-11-19T19:18:50.000Z",
-      "firstSeenAt": "2026-11-19T21:55:23.506Z",
-      "outlets": 3,
-      "outletNames": [
-        "WDHA FM",
-        "Boston's ROCK 92.9",
-        "95.9 The RAT"
-      ],
-      "score": 2.47
     },
     {
       "id": "f60e65cf388c",
@@ -1139,6 +1100,23 @@
       "score": 1.72
     },
     {
+      "id": "504b2f0e2351",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission targeted in an AI-assisted cyberattack, spokesperson confirms",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
+      "source": "DW.com",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-19T16:11:09.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 2,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "82b3f3881601",
       "cat": "hacks",
       "kind": "news",
@@ -1222,39 +1200,6 @@
         "Goshen News"
       ],
       "score": 1.54
-    },
-    {
-      "id": "3712e02a1b2c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16ejBjNzhGeUhBWnhVTkRHZ2sxRE4xUXZ3RVhiNTMwZlU4MUx1LUxVcG1xbi0zV1RFTzhVamxHOXd6MTFWVG5jVmctUDZQcF84U3UzcGNlbjFOQjlHX3lyQXFZYmdjNWM2UGtoM1ZVbkxzWFFDNHBwTTV5cW56UnfSAYQBQVVfeXFMUElHd25xekpscWFKV18xeHM0VUw4N1YyN0JRUFVOYmlSTGduZ0s1d2Jvc3ZFeXZBRzlDdlM1cnhuOXhCYWlid0ZSakZ2b1ljUTY2QmlaeXU0UXZrQzJISTYtWkF2Z0xMb3ZKRkg4aDlPQUhlNDdYR19pcWJtc0g2WnhQcW5W?oc=5",
-      "source": "upi",
-      "publishedAt": "2026-11-19T19:07:44.000Z",
-      "latestAt": "2026-11-20T01:19:21.000Z",
-      "firstSeenAt": "2026-11-20T11:57:38.909Z",
-      "outlets": 2,
-      "outletNames": [
-        "upi",
-        "LAmag"
-      ],
-      "score": 1.44
-    },
-    {
-      "id": "60bf689c89a1",
-      "cat": "internet",
-      "kind": "news",
-      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
-      "source": "StoneWars.com",
-      "publishedAt": "2026-11-20T11:37:19.000Z",
-      "latestAt": "2026-11-20T11:37:30.000Z",
-      "firstSeenAt": "2026-11-20T11:42:39.182Z",
-      "outlets": 1,
-      "outletNames": [
-        "StoneWars.com"
-      ],
-      "score": 1.4
     },
     {
       "id": "3383e4bd7e29",
@@ -1998,6 +1943,38 @@
       "score": 0.99
     },
     {
+      "id": "79439296a66d",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Update: 2.7 magnitude earthquake detected near Primo Tapia, B.C., MX on Nov. 18",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBDdTRzcERXdFdjZVd1Q2U2WnlLNEthTzR3UmdpXzQ5czMtR1RMcDBzTGtiTkQ4QUc1UENXbmJDb3JGRUViX1k3aEVVQXlvS1JUNE5vSUN3UzlJQmUtTDJiUFA1eF9ZbkZ4WkRQVE8tOUxJVGxwaWJSVTBEck4?oc=5",
+      "source": "Sacramento Bee",
+      "publishedAt": "2026-11-19T17:22:06.000Z",
+      "latestAt": "2026-11-19T17:22:06.000Z",
+      "firstSeenAt": "2026-11-19T18:39:49.132Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sacramento Bee"
+      ],
+      "score": 0.98
+    },
+    {
+      "id": "2b7575e120a2",
+      "cat": "space",
+      "kind": "news",
+      "title": "5 asteroids racing towards Earth at 47,880 km: NASA tracks dangerous space rocks on November 19 and 20",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQZk93VlFBV3Z1VUtCdHgxM3Q4eDlMaGhYbzBBNWUxVWdvclVseWxtYmtvbkpEN2J2dThKblNlVHNVQ2x1V2ZXclpSU2sxWjFzMnliSmpGSDhtTThwOUlMN3MzclBWYWYxU01GM0lfNkE0S2gzRF9uNks2TE1yTDhneFlqM3FfM2ZhRzJKTzVPTjFHR19uM0VwMG81VkRrT1RYeGZfUHM3QTktSVVqV1RHYjBvYXNJeUtmUXQ4Tl9QT2Etb1RMSGxVaGZQenhBNlZLYmF3eWc3UVY1UdIB2gFBVV95cUxQZk93VlFBV3Z1VUtCdHgxM3Q4eDlMaGhYbzBBNWUxVWdvclVseWxtYmtvbkpEN2J2dThKblNlVHNVQ2x1V2ZXclpSU2sxWjFzMnliSmpGSDhtTThwOUlMN3MzclBWYWYxU01GM0lfNkE0S2gzRF9uNks2TE1yTDhneFlqM3FfM2ZhRzJKTzVPTjFHR19uM0VwMG81VkRrT1RYeGZfUHM3QTktSVVqV1RHYjBvYXNJeUtmUXQ4Tl9QT2Etb1RMSGxVaGZQenhBNlZLYmF3eWc3UVY1UQ?oc=5",
+      "source": "News24Online",
+      "publishedAt": "2026-11-19T16:42:07.000Z",
+      "latestAt": "2026-11-19T16:42:07.000Z",
+      "firstSeenAt": "2026-11-19T18:09:44.298Z",
+      "outlets": 1,
+      "outletNames": [
+        "News24Online"
+      ],
+      "score": 0.98
+    },
+    {
       "id": "4bbee913a352",
       "cat": "germs",
       "kind": "news",
@@ -2021,7 +1998,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-20T00:48:00.000Z",
-      "latestAt": "2026-11-20T02:09:00.000Z",
+      "latestAt": "2026-11-20T03:51:00.000Z",
       "firstSeenAt": "2026-11-20T09:27:15.197Z",
       "outlets": 1,
       "outletNames": [
