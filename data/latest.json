@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-19T23:55:37.476Z",
+  "buildTime": "2026-11-20T00:10:40.191Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 18:55 ET",
-  "score": 79,
+  "etStamp": "2026-11-19 19:10 ET",
+  "score": 80,
   "fired": [
     "flights",
     "hacks",
@@ -19,9 +19,9 @@
   ],
   "bumps": [
     {
-      "key": "kp",
-      "label": "Kp 5 or more",
-      "points": 5
+      "key": "faa",
+      "label": "Ground stop at a major hub",
+      "points": 6
     },
     {
       "key": "status",
@@ -29,7 +29,7 @@
       "points": 8
     }
   ],
-  "change": 3,
+  "change": 4,
   "yesterday": {
     "date": "2026-11-18",
     "score": 76,
@@ -50,20 +50,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1257,
-  "lastSuccessAt": "2026-11-19T23:55:37.476Z",
+  "headlinesRead": 1125,
+  "lastSuccessAt": "2026-11-20T00:10:40.191Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
-    "hacks": 37,
+    "flights": 15,
+    "hacks": 38,
     "internet": 12,
-    "sun": 4,
     "germs": 5,
     "earth": 4,
     "grid": 6,
     "markets": 4,
     "space": 4,
     "weather": 4,
+    "sun": 4,
     "animals": 1,
     "ai": 3
   },
@@ -79,19 +79,25 @@
     "kp": {
       "value": 3,
       "time": "2026-11-19T18:00:00.000Z",
-      "max24": 5
+      "max24": 3
     },
     "asteroid": {
-      "des": "2026 VA11",
-      "ld": 8.723,
-      "at": "2026-11-19T11:26:00.000Z",
-      "sizeM": 12.7,
-      "size": "a bus",
-      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20VA11",
-      "upcoming": false
+      "des": "2026 VN11",
+      "ld": 5.154,
+      "at": "2026-11-21T06:47:00.000Z",
+      "sizeM": 41.2,
+      "size": "a jumbo jet",
+      "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20VN11",
+      "upcoming": true
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "SAN",
+          "hub": true,
+          "reason": "low visibility"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 2,
       "closures": 0,
@@ -187,57 +193,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 951,
-      "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "count": 818,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 18 of 26 queries)",
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     },
     "bing": {
       "ok": true,
-      "count": 272,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-19T22:40:25.650Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     },
     "x": {
       "ok": true,
@@ -248,26 +254,55 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-19T23:55:37.476Z"
+      "lastOkAt": "2026-11-20T00:10:40.191Z"
     }
   },
   "stories": [
+    {
+      "id": "bab44e1adaa9",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Sources dispute FAA’s account of oversight before nationwide ground stop",
+      "url": "https://www.scrippsnews.com/us-news/sources-dispute-faas-account-of-oversight-before-nationwide-ground-stop",
+      "source": "Scripps News",
+      "publishedAt": "2026-11-19T05:09:00.000Z",
+      "latestAt": "2026-11-19T18:39:08.000Z",
+      "firstSeenAt": "2026-11-19T13:23:53.347Z",
+      "outlets": 14,
+      "outletNames": [
+        "KPAX News",
+        "Scripps News",
+        "LEX 18 News",
+        "WTKR",
+        "WPTV",
+        "News Channel 5 Nashville",
+        "KTVQ",
+        "WTVR.com",
+        "News 5 Cleveland WEWS",
+        "ktnv.com",
+        "WXYZ Channel 7",
+        "WCPO 9 News",
+        "KBZK News",
+        "KSHB 41 Kansas City"
+      ],
+      "score": 5.81
+    },
     {
       "id": "f3287ab342cd",
       "cat": "flights",
       "kind": "news",
       "title": "Ground stop leads to airport wedding",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOQXdGNkFPZldWbEJPMVZxZkZoV2lJdXh2b0NqMTF0dmdUWHgzUmU0UjJTWFd3Z3pwWTI2SThoT0Y0al9mLW1TQ1MwYS1pOG1mYnVDWTBWNFBuSnFQQjYwMTRLU3U2N0xJeWh3MWtZUGtWbmJkek9pX2Nuam5WQlZwVWt3?oc=5",
-      "source": "AZ Family",
-      "publishedAt": "2026-11-19T19:32:00.000Z",
+      "url": "https://www.wctv.tv/2026/11/19/ground-stop-leads-airport-wedding/",
+      "source": "WCTV",
+      "publishedAt": "2026-11-19T11:41:00.000Z",
       "latestAt": "2026-11-19T21:41:13.000Z",
       "firstSeenAt": "2026-11-19T19:40:09.535Z",
       "outlets": 32,
@@ -305,64 +340,7 @@
         "WBNG",
         "KSWO 7News"
       ],
-      "score": 5.99
-    },
-    {
-      "id": "bab44e1adaa9",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Sources dispute FAA’s account of oversight before nationwide ground stop",
-      "url": "https://www.scrippsnews.com/us-news/sources-dispute-faas-account-of-oversight-before-nationwide-ground-stop",
-      "source": "Scripps News",
-      "publishedAt": "2026-11-19T05:09:00.000Z",
-      "latestAt": "2026-11-19T18:39:08.000Z",
-      "firstSeenAt": "2026-11-19T13:23:53.347Z",
-      "outlets": 14,
-      "outletNames": [
-        "KPAX News",
-        "Scripps News",
-        "LEX 18 News",
-        "WTKR",
-        "WPTV",
-        "News Channel 5 Nashville",
-        "KTVQ",
-        "WTVR.com",
-        "News 5 Cleveland WEWS",
-        "ktnv.com",
-        "WXYZ Channel 7",
-        "WCPO 9 News",
-        "KBZK News",
-        "KSHB 41 Kansas City"
-      ],
-      "score": 5.81
-    },
-    {
-      "id": "21ec90f1e9d6",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US Plans to Announce Cause of Outage That Led to Nationwide Ground Stop, FAA Says",
-      "url": "https://www.usnews.com/news/world/articles/2026-11-19/us-plans-to-announce-cause-of-outage-that-led-to-nationwide-ground-stop-faa-says",
-      "source": "U.S. News & World Report",
-      "publishedAt": "2026-11-18T23:59:00.000Z",
-      "latestAt": "2026-11-19T23:09:12.000Z",
-      "firstSeenAt": "2026-11-19T15:39:19.020Z",
-      "outlets": 12,
-      "outletNames": [
-        "Reuters",
-        "The Straits Times",
-        "U.S. News & World Report",
-        "Internazionale",
-        "www.marketscreener.com",
-        "Devdiscourse",
-        "The News Tribune",
-        "@Reuters on X",
-        "CNA",
-        "Kansas City Star",
-        "Fresno Bee",
-        "Avi-Go"
-      ],
-      "xUrl": "https://x.com/Reuters/status/2123485247463408118",
-      "score": 4.74
+      "score": 5.2
     },
     {
       "id": "609d5f00cba2",
@@ -412,44 +390,6 @@
       "score": 4.69
     },
     {
-      "id": "c3ddbca70630",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "EU Commission targeted in cyberattack, Politico reports",
-      "url": "https://www.reuters.com/legal/litigation/eu-commission-targeted-cyberattack-politico-reports-2026-11-19/",
-      "source": "Reuters",
-      "publishedAt": "2026-11-19T00:03:00.000Z",
-      "latestAt": "2026-11-19T13:43:07.000Z",
-      "firstSeenAt": "2026-11-19T08:38:02.032Z",
-      "outlets": 22,
-      "outletNames": [
-        "Reuters",
-        "StreetInsider",
-        "AzerNews",
-        "Mezha.net",
-        "The News International",
-        "Times Now",
-        "The Next Web",
-        "@Reuters on X",
-        "Daily Sabah",
-        "Metro Mode",
-        "The Verge",
-        "Modern Diplomacy",
-        "Hromadske",
-        "Hungarian Conservative",
-        "@unusual_whales on X",
-        "Firstpost",
-        "Philenews",
-        "Irish Independent",
-        "RTE.ie",
-        "CNA",
-        "Washington Examiner",
-        "GMA Network"
-      ],
-      "xUrl": "https://x.com/Reuters/status/2123343058611671245",
-      "score": 4.68
-    },
-    {
       "id": "12a74ab1488e",
       "cat": "hacks",
       "kind": "news",
@@ -495,9 +435,69 @@
         "OFFGRID Survival"
       ],
       "xUrl": "https://x.com/unusual_whales/status/2123505841991270765",
-      "trending": 5000,
+      "trending": 10000,
       "trendTerm": "jpmorgan chase & co",
       "score": 4.63
+    },
+    {
+      "id": "22c7080496e8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission confirms AI-driven cyberattack weeks after detecting it",
+      "url": "https://brusselssignal.eu/2026/11/european-commission-confirms-ai-driven-cyberattack-weeks-after-detecting-it/",
+      "source": "brusselssignal",
+      "publishedAt": "2026-11-19T02:02:00.000Z",
+      "latestAt": "2026-11-19T19:33:10.000Z",
+      "firstSeenAt": "2026-11-19T11:23:37.429Z",
+      "outlets": 22,
+      "outletNames": [
+        "Protos | Informed crypto news",
+        "Protos",
+        "www.marketscreener.com",
+        "Irish Independent",
+        "brusselssignal",
+        "Irish Examiner",
+        "The Copenhagen Post",
+        "DW.com",
+        "Metro Mode",
+        "RTE.ie",
+        "Philenews",
+        "Washington Examiner",
+        "The Portugal News",
+        "The Record from Recorded Future News",
+        "Notebookcheck",
+        "UPI on MSN",
+        "Sharjah24",
+        "Investing.com",
+        "Yahoo",
+        "Superpower Daily",
+        "İlke Haber Ajansı",
+        "The Brussels Times"
+      ],
+      "score": 4.61
+    },
+    {
+      "id": "sig:faa-stop:SAN:2026-11-19",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SAN (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-20T00:10:40.191Z",
+      "latestAt": "2026-11-20T00:10:40.191Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SAN",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -519,27 +519,6 @@
         "indicator": "major",
         "page": "openai",
         "description": "Partial System Outage"
-      }
-    },
-    {
-      "id": "sig:kp:2026-11-18",
-      "cat": "sun",
-      "kind": "signal",
-      "title": "Geomagnetic storm reaches Kp 5.0 (G1, minor)",
-      "url": "https://www.swpc.noaa.gov/products/planetary-k-index",
-      "source": "NOAA SWPC",
-      "publishedAt": "2026-11-19T00:00:00.000Z",
-      "latestAt": "2026-11-19T00:00:00.000Z",
-      "firstSeenAt": "2026-11-19T03:07:10.355Z",
-      "outlets": 1,
-      "outletNames": [
-        "NOAA SWPC"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "kp",
-        "kp": 5,
-        "scale": "G1"
       }
     },
     {
@@ -646,41 +625,21 @@
       "score": 2.73
     },
     {
-      "id": "22c7080496e8",
-      "cat": "hacks",
+      "id": "e498b9be28a4",
+      "cat": "internet",
       "kind": "news",
-      "title": "European Commission confirms AI-driven cyberattack weeks after detecting it",
-      "url": "https://brusselssignal.eu/2026/11/european-commission-confirms-ai-driven-cyberattack-weeks-after-detecting-it/",
-      "source": "brusselssignal",
-      "publishedAt": "2026-11-19T02:02:00.000Z",
-      "latestAt": "2026-11-19T19:33:10.000Z",
-      "firstSeenAt": "2026-11-19T11:23:37.429Z",
-      "outlets": 22,
+      "title": "LIVE - Water supply restored to 'vast majority' after major outage",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaEhlamV2bkN6WDJ6WHJQMUFCSzhGem1pT1drUmlqdS15T3NzOFJuTXVSV25QUktaeUlPeERxbjQ1c29VN181S0lrMkp2MFd2N2FHVE05dF95WVRrZV81Z0RQb0NhRFd4aVVvVGRBWnc2NTFlM1BweHQtYjBCaURsdGxpMklVeENoR3p3dUNMbUlyOW9qVU9HNFZ2TFMtTHlZbWJz?oc=5",
+      "source": "Halesowen News",
+      "publishedAt": "2026-11-19T07:37:27.000Z",
+      "latestAt": "2026-11-19T07:37:27.000Z",
+      "firstSeenAt": "2026-11-19T14:09:00.345Z",
+      "outlets": 2,
       "outletNames": [
-        "Protos | Informed crypto news",
-        "Protos",
-        "www.marketscreener.com",
-        "Irish Independent",
-        "brusselssignal",
-        "Irish Examiner",
-        "The Copenhagen Post",
-        "DW.com",
-        "Metro Mode",
-        "RTE.ie",
-        "Philenews",
-        "Washington Examiner",
-        "The Portugal News",
-        "The Record from Recorded Future News",
-        "Notebookcheck",
-        "UPI on MSN",
-        "Sharjah24",
-        "Investing.com",
-        "Yahoo",
-        "Superpower Daily",
-        "İlke Haber Ajansı",
-        "The Brussels Times"
+        "Halesowen News",
+        "Stourbridge News"
       ],
-      "score": 4.61
+      "score": 2.5
     },
     {
       "id": "41bda97d8bc2",
@@ -770,21 +729,25 @@
       "score": 3.27
     },
     {
-      "id": "e498b9be28a4",
-      "cat": "internet",
+      "id": "abe5c8e58707",
+      "cat": "hacks",
       "kind": "news",
-      "title": "LIVE - Water supply restored to 'vast majority' after major outage",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaEhlamV2bkN6WDJ6WHJQMUFCSzhGem1pT1drUmlqdS15T3NzOFJuTXVSV25QUktaeUlPeERxbjQ1c29VN181S0lrMkp2MFd2N2FHVE05dF95WVRrZV81Z0RQb0NhRFd4aVVvVGRBWnc2NTFlM1BweHQtYjBCaURsdGxpMklVeENoR3p3dUNMbUlyOW9qVU9HNFZ2TFMtTHlZbWJz?oc=5",
-      "source": "Halesowen News",
-      "publishedAt": "2026-11-19T07:37:27.000Z",
-      "latestAt": "2026-11-19T07:37:27.000Z",
-      "firstSeenAt": "2026-11-19T14:09:00.345Z",
-      "outlets": 2,
+      "title": "Ethiopian Airlines investigates data breach affecting its loyalty programme",
+      "url": "https://www.yahoo.com/news/world/articles/ethiopian-airlines-investigates-data-breach-092452393.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T01:25:00.000Z",
+      "latestAt": "2026-11-19T19:01:29.000Z",
+      "firstSeenAt": "2026-11-19T09:38:12.118Z",
+      "outlets": 6,
       "outletNames": [
-        "Halesowen News",
-        "Stourbridge News"
+        "Yahoo",
+        "marketscreener.com",
+        "TradingView",
+        "SRN News",
+        "Reuters",
+        "Airways Magazine"
       ],
-      "score": 2.5
+      "score": 3.09
     },
     {
       "id": "09bfbf9d8033",
@@ -995,25 +958,44 @@
       "score": 1.71
     },
     {
-      "id": "abe5c8e58707",
-      "cat": "hacks",
+      "id": "3cb2e1b41dd8",
+      "cat": "germs",
       "kind": "news",
-      "title": "Ethiopian Airlines investigates data breach affecting its loyalty programme",
-      "url": "https://www.yahoo.com/news/world/articles/ethiopian-airlines-investigates-data-breach-092452393.html",
+      "title": "Restrictions in place after another bird flu case",
+      "url": "https://www.yahoo.com/news/world/articles/restrictions-place-another-bird-flu-083352782.html",
       "source": "Yahoo",
-      "publishedAt": "2026-11-19T01:25:00.000Z",
-      "latestAt": "2026-11-19T19:01:29.000Z",
-      "firstSeenAt": "2026-11-19T09:38:12.118Z",
-      "outlets": 6,
+      "publishedAt": "2026-11-19T00:33:00.000Z",
+      "latestAt": "2026-11-19T08:33:48.000Z",
+      "firstSeenAt": "2026-11-19T09:23:13.184Z",
+      "outlets": 2,
       "outletNames": [
         "Yahoo",
-        "marketscreener.com",
-        "TradingView",
-        "SRN News",
-        "Reuters",
-        "Airways Magazine"
+        "BBC"
       ],
-      "score": 3.09
+      "score": 1.71
+    },
+    {
+      "id": "ce3b0f14cf6a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
+      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-19T14:55:29.000Z",
+      "latestAt": "2026-11-19T23:40:00.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 6,
+      "outletNames": [
+        "6abc Philadelphia",
+        "ABC News - Breaking News, Latest News and Videos",
+        "kaaltv.com",
+        "ABC Columbia",
+        "upi",
+        "weisradio.com"
+      ],
+      "trending": 10000,
+      "trendTerm": "jpmorgan chase cyber attack",
+      "score": 3.03
     },
     {
       "id": "3223634bacce",
@@ -1054,6 +1036,26 @@
       "score": 2.75
     },
     {
+      "id": "307f16754e66",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
+      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
+      "source": "Pioneer Press",
+      "publishedAt": "2026-11-19T08:16:00.000Z",
+      "latestAt": "2026-11-19T13:30:39.000Z",
+      "firstSeenAt": "2026-11-19T21:25:13.013Z",
+      "outlets": 5,
+      "outletNames": [
+        "Pioneer Press",
+        "ABC News - Breaking News, Latest News and Videos",
+        "KRCG",
+        "Orange County Register",
+        "The Baltimore Sun"
+      ],
+      "score": 2.59
+    },
+    {
       "id": "dd2857255f06",
       "cat": "hacks",
       "kind": "news",
@@ -1089,25 +1091,6 @@
         "A News"
       ],
       "score": 2.41
-    },
-    {
-      "id": "307f16754e66",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "A cyberattack using artificial intelligence targeted the EU in October, official says",
-      "url": "https://www.twincities.com/2026/11/19/eu-ai-cyberattack/",
-      "source": "Pioneer Press",
-      "publishedAt": "2026-11-19T08:16:00.000Z",
-      "latestAt": "2026-11-19T13:30:39.000Z",
-      "firstSeenAt": "2026-11-19T21:25:13.013Z",
-      "outlets": 4,
-      "outletNames": [
-        "Pioneer Press",
-        "ABC News - Breaking News, Latest News and Videos",
-        "KRCG",
-        "Orange County Register"
-      ],
-      "score": 2.34
     },
     {
       "id": "424febfdf588",
@@ -1521,23 +1504,6 @@
       "score": 1.71
     },
     {
-      "id": "3cb2e1b41dd8",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Restrictions in place after another bird flu case",
-      "url": "https://www.yahoo.com/news/world/articles/restrictions-place-another-bird-flu-083352782.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T00:33:00.000Z",
-      "latestAt": "2026-11-19T08:33:48.000Z",
-      "firstSeenAt": "2026-11-19T09:23:13.184Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "BBC"
-      ],
-      "score": 1.71
-    },
-    {
       "id": "9e3071119d6d",
       "cat": "internet",
       "kind": "news",
@@ -1689,6 +1655,22 @@
         "Honolulu Star-Advertiser"
       ],
       "score": 1.51
+    },
+    {
+      "id": "a658db7bfa93",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Tens of thousands of UK fridges secured from hackers in secret nationwide operation",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOb3doYzVpbWtWNld6SXo0RDRwUldtWTk5VnZpUHd5U3J2cGZCTWdQSXAxSk5EUV95YXI1RW9xNUpITlhabDlMZXNTNVdHNXJ2T1Uxc09sSlE0TU9iZ1ZnRWJvajY3V1JsZnU2M0tYR1dQeXJxLUszQ1VzY0xlclYzcS1hQlg2U1ZZcmtweFNrXy1CRW1Q?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-20T00:02:00.000Z",
+      "latestAt": "2026-11-20T00:02:00.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yahoo"
+      ],
+      "score": 1.4
     },
     {
       "id": "3359daf535a0",
@@ -1903,22 +1885,6 @@
       "score": 1.39
     },
     {
-      "id": "5b08db75b6b4",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Local Wyoming airports back on track days after the nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQSGdBOExOUDJMckx3OFZoX2hsLTRqZXQzbXNrY25LX3F2RXJUQUZCV25LZ3c2SlFIR29vTGZOWjF3RlhIbmpCNkVMMlNtYjlwOHZLcjVRUFRpYnBqd1dUVG55VE40eEFOLWMyZlFXcG9aTjBjNnF2RDBSMk5WWk9fV29ZQmg5Zm5ObmxkNnV6bzFWVXZ3LXdxVGg0OERmNEJNemlKZlJmSnNYekg3Q2hfWnpsM0Q3M1FqQmpMZ0s4bGw1em4ycjBzV0dtUTZpcVZHYU9veG44NkR0bXBTQXdZTnNwcWU4SDY0UjJoeDc3NnU?oc=5",
-      "source": "wyomingnewsnow.tv",
-      "publishedAt": "2026-11-19T22:41:00.000Z",
-      "latestAt": "2026-11-19T22:41:00.000Z",
-      "firstSeenAt": "2026-11-19T23:55:37.476Z",
-      "outlets": 1,
-      "outletNames": [
-        "wyomingnewsnow.tv"
-      ],
-      "score": 1.37
-    },
-    {
       "id": "be4676c173da",
       "cat": "weather",
       "kind": "news",
@@ -1933,6 +1899,22 @@
         "Techno-Science"
       ],
       "score": 1.32
+    },
+    {
+      "id": "56c3600450aa",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Anthropic IPO sets retail trading record as market selloff weighs on buying",
+      "url": "https://www.msn.com/en-us/money/economy/anthropic-ipo-sets-retail-trading-record-as-market-selloff-weighs-on-buying/ar-AA2hOiJ4",
+      "source": "Yahoo Finance on MSN",
+      "publishedAt": "2026-11-19T15:47:12.000Z",
+      "latestAt": "2026-11-19T15:47:12.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yahoo Finance on MSN"
+      ],
+      "score": 1.2
     },
     {
       "id": "0690304d1415",
@@ -1963,22 +1945,6 @@
       "outlets": 1,
       "outletNames": [
         "Volcano Discovery"
-      ],
-      "score": 1
-    },
-    {
-      "id": "640bbd39b2ca",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Warby Parker (WRBY) Shares Drop 14.5% Amid Market Selloff on Nov",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVjY5b0NDWXFFWlZQQ000VnFFWXQwYWV6Y1hXOXA0TWpsUjM3OXBwUlNQM0NXSEtwYUt4blF6Mkg1TWQyajh2U1MyRUczSndZckVmc1JSZi1BUUxNY3lILUkwNHZiRUFqaUREYkM0dGx3dFRyTjJFV3Z4Q2tFdWplSWt6QS1yaFExcGdZVW5jM3A0U0ZSZlAxWFN2RkQ3V21qSlUyN0xkUWdCLWxaRkxkODJR?oc=5",
-      "source": "GuruFocus",
-      "publishedAt": "2026-11-19T22:13:27.000Z",
-      "latestAt": "2026-11-19T22:13:27.000Z",
-      "firstSeenAt": "2026-11-19T22:25:24.498Z",
-      "outlets": 1,
-      "outletNames": [
-        "GuruFocus"
       ],
       "score": 1
     },
@@ -2143,6 +2109,22 @@
         "New York Post"
       ],
       "score": 0.86
+    },
+    {
+      "id": "4530c7bfd098",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Cannibal coronal mass ejection generated by strong solar flare",
+      "url": "https://www.msn.com/en-us/science/astronomy/cannibal-coronal-mass-ejection-generated-by-strong-solar-flare/vi-AA2hNPdC",
+      "source": "Dailymotion on MSN",
+      "publishedAt": "2026-11-19T15:01:54.000Z",
+      "latestAt": "2026-11-19T15:01:54.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 1,
+      "outletNames": [
+        "Dailymotion on MSN"
+      ],
+      "score": 0.85
     },
     {
       "id": "6b6b9ea66d26",
