@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T15:28:28.186Z",
+  "buildTime": "2026-11-20T15:43:31.995Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 10:28 ET",
+  "etStamp": "2026-11-20 10:43 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,14 +51,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 907,
-  "lastSuccessAt": "2026-11-20T15:28:28.186Z",
+  "headlinesRead": 1309,
+  "lastSuccessAt": "2026-11-20T15:43:31.995Z",
   "rollingFallback": false,
   "cats": {
+    "hacks": 27,
     "flights": 19,
     "germs": 4,
-    "internet": 13,
-    "hacks": 26,
+    "internet": 12,
     "grid": 4,
     "earth": 4,
     "sun": 4,
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 596,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 14 of 26 queries)",
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "count": 1003,
+      "error": null,
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     },
     "bing": {
       "ok": true,
-      "count": 271,
+      "count": 270,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,60 +206,83 @@
     },
     "hn": {
       "ok": true,
-      "count": 7,
+      "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     },
     "x": {
       "ok": true,
-      "count": 4,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:28:28.186Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T15:28:28.186Z"
+      "lastOkAt": "2026-11-20T15:43:31.995Z"
     }
   },
   "stories": [
+    {
+      "id": "a658db7bfa93",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Tens of thousands of UK fridges secured from hackers in secret nationwide operation",
+      "url": "https://www.bbc.co.uk/news/articles/c6eq49zyx7p4o",
+      "source": "BBC",
+      "publishedAt": "2026-11-19T16:00:00.000Z",
+      "latestAt": "2026-11-20T13:05:57.000Z",
+      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "outlets": 7,
+      "outletNames": [
+        "Yahoo",
+        "BBC",
+        "NewsCord",
+        "The Telegraph",
+        "Anadolu Ajansı",
+        "Arise News",
+        "London Evening Standard"
+      ],
+      "score": 4.6
+    },
     {
       "id": "sig:faa-stop:LAS:2026-11-19",
       "cat": "flights",
@@ -427,24 +450,6 @@
       "score": 2.95
     },
     {
-      "id": "f54c54e006b3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
-      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T16:00:00.000Z",
-      "latestAt": "2026-11-20T02:10:51.000Z",
-      "firstSeenAt": "2026-11-20T03:11:30.805Z",
-      "outlets": 3,
-      "outletNames": [
-        "KTNV Las Vegas",
-        "Yahoo",
-        "KTNV 13 Action News"
-      ],
-      "score": 2.94
-    },
-    {
       "id": "8318992f830e",
       "cat": "grid",
       "kind": "news",
@@ -549,6 +554,24 @@
       "score": 3.36
     },
     {
+      "id": "f54c54e006b3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
+      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T16:00:00.000Z",
+      "latestAt": "2026-11-20T02:10:51.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "outlets": 3,
+      "outletNames": [
+        "KTNV Las Vegas",
+        "Yahoo",
+        "KTNV 13 Action News"
+      ],
+      "score": 2.94
+    },
+    {
       "id": "80b173a24678",
       "cat": "hacks",
       "kind": "news",
@@ -581,27 +604,6 @@
         "FOX 13 Tampa Bay"
       ],
       "score": 2.6
-    },
-    {
-      "id": "b6dcdf986663",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank announces cyberattack, says hackers may have obtained customers’ personal information",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQb2Q0ZE10Ykw4cVRzeTdqVTU2b01xTmtLUTNILVpZRGtOX2s4MDVqYi1HUjZiYmhucVl5Z2dFcjhSV0cyTXp4eGtCQUFWZldBcXNDNkZPR0Z3b09jRGR5YXdZWWRXay1UTGNQdE81U21CT1VaQ2Via0pQaTV4ZGloY1lhQTM0R1U5Q2RhZ05FTGJjQnVpc0UyQXY5d1Vwbmc4ZEthbGpzczY5dHJ6RjRBanJsb19ObjhyTzc0cHM1SG8zT2Z6RUHSAdoBQVVfeXFMTnR3SEw1UDVPaUFzM2JrT0JvTW1sMWFIRHN4OEdMV253UklleHpZZlRMaHUwTTJBNWVvS3NsTGw1Rjd0Q2RBdkpFUS1Gd3NKR2U3djZ0aW83T2ZQR3F6N3RVUG1teWlZSHpvX0l1cWdmcmVSZi0yb0lsaWpsN05qeXpXcV9SRzZNTWJJWXpOb0JSOC1ldjBXZmhyWEp0ZjJ3MkpKb3pya1ZwWTN6V21lNjNRdHB0T0JSb3NYdmpsOG9rUjZRM3VuaXlYRTZrb3YxYmhXaVYxT19Va3c?oc=5",
-      "source": "KOLD",
-      "publishedAt": "2026-11-19T17:52:00.000Z",
-      "latestAt": "2026-11-20T09:41:34.000Z",
-      "firstSeenAt": "2026-11-20T11:42:39.182Z",
-      "outlets": 6,
-      "outletNames": [
-        "KOLD",
-        "wandtv.com",
-        "FOX5 Vegas",
-        "NewsNation",
-        "12News",
-        "WBBJ-TV"
-      ],
-      "score": 2.52
     },
     {
       "id": "28b64844bc13",
@@ -840,6 +842,27 @@
         "StoneWars.com"
       ],
       "score": 1.4
+    },
+    {
+      "id": "b6dcdf986663",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase Bank announces cyberattack, says hackers may have obtained customers’ personal information",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQb2Q0ZE10Ykw4cVRzeTdqVTU2b01xTmtLUTNILVpZRGtOX2s4MDVqYi1HUjZiYmhucVl5Z2dFcjhSV0cyTXp4eGtCQUFWZldBcXNDNkZPR0Z3b09jRGR5YXdZWWRXay1UTGNQdE81U21CT1VaQ2Via0pQaTV4ZGloY1lhQTM0R1U5Q2RhZ05FTGJjQnVpc0UyQXY5d1Vwbmc4ZEthbGpzczY5dHJ6RjRBanJsb19ObjhyTzc0cHM1SG8zT2Z6RUHSAdoBQVVfeXFMTnR3SEw1UDVPaUFzM2JrT0JvTW1sMWFIRHN4OEdMV253UklleHpZZlRMaHUwTTJBNWVvS3NsTGw1Rjd0Q2RBdkpFUS1Gd3NKR2U3djZ0aW83T2ZQR3F6N3RVUG1teWlZSHpvX0l1cWdmcmVSZi0yb0lsaWpsN05qeXpXcV9SRzZNTWJJWXpOb0JSOC1ldjBXZmhyWEp0ZjJ3MkpKb3pya1ZwWTN6V21lNjNRdHB0T0JSb3NYdmpsOG9rUjZRM3VuaXlYRTZrb3YxYmhXaVYxT19Va3c?oc=5",
+      "source": "KOLD",
+      "publishedAt": "2026-11-19T17:52:00.000Z",
+      "latestAt": "2026-11-20T09:41:34.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 6,
+      "outletNames": [
+        "KOLD",
+        "wandtv.com",
+        "FOX5 Vegas",
+        "NewsNation",
+        "12News",
+        "WBBJ-TV"
+      ],
+      "score": 2.52
     },
     {
       "id": "d61f837abd4a",
@@ -1139,7 +1162,7 @@
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNcmRMdVNBZEFEd21pcEFZWFpjcG9KaUpxcUkybEJMbFRrV2VHOE1FbWk2cUtUTm1nOUNFWTdnQWJUdGlyMUxCeUtUcUJhWXJoTlo5WE85ZGJERW01RjFvQkE4dzRwcXN0SkIxamh3LWM3M0ZCcmFDaVMxYW5INmZtVmY3cw?oc=5",
       "source": "WHMI",
       "publishedAt": "2026-11-20T09:38:05.000Z",
-      "latestAt": "2026-11-20T09:38:05.000Z",
+      "latestAt": "2026-11-20T09:38:24.000Z",
       "firstSeenAt": "2026-11-20T09:42:17.320Z",
       "outlets": 1,
       "outletNames": [
@@ -1242,6 +1265,22 @@
         "The Insurer"
       ],
       "score": 1.4
+    },
+    {
+      "id": "867eb675987d",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Indonesia’s Semeru volcano erupts, spews massive ash cloud",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSVptMW1rVlhVaDlfUlZyVkdwcWxfRXRsRDQ5SHB6MVptUTVpSVdwSlZheXBsZ2oxT0piWFVGaW1Xc0tEOXVScE5ick1CQ3Q0b3JRWkZISjJBSVh5TUY4a2x3XzhuTEJ5em9ZaGhQTS1ibDhXbldmN2o1V1ZUeUJBTlZEYm5xb0tyelpWRENCV2N0ZW1KLV9uQU11Zw?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-20T15:20:36.000Z",
+      "latestAt": "2026-11-20T15:20:36.000Z",
+      "firstSeenAt": "2026-11-20T15:43:31.995Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yeni Safak English"
+      ],
+      "score": 1.39
     },
     {
       "id": "83ef9fdc9f2a",
@@ -1554,6 +1593,22 @@
       "score": 1.22
     },
     {
+      "id": "ffae0d5f9188",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft CEO Satya Nadella Apologizes for Nearly 24-Hour Global 365 Outage",
+      "url": "https://www.latintimes.com/microsoft-365-outage-nadella-ai-cybersecurity-warning-601554",
+      "source": "Latin Times",
+      "publishedAt": "2026-11-20T07:37:00.000Z",
+      "latestAt": "2026-11-20T07:37:00.000Z",
+      "firstSeenAt": "2026-11-20T15:43:31.995Z",
+      "outlets": 1,
+      "outletNames": [
+        "Latin Times"
+      ],
+      "score": 1.21
+    },
+    {
       "id": "4b0978bf9b0f",
       "cat": "hacks",
       "kind": "news",
@@ -1714,34 +1769,18 @@
       "score": 1.16
     },
     {
-      "id": "f82c59b1b46e",
-      "cat": "internet",
+      "id": "6909d0eab00e",
+      "cat": "germs",
       "kind": "news",
-      "title": "N-able says recent security breach led to major service outage",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
-      "source": "Bleeping Computer",
-      "publishedAt": "2026-11-20T00:18:00.000Z",
-      "latestAt": "2026-11-20T00:18:00.000Z",
-      "firstSeenAt": "2026-11-20T15:13:15.858Z",
+      "title": "Bird flu spreads amid cuts to federal agency oversight",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTGFVcElaZjZhdVZ6Z1E1RklRNW1TVnduVWlFRV9rT080NTN2TGxTTE54SFFYeTJTZVVfWDhzTDVPMjdhQ1Bjdm1NYmprRHlkV0pRV0FqR3FsUGxJTnhrUVdHN1pkMkdxQ1dRc084czY2WEFsZFVxWWVIWFVYVVptaVAtYkl2aUJlZk1Bcy14cjBodw?oc=5",
+      "source": "knoxradio.com",
+      "publishedAt": "2026-11-20T15:32:48.000Z",
+      "latestAt": "2026-11-20T15:32:48.000Z",
+      "firstSeenAt": "2026-11-20T15:43:31.995Z",
       "outlets": 1,
       "outletNames": [
-        "Bleeping Computer"
-      ],
-      "score": 1.05
-    },
-    {
-      "id": "21d7afbbbc82",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Apple Music Restored Following Widespread Outage",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX0F2SDZzSTJ6RmhqMmtOMXpwLXZwYUQ0YWExQ3ExY1NDci1UWE5RTk1MamtERUtDcmpYemVwXzN2RHl6MS1lR19MVzh3ZDMxQmViX0NydTlVdU5Bb3NvSjE1X0Etbk4zNFhfNkNhbjY5Zk9KY1pKWFRhSm9YSUx4RzZNQnA1THBMcHJ1NmRR?oc=5",
-      "source": "EDMTunes",
-      "publishedAt": "2026-11-20T15:20:55.000Z",
-      "latestAt": "2026-11-20T15:20:55.000Z",
-      "firstSeenAt": "2026-11-20T15:28:28.186Z",
-      "outlets": 1,
-      "outletNames": [
-        "EDMTunes"
+        "knoxradio.com"
       ],
       "score": 1
     },
@@ -1758,22 +1797,6 @@
       "outlets": 1,
       "outletNames": [
         "@unusual_whales on X"
-      ],
-      "score": 1
-    },
-    {
-      "id": "7815d2ca14bb",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird Flu Found in Ducks at Delaware's Little Creek",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSXlJaVVBWmJTSnZRUmhHSVYzQnlzbW0tLW52X2RoTkFOa24weDdCZk94NTkxMXFGVGdYRmhrUDFZQllfVTNYeGZpRjJfdlpFeEx3SkdpdUVBWWVZcUF3UVFObGNjUkQ2YUdkM2NVRG1iM05IRkJXY1gyNE9aa2lFc3VpbGFkLXFOaHVyeE1oRUJFb0lTWUhxZnNtdV9mOU81eUE?oc=5",
-      "source": "Eastern Shore Undercover",
-      "publishedAt": "2026-11-20T15:00:00.000Z",
-      "latestAt": "2026-11-20T15:00:00.000Z",
-      "firstSeenAt": "2026-11-20T15:13:15.858Z",
-      "outlets": 1,
-      "outletNames": [
-        "Eastern Shore Undercover"
       ],
       "score": 1
     },
@@ -1874,22 +1897,6 @@
         "The Sunday Guardian"
       ],
       "score": 1
-    },
-    {
-      "id": "71507e8a4270",
-      "cat": "earth",
-      "kind": "news",
-      "title": "USGS Reports 2.8 Magnitude Earthquake Near Toms Place",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE83UGRKVnRqOHoxbE9JVlRfU3cxNGJELVZaYUVQVVhhd1AwT05ITkF2ZG5GNXBRdkdqLWdGWlU2a3hkQzNfUjdtTUctRFJ3YzhCUzVMOV8yQXUwRlFzNnhSQ09aM2hJQQ?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-20T08:02:16.000Z",
-      "latestAt": "2026-11-20T08:02:16.000Z",
-      "firstSeenAt": "2026-11-20T08:27:10.550Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 0.99
     },
     {
       "id": "de5252583060",
