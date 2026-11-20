@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T14:28:08.188Z",
+  "buildTime": "2026-11-20T14:43:16.753Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 09:28 ET",
+  "etStamp": "2026-11-20 09:43 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,11 +51,11 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1316,
-  "lastSuccessAt": "2026-11-20T14:28:08.188Z",
+  "headlinesRead": 1232,
+  "lastSuccessAt": "2026-11-20T14:43:16.753Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 30,
+    "hacks": 29,
     "flights": 18,
     "germs": 4,
     "internet": 10,
@@ -64,7 +64,7 @@
     "sun": 4,
     "weather": 7,
     "ai": 4,
-    "markets": 7,
+    "markets": 8,
     "space": 4,
     "animals": 2
   },
@@ -183,80 +183,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1001,
-      "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "count": 912,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 24 of 26 queries)",
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 9,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-20T10:42:31.579Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:28:08.188Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T14:28:08.188Z"
+      "lastOkAt": "2026-11-20T14:43:16.753Z"
     }
   },
   "stories": [
@@ -335,12 +336,12 @@
       "cat": "hacks",
       "kind": "news",
       "title": "Chase Bank customers may be affected after hackers access marketing data",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQbmwtUUN6YzFYZzZ6Z2RQdFZVemJuR0hqVlpKZFluc25nSi1neVVka3phMDNVZDlkU0JhaGZ3Nmw4eW9SaXVlVUg1T3piakQ2Ty11TXdWeU1Hd1VmQTFnUUVObk5WUDZDRmVMU1MxSVJNdWRRbzY4eE5vNm1weE43UDRZU19ZbnktZW9ycXJ3OXA1Y01tX3lzY1E1T2ZVZWsySTc4Y00tZlV1NzU3dFRNZXNHaGZ2VDJJcFlZbU1aa2ZER015cWwxSHNSX3h4SHM5dVBqZElzS04?oc=5",
-      "source": "WCPO 9 Cincinnati",
+      "url": "https://www.yahoo.com/news/videos/chase-bank-customers-may-affected-140903368.html",
+      "source": "Yahoo",
       "publishedAt": "2026-11-19T15:01:48.000Z",
       "latestAt": "2026-11-20T13:26:53.000Z",
       "firstSeenAt": "2026-11-19T20:10:12.029Z",
-      "outlets": 12,
+      "outlets": 13,
       "outletNames": [
         "WCPO 9 Cincinnati",
         "Scripps News",
@@ -353,9 +354,10 @@
         "TMJ4 News",
         "10News.com",
         "KSBY News",
-        "Tampa Bay 28"
+        "Tampa Bay 28",
+        "Yahoo"
       ],
-      "score": 4.19
+      "score": 4.3
     },
     {
       "id": "6d7a6b3b2346",
@@ -389,33 +391,6 @@
         "Your Oregon News"
       ],
       "score": 4.14
-    },
-    {
-      "id": "ce3b0f14cf6a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorganChase, Mastercard, Visa report cyberattack on third-party service providers",
-      "url": "https://abcnews.com/US/jpmorgan-chase-reports-cyberattack-party-service-providers/story?id=138287705",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-19T14:55:29.000Z",
-      "latestAt": "2026-11-20T02:07:53.000Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 10,
-      "outletNames": [
-        "6abc Philadelphia",
-        "ABC News - Breaking News, Latest News and Videos",
-        "kaaltv.com",
-        "ABC Columbia",
-        "upi",
-        "weisradio.com",
-        "Everett Post",
-        "ABC7 Chicago",
-        "LAmag",
-        "Rural Radio Network"
-      ],
-      "trending": 10000,
-      "trendTerm": "jpmorgan chase cyber attack",
-      "score": 3.66
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -456,6 +431,24 @@
         "The Standard-Speaker"
       ],
       "score": 3.36
+    },
+    {
+      "id": "f54c54e006b3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
+      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T16:00:00.000Z",
+      "latestAt": "2026-11-20T02:10:51.000Z",
+      "firstSeenAt": "2026-11-20T03:11:30.805Z",
+      "outlets": 3,
+      "outletNames": [
+        "KTNV Las Vegas",
+        "Yahoo",
+        "KTNV 13 Action News"
+      ],
+      "score": 2.94
     },
     {
       "id": "497408cf71f1",
@@ -543,54 +536,6 @@
       "score": 1.99
     },
     {
-      "id": "5fb45796b1b2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
-      "url": "https://www.wsj.com/finance/banking/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers-3b5a0f87",
-      "source": "wsj.com",
-      "publishedAt": "2026-11-19T14:41:00.000Z",
-      "latestAt": "2026-11-20T13:14:55.000Z",
-      "firstSeenAt": "2026-11-20T14:13:04.081Z",
-      "outlets": 15,
-      "outletNames": [
-        "Newsweek",
-        "CBS News",
-        "Decrypt",
-        "Yahoo Finance",
-        "Finextra Research",
-        "Wccftech",
-        "WSJ",
-        "Futurism",
-        "Techlicious",
-        "FOX 5 New York",
-        "The SOFX Report",
-        "Tempo.co English",
-        "Incrypted",
-        "Euronews.com",
-        "Malwarebytes"
-      ],
-      "score": 2.98
-    },
-    {
-      "id": "f54c54e006b3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Las Vegas residents take precautions amid nationwide tech outages, new JPMorgan Chase cyberattack",
-      "url": "https://www.yahoo.com/news/videos/las-vegas-residents-precautions-amid-024818446.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T16:00:00.000Z",
-      "latestAt": "2026-11-20T02:10:51.000Z",
-      "firstSeenAt": "2026-11-20T03:11:30.805Z",
-      "outlets": 3,
-      "outletNames": [
-        "KTNV Las Vegas",
-        "Yahoo",
-        "KTNV 13 Action News"
-      ],
-      "score": 2.94
-    },
-    {
       "id": "63f3e69e3827",
       "cat": "flights",
       "kind": "news",
@@ -623,6 +568,41 @@
         "Yahoo"
       ],
       "score": 2.76
+    },
+    {
+      "id": "04c2e2acf99a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack targets major banking and card vendors",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-19T23:12:30.000Z",
+      "latestAt": "2026-11-19T23:12:30.000Z",
+      "firstSeenAt": "2026-11-20T03:26:28.712Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 13 Tampa Bay"
+      ],
+      "score": 2.6
+    },
+    {
+      "id": "fa6bdfc296d7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SLED opens criminal probe into Charleston County cyberattack after data copied",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRlJwZHVUTDlBQ3FHamFnZ0F1MEdCVzhvSHdpYm9aa1NFU2Vmc1lRVW5GNXlwNVdIYkkybWxUUm9DelFXdlprdHZzNEx1LXVhODhpcEs0dm5YaGZVNjhUa2xtWXVhWG94b1ZiajExeTVITDVtZkNleEZucXlzRl9hU0pfeEZqUnk3SS1EdmhvaVd5NXBmS3FVTlZJVFRoeUZiZ3JIZzRJVWhDaXFvT1RJ?oc=5",
+      "source": "WCIV",
+      "publishedAt": "2026-11-19T22:19:17.000Z",
+      "latestAt": "2026-11-20T14:02:00.000Z",
+      "firstSeenAt": "2026-11-19T22:40:25.650Z",
+      "outlets": 3,
+      "outletNames": [
+        "WCIV",
+        "WTMA-AM",
+        "South Carolina Public Radio"
+      ],
+      "score": 2.57
     },
     {
       "id": "28b64844bc13",
@@ -863,41 +843,6 @@
       "score": 1.4
     },
     {
-      "id": "04c2e2acf99a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack targets major banking and card vendors",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOXJTUTVtUzJrSm93alBjdUZzQmdtaHU2czAyNjViakkybjhUcllrdHJpZFpLdEc1ZzNDYnFocnRnakk4OHJKRXp0X2tWQXFaOE9ONWdYb0xYX2RDdFBsU05UU0RPQnFULWhPZExmcV8yWGt0dUswZVJfSExNR3QyVlZfRjFjWEdNbDVVMkV1dWc?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-19T23:12:30.000Z",
-      "latestAt": "2026-11-19T23:12:30.000Z",
-      "firstSeenAt": "2026-11-20T03:26:28.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX 13 Tampa Bay"
-      ],
-      "score": 2.6
-    },
-    {
-      "id": "fa6bdfc296d7",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "SLED opens criminal probe into Charleston County cyberattack after data copied",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRlJwZHVUTDlBQ3FHamFnZ0F1MEdCVzhvSHdpYm9aa1NFU2Vmc1lRVW5GNXlwNVdIYkkybWxUUm9DelFXdlprdHZzNEx1LXVhODhpcEs0dm5YaGZVNjhUa2xtWXVhWG94b1ZiajExeTVITDVtZkNleEZucXlzRl9hU0pfeEZqUnk3SS1EdmhvaVd5NXBmS3FVTlZJVFRoeUZiZ3JIZzRJVWhDaXFvT1RJ?oc=5",
-      "source": "WCIV",
-      "publishedAt": "2026-11-19T22:19:17.000Z",
-      "latestAt": "2026-11-20T14:02:00.000Z",
-      "firstSeenAt": "2026-11-19T22:40:25.650Z",
-      "outlets": 3,
-      "outletNames": [
-        "WCIV",
-        "WTMA-AM",
-        "South Carolina Public Radio"
-      ],
-      "score": 2.57
-    },
-    {
       "id": "b6dcdf986663",
       "cat": "hacks",
       "kind": "news",
@@ -954,24 +899,22 @@
       "score": 2.42
     },
     {
-      "id": "70923e6927ce",
+      "id": "fea9c53a752c",
       "cat": "hacks",
       "kind": "news",
-      "title": "Video JPMorgan Chase, Visa, Mastercard say hackers targeted their 3rd-party vendors",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5jMUlZZ19GTEZ6c01laGVybURRNm1sMjU4VkZ4RkkyWjBwSzV6TnJEMHdNUHF2eWJHczQ5ZGVJc2txM1cxbUtHUzVfM1U?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-19T18:56:07.000Z",
-      "latestAt": "2026-11-20T11:28:30.000Z",
-      "firstSeenAt": "2026-11-20T14:28:08.188Z",
-      "outlets": 5,
+      "title": "European Commission confirms AI-generated cyberattack disrupted its systems",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNckIzZmV5TldqaWNORGlSVl9lRUc3Yi1zQ1dJbXh4Wk9Iai1WV1U2RW1mRXM1YnlRempCeThFdFVUZ0ZmekoxSTc1c1JyTHo1VTJDV01uNHUtOVZjd0FzSUEtZnZ6M2J0SUs4ZnVmUVVpam13UmNNWTMtUjB5YVEtR05mQjhJS0E2M2paRTRIUFFkSTNRVjZjRUY1REhhR3puaUppTHhOYkdGZXA5SUZNRW5R?oc=5",
+      "source": "Help Net Security",
+      "publishedAt": "2026-11-20T08:52:29.000Z",
+      "latestAt": "2026-11-20T11:01:48.000Z",
+      "firstSeenAt": "2026-11-20T14:43:16.753Z",
+      "outlets": 3,
       "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "Yahoo Finance",
-        "Reuters",
-        "iTnews",
-        "Intelligent CISO"
+        "Help Net Security",
+        "Intelligent CISO",
+        "IranWire"
       ],
-      "score": 2.24
+      "score": 2.33
     },
     {
       "id": "c1708c8ee65b",
@@ -1076,6 +1019,23 @@
       "score": 1.72
     },
     {
+      "id": "504b2f0e2351",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission targeted in an AI-assisted cyberattack, spokesperson confirms",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcGVKeU02bmRDQjRubjJzMXJfbnlxM3IwU0x5bEpJZDdQUHB2c1F5Tk1nbEUycld2eHlmekYzTFd0akY3THJ6VTlTOC0tLVVHTnFlWkRfUjl6MzdlSnJqNzNxMlRRNWdUeTYwTV9ZRFM3YVF2c2VZbEs0U2drRklJVVlWOUZUYTViZVJhRU5lZHRsOHY1WmJ4Y2c2aGRGZWQ4X0VB0gGjAUFVX3lxTE9lNXRiaWxWTUo3WTY3YzhUMU1hQUx4eE9HV3luYVdWVGhfUnRjeE44c3oyR0dRc0pKbkFNTmRhakpSQnkxbGxsa0RSTk93Z3lvbDYwTXZhZDV3YXVDNHlYektsUXlPZnIyRDBWRy0xMFdNdnVMUnhDaDlNRnNjMGZWS0lTVVBBNEJTYTVGMnhjcXA2RnBNNm9HbUszUWNSM3RfalE?oc=5",
+      "source": "DW.com",
+      "publishedAt": "2026-11-19T15:03:28.000Z",
+      "latestAt": "2026-11-20T02:54:43.000Z",
+      "firstSeenAt": "2026-11-19T23:25:35.730Z",
+      "outlets": 2,
+      "outletNames": [
+        "DW.com",
+        "İlke Haber Ajansı"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "82b3f3881601",
       "cat": "hacks",
       "kind": "news",
@@ -1091,24 +1051,6 @@
         "marketscreener.com"
       ],
       "score": 1.7
-    },
-    {
-      "id": "1da502c155c4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank warns customer data may have been exposed after third-party cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQZ1Zwbm9ELXpMakZjRXZPYnd1YnRuRUVkajczaXhtT0Q5dER4Sl9PYk1tU2N2NzM2anpqdk1sZGxhNGpEOGlZLU03Q2RMY1U4YXFMTDN5MFA1TnByNllzYTljbkk4bGdoR2VpMlFicGR5bDl2c19rUVJfdjlIM2t6Vkpvck1iMmpQdjFSV1ozck1ONzd5QVRvYWM5cldkem1oWk5MV21zdHRBeEJzazlHOVJ6ck1xOUFuczlpSmF1N05hSjFNelV6cNIB0AFBVV95cUxQajRZdmNCdWw1UXJmQ0pLTDNpcnlsUVdrV3lKaUlfbTNGaXk4NHlLVHhQTnYwc2ZPNVJnVXpabzlodGZRSHVTNDZGVUV2VXRqQjZSclcwMXFNZERhN0JGSXU3WWZxSW9ubml6SU5ERkFfeWRzRWVndFVkbXdselFGaFhDWFV5MmlPcUlzWGlpaEI1ck5IS0VtTnpXQUJXaWE5LWx6R2pqQ0IzNnNWSHo4cDFRZDZWZmdfQWlvd1lvc3BnZ0dYVld2TUdUVzRvUm1f?oc=5",
-      "source": "NBC 5 Chicago",
-      "publishedAt": "2026-11-19T17:07:52.000Z",
-      "latestAt": "2026-11-20T07:30:00.000Z",
-      "firstSeenAt": "2026-11-20T14:28:08.188Z",
-      "outlets": 3,
-      "outletNames": [
-        "NBC 5 Chicago",
-        "The Washington Post",
-        "Newser"
-      ],
-      "score": 1.67
     },
     {
       "id": "4aca0fcdb259",
@@ -1307,22 +1249,6 @@
       "score": 1.4
     },
     {
-      "id": "338803608316",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "BlackFog Report: Publicly disclosed ransomware attacks reach highest Q3 total on record",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQnBXemlDbUxsUGlqSTFadHVVdGI2WHAyUHE2ZmJpSWhlZVlRNDNrMjZubEFSTzFRa1R4OTQxVUZJWW5MNjB1RFNOSV9CaDQ1ejhyanVGWHFnNGVkTmp3WkxmYUo5VDZzUDlmbHFHQVYtTVUyREhyZS1MLUlvZEszdHJ3cWxTcHpDNUsxZXFiT01pWm9SbEFJQVZxM2VjU0NwcV9XUU5YT2pwSDdXRXRhcA?oc=5",
-      "source": "VMblog",
-      "publishedAt": "2026-11-19T14:36:01.000Z",
-      "latestAt": "2026-11-19T14:36:01.000Z",
-      "firstSeenAt": "2026-11-19T14:39:05.531Z",
-      "outlets": 1,
-      "outletNames": [
-        "VMblog"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "83ef9fdc9f2a",
       "cat": "weather",
       "kind": "news",
@@ -1497,6 +1423,23 @@
       "outlets": 1,
       "outletNames": [
         "Oskaloosa Herald"
+      ],
+      "score": 1.35
+    },
+    {
+      "id": "3712e02a1b2c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16ejBjNzhGeUhBWnhVTkRHZ2sxRE4xUXZ3RVhiNTMwZlU4MUx1LUxVcG1xbi0zV1RFTzhVamxHOXd6MTFWVG5jVmctUDZQcF84U3UzcGNlbjFOQjlHX3lyQXFZYmdjNWM2UGtoM1ZVbkxzWFFDNHBwTTV5cW56UnfSAYQBQVVfeXFMUElHd25xekpscWFKV18xeHM0VUw4N1YyN0JRUFVOYmlSTGduZ0s1d2Jvc3ZFeXZBRzlDdlM1cnhuOXhCYWlid0ZSakZ2b1ljUTY2QmlaeXU0UXZrQzJISTYtWkF2Z0xMb3ZKRkg4aDlPQUhlNDdYR19pcWJtc0g2WnhQcW5W?oc=5",
+      "source": "upi",
+      "publishedAt": "2026-11-19T19:07:44.000Z",
+      "latestAt": "2026-11-20T01:19:21.000Z",
+      "firstSeenAt": "2026-11-20T14:43:16.753Z",
+      "outlets": 2,
+      "outletNames": [
+        "upi",
+        "LAmag"
       ],
       "score": 1.35
     },
@@ -1695,6 +1638,22 @@
       "score": 1.2
     },
     {
+      "id": "ff15f308cf54",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Global stock markets slump as Anthropic’s record IPO fails to stem AI sell-off",
+      "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+      "source": "The Guardian",
+      "publishedAt": "2026-11-20T05:27:00.000Z",
+      "latestAt": "2026-11-20T05:27:00.000Z",
+      "firstSeenAt": "2026-11-20T14:43:16.753Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Guardian"
+      ],
+      "score": 1.18
+    },
+    {
       "id": "5cbcb0193557",
       "cat": "weather",
       "kind": "news",
@@ -1773,6 +1732,22 @@
         "Fox News"
       ],
       "score": 1.01
+    },
+    {
+      "id": "695035f26c8d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "New FastUnlock zero-day vulnerability affects Windows lock screens",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNelFhS1NIZVdFNDdPUWlhaThNR3Nyd3RwS05UVFRGNnJHNUNMRE9YUU1aamV1eVhkQWpYcHZuTmZQUlgyTmhJeUtlNkViWnNKWkpQeDhaYVEyR3lpY0VIN1NNeDlxMnc4V2VxY2JnMGVOWkVlNTZxZjRIU0JzdUVyR2ZqSk9ocktJQVMtaGxheWtqREhxTXpkQzM3MUI?oc=5",
+      "source": "SC Media",
+      "publishedAt": "2026-11-20T14:32:03.000Z",
+      "latestAt": "2026-11-20T14:32:03.000Z",
+      "firstSeenAt": "2026-11-20T14:43:16.753Z",
+      "outlets": 1,
+      "outletNames": [
+        "SC Media"
+      ],
+      "score": 1
     },
     {
       "id": "ea8a33cacf31",
@@ -1873,6 +1848,22 @@
       "score": 1
     },
     {
+      "id": "08fe855d9fd4",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu detected in Delaware ducks ahead of waterfowl hunting season",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQM0RNdVZEQ1F3dzYzYWpxQ2Z0T1loWlZsdlVEaExUTEczUEFnTk4tcFNrMDl0WGhaT1ZtNVExcUVpOU55UEY0Y0I0VEtjUEJKX2hBVUE0d1NTNHl0TlRjVHVhSFBka3BWWFpSdG43RjBxcU5pY1FjcjB4cVota19XaU9QZDFSVWJ2RzdEVGp0MkY1MWhNVnl2MW55LXAzcmVIanJGM3JqV2M4T24xZnBhUHEyYkRWZnBPX0ZILUVZcnVqVkhwZGEzQnJaa3JHaVh0ODM2SjFjWnlEMHp4SjBPQlln?oc=5",
+      "source": "CoastTV",
+      "publishedAt": "2026-11-20T14:16:00.000Z",
+      "latestAt": "2026-11-20T14:16:00.000Z",
+      "firstSeenAt": "2026-11-20T14:43:16.753Z",
+      "outlets": 1,
+      "outletNames": [
+        "CoastTV"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "71507e8a4270",
       "cat": "earth",
       "kind": "news",
@@ -1951,22 +1942,6 @@
         "Universe Space Tech"
       ],
       "score": 0.95
-    },
-    {
-      "id": "233aae5de6a6",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Storks Together for Nearly 30 Years Lost Days Apart as Bird Flu Reaches Louisville Zoo's Animals",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNSUNUaWh4M2syT19adnJ3cHJUM3lVMGd2SDZqS2pWd0s2eVJlRHRpSWZ2UDRuM3FjNXF0eTQ1SHhIYUdRdDJJT2ZXMDdLZUpuSER5eThBLS1TV1JhUnFIX2R2WVpfdlpWZzQybmdhOVMxLUl6dE1sbVdtVW0xWFE0VGN3X0ExSHI3Rl9KOEx5ckk0QkZjcjZTVHlyRk1SSzd2UDFZZXRBcHc2Y0FibFYyNWhYSFFGM3RRdzdXdWRsaG1RNlJSWVdycTd5cTJrY1ktX3M2THNZMEE3Z29RdjV1dkRR?oc=5",
-      "source": "Nature World News",
-      "publishedAt": "2026-11-20T07:38:50.000Z",
-      "latestAt": "2026-11-20T07:38:50.000Z",
-      "firstSeenAt": "2026-11-20T14:28:08.188Z",
-      "outlets": 1,
-      "outletNames": [
-        "Nature World News"
-      ],
-      "score": 0.89
     },
     {
       "id": "3f99b2a2a3e3",
