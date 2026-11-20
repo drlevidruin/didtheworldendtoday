@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T19:14:04.077Z",
+  "buildTime": "2026-11-20T19:29:07.128Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 14:14 ET",
+  "etStamp": "2026-11-20 14:29 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -46,8 +46,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1302,
-  "lastSuccessAt": "2026-11-20T19:14:04.077Z",
+  "headlinesRead": 1316,
+  "lastSuccessAt": "2026-11-20T19:29:07.128Z",
   "rollingFallback": false,
   "cats": {
     "flights": 21,
@@ -87,7 +87,13 @@
       "upcoming": true
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "BFI",
+          "hub": false,
+          "reason": "other"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 1,
       "closures": 0,
@@ -141,8 +147,8 @@
         {
           "id": "coinbase",
           "name": "Coinbase",
-          "indicator": "none",
-          "description": "All Systems Operational"
+          "indicator": "minor",
+          "description": "Partially Degraded Service"
         }
       ],
       "unreachable": 0
@@ -178,81 +184,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 990,
+      "count": 991,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
+      "count": 272,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 15,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-20T17:13:37.932Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T18:28:45.750Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T19:14:04.077Z"
+      "lastOkAt": "2026-11-20T19:29:07.128Z"
     }
   },
   "stories": [
@@ -522,6 +527,29 @@
       "score": 1.96
     },
     {
+      "id": "sig:faa-stop:BFI:2026-11-20",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at BFI (other)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-20T19:29:07.128Z",
+      "latestAt": "2026-11-20T19:29:07.128Z",
+      "firstSeenAt": "2026-11-20T19:29:07.128Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "BFI",
+        "hub": false,
+        "nationwide": false,
+        "reason": "other"
+      }
+    },
+    {
       "id": "sig:faa-stop:TEB:2026-11-20",
       "cat": "flights",
       "kind": "signal",
@@ -561,24 +589,6 @@
         "The Standard-Speaker"
       ],
       "score": 3.36
-    },
-    {
-      "id": "f60e65cf388c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US to announce cause of nationwide FAA outage that disrupted 18,000 flights",
-      "url": "https://www.msn.com/en-in/news/other/us-to-announce-cause-of-nationwide-faa-outage-that-disrupted-18-000-flights/ar-AA2hOuUJ",
-      "source": "The Times of India on MSN",
-      "publishedAt": "2026-11-19T20:54:00.000Z",
-      "latestAt": "2026-11-20T17:26:32.000Z",
-      "firstSeenAt": "2026-11-20T05:11:34.772Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Times of India",
-        "timesofindia.indiatimes.com",
-        "The American Bazaar"
-      ],
-      "score": 3.12
     },
     {
       "id": "80b173a24678",
@@ -838,40 +848,22 @@
       "score": 1.4
     },
     {
-      "id": "d61f837abd4a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase confirms data breach affecting thousands of customers",
-      "url": "https://www.consumeraffairs.com/news/jpmorgan-chase-confirms-data-breach-affecting-thousands-of-customers-112026.html",
-      "source": "ConsumerAffairs",
-      "publishedAt": "2026-11-19T19:15:43.000Z",
-      "latestAt": "2026-11-20T13:38:41.000Z",
-      "firstSeenAt": "2026-11-19T21:25:13.013Z",
-      "outlets": 3,
-      "outletNames": [
-        "Rolling Out",
-        "Cryptonews.net",
-        "ConsumerAffairs"
-      ],
-      "score": 2.49
-    },
-    {
-      "id": "28b64844bc13",
+      "id": "f60e65cf388c",
       "cat": "flights",
       "kind": "news",
-      "title": "FAA Ground Stop Keeps Tom Morello From Iron Maiden Rock Hall Tribute",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVTd2VDlyaEJQX2xMc0ZOVzJLMVdHOVJYTGZnMG92aDlpcmJ6Z3pYRWZDUmlhcG1iN0FWY2ZOU1ZVNW9zbzNfWTlkX1R2ekNHTWxoQUo4bTB1bnRFdDVsc2NUakNuN3p2OUE3Sm9ycGxlVWpXSDRmRGU4UVFEbGo0ZnBlZDZoRDdiZUxxT0t4SDNmSENIeF9BejhkN2hhS2t3?oc=5",
-      "source": "WDHA FM",
-      "publishedAt": "2026-11-19T19:18:50.000Z",
-      "latestAt": "2026-11-19T19:18:50.000Z",
-      "firstSeenAt": "2026-11-19T21:55:23.506Z",
+      "title": "US to announce cause of nationwide FAA outage that disrupted 18,000 flights",
+      "url": "https://www.msn.com/en-in/news/other/us-to-announce-cause-of-nationwide-faa-outage-that-disrupted-18-000-flights/ar-AA2hOuUJ",
+      "source": "The Times of India on MSN",
+      "publishedAt": "2026-11-19T20:54:00.000Z",
+      "latestAt": "2026-11-20T17:26:32.000Z",
+      "firstSeenAt": "2026-11-20T05:11:34.772Z",
       "outlets": 3,
       "outletNames": [
-        "WDHA FM",
-        "Boston's ROCK 92.9",
-        "95.9 The RAT"
+        "The Times of India",
+        "timesofindia.indiatimes.com",
+        "The American Bazaar"
       ],
-      "score": 2.47
+      "score": 3.12
     },
     {
       "id": "50e8bed5e3a2",
@@ -1152,18 +1144,18 @@
       "score": 1.73
     },
     {
-      "id": "353d539ee6da",
+      "id": "8ae297aa1b0c",
       "cat": "hacks",
       "kind": "news",
-      "title": "Britain secures commercial fridges from cyberattack in secret operation",
-      "url": "https://www.msn.com/en-us/news/other/britain-secures-commercial-fridges-from-cyberattack-in-secret-operation/ar-AA2hRFn6",
-      "source": "UPI on MSN",
-      "publishedAt": "2026-11-20T06:56:58.000Z",
-      "latestAt": "2026-11-20T15:00:05.000Z",
-      "firstSeenAt": "2026-11-20T15:13:15.858Z",
+      "title": "UK Ran a Secret Operation to Protect Thousands of Fridges From Cyberattack",
+      "url": "https://www.gadgetreview.com/uk-ran-a-secret-operation-to-protect-thousands-of-fridges-from-cyberattack",
+      "source": "Gadget Review",
+      "publishedAt": "2026-11-20T11:07:00.000Z",
+      "latestAt": "2026-11-20T19:07:21.000Z",
+      "firstSeenAt": "2026-11-20T19:29:07.128Z",
       "outlets": 2,
       "outletNames": [
-        "UPI on MSN",
+        "Gadget Review",
         "Yahoo"
       ],
       "score": 1.72
@@ -1252,6 +1244,23 @@
         "Wccftech"
       ],
       "score": 1.58
+    },
+    {
+      "id": "353d539ee6da",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Britain secures commercial fridges from cyberattack in secret operation",
+      "url": "https://www.msn.com/en-us/news/other/britain-secures-commercial-fridges-from-cyberattack-in-secret-operation/ar-AA2hRFn6",
+      "source": "UPI on MSN",
+      "publishedAt": "2026-11-20T01:55:00.000Z",
+      "latestAt": "2026-11-20T15:00:05.000Z",
+      "firstSeenAt": "2026-11-20T15:13:15.858Z",
+      "outlets": 2,
+      "outletNames": [
+        "UPI on MSN",
+        "Yahoo"
+      ],
+      "score": 1.56
     },
     {
       "id": "f24aa573dec9",

@@ -1,38 +1,38 @@
 {
   "google": {
     "ok": true,
-    "count": 990,
+    "count": 991,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z"
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z"
   },
   "bing": {
     "ok": true,
-    "count": 274,
+    "count": 272,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z"
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z"
   },
   "gdelt": {
-    "ok": false,
-    "count": 0,
+    "ok": true,
+    "count": 15,
     "error": "rate limited (HTTP 429)",
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T17:13:37.932Z"
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z"
   },
   "hn": {
     "ok": true,
     "count": 8,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z"
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z"
   },
   "usgs": {
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z",
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z",
     "vital": {
       "quake": {
         "mag": 5.6,
@@ -48,8 +48,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z",
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z",
     "vital": {
       "kp": {
         "value": 0.33,
@@ -62,8 +62,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z",
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z",
     "vital": {
       "asteroid": {
         "des": "2026 WA1",
@@ -78,13 +78,19 @@
   },
   "faa": {
     "ok": true,
-    "count": 0,
+    "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z",
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z",
     "vital": {
       "faa": {
-        "groundStops": [],
+        "groundStops": [
+          {
+            "airport": "BFI",
+            "hub": false,
+            "reason": "other"
+          }
+        ],
         "nationwide": false,
         "groundDelays": 1,
         "closures": 0,
@@ -96,8 +102,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z",
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z",
     "vital": {
       "status": {
         "worst": "minor",
@@ -147,8 +153,8 @@
           {
             "id": "coinbase",
             "name": "Coinbase",
-            "indicator": "none",
-            "description": "All Systems Operational"
+            "indicator": "minor",
+            "description": "Partially Degraded Service"
           }
         ],
         "unreachable": 0
@@ -159,21 +165,21 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T18:28:45.750Z"
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z"
   },
   "trends": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z"
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z"
   },
   "topstories": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-20T19:14:04.077Z",
-    "lastOkAt": "2026-11-20T19:14:04.077Z"
+    "lastTryAt": "2026-11-20T19:29:07.128Z",
+    "lastOkAt": "2026-11-20T19:29:07.128Z"
   }
 }
