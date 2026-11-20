@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-20T01:41:03.776Z",
+  "buildTime": "2026-11-20T01:56:01.728Z",
   "etDate": "2026-11-19",
-  "etStamp": "2026-11-19 20:41 ET",
+  "etStamp": "2026-11-19 20:56 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -50,12 +50,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 224,
-  "lastSuccessAt": "2026-11-20T01:41:03.776Z",
+  "headlinesRead": 517,
+  "lastSuccessAt": "2026-11-20T01:56:01.728Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 17,
-    "hacks": 36,
+    "flights": 16,
+    "hacks": 37,
     "germs": 4,
     "internet": 12,
     "earth": 4,
@@ -168,7 +168,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -182,80 +182,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-20T01:19:38.890Z"
+      "ok": true,
+      "count": 211,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     },
     "bing": {
       "ok": true,
-      "count": 186,
-      "error": "7 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "count": 271,
+      "error": null,
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T00:55:55.472Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     },
     "swpc": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     },
     "x": {
       "ok": true,
-      "count": 3,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "lastOkAt": "2026-11-20T01:41:03.776Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-20T01:41:03.776Z"
+      "lastOkAt": "2026-11-20T01:56:01.728Z"
     }
   },
   "stories": [
@@ -343,7 +344,7 @@
       "url": "https://www.straitstimes.com/business/companies-markets/jpmorgan-visa-mastercard-say-third-party-vendors-targeted-in-cyberattack",
       "source": "The Straits Times",
       "publishedAt": "2026-11-19T03:58:00.000Z",
-      "latestAt": "2026-11-20T01:11:33.000Z",
+      "latestAt": "2026-11-20T01:29:13.000Z",
       "firstSeenAt": "2026-11-19T17:39:41.337Z",
       "outlets": 32,
       "outletNames": [
@@ -502,7 +503,7 @@
       "publishedAt": "2026-11-19T04:28:00.000Z",
       "latestAt": "2026-11-20T01:05:00.000Z",
       "firstSeenAt": "2026-11-19T20:40:10.941Z",
-      "outlets": 14,
+      "outlets": 15,
       "outletNames": [
         "KGW",
         "KTVZ",
@@ -517,9 +518,10 @@
         "KPTV",
         "Oregon Capital Chronicle",
         "News From The States",
-        "Your Oregon News"
+        "Your Oregon News",
+        "Oregon Public Broadcasting"
       ],
-      "score": 3.51
+      "score": 3.58
     },
     {
       "id": "sig:status:openai:2026-11-19",
@@ -983,7 +985,7 @@
       "publishedAt": "2026-11-19T14:55:29.000Z",
       "latestAt": "2026-11-19T23:40:00.000Z",
       "firstSeenAt": "2026-11-20T00:10:40.191Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "6abc Philadelphia",
         "ABC News - Breaking News, Latest News and Videos",
@@ -991,11 +993,12 @@
         "ABC Columbia",
         "upi",
         "weisradio.com",
-        "Everett Post"
+        "Everett Post",
+        "ABC7 Chicago"
       ],
       "trending": 10000,
       "trendTerm": "jpmorgan chase cyber attack",
-      "score": 3.22
+      "score": 3.38
     },
     {
       "id": "e358feae5cc2",
@@ -1318,23 +1321,6 @@
       "score": 1.93
     },
     {
-      "id": "59439d3db686",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Sources: FAA let contractors work without approval ahead of ground stop",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNM3lpZ19MeDNOd2FmRWxwWkZacTVEdmhpNjNNWGN1NmdmMUk0UWV4WUdwOFotTjBhTVVZTkdsZTY0cmhaS2VDaThZRTVMdlBRdEwweGo5SHlLQWQ4TkRvZGlmUm00eEJVeVR5VnBoZUZNMWkxUG5wSkJraE5Ldml1b3ZnUFJTakhVd0ZobjRKUW1LMFByT3gyZl9WTVlXMF9LYWFHUjhGSWlhZlpMZWY4T0thWUYxX3J6dlE?oc=5",
-      "source": "CNN",
-      "publishedAt": "2026-11-19T01:50:56.000Z",
-      "latestAt": "2026-11-19T03:30:00.000Z",
-      "firstSeenAt": "2026-11-19T03:52:16.778Z",
-      "outlets": 2,
-      "outletNames": [
-        "CNN",
-        "Modern Ghana"
-      ],
-      "score": 1.93
-    },
-    {
       "id": "28b64844bc13",
       "cat": "flights",
       "kind": "news",
@@ -1435,6 +1421,23 @@
         "Law360"
       ],
       "score": 1.8
+    },
+    {
+      "id": "3712e02a1b2c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Chase reports cyberattack on third-party service platforms",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE16ejBjNzhGeUhBWnhVTkRHZ2sxRE4xUXZ3RVhiNTMwZlU4MUx1LUxVcG1xbi0zV1RFTzhVamxHOXd6MTFWVG5jVmctUDZQcF84U3UzcGNlbjFOQjlHX3lyQXFZYmdjNWM2UGtoM1ZVbkxzWFFDNHBwTTV5cW56UnfSAYQBQVVfeXFMUElHd25xekpscWFKV18xeHM0VUw4N1YyN0JRUFVOYmlSTGduZ0s1d2Jvc3ZFeXZBRzlDdlM1cnhuOXhCYWlid0ZSakZ2b1ljUTY2QmlaeXU0UXZrQzJISTYtWkF2Z0xMb3ZKRkg4aDlPQUhlNDdYR19pcWJtc0g2WnhQcW5W?oc=5",
+      "source": "upi",
+      "publishedAt": "2026-11-19T19:07:44.000Z",
+      "latestAt": "2026-11-20T01:19:21.000Z",
+      "firstSeenAt": "2026-11-20T01:56:01.728Z",
+      "outlets": 2,
+      "outletNames": [
+        "upi",
+        "LAmag"
+      ],
+      "score": 1.77
     },
     {
       "id": "0bf13d0d47a4",
@@ -1693,23 +1696,6 @@
       "score": 1.61
     },
     {
-      "id": "11aa103cfaf1",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack may have exposed Chase Bank and Mastercard customer data",
-      "url": "https://www.washingtonpost.com/nation/2026/11/19/cyberattack-may-have-exposed-chase-bank-mastercard-customer-data/",
-      "source": "The Washington Post",
-      "publishedAt": "2026-11-19T11:08:00.000Z",
-      "latestAt": "2026-11-19T16:03:00.000Z",
-      "firstSeenAt": "2026-11-20T01:41:03.776Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Washington Post",
-        "USA TODAY"
-      ],
-      "score": 1.51
-    },
-    {
       "id": "b58dc9dabd96",
       "cat": "markets",
       "kind": "news",
@@ -1871,6 +1857,22 @@
       "score": 1.4
     },
     {
+      "id": "31e84602ff80",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "‘We’ve Got to Trust the Government’: Ex-CIA Cyber Chief Says US Wouldn’t Hide Major Cyberattack After Mic",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNczUyX3VFNHljZmlqeGdVYnZmbWdmMDZhSm9RLVNHcWFZNTh4ai1HMXQxcU1BYkNKdXFfQkJZNkJXanpPc3luenF5Q1pnZUdtNXNKb0VUWW1lTUl1QkpDVTRxTUd6Uks4TVE5UlRXY1hDcVEyRDZWRllaLVBLdnJrbW8xUWl2OEpmT3UyTWVPd3Q5aE5DSzBZeg?oc=5",
+      "source": "Benzinga",
+      "publishedAt": "2026-11-19T03:25:31.000Z",
+      "latestAt": "2026-11-19T03:25:31.000Z",
+      "firstSeenAt": "2026-11-19T03:37:16.857Z",
+      "outlets": 1,
+      "outletNames": [
+        "Benzinga"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "b48fee4b63eb",
       "cat": "markets",
       "kind": "news",
@@ -1907,18 +1909,18 @@
       "quietReason": "headline mentions tornadoes"
     },
     {
-      "id": "56c3600450aa",
+      "id": "8838110540f0",
       "cat": "markets",
       "kind": "news",
-      "title": "Anthropic IPO sets retail trading record as market selloff weighs on buying",
-      "url": "https://www.msn.com/en-us/money/economy/anthropic-ipo-sets-retail-trading-record-as-market-selloff-weighs-on-buying/ar-AA2hOiJ4",
-      "source": "Yahoo Finance on MSN",
-      "publishedAt": "2026-11-19T15:47:12.000Z",
-      "latestAt": "2026-11-19T15:47:12.000Z",
-      "firstSeenAt": "2026-11-20T00:10:40.191Z",
+      "title": "Anthropic's record-breaking IPO fails to calm AI fears: Shares soar 17%, but Asian markets tumble",
+      "url": "https://english.mathrubhumi.com/news/money/anthropic-record-ipo-ai-bubble-fears-asian-markets-hfaqm8wc",
+      "source": "Mathrubhumi English",
+      "publishedAt": "2026-11-19T17:26:00.000Z",
+      "latestAt": "2026-11-19T17:26:00.000Z",
+      "firstSeenAt": "2026-11-20T01:56:01.728Z",
       "outlets": 1,
       "outletNames": [
-        "Yahoo Finance on MSN"
+        "Mathrubhumi English"
       ],
       "score": 1.2
     },
