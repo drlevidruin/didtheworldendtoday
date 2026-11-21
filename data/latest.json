@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T21:48:06.123Z",
+  "buildTime": "2026-11-21T22:03:19.113Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 16:48 ET",
+  "etStamp": "2026-11-21 17:03 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -50,11 +50,11 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1220,
-  "lastSuccessAt": "2026-11-21T21:48:06.123Z",
+  "headlinesRead": 296,
+  "lastSuccessAt": "2026-11-21T22:03:19.113Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 30,
+    "flights": 29,
     "earth": 10,
     "hacks": 25,
     "grid": 5,
@@ -62,7 +62,7 @@
     "germs": 4,
     "markets": 6,
     "ai": 3,
-    "internet": 7,
+    "internet": 8,
     "weather": 5,
     "animals": 1
   },
@@ -167,7 +167,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -185,16 +185,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 920,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-21T21:48:06.123Z"
     },
     "bing": {
       "ok": true,
-      "count": 268,
+      "count": 264,
       "error": null,
-      "lastOkAt": "2026-11-21T21:48:06.123Z"
+      "lastOkAt": "2026-11-21T22:03:19.113Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,37 +206,37 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T21:48:06.123Z"
+      "lastOkAt": "2026-11-21T22:03:19.113Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T21:48:06.123Z"
+      "lastOkAt": "2026-11-21T22:03:19.113Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T21:48:06.123Z"
+      "lastOkAt": "2026-11-21T22:03:19.113Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T21:48:06.123Z"
+      "lastOkAt": "2026-11-21T22:03:19.113Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T21:48:06.123Z"
+      "lastOkAt": "2026-11-21T22:03:19.113Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T21:48:06.123Z"
+      "lastOkAt": "2026-11-21T22:03:19.113Z"
     },
     "x": {
       "ok": true,
@@ -249,13 +249,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T21:48:06.123Z"
+      "lastOkAt": "2026-11-21T22:03:19.113Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T21:48:06.123Z"
+      "lastOkAt": "2026-11-21T22:03:19.113Z"
     }
   },
   "stories": [
@@ -1042,23 +1042,6 @@
       "score": 1.97
     },
     {
-      "id": "1c3758e7a1fc",
-      "cat": "flights",
-      "kind": "news",
-      "title": "1 week after national ground stop, Atlanta airport ready for busy Thanksgiving, GM says",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdG5vcm1LR216RmFiQ3otOE1vc2NqMmdjLXNPVUd3RnZ1YlBSUFZaMkxaT3hSaGFzWXI1ajhzOHZ1X0xoQWxMTmdUUXdnTElTUWlqVDFNMV9TbEE3WENscjRuOWtNRnFCemJocEx4OFVnOTl2Y002UzhnT2VuZThnYUxpNmR1eC04?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-20T22:01:17.000Z",
-      "latestAt": "2026-11-20T23:56:06.000Z",
-      "firstSeenAt": "2026-11-20T23:56:09.314Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WSB-TV"
-      ],
-      "score": 1.94
-    },
-    {
       "id": "34f6be7416fc",
       "cat": "hacks",
       "kind": "news",
@@ -1806,6 +1789,22 @@
         "Mashable"
       ],
       "score": 1.06
+    },
+    {
+      "id": "47e69d687422",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Analysts call for investigation, audit on nationwide outages",
+      "url": "https://www.aol.com/articles/analysts-call-investigation-audit-nationwide-143900000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-21T07:01:00.000Z",
+      "latestAt": "2026-11-21T07:01:00.000Z",
+      "firstSeenAt": "2026-11-21T22:03:19.113Z",
+      "outlets": 1,
+      "outletNames": [
+        "AOL"
+      ],
+      "score": 1.05
     },
     {
       "id": "2573a87645e1",
