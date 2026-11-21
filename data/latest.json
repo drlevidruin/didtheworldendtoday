@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T05:30:36.526Z",
+  "buildTime": "2026-11-21T05:45:44.906Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 00:30 ET",
+  "etStamp": "2026-11-21 00:45 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,14 +46,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1316,
-  "lastSuccessAt": "2026-11-21T05:30:36.526Z",
+  "headlinesRead": 1263,
+  "lastSuccessAt": "2026-11-21T05:45:44.906Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 20,
+    "flights": 21,
     "earth": 6,
     "germs": 4,
-    "hacks": 30,
+    "hacks": 29,
     "markets": 13,
     "grid": 5,
     "weather": 4,
@@ -178,20 +178,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1004,
+      "count": 1007,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     },
     "bing": {
       "ok": true,
-      "count": 275,
+      "count": 216,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,55 +203,56 @@
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:30:36.526Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 27,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z"
+      "lastOkAt": "2026-11-21T05:45:44.906Z"
     }
   },
   "stories": [
@@ -355,6 +356,37 @@
       "score": 3.7
     },
     {
+      "id": "17e895587c28",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Peru earthquake: 6.7 magnitude tremor hits Carhuamayo, near Lima",
+      "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
+      "source": "Times Now on MSN",
+      "publishedAt": "2026-11-20T10:59:00.000Z",
+      "latestAt": "2026-11-21T05:28:05.000Z",
+      "firstSeenAt": "2026-11-21T01:29:59.829Z",
+      "outlets": 14,
+      "outletNames": [
+        "Times Now on MSN",
+        "Egyptian Gazette",
+        "ABP News on MSN",
+        "The Times of India",
+        "CGTN",
+        "Newcastle Herald",
+        "UA.NEWS",
+        "The Daily Star",
+        "news9live",
+        "The Rio Times",
+        "Daily Sun",
+        "Gulf News",
+        "India News Network",
+        "The Malaysian Reserve"
+      ],
+      "score": 3.64,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "d58ec51a5e53",
       "cat": "flights",
       "kind": "news",
@@ -391,36 +423,6 @@
       "score": 3.57
     },
     {
-      "id": "17e895587c28",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Peru earthquake: 6.7 magnitude tremor hits Carhuamayo, near Lima",
-      "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
-      "source": "Times Now on MSN",
-      "publishedAt": "2026-11-20T10:59:00.000Z",
-      "latestAt": "2026-11-21T04:50:20.000Z",
-      "firstSeenAt": "2026-11-21T01:29:59.829Z",
-      "outlets": 13,
-      "outletNames": [
-        "Times Now on MSN",
-        "Egyptian Gazette",
-        "ABP News on MSN",
-        "The Times of India",
-        "CGTN",
-        "Newcastle Herald",
-        "UA.NEWS",
-        "The Daily Star",
-        "news9live",
-        "The Rio Times",
-        "Daily Sun",
-        "Gulf News",
-        "India News Network"
-      ],
-      "score": 3.56,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "0e3af96a9376",
       "cat": "hacks",
       "kind": "news",
@@ -453,17 +455,18 @@
       "url": "https://www.khou.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0",
       "source": "KHOU",
       "publishedAt": "2026-11-20T19:35:00.000Z",
-      "latestAt": "2026-11-21T04:15:17.000Z",
+      "latestAt": "2026-11-21T05:31:02.000Z",
       "firstSeenAt": "2026-11-21T04:30:36.214Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "KHOU",
         "fox61.com",
         "WFAA",
         "WCNC",
-        "WUSA9"
+        "WUSA9",
+        "The New Indian Express"
       ],
-      "score": 2.83
+      "score": 3.05
     },
     {
       "id": "aeda33a9b3e1",
@@ -805,6 +808,24 @@
       "score": 2.04
     },
     {
+      "id": "13b6d70b3a84",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Stock Market Today, Nov. 20: Stocks Plunge as AI Trade Unwinds",
+      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-stocks-plunge-as-ai-trade-unwinds/",
+      "source": "The Motley Fool",
+      "publishedAt": "2026-11-20T14:15:00.000Z",
+      "latestAt": "2026-11-20T22:37:04.000Z",
+      "firstSeenAt": "2026-11-21T03:15:12.421Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Motley Fool",
+        "Yahoo Finance",
+        "The Globe and Mail"
+      ],
+      "score": 2.02
+    },
+    {
       "id": "acd1e0d2dcd8",
       "cat": "germs",
       "kind": "news",
@@ -835,24 +856,6 @@
       "outletNames": [
         "The Economic Times",
         "@Reuters on X"
-      ],
-      "score": 1.99
-    },
-    {
-      "id": "22a06be19db9",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stocks plunge as investors take cover amid growing uncertainty",
-      "url": "https://www.msn.com/en-us/news/other/stocks-plunge-as-investors-take-cover-amid-growing-uncertainty/ar-AA2hO60v",
-      "source": "CBS News on MSN",
-      "publishedAt": "2026-11-20T07:23:00.000Z",
-      "latestAt": "2026-11-20T15:23:30.000Z",
-      "firstSeenAt": "2026-11-20T21:14:16.656Z",
-      "outlets": 3,
-      "outletNames": [
-        "CBS News on MSN",
-        "Yahoo Finance",
-        "AOL.com"
       ],
       "score": 1.99
     },
@@ -948,25 +951,6 @@
         "USA TODAY"
       ],
       "score": 2.59
-    },
-    {
-      "id": "0e469f138088",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Air traffic control system needs more than money after FAA ground stop",
-      "url": "https://www.journalgazette.net/opinion/air-traffic-control-system-needs-more-than-money-after-faa-ground-stop/article_85744212-ab27-4284-9b51-bd133a10906c.html",
-      "source": "journalgazette.net",
-      "publishedAt": "2026-11-20T05:45:00.000Z",
-      "latestAt": "2026-11-20T16:00:00.000Z",
-      "firstSeenAt": "2026-11-20T14:58:12.038Z",
-      "outlets": 4,
-      "outletNames": [
-        "The Spokesman-Review",
-        "nny360.com",
-        "journalgazette.net",
-        "The Republic"
-      ],
-      "score": 2.54
     },
     {
       "id": "501df2603002",
@@ -1075,6 +1059,24 @@
         "Hotel Online"
       ],
       "score": 2.03
+    },
+    {
+      "id": "22a06be19db9",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Stocks plunge as investors take cover amid growing uncertainty",
+      "url": "https://www.msn.com/en-us/news/other/stocks-plunge-as-investors-take-cover-amid-growing-uncertainty/ar-AA2hO60v",
+      "source": "CBS News on MSN",
+      "publishedAt": "2026-11-20T07:23:00.000Z",
+      "latestAt": "2026-11-20T15:23:30.000Z",
+      "firstSeenAt": "2026-11-20T21:14:16.656Z",
+      "outlets": 3,
+      "outletNames": [
+        "CBS News on MSN",
+        "Yahoo Finance",
+        "AOL.com"
+      ],
+      "score": 1.99
     },
     {
       "id": "21bb56ff9807",
@@ -1545,23 +1547,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "13b6d70b3a84",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stock Market Today, Nov. 20: Stocks Plunge as AI Trade Unwinds",
-      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-stocks-plunge-as-ai-trade-unwinds/",
-      "source": "The Motley Fool",
-      "publishedAt": "2026-11-20T14:15:00.000Z",
-      "latestAt": "2026-11-20T22:35:13.000Z",
-      "firstSeenAt": "2026-11-21T03:15:12.421Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Motley Fool",
-        "Yahoo Finance"
-      ],
-      "score": 1.57
-    },
-    {
       "id": "8f9147e76bc9",
       "cat": "hacks",
       "kind": "news",
@@ -1596,23 +1581,6 @@
       "score": 1.55
     },
     {
-      "id": "8c27ec3c5095",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK finds fix for fridge and freezer vulnerability after European hacks",
-      "url": "https://wkzo.com/2026/11/20/uk-finds-fix-for-fridge-and-freezer-vulnerability-after-european-hacks/",
-      "source": "WKZO",
-      "publishedAt": "2026-11-20T05:35:00.000Z",
-      "latestAt": "2026-11-20T21:33:49.000Z",
-      "firstSeenAt": "2026-11-20T19:14:04.077Z",
-      "outlets": 2,
-      "outletNames": [
-        "WKZO",
-        "Reuters"
-      ],
-      "score": 1.54
-    },
-    {
       "id": "e769ddcdb889",
       "cat": "hacks",
       "kind": "news",
@@ -1628,6 +1596,23 @@
         "Pasquale Pillitteri"
       ],
       "score": 1.51
+    },
+    {
+      "id": "b85269f2db55",
+      "cat": "flights",
+      "kind": "news",
+      "title": "In its rush to upgrade air traffic control, FAA risked causing ‘excessive disruptions'",
+      "url": "https://www.aol.com/articles/rush-upgrade-air-traffic-control-223430000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-20T14:37:00.000Z",
+      "latestAt": "2026-11-20T22:42:14.000Z",
+      "firstSeenAt": "2026-11-21T05:45:44.906Z",
+      "outlets": 2,
+      "outletNames": [
+        "AOL",
+        "Scripps News"
+      ],
+      "score": 1.5
     },
     {
       "id": "dbaf0f1fd383",
@@ -1766,7 +1751,7 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-20T06:15:43.000Z",
-      "latestAt": "2026-11-21T04:40:53.000Z",
+      "latestAt": "2026-11-21T05:39:07.000Z",
       "firstSeenAt": "2026-11-20T06:26:52.947Z",
       "outlets": 1,
       "outletNames": [
@@ -1835,6 +1820,22 @@
       "outlets": 1,
       "outletNames": [
         "KMBC"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "b38993ca1e0a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Thanksgiving travelers head to airports early following nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWHlZNW9MazBWZmF0X3dGTUdoREpRTmtXSGRVVE1acmlmYWVsOFlHMkx1S3p4NVVkbVlmSjc0clQ5WGRiZlBxcFE2WlgzQjc3UXlIM2d1SVllWG1Zc2dXdDFEUFNpOC1YVFVjQ1NSY2NXTG1lMTMtanI5NVRaT3NtWlU1Zm1EY2RXRVgyVlBPcDdfZy1Fd2hqcEhHSTFQVkZvZXgwZktXRVdOdlByU3fSAbMBQVVfeXFMTUkxeFhlcl9PRlRXaVdDcjMzbFJyQnkzbUN6bXJLelJja2gzX2p4M2Nid1NrU25nQnNMMFZfc1U0bTlUSVdfVHZQUGtNX1FEZWpadUZuellZUmt1YV9QTWcwZ0R3WWxxamoyX282MENKam5IQjU1V3NRTzQxMnptdkphZUxUSzZvX0ljY2dHV09iTGZibm1OdldyWllfNTJ4SXRzOFFZNzFqYmVNMDNBU1ptU28?oc=5",
+      "source": "ABC7 New York",
+      "publishedAt": "2026-11-20T23:26:08.000Z",
+      "latestAt": "2026-11-21T02:15:00.000Z",
+      "firstSeenAt": "2026-11-20T23:44:52.341Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC7 New York"
       ],
       "score": 1.39
     },
