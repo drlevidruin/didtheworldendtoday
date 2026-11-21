@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T20:17:54.085Z",
+  "buildTime": "2026-11-21T20:32:57.937Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 15:17 ET",
+  "etStamp": "2026-11-21 15:32 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -50,20 +50,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1212,
-  "lastSuccessAt": "2026-11-21T20:17:54.085Z",
+  "headlinesRead": 1201,
+  "lastSuccessAt": "2026-11-21T20:32:57.937Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 30,
-    "earth": 9,
-    "hacks": 21,
+    "flights": 29,
+    "earth": 7,
+    "hacks": 23,
     "markets": 11,
     "grid": 5,
     "space": 4,
     "germs": 4,
     "ai": 3,
     "internet": 5,
-    "weather": 4,
+    "weather": 5,
     "sun": 2,
     "animals": 2
   },
@@ -182,81 +182,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 916,
+      "count": 905,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "bing": {
       "ok": true,
-      "count": 262,
+      "count": 264,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-21T18:17:37.972Z"
     },
     "hn": {
       "ok": true,
-      "count": 4,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T19:32:53.735Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T20:17:54.085Z"
+      "lastOkAt": "2026-11-21T20:32:57.937Z"
     }
   },
   "stories": [
@@ -621,6 +620,26 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "8f9147e76bc9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Staples Canada says customer information accessed in data breach",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNN0didzNpRTFqNGs0MVZ6cHI1Z25hb1E1ZTBSQy1EOHM5QWRGTmYyRGwwSkpjanMzSEl1MzhadXluTk5TOWdjNF9FVVJsR0VhTUJCUWdVRW5mNGd3NVNMQnNzYzRQcHNrSF8wQ3pTUTlUV3dfeGxtOEZsNm40T09TWWxaU003aGlCenU3aXlGS2Zqd0l5U3RGeDM5TDhJNUpaT3cyRWtwZjJvLXh2MUZMd2gzRXAwbnY5Ykh4UnJ0bzB5cFA5ZEF2bnN4Y29VdWxBUnBKdmRQOVVLQ2RSNXhhYQ?oc=5",
+      "source": "The Spec",
+      "publishedAt": "2026-11-21T05:05:00.000Z",
+      "latestAt": "2026-11-21T14:32:16.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 5,
+      "outletNames": [
+        "The Spec",
+        "Toronto Star",
+        "Castanet",
+        "Castanet Kamloops",
+        "CityNews Toronto"
+      ],
+      "score": 2.7
+    },
+    {
       "id": "f42eaad8c569",
       "cat": "hacks",
       "kind": "news",
@@ -676,46 +695,6 @@
         "Yahoo"
       ],
       "score": 2.51
-    },
-    {
-      "id": "2593cf91a89e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US Department of Agriculture Hit by Cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY3lqQWxtTDBiMk9wWGhNVldGVXJqMUN2NUZuZWlyRThiMXEtQjR5aGw3SWpGRkxhYTFkdkxMTlFfUXVmOG1LSXh1MTc0RHF0SnRYcS0tc3I4Y1AxXzFmREpyWHdVOEFtZE9iUEZEdXpqV1pra1M1d0JJTjh0bWxfMTRn?oc=5",
-      "source": "8AM Media",
-      "publishedAt": "2026-11-21T05:52:00.000Z",
-      "latestAt": "2026-11-21T14:10:57.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
-      "outlets": 4,
-      "outletNames": [
-        "8AM Media",
-        "Afghanistan International",
-        "Ratopati",
-        "IANS LIVE"
-      ],
-      "score": 2.48
-    },
-    {
-      "id": "6aa8479c13bb",
-      "cat": "earth",
-      "kind": "news",
-      "title": "6.8-Magnitude Earthquake Strikes Indonesia, 1.5 Lakh People Experience Tremors",
-      "url": "https://www.oneindia.com/international/6-8-magnitude-earthquake-strikes-indonesia-1-5-lakh-people-experience-tremors-8266265.html",
-      "source": "Oneindia",
-      "publishedAt": "2026-11-20T20:32:00.000Z",
-      "latestAt": "2026-11-21T11:06:37.000Z",
-      "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 4,
-      "outletNames": [
-        "TodayPress.tv",
-        "Report.az",
-        "Oneindia",
-        "Syrian Arab News Agency"
-      ],
-      "score": 2.21,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "3e4b1c709480",
@@ -872,6 +851,25 @@
       "score": 1.68
     },
     {
+      "id": "1d17892f4747",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude-7.2 earthquake strikes Indonesia's Maluku, no tsunami threat",
+      "url": "https://thepeninsulaqatar.com/article/21/11/2026/magnitude-72-earthquake-strikes-indonesias-maluku-no-tsunami-threat",
+      "source": "The Peninsula Qatar",
+      "publishedAt": "2026-11-21T06:48:00.000Z",
+      "latestAt": "2026-11-21T13:46:00.000Z",
+      "firstSeenAt": "2026-11-21T17:17:32.491Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Peninsula Qatar",
+        "The Star"
+      ],
+      "score": 1.65,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "sig:faa-stop:YOW:2026-11-21",
       "cat": "flights",
       "kind": "signal",
@@ -932,23 +930,23 @@
       "score": 3.12
     },
     {
-      "id": "8f9147e76bc9",
+      "id": "2593cf91a89e",
       "cat": "hacks",
       "kind": "news",
-      "title": "Staples Canada says customer information accessed in data breach",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNN0didzNpRTFqNGs0MVZ6cHI1Z25hb1E1ZTBSQy1EOHM5QWRGTmYyRGwwSkpjanMzSEl1MzhadXluTk5TOWdjNF9FVVJsR0VhTUJCUWdVRW5mNGd3NVNMQnNzYzRQcHNrSF8wQ3pTUTlUV3dfeGxtOEZsNm40T09TWWxaU003aGlCenU3aXlGS2Zqd0l5U3RGeDM5TDhJNUpaT3cyRWtwZjJvLXh2MUZMd2gzRXAwbnY5Ykh4UnJ0bzB5cFA5ZEF2bnN4Y29VdWxBUnBKdmRQOVVLQ2RSNXhhYQ?oc=5",
-      "source": "The Spec",
-      "publishedAt": "2026-11-21T05:05:00.000Z",
-      "latestAt": "2026-11-21T14:32:16.000Z",
+      "title": "US Department of Agriculture Hit by Cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY3lqQWxtTDBiMk9wWGhNVldGVXJqMUN2NUZuZWlyRThiMXEtQjR5aGw3SWpGRkxhYTFkdkxMTlFfUXVmOG1LSXh1MTc0RHF0SnRYcS0tc3I4Y1AxXzFmREpyWHdVOEFtZE9iUEZEdXpqV1pra1M1d0JJTjh0bWxfMTRn?oc=5",
+      "source": "8AM Media",
+      "publishedAt": "2026-11-21T05:52:00.000Z",
+      "latestAt": "2026-11-21T14:10:57.000Z",
       "firstSeenAt": "2026-11-21T16:17:26.966Z",
       "outlets": 4,
       "outletNames": [
-        "The Spec",
-        "Toronto Star",
-        "Castanet",
-        "Castanet Kamloops"
+        "8AM Media",
+        "Afghanistan International",
+        "Ratopati",
+        "IANS LIVE"
       ],
-      "score": 2.44
+      "score": 2.48
     },
     {
       "id": "c0ec02877349",
@@ -1071,6 +1069,23 @@
       "score": 1.94
     },
     {
+      "id": "34f6be7416fc",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI's crime database in hackers' hands after shocking security breach",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMGxMMF9kMTFCRkcwSjVhc1FpVndSZy12TUg2U0lqbVdHUlFNb1FweWg5SDVqZ29FSkVhSmJBclRFUVM5Q0VwZ1VmNDFTT0VkQ2FvV0x2WHlWLThWaUtvc0xVUTA4TUk2blFYb3VZeGY0SU5aSlFKaGlRMEx3X3hCMXZVal9LcHY2dWVaazU5VkM3VUZU?oc=5",
+      "source": "MEAWW News",
+      "publishedAt": "2026-11-21T16:12:33.000Z",
+      "latestAt": "2026-11-21T20:01:04.000Z",
+      "firstSeenAt": "2026-11-21T20:32:57.937Z",
+      "outlets": 2,
+      "outletNames": [
+        "MEAWW News",
+        "Gistmania"
+      ],
+      "score": 1.86
+    },
+    {
       "id": "d1edf1a96217",
       "cat": "hacks",
       "kind": "news",
@@ -1171,25 +1186,6 @@
         "Yahoo"
       ],
       "score": 1.66
-    },
-    {
-      "id": "1d17892f4747",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude-7.2 earthquake strikes Indonesia's Maluku, no tsunami threat",
-      "url": "https://thepeninsulaqatar.com/article/21/11/2026/magnitude-72-earthquake-strikes-indonesias-maluku-no-tsunami-threat",
-      "source": "The Peninsula Qatar",
-      "publishedAt": "2026-11-21T06:48:00.000Z",
-      "latestAt": "2026-11-21T13:46:00.000Z",
-      "firstSeenAt": "2026-11-21T17:17:32.491Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Peninsula Qatar",
-        "The Star"
-      ],
-      "score": 1.65,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "cef185c52f33",
@@ -1560,6 +1556,22 @@
       "score": 1.39
     },
     {
+      "id": "4b3383a8d406",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Wisconsin's gun deer season set to open with near record-high temperatures",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPMVViVGxRNDBPZkUxdmY0SWxJd291aG96RElzWHRrQU1VMzJwR0xHTlJtc3VOZFRDbnhadHV1NVZ3UG9BczlHWlJQbEhscFVyanB0YUU3VnFlMlpRRUhDaXFMbzRKMlUxMzNmcjc0M2RqUl9hWEpCZm9uWE96UFIySkk3S2ZJQ25EOGhLR25LX0lNbkIyXzU4Y0RB?oc=5",
+      "source": "WISN",
+      "publishedAt": "2026-11-21T04:16:20.000Z",
+      "latestAt": "2026-11-21T04:16:20.000Z",
+      "firstSeenAt": "2026-11-21T04:30:36.214Z",
+      "outlets": 1,
+      "outletNames": [
+        "WISN"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "443993908cdc",
       "cat": "grid",
       "kind": "news",
@@ -1801,6 +1813,22 @@
       "score": 1.06
     },
     {
+      "id": "ffe861b12a61",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Fridges, Hackers, AI and La Flemme: A Nov. 21 Tech Roundup",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNekZsd2w4MDRET1EwV1ZHdnloc1dULXJUWmNnT0Z2U3VsZ21xVzgyOUY0cDFMYkROcTJzdHVQd2hqT2hqX3QtY2txU0VzQ0VpOXVKS0xyS05pYi1zSURDX24yUUVOSmFUaUlJbnBCeHJFQzhReTkyMW91OGRTV1cxeXlLRWM3NEJ2bEFZ?oc=5",
+      "source": "news.lavx.hu",
+      "publishedAt": "2026-11-21T20:17:11.000Z",
+      "latestAt": "2026-11-21T20:17:11.000Z",
+      "firstSeenAt": "2026-11-21T20:32:57.937Z",
+      "outlets": 1,
+      "outletNames": [
+        "news.lavx.hu"
+      ],
+      "score": 1
+    },
+    {
       "id": "b32496dae58b",
       "cat": "hacks",
       "kind": "news",
@@ -1813,22 +1841,6 @@
       "outlets": 1,
       "outletNames": [
         "bsinews.id"
-      ],
-      "score": 1
-    },
-    {
-      "id": "121ee787e47a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Asian Hubs See Elevated Flight Disruption After US Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMjdxTTQzSVlDUldEWmRRcjY2cTAxRFU3WVQ3TjJ6TzU5RmgwV1Z2WjRhOExZV3BnNGJNU1BGY2cwQXZwcEtmQklvaWNfQWhTQl96TGZoRWlCY0JUSDNtWVN4RFByR3JXYmRNSnVmNHJ4eDVmMXMwT09LUmMzblM2Um5hdDMxZE53U3B3N0tWWURmRnQtNUE?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-21T19:45:05.000Z",
-      "latestAt": "2026-11-21T19:45:05.000Z",
-      "firstSeenAt": "2026-11-21T20:02:53.581Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
       ],
       "score": 1
     },
@@ -1931,24 +1943,6 @@
         "Barrie News"
       ],
       "score": 0.99
-    },
-    {
-      "id": "54a7ba1960f7",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Light mag. 3.1 earthquake - 9.8 km northeast of Argostoli, Kefallonia Regional Unit, Ionian Islands, Greece, on Saturday, Nov 21, 2026, at 09:08 pm (GMT +2)",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPN1ZJUzJRcDRmcWEySnFsUTlBSGI5Y1BiX1ZmRWdGU01mcGFZREJMWFY2SlUtTlpNMVZuNXZKd1hDdk5VSXFrMkhoajVrY1BVckV2RGtET21OeGI3aG90VHdOalZWQ2J0dHFUWTdxUWpZU0djT04yR0pYcTNCRnZsNnJYLVlnTUpraUkwdElydVB5X0NVanJQVTBpOVdhY3M?oc=5",
-      "source": "Volcano Discovery",
-      "publishedAt": "2026-11-21T19:15:07.000Z",
-      "latestAt": "2026-11-21T19:15:07.000Z",
-      "firstSeenAt": "2026-11-21T20:17:54.085Z",
-      "outlets": 1,
-      "outletNames": [
-        "Volcano Discovery"
-      ],
-      "score": 0.98,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "00209392cbc5",
