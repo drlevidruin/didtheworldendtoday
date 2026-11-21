@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T07:45:57.798Z",
+  "buildTime": "2026-11-21T08:00:59.190Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 02:45 ET",
+  "etStamp": "2026-11-21 03:00 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,15 +46,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1328,
-  "lastSuccessAt": "2026-11-21T07:45:57.798Z",
+  "headlinesRead": 632,
+  "lastSuccessAt": "2026-11-21T08:00:59.190Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
     "earth": 10,
-    "hacks": 25,
+    "hacks": 26,
     "germs": 4,
-    "markets": 12,
+    "markets": 11,
     "grid": 5,
     "weather": 6,
     "sun": 4,
@@ -183,15 +183,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1011,
-      "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "count": 353,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 6 of 26 queries)",
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
-      "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "count": 240,
+      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,37 +203,37 @@
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +246,13 @@
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T07:45:57.798Z"
+      "lastOkAt": "2026-11-21T08:00:59.190Z"
     }
   },
   "stories": [
@@ -311,7 +311,7 @@
       "publishedAt": "2026-11-20T10:59:00.000Z",
       "latestAt": "2026-11-21T07:12:45.000Z",
       "firstSeenAt": "2026-11-21T01:29:59.829Z",
-      "outlets": 19,
+      "outlets": 20,
       "outletNames": [
         "Times Now on MSN",
         "Egyptian Gazette",
@@ -331,9 +331,10 @@
         "BusinessLine",
         "Xinhua",
         "Jamaica Observer",
-        "chinadailyhk"
+        "chinadailyhk",
+        "Gulf Today"
       ],
-      "score": 3.98,
+      "score": 4.03,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
     },
@@ -347,7 +348,7 @@
       "publishedAt": "2026-11-20T09:39:00.000Z",
       "latestAt": "2026-11-21T07:36:58.000Z",
       "firstSeenAt": "2026-11-20T22:44:29.793Z",
-      "outlets": 14,
+      "outlets": 16,
       "outletNames": [
         "NBC News",
         "marketscreener.com",
@@ -362,9 +363,37 @@
         "Breakingthenews.net",
         "Khaama Press",
         "TRT World",
-        "Gulf News"
+        "Gulf News",
+        "The Hindu",
+        "Free Malaysia Today"
       ],
-      "score": 3.76
+      "score": 3.91
+    },
+    {
+      "id": "78e8cb4ec0eb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "State officials investigating attempted cyberattack on Algonquin Dam",
+      "url": "https://www.chicagotribune.com/2026/11/20/state-officials-investigating-attempted-cyberattack-on-algonquin-dam/",
+      "source": "Chicago Tribune",
+      "publishedAt": "2026-11-20T17:26:00.000Z",
+      "latestAt": "2026-11-21T05:15:00.000Z",
+      "firstSeenAt": "2026-11-21T02:00:09.750Z",
+      "outlets": 11,
+      "outletNames": [
+        "Chicago Tribune",
+        "Daily Herald",
+        "CBS News",
+        "ABC7 Chicago",
+        "Wirepoints",
+        "Shaw Local",
+        "WGN-TV",
+        "Hindustan Times on MSN",
+        "Yahoo",
+        "Gizmodo",
+        "AOL.com"
+      ],
+      "score": 3.82
     },
     {
       "id": "c1812514f929",
@@ -390,31 +419,6 @@
         "10News.com"
       ],
       "score": 3.73
-    },
-    {
-      "id": "78e8cb4ec0eb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "State officials investigating attempted cyberattack on Algonquin Dam",
-      "url": "https://www.chicagotribune.com/2026/11/20/state-officials-investigating-attempted-cyberattack-on-algonquin-dam/",
-      "source": "Chicago Tribune",
-      "publishedAt": "2026-11-20T17:26:00.000Z",
-      "latestAt": "2026-11-21T05:15:00.000Z",
-      "firstSeenAt": "2026-11-21T02:00:09.750Z",
-      "outlets": 10,
-      "outletNames": [
-        "Chicago Tribune",
-        "Daily Herald",
-        "CBS News",
-        "ABC7 Chicago",
-        "Wirepoints",
-        "Shaw Local",
-        "WGN-TV",
-        "Hindustan Times on MSN",
-        "Yahoo",
-        "Gizmodo"
-      ],
-      "score": 3.7
     },
     {
       "id": "d58ec51a5e53",
@@ -794,24 +798,6 @@
       "score": 2.04
     },
     {
-      "id": "13b6d70b3a84",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stock Market Today, Nov. 20: Stocks Plunge as AI Trade Unwinds",
-      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-stocks-plunge-as-ai-trade-unwinds/",
-      "source": "The Motley Fool",
-      "publishedAt": "2026-11-20T14:15:00.000Z",
-      "latestAt": "2026-11-20T22:37:04.000Z",
-      "firstSeenAt": "2026-11-21T03:15:12.421Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Motley Fool",
-        "Yahoo Finance",
-        "The Globe and Mail"
-      ],
-      "score": 2.02
-    },
-    {
       "id": "acd1e0d2dcd8",
       "cat": "germs",
       "kind": "news",
@@ -861,6 +847,23 @@
         "cedarnews"
       ],
       "score": 1.96
+    },
+    {
+      "id": "00ef8288ba46",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Nvidia stock plunges 10% amid potential SEC probe, market selloff",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTmdEaExyd0p4eDRQandxVHVZMmhkaHlDeFpZQTdNQlBPdjlZcUcyeVItWFNfeC02ZXprRjc0U1BIOFduRjhERUROR0w2VkRKMVY4TGQ0M2M5Wnlfbjdud0tjcks4bnF1dlVNTTZMS2ZXY01uSEVsYkJBeVNIS0NjODhjTC1ZellMamVyS28xcmE0T1hJS0E?oc=5",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-20T20:52:24.000Z",
+      "latestAt": "2026-11-20T22:12:21.000Z",
+      "firstSeenAt": "2026-11-20T22:29:32.024Z",
+      "outlets": 2,
+      "outletNames": [
+        "Crypto Briefing",
+        "Bloomberg.com"
+      ],
+      "score": 1.95
     },
     {
       "id": "76b284e47755",
@@ -1084,23 +1087,6 @@
         "ABC News - Breaking News, Latest News and Videos"
       ],
       "score": 1.97
-    },
-    {
-      "id": "00ef8288ba46",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Nvidia stock plunges 10% amid potential SEC probe, market selloff",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTmdEaExyd0p4eDRQandxVHVZMmhkaHlDeFpZQTdNQlBPdjlZcUcyeVItWFNfeC02ZXprRjc0U1BIOFduRjhERUROR0w2VkRKMVY4TGQ0M2M5Wnlfbjdud0tjcks4bnF1dlVNTTZMS2ZXY01uSEVsYkJBeVNIS0NjODhjTC1ZellMamVyS28xcmE0T1hJS0E?oc=5",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-20T20:52:24.000Z",
-      "latestAt": "2026-11-20T22:12:21.000Z",
-      "firstSeenAt": "2026-11-20T22:29:32.024Z",
-      "outlets": 2,
-      "outletNames": [
-        "Crypto Briefing",
-        "Bloomberg.com"
-      ],
-      "score": 1.95
     },
     {
       "id": "787be39d8478",
@@ -1381,6 +1367,23 @@
       "score": 1.69
     },
     {
+      "id": "3d6916f74e8a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Otter Tail County hit by cyberattack, personal information breached",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxON3dpbFYtRng4VENNMDU4RGdiYmMxSXNyWGlLSjJpYVBZd2wyVFBIcTItNGxOUm5vaTJSem42QXJmY3lmbG04ZDE2UjJRZ08xMV9mSk96NEZPbm9ISmxPSi1GdlkyN2FCbG9mSzFhRWVMcXloZkZxV1dXV2dqSEFEUWtQcWlka0U4bEo2Y0Q3WExVcENUc1lZUC1kaTNoWjdtUmNHcElR?oc=5",
+      "source": "Detroit Lakes Tribune",
+      "publishedAt": "2026-11-20T22:07:04.000Z",
+      "latestAt": "2026-11-20T22:28:52.000Z",
+      "firstSeenAt": "2026-11-21T08:00:59.190Z",
+      "outlets": 2,
+      "outletNames": [
+        "Detroit Lakes Tribune",
+        "InForum"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "a40572699cb2",
       "cat": "hacks",
       "kind": "news",
@@ -1484,6 +1487,23 @@
         "ABC News - Breaking News, Latest News and Videos"
       ],
       "score": 1.55
+    },
+    {
+      "id": "e418d2a62e17",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan, Visa Warn of Cyberattack That Hit Outside Vendor",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM0lFTG01R2IzS1g2LWx0b284NlBhNjY2UXNIZnNobUhJMzhoZlkyZWUtaEZyTVNncjgwZndaVDA0cUYzYVNucWVaaE8ycWUtVmxXMVFrOURjQ1VjNUdoTE16eHR1NW9fRXdFNXhhOGV4QWdEUWV1VDlZc29JSU9CeHNoR1Z1R2Z3?oc=5",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-20T17:55:29.000Z",
+      "latestAt": "2026-11-20T17:55:29.000Z",
+      "firstSeenAt": "2026-11-21T08:00:59.190Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Finance",
+        "Yahoo! Finance Canada"
+      ],
+      "score": 1.53
     },
     {
       "id": "2593cf91a89e",
@@ -1731,6 +1751,22 @@
       "score": 1.39
     },
     {
+      "id": "6f901e0effd5",
+      "cat": "flights",
+      "kind": "news",
+      "title": "United Airlines reports major system outage as US air travel faces fresh disruption",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XeTlLa3BVTnRZZ01yWnk4SGNVZnpaRXk0dV9KQWpLUGVWX0JSOTgtYXF5eDlTN1VnLVlGQnJ0UzJLSmRDa0VMbFNWb2ZtMVgyUjdSNExFZEE?oc=5",
+      "source": "TRT World",
+      "publishedAt": "2026-11-21T05:55:27.000Z",
+      "latestAt": "2026-11-21T05:55:27.000Z",
+      "firstSeenAt": "2026-11-21T08:00:59.190Z",
+      "outlets": 1,
+      "outletNames": [
+        "TRT World"
+      ],
+      "score": 1.35
+    },
+    {
       "id": "3b772a241d3b",
       "cat": "flights",
       "kind": "news",
@@ -1777,38 +1813,6 @@
         "WBAY"
       ],
       "score": 1.2
-    },
-    {
-      "id": "6356ead9544f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "New radar is being built in Kansas a week after nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZFcwd0FXQmQ4cnFENVgtQXdkME1odm5LSkt4SFQ1TWJ3Tm5jaWVvMDUxOEQ0a2RoQzkzcXpuLXJLeG5ZQkVaZ19BYUdBM1JMYTZZVHB1REFNdHp6TF90aWo3SnNNVTMzRm9EQTRwbXJGQjJsNWYzd3o1dnNRMEo5ZXBlR0w4VTZBd1U4OFZ5N0VHNk5kRUItbVF1M3FYWmEweVZEeHRkeTY?oc=5",
-      "source": "KCTV",
-      "publishedAt": "2026-11-20T22:17:00.000Z",
-      "latestAt": "2026-11-20T22:17:00.000Z",
-      "firstSeenAt": "2026-11-21T07:16:01.078Z",
-      "outlets": 1,
-      "outletNames": [
-        "KCTV"
-      ],
-      "score": 1.19
-    },
-    {
-      "id": "215243f80f61",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Africa's biggest airline digs into hackers targeting 5.38 million customer accounts as it connects the U.S., Canada and South Africa",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdWRDMTdoWlJ5cGJwUHhuQTlfWUtQaGlKamxtaTNDOG85VXV3U1c0SzJta2FmR2hlcUVSYWpURjY5cFpQZUllSXZZZ09xV0ppcEpQc1cxUk5BRzJOV2hQWVBOWWVVN0VZZFB4WklONk5kM1I1MW1lQmtlUjhHQmdvR2o0cUZtYWZpdzVtcFNmdUhkeklDMTFZbEhQcFg3cWRjR1lkd3lFY0Zid1BVT2JEQlR2Ulc5aW5BWU1xcVFyQmxIUGJvOXc1ejZ2cTJ2WkZkMzNYbkpR?oc=5",
-      "source": "Business Insider Africa",
-      "publishedAt": "2026-11-20T21:35:54.000Z",
-      "latestAt": "2026-11-20T21:35:54.000Z",
-      "firstSeenAt": "2026-11-21T07:45:57.798Z",
-      "outlets": 1,
-      "outletNames": [
-        "Business Insider Africa"
-      ],
-      "score": 1.16
     },
     {
       "id": "3f09681c5efa",
