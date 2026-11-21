@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T22:48:19.775Z",
+  "buildTime": "2026-11-21T23:03:18.655Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 17:48 ET",
+  "etStamp": "2026-11-21 18:03 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -50,17 +50,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1159,
-  "lastSuccessAt": "2026-11-21T22:48:19.775Z",
+  "headlinesRead": 1182,
+  "lastSuccessAt": "2026-11-21T23:03:18.655Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 26,
+    "flights": 27,
     "earth": 10,
-    "grid": 5,
     "hacks": 21,
+    "grid": 5,
     "space": 4,
     "germs": 4,
-    "markets": 7,
+    "markets": 6,
     "ai": 3,
     "internet": 11,
     "weather": 7,
@@ -91,13 +91,7 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "YYZ",
-          "hub": false,
-          "reason": "fog"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
       "closures": 0,
@@ -193,15 +187,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 902,
+      "count": 883,
       "error": null,
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     },
     "bing": {
       "ok": true,
-      "count": 225,
-      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "count": 266,
+      "error": null,
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     },
     "gdelt": {
       "ok": false,
@@ -211,39 +205,39 @@
     },
     "hn": {
       "ok": true,
-      "count": 2,
+      "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     },
     "faa": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     },
     "x": {
       "ok": true,
@@ -256,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T22:48:19.775Z"
+      "lastOkAt": "2026-11-21T23:03:18.655Z"
     }
   },
   "stories": [
@@ -396,6 +390,30 @@
       "score": 3.61
     },
     {
+      "id": "f42eaad8c569",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says",
+      "url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-21T00:46:00.000Z",
+      "latestAt": "2026-11-21T16:35:15.000Z",
+      "firstSeenAt": "2026-11-21T16:47:19.211Z",
+      "outlets": 9,
+      "outletNames": [
+        "Associated Press News",
+        "BBC",
+        "U.S. News & World Report",
+        "Daily Press",
+        "SFGATE",
+        "13abc",
+        "HuffPost",
+        "Chicago Tribune",
+        "WDBJ"
+      ],
+      "score": 3.06
+    },
+    {
       "id": "080cfdf1f2e2",
       "cat": "grid",
       "kind": "news",
@@ -434,29 +452,6 @@
       "trending": 500,
       "trendTerm": "fbi hacked",
       "score": 2.97
-    },
-    {
-      "id": "f42eaad8c569",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says",
-      "url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-21T00:46:00.000Z",
-      "latestAt": "2026-11-21T16:35:15.000Z",
-      "firstSeenAt": "2026-11-21T16:47:19.211Z",
-      "outlets": 8,
-      "outletNames": [
-        "Associated Press News",
-        "BBC",
-        "U.S. News & World Report",
-        "Daily Press",
-        "SFGATE",
-        "13abc",
-        "HuffPost",
-        "Chicago Tribune"
-      ],
-      "score": 2.93
     },
     {
       "id": "8f9147e76bc9",
@@ -499,23 +494,6 @@
       "score": 2.39
     },
     {
-      "id": "e5d5df26ea16",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Powerful storm crushes two massive transmission towers, leaving 24,000 customers without electricity",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZlJGMnZHbXZtUWhGWmJDMFMwVkE2eXVJUW1JR1NDYV82QjVTY2Z2SlBIQlllOEhlU3ZQYktDWm9HMEtXSEhLa1d3ZlJweEtHY1A5alhQZWctWFJJYVJ0Sm8yTmZWdy1xc3VUNWdYb0pzdlRwZkdyWEtiOElLd2QxT3hmdG5BaEpiMWtlSFZjVE1hVDA?oc=5",
-      "source": "The Cool Down",
-      "publishedAt": "2026-11-20T22:52:00.000Z",
-      "latestAt": "2026-11-20T22:52:00.000Z",
-      "firstSeenAt": "2026-11-21T08:31:10.813Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Cool Down",
-        "Yahoo News UK"
-      ],
-      "score": 2.35
-    },
-    {
       "id": "3e4b1c709480",
       "cat": "germs",
       "kind": "news",
@@ -531,6 +509,23 @@
         "Limapagi"
       ],
       "score": 1.99
+    },
+    {
+      "id": "4a96a57e3052",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Wall Street tumbles as AI stocks plunge",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOR1VwVWFLWGlQM2VFWFdqWGJ2NURRT3FTcjVkQ1VxS3B1Wi1RckNBM3JYcmpQS05mRElPQkZlcTg4WlpFeW5iUjF2LW5vdTJzUmk1VHNRR0ctamE0M0oxRmpHdE45dHpUUEtBeUlQR3N4OWR6ZjN6SVNwRkJHNWxFZA?oc=5",
+      "source": "1News",
+      "publishedAt": "2026-11-21T11:05:28.000Z",
+      "latestAt": "2026-11-21T20:50:37.000Z",
+      "firstSeenAt": "2026-11-21T13:31:53.958Z",
+      "outlets": 2,
+      "outletNames": [
+        "1News",
+        "SSBCrack"
+      ],
+      "score": 1.92
     },
     {
       "id": "sig:faa-stop:AUS:2026-11-21",
@@ -715,23 +710,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "4a96a57e3052",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Wall Street tumbles as AI stocks plunge",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOR1VwVWFLWGlQM2VFWFdqWGJ2NURRT3FTcjVkQ1VxS3B1Wi1RckNBM3JYcmpQS05mRElPQkZlcTg4WlpFeW5iUjF2LW5vdTJzUmk1VHNRR0ctamE0M0oxRmpHdE45dHpUUEtBeUlQR3N4OWR6ZjN6SVNwRkJHNWxFZA?oc=5",
-      "source": "1News",
-      "publishedAt": "2026-11-21T11:05:28.000Z",
-      "latestAt": "2026-11-21T20:50:37.000Z",
-      "firstSeenAt": "2026-11-21T13:31:53.958Z",
-      "outlets": 2,
-      "outletNames": [
-        "1News",
-        "SSBCrack"
-      ],
-      "score": 1.92
-    },
-    {
       "id": "fc6a032e6502",
       "cat": "germs",
       "kind": "news",
@@ -862,6 +840,22 @@
       "outlets": 1,
       "outletNames": [
         "Hokanews"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "4f6393459502",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Executive Apologizes for Widespread Outage Affecting Users Worldwide and Reveals Three Factors Behind It",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1zZ3RIS0lRQTl6d0lIMFZBWndaemVlRUFWUU1MYWpza2F5VHlkSEp0aHdBMEhLdUE1V0JCVnVPUW44V1pIcG82VzlMQTNlMDZuenFvVmQ4ZW1pSm8tZVRhUG1pdWNYbThzNERWWUFmSi1RQ2phcHBvYmg1QQ?oc=5",
+      "source": "news.amomama.com",
+      "publishedAt": "2026-11-21T11:13:00.000Z",
+      "latestAt": "2026-11-21T11:13:00.000Z",
+      "firstSeenAt": "2026-11-21T11:16:31.801Z",
+      "outlets": 1,
+      "outletNames": [
+        "news.amomama.com"
       ],
       "score": 1.4
     },
@@ -1111,6 +1105,23 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "652eadbd4717",
+      "cat": "flights",
+      "kind": "news",
+      "title": "The FAA ground stop blame game",
+      "url": "https://www.yahoo.com/news/videos/faa-ground-stop-blame-game-200636943.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-21T12:06:00.000Z",
+      "latestAt": "2026-11-21T20:06:36.000Z",
+      "firstSeenAt": "2026-11-21T23:03:18.655Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Fox News"
+      ],
+      "score": 1.63
+    },
+    {
       "id": "cef185c52f33",
       "cat": "hacks",
       "kind": "news",
@@ -1193,38 +1204,6 @@
       "outlets": 1,
       "outletNames": [
         "www.frequencynews.ca"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "4f6393459502",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Executive Apologizes for Widespread Outage Affecting Users Worldwide and Reveals Three Factors Behind It",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1zZ3RIS0lRQTl6d0lIMFZBWndaemVlRUFWUU1MYWpza2F5VHlkSEp0aHdBMEhLdUE1V0JCVnVPUW44V1pIcG82VzlMQTNlMDZuenFvVmQ4ZW1pSm8tZVRhUG1pdWNYbThzNERWWUFmSi1RQ2phcHBvYmg1QQ?oc=5",
-      "source": "news.amomama.com",
-      "publishedAt": "2026-11-21T11:13:00.000Z",
-      "latestAt": "2026-11-21T11:13:00.000Z",
-      "firstSeenAt": "2026-11-21T11:16:31.801Z",
-      "outlets": 1,
-      "outletNames": [
-        "news.amomama.com"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "64f38f08d8b6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Breach FBI’s Nationwide Criminal Database",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1OYVdITHFnU0psSFpDbllLRlRWOUUyNzFHX1ZTZDlsZmk1Ykt0UkJZMThXZlNXb2pZWXJkamJqTUEzNnFjTDVjV2R1RFV6VEE?oc=5",
-      "source": "MTV Lebanon",
-      "publishedAt": "2026-11-21T10:38:16.000Z",
-      "latestAt": "2026-11-21T10:38:16.000Z",
-      "firstSeenAt": "2026-11-21T10:46:35.828Z",
-      "outlets": 1,
-      "outletNames": [
-        "MTV Lebanon"
       ],
       "score": 1.4
     },
@@ -1817,6 +1796,54 @@
       "score": 1.01
     },
     {
+      "id": "102cbaf96333",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI's Crime database hit by hackers in 2nd breach in recent months",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVlc4OTBlR1l4RUVZOGswT2tkWWFqdmdwUThMNnBQTXBMTHhqQnZMZy15Nk5YOTFzQVdXU19waVhzVmJ3Q09aRUVwR2VwajBvTzhsQjFvR1liZVNMdTJfR3F4QnhuNGN2Xy01RzZ5MUdrdnhRVTJxZWd0LTEzbmdnamFrVzhjS0NSbG4yWW9sX0Z1WVhpV25UQnVIdkc4Qk9jV0hVMEVRdzMyeUZLa2c?oc=5",
+      "source": "Daily Finland",
+      "publishedAt": "2026-11-21T23:01:02.000Z",
+      "latestAt": "2026-11-21T23:01:02.000Z",
+      "firstSeenAt": "2026-11-21T23:03:18.655Z",
+      "outlets": 1,
+      "outletNames": [
+        "Daily Finland"
+      ],
+      "score": 1
+    },
+    {
+      "id": "b3f921dc9af6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTXZ5b1htMjlSeEpBVFRKdFZ3U2JMSFA2MVVtaEZJTkhJcDlldkVzOHp1cHp1SHhDcDZSdEpBTDVONlp3bEhOcno1cHFjVVNucGF3Z3MyVmQtdXJXb0Q0RnkxSjRWV1RHaFdxV2hNT2Nnd1BQVXhTQk9WWDVvZ2xqYm9fX3lPOWpzWXFyb2NCN3lhY2pTbGItaGNZbEFFTVJobVdaOXZpMzlFeEVHX1JqdWtVb1NLTnc?oc=5",
+      "source": "BleepingComputer",
+      "publishedAt": "2026-11-21T22:59:58.000Z",
+      "latestAt": "2026-11-21T22:59:58.000Z",
+      "firstSeenAt": "2026-11-21T23:03:18.655Z",
+      "outlets": 1,
+      "outletNames": [
+        "BleepingComputer"
+      ],
+      "score": 1
+    },
+    {
+      "id": "79d469f763f7",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Dumsor: ECG announces 3-day power cuts in Ashanti region, affected areas listed",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQllFSV9xaFlEX1FHN3BwT1Z0dU4tRWwtcF90Z0VRQWVVTmM4WXhfazRUSVZUOXJ5bk1ZYjAxLTlnclZyMF83d2UwOVh5bTBSdG9Xc29WUVZKTXVfakdCNVdqNnFjMlJ5OUs3cHVuUENkNTV0a0hyNVYwZDVpTVBySVBaVWVLdTVtMWc2NVBJWnUwa0MyZFpTdTJCeXJsb3NqQ3hhTGs0N0t3QnVXT2xxZQ?oc=5",
+      "source": "Yen News",
+      "publishedAt": "2026-11-21T22:49:08.000Z",
+      "latestAt": "2026-11-21T22:49:08.000Z",
+      "firstSeenAt": "2026-11-21T23:03:18.655Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yen News"
+      ],
+      "score": 1
+    },
+    {
       "id": "ade86f14861b",
       "cat": "internet",
       "kind": "news",
@@ -1867,22 +1894,6 @@
       "score": 1
     },
     {
-      "id": "37a70f965357",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers strike at the heart of US law enforcement by targeting FBI criminal database",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZndvRk1RNWxTYkZCbjRtcng3dGhseFNIbnRxRVF4bmd3Um9KalBFTVhoQ1dmZng0TFdndHFlbDFfcURZaVNmV3hrT2sxR04zLW1TSXFxWThZaUdEV1gzT3UyN1pleGxfU0JBTDVHcWp1WUhLdjhveDgxUGFHR1Boa3VvY21yelpERXNlbXVBWlBGaGczdi03RWVSS3ByNWlUbGgxRzczMnZ5ZEdTc2t2T2dwYlpjYlZoQncwRFRiejc?oc=5",
-      "source": "Euro Weekly News",
-      "publishedAt": "2026-11-21T21:33:14.000Z",
-      "latestAt": "2026-11-21T21:33:14.000Z",
-      "firstSeenAt": "2026-11-21T21:48:06.123Z",
-      "outlets": 1,
-      "outletNames": [
-        "Euro Weekly News"
-      ],
-      "score": 1
-    },
-    {
       "id": "a0f3fcd5250b",
       "cat": "germs",
       "kind": "news",
@@ -1897,22 +1908,6 @@
         "County Times"
       ],
       "score": 1
-    },
-    {
-      "id": "7e4ad2140960",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Retail Investors Brace for Monday as U.S. Stocks Plunge Again",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOM3BMSzlCZUU5YmJlNGt4eGQ1eVpGdU5xelFHVEotV3owSTZoZHBjM3JwOUw0X0tZaDAyTFV3OUVicnZDbmZ5WmtYWmdsQXRsem84NlRjZ3ZzNUxoZkVhOFBuNVM0Z2lheHBtN01XbFhqT1ZkemlCbjJMdXZnU1ZqdGJURG1rckU0dDV6NGN2X2QtQXlrTXhSbHIzYW9tWFVLeHc?oc=5",
-      "source": "Seoul Economic Daily",
-      "publishedAt": "2026-11-21T22:00:05.000Z",
-      "latestAt": "2026-11-21T22:00:05.000Z",
-      "firstSeenAt": "2026-11-21T22:33:19.040Z",
-      "outlets": 1,
-      "outletNames": [
-        "Seoul Economic Daily"
-      ],
-      "score": 0.99
     },
     {
       "id": "7ea48e0c9ab9",
