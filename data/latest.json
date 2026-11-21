@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T08:46:06.995Z",
+  "buildTime": "2026-11-21T09:01:07.616Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 03:46 ET",
-  "score": 71,
+  "etStamp": "2026-11-21 04:01 ET",
+  "score": 77,
   "fired": [
     "flights",
     "hacks",
@@ -15,7 +15,8 @@
     "ai",
     "grid",
     "germs",
-    "weather"
+    "weather",
+    "animals"
   ],
   "bumps": [
     {
@@ -24,7 +25,7 @@
       "points": 5
     }
   ],
-  "change": 0,
+  "change": 6,
   "yesterday": {
     "date": "2026-11-20",
     "score": 71,
@@ -46,13 +47,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 291,
-  "lastSuccessAt": "2026-11-21T08:46:06.995Z",
+  "headlinesRead": 1128,
+  "lastSuccessAt": "2026-11-21T09:01:07.616Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
+    "flights": 25,
     "earth": 9,
-    "hacks": 25,
+    "hacks": 22,
     "germs": 4,
     "markets": 11,
     "weather": 6,
@@ -61,7 +62,7 @@
     "internet": 4,
     "ai": 3,
     "space": 3,
-    "animals": 2
+    "animals": 3
   },
   "vital": {
     "quake": {
@@ -182,58 +183,58 @@
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
-      "lastOkAt": "2026-11-21T08:31:10.813Z"
+      "ok": true,
+      "count": 825,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 20 of 26 queries)",
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     },
     "bing": {
       "ok": true,
-      "count": 236,
-      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T08:46:06.995Z"
+      "count": 263,
+      "error": null,
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 16,
-      "error": "rate limited (HTTP 429)",
+      "ok": false,
+      "count": 0,
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-21T08:46:06.995Z"
     },
     "hn": {
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T08:46:06.995Z"
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T08:46:06.995Z"
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:46:06.995Z"
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:46:06.995Z"
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:46:06.995Z"
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:46:06.995Z"
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     },
     "x": {
       "ok": true,
@@ -244,15 +245,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T08:46:06.995Z"
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T08:46:06.995Z"
+      "lastOkAt": "2026-11-21T09:01:07.616Z"
     }
   },
   "stories": [
@@ -309,9 +310,9 @@
       "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
       "source": "Times Now on MSN",
       "publishedAt": "2026-11-20T10:59:00.000Z",
-      "latestAt": "2026-11-21T07:52:23.000Z",
+      "latestAt": "2026-11-21T08:57:37.000Z",
       "firstSeenAt": "2026-11-21T01:29:59.829Z",
-      "outlets": 21,
+      "outlets": 23,
       "outletNames": [
         "Times Now on MSN",
         "Egyptian Gazette",
@@ -333,9 +334,11 @@
         "Jamaica Observer",
         "chinadailyhk",
         "Gulf Today",
-        "Al Arabiya English"
+        "Al Arabiya English",
+        "NZ Herald",
+        "Arise News"
       ],
-      "score": 4.09,
+      "score": 4.19,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
     },
@@ -519,6 +522,29 @@
       "score": 2.58
     },
     {
+      "id": "d3a9abf6f372",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6.8 quake in Peru's Andean region sends Lima residents onto streets",
+      "url": "https://www.khaleejtimes.com/world/americas/earthquake-peru-sends-lima-residents-onto-streets",
+      "source": "Khaleej Times",
+      "publishedAt": "2026-11-20T12:38:00.000Z",
+      "latestAt": "2026-11-21T01:19:04.000Z",
+      "firstSeenAt": "2026-11-21T06:54:11.370Z",
+      "outlets": 6,
+      "outletNames": [
+        "Khaleej Times",
+        "MSN",
+        "NBC News",
+        "GMA Network",
+        "tbsnews",
+        "The Business Standard"
+      ],
+      "score": 2.49,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "912d0c94ffbf",
       "cat": "markets",
       "kind": "news",
@@ -535,23 +561,6 @@
         "sunny 99.1"
       ],
       "score": 2.46
-    },
-    {
-      "id": "4b3383a8d406",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Wisconsin's gun deer season set to open with near record-high temperatures",
-      "url": "https://www.wisn.com/article/wisconsins-gun-deer-season-near-record-high-temperatures/74496179",
-      "source": "WISN 12 News",
-      "publishedAt": "2026-11-20T20:13:00.000Z",
-      "latestAt": "2026-11-21T04:16:20.000Z",
-      "firstSeenAt": "2026-11-21T04:30:36.214Z",
-      "outlets": 2,
-      "outletNames": [
-        "WISN",
-        "WISN 12 News"
-      ],
-      "score": 2.41
     },
     {
       "id": "d39c76101e71",
@@ -618,27 +627,6 @@
       }
     },
     {
-      "id": "c3543c0a8ead",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
-      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
-      "source": "Hindustan Times on MSN",
-      "publishedAt": "2026-11-20T20:15:11.000Z",
-      "latestAt": "2026-11-21T03:36:34.000Z",
-      "firstSeenAt": "2026-11-21T02:30:05.009Z",
-      "outlets": 6,
-      "outletNames": [
-        "CBS News",
-        "ABC7 Chicago",
-        "Wirepoints",
-        "Shaw Local",
-        "WGN-TV",
-        "Hindustan Times on MSN"
-      ],
-      "score": 3.21
-    },
-    {
       "id": "bba455d55701",
       "cat": "hacks",
       "kind": "news",
@@ -687,6 +675,44 @@
       "score": 2.9
     },
     {
+      "id": "4ee3012c5ba5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
+      "source": "Meteora Web",
+      "publishedAt": "2026-11-20T09:16:22.000Z",
+      "latestAt": "2026-11-20T21:17:53.000Z",
+      "firstSeenAt": "2026-11-21T00:44:46.578Z",
+      "outlets": 6,
+      "outletNames": [
+        "Meteora Web",
+        "Help Net Security",
+        "SOC Prime",
+        "SOCRadar",
+        "Pasquale Pillitteri",
+        "Dark Reading"
+      ],
+      "score": 2.66
+    },
+    {
+      "id": "4b3383a8d406",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Wisconsin's gun deer season set to open with near record-high temperatures",
+      "url": "https://www.wisn.com/article/wisconsins-gun-deer-season-near-record-high-temperatures/74496179",
+      "source": "WISN 12 News",
+      "publishedAt": "2026-11-20T20:13:00.000Z",
+      "latestAt": "2026-11-21T04:16:20.000Z",
+      "firstSeenAt": "2026-11-21T04:30:36.214Z",
+      "outlets": 2,
+      "outletNames": [
+        "WISN",
+        "WISN 12 News"
+      ],
+      "score": 2.41
+    },
+    {
       "id": "d130253cceea",
       "cat": "markets",
       "kind": "news",
@@ -704,28 +730,6 @@
         "Yahoo"
       ],
       "score": 2.33
-    },
-    {
-      "id": "d3a9abf6f372",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.8 quake in Peru's Andean region sends Lima residents onto streets",
-      "url": "https://www.khaleejtimes.com/world/americas/earthquake-peru-sends-lima-residents-onto-streets",
-      "source": "Khaleej Times",
-      "publishedAt": "2026-11-20T12:38:00.000Z",
-      "latestAt": "2026-11-21T01:19:04.000Z",
-      "firstSeenAt": "2026-11-21T06:54:11.370Z",
-      "outlets": 5,
-      "outletNames": [
-        "Khaleej Times",
-        "MSN",
-        "NBC News",
-        "GMA Network",
-        "tbsnews"
-      ],
-      "score": 2.31,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "f0efdb839f92",
@@ -820,6 +824,23 @@
       "score": 2.04
     },
     {
+      "id": "3e4b1c709480",
+      "cat": "germs",
+      "kind": "news",
+      "title": "FDA Recalls ORL Oral Care Products Over Hormone Contamination",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5d3NFdGU5R1M4WDZvMWdrRk5ncktvNE1zNmNnN2J6elg4OElKUVRrZ3hSU1RqdnlRLW43WjZXRklaaXZOZ1VMMExjSkVoUXFhSFFTN2l0Y1VJOGs?oc=5",
+      "source": "cwibc.co.id",
+      "publishedAt": "2026-11-21T08:11:59.000Z",
+      "latestAt": "2026-11-21T08:29:47.000Z",
+      "firstSeenAt": "2026-11-21T08:31:10.813Z",
+      "outlets": 2,
+      "outletNames": [
+        "cwibc.co.id",
+        "Limapagi"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "acd1e0d2dcd8",
       "cat": "germs",
       "kind": "news",
@@ -888,23 +909,6 @@
       "score": 1.94
     },
     {
-      "id": "98d844f22c3b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "SoftBank Group Stocks Plunge 14.48% in Worst Day Since 2024 as AI Rout Hits OpenAI Bet",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQTRJNDFCVUx0eG5JWjNwVW1Mc0RKMlNRVEE4dkh6ejRDTHVGRkFJQTFFcWhMcXZnWGIzMzczb2E3TFNnVXB5cHdNV3lubEdsV0tsWk1sRHRxMDRhbS1PUXg1ekNqSDlWbHNlQ0NnVGpFOHVjWG1SZzFMQklQQ3FGaTlNNElsQV96UG14d3AtYjNfVXcxMWlqQUpUa01FMjZabmxGOFJHNndNNmpqWFdybzF6dDd6LUNqenNadzBtSzJNdm1VT3gzRnp3SVpRQXlJWS0xSTBQQmpfOGdNZHc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-20T21:37:37.000Z",
-      "latestAt": "2026-11-20T22:45:33.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 2,
-      "outletNames": [
-        "TradingView",
-        "GuruFocus"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "sig:faa-stop:TEB:2026-11-20",
       "cat": "flights",
       "kind": "signal",
@@ -945,27 +949,6 @@
         "FOX 35 Orlando"
       ],
       "score": 2.81
-    },
-    {
-      "id": "4ee3012c5ba5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
-      "source": "Meteora Web",
-      "publishedAt": "2026-11-20T09:16:22.000Z",
-      "latestAt": "2026-11-20T21:17:53.000Z",
-      "firstSeenAt": "2026-11-21T00:44:46.578Z",
-      "outlets": 6,
-      "outletNames": [
-        "Meteora Web",
-        "Help Net Security",
-        "SOC Prime",
-        "SOCRadar",
-        "Pasquale Pillitteri",
-        "Dark Reading"
-      ],
-      "score": 2.66
     },
     {
       "id": "21bb56ff9807",
@@ -1113,24 +1096,6 @@
       "score": 1.97
     },
     {
-      "id": "787be39d8478",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers leak data on 16,000 Visa, Mastercard & JPMorgan customers",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbkd6cHh4bXpleE1sNW9EckxqQXNBM2cxZXVBaUtnVnBWd2pBdnNqa1c1N3VVcHZHV25DS0JBSHlkR1A4MlpFRmNmRWpHZzF6WE5nMUhvS3EtM0pHX3oybXNPbUo0R0FoUzZHd05qV09LNExNZmY4QTlqZjh2dUdDT0xNZWlhSDFRZlRqamE5M3Y2T2ZZNWR1dmRBcXZDbEdjQzRPeGhFZGM1M2Nt?oc=5",
-      "source": "Euronews.com",
-      "publishedAt": "2026-11-20T08:52:01.000Z",
-      "latestAt": "2026-11-20T13:14:55.000Z",
-      "firstSeenAt": "2026-11-20T23:29:43.349Z",
-      "outlets": 3,
-      "outletNames": [
-        "Euronews.com",
-        "Saudi Gazette",
-        "Malwarebytes"
-      ],
-      "score": 1.95
-    },
-    {
       "id": "e7ec2c2dedbb",
       "cat": "hacks",
       "kind": "news",
@@ -1165,6 +1130,23 @@
       "score": 1.94
     },
     {
+      "id": "98d844f22c3b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "SoftBank Group Stocks Plunge 14.48% in Worst Day Since 2024 as AI Rout Hits OpenAI Bet",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQTRJNDFCVUx0eG5JWjNwVW1Mc0RKMlNRVEE4dkh6ejRDTHVGRkFJQTFFcWhMcXZnWGIzMzczb2E3TFNnVXB5cHdNV3lubEdsV0tsWk1sRHRxMDRhbS1PUXg1ekNqSDlWbHNlQ0NnVGpFOHVjWG1SZzFMQklQQ3FGaTlNNElsQV96UG14d3AtYjNfVXcxMWlqQUpUa01FMjZabmxGOFJHNndNNmpqWFdybzF6dDd6LUNqenNadzBtSzJNdm1VT3gzRnp3SVpRQXlJWS0xSTBQQmpfOGdNZHc?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-20T21:37:37.000Z",
+      "latestAt": "2026-11-20T22:45:33.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 2,
+      "outletNames": [
+        "TradingView",
+        "GuruFocus"
+      ],
+      "score": 1.91
+    },
+    {
       "id": "77772b62137b",
       "cat": "markets",
       "kind": "news",
@@ -1180,24 +1162,6 @@
         "TradingView"
       ],
       "score": 1.91
-    },
-    {
-      "id": "fea9c53a752c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission confirms AI-generated cyberattack disrupted its systems",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNckIzZmV5TldqaWNORGlSVl9lRUc3Yi1zQ1dJbXh4Wk9Iai1WV1U2RW1mRXM1YnlRempCeThFdFVUZ0ZmekoxSTc1c1JyTHo1VTJDV01uNHUtOVZjd0FzSUEtZnZ6M2J0SUs4ZnVmUVVpam13UmNNWTMtUjB5YVEtR05mQjhJS0E2M2paRTRIUFFkSTNRVjZjRUY1REhhR3puaUppTHhOYkdGZXA5SUZNRW5R?oc=5",
-      "source": "Help Net Security",
-      "publishedAt": "2026-11-20T08:52:29.000Z",
-      "latestAt": "2026-11-20T14:48:44.000Z",
-      "firstSeenAt": "2026-11-21T00:59:57.284Z",
-      "outlets": 3,
-      "outletNames": [
-        "Help Net Security",
-        "IranWire",
-        "Intelligent CISO"
-      ],
-      "score": 1.89
     },
     {
       "id": "983bd44770c2",
@@ -1836,6 +1800,22 @@
       "score": 1.14
     },
     {
+      "id": "a911d8548c3f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPczZRcXVPLVRrNEtOOHNBanRMTzZDdGtrRlNUWm9hbUh4YngybUpfME9aaXk0LXlmTzdDaDhvTk1xZzkzS1dzTmJyeGNvN090al90S21Jc0wxWjRrWXZQQnY3Zy1JRzNSNEJZWXdZRGV4NVloOG9aRnNpY2ZuREJhZDBtNm1HcE9NMTdabnJVXzhyandPOVhKdGs2Rnp5dw?oc=5",
+      "source": "timesdaily.com",
+      "publishedAt": "2026-11-20T20:07:00.000Z",
+      "latestAt": "2026-11-20T20:07:00.000Z",
+      "firstSeenAt": "2026-11-21T09:01:07.616Z",
+      "outlets": 1,
+      "outletNames": [
+        "timesdaily.com"
+      ],
+      "score": 1.1
+    },
+    {
       "id": "58175d25b3b7",
       "cat": "internet",
       "kind": "news",
@@ -1850,6 +1830,22 @@
         "Latin Times"
       ],
       "score": 1.1
+    },
+    {
+      "id": "76f09d0a5223",
+      "cat": "flights",
+      "kind": "news",
+      "title": "United Airlines says it has a widespread system outage just days after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQVm1MaUtob2FDQlBqVHBNX2V5bzg3blFKOEJvYURCdE9xdUxfSjF6R0thdDg4ZkJlR1JwUUFmVmt2NGVPaWlzTXhlenpZWjdibDFwQUhxbWVYd19uYUR4VndfQWkwaEd6SUJiN1VLMEZsU0pTWjQ1NldDR2lYa3RxQVVQN2EyN0VlS0c1OFJpQjBtcWFVRDAxQ3lFa0ZyRU1yaDYzQ1V4MDktdWVMQ2xPVE9WcFhpb2c0UGh3cmJiSjZTQ3Y4THVPN2VPQmxzLW51SG5uMDg2U0gtVV9kSThNXw?oc=5",
+      "source": "Trinidad Guardian",
+      "publishedAt": "2026-11-20T16:35:23.000Z",
+      "latestAt": "2026-11-20T16:35:23.000Z",
+      "firstSeenAt": "2026-11-21T09:01:07.616Z",
+      "outlets": 1,
+      "outletNames": [
+        "Trinidad Guardian"
+      ],
+      "score": 1.02
     },
     {
       "id": "d254eeba4937",
@@ -1914,22 +1910,6 @@
         "The Watchers - Watching the world evolve and transform"
       ],
       "score": 1
-    },
-    {
-      "id": "3e4b1c709480",
-      "cat": "germs",
-      "kind": "news",
-      "title": "FDA Recalls ORL Oral Care Products Over Hormone Contamination",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5d3NFdGU5R1M4WDZvMWdrRk5ncktvNE1zNmNnN2J6elg4OElKUVRrZ3hSU1RqdnlRLW43WjZXRklaaXZOZ1VMMExjSkVoUXFhSFFTN2l0Y1VJOGs?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-21T08:11:59.000Z",
-      "latestAt": "2026-11-21T08:11:59.000Z",
-      "firstSeenAt": "2026-11-21T08:31:10.813Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 0.99
     },
     {
       "id": "a15d7e78fba1",
@@ -2014,6 +1994,22 @@
         "Mashable"
       ],
       "score": 0.91
+    },
+    {
+      "id": "f59cff6a06e4",
+      "cat": "animals",
+      "kind": "news",
+      "title": "I’m A Celeb’s Leomie Anderson disgusted as flies swarm around co-star’s dirty underwear as she forces him to clean them",
+      "url": "https://www.thesun.co.uk/tv/41089918/im-a-celeb-leomie-anderson-disgusted-sharky-dirty-underwear/",
+      "source": "The Sun",
+      "publishedAt": "2026-11-21T00:41:00.000Z",
+      "latestAt": "2026-11-21T00:41:00.000Z",
+      "firstSeenAt": "2026-11-21T09:01:07.616Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Sun"
+      ],
+      "score": 0.86
     },
     {
       "id": "3f99b2a2a3e3",
