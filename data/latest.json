@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T06:00:49.219Z",
+  "buildTime": "2026-11-21T06:15:44.332Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 01:00 ET",
+  "etStamp": "2026-11-21 01:15 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,20 +46,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 664,
-  "lastSuccessAt": "2026-11-21T06:00:49.219Z",
+  "headlinesRead": 1317,
+  "lastSuccessAt": "2026-11-21T06:15:44.332Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 20,
+    "flights": 22,
     "earth": 6,
     "germs": 4,
-    "hacks": 30,
+    "hacks": 27,
     "markets": 13,
-    "grid": 5,
-    "weather": 4,
+    "grid": 6,
+    "weather": 5,
     "internet": 4,
     "sun": 4,
-    "ai": 4,
+    "ai": 3,
     "space": 4,
     "animals": 2
   },
@@ -73,8 +73,8 @@
       "tsunami": true
     },
     "kp": {
-      "value": 2.67,
-      "time": "2026-11-21T00:00:00.000Z",
+      "value": 0.33,
+      "time": "2026-11-21T03:00:00.000Z",
       "max24": 2.67
     },
     "asteroid": {
@@ -183,57 +183,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 350,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 10 of 26 queries)",
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "count": 1015,
+      "error": null,
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
-      "error": null,
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "count": 262,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +246,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T06:00:49.219Z"
+      "lastOkAt": "2026-11-21T06:15:44.332Z"
     }
   },
   "stories": [
@@ -331,6 +331,39 @@
       "score": 4.11
     },
     {
+      "id": "17e895587c28",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Peru earthquake: 6.7 magnitude tremor hits Carhuamayo, near Lima",
+      "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
+      "source": "Times Now on MSN",
+      "publishedAt": "2026-11-20T10:59:00.000Z",
+      "latestAt": "2026-11-21T06:01:00.000Z",
+      "firstSeenAt": "2026-11-21T01:29:59.829Z",
+      "outlets": 16,
+      "outletNames": [
+        "Times Now on MSN",
+        "Egyptian Gazette",
+        "ABP News on MSN",
+        "The Times of India",
+        "CGTN",
+        "Newcastle Herald",
+        "UA.NEWS",
+        "The Daily Star",
+        "news9live",
+        "The Rio Times",
+        "Daily Sun",
+        "Gulf News",
+        "India News Network",
+        "The Malaysian Reserve",
+        "The Hindu BusinessLine",
+        "BusinessLine"
+      ],
+      "score": 3.79,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "78e8cb4ec0eb",
       "cat": "hacks",
       "kind": "news",
@@ -356,35 +389,28 @@
       "score": 3.7
     },
     {
-      "id": "17e895587c28",
-      "cat": "earth",
+      "id": "c1812514f929",
+      "cat": "flights",
       "kind": "news",
-      "title": "Peru earthquake: 6.7 magnitude tremor hits Carhuamayo, near Lima",
-      "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
-      "source": "Times Now on MSN",
-      "publishedAt": "2026-11-20T10:59:00.000Z",
-      "latestAt": "2026-11-21T05:28:05.000Z",
-      "firstSeenAt": "2026-11-21T01:29:59.829Z",
-      "outlets": 14,
+      "title": "Catch Me Up: How the ground stop unfolded, and a huge launch for 'GTA IV'",
+      "url": "https://www.lex18.com/shows/catch-me-up/catch-me-up-how-the-ground-stop-unfolded-and-a-huge-launch-for-gta-iv",
+      "source": "LEX 18",
+      "publishedAt": "2026-11-20T16:01:00.000Z",
+      "latestAt": "2026-11-21T03:18:33.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 9,
       "outletNames": [
-        "Times Now on MSN",
-        "Egyptian Gazette",
-        "ABP News on MSN",
-        "The Times of India",
-        "CGTN",
-        "Newcastle Herald",
-        "UA.NEWS",
-        "The Daily Star",
-        "news9live",
-        "The Rio Times",
-        "Daily Sun",
-        "Gulf News",
-        "India News Network",
-        "The Malaysian Reserve"
+        "KPAX News",
+        "KJRH",
+        "Scripps News",
+        "Tampa Bay 28",
+        "LEX 18",
+        "NBC26",
+        "KGUN 9",
+        "KXXV",
+        "WPTV"
       ],
-      "score": 3.64,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
+      "score": 3.6
     },
     {
       "id": "d58ec51a5e53",
@@ -403,24 +429,6 @@
         "Modern Ghana"
       ],
       "score": 3.59
-    },
-    {
-      "id": "d39c76101e71",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Nationwide ground stop caused drop in Americans' confidence in air travel reliability, survey finds",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOX09SMUlwWW1oMnY2Z0xqMHJla3hYTHVDcTQ4b1Jqbm1IbXV4ZWtVdUtPSGNpczUtTVNONGwtSXVzLURvQmFBZ3NWeGZQM2ZldU5ZYmFMUWNadm11MTBnY3BiMkJFeEdFTkNrc3pxWXk4RkJaYnBuSTRjZV9Kd3pBaWtqWWs2ZU9rSVUyYWtibzVHQWNjTEEyUG5Fc29PSzh2b3Utb1BLQi1OSzA1UjdKTzRILVk4azJHb3l2TV9ycUphR1NPMmdr?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-20T23:24:00.000Z",
-      "latestAt": "2026-11-21T00:10:00.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 3,
-      "outletNames": [
-        "CBS News",
-        "Yahoo",
-        "Modern Ghana"
-      ],
-      "score": 3.57
     },
     {
       "id": "0e3af96a9376",
@@ -448,25 +456,25 @@
       "score": 3.38
     },
     {
-      "id": "c3543c0a8ead",
+      "id": "f6d7be94463a",
       "cat": "hacks",
       "kind": "news",
-      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
-      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
-      "source": "Hindustan Times on MSN",
-      "publishedAt": "2026-11-20T20:15:11.000Z",
-      "latestAt": "2026-11-21T03:36:34.000Z",
-      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "title": "Report: FBI criminal information database breached in cyberattack",
+      "url": "https://www.khou.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0",
+      "source": "KHOU",
+      "publishedAt": "2026-11-20T19:35:00.000Z",
+      "latestAt": "2026-11-21T05:31:02.000Z",
+      "firstSeenAt": "2026-11-21T04:30:36.214Z",
       "outlets": 6,
       "outletNames": [
-        "CBS News",
-        "ABC7 Chicago",
-        "Wirepoints",
-        "Shaw Local",
-        "WGN-TV",
-        "Hindustan Times on MSN"
+        "KHOU",
+        "fox61.com",
+        "WFAA",
+        "WCNC",
+        "WUSA9",
+        "The New Indian Express"
       ],
-      "score": 3.21
+      "score": 3.05
     },
     {
       "id": "aeda33a9b3e1",
@@ -544,6 +552,24 @@
       "score": 2.46
     },
     {
+      "id": "d39c76101e71",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide ground stop caused drop in Americans' confidence in air travel reliability, survey finds",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOX09SMUlwWW1oMnY2Z0xqMHJla3hYTHVDcTQ4b1Jqbm1IbXV4ZWtVdUtPSGNpczUtTVNONGwtSXVzLURvQmFBZ3NWeGZQM2ZldU5ZYmFMUWNadm11MTBnY3BiMkJFeEdFTkNrc3pxWXk4RkJaYnBuSTRjZV9Kd3pBaWtqWWs2ZU9rSVUyYWtibzVHQWNjTEEyUG5Fc29PSzh2b3Utb1BLQi1OSzA1UjdKTzRILVk4azJHb3l2TV9ycUphR1NPMmdr?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-20T23:24:00.000Z",
+      "latestAt": "2026-11-21T00:10:00.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 3,
+      "outletNames": [
+        "CBS News",
+        "Yahoo",
+        "Modern Ghana"
+      ],
+      "score": 3.57
+    },
+    {
       "id": "sig:faa-stop:AUS:2026-11-20",
       "cat": "flights",
       "kind": "signal",
@@ -590,50 +616,6 @@
       }
     },
     {
-      "id": "sig:faa-stop:TEB:2026-11-20",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-20T16:28:32.497Z",
-      "latestAt": "2026-11-20T16:28:32.497Z",
-      "firstSeenAt": "2026-11-20T16:28:32.497Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
-    },
-    {
-      "id": "f6d7be94463a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Report: FBI criminal information database breached in cyberattack",
-      "url": "https://www.khou.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0",
-      "source": "KHOU",
-      "publishedAt": "2026-11-20T19:35:00.000Z",
-      "latestAt": "2026-11-21T05:31:02.000Z",
-      "firstSeenAt": "2026-11-21T04:30:36.214Z",
-      "outlets": 6,
-      "outletNames": [
-        "KHOU",
-        "fox61.com",
-        "WFAA",
-        "WCNC",
-        "WUSA9",
-        "The New Indian Express"
-      ],
-      "score": 3.05
-    },
-    {
       "id": "db43eadebab2",
       "cat": "hacks",
       "kind": "news",
@@ -675,6 +657,27 @@
         "KVAL"
       ],
       "score": 2.78
+    },
+    {
+      "id": "4ee3012c5ba5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
+      "source": "Meteora Web",
+      "publishedAt": "2026-11-20T09:16:22.000Z",
+      "latestAt": "2026-11-20T21:17:53.000Z",
+      "firstSeenAt": "2026-11-21T00:44:46.578Z",
+      "outlets": 6,
+      "outletNames": [
+        "Meteora Web",
+        "Help Net Security",
+        "SOC Prime",
+        "SOCRadar",
+        "Pasquale Pillitteri",
+        "Dark Reading"
+      ],
+      "score": 2.66
     },
     {
       "id": "39e492d9e722",
@@ -894,25 +897,27 @@
       "score": 1.94
     },
     {
-      "id": "c1812514f929",
+      "id": "sig:faa-stop:TEB:2026-11-20",
       "cat": "flights",
-      "kind": "news",
-      "title": "Catch Me Up: How the ground stop unfolded, and a huge launch for 'GTA IV'",
-      "url": "https://www.lex18.com/shows/catch-me-up/catch-me-up-how-the-ground-stop-unfolded-and-a-huge-launch-for-gta-iv",
-      "source": "LEX 18",
-      "publishedAt": "2026-11-20T16:01:00.000Z",
-      "latestAt": "2026-11-21T01:41:09.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 6,
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-20T16:28:32.497Z",
+      "latestAt": "2026-11-20T16:28:32.497Z",
+      "firstSeenAt": "2026-11-20T16:28:32.497Z",
+      "outlets": 1,
       "outletNames": [
-        "KPAX News",
-        "KJRH",
-        "Scripps News",
-        "Tampa Bay 28",
-        "LEX 18",
-        "NBC26"
+        "FAA"
       ],
-      "score": 3.09
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
     },
     {
       "id": "976915d23d0d",
@@ -932,27 +937,6 @@
         "FOX 35 Orlando"
       ],
       "score": 2.81
-    },
-    {
-      "id": "4ee3012c5ba5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
-      "source": "Meteora Web",
-      "publishedAt": "2026-11-20T09:16:22.000Z",
-      "latestAt": "2026-11-20T21:17:53.000Z",
-      "firstSeenAt": "2026-11-21T00:44:46.578Z",
-      "outlets": 6,
-      "outletNames": [
-        "Meteora Web",
-        "Help Net Security",
-        "SOC Prime",
-        "SOCRadar",
-        "Pasquale Pillitteri",
-        "Dark Reading"
-      ],
-      "score": 2.66
     },
     {
       "id": "1ac4999a4493",
@@ -992,25 +976,6 @@
       "score": 2.49
     },
     {
-      "id": "ceb2408f55ce",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers use Microsoft Outlook security flaw to steal your login data",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-microsoft-outlook-security-flaw-140917119.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-20T06:09:00.000Z",
-      "latestAt": "2026-11-20T14:09:17.000Z",
-      "firstSeenAt": "2026-11-20T16:58:32.799Z",
-      "outlets": 4,
-      "outletNames": [
-        "YAHOO!",
-        "Fox News",
-        "AOL.com",
-        "Yahoo Tech"
-      ],
-      "score": 2.46
-    },
-    {
       "id": "50e8bed5e3a2",
       "cat": "hacks",
       "kind": "news",
@@ -1044,24 +1009,6 @@
         "WWAYTV3"
       ],
       "score": 2.4
-    },
-    {
-      "id": "4d14115377e9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Faces Data Leak After Banking Outage: Risks Mount?",
-      "url": "https://finance.yahoo.com/technology/articles/jpmorgan-faces-data-leak-banking-141200565.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-20T06:12:00.000Z",
-      "latestAt": "2026-11-20T15:43:15.000Z",
-      "firstSeenAt": "2026-11-20T15:58:21.605Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo Finance",
-        "Zacks Investment Research",
-        "Yahoo Finance Australia"
-      ],
-      "score": 2.16
     },
     {
       "id": "baee4d10b4a4",
@@ -1213,7 +1160,7 @@
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdG5vcm1LR216RmFiQ3otOE1vc2NqMmdjLXNPVUd3RnZ1YlBSUFZaMkxaT3hSaGFzWXI1ajhzOHZ1X0xoQWxMTmdUUXdnTElTUWlqVDFNMV9TbEE3WENscjRuOWtNRnFCemJocEx4OFVnOTl2Y002UzhnT2VuZThnYUxpNmR1eC04?oc=5",
       "source": "Yahoo",
       "publishedAt": "2026-11-20T22:01:17.000Z",
-      "latestAt": "2026-11-20T23:53:37.000Z",
+      "latestAt": "2026-11-20T23:56:06.000Z",
       "firstSeenAt": "2026-11-20T23:56:09.314Z",
       "outlets": 2,
       "outletNames": [
@@ -1748,22 +1695,6 @@
       "score": 1.4
     },
     {
-      "id": "3a64d7cbe587",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Microsoft meltdown: Outlook, Teams and Copilot hit by global outage",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-20T06:15:43.000Z",
-      "latestAt": "2026-11-21T05:39:07.000Z",
-      "firstSeenAt": "2026-11-20T06:26:52.947Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "9c038831c357",
       "cat": "flights",
       "kind": "news",
@@ -1842,6 +1773,71 @@
         "ABC7 New York"
       ],
       "score": 1.39
+    },
+    {
+      "id": "83ef9fdc9f2a",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Weekend Outlook: Record heat followed by cold and snow",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVm9zMTBGLTBKZkx2QWNaNWs0eFBsQnpuSktOZ2FpdUpPOXRqVlp3VU05TDYxVXNXX3lETWxBZGtGLUxyQ3lTcWZacjIzVTRuTzc4VUEzblo3TW0xbW5NYUhQSVpJVjRqREs2UTZROFAtaTFmN2RZaFRfNEJjZC1kNWpybzZDNHc0UlhQcHZIaVloV21XLUtTQnZGVnl4b28?oc=5",
+      "source": "SooToday.com",
+      "publishedAt": "2026-11-20T11:40:50.000Z",
+      "latestAt": "2026-11-20T11:45:07.000Z",
+      "firstSeenAt": "2026-11-20T11:57:38.909Z",
+      "outlets": 1,
+      "outletNames": [
+        "SooToday.com"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "fb2ea691c7d6",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Why some Americans are stockpiling for a 90-day power outage",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1JYVE0LTZoUVU4VzVVdDZoM3dJZUlCV2szLTNMaExSeWlvdDg3aG5HQkZPZml6eHAtdW8yZ1pBNEp5VnJudUxvYkdfVGZ0dkxnN2NicmdESE5nT19uNUhpUTFmNy1uRm1tRTVhN05BZjVoTW1pUktGUkFFZHdrUQ?oc=5",
+      "source": "Yahoo News Canada",
+      "publishedAt": "2026-11-20T09:00:00.000Z",
+      "latestAt": "2026-11-21T02:24:48.000Z",
+      "firstSeenAt": "2026-11-21T06:15:44.332Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo News Canada",
+        "CBC"
+      ],
+      "score": 1.29
+    },
+    {
+      "id": "3b772a241d3b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "MSY officials give an update after nationwide ground stop, ahead of holiday travel",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObE50anpxSFFPQzVfaUNCZ183akxkcm5ZaVRTQkxmd3Exd0QwdXFWVmxYNXRRcGwzakY1elA3THhuUGhaU0ZQN093Q0U5ZGRWbGhOQjBVLWNqa0dZbmNKUUZkOUpkMHlTR1ZCdzU2NmJ5b3Atb1VGcXhRTTZGaS0zcXI1MlQ5azlBR2xlbkwyUTB2TEZuZnhyVV9kbDhwSHhTR1pIS1dxOVh4cTFVVS1oWnM4SW5rVmkzNzBF?oc=5",
+      "source": "WDSU",
+      "publishedAt": "2026-11-21T00:20:00.000Z",
+      "latestAt": "2026-11-21T00:20:00.000Z",
+      "firstSeenAt": "2026-11-21T06:15:44.332Z",
+      "outlets": 1,
+      "outletNames": [
+        "WDSU"
+      ],
+      "score": 1.26
+    },
+    {
+      "id": "bde7b736b93c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Holiday travel concerns after recent nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0zNEp4RXg0ZUdLQnpGVVBUWVhRTjVoV3VuSk9rNmRodEc4YV93enFSMjUtN2o0eUU3WjR1eXNGV0NwanRCZzVhdkhSX1NpTWRndy0zWktTejF5QU1TT0HSAWNBVV95cUxQUlFWbnk0TkM5SnpjT1M3TzZ4RjlDOHJVSi1QT1c4TV83dDMwV01kSmwzOXNvcVFselRzMlJoRE1GSk9kak0tbTAwTW82ZlJNeGZDT2pjckFSZHpLWTU5a3ktOGs?oc=5",
+      "source": "FOX 5 New York",
+      "publishedAt": "2026-11-20T23:10:44.000Z",
+      "latestAt": "2026-11-20T23:10:44.000Z",
+      "firstSeenAt": "2026-11-21T06:15:44.332Z",
+      "outlets": 1,
+      "outletNames": [
+        "FOX 5 New York"
+      ],
+      "score": 1.23
     },
     {
       "id": "3a38015822b7",
