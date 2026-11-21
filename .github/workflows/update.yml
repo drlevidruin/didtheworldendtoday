@@ -26,7 +26,7 @@ jobs:
     timeout-minutes: 20
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.deploy_retry.outputs.page_url }}
     steps:
       # ref: the branch itself, not the commit that triggered the run, so a run
       # that waited behind another one starts from the newest main.
@@ -115,6 +115,19 @@ jobs:
         with:
           path: dist
 
+      # GitHub sometimes lists the uploaded site a second or two late, and the
+      # deploy then finds no "github-pages" artifact (about one run in seven on
+      # 2026-11-21). The first try may fail; the second, after a wait, decides.
       - name: Deploy
         id: deploy
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+
+      - name: Wait before the second try
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 20
+
+      - name: Deploy, second try
+        id: deploy_retry
+        if: steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v5
