@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T08:16:04.663Z",
+  "buildTime": "2026-11-21T08:31:10.813Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 03:16 ET",
+  "etStamp": "2026-11-21 03:31 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,17 +46,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1297,
-  "lastSuccessAt": "2026-11-21T08:16:04.663Z",
+  "headlinesRead": 834,
+  "lastSuccessAt": "2026-11-21T08:31:10.813Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
     "earth": 9,
-    "hacks": 27,
+    "hacks": 25,
     "germs": 4,
-    "markets": 10,
+    "markets": 11,
     "weather": 6,
-    "grid": 5,
+    "grid": 6,
     "sun": 4,
     "internet": 4,
     "ai": 3,
@@ -178,81 +178,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1005,
-      "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "count": 566,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 12 of 26 queries)",
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "bing": {
       "ok": true,
-      "count": 253,
-      "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "count": 228,
+      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T08:16:04.663Z"
+      "lastOkAt": "2026-11-21T08:31:10.813Z"
     }
   },
   "stories": [
@@ -705,6 +704,28 @@
       "score": 2.33
     },
     {
+      "id": "d3a9abf6f372",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6.8 quake in Peru's Andean region sends Lima residents onto streets",
+      "url": "https://www.khaleejtimes.com/world/americas/earthquake-peru-sends-lima-residents-onto-streets",
+      "source": "Khaleej Times",
+      "publishedAt": "2026-11-20T12:38:00.000Z",
+      "latestAt": "2026-11-21T01:19:04.000Z",
+      "firstSeenAt": "2026-11-21T06:54:11.370Z",
+      "outlets": 5,
+      "outletNames": [
+        "Khaleej Times",
+        "MSN",
+        "NBC News",
+        "GMA Network",
+        "tbsnews"
+      ],
+      "score": 2.31,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "f0efdb839f92",
       "cat": "earth",
       "kind": "news",
@@ -778,27 +799,6 @@
         "CBS News"
       ],
       "score": 2.19
-    },
-    {
-      "id": "d3a9abf6f372",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.8 quake in Peru's Andean region sends Lima residents onto streets",
-      "url": "https://www.khaleejtimes.com/world/americas/earthquake-peru-sends-lima-residents-onto-streets",
-      "source": "Khaleej Times",
-      "publishedAt": "2026-11-20T12:38:00.000Z",
-      "latestAt": "2026-11-21T01:19:04.000Z",
-      "firstSeenAt": "2026-11-21T06:54:11.370Z",
-      "outlets": 4,
-      "outletNames": [
-        "Khaleej Times",
-        "MSN",
-        "NBC News",
-        "GMA Network"
-      ],
-      "score": 2.09,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "cb91c9815031",
@@ -1385,24 +1385,6 @@
       "score": 1.67
     },
     {
-      "id": "a40572699cb2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Leaked Customer Data From Visa, Mastercard, and JPMorgan After Hacking Contractors",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV2htaXBtYnptYUFJbjR6bUJTVno4RF9LQXo0VE5xYTJqTmphNXpSOEl6S01fSFRlVGc3Q2pZMUNDRFdhTkRfVHhiVHcxZ0ZGcHBmZkRYNjNVU3lUUjk0Z3NwcVhCV1lsQ04tNVN6MnBHQmR4eVRMZDlLY0V4a2RLaTNxVERTSFBfaUxfUjRkRlJRZVhSQjlLVkU4UmlqZC0tXzdjTHJNV2JBcElKdnNEdkEtRWk?oc=5",
-      "source": "Incrypted",
-      "publishedAt": "2026-11-20T08:17:19.000Z",
-      "latestAt": "2026-11-21T03:14:53.000Z",
-      "firstSeenAt": "2026-11-21T05:30:36.526Z",
-      "outlets": 3,
-      "outletNames": [
-        "Incrypted",
-        "Yahoo",
-        "CXOToday.com"
-      ],
-      "score": 1.67
-    },
-    {
       "id": "92a732a5dbb6",
       "cat": "grid",
       "kind": "news",
@@ -1454,6 +1436,23 @@
       "score": 1.57,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "13b6d70b3a84",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Stock Market Today, Nov. 20: Stocks Plunge as AI Trade Unwinds",
+      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-stocks-plunge-as-ai-trade-unwinds/",
+      "source": "The Motley Fool",
+      "publishedAt": "2026-11-20T14:15:00.000Z",
+      "latestAt": "2026-11-20T22:35:13.000Z",
+      "firstSeenAt": "2026-11-21T03:15:12.421Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Motley Fool",
+        "Yahoo Finance"
+      ],
+      "score": 1.57
     },
     {
       "id": "99cd329f37d5",
@@ -1783,6 +1782,22 @@
       "score": 1.2
     },
     {
+      "id": "e5d5df26ea16",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Powerful storm crushes two massive transmission towers, leaving 24,000 customers without electricity",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZlJGMnZHbXZtUWhGWmJDMFMwVkE2eXVJUW1JR1NDYV82QjVTY2Z2SlBIQlllOEhlU3ZQYktDWm9HMEtXSEhLa1d3ZlJweEtHY1A5alhQZWctWFJJYVJ0Sm8yTmZWdy1xc3VUNWdYb0pzdlRwZkdyWEtiOElLd2QxT3hmdG5BaEpiMWtlSFZjVE1hVDA?oc=5",
+      "source": "The Cool Down",
+      "publishedAt": "2026-11-20T22:52:00.000Z",
+      "latestAt": "2026-11-20T22:52:00.000Z",
+      "firstSeenAt": "2026-11-21T08:31:10.813Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Cool Down"
+      ],
+      "score": 1.17
+    },
+    {
       "id": "6356ead9544f",
       "cat": "flights",
       "kind": "news",
@@ -1797,22 +1812,6 @@
         "KCTV"
       ],
       "score": 1.17
-    },
-    {
-      "id": "215243f80f61",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Africa's biggest airline digs into hackers targeting 5.38 million customer accounts as it connects the U.S., Canada and South Africa",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdWRDMTdoWlJ5cGJwUHhuQTlfWUtQaGlKamxtaTNDOG85VXV3U1c0SzJta2FmR2hlcUVSYWpURjY5cFpQZUllSXZZZ09xV0ppcEpQc1cxUk5BRzJOV2hQWVBOWWVVN0VZZFB4WklONk5kM1I1MW1lQmtlUjhHQmdvR2o0cUZtYWZpdzVtcFNmdUhkeklDMTFZbEhQcFg3cWRjR1lkd3lFY0Zid1BVT2JEQlR2Ulc5aW5BWU1xcVFyQmxIUGJvOXc1ejZ2cTJ2WkZkMzNYbkpR?oc=5",
-      "source": "Business Insider Africa",
-      "publishedAt": "2026-11-20T21:35:54.000Z",
-      "latestAt": "2026-11-20T21:35:54.000Z",
-      "firstSeenAt": "2026-11-21T08:16:04.663Z",
-      "outlets": 1,
-      "outletNames": [
-        "Business Insider Africa"
-      ],
-      "score": 1.15
     },
     {
       "id": "3f09681c5efa",
@@ -1895,6 +1894,22 @@
       "score": 1
     },
     {
+      "id": "3e4b1c709480",
+      "cat": "germs",
+      "kind": "news",
+      "title": "FDA Recalls ORL Oral Care Products Over Hormone Contamination",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5d3NFdGU5R1M4WDZvMWdrRk5ncktvNE1zNmNnN2J6elg4OElKUVRrZ3hSU1RqdnlRLW43WjZXRklaaXZOZ1VMMExjSkVoUXFhSFFTN2l0Y1VJOGs?oc=5",
+      "source": "cwibc.co.id",
+      "publishedAt": "2026-11-21T08:11:59.000Z",
+      "latestAt": "2026-11-21T08:11:59.000Z",
+      "firstSeenAt": "2026-11-21T08:31:10.813Z",
+      "outlets": 1,
+      "outletNames": [
+        "cwibc.co.id"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "339b07375920",
       "cat": "internet",
       "kind": "news",
@@ -1961,22 +1976,6 @@
         "Barrie News"
       ],
       "score": 0.99
-    },
-    {
-      "id": "177df1cbaf42",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Kittitas bird flu",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWmRRMGZZNGFSRlRXUm9BZ2lOUk5fTWJ6eVdzZHc2bmlZOThlMjhCU2NkRWY0UzhCemhobnczX1R2VG8wcWhSWlg5b2ZaVjk1blpxSFBVQVBNU2hZMEdIR2w0dVhhZXEtdGpiaU91eEJJUmdoM0JpaHVhdk5BZmNxejV4eHNPV0kxWDhZTTNZdjR0dnljalZfRQ?oc=5",
-      "source": "Nonstop Local News",
-      "publishedAt": "2026-11-21T03:20:46.000Z",
-      "latestAt": "2026-11-21T03:20:46.000Z",
-      "firstSeenAt": "2026-11-21T07:16:01.078Z",
-      "outlets": 1,
-      "outletNames": [
-        "Nonstop Local News"
-      ],
-      "score": 0.93
     },
     {
       "id": "998f7018e162",
