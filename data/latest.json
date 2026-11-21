@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T01:15:04.078Z",
+  "buildTime": "2026-11-21T01:29:59.829Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 20:15 ET",
+  "etStamp": "2026-11-20 20:29 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -51,15 +51,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1321,
-  "lastSuccessAt": "2026-11-21T01:15:04.078Z",
+  "headlinesRead": 1308,
+  "lastSuccessAt": "2026-11-21T01:29:59.829Z",
   "rollingFallback": false,
   "cats": {
     "flights": 26,
     "earth": 5,
-    "grid": 5,
+    "grid": 6,
     "germs": 5,
-    "hacks": 27,
+    "hacks": 26,
     "markets": 11,
     "internet": 5,
     "sun": 4,
@@ -183,81 +183,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1005,
+      "count": 994,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 275,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T00:29:44.121Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T01:15:04.078Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z"
     }
   },
   "stories": [
@@ -404,7 +403,7 @@
       "publishedAt": "2026-11-20T09:39:00.000Z",
       "latestAt": "2026-11-20T23:54:58.000Z",
       "firstSeenAt": "2026-11-20T22:44:29.793Z",
-      "outlets": 8,
+      "outlets": 9,
       "outletNames": [
         "NBC News",
         "marketscreener.com",
@@ -413,9 +412,10 @@
         "CNA",
         "Investing.com",
         "U.S. News & World Report",
-        "SRN News"
+        "SRN News",
+        "Devdiscourse"
       ],
-      "score": 3.13
+      "score": 3.26
     },
     {
       "id": "80b173a24678",
@@ -454,6 +454,27 @@
       "score": 2.67
     },
     {
+      "id": "4ee3012c5ba5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
+      "source": "Meteora Web",
+      "publishedAt": "2026-11-20T09:16:22.000Z",
+      "latestAt": "2026-11-20T21:17:53.000Z",
+      "firstSeenAt": "2026-11-21T00:44:46.578Z",
+      "outlets": 6,
+      "outletNames": [
+        "Meteora Web",
+        "Help Net Security",
+        "SOC Prime",
+        "SOCRadar",
+        "Pasquale Pillitteri",
+        "Dark Reading"
+      ],
+      "score": 2.66
+    },
+    {
       "id": "6a48e452a3f3",
       "cat": "markets",
       "kind": "news",
@@ -490,24 +511,6 @@
         "KBND"
       ],
       "score": 2.58
-    },
-    {
-      "id": "501df2603002",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcFBfVV9yWmpNSFpEMTdwdmJha2t3aVFja1gzeUhTWUZfWTF4U0NaNXBmYlp3V1pwZlU5dk5XZ0F2YkVGWmpEOHJ5bXE5bjhseTlocldieHpUQXdtY0FUZ1A5RXRQMmtUbDdQVlFvMU9pZDduWFdySUZ6NVFFMjlXNHRnT0lIX3p5Umc?oc=5",
-      "source": "SecurityWeek",
-      "publishedAt": "2026-11-20T11:36:51.000Z",
-      "latestAt": "2026-11-20T17:37:22.000Z",
-      "firstSeenAt": "2026-11-20T13:42:59.984Z",
-      "outlets": 3,
-      "outletNames": [
-        "SecurityWeek",
-        "SC Media",
-        "Claim Depot"
-      ],
-      "score": 2.49
     },
     {
       "id": "ad9dfb453401",
@@ -592,24 +595,22 @@
       }
     },
     {
-      "id": "4ee3012c5ba5",
+      "id": "501df2603002",
       "cat": "hacks",
       "kind": "news",
-      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
-      "source": "Meteora Web",
-      "publishedAt": "2026-11-20T09:16:22.000Z",
-      "latestAt": "2026-11-20T16:57:05.000Z",
-      "firstSeenAt": "2026-11-21T00:44:46.578Z",
-      "outlets": 5,
+      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcFBfVV9yWmpNSFpEMTdwdmJha2t3aVFja1gzeUhTWUZfWTF4U0NaNXBmYlp3V1pwZlU5dk5XZ0F2YkVGWmpEOHJ5bXE5bjhseTlocldieHpUQXdtY0FUZ1A5RXRQMmtUbDdQVlFvMU9pZDduWFdySUZ6NVFFMjlXNHRnT0lIX3p5Umc?oc=5",
+      "source": "SecurityWeek",
+      "publishedAt": "2026-11-20T11:36:51.000Z",
+      "latestAt": "2026-11-20T17:37:22.000Z",
+      "firstSeenAt": "2026-11-20T13:42:59.984Z",
+      "outlets": 3,
       "outletNames": [
-        "Meteora Web",
-        "Help Net Security",
-        "SOC Prime",
-        "SOCRadar",
-        "Pasquale Pillitteri"
+        "SecurityWeek",
+        "SC Media",
+        "Claim Depot"
       ],
-      "score": 2.47
+      "score": 2.49
     },
     {
       "id": "ceb2408f55ce",
@@ -709,7 +710,7 @@
       "url": "https://www.usnews.com/news/world/articles/2026-11-20/magnitude-6-8-quake-strikes-peru-sending-lima-residents-from-homes",
       "source": "U.S. News & World Report",
       "publishedAt": "2026-11-20T11:30:00.000Z",
-      "latestAt": "2026-11-21T00:35:17.000Z",
+      "latestAt": "2026-11-21T00:39:00.000Z",
       "firstSeenAt": "2026-11-21T01:15:04.078Z",
       "outlets": 3,
       "outletNames": [
@@ -1294,6 +1295,25 @@
       "score": 1.73
     },
     {
+      "id": "17e895587c28",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Peru earthquake: 6.7 magnitude tremor hits Carhuamayo, near Lima",
+      "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
+      "source": "Times Now on MSN",
+      "publishedAt": "2026-11-20T17:01:20.000Z",
+      "latestAt": "2026-11-21T00:32:51.000Z",
+      "firstSeenAt": "2026-11-21T01:29:59.829Z",
+      "outlets": 2,
+      "outletNames": [
+        "Times Now on MSN",
+        "Egyptian Gazette"
+      ],
+      "score": 1.72,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "8ae297aa1b0c",
       "cat": "hacks",
       "kind": "news",
@@ -1341,6 +1361,24 @@
       "outletNames": [
         "Yahoo Finance",
         "The Motley Fool"
+      ],
+      "score": 1.71
+    },
+    {
+      "id": "745b1609cdfd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan, Visa, and Mastercard customer data leaked on the dark web by \"n0n\" ransomware group",
+      "url": "https://www.techspot.com/news/114637-jpmorgan-visa-mastercard-customer-data-leaked-dark-web.html",
+      "source": "TechSpot",
+      "publishedAt": "2026-11-20T05:17:16.000Z",
+      "latestAt": "2026-11-20T08:17:19.000Z",
+      "firstSeenAt": "2026-11-21T01:29:59.829Z",
+      "outlets": 3,
+      "outletNames": [
+        "Tempo.co English",
+        "TechSpot",
+        "Incrypted"
       ],
       "score": 1.71
     },
@@ -1694,6 +1732,22 @@
       "score": 1.4
     },
     {
+      "id": "443993908cdc",
+      "cat": "grid",
+      "kind": "news",
+      "title": "PG&E claims better 2025 reliability, but leaves out massive San Francisco blackout",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9SZDdOOTJvQ1k2YmJTRUl2ZEFVYnJmNk0wb0VaRXoyRUNVSllhTzMyNlczczN6T1ZydExXaVdTUzF6NWVqQ29lWnVVMXpUUllyMzNpbG9FY0c0NFJHQ2FaR3FORU03TEU4VFVhWHpmTjAyYjUwZHp2UWpJMNIBgwFBVV95cUxOOENiaUp2dWxCOXZoTU92N3NZbTI4TEpzR1JyY2drVXBJTVRoQkV6b19YMDNUMlVqV0VZU1ZOU01vSjc0TkpxaXVkd0pnV2lHNHNPOHBYLUpreEdZM00zX042cGNwV0NRd2NuYlVTWHBjUHVjUEV6OXpKb3lZdHMzVVBxYw?oc=5",
+      "source": "NBC Bay Area",
+      "publishedAt": "2026-11-21T01:09:54.000Z",
+      "latestAt": "2026-11-21T01:09:54.000Z",
+      "firstSeenAt": "2026-11-21T01:29:59.829Z",
+      "outlets": 1,
+      "outletNames": [
+        "NBC Bay Area"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "0d6a4a9c9e41",
       "cat": "flights",
       "kind": "news",
@@ -1790,38 +1844,6 @@
       "score": 1.39
     },
     {
-      "id": "0ef8a3bbfd00",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK Refrigerators saved from major Cyberattack in a Secret Seven Day Operation",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbi16VC1uQ2J1ek44aTRhaDNhTWhuekpuWEZsOGItdnZoTnBWYjN4b1p6bTZscThvSTBvX1BIbXllNm1mMkcwSVBpMWtHcFBGNGQ0dUdYbTkzbHlKd1lqVExiNmhYNU1kYVJJMG0zdjJkbXRHaFZuOXFZeWNPNGNHcjBDcTM1NXlWZ3oydzhlNGExZDBJbi14aG8zRVZvMTZiSkp0OUZNZENjb0xMOXJlN21IQVBkM254?oc=5",
-      "source": "Cybersecurity Insiders",
-      "publishedAt": "2026-11-20T15:29:55.000Z",
-      "latestAt": "2026-11-20T15:29:55.000Z",
-      "firstSeenAt": "2026-11-20T15:58:21.605Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cybersecurity Insiders"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "867eb675987d",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Indonesia’s Semeru volcano erupts, spews massive ash cloud",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSVptMW1rVlhVaDlfUlZyVkdwcWxfRXRsRDQ5SHB6MVptUTVpSVdwSlZheXBsZ2oxT0piWFVGaW1Xc0tEOXVScE5ick1CQ3Q0b3JRWkZISjJBSVh5TUY4a2x3XzhuTEJ5em9ZaGhQTS1ibDhXbldmN2o1V1ZUeUJBTlZEYm5xb0tyelpWRENCV2N0ZW1KLV9uQU11Zw?oc=5",
-      "source": "Yeni Safak English",
-      "publishedAt": "2026-11-20T15:20:36.000Z",
-      "latestAt": "2026-11-20T15:20:36.000Z",
-      "firstSeenAt": "2026-11-20T15:43:31.995Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yeni Safak English"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "83ef9fdc9f2a",
       "cat": "weather",
       "kind": "news",
@@ -1834,22 +1856,6 @@
       "outlets": 1,
       "outletNames": [
         "SooToday.com"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "74e770b8872d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major US banks face cyberattack involving 16,000 customer details",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPXzN5UGVXd2tGT01aTFR6X1ZVNzM4N1BELVNVM052MTkwOEtUZGdKM1diVU1XUkZXWTBWTEMzdkhndGtPcEZwUnZ6QzBDZ3ZMaTJLM0FIQW1XMm5VVTF4MjJnOHI2X0FnaXVMNkpHZ3dkc0JtT0I0VGdqMC1MUmF1REVLUlJwVDZGVDRtaVhn?oc=5",
-      "source": "Interesting Engineering",
-      "publishedAt": "2026-11-20T03:42:00.000Z",
-      "latestAt": "2026-11-20T03:42:00.000Z",
-      "firstSeenAt": "2026-11-20T03:56:22.027Z",
-      "outlets": 1,
-      "outletNames": [
-        "Interesting Engineering"
       ],
       "score": 1.39
     },
