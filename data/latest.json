@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T00:14:45.697Z",
+  "buildTime": "2026-11-21T00:29:44.121Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 19:14 ET",
-  "score": 72,
+  "etStamp": "2026-11-20 19:29 ET",
+  "score": 77,
   "fired": [
     "flights",
     "hacks",
@@ -19,12 +19,17 @@
   ],
   "bumps": [
     {
+      "key": "quake",
+      "label": "Quake M6 or more",
+      "points": 5
+    },
+    {
       "key": "faa",
       "label": "Ground stop at a major hub",
       "points": 6
     }
   ],
-  "change": -8,
+  "change": -3,
   "yesterday": {
     "date": "2026-11-19",
     "score": 80,
@@ -46,31 +51,31 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1262,
-  "lastSuccessAt": "2026-11-21T00:14:45.697Z",
+  "headlinesRead": 1270,
+  "lastSuccessAt": "2026-11-21T00:29:44.121Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 25,
+    "flights": 26,
+    "earth": 4,
     "grid": 7,
     "germs": 5,
     "hacks": 25,
     "markets": 12,
-    "earth": 4,
-    "ai": 4,
     "internet": 5,
     "weather": 4,
+    "ai": 3,
     "sun": 4,
     "space": 4,
     "animals": 1
   },
   "vital": {
     "quake": {
-      "mag": 5.6,
-      "place": "southeast of the Loyalty Islands",
-      "time": "2026-11-20T00:49:14.102Z",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uc4v",
-      "pager": "green",
-      "tsunami": false
+      "mag": 6.7,
+      "place": "9 km NE of Carhuamayo, Peru",
+      "time": "2026-11-21T00:09:19.667Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucfm",
+      "pager": null,
+      "tsunami": true
     },
     "kp": {
       "value": 0.67,
@@ -178,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1007,
+      "count": 995,
       "error": null,
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "bing": {
       "ok": true,
-      "count": 216,
-      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "count": 236,
+      "error": null,
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,56 +208,55 @@
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "usgs": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-20T23:29:43.349Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T00:14:45.697Z"
+      "lastOkAt": "2026-11-21T00:29:44.121Z"
     }
   },
   "stories": [
@@ -275,6 +279,31 @@
         "crossville-chronicle.com"
       ],
       "score": 4.62
+    },
+    {
+      "id": "sig:quake:us6000ucfm",
+      "cat": "earth",
+      "kind": "signal",
+      "title": "M 6.7 - 9 km NE of Carhuamayo, Peru",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucfm",
+      "source": "USGS",
+      "publishedAt": "2026-11-21T00:09:19.667Z",
+      "latestAt": "2026-11-21T00:09:19.667Z",
+      "firstSeenAt": "2026-11-21T00:29:44.121Z",
+      "outlets": 1,
+      "outletNames": [
+        "USGS"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "quake",
+        "mag": 6.7,
+        "place": "9 km NE of Carhuamayo, Peru",
+        "pager": null,
+        "tsunami": true
+      },
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "sig:faa-stop:LAS:2026-11-19",
@@ -365,28 +394,6 @@
       "score": 3.59
     },
     {
-      "id": "c77caedd2626",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "VMware patches vCenter zero-day exploited in attacks since September",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPR1RWd3JTTlJ2Rk9keERmYWpGcFRQdkpCdkVud2x0RXp2dFFzX0hrVDg4UGtBSDgwNGZrdXB4MGxtbmxXS2hqZ1pCdjVqR004d2ZDY29uNEVmVUpNRGJNb2gyaFFUU256cHhwU2lJRmRMQlhDX0U5cmJpSTBlNDhhS3Mtd01uQmtkQlNfYnZ4U2dNbUJkZzQwaHdwOTN3V2RhWjJXWFhKOFpyU0M3VF85WkN2bnlIZTQ?oc=5",
-      "source": "BleepingComputer",
-      "publishedAt": "2026-11-20T00:26:25.000Z",
-      "latestAt": "2026-11-20T16:57:05.000Z",
-      "firstSeenAt": "2026-11-20T08:42:12.202Z",
-      "outlets": 7,
-      "outletNames": [
-        "BleepingComputer",
-        "Mezha.net",
-        "Help Net Security",
-        "Pasquale Pillitteri",
-        "Meteora Web",
-        "SOC Prime",
-        "SOCRadar"
-      ],
-      "score": 3.28
-    },
-    {
       "id": "0e3af96a9376",
       "cat": "hacks",
       "kind": "news",
@@ -394,9 +401,9 @@
       "url": "https://www.nbcnews.com/politics/national-security/agriculture-department-breached-hackers-sources-say-rcna610497",
       "source": "NBC News",
       "publishedAt": "2026-11-20T09:39:00.000Z",
-      "latestAt": "2026-11-20T22:54:52.000Z",
+      "latestAt": "2026-11-20T23:54:58.000Z",
       "firstSeenAt": "2026-11-20T22:44:29.793Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "NBC News",
         "marketscreener.com",
@@ -404,9 +411,10 @@
         "Reuters",
         "CNA",
         "Investing.com",
-        "U.S. News & World Report"
+        "U.S. News & World Report",
+        "SRN News"
       ],
-      "score": 2.98
+      "score": 3.13
     },
     {
       "id": "80b173a24678",
@@ -464,6 +472,42 @@
       "score": 2.58
     },
     {
+      "id": "501df2603002",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcFBfVV9yWmpNSFpEMTdwdmJha2t3aVFja1gzeUhTWUZfWTF4U0NaNXBmYlp3V1pwZlU5dk5XZ0F2YkVGWmpEOHJ5bXE5bjhseTlocldieHpUQXdtY0FUZ1A5RXRQMmtUbDdQVlFvMU9pZDduWFdySUZ6NVFFMjlXNHRnT0lIX3p5Umc?oc=5",
+      "source": "SecurityWeek",
+      "publishedAt": "2026-11-20T11:36:51.000Z",
+      "latestAt": "2026-11-20T17:37:22.000Z",
+      "firstSeenAt": "2026-11-20T13:42:59.984Z",
+      "outlets": 3,
+      "outletNames": [
+        "SecurityWeek",
+        "SC Media",
+        "Claim Depot"
+      ],
+      "score": 2.49
+    },
+    {
+      "id": "aeda33a9b3e1",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Kittitas County wastewater sample tests positive for bird flu",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPaU9hVkc0eFZmLWhpS1NFTnBTaV96WnlOZ3dhSkF6M3ZGUG9USEZiQ3Z1YXQxQzIyV1RPNXN0ZGRGSlBkXzNudFZfb09kMjdaUjZjd1d6VGR5M1ZBNG9zWnV6Q2pTbGYza2lXdHFCZnJRRGRmemZrT091Y2daRlUyRWhYS0N0ZnpQckJxNWU0V1NCS3l1M3RTRU90a2Z0ekpVZEdIenFzbXhBRVRjSjJISjRCbm5NWnN5b1VzajFQVlI2bW1kbnVhRUM1d21XRHcxMTdTVThtYzZOaDN0?oc=5",
+      "source": "Nonstop Local News",
+      "publishedAt": "2026-11-20T15:05:42.000Z",
+      "latestAt": "2026-11-20T21:34:00.000Z",
+      "firstSeenAt": "2026-11-20T21:44:17.518Z",
+      "outlets": 3,
+      "outletNames": [
+        "Nonstop Local News",
+        "FOX 13 Seattle",
+        "Source ONE News"
+      ],
+      "score": 2.3
+    },
+    {
       "id": "ad9dfb453401",
       "cat": "grid",
       "kind": "news",
@@ -480,43 +524,6 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 2.21
-    },
-    {
-      "id": "bf8fe076cf11",
-      "cat": "earth",
-      "kind": "news",
-      "title": "3.9-magnitude earthquake rattles Los Angeles",
-      "url": "https://www.yahoo.com/news/weather-news/articles/3-9-magnitude-earthquake-rattles-202921614.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-20T12:29:00.000Z",
-      "latestAt": "2026-11-20T20:29:21.000Z",
-      "firstSeenAt": "2026-11-20T21:44:17.518Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "upi",
-        "CBS News"
-      ],
-      "score": 2.19
-    },
-    {
-      "id": "39e492d9e722",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Bitcoin Falls Below $62,000 as ETF Outflows and Fed Rate Concerns Deepen Crypto Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPN3dRdXpwRDBqai1wQU1Ic1FQZ0MwWV9KTFFGX1NvS1RNMjRpOTQ0alRuMF9CVjdmT3h1VkRUUEowMFVja1N2aGZWSjRkel8zTVc2V3Z2TVg0TjdyOEJvVEkwQzYyRG8zaVlYUHNkdkQ5a0V6RGFzVWI5UGhGa19BTmo2eWRHcUhDSmJxMHFkazA3NzhjQl84ajcycDdUNGVLZEhFVDl1bnJnSGhsNDdDUkZVb2F2eHRlclE?oc=5",
-      "source": "FinanceFeeds",
-      "publishedAt": "2026-11-20T08:01:45.000Z",
-      "latestAt": "2026-11-20T18:46:14.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 4,
-      "outletNames": [
-        "FinanceFeeds",
-        "TradingView",
-        "www.tokenpost.com",
-        "TechJuice"
-      ],
-      "score": 2.19
     },
     {
       "id": "sig:faa-stop:AUS:2026-11-20",
@@ -588,24 +595,6 @@
       }
     },
     {
-      "id": "501df2603002",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcFBfVV9yWmpNSFpEMTdwdmJha2t3aVFja1gzeUhTWUZfWTF4U0NaNXBmYlp3V1pwZlU5dk5XZ0F2YkVGWmpEOHJ5bXE5bjhseTlocldieHpUQXdtY0FUZ1A5RXRQMmtUbDdQVlFvMU9pZDduWFdySUZ6NVFFMjlXNHRnT0lIX3p5Umc?oc=5",
-      "source": "SecurityWeek",
-      "publishedAt": "2026-11-20T11:36:51.000Z",
-      "latestAt": "2026-11-20T17:37:22.000Z",
-      "firstSeenAt": "2026-11-20T13:42:59.984Z",
-      "outlets": 3,
-      "outletNames": [
-        "SecurityWeek",
-        "SC Media",
-        "Claim Depot"
-      ],
-      "score": 2.49
-    },
-    {
       "id": "ceb2408f55ce",
       "cat": "hacks",
       "kind": "news",
@@ -640,6 +629,60 @@
         "YAHOO!"
       ],
       "score": 2.42
+    },
+    {
+      "id": "3383e4bd7e29",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Gas supplier giant Equinor hit by cyberattack — Europe's biggest gas supplier says it has now restored services",
+      "url": "https://www.yahoo.com/news/world/articles/gas-supplier-giant-equinor-hit-113033242.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-20T03:29:00.000Z",
+      "latestAt": "2026-11-20T11:30:33.000Z",
+      "firstSeenAt": "2026-11-20T11:42:39.182Z",
+      "outlets": 2,
+      "outletNames": [
+        "TechRadar",
+        "Yahoo"
+      ],
+      "score": 2.42
+    },
+    {
+      "id": "bf8fe076cf11",
+      "cat": "earth",
+      "kind": "news",
+      "title": "3.9-magnitude earthquake rattles Los Angeles",
+      "url": "https://www.yahoo.com/news/weather-news/articles/3-9-magnitude-earthquake-rattles-202921614.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-20T12:29:00.000Z",
+      "latestAt": "2026-11-20T20:29:21.000Z",
+      "firstSeenAt": "2026-11-20T21:44:17.518Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "upi",
+        "CBS News"
+      ],
+      "score": 2.19
+    },
+    {
+      "id": "39e492d9e722",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Bitcoin Falls Below $62,000 as ETF Outflows and Fed Rate Concerns Deepen Crypto Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPN3dRdXpwRDBqai1wQU1Ic1FQZ0MwWV9KTFFGX1NvS1RNMjRpOTQ0alRuMF9CVjdmT3h1VkRUUEowMFVja1N2aGZWSjRkel8zTVc2V3Z2TVg0TjdyOEJvVEkwQzYyRG8zaVlYUHNkdkQ5a0V6RGFzVWI5UGhGa19BTmo2eWRHcUhDSmJxMHFkazA3NzhjQl84ajcycDdUNGVLZEhFVDl1bnJnSGhsNDdDUkZVb2F2eHRlclE?oc=5",
+      "source": "FinanceFeeds",
+      "publishedAt": "2026-11-20T08:01:45.000Z",
+      "latestAt": "2026-11-20T18:46:14.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 4,
+      "outletNames": [
+        "FinanceFeeds",
+        "TradingView",
+        "www.tokenpost.com",
+        "TechJuice"
+      ],
+      "score": 2.19
     },
     {
       "id": "acd1e0d2dcd8",
@@ -796,23 +839,6 @@
       "score": 1.91
     },
     {
-      "id": "aeda33a9b3e1",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Kittitas County wastewater sample tests positive for bird flu",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPaU9hVkc0eFZmLWhpS1NFTnBTaV96WnlOZ3dhSkF6M3ZGUG9USEZiQ3Z1YXQxQzIyV1RPNXN0ZGRGSlBkXzNudFZfb09kMjdaUjZjd1d6VGR5M1ZBNG9zWnV6Q2pTbGYza2lXdHFCZnJRRGRmemZrT091Y2daRlUyRWhYS0N0ZnpQckJxNWU0V1NCS3l1M3RTRU90a2Z0ekpVZEdIenFzbXhBRVRjSjJISjRCbm5NWnN5b1VzajFQVlI2bW1kbnVhRUM1d21XRHcxMTdTVThtYzZOaDN0?oc=5",
-      "source": "Nonstop Local News",
-      "publishedAt": "2026-11-20T15:05:42.000Z",
-      "latestAt": "2026-11-20T20:27:57.000Z",
-      "firstSeenAt": "2026-11-20T21:44:17.518Z",
-      "outlets": 2,
-      "outletNames": [
-        "Nonstop Local News",
-        "FOX 13 Seattle"
-      ],
-      "score": 1.78
-    },
-    {
       "id": "75cfa403ab35",
       "cat": "germs",
       "kind": "news",
@@ -826,23 +852,6 @@
       "outletNames": [
         "BBC",
         "Yahoo"
-      ],
-      "score": 1.73
-    },
-    {
-      "id": "2f4fa7af0098",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Anthropic Stock Is Down 13% From Its Opening Price. Is This Dip Worth Buying?",
-      "url": "https://www.fool.com/investing/2026/11/20/anthropic-stock-is-down-13-from-its-opening-price-is-this-dip-worth-buying/",
-      "source": "The Motley Fool",
-      "publishedAt": "2026-11-20T00:15:00.000Z",
-      "latestAt": "2026-11-20T00:35:00.000Z",
-      "firstSeenAt": "2026-11-20T08:27:10.550Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Motley Fool",
-        "Yahoo Finance"
       ],
       "score": 1.73
     },
@@ -922,21 +931,22 @@
       "score": 2.56
     },
     {
-      "id": "3383e4bd7e29",
-      "cat": "hacks",
+      "id": "c1812514f929",
+      "cat": "flights",
       "kind": "news",
-      "title": "Gas supplier giant Equinor hit by cyberattack — Europe's biggest gas supplier says it has now restored services",
-      "url": "https://www.yahoo.com/news/world/articles/gas-supplier-giant-equinor-hit-113033242.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-20T03:29:00.000Z",
-      "latestAt": "2026-11-20T11:30:33.000Z",
-      "firstSeenAt": "2026-11-20T11:42:39.182Z",
-      "outlets": 2,
+      "title": "Catch Me Up: How the ground stop unfolded, and a huge launch for 'GTA IV'",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQUDJDaXFINWVQRm1xZkYycW45SzM0UmRMcV9qWVJyNlc1dWx5NTR3YnZXNkZuYjh1bXhydG5wSVhqR3hCaWdMVnRPS0R3RklqclRQX1ZZR0w3VTJsUzJfRDdwbmdpSG4xS19yVjBmV2luYkxtT0dXY2R6YzM3azJUSDV2eHFkTXVkQzJwaFV3NG1wdDZvNnNZSG9pdjY3NC1MWnl1cTkxUmRqUklH?oc=5",
+      "source": "KPAX News",
+      "publishedAt": "2026-11-20T23:08:50.000Z",
+      "latestAt": "2026-11-21T00:11:32.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 3,
       "outletNames": [
-        "TechRadar",
-        "Yahoo"
+        "KPAX News",
+        "KJRH",
+        "Scripps News"
       ],
-      "score": 2.42
+      "score": 2.54
     },
     {
       "id": "2ff82b092c72",
@@ -1049,23 +1059,6 @@
       "score": 1.97
     },
     {
-      "id": "c1812514f929",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Catch Me Up: How the ground stop unfolded, and a huge launch for 'GTA IV'",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQUDJDaXFINWVQRm1xZkYycW45SzM0UmRMcV9qWVJyNlc1dWx5NTR3YnZXNkZuYjh1bXhydG5wSVhqR3hCaWdMVnRPS0R3RklqclRQX1ZZR0w3VTJsUzJfRDdwbmdpSG4xS19yVjBmV2luYkxtT0dXY2R6YzM3azJUSDV2eHFkTXVkQzJwaFV3NG1wdDZvNnNZSG9pdjY3NC1MWnl1cTkxUmRqUklH?oc=5",
-      "source": "KPAX News",
-      "publishedAt": "2026-11-20T23:08:50.000Z",
-      "latestAt": "2026-11-21T00:11:32.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 2,
-      "outletNames": [
-        "KPAX News",
-        "KJRH"
-      ],
-      "score": 1.96
-    },
-    {
       "id": "787be39d8478",
       "cat": "hacks",
       "kind": "news",
@@ -1116,6 +1109,25 @@
         "WBZ NewsRadio 1030"
       ],
       "score": 1.9
+    },
+    {
+      "id": "a2c8d79b7f44",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Chip stocks plunge as AI trade unwinds",
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-anthropic-ipo-second-day-trading/card/chip-stocks-plunge-as-ai-trade-unwinds-LiGJcJtoyoLLTM1sGZ1n",
+      "source": "MarketWatch",
+      "publishedAt": "2026-11-20T00:45:00.000Z",
+      "latestAt": "2026-11-20T22:44:36.000Z",
+      "firstSeenAt": "2026-11-20T22:59:46.380Z",
+      "outlets": 4,
+      "outletNames": [
+        "MarketWatch",
+        "The Motley Fool",
+        "The Globe and Mail",
+        "Yahoo Finance"
+      ],
+      "score": 1.89
     },
     {
       "id": "2e6adfd30f75",
@@ -1358,24 +1370,6 @@
       "score": 1.63
     },
     {
-      "id": "a2c8d79b7f44",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Chip stocks plunge as AI trade unwinds",
-      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-anthropic-ipo-second-day-trading/card/chip-stocks-plunge-as-ai-trade-unwinds-LiGJcJtoyoLLTM1sGZ1n",
-      "source": "MarketWatch",
-      "publishedAt": "2026-11-20T00:45:00.000Z",
-      "latestAt": "2026-11-20T22:44:36.000Z",
-      "firstSeenAt": "2026-11-20T22:59:46.380Z",
-      "outlets": 3,
-      "outletNames": [
-        "MarketWatch",
-        "The Motley Fool",
-        "The Globe and Mail"
-      ],
-      "score": 1.63
-    },
-    {
       "id": "6cc666037260",
       "cat": "flights",
       "kind": "news",
@@ -1544,6 +1538,22 @@
         "Rio Rancho Observer Home"
       ],
       "score": 1.49
+    },
+    {
+      "id": "3b772a241d3b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "MSY officials give an update after nationwide ground stop, ahead of holiday travel",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObE50anpxSFFPQzVfaUNCZ183akxkcm5ZaVRTQkxmd3Exd0QwdXFWVmxYNXRRcGwzakY1elA3THhuUGhaU0ZQN093Q0U5ZGRWbGhOQjBVLWNqa0dZbmNKUUZkOUpkMHlTR1ZCdzU2NmJ5b3Atb1VGcXhRTTZGaS0zcXI1MlQ5azlBR2xlbkwyUTB2TEZuZnhyVV9kbDhwSHhTR1pIS1dxOVh4cTFVVS1oWnM4SW5rVmkzNzBF?oc=5",
+      "source": "WDSU",
+      "publishedAt": "2026-11-21T00:20:00.000Z",
+      "latestAt": "2026-11-21T00:20:00.000Z",
+      "firstSeenAt": "2026-11-21T00:29:44.121Z",
+      "outlets": 1,
+      "outletNames": [
+        "WDSU"
+      ],
+      "score": 1.4
     },
     {
       "id": "28fa8c6eded9",
@@ -1802,6 +1812,22 @@
       "score": 1.39
     },
     {
+      "id": "74e770b8872d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Major US banks face cyberattack involving 16,000 customer details",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPXzN5UGVXd2tGT01aTFR6X1ZVNzM4N1BELVNVM052MTkwOEtUZGdKM1diVU1XUkZXWTBWTEMzdkhndGtPcEZwUnZ6QzBDZ3ZMaTJLM0FIQW1XMm5VVTF4MjJnOHI2X0FnaXVMNkpHZ3dkc0JtT0I0VGdqMC1MUmF1REVLUlJwVDZGVDRtaVhn?oc=5",
+      "source": "Interesting Engineering",
+      "publishedAt": "2026-11-20T03:42:00.000Z",
+      "latestAt": "2026-11-20T03:42:00.000Z",
+      "firstSeenAt": "2026-11-20T03:56:22.027Z",
+      "outlets": 1,
+      "outletNames": [
+        "Interesting Engineering"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "5b812082b97b",
       "cat": "weather",
       "kind": "news",
@@ -1848,24 +1874,6 @@
         "@unusual_whales on X"
       ],
       "score": 1
-    },
-    {
-      "id": "ea8a33cacf31",
-      "cat": "earth",
-      "kind": "news",
-      "title": "If the Hellenic Arc in the Aegean breaks, an earthquake above magnitude 8 will be felt in almost all of Turkey! Risky regions on the map",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRkNjcWlrNllNV1lYYU9WRzhvNDc0ZGo5VlM3aEtZVTFybzhXbVRxV0dtTm0wam9fdng3QlZpYnhjMTZSbExJdWJ4MjhEa19QMDNYb3h3ZGpza1ZueHlxd0h5dFN0YVlyNHhzLWtfck9ZMTZUTzRjVjBrQkc1VUNmTg?oc=5",
-      "source": "Haberler.com",
-      "publishedAt": "2026-11-20T13:10:51.000Z",
-      "latestAt": "2026-11-20T13:10:51.000Z",
-      "firstSeenAt": "2026-11-20T13:27:59.235Z",
-      "outlets": 1,
-      "outletNames": [
-        "Haberler.com"
-      ],
-      "score": 1,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "5db8d3d3123a",
