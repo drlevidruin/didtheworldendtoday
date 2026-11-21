@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T07:16:01.078Z",
+  "buildTime": "2026-11-21T07:30:59.601Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 02:16 ET",
+  "etStamp": "2026-11-21 02:30 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,19 +46,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1287,
-  "lastSuccessAt": "2026-11-21T07:16:01.078Z",
+  "headlinesRead": 314,
+  "lastSuccessAt": "2026-11-21T07:30:59.601Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
     "earth": 9,
-    "hacks": 25,
+    "hacks": 26,
     "germs": 4,
     "markets": 13,
     "grid": 5,
     "weather": 6,
     "sun": 4,
-    "internet": 4,
+    "internet": 3,
     "ai": 3,
     "space": 3,
     "animals": 2
@@ -178,20 +178,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 1014,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-21T07:16:01.078Z"
     },
     "bing": {
       "ok": true,
-      "count": 233,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,56 +203,55 @@
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T06:30:47.468Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z"
     }
   },
   "stories": [
@@ -431,25 +430,25 @@
       "score": 3.38
     },
     {
-      "id": "f6d7be94463a",
+      "id": "c3543c0a8ead",
       "cat": "hacks",
       "kind": "news",
-      "title": "Report: FBI criminal information database breached in cyberattack",
-      "url": "https://www.khou.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0",
-      "source": "KHOU",
-      "publishedAt": "2026-11-20T19:35:00.000Z",
-      "latestAt": "2026-11-21T05:31:02.000Z",
-      "firstSeenAt": "2026-11-21T04:30:36.214Z",
+      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
+      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-20T20:15:11.000Z",
+      "latestAt": "2026-11-21T03:36:34.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
       "outlets": 6,
       "outletNames": [
-        "KHOU",
-        "fox61.com",
-        "WFAA",
-        "WCNC",
-        "WUSA9",
-        "The New Indian Express"
+        "CBS News",
+        "ABC7 Chicago",
+        "Wirepoints",
+        "Shaw Local",
+        "WGN-TV",
+        "Hindustan Times on MSN"
       ],
-      "score": 3.05
+      "score": 3.21
     },
     {
       "id": "aeda33a9b3e1",
@@ -611,6 +610,27 @@
       }
     },
     {
+      "id": "f6d7be94463a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Report: FBI criminal information database breached in cyberattack",
+      "url": "https://www.khou.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0",
+      "source": "KHOU",
+      "publishedAt": "2026-11-20T19:35:00.000Z",
+      "latestAt": "2026-11-21T05:31:02.000Z",
+      "firstSeenAt": "2026-11-21T04:30:36.214Z",
+      "outlets": 6,
+      "outletNames": [
+        "KHOU",
+        "fox61.com",
+        "WFAA",
+        "WCNC",
+        "WUSA9",
+        "The New Indian Express"
+      ],
+      "score": 3.05
+    },
+    {
       "id": "bba455d55701",
       "cat": "hacks",
       "kind": "news",
@@ -656,27 +676,6 @@
       ],
       "xUrl": "https://x.com/Reuters/status/2124027615098941865",
       "score": 2.78
-    },
-    {
-      "id": "4ee3012c5ba5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
-      "source": "Meteora Web",
-      "publishedAt": "2026-11-20T09:16:22.000Z",
-      "latestAt": "2026-11-20T21:17:53.000Z",
-      "firstSeenAt": "2026-11-21T00:44:46.578Z",
-      "outlets": 6,
-      "outletNames": [
-        "Meteora Web",
-        "Help Net Security",
-        "SOC Prime",
-        "SOCRadar",
-        "Pasquale Pillitteri",
-        "Dark Reading"
-      ],
-      "score": 2.66
     },
     {
       "id": "d130253cceea",
@@ -938,6 +937,27 @@
       "score": 2.81
     },
     {
+      "id": "4ee3012c5ba5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
+      "source": "Meteora Web",
+      "publishedAt": "2026-11-20T09:16:22.000Z",
+      "latestAt": "2026-11-20T21:17:53.000Z",
+      "firstSeenAt": "2026-11-21T00:44:46.578Z",
+      "outlets": 6,
+      "outletNames": [
+        "Meteora Web",
+        "Help Net Security",
+        "SOC Prime",
+        "SOCRadar",
+        "Pasquale Pillitteri",
+        "Dark Reading"
+      ],
+      "score": 2.66
+    },
+    {
       "id": "21bb56ff9807",
       "cat": "hacks",
       "kind": "news",
@@ -1063,24 +1083,6 @@
         "The Spec"
       ],
       "score": 2
-    },
-    {
-      "id": "22a06be19db9",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stocks plunge as investors take cover amid growing uncertainty",
-      "url": "https://www.msn.com/en-us/news/other/stocks-plunge-as-investors-take-cover-amid-growing-uncertainty/ar-AA2hO60v",
-      "source": "CBS News on MSN",
-      "publishedAt": "2026-11-20T07:23:00.000Z",
-      "latestAt": "2026-11-20T15:23:30.000Z",
-      "firstSeenAt": "2026-11-20T21:14:16.656Z",
-      "outlets": 3,
-      "outletNames": [
-        "CBS News on MSN",
-        "Yahoo Finance",
-        "AOL.com"
-      ],
-      "score": 1.99
     },
     {
       "id": "79f0a0ef4886",
@@ -1616,22 +1618,6 @@
       "score": 1.4
     },
     {
-      "id": "60bf689c89a1",
-      "cat": "internet",
-      "kind": "news",
-      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
-      "source": "StoneWars.com",
-      "publishedAt": "2026-11-20T11:37:19.000Z",
-      "latestAt": "2026-11-20T11:40:12.000Z",
-      "firstSeenAt": "2026-11-20T11:42:39.182Z",
-      "outlets": 1,
-      "outletNames": [
-        "StoneWars.com"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "1055221191c6",
       "cat": "flights",
       "kind": "news",
@@ -1954,6 +1940,22 @@
         "Barrie News"
       ],
       "score": 0.99
+    },
+    {
+      "id": "56acddf51ee6",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Stock market today: Major indexes nosedive, wipe out 2026 gains as AI trade melts down; Nvidia leads tech rout, Anthropic slides after historic IPO",
+      "url": "https://www.msn.com/en-us/money/top-stocks/stock-market-today-major-indexes-nosedive-wipe-out-2026-gains-as-ai-trade-melts-down-nvidia-leads-tech-rout-anthropic-slides-after-historic-ipo/ar-AA2hRJBy",
+      "source": "Investopedia on MSN",
+      "publishedAt": "2026-11-20T13:21:29.000Z",
+      "latestAt": "2026-11-20T13:21:29.000Z",
+      "firstSeenAt": "2026-11-21T07:30:59.601Z",
+      "outlets": 1,
+      "outletNames": [
+        "Investopedia on MSN"
+      ],
+      "score": 0.98
     },
     {
       "id": "177df1cbaf42",
