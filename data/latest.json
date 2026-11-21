@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T10:16:20.642Z",
+  "buildTime": "2026-11-21T10:31:24.734Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 05:16 ET",
+  "etStamp": "2026-11-21 05:31 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -45,15 +45,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1285,
-  "lastSuccessAt": "2026-11-21T10:16:20.642Z",
+  "headlinesRead": 422,
+  "lastSuccessAt": "2026-11-21T10:31:24.734Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 25,
-    "earth": 12,
-    "hacks": 23,
+    "flights": 24,
+    "earth": 13,
+    "hacks": 24,
     "germs": 5,
-    "markets": 10,
+    "markets": 9,
     "weather": 6,
     "grid": 4,
     "sun": 4,
@@ -177,81 +177,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1026,
-      "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "count": 137,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "bing": {
       "ok": true,
-      "count": 221,
+      "count": 247,
       "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-21T08:46:06.995Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T09:31:16.400Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T10:16:20.642Z"
+      "lastOkAt": "2026-11-21T10:31:24.734Z"
     }
   },
   "stories": [
@@ -274,6 +273,54 @@
         "crossville-chronicle.com"
       ],
       "score": 4.62
+    },
+    {
+      "id": "17e895587c28",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Peru earthquake: 6.7 magnitude tremor hits Carhuamayo, near Lima",
+      "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
+      "source": "Times Now on MSN",
+      "publishedAt": "2026-11-20T10:59:00.000Z",
+      "latestAt": "2026-11-21T09:51:12.000Z",
+      "firstSeenAt": "2026-11-21T01:29:59.829Z",
+      "outlets": 31,
+      "outletNames": [
+        "Times Now on MSN",
+        "Egyptian Gazette",
+        "ABP News on MSN",
+        "The Times of India",
+        "CGTN",
+        "Newcastle Herald",
+        "UA.NEWS",
+        "The Daily Star",
+        "news9live",
+        "The Rio Times",
+        "Daily Sun",
+        "Gulf News",
+        "India News Network",
+        "The Malaysian Reserve",
+        "The Hindu BusinessLine",
+        "BusinessLine",
+        "Xinhua",
+        "Jamaica Observer",
+        "chinadailyhk",
+        "Gulf Today",
+        "Al Arabiya English",
+        "NZ Herald",
+        "Arise News",
+        "The Korea Times",
+        "Qatar news agency",
+        "Serbian News Media",
+        "Yahoo",
+        "FOX Weather",
+        "Syrian Arab News Agency",
+        "A News",
+        "Fana News -"
+      ],
+      "score": 4.51,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "sig:quake:us6000ucij",
@@ -322,49 +369,6 @@
         "pager": null,
         "tsunami": true
       },
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
-      "id": "17e895587c28",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Peru earthquake: 6.7 magnitude tremor hits Carhuamayo, near Lima",
-      "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
-      "source": "Times Now on MSN",
-      "publishedAt": "2026-11-20T10:59:00.000Z",
-      "latestAt": "2026-11-21T09:51:12.000Z",
-      "firstSeenAt": "2026-11-21T01:29:59.829Z",
-      "outlets": 26,
-      "outletNames": [
-        "Times Now on MSN",
-        "Egyptian Gazette",
-        "ABP News on MSN",
-        "The Times of India",
-        "CGTN",
-        "Newcastle Herald",
-        "UA.NEWS",
-        "The Daily Star",
-        "news9live",
-        "The Rio Times",
-        "Daily Sun",
-        "Gulf News",
-        "India News Network",
-        "The Malaysian Reserve",
-        "The Hindu BusinessLine",
-        "BusinessLine",
-        "Xinhua",
-        "Jamaica Observer",
-        "chinadailyhk",
-        "Gulf Today",
-        "Al Arabiya English",
-        "NZ Herald",
-        "Arise News",
-        "The Korea Times",
-        "Qatar news agency",
-        "Serbian News Media"
-      ],
-      "score": 4.32,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
     },
@@ -542,24 +546,21 @@
       "score": 2.46
     },
     {
-      "id": "d130253cceea",
-      "cat": "markets",
+      "id": "4b3383a8d406",
+      "cat": "weather",
       "kind": "news",
-      "title": "Stocks plunge on Anthropic amid tech fears",
-      "url": "https://www.msn.com/en-us/money/top-stocks/stocks-plunge-on-anthropic-amid-tech-fears/vi-AA2hTlzI",
-      "source": "ABC News on MSN",
-      "publishedAt": "2026-11-20T10:28:11.000Z",
-      "latestAt": "2026-11-21T03:10:00.000Z",
-      "firstSeenAt": "2026-11-21T02:30:05.009Z",
-      "outlets": 5,
+      "title": "Wisconsin's gun deer season set to open with near record-high temperatures",
+      "url": "https://www.wisn.com/article/wisconsins-gun-deer-season-near-record-high-temperatures/74496179",
+      "source": "WISN 12 News",
+      "publishedAt": "2026-11-20T20:13:00.000Z",
+      "latestAt": "2026-11-21T04:16:20.000Z",
+      "firstSeenAt": "2026-11-21T04:30:36.214Z",
+      "outlets": 2,
       "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "Modern Ghana",
-        "ABC News on MSN",
-        "Yahoo",
-        "www.tmgm.com"
+        "WISN",
+        "WISN 12 News"
       ],
-      "score": 2.43
+      "score": 2.41
     },
     {
       "id": "d39c76101e71",
@@ -624,6 +625,27 @@
         "nationwide": false,
         "reason": "other"
       }
+    },
+    {
+      "id": "c3543c0a8ead",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
+      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-20T20:15:11.000Z",
+      "latestAt": "2026-11-21T03:36:34.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "outlets": 6,
+      "outletNames": [
+        "CBS News",
+        "ABC7 Chicago",
+        "Wirepoints",
+        "Shaw Local",
+        "WGN-TV",
+        "Hindustan Times on MSN"
+      ],
+      "score": 3.21
     },
     {
       "id": "db43eadebab2",
@@ -692,41 +714,6 @@
       "score": 2.56
     },
     {
-      "id": "501df2603002",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcFBfVV9yWmpNSFpEMTdwdmJha2t3aVFja1gzeUhTWUZfWTF4U0NaNXBmYlp3V1pwZlU5dk5XZ0F2YkVGWmpEOHJ5bXE5bjhseTlocldieHpUQXdtY0FUZ1A5RXRQMmtUbDdQVlFvMU9pZDduWFdySUZ6NVFFMjlXNHRnT0lIX3p5Umc?oc=5",
-      "source": "SecurityWeek",
-      "publishedAt": "2026-11-20T11:36:51.000Z",
-      "latestAt": "2026-11-20T17:37:22.000Z",
-      "firstSeenAt": "2026-11-20T13:42:59.984Z",
-      "outlets": 3,
-      "outletNames": [
-        "SecurityWeek",
-        "SC Media",
-        "Claim Depot"
-      ],
-      "score": 2.49
-    },
-    {
-      "id": "4b3383a8d406",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Wisconsin's gun deer season set to open with near record-high temperatures",
-      "url": "https://www.wisn.com/article/wisconsins-gun-deer-season-near-record-high-temperatures/74496179",
-      "source": "WISN 12 News",
-      "publishedAt": "2026-11-20T20:13:00.000Z",
-      "latestAt": "2026-11-21T04:16:20.000Z",
-      "firstSeenAt": "2026-11-21T04:30:36.214Z",
-      "outlets": 2,
-      "outletNames": [
-        "WISN",
-        "WISN 12 News"
-      ],
-      "score": 2.41
-    },
-    {
       "id": "f0efdb839f92",
       "cat": "earth",
       "kind": "news",
@@ -748,27 +735,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "60f8adc85a5a",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Strong magnitude 6.7 earthquake strikes Peru just outside of Lima",
-      "url": "https://www.yahoo.com/news/weather-news/articles/strong-magnitude-6-7-earthquake-010437777.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-20T13:57:00.000Z",
-      "latestAt": "2026-11-21T01:53:00.000Z",
-      "firstSeenAt": "2026-11-21T05:00:33.428Z",
-      "outlets": 4,
-      "outletNames": [
-        "Yahoo",
-        "FOX Weather",
-        "Syrian Arab News Agency",
-        "Arise News"
-      ],
-      "score": 2.25,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "7814b483c9c0",
       "cat": "markets",
       "kind": "news",
@@ -785,6 +751,24 @@
         "The Globe and Mail"
       ],
       "score": 2.21
+    },
+    {
+      "id": "bf8fe076cf11",
+      "cat": "earth",
+      "kind": "news",
+      "title": "3.9-magnitude earthquake rattles Los Angeles",
+      "url": "https://www.yahoo.com/news/weather-news/articles/3-9-magnitude-earthquake-rattles-202921614.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-20T12:29:00.000Z",
+      "latestAt": "2026-11-20T20:29:21.000Z",
+      "firstSeenAt": "2026-11-20T21:44:17.518Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "upi",
+        "CBS News"
+      ],
+      "score": 2.19
     },
     {
       "id": "cb91c9815031",
@@ -907,6 +891,23 @@
       "score": 1.94
     },
     {
+      "id": "98d844f22c3b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "SoftBank Group Stocks Plunge 14.48% in Worst Day Since 2024 as AI Rout Hits OpenAI Bet",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQTRJNDFCVUx0eG5JWjNwVW1Mc0RKMlNRVEE4dkh6ejRDTHVGRkFJQTFFcWhMcXZnWGIzMzczb2E3TFNnVXB5cHdNV3lubEdsV0tsWk1sRHRxMDRhbS1PUXg1ekNqSDlWbHNlQ0NnVGpFOHVjWG1SZzFMQklQQ3FGaTlNNElsQV96UG14d3AtYjNfVXcxMWlqQUpUa01FMjZabmxGOFJHNndNNmpqWFdybzF6dDd6LUNqenNadzBtSzJNdm1VT3gzRnp3SVpRQXlJWS0xSTBQQmpfOGdNZHc?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-20T21:37:37.000Z",
+      "latestAt": "2026-11-20T22:45:33.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 2,
+      "outletNames": [
+        "TradingView",
+        "GuruFocus"
+      ],
+      "score": 1.91
+    },
+    {
       "id": "sig:faa-stop:TEB:2026-11-20",
       "cat": "flights",
       "kind": "signal",
@@ -966,6 +967,24 @@
       "score": 2.79
     },
     {
+      "id": "501df2603002",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcFBfVV9yWmpNSFpEMTdwdmJha2t3aVFja1gzeUhTWUZfWTF4U0NaNXBmYlp3V1pwZlU5dk5XZ0F2YkVGWmpEOHJ5bXE5bjhseTlocldieHpUQXdtY0FUZ1A5RXRQMmtUbDdQVlFvMU9pZDduWFdySUZ6NVFFMjlXNHRnT0lIX3p5Umc?oc=5",
+      "source": "SecurityWeek",
+      "publishedAt": "2026-11-20T11:36:51.000Z",
+      "latestAt": "2026-11-20T17:37:22.000Z",
+      "firstSeenAt": "2026-11-20T13:42:59.984Z",
+      "outlets": 3,
+      "outletNames": [
+        "SecurityWeek",
+        "SC Media",
+        "Claim Depot"
+      ],
+      "score": 2.49
+    },
+    {
       "id": "2e6adfd30f75",
       "cat": "hacks",
       "kind": "news",
@@ -984,24 +1003,6 @@
       "score": 2.4
     },
     {
-      "id": "bf8fe076cf11",
-      "cat": "earth",
-      "kind": "news",
-      "title": "3.9-magnitude earthquake rattles Los Angeles",
-      "url": "https://www.yahoo.com/news/weather-news/articles/3-9-magnitude-earthquake-rattles-202921614.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-20T12:29:00.000Z",
-      "latestAt": "2026-11-20T20:29:21.000Z",
-      "firstSeenAt": "2026-11-20T21:44:17.518Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "upi",
-        "CBS News"
-      ],
-      "score": 2.19
-    },
-    {
       "id": "9bf224cf6439",
       "cat": "hacks",
       "kind": "news",
@@ -1018,24 +1019,6 @@
         "TechRadar"
       ],
       "score": 2.05
-    },
-    {
-      "id": "99cd329f37d5",
-      "cat": "flights",
-      "kind": "news",
-      "title": "1.5-hour-long system outage forces United Airlines to delay departing flights",
-      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPYmtQc3RIX2RHdk5lSmh0enFYSWVpd0s5ZHdRb0dsNklKV2hGQUVqdlptS21hRjRXb2JSaEx4ZFVyOUVNcTk5VjkxcUZlaHJ6R1h1c3Q1OFRGWVI1SWd4NDIyWmFxRFVXN2E1UFhBUjk4UHhaeTdBTEE5WHdobXJzeTJvV1YzX0RxUkdCRExJNGtrX0RWSTVZSUtPNUpQV051LXZlSEJGMXdFMVB3SC1fOFhYLVhuS21icml0R1UzckV4ZUlOSFpwSmNZRGlSOEtfUjluWl9YcVlQMWtmVkRSU1JaMVFDSmw5YVl3b285STZ5dV9BVnNaaUExOXFMUEdNYWpNUnFkTXZjT0Vhd3hiMUtoNEhOU0JO?oc=5",
-      "source": "Goshen News",
-      "publishedAt": "2026-11-20T10:23:39.000Z",
-      "latestAt": "2026-11-20T22:10:09.000Z",
-      "firstSeenAt": "2026-11-20T23:44:52.341Z",
-      "outlets": 3,
-      "outletNames": [
-        "Goshen News",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Chronicle-Tribune"
-      ],
-      "score": 2.01
     },
     {
       "id": "8f9147e76bc9",
@@ -1105,23 +1088,6 @@
         "WSB-TV"
       ],
       "score": 1.94
-    },
-    {
-      "id": "98d844f22c3b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "SoftBank Group Stocks Plunge 14.48% in Worst Day Since 2024 as AI Rout Hits OpenAI Bet",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQTRJNDFCVUx0eG5JWjNwVW1Mc0RKMlNRVEE4dkh6ejRDTHVGRkFJQTFFcWhMcXZnWGIzMzczb2E3TFNnVXB5cHdNV3lubEdsV0tsWk1sRHRxMDRhbS1PUXg1ekNqSDlWbHNlQ0NnVGpFOHVjWG1SZzFMQklQQ3FGaTlNNElsQV96UG14d3AtYjNfVXcxMWlqQUpUa01FMjZabmxGOFJHNndNNmpqWFdybzF6dDd6LUNqenNadzBtSzJNdm1VT3gzRnp3SVpRQXlJWS0xSTBQQmpfOGdNZHc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-20T21:37:37.000Z",
-      "latestAt": "2026-11-20T22:45:33.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 2,
-      "outletNames": [
-        "TradingView",
-        "GuruFocus"
-      ],
-      "score": 1.91
     },
     {
       "id": "77772b62137b",
@@ -1253,7 +1219,7 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORHhjM1dVRXk2QjBvSzB2NU1kTVVEbG1zQkE5dFBHSUFGVmhkNFBiaXczNFdVcTVSTFQ3YnlSU0ljcm92RGxoWWdFaXJPYkV2NXc2ZzVja3NOT0cwbWxKcUZuYklCSWY2ZjZDa05TMUI3eFRaby1XTTFUZ3oxemdBNkd5SzVrdDZQOEVmM1FVMGs3WFlPSjh5RFZBOG1FRXppb2M00gGjAUFVX3lxTE5EeGMzV1VFeTZCMG9LMHY1TWRNVURsbXNCQTl0UEdJQUZWaGQ0UGJpdzM0V1VxNVJMVDdieVJTSWNyb3ZEbGhZZ0Vpck9iRXY1dzZnNWNrc05PRzBtbEpxRm5iSUJJZjZmNkNrTlMxQjd4VFpvLVdNMVRnejF6Z0E2R3lLNWt0NlA4RWYzUVUwazdYWU9KOHlEVkE4bUVFemlvYzQ?oc=5",
       "source": "US Muslims",
       "publishedAt": "2026-11-21T00:37:16.000Z",
-      "latestAt": "2026-11-21T00:57:55.000Z",
+      "latestAt": "2026-11-21T03:10:51.000Z",
       "firstSeenAt": "2026-11-21T07:45:57.798Z",
       "outlets": 2,
       "outletNames": [
@@ -1986,6 +1952,38 @@
         "Cointribune"
       ],
       "score": 0.98
+    },
+    {
+      "id": "070cb28aa336",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Powerful earthquake strikes Peru",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE96TU1tTlUtaE5nSkxQdV9Eb3lHS19JZUpUZ19wSVFjdHdjSVFrdmtCemxlNWRNemhjbmxxQnpqeExNSmtmejVUS3dqVjEydlFLdmFTMF9RV3BzTnh5OGN1YmJ4bEFqVXhfclZNcnl3SW0?oc=5",
+      "source": "TodayPress.tv",
+      "publishedAt": "2026-11-21T07:29:04.000Z",
+      "latestAt": "2026-11-21T07:29:04.000Z",
+      "firstSeenAt": "2026-11-21T10:31:24.734Z",
+      "outlets": 1,
+      "outletNames": [
+        "TodayPress.tv"
+      ],
+      "score": 0.95
+    },
+    {
+      "id": "867eb675987d",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Indonesia’s Semeru volcano erupts, spews massive ash cloud",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSVptMW1rVlhVaDlfUlZyVkdwcWxfRXRsRDQ5SHB6MVptUTVpSVdwSlZheXBsZ2oxT0piWFVGaW1Xc0tEOXVScE5ick1CQ3Q0b3JRWkZISjJBSVh5TUY4a2x3XzhuTEJ5em9ZaGhQTS1ibDhXbldmN2o1V1ZUeUJBTlZEYm5xb0tyelpWRENCV2N0ZW1KLV9uQU11Zw?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-20T15:20:36.000Z",
+      "latestAt": "2026-11-20T15:20:36.000Z",
+      "firstSeenAt": "2026-11-21T10:31:24.734Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yeni Safak English"
+      ],
+      "score": 0.95
     },
     {
       "id": "998f7018e162",
