@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T03:45:20.063Z",
+  "buildTime": "2026-11-21T04:00:24.029Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 22:45 ET",
+  "etStamp": "2026-11-20 23:00 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,8 +46,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1275,
-  "lastSuccessAt": "2026-11-21T03:45:20.063Z",
+  "headlinesRead": 1319,
+  "lastSuccessAt": "2026-11-21T04:00:24.029Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
@@ -183,57 +183,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1007,
+      "count": 1013,
       "error": null,
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     },
     "bing": {
       "ok": true,
-      "count": 229,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "count": 267,
+      "error": null,
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +246,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T03:45:20.063Z"
+      "lastOkAt": "2026-11-21T04:00:24.029Z"
     }
   },
   "stories": [
@@ -330,6 +330,34 @@
       "score": 4.02
     },
     {
+      "id": "17e895587c28",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Peru earthquake: 6.7 magnitude tremor hits Carhuamayo, near Lima",
+      "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
+      "source": "Times Now on MSN",
+      "publishedAt": "2026-11-20T15:04:00.000Z",
+      "latestAt": "2026-11-21T03:02:55.000Z",
+      "firstSeenAt": "2026-11-21T01:29:59.829Z",
+      "outlets": 11,
+      "outletNames": [
+        "Times Now on MSN",
+        "Egyptian Gazette",
+        "ABP News on MSN",
+        "The Times of India",
+        "CGTN",
+        "Newcastle Herald",
+        "UA.NEWS",
+        "The Daily Star",
+        "news9live",
+        "The Rio Times",
+        "Daily Sun"
+      ],
+      "score": 3.68,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "d58ec51a5e53",
       "cat": "flights",
       "kind": "news",
@@ -366,31 +394,24 @@
       "score": 3.57
     },
     {
-      "id": "17e895587c28",
-      "cat": "earth",
+      "id": "bba455d55701",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Peru earthquake: 6.7 magnitude tremor hits Carhuamayo, near Lima",
-      "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
-      "source": "Times Now on MSN",
-      "publishedAt": "2026-11-20T15:04:00.000Z",
-      "latestAt": "2026-11-21T03:02:55.000Z",
-      "firstSeenAt": "2026-11-21T01:29:59.829Z",
-      "outlets": 10,
+      "title": "Hackers allegedly breach USDA system used to pay farmers: reports",
+      "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPX3E1Sm9VZE85cjkyWHhlN3o3TXR5dzZ2VjE5Y2ZPSF9xMFlzUDBzX3hGWmE0MFh6eVl4Q0xNOExQWEVHTTBIRUE5Z05YQzE3dUw3M0Y0dkU0QTM3SXlQUk8tS2JsRlJ2U1BPZXRGTXhaUW0zanZuZi1nR0FsTEg0aEVJX0w2WUI0Rk5iZDZ6b3ZmenZ6LWJaUGh0RmRxN0ZuSEt1em5hdVhvUFZPZmJSOUVMajB3VVNRTElxLS12cmlOdmpJT3JIUFJudlRmNDN3SFBLZTNWbWtRaTZqbktPcTNhNWtFalcxNXN5aG1QNnZLQUhRVW4xWnpHVVl5Y01pSmdPc00yX3VwR0wxQjZSeS1SaFRjTVNpNU12NFJqV0RIOHI1SlNWWA?oc=5",
+      "source": "WLUK",
+      "publishedAt": "2026-11-21T03:40:09.000Z",
+      "latestAt": "2026-11-21T03:43:05.000Z",
+      "firstSeenAt": "2026-11-21T03:45:20.063Z",
+      "outlets": 5,
       "outletNames": [
-        "Times Now on MSN",
-        "Egyptian Gazette",
-        "ABP News on MSN",
-        "The Times of India",
-        "CGTN",
-        "Newcastle Herald",
-        "UA.NEWS",
-        "The Daily Star",
-        "news9live",
-        "The Rio Times"
+        "WLUK",
+        "KBOI",
+        "WJAR",
+        "WSBT",
+        "KATU"
       ],
-      "score": 3.57,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
+      "score": 3.32
     },
     {
       "id": "0e3af96a9376",
@@ -435,23 +456,6 @@
         "WGN-TV"
       ],
       "score": 3.24
-    },
-    {
-      "id": "80b173a24678",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack exposes customer names and emails at major financial companies",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZHBxaGZLTXRuZFVoYTMzN2xCLWZpRFA1TUZ1cHhiemJaajRIT1FqMGV1dXI3QXpzYkJWUTU5LXNtWGM1V0FoLVZiek00RTVZUXlSdTRUNE9vckRrbW8tYlZ4Wm5qc0EwWUhzaUhNTzhzR0M0Zmt6WFNRaHBoaVdBYW56SldDOEVERnNZSmV3bXhXS1NxSGc0QVNwLXZTUzVkeGViTWk2NklWcExmTzZya2V2aw?oc=5",
-      "source": "ABC10",
-      "publishedAt": "2026-11-20T05:25:00.000Z",
-      "latestAt": "2026-11-20T05:25:00.000Z",
-      "firstSeenAt": "2026-11-20T06:11:44.716Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC10",
-        "Yahoo"
-      ],
-      "score": 2.76
     },
     {
       "id": "aeda33a9b3e1",
@@ -511,22 +515,22 @@
       "score": 2.58
     },
     {
-      "id": "d130253cceea",
+      "id": "912d0c94ffbf",
       "cat": "markets",
       "kind": "news",
-      "title": "Stocks plunge on Anthropic amid tech fears",
-      "url": "https://www.msn.com/en-us/money/top-stocks/stocks-plunge-on-anthropic-amid-tech-fears/vi-AA2hTlzI",
-      "source": "ABC News on MSN",
-      "publishedAt": "2026-11-20T18:04:19.000Z",
-      "latestAt": "2026-11-21T03:10:00.000Z",
-      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "title": "Stocks Plunge, Marking Five-Day Losing Streak",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaFp5MVpnOTQzd2RhNDNfamF1LWdpSjgyVVBVeE9oemc0Tzd1YndDclpZbmVxNVViYzJ3RFl6Qng4d3BFQkhXb0FSUXBldUhpSDUzZFlxTF9FVnNDRF9xNkc5bE9VaUlmVlRTQVpBczNhU0YzOFVMVTZ1dU9abXdWaGEzU2hyLTViMVFFWXkxNF9fV04wZHc?oc=5",
+      "source": "iHeart",
+      "publishedAt": "2026-11-20T21:20:00.000Z",
+      "latestAt": "2026-11-20T21:20:00.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
       "outlets": 3,
       "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "Modern Ghana",
-        "ABC News on MSN"
+        "iHeart",
+        "WBZ NewsRadio 1030",
+        "sunny 99.1"
       ],
-      "score": 2.22
+      "score": 2.46
     },
     {
       "id": "sig:faa-stop:AUS:2026-11-20",
@@ -598,6 +602,23 @@
       }
     },
     {
+      "id": "80b173a24678",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack exposes customer names and emails at major financial companies",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZHBxaGZLTXRuZFVoYTMzN2xCLWZpRFA1TUZ1cHhiemJaajRIT1FqMGV1dXI3QXpzYkJWUTU5LXNtWGM1V0FoLVZiek00RTVZUXlSdTRUNE9vckRrbW8tYlZ4Wm5qc0EwWUhzaUhNTzhzR0M0Zmt6WFNRaHBoaVdBYW56SldDOEVERnNZSmV3bXhXS1NxSGc0QVNwLXZTUzVkeGViTWk2NklWcExmTzZya2V2aw?oc=5",
+      "source": "ABC10",
+      "publishedAt": "2026-11-20T05:25:00.000Z",
+      "latestAt": "2026-11-20T05:25:00.000Z",
+      "firstSeenAt": "2026-11-20T06:11:44.716Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC10",
+        "Yahoo"
+      ],
+      "score": 2.76
+    },
+    {
       "id": "4ee3012c5ba5",
       "cat": "hacks",
       "kind": "news",
@@ -619,24 +640,6 @@
       "score": 2.66
     },
     {
-      "id": "bba455d55701",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers allegedly breach USDA system used to pay farmers: reports",
-      "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPX3E1Sm9VZE85cjkyWHhlN3o3TXR5dzZ2VjE5Y2ZPSF9xMFlzUDBzX3hGWmE0MFh6eVl4Q0xNOExQWEVHTTBIRUE5Z05YQzE3dUw3M0Y0dkU0QTM3SXlQUk8tS2JsRlJ2U1BPZXRGTXhaUW0zanZuZi1nR0FsTEg0aEVJX0w2WUI0Rk5iZDZ6b3ZmenZ6LWJaUGh0RmRxN0ZuSEt1em5hdVhvUFZPZmJSOUVMajB3VVNRTElxLS12cmlOdmpJT3JIUFJudlRmNDN3SFBLZTNWbWtRaTZqbktPcTNhNWtFalcxNXN5aG1QNnZLQUhRVW4xWnpHVVl5Y01pSmdPc00yX3VwR0wxQjZSeS1SaFRjTVNpNU12NFJqV0RIOHI1SlNWWA?oc=5",
-      "source": "WLUK",
-      "publishedAt": "2026-11-21T03:40:09.000Z",
-      "latestAt": "2026-11-21T03:43:05.000Z",
-      "firstSeenAt": "2026-11-21T03:45:20.063Z",
-      "outlets": 3,
-      "outletNames": [
-        "WLUK",
-        "KBOI",
-        "WJAR"
-      ],
-      "score": 2.58
-    },
-    {
       "id": "501df2603002",
       "cat": "hacks",
       "kind": "news",
@@ -655,24 +658,40 @@
       "score": 2.49
     },
     {
-      "id": "2e35775bd6c3",
-      "cat": "earth",
+      "id": "d130253cceea",
+      "cat": "markets",
       "kind": "news",
-      "title": "Magnitude 6.7 Earthquake Shakes Central Peru",
-      "url": "https://www.riotimesonline.com/magnitude-6-7-earthquake-shakes-central-peru/",
-      "source": "The Rio Times",
-      "publishedAt": "2026-11-20T19:00:00.000Z",
-      "latestAt": "2026-11-21T02:01:09.000Z",
-      "firstSeenAt": "2026-11-21T03:45:20.063Z",
+      "title": "Stocks plunge on Anthropic amid tech fears",
+      "url": "https://www.msn.com/en-us/money/top-stocks/stocks-plunge-on-anthropic-amid-tech-fears/vi-AA2hTlzI",
+      "source": "ABC News on MSN",
+      "publishedAt": "2026-11-20T18:04:19.000Z",
+      "latestAt": "2026-11-21T03:10:00.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
       "outlets": 3,
       "outletNames": [
-        "The Rio Times",
-        "The Times of India",
-        "CGTN"
+        "ABC News - Breaking News, Latest News and Videos",
+        "Modern Ghana",
+        "ABC News on MSN"
       ],
-      "score": 2.21,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
+      "score": 2.22
+    },
+    {
+      "id": "7814b483c9c0",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Crypto Market Today, Nov. 20: Bitcoin Plunges Below $60,000 as Wall Street's Sell-Off Spreads to Crypto",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-nov-20-220503348.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-20T13:45:00.000Z",
+      "latestAt": "2026-11-20T22:11:59.000Z",
+      "firstSeenAt": "2026-11-20T22:29:32.024Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo Finance",
+        "The Motley Fool",
+        "The Globe and Mail"
+      ],
+      "score": 2.21
     },
     {
       "id": "ad9dfb453401",
@@ -819,23 +838,6 @@
       "score": 1.96
     },
     {
-      "id": "00ef8288ba46",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Nvidia stock plunges 10% amid potential SEC probe, market selloff",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTmdEaExyd0p4eDRQandxVHVZMmhkaHlDeFpZQTdNQlBPdjlZcUcyeVItWFNfeC02ZXprRjc0U1BIOFduRjhERUROR0w2VkRKMVY4TGQ0M2M5Wnlfbjdud0tjcks4bnF1dlVNTTZMS2ZXY01uSEVsYkJBeVNIS0NjODhjTC1ZellMamVyS28xcmE0T1hJS0E?oc=5",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-20T20:52:24.000Z",
-      "latestAt": "2026-11-20T22:12:21.000Z",
-      "firstSeenAt": "2026-11-20T22:29:32.024Z",
-      "outlets": 2,
-      "outletNames": [
-        "Crypto Briefing",
-        "Bloomberg.com"
-      ],
-      "score": 1.95
-    },
-    {
       "id": "76b284e47755",
       "cat": "grid",
       "kind": "news",
@@ -853,21 +855,21 @@
       "score": 1.94
     },
     {
-      "id": "98d844f22c3b",
-      "cat": "markets",
+      "id": "75cfa403ab35",
+      "cat": "germs",
       "kind": "news",
-      "title": "SoftBank Group Stocks Plunge 14.48% in Worst Day Since 2024 as AI Rout Hits OpenAI Bet",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQTRJNDFCVUx0eG5JWjNwVW1Mc0RKMlNRVEE4dkh6ejRDTHVGRkFJQTFFcWhMcXZnWGIzMzczb2E3TFNnVXB5cHdNV3lubEdsV0tsWk1sRHRxMDRhbS1PUXg1ekNqSDlWbHNlQ0NnVGpFOHVjWG1SZzFMQklQQ3FGaTlNNElsQV96UG14d3AtYjNfVXcxMWlqQUpUa01FMjZabmxGOFJHNndNNmpqWFdybzF6dDd6LUNqenNadzBtSzJNdm1VT3gzRnp3SVpRQXlJWS0xSTBQQmpfOGdNZHc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-20T21:37:37.000Z",
-      "latestAt": "2026-11-20T22:45:33.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "title": "Bird flu confirmed with other species affected, charity says",
+      "url": "https://www.bbc.co.uk/news/articles/cq5y10g22e2ro",
+      "source": "BBC",
+      "publishedAt": "2026-11-20T04:29:00.000Z",
+      "latestAt": "2026-11-20T12:29:18.000Z",
+      "firstSeenAt": "2026-11-20T12:42:47.538Z",
       "outlets": 2,
       "outletNames": [
-        "TradingView",
-        "GuruFocus"
+        "BBC",
+        "Yahoo"
       ],
-      "score": 1.91
+      "score": 1.73
     },
     {
       "id": "c1812514f929",
@@ -947,27 +949,6 @@
       "score": 2.59
     },
     {
-      "id": "bec04669a41a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Love isnt in the air , it at baggage claim during ground stop at Denver International Airport",
-      "url": "https://www.koco.com/article/couple-airport-wedding-flight-canceled-ground-stop/74456949",
-      "source": "koco.com",
-      "publishedAt": "2026-11-20T04:00:00.000Z",
-      "latestAt": "2026-11-20T06:15:00.000Z",
-      "firstSeenAt": "2026-11-20T21:14:16.656Z",
-      "outlets": 6,
-      "outletNames": [
-        "KCRA",
-        "koco.com",
-        "wxii12.com",
-        "wyff4.com",
-        "wcvb.com",
-        "wlwt.com"
-      ],
-      "score": 2.56
-    },
-    {
       "id": "ceb2408f55ce",
       "cat": "hacks",
       "kind": "news",
@@ -1020,6 +1001,24 @@
         "WWAYTV3"
       ],
       "score": 2.4
+    },
+    {
+      "id": "db43eadebab2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI’s criminal information database hacked",
+      "url": "https://www.msn.com/en-my/news/other/fbi-s-criminal-information-database-hacked/ar-AA2hTV50",
+      "source": "Free Malaysia Today on MSN",
+      "publishedAt": "2026-11-20T19:28:19.000Z",
+      "latestAt": "2026-11-21T03:40:52.000Z",
+      "firstSeenAt": "2026-11-21T03:45:20.063Z",
+      "outlets": 3,
+      "outletNames": [
+        "Free Malaysia Today",
+        "India Today",
+        "The Hindu"
+      ],
+      "score": 2.23
     },
     {
       "id": "745b1609cdfd",
@@ -1096,23 +1095,6 @@
       "score": 2.03
     },
     {
-      "id": "db43eadebab2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI’s criminal information database hacked",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOX3ZScHEwdTE0OG83Z0pWRm5vLXpKSnNkU3FQakViV1cyOEg1YjFIcGZyLW9FRXk3NnFfTDY0aFVmN2VqQW1vSzZ2TEhDTVhNZ3oxQVFYdnVTdW10T3dic3ZpUmJXSk5Sd0lLT2VJWUtKUzE3SERrLWk4QTVIbzRBaGJGODRTUklSSVJuYXNNRVd0QmgxdHhTUmMtTUR6Wk11bXVJZg?oc=5",
-      "source": "Free Malaysia Today",
-      "publishedAt": "2026-11-21T03:28:19.000Z",
-      "latestAt": "2026-11-21T03:40:52.000Z",
-      "firstSeenAt": "2026-11-21T03:45:20.063Z",
-      "outlets": 2,
-      "outletNames": [
-        "Free Malaysia Today",
-        "India Today"
-      ],
-      "score": 1.99
-    },
-    {
       "id": "21bb56ff9807",
       "cat": "hacks",
       "kind": "news",
@@ -1167,6 +1149,23 @@
       "score": 1.97
     },
     {
+      "id": "00ef8288ba46",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Nvidia stock plunges 10% amid potential SEC probe, market selloff",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTmdEaExyd0p4eDRQandxVHVZMmhkaHlDeFpZQTdNQlBPdjlZcUcyeVItWFNfeC02ZXprRjc0U1BIOFduRjhERUROR0w2VkRKMVY4TGQ0M2M5Wnlfbjdud0tjcks4bnF1dlVNTTZMS2ZXY01uSEVsYkJBeVNIS0NjODhjTC1ZellMamVyS28xcmE0T1hJS0E?oc=5",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-20T20:52:24.000Z",
+      "latestAt": "2026-11-20T22:12:21.000Z",
+      "firstSeenAt": "2026-11-20T22:29:32.024Z",
+      "outlets": 2,
+      "outletNames": [
+        "Crypto Briefing",
+        "Bloomberg.com"
+      ],
+      "score": 1.95
+    },
+    {
       "id": "787be39d8478",
       "cat": "hacks",
       "kind": "news",
@@ -1219,6 +1218,23 @@
       "score": 1.94
     },
     {
+      "id": "98d844f22c3b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "SoftBank Group Stocks Plunge 14.48% in Worst Day Since 2024 as AI Rout Hits OpenAI Bet",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQTRJNDFCVUx0eG5JWjNwVW1Mc0RKMlNRVEE4dkh6ejRDTHVGRkFJQTFFcWhMcXZnWGIzMzczb2E3TFNnVXB5cHdNV3lubEdsV0tsWk1sRHRxMDRhbS1PUXg1ekNqSDlWbHNlQ0NnVGpFOHVjWG1SZzFMQklQQ3FGaTlNNElsQV96UG14d3AtYjNfVXcxMWlqQUpUa01FMjZabmxGOFJHNndNNmpqWFdybzF6dDd6LUNqenNadzBtSzJNdm1VT3gzRnp3SVpRQXlJWS0xSTBQQmpfOGdNZHc?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-20T21:37:37.000Z",
+      "latestAt": "2026-11-20T22:45:33.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 2,
+      "outletNames": [
+        "TradingView",
+        "GuruFocus"
+      ],
+      "score": 1.91
+    },
+    {
       "id": "77772b62137b",
       "cat": "markets",
       "kind": "news",
@@ -1234,23 +1250,6 @@
         "TradingView"
       ],
       "score": 1.91
-    },
-    {
-      "id": "912d0c94ffbf",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stocks Plunge, Marking Five-Day Losing Streak",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaFp5MVpnOTQzd2RhNDNfamF1LWdpSjgyVVBVeE9oemc0Tzd1YndDclpZbmVxNVViYzJ3RFl6Qng4d3BFQkhXb0FSUXBldUhpSDUzZFlxTF9FVnNDRF9xNkc5bE9VaUlmVlRTQVpBczNhU0YzOFVMVTZ1dU9abXdWaGEzU2hyLTViMVFFWXkxNF9fV04wZHc?oc=5",
-      "source": "iHeart",
-      "publishedAt": "2026-11-20T21:20:00.000Z",
-      "latestAt": "2026-11-20T21:20:00.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 2,
-      "outletNames": [
-        "iHeart",
-        "WBZ NewsRadio 1030"
-      ],
-      "score": 1.9
     },
     {
       "id": "fea9c53a752c",
@@ -1373,23 +1372,6 @@
       "score": 1.73
     },
     {
-      "id": "75cfa403ab35",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed with other species affected, charity says",
-      "url": "https://www.bbc.co.uk/news/articles/cq5y10g22e2ro",
-      "source": "BBC",
-      "publishedAt": "2026-11-20T04:29:00.000Z",
-      "latestAt": "2026-11-20T12:29:18.000Z",
-      "firstSeenAt": "2026-11-20T12:42:47.538Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "Yahoo"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "8ae297aa1b0c",
       "cat": "hacks",
       "kind": "news",
@@ -1437,23 +1419,6 @@
       "outletNames": [
         "Chicago Tribune",
         "Daily Herald"
-      ],
-      "score": 1.71
-    },
-    {
-      "id": "7814b483c9c0",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Crypto Market Today, Nov. 20: Bitcoin Plunges Below $60,000 as Wall Street's Sell-Off Spreads to Crypto",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-nov-20-220503348.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-20T13:45:00.000Z",
-      "latestAt": "2026-11-20T21:45:03.000Z",
-      "firstSeenAt": "2026-11-20T22:29:32.024Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "The Motley Fool"
       ],
       "score": 1.71
     },
@@ -1544,6 +1509,25 @@
       "score": 1.63
     },
     {
+      "id": "60f8adc85a5a",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Strong magnitude 6.7 earthquake strikes Peru just outside of Lima",
+      "url": "https://www.yahoo.com/news/weather-news/articles/strong-magnitude-6-7-earthquake-010437777.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-20T16:00:00.000Z",
+      "latestAt": "2026-11-21T01:04:00.000Z",
+      "firstSeenAt": "2026-11-21T04:00:24.029Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX Weather"
+      ],
+      "score": 1.6,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "13b6d70b3a84",
       "cat": "markets",
       "kind": "news",
@@ -1610,23 +1594,6 @@
         "Reuters"
       ],
       "score": 1.54
-    },
-    {
-      "id": "55181d673ef9",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Gerapetritis on undersea cable: French vessel operating within Turkey-Libya memorandum with Greek permit and Navtex – that is enough",
-      "url": "https://en.protothema.gr/2026/11/20/gerapetritis-on-undersea-cable-french-vessel-operating-within-turkey-libya-memorandum-with-greek-permit-and-navtex-that-is-enough/",
-      "source": "Proto Thema",
-      "publishedAt": "2026-11-20T03:55:00.000Z",
-      "latestAt": "2026-11-20T09:55:17.000Z",
-      "firstSeenAt": "2026-11-20T17:53:24.552Z",
-      "outlets": 2,
-      "outletNames": [
-        "Proto Thema",
-        "ProtoThema English"
-      ],
-      "score": 1.53
     },
     {
       "id": "e769ddcdb889",
@@ -1871,6 +1838,22 @@
       "score": 1.37
     },
     {
+      "id": "5e64f6f5156b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Missouri couple meets Ted Lasso star during nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcEtkR3ZYR3dpTWJYTU02QjRaTU5lNENuRjhhZEtWZUZudWFiZUhnZU1qR2E5VU1xY3NLcjNVNmpqMzJab0VCZTE2MW1YU0NaX0FXeUNYODA1M2Fpbkx0STM4aFpWR1preVMwakRTbUhKM2xFLVpKUDM2WFhKb0R5ZUxWbnN2X1d5ak5KbVRUX1dYTm9wWThsRF9WX0IyTGdxWnRyaHk1NUkySV9rXzNCbTgyRFl4YkgxUHNxS0laaW5PaHpsc04zNEpHME52dXkxM2VDeTNR?oc=5",
+      "source": "THV11",
+      "publishedAt": "2026-11-20T23:01:46.000Z",
+      "latestAt": "2026-11-20T23:01:46.000Z",
+      "firstSeenAt": "2026-11-21T04:00:24.029Z",
+      "outlets": 1,
+      "outletNames": [
+        "THV11"
+      ],
+      "score": 1.28
+    },
+    {
       "id": "3a38015822b7",
       "cat": "sun",
       "kind": "news",
@@ -1885,6 +1868,22 @@
         "Yahoo Finance"
       ],
       "score": 1.16
+    },
+    {
+      "id": "58175d25b3b7",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Two major outages hit within days—and social media quickly turned them into doomsday theories",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNczdVU24yREFqZG1iZm1QZ2pmbHpkc1piOVNIbjN0REdjQkE4Z2MxVi1kZnp0VUhNUzNnYVY1akhRbWE1WGdoVlY2ZnRZVjJab0VtY0s0QzBjcGlDMmx2SjEzZ3lqTVpMVUxxUWtWczBCY0lMOGtyaTFWRjRLeHE2bWhRbzRtYVltcjFTLVpVcw?oc=5",
+      "source": "Latin Times",
+      "publishedAt": "2026-11-20T16:35:12.000Z",
+      "latestAt": "2026-11-20T16:35:12.000Z",
+      "firstSeenAt": "2026-11-21T04:00:24.029Z",
+      "outlets": 1,
+      "outletNames": [
+        "Latin Times"
+      ],
+      "score": 1.13
     },
     {
       "id": "7ba0231ec718",
