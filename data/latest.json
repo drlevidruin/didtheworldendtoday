@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T17:02:24.582Z",
+  "buildTime": "2026-11-21T17:17:32.491Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 12:02 ET",
+  "etStamp": "2026-11-21 12:17 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,22 +46,22 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1270,
-  "lastSuccessAt": "2026-11-21T17:02:24.582Z",
+  "headlinesRead": 1264,
+  "lastSuccessAt": "2026-11-21T17:17:32.491Z",
   "rollingFallback": false,
   "cats": {
-    "earth": 6,
-    "hacks": 26,
+    "earth": 7,
+    "hacks": 25,
     "flights": 28,
     "markets": 11,
-    "weather": 4,
+    "weather": 5,
     "space": 4,
     "germs": 4,
     "grid": 4,
     "ai": 3,
     "internet": 4,
     "sun": 2,
-    "animals": 4
+    "animals": 3
   },
   "vital": {
     "quake": {
@@ -87,13 +87,7 @@
       "upcoming": true
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "AUS",
-          "hub": false,
-          "reason": "low ceilings"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
       "groundDelays": 2,
       "closures": 0,
@@ -189,57 +183,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 981,
+      "count": 966,
       "error": null,
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     },
     "bing": {
       "ok": true,
-      "count": 254,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "count": 263,
+      "error": null,
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-21T16:47:19.211Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     },
     "faa": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     },
     "x": {
       "ok": true,
@@ -252,13 +246,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T17:02:24.582Z"
+      "lastOkAt": "2026-11-21T17:17:32.491Z"
     }
   },
   "stories": [
@@ -362,6 +356,36 @@
       "score": 4.14
     },
     {
+      "id": "3eecdde20922",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "The FBI was hacked again, this time the breach targeted its crime database",
+      "url": "https://www.msn.com/en-us/news/other/the-fbi-was-hacked-again-this-time-the-breach-targeted-its-crime-database/ar-AA2hSP7w",
+      "source": "CNN on MSN",
+      "publishedAt": "2026-11-20T18:23:12.000Z",
+      "latestAt": "2026-11-21T17:06:32.000Z",
+      "firstSeenAt": "2026-11-21T05:00:33.428Z",
+      "outlets": 15,
+      "outletNames": [
+        "CNN on MSN",
+        "New York Post",
+        "Ammon News",
+        "The Week",
+        "KMBC",
+        "Sandesh",
+        "PCMag",
+        "People Daily",
+        "News9live",
+        "Fox News",
+        "PCMag UK",
+        "The Tribune",
+        "ANI News",
+        "Republic World",
+        "NDTV Profit"
+      ],
+      "score": 4.04
+    },
+    {
       "id": "f6d7be94463a",
       "cat": "hacks",
       "kind": "news",
@@ -385,32 +409,6 @@
         "WKYC"
       ],
       "score": 3.68
-    },
-    {
-      "id": "3eecdde20922",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "The FBI was hacked again, this time the breach targeted its crime database",
-      "url": "https://www.msn.com/en-us/news/other/the-fbi-was-hacked-again-this-time-the-breach-targeted-its-crime-database/ar-AA2hSP7w",
-      "source": "CNN on MSN",
-      "publishedAt": "2026-11-20T18:23:12.000Z",
-      "latestAt": "2026-11-21T15:40:12.000Z",
-      "firstSeenAt": "2026-11-21T05:00:33.428Z",
-      "outlets": 11,
-      "outletNames": [
-        "CNN on MSN",
-        "New York Post",
-        "Ammon News",
-        "The Week",
-        "KMBC",
-        "Sandesh",
-        "PCMag",
-        "People Daily",
-        "News9live",
-        "Fox News",
-        "PCMag UK"
-      ],
-      "score": 3.67
     },
     {
       "id": "eb797381b6bc",
@@ -635,6 +633,27 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "21bb56ff9807",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI investigates apparent breach of national crime database",
+      "url": "https://mezha.net/eng/news/mezha-eec90f16c23b37c371d0ec7c_fbi_investigates_apparent/",
+      "source": "Mezha.net",
+      "publishedAt": "2026-11-21T02:25:08.000Z",
+      "latestAt": "2026-11-21T08:51:00.000Z",
+      "firstSeenAt": "2026-11-21T03:00:10.082Z",
+      "outlets": 4,
+      "outletNames": [
+        "Ticker News",
+        "Mezha.net",
+        "Kriptofoni",
+        "Daily Post Nigeria"
+      ],
+      "trending": 500,
+      "trendTerm": "fbi hacked",
+      "score": 2.97
+    },
+    {
       "id": "8a06101ad7b2",
       "cat": "hacks",
       "kind": "news",
@@ -688,26 +707,6 @@
         "Devdiscourse"
       ],
       "score": 2.58
-    },
-    {
-      "id": "21bb56ff9807",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI investigates apparent breach of national crime database",
-      "url": "https://mezha.net/eng/news/mezha-eec90f16c23b37c371d0ec7c_fbi_investigates_apparent/",
-      "source": "Mezha.net",
-      "publishedAt": "2026-11-21T02:25:08.000Z",
-      "latestAt": "2026-11-21T03:46:44.000Z",
-      "firstSeenAt": "2026-11-21T03:00:10.082Z",
-      "outlets": 3,
-      "outletNames": [
-        "Ticker News",
-        "Mezha.net",
-        "Kriptofoni"
-      ],
-      "trending": 500,
-      "trendTerm": "fbi hacked",
-      "score": 2.56
     },
     {
       "id": "00ef8288ba46",
@@ -1052,22 +1051,22 @@
       "score": 2.34
     },
     {
-      "id": "6a51029821da",
+      "id": "8f9147e76bc9",
       "cat": "hacks",
       "kind": "news",
-      "title": "FBI's National Crime database hit by hackers in 2nd breach in recent months",
-      "url": "https://www.tribuneindia.com/news/usa-news/fbis-national-crime-database-hit-by-hackers-in-2nd-breach-in-recent-months/",
-      "source": "The Tribune",
-      "publishedAt": "2026-11-21T08:12:00.000Z",
-      "latestAt": "2026-11-21T16:11:00.000Z",
-      "firstSeenAt": "2026-11-21T16:32:25.046Z",
+      "title": "Staples Canada says customer information accessed in data breach",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNN0didzNpRTFqNGs0MVZ6cHI1Z25hb1E1ZTBSQy1EOHM5QWRGTmYyRGwwSkpjanMzSEl1MzhadXluTk5TOWdjNF9FVVJsR0VhTUJCUWdVRW5mNGd3NVNMQnNzYzRQcHNrSF8wQ3pTUTlUV3dfeGxtOEZsNm40T09TWWxaU003aGlCenU3aXlGS2Zqd0l5U3RGeDM5TDhJNUpaT3cyRWtwZjJvLXh2MUZMd2gzRXAwbnY5Ykh4UnJ0bzB5cFA5ZEF2bnN4Y29VdWxBUnBKdmRQOVVLQ2RSNXhhYQ?oc=5",
+      "source": "The Spec",
+      "publishedAt": "2026-11-21T05:05:00.000Z",
+      "latestAt": "2026-11-21T14:28:00.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
       "outlets": 3,
       "outletNames": [
-        "The Tribune",
-        "ANI News",
-        "Republic World"
+        "The Spec",
+        "Toronto Star",
+        "Castanet"
       ],
-      "score": 2.23
+      "score": 2.1
     },
     {
       "id": "1117a0401a89",
@@ -1102,6 +1101,24 @@
         "localmemphis.com"
       ],
       "score": 2.03
+    },
+    {
+      "id": "f42eaad8c569",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says",
+      "url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-21T03:34:00.000Z",
+      "latestAt": "2026-11-21T09:34:20.000Z",
+      "firstSeenAt": "2026-11-21T16:47:19.211Z",
+      "outlets": 3,
+      "outletNames": [
+        "Associated Press News",
+        "BBC",
+        "U.S. News & World Report"
+      ],
+      "score": 2.02
     },
     {
       "id": "79f0a0ef4886",
@@ -1172,23 +1189,6 @@
       "score": 1.82
     },
     {
-      "id": "f42eaad8c569",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says",
-      "url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-21T08:33:00.000Z",
-      "latestAt": "2026-11-21T09:34:20.000Z",
-      "firstSeenAt": "2026-11-21T16:47:19.211Z",
-      "outlets": 2,
-      "outletNames": [
-        "Associated Press News",
-        "BBC"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "7b61052c2458",
       "cat": "markets",
       "kind": "news",
@@ -1247,7 +1247,7 @@
       "url": "https://247wallst.com/investing/2026/11/21/michael-burry-says-i-told-you-so-as-wall-street-caught-off-guard-by-ai-selloff/",
       "source": "24/7 Wall St.",
       "publishedAt": "2026-11-21T06:44:00.000Z",
-      "latestAt": "2026-11-21T06:44:00.000Z",
+      "latestAt": "2026-11-21T08:03:07.000Z",
       "firstSeenAt": "2026-11-21T16:47:19.211Z",
       "outlets": 2,
       "outletNames": [
@@ -1274,21 +1274,23 @@
       "score": 1.66
     },
     {
-      "id": "8f9147e76bc9",
-      "cat": "hacks",
+      "id": "1d17892f4747",
+      "cat": "earth",
       "kind": "news",
-      "title": "Staples Canada says customer information accessed in data breach",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNN0didzNpRTFqNGs0MVZ6cHI1Z25hb1E1ZTBSQy1EOHM5QWRGTmYyRGwwSkpjanMzSEl1MzhadXluTk5TOWdjNF9FVVJsR0VhTUJCUWdVRW5mNGd3NVNMQnNzYzRQcHNrSF8wQ3pTUTlUV3dfeGxtOEZsNm40T09TWWxaU003aGlCenU3aXlGS2Zqd0l5U3RGeDM5TDhJNUpaT3cyRWtwZjJvLXh2MUZMd2gzRXAwbnY5Ykh4UnJ0bzB5cFA5ZEF2bnN4Y29VdWxBUnBKdmRQOVVLQ2RSNXhhYQ?oc=5",
-      "source": "The Spec",
-      "publishedAt": "2026-11-21T05:05:48.000Z",
-      "latestAt": "2026-11-21T05:05:48.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "title": "Magnitude-7.2 earthquake strikes Indonesia's Maluku, no tsunami threat",
+      "url": "https://thepeninsulaqatar.com/article/21/11/2026/magnitude-72-earthquake-strikes-indonesias-maluku-no-tsunami-threat",
+      "source": "The Peninsula Qatar",
+      "publishedAt": "2026-11-21T06:48:00.000Z",
+      "latestAt": "2026-11-21T13:46:00.000Z",
+      "firstSeenAt": "2026-11-21T17:17:32.491Z",
       "outlets": 2,
       "outletNames": [
-        "The Spec",
-        "Toronto Star"
+        "The Peninsula Qatar",
+        "The Star"
       ],
-      "score": 1.63
+      "score": 1.65,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "cef185c52f33",
@@ -1454,6 +1456,42 @@
         "Legis1"
       ],
       "score": 1.4
+    },
+    {
+      "id": "459513ce3d92",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Record warmth possible in Chicago, but forecast is about to change dramatically",
+      "url": "https://www.nbcchicago.com/news/local/record-warmth-possible-in-chicago-but-the-forecast-is-about-to-change-dramatically/4018978/",
+      "source": "NBC 5 Chicago",
+      "publishedAt": "2026-11-21T16:50:00.000Z",
+      "latestAt": "2026-11-21T16:50:00.000Z",
+      "firstSeenAt": "2026-11-21T17:17:32.491Z",
+      "outlets": 1,
+      "outletNames": [
+        "NBC 5 Chicago"
+      ],
+      "trending": 200,
+      "trendTerm": "weather chicago",
+      "score": 1.39
+    },
+    {
+      "id": "69ac125ac2fb",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Second consecutive day of near record warmth: Saturday’s predicted 72 degrees to tie 113-year-old record for the date",
+      "url": "https://wgntv.com/weather/chicago-weather-saturday-11212026/",
+      "source": "WGN-TV",
+      "publishedAt": "2026-11-21T16:50:00.000Z",
+      "latestAt": "2026-11-21T16:50:00.000Z",
+      "firstSeenAt": "2026-11-21T17:17:32.491Z",
+      "outlets": 1,
+      "outletNames": [
+        "WGN-TV"
+      ],
+      "trending": 200,
+      "trendTerm": "weather chicago",
+      "score": 1.39
     },
     {
       "id": "cfa8d9fcb897",
@@ -1827,22 +1865,6 @@
       "score": 1
     },
     {
-      "id": "0ee92cae30ea",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Large hail threat amid cold front heading towards Texas",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNV3hvZ3B1eXZlRkhyTTR1S1NQcU5sbHJlOEJTeUt6bThBWndXcjZVVXJQbnR2YkF2ckNtb3ZJcXJFSzJEWFFtdzFKZkFuMnZwUWYzcHZtUGttQlAwUXc5Sm8zLVhjb1FaYTVOWGRSTWFyeURZbENCRnh4cl9DZm5QQXhLaWp0Z3RTcC1HVA?oc=5",
-      "source": "MySA",
-      "publishedAt": "2026-11-21T15:44:27.000Z",
-      "latestAt": "2026-11-21T15:45:00.000Z",
-      "firstSeenAt": "2026-11-21T15:47:11.421Z",
-      "outlets": 1,
-      "outletNames": [
-        "MySA"
-      ],
-      "score": 1
-    },
-    {
       "id": "7ea48e0c9ab9",
       "cat": "space",
       "kind": "news",
@@ -2005,22 +2027,6 @@
         "The Sun"
       ],
       "score": 0.86
-    },
-    {
-      "id": "7caadb4c0494",
-      "cat": "animals",
-      "kind": "news",
-      "title": "Escaped emu wanders Surprise yards",
-      "url": "https://www.yahoo.com/news/videos/escaped-emu-wanders-surprise-yards-011212897.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-20T17:12:00.000Z",
-      "latestAt": "2026-11-20T17:12:00.000Z",
-      "firstSeenAt": "2026-11-21T02:00:09.750Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yahoo"
-      ],
-      "score": 0.85
     },
     {
       "id": "284e4d9fefeb",
