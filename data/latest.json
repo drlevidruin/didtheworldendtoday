@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T12:16:53.020Z",
+  "buildTime": "2026-11-21T12:31:40.838Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 07:16 ET",
+  "etStamp": "2026-11-21 07:31 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -47,8 +47,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1309,
-  "lastSuccessAt": "2026-11-21T12:16:53.020Z",
+  "headlinesRead": 486,
+  "lastSuccessAt": "2026-11-21T12:31:40.838Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
@@ -165,9 +165,9 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
-      "headlines": 30,
+      "headlines": 26,
       "matched": 0,
       "tripAt": 3,
       "tripped": false,
@@ -179,81 +179,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 998,
-      "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "count": 225,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 9 of 26 queries)",
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
+      "count": 223,
       "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-21T08:46:06.995Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T11:31:37.586Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     },
     "topstories": {
       "ok": true,
-      "count": 30,
+      "count": 26,
       "error": null,
-      "lastOkAt": "2026-11-21T12:16:53.020Z"
+      "lastOkAt": "2026-11-21T12:31:40.838Z"
     }
   },
   "stories": [
@@ -445,6 +444,24 @@
       "score": 3.26
     },
     {
+      "id": "eb797381b6bc",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Top End shaken as major quake hits East Timor",
+      "url": "https://www.msn.com/en-au/news/other/top-end-shaken-as-major-quake-hits-east-timor/ar-AA2hUxe7",
+      "source": "AAP Newsroom on MSN",
+      "publishedAt": "2026-11-21T02:52:54.000Z",
+      "latestAt": "2026-11-21T12:04:52.000Z",
+      "firstSeenAt": "2026-11-21T11:01:28.780Z",
+      "outlets": 3,
+      "outletNames": [
+        "AAP Newsroom on MSN",
+        "ABC (Australian Broadcasting Corporation)",
+        "ABC News & Headlines – Australian Broadcasting Corporation"
+      ],
+      "score": 3.13
+    },
+    {
       "id": "912d0c94ffbf",
       "cat": "markets",
       "kind": "news",
@@ -481,30 +498,6 @@
         "AppleValleyNewsNow.com"
       ],
       "score": 2.67
-    },
-    {
-      "id": "d3a9abf6f372",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.8 quake in Peru's Andean region sends Lima residents onto streets",
-      "url": "https://www.khaleejtimes.com/world/americas/earthquake-peru-sends-lima-residents-onto-streets",
-      "source": "Khaleej Times",
-      "publishedAt": "2026-11-20T12:38:00.000Z",
-      "latestAt": "2026-11-21T03:30:00.000Z",
-      "firstSeenAt": "2026-11-21T06:54:11.370Z",
-      "outlets": 7,
-      "outletNames": [
-        "Khaleej Times",
-        "MSN",
-        "NBC News",
-        "GMA Network",
-        "tbsnews",
-        "The Business Standard",
-        "TimesLIVE"
-      ],
-      "score": 2.65,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "4b3383a8d406",
@@ -602,6 +595,51 @@
       }
     },
     {
+      "id": "c3543c0a8ead",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
+      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-20T20:15:11.000Z",
+      "latestAt": "2026-11-21T03:36:34.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "outlets": 6,
+      "outletNames": [
+        "CBS News",
+        "ABC7 Chicago",
+        "Wirepoints",
+        "Shaw Local",
+        "WGN-TV",
+        "Hindustan Times on MSN"
+      ],
+      "score": 3.21
+    },
+    {
+      "id": "d3a9abf6f372",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6.8 quake in Peru's Andean region sends Lima residents onto streets",
+      "url": "https://www.khaleejtimes.com/world/americas/earthquake-peru-sends-lima-residents-onto-streets",
+      "source": "Khaleej Times",
+      "publishedAt": "2026-11-20T12:38:00.000Z",
+      "latestAt": "2026-11-21T03:30:00.000Z",
+      "firstSeenAt": "2026-11-21T06:54:11.370Z",
+      "outlets": 7,
+      "outletNames": [
+        "Khaleej Times",
+        "MSN",
+        "NBC News",
+        "GMA Network",
+        "tbsnews",
+        "The Business Standard",
+        "TimesLIVE"
+      ],
+      "score": 2.65,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "21bb56ff9807",
       "cat": "hacks",
       "kind": "news",
@@ -622,6 +660,29 @@
       "score": 2.56
     },
     {
+      "id": "0c0836c2b605",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6.8 Earthquake Strikes Banda Sea Near Timor-Leste, GFZ Says",
+      "url": "https://www.usnews.com/news/world/articles/2026-11-21/magnitude-6-8-earthquake-strikes-banda-sea-near-timor-leste-gfz-says",
+      "source": "U.S. News & World Report",
+      "publishedAt": "2026-11-20T21:05:00.000Z",
+      "latestAt": "2026-11-21T12:30:26.000Z",
+      "firstSeenAt": "2026-11-21T12:16:53.020Z",
+      "outlets": 5,
+      "outletNames": [
+        "U.S. News & World Report",
+        "FOX Weather on MSN",
+        "Daily Observer",
+        "Apa.az",
+        "@Reuters on X"
+      ],
+      "xUrl": "https://x.com/Reuters/status/2124118237273083976",
+      "score": 2.48,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "c0ec02877349",
       "cat": "hacks",
       "kind": "news",
@@ -637,62 +698,6 @@
         "The Mirror US"
       ],
       "score": 2.42
-    },
-    {
-      "id": "eb797381b6bc",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Top End shaken as major quake hits East Timor",
-      "url": "https://www.msn.com/en-au/news/other/top-end-shaken-as-major-quake-hits-east-timor/ar-AA2hUxe7",
-      "source": "AAP Newsroom on MSN",
-      "publishedAt": "2026-11-21T02:52:54.000Z",
-      "latestAt": "2026-11-21T04:04:00.000Z",
-      "firstSeenAt": "2026-11-21T11:01:28.780Z",
-      "outlets": 2,
-      "outletNames": [
-        "AAP Newsroom on MSN",
-        "ABC (Australian Broadcasting Corporation)"
-      ],
-      "score": 2.42
-    },
-    {
-      "id": "2e6adfd30f75",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Video New concerns on potential cyberattack over US food supply",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE50STdjMEhqZ2o4dGd2UlVyY2ZudXZkQ3FJMUhDdFlqNDB6aGl0cFZMZDJJRmNwSF9NT2p4ZUQtbm1LREhpM0JwTW8yY2Q?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-20T12:40:01.000Z",
-      "latestAt": "2026-11-20T19:14:54.000Z",
-      "firstSeenAt": "2026-11-20T16:58:32.799Z",
-      "outlets": 3,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "Modern Ghana",
-        "WWAYTV3"
-      ],
-      "score": 2.4
-    },
-    {
-      "id": "0c0836c2b605",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.8 Earthquake Strikes Banda Sea Near Timor-Leste, GFZ Says",
-      "url": "https://www.usnews.com/news/world/articles/2026-11-21/magnitude-6-8-earthquake-strikes-banda-sea-near-timor-leste-gfz-says",
-      "source": "U.S. News & World Report",
-      "publishedAt": "2026-11-20T21:05:00.000Z",
-      "latestAt": "2026-11-21T11:26:00.000Z",
-      "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 4,
-      "outletNames": [
-        "U.S. News & World Report",
-        "FOX Weather on MSN",
-        "Daily Observer",
-        "Apa.az"
-      ],
-      "score": 2.24,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "7814b483c9c0",
@@ -713,22 +718,25 @@
       "score": 2.21
     },
     {
-      "id": "bf8fe076cf11",
+      "id": "a4a9603cb8fb",
       "cat": "earth",
       "kind": "news",
-      "title": "3.9-magnitude earthquake rattles Los Angeles",
-      "url": "https://www.yahoo.com/news/weather-news/articles/3-9-magnitude-earthquake-rattles-202921614.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-20T12:29:00.000Z",
-      "latestAt": "2026-11-20T20:29:21.000Z",
-      "firstSeenAt": "2026-11-20T21:44:17.518Z",
-      "outlets": 3,
+      "title": "Magnitude 6.7 earthquake shakes Peru’s Andes",
+      "url": "https://www.arabtimesonline.com/news/magnitude-67-earthquake-shakes-perus-andes/",
+      "source": "Arab Times",
+      "publishedAt": "2026-11-20T13:43:00.000Z",
+      "latestAt": "2026-11-21T04:33:00.000Z",
+      "firstSeenAt": "2026-11-21T06:54:11.370Z",
+      "outlets": 4,
       "outletNames": [
-        "Yahoo",
-        "upi",
-        "CBS News"
+        "Egyptian Gazette",
+        "CBS News",
+        "Arab Times",
+        "New York Post on MSN"
       ],
-      "score": 2.19
+      "score": 2.14,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "cb91c9815031",
@@ -951,6 +959,24 @@
       "score": 2.81
     },
     {
+      "id": "2e6adfd30f75",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Video New concerns on potential cyberattack over US food supply",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE50STdjMEhqZ2o4dGd2UlVyY2ZudXZkQ3FJMUhDdFlqNDB6aGl0cFZMZDJJRmNwSF9NT2p4ZUQtbm1LREhpM0JwTW8yY2Q?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-20T12:40:01.000Z",
+      "latestAt": "2026-11-20T19:14:54.000Z",
+      "firstSeenAt": "2026-11-20T16:58:32.799Z",
+      "outlets": 3,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos",
+        "Modern Ghana",
+        "WWAYTV3"
+      ],
+      "score": 2.4
+    },
+    {
       "id": "8f9147e76bc9",
       "cat": "hacks",
       "kind": "news",
@@ -968,27 +994,6 @@
         "CP24"
       ],
       "score": 2.32
-    },
-    {
-      "id": "a4a9603cb8fb",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.7 earthquake shakes Peru’s Andes",
-      "url": "https://www.arabtimesonline.com/news/magnitude-67-earthquake-shakes-perus-andes/",
-      "source": "Arab Times",
-      "publishedAt": "2026-11-20T13:43:00.000Z",
-      "latestAt": "2026-11-21T04:33:00.000Z",
-      "firstSeenAt": "2026-11-21T06:54:11.370Z",
-      "outlets": 4,
-      "outletNames": [
-        "Egyptian Gazette",
-        "CBS News",
-        "Arab Times",
-        "New York Post on MSN"
-      ],
-      "score": 2.14,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "9bf224cf6439",
@@ -1598,6 +1603,25 @@
       "score": 1.35
     },
     {
+      "id": "60f8adc85a5a",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Strong magnitude 6.7 earthquake strikes Peru just outside of Lima",
+      "url": "https://www.yahoo.com/news/weather-news/articles/strong-magnitude-6-7-earthquake-010437777.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-20T17:04:00.000Z",
+      "latestAt": "2026-11-21T01:04:00.000Z",
+      "firstSeenAt": "2026-11-21T12:31:40.838Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX Weather"
+      ],
+      "score": 1.35,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "3b772a241d3b",
       "cat": "flights",
       "kind": "news",
@@ -1818,22 +1842,6 @@
       "outlets": 1,
       "outletNames": [
         "The Mirror US"
-      ],
-      "score": 1
-    },
-    {
-      "id": "cd758e905573",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers gain access to databases of Austrian diplomatic missions",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9FTDZXVEZJcXMtaUU1bGF5c2RDMjJtNkFHX3hnYXJzbUFrNDdieGczS1B2bkdFakhEZGN0RS1tRzBFajZFS0JwLU5velRaNDhpVFoyZw?oc=5",
-      "source": "AzerNews",
-      "publishedAt": "2026-11-21T11:14:00.000Z",
-      "latestAt": "2026-11-21T11:14:00.000Z",
-      "firstSeenAt": "2026-11-21T11:31:37.586Z",
-      "outlets": 1,
-      "outletNames": [
-        "AzerNews"
       ],
       "score": 1
     },
