@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T20:47:56.763Z",
+  "buildTime": "2026-11-21T20:55:55.462Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 15:47 ET",
+  "etStamp": "2026-11-21 15:55 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -50,14 +50,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1165,
-  "lastSuccessAt": "2026-11-21T20:47:56.763Z",
+  "headlinesRead": 1175,
+  "lastSuccessAt": "2026-11-21T20:55:55.462Z",
   "rollingFallback": false,
   "cats": {
     "flights": 29,
     "earth": 9,
-    "hacks": 22,
-    "markets": 10,
+    "hacks": 23,
+    "markets": 9,
     "grid": 5,
     "space": 4,
     "germs": 4,
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 907,
+      "count": 895,
       "error": null,
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "bing": {
       "ok": true,
-      "count": 226,
-      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "count": 238,
+      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 10,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-21T18:17:37.972Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T20:47:56.763Z"
+      "lastOkAt": "2026-11-21T20:55:55.462Z"
     }
   },
   "stories": [
@@ -417,25 +417,6 @@
       "score": 3.5
     },
     {
-      "id": "8a06101ad7b2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase says customer emails were exposed days after a major banking outage",
-      "url": "https://www.nj.com/news/2026/11/chase-says-customer-emails-were-exposed-days-after-a-major-banking-outage.html",
-      "source": "NJ.com",
-      "publishedAt": "2026-11-20T20:53:00.000Z",
-      "latestAt": "2026-11-21T12:53:00.000Z",
-      "firstSeenAt": "2026-11-21T13:01:49.648Z",
-      "outlets": 4,
-      "outletNames": [
-        "NJ.com",
-        "Cleveland.com",
-        "mlive",
-        "OregonLive.com"
-      ],
-      "score": 3.07
-    },
-    {
       "id": "21bb56ff9807",
       "cat": "hacks",
       "kind": "news",
@@ -474,6 +455,26 @@
         "WIOD"
       ],
       "score": 2.85
+    },
+    {
+      "id": "8f9147e76bc9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Staples Canada says customer information accessed in data breach",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNN0didzNpRTFqNGs0MVZ6cHI1Z25hb1E1ZTBSQy1EOHM5QWRGTmYyRGwwSkpjanMzSEl1MzhadXluTk5TOWdjNF9FVVJsR0VhTUJCUWdVRW5mNGd3NVNMQnNzYzRQcHNrSF8wQ3pTUTlUV3dfeGxtOEZsNm40T09TWWxaU003aGlCenU3aXlGS2Zqd0l5U3RGeDM5TDhJNUpaT3cyRWtwZjJvLXh2MUZMd2gzRXAwbnY5Ykh4UnJ0bzB5cFA5ZEF2bnN4Y29VdWxBUnBKdmRQOVVLQ2RSNXhhYQ?oc=5",
+      "source": "The Spec",
+      "publishedAt": "2026-11-21T05:05:00.000Z",
+      "latestAt": "2026-11-21T14:32:16.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 5,
+      "outletNames": [
+        "The Spec",
+        "Toronto Star",
+        "Castanet",
+        "Castanet Kamloops",
+        "CityNews Toronto"
+      ],
+      "score": 2.7
     },
     {
       "id": "080cfdf1f2e2",
@@ -621,26 +622,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "8f9147e76bc9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Staples Canada says customer information accessed in data breach",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNN0didzNpRTFqNGs0MVZ6cHI1Z25hb1E1ZTBSQy1EOHM5QWRGTmYyRGwwSkpjanMzSEl1MzhadXluTk5TOWdjNF9FVVJsR0VhTUJCUWdVRW5mNGd3NVNMQnNzYzRQcHNrSF8wQ3pTUTlUV3dfeGxtOEZsNm40T09TWWxaU003aGlCenU3aXlGS2Zqd0l5U3RGeDM5TDhJNUpaT3cyRWtwZjJvLXh2MUZMd2gzRXAwbnY5Ykh4UnJ0bzB5cFA5ZEF2bnN4Y29VdWxBUnBKdmRQOVVLQ2RSNXhhYQ?oc=5",
-      "source": "The Spec",
-      "publishedAt": "2026-11-21T05:05:00.000Z",
-      "latestAt": "2026-11-21T14:32:16.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
-      "outlets": 5,
-      "outletNames": [
-        "The Spec",
-        "Toronto Star",
-        "Castanet",
-        "Castanet Kamloops",
-        "CityNews Toronto"
-      ],
-      "score": 2.7
-    },
-    {
       "id": "f42eaad8c569",
       "cat": "hacks",
       "kind": "news",
@@ -698,6 +679,25 @@
       "score": 2.51
     },
     {
+      "id": "2593cf91a89e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US Department of Agriculture Hit by Cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY3lqQWxtTDBiMk9wWGhNVldGVXJqMUN2NUZuZWlyRThiMXEtQjR5aGw3SWpGRkxhYTFkdkxMTlFfUXVmOG1LSXh1MTc0RHF0SnRYcS0tc3I4Y1AxXzFmREpyWHdVOEFtZE9iUEZEdXpqV1pra1M1d0JJTjh0bWxfMTRn?oc=5",
+      "source": "8AM Media",
+      "publishedAt": "2026-11-21T05:52:00.000Z",
+      "latestAt": "2026-11-21T14:10:57.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 4,
+      "outletNames": [
+        "8AM Media",
+        "Afghanistan International",
+        "Ratopati",
+        "IANS LIVE"
+      ],
+      "score": 2.48
+    },
+    {
       "id": "3e4b1c709480",
       "cat": "germs",
       "kind": "news",
@@ -715,23 +715,6 @@
       "score": 1.99
     },
     {
-      "id": "00ef8288ba46",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Nvidia stock plunges 10% amid potential SEC probe, market selloff",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTmdEaExyd0p4eDRQandxVHVZMmhkaHlDeFpZQTdNQlBPdjlZcUcyeVItWFNfeC02ZXprRjc0U1BIOFduRjhERUROR0w2VkRKMVY4TGQ0M2M5Wnlfbjdud0tjcks4bnF1dlVNTTZMS2ZXY01uSEVsYkJBeVNIS0NjODhjTC1ZellMamVyS28xcmE0T1hJS0E?oc=5",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-20T20:52:24.000Z",
-      "latestAt": "2026-11-20T22:12:21.000Z",
-      "firstSeenAt": "2026-11-20T22:29:32.024Z",
-      "outlets": 2,
-      "outletNames": [
-        "Crypto Briefing",
-        "Bloomberg.com"
-      ],
-      "score": 1.95
-    },
-    {
       "id": "4a96a57e3052",
       "cat": "markets",
       "kind": "news",
@@ -739,7 +722,7 @@
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOR1VwVWFLWGlQM2VFWFdqWGJ2NURRT3FTcjVkQ1VxS3B1Wi1RckNBM3JYcmpQS05mRElPQkZlcTg4WlpFeW5iUjF2LW5vdTJzUmk1VHNRR0ctamE0M0oxRmpHdE45dHpUUEtBeUlQR3N4OWR6ZjN6SVNwRkJHNWxFZA?oc=5",
       "source": "1News",
       "publishedAt": "2026-11-21T11:05:28.000Z",
-      "latestAt": "2026-11-21T17:48:27.000Z",
+      "latestAt": "2026-11-21T20:44:37.000Z",
       "firstSeenAt": "2026-11-21T13:31:53.958Z",
       "outlets": 2,
       "outletNames": [
@@ -817,26 +800,6 @@
       "score": 1.72
     },
     {
-      "id": "d3a9abf6f372",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.8 quake in Peru’s Andean region sends Lima residents onto streets",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ2Z2RWMyS1k1aWpqRm9GZ0NyNUdPdWVveXN1Qi1tZkVYRThCRGMxdHVGR3VHODhkT0JoNFpBU3ZBV3dSTFMxRXVQMzV5ZGZXVXFaclVLQUVfTE0ybERoM196eW1mMzVKeDBreUptck95M01GYkJYbmpmSHFySjRiVGtubnpaNjhpcl9ZcEVwc201andqcTNpc291ZjlDOEk5UTl2SWQzTUw3YkRMMlo1TExweFJqZw?oc=5",
-      "source": "NBC News",
-      "publishedAt": "2026-11-21T00:39:00.000Z",
-      "latestAt": "2026-11-21T07:27:37.000Z",
-      "firstSeenAt": "2026-11-21T20:47:56.763Z",
-      "outlets": 3,
-      "outletNames": [
-        "NBC News",
-        "Philenews",
-        "The Business Standard"
-      ],
-      "score": 1.72,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "733eb33f2940",
       "cat": "germs",
       "kind": "news",
@@ -870,6 +833,42 @@
         "The Straits Times"
       ],
       "score": 1.68
+    },
+    {
+      "id": "6aa8479c13bb",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 7.2 earthquake strikes Indonesia",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5LejlOTWpNOGpOYXd0bkpxaE9oeDRNUFMyVG5pQjlzT2RwVnFVRThvRG12YlFsSmZMaWJPNDJVRFIxeXFhX2s3T3RIaUQzRG9QVExxenhtNnBmTFJORE1FbDFsWEdDVFJDSm40azlhSHVBeG93ZWJNMlFVQVc?oc=5",
+      "source": "TodayPress.tv",
+      "publishedAt": "2026-11-21T10:51:00.000Z",
+      "latestAt": "2026-11-21T11:06:37.000Z",
+      "firstSeenAt": "2026-11-21T20:47:56.763Z",
+      "outlets": 2,
+      "outletNames": [
+        "TodayPress.tv",
+        "Report.az"
+      ],
+      "score": 1.67,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "2c9f45221a61",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Michael Burry Says ‘I Told You So’ as Wall Street Caught Off Guard by AI Selloff",
+      "url": "https://247wallst.com/investing/2026/11/21/michael-burry-says-i-told-you-so-as-wall-street-caught-off-guard-by-ai-selloff/",
+      "source": "24/7 Wall St.",
+      "publishedAt": "2026-11-21T06:44:00.000Z",
+      "latestAt": "2026-11-21T08:03:07.000Z",
+      "firstSeenAt": "2026-11-21T16:47:19.211Z",
+      "outlets": 2,
+      "outletNames": [
+        "24/7 Wall St.",
+        "Yahoo Finance"
+      ],
+      "score": 1.66
     },
     {
       "id": "sig:faa-stop:YOW:2026-11-21",
@@ -930,25 +929,6 @@
         "AOL.com"
       ],
       "score": 3.12
-    },
-    {
-      "id": "2593cf91a89e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US Department of Agriculture Hit by Cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY3lqQWxtTDBiMk9wWGhNVldGVXJqMUN2NUZuZWlyRThiMXEtQjR5aGw3SWpGRkxhYTFkdkxMTlFfUXVmOG1LSXh1MTc0RHF0SnRYcS0tc3I4Y1AxXzFmREpyWHdVOEFtZE9iUEZEdXpqV1pra1M1d0JJTjh0bWxfMTRn?oc=5",
-      "source": "8AM Media",
-      "publishedAt": "2026-11-21T05:52:00.000Z",
-      "latestAt": "2026-11-21T14:10:57.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
-      "outlets": 4,
-      "outletNames": [
-        "8AM Media",
-        "Afghanistan International",
-        "Ratopati",
-        "IANS LIVE"
-      ],
-      "score": 2.48
     },
     {
       "id": "c0ec02877349",
@@ -1139,25 +1119,6 @@
       "score": 1.68
     },
     {
-      "id": "6aa8479c13bb",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 7.2 earthquake strikes Indonesia",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5LejlOTWpNOGpOYXd0bkpxaE9oeDRNUFMyVG5pQjlzT2RwVnFVRThvRG12YlFsSmZMaWJPNDJVRFIxeXFhX2s3T3RIaUQzRG9QVExxenhtNnBmTFJORE1FbDFsWEdDVFJDSm40azlhSHVBeG93ZWJNMlFVQVc?oc=5",
-      "source": "TodayPress.tv",
-      "publishedAt": "2026-11-21T10:51:00.000Z",
-      "latestAt": "2026-11-21T11:06:37.000Z",
-      "firstSeenAt": "2026-11-21T20:47:56.763Z",
-      "outlets": 2,
-      "outletNames": [
-        "TodayPress.tv",
-        "Report.az"
-      ],
-      "score": 1.67,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "3d6916f74e8a",
       "cat": "hacks",
       "kind": "news",
@@ -1173,23 +1134,6 @@
         "InForum"
       ],
       "score": 1.67
-    },
-    {
-      "id": "2c9f45221a61",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Michael Burry Says ‘I Told You So’ as Wall Street Caught Off Guard by AI Selloff",
-      "url": "https://247wallst.com/investing/2026/11/21/michael-burry-says-i-told-you-so-as-wall-street-caught-off-guard-by-ai-selloff/",
-      "source": "24/7 Wall St.",
-      "publishedAt": "2026-11-21T06:44:00.000Z",
-      "latestAt": "2026-11-21T08:03:07.000Z",
-      "firstSeenAt": "2026-11-21T16:47:19.211Z",
-      "outlets": 2,
-      "outletNames": [
-        "24/7 Wall St.",
-        "Yahoo Finance"
-      ],
-      "score": 1.66
     },
     {
       "id": "47d612217764",
@@ -1870,6 +1814,22 @@
       "score": 1.06
     },
     {
+      "id": "8ae176c03b65",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Earthquake rattles area near Pinnacles, CA: 2.9 magnitude detected on Nov. 21",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5rOWlYd1F3bTd5NnM2bDFzSEtwaVV0eWllcjF2SXRLbm5BR0tabU5sZjJiUW5uOFN0bzBIWWU4ZzNYdGk4MkFydl9oNm05cW43RVd1RnJTM0ZJa1EtMkRHbUhwZmxmaUlERHBoakYtVlRSam5ZTVJEbExQVlM?oc=5",
+      "source": "Sacramento Bee",
+      "publishedAt": "2026-11-21T20:43:08.000Z",
+      "latestAt": "2026-11-21T20:43:08.000Z",
+      "firstSeenAt": "2026-11-21T20:55:55.462Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sacramento Bee"
+      ],
+      "score": 1
+    },
+    {
       "id": "a0f3fcd5250b",
       "cat": "germs",
       "kind": "news",
@@ -1884,6 +1844,38 @@
         "County Times"
       ],
       "score": 1
+    },
+    {
+      "id": "ffe861b12a61",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Fridges, Hackers, AI and La Flemme: A Nov. 21 Tech Roundup",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNekZsd2w4MDRET1EwV1ZHdnloc1dULXJUWmNnT0Z2U3VsZ21xVzgyOUY0cDFMYkROcTJzdHVQd2hqT2hqX3QtY2txU0VzQ0VpOXVKS0xyS05pYi1zSURDX24yUUVOSmFUaUlJbnBCeHJFQzhReTkyMW91OGRTV1cxeXlLRWM3NEJ2bEFZ?oc=5",
+      "source": "news.lavx.hu",
+      "publishedAt": "2026-11-21T20:17:11.000Z",
+      "latestAt": "2026-11-21T20:17:11.000Z",
+      "firstSeenAt": "2026-11-21T20:55:55.462Z",
+      "outlets": 1,
+      "outletNames": [
+        "news.lavx.hu"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "b32496dae58b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Breach FBI and USDA Systems Amid US Cyber Outages",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5XenRqR2ZESll0U0luUlpQaTJzRFRaaWdIeFU3UlNrZ09nYzlhV0NzM1RXa29pMDR6TFU4eV9LY1hRS0xPTFc1RFdISXp0ZWJFUlpxdlFpcThHMDFZWXpRRDc3TQ?oc=5",
+      "source": "bsinews.id",
+      "publishedAt": "2026-11-21T20:06:00.000Z",
+      "latestAt": "2026-11-21T20:06:00.000Z",
+      "firstSeenAt": "2026-11-21T20:55:55.462Z",
+      "outlets": 1,
+      "outletNames": [
+        "bsinews.id"
+      ],
+      "score": 0.99
     },
     {
       "id": "7ea48e0c9ab9",
