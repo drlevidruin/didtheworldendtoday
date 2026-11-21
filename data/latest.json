@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T05:00:33.428Z",
+  "buildTime": "2026-11-21T05:15:35.014Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 00:00 ET",
+  "etStamp": "2026-11-21 00:15 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,8 +46,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1118,
-  "lastSuccessAt": "2026-11-21T05:00:33.428Z",
+  "headlinesRead": 1367,
+  "lastSuccessAt": "2026-11-21T05:15:35.014Z",
   "rollingFallback": false,
   "cats": {
     "flights": 19,
@@ -183,57 +183,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 802,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 22 of 26 queries)",
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "count": 1056,
+      "error": null,
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
-      "count": 8,
+      "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     },
     "x": {
       "ok": true,
@@ -244,15 +244,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T05:00:33.428Z"
+      "lastOkAt": "2026-11-21T05:15:35.014Z"
     }
   },
   "stories": [
@@ -397,6 +397,28 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "c3543c0a8ead",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
+      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-20T20:15:11.000Z",
+      "latestAt": "2026-11-21T04:12:00.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "outlets": 7,
+      "outletNames": [
+        "CBS News",
+        "ABC7 Chicago",
+        "Wirepoints",
+        "Shaw Local",
+        "WGN-TV",
+        "Hindustan Times on MSN",
+        "Yahoo"
+      ],
+      "score": 3.41
+    },
+    {
       "id": "0e3af96a9376",
       "cat": "hacks",
       "kind": "news",
@@ -422,47 +444,25 @@
       "score": 3.38
     },
     {
-      "id": "c3543c0a8ead",
+      "id": "db43eadebab2",
       "cat": "hacks",
       "kind": "news",
-      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
-      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
-      "source": "Hindustan Times on MSN",
-      "publishedAt": "2026-11-20T20:15:11.000Z",
-      "latestAt": "2026-11-21T03:36:34.000Z",
-      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "title": "FBI’s criminal information database hacked",
+      "url": "https://www.msn.com/en-my/news/other/fbi-s-criminal-information-database-hacked/ar-AA2hTV50",
+      "source": "Free Malaysia Today on MSN",
+      "publishedAt": "2026-11-20T14:38:00.000Z",
+      "latestAt": "2026-11-21T04:05:00.000Z",
+      "firstSeenAt": "2026-11-21T03:45:20.063Z",
       "outlets": 6,
       "outletNames": [
-        "CBS News",
-        "ABC7 Chicago",
-        "Wirepoints",
-        "Shaw Local",
-        "WGN-TV",
-        "Hindustan Times on MSN"
+        "Free Malaysia Today",
+        "India Today",
+        "The Hindu",
+        "The Straits Times",
+        "The News & Observer",
+        "102.7 WBOW"
       ],
-      "score": 3.21
-    },
-    {
-      "id": "bba455d55701",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers allegedly breach USDA system used to pay farmers: reports",
-      "url": "https://kval.com/news/nation-world/hackers-allegedly-breach-usda-system-used-to-pay-farmers-reports-payment-system-us-department-of-agriculture-cybersecurity-cyberthreat-united-states-government",
-      "source": "KVAL",
-      "publishedAt": "2026-11-20T11:37:00.000Z",
-      "latestAt": "2026-11-21T03:45:11.000Z",
-      "firstSeenAt": "2026-11-21T03:45:20.063Z",
-      "outlets": 7,
-      "outletNames": [
-        "WLUK",
-        "KBOI",
-        "WJAR",
-        "WSBT",
-        "KATU",
-        "13WHAM-TV",
-        "KVAL"
-      ],
-      "score": 2.78
+      "score": 2.8
     },
     {
       "id": "aeda33a9b3e1",
@@ -609,6 +609,28 @@
       }
     },
     {
+      "id": "bba455d55701",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers allegedly breach USDA system used to pay farmers: reports",
+      "url": "https://kval.com/news/nation-world/hackers-allegedly-breach-usda-system-used-to-pay-farmers-reports-payment-system-us-department-of-agriculture-cybersecurity-cyberthreat-united-states-government",
+      "source": "KVAL",
+      "publishedAt": "2026-11-20T11:37:00.000Z",
+      "latestAt": "2026-11-21T03:45:11.000Z",
+      "firstSeenAt": "2026-11-21T03:45:20.063Z",
+      "outlets": 7,
+      "outletNames": [
+        "WLUK",
+        "KBOI",
+        "WJAR",
+        "WSBT",
+        "KATU",
+        "13WHAM-TV",
+        "KVAL"
+      ],
+      "score": 2.78
+    },
+    {
       "id": "80b173a24678",
       "cat": "hacks",
       "kind": "news",
@@ -645,26 +667,6 @@
         "Dark Reading"
       ],
       "score": 2.66
-    },
-    {
-      "id": "db43eadebab2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI’s criminal information database hacked",
-      "url": "https://www.msn.com/en-my/news/other/fbi-s-criminal-information-database-hacked/ar-AA2hTV50",
-      "source": "Free Malaysia Today on MSN",
-      "publishedAt": "2026-11-20T14:38:00.000Z",
-      "latestAt": "2026-11-21T04:05:00.000Z",
-      "firstSeenAt": "2026-11-21T03:45:20.063Z",
-      "outlets": 5,
-      "outletNames": [
-        "Free Malaysia Today",
-        "India Today",
-        "The Hindu",
-        "The Straits Times",
-        "The News & Observer"
-      ],
-      "score": 2.6
     },
     {
       "id": "d130253cceea",
@@ -942,6 +944,25 @@
       "score": 2.59
     },
     {
+      "id": "f6d7be94463a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Report: FBI criminal information database breached in cyberattack",
+      "url": "https://www.khou.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0",
+      "source": "KHOU",
+      "publishedAt": "2026-11-20T19:35:00.000Z",
+      "latestAt": "2026-11-21T04:15:17.000Z",
+      "firstSeenAt": "2026-11-21T04:30:36.214Z",
+      "outlets": 4,
+      "outletNames": [
+        "KHOU",
+        "fox61.com",
+        "WFAA",
+        "WCNC"
+      ],
+      "score": 2.55
+    },
+    {
       "id": "501df2603002",
       "cat": "hacks",
       "kind": "news",
@@ -1033,24 +1054,6 @@
         "Mashable"
       ],
       "score": 2.38
-    },
-    {
-      "id": "f6d7be94463a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Report: FBI criminal information database breached in cyberattack",
-      "url": "https://www.khou.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0",
-      "source": "KHOU",
-      "publishedAt": "2026-11-20T19:35:00.000Z",
-      "latestAt": "2026-11-21T04:15:17.000Z",
-      "firstSeenAt": "2026-11-21T04:30:36.214Z",
-      "outlets": 3,
-      "outletNames": [
-        "KHOU",
-        "fox61.com",
-        "WFAA"
-      ],
-      "score": 2.2
     },
     {
       "id": "0e469f138088",
