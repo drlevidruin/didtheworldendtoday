@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T16:47:19.211Z",
+  "buildTime": "2026-11-21T17:02:24.582Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 11:47 ET",
+  "etStamp": "2026-11-21 12:02 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,19 +46,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1258,
-  "lastSuccessAt": "2026-11-21T16:47:19.211Z",
+  "headlinesRead": 1270,
+  "lastSuccessAt": "2026-11-21T17:02:24.582Z",
   "rollingFallback": false,
   "cats": {
-    "earth": 7,
+    "earth": 6,
     "hacks": 26,
-    "flights": 27,
+    "flights": 28,
     "markets": 11,
     "weather": 4,
+    "space": 4,
     "germs": 4,
     "grid": 4,
     "ai": 3,
-    "space": 4,
     "internet": 4,
     "sun": 2,
     "animals": 4
@@ -87,7 +87,13 @@
       "upcoming": true
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "AUS",
+          "hub": false,
+          "reason": "low ceilings"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 2,
       "closures": 0,
@@ -183,57 +189,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 956,
+      "count": 981,
       "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     },
     "bing": {
       "ok": true,
-      "count": 265,
-      "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "count": 254,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 1,
-      "error": "rate limited (HTTP 429)",
+      "ok": false,
+      "count": 0,
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-21T16:47:19.211Z"
     },
     "hn": {
       "ok": true,
-      "count": 6,
+      "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +252,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T16:47:19.211Z"
+      "lastOkAt": "2026-11-21T17:02:24.582Z"
     }
   },
   "stories": [
@@ -498,6 +504,24 @@
       "score": 2.41
     },
     {
+      "id": "276c4b2d0e1e",
+      "cat": "space",
+      "kind": "news",
+      "title": "Earth has a new temporary ‘mini-moon’",
+      "url": "https://www.cnn.com/2026/11/21/science/mini-moon-earth-2026-qq8",
+      "source": "CNN",
+      "publishedAt": "2026-11-21T03:30:00.000Z",
+      "latestAt": "2026-11-21T16:08:13.000Z",
+      "firstSeenAt": "2026-11-21T15:47:11.421Z",
+      "outlets": 3,
+      "outletNames": [
+        "CNN",
+        "SSBCrack",
+        "Yahoo News UK"
+      ],
+      "score": 2.06
+    },
+    {
       "id": "3e4b1c709480",
       "cat": "germs",
       "kind": "news",
@@ -515,21 +539,27 @@
       "score": 1.99
     },
     {
-      "id": "00ef8288ba46",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Nvidia stock plunges 10% amid potential SEC probe, market selloff",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTmdEaExyd0p4eDRQandxVHVZMmhkaHlDeFpZQTdNQlBPdjlZcUcyeVItWFNfeC02ZXprRjc0U1BIOFduRjhERUROR0w2VkRKMVY4TGQ0M2M5Wnlfbjdud0tjcks4bnF1dlVNTTZMS2ZXY01uSEVsYkJBeVNIS0NjODhjTC1ZellMamVyS28xcmE0T1hJS0E?oc=5",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-20T20:52:24.000Z",
-      "latestAt": "2026-11-20T22:12:21.000Z",
-      "firstSeenAt": "2026-11-20T22:29:32.024Z",
-      "outlets": 2,
+      "id": "sig:faa-stop:AUS:2026-11-21",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at AUS (low ceilings)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-21T17:02:24.582Z",
+      "latestAt": "2026-11-21T17:02:24.582Z",
+      "firstSeenAt": "2026-11-21T17:02:24.582Z",
+      "outlets": 1,
       "outletNames": [
-        "Crypto Briefing",
-        "Bloomberg.com"
+        "FAA"
       ],
-      "score": 1.95
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "AUS",
+        "hub": false,
+        "nationwide": false,
+        "reason": "low ceilings"
+      }
     },
     {
       "id": "sig:faa-stop:YYZ:2026-11-21",
@@ -575,29 +605,6 @@
         "hub": false,
         "nationwide": false,
         "reason": "low visibility"
-      }
-    },
-    {
-      "id": "sig:faa-stop:AUS:2026-11-20",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at AUS (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-20T19:44:14.656Z",
-      "latestAt": "2026-11-20T19:44:14.656Z",
-      "firstSeenAt": "2026-11-20T19:44:14.656Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "AUS",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
       }
     },
     {
@@ -703,25 +710,21 @@
       "score": 2.56
     },
     {
-      "id": "1d17892f4747",
-      "cat": "earth",
+      "id": "00ef8288ba46",
+      "cat": "markets",
       "kind": "news",
-      "title": "Magnitude-7.2 earthquake strikes Indonesia's Maluku, no tsunami threat",
-      "url": "https://english.news.cn/20261121/46f5b95399794d6a969dbf387647c325/c.html",
-      "source": "Xinhua",
-      "publishedAt": "2026-11-20T16:48:00.000Z",
-      "latestAt": "2026-11-21T13:46:00.000Z",
-      "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 4,
+      "title": "Nvidia stock plunges 10% amid potential SEC probe, market selloff",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTmdEaExyd0p4eDRQandxVHVZMmhkaHlDeFpZQTdNQlBPdjlZcUcyeVItWFNfeC02ZXprRjc0U1BIOFduRjhERUROR0w2VkRKMVY4TGQ0M2M5Wnlfbjdud0tjcks4bnF1dlVNTTZMS2ZXY01uSEVsYkJBeVNIS0NjODhjTC1ZellMamVyS28xcmE0T1hJS0E?oc=5",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-20T20:52:24.000Z",
+      "latestAt": "2026-11-20T22:12:21.000Z",
+      "firstSeenAt": "2026-11-20T22:29:32.024Z",
+      "outlets": 2,
       "outletNames": [
-        "Xinhua",
-        "The Peninsula Qatar",
-        "The Malaysian Reserve",
-        "The Star"
+        "Crypto Briefing",
+        "Bloomberg.com"
       ],
-      "score": 2.03,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
+      "score": 1.95
     },
     {
       "id": "76b284e47755",
@@ -792,6 +795,26 @@
       "score": 1.91
     },
     {
+      "id": "6aa8479c13bb",
+      "cat": "earth",
+      "kind": "news",
+      "title": "6.8-Magnitude Earthquake Strikes Indonesia, 1.5 Lakh People Experience Tremors",
+      "url": "https://www.oneindia.com/international/6-8-magnitude-earthquake-strikes-indonesia-1-5-lakh-people-experience-tremors-8266265.html",
+      "source": "Oneindia",
+      "publishedAt": "2026-11-20T20:32:00.000Z",
+      "latestAt": "2026-11-21T11:06:37.000Z",
+      "firstSeenAt": "2026-11-21T12:16:53.020Z",
+      "outlets": 3,
+      "outletNames": [
+        "TodayPress.tv",
+        "Report.az",
+        "Oneindia"
+      ],
+      "score": 1.91,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "aceb16070725",
       "cat": "markets",
       "kind": "news",
@@ -826,23 +849,6 @@
       "score": 1.72
     },
     {
-      "id": "276c4b2d0e1e",
-      "cat": "space",
-      "kind": "news",
-      "title": "Earth has a new temporary ‘mini-moon’",
-      "url": "https://www.cnn.com/2026/11/21/science/mini-moon-earth-2026-qq8",
-      "source": "CNN",
-      "publishedAt": "2026-11-21T03:30:00.000Z",
-      "latestAt": "2026-11-21T16:08:13.000Z",
-      "firstSeenAt": "2026-11-21T15:47:11.421Z",
-      "outlets": 2,
-      "outletNames": [
-        "CNN",
-        "SSBCrack"
-      ],
-      "score": 1.59
-    },
-    {
       "id": "4f6393459502",
       "cat": "internet",
       "kind": "news",
@@ -873,6 +879,29 @@
         "kare11.com"
       ],
       "score": 1.4
+    },
+    {
+      "id": "sig:faa-stop:AUS:2026-11-20",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at AUS (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-20T19:44:14.656Z",
+      "latestAt": "2026-11-20T19:44:14.656Z",
+      "firstSeenAt": "2026-11-20T19:44:14.656Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "AUS",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
     },
     {
       "id": "sig:faa-stop:BFI:2026-11-20",
@@ -952,6 +981,25 @@
       "score": 2.51
     },
     {
+      "id": "2593cf91a89e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US Department of Agriculture Hit by Cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY3lqQWxtTDBiMk9wWGhNVldGVXJqMUN2NUZuZWlyRThiMXEtQjR5aGw3SWpGRkxhYTFkdkxMTlFfUXVmOG1LSXh1MTc0RHF0SnRYcS0tc3I4Y1AxXzFmREpyWHdVOEFtZE9iUEZEdXpqV1pra1M1d0JJTjh0bWxfMTRn?oc=5",
+      "source": "8AM Media",
+      "publishedAt": "2026-11-21T05:52:00.000Z",
+      "latestAt": "2026-11-21T14:10:57.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 4,
+      "outletNames": [
+        "8AM Media",
+        "Afghanistan International",
+        "Ratopati",
+        "IANS LIVE"
+      ],
+      "score": 2.48
+    },
+    {
       "id": "c0ec02877349",
       "cat": "hacks",
       "kind": "news",
@@ -1004,22 +1052,22 @@
       "score": 2.34
     },
     {
-      "id": "2593cf91a89e",
+      "id": "6a51029821da",
       "cat": "hacks",
       "kind": "news",
-      "title": "US Department of Agriculture Hit by Cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY3lqQWxtTDBiMk9wWGhNVldGVXJqMUN2NUZuZWlyRThiMXEtQjR5aGw3SWpGRkxhYTFkdkxMTlFfUXVmOG1LSXh1MTc0RHF0SnRYcS0tc3I4Y1AxXzFmREpyWHdVOEFtZE9iUEZEdXpqV1pra1M1d0JJTjh0bWxfMTRn?oc=5",
-      "source": "8AM Media",
-      "publishedAt": "2026-11-21T06:30:05.000Z",
-      "latestAt": "2026-11-21T14:10:57.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "title": "FBI's National Crime database hit by hackers in 2nd breach in recent months",
+      "url": "https://www.tribuneindia.com/news/usa-news/fbis-national-crime-database-hit-by-hackers-in-2nd-breach-in-recent-months/",
+      "source": "The Tribune",
+      "publishedAt": "2026-11-21T08:12:00.000Z",
+      "latestAt": "2026-11-21T16:11:00.000Z",
+      "firstSeenAt": "2026-11-21T16:32:25.046Z",
       "outlets": 3,
       "outletNames": [
-        "8AM Media",
-        "Afghanistan International",
-        "Ratopati"
+        "The Tribune",
+        "ANI News",
+        "Republic World"
       ],
-      "score": 2.16
+      "score": 2.23
     },
     {
       "id": "1117a0401a89",
@@ -1090,26 +1138,6 @@
       "score": 1.94
     },
     {
-      "id": "6aa8479c13bb",
-      "cat": "earth",
-      "kind": "news",
-      "title": "6.8-Magnitude Earthquake Strikes Indonesia, 1.5 Lakh People Experience Tremors",
-      "url": "https://www.oneindia.com/international/6-8-magnitude-earthquake-strikes-indonesia-1-5-lakh-people-experience-tremors-8266265.html",
-      "source": "Oneindia",
-      "publishedAt": "2026-11-20T20:32:00.000Z",
-      "latestAt": "2026-11-21T11:06:37.000Z",
-      "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 3,
-      "outletNames": [
-        "TodayPress.tv",
-        "Report.az",
-        "Oneindia"
-      ],
-      "score": 1.91,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "d1edf1a96217",
       "cat": "hacks",
       "kind": "news",
@@ -1159,23 +1187,6 @@
         "BBC"
       ],
       "score": 1.73
-    },
-    {
-      "id": "6a51029821da",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI's National Crime database hit by hackers in 2nd breach in recent months",
-      "url": "https://www.tribuneindia.com/news/usa-news/fbis-national-crime-database-hit-by-hackers-in-2nd-breach-in-recent-months/",
-      "source": "The Tribune",
-      "publishedAt": "2026-11-21T08:12:00.000Z",
-      "latestAt": "2026-11-21T16:11:00.000Z",
-      "firstSeenAt": "2026-11-21T16:32:25.046Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Tribune",
-        "ANI News"
-      ],
-      "score": 1.72
     },
     {
       "id": "7b61052c2458",
