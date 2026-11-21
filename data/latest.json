@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T12:46:50.384Z",
+  "buildTime": "2026-11-21T13:01:49.648Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 07:46 ET",
+  "etStamp": "2026-11-21 08:01 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -47,13 +47,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1284,
-  "lastSuccessAt": "2026-11-21T12:46:50.384Z",
+  "headlinesRead": 418,
+  "lastSuccessAt": "2026-11-21T13:01:49.648Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
+    "flights": 24,
     "earth": 9,
-    "hacks": 25,
+    "hacks": 24,
     "markets": 12,
     "germs": 4,
     "weather": 4,
@@ -91,7 +91,7 @@
       "groundStops": [],
       "nationwide": false,
       "groundDelays": 2,
-      "closures": 1,
+      "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -184,57 +184,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 979,
-      "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "count": 108,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     },
     "bing": {
       "ok": true,
-      "count": 268,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-21T08:46:06.995Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     },
     "x": {
       "ok": true,
@@ -247,13 +247,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T12:46:50.384Z"
+      "lastOkAt": "2026-11-21T13:01:49.648Z"
     }
   },
   "stories": [
@@ -597,6 +597,27 @@
       }
     },
     {
+      "id": "c3543c0a8ead",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
+      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-20T20:15:11.000Z",
+      "latestAt": "2026-11-21T03:36:34.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "outlets": 6,
+      "outletNames": [
+        "CBS News",
+        "ABC7 Chicago",
+        "Wirepoints",
+        "Shaw Local",
+        "WGN-TV",
+        "Hindustan Times on MSN"
+      ],
+      "score": 3.21
+    },
+    {
       "id": "21bb56ff9807",
       "cat": "hacks",
       "kind": "news",
@@ -655,25 +676,6 @@
         "The Mirror US"
       ],
       "score": 2.42
-    },
-    {
-      "id": "8f9147e76bc9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Staples Canada says customer information accessed in data breach",
-      "url": "https://www.thestar.com/business/staples-canada-says-customer-information-accessed-in-data-breach/article_0ea9c7cb-dbd5-5f96-b5b1-ab2d021f1e2a.html",
-      "source": "The Star",
-      "publishedAt": "2026-11-20T16:00:00.000Z",
-      "latestAt": "2026-11-21T05:05:48.000Z",
-      "firstSeenAt": "2026-11-21T05:30:36.526Z",
-      "outlets": 4,
-      "outletNames": [
-        "The Star",
-        "Toronto Star",
-        "The Spec",
-        "CP24"
-      ],
-      "score": 2.32
     },
     {
       "id": "7814b483c9c0",
@@ -950,6 +952,25 @@
         "FOX 35 Orlando"
       ],
       "score": 2.81
+    },
+    {
+      "id": "8f9147e76bc9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Staples Canada says customer information accessed in data breach",
+      "url": "https://www.thestar.com/business/staples-canada-says-customer-information-accessed-in-data-breach/article_0ea9c7cb-dbd5-5f96-b5b1-ab2d021f1e2a.html",
+      "source": "The Star",
+      "publishedAt": "2026-11-20T16:00:00.000Z",
+      "latestAt": "2026-11-21T05:05:48.000Z",
+      "firstSeenAt": "2026-11-21T05:30:36.526Z",
+      "outlets": 4,
+      "outletNames": [
+        "The Star",
+        "Toronto Star",
+        "The Spec",
+        "CP24"
+      ],
+      "score": 2.32
     },
     {
       "id": "2593cf91a89e",
@@ -1708,6 +1729,22 @@
       "score": 1.1
     },
     {
+      "id": "8a06101ad7b2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase says customer emails were exposed days after a major banking outage",
+      "url": "https://www.nj.com/news/2026/11/chase-says-customer-emails-were-exposed-days-after-a-major-banking-outage.html",
+      "source": "NJ.com",
+      "publishedAt": "2026-11-20T23:53:00.000Z",
+      "latestAt": "2026-11-20T23:53:00.000Z",
+      "firstSeenAt": "2026-11-21T13:01:49.648Z",
+      "outlets": 1,
+      "outletNames": [
+        "NJ.com"
+      ],
+      "score": 1.09
+    },
+    {
       "id": "fb811c4c9021",
       "cat": "markets",
       "kind": "news",
@@ -1738,6 +1775,22 @@
         "timesdaily.com"
       ],
       "score": 1.08
+    },
+    {
+      "id": "e5af25d5cb82",
+      "cat": "flights",
+      "kind": "news",
+      "title": "How I covered the FAA ground stop from a Southwest flight at 36,000 feet",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNck1hNThlbFJjY2lkQWxlZWRGZHBITHZBRW5aelU4SHNVczlScmEwcmV2Xy15U08tRzI2eTZOSUZhOFpQVE5GcnJGWGhkdHBpbEZpUHdER1VXNHpCYmR6endkMTYyZkJTQWltcXVieG56M1E4QlFFT1UwZXlNOTZuY2txZlpMdnExVTZDZDJYME5GTHVuMWd4QU1reDRIbXRkTFVDUHh5Ump3Nmhma2QteDJ6LTJiNDg?oc=5",
+      "source": "Dallas News",
+      "publishedAt": "2026-11-21T12:57:52.000Z",
+      "latestAt": "2026-11-21T12:57:52.000Z",
+      "firstSeenAt": "2026-11-21T13:01:49.648Z",
+      "outlets": 1,
+      "outletNames": [
+        "Dallas News"
+      ],
+      "score": 1
     },
     {
       "id": "029a4d833d94",
@@ -1772,22 +1825,6 @@
       "score": 1
     },
     {
-      "id": "7e89211dd5e1",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Crippling outages sweep US tech this week from banks to 178 websites hacked",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWF9rNDNTMVlCWHY2TDlRdkliUHdrUmhqOV9oQ0RaamtlYmtCUG13S3AyWHUzYW93d2ZiN0M1N3gzMUJXWUhRMFVpY3hURWlnQkZ3eEh6ZUN4X3hJeFBFZlc3eGJfeWNxVG1TdmIwckFDVTA2Z0VBUnZMb2ZLZ0dLZzd6WXhIdW5LTTBpTW9LV0paUdIBjAFBVV95cUxNN0FMM09aTTRXd2V3M2luMjNma2FyMkZMQmg4TWp0eWlDeUxlMmdCNFpqWjEwVHpTMm5SU09uYTZidnlUQndrVEZhRmZicWFwRFp2VVBtZ1hSdFJNemdmQU1naUNpbl96bEstOHZ2WEJmLVU5QzZMdzk3X1JGa1dFRmF5eGdGNThvd004OQ?oc=5",
-      "source": "The Mirror US",
-      "publishedAt": "2026-11-21T12:00:00.000Z",
-      "latestAt": "2026-11-21T12:00:00.000Z",
-      "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Mirror US"
-      ],
-      "score": 1
-    },
-    {
       "id": "7ba0231ec718",
       "cat": "ai",
       "kind": "x",
@@ -1802,22 +1839,6 @@
         "@unusual_whales on X"
       ],
       "score": 1
-    },
-    {
-      "id": "c52f263ab563",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Chase cyberattack disclosure points to vendor-held marketing data",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQ2dTSGFLeTJYVXhseGRaaHhUbVZFS3NGNDZzbVA0aTNaSmhmSk1VVC16NTJfeUY4Sm11aWZpODA0RXEydlZOb0RpV2JwTWdDdXNIUlV2RjJPOTJnMEI0dEJaSVdmM19pd1BRYTVkY1pPSWVNMW9lQ05fQkhBLUh2MFp2bmF3YWZYX0RqWVZ5VGFyNVZZVE5WTXItTnkwZ0lRcGs5MzVNTU5JaTJBWkVSSmVMV0owR1V0ZTB5TGVpUnZxYUFhODRYVlVNOGNrNHhsTURaeQ?oc=5",
-      "source": "finchannel",
-      "publishedAt": "2026-11-21T12:21:55.000Z",
-      "latestAt": "2026-11-21T12:21:55.000Z",
-      "firstSeenAt": "2026-11-21T12:46:50.384Z",
-      "outlets": 1,
-      "outletNames": [
-        "finchannel"
-      ],
-      "score": 0.99
     },
     {
       "id": "7ea48e0c9ab9",
@@ -1902,22 +1923,6 @@
         "Barrie News"
       ],
       "score": 0.99
-    },
-    {
-      "id": "942f6624f725",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK launches secret operation to protect supermarket fridges, freezers from hackers",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQemMxaXBuU3NxbW02OU9WeGxPc1B6dHhfQXlVX2lHbkhJN0traHI2OWxNTmxEQUwtY0N5WFQ4T2dSb3NGMC1LaV9RSVNqQUM1Z0tzdEU5UWNxNmxXZW1nR0I1LVVmNUdsejIwS0FRTDRUUlg4TEhoQzdldGlyYTVzUTI3ajNJVVpMZTBuUml1TXdOZzRPUUp4NkJyVnlZQ05XdkZ2Q1dNWmVjX1BLWGdGOE9hSV80OEk2bGZ1LWJrYldvZ0cyM05fOU9YRHRHNGhPOE9VNtIB2gFBVV95cUxQd09mNl9WcHMxTzRwSkpGdjg3TTZtcjBpQTFRd1A3RmY1eFd4YjVqVDdsRDJYLU9YZkdoOGJUbHNwdkZ5Y0p4X2U0Zi1kdU40Z3hPbnY4VXRpY3RqWTlTaDZDbm9xVjV3MUVFaTR3SUJrS2Jxc21uUWF1ejFBY2Zla0ZaOTBJYlR5R0RaVDNTMk9QQmJLN3g2cUIzXzZ5UTdjUWNKa3hCN0dmUVJDZDFlWGRnSDFTNHJrVjNMbjFaajBPRGhIY2J6THRpOVRRRVBIR19LOW40XzJVZw?oc=5",
-      "source": "Moneycontrol.com",
-      "publishedAt": "2026-11-21T11:52:00.000Z",
-      "latestAt": "2026-11-21T11:52:00.000Z",
-      "firstSeenAt": "2026-11-21T12:46:50.384Z",
-      "outlets": 1,
-      "outletNames": [
-        "Moneycontrol.com"
-      ],
-      "score": 0.98
     },
     {
       "id": "998f7018e162",
