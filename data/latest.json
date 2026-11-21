@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T04:45:33.761Z",
-  "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 23:45 ET",
+  "buildTime": "2026-11-21T05:00:33.428Z",
+  "etDate": "2026-11-21",
+  "etStamp": "2026-11-21 00:00 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -24,10 +24,10 @@
       "points": 5
     }
   ],
-  "change": -9,
+  "change": 0,
   "yesterday": {
-    "date": "2026-11-19",
-    "score": 80,
+    "date": "2026-11-20",
+    "score": 71,
     "fired": [
       "flights",
       "hacks",
@@ -46,20 +46,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1300,
-  "lastSuccessAt": "2026-11-21T04:45:33.761Z",
+  "headlinesRead": 1118,
+  "lastSuccessAt": "2026-11-21T05:00:33.428Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 22,
-    "earth": 5,
+    "flights": 19,
+    "earth": 6,
     "germs": 4,
-    "hacks": 30,
+    "hacks": 31,
     "markets": 13,
     "grid": 5,
+    "weather": 4,
     "internet": 4,
     "sun": 4,
-    "weather": 4,
-    "ai": 3,
+    "ai": 4,
     "space": 4,
     "animals": 2
   },
@@ -89,7 +89,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 1,
+      "groundDelays": 0,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -183,57 +183,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1046,
-      "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "count": 802,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 22 of 26 queries)",
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     },
     "bing": {
       "ok": true,
-      "count": 216,
+      "count": 278,
       "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +246,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T04:45:33.761Z"
+      "lastOkAt": "2026-11-21T05:00:33.428Z"
     }
   },
   "stories": [
@@ -374,9 +374,9 @@
       "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
       "source": "Times Now on MSN",
       "publishedAt": "2026-11-20T10:59:00.000Z",
-      "latestAt": "2026-11-21T03:49:21.000Z",
+      "latestAt": "2026-11-21T04:50:20.000Z",
       "firstSeenAt": "2026-11-21T01:29:59.829Z",
-      "outlets": 12,
+      "outlets": 13,
       "outletNames": [
         "Times Now on MSN",
         "Egyptian Gazette",
@@ -389,9 +389,10 @@
         "news9live",
         "The Rio Times",
         "Daily Sun",
-        "Gulf News"
+        "Gulf News",
+        "India News Network"
       ],
-      "score": 3.48,
+      "score": 3.56,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
     },
@@ -405,7 +406,7 @@
       "publishedAt": "2026-11-20T09:39:00.000Z",
       "latestAt": "2026-11-20T23:54:58.000Z",
       "firstSeenAt": "2026-11-20T22:44:29.793Z",
-      "outlets": 9,
+      "outlets": 10,
       "outletNames": [
         "NBC News",
         "marketscreener.com",
@@ -415,9 +416,10 @@
         "Investing.com",
         "U.S. News & World Report",
         "SRN News",
-        "Devdiscourse"
+        "Devdiscourse",
+        "The Detroit News"
       ],
-      "score": 3.26
+      "score": 3.38
     },
     {
       "id": "c3543c0a8ead",
@@ -778,6 +780,23 @@
       "score": 2.19
     },
     {
+      "id": "cb91c9815031",
+      "cat": "weather",
+      "kind": "news",
+      "title": "New record high temperatures possible today before temperatures begin to tumble",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNaXBtcHFRRDI0YkF2RjlJWFFEbG1zX3RCU2ZwVjJXUTNFblpiUmhzMnBreDQydldIQm9sbzJmbzZ5b1IzY01KdngwdlVuZVNVNW5DY2FDU3A3dWdNNkNTTzdEdmVXZ0VvZmtWQlVfeDlKZUhpa3I1STdzdTRGUDByWTVVYUdiVnRmYUp3eVppaXdKSEdSMTRvZ3lsTndiVGpJMXdPR2hLWU12ZUNLUGtZOEYtZFVEUQ?oc=5",
+      "source": "WEAU",
+      "publishedAt": "2026-11-20T12:39:00.000Z",
+      "latestAt": "2026-11-20T16:31:00.000Z",
+      "firstSeenAt": "2026-11-21T05:00:33.428Z",
+      "outlets": 2,
+      "outletNames": [
+        "WEAU",
+        "WLFI"
+      ],
+      "score": 2.04
+    },
+    {
       "id": "acd1e0d2dcd8",
       "cat": "germs",
       "kind": "news",
@@ -864,23 +883,6 @@
       "score": 1.94
     },
     {
-      "id": "b1232520d389",
-      "cat": "internet",
-      "kind": "news",
-      "title": "APRA calls Microsoft outage a \"near miss\" for financial system",
-      "url": "https://www.insurancebusinessmag.com/au/news/cyber/apra-calls-microsoft-outage-a-near-miss-for-financial-system-598268.aspx",
-      "source": "Insurance Business America",
-      "publishedAt": "2026-11-20T06:56:00.000Z",
-      "latestAt": "2026-11-20T16:00:00.000Z",
-      "firstSeenAt": "2026-11-20T15:28:28.186Z",
-      "outlets": 2,
-      "outletNames": [
-        "Insurance Business America",
-        "Insurance Business"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "c1812514f929",
       "cat": "flights",
       "kind": "news",
@@ -919,24 +921,6 @@
         "FOX 35 Orlando"
       ],
       "score": 2.81
-    },
-    {
-      "id": "f60e65cf388c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US to announce cause of nationwide FAA outage that disrupted 18 , 000 flights",
-      "url": "https://timesofindia.indiatimes.com/world/us/us-to-announce-cause-of-nationwide-faa-outage-that-disrupted-18000-flights/articleshow/136013506.cms",
-      "source": "timesofindia.indiatimes.com",
-      "publishedAt": "2026-11-20T04:54:00.000Z",
-      "latestAt": "2026-11-20T17:26:32.000Z",
-      "firstSeenAt": "2026-11-20T21:14:16.656Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Times of India",
-        "timesofindia.indiatimes.com",
-        "The American Bazaar"
-      ],
-      "score": 2.63
     },
     {
       "id": "1ac4999a4493",
@@ -1417,6 +1401,23 @@
       "score": 1.72
     },
     {
+      "id": "b1232520d389",
+      "cat": "internet",
+      "kind": "news",
+      "title": "APRA calls Microsoft outage a \"near miss\" for financial system",
+      "url": "https://www.insurancebusinessmag.com/au/news/cyber/apra-calls-microsoft-outage-a-near-miss-for-financial-system-598268.aspx",
+      "source": "Insurance Business America",
+      "publishedAt": "2026-11-20T06:56:00.000Z",
+      "latestAt": "2026-11-20T16:00:00.000Z",
+      "firstSeenAt": "2026-11-20T15:28:28.186Z",
+      "outlets": 2,
+      "outletNames": [
+        "Insurance Business America",
+        "Insurance Business"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "78e8cb4ec0eb",
       "cat": "hacks",
       "kind": "news",
@@ -1486,6 +1487,23 @@
       "score": 1.66
     },
     {
+      "id": "3eecdde20922",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "The FBI was hacked again, this time the breach targeted its crime database",
+      "url": "https://www.msn.com/en-us/news/other/the-fbi-was-hacked-again-this-time-the-breach-targeted-its-crime-database/ar-AA2hSP7w",
+      "source": "CNN on MSN",
+      "publishedAt": "2026-11-20T18:23:12.000Z",
+      "latestAt": "2026-11-21T04:43:00.000Z",
+      "firstSeenAt": "2026-11-21T05:00:33.428Z",
+      "outlets": 2,
+      "outletNames": [
+        "CNN on MSN",
+        "New York Post"
+      ],
+      "score": 1.65
+    },
+    {
       "id": "1848abefd9f1",
       "cat": "flights",
       "kind": "news",
@@ -1535,6 +1553,25 @@
         "Yahoo Tech"
       ],
       "score": 1.58
+    },
+    {
+      "id": "60f8adc85a5a",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Strong magnitude 6.7 earthquake strikes Peru just outside of Lima",
+      "url": "https://www.yahoo.com/news/weather-news/articles/strong-magnitude-6-7-earthquake-010437777.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-20T16:00:00.000Z",
+      "latestAt": "2026-11-21T01:04:00.000Z",
+      "firstSeenAt": "2026-11-21T05:00:33.428Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX Weather"
+      ],
+      "score": 1.57,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "13b6d70b3a84",
@@ -1815,54 +1852,6 @@
       "score": 1.39
     },
     {
-      "id": "0d6a4a9c9e41",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Flight delays, cancellations on consumers' minds during Thanksgiving travel after nationwide ground stop last week",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcDNtNWZuOFRvRURrX2ZwTUY1bDBydmstd0NiUVItcXpqRWRvaUVFYng2emZoZGhMcEU5RWg3cndPUEsxanpnTHg3TzYxd2VvYlA0RklWMF9aMGF3TXZMVDZxRVJ0TmliMFVKXzQzNjlRRnZlVFc2MFB5ZTE5VGd6NVpyNUZJck9zX3RiRGlZaGtBSDlpaDNCd0xhV0N2Zw?oc=5",
-      "source": "KMBC",
-      "publishedAt": "2026-11-20T23:58:00.000Z",
-      "latestAt": "2026-11-20T23:58:00.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 1,
-      "outletNames": [
-        "KMBC"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "b38993ca1e0a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Thanksgiving travelers head to airports early following nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWHlZNW9MazBWZmF0X3dGTUdoREpRTmtXSGRVVE1acmlmYWVsOFlHMkx1S3p4NVVkbVlmSjc0clQ5WGRiZlBxcFE2WlgzQjc3UXlIM2d1SVllWG1Zc2dXdDFEUFNpOC1YVFVjQ1NSY2NXTG1lMTMtanI5NVRaT3NtWlU1Zm1EY2RXRVgyVlBPcDdfZy1Fd2hqcEhHSTFQVkZvZXgwZktXRVdOdlByU3fSAbMBQVVfeXFMTUkxeFhlcl9PRlRXaVdDcjMzbFJyQnkzbUN6bXJLelJja2gzX2p4M2Nid1NrU25nQnNMMFZfc1U0bTlUSVdfVHZQUGtNX1FEZWpadUZuellZUmt1YV9QTWcwZ0R3WWxxamoyX282MENKam5IQjU1V3NRTzQxMnptdkphZUxUSzZvX0ljY2dHV09iTGZibm1OdldyWllfNTJ4SXRzOFFZNzFqYmVNMDNBU1ptU28?oc=5",
-      "source": "ABC7 New York",
-      "publishedAt": "2026-11-20T23:26:08.000Z",
-      "latestAt": "2026-11-21T02:15:00.000Z",
-      "firstSeenAt": "2026-11-20T23:44:52.341Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC7 New York"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "83ef9fdc9f2a",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Weekend Outlook: Record heat followed by cold and snow",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVm9zMTBGLTBKZkx2QWNaNWs0eFBsQnpuSktOZ2FpdUpPOXRqVlp3VU05TDYxVXNXX3lETWxBZGtGLUxyQ3lTcWZacjIzVTRuTzc4VUEzblo3TW0xbW5NYUhQSVpJVjRqREs2UTZROFAtaTFmN2RZaFRfNEJjZC1kNWpybzZDNHc0UlhQcHZIaVloV21XLUtTQnZGVnl4b28?oc=5",
-      "source": "SooToday.com",
-      "publishedAt": "2026-11-20T11:40:50.000Z",
-      "latestAt": "2026-11-20T11:45:07.000Z",
-      "firstSeenAt": "2026-11-20T11:57:38.909Z",
-      "outlets": 1,
-      "outletNames": [
-        "SooToday.com"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "3a38015822b7",
       "cat": "sun",
       "kind": "news",
@@ -2009,6 +1998,22 @@
         "Secret London"
       ],
       "score": 0.92
+    },
+    {
+      "id": "d1bfe0d98aab",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Anthropic Claude down: Why it said it was unable to authenticate code",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcDBjX2hrQXlxUEV2Q3pZVUlzVUpPcTU1TFpiaGY4bEtualhpY2FWemdBQnlpclpESjlVSkxobHJ1NDJyZU9FZlJSQW9odU1zUmdvazJqUXV6YmxPYmRDc19HWnNBTDRwRHVGcWJLc1VGZDd4RWxHUTF0Z0lKd05vOA?oc=5",
+      "source": "Mashable",
+      "publishedAt": "2026-11-20T23:30:34.000Z",
+      "latestAt": "2026-11-20T23:30:34.000Z",
+      "firstSeenAt": "2026-11-21T05:00:33.428Z",
+      "outlets": 1,
+      "outletNames": [
+        "Mashable"
+      ],
+      "score": 0.91
     },
     {
       "id": "3f99b2a2a3e3",
