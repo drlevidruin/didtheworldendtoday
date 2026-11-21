@@ -125,7 +125,12 @@ test('workflow: the steps come in the spec order', () => {
     'Configure Pages',
     'Upload site',
     'Deploy',
+    'Wait before the second try',
+    'Deploy, second try',
   ]);
+  // The first Deploy may fail without failing the run; the second try, which only runs after that failure, decides.
+  assert.match(workflow, /id: deploy\s*\n\s*continue-on-error: true\s*\n\s*uses: actions\/deploy-pages@v\d+/);
+  assert.match(workflow, /id: deploy_retry\s*\n\s*if: steps\.deploy\.outcome == 'failure'\s*\n\s*uses: actions\/deploy-pages@v\d+/);
   assert.match(workflow, /node-version: 22\s*\n\s*cache: npm/);
   assert.match(workflow, /upload-pages-artifact@v\d+\s*\n\s*with:\s*\n\s*path: dist/);
 });
@@ -294,7 +299,7 @@ test('workflow: a data push with no race goes straight through', { skip: !gitAva
 
 test('workflow: current action versions, and no secret besides the optional X token and the Anthropic key', () => {
   const uses = [...workflow.matchAll(/uses: ([\w.-]+\/[\w.-]+)@(v\d+)/g)].map((m) => `${m[1]}@${m[2]}`);
-  assert.deepEqual(uses, ['actions/checkout@v7', 'actions/setup-node@v7', 'actions/configure-pages@v6', 'actions/upload-pages-artifact@v5', 'actions/deploy-pages@v5']);
+  assert.deepEqual(uses, ['actions/checkout@v7', 'actions/setup-node@v7', 'actions/configure-pages@v6', 'actions/upload-pages-artifact@v5', 'actions/deploy-pages@v5', 'actions/deploy-pages@v5']);
   const secrets = [...workflow.matchAll(/secrets\.(\w+)/g)].map((m) => m[1]);
   assert.deepEqual(secrets, ['X_BEARER_TOKEN', 'ANTHROPIC_API_KEY', 'NTHROPIC_API_KEY']);
   assert.ok(!/pull_request_target/.test(workflow));
