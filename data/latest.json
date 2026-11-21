@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T07:30:59.601Z",
+  "buildTime": "2026-11-21T07:45:57.798Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 02:30 ET",
+  "etStamp": "2026-11-21 02:45 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,19 +46,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 314,
-  "lastSuccessAt": "2026-11-21T07:30:59.601Z",
+  "headlinesRead": 1328,
+  "lastSuccessAt": "2026-11-21T07:45:57.798Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
-    "earth": 9,
-    "hacks": 26,
+    "earth": 10,
+    "hacks": 25,
     "germs": 4,
-    "markets": 13,
+    "markets": 12,
     "grid": 5,
     "weather": 6,
     "sun": 4,
-    "internet": 3,
+    "internet": 4,
     "ai": 3,
     "space": 3,
     "animals": 2
@@ -90,7 +90,7 @@
       "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
-      "closures": 1,
+      "closures": 2,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -178,20 +178,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
-      "lastOkAt": "2026-11-21T07:16:01.078Z"
+      "ok": true,
+      "count": 1011,
+      "error": null,
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
+      "count": 278,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,55 +203,56 @@
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:30:59.601Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T07:30:59.601Z"
+      "lastOkAt": "2026-11-21T07:45:57.798Z"
     }
   },
   "stories": [
@@ -337,6 +338,35 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "0e3af96a9376",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Agriculture Department breached by hackers, sources say",
+      "url": "https://www.nbcnews.com/politics/national-security/agriculture-department-breached-hackers-sources-say-rcna610497",
+      "source": "NBC News",
+      "publishedAt": "2026-11-20T09:39:00.000Z",
+      "latestAt": "2026-11-21T07:36:58.000Z",
+      "firstSeenAt": "2026-11-20T22:44:29.793Z",
+      "outlets": 14,
+      "outletNames": [
+        "NBC News",
+        "marketscreener.com",
+        "StreetInsider",
+        "Reuters",
+        "CNA",
+        "Investing.com",
+        "U.S. News & World Report",
+        "SRN News",
+        "Devdiscourse",
+        "The Detroit News",
+        "Breakingthenews.net",
+        "Khaama Press",
+        "TRT World",
+        "Gulf News"
+      ],
+      "score": 3.76
+    },
+    {
       "id": "c1812514f929",
       "cat": "flights",
       "kind": "news",
@@ -405,50 +435,25 @@
       "score": 3.59
     },
     {
-      "id": "0e3af96a9376",
+      "id": "f6d7be94463a",
       "cat": "hacks",
       "kind": "news",
-      "title": "Agriculture Department breached by hackers, sources say",
-      "url": "https://www.nbcnews.com/politics/national-security/agriculture-department-breached-hackers-sources-say-rcna610497",
-      "source": "NBC News",
-      "publishedAt": "2026-11-20T09:39:00.000Z",
-      "latestAt": "2026-11-20T23:54:58.000Z",
-      "firstSeenAt": "2026-11-20T22:44:29.793Z",
-      "outlets": 10,
-      "outletNames": [
-        "NBC News",
-        "marketscreener.com",
-        "StreetInsider",
-        "Reuters",
-        "CNA",
-        "Investing.com",
-        "U.S. News & World Report",
-        "SRN News",
-        "Devdiscourse",
-        "The Detroit News"
-      ],
-      "score": 3.38
-    },
-    {
-      "id": "c3543c0a8ead",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
-      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
-      "source": "Hindustan Times on MSN",
-      "publishedAt": "2026-11-20T20:15:11.000Z",
-      "latestAt": "2026-11-21T03:36:34.000Z",
-      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "title": "Report: FBI criminal information database breached in cyberattack",
+      "url": "https://www.khou.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0",
+      "source": "KHOU",
+      "publishedAt": "2026-11-20T19:35:00.000Z",
+      "latestAt": "2026-11-21T05:31:02.000Z",
+      "firstSeenAt": "2026-11-21T04:30:36.214Z",
       "outlets": 6,
       "outletNames": [
-        "CBS News",
-        "ABC7 Chicago",
-        "Wirepoints",
-        "Shaw Local",
-        "WGN-TV",
-        "Hindustan Times on MSN"
+        "KHOU",
+        "fox61.com",
+        "WFAA",
+        "WCNC",
+        "WUSA9",
+        "The New Indian Express"
       ],
-      "score": 3.21
+      "score": 3.05
     },
     {
       "id": "aeda33a9b3e1",
@@ -610,27 +615,6 @@
       }
     },
     {
-      "id": "f6d7be94463a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Report: FBI criminal information database breached in cyberattack",
-      "url": "https://www.khou.com/article/news/nation-world/fbi-criminal-information-database-breached-cyberattack-report/507-8a30d23c-a238-4802-9953-24c88f7519e0",
-      "source": "KHOU",
-      "publishedAt": "2026-11-20T19:35:00.000Z",
-      "latestAt": "2026-11-21T05:31:02.000Z",
-      "firstSeenAt": "2026-11-21T04:30:36.214Z",
-      "outlets": 6,
-      "outletNames": [
-        "KHOU",
-        "fox61.com",
-        "WFAA",
-        "WCNC",
-        "WUSA9",
-        "The New Indian Express"
-      ],
-      "score": 3.05
-    },
-    {
       "id": "bba455d55701",
       "cat": "hacks",
       "kind": "news",
@@ -676,6 +660,27 @@
       ],
       "xUrl": "https://x.com/Reuters/status/2124027615098941865",
       "score": 2.78
+    },
+    {
+      "id": "4ee3012c5ba5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
+      "source": "Meteora Web",
+      "publishedAt": "2026-11-20T09:16:22.000Z",
+      "latestAt": "2026-11-20T21:17:53.000Z",
+      "firstSeenAt": "2026-11-21T00:44:46.578Z",
+      "outlets": 6,
+      "outletNames": [
+        "Meteora Web",
+        "Help Net Security",
+        "SOC Prime",
+        "SOCRadar",
+        "Pasquale Pillitteri",
+        "Dark Reading"
+      ],
+      "score": 2.66
     },
     {
       "id": "d130253cceea",
@@ -937,27 +942,6 @@
       "score": 2.81
     },
     {
-      "id": "4ee3012c5ba5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
-      "source": "Meteora Web",
-      "publishedAt": "2026-11-20T09:16:22.000Z",
-      "latestAt": "2026-11-20T21:17:53.000Z",
-      "firstSeenAt": "2026-11-21T00:44:46.578Z",
-      "outlets": 6,
-      "outletNames": [
-        "Meteora Web",
-        "Help Net Security",
-        "SOC Prime",
-        "SOCRadar",
-        "Pasquale Pillitteri",
-        "Dark Reading"
-      ],
-      "score": 2.66
-    },
-    {
       "id": "21bb56ff9807",
       "cat": "hacks",
       "kind": "news",
@@ -1029,24 +1013,6 @@
         "WWAYTV3"
       ],
       "score": 2.4
-    },
-    {
-      "id": "c000a8ed7df4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers said to breach US Agriculture Department",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNNUhUc3hMUlJzT1BiZjFIUFpPMUlQQ3NCQ0ttNmIzUHBHRHJseWhmZS1LR1ZIUlVNVEh5a1M5TjJLSExZSWwyZFlOSmtUeTN5R013WGQ4Tk8zQVhPQjRIclc0RTRERzBjc3k3Qy12UlAwNmRzWjBwTTIwQVZwZnlJVWEyaHRrRU1WR2FqeGJaREFZT1lVejF2WA?oc=5",
-      "source": "Breakingthenews.net",
-      "publishedAt": "2026-11-20T23:37:00.000Z",
-      "latestAt": "2026-11-21T07:02:59.000Z",
-      "firstSeenAt": "2026-11-21T06:54:11.370Z",
-      "outlets": 3,
-      "outletNames": [
-        "Breakingthenews.net",
-        "Khaama Press",
-        "TRT World"
-      ],
-      "score": 2.27
     },
     {
       "id": "baee4d10b4a4",
@@ -1343,6 +1309,25 @@
         "VentureBeat"
       ],
       "score": 1.78
+    },
+    {
+      "id": "5a15616777c3",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6.9 earthquake strikes Peru's Junin region",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORHhjM1dVRXk2QjBvSzB2NU1kTVVEbG1zQkE5dFBHSUFGVmhkNFBiaXczNFdVcTVSTFQ3YnlSU0ljcm92RGxoWWdFaXJPYkV2NXc2ZzVja3NOT0cwbWxKcUZuYklCSWY2ZjZDa05TMUI3eFRaby1XTTFUZ3oxemdBNkd5SzVrdDZQOEVmM1FVMGs3WFlPSjh5RFZBOG1FRXppb2M00gGjAUFVX3lxTE5EeGMzV1VFeTZCMG9LMHY1TWRNVURsbXNCQTl0UEdJQUZWaGQ0UGJpdzM0V1VxNVJMVDdieVJTSWNyb3ZEbGhZZ0Vpck9iRXY1dzZnNWNrc05PRzBtbEpxRm5iSUJJZjZmNkNrTlMxQjd4VFpvLVdNMVRnejF6Z0E2R3lLNWt0NlA4RWYzUVUwazdYWU9KOHlEVkE4bUVFemlvYzQ?oc=5",
+      "source": "US Muslims",
+      "publishedAt": "2026-11-21T00:37:16.000Z",
+      "latestAt": "2026-11-21T00:57:55.000Z",
+      "firstSeenAt": "2026-11-21T07:45:57.798Z",
+      "outlets": 2,
+      "outletNames": [
+        "US Muslims",
+        "Anadolu Ajansı"
+      ],
+      "score": 1.76,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "4a96ffb61e5f",
@@ -1810,6 +1795,22 @@
       "score": 1.19
     },
     {
+      "id": "215243f80f61",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Africa's biggest airline digs into hackers targeting 5.38 million customer accounts as it connects the U.S., Canada and South Africa",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdWRDMTdoWlJ5cGJwUHhuQTlfWUtQaGlKamxtaTNDOG85VXV3U1c0SzJta2FmR2hlcUVSYWpURjY5cFpQZUllSXZZZ09xV0ppcEpQc1cxUk5BRzJOV2hQWVBOWWVVN0VZZFB4WklONk5kM1I1MW1lQmtlUjhHQmdvR2o0cUZtYWZpdzVtcFNmdUhkeklDMTFZbEhQcFg3cWRjR1lkd3lFY0Zid1BVT2JEQlR2Ulc5aW5BWU1xcVFyQmxIUGJvOXc1ejZ2cTJ2WkZkMzNYbkpR?oc=5",
+      "source": "Business Insider Africa",
+      "publishedAt": "2026-11-20T21:35:54.000Z",
+      "latestAt": "2026-11-20T21:35:54.000Z",
+      "firstSeenAt": "2026-11-21T07:45:57.798Z",
+      "outlets": 1,
+      "outletNames": [
+        "Business Insider Africa"
+      ],
+      "score": 1.16
+    },
+    {
       "id": "3f09681c5efa",
       "cat": "internet",
       "kind": "news",
@@ -1840,6 +1841,22 @@
         "Latin Times"
       ],
       "score": 1.1
+    },
+    {
+      "id": "d254eeba4937",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft outage cause revealed: It was a perfect storm of problems",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5aOXNncW9QdWVtZ3RXTHF5VnFncFJTcXptUWtGX0V6azdmcXZVQjBienJMdzJydEdseXhVZHZRcExPbS0xUXlCcXhyX2RDOUZOd0h3bEhwU1hiNF9hc0FNdTZLSkJGUVpz?oc=5",
+      "source": "Mashable",
+      "publishedAt": "2026-11-21T07:32:56.000Z",
+      "latestAt": "2026-11-21T07:32:56.000Z",
+      "firstSeenAt": "2026-11-21T07:45:57.798Z",
+      "outlets": 1,
+      "outletNames": [
+        "Mashable"
+      ],
+      "score": 1
     },
     {
       "id": "7ba0231ec718",
@@ -1940,22 +1957,6 @@
         "Barrie News"
       ],
       "score": 0.99
-    },
-    {
-      "id": "56acddf51ee6",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stock market today: Major indexes nosedive, wipe out 2026 gains as AI trade melts down; Nvidia leads tech rout, Anthropic slides after historic IPO",
-      "url": "https://www.msn.com/en-us/money/top-stocks/stock-market-today-major-indexes-nosedive-wipe-out-2026-gains-as-ai-trade-melts-down-nvidia-leads-tech-rout-anthropic-slides-after-historic-ipo/ar-AA2hRJBy",
-      "source": "Investopedia on MSN",
-      "publishedAt": "2026-11-20T13:21:29.000Z",
-      "latestAt": "2026-11-20T13:21:29.000Z",
-      "firstSeenAt": "2026-11-21T07:30:59.601Z",
-      "outlets": 1,
-      "outletNames": [
-        "Investopedia on MSN"
-      ],
-      "score": 0.98
     },
     {
       "id": "177df1cbaf42",
