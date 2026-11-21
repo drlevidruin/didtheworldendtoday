@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T19:47:57.913Z",
+  "buildTime": "2026-11-21T20:02:53.581Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 14:47 ET",
+  "etStamp": "2026-11-21 15:02 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -50,12 +50,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1216,
-  "lastSuccessAt": "2026-11-21T19:47:57.913Z",
+  "headlinesRead": 1220,
+  "lastSuccessAt": "2026-11-21T20:02:53.581Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 30,
-    "earth": 9,
+    "flights": 31,
+    "earth": 8,
     "hacks": 20,
     "markets": 11,
     "grid": 5,
@@ -91,13 +91,7 @@
       "upcoming": true
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "MIA",
-          "hub": true,
-          "reason": "thunderstorms"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
       "closures": 0,
@@ -193,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 913,
+      "count": 922,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     },
     "bing": {
       "ok": true,
-      "count": 269,
+      "count": 264,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-21T18:17:37.972Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     },
     "faa": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     },
     "x": {
       "ok": true,
@@ -256,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T19:47:57.913Z"
+      "lastOkAt": "2026-11-21T20:02:53.581Z"
     }
   },
   "stories": [
@@ -402,10 +396,10 @@
       "title": "FBI probes second cyberattack in months as hackers breach key crime database, sources say",
       "url": "https://www.foxnews.com/politics/fbi-probes-second-cyberattack-months-hackers-breach-key-crime-database-sources-say",
       "source": "Fox News",
-      "publishedAt": "2026-11-21T04:43:00.000Z",
+      "publishedAt": "2026-11-21T04:34:04.000Z",
       "latestAt": "2026-11-21T17:06:32.000Z",
       "firstSeenAt": "2026-11-21T18:47:39.186Z",
-      "outlets": 10,
+      "outlets": 11,
       "outletNames": [
         "New York Post",
         "The Week",
@@ -416,9 +410,10 @@
         "Republic World",
         "AOL.co.uk",
         "NDTV Profit",
-        "cedarnews.net"
+        "cedarnews.net",
+        "People Daily"
       ],
-      "score": 3.31
+      "score": 3.4
     },
     {
       "id": "8a06101ad7b2",
@@ -1023,6 +1018,24 @@
       "score": 2.03
     },
     {
+      "id": "b1224b4f8b73",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "South Portland library reopens after cyberattack, city hall remains closed",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdFd4YnlGeHQ4Wi1jTGl4UzNySFFMU0JOMlNsRmVMZ0JLZ3B2UllsQ29OcElwSVFvcjlmUkdMNWY4X2pJMzB1aVg5NjBJZURFVFY5d3lmNXJzMm1FWi1HYzJHMVJ3YnZvVlc4YnNTNHUxVDhqcWI1cEs5RTFOS1NGOGxhekNHVVJqZ3loY1h3LWJrcmhOVDRWQ0oxeTJBckRvN0FV?oc=5",
+      "source": "WGME",
+      "publishedAt": "2026-11-21T05:32:37.000Z",
+      "latestAt": "2026-11-21T19:01:56.000Z",
+      "firstSeenAt": "2026-11-21T19:17:43.821Z",
+      "outlets": 3,
+      "outletNames": [
+        "WGME",
+        "Newsradio WGAN |",
+        "fox23maine.com"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "79f0a0ef4886",
       "cat": "hacks",
       "kind": "news",
@@ -1072,26 +1085,6 @@
         "MorungExpress"
       ],
       "score": 1.83
-    },
-    {
-      "id": "a4a9603cb8fb",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.7 earthquake shakes Peru’s Andes",
-      "url": "https://www.msn.com/en-us/news/other/magnitude-6-7-earthquake-shakes-peru-s-andes/ar-AA2hVg9c",
-      "source": "New York Post on MSN",
-      "publishedAt": "2026-11-21T00:32:51.000Z",
-      "latestAt": "2026-11-21T04:33:00.000Z",
-      "firstSeenAt": "2026-11-21T19:47:57.913Z",
-      "outlets": 3,
-      "outletNames": [
-        "Egyptian Gazette",
-        "New York Post on MSN",
-        "CBS News"
-      ],
-      "score": 1.76,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "a8784b323116",
@@ -1230,23 +1223,6 @@
         "5newsonline.com"
       ],
       "score": 1.55
-    },
-    {
-      "id": "b1224b4f8b73",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "South Portland library reopens after cyberattack, city hall remains closed",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdFd4YnlGeHQ4Wi1jTGl4UzNySFFMU0JOMlNsRmVMZ0JLZ3B2UllsQ29OcElwSVFvcjlmUkdMNWY4X2pJMzB1aVg5NjBJZURFVFY5d3lmNXJzMm1FWi1HYzJHMVJ3YnZvVlc4YnNTNHUxVDhqcWI1cEs5RTFOS1NGOGxhekNHVVJqZ3loY1h3LWJrcmhOVDRWQ0oxeTJBckRvN0FV?oc=5",
-      "source": "WGME",
-      "publishedAt": "2026-11-21T05:32:37.000Z",
-      "latestAt": "2026-11-21T19:01:56.000Z",
-      "firstSeenAt": "2026-11-21T19:17:43.821Z",
-      "outlets": 2,
-      "outletNames": [
-        "WGME",
-        "Newsradio WGAN |"
-      ],
-      "score": 1.54
     },
     {
       "id": "305315cb563c",
@@ -1855,6 +1831,22 @@
         "Mashable"
       ],
       "score": 1.06
+    },
+    {
+      "id": "121ee787e47a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Asian Hubs See Elevated Flight Disruption After US Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMjdxTTQzSVlDUldEWmRRcjY2cTAxRFU3WVQ3TjJ6TzU5RmgwV1Z2WjRhOExZV3BnNGJNU1BGY2cwQXZwcEtmQklvaWNfQWhTQl96TGZoRWlCY0JUSDNtWVN4RFByR3JXYmRNSnVmNHJ4eDVmMXMwT09LUmMzblM2Um5hdDMxZE53U3B3N0tWWURmRnQtNUE?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-21T19:45:05.000Z",
+      "latestAt": "2026-11-21T19:45:05.000Z",
+      "firstSeenAt": "2026-11-21T20:02:53.581Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1
     },
     {
       "id": "a0f3fcd5250b",
