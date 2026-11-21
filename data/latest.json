@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T06:15:44.332Z",
+  "buildTime": "2026-11-21T06:30:47.468Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 01:15 ET",
+  "etStamp": "2026-11-21 01:30 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,21 +46,21 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1317,
-  "lastSuccessAt": "2026-11-21T06:15:44.332Z",
+  "headlinesRead": 1339,
+  "lastSuccessAt": "2026-11-21T06:30:47.468Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 22,
+    "flights": 24,
     "earth": 6,
     "germs": 4,
-    "hacks": 27,
+    "hacks": 26,
     "markets": 13,
     "grid": 6,
     "weather": 5,
     "internet": 4,
     "sun": 4,
     "ai": 3,
-    "space": 4,
+    "space": 3,
     "animals": 2
   },
   "vital": {
@@ -178,81 +178,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1015,
+      "count": 1026,
       "error": null,
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "bing": {
       "ok": true,
-      "count": 262,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "count": 272,
+      "error": null,
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T05:30:36.526Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T06:15:44.332Z"
+      "lastOkAt": "2026-11-21T06:30:47.468Z"
     }
   },
   "stories": [
@@ -364,6 +363,31 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "c1812514f929",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Catch Me Up: How the ground stop unfolded, and a huge launch for 'GTA IV'",
+      "url": "https://www.lex18.com/shows/catch-me-up/catch-me-up-how-the-ground-stop-unfolded-and-a-huge-launch-for-gta-iv",
+      "source": "LEX 18",
+      "publishedAt": "2026-11-20T16:01:00.000Z",
+      "latestAt": "2026-11-21T03:18:33.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 10,
+      "outletNames": [
+        "KPAX News",
+        "KJRH",
+        "Scripps News",
+        "Tampa Bay 28",
+        "LEX 18",
+        "NBC26",
+        "KGUN 9",
+        "KXXV",
+        "WPTV",
+        "10News.com"
+      ],
+      "score": 3.73
+    },
+    {
       "id": "78e8cb4ec0eb",
       "cat": "hacks",
       "kind": "news",
@@ -387,30 +411,6 @@
         "Gizmodo"
       ],
       "score": 3.7
-    },
-    {
-      "id": "c1812514f929",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Catch Me Up: How the ground stop unfolded, and a huge launch for 'GTA IV'",
-      "url": "https://www.lex18.com/shows/catch-me-up/catch-me-up-how-the-ground-stop-unfolded-and-a-huge-launch-for-gta-iv",
-      "source": "LEX 18",
-      "publishedAt": "2026-11-20T16:01:00.000Z",
-      "latestAt": "2026-11-21T03:18:33.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 9,
-      "outletNames": [
-        "KPAX News",
-        "KJRH",
-        "Scripps News",
-        "Tampa Bay 28",
-        "LEX 18",
-        "NBC26",
-        "KGUN 9",
-        "KXXV",
-        "WPTV"
-      ],
-      "score": 3.6
     },
     {
       "id": "d58ec51a5e53",
@@ -623,18 +623,20 @@
       "url": "https://www.msn.com/en-my/news/other/fbi-s-criminal-information-database-hacked/ar-AA2hTV50",
       "source": "Free Malaysia Today on MSN",
       "publishedAt": "2026-11-20T14:38:00.000Z",
-      "latestAt": "2026-11-21T04:05:00.000Z",
+      "latestAt": "2026-11-21T06:30:20.000Z",
       "firstSeenAt": "2026-11-21T03:45:20.063Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "Free Malaysia Today",
         "India Today",
         "The Hindu",
         "The Straits Times",
         "The News & Observer",
-        "102.7 WBOW"
+        "102.7 WBOW",
+        "@Reuters on X"
       ],
-      "score": 2.8
+      "xUrl": "https://x.com/Reuters/status/2124027615098941865",
+      "score": 2.97
     },
     {
       "id": "bba455d55701",
@@ -1566,23 +1568,6 @@
       "score": 1.5
     },
     {
-      "id": "dbaf0f1fd383",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Dion’s online ordering vendor warns customers of potential data breach",
-      "url": "https://www.abqjournal.com/business/dions-online-ordering-vendor-warns-customers-of-potential-data-breach/3166477",
-      "source": "Albuquerque Journal",
-      "publishedAt": "2026-11-20T06:30:00.000Z",
-      "latestAt": "2026-11-20T21:34:08.000Z",
-      "firstSeenAt": "2026-11-20T21:44:17.518Z",
-      "outlets": 2,
-      "outletNames": [
-        "Albuquerque Journal",
-        "Rio Rancho Observer Home"
-      ],
-      "score": 1.49
-    },
-    {
       "id": "46fffeee8fff",
       "cat": "flights",
       "kind": "news",
@@ -1766,7 +1751,7 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWHlZNW9MazBWZmF0X3dGTUdoREpRTmtXSGRVVE1acmlmYWVsOFlHMkx1S3p4NVVkbVlmSjc0clQ5WGRiZlBxcFE2WlgzQjc3UXlIM2d1SVllWG1Zc2dXdDFEUFNpOC1YVFVjQ1NSY2NXTG1lMTMtanI5NVRaT3NtWlU1Zm1EY2RXRVgyVlBPcDdfZy1Fd2hqcEhHSTFQVkZvZXgwZktXRVdOdlByU3fSAbMBQVVfeXFMTUkxeFhlcl9PRlRXaVdDcjMzbFJyQnkzbUN6bXJLelJja2gzX2p4M2Nid1NrU25nQnNMMFZfc1U0bTlUSVdfVHZQUGtNX1FEZWpadUZuellZUmt1YV9QTWcwZ0R3WWxxamoyX282MENKam5IQjU1V3NRTzQxMnptdkphZUxUSzZvX0ljY2dHV09iTGZibm1OdldyWllfNTJ4SXRzOFFZNzFqYmVNMDNBU1ptU28?oc=5",
       "source": "ABC7 New York",
       "publishedAt": "2026-11-20T23:26:08.000Z",
-      "latestAt": "2026-11-21T02:15:00.000Z",
+      "latestAt": "2026-11-21T02:23:44.000Z",
       "firstSeenAt": "2026-11-20T23:44:52.341Z",
       "outlets": 1,
       "outletNames": [
@@ -1838,6 +1823,38 @@
         "FOX 5 New York"
       ],
       "score": 1.23
+    },
+    {
+      "id": "5e64f6f5156b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Missouri couple meets Ted Lasso star during nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcEtkR3ZYR3dpTWJYTU02QjRaTU5lNENuRjhhZEtWZUZudWFiZUhnZU1qR2E5VU1xY3NLcjNVNmpqMzJab0VCZTE2MW1YU0NaX0FXeUNYODA1M2Fpbkx0STM4aFpWR1preVMwakRTbUhKM2xFLVpKUDM2WFhKb0R5ZUxWbnN2X1d5ak5KbVRUX1dYTm9wWThsRF9WX0IyTGdxWnRyaHk1NUkySV9rXzNCbTgyRFl4YkgxUHNxS0laaW5PaHpsc04zNEpHME52dXkxM2VDeTNR?oc=5",
+      "source": "THV11",
+      "publishedAt": "2026-11-20T23:01:46.000Z",
+      "latestAt": "2026-11-20T23:01:46.000Z",
+      "firstSeenAt": "2026-11-21T06:30:47.468Z",
+      "outlets": 1,
+      "outletNames": [
+        "THV11"
+      ],
+      "score": 1.23
+    },
+    {
+      "id": "6356ead9544f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "New radar is being built in Kansas a week after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZFcwd0FXQmQ4cnFENVgtQXdkME1odm5LSkt4SFQ1TWJ3Tm5jaWVvMDUxOEQ0a2RoQzkzcXpuLXJLeG5ZQkVaZ19BYUdBM1JMYTZZVHB1REFNdHp6TF90aWo3SnNNVTMzRm9EQTRwbXJGQjJsNWYzd3o1dnNRMEo5ZXBlR0w4VTZBd1U4OFZ5N0VHNk5kRUItbVF1M3FYWmEweVZEeHRkeTY?oc=5",
+      "source": "KCTV",
+      "publishedAt": "2026-11-20T22:17:00.000Z",
+      "latestAt": "2026-11-20T22:17:00.000Z",
+      "firstSeenAt": "2026-11-21T06:30:47.468Z",
+      "outlets": 1,
+      "outletNames": [
+        "KCTV"
+      ],
+      "score": 1.21
     },
     {
       "id": "3a38015822b7",
@@ -1968,22 +1985,6 @@
       "outlets": 1,
       "outletNames": [
         "Barrie News"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "de5252583060",
-      "cat": "space",
-      "kind": "news",
-      "title": "2 days, 5 asteroids: Rocky day for Earth as cosmic debris hurtles towards us",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQVlvRWZGcWwyckFpajMxSFRCVjlraWVYaWJZa1hMLTQ0aU5CY2h3R0JyMGRsNl96cG95VkZmdlRnRFdvX2lqcTU4M0t5TloxS2oxWGdBVTFxQTZLWFdldzRZYzVDcHFkRzk1VXMtTjZwNVlsa3BnelhvMkcwcTRFZXhBY1VKS3U1R0IxQV9QUDFIakJ1dWJ0UHFfNllCN1lXSUxIMWN2eUZRUdIBrwFBVV95cUxNV0RmOWdMRHR4Qm9sdE1NclZObUg2Mk5VMnVkb2FlX080blNCUWs4dnpscU5GS21hNWxMWDhCM1FnNzF2RXVEVWpGMnZGX2ozekxmbXhsZlNrdkF5bXVvUUV3VWJWbGFfMmQ2RS03UjBES04zcU81eTQ1c3VxSmJxLWszZG9VVTFBTE1uV0J2YTk3R3lQMVlUYXdIdHNGa2RzSEQ2V2NYQkpJdW56VlVB?oc=5",
-      "source": "WION",
-      "publishedAt": "2026-11-20T06:18:00.000Z",
-      "latestAt": "2026-11-20T06:18:00.000Z",
-      "firstSeenAt": "2026-11-20T06:41:52.759Z",
-      "outlets": 1,
-      "outletNames": [
-        "WION"
       ],
       "score": 0.99
     },
