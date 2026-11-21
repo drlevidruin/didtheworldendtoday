@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T01:29:59.829Z",
+  "buildTime": "2026-11-21T01:44:56.802Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 20:29 ET",
+  "etStamp": "2026-11-20 20:44 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -51,8 +51,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1308,
-  "lastSuccessAt": "2026-11-21T01:29:59.829Z",
+  "headlinesRead": 1265,
+  "lastSuccessAt": "2026-11-21T01:44:56.802Z",
   "rollingFallback": false,
   "cats": {
     "flights": 26,
@@ -183,80 +183,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 994,
+      "count": 999,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     },
     "bing": {
       "ok": true,
-      "count": 275,
+      "count": 227,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:29:59.829Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z"
+      "lastOkAt": "2026-11-21T01:44:56.802Z"
     }
   },
   "stories": [
@@ -883,6 +884,27 @@
       }
     },
     {
+      "id": "c1812514f929",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Catch Me Up: How the ground stop unfolded, and a huge launch for 'GTA IV'",
+      "url": "https://www.lex18.com/shows/catch-me-up/catch-me-up-how-the-ground-stop-unfolded-and-a-huge-launch-for-gta-iv",
+      "source": "LEX 18",
+      "publishedAt": "2026-11-20T16:01:00.000Z",
+      "latestAt": "2026-11-21T01:41:09.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 6,
+      "outletNames": [
+        "KPAX News",
+        "KJRH",
+        "Scripps News",
+        "Tampa Bay 28",
+        "LEX 18",
+        "NBC26"
+      ],
+      "score": 3.09
+    },
+    {
       "id": "976915d23d0d",
       "cat": "flights",
       "kind": "news",
@@ -900,25 +922,6 @@
         "FOX 35 Orlando"
       ],
       "score": 2.81
-    },
-    {
-      "id": "c1812514f929",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Catch Me Up: How the ground stop unfolded, and a huge launch for 'GTA IV'",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQUDJDaXFINWVQRm1xZkYycW45SzM0UmRMcV9qWVJyNlc1dWx5NTR3YnZXNkZuYjh1bXhydG5wSVhqR3hCaWdMVnRPS0R3RklqclRQX1ZZR0w3VTJsUzJfRDdwbmdpSG4xS19yVjBmV2luYkxtT0dXY2R6YzM3azJUSDV2eHFkTXVkQzJwaFV3NG1wdDZvNnNZSG9pdjY3NC1MWnl1cTkxUmRqUklH?oc=5",
-      "source": "KPAX News",
-      "publishedAt": "2026-11-20T19:11:23.000Z",
-      "latestAt": "2026-11-21T00:11:32.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 4,
-      "outletNames": [
-        "KPAX News",
-        "KJRH",
-        "Scripps News",
-        "Tampa Bay 28"
-      ],
-      "score": 2.75
     },
     {
       "id": "f60e65cf388c",
