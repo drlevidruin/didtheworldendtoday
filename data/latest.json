@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T02:15:04.384Z",
+  "buildTime": "2026-11-21T02:30:05.009Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 21:15 ET",
+  "etStamp": "2026-11-20 21:30 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -52,20 +52,20 @@
     "score": 80
   },
   "headlinesRead": 1298,
-  "lastSuccessAt": "2026-11-21T02:15:04.384Z",
+  "lastSuccessAt": "2026-11-21T02:30:05.009Z",
   "rollingFallback": false,
   "cats": {
     "flights": 26,
     "earth": 6,
     "germs": 5,
     "hacks": 26,
-    "markets": 11,
+    "markets": 12,
     "grid": 5,
     "internet": 4,
     "sun": 4,
     "weather": 4,
     "ai": 3,
-    "space": 4,
+    "space": 3,
     "animals": 2
   },
   "vital": {
@@ -94,7 +94,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 3,
+      "groundDelays": 2,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1024,
+      "count": 1013,
       "error": null,
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "bing": {
       "ok": true,
-      "count": 235,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "count": 245,
+      "error": null,
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,56 +208,55 @@
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T01:29:59.829Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T02:15:04.384Z"
+      "lastOkAt": "2026-11-21T02:30:05.009Z"
     }
   },
   "stories": [
@@ -595,6 +594,24 @@
       }
     },
     {
+      "id": "c3543c0a8ead",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Illinois officials investigating \"apparent cyberattack\" on Monday at Algonquin Dam on Fox River",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1YS09lVUJ5RHF0bi1tZXpNdTNaVDE5NkJyLWhiUC1IakQ2MGhXRm43UzFGV0R6dEI2a2RyMHB6OWJtbVNGTGZfUU9aUno2UzBrLU10Zmo0aUxUU2dOdk10QXh4Qy0wdldVaXltczJPQm9Cc2lhRW0yNVRud1Z1UQ?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-21T00:56:11.000Z",
+      "latestAt": "2026-11-21T02:28:25.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "outlets": 3,
+      "outletNames": [
+        "CBS News",
+        "ABC7 Chicago",
+        "Wirepoints"
+      ],
+      "score": 2.52
+    },
+    {
       "id": "501df2603002",
       "cat": "hacks",
       "kind": "news",
@@ -632,23 +649,6 @@
       "score": 2.46
     },
     {
-      "id": "50e8bed5e3a2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Mastercard and Visa data leaked in breach — ransomware hackers leak information in latest major attack",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/mastercard-visa-data-leaked-breach-163500547.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-20T08:35:00.000Z",
-      "latestAt": "2026-11-20T16:35:00.000Z",
-      "firstSeenAt": "2026-11-20T16:43:32.956Z",
-      "outlets": 2,
-      "outletNames": [
-        "TechRadar",
-        "YAHOO!"
-      ],
-      "score": 2.42
-    },
-    {
       "id": "39e492d9e722",
       "cat": "markets",
       "kind": "news",
@@ -666,6 +666,23 @@
         "TechJuice"
       ],
       "score": 2.19
+    },
+    {
+      "id": "d130253cceea",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Video Stocks plunge on Anthropic amid tech fears",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5ua1g3UHprYzYyZE5vNzVIalhIcEU0QWNaSHBvWGZkME9KRHRueW1xOGY3SEhSRUkzZWtQZUZGQWRiVExleXg5NTdjXzY?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-21T02:10:15.000Z",
+      "latestAt": "2026-11-21T02:20:00.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos",
+        "Modern Ghana"
+      ],
+      "score": 1.99
     },
     {
       "id": "acd1e0d2dcd8",
@@ -808,23 +825,6 @@
       "score": 1.91
     },
     {
-      "id": "77772b62137b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Bitcoin plunges 6%, dips under $58K (BTC-USD:Cryptocurrency)",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQWlLWTJZcjFZUUNVQ19xYzRLUjhkRWhMa1YyM2xXYVNKRndLMmxKaE9uUVhQQm9id0N4MG1BZm9OTzBqTjQ0aFFLOENDOXVzWUh6Y3BXQTlnUnZQQXIweEt6dlJlSlBRUmFTcWFYS0RMWE9BWE1DLV9JM2dhOFg5Z1JIVkw?oc=5",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-11-20T20:39:08.000Z",
-      "latestAt": "2026-11-20T20:39:08.000Z",
-      "firstSeenAt": "2026-11-20T23:14:38.391Z",
-      "outlets": 2,
-      "outletNames": [
-        "Seeking Alpha",
-        "TradingView"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "75cfa403ab35",
       "cat": "germs",
       "kind": "news",
@@ -961,6 +961,23 @@
         "wlwt.com"
       ],
       "score": 2.56
+    },
+    {
+      "id": "50e8bed5e3a2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Mastercard and Visa data leaked in breach — ransomware hackers leak information in latest major attack",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/mastercard-visa-data-leaked-breach-163500547.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-20T08:35:00.000Z",
+      "latestAt": "2026-11-20T16:35:00.000Z",
+      "firstSeenAt": "2026-11-20T16:43:32.956Z",
+      "outlets": 2,
+      "outletNames": [
+        "TechRadar",
+        "YAHOO!"
+      ],
+      "score": 2.42
     },
     {
       "id": "3383e4bd7e29",
@@ -1158,6 +1175,23 @@
         "WSB-TV"
       ],
       "score": 1.94
+    },
+    {
+      "id": "77772b62137b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Bitcoin plunges 6%, dips under $58K (BTC-USD:Cryptocurrency)",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQWlLWTJZcjFZUUNVQ19xYzRLUjhkRWhMa1YyM2xXYVNKRndLMmxKaE9uUVhQQm9id0N4MG1BZm9OTzBqTjQ0aFFLOENDOXVzWUh6Y3BXQTlnUnZQQXIweEt6dlJlSlBRUmFTcWFYS0RMWE9BWE1DLV9JM2dhOFg5Z1JIVkw?oc=5",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-11-20T20:39:08.000Z",
+      "latestAt": "2026-11-20T20:39:08.000Z",
+      "firstSeenAt": "2026-11-20T23:14:38.391Z",
+      "outlets": 2,
+      "outletNames": [
+        "Seeking Alpha",
+        "TradingView"
+      ],
+      "score": 1.91
     },
     {
       "id": "912d0c94ffbf",
@@ -1756,7 +1790,7 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWHlZNW9MazBWZmF0X3dGTUdoREpRTmtXSGRVVE1acmlmYWVsOFlHMkx1S3p4NVVkbVlmSjc0clQ5WGRiZlBxcFE2WlgzQjc3UXlIM2d1SVllWG1Zc2dXdDFEUFNpOC1YVFVjQ1NSY2NXTG1lMTMtanI5NVRaT3NtWlU1Zm1EY2RXRVgyVlBPcDdfZy1Fd2hqcEhHSTFQVkZvZXgwZktXRVdOdlByU3fSAbMBQVVfeXFMTUkxeFhlcl9PRlRXaVdDcjMzbFJyQnkzbUN6bXJLelJja2gzX2p4M2Nid1NrU25nQnNMMFZfc1U0bTlUSVdfVHZQUGtNX1FEZWpadUZuellZUmt1YV9QTWcwZ0R3WWxxamoyX282MENKam5IQjU1V3NRTzQxMnptdkphZUxUSzZvX0ljY2dHV09iTGZibm1OdldyWllfNTJ4SXRzOFFZNzFqYmVNMDNBU1ptU28?oc=5",
       "source": "ABC7 New York",
       "publishedAt": "2026-11-20T23:26:08.000Z",
-      "latestAt": "2026-11-20T23:26:08.000Z",
+      "latestAt": "2026-11-21T02:15:00.000Z",
       "firstSeenAt": "2026-11-20T23:44:52.341Z",
       "outlets": 1,
       "outletNames": [
@@ -1809,22 +1843,6 @@
       "outlets": 1,
       "outletNames": [
         "Business Insider Africa"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "f48f8a58cf3f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Rakuten Securities data breach impacts millions of customers",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNURXMFhnN0F3WXBMU0IwbVA3bkpEVVdmMC1pYzRaQ1VRTTZQVFA4Zmg4V3dhNjQtOEFacXdFXzVjN1RTNURNUEcwNWJaTTROOWRQamZVQzVmd0g4VU1QMURZcUVlMGJXcENaeGEyUVlYbjNPcjFEMEUtM1MzSkxFcndiazFUeGVmZ1JFWGo2REFuYWdr?oc=5",
-      "source": "SC Media",
-      "publishedAt": "2026-11-20T15:40:56.000Z",
-      "latestAt": "2026-11-20T15:40:56.000Z",
-      "firstSeenAt": "2026-11-20T15:58:21.605Z",
-      "outlets": 1,
-      "outletNames": [
-        "SC Media"
       ],
       "score": 1.39
     },
@@ -2023,22 +2041,6 @@
         "Yahoo"
       ],
       "score": 0.85
-    },
-    {
-      "id": "1811f9cfb712",
-      "cat": "space",
-      "kind": "news",
-      "title": "Hayabusa2 Changes Course After Thruster Trouble, Targeting 2028 Asteroid Flyby",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQa05ZcU1KV1NnLW00T0xuM3Fkd0FzTHlGaTJvWklYZDQwSmZPbXB1MG5HUHdyUWM0OFh6aGF0VkdzUkZjekpQdkVkRlhGczFZbFp6RkRBQVE4bTE5QTlIYWdzTHZiUUl1bDNVY05UdzFvcU5nOEYzaHBIbVdYYmhBaXJGVXkxNVhPaEg5dWlwU0thV2d6NUJBT3lGTmZBRTFEckR2dTVHVQ?oc=5",
-      "source": "SSBCrack",
-      "publishedAt": "2026-11-20T02:22:14.000Z",
-      "latestAt": "2026-11-20T02:22:14.000Z",
-      "firstSeenAt": "2026-11-20T22:14:24.072Z",
-      "outlets": 1,
-      "outletNames": [
-        "SSBCrack"
-      ],
-      "score": 0.67
     }
   ]
 }
