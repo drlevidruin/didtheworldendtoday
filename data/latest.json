@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T14:01:55.456Z",
+  "buildTime": "2026-11-21T14:17:00.374Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 09:01 ET",
+  "etStamp": "2026-11-21 09:17 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -47,20 +47,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 288,
-  "lastSuccessAt": "2026-11-21T14:01:55.456Z",
+  "headlinesRead": 376,
+  "lastSuccessAt": "2026-11-21T14:17:00.374Z",
   "rollingFallback": false,
   "cats": {
     "earth": 10,
     "hacks": 25,
     "flights": 23,
-    "markets": 10,
+    "markets": 9,
     "germs": 4,
     "weather": 4,
     "grid": 4,
     "ai": 4,
     "sun": 4,
-    "internet": 5,
+    "internet": 6,
     "space": 4,
     "animals": 3
   },
@@ -189,58 +189,58 @@
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "ok": true,
+      "count": 72,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     },
     "bing": {
       "ok": true,
-      "count": 255,
+      "count": 266,
       "error": null,
-      "lastOkAt": "2026-11-21T14:01:55.456Z"
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-21T08:46:06.995Z"
     },
     "hn": {
       "ok": true,
-      "count": 3,
+      "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-21T14:01:55.456Z"
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T14:01:55.456Z"
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T14:01:55.456Z"
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T14:01:55.456Z"
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T14:01:55.456Z"
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T14:01:55.456Z"
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     },
     "x": {
       "ok": true,
@@ -253,13 +253,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T14:01:55.456Z"
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T14:01:55.456Z"
+      "lastOkAt": "2026-11-21T14:17:00.374Z"
     }
   },
   "stories": [
@@ -525,22 +525,21 @@
       "score": 2.41
     },
     {
-      "id": "13b6d70b3a84",
-      "cat": "markets",
+      "id": "3e4b1c709480",
+      "cat": "germs",
       "kind": "news",
-      "title": "Stock Market Today, Nov. 20: Stocks Plunge as AI Trade Unwinds",
-      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-stocks-plunge-as-ai-trade-unwinds/",
-      "source": "The Motley Fool",
-      "publishedAt": "2026-11-20T14:15:00.000Z",
-      "latestAt": "2026-11-20T22:44:36.000Z",
-      "firstSeenAt": "2026-11-21T03:15:12.421Z",
-      "outlets": 3,
+      "title": "FDA Recalls ORL Oral Care Products Over Hormone Contamination",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5d3NFdGU5R1M4WDZvMWdrRk5ncktvNE1zNmNnN2J6elg4OElKUVRrZ3hSU1RqdnlRLW43WjZXRklaaXZOZ1VMMExjSkVoUXFhSFFTN2l0Y1VJOGs?oc=5",
+      "source": "cwibc.co.id",
+      "publishedAt": "2026-11-21T08:11:59.000Z",
+      "latestAt": "2026-11-21T08:29:47.000Z",
+      "firstSeenAt": "2026-11-21T08:31:10.813Z",
+      "outlets": 2,
       "outletNames": [
-        "The Motley Fool",
-        "Yahoo Finance",
-        "The Globe and Mail"
+        "cwibc.co.id",
+        "Limapagi"
       ],
-      "score": 2.02
+      "score": 1.99
     },
     {
       "id": "d39c76101e71",
@@ -728,23 +727,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "3e4b1c709480",
-      "cat": "germs",
-      "kind": "news",
-      "title": "FDA Recalls ORL Oral Care Products Over Hormone Contamination",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5d3NFdGU5R1M4WDZvMWdrRk5ncktvNE1zNmNnN2J6elg4OElKUVRrZ3hSU1RqdnlRLW43WjZXRklaaXZOZ1VMMExjSkVoUXFhSFFTN2l0Y1VJOGs?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-21T08:11:59.000Z",
-      "latestAt": "2026-11-21T08:29:47.000Z",
-      "firstSeenAt": "2026-11-21T08:31:10.813Z",
-      "outlets": 2,
-      "outletNames": [
-        "cwibc.co.id",
-        "Limapagi"
-      ],
-      "score": 1.99
-    },
-    {
       "id": "acd1e0d2dcd8",
       "cat": "germs",
       "kind": "news",
@@ -862,6 +844,23 @@
         "TradingView"
       ],
       "score": 1.91
+    },
+    {
+      "id": "aceb16070725",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Bitcoin plunges below $57,000 to lowest level since September 2024 as global market rout deepens",
+      "url": "https://www.fortuneindia.com/markets/cryptocurrency/bitcoin-plunges-below-57000-to-lowest-level-since-september-2024-as-global-market-rout-deepens/171635",
+      "source": "Fortune India",
+      "publishedAt": "2026-11-20T17:32:57.000Z",
+      "latestAt": "2026-11-21T12:37:59.000Z",
+      "firstSeenAt": "2026-11-21T12:46:50.384Z",
+      "outlets": 2,
+      "outletNames": [
+        "www.trendingtopics.eu",
+        "Fortune India"
+      ],
+      "score": 1.9
     },
     {
       "id": "6b5650d1f6ca",
@@ -1124,23 +1123,6 @@
       "score": 1.91,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
-    },
-    {
-      "id": "aceb16070725",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Bitcoin plunges below $57,000 to lowest level since September 2024 as global market rout deepens",
-      "url": "https://www.fortuneindia.com/markets/cryptocurrency/bitcoin-plunges-below-57000-to-lowest-level-since-september-2024-as-global-market-rout-deepens/171635",
-      "source": "Fortune India",
-      "publishedAt": "2026-11-20T17:32:57.000Z",
-      "latestAt": "2026-11-21T12:37:59.000Z",
-      "firstSeenAt": "2026-11-21T12:46:50.384Z",
-      "outlets": 2,
-      "outletNames": [
-        "www.trendingtopics.eu",
-        "Fortune India"
-      ],
-      "score": 1.9
     },
     {
       "id": "983bd44770c2",
@@ -1662,6 +1644,22 @@
       "score": 1.24
     },
     {
+      "id": "58ca15327d71",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Seven major tech outages in a week. Is AI really to blame?",
+      "url": "https://scroll.in/article/1097185/seven-major-tech-outages-in-a-week-is-ai-really-to-blame",
+      "source": "Scroll.in",
+      "publishedAt": "2026-11-21T06:00:00.000Z",
+      "latestAt": "2026-11-21T06:00:00.000Z",
+      "firstSeenAt": "2026-11-21T14:17:00.374Z",
+      "outlets": 1,
+      "outletNames": [
+        "Scroll.in"
+      ],
+      "score": 1.21
+    },
+    {
       "id": "a17702d91ada",
       "cat": "hacks",
       "kind": "news",
@@ -1970,6 +1968,22 @@
       "score": 0.91
     },
     {
+      "id": "edf37e355bd2",
+      "cat": "ai",
+      "kind": "news",
+      "title": "The AI race to fix security flaws could be making tech outages more common",
+      "url": "https://www.nbcnews.com/tech/security/microsoft-outage-ai-race-fix-security-flaws-cyber-tech-outages-common-rcna610143",
+      "source": "NBC News",
+      "publishedAt": "2026-11-21T06:00:00.000Z",
+      "latestAt": "2026-11-21T06:00:00.000Z",
+      "firstSeenAt": "2026-11-21T14:17:00.374Z",
+      "outlets": 1,
+      "outletNames": [
+        "NBC News"
+      ],
+      "score": 0.86
+    },
+    {
       "id": "167fb3d0e690",
       "cat": "space",
       "kind": "news",
@@ -1982,22 +1996,6 @@
       "outlets": 1,
       "outletNames": [
         "Scientific American"
-      ],
-      "score": 0.86
-    },
-    {
-      "id": "d3bd88e90dee",
-      "cat": "ai",
-      "kind": "news",
-      "title": "The real cyberthreat is rogue humans, not rogue AI",
-      "url": "https://www.washingtonpost.com/opinions/2026/11/21/scariest-thing-about-ai-is-still-humans/",
-      "source": "The Washington Post",
-      "publishedAt": "2026-11-21T02:45:00.000Z",
-      "latestAt": "2026-11-21T02:45:00.000Z",
-      "firstSeenAt": "2026-11-21T11:01:28.780Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Washington Post"
       ],
       "score": 0.86
     },
