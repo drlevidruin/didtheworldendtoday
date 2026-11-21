@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T16:02:20.381Z",
+  "buildTime": "2026-11-21T16:17:26.966Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 11:02 ET",
+  "etStamp": "2026-11-21 11:17 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -47,21 +47,21 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 574,
-  "lastSuccessAt": "2026-11-21T16:02:20.381Z",
+  "headlinesRead": 1259,
+  "lastSuccessAt": "2026-11-21T16:17:26.966Z",
   "rollingFallback": false,
   "cats": {
-    "earth": 8,
+    "earth": 9,
     "flights": 27,
-    "hacks": 22,
-    "markets": 10,
+    "hacks": 23,
+    "markets": 11,
     "weather": 4,
     "germs": 4,
     "grid": 4,
     "ai": 3,
-    "sun": 4,
     "space": 4,
-    "internet": 6,
+    "internet": 4,
+    "sun": 3,
     "animals": 4
   },
   "vital": {
@@ -88,18 +88,7 @@
       "upcoming": true
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "YYZ",
-          "hub": false,
-          "reason": "low visibility"
-        },
-        {
-          "airport": "YOW",
-          "hub": false,
-          "reason": "low visibility"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
       "groundDelays": 2,
       "closures": 0,
@@ -195,57 +184,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 267,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "count": 956,
+      "error": null,
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     },
     "bing": {
       "ok": true,
-      "count": 269,
+      "count": 265,
       "error": null,
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-21T08:46:06.995Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     },
     "faa": {
       "ok": true,
-      "count": 2,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     },
     "x": {
       "ok": true,
@@ -258,13 +247,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T16:02:20.381Z"
+      "lastOkAt": "2026-11-21T16:17:26.966Z"
     }
   },
   "stories": [
@@ -620,7 +609,7 @@
       "publishedAt": "2026-11-20T21:05:00.000Z",
       "latestAt": "2026-11-21T12:30:26.000Z",
       "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 8,
+      "outlets": 9,
       "outletNames": [
         "U.S. News & World Report",
         "FOX Weather on MSN",
@@ -629,10 +618,11 @@
         "@Reuters on X",
         "Devdiscourse",
         "Yahoo",
-        "SRN News"
+        "SRN News",
+        "Seoul Economic Daily"
       ],
       "xUrl": "https://x.com/Reuters/status/2124118237273083976",
-      "score": 2.99,
+      "score": 3.11,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
     },
@@ -852,23 +842,6 @@
       "score": 1.72
     },
     {
-      "id": "d3f2123d2217",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Multiple Wavelengths Of Sun Blasts X1.2-Class Solar Flare",
-      "url": "https://www.msn.com/en-us/science/astronomy/multiple-wavelengths-of-sun-blasts-x1-2-class-solar-flare/vi-AA2hTnyj",
-      "source": "Dailymotion on MSN",
-      "publishedAt": "2026-11-20T16:02:34.000Z",
-      "latestAt": "2026-11-20T17:21:22.000Z",
-      "firstSeenAt": "2026-11-21T01:15:04.078Z",
-      "outlets": 2,
-      "outletNames": [
-        "Dailymotion on MSN",
-        "Yahoo"
-      ],
-      "score": 1.69
-    },
-    {
       "id": "276c4b2d0e1e",
       "cat": "space",
       "kind": "news",
@@ -876,7 +849,7 @@
       "url": "https://www.cnn.com/2026/11/21/science/mini-moon-earth-2026-qq8",
       "source": "CNN",
       "publishedAt": "2026-11-21T03:30:00.000Z",
-      "latestAt": "2026-11-21T15:33:15.000Z",
+      "latestAt": "2026-11-21T16:08:13.000Z",
       "firstSeenAt": "2026-11-21T15:47:11.421Z",
       "outlets": 2,
       "outletNames": [
@@ -884,6 +857,22 @@
         "SSBCrack"
       ],
       "score": 1.59
+    },
+    {
+      "id": "4f6393459502",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Executive Apologizes for Widespread Outage Affecting Users Worldwide and Reveals Three Factors Behind It",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1zZ3RIS0lRQTl6d0lIMFZBWndaemVlRUFWUU1MYWpza2F5VHlkSEp0aHdBMEhLdUE1V0JCVnVPUW44V1pIcG82VzlMQTNlMDZuenFvVmQ4ZW1pSm8tZVRhUG1pdWNYbThzNERWWUFmSi1RQ2phcHBvYmg1QQ?oc=5",
+      "source": "news.amomama.com",
+      "publishedAt": "2026-11-21T11:13:00.000Z",
+      "latestAt": "2026-11-21T11:13:00.000Z",
+      "firstSeenAt": "2026-11-21T11:16:31.801Z",
+      "outlets": 1,
+      "outletNames": [
+        "news.amomama.com"
+      ],
+      "score": 1.4
     },
     {
       "id": "sig:faa-stop:BFI:2026-11-20",
@@ -948,6 +937,24 @@
         "AOL.com"
       ],
       "score": 3.12
+    },
+    {
+      "id": "6c8a88bd11bd",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Inside the FAA router failure that grounded US flights nationwide",
+      "url": "https://www.usatoday.com/story/graphics/2026/11/21/faa-explains-why-flights-were-grounded/92877632007/",
+      "source": "USA TODAY",
+      "publishedAt": "2026-11-21T01:57:00.000Z",
+      "latestAt": "2026-11-21T15:39:00.000Z",
+      "firstSeenAt": "2026-11-21T16:02:20.381Z",
+      "outlets": 3,
+      "outletNames": [
+        "USA TODAY",
+        "The Kansas City Star",
+        "The State"
+      ],
+      "score": 2.77
     },
     {
       "id": "e7ec2c2dedbb",
@@ -1018,6 +1025,24 @@
         "TechGig"
       ],
       "score": 2.34
+    },
+    {
+      "id": "2593cf91a89e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US Department of Agriculture Hit by Cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY3lqQWxtTDBiMk9wWGhNVldGVXJqMUN2NUZuZWlyRThiMXEtQjR5aGw3SWpGRkxhYTFkdkxMTlFfUXVmOG1LSXh1MTc0RHF0SnRYcS0tc3I4Y1AxXzFmREpyWHdVOEFtZE9iUEZEdXpqV1pra1M1d0JJTjh0bWxfMTRn?oc=5",
+      "source": "8AM Media",
+      "publishedAt": "2026-11-21T06:30:05.000Z",
+      "latestAt": "2026-11-21T14:10:57.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 3,
+      "outletNames": [
+        "8AM Media",
+        "Afghanistan International",
+        "Ratopati"
+      ],
+      "score": 2.16
     },
     {
       "id": "1117a0401a89",
@@ -1247,6 +1272,42 @@
       "score": 1.66
     },
     {
+      "id": "8f9147e76bc9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Staples Canada says customer information accessed in data breach",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNN0didzNpRTFqNGs0MVZ6cHI1Z25hb1E1ZTBSQy1EOHM5QWRGTmYyRGwwSkpjanMzSEl1MzhadXluTk5TOWdjNF9FVVJsR0VhTUJCUWdVRW5mNGd3NVNMQnNzYzRQcHNrSF8wQ3pTUTlUV3dfeGxtOEZsNm40T09TWWxaU003aGlCenU3aXlGS2Zqd0l5U3RGeDM5TDhJNUpaT3cyRWtwZjJvLXh2MUZMd2gzRXAwbnY5Ykh4UnJ0bzB5cFA5ZEF2bnN4Y29VdWxBUnBKdmRQOVVLQ2RSNXhhYQ?oc=5",
+      "source": "The Spec",
+      "publishedAt": "2026-11-21T05:05:48.000Z",
+      "latestAt": "2026-11-21T05:05:48.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Spec",
+        "Toronto Star"
+      ],
+      "score": 1.63
+    },
+    {
+      "id": "46325015c386",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Peru hit by magnitude 6.8 earthquake; no immediate damage reported",
+      "url": "https://www.thehindubusinessline.com/news/world/peru-hit-by-magnitude-68-earthquake-no-immediate-damage-reported/article71727426.ece",
+      "source": "The Hindu BusinessLine",
+      "publishedAt": "2026-11-21T03:32:00.000Z",
+      "latestAt": "2026-11-21T06:01:00.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Hindu BusinessLine",
+        "BusinessLine"
+      ],
+      "score": 1.57,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "65e529a55c42",
       "cat": "hacks",
       "kind": "news",
@@ -1347,22 +1408,6 @@
       "score": 1.4
     },
     {
-      "id": "4f6393459502",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Executive Apologizes for Widespread Outage Affecting Users Worldwide and Reveals Three Factors Behind It",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1zZ3RIS0lRQTl6d0lIMFZBWndaemVlRUFWUU1MYWpza2F5VHlkSEp0aHdBMEhLdUE1V0JCVnVPUW44V1pIcG82VzlMQTNlMDZuenFvVmQ4ZW1pSm8tZVRhUG1pdWNYbThzNERWWUFmSi1RQ2phcHBvYmg1QQ?oc=5",
-      "source": "news.amomama.com",
-      "publishedAt": "2026-11-21T11:13:00.000Z",
-      "latestAt": "2026-11-21T11:13:00.000Z",
-      "firstSeenAt": "2026-11-21T11:16:31.801Z",
-      "outlets": 1,
-      "outletNames": [
-        "news.amomama.com"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "64f38f08d8b6",
       "cat": "hacks",
       "kind": "news",
@@ -1425,6 +1470,54 @@
         "Legis1"
       ],
       "score": 1.4
+    },
+    {
+      "id": "cfa8d9fcb897",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Tech experts urge digital 'emergency exits' after global outage wave",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPcS1zLUxFTHFiRHRZWXc0LUhEVmY4cTh1ZS1xalFsbm9McGpJWGhwT0VrV3pDdXg2T09mdkJGNEw3QlhYSU1iMWJwUmV4Y2lxVGVZYXdHRElCeHNzWnQwdzNuallRR0FSZTFOVVlnZVJxM0EzcUZGTUtac1I1MVFOc09tYjk4RUg2eXVPMzlJcWk3UDVySllLRmlCU2ZWalZUdjFHYQ?oc=5",
+      "source": "Daily Voice Of Asia",
+      "publishedAt": "2026-11-21T16:01:11.000Z",
+      "latestAt": "2026-11-21T16:01:11.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 1,
+      "outletNames": [
+        "Daily Voice Of Asia"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "c46a4bb5c69b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Global tech sell-off deepens as Anthropic retreats near IPO price",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNU14RmhPUmV4cmp6dmtoQTBnbDVlcnRkTE9BekZOZnB1M3BIVEZ5dzE5TXJGQ0xtaEprblFQY1FwbFg2Tl95amlVN0hhUXlRSzllNWZQeGNNOU5KSnE5TEZwRGpsencyaDk3UFRXbnROWE9QYXNjV001R0JvSVRBVE4xeVZ1ZndybGY2dlhZTmJwd256TVBNU2Nqbms1d05P?oc=5",
+      "source": "Daily Voice Of Asia",
+      "publishedAt": "2026-11-21T15:57:56.000Z",
+      "latestAt": "2026-11-21T15:57:56.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 1,
+      "outletNames": [
+        "Daily Voice Of Asia"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "000b24c373ac",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Outage Triggers Nationwide Flight Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUVVhR3hmek1jTExReWNlTk4tRUNkVnh2dE9RalNmN0hLRVBvLTM5UWVuLUl4OEFMRFBweDAzaWQ5S3NzbFJsM1VVa2E0Y1M0a2VkVGdTeExMMXJWbG5xdkZqU3YzRTdnTUxvc3MybnM3emVoYnN2YTVicUQ0NTRJT2Vzb1ducW1hQlE?oc=5",
+      "source": "Wisevoter",
+      "publishedAt": "2026-11-21T15:48:13.000Z",
+      "latestAt": "2026-11-21T15:48:13.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 1,
+      "outletNames": [
+        "Wisevoter"
+      ],
+      "score": 1.39
     },
     {
       "id": "146ca5e4e786",
@@ -1669,23 +1762,6 @@
       "score": 1.33
     },
     {
-      "id": "8bf45270882b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Spitfire flights grounded at Hampshire airport with immediate effect",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUjFOU252eFMtdnNJeXdEZFRhaVRzQVBiNFhFZlhjeXVtSHFKU25KeTRrU0NSN2ZJV05hQTNEVkJiNmx1eU82UHZHeGNCemk3R25zWTFyZk54VTYxLU00c0FOUVQtWmdwdnl3d3B1TmZLYTE0VVdPaHNvNVVDT1FoTndVcko5bmRVOVpXdWlqWS1nNDFSWjlGS3hRZG10SXowV0tTNmdB?oc=5",
-      "source": "Daily Echo",
-      "publishedAt": "2026-11-20T16:42:13.000Z",
-      "latestAt": "2026-11-21T11:01:37.000Z",
-      "firstSeenAt": "2026-11-21T13:16:50.499Z",
-      "outlets": 2,
-      "outletNames": [
-        "Daily Echo",
-        "Hampshire Chronicle"
-      ],
-      "score": 1.31
-    },
-    {
       "id": "58ca15327d71",
       "cat": "internet",
       "kind": "news",
@@ -1700,22 +1776,6 @@
         "Scroll.in"
       ],
       "score": 1.21
-    },
-    {
-      "id": "6c8a88bd11bd",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Inside the FAA router failure that grounded US flights nationwide",
-      "url": "https://www.usatoday.com/story/graphics/2026/11/21/faa-explains-why-flights-were-grounded/92877632007/",
-      "source": "USA TODAY",
-      "publishedAt": "2026-11-21T07:39:00.000Z",
-      "latestAt": "2026-11-21T07:39:00.000Z",
-      "firstSeenAt": "2026-11-21T16:02:20.381Z",
-      "outlets": 1,
-      "outletNames": [
-        "USA TODAY"
-      ],
-      "score": 1.2
     },
     {
       "id": "2bf2461c8c5c",
@@ -1734,22 +1794,6 @@
       "score": 1.2
     },
     {
-      "id": "47e69d687422",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Analysts call for investigation, audit on nationwide outages",
-      "url": "https://www.aol.com/articles/analysts-call-investigation-audit-nationwide-143900000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-21T07:01:00.000Z",
-      "latestAt": "2026-11-21T07:01:00.000Z",
-      "firstSeenAt": "2026-11-21T16:02:20.381Z",
-      "outlets": 1,
-      "outletNames": [
-        "AOL"
-      ],
-      "score": 1.19
-    },
-    {
       "id": "e5d5df26ea16",
       "cat": "grid",
       "kind": "news",
@@ -1766,36 +1810,20 @@
       "score": 1.17
     },
     {
-      "id": "2573a87645e1",
-      "cat": "internet",
+      "id": "a0f3fcd5250b",
+      "cat": "germs",
       "kind": "news",
-      "title": "Microsoft outage affects global travel communications",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSkd0c1BKUmpiNUVCUkdaUzcyMG9sQWVQNXJsZlg4Y3k3YzRlOG5KbEJ3MUJNTmVPakFxUTg0Z2hCSl9TSUhqQW9IX09OYUJBT3Brb3hWZXY0d1dhZTl6S1lMYzZDS2piTnU0MmI5eGN5RkJwQ0pWVGtZM2lFWkZ4YkV5X2Znbkl6YlMtRUk1OVVMd3daU2pFcjhDMWg5VzlkR0t5VFJJRWNKbXZuOEE?oc=5",
-      "source": "The Portugal News",
-      "publishedAt": "2026-11-21T04:41:15.000Z",
-      "latestAt": "2026-11-21T04:41:15.000Z",
-      "firstSeenAt": "2026-11-21T14:47:03.235Z",
+      "title": "Poultry keepers in Wales must house birds as avian flu concerns grow",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNG5EU2FxUUhpX0pmajJKSHVsaU1lTkRPNWlLR1Z1Q1d2WmRrcXVLbzE0Nk9yeXJvQ0tIRTNKc0pLZlJqMjdxd0J3dER3aGdBVVNXQ1NKT25iRzhiMHRmekFvR3pQVGNNMnkzWk1QMzN1OHFMekpGY01seGt3bEQ5QnhlcVFYMm9fUFV5UHk0dnk4a1BoMGZMM0t1M3Jva0lO?oc=5",
+      "source": "County Times",
+      "publishedAt": "2026-11-21T16:00:00.000Z",
+      "latestAt": "2026-11-21T16:00:00.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
       "outlets": 1,
       "outletNames": [
-        "The Portugal News"
+        "County Times"
       ],
-      "score": 1.16
-    },
-    {
-      "id": "3f09681c5efa",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Global Outage in Australia: Impact and Recovery Checks | Nov. 21",
-      "url": "https://www.webtech360.com/detail/microsoft-global-outage-in-australia-impact-and-en-trend-hp2-99921178.html",
-      "source": "WEBTECH 360",
-      "publishedAt": "2026-11-20T17:12:00.000Z",
-      "latestAt": "2026-11-20T17:12:00.000Z",
-      "firstSeenAt": "2026-11-21T04:15:21.688Z",
-      "outlets": 1,
-      "outletNames": [
-        "WEBTECH 360"
-      ],
-      "score": 1.14
+      "score": 1
     },
     {
       "id": "0ee92cae30ea",
@@ -1812,22 +1840,6 @@
         "MySA"
       ],
       "score": 1
-    },
-    {
-      "id": "468a91418103",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "A new Windows zero-day reportedly gets past BitLocker using only the screen reader and a USB stick",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZDE1TEtwejFHTlVGMlY1cXkzZWx0N3I1VGhmWUJsd0JEZ193SFVRc3lTSlZXRU51UzJua242S0s5WDc1U24tdHhkME5uMFRKVzd4djV2bmhFRk5XbmRmc2IyRFhUOFMxT1F5cXN0VGJZQ0hlN3I0XzBJbGxYVUlEandqYkJtSGJNajJyU1JXbGRXWXFvVkFzZg?oc=5",
-      "source": "TechSpot",
-      "publishedAt": "2026-11-21T15:23:00.000Z",
-      "latestAt": "2026-11-21T15:23:00.000Z",
-      "firstSeenAt": "2026-11-21T16:02:20.381Z",
-      "outlets": 1,
-      "outletNames": [
-        "TechSpot"
-      ],
-      "score": 0.99
     },
     {
       "id": "7ea48e0c9ab9",
@@ -1914,22 +1926,6 @@
       "score": 0.99
     },
     {
-      "id": "00209392cbc5",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird Flu Alert – Two Wild Swans Test Positive For H5N1 In Irish Midlands.",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQajJjR3J0Nm5uaUJCVlJkNDU4LS1xa21JWUVFNHZ4MkZ2eFl3dGduSVh5THd2aUpUd1pPeFJocWxRTV96ZVpWS0Z6N09WeUJwRmc1bkxvRHdTQndULXFQczFSNGVUTmtfaHRlSEMtWS16SUNuWkxaQTMydHl1Rk0yVGVQbWo2Rk9HYXRRdlhTZFBrRlhabDlkeU1tUy1WTjVuczBBYXdJbG5QbGM?oc=5",
-      "source": "Thurles Information",
-      "publishedAt": "2026-11-21T12:48:08.000Z",
-      "latestAt": "2026-11-21T12:48:08.000Z",
-      "firstSeenAt": "2026-11-21T15:15:34.480Z",
-      "outlets": 1,
-      "outletNames": [
-        "Thurles Information"
-      ],
-      "score": 0.96
-    },
-    {
       "id": "d1bfe0d98aab",
       "cat": "ai",
       "kind": "news",
@@ -1946,6 +1942,22 @@
       "score": 0.91
     },
     {
+      "id": "b33ce89da40a",
+      "cat": "space",
+      "kind": "news",
+      "title": "Asteroid DW Chances Of Impacting The Earth In 2046",
+      "url": "https://www.msn.com/en-us/news/other/asteroid-dw-chances-of-impacting-the-earth-in-2046/vi-AA2hVkCa",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-21T08:00:00.000Z",
+      "latestAt": "2026-11-21T08:00:00.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 1,
+      "outletNames": [
+        "Space on MSN"
+      ],
+      "score": 0.86
+    },
+    {
       "id": "edf37e355bd2",
       "cat": "ai",
       "kind": "news",
@@ -1958,22 +1970,6 @@
       "outlets": 1,
       "outletNames": [
         "NBC News"
-      ],
-      "score": 0.86
-    },
-    {
-      "id": "167fb3d0e690",
-      "cat": "space",
-      "kind": "news",
-      "title": "Weirdly accelerating space rock keeps puzzling astronomers",
-      "url": "https://www.scientificamerican.com/article/weirdly-accelerating-space-rock-keeps-puzzling-astronomers/",
-      "source": "Scientific American",
-      "publishedAt": "2026-11-21T04:00:00.000Z",
-      "latestAt": "2026-11-21T12:05:51.000Z",
-      "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 1,
-      "outletNames": [
-        "Scientific American"
       ],
       "score": 0.86
     },
