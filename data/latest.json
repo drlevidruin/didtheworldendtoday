@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T03:30:16.173Z",
+  "buildTime": "2026-11-21T03:45:20.063Z",
   "etDate": "2026-11-20",
-  "etStamp": "2026-11-20 22:30 ET",
-  "score": 77,
+  "etStamp": "2026-11-20 22:45 ET",
+  "score": 71,
   "fired": [
     "flights",
     "hacks",
@@ -22,14 +22,9 @@
       "key": "quake",
       "label": "Quake M6 or more",
       "points": 5
-    },
-    {
-      "key": "faa",
-      "label": "Ground stop at a major hub",
-      "points": 6
     }
   ],
-  "change": -3,
+  "change": -9,
   "yesterday": {
     "date": "2026-11-19",
     "score": 80,
@@ -51,14 +46,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1294,
-  "lastSuccessAt": "2026-11-21T03:30:16.173Z",
+  "headlinesRead": 1275,
+  "lastSuccessAt": "2026-11-21T03:45:20.063Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 24,
-    "earth": 5,
+    "flights": 22,
+    "earth": 6,
     "germs": 5,
-    "hacks": 27,
+    "hacks": 28,
     "markets": 13,
     "grid": 5,
     "internet": 4,
@@ -183,80 +178,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1016,
+      "count": 1007,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     },
     "bing": {
       "ok": true,
-      "count": 238,
-      "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "count": 229,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     },
     "x": {
       "ok": true,
-      "count": 2,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:30:16.173Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T03:30:16.173Z"
+      "lastOkAt": "2026-11-21T03:45:20.063Z"
     }
   },
   "stories": [
@@ -306,29 +302,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "sig:faa-stop:LAS:2026-11-19",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at LAS (low ceilings)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-20T03:41:23.681Z",
-      "latestAt": "2026-11-20T03:41:23.681Z",
-      "firstSeenAt": "2026-11-20T03:41:23.681Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "LAS",
-        "hub": true,
-        "nationwide": false,
-        "reason": "low ceilings"
-      }
-    },
-    {
       "id": "6909d0eab00e",
       "cat": "germs",
       "kind": "news",
@@ -373,6 +346,24 @@
         "Modern Ghana"
       ],
       "score": 3.59
+    },
+    {
+      "id": "d39c76101e71",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide ground stop caused drop in Americans' confidence in air travel reliability, survey finds",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOX09SMUlwWW1oMnY2Z0xqMHJla3hYTHVDcTQ4b1Jqbm1IbXV4ZWtVdUtPSGNpczUtTVNONGwtSXVzLURvQmFBZ3NWeGZQM2ZldU5ZYmFMUWNadm11MTBnY3BiMkJFeEdFTkNrc3pxWXk4RkJaYnBuSTRjZV9Kd3pBaWtqWWs2ZU9rSVUyYWtibzVHQWNjTEEyUG5Fc29PSzh2b3Utb1BLQi1OSzA1UjdKTzRILVk4azJHb3l2TV9ycUphR1NPMmdr?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-20T23:24:00.000Z",
+      "latestAt": "2026-11-21T00:10:00.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 3,
+      "outletNames": [
+        "CBS News",
+        "Yahoo",
+        "Modern Ghana"
+      ],
+      "score": 3.57
     },
     {
       "id": "17e895587c28",
@@ -426,6 +417,26 @@
       "score": 3.26
     },
     {
+      "id": "c3543c0a8ead",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Illinois officials investigating \"apparent cyberattack\" on Monday at Algonquin Dam on Fox River",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1YS09lVUJ5RHF0bi1tZXpNdTNaVDE5NkJyLWhiUC1IakQ2MGhXRm43UzFGV0R6dEI2a2RyMHB6OWJtbVNGTGZfUU9aUno2UzBrLU10Zmo0aUxUU2dOdk10QXh4Qy0wdldVaXltczJPQm9Cc2lhRW0yNVRud1Z1UQ?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-21T00:56:11.000Z",
+      "latestAt": "2026-11-21T03:36:34.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "outlets": 5,
+      "outletNames": [
+        "CBS News",
+        "ABC7 Chicago",
+        "Wirepoints",
+        "Shaw Local",
+        "WGN-TV"
+      ],
+      "score": 3.24
+    },
+    {
       "id": "80b173a24678",
       "cat": "hacks",
       "kind": "news",
@@ -460,27 +471,6 @@
         "AppleValleyNewsNow.com"
       ],
       "score": 2.67
-    },
-    {
-      "id": "4ee3012c5ba5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
-      "source": "Meteora Web",
-      "publishedAt": "2026-11-20T09:16:22.000Z",
-      "latestAt": "2026-11-20T21:17:53.000Z",
-      "firstSeenAt": "2026-11-21T00:44:46.578Z",
-      "outlets": 6,
-      "outletNames": [
-        "Meteora Web",
-        "Help Net Security",
-        "SOC Prime",
-        "SOCRadar",
-        "Pasquale Pillitteri",
-        "Dark Reading"
-      ],
-      "score": 2.66
     },
     {
       "id": "6a48e452a3f3",
@@ -539,24 +529,6 @@
       "score": 2.22
     },
     {
-      "id": "d39c76101e71",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Nationwide ground stop caused drop in Americans' confidence in air travel reliability, survey finds",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOX09SMUlwWW1oMnY2Z0xqMHJla3hYTHVDcTQ4b1Jqbm1IbXV4ZWtVdUtPSGNpczUtTVNONGwtSXVzLURvQmFBZ3NWeGZQM2ZldU5ZYmFMUWNadm11MTBnY3BiMkJFeEdFTkNrc3pxWXk4RkJaYnBuSTRjZV9Kd3pBaWtqWWs2ZU9rSVUyYWtibzVHQWNjTEEyUG5Fc29PSzh2b3Utb1BLQi1OSzA1UjdKTzRILVk4azJHb3l2TV9ycUphR1NPMmdr?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-20T23:24:00.000Z",
-      "latestAt": "2026-11-21T00:10:00.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 3,
-      "outletNames": [
-        "CBS News",
-        "Yahoo",
-        "Modern Ghana"
-      ],
-      "score": 3.57
-    },
-    {
       "id": "sig:faa-stop:AUS:2026-11-20",
       "cat": "flights",
       "kind": "signal",
@@ -603,22 +575,66 @@
       }
     },
     {
-      "id": "c3543c0a8ead",
+      "id": "sig:faa-stop:TEB:2026-11-20",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-20T16:28:32.497Z",
+      "latestAt": "2026-11-20T16:28:32.497Z",
+      "firstSeenAt": "2026-11-20T16:28:32.497Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
+    },
+    {
+      "id": "4ee3012c5ba5",
       "cat": "hacks",
       "kind": "news",
-      "title": "Illinois officials investigating \"apparent cyberattack\" on Monday at Algonquin Dam on Fox River",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1YS09lVUJ5RHF0bi1tZXpNdTNaVDE5NkJyLWhiUC1IakQ2MGhXRm43UzFGV0R6dEI2a2RyMHB6OWJtbVNGTGZfUU9aUno2UzBrLU10Zmo0aUxUU2dOdk10QXh4Qy0wdldVaXltczJPQm9Cc2lhRW0yNVRud1Z1UQ?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-21T00:56:11.000Z",
-      "latestAt": "2026-11-21T02:28:25.000Z",
-      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "title": "VMware vCenter, zero-day CVE-2026-123890 exploited since September by the ARMORY CASTLE group",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMHFJdEtnQnMyelJ0d2JXS2oxM0cxQXBEcDVqMGl3NjdJYjR4YXJsVzFRU1ZQMndHY2RFZzBpaklybm5HazdHcE16bmhiVFl1bWZPeHlXcFJVODBIWlk2V0F4TGpVNmxFYXgzQ1RGdnRaYzd5WkRubWI4TE1TbGRJQndKeWZKR0JpOEh2VHFrWjdhRlExeDVtY0tzSVE?oc=5",
+      "source": "Meteora Web",
+      "publishedAt": "2026-11-20T09:16:22.000Z",
+      "latestAt": "2026-11-20T21:17:53.000Z",
+      "firstSeenAt": "2026-11-21T00:44:46.578Z",
+      "outlets": 6,
+      "outletNames": [
+        "Meteora Web",
+        "Help Net Security",
+        "SOC Prime",
+        "SOCRadar",
+        "Pasquale Pillitteri",
+        "Dark Reading"
+      ],
+      "score": 2.66
+    },
+    {
+      "id": "bba455d55701",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers allegedly breach USDA system used to pay farmers: reports",
+      "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPX3E1Sm9VZE85cjkyWHhlN3o3TXR5dzZ2VjE5Y2ZPSF9xMFlzUDBzX3hGWmE0MFh6eVl4Q0xNOExQWEVHTTBIRUE5Z05YQzE3dUw3M0Y0dkU0QTM3SXlQUk8tS2JsRlJ2U1BPZXRGTXhaUW0zanZuZi1nR0FsTEg0aEVJX0w2WUI0Rk5iZDZ6b3ZmenZ6LWJaUGh0RmRxN0ZuSEt1em5hdVhvUFZPZmJSOUVMajB3VVNRTElxLS12cmlOdmpJT3JIUFJudlRmNDN3SFBLZTNWbWtRaTZqbktPcTNhNWtFalcxNXN5aG1QNnZLQUhRVW4xWnpHVVl5Y01pSmdPc00yX3VwR0wxQjZSeS1SaFRjTVNpNU12NFJqV0RIOHI1SlNWWA?oc=5",
+      "source": "WLUK",
+      "publishedAt": "2026-11-21T03:40:09.000Z",
+      "latestAt": "2026-11-21T03:43:05.000Z",
+      "firstSeenAt": "2026-11-21T03:45:20.063Z",
       "outlets": 3,
       "outletNames": [
-        "CBS News",
-        "ABC7 Chicago",
-        "Wirepoints"
+        "WLUK",
+        "KBOI",
+        "WJAR"
       ],
-      "score": 2.52
+      "score": 2.58
     },
     {
       "id": "501df2603002",
@@ -639,23 +655,24 @@
       "score": 2.49
     },
     {
-      "id": "ceb2408f55ce",
-      "cat": "hacks",
+      "id": "2e35775bd6c3",
+      "cat": "earth",
       "kind": "news",
-      "title": "Hackers use Microsoft Outlook security flaw to steal your login data",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-microsoft-outlook-security-flaw-140917119.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-20T06:09:00.000Z",
-      "latestAt": "2026-11-20T14:09:17.000Z",
-      "firstSeenAt": "2026-11-20T16:58:32.799Z",
-      "outlets": 4,
+      "title": "Magnitude 6.7 Earthquake Shakes Central Peru",
+      "url": "https://www.riotimesonline.com/magnitude-6-7-earthquake-shakes-central-peru/",
+      "source": "The Rio Times",
+      "publishedAt": "2026-11-20T19:00:00.000Z",
+      "latestAt": "2026-11-21T02:01:09.000Z",
+      "firstSeenAt": "2026-11-21T03:45:20.063Z",
+      "outlets": 3,
       "outletNames": [
-        "YAHOO!",
-        "Fox News",
-        "AOL.com",
-        "Yahoo Tech"
+        "The Rio Times",
+        "The Times of India",
+        "CGTN"
       ],
-      "score": 2.46
+      "score": 2.21,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "ad9dfb453401",
@@ -853,46 +870,6 @@
       "score": 1.91
     },
     {
-      "id": "75cfa403ab35",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed with other species affected, charity says",
-      "url": "https://www.bbc.co.uk/news/articles/cq5y10g22e2ro",
-      "source": "BBC",
-      "publishedAt": "2026-11-20T04:29:00.000Z",
-      "latestAt": "2026-11-20T12:29:18.000Z",
-      "firstSeenAt": "2026-11-20T12:42:47.538Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "Yahoo"
-      ],
-      "score": 1.73
-    },
-    {
-      "id": "sig:faa-stop:TEB:2026-11-20",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-20T16:28:32.497Z",
-      "latestAt": "2026-11-20T16:28:32.497Z",
-      "firstSeenAt": "2026-11-20T16:28:32.497Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
-    },
-    {
       "id": "c1812514f929",
       "cat": "flights",
       "kind": "news",
@@ -989,6 +966,25 @@
         "wlwt.com"
       ],
       "score": 2.56
+    },
+    {
+      "id": "ceb2408f55ce",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers use Microsoft Outlook security flaw to steal your login data",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-microsoft-outlook-security-flaw-140917119.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-20T06:09:00.000Z",
+      "latestAt": "2026-11-20T14:09:17.000Z",
+      "firstSeenAt": "2026-11-20T16:58:32.799Z",
+      "outlets": 4,
+      "outletNames": [
+        "YAHOO!",
+        "Fox News",
+        "AOL.com",
+        "Yahoo Tech"
+      ],
+      "score": 2.46
     },
     {
       "id": "50e8bed5e3a2",
@@ -1098,6 +1094,23 @@
         "Hotel Online"
       ],
       "score": 2.03
+    },
+    {
+      "id": "db43eadebab2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI’s criminal information database hacked",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOX3ZScHEwdTE0OG83Z0pWRm5vLXpKSnNkU3FQakViV1cyOEg1YjFIcGZyLW9FRXk3NnFfTDY0aFVmN2VqQW1vSzZ2TEhDTVhNZ3oxQVFYdnVTdW10T3dic3ZpUmJXSk5Sd0lLT2VJWUtKUzE3SERrLWk4QTVIbzRBaGJGODRTUklSSVJuYXNNRVd0QmgxdHhTUmMtTUR6Wk11bXVJZg?oc=5",
+      "source": "Free Malaysia Today",
+      "publishedAt": "2026-11-21T03:28:19.000Z",
+      "latestAt": "2026-11-21T03:40:52.000Z",
+      "firstSeenAt": "2026-11-21T03:45:20.063Z",
+      "outlets": 2,
+      "outletNames": [
+        "Free Malaysia Today",
+        "India Today"
+      ],
+      "score": 1.99
     },
     {
       "id": "21bb56ff9807",
@@ -1356,6 +1369,23 @@
       "outletNames": [
         "Insider",
         "Business Insider"
+      ],
+      "score": 1.73
+    },
+    {
+      "id": "75cfa403ab35",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed with other species affected, charity says",
+      "url": "https://www.bbc.co.uk/news/articles/cq5y10g22e2ro",
+      "source": "BBC",
+      "publishedAt": "2026-11-20T04:29:00.000Z",
+      "latestAt": "2026-11-20T12:29:18.000Z",
+      "firstSeenAt": "2026-11-20T12:42:47.538Z",
+      "outlets": 2,
+      "outletNames": [
+        "BBC",
+        "Yahoo"
       ],
       "score": 1.73
     },
@@ -1752,7 +1782,7 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-20T06:15:43.000Z",
-      "latestAt": "2026-11-21T01:46:02.000Z",
+      "latestAt": "2026-11-21T03:42:37.000Z",
       "firstSeenAt": "2026-11-20T06:26:52.947Z",
       "outlets": 1,
       "outletNames": [
@@ -1809,22 +1839,6 @@
       "score": 1.39
     },
     {
-      "id": "5e64f6f5156b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Missouri couple meets Ted Lasso star during nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcEtkR3ZYR3dpTWJYTU02QjRaTU5lNENuRjhhZEtWZUZudWFiZUhnZU1qR2E5VU1xY3NLcjNVNmpqMzJab0VCZTE2MW1YU0NaX0FXeUNYODA1M2Fpbkx0STM4aFpWR1preVMwakRTbUhKM2xFLVpKUDM2WFhKb0R5ZUxWbnN2X1d5ak5KbVRUX1dYTm9wWThsRF9WX0IyTGdxWnRyaHk1NUkySV9rXzNCbTgyRFl4YkgxUHNxS0laaW5PaHpsc04zNEpHME52dXkxM2VDeTNR?oc=5",
-      "source": "THV11",
-      "publishedAt": "2026-11-20T23:01:46.000Z",
-      "latestAt": "2026-11-20T23:01:46.000Z",
-      "firstSeenAt": "2026-11-20T23:14:38.391Z",
-      "outlets": 1,
-      "outletNames": [
-        "THV11"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "83ef9fdc9f2a",
       "cat": "weather",
       "kind": "news",
@@ -1837,22 +1851,6 @@
       "outlets": 1,
       "outletNames": [
         "SooToday.com"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "74e770b8872d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major US banks face cyberattack involving 16,000 customer details",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPXzN5UGVXd2tGT01aTFR6X1ZVNzM4N1BELVNVM052MTkwOEtUZGdKM1diVU1XUkZXWTBWTEMzdkhndGtPcEZwUnZ6QzBDZ3ZMaTJLM0FIQW1XMm5VVTF4MjJnOHI2X0FnaXVMNkpHZ3dkc0JtT0I0VGdqMC1MUmF1REVLUlJwVDZGVDRtaVhn?oc=5",
-      "source": "Interesting Engineering",
-      "publishedAt": "2026-11-20T03:42:00.000Z",
-      "latestAt": "2026-11-20T03:42:00.000Z",
-      "firstSeenAt": "2026-11-20T03:56:22.027Z",
-      "outlets": 1,
-      "outletNames": [
-        "Interesting Engineering"
       ],
       "score": 1.39
     },
