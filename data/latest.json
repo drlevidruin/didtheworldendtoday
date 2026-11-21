@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T08:00:59.190Z",
+  "buildTime": "2026-11-21T08:16:04.663Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 03:00 ET",
+  "etStamp": "2026-11-21 03:16 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -46,17 +46,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 632,
-  "lastSuccessAt": "2026-11-21T08:00:59.190Z",
+  "headlinesRead": 1297,
+  "lastSuccessAt": "2026-11-21T08:16:04.663Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 22,
-    "earth": 10,
-    "hacks": 26,
+    "flights": 23,
+    "earth": 9,
+    "hacks": 27,
     "germs": 4,
-    "markets": 11,
-    "grid": 5,
+    "markets": 10,
     "weather": 6,
+    "grid": 5,
     "sun": 4,
     "internet": 4,
     "ai": 3,
@@ -183,57 +183,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 353,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 6 of 26 queries)",
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "count": 1005,
+      "error": null,
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     },
     "bing": {
       "ok": true,
-      "count": 240,
-      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "count": 253,
+      "error": null,
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "timeout",
       "lastOkAt": "2026-11-20T23:56:09.314Z"
     },
     "hn": {
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +246,13 @@
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T08:00:59.190Z"
+      "lastOkAt": "2026-11-21T08:16:04.663Z"
     }
   },
   "stories": [
@@ -309,9 +309,9 @@
       "url": "https://www.msn.com/en-in/news/other/peru-earthquake-67-magnitude-tremor-hits-carhuamayo-near-lima/ar-AA2hSHpL",
       "source": "Times Now on MSN",
       "publishedAt": "2026-11-20T10:59:00.000Z",
-      "latestAt": "2026-11-21T07:12:45.000Z",
+      "latestAt": "2026-11-21T07:52:23.000Z",
       "firstSeenAt": "2026-11-21T01:29:59.829Z",
-      "outlets": 20,
+      "outlets": 21,
       "outletNames": [
         "Times Now on MSN",
         "Egyptian Gazette",
@@ -332,9 +332,10 @@
         "Xinhua",
         "Jamaica Observer",
         "chinadailyhk",
-        "Gulf Today"
+        "Gulf Today",
+        "Al Arabiya English"
       ],
-      "score": 4.03,
+      "score": 4.09,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
     },
@@ -535,24 +536,21 @@
       "score": 2.46
     },
     {
-      "id": "39e492d9e722",
-      "cat": "markets",
+      "id": "4b3383a8d406",
+      "cat": "weather",
       "kind": "news",
-      "title": "Bitcoin SV Falls 3.76% Amid Broader Crypto Selloff",
-      "url": "https://coinmarketcap.com/top-stories/6b0126d941b2a86394629b2a/",
-      "source": "CoinMarketCap",
-      "publishedAt": "2026-11-20T08:01:45.000Z",
-      "latestAt": "2026-11-21T00:45:26.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 5,
+      "title": "Wisconsin's gun deer season set to open with near record-high temperatures",
+      "url": "https://www.wisn.com/article/wisconsins-gun-deer-season-near-record-high-temperatures/74496179",
+      "source": "WISN 12 News",
+      "publishedAt": "2026-11-20T20:13:00.000Z",
+      "latestAt": "2026-11-21T04:16:20.000Z",
+      "firstSeenAt": "2026-11-21T04:30:36.214Z",
+      "outlets": 2,
       "outletNames": [
-        "FinanceFeeds",
-        "TradingView",
-        "www.tokenpost.com",
-        "TechJuice",
-        "CoinMarketCap"
+        "WISN",
+        "WISN 12 News"
       ],
-      "score": 2.42
+      "score": 2.41
     },
     {
       "id": "d39c76101e71",
@@ -651,7 +649,7 @@
       "publishedAt": "2026-11-20T09:30:00.000Z",
       "latestAt": "2026-11-21T06:30:20.000Z",
       "firstSeenAt": "2026-11-21T03:45:20.063Z",
-      "outlets": 8,
+      "outlets": 9,
       "outletNames": [
         "Free Malaysia Today",
         "India Today",
@@ -660,10 +658,11 @@
         "The News & Observer",
         "102.7 WBOW",
         "@Reuters on X",
-        "Khaleej Times"
+        "Khaleej Times",
+        "Reuters"
       ],
       "xUrl": "https://x.com/Reuters/status/2124027615098941865",
-      "score": 2.78
+      "score": 2.9
     },
     {
       "id": "4ee3012c5ba5",
@@ -781,6 +780,27 @@
       "score": 2.19
     },
     {
+      "id": "d3a9abf6f372",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6.8 quake in Peru's Andean region sends Lima residents onto streets",
+      "url": "https://www.khaleejtimes.com/world/americas/earthquake-peru-sends-lima-residents-onto-streets",
+      "source": "Khaleej Times",
+      "publishedAt": "2026-11-20T12:38:00.000Z",
+      "latestAt": "2026-11-21T01:19:04.000Z",
+      "firstSeenAt": "2026-11-21T06:54:11.370Z",
+      "outlets": 4,
+      "outletNames": [
+        "Khaleej Times",
+        "MSN",
+        "NBC News",
+        "GMA Network"
+      ],
+      "score": 2.09,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "cb91c9815031",
       "cat": "weather",
       "kind": "news",
@@ -811,23 +831,6 @@
       "outletNames": [
         "WBOC TV",
         "CoastTV"
-      ],
-      "score": 1.99
-    },
-    {
-      "id": "5220352e97b0",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 5.1 earthquake strikes near California's Monterey County, USGS says",
-      "url": "https://x.com/Reuters/status/2123729367394124101",
-      "source": "@Reuters on X",
-      "publishedAt": "2026-11-20T08:09:28.000Z",
-      "latestAt": "2026-11-20T14:50:09.000Z",
-      "firstSeenAt": "2026-11-20T08:27:10.550Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Economic Times",
-        "@Reuters on X"
       ],
       "score": 1.99
     },
@@ -883,24 +886,21 @@
       "score": 1.94
     },
     {
-      "id": "d3a9abf6f372",
-      "cat": "earth",
+      "id": "98d844f22c3b",
+      "cat": "markets",
       "kind": "news",
-      "title": "Magnitude 6.8 quake in Peru's Andean region sends Lima residents onto streets",
-      "url": "https://www.khaleejtimes.com/world/americas/earthquake-peru-sends-lima-residents-onto-streets",
-      "source": "Khaleej Times",
-      "publishedAt": "2026-11-20T12:38:00.000Z",
-      "latestAt": "2026-11-21T00:39:00.000Z",
-      "firstSeenAt": "2026-11-21T06:54:11.370Z",
-      "outlets": 3,
+      "title": "SoftBank Group Stocks Plunge 14.48% in Worst Day Since 2024 as AI Rout Hits OpenAI Bet",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQTRJNDFCVUx0eG5JWjNwVW1Mc0RKMlNRVEE4dkh6ejRDTHVGRkFJQTFFcWhMcXZnWGIzMzczb2E3TFNnVXB5cHdNV3lubEdsV0tsWk1sRHRxMDRhbS1PUXg1ekNqSDlWbHNlQ0NnVGpFOHVjWG1SZzFMQklQQ3FGaTlNNElsQV96UG14d3AtYjNfVXcxMWlqQUpUa01FMjZabmxGOFJHNndNNmpqWFdybzF6dDd6LUNqenNadzBtSzJNdm1VT3gzRnp3SVpRQXlJWS0xSTBQQmpfOGdNZHc?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-20T21:37:37.000Z",
+      "latestAt": "2026-11-20T22:45:33.000Z",
+      "firstSeenAt": "2026-11-21T00:14:45.697Z",
+      "outlets": 2,
       "outletNames": [
-        "Khaleej Times",
-        "MSN",
-        "NBC News"
+        "TradingView",
+        "GuruFocus"
       ],
-      "score": 1.8,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
+      "score": 1.91
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-20",
@@ -1016,6 +1016,24 @@
         "WWAYTV3"
       ],
       "score": 2.4
+    },
+    {
+      "id": "9bf224cf6439",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers infiltrate Japan's former world-leading Fugaku supercomputer",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-infiltrate-japans-former-world-020500319.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-20T16:00:00.000Z",
+      "latestAt": "2026-11-21T02:05:00.000Z",
+      "firstSeenAt": "2026-11-21T04:30:36.214Z",
+      "outlets": 3,
+      "outletNames": [
+        "YAHOO!",
+        "Yahoo Tech",
+        "TechRadar"
+      ],
+      "score": 2.05
     },
     {
       "id": "baee4d10b4a4",
@@ -1139,23 +1157,6 @@
         "WSB-TV"
       ],
       "score": 1.94
-    },
-    {
-      "id": "98d844f22c3b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "SoftBank Group Stocks Plunge 14.48% in Worst Day Since 2024 as AI Rout Hits OpenAI Bet",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQTRJNDFCVUx0eG5JWjNwVW1Mc0RKMlNRVEE4dkh6ejRDTHVGRkFJQTFFcWhMcXZnWGIzMzczb2E3TFNnVXB5cHdNV3lubEdsV0tsWk1sRHRxMDRhbS1PUXg1ekNqSDlWbHNlQ0NnVGpFOHVjWG1SZzFMQklQQ3FGaTlNNElsQV96UG14d3AtYjNfVXcxMWlqQUpUa01FMjZabmxGOFJHNndNNmpqWFdybzF6dDd6LUNqenNadzBtSzJNdm1VT3gzRnp3SVpRQXlJWS0xSTBQQmpfOGdNZHc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-20T21:37:37.000Z",
-      "latestAt": "2026-11-20T22:45:33.000Z",
-      "firstSeenAt": "2026-11-21T00:14:45.697Z",
-      "outlets": 2,
-      "outletNames": [
-        "TradingView",
-        "GuruFocus"
-      ],
-      "score": 1.91
     },
     {
       "id": "77772b62137b",
@@ -1436,23 +1437,6 @@
       "score": 1.65
     },
     {
-      "id": "9bf224cf6439",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers infiltrate Japan's former world-leading Fugaku supercomputer",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-infiltrate-japans-former-world-020500319.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-20T16:00:00.000Z",
-      "latestAt": "2026-11-21T02:05:00.000Z",
-      "firstSeenAt": "2026-11-21T04:30:36.214Z",
-      "outlets": 2,
-      "outletNames": [
-        "YAHOO!",
-        "Yahoo Tech"
-      ],
-      "score": 1.58
-    },
-    {
       "id": "60f8adc85a5a",
       "cat": "earth",
       "kind": "news",
@@ -1671,22 +1655,6 @@
       "score": 1.39
     },
     {
-      "id": "4b3383a8d406",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Wisconsin's gun deer season set to open with near record-high temperatures",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPMVViVGxRNDBPZkUxdmY0SWxJd291aG96RElzWHRrQU1VMzJwR0xHTlJtc3VOZFRDbnhadHV1NVZ3UG9BczlHWlJQbEhscFVyanB0YUU3VnFlMlpRRUhDaXFMbzRKMlUxMzNmcjc0M2RqUl9hWEpCZm9uWE96UFIySkk3S2ZJQ25EOGhLR25LX0lNbkIyXzU4Y0RB?oc=5",
-      "source": "WISN",
-      "publishedAt": "2026-11-21T04:16:20.000Z",
-      "latestAt": "2026-11-21T04:16:20.000Z",
-      "firstSeenAt": "2026-11-21T04:30:36.214Z",
-      "outlets": 1,
-      "outletNames": [
-        "WISN"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "443993908cdc",
       "cat": "grid",
       "kind": "news",
@@ -1813,6 +1781,38 @@
         "WBAY"
       ],
       "score": 1.2
+    },
+    {
+      "id": "6356ead9544f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "New radar is being built in Kansas a week after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZFcwd0FXQmQ4cnFENVgtQXdkME1odm5LSkt4SFQ1TWJ3Tm5jaWVvMDUxOEQ0a2RoQzkzcXpuLXJLeG5ZQkVaZ19BYUdBM1JMYTZZVHB1REFNdHp6TF90aWo3SnNNVTMzRm9EQTRwbXJGQjJsNWYzd3o1dnNRMEo5ZXBlR0w4VTZBd1U4OFZ5N0VHNk5kRUItbVF1M3FYWmEweVZEeHRkeTY?oc=5",
+      "source": "KCTV",
+      "publishedAt": "2026-11-20T22:17:00.000Z",
+      "latestAt": "2026-11-20T22:17:00.000Z",
+      "firstSeenAt": "2026-11-21T08:16:04.663Z",
+      "outlets": 1,
+      "outletNames": [
+        "KCTV"
+      ],
+      "score": 1.17
+    },
+    {
+      "id": "215243f80f61",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Africa's biggest airline digs into hackers targeting 5.38 million customer accounts as it connects the U.S., Canada and South Africa",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdWRDMTdoWlJ5cGJwUHhuQTlfWUtQaGlKamxtaTNDOG85VXV3U1c0SzJta2FmR2hlcUVSYWpURjY5cFpQZUllSXZZZ09xV0ppcEpQc1cxUk5BRzJOV2hQWVBOWWVVN0VZZFB4WklONk5kM1I1MW1lQmtlUjhHQmdvR2o0cUZtYWZpdzVtcFNmdUhkeklDMTFZbEhQcFg3cWRjR1lkd3lFY0Zid1BVT2JEQlR2Ulc5aW5BWU1xcVFyQmxIUGJvOXc1ejZ2cTJ2WkZkMzNYbkpR?oc=5",
+      "source": "Business Insider Africa",
+      "publishedAt": "2026-11-20T21:35:54.000Z",
+      "latestAt": "2026-11-20T21:35:54.000Z",
+      "firstSeenAt": "2026-11-21T08:16:04.663Z",
+      "outlets": 1,
+      "outletNames": [
+        "Business Insider Africa"
+      ],
+      "score": 1.15
     },
     {
       "id": "3f09681c5efa",
