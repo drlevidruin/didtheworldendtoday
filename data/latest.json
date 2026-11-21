@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-21T13:46:53.301Z",
+  "buildTime": "2026-11-21T14:01:55.456Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 08:46 ET",
+  "etStamp": "2026-11-21 09:01 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -47,13 +47,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1218,
-  "lastSuccessAt": "2026-11-21T13:46:53.301Z",
+  "headlinesRead": 288,
+  "lastSuccessAt": "2026-11-21T14:01:55.456Z",
   "rollingFallback": false,
   "cats": {
     "earth": 10,
-    "hacks": 24,
-    "flights": 24,
+    "hacks": 25,
+    "flights": 23,
     "markets": 10,
     "germs": 4,
     "weather": 4,
@@ -80,9 +80,9 @@
     },
     "asteroid": {
       "des": "2026 WA1",
-      "ld": 1.235,
-      "at": "2026-11-21T22:28:00.000Z",
-      "sizeM": 4.6,
+      "ld": 1.236,
+      "at": "2026-11-21T22:26:00.000Z",
+      "sizeM": 4.7,
       "size": "a bus",
       "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WA1",
       "upcoming": true
@@ -96,7 +96,7 @@
         }
       ],
       "nationwide": false,
-      "groundDelays": 1,
+      "groundDelays": 2,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -189,58 +189,58 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 976,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-21T13:46:53.301Z"
     },
     "bing": {
       "ok": true,
-      "count": 205,
-      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "count": 255,
+      "error": null,
+      "lastOkAt": "2026-11-21T14:01:55.456Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-21T08:46:06.995Z"
     },
     "hn": {
       "ok": true,
-      "count": 8,
+      "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "lastOkAt": "2026-11-21T14:01:55.456Z"
     },
     "usgs": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "lastOkAt": "2026-11-21T14:01:55.456Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "lastOkAt": "2026-11-21T14:01:55.456Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "lastOkAt": "2026-11-21T14:01:55.456Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "lastOkAt": "2026-11-21T14:01:55.456Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "lastOkAt": "2026-11-21T14:01:55.456Z"
     },
     "x": {
       "ok": true,
@@ -251,15 +251,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "lastOkAt": "2026-11-21T14:01:55.456Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-21T13:46:53.301Z"
+      "lastOkAt": "2026-11-21T14:01:55.456Z"
     }
   },
   "stories": [
@@ -607,6 +607,27 @@
       }
     },
     {
+      "id": "c3543c0a8ead",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Illinois investigates apparent cyberattack on Algonquin Dam on Fox River",
+      "url": "https://www.msn.com/en-in/news/other/illinois-investigates-apparent-cyberattack-on-algonquin-dam-on-fox-river/ar-AA2hTBtL",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-20T20:15:11.000Z",
+      "latestAt": "2026-11-21T03:36:34.000Z",
+      "firstSeenAt": "2026-11-21T02:30:05.009Z",
+      "outlets": 6,
+      "outletNames": [
+        "CBS News",
+        "ABC7 Chicago",
+        "Wirepoints",
+        "Shaw Local",
+        "WGN-TV",
+        "Hindustan Times on MSN"
+      ],
+      "score": 3.21
+    },
+    {
       "id": "0c0836c2b605",
       "cat": "earth",
       "kind": "news",
@@ -686,23 +707,25 @@
       "score": 2.42
     },
     {
-      "id": "8f9147e76bc9",
-      "cat": "hacks",
+      "id": "1d17892f4747",
+      "cat": "earth",
       "kind": "news",
-      "title": "Staples Canada says customer information accessed in data breach",
-      "url": "https://www.thestar.com/business/staples-canada-says-customer-information-accessed-in-data-breach/article_0ea9c7cb-dbd5-5f96-b5b1-ab2d021f1e2a.html",
-      "source": "The Star",
-      "publishedAt": "2026-11-20T16:00:00.000Z",
-      "latestAt": "2026-11-21T05:05:48.000Z",
-      "firstSeenAt": "2026-11-21T05:30:36.526Z",
+      "title": "Magnitude-7.2 earthquake strikes Indonesia's Maluku, no tsunami threat",
+      "url": "https://english.news.cn/20261121/46f5b95399794d6a969dbf387647c325/c.html",
+      "source": "Xinhua",
+      "publishedAt": "2026-11-20T16:48:00.000Z",
+      "latestAt": "2026-11-21T12:31:51.000Z",
+      "firstSeenAt": "2026-11-21T12:16:53.020Z",
       "outlets": 4,
       "outletNames": [
-        "The Star",
-        "Toronto Star",
-        "The Spec",
-        "CP24"
+        "Xinhua",
+        "The Peninsula Qatar",
+        "The Malaysian Reserve",
+        "The Star"
       ],
-      "score": 2.32
+      "score": 2.03,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "3e4b1c709480",
@@ -841,26 +864,6 @@
       "score": 1.91
     },
     {
-      "id": "6aa8479c13bb",
-      "cat": "earth",
-      "kind": "news",
-      "title": "6.8-Magnitude Earthquake Strikes Indonesia, 1.5 Lakh People Experience Tremors",
-      "url": "https://www.oneindia.com/international/6-8-magnitude-earthquake-strikes-indonesia-1-5-lakh-people-experience-tremors-8266265.html",
-      "source": "Oneindia",
-      "publishedAt": "2026-11-20T20:32:00.000Z",
-      "latestAt": "2026-11-21T11:06:37.000Z",
-      "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 3,
-      "outletNames": [
-        "TodayPress.tv",
-        "Report.az",
-        "Oneindia"
-      ],
-      "score": 1.91,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "6b5650d1f6ca",
       "cat": "ai",
       "kind": "news",
@@ -959,6 +962,25 @@
         "FOX 35 Orlando"
       ],
       "score": 2.81
+    },
+    {
+      "id": "8f9147e76bc9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Staples Canada says customer information accessed in data breach",
+      "url": "https://www.thestar.com/business/staples-canada-says-customer-information-accessed-in-data-breach/article_0ea9c7cb-dbd5-5f96-b5b1-ab2d021f1e2a.html",
+      "source": "The Star",
+      "publishedAt": "2026-11-20T16:00:00.000Z",
+      "latestAt": "2026-11-21T05:05:48.000Z",
+      "firstSeenAt": "2026-11-21T05:30:36.526Z",
+      "outlets": 4,
+      "outletNames": [
+        "The Star",
+        "Toronto Star",
+        "The Spec",
+        "CP24"
+      ],
+      "score": 2.32
     },
     {
       "id": "2593cf91a89e",
@@ -1084,6 +1106,26 @@
       "score": 1.93
     },
     {
+      "id": "6aa8479c13bb",
+      "cat": "earth",
+      "kind": "news",
+      "title": "6.8-Magnitude Earthquake Strikes Indonesia, 1.5 Lakh People Experience Tremors",
+      "url": "https://www.oneindia.com/international/6-8-magnitude-earthquake-strikes-indonesia-1-5-lakh-people-experience-tremors-8266265.html",
+      "source": "Oneindia",
+      "publishedAt": "2026-11-20T20:32:00.000Z",
+      "latestAt": "2026-11-21T11:06:37.000Z",
+      "firstSeenAt": "2026-11-21T12:16:53.020Z",
+      "outlets": 3,
+      "outletNames": [
+        "TodayPress.tv",
+        "Report.az",
+        "Oneindia"
+      ],
+      "score": 1.91,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "aceb16070725",
       "cat": "markets",
       "kind": "news",
@@ -1184,26 +1226,6 @@
         "VentureBeat"
       ],
       "score": 1.78
-    },
-    {
-      "id": "1d17892f4747",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude-7.2 earthquake strikes Indonesia's Maluku, no tsunami threat",
-      "url": "https://english.news.cn/20261121/46f5b95399794d6a969dbf387647c325/c.html",
-      "source": "Xinhua",
-      "publishedAt": "2026-11-20T16:48:00.000Z",
-      "latestAt": "2026-11-21T12:31:51.000Z",
-      "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 3,
-      "outletNames": [
-        "Xinhua",
-        "The Peninsula Qatar",
-        "The Malaysian Reserve"
-      ],
-      "score": 1.75,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "d3f2123d2217",
@@ -1363,22 +1385,6 @@
         "Yahoo! Finance Canada"
       ],
       "score": 1.53
-    },
-    {
-      "id": "a17702d91ada",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major Cyberattack Forces Icelandic Web Host 1984 Offline",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNm5rTmdEY0FfR29SY2Z6b1V2N3A4RHlvZ3cxZ1VVcVczVGZBUmhCLXF0U1FEbURnUjcxWl9GOHZGeUppSGw5R0pEbDZtYW1KV0s0V3U3MWhuZjItVS0zcDVHekxGVXpCb1hIeTJBNnpJQ3hXVEQ5TjQ0bkluR3UwMDk3d1phUUU?oc=5",
-      "source": "Iceland Review",
-      "publishedAt": "2026-11-21T13:30:00.000Z",
-      "latestAt": "2026-11-21T13:30:00.000Z",
-      "firstSeenAt": "2026-11-21T13:31:53.958Z",
-      "outlets": 1,
-      "outletNames": [
-        "Iceland Review"
-      ],
-      "score": 1.4
     },
     {
       "id": "4f6393459502",
@@ -1656,6 +1662,22 @@
       "score": 1.24
     },
     {
+      "id": "a17702d91ada",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Major Cyberattack Forces Icelandic Web Host 1984 Offline",
+      "url": "https://www.icelandreview.com/news/1984-cyberattack-iceland-websites-email-2026/",
+      "source": "Iceland Review",
+      "publishedAt": "2026-11-21T05:30:00.000Z",
+      "latestAt": "2026-11-21T13:30:00.000Z",
+      "firstSeenAt": "2026-11-21T13:31:53.958Z",
+      "outlets": 1,
+      "outletNames": [
+        "Iceland Review"
+      ],
+      "score": 1.21
+    },
+    {
       "id": "5e64f6f5156b",
       "cat": "flights",
       "kind": "news",
@@ -1830,22 +1852,6 @@
         "@unusual_whales on X"
       ],
       "score": 1
-    },
-    {
-      "id": "1dea5ec928c9",
-      "cat": "flights",
-      "kind": "news",
-      "title": "How Travel Advisors Reworked Thousands of Trips After a Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObm5Ja05MTVJfUUdDTnJLQzVPeDAxcWFLcmJGN2wtWEd3U081ZWhVRjVCc200cmFxMWFVc1lBaHpCWGVoMXlOR2hqMXFyeE9PbDUyMmpyQU9UVnJGdnd4eFc3Q2s4QUFpdEwtZklWZDF3Y2U0eXBLRlhoRFlLb21EUm5mOFpzbS1EaDY0Wng0TnVGeVo5aGFudUJYOTF1Q0Fo?oc=5",
-      "source": "www.luxurytravelreport.com",
-      "publishedAt": "2026-11-21T13:26:07.000Z",
-      "latestAt": "2026-11-21T13:26:07.000Z",
-      "firstSeenAt": "2026-11-21T13:46:53.301Z",
-      "outlets": 1,
-      "outletNames": [
-        "www.luxurytravelreport.com"
-      ],
-      "score": 0.99
     },
     {
       "id": "7ea48e0c9ab9",
