@@ -70,29 +70,6 @@
       }
     },
     {
-      "id": "sig:faa-stop:AUS:2026-11-21",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at AUS (low ceilings)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-21T17:02:24.582Z",
-      "latestAt": "2026-11-21T17:02:24.582Z",
-      "firstSeenAt": "2026-11-21T17:02:24.582Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "AUS",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low ceilings"
-      }
-    },
-    {
       "id": "080cfdf1f2e2",
       "cat": "grid",
       "kind": "news",
@@ -102,15 +79,39 @@
       "publishedAt": "2026-11-21T18:46:08.000Z",
       "latestAt": "2026-11-22T06:04:07.000Z",
       "firstSeenAt": "2026-11-21T19:02:44.392Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "Norwalk Hour",
         "cedarnews.net",
         "New Haven Register",
         "Stamford Advocate",
-        "CTPost"
+        "CTPost",
+        "News-Times"
       ],
-      "score": 3.31
+      "score": 3.57
+    },
+    {
+      "id": "sig:faa-stop:HOU:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at HOU (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T12:50:28.187Z",
+      "latestAt": "2026-11-22T12:50:28.187Z",
+      "firstSeenAt": "2026-11-22T12:50:28.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "HOU",
+        "hub": false,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
     },
     {
       "id": "9a567984025b",
@@ -122,16 +123,17 @@
       "publishedAt": "2026-11-21T21:11:35.000Z",
       "latestAt": "2026-11-22T07:29:10.000Z",
       "firstSeenAt": "2026-11-22T05:34:14.943Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "FOX8 WGHP on MSN",
         "NewsNation",
         "BigCountryHomepage on MSN",
         "KETK.com on MSN",
         "WYTV on MSN",
-        "WDHN on MSN"
+        "WDHN on MSN",
+        "WRIC ABC 8News on MSN"
       ],
-      "score": 3.08
+      "score": 3.28
     },
     {
       "id": "a2ecb1df5d2f",
@@ -276,6 +278,29 @@
       "score": 1.71
     },
     {
+      "id": "sig:faa-stop:AUS:2026-11-21",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at AUS (low ceilings)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-21T17:02:24.582Z",
+      "latestAt": "2026-11-21T17:02:24.582Z",
+      "firstSeenAt": "2026-11-21T17:02:24.582Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "AUS",
+        "hub": false,
+        "nationwide": false,
+        "reason": "low ceilings"
+      }
+    },
+    {
       "id": "sig:faa-stop:YYZ:2026-11-21",
       "cat": "flights",
       "kind": "signal",
@@ -358,38 +383,21 @@
       "score": 2.21
     },
     {
-      "id": "eaceeef59447",
+      "id": "e1413fca8a91",
       "cat": "hacks",
       "kind": "news",
-      "title": "DMT website hit by cyberattack; appointments unaffected",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5sY041MDJSZTR2d2ptMy05MHhFa25TQTFMaER2OUVjZTdILTU4MVdBQ0tuMkhmWjRkS2NkZ1pTSm13MllmbVZ3?oc=5",
-      "source": "Ada Derana",
-      "publishedAt": "2026-11-22T05:51:56.000Z",
-      "latestAt": "2026-11-22T06:03:56.000Z",
-      "firstSeenAt": "2026-11-22T06:04:20.773Z",
+      "title": "FBI crime database reportedly hit by suspected cyberattack",
+      "url": "https://news.az/news/fbi-crime-database-reportedly-hit-by-suspected-cyberattack",
+      "source": "news.az",
+      "publishedAt": "2026-11-22T09:17:08.000Z",
+      "latestAt": "2026-11-22T12:30:00.000Z",
+      "firstSeenAt": "2026-11-22T09:19:53.152Z",
       "outlets": 2,
       "outletNames": [
-        "Ada Derana",
-        "The Morning"
+        "Latest news from Azerbaijan",
+        "news.az"
       ],
-      "score": 1.99
-    },
-    {
-      "id": "86d770a3a530",
-      "cat": "flights",
-      "kind": "news",
-      "title": "The ground stop is over, but America's flights still haven't recovered",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNSVIwRUJxbHRlRmM4b3RTWlMzcGhsang2R2cwdDlxb0Rndl91ZG9VWVFVaTlhR3l1UmhWTFc0LUdKMzZuaWdpV0xJM1ZzUGs1NGducWlldDktLWVOekZUR0UtV3V5ODgtNFJaRWhhQlRHY0VacUJaNTFzZDhWWFJfak9Vaw?oc=5",
-      "source": "AOL.com",
-      "publishedAt": "2026-11-21T16:25:18.000Z",
-      "latestAt": "2026-11-21T16:25:18.000Z",
-      "firstSeenAt": "2026-11-21T21:48:06.123Z",
-      "outlets": 2,
-      "outletNames": [
-        "AOL.com",
-        "https://travelhost.com/"
-      ],
-      "score": 1.82
+      "score": 2
     },
     {
       "id": "3810674c6e05",
@@ -441,26 +449,6 @@
         "PhilNews"
       ],
       "score": 1.57
-    },
-    {
-      "id": "88bf84a676fa",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.8 Earthquake Strikes Peru, Shakes Capital Lima",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdjFVdloxUXlEMGZLY2JYbHhWa2RQWHF6SW1jMFhELTZERktXdGh4RF8tUlZtd09JTHhoRmpSMmlhYnBoZHNoSDZhVWlFdEJFS3JhYnp4MHlRVVRjd1hTMXZjdjJ1SFNnQmJLaTNoSjhhbnltUE1pUi1OeTN3QzEzcjIwQQ?oc=5",
-      "source": "Voice of Nigeria",
-      "publishedAt": "2026-11-21T12:53:50.000Z",
-      "latestAt": "2026-11-22T08:33:46.000Z",
-      "firstSeenAt": "2026-11-22T12:35:18.374Z",
-      "outlets": 3,
-      "outletNames": [
-        "Voice of Nigeria",
-        "NDTV",
-        "Myanmar International TV"
-      ],
-      "score": 1.56,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "9b3fe105e0e3",
@@ -599,6 +587,39 @@
       "score": 1.39
     },
     {
+      "id": "c46a4bb5c69b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Global tech sell-off deepens as Anthropic retreats near IPO price",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNU14RmhPUmV4cmp6dmtoQTBnbDVlcnRkTE9BekZOZnB1M3BIVEZ5dzE5TXJGQ0xtaEprblFQY1FwbFg2Tl95amlVN0hhUXlRSzllNWZQeGNNOU5KSnE5TEZwRGpsencyaDk3UFRXbnROWE9QYXNjV001R0JvSVRBVE4xeVZ1ZndybGY2dlhZTmJwd256TVBNU2Nqbms1d05P?oc=5",
+      "source": "Daily Voice Of Asia",
+      "publishedAt": "2026-11-21T15:57:56.000Z",
+      "latestAt": "2026-11-22T04:01:18.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 1,
+      "outletNames": [
+        "Daily Voice Of Asia"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "eaceeef59447",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "DMT website hit by cyberattack; appointments unaffected",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5sY041MDJSZTR2d2ptMy05MHhFa25TQTFMaER2OUVjZTdILTU4MVdBQ0tuMkhmWjRkS2NkZ1pTSm13MllmbVZ3?oc=5",
+      "source": "Ada Derana",
+      "publishedAt": "2026-11-22T05:51:56.000Z",
+      "latestAt": "2026-11-22T06:03:56.000Z",
+      "firstSeenAt": "2026-11-22T06:04:20.773Z",
+      "outlets": 2,
+      "outletNames": [
+        "Ada Derana",
+        "The Morning"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "34f6be7416fc",
       "cat": "hacks",
       "kind": "news",
@@ -632,6 +653,23 @@
         "Scripps News"
       ],
       "score": 1.85
+    },
+    {
+      "id": "86d770a3a530",
+      "cat": "flights",
+      "kind": "news",
+      "title": "The ground stop is over, but America's flights still haven't recovered",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNSVIwRUJxbHRlRmM4b3RTWlMzcGhsang2R2cwdDlxb0Rndl91ZG9VWVFVaTlhR3l1UmhWTFc0LUdKMzZuaWdpV0xJM1ZzUGs1NGducWlldDktLWVOekZUR0UtV3V5ODgtNFJaRWhhQlRHY0VacUJaNTFzZDhWWFJfak9Vaw?oc=5",
+      "source": "AOL.com",
+      "publishedAt": "2026-11-21T16:25:18.000Z",
+      "latestAt": "2026-11-21T16:25:18.000Z",
+      "firstSeenAt": "2026-11-21T21:48:06.123Z",
+      "outlets": 2,
+      "outletNames": [
+        "AOL.com",
+        "https://travelhost.com/"
+      ],
+      "score": 1.82
     },
     {
       "id": "652eadbd4717",
@@ -719,6 +757,22 @@
       "score": 1.42
     },
     {
+      "id": "58fabfb0567f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Belgium’s Airspace Closed 7 AM – 9 PM On Monday (November 23, 2026) & All Flights Canceled At Brussels Airport",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPbElwa0Jwckx3S3NseHVlS01RZi01NDI1dmlWUmtzVmhDXzIyMXMxRlA5SENXVGduU2h4YTlUYzJ5Tm9Ja1BfVy1FSWRWUGJ4YkhFNmdKbmM2VUZGOXdhTU1tUFB1bTZxYTg1djRHNVFnNlpQbWZob2JKbzBHSjNKNlpmdGZubm1qMTVOaVhVNERDXzRhV1hBYzdLdnlUUGlGMGJtTlpPRHRpRXRObm84SEFTZHFaM2xWX0otT0luZ1BtZC1UZG9vMFRYQm82Yk82RWNIdE5B?oc=5",
+      "source": "LoyaltyLobby",
+      "publishedAt": "2026-11-22T12:44:15.000Z",
+      "latestAt": "2026-11-22T12:44:15.000Z",
+      "firstSeenAt": "2026-11-22T12:50:28.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "LoyaltyLobby"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "cb452e32fec4",
       "cat": "hacks",
       "kind": "news",
@@ -775,22 +829,6 @@
       "source": "Daily Voice Of Asia",
       "publishedAt": "2026-11-21T16:01:11.000Z",
       "latestAt": "2026-11-22T04:00:50.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Voice Of Asia"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "c46a4bb5c69b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Global tech sell-off deepens as Anthropic retreats near IPO price",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNU14RmhPUmV4cmp6dmtoQTBnbDVlcnRkTE9BekZOZnB1M3BIVEZ5dzE5TXJGQ0xtaEprblFQY1FwbFg2Tl95amlVN0hhUXlRSzllNWZQeGNNOU5KSnE5TEZwRGpsencyaDk3UFRXbnROWE9QYXNjV001R0JvSVRBVE4xeVZ1ZndybGY2dlhZTmJwd256TVBNU2Nqbms1d05P?oc=5",
-      "source": "Daily Voice Of Asia",
-      "publishedAt": "2026-11-21T15:57:56.000Z",
-      "latestAt": "2026-11-22T04:01:18.000Z",
       "firstSeenAt": "2026-11-21T16:17:26.966Z",
       "outlets": 1,
       "outletNames": [
@@ -902,7 +940,7 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQWEyOTd5eElOMGZzZFdFOGJMRUlLcV9DYm9DZlBxV2dLQnJlbVN4cjZ4RzdxZWpZYWJtcV9HblJvS251QUs2MFhILWdyREFKWGVSN0JRSjREbDhRWXFGNWVpN1JxMzlYREI5VktSanJfQlloQjNFTzdxNVBSVUZabkh0UHQ?oc=5",
       "source": "Herald.Wales",
       "publishedAt": "2026-11-21T13:15:53.000Z",
-      "latestAt": "2026-11-21T13:15:53.000Z",
+      "latestAt": "2026-11-22T10:40:36.000Z",
       "firstSeenAt": "2026-11-21T14:47:03.235Z",
       "outlets": 1,
       "outletNames": [
@@ -1071,6 +1109,22 @@
       "score": 1.14
     },
     {
+      "id": "1e0613224b49",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Pursue GTA 6 PC Port From Leaked Xbox Build",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE16WlpNUlBmaVoyU3VPeVdBaXpMdERVQlFaMmlVOTdhbGFTa0tPSnBTdl9sQ0dSd1A5MlBsRjBXVVpXU0l5TW1ZXzhwNGNWX29HNElwM2xucmhtSW9FQmdraHlsRGxQY19LY3c?oc=5",
+      "source": "Limapagi",
+      "publishedAt": "2026-11-22T12:37:34.000Z",
+      "latestAt": "2026-11-22T12:37:34.000Z",
+      "firstSeenAt": "2026-11-22T12:50:28.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "Limapagi"
+      ],
+      "score": 1
+    },
+    {
       "id": "653fd08229eb",
       "cat": "sun",
       "kind": "news",
@@ -1195,22 +1249,6 @@
       "outlets": 1,
       "outletNames": [
         "TRAICY Global"
-      ],
-      "score": 1
-    },
-    {
-      "id": "e1413fca8a91",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI crime database reportedly hit by suspected cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaVgzZzBqdWk4WlZtV3huUlpJSVROQ2I2anZuRGpSMWctcnZOeGVnU1liOG40ZWRaQlJmb2pnNzN3YzR6bGlSNFJfVGtkT0J4aXhISnpIUlhrNENqMXdrVDZXNlhZVmJreXlOMXhBM3NWNTFIcWpLX016UlRKX0dqaFlkSmZfZw?oc=5",
-      "source": "Latest news from Azerbaijan",
-      "publishedAt": "2026-11-22T09:17:08.000Z",
-      "latestAt": "2026-11-22T09:17:08.000Z",
-      "firstSeenAt": "2026-11-22T09:19:53.152Z",
-      "outlets": 1,
-      "outletNames": [
-        "Latest news from Azerbaijan"
       ],
       "score": 1
     },
@@ -1503,54 +1541,6 @@
       "score": 1
     },
     {
-      "id": "704cf229d2ed",
-      "cat": "internet",
-      "kind": "news",
-      "title": "AI patching surge: Microsoft's 3,554 fixes and NZ outage risk",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUnlOS2hEVGlPMGdHT21QeWM0eVNBbDlnZEc3aU5rZFJDbEVZZE1wSmN5YzBwZjJWcnJkR056dnFrQ0hOdTd3bHNHcEZ5RW9mQldzdnlVeVpCS25VVjM3SnhYTUhkdTlST1k2QW82d0tyY0dzRDN1R3haZ1lDVk5ibjJMVDNEOFNxT1d5QWk1bw?oc=5",
-      "source": "B2B News",
-      "publishedAt": "2026-11-22T01:46:08.000Z",
-      "latestAt": "2026-11-22T01:46:08.000Z",
-      "firstSeenAt": "2026-11-22T01:48:41.812Z",
-      "outlets": 1,
-      "outletNames": [
-        "B2B News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "5bf83ef90d12",
-      "cat": "flights",
-      "kind": "news",
-      "title": "First Holiday Rush Since the Nov. 13 Ground Stop: What U.S. Flyers Need to Know",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQb2hGbnNQcVhxWkRrcjZ1SVpxbEJRN19nTjJsV0NTazFCR2RsaHpIWjhNREtlVHpLTVF5eDRwdHZlS0RSOUtEcEVGZXhrVGxtU2pCa05RX2FqNXI4aEdxcTB1UG5IQ0lsZmtaU0dGeUNLYW82WVJVMHB5VVFURGdTd2dfY0xQLTRpelB4NjNsQ3h3dGFnNFVXbFJ4ZnVHY05XUmFnR1FSSjd6dWM?oc=5",
-      "source": "Travel Off Path",
-      "publishedAt": "2026-11-22T01:29:02.000Z",
-      "latestAt": "2026-11-22T01:29:02.000Z",
-      "firstSeenAt": "2026-11-22T01:33:37.048Z",
-      "outlets": 1,
-      "outletNames": [
-        "Travel Off Path"
-      ],
-      "score": 1
-    },
-    {
-      "id": "79d469f763f7",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Dumsor: ECG announces 3-day power cuts in Ashanti region, affected areas listed",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQllFSV9xaFlEX1FHN3BwT1Z0dU4tRWwtcF90Z0VRQWVVTmM4WXhfazRUSVZUOXJ5bk1ZYjAxLTlnclZyMF83d2UwOVh5bTBSdG9Xc29WUVZKTXVfakdCNVdqNnFjMlJ5OUs3cHVuUENkNTV0a0hyNVYwZDVpTVBySVBaVWVLdTVtMWc2NVBJWnUwa0MyZFpTdTJCeXJsb3NqQ3hhTGs0N0t3QnVXT2xxZQ?oc=5",
-      "source": "Yen News",
-      "publishedAt": "2026-11-21T22:49:08.000Z",
-      "latestAt": "2026-11-21T22:49:08.000Z",
-      "firstSeenAt": "2026-11-21T23:03:18.655Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yen News"
-      ],
-      "score": 1
-    },
-    {
       "id": "d1bfe0d98aab",
       "cat": "ai",
       "kind": "news",
@@ -1565,6 +1555,22 @@
         "Mashable"
       ],
       "score": 0.97
+    },
+    {
+      "id": "605d3b57beb9",
+      "cat": "ai",
+      "kind": "news",
+      "title": "How best to practice ‘cyber hygiene’ in the AI age amid recent online outages",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPaG1rcGxmckJJaFR1VmxtdDZlT3cxNTA5bDYyZFZzdDdUS2ZoNHdYbmwwM0VjVjYzTUc4VFFzckZhQ3IwY3E5REwzcjRSTlBPdGFZNmZRQlJiTU9TN3Z2X3VRRElUTThyMUJhTFVTaWtCSmI4a1JPSXRRUERHenV1WmxR?oc=5",
+      "source": "PressReader",
+      "publishedAt": "2026-11-22T09:28:13.000Z",
+      "latestAt": "2026-11-22T09:28:13.000Z",
+      "firstSeenAt": "2026-11-22T12:50:28.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "PressReader"
+      ],
+      "score": 0.94
     },
     {
       "id": "6ba194e9c913",
@@ -1663,6 +1669,22 @@
       "score": 0.86
     },
     {
+      "id": "87ea90ca6c72",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Darwin rocked by powerful 6.8 earth tremor",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRXI2VzM3TjFiUUwzUDN0YVpHY3dFSUM2N1BRRmdjUE4xRzJrSDBpYngyczd0WnhjMzFCNV9LQkxKWjVXUHE5cUotUnJ1bTZhTHFwV0J1MnNjMlNxU0VrWUZvRno2bVd3cVg4ZjVmLWNudkRiZWxJMGw3X2hzaTc3ekhXX0dHRTJhRzN6LW1YZml5cUx0OV9DNFRmM3F1WFJmUVhXdDVmVHVwb1h3dFJrLUphMFNPZW1Wa3JOel9LVmdOS3A1WGNseg?oc=5",
+      "source": "NT News",
+      "publishedAt": "2026-11-22T03:19:23.000Z",
+      "latestAt": "2026-11-22T03:19:23.000Z",
+      "firstSeenAt": "2026-11-22T12:50:28.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "NT News"
+      ],
+      "score": 0.84
+    },
+    {
       "id": "af7444082351",
       "cat": "ai",
       "kind": "news",
@@ -1677,22 +1699,6 @@
         "TechJuice"
       ],
       "score": 0.81
-    },
-    {
-      "id": "10deca123f63",
-      "cat": "ai",
-      "kind": "news",
-      "title": "‘Zero chance’: Experts warn rogue AI agents cannot be controlled amid cyber chaos",
-      "url": "https://www.news.com.au/technology/online/hacking/zero-chance-experts-warn-rogue-ai-agents-cannot-be-controlled-amid-cyber-chaos/news-story/982103592c7e9fc33a30ee1769ab7c69",
-      "source": "news.com.au",
-      "publishedAt": "2026-11-21T14:06:00.000Z",
-      "latestAt": "2026-11-22T04:06:00.000Z",
-      "firstSeenAt": "2026-11-22T01:48:41.812Z",
-      "outlets": 1,
-      "outletNames": [
-        "news.com.au"
-      ],
-      "score": 0.8
     },
     {
       "id": "682f9d418bfa",
@@ -1711,5 +1717,5 @@
       "score": 0.66
     }
   ],
-  "updatedAt": "2026-11-22T12:35:18.374Z"
+  "updatedAt": "2026-11-22T12:50:28.187Z"
 }
