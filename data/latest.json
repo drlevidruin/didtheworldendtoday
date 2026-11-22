@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T15:50:52.043Z",
+  "buildTime": "2026-11-22T16:05:54.465Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 10:50 ET",
+  "etStamp": "2026-11-22 11:05 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,15 +45,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 764,
-  "lastSuccessAt": "2026-11-22T15:50:52.043Z",
+  "headlinesRead": 322,
+  "lastSuccessAt": "2026-11-22T16:05:54.465Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
-    "hacks": 30,
+    "flights": 22,
+    "hacks": 31,
     "grid": 8,
-    "internet": 10,
-    "germs": 6,
+    "internet": 9,
+    "germs": 7,
     "space": 2,
     "earth": 4,
     "markets": 4,
@@ -85,7 +85,13 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "LGA",
+          "hub": true,
+          "reason": "low visibility"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 3,
       "closures": 0,
@@ -162,7 +168,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -181,15 +187,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 479,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "count": 36,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     },
     "bing": {
       "ok": true,
-      "count": 257,
+      "count": 258,
       "error": null,
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,37 +207,37 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +250,13 @@
       "ok": true,
       "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T15:50:52.043Z"
+      "lastOkAt": "2026-11-22T16:05:54.465Z"
     }
   },
   "stories": [
@@ -975,23 +981,6 @@
       "score": 1.53
     },
     {
-      "id": "84e3d40a9cbf",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Ground stop exposed weaknesses in air traffic control systems in rural states like Montana",
-      "url": "https://dailyinterlake.com/news/2026/nov/22/ground-stop-exposed-weaknesses-in-air-traffic-control-systems-in-rural-states-like-montana/",
-      "source": "Daily Inter Lake",
-      "publishedAt": "2026-11-21T15:59:00.000Z",
-      "latestAt": "2026-11-22T07:00:00.000Z",
-      "firstSeenAt": "2026-11-22T08:34:41.544Z",
-      "outlets": 2,
-      "outletNames": [
-        "Daily Inter Lake",
-        "Hagadone News Network"
-      ],
-      "score": 1.45
-    },
-    {
       "id": "c08956012312",
       "cat": "flights",
       "kind": "news",
@@ -1071,38 +1060,6 @@
       "outlets": 1,
       "outletNames": [
         "NBC Los Angeles"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "cfa8d9fcb897",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Tech experts urge digital 'emergency exits' after global outage wave",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPcS1zLUxFTHFiRHRZWXc0LUhEVmY4cTh1ZS1xalFsbm9McGpJWGhwT0VrV3pDdXg2T09mdkJGNEw3QlhYSU1iMWJwUmV4Y2lxVGVZYXdHRElCeHNzWnQwdzNuallRR0FSZTFOVVlnZVJxM0EzcUZGTUtac1I1MVFOc09tYjk4RUg2eXVPMzlJcWk3UDVySllLRmlCU2ZWalZUdjFHYQ?oc=5",
-      "source": "Daily Voice Of Asia",
-      "publishedAt": "2026-11-21T16:01:11.000Z",
-      "latestAt": "2026-11-22T04:00:50.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Voice Of Asia"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "c46a4bb5c69b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Global tech sell-off deepens as Anthropic retreats near IPO price",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNU14RmhPUmV4cmp6dmtoQTBnbDVlcnRkTE9BekZOZnB1M3BIVEZ5dzE5TXJGQ0xtaEprblFQY1FwbFg2Tl95amlVN0hhUXlRSzllNWZQeGNNOU5KSnE5TEZwRGpsencyaDk3UFRXbnROWE9QYXNjV001R0JvSVRBVE4xeVZ1ZndybGY2dlhZTmJwd256TVBNU2Nqbms1d05P?oc=5",
-      "source": "Daily Voice Of Asia",
-      "publishedAt": "2026-11-21T15:57:56.000Z",
-      "latestAt": "2026-11-22T04:01:18.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Voice Of Asia"
       ],
       "score": 1.39
     },
@@ -1220,22 +1177,6 @@
         "Sonoma State Star"
       ],
       "score": 1.19
-    },
-    {
-      "id": "7dbf428e8f5f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "The Next Global Cyberattack Could Have Your Home IP Address – Analysis",
-      "url": "https://www.eurasiareview.com/22112026-the-next-global-cyberattack-could-have-your-home-ip-address-analysis/",
-      "source": "Eurasia Review",
-      "publishedAt": "2026-11-21T15:59:00.000Z",
-      "latestAt": "2026-11-22T01:53:05.000Z",
-      "firstSeenAt": "2026-11-22T02:03:41.065Z",
-      "outlets": 1,
-      "outletNames": [
-        "Eurasia Review"
-      ],
-      "score": 1.16
     },
     {
       "id": "00ad7ddc680a",
@@ -1800,6 +1741,54 @@
       "score": 1
     },
     {
+      "id": "4be20b09da55",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI law enforcement database becomes the latest target of hackers",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQRWxqdlN6WS1yNjJVTjc1X05wUURmVTRLUlNoNmRrZUJGdERvM0tOVV9DaF85cHdnblRMUWw4QzI0Qy1fSFRBNk02NjM1SUJ6OW4zem5YTDZseXF1NE0zaTZ1bGkyNmpZZnpfblByV1l2aWpmblNDUzE4bGxWalBsZkVoRUVseloxMVJkYktWaTcyaWRobC1UZ3ptUUFtVk5qQlQ0?oc=5",
+      "source": "1News",
+      "publishedAt": "2026-11-22T03:17:38.000Z",
+      "latestAt": "2026-11-22T04:46:55.000Z",
+      "firstSeenAt": "2026-11-22T03:33:57.721Z",
+      "outlets": 1,
+      "outletNames": [
+        "1News"
+      ],
+      "score": 1
+    },
+    {
+      "id": "82aeb0a5031e",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Canada Recalls ORB Funkee Toys Over Asbestos Contamination",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMWVluWGZJeDJtNjd3dFpraG9iSk5hMEdFMDFpMDVjNkRKMlZka3ZMaDN2akt6ZWdRQmozZXN4WFk3QkRFUklKTFYyYURDb3dWWFJKLUtFbk5sZnI3RE9pLVZhc29RSXhRMzhFZG9B?oc=5",
+      "source": "Peradaban.id",
+      "publishedAt": "2026-11-22T03:09:11.000Z",
+      "latestAt": "2026-11-22T03:09:11.000Z",
+      "firstSeenAt": "2026-11-22T03:19:01.686Z",
+      "outlets": 1,
+      "outletNames": [
+        "Peradaban.id"
+      ],
+      "score": 1
+    },
+    {
+      "id": "539d7a43f6fe",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Exploit Microsoft Entra Connect Health Flaw to Access Admin Emails and Organization Data",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9CRkFBeGNibWhuZHlBdkF2ek12cTU0ajlNSDA0R1EyaS1ZdDhmc3FabG9YWkZGZGQ0V3Q3TGdlS0dDVi15NTF2TTY5SHJWZXQ0M05NODJDR1hLSGRpbUJ2Y0I0c0Vja3FVUFVxeFRUUVZDRjZr0gF6QVVfeXFMT25SSjgzdGtWUzUyUjl1S3RzdW1tSUpRWC1jVUlLdF9Fem5kYWNrUy1LdVlYYUpyd1lOLWNjNGhzZWxxUjVocnlGbzNobTVPZUxIdmxmYTB3RlkxUUFnd1FBc0IyTlZmZTRrNTVJU0hEdnpCU0l6eEVVYXc?oc=5",
+      "source": "CyberSecurityNews",
+      "publishedAt": "2026-11-22T02:18:32.000Z",
+      "latestAt": "2026-11-22T02:18:32.000Z",
+      "firstSeenAt": "2026-11-22T02:33:48.142Z",
+      "outlets": 1,
+      "outletNames": [
+        "CyberSecurityNews"
+      ],
+      "score": 1
+    },
+    {
       "id": "d1bfe0d98aab",
       "cat": "ai",
       "kind": "news",
@@ -1894,6 +1883,22 @@
         "ThePrint"
       ],
       "score": 0.89
+    },
+    {
+      "id": "51fa9dc6576f",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Tech stocks plunge as investors lose faith in AI build-out",
+      "url": "https://newsroom.co.nz/2026/11/23/tech-stocks-plunge-as-investors-lose-faith-in-ai-build-out/",
+      "source": "Newsroom",
+      "publishedAt": "2026-11-22T08:00:00.000Z",
+      "latestAt": "2026-11-22T08:00:00.000Z",
+      "firstSeenAt": "2026-11-22T16:05:54.465Z",
+      "outlets": 1,
+      "outletNames": [
+        "Newsroom"
+      ],
+      "score": 0.87
     },
     {
       "id": "382b197da3a9",
