@@ -23,6 +23,45 @@
   "change": -5,
   "stories": [
     {
+      "id": "ec18cf5cc104",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Ground Stop at World’s Busiest Airport Delays Delta Flights Across US",
+      "url": "https://www.newsweek.com/ground-stop-at-worlds-busiest-airport-delays-delta-flights-across-us-12753772",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-22T08:35:00.000Z",
+      "latestAt": "2026-11-22T20:37:03.000Z",
+      "firstSeenAt": "2026-11-22T19:36:25.859Z",
+      "outlets": 24,
+      "outletNames": [
+        "Ticker News",
+        "Newsweek",
+        "travel",
+        "Atlanta News First",
+        "Yahoo",
+        "cedarnews.net",
+        "Speaks Media",
+        "AOL.com",
+        "Fox News",
+        "Yahoo Life UK",
+        "stupidDOPE",
+        "National News Desk",
+        "X",
+        "KBOI",
+        "WSET",
+        "MLQ.ai",
+        "WHP Harrisburg",
+        "13WHAM-TV",
+        "Open Jaw",
+        "local21news.com",
+        "wtvcfox",
+        "FOX One",
+        "KDBC",
+        "MEAWW News"
+      ],
+      "score": 4.56
+    },
+    {
       "id": "sig:faa-stop:SFO:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -66,29 +105,6 @@
         "hub": true,
         "nationwide": false,
         "reason": "other"
-      }
-    },
-    {
-      "id": "sig:faa-stop:LGA:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at LGA (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T11:50:13.236Z",
-      "latestAt": "2026-11-22T11:50:13.236Z",
-      "firstSeenAt": "2026-11-22T11:50:13.236Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "LGA",
-        "hub": true,
-        "nationwide": false,
-        "reason": "low visibility"
       }
     },
     {
@@ -234,25 +250,6 @@
       "score": 1.95
     },
     {
-      "id": "a2ecb1df5d2f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "PANI project to connect Andaman's eight islands through undersea cable network",
-      "url": "https://www.hindustantimes.com/india-news/pani-project-to-connect-andaman-s-eight-islands-through-undersea-cable-network-101795325743696.html",
-      "source": "Hindustan Times",
-      "publishedAt": "2026-11-21T21:35:00.000Z",
-      "latestAt": "2026-11-22T12:29:28.000Z",
-      "firstSeenAt": "2026-11-22T18:51:20.489Z",
-      "outlets": 4,
-      "outletNames": [
-        "Hindustan Times",
-        "The Hindu",
-        "NewsBytes",
-        "Deccan Chronicle"
-      ],
-      "score": 1.94
-    },
-    {
       "id": "f9b8b15de8ad",
       "cat": "internet",
       "kind": "news",
@@ -268,6 +265,69 @@
         "MyIndMakers"
       ],
       "score": 1.91
+    },
+    {
+      "id": "8887c12d10d2",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage affects over 200 members north of Eminence",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1IVUY3UlR2SUx3UXdvbTdUa1N5RkRHQ1p1WVpJUExQbnhwUENHZ3ZsRFhvNUlmQjBfNUFzcTdCd1k5QUZVZW1UTmZMUFhVUUVhTVRoMXVhTDI0RFNhRUZyaENzQlZoVmRPN3fSAW9BVV95cUxNQjluQmZWeFF0UjRMZ19Kc3Zudlh6QWVTSzdxb0lERGxSbi1NZ3d2V2g4TjJ5UUFMUU5IS3p4ODBINjcxczAtaUVMMGRsOXdqOWFZYWFLd3hNVzQyRFBNLTdIOUZUOEg2Z3EzM1ZlcDQ?oc=5",
+      "source": "OzarksFirst.com",
+      "publishedAt": "2026-11-22T17:13:33.000Z",
+      "latestAt": "2026-11-22T17:13:33.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 2,
+      "outletNames": [
+        "OzarksFirst.com",
+        "Yahoo"
+      ],
+      "score": 1.86
+    },
+    {
+      "id": "sig:faa-stop:LGA:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at LGA (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T11:50:13.236Z",
+      "latestAt": "2026-11-22T11:50:13.236Z",
+      "firstSeenAt": "2026-11-22T11:50:13.236Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "LGA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
+    },
+    {
+      "id": "sig:faa-stop:HPN:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at HPN (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T21:36:48.376Z",
+      "latestAt": "2026-11-22T21:36:48.376Z",
+      "firstSeenAt": "2026-11-22T21:36:48.376Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "HPN",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-22",
@@ -291,47 +351,6 @@
         "nationwide": false,
         "reason": "low ceilings"
       }
-    },
-    {
-      "id": "sig:faa-stop:HOU:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at HOU (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T12:50:28.187Z",
-      "latestAt": "2026-11-22T12:50:28.187Z",
-      "firstSeenAt": "2026-11-22T12:50:28.187Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "HOU",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low visibility"
-      }
-    },
-    {
-      "id": "2dc2ae6e44f8",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Chaos strikes California airports as Delta has major outage days before Thanksgiving",
-      "url": "https://nypost.com/2026/11/22/us-news/major-delta-outages-at-california-airports-days-before-thanksgiving/",
-      "source": "New York Post",
-      "publishedAt": "2026-11-22T09:16:00.000Z",
-      "latestAt": "2026-11-22T17:16:19.000Z",
-      "firstSeenAt": "2026-11-22T17:21:07.804Z",
-      "outlets": 3,
-      "outletNames": [
-        "New York Post",
-        "travel",
-        "Yahoo"
-      ],
-      "score": 3.13
     },
     {
       "id": "b3f921dc9af6",
@@ -387,23 +406,6 @@
         "The Edge Singapore"
       ],
       "score": 2.21
-    },
-    {
-      "id": "8887c12d10d2",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage affects over 200 members north of Eminence",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1IVUY3UlR2SUx3UXdvbTdUa1N5RkRHQ1p1WVpJUExQbnhwUENHZ3ZsRFhvNUlmQjBfNUFzcTdCd1k5QUZVZW1UTmZMUFhVUUVhTVRoMXVhTDI0RFNhRUZyaENzQlZoVmRPN3fSAW9BVV95cUxNQjluQmZWeFF0UjRMZ19Kc3Zudlh6QWVTSzdxb0lERGxSbi1NZ3d2V2g4TjJ5UUFMUU5IS3p4ODBINjcxczAtaUVMMGRsOXdqOWFZYWFLd3hNVzQyRFBNLTdIOUZUOEg2Z3EzM1ZlcDQ?oc=5",
-      "source": "OzarksFirst.com",
-      "publishedAt": "2026-11-22T17:13:33.000Z",
-      "latestAt": "2026-11-22T17:13:33.000Z",
-      "firstSeenAt": "2026-11-22T21:21:47.117Z",
-      "outlets": 2,
-      "outletNames": [
-        "OzarksFirst.com",
-        "Yahoo"
-      ],
-      "score": 1.86
     },
     {
       "id": "26a967944e74",
@@ -538,6 +540,22 @@
       "score": 1.39
     },
     {
+      "id": "5942f55a5ba8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Global tech outages expose need for stronger digital risk safeguards",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWjFUaFlIeENWbzJsUUpfR1F1V3pBVFVkcVVJLUN1d05xVEFqS3hGVTF5d0EyeTdZYThkNFo5cUFCbVVncENQZ09YN3BUMFpQMkFYWFBONm0xWUk5LXpfc2d6TnFoTmRwT0FNNkpsWmFoNFMwQkYzZEMtVmMxSUVJOGZOa2czTVRFdFA2RlVqTGxXSVd1TkdDQ0RYZFctdDJfQ1lGOWtlb0dPeUdDQmM0Z09MU0JmeVotTkg1QkdEUlRiZUw2MjhON09YRzdZSk13NWxYWmdGb9IB3AFBVV95cUxNS09ER1FOMncxM2I0UlZPUlJZSVoydWtCTnp2ak9DNG9DWXhrcnBTeV8zVFhCek9FR1FZSUl4ZDBGRFNld2I3YUhqY3VLYVlqVUNOM3d4RUdOX0hYdndGa1VsMEg1V1Q2Yk5FdUg1NEhuM1YzLWYtM29GS1N4c2FkMkt4eWp0b2VLR1NLUGI3OFhCWjRhd3kzWTNkQnFjMDdoRVpvR0duQW1XUklaOV9aRWV6T1Ezd0txbXBNMDBYTHZpa1dpeDZ4TjQ4TEloaFAzd0gxRng5ZUlab2Nq?oc=5",
+      "source": "Business Standard",
+      "publishedAt": "2026-11-22T16:25:22.000Z",
+      "latestAt": "2026-11-22T16:25:22.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 1,
+      "outletNames": [
+        "Business Standard"
+      ],
+      "score": 1.38
+    },
+    {
       "id": "aa603ae735f8",
       "cat": "weather",
       "kind": "news",
@@ -584,6 +602,47 @@
         "Philstar.com"
       ],
       "score": 1.07
+    },
+    {
+      "id": "sig:faa-stop:HOU:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at HOU (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T12:50:28.187Z",
+      "latestAt": "2026-11-22T12:50:28.187Z",
+      "firstSeenAt": "2026-11-22T12:50:28.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "HOU",
+        "hub": false,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
+    },
+    {
+      "id": "2dc2ae6e44f8",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Chaos strikes California airports as Delta has major outage days before Thanksgiving",
+      "url": "https://nypost.com/2026/11/22/us-news/major-delta-outages-at-california-airports-days-before-thanksgiving/",
+      "source": "New York Post",
+      "publishedAt": "2026-11-22T09:16:00.000Z",
+      "latestAt": "2026-11-22T17:16:19.000Z",
+      "firstSeenAt": "2026-11-22T17:21:07.804Z",
+      "outlets": 3,
+      "outletNames": [
+        "New York Post",
+        "travel",
+        "Yahoo"
+      ],
+      "score": 3.13
     },
     {
       "id": "d1431f408c53",
@@ -694,6 +753,23 @@
         "ShiftDelete.Net"
       ],
       "score": 2
+    },
+    {
+      "id": "9c203136b2c3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta resolves system outage delaying flights out of Atlanta",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPZzJ4T21sbmd1R3dEVzZ2UG56a3V6UDh6RW9MNlg1ZzltVmFHMUd6akZSd2dBanRQVVNpOWwtLUV5NVVzQXhZV3gwaTIwX3lYSnIwV1lIWHQ4RTRmeUR1YUxYSUpDM0RCal9IUGhhVEp2WDRMUXhMU21HUEtPSkloOWxxbGZSbXhhTjZfbFpjZVZFUGM2RlNxUnI0dHYwTi1YTXNva2hQNmwtRzhXd1Rmb0E2blVaSy1GSWoyckVXUFB6c05yajRCT2YxTk1FRHk1TGxxc0ZpanVqb1pMWXE0VTA3eUhDQ2dDa1E1eDVTNHdNMTRCZnRZ?oc=5",
+      "source": "kare11.com",
+      "publishedAt": "2026-11-22T21:11:15.000Z",
+      "latestAt": "2026-11-22T21:21:18.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 2,
+      "outletNames": [
+        "kare11.com",
+        "WWLTV.com"
+      ],
+      "score": 1.99
     },
     {
       "id": "bfe1d029b305",
@@ -856,7 +932,7 @@
       "url": "https://www.yahoo.com/news/us/articles/faa-declares-ground-delay-delta-162148510.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-22T08:21:00.000Z",
-      "latestAt": "2026-11-22T09:08:00.000Z",
+      "latestAt": "2026-11-22T13:08:51.000Z",
       "firstSeenAt": "2026-11-22T17:21:07.804Z",
       "outlets": 2,
       "outletNames": [
@@ -998,22 +1074,6 @@
         "NBC Los Angeles"
       ],
       "score": 1.39
-    },
-    {
-      "id": "5942f55a5ba8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Global tech outages expose need for stronger digital risk safeguards",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWjFUaFlIeENWbzJsUUpfR1F1V3pBVFVkcVVJLUN1d05xVEFqS3hGVTF5d0EyeTdZYThkNFo5cUFCbVVncENQZ09YN3BUMFpQMkFYWFBONm0xWUk5LXpfc2d6TnFoTmRwT0FNNkpsWmFoNFMwQkYzZEMtVmMxSUVJOGZOa2czTVRFdFA2RlVqTGxXSVd1TkdDQ0RYZFctdDJfQ1lGOWtlb0dPeUdDQmM0Z09MU0JmeVotTkg1QkdEUlRiZUw2MjhON09YRzdZSk13NWxYWmdGb9IB3AFBVV95cUxNS09ER1FOMncxM2I0UlZPUlJZSVoydWtCTnp2ak9DNG9DWXhrcnBTeV8zVFhCek9FR1FZSUl4ZDBGRFNld2I3YUhqY3VLYVlqVUNOM3d4RUdOX0hYdndGa1VsMEg1V1Q2Yk5FdUg1NEhuM1YzLWYtM29GS1N4c2FkMkt4eWp0b2VLR1NLUGI3OFhCWjRhd3kzWTNkQnFjMDdoRVpvR0duQW1XUklaOV9aRWV6T1Ezd0txbXBNMDBYTHZpa1dpeDZ4TjQ4TEloaFAzd0gxRng5ZUlab2Nq?oc=5",
-      "source": "Business Standard",
-      "publishedAt": "2026-11-22T16:25:22.000Z",
-      "latestAt": "2026-11-22T16:25:22.000Z",
-      "firstSeenAt": "2026-11-22T17:06:04.972Z",
-      "outlets": 1,
-      "outletNames": [
-        "Business Standard"
-      ],
-      "score": 1.38
     },
     {
       "id": "a4728885485b",
@@ -1176,22 +1236,6 @@
       "score": 1.19
     },
     {
-      "id": "cd912245b84f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta outage delays more than 1,000 flights nationwide, disrupts travel at MSP",
-      "url": "https://www.msn.com/en-us/news/other/delta-outage-delays-more-than-1000-flights-nationwide-disrupts-travel-at-msp/ar-AA2hZazA",
-      "source": "Star Tribune on MSN",
-      "publishedAt": "2026-11-22T11:10:00.000Z",
-      "latestAt": "2026-11-22T11:10:00.000Z",
-      "firstSeenAt": "2026-11-22T21:21:47.117Z",
-      "outlets": 1,
-      "outletNames": [
-        "Star Tribune on MSN"
-      ],
-      "score": 1.16
-    },
-    {
       "id": "cb11932ff8f0",
       "cat": "flights",
       "kind": "news",
@@ -1240,6 +1284,22 @@
       "score": 1.04
     },
     {
+      "id": "c9d46a13d0e4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Japan a sitting duck for cyberattacks",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZEVDVU9OLXlEUER4SlBmSVRiSE1sWjdmVXlVQTU0YWJPdlItV3lUeEZCVHhHQ2xjWHVoazFNWjNOTk1JQ3NVTFBYaW90QVpqcWtZUG9tN3RUSGR6dUUxTHNZS2FyTDZNVnlVY2hxWk4yVHpudHc2Tkp1SlZGRDJQdk1NZWRaUDdSU2pjOXBZakZMdw?oc=5",
+      "source": "Japan Today",
+      "publishedAt": "2026-11-22T21:34:20.000Z",
+      "latestAt": "2026-11-22T21:34:20.000Z",
+      "firstSeenAt": "2026-11-22T21:36:48.376Z",
+      "outlets": 1,
+      "outletNames": [
+        "Japan Today"
+      ],
+      "score": 1
+    },
+    {
       "id": "fe51cd80f5bd",
       "cat": "germs",
       "kind": "news",
@@ -1256,22 +1316,6 @@
       "score": 1
     },
     {
-      "id": "9c203136b2c3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta resolves system outage delaying flights out of Atlanta",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPZzJ4T21sbmd1R3dEVzZ2UG56a3V6UDh6RW9MNlg1ZzltVmFHMUd6akZSd2dBanRQVVNpOWwtLUV5NVVzQXhZV3gwaTIwX3lYSnIwV1lIWHQ4RTRmeUR1YUxYSUpDM0RCal9IUGhhVEp2WDRMUXhMU21HUEtPSkloOWxxbGZSbXhhTjZfbFpjZVZFUGM2RlNxUnI0dHYwTi1YTXNva2hQNmwtRzhXd1Rmb0E2blVaSy1GSWoyckVXUFB6c05yajRCT2YxTk1FRHk1TGxxc0ZpanVqb1pMWXE0VTA3eUhDQ2dDa1E1eDVTNHdNMTRCZnRZ?oc=5",
-      "source": "kare11.com",
-      "publishedAt": "2026-11-22T21:11:15.000Z",
-      "latestAt": "2026-11-22T21:11:15.000Z",
-      "firstSeenAt": "2026-11-22T21:21:47.117Z",
-      "outlets": 1,
-      "outletNames": [
-        "kare11.com"
-      ],
-      "score": 1
-    },
-    {
       "id": "174545db5029",
       "cat": "markets",
       "kind": "news",
@@ -1279,7 +1323,7 @@
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9xdHpLM2FUakZhTElfZGhrRVp0bVlnRlVIeV9VTzlFN3NRNTVRNENxRW1OdVg5RmdEemlNZXhHNmpvWjFFbU9wOU5YZC1seWd3Z21jLW9keUNWNW9vdzFjaklUX3BRU2Fv?oc=5",
       "source": "Peradaban.id",
       "publishedAt": "2026-11-22T21:09:00.000Z",
-      "latestAt": "2026-11-22T21:10:00.000Z",
+      "latestAt": "2026-11-22T21:27:00.000Z",
       "firstSeenAt": "2026-11-22T21:21:47.117Z",
       "outlets": 1,
       "outletNames": [
@@ -1364,22 +1408,6 @@
       "outlets": 1,
       "outletNames": [
         "Pakistan Connect"
-      ],
-      "score": 1
-    },
-    {
-      "id": "ec18cf5cc104",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Hundreds of flights delayed after Atlanta airport tech fault",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjVaVEF3UlhKclRCLV9LM2JvNWJXRTNNOWpFOUlfSV94aDR4TVVuMlRwdHJUanFDR25WUEtWamtBRGZOY25ZejlMX1dOd0ZPZVFLT2pJU21UeWlvU0ZXZ2FGU1JTOWZiV0ZnMFJMdFNqVEZsQlNfb3N5NmlEeVJEdl9B?oc=5",
-      "source": "Ticker News",
-      "publishedAt": "2026-11-22T19:27:07.000Z",
-      "latestAt": "2026-11-22T19:27:07.000Z",
-      "firstSeenAt": "2026-11-22T19:36:25.859Z",
-      "outlets": 1,
-      "outletNames": [
-        "Ticker News"
       ],
       "score": 1
     },
@@ -1728,5 +1756,5 @@
       "score": 0.73
     }
   ],
-  "updatedAt": "2026-11-22T21:21:47.117Z"
+  "updatedAt": "2026-11-22T21:36:48.376Z"
 }
