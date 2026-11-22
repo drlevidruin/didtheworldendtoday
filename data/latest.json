@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T13:35:30.169Z",
+  "buildTime": "2026-11-22T13:50:33.480Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 08:35 ET",
+  "etStamp": "2026-11-22 08:50 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,15 +45,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1093,
-  "lastSuccessAt": "2026-11-22T13:35:30.169Z",
+  "headlinesRead": 1048,
+  "lastSuccessAt": "2026-11-22T13:50:33.480Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 25,
+    "flights": 24,
     "hacks": 27,
     "grid": 7,
     "internet": 12,
-    "germs": 4,
+    "germs": 5,
     "space": 3,
     "earth": 4,
     "markets": 4,
@@ -86,11 +86,6 @@
     },
     "faa": {
       "groundStops": [
-        {
-          "airport": "HOU",
-          "hub": false,
-          "reason": "low visibility"
-        },
         {
           "airport": "LGA",
           "hub": true,
@@ -187,20 +182,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 800,
+      "count": 767,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     },
     "bing": {
       "ok": true,
-      "count": 262,
+      "count": 250,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     },
     "gdelt": {
       "ok": false,
@@ -212,55 +207,56 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     },
     "faa": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:35:30.169Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T13:35:30.169Z"
+      "lastOkAt": "2026-11-22T13:50:33.480Z"
     }
   },
   "stories": [
@@ -403,7 +399,7 @@
       "url": "https://www.msn.com/en-in/news/other/pani-project-to-connect-andamans-eight-islands-through-undersea-cable-network/ar-AA2hXhVt",
       "source": "Press Trust of India on MSN",
       "publishedAt": "2026-11-21T18:30:00.000Z",
-      "latestAt": "2026-11-22T10:59:17.000Z",
+      "latestAt": "2026-11-22T12:29:28.000Z",
       "firstSeenAt": "2026-11-22T06:19:24.497Z",
       "outlets": 7,
       "outletNames": [
@@ -802,13 +798,13 @@
       "url": "https://www.nbcchicago.com/news/local/record-warmth-possible-in-chicago-but-the-forecast-is-about-to-change-dramatically/4018978/",
       "source": "NBC 5 Chicago",
       "publishedAt": "2026-11-21T16:50:00.000Z",
-      "latestAt": "2026-11-22T12:00:00.000Z",
+      "latestAt": "2026-11-22T13:20:00.000Z",
       "firstSeenAt": "2026-11-21T17:17:32.491Z",
       "outlets": 1,
       "outletNames": [
         "NBC 5 Chicago"
       ],
-      "trending": 500,
+      "trending": 1000,
       "trendTerm": "weather chicago",
       "score": 1.39
     },
@@ -820,13 +816,13 @@
       "url": "https://wgntv.com/weather/chicago-weather-saturday-11212026/",
       "source": "WGN-TV",
       "publishedAt": "2026-11-21T16:50:00.000Z",
-      "latestAt": "2026-11-22T12:00:00.000Z",
+      "latestAt": "2026-11-22T13:20:00.000Z",
       "firstSeenAt": "2026-11-21T17:17:32.491Z",
       "outlets": 1,
       "outletNames": [
         "WGN-TV"
       ],
-      "trending": 500,
+      "trending": 1000,
       "trendTerm": "weather chicago",
       "score": 1.39
     },
@@ -845,29 +841,6 @@
         "Daily Voice Of Asia"
       ],
       "score": 1.39
-    },
-    {
-      "id": "sig:faa-stop:YOW:2026-11-21",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at YOW (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-21T13:46:53.301Z",
-      "latestAt": "2026-11-21T13:46:53.301Z",
-      "firstSeenAt": "2026-11-21T13:46:53.301Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "YOW",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low visibility"
-      }
     },
     {
       "id": "bfe1d029b305",
@@ -1220,22 +1193,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "4f8824fbddcd",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US Airport Hotel Occupancy Hits 85% After Nationwide FAA Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOFVKTmw0djhZYkNKenF0anZZVEtKLVptVnQ4OGEyc2JrRWZZbmcwVmtIUWNxWkYtSnIyQkdVTmhvdVBJWEd6OHVEQmJhT1JTN002WU9kMk9FM2FyekktaWEzeWh0MFhSOGRLNXdHVVRJbzIxUlBZN041bE9pYzluemp6SmFWYXIzZi1CbzdYTW1LSXotZWhtZjZYdVZtdXp1Ul9hQ2ZrMV9KYzY2TlJZ?oc=5",
-      "source": "Rus Tourism News",
-      "publishedAt": "2026-11-21T13:37:30.000Z",
-      "latestAt": "2026-11-21T13:37:30.000Z",
-      "firstSeenAt": "2026-11-21T15:02:10.743Z",
-      "outlets": 1,
-      "outletNames": [
-        "Rus Tourism News"
-      ],
-      "score": 1.37
-    },
-    {
       "id": "82218d53aaad",
       "cat": "flights",
       "kind": "news",
@@ -1443,6 +1400,38 @@
         "cedarnews.net"
       ],
       "score": 1.14
+    },
+    {
+      "id": "3382f550696a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air Lines ground stop at Hartsfield-Jackson downgraded to ‘ground delay,’ FAA says",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQY0RsNzdjQlFwdjBKdk43Z2ZGZDVKazZONmJ3czg0RmsyNmJKSUl1dEJfVHQ0NmxDbW16ZGpUdHdjN21HTTNkOHZZeG5CMXZ2STJ3ekd5YVBsc05mVjIzanRlNXFWRGVvX1M1Tktrckd4bVp3YU1pMlBwSVFRTnViOURMUmQ2ZF9CYjNIS1hydHpYaUN4bTNJc2piLXY5TUpZQkY1akRQZHl2d3cwTndWaVd2d25zdkpXdURjRllnYXA3dXVxRnM0TlVtYlhuQWtNOFpqYVNNN051dHdRa0ttd1psWWlRZTlB0gH8AUFVX3lxTE1Udk5CbkVnclRyTGxxNDhkVG5iYjJWR2pPOEJXdC1aZmQzS3JYRmNsQ1QzTDh4VWlScTlzYXg2b0psVUQxRXBBUThlTW8wOVcwVFFzR0x5NzNvT04tQ0lJNWNEOXZ1Q3ljUjBTNGQzTXd5WGhzNWFnbjZxRmpmNVFJQlFlVTJ5SGhrLXNTN2VxY0JJMUJFM2h1QlJaQXBWSjMzczgzeVNiMFF6Y1RYMWNZQktPZVR2eGRYaFhISENvQnVVWURBRmJzbHZENHVtZXFqOGNFbmpmTW1BVTJ0ZjVfbWl1YURJbW53SXk2YURua05hZ1JDb2VqMW95NA?oc=5",
+      "source": "WSB-TV",
+      "publishedAt": "2026-11-22T13:45:14.000Z",
+      "latestAt": "2026-11-22T13:45:14.000Z",
+      "firstSeenAt": "2026-11-22T13:50:33.480Z",
+      "outlets": 1,
+      "outletNames": [
+        "WSB-TV"
+      ],
+      "score": 1
+    },
+    {
+      "id": "dbc25af0d467",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Namakkal egg price falls as Oman importers’ dilemma over bird flu looms",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaW9aOEZPUzVMWUR5dU5LYlRtSFd3eXBRaW84S08yQ2x2RlUtZ3B5akxNQlBLS3pIa3hRMGNWS2J4d0RKY2dJREpzejVyakc4bmZWaVhrMjhYRld0RzhZTENYMjlUNTM5MmlLZXVUWThFMjNCRU9Xc0R5NWJlYjNwd3BDblR6V2hfTXlpQmp4OTVBQ0I0Q0ZCdW1laVJsM0o0X1VoeTlFR19VWTg2Y3NxcWpabHZfNkZxbWk5RTJKMV9MY1JpcmFGMTU5Ti0wenJyekpBLdIB2wFBVV95cUxOZ0RrbzlTRjg3VlBiaHJIZHRHVkpzSjJVNzRPNHVQM3Y1c0tGX1FIOGxNWkFRZW4wSGNjM0VHMklqNGxBWkJadXEtM3pmMW95MC00TVplXzRKZksyOWNEVzNjRzJEeVRVZ2xfYmo1U3hCQlVJNnFreG4wSmRWQW5jN1dKU0Y3NmFseWtEbjBtQzNqQmpLTmRad21hb2RCVmpaVkNBdUNHUGdxODdPU21zRDZtTGZLenpXYmtSWjR2NDNmWGNPRW5VZ3Z4Xy1rdE9pXzVlb3p1YWZLMFU?oc=5",
+      "source": "The Hindu",
+      "publishedAt": "2026-11-22T13:33:37.000Z",
+      "latestAt": "2026-11-22T13:33:37.000Z",
+      "firstSeenAt": "2026-11-22T13:50:33.480Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Hindu"
+      ],
+      "score": 1
     },
     {
       "id": "e53ca63fb563",
