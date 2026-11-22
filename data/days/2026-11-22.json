@@ -24,6 +24,29 @@
   "change": 1,
   "stories": [
     {
+      "id": "sig:faa-stop:SFO:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SFO (low ceilings)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T17:21:07.804Z",
+      "latestAt": "2026-11-22T17:21:07.804Z",
+      "firstSeenAt": "2026-11-22T17:21:07.804Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SFO",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low ceilings"
+      }
+    },
+    {
       "id": "sig:faa-stop:ATL:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -67,29 +90,6 @@
         "hub": true,
         "nationwide": false,
         "reason": "low visibility"
-      }
-    },
-    {
-      "id": "sig:faa-stop:MIA:2026-11-21",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at MIA (thunderstorms)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-21T19:02:44.392Z",
-      "latestAt": "2026-11-21T19:02:44.392Z",
-      "firstSeenAt": "2026-11-21T19:02:44.392Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "MIA",
-        "hub": true,
-        "nationwide": false,
-        "reason": "thunderstorms"
       }
     },
     {
@@ -255,7 +255,7 @@
       "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNSDJvZE1jdkJwWVNoTUVYNWdLb1pmaUFoY3g3UTZQeGpuNXZ1TDBZTFdyeUFGcFpIWng0T011TkVvandsWlZiUzAzUGVGV01EV092aGhuOG1IN25mSjNyd2xsQWxmSTZnaXp2RVJJekI0bjJaTnN3enNfUjFNR0VsbU8xTGpyWjFDN01OVlhsZm11WFV1Ymk2TWgzSlRrZUUwbG9MUDV6Rlk5MkFFWGVHM3Bkb2swX2sybnhYWlhWc3ZOMzFpYXNQTGtud0VhaGxLclp3YUY5Sl9UVWlIUjJDM0Z4MHZwUVBhMlB5MjJQVEZ4eU9nRWfSAfsBQVVfeXFMTUdlMC05eGNBek12TG44N2xRZWh2UERXazV3OENyMHY2VFlmTTlIbGZwcVdTTHVPUFlZbUR5aXJlNWNzbUZoNWQ2MVU0Rmw0bHJBbnBfR3N2VFpZYVh4Rko0TzlwOUdDbDRsUmVIanZGSlg3VEF3Z194RG5OX1ctV0FvZ3duakttNGJjYXUxQzhFdnAwOUhEenJlc28tTllWTXUyZlE1Wjd1OHYyMVpwejdNLXV1LUpjX3pFZFlzU1cwSXpjN3FLdDlfaTk3T3U2Q2daRmZZZ3hFWVBaWUs2c2hOaWdJb01lZTlGRWhQZVBFa213dTB3ZXZmYVU?oc=5",
       "source": "India TV News",
       "publishedAt": "2026-11-22T04:40:35.000Z",
-      "latestAt": "2026-11-22T15:27:13.000Z",
+      "latestAt": "2026-11-22T17:08:35.000Z",
       "firstSeenAt": "2026-11-22T14:35:43.292Z",
       "outlets": 3,
       "outletNames": [
@@ -281,6 +281,29 @@
         "cedarnews.net"
       ],
       "score": 1.95
+    },
+    {
+      "id": "sig:faa-stop:MIA:2026-11-21",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at MIA (thunderstorms)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-21T19:02:44.392Z",
+      "latestAt": "2026-11-21T19:02:44.392Z",
+      "firstSeenAt": "2026-11-21T19:02:44.392Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "MIA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "thunderstorms"
+      }
     },
     {
       "id": "sig:faa-stop:HOU:2026-11-22",
@@ -349,24 +372,6 @@
       "score": 2.52
     },
     {
-      "id": "652eadbd4717",
-      "cat": "flights",
-      "kind": "news",
-      "title": "The FAA ground stop blame game",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeUtCUHJVa1lqOENhWXhNVG15TGV1bVlZOGpjYTFHczJ1cW1fVUNWYkJwbjhONXJBWDJZUEgzT3pzYjdiXzdyeVFrVS1iOF9Zc2M5YlB4WjIxNGwxSV8ySGVGb1E1TTdtQkFJb0xiUWk0UkczWExCcU1JSm5DUjI2Sg?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-21T20:06:36.000Z",
-      "latestAt": "2026-11-22T15:34:21.000Z",
-      "firstSeenAt": "2026-11-22T03:03:49.946Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "FOX One",
-        "WSJ"
-      ],
-      "score": 2.29
-    },
-    {
       "id": "a397ae9e51e0",
       "cat": "hacks",
       "kind": "news",
@@ -385,21 +390,22 @@
       "score": 2.21
     },
     {
-      "id": "e1413fca8a91",
+      "id": "4147ab830552",
       "cat": "hacks",
       "kind": "news",
-      "title": "FBI crime database reportedly hit by suspected cyberattack",
-      "url": "https://news.az/news/fbi-crime-database-reportedly-hit-by-suspected-cyberattack",
-      "source": "news.az",
-      "publishedAt": "2026-11-22T09:17:08.000Z",
-      "latestAt": "2026-11-22T12:30:00.000Z",
-      "firstSeenAt": "2026-11-22T09:19:53.152Z",
-      "outlets": 2,
+      "title": "FBI investigating suspected hack of national crime database, AP reports",
+      "url": "https://www.wgal.com/article/fbi-suspected-hack-national-crime-database-ap-reports/74500671",
+      "source": "WGAL",
+      "publishedAt": "2026-11-22T07:08:00.000Z",
+      "latestAt": "2026-11-22T07:08:00.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 3,
       "outletNames": [
-        "Latest news from Azerbaijan",
-        "news.az"
+        "WGAL",
+        "WYFF News 4",
+        "WMUR Channel 9"
       ],
-      "score": 2
+      "score": 2.16
     },
     {
       "id": "f9b8b15de8ad",
@@ -417,6 +423,26 @@
         "MyIndMakers"
       ],
       "score": 1.91
+    },
+    {
+      "id": "233cde5c351e",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Video | Peru Earthquake | 6.7 Magnitude Earthquake Strikes Peru, Tremors Felt In Capital Lima",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUTVRMGhwWmxWVzhvLTFNZkZBNzF3V3Y4RUxjZWpJRnlONUZRUnh3dlVuSWI5TzVFWDJmTFNEX2tyNkUxX21sZlh5Znp1WThtZ1JfNzM0eEt0SzR5ZEMxTVZQR3U1SGJmMnYyQmNiT3JRbFBYRFhLdTVpc3V3WW53Y2NpejVqMVJkMVJGcEhiWmtUV2N3QVExNTdoZ0Qxa3ZFbVV4d3Yxaml1b2dQWllKU09nT1JWRWZs?oc=5",
+      "source": "NDTV",
+      "publishedAt": "2026-11-21T18:17:48.000Z",
+      "latestAt": "2026-11-22T08:33:46.000Z",
+      "firstSeenAt": "2026-11-22T13:05:25.758Z",
+      "outlets": 3,
+      "outletNames": [
+        "NDTV",
+        "Myanmar International TV",
+        "Operativ Media"
+      ],
+      "score": 1.78,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "9feb2a3e367f",
@@ -568,25 +594,6 @@
       "score": 1.39
     },
     {
-      "id": "233cde5c351e",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Video | Peru Earthquake | 6.7 Magnitude Earthquake Strikes Peru, Tremors Felt In Capital Lima",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUTVRMGhwWmxWVzhvLTFNZkZBNzF3V3Y4RUxjZWpJRnlONUZRUnh3dlVuSWI5TzVFWDJmTFNEX2tyNkUxX21sZlh5Znp1WThtZ1JfNzM0eEt0SzR5ZEMxTVZQR3U1SGJmMnYyQmNiT3JRbFBYRFhLdTVpc3V3WW53Y2NpejVqMVJkMVJGcEhiWmtUV2N3QVExNTdoZ0Qxa3ZFbVV4d3Yxaml1b2dQWllKU09nT1JWRWZs?oc=5",
-      "source": "NDTV",
-      "publishedAt": "2026-11-21T18:17:48.000Z",
-      "latestAt": "2026-11-22T08:33:46.000Z",
-      "firstSeenAt": "2026-11-22T13:05:25.758Z",
-      "outlets": 2,
-      "outletNames": [
-        "NDTV",
-        "Myanmar International TV"
-      ],
-      "score": 1.37,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "aa603ae735f8",
       "cat": "weather",
       "kind": "news",
@@ -601,6 +608,24 @@
         "Wisevoter"
       ],
       "score": 1.29
+    },
+    {
+      "id": "652eadbd4717",
+      "cat": "flights",
+      "kind": "news",
+      "title": "The FAA ground stop blame game",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeUtCUHJVa1lqOENhWXhNVG15TGV1bVlZOGpjYTFHczJ1cW1fVUNWYkJwbjhONXJBWDJZUEgzT3pzYjdiXzdyeVFrVS1iOF9Zc2M5YlB4WjIxNGwxSV8ySGVGb1E1TTdtQkFJb0xiUWk0UkczWExCcU1JSm5DUjI2Sg?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-21T20:06:36.000Z",
+      "latestAt": "2026-11-22T15:34:21.000Z",
+      "firstSeenAt": "2026-11-22T03:03:49.946Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "FOX One",
+        "WSJ"
+      ],
+      "score": 2.29
     },
     {
       "id": "ebe27cfc8a8f",
@@ -618,6 +643,40 @@
         "The Sun"
       ],
       "score": 2.16
+    },
+    {
+      "id": "e1413fca8a91",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI crime database reportedly hit by suspected cyberattack",
+      "url": "https://news.az/news/fbi-crime-database-reportedly-hit-by-suspected-cyberattack",
+      "source": "news.az",
+      "publishedAt": "2026-11-22T09:17:08.000Z",
+      "latestAt": "2026-11-22T12:30:00.000Z",
+      "firstSeenAt": "2026-11-22T09:19:53.152Z",
+      "outlets": 2,
+      "outletNames": [
+        "Latest news from Azerbaijan",
+        "news.az"
+      ],
+      "score": 2
+    },
+    {
+      "id": "ee56f4124855",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA lifts ground stop on Atlanta-bound Delta flights after system outage",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSllMNVNYeXZ4Mlc5RjlsRFlweFRoWnJxUHE2cEw2d0VsSjB6clB6TWc1WGtYZXYzcUtoOHh3bnBRNkNNeVEtN3lrWk5OajdZY0FaWVdkdkhsRUpCT0tiOHpjWmczWVhnU3UxTDB6MHBkZ29nUXhnczlnT0gzQTBlTWw3UlFrMkY5UUlYUC14bXRya0xx0gGaAUFVX3lxTE5GbV8wMjFfSXVYOF9RQzF6UHZpWThoOEdrbU15Ym5BUTUxTlVKTEhscmtob193R1U2T0txX01fcWlQeGxKcmZhQTd0Z3lEeGx2N0NOcnZ1bThPbHRRRmc3TGtsY2NTcmRfdmpyRXRNVGFkVEd5QmUwVUFTLTZWeGRwVEN0ZklCSFFrc0VwR3VfbFlpUDdDNHBwQnc?oc=5",
+      "source": "Fox News",
+      "publishedAt": "2026-11-22T16:53:24.000Z",
+      "latestAt": "2026-11-22T17:20:00.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 2,
+      "outletNames": [
+        "Fox News",
+        "X"
+      ],
+      "score": 1.99
     },
     {
       "id": "bfe1d029b305",
@@ -722,21 +781,21 @@
       "score": 1.72
     },
     {
-      "id": "4147ab830552",
-      "cat": "hacks",
+      "id": "dd78ea70c221",
+      "cat": "flights",
       "kind": "news",
-      "title": "FBI investigating suspected hack of national crime database, AP reports",
-      "url": "https://www.wgal.com/article/fbi-suspected-hack-national-crime-database-ap-reports/74500671",
-      "source": "WGAL",
-      "publishedAt": "2026-11-22T07:08:00.000Z",
-      "latestAt": "2026-11-22T07:08:00.000Z",
-      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "title": "FAA Declares Ground Delay For Delta Flights In Atlanta",
+      "url": "https://www.yahoo.com/news/us/articles/faa-declares-ground-delay-delta-162148510.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T08:21:00.000Z",
+      "latestAt": "2026-11-22T08:21:48.000Z",
+      "firstSeenAt": "2026-11-22T17:21:07.804Z",
       "outlets": 2,
       "outletNames": [
-        "WGAL",
-        "WYFF News 4"
+        "Yahoo",
+        "Forbes on MSN"
       ],
-      "score": 1.67
+      "score": 1.7
     },
     {
       "id": "1001ac6e1707",
@@ -757,6 +816,23 @@
       "score": 1.64
     },
     {
+      "id": "a2fa3f9e9cbc",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US Ports Face Rising Wave of Cyberattacks",
+      "url": "https://www.yahoo.com/news/us/articles/us-ports-face-rising-wave-141353021.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T06:13:00.000Z",
+      "latestAt": "2026-11-22T17:01:05.000Z",
+      "firstSeenAt": "2026-11-22T17:21:07.804Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Gulf News"
+      ],
+      "score": 1.63
+    },
+    {
       "id": "c08956012312",
       "cat": "flights",
       "kind": "news",
@@ -772,6 +848,22 @@
         "ABC News - Breaking News, Latest News and Videos"
       ],
       "score": 1.42
+    },
+    {
+      "id": "2dc2ae6e44f8",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Chaos strikes California airports as Delta has major outage days before Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUmxMUzJiLTlRTno0LU81MVFFZk1Xc1g2NVlsSGdieGFNNjZYTjladTJmWHhIOG9nRmRKTEc2WmxZZFZYR2otQjZjVlBDenpuZ3JEWUduaEwzQkNCcnZKWUtKblZIdTMxUTFfc21qeFAwVVRvVkV5TW1ONWlsWW90M3p1a1JEdkZuY0ZKc25PV3VuRUlZX2dkOXJvTlh1am5XaEE5bFFDMXJ4UQ?oc=5",
+      "source": "New York Post",
+      "publishedAt": "2026-11-22T17:16:00.000Z",
+      "latestAt": "2026-11-22T17:16:00.000Z",
+      "firstSeenAt": "2026-11-22T17:21:07.804Z",
+      "outlets": 1,
+      "outletNames": [
+        "New York Post"
+      ],
+      "score": 1.4
     },
     {
       "id": "58fabfb0567f",
@@ -920,6 +1012,22 @@
       "score": 1.29
     },
     {
+      "id": "dd999117e58d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta outage leads to nationwide delays days before Thanksgiving",
+      "url": "https://www.msn.com/en-us/news/other/delta-outage-leads-to-nationwide-delays-days-before-thanksgiving/ar-AA2hZ08y",
+      "source": "TMZ on MSN",
+      "publishedAt": "2026-11-22T09:02:53.000Z",
+      "latestAt": "2026-11-22T17:02:53.000Z",
+      "firstSeenAt": "2026-11-22T17:21:07.804Z",
+      "outlets": 1,
+      "outletNames": [
+        "TMZ on MSN"
+      ],
+      "score": 1.21
+    },
+    {
       "id": "4cf1a42edc29",
       "cat": "internet",
       "kind": "news",
@@ -1016,6 +1124,54 @@
       "score": 1.07
     },
     {
+      "id": "4aa4a1618b10",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air Lines Atlanta Ground Stop on Nov. 22: 400+ Flights Delayed and What Passengers Should Do",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNam1qZV9yemVWdlBmaFJaUlM5cVhqeGJDY0d1cnNYcVZTUThXaUYtb3U2N1BnVnFiWFZkcEdSQzIyUUljbDFOaHpUUWRIaXZnYTBLd3Z0akZ1QWRtQlB5emg4WlE2TkhwTjJ2SnhPdEZ2c0EyR0NVVHV4SU92dFR6aWJ5TlpXSmZlSEZ2ZEtOUkZpOWZHekVZdm1UQ3RqQXBVN2JlQ1p3akd2N2I4eG8zS2JfaHRxLVBXNUFreUs5X19UMGF1X2c?oc=5",
+      "source": "stupidDOPE",
+      "publishedAt": "2026-11-22T17:15:02.000Z",
+      "latestAt": "2026-11-22T17:15:02.000Z",
+      "firstSeenAt": "2026-11-22T17:21:07.804Z",
+      "outlets": 1,
+      "outletNames": [
+        "stupidDOPE"
+      ],
+      "score": 1
+    },
+    {
+      "id": "02679bd2022f",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Berbicians affected by power outage to receive 50% cut in Nov. electricity bill – President",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOam9ya2k1elV5dUlyWDNsMm5rWGhaYThSdEx6eEF6V0h0dndnMFNROGZBNnBlU2tZX2ptUkhsUVBCdDE1T3U2cjhQTTdQeGUzR0xKSDEtM0JId1pQV2NNMUlZY1pQTE1uemVtaHp2bjhnNkJhQzlsVmxFZDFGM3lwM09rSjdScmY3TW9fREZGRi1OOWE5c3gzMEdIbXp3NGNEMXIxdGhBS3BnS1hUOHZ5V0NPUjhPTkQ5d0RV?oc=5",
+      "source": "News Room Guyana",
+      "publishedAt": "2026-11-22T17:11:28.000Z",
+      "latestAt": "2026-11-22T17:11:28.000Z",
+      "firstSeenAt": "2026-11-22T17:21:07.804Z",
+      "outlets": 1,
+      "outletNames": [
+        "News Room Guyana"
+      ],
+      "score": 1
+    },
+    {
+      "id": "58dd97fb3dd8",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Outage: Ground Stop on Flights Bound for Atlanta Causes Travel Delays Before Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMExja2VYVDhSYzRDNmp2WUZfWVo1UmY3cnBpSUE0R09ncUZMS3BXY3VhUHJGN1lDRGdLM3ctX2NFTjJkOU1fd2dJLWlqS3ZCandQc2RmSEN6RVpKd2V0dFRUeTFhZ1h0WnktOXNiRXB4MzlVb0xMSUgtaWk0cDFNQXlINnRFVjNkcjJNaHRHbmNzTldmdFZmRVhZYWliYTR0TS1nM3E5enlNWTYwWTlMdXBvUGtqM1lMUVhVR0FrNXlMb2R6eGc?oc=5",
+      "source": "Men's Journal",
+      "publishedAt": "2026-11-22T17:03:55.000Z",
+      "latestAt": "2026-11-22T17:03:55.000Z",
+      "firstSeenAt": "2026-11-22T17:21:07.804Z",
+      "outlets": 1,
+      "outletNames": [
+        "Men's Journal"
+      ],
+      "score": 1
+    },
+    {
       "id": "5bab5c44f992",
       "cat": "germs",
       "kind": "news",
@@ -1028,22 +1184,6 @@
       "outlets": 1,
       "outletNames": [
         "The Central App"
-      ],
-      "score": 1
-    },
-    {
-      "id": "ee56f4124855",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA lifts ground stop on Atlanta-bound Delta flights after system outage",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSllMNVNYeXZ4Mlc5RjlsRFlweFRoWnJxUHE2cEw2d0VsSjB6clB6TWc1WGtYZXYzcUtoOHh3bnBRNkNNeVEtN3lrWk5OajdZY0FaWVdkdkhsRUpCT0tiOHpjWmczWVhnU3UxTDB6MHBkZ29nUXhnczlnT0gzQTBlTWw3UlFrMkY5UUlYUC14bXRya0xx0gGaAUFVX3lxTE5GbV8wMjFfSXVYOF9RQzF6UHZpWThoOEdrbU15Ym5BUTUxTlVKTEhscmtob193R1U2T0txX01fcWlQeGxKcmZhQTd0Z3lEeGx2N0NOcnZ1bThPbHRRRmc3TGtsY2NTcmRfdmpyRXRNVGFkVEd5QmUwVUFTLTZWeGRwVEN0ZklCSFFrc0VwR3VfbFlpUDdDNHBwQnc?oc=5",
-      "source": "Fox News",
-      "publishedAt": "2026-11-22T16:53:24.000Z",
-      "latestAt": "2026-11-22T16:53:24.000Z",
-      "firstSeenAt": "2026-11-22T17:06:04.972Z",
-      "outlets": 1,
-      "outletNames": [
-        "Fox News"
       ],
       "score": 1
     },
@@ -1418,118 +1558,6 @@
       "score": 1
     },
     {
-      "id": "e244e0cc1873",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Morning Digest: Northeast Ohio library systems hit by data breach",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOR29XVFlOTUR6ZUdCa2tZc3ZWdm90NVBzR3Q5eWQ1TkpBV3NnWXp4U3pvbi1EeWZVVk5YZUVoRE14OGFoRDNNRm5fSVZxbTNpc1dfV2xEaUxsNlVUUGNxQjlybTFlaE5xNHhLRHR3YTZDNjBEa2x3dUljbWx0NlhXZTZpX3BBTTNUd2JNUHF1NDFBQVFnNHpNT3ZEeXIxdFFXcnJjbndNT1I4cVk4LUhpMDBVejF5QQ?oc=5",
-      "source": "News 5 Cleveland WEWS",
-      "publishedAt": "2026-11-22T09:08:10.000Z",
-      "latestAt": "2026-11-22T15:08:10.000Z",
-      "firstSeenAt": "2026-11-22T09:19:53.152Z",
-      "outlets": 1,
-      "outletNames": [
-        "News 5 Cleveland WEWS"
-      ],
-      "score": 1
-    },
-    {
-      "id": "4223f8e5b10c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Ground Stop Exposes Risks in Aging Air Traffic Systems",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9QMi1nN3F2d0IyYzZNLUk0a2NRaDlWMzJoUkdUblZuTVFUNTFJZUYtVGdQLWpvVmRlRkx5ZU5HRWNONm5Ga2NYQTRCLUthZWFUR0JULVhSTmlNT0JXc1c0?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-22T09:05:36.000Z",
-      "latestAt": "2026-11-22T09:05:36.000Z",
-      "firstSeenAt": "2026-11-22T09:19:53.152Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 1
-    },
-    {
-      "id": "6ed031a95f4f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Osius: Friday the 13th: Stuck in the ground stop",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTVZkY2x2eE1abDNFWmJhWGUtQnVIbWxQelZvQVVQMUNoLTNkTE5yU2hQRkhRWXNJRDJEN0tjMGNHQWwtSVJwS05DanFua0VHd2dNUF9Hb0VEdHdjYzBqRDJLRkktX0c4aVRRZGZHaXhiVmR4T0ptYnlNdzZNUTVBTGQtR3V2azlHejhQQnBJamwwSGVYZkpRMm5B?oc=5",
-      "source": "Aspen Daily News",
-      "publishedAt": "2026-11-22T08:57:45.000Z",
-      "latestAt": "2026-11-22T08:57:45.000Z",
-      "firstSeenAt": "2026-11-22T09:04:54.848Z",
-      "outlets": 1,
-      "outletNames": [
-        "Aspen Daily News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "621569550e77",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Bengaluru Power Outage Schedule: Locality-Wise Alert",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSi1XU3d4alJjMWRmMk1fRjQtVU9qTllxVzYyYmxLQV9wS1lGTXZibHh2cWtkMjRUX0czMGpDd3ZlOWlhOHV6Ym82dWNqZ0k4c3hxd29NWlJaSVdwVnJUTjhBZm9IcnNTODZlSHo5a1hqenc5Z0NRZXhJeTI5b3pIN0R6OVFlNFhZSTFvRTJsbUNjWXhWMnZxd1VwaG00UU9QMEJqU3lZSTk?oc=5",
-      "source": "Urban Acres",
-      "publishedAt": "2026-11-22T08:39:07.000Z",
-      "latestAt": "2026-11-22T08:39:07.000Z",
-      "firstSeenAt": "2026-11-22T08:49:48.445Z",
-      "outlets": 1,
-      "outletNames": [
-        "Urban Acres"
-      ],
-      "score": 1
-    },
-    {
-      "id": "7e716d430e2c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cardinal Services Data Breach Settlement — $850K",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ05DdkNTSUd0VGxYYi1tbXRJcDIwcmN4QUE1d0tRVjhaYU9BWXVLQmxwZk1zVXVkc1l4aUxuUmlpWXFYdGJ5NmJiVy1DeGZRdWkxdFlRRmV3cjBPSzFSeXpTSjZya2dKaGlkNm9yMVdld3BYQmdLeVZNLThUY3Q5dmxWZ1hMSlFxN3NaZ2RDTGpjS0pjWVZuM3ZNLTBtYVFm?oc=5",
-      "source": "openclassactions.com",
-      "publishedAt": "2026-11-22T08:23:52.000Z",
-      "latestAt": "2026-11-22T08:23:52.000Z",
-      "firstSeenAt": "2026-11-22T08:34:41.544Z",
-      "outlets": 1,
-      "outletNames": [
-        "openclassactions.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "33d0fa033e9c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UI Community HomeCare Data Breach Settlement — $2M",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVUNVRExjajFLSDVibUduUFFkajBOQmwxWDNVSlc3dW9BRDBJR0xNaEdEdDVtc1JBd29VbG1NQm1FX2g1VWVEOGY3dU5wak8zNS1xNEctbGpPb2sxWkt0S0VSTVY5N2hPZ0c4a1V3QkV0R1NteXE1cjFyeXlLZUh1c3NzaG41YWg0YnQ2eWJQbzZ3azZNMWlsc2JVeDJhdzBQXzlhQVlB?oc=5",
-      "source": "openclassactions.com",
-      "publishedAt": "2026-11-22T08:23:50.000Z",
-      "latestAt": "2026-11-22T08:23:50.000Z",
-      "firstSeenAt": "2026-11-22T08:34:41.544Z",
-      "outlets": 1,
-      "outletNames": [
-        "openclassactions.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "8e7d26216a38",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage schedules will be in effect in some regions on November 22",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPOUc0ZkNKMUxNUktkZF9Dd3VaaEVkdy04dExKMnpJSjU2REtRWF9kcjRLbUFKVjlNOWZiV3VZWWFzTVNGN04yVjZsVGwxaUZLWHRFX29qM2d1QlpxTzN0WTc1R3Q1V0dGVmloNGRFT3Z2ODBkc3JhTVhjMFlkTDF4MlljamFCalUwZDVNb2JraW5SeTFYYnNQU0JzYzU?oc=5",
-      "source": "UA.NEWS",
-      "publishedAt": "2026-11-22T07:29:05.000Z",
-      "latestAt": "2026-11-22T07:29:05.000Z",
-      "firstSeenAt": "2026-11-22T07:34:39.581Z",
-      "outlets": 1,
-      "outletNames": [
-        "UA.NEWS"
-      ],
-      "score": 1
-    },
-    {
       "id": "57a979ec4cea",
       "cat": "markets",
       "kind": "news",
@@ -1674,22 +1702,6 @@
       "score": 0.86
     },
     {
-      "id": "4ee4e22b5039",
-      "cat": "sun",
-      "kind": "news",
-      "title": "☀️ Solar Activity: Kp Index, Solar Wind, Flares and Aurora Forecast",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tXzFhTUtNbHNxTU9TY3RzNlVLVFVpYklvRnZnS3BEcE5NSWlwNm1BUWJJbi1iTnluTkJiWVBaT1dGOTdLTTFIdXBldHlMZ3FfT0ptQ1FPUWZ4M05tSGJONEdLVTdEbU8w?oc=5",
-      "source": "notre-planete.info",
-      "publishedAt": "2026-11-21T17:15:49.000Z",
-      "latestAt": "2026-11-21T17:15:49.000Z",
-      "firstSeenAt": "2026-11-22T01:33:37.048Z",
-      "outlets": 1,
-      "outletNames": [
-        "notre-planete.info"
-      ],
-      "score": 0.86
-    },
-    {
       "id": "af7444082351",
       "cat": "ai",
       "kind": "news",
@@ -1722,5 +1734,5 @@
       "score": 0.8
     }
   ],
-  "updatedAt": "2026-11-22T17:06:04.972Z"
+  "updatedAt": "2026-11-22T17:21:07.804Z"
 }
