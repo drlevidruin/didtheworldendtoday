@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T07:34:39.581Z",
+  "buildTime": "2026-11-22T07:49:34.639Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 02:34 ET",
+  "etStamp": "2026-11-22 02:49 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,15 +49,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1100,
-  "lastSuccessAt": "2026-11-22T07:34:39.581Z",
+  "headlinesRead": 969,
+  "lastSuccessAt": "2026-11-22T07:49:34.639Z",
   "rollingFallback": false,
   "cats": {
     "flights": 20,
     "earth": 7,
     "grid": 8,
-    "hacks": 24,
-    "internet": 13,
+    "hacks": 25,
+    "internet": 12,
     "germs": 8,
     "markets": 5,
     "weather": 6,
@@ -180,20 +180,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 808,
+      "count": 804,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     },
     "bing": {
       "ok": true,
-      "count": 261,
-      "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "count": 134,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,55 +205,56 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:34:39.581Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z"
+      "lastOkAt": "2026-11-22T07:49:34.639Z"
     }
   },
   "stories": [
@@ -461,6 +462,26 @@
       "score": 2.41
     },
     {
+      "id": "f42eaad8c569",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says",
+      "url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-21T08:41:00.000Z",
+      "latestAt": "2026-11-22T00:10:44.000Z",
+      "firstSeenAt": "2026-11-22T01:33:37.048Z",
+      "outlets": 5,
+      "outletNames": [
+        "Associated Press News",
+        "Chicago Tribune",
+        "HuffPost",
+        "BBC",
+        "Los Angeles Times on MSN"
+      ],
+      "score": 2.39
+    },
+    {
       "id": "16a963138cec",
       "cat": "hacks",
       "kind": "news",
@@ -477,24 +498,6 @@
         "FOX 32 Chicago"
       ],
       "score": 2.06
-    },
-    {
-      "id": "8921c65897d0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNS0RzYnRJVzA5MjhlSWJfODFMNDRMdDl3Zk81UkxlbklPbE8tQ2xMYWdzSElBdlF6eTJaeWRSdm9aa3JkYU5xbUZIUjUtc3VxZzlYUXhCOWplcHBDb1AzcEMzWXd1eTdndHdIVWlrUnVSMExWQnZaakd4Y3JYRkFZeE9POGNKTE5tRlhwTTJnWUs4QVBjM1l6OFpaYmVqNVZWa0ZIUU5R?oc=5",
-      "source": "SecurityWeek",
-      "publishedAt": "2026-11-21T12:08:50.000Z",
-      "latestAt": "2026-11-22T00:26:21.000Z",
-      "firstSeenAt": "2026-11-22T00:48:33.869Z",
-      "outlets": 3,
-      "outletNames": [
-        "SecurityWeek",
-        "https://www.findarticles.com/",
-        "findarticles.com"
-      ],
-      "score": 2.04
     },
     {
       "id": "3e4b1c709480",
@@ -583,6 +586,24 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "8921c65897d0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNS0RzYnRJVzA5MjhlSWJfODFMNDRMdDl3Zk81UkxlbklPbE8tQ2xMYWdzSElBdlF6eTJaeWRSdm9aa3JkYU5xbUZIUjUtc3VxZzlYUXhCOWplcHBDb1AzcEMzWXd1eTdndHdIVWlrUnVSMExWQnZaakd4Y3JYRkFZeE9POGNKTE5tRlhwTTJnWUs4QVBjM1l6OFpaYmVqNVZWa0ZIUU5R?oc=5",
+      "source": "SecurityWeek",
+      "publishedAt": "2026-11-21T12:08:50.000Z",
+      "latestAt": "2026-11-22T00:26:21.000Z",
+      "firstSeenAt": "2026-11-22T00:48:33.869Z",
+      "outlets": 3,
+      "outletNames": [
+        "SecurityWeek",
+        "https://www.findarticles.com/",
+        "findarticles.com"
+      ],
+      "score": 2.04
+    },
+    {
       "id": "eaceeef59447",
       "cat": "hacks",
       "kind": "news",
@@ -650,23 +671,6 @@
         "ANI News"
       ],
       "score": 1.87
-    },
-    {
-      "id": "34f6be7416fc",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI's crime database in hackers' hands after shocking security breach",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMGxMMF9kMTFCRkcwSjVhc1FpVndSZy12TUg2U0lqbVdHUlFNb1FweWg5SDVqZ29FSkVhSmJBclRFUVM5Q0VwZ1VmNDFTT0VkQ2FvV0x2WHlWLThWaUtvc0xVUTA4TUk2blFYb3VZeGY0SU5aSlFKaGlRMEx3X3hCMXZVal9LcHY2dWVaazU5VkM3VUZU?oc=5",
-      "source": "MEAWW News",
-      "publishedAt": "2026-11-21T16:12:33.000Z",
-      "latestAt": "2026-11-21T20:01:04.000Z",
-      "firstSeenAt": "2026-11-21T20:32:57.937Z",
-      "outlets": 2,
-      "outletNames": [
-        "MEAWW News",
-        "Gistmania"
-      ],
-      "score": 1.86
     },
     {
       "id": "86d770a3a530",
@@ -833,6 +837,23 @@
         "news.amomama.com"
       ],
       "score": 1.4
+    },
+    {
+      "id": "34f6be7416fc",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI's crime database in hackers' hands after shocking security breach",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMGxMMF9kMTFCRkcwSjVhc1FpVndSZy12TUg2U0lqbVdHUlFNb1FweWg5SDVqZ29FSkVhSmJBclRFUVM5Q0VwZ1VmNDFTT0VkQ2FvV0x2WHlWLThWaUtvc0xVUTA4TUk2blFYb3VZeGY0SU5aSlFKaGlRMEx3X3hCMXZVal9LcHY2dWVaazU5VkM3VUZU?oc=5",
+      "source": "MEAWW News",
+      "publishedAt": "2026-11-21T16:12:33.000Z",
+      "latestAt": "2026-11-21T20:01:04.000Z",
+      "firstSeenAt": "2026-11-21T20:32:57.937Z",
+      "outlets": 2,
+      "outletNames": [
+        "MEAWW News",
+        "Gistmania"
+      ],
+      "score": 1.86
     },
     {
       "id": "652eadbd4717",
@@ -1845,22 +1866,6 @@
       "score": 0.98
     },
     {
-      "id": "9e7f6fbe22c0",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Adrian Weckler: They call it ‘vulnageddon’ — it’s the reason that our IT networks will keep going down for the foreseeable future",
-      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNbHNJQURjRG1VcDF4OUsxQjZWSzNWSWZQZlpCczZISEJTQUNjZ3BsSHJXd1l2cDQyNTMxYUdpWWh6RUJxbnZfRjVBd1BaRkdQMG5Ucm9QNTBRTzJkSlR2SlR1YUNPX3BvTTduVFpUclhGLU1YUG42aDBuUm5iU0o2cFdYTEdTa08zb2dOQl9GVEZ2SlRZZ0w5TFEyNzZHX2hxNE9zUDJhdThOUmVVMlhhRURNdmpaU3lwanZPNG9hWHVZb19hS2pxRHZSZmdES2xEajVPR1VteWFzNzd6NWNpUGgzWjRJM0FMQmhYblZPQTBsN3dlTlE4bC1hcEd3Z3hwTXQzZDlHS216S0lMMHB3b3RTeF9OZw?oc=5",
-      "source": "Irish Independent",
-      "publishedAt": "2026-11-22T05:30:00.000Z",
-      "latestAt": "2026-11-22T05:30:00.000Z",
-      "firstSeenAt": "2026-11-22T07:34:39.581Z",
-      "outlets": 1,
-      "outletNames": [
-        "Irish Independent"
-      ],
-      "score": 0.97
-    },
-    {
       "id": "d1bfe0d98aab",
       "cat": "ai",
       "kind": "news",
@@ -1891,22 +1896,6 @@
         "SSBCrack"
       ],
       "score": 0.9
-    },
-    {
-      "id": "6bd2a72536cd",
-      "cat": "space",
-      "kind": "news",
-      "title": "Earth Captures Tiny Asteroid 2026 QQ8 as Temporary Mini Moon",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5BVHA0dnl1bzR5eUFiU2ZyVVRwbG9Wd05BaUFxWGxPM3RPVzhrcHJLR1JSYkZ0MGZCbl9jSEgtR090bXg1Q1RWYjFmZUExM3B1SW8xRXF4ZDkwNGJ4a0ttNHlYMVVka2M?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-21T20:10:00.000Z",
-      "latestAt": "2026-11-22T01:51:10.000Z",
-      "firstSeenAt": "2026-11-22T04:49:17.841Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 0.86
     },
     {
       "id": "4ee4e22b5039",
@@ -1955,6 +1944,22 @@
         "news.com.au"
       ],
       "score": 0.8
+    },
+    {
+      "id": "682f9d418bfa",
+      "cat": "space",
+      "kind": "news",
+      "title": "Four asteroids sweep past Earth on Saturday, one the size of an airplane",
+      "url": "https://www.msn.com/en-us/news/other/four-asteroids-sweep-past-earth-on-saturday-one-the-size-of-an-airplane/ar-AA2hVUWR",
+      "source": "Morning Overview on MSN",
+      "publishedAt": "2026-11-21T15:25:00.000Z",
+      "latestAt": "2026-11-21T15:25:00.000Z",
+      "firstSeenAt": "2026-11-22T07:49:34.639Z",
+      "outlets": 1,
+      "outletNames": [
+        "Morning Overview on MSN"
+      ],
+      "score": 0.73
     }
   ]
 }
