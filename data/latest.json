@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T15:20:46.257Z",
+  "buildTime": "2026-11-22T15:35:47.159Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 10:20 ET",
+  "etStamp": "2026-11-22 10:35 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,16 +45,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1042,
-  "lastSuccessAt": "2026-11-22T15:20:46.257Z",
+  "headlinesRead": 811,
+  "lastSuccessAt": "2026-11-22T15:35:47.159Z",
   "rollingFallback": false,
   "cats": {
     "flights": 24,
-    "hacks": 29,
+    "hacks": 30,
     "grid": 7,
-    "internet": 11,
-    "germs": 5,
-    "space": 3,
+    "internet": 10,
+    "germs": 6,
+    "space": 2,
     "earth": 4,
     "markets": 4,
     "weather": 5,
@@ -182,20 +182,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 760,
-      "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "count": 539,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 16 of 26 queries)",
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "bing": {
       "ok": true,
-      "count": 253,
-      "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "count": 244,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,56 +207,55 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T15:20:46.257Z"
+      "lastOkAt": "2026-11-22T15:35:47.159Z"
     }
   },
   "stories": [
@@ -449,23 +448,6 @@
       "score": 2.58
     },
     {
-      "id": "517283866840",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft blames months-old software glitch for global service outage",
-      "url": "https://www.kiro7.com/news/local/microsoft-blames-months-old-software-glitch-global-service-outage/A4GQBWFXYNFHHHZ452ZO5DVSAY/",
-      "source": "KIRO 7 News Seattle",
-      "publishedAt": "2026-11-21T15:29:00.000Z",
-      "latestAt": "2026-11-21T23:29:41.000Z",
-      "firstSeenAt": "2026-11-21T23:48:23.967Z",
-      "outlets": 2,
-      "outletNames": [
-        "KIRO 7 News Seattle",
-        "Yahoo Tech"
-      ],
-      "score": 2.41
-    },
-    {
       "id": "58e7fe865466",
       "cat": "grid",
       "kind": "news",
@@ -501,19 +483,36 @@
       "score": 1.99
     },
     {
-      "id": "9feb2a3e367f",
-      "cat": "germs",
+      "id": "f9b8b15de8ad",
+      "cat": "internet",
       "kind": "news",
-      "title": "Cases of bird flu are on the rise, especially in the north",
-      "url": "https://www.bluewin.ch/en/lifestyle/cases-of-bird-flu-are-on-the-rise-especially-in-the-north-li.3682447",
-      "source": "Bluewin",
-      "publishedAt": "2026-11-21T21:01:00.000Z",
-      "latestAt": "2026-11-22T05:04:19.000Z",
-      "firstSeenAt": "2026-11-22T05:04:22.396Z",
+      "title": "Centre considers new undersea cable link for remote Andaman islands",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWlqVFNBTHgzWl85R0NsdTVERF9OeXhhM0hKY3JUeFNweEJwZ2NtNmp5TUhJeG9sbDhRZDY5SnNNM3ZydWdUcXZqUWFZODNBY1g5dzhqY3BqYzhaMEhfcTZJRUJWeld3bnE5WF8yUnNpZUpLVkRMWjN3Zk9nTXRDeFZkWUE4Y3FqU0ZrcnZod2Z1Y2RGYkNIOElpbnUxQ1XSAawBQVVfeXFMTmhKU0tubHpEY0lmQ3dqVDAxc2pZMWRXVlVUeldmYmp0M3pOQjd5ZkR0Q04zdW9wVlI1b0hmWmN5NWxaTXpJYmR4QzVEZVdVTUcxQ3RicVRJNVZTY2VxSms3bVMwUWJ3VGIwbVVRazRmQjVudG45bEZPbFVsTDNBVlRocG1vMHE2SEJzMG5JTmxwYmI2MUk0TFFmTC1PS3h6bnA5T2pzUVNaWDM1dg?oc=5",
+      "source": "The Pioneer",
+      "publishedAt": "2026-11-22T09:30:19.000Z",
+      "latestAt": "2026-11-22T11:58:23.000Z",
+      "firstSeenAt": "2026-11-22T12:05:21.263Z",
       "outlets": 2,
       "outletNames": [
-        "blue News",
-        "Bluewin"
+        "The Pioneer",
+        "MyIndMakers"
+      ],
+      "score": 1.91
+    },
+    {
+      "id": "aef8ae7ce7c1",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Third case of bird flu found in commercial poultry",
+      "url": "https://www.msn.com/en-xl/news/other/third-case-of-bird-flu-found-in-commercial-poultry/ar-AA2hYX6F",
+      "source": "BBC on MSN",
+      "publishedAt": "2026-11-22T07:22:39.000Z",
+      "latestAt": "2026-11-22T15:22:44.000Z",
+      "firstSeenAt": "2026-11-22T15:35:47.159Z",
+      "outlets": 2,
+      "outletNames": [
+        "BBC on MSN",
+        "AOL.com"
       ],
       "score": 1.73
     },
@@ -638,21 +637,21 @@
       "score": 2
     },
     {
-      "id": "f9b8b15de8ad",
-      "cat": "internet",
+      "id": "9feb2a3e367f",
+      "cat": "germs",
       "kind": "news",
-      "title": "Centre considers new undersea cable link for remote Andaman islands",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWlqVFNBTHgzWl85R0NsdTVERF9OeXhhM0hKY3JUeFNweEJwZ2NtNmp5TUhJeG9sbDhRZDY5SnNNM3ZydWdUcXZqUWFZODNBY1g5dzhqY3BqYzhaMEhfcTZJRUJWeld3bnE5WF8yUnNpZUpLVkRMWjN3Zk9nTXRDeFZkWUE4Y3FqU0ZrcnZod2Z1Y2RGYkNIOElpbnUxQ1XSAawBQVVfeXFMTmhKU0tubHpEY0lmQ3dqVDAxc2pZMWRXVlVUeldmYmp0M3pOQjd5ZkR0Q04zdW9wVlI1b0hmWmN5NWxaTXpJYmR4QzVEZVdVTUcxQ3RicVRJNVZTY2VxSms3bVMwUWJ3VGIwbVVRazRmQjVudG45bEZPbFVsTDNBVlRocG1vMHE2SEJzMG5JTmxwYmI2MUk0TFFmTC1PS3h6bnA5T2pzUVNaWDM1dg?oc=5",
-      "source": "The Pioneer",
-      "publishedAt": "2026-11-22T09:30:19.000Z",
-      "latestAt": "2026-11-22T11:58:23.000Z",
-      "firstSeenAt": "2026-11-22T12:05:21.263Z",
+      "title": "Cases of bird flu are on the rise, especially in the north",
+      "url": "https://www.bluewin.ch/en/lifestyle/cases-of-bird-flu-are-on-the-rise-especially-in-the-north-li.3682447",
+      "source": "Bluewin",
+      "publishedAt": "2026-11-21T21:01:00.000Z",
+      "latestAt": "2026-11-22T05:04:19.000Z",
+      "firstSeenAt": "2026-11-22T05:04:22.396Z",
       "outlets": 2,
       "outletNames": [
-        "The Pioneer",
-        "MyIndMakers"
+        "blue News",
+        "Bluewin"
       ],
-      "score": 1.91
+      "score": 1.73
     },
     {
       "id": "6bd2a72536cd",
@@ -771,6 +770,22 @@
       "score": 1.39
     },
     {
+      "id": "288b7517e916",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Says Outlook Testing Missed Bug Behind Worldwide Outage",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMktjbmNDN0VrbFNBemJ1WnB1UE5LREJMaWs1bDdGY3NsM1hidGJ5WmQ2MUE3WUdiNDhmUE5SZVNZczZGUHhjMnNObTJkMWcxNVZYVk5ITThlS3N2bE9NbE5DUUUzdUg3amtxMW1TWjZVV0lRdTN5MVMzNjAxOWgzWGVHTDdDbWUyWVNuN2oydkl2bms?oc=5",
+      "source": "JournalArta",
+      "publishedAt": "2026-11-22T00:16:18.000Z",
+      "latestAt": "2026-11-22T00:16:18.000Z",
+      "firstSeenAt": "2026-11-22T00:33:30.018Z",
+      "outlets": 1,
+      "outletNames": [
+        "JournalArta"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "160f1572ae30",
       "cat": "weather",
       "kind": "news",
@@ -824,22 +839,6 @@
       ],
       "trending": 1000,
       "trendTerm": "weather chicago",
-      "score": 1.39
-    },
-    {
-      "id": "c46a4bb5c69b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Global tech sell-off deepens as Anthropic retreats near IPO price",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNU14RmhPUmV4cmp6dmtoQTBnbDVlcnRkTE9BekZOZnB1M3BIVEZ5dzE5TXJGQ0xtaEprblFQY1FwbFg2Tl95amlVN0hhUXlRSzllNWZQeGNNOU5KSnE5TEZwRGpsencyaDk3UFRXbnROWE9QYXNjV001R0JvSVRBVE4xeVZ1ZndybGY2dlhZTmJwd256TVBNU2Nqbms1d05P?oc=5",
-      "source": "Daily Voice Of Asia",
-      "publishedAt": "2026-11-21T15:57:56.000Z",
-      "latestAt": "2026-11-22T04:01:18.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Voice Of Asia"
-      ],
       "score": 1.39
     },
     {
@@ -944,6 +943,23 @@
         "Scripps News"
       ],
       "score": 1.73
+    },
+    {
+      "id": "d5a573541da5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers have attacked the FBI’s criminal database",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1acXBVak9YSTM3WFFwWm5ER0p5VUF5cTMyd0lkbDZ1MUNGYnN0UkwyemVGUHlpS2RKaFBucHphdE1SLWt6a1NTOVVzeXBXZXVLVktfTFp1ZTBhWkdZUGNONmZ0NFhMbVRJVlRCYlhFZDVrTEU?oc=5",
+      "source": "UkrMedia News",
+      "publishedAt": "2026-11-22T07:14:16.000Z",
+      "latestAt": "2026-11-22T07:19:23.000Z",
+      "firstSeenAt": "2026-11-22T15:35:47.159Z",
+      "outlets": 2,
+      "outletNames": [
+        "UkrMedia News",
+        "cedarnews.net"
+      ],
+      "score": 1.72
     },
     {
       "id": "1001ac6e1707",
@@ -1081,22 +1097,6 @@
       "score": 1.39
     },
     {
-      "id": "288b7517e916",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Says Outlook Testing Missed Bug Behind Worldwide Outage",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMktjbmNDN0VrbFNBemJ1WnB1UE5LREJMaWs1bDdGY3NsM1hidGJ5WmQ2MUE3WUdiNDhmUE5SZVNZczZGUHhjMnNObTJkMWcxNVZYVk5ITThlS3N2bE9NbE5DUUUzdUg3amtxMW1TWjZVV0lRdTN5MVMzNjAxOWgzWGVHTDdDbWUyWVNuN2oydkl2bms?oc=5",
-      "source": "JournalArta",
-      "publishedAt": "2026-11-22T00:16:18.000Z",
-      "latestAt": "2026-11-22T00:16:18.000Z",
-      "firstSeenAt": "2026-11-22T00:33:30.018Z",
-      "outlets": 1,
-      "outletNames": [
-        "JournalArta"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "cfa8d9fcb897",
       "cat": "internet",
       "kind": "news",
@@ -1105,6 +1105,22 @@
       "source": "Daily Voice Of Asia",
       "publishedAt": "2026-11-21T16:01:11.000Z",
       "latestAt": "2026-11-22T04:00:50.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 1,
+      "outletNames": [
+        "Daily Voice Of Asia"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "c46a4bb5c69b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Global tech sell-off deepens as Anthropic retreats near IPO price",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNU14RmhPUmV4cmp6dmtoQTBnbDVlcnRkTE9BekZOZnB1M3BIVEZ5dzE5TXJGQ0xtaEprblFQY1FwbFg2Tl95amlVN0hhUXlRSzllNWZQeGNNOU5KSnE5TEZwRGpsencyaDk3UFRXbnROWE9QYXNjV001R0JvSVRBVE4xeVZ1ZndybGY2dlhZTmJwd256TVBNU2Nqbms1d05P?oc=5",
+      "source": "Daily Voice Of Asia",
+      "publishedAt": "2026-11-21T15:57:56.000Z",
+      "latestAt": "2026-11-22T04:01:18.000Z",
       "firstSeenAt": "2026-11-21T16:17:26.966Z",
       "outlets": 1,
       "outletNames": [
@@ -1244,22 +1260,6 @@
       "score": 1.29
     },
     {
-      "id": "e4ee3a724b8a",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Ticketmaster service restored after nationwide outage affected fans at Usher, Chris Brown concert",
-      "url": "https://www.msn.com/en-us/news/other/ticketmaster-service-restored-after-nationwide-outage-affected-fans-at-usher-chris-brown-concert/ar-AA2hTI8k",
-      "source": "FOX 8 WVUE-TV on MSN",
-      "publishedAt": "2026-11-21T15:33:03.000Z",
-      "latestAt": "2026-11-21T15:33:03.000Z",
-      "firstSeenAt": "2026-11-21T23:48:23.967Z",
-      "outlets": 1,
-      "outletNames": [
-        "FOX 8 WVUE-TV on MSN"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "85b4e9a10a86",
       "cat": "flights",
       "kind": "news",
@@ -1322,6 +1322,22 @@
         "Herald.Wales"
       ],
       "score": 1.09
+    },
+    {
+      "id": "f7650a9c9fe7",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Delta Air Lines Facing Widespread Delays After System-Wide Computer Outage",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZ3VleTl5VDJZOFZiQnVOZEFPYU1yNnVaTzJpaFE2U0xHV2pQcEFnQkVTT2xRUEg1NE1TUlpTWEtZWS1URmZtQ0tXejluLVdqVlNCcnB3bkJIMnhMSTQ5b0poc3JneWF4QVZVaDFmaVlmSG9YM19sRElXNkZjbzVpbHFqdEpHYWNTTUJlai05WnRRQVRXQTB5ci1EYjNLYWcyeVhMd09zd1pPd054MDVnRmFKWUlPTEpOb3Z3VlZB?oc=5",
+      "source": "PYOK",
+      "publishedAt": "2026-11-22T15:24:58.000Z",
+      "latestAt": "2026-11-22T15:24:58.000Z",
+      "firstSeenAt": "2026-11-22T15:35:47.159Z",
+      "outlets": 1,
+      "outletNames": [
+        "PYOK"
+      ],
+      "score": 1
     },
     {
       "id": "fb7cb11cc130",
@@ -1948,22 +1964,6 @@
         "TechJuice"
       ],
       "score": 0.81
-    },
-    {
-      "id": "682f9d418bfa",
-      "cat": "space",
-      "kind": "news",
-      "title": "Four asteroids sweep past Earth on Saturday, one the size of an airplane",
-      "url": "https://www.msn.com/en-us/news/other/four-asteroids-sweep-past-earth-on-saturday-one-the-size-of-an-airplane/ar-AA2hVUWR",
-      "source": "Morning Overview on MSN",
-      "publishedAt": "2026-11-21T15:25:00.000Z",
-      "latestAt": "2026-11-21T15:25:00.000Z",
-      "firstSeenAt": "2026-11-22T11:35:10.685Z",
-      "outlets": 1,
-      "outletNames": [
-        "Morning Overview on MSN"
-      ],
-      "score": 0.66
     }
   ]
 }
