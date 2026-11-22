@@ -1,38 +1,38 @@
 {
   "google": {
-    "ok": true,
-    "count": 782,
-    "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
+    "ok": false,
+    "count": 0,
+    "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
     "lastOkAt": "2026-11-22T18:51:20.489Z"
   },
   "bing": {
     "ok": true,
-    "count": 271,
+    "count": 272,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
-    "lastOkAt": "2026-11-22T18:51:20.489Z"
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
+    "lastOkAt": "2026-11-22T19:06:21.385Z"
   },
   "gdelt": {
     "ok": false,
     "count": 0,
-    "error": "network error: UND_ERR_CONNECT_TIMEOUT",
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
+    "error": "timeout",
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
     "lastOkAt": "2026-11-22T18:36:27.451Z"
   },
   "hn": {
     "ok": true,
     "count": 2,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
-    "lastOkAt": "2026-11-22T18:51:20.489Z"
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
+    "lastOkAt": "2026-11-22T19:06:21.385Z"
   },
   "usgs": {
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
-    "lastOkAt": "2026-11-22T18:51:20.489Z",
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
+    "lastOkAt": "2026-11-22T19:06:21.385Z",
     "vital": {
       "quake": {
         "mag": 5.4,
@@ -48,8 +48,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
-    "lastOkAt": "2026-11-22T18:51:20.489Z",
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
+    "lastOkAt": "2026-11-22T19:06:21.385Z",
     "vital": {
       "kp": {
         "value": 0.33,
@@ -62,8 +62,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
-    "lastOkAt": "2026-11-22T18:51:20.489Z",
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
+    "lastOkAt": "2026-11-22T19:06:21.385Z",
     "vital": {
       "asteroid": {
         "des": "2026 WA1",
@@ -78,13 +78,19 @@
   },
   "faa": {
     "ok": true,
-    "count": 0,
+    "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
-    "lastOkAt": "2026-11-22T18:51:20.489Z",
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
+    "lastOkAt": "2026-11-22T19:06:21.385Z",
     "vital": {
       "faa": {
-        "groundStops": [],
+        "groundStops": [
+          {
+            "airport": "LGA",
+            "hub": true,
+            "reason": "low visibility"
+          }
+        ],
         "nationwide": false,
         "groundDelays": 4,
         "closures": 0,
@@ -96,8 +102,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
-    "lastOkAt": "2026-11-22T18:51:20.489Z",
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
+    "lastOkAt": "2026-11-22T19:06:21.385Z",
     "vital": {
       "status": {
         "worst": "minor",
@@ -159,21 +165,21 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
     "lastOkAt": "2026-11-22T18:36:27.451Z"
   },
   "trends": {
     "ok": true,
-    "count": 27,
+    "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
-    "lastOkAt": "2026-11-22T18:51:20.489Z"
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
+    "lastOkAt": "2026-11-22T19:06:21.385Z"
   },
   "topstories": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-22T18:51:20.489Z",
-    "lastOkAt": "2026-11-22T18:51:20.489Z"
+    "lastTryAt": "2026-11-22T19:06:21.385Z",
+    "lastOkAt": "2026-11-22T19:06:21.385Z"
   }
 }
