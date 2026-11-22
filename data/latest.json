@@ -1,14 +1,13 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T16:05:54.465Z",
+  "buildTime": "2026-11-22T16:20:54.797Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 11:05 ET",
-  "score": 72,
+  "etStamp": "2026-11-22 11:20 ET",
+  "score": 66,
   "fired": [
     "flights",
     "hacks",
     "internet",
-    "space",
     "sun",
     "earth",
     "markets",
@@ -24,7 +23,7 @@
       "points": 6
     }
   ],
-  "change": 1,
+  "change": -5,
   "yesterday": {
     "date": "2026-11-21",
     "score": 71,
@@ -45,16 +44,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 322,
-  "lastSuccessAt": "2026-11-22T16:05:54.465Z",
+  "headlinesRead": 529,
+  "lastSuccessAt": "2026-11-22T16:20:54.797Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
-    "hacks": 31,
-    "grid": 8,
+    "hacks": 29,
+    "grid": 10,
     "internet": 9,
-    "germs": 7,
-    "space": 2,
+    "germs": 8,
+    "space": 1,
     "earth": 4,
     "markets": 4,
     "weather": 5,
@@ -168,7 +167,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -187,57 +186,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 36,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "count": 284,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 6 of 26 queries)",
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     },
     "bing": {
       "ok": true,
-      "count": 258,
-      "error": null,
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "count": 217,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-22T12:50:28.187Z"
     },
     "hn": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +249,13 @@
       "ok": true,
       "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T16:05:54.465Z"
+      "lastOkAt": "2026-11-22T16:20:54.797Z"
     }
   },
   "stories": [
@@ -449,6 +448,24 @@
       "score": 2.58
     },
     {
+      "id": "e309da46447d",
+      "cat": "germs",
+      "kind": "news",
+      "title": "After bird flu concerns impact egg exports from Namakkal, TN poultry farmers seek special export zone",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQV196UnlYOVBDaHJPeXlobHFlLXN6S3FVaVAzRDJrdy1hMlNLOWJoUGJFcl9SZmVydHQ5ejBkQk9WRGdMUGdmc2JiNVo4LVNFbEpSTFA5ZWhNc3Uzd1huNWdpQWNibHd6WHJFQ1pWRmJCN3hXc2djQktqUkh2NjNkS0ZJWGVkZ3FKUG9PR0lxRV9RdGtQTDA2UDBKOV9TN0ktV2pmRm95c25Qd1F2djdOQjhwQlYzTWZCdFMxTXFyc19aM1FmRkpJT1BLREJITjNfMW1kT1lDTjUxWkpfZ1hvT21feUVFQdIB6wFBVV95cUxQSXAwZk9uNWhvakoxa2xjWkNhTnBnaWpRcWN4S2lDNHhhdHNvTHZfNUdITGQ2Sk5uVzRPQ1hRLV9zQTBMUndFcnpaTHpqVU43dkVPeElvZjBXY2lCVHE5d0N3c0Z0SXBNUE9YNFFBMFNLMWtTWlEtZFFIc1FEei0wc3ZuM01hMldma3ZaMXNJbXV3cFpfQjJFVnpDNTZydDV3ZmN3ZXlnZ0pHb2wyZVhfZ3djaGliUDRNdXBiWEVIdm9GNjVFVjA0aEdjNVVkZE12ZlJNdXZWbzg0UWc4TUdLRGoyLUtYTzJXek9N?oc=5",
+      "source": "The Hans India",
+      "publishedAt": "2026-11-22T10:46:53.000Z",
+      "latestAt": "2026-11-22T12:57:41.000Z",
+      "firstSeenAt": "2026-11-22T11:05:07.226Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Hans India",
+        "Social News XYZ",
+        "Tripuratimes"
+      ],
+      "score": 2.57
+    },
+    {
       "id": "aef8ae7ce7c1",
       "cat": "germs",
       "kind": "news",
@@ -474,7 +491,7 @@
       "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNSDJvZE1jdkJwWVNoTUVYNWdLb1pmaUFoY3g3UTZQeGpuNXZ1TDBZTFdyeUFGcFpIWng0T011TkVvandsWlZiUzAzUGVGV01EV092aGhuOG1IN25mSjNyd2xsQWxmSTZnaXp2RVJJekI0bjJaTnN3enNfUjFNR0VsbU8xTGpyWjFDN01OVlhsZm11WFV1Ymk2TWgzSlRrZUUwbG9MUDV6Rlk5MkFFWGVHM3Bkb2swX2sybnhYWlhWc3ZOMzFpYXNQTGtud0VhaGxLclp3YUY5Sl9UVWlIUjJDM0Z4MHZwUVBhMlB5MjJQVEZ4eU9nRWfSAfsBQVVfeXFMTUdlMC05eGNBek12TG44N2xRZWh2UERXazV3OENyMHY2VFlmTTlIbGZwcVdTTHVPUFlZbUR5aXJlNWNzbUZoNWQ2MVU0Rmw0bHJBbnBfR3N2VFpZYVh4Rko0TzlwOUdDbDRsUmVIanZGSlg3VEF3Z194RG5OX1ctV0FvZ3duakttNGJjYXUxQzhFdnAwOUhEenJlc28tTllWTXUyZlE1Wjd1OHYyMVpwejdNLXV1LUpjX3pFZFlzU1cwSXpjN3FLdDlfaTk3T3U2Q2daRmZZZ3hFWVBaWUs2c2hOaWdJb01lZTlGRWhQZVBFa213dTB3ZXZmYVU?oc=5",
       "source": "India TV News",
       "publishedAt": "2026-11-22T04:40:35.000Z",
-      "latestAt": "2026-11-22T14:05:00.000Z",
+      "latestAt": "2026-11-22T15:27:13.000Z",
       "firstSeenAt": "2026-11-22T14:35:43.292Z",
       "outlets": 3,
       "outletNames": [
@@ -485,38 +502,21 @@
       "score": 2.16
     },
     {
-      "id": "e309da46447d",
-      "cat": "germs",
+      "id": "5bbfa7de489f",
+      "cat": "grid",
       "kind": "news",
-      "title": "After bird flu concerns impact egg exports from Namakkal, TN poultry farmers seek special export zone",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQV196UnlYOVBDaHJPeXlobHFlLXN6S3FVaVAzRDJrdy1hMlNLOWJoUGJFcl9SZmVydHQ5ejBkQk9WRGdMUGdmc2JiNVo4LVNFbEpSTFA5ZWhNc3Uzd1huNWdpQWNibHd6WHJFQ1pWRmJCN3hXc2djQktqUkh2NjNkS0ZJWGVkZ3FKUG9PR0lxRV9RdGtQTDA2UDBKOV9TN0ktV2pmRm95c25Qd1F2djdOQjhwQlYzTWZCdFMxTXFyc19aM1FmRkpJT1BLREJITjNfMW1kT1lDTjUxWkpfZ1hvT21feUVFQdIB6wFBVV95cUxQSXAwZk9uNWhvakoxa2xjWkNhTnBnaWpRcWN4S2lDNHhhdHNvTHZfNUdITGQ2Sk5uVzRPQ1hRLV9zQTBMUndFcnpaTHpqVU43dkVPeElvZjBXY2lCVHE5d0N3c0Z0SXBNUE9YNFFBMFNLMWtTWlEtZFFIc1FEei0wc3ZuM01hMldma3ZaMXNJbXV3cFpfQjJFVnpDNTZydDV3ZmN3ZXlnZ0pHb2wyZVhfZ3djaGliUDRNdXBiWEVIdm9GNjVFVjA0aEdjNVVkZE12ZlJNdXZWbzg0UWc4TUdLRGoyLUtYTzJXek9N?oc=5",
-      "source": "The Hans India",
-      "publishedAt": "2026-11-22T10:49:58.000Z",
-      "latestAt": "2026-11-22T10:53:16.000Z",
-      "firstSeenAt": "2026-11-22T11:05:07.226Z",
+      "title": "Crews work to restore power outage in Bridgeport",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPd3RGNTU3NlNQa0MxamY4MGpsT3VrU0V4WlQ5bmpSN19Zc3Y4VkZHMG5qZGNuWGZFeG12UVpPSTFyUVJqa0VKbC10N0RWZzd3OEx5LUd1TlhCWTV1UFoxaTVMRWUxZFBhTXR2OVRSLW5XajQ3M1BXdl9ZNEZnSmFzSTdaaFlNNE1VNFRsZXk3WWJHMjc4NkJJc084M3YtMzZ60gGoAUFVX3lxTE8teEdaRWN2aTRfUVhkOGh0ZGxQdjVtbm1VVFZUaGwxT2doRkpwVTRPNERsYTdQZm92T1RQYS16Q2NxdWx1TmEtQmR2VjZnVlNQRENiMnRmcVVaVGhlRnNGTUM1VVc2bXdzSmVjVmZTQUt1VUMtcEJuaDRLU3FQWjdraHRYRzJvcEJjZXRJR1o1UXJqUnZfNEE3c0hKbFVzY20tR0pYTzljcg?oc=5",
+      "source": "NBC Connecticut",
+      "publishedAt": "2026-11-22T14:49:13.000Z",
+      "latestAt": "2026-11-22T14:55:19.000Z",
+      "firstSeenAt": "2026-11-22T16:20:54.797Z",
       "outlets": 2,
       "outletNames": [
-        "The Hans India",
-        "Social News XYZ"
+        "NBC Connecticut",
+        "cedarnews.net"
       ],
-      "score": 1.99
-    },
-    {
-      "id": "f9b8b15de8ad",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Centre considers new undersea cable link for remote Andaman islands",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWlqVFNBTHgzWl85R0NsdTVERF9OeXhhM0hKY3JUeFNweEJwZ2NtNmp5TUhJeG9sbDhRZDY5SnNNM3ZydWdUcXZqUWFZODNBY1g5dzhqY3BqYzhaMEhfcTZJRUJWeld3bnE5WF8yUnNpZUpLVkRMWjN3Zk9nTXRDeFZkWUE4Y3FqU0ZrcnZod2Z1Y2RGYkNIOElpbnUxQ1XSAawBQVVfeXFMTmhKU0tubHpEY0lmQ3dqVDAxc2pZMWRXVlVUeldmYmp0M3pOQjd5ZkR0Q04zdW9wVlI1b0hmWmN5NWxaTXpJYmR4QzVEZVdVTUcxQ3RicVRJNVZTY2VxSms3bVMwUWJ3VGIwbVVRazRmQjVudG45bEZPbFVsTDNBVlRocG1vMHE2SEJzMG5JTmxwYmI2MUk0TFFmTC1PS3h6bnA5T2pzUVNaWDM1dg?oc=5",
-      "source": "The Pioneer",
-      "publishedAt": "2026-11-22T09:30:19.000Z",
-      "latestAt": "2026-11-22T11:58:23.000Z",
-      "firstSeenAt": "2026-11-22T12:05:21.263Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Pioneer",
-        "MyIndMakers"
-      ],
-      "score": 1.91
+      "score": 1.95
     },
     {
       "id": "sig:faa-stop:HOU:2026-11-22",
@@ -637,6 +637,23 @@
         "news.az"
       ],
       "score": 2
+    },
+    {
+      "id": "f9b8b15de8ad",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Centre considers new undersea cable link for remote Andaman islands",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWlqVFNBTHgzWl85R0NsdTVERF9OeXhhM0hKY3JUeFNweEJwZ2NtNmp5TUhJeG9sbDhRZDY5SnNNM3ZydWdUcXZqUWFZODNBY1g5dzhqY3BqYzhaMEhfcTZJRUJWeld3bnE5WF8yUnNpZUpLVkRMWjN3Zk9nTXRDeFZkWUE4Y3FqU0ZrcnZod2Z1Y2RGYkNIOElpbnUxQ1XSAawBQVVfeXFMTmhKU0tubHpEY0lmQ3dqVDAxc2pZMWRXVlVUeldmYmp0M3pOQjd5ZkR0Q04zdW9wVlI1b0hmWmN5NWxaTXpJYmR4QzVEZVdVTUcxQ3RicVRJNVZTY2VxSms3bVMwUWJ3VGIwbVVRazRmQjVudG45bEZPbFVsTDNBVlRocG1vMHE2SEJzMG5JTmxwYmI2MUk0TFFmTC1PS3h6bnA5T2pzUVNaWDM1dg?oc=5",
+      "source": "The Pioneer",
+      "publishedAt": "2026-11-22T09:30:19.000Z",
+      "latestAt": "2026-11-22T11:58:23.000Z",
+      "firstSeenAt": "2026-11-22T12:05:21.263Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Pioneer",
+        "MyIndMakers"
+      ],
+      "score": 1.91
     },
     {
       "id": "9feb2a3e367f",
@@ -826,24 +843,6 @@
       "score": 1.39
     },
     {
-      "id": "69ac125ac2fb",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Second consecutive day of near record warmth: Saturday’s predicted 72 degrees to tie 113-year-old record for the date",
-      "url": "https://wgntv.com/weather/chicago-weather-saturday-11212026/",
-      "source": "WGN-TV",
-      "publishedAt": "2026-11-21T16:50:00.000Z",
-      "latestAt": "2026-11-22T13:20:00.000Z",
-      "firstSeenAt": "2026-11-21T17:17:32.491Z",
-      "outlets": 1,
-      "outletNames": [
-        "WGN-TV"
-      ],
-      "trending": 1000,
-      "trendTerm": "weather chicago",
-      "score": 1.39
-    },
-    {
       "id": "652eadbd4717",
       "cat": "flights",
       "kind": "news",
@@ -860,6 +859,23 @@
         "WSJ"
       ],
       "score": 2.29
+    },
+    {
+      "id": "ebe27cfc8a8f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "At least 3,500 Delta flights delayed at major US airports as airline hit with outage sparking Thanksgiving travel chaos",
+      "url": "https://www.the-sun.com/travel/17340877/delta-air-line-outage-delays-thanksgiving-travel-atlanta/",
+      "source": "The US Sun",
+      "publishedAt": "2026-11-22T02:02:00.000Z",
+      "latestAt": "2026-11-22T07:02:00.000Z",
+      "firstSeenAt": "2026-11-22T15:50:52.043Z",
+      "outlets": 2,
+      "outletNames": [
+        "The US Sun",
+        "The Sun"
+      ],
+      "score": 2.16
     },
     {
       "id": "bfe1d029b305",
@@ -894,23 +910,6 @@
         "The Morning"
       ],
       "score": 1.99
-    },
-    {
-      "id": "34f6be7416fc",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI's crime database in hackers' hands after shocking security breach",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMGxMMF9kMTFCRkcwSjVhc1FpVndSZy12TUg2U0lqbVdHUlFNb1FweWg5SDVqZ29FSkVhSmJBclRFUVM5Q0VwZ1VmNDFTT0VkQ2FvV0x2WHlWLThWaUtvc0xVUTA4TUk2blFYb3VZeGY0SU5aSlFKaGlRMEx3X3hCMXZVal9LcHY2dWVaazU5VkM3VUZU?oc=5",
-      "source": "MEAWW News",
-      "publishedAt": "2026-11-21T16:12:33.000Z",
-      "latestAt": "2026-11-21T20:01:04.000Z",
-      "firstSeenAt": "2026-11-21T20:32:57.937Z",
-      "outlets": 2,
-      "outletNames": [
-        "MEAWW News",
-        "Gistmania"
-      ],
-      "score": 1.86
     },
     {
       "id": "86d770a3a530",
@@ -962,23 +961,6 @@
         "cedarnews.net"
       ],
       "score": 1.72
-    },
-    {
-      "id": "347cb0aab8f9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI Investigates Suspected Cyberattack on Sensitive US Criminal Database",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1YZnJkYWg3LVNla2pYTVhxemhGdENDVmhIS2RrVHUyUEplWk9NMmFzVVZ4N2hWVkMzMHh2YllYSWtsaXhmbzgwc1RTcEtjd0dKaVNndmpjZFBVREY1WTVEbHZ0N0VjUnlVV3lnQktzSzN6dC1zeWtLaUVyTQ?oc=5",
-      "source": "GreekReporter.com",
-      "publishedAt": "2026-11-21T16:11:03.000Z",
-      "latestAt": "2026-11-22T06:00:39.000Z",
-      "firstSeenAt": "2026-11-22T06:19:24.497Z",
-      "outlets": 2,
-      "outletNames": [
-        "GreekReporter.com",
-        "Barlaman Today"
-      ],
-      "score": 1.53
     },
     {
       "id": "c08956012312",
@@ -1061,6 +1043,24 @@
       "outletNames": [
         "NBC Los Angeles"
       ],
+      "score": 1.39
+    },
+    {
+      "id": "69ac125ac2fb",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Second consecutive day of near record warmth: Saturday’s predicted 72 degrees to tie 113-year-old record for the date",
+      "url": "https://wgntv.com/weather/chicago-weather-saturday-11212026/",
+      "source": "WGN-TV",
+      "publishedAt": "2026-11-21T16:50:00.000Z",
+      "latestAt": "2026-11-22T13:20:00.000Z",
+      "firstSeenAt": "2026-11-21T17:17:32.491Z",
+      "outlets": 1,
+      "outletNames": [
+        "WGN-TV"
+      ],
+      "trending": 1000,
+      "trendTerm": "weather chicago",
       "score": 1.39
     },
     {
@@ -1211,20 +1211,36 @@
       "score": 1.09
     },
     {
-      "id": "ebe27cfc8a8f",
-      "cat": "flights",
+      "id": "91912766c581",
+      "cat": "markets",
       "kind": "news",
-      "title": "At least 3,500 Delta flights delayed at major US airports as airline hit with outage sparking Thanksgiving travel chaos",
-      "url": "https://www.the-sun.com/travel/17340877/delta-air-line-outage-delays-thanksgiving-travel-atlanta/",
-      "source": "The US Sun",
-      "publishedAt": "2026-11-22T02:02:00.000Z",
-      "latestAt": "2026-11-22T02:02:00.000Z",
-      "firstSeenAt": "2026-11-22T15:50:52.043Z",
+      "title": "Stocks plunge amid biggest IPO",
+      "url": "https://www.philstar.com/business/2026/11/23/2571911/stocks-plunge-amid-biggest-ipo",
+      "source": "Philstar.com",
+      "publishedAt": "2026-11-22T02:00:00.000Z",
+      "latestAt": "2026-11-22T02:00:00.000Z",
+      "firstSeenAt": "2026-11-22T16:20:54.797Z",
       "outlets": 1,
       "outletNames": [
-        "The US Sun"
+        "Philstar.com"
       ],
-      "score": 1.08
+      "score": 1.07
+    },
+    {
+      "id": "a52c92b87667",
+      "cat": "germs",
+      "kind": "news",
+      "title": "A young Egret flew 38 hours nonstop in Australia, now scientists are tracking birds to monitor bird flu",
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPQVByLUw0cjlOTFFqcnUxM1JfR2NwNnJ5RDZLbS1xTHk5SnNZVkNTT1hzZnBwYWlsY3ZpbUdvSFBqNWZHdlQ3RUpWR0lhbzF0MUx4WlIzQkRTU3Q3ZkFIMVFsSXlpb2tuMEcxdHlrUzVWNk5NeWFsRzA5VFVJS3ZGeHlYTUxtcHdyQ3hzTFlTX1JpWEU4bzdIdzJTWVhGdEVPNFdJRWI3MVFrTXFIZXF0M3BoREJYT19GMlRYMzZqWF8xV3dxSXRrMVJtNjViQ1Y2NHZ2WWc1QmF4MzdrclRFVVA5dW42bnpSTEc5N25EREQta1dKMXM1SE9BLWlEdy11Q0xub9IBigJBVV95cUxOdkU2TDUwRFhLSXZpVnhGT0MzWUcza2VtdUZOcGg4ZHY1cXFhMTJ0d2l1bHZhQ2dTRDN2emJ3cmJuSHQ4ZG9oUnZfcU1PS0FzVDVMOVZydk5CYmp4cmd2bFFVQkJ3NjlkWEFjMUZlakZvanhYY1JmZE5oazZnWkNsaFZQWm9qdkhScTItcTRSODNvVHhCWlBHYnJaLVRCSlBwWC1aYi10cEhFTHRyT19pNWN2YjZ1Qzltc1poQUhMTjdwZkdoYkc3QXoxQXI2VHdlM0MzXzRkcmFOeFRzMnI5MGJNdW93cndybGljUmVjRHRGSGc5WWtha0RwTGw1aHMtVkREZHd6SWc2UQ?oc=5",
+      "source": "The Economic Times",
+      "publishedAt": "2026-11-22T16:04:39.000Z",
+      "latestAt": "2026-11-22T16:04:39.000Z",
+      "firstSeenAt": "2026-11-22T16:20:54.797Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Economic Times"
+      ],
+      "score": 1
     },
     {
       "id": "f7650a9c9fe7",
@@ -1732,7 +1748,7 @@
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRlpLdHc4cDhiXy1jU2J6QXphd1VwSllvck9kZGJ6UnFDRk4xTktHbkpuNzBmbnYwMVE2TXpCR1pOanE0MjdPeExhX1Zkb0RNOTZfNFY1U3RkS0RqSjMxNUNNdDgwdUgtQmdqYzJBQnNWeGJQWWxONDlMdUpvNkRYbWNCdlNwRzYtN0JQT1Zn?oc=5",
       "source": "100.1 BayFM",
       "publishedAt": "2026-11-22T03:18:14.000Z",
-      "latestAt": "2026-11-22T03:18:14.000Z",
+      "latestAt": "2026-11-22T09:03:15.000Z",
       "firstSeenAt": "2026-11-22T03:33:57.721Z",
       "outlets": 1,
       "outletNames": [
@@ -1785,6 +1801,22 @@
       "outlets": 1,
       "outletNames": [
         "CyberSecurityNews"
+      ],
+      "score": 1
+    },
+    {
+      "id": "b0d76e595fde",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Berbice Chamber demands answers from GPL over 40-hour power outage",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY2hpeU9PVWN0QkR2SzNQN3c2SDlmYjIxb3liZ3NFNzlsYnc3QUZkZEw2bnBER1pzSjBDT0tSNnNLNXNSc2dYcXljMXVqNm0yVkppb2s0XzkweElDOHN3TG90U09fc0lXYkJ0Vkc4VmJnUjJKdktfbG9vMFhyZHFEMVdKcUJPYWlpY0Z1MnZha0RFTURCb0x1d21Qc0hPcWs?oc=5",
+      "source": "News Room Guyana",
+      "publishedAt": "2026-11-22T01:57:06.000Z",
+      "latestAt": "2026-11-22T01:57:06.000Z",
+      "firstSeenAt": "2026-11-22T02:03:41.065Z",
+      "outlets": 1,
+      "outletNames": [
+        "News Room Guyana"
       ],
       "score": 1
     },
@@ -1853,22 +1885,6 @@
       "score": 0.9
     },
     {
-      "id": "6ba194e9c913",
-      "cat": "space",
-      "kind": "news",
-      "title": "Earth’s Temporary Mini-Moon 2026 QQ8 Will Depart in December",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWHAzVWFpUGJoa3RodnhWNWZHNTZFSWdoNjJoZHBtNThYR1RqYW0zOEo3bEZIZ1ByVlhGSE9DN0hWcEY4TFo0RS0yTWVFWk1uNkNmUk9VS0xMR1o3YUs2TTRTbXB5UXIxby1iVkVoZ2RVSUw3WnFPN1ZGdU50d2tqX2JCZEE2YS0tLU1GTnZKWQ?oc=5",
-      "source": "SSBCrack",
-      "publishedAt": "2026-11-21T16:08:13.000Z",
-      "latestAt": "2026-11-21T16:08:13.000Z",
-      "firstSeenAt": "2026-11-21T22:18:18.980Z",
-      "outlets": 1,
-      "outletNames": [
-        "SSBCrack"
-      ],
-      "score": 0.9
-    },
-    {
       "id": "13b34f7d2321",
       "cat": "earth",
       "kind": "news",
@@ -1883,22 +1899,6 @@
         "ThePrint"
       ],
       "score": 0.89
-    },
-    {
-      "id": "51fa9dc6576f",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Tech stocks plunge as investors lose faith in AI build-out",
-      "url": "https://newsroom.co.nz/2026/11/23/tech-stocks-plunge-as-investors-lose-faith-in-ai-build-out/",
-      "source": "Newsroom",
-      "publishedAt": "2026-11-22T08:00:00.000Z",
-      "latestAt": "2026-11-22T08:00:00.000Z",
-      "firstSeenAt": "2026-11-22T16:05:54.465Z",
-      "outlets": 1,
-      "outletNames": [
-        "Newsroom"
-      ],
-      "score": 0.87
     },
     {
       "id": "382b197da3a9",
