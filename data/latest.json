@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T21:58:03.359Z",
+  "buildTime": "2026-11-22T22:21:49.827Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 16:58 ET",
+  "etStamp": "2026-11-22 17:21 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,16 +44,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1101,
-  "lastSuccessAt": "2026-11-22T21:58:03.359Z",
+  "headlinesRead": 1045,
+  "lastSuccessAt": "2026-11-22T22:21:49.827Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 35,
-    "hacks": 22,
+    "flights": 37,
+    "hacks": 21,
     "internet": 12,
     "germs": 4,
     "grid": 4,
-    "ai": 4,
+    "ai": 3,
     "weather": 4,
     "markets": 4,
     "sun": 4,
@@ -63,10 +63,10 @@
   "vital": {
     "quake": {
       "mag": 5.4,
-      "place": "9 km NNE of Carhuamayo, Peru",
-      "time": "2026-11-22T21:35:30.974Z",
+      "place": "9 km N of Carhuamayo, Peru",
+      "time": "2026-11-22T21:35:31.763Z",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucuf",
-      "pager": null,
+      "pager": "green",
       "tsunami": false
     },
     "kp": {
@@ -97,7 +97,7 @@
         }
       ],
       "nationwide": false,
-      "groundDelays": 3,
+      "groundDelays": 2,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -191,15 +191,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 792,
+      "count": 791,
       "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
-      "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "count": 219,
+      "error": "6 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     },
     "gdelt": {
       "ok": false,
@@ -211,37 +211,37 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     },
     "faa": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     },
     "x": {
       "ok": true,
@@ -254,13 +254,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T21:58:03.359Z"
+      "lastOkAt": "2026-11-22T22:21:49.827Z"
     }
   },
   "stories": [
@@ -517,9 +517,9 @@
       "url": "https://www.newsweek.com/ground-stop-at-worlds-busiest-airport-delays-delta-flights-across-us-12753772",
       "source": "Newsweek",
       "publishedAt": "2026-11-22T02:07:24.000Z",
-      "latestAt": "2026-11-22T20:37:03.000Z",
+      "latestAt": "2026-11-22T21:04:17.000Z",
       "firstSeenAt": "2026-11-22T19:36:25.859Z",
-      "outlets": 25,
+      "outlets": 26,
       "outletNames": [
         "Ticker News",
         "Newsweek",
@@ -545,9 +545,10 @@
         "FOX One",
         "KDBC",
         "MEAWW News",
-        "WJLA"
+        "WJLA",
+        "KOMO"
       ],
-      "score": 4
+      "score": 4.04
     },
     {
       "id": "sig:faa-stop:HPN:2026-11-22",
@@ -735,22 +736,6 @@
       "score": 1.4
     },
     {
-      "id": "4931af518ce8",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Another day of record high temperatures!",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWnJ0a3dWenJrTS1NMUdwWjZhU3NUQXI1dGRNcHRHblFtMWJ3b1pqdTZiZDhldk5xaGpha01zVjd1ZXJBNmVpNDdMSm50YkRRVGlESnByMTRScURiVnlUMklNaEcwRlBTX1Z0WE5VR2F4OHRwSXR6TENQbVRDSzF4RQ?oc=5",
-      "source": "WMTV 15 NEWS",
-      "publishedAt": "2026-11-21T22:06:00.000Z",
-      "latestAt": "2026-11-21T22:06:00.000Z",
-      "firstSeenAt": "2026-11-21T22:18:18.980Z",
-      "outlets": 1,
-      "outletNames": [
-        "WMTV 15 NEWS"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "ca68af327c34",
       "cat": "internet",
       "kind": "news",
@@ -847,6 +832,22 @@
       "score": 1.07
     },
     {
+      "id": "174545db5029",
+      "cat": "markets",
+      "kind": "news",
+      "title": "S&P 500 Faces Thanksgiving Week After Sharp Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9xdHpLM2FUakZhTElfZGhrRVp0bVlnRlVIeV9VTzlFN3NRNTVRNENxRW1OdVg5RmdEemlNZXhHNmpvWjFFbU9wOU5YZC1seWd3Z21jLW9keUNWNW9vdzFjaklUX3BRU2Fv?oc=5",
+      "source": "Peradaban.id",
+      "publishedAt": "2026-11-22T21:09:00.000Z",
+      "latestAt": "2026-11-22T21:27:00.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 1,
+      "outletNames": [
+        "Peradaban.id"
+      ],
+      "score": 1
+    },
+    {
       "id": "sig:faa-stop:HOU:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -912,6 +913,24 @@
       "score": 3.13
     },
     {
+      "id": "1d292ca98298",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air Lines flights delayed nationwide on Sunday due to automation system issue",
+      "url": "https://www.masslive.com/news/2026/11/delta-air-lines-flights-delayed-nationwide-on-sunday-due-to-automation-system-issue.html",
+      "source": "MassLive",
+      "publishedAt": "2026-11-22T05:24:00.000Z",
+      "latestAt": "2026-11-22T17:32:00.000Z",
+      "firstSeenAt": "2026-11-22T17:51:11.929Z",
+      "outlets": 3,
+      "outletNames": [
+        "Mediaite",
+        "MassLive",
+        "CNN"
+      ],
+      "score": 2.87
+    },
+    {
       "id": "f257116fae03",
       "cat": "flights",
       "kind": "news",
@@ -948,21 +967,58 @@
       "score": 2.55
     },
     {
-      "id": "1d292ca98298",
+      "id": "9c203136b2c3",
       "cat": "flights",
       "kind": "news",
-      "title": "Delta Air Lines flights delayed nationwide on Sunday due to automation system issue",
-      "url": "https://www.masslive.com/news/2026/11/delta-air-lines-flights-delayed-nationwide-on-sunday-due-to-automation-system-issue.html",
-      "source": "MassLive",
-      "publishedAt": "2026-11-22T05:24:00.000Z",
-      "latestAt": "2026-11-22T17:32:00.000Z",
-      "firstSeenAt": "2026-11-22T17:51:11.929Z",
-      "outlets": 2,
+      "title": "Delta resolves system outage delaying flights out of Atlanta",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPZzJ4T21sbmd1R3dEVzZ2UG56a3V6UDh6RW9MNlg1ZzltVmFHMUd6akZSd2dBanRQVVNpOWwtLUV5NVVzQXhZV3gwaTIwX3lYSnIwV1lIWHQ4RTRmeUR1YUxYSUpDM0RCal9IUGhhVEp2WDRMUXhMU21HUEtPSkloOWxxbGZSbXhhTjZfbFpjZVZFUGM2RlNxUnI0dHYwTi1YTXNva2hQNmwtRzhXd1Rmb0E2blVaSy1GSWoyckVXUFB6c05yajRCT2YxTk1FRHk1TGxxc0ZpanVqb1pMWXE0VTA3eUhDQ2dDa1E1eDVTNHdNMTRCZnRZ?oc=5",
+      "source": "kare11.com",
+      "publishedAt": "2026-11-22T16:33:00.000Z",
+      "latestAt": "2026-11-22T21:21:18.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 3,
       "outletNames": [
-        "Mediaite",
-        "MassLive"
+        "kare11.com",
+        "WWLTV.com",
+        "WCNC"
       ],
-      "score": 2.22
+      "score": 2.38
+    },
+    {
+      "id": "97d94439688d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air Lines experiences delays after system outage ahead of holiday travel",
+      "url": "https://www.yahoo.com/news/us/articles/delta-air-lines-experiences-delays-174727554.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T09:48:00.000Z",
+      "latestAt": "2026-11-22T17:47:27.000Z",
+      "firstSeenAt": "2026-11-22T18:06:12.729Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "The Independent",
+        "AOL.com"
+      ],
+      "score": 2.23
+    },
+    {
+      "id": "975276c3210e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta tech issue delays Atlanta-bound flights head of Thanksgiving",
+      "url": "https://www.nbcnews.com/news/us-news/delta-tech-issues-thanksgiving-travel-rcna610685",
+      "source": "NBC News",
+      "publishedAt": "2026-11-22T08:26:00.000Z",
+      "latestAt": "2026-11-22T16:38:25.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 3,
+      "outletNames": [
+        "NBC News",
+        "AOL.com",
+        "travel"
+      ],
+      "score": 2.21
     },
     {
       "id": "ebe27cfc8a8f",
@@ -998,23 +1054,6 @@
         "ShiftDelete.Net"
       ],
       "score": 2
-    },
-    {
-      "id": "9c203136b2c3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta resolves system outage delaying flights out of Atlanta",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPZzJ4T21sbmd1R3dEVzZ2UG56a3V6UDh6RW9MNlg1ZzltVmFHMUd6akZSd2dBanRQVVNpOWwtLUV5NVVzQXhZV3gwaTIwX3lYSnIwV1lIWHQ4RTRmeUR1YUxYSUpDM0RCal9IUGhhVEp2WDRMUXhMU21HUEtPSkloOWxxbGZSbXhhTjZfbFpjZVZFUGM2RlNxUnI0dHYwTi1YTXNva2hQNmwtRzhXd1Rmb0E2blVaSy1GSWoyckVXUFB6c05yajRCT2YxTk1FRHk1TGxxc0ZpanVqb1pMWXE0VTA3eUhDQ2dDa1E1eDVTNHdNMTRCZnRZ?oc=5",
-      "source": "kare11.com",
-      "publishedAt": "2026-11-22T21:11:15.000Z",
-      "latestAt": "2026-11-22T21:21:18.000Z",
-      "firstSeenAt": "2026-11-22T21:21:47.117Z",
-      "outlets": 2,
-      "outletNames": [
-        "kare11.com",
-        "WWLTV.com"
-      ],
-      "score": 1.99
     },
     {
       "id": "bfe1d029b305",
@@ -1117,40 +1156,6 @@
         "Scripps News"
       ],
       "score": 1.73
-    },
-    {
-      "id": "97d94439688d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air Lines experiences delays after system outage ahead of holiday travel",
-      "url": "https://www.yahoo.com/news/us/articles/delta-air-lines-experiences-delays-174727554.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T09:48:00.000Z",
-      "latestAt": "2026-11-22T17:47:00.000Z",
-      "firstSeenAt": "2026-11-22T18:06:12.729Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "The Independent"
-      ],
-      "score": 1.72
-    },
-    {
-      "id": "975276c3210e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta tech issue delays Atlanta-bound flights head of Thanksgiving",
-      "url": "https://www.nbcnews.com/news/us-news/delta-tech-issues-thanksgiving-travel-rcna610685",
-      "source": "NBC News",
-      "publishedAt": "2026-11-22T08:38:00.000Z",
-      "latestAt": "2026-11-22T16:38:25.000Z",
-      "firstSeenAt": "2026-11-22T17:06:04.972Z",
-      "outlets": 2,
-      "outletNames": [
-        "NBC News",
-        "AOL.com"
-      ],
-      "score": 1.72
     },
     {
       "id": "d5a573541da5",
@@ -1302,6 +1307,22 @@
         "Arise News"
       ],
       "score": 1.4
+    },
+    {
+      "id": "a597312e933a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Airlines Suffers Major IT Failure, Disrupting Travel Plans for Thousands",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02MFFNTjJNNkJFR2tiQk5CUHhDbE1odkVoMkkxdEkzdXFkU1YzSTFRR21jaGxyTzNLeHpubWlHb2dISkF4dlhidlc4VHRaeTBEY3pOLW1kWHg?oc=5",
+      "source": "CubaHeadlines",
+      "publishedAt": "2026-11-22T22:02:32.000Z",
+      "latestAt": "2026-11-22T22:02:32.000Z",
+      "firstSeenAt": "2026-11-22T22:21:49.827Z",
+      "outlets": 1,
+      "outletNames": [
+        "CubaHeadlines"
+      ],
+      "score": 1.39
     },
     {
       "id": "e56e6d210190",
@@ -1546,6 +1567,22 @@
       "score": 1.04
     },
     {
+      "id": "ed8122b35384",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Thanksgiving flyers face a bigger bill after a ground stop rattled air travel",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQM3Y1Q2xkeFlRMTRvZ1RRR0dUNTZ5ekFwSmV4Ykw4T1NiVXd3Ni1sWmwzdEtueXo0dGV1TExLeWRjb2dWOVdnbFFmUDdKMVJ5N3d4SFEwNWR1c3VwdUVxaGJxSWVfd19tNkk5bkxxeE5GTGp4bzZIZ21vYTlkOUdqenp0Q3RDYnpNMk5DQU1EemlkWDJXbTlZT3RYYTZhVlM0R2FaYnJsMmI?oc=5",
+      "source": "travelhost.com",
+      "publishedAt": "2026-11-22T22:10:31.000Z",
+      "latestAt": "2026-11-22T22:10:31.000Z",
+      "firstSeenAt": "2026-11-22T22:21:49.827Z",
+      "outlets": 1,
+      "outletNames": [
+        "travelhost.com"
+      ],
+      "score": 1
+    },
+    {
       "id": "c9d46a13d0e4",
       "cat": "hacks",
       "kind": "news",
@@ -1558,22 +1595,6 @@
       "outlets": 1,
       "outletNames": [
         "Japan Today"
-      ],
-      "score": 1
-    },
-    {
-      "id": "174545db5029",
-      "cat": "markets",
-      "kind": "news",
-      "title": "S&P 500 Faces Thanksgiving Week After Sharp Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9xdHpLM2FUakZhTElfZGhrRVp0bVlnRlVIeV9VTzlFN3NRNTVRNENxRW1OdVg5RmdEemlNZXhHNmpvWjFFbU9wOU5YZC1seWd3Z21jLW9keUNWNW9vdzFjaklUX3BRU2Fv?oc=5",
-      "source": "Peradaban.id",
-      "publishedAt": "2026-11-22T21:09:00.000Z",
-      "latestAt": "2026-11-22T21:27:00.000Z",
-      "firstSeenAt": "2026-11-22T21:21:47.117Z",
-      "outlets": 1,
-      "outletNames": [
-        "Peradaban.id"
       ],
       "score": 1
     },
@@ -1665,7 +1686,7 @@
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZlNjcHozY1hpYnNhcncxaW5aOG5mQmJudWFZc3BXU21jT1Utd05aNndQZGhDUWlLTC1rVUxVNmdhZHlnT2hkLTM2ZjdmbURHeFBQVWM2X1BlUnpQekMxc0RHN3NaS29uNmFMM3I1MmFENVlhZ3JwS3p2M3NRaEpaUkFIZ3dCMFFkX3Q3Nl9vbHIzS295Tmg4Sld5RjAwMVE3SW8tYkJQSzRfUXlISUU3ZkZaZmF4T29Rd3JrV2ZB?oc=5",
       "source": "Star Tribune",
       "publishedAt": "2026-11-22T19:10:06.000Z",
-      "latestAt": "2026-11-22T19:10:06.000Z",
+      "latestAt": "2026-11-22T21:10:20.000Z",
       "firstSeenAt": "2026-11-22T19:21:23.088Z",
       "outlets": 1,
       "outletNames": [
@@ -1718,22 +1739,6 @@
       "outlets": 1,
       "outletNames": [
         "The Verge"
-      ],
-      "score": 1
-    },
-    {
-      "id": "3dc081114219",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Target South Korean Power Giant KEPCO, Exposing Sensitive Customer Banking Details",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQnJYaXZwVVVnUFBBY2JQdjJUVFZVVGlTeUdDNWxFUGlYa0tFWFFTZUhWZkhUcmtaNXpwZFhzT295YlNuaUJzN05vdUdpMHZwTHZsYXRSX191czh0a3BCY05aX0lwQV9lRTFGd1l4ejZhemFCamw5VkFHV0RKS3c0bVA2dUtfeW5BRklmUGZRemdGTHlWZW1PR1lnc21kaVNkcnU4ZjFyZ0RBbDdq?oc=5",
-      "source": "The 420.in",
-      "publishedAt": "2026-11-22T17:34:25.000Z",
-      "latestAt": "2026-11-22T17:34:25.000Z",
-      "firstSeenAt": "2026-11-22T17:51:11.929Z",
-      "outlets": 1,
-      "outletNames": [
-        "The 420.in"
       ],
       "score": 1
     },
@@ -1852,22 +1857,6 @@
       "outlets": 1,
       "outletNames": [
         "ESA"
-      ],
-      "score": 0.97
-    },
-    {
-      "id": "d1bfe0d98aab",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Anthropic Claude down: Why it said it was unable to authenticate code",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOcDBjX2hrQXlxUEV2Q3pZVUlzVUpPcTU1TFpiaGY4bEtualhpY2FWemdBQnlpclpESjlVSkxobHJ1NDJyZU9FZlJSQW9odU1zUmdvazJqUXV6YmxPYmRDc19HWnNBTDRwRHVGcWJLc1VGZDd4RWxHUTF0Z0lKd05vOA?oc=5",
-      "source": "Mashable",
-      "publishedAt": "2026-11-21T21:59:13.000Z",
-      "latestAt": "2026-11-21T21:59:13.000Z",
-      "firstSeenAt": "2026-11-21T23:48:23.967Z",
-      "outlets": 1,
-      "outletNames": [
-        "Mashable"
       ],
       "score": 0.97
     },
@@ -2000,6 +1989,22 @@
         "Himachal Scape"
       ],
       "score": 0.73
+    },
+    {
+      "id": "35ba0d50d024",
+      "cat": "weather",
+      "kind": "news",
+      "title": "VIC Severe Thunderstorm Warning: Large Hail, Damaging Winds, Heavy Rain",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNSnBQNl9fX2cwYi1zcGZvV3J2dzBkVjIzcWRLc0QtR0ZzV3RCNEVZYVhXNUk4WTc3OXoyWkVzZjJXNWpFLVhocVE2ZVVPdzVsV1FvdFdnMnlZNnZRTDNvSzRWMjFIYksyMzIwNzhuZEtGZVdxZS1Nb1ZCSEJPb1JuemRJUHp3RldYcWZwaDNTcUxGZVhtUUs4Ym5uTnRRcDJ2emt3MzhPM2pJOXRzTXYyVHFkU0ZralhwRmNKY3VSbW1rTS1DNlktZFc3dUxRWG1mVXZwY1FBS0hQLTIyS1VySzdtMDFMeDdZajJsT3RFWXItME8xcWx1WURpR3FBS3BOcS1FeV9yRVJSQQ?oc=5",
+      "source": "Early Warning Network",
+      "publishedAt": "2026-11-22T05:00:11.000Z",
+      "latestAt": "2026-11-22T05:12:35.000Z",
+      "firstSeenAt": "2026-11-22T22:21:49.827Z",
+      "outlets": 1,
+      "outletNames": [
+        "Early Warning Network"
+      ],
+      "score": 0.71
     }
   ]
 }
