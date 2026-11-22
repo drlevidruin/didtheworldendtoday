@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T23:07:00.961Z",
+  "buildTime": "2026-11-22T23:22:08.953Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 18:07 ET",
+  "etStamp": "2026-11-22 18:22 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,12 +44,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1112,
-  "lastSuccessAt": "2026-11-22T23:07:00.961Z",
+  "headlinesRead": 1088,
+  "lastSuccessAt": "2026-11-22T23:22:08.953Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 36,
-    "hacks": 20,
+    "flights": 37,
+    "hacks": 19,
     "internet": 14,
     "germs": 4,
     "grid": 4,
@@ -92,7 +92,7 @@
         }
       ],
       "nationwide": false,
-      "groundDelays": 2,
+      "groundDelays": 1,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -181,80 +181,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 795,
+      "count": 778,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
+      "count": 275,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 7,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "ok": false,
+      "count": 0,
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-22T23:07:00.961Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:07:00.961Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T23:07:00.961Z"
+      "lastOkAt": "2026-11-22T23:22:08.953Z"
     }
   },
   "stories": [
@@ -442,7 +443,7 @@
       "url": "https://www.oneindia.com/lucknow/up-blackout-mock-drill-today-at-6-pm-sirens-rescue-operations-and-temporary-power-cuts-across-75-d-8266821.html",
       "source": "oneindia.com",
       "publishedAt": "2026-11-22T04:40:35.000Z",
-      "latestAt": "2026-11-22T21:38:45.000Z",
+      "latestAt": "2026-11-22T23:02:37.000Z",
       "firstSeenAt": "2026-11-22T14:35:43.292Z",
       "outlets": 3,
       "outletNames": [
@@ -1101,6 +1102,23 @@
       "score": 1.9
     },
     {
+      "id": "50bbc40a724b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta ground stop lifted in Atlanta, now in delays due to automation system issue",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVGs5U3Z0dmFoSmJvTjU5dVRCNGdDaExjN2RXM0pLeENKSW50MDN2ZzhXZXFranFRR0J2dEthclNySUkxaVVzeDRxbWxYQ0RPeWVwVEdXam5rYUllSTUwdHd1RmlGbDZyRGwtby12TVN6OHYwQ3RZcm1fRWNDZVR0NkdKRkloMGo3?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T18:46:17.000Z",
+      "latestAt": "2026-11-22T23:07:00.000Z",
+      "firstSeenAt": "2026-11-22T23:22:08.953Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "13WMAZ"
+      ],
+      "score": 1.85
+    },
+    {
       "id": "c870b6e81aad",
       "cat": "hacks",
       "kind": "news",
@@ -1593,6 +1611,38 @@
       "score": 1.04
     },
     {
+      "id": "d4709656b163",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Flight delays, Delta system outage impact travelers amid South Florida holiday rush",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOcjRySjVvZW5kZ1BTTHZIdDByaV9uMmYyV2Via0xuRFNMN1JSYXBvVnlhRmNxLVgxamFmYlF5YmtBUXZqQTlXblJfdmoyZ1JtNV9ybUJsQ09lSTZYT1NSd0JLTkczcFdKQWpyNFVPN1ZIX0VqV1ZyaGxIX2tNcXF3d3NPak45OWlHbl9hRG1kRWpHaVo2VDdkZUZaaFhxUGs5VXdqRGtSa3V2YVFDSUFLYmNxR09YRmhLTzNsV2V6WQ?oc=5",
+      "source": "WSVN",
+      "publishedAt": "2026-11-22T23:19:57.000Z",
+      "latestAt": "2026-11-22T23:19:57.000Z",
+      "firstSeenAt": "2026-11-22T23:22:08.953Z",
+      "outlets": 1,
+      "outletNames": [
+        "WSVN"
+      ],
+      "score": 1
+    },
+    {
+      "id": "b3e926d1d3fb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Bell MTS says cyberattack behind recent email outage",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQzlqUmE2NTgtT3RPOUxyR0lxdjhRSkttcHY3d2lmaUU2XzloN0cyaWc2eGhpMWpFd0J6eVpPM1Q0SU5YZmIzcDBram40ZXNhcXQ1b3h2aUZOVUxzdzUtbXFEY1kybXl5bkhUazZzQktmb3R2QmY4REQwcHVkWGZkZHNmTHlIeEY1Q3hvNnR0dGZ5NlZNS0JDQW55Y2pVZ1F2N1RBSGQ2bGdBblZjcDJF?oc=5",
+      "source": "Winnipeg Free Press",
+      "publishedAt": "2026-11-22T23:11:35.000Z",
+      "latestAt": "2026-11-22T23:11:35.000Z",
+      "firstSeenAt": "2026-11-22T23:22:08.953Z",
+      "outlets": 1,
+      "outletNames": [
+        "Winnipeg Free Press"
+      ],
+      "score": 1
+    },
+    {
       "id": "b9c97dcaa6b3",
       "cat": "flights",
       "kind": "news",
@@ -1673,38 +1723,6 @@
       "score": 1
     },
     {
-      "id": "59da61197671",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "South Portland city buildings to reopen after cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNY21VNURkbHBRdk1zNXdwMW1DRmJaYkhBakxXay1QQ1I4MFlQVF9ZQ1p0eUR6UWtfUVdCQ3E5SEtSc0tZTjFwWXgyZnlWOFA5VnFxZ2Z4V3dxNTQ0MWlxVWl6Z2dDWVFUTTBXaEltX0ZzWV9oX19UbU90MHlCd05TOW5xcTdJX2hXODU2SFhVcnFpeXhFOTM0UVlkODRXUQ?oc=5",
-      "source": "The Portland Press Herald",
-      "publishedAt": "2026-11-22T20:05:52.000Z",
-      "latestAt": "2026-11-22T20:05:52.000Z",
-      "firstSeenAt": "2026-11-22T20:21:35.022Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Portland Press Herald"
-      ],
-      "score": 1
-    },
-    {
-      "id": "f37d1c38ef60",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US: Automation glitch triggers ground delays for Delta flights at Atlanta airport",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQbmVUYXU5Rm9PNzctU0FISG5MOEVQeTl0cmVKRFJNYWJVLWJiM3ZqQTZsUzdYdFo1TWlldmEtZ1pJeGFCRTEwUG5UQVBYQXdHSU1QYzlMNEFCNm8teXlqdksyZThTanhRQVRZZFpIeV84YXhZaElvamNUd1liQXA0MnhZb3B4WWxQNDNBSzFTSks3ZDA2WEdZTXFUZzdRdG42LVZaZ3VUR1hEZi1KSkxBQXVOYkR2MWE4MGhZM3FSV1RyblpDRmpjdUNndw?oc=5",
-      "source": "ANI News",
-      "publishedAt": "2026-11-22T19:53:00.000Z",
-      "latestAt": "2026-11-22T19:53:00.000Z",
-      "firstSeenAt": "2026-11-22T20:06:33.048Z",
-      "outlets": 1,
-      "outletNames": [
-        "ANI News"
-      ],
-      "score": 1
-    },
-    {
       "id": "df5a6554e327",
       "cat": "grid",
       "kind": "news",
@@ -1767,22 +1785,6 @@
       "outlets": 1,
       "outletNames": [
         "Foro3D"
-      ],
-      "score": 1
-    },
-    {
-      "id": "554ed76f9029",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Data Breach: Vendor Hit, 16,000 Unconfirmed",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUEl2LWVfRWlnX2tidldTMklFQXg1RzB1VEdfUDNXVXpVdVE5NTZ6TVNPanBGWExzTkZneGdmbFowVU56YmVmaTFURjBJbkhIa3Fidnpwdm9sU2JsUm5pR01uZlZ2MDdEdjJPcUpldVV5cGNzcWF0cWlXcUtyNFQ1X1BFcDEwZ2RLbWk3TU14eGROOG9K?oc=5",
-      "source": "shattered.io",
-      "publishedAt": "2026-11-22T03:59:23.000Z",
-      "latestAt": "2026-11-22T03:59:23.000Z",
-      "firstSeenAt": "2026-11-22T04:04:03.667Z",
-      "outlets": 1,
-      "outletNames": [
-        "shattered.io"
       ],
       "score": 1
     },
