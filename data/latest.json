@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T21:51:59.735Z",
+  "buildTime": "2026-11-22T21:58:03.359Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 16:51 ET",
+  "etStamp": "2026-11-22 16:58 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,8 +44,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1122,
-  "lastSuccessAt": "2026-11-22T21:51:59.735Z",
+  "headlinesRead": 1101,
+  "lastSuccessAt": "2026-11-22T21:58:03.359Z",
   "rollingFallback": false,
   "cats": {
     "flights": 35,
@@ -186,20 +186,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 809,
+      "count": 792,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     },
     "bing": {
       "ok": true,
-      "count": 279,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     },
     "gdelt": {
       "ok": false,
@@ -209,99 +209,61 @@
     },
     "hn": {
       "ok": true,
-      "count": 4,
+      "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     },
     "faa": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:51:59.735Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T21:51:59.735Z"
+      "lastOkAt": "2026-11-22T21:58:03.359Z"
     }
   },
   "stories": [
-    {
-      "id": "ec18cf5cc104",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Ground Stop at World’s Busiest Airport Delays Delta Flights Across US",
-      "url": "https://www.newsweek.com/ground-stop-at-worlds-busiest-airport-delays-delta-flights-across-us-12753772",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-22T08:35:00.000Z",
-      "latestAt": "2026-11-22T20:37:03.000Z",
-      "firstSeenAt": "2026-11-22T19:36:25.859Z",
-      "outlets": 24,
-      "outletNames": [
-        "Ticker News",
-        "Newsweek",
-        "travel",
-        "Atlanta News First",
-        "Yahoo",
-        "cedarnews.net",
-        "Speaks Media",
-        "AOL.com",
-        "Fox News",
-        "Yahoo Life UK",
-        "stupidDOPE",
-        "National News Desk",
-        "X",
-        "KBOI",
-        "WSET",
-        "MLQ.ai",
-        "WHP Harrisburg",
-        "13WHAM-TV",
-        "Open Jaw",
-        "local21news.com",
-        "wtvcfox",
-        "FOX One",
-        "KDBC",
-        "MEAWW News"
-      ],
-      "score": 4.56
-    },
     {
       "id": "sig:faa-stop:SFO:2026-11-22",
       "cat": "flights",
@@ -346,6 +308,29 @@
         "hub": true,
         "nationwide": false,
         "reason": "other"
+      }
+    },
+    {
+      "id": "sig:faa-stop:LGA:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at LGA (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T11:50:13.236Z",
+      "latestAt": "2026-11-22T11:50:13.236Z",
+      "firstSeenAt": "2026-11-22T11:50:13.236Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "LGA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
       }
     },
     {
@@ -525,27 +510,44 @@
       "score": 1.86
     },
     {
-      "id": "sig:faa-stop:LGA:2026-11-22",
+      "id": "ec18cf5cc104",
       "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at LGA (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T11:50:13.236Z",
-      "latestAt": "2026-11-22T11:50:13.236Z",
-      "firstSeenAt": "2026-11-22T11:50:13.236Z",
-      "outlets": 1,
+      "kind": "news",
+      "title": "Ground Stop at World’s Busiest Airport Delays Delta Flights Across US",
+      "url": "https://www.newsweek.com/ground-stop-at-worlds-busiest-airport-delays-delta-flights-across-us-12753772",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-22T02:07:24.000Z",
+      "latestAt": "2026-11-22T20:37:03.000Z",
+      "firstSeenAt": "2026-11-22T19:36:25.859Z",
+      "outlets": 25,
       "outletNames": [
-        "FAA"
+        "Ticker News",
+        "Newsweek",
+        "travel",
+        "Atlanta News First",
+        "Yahoo",
+        "cedarnews.net",
+        "Speaks Media",
+        "AOL.com",
+        "Fox News",
+        "Yahoo Life UK",
+        "stupidDOPE",
+        "National News Desk",
+        "X",
+        "KBOI",
+        "WSET",
+        "MLQ.ai",
+        "WHP Harrisburg",
+        "13WHAM-TV",
+        "Open Jaw",
+        "local21news.com",
+        "wtvcfox",
+        "FOX One",
+        "KDBC",
+        "MEAWW News",
+        "WJLA"
       ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "LGA",
-        "hub": true,
-        "nationwide": false,
-        "reason": "low visibility"
-      }
+      "score": 4
     },
     {
       "id": "sig:faa-stop:HPN:2026-11-22",
@@ -868,6 +870,30 @@
       }
     },
     {
+      "id": "d1431f408c53",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta delays hundreds of flights over system outage",
+      "url": "https://www.msn.com/en-us/news/other/delta-delays-hundreds-of-flights-over-system-outage/ar-AA2hYty2",
+      "source": "The Wall Street Journal on MSN",
+      "publishedAt": "2026-11-22T03:10:00.000Z",
+      "latestAt": "2026-11-22T21:36:00.000Z",
+      "firstSeenAt": "2026-11-22T17:36:06.971Z",
+      "outlets": 9,
+      "outletNames": [
+        "TheTravel",
+        "WSJ",
+        "The Wall Street Journal on MSN",
+        "Beinsure",
+        "Financial-News.co.uk",
+        "Star Tribune",
+        "ShiftDelete.Net",
+        "Firstpost",
+        "Chosunbiz"
+      ],
+      "score": 3.17
+    },
+    {
       "id": "2dc2ae6e44f8",
       "cat": "flights",
       "kind": "news",
@@ -884,29 +910,6 @@
         "Yahoo"
       ],
       "score": 3.13
-    },
-    {
-      "id": "d1431f408c53",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta delays hundreds of flights over system outage",
-      "url": "https://www.msn.com/en-us/news/other/delta-delays-hundreds-of-flights-over-system-outage/ar-AA2hYty2",
-      "source": "The Wall Street Journal on MSN",
-      "publishedAt": "2026-11-22T03:10:00.000Z",
-      "latestAt": "2026-11-22T19:53:36.000Z",
-      "firstSeenAt": "2026-11-22T17:36:06.971Z",
-      "outlets": 8,
-      "outletNames": [
-        "TheTravel",
-        "WSJ",
-        "The Wall Street Journal on MSN",
-        "Beinsure",
-        "Financial-News.co.uk",
-        "Star Tribune",
-        "ShiftDelete.Net",
-        "Firstpost"
-      ],
-      "score": 3.04
     },
     {
       "id": "f257116fae03",
