@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T18:21:13.314Z",
+  "buildTime": "2026-11-22T18:36:27.451Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 13:21 ET",
+  "etStamp": "2026-11-22 13:36 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,17 +45,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 307,
-  "lastSuccessAt": "2026-11-22T18:21:13.314Z",
+  "headlinesRead": 1103,
+  "lastSuccessAt": "2026-11-22T18:36:27.451Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 36,
-    "hacks": 20,
-    "grid": 5,
+    "flights": 35,
+    "hacks": 19,
+    "grid": 6,
     "internet": 12,
     "germs": 7,
     "space": 2,
-    "earth": 3,
+    "earth": 4,
     "markets": 4,
     "weather": 4,
     "sun": 3,
@@ -176,81 +176,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 4,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "count": 801,
+      "error": null,
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "bing": {
       "ok": true,
-      "count": 271,
+      "count": 268,
       "error": null,
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 2,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-22T12:50:28.187Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T18:21:13.314Z"
+      "lastOkAt": "2026-11-22T18:36:27.451Z"
     }
   },
   "stories": [
@@ -386,28 +385,6 @@
       "score": 3.44
     },
     {
-      "id": "a2ecb1df5d2f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "PANI project to connect Andaman's eight islands through undersea cable network",
-      "url": "https://www.msn.com/en-in/news/other/pani-project-to-connect-andamans-eight-islands-through-undersea-cable-network/ar-AA2hXhVt",
-      "source": "Press Trust of India on MSN",
-      "publishedAt": "2026-11-21T18:30:00.000Z",
-      "latestAt": "2026-11-22T12:29:28.000Z",
-      "firstSeenAt": "2026-11-22T06:19:24.497Z",
-      "outlets": 7,
-      "outletNames": [
-        "Press Trust of India on MSN",
-        "Hindustan Times",
-        "The Hindu",
-        "The Economic Times",
-        "NewsBytes",
-        "Deccan Chronicle",
-        "inkl"
-      ],
-      "score": 3.06
-    },
-    {
       "id": "9b3fe105e0e3",
       "cat": "internet",
       "kind": "news",
@@ -482,9 +459,9 @@
       "id": "58e7fe865466",
       "cat": "grid",
       "kind": "news",
-      "title": "UP to conduct blackout mock drill across all 75 districts at 6 pm today, sirens to sound",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNSDJvZE1jdkJwWVNoTUVYNWdLb1pmaUFoY3g3UTZQeGpuNXZ1TDBZTFdyeUFGcFpIWng0T011TkVvandsWlZiUzAzUGVGV01EV092aGhuOG1IN25mSjNyd2xsQWxmSTZnaXp2RVJJekI0bjJaTnN3enNfUjFNR0VsbU8xTGpyWjFDN01OVlhsZm11WFV1Ymk2TWgzSlRrZUUwbG9MUDV6Rlk5MkFFWGVHM3Bkb2swX2sybnhYWlhWc3ZOMzFpYXNQTGtud0VhaGxLclp3YUY5Sl9UVWlIUjJDM0Z4MHZwUVBhMlB5MjJQVEZ4eU9nRWfSAfsBQVVfeXFMTUdlMC05eGNBek12TG44N2xRZWh2UERXazV3OENyMHY2VFlmTTlIbGZwcVdTTHVPUFlZbUR5aXJlNWNzbUZoNWQ2MVU0Rmw0bHJBbnBfR3N2VFpZYVh4Rko0TzlwOUdDbDRsUmVIanZGSlg3VEF3Z194RG5OX1ctV0FvZ3duakttNGJjYXUxQzhFdnAwOUhEenJlc28tTllWTXUyZlE1Wjd1OHYyMVpwejdNLXV1LUpjX3pFZFlzU1cwSXpjN3FLdDlfaTk3T3U2Q2daRmZZZ3hFWVBaWUs2c2hOaWdJb01lZTlGRWhQZVBFa213dTB3ZXZmYVU?oc=5",
-      "source": "India TV News",
+      "title": "UP Blackout Mock Drill Today At 6 PM : Sirens , Rescue Operations And Temporary Power Cuts Across 75 Districts",
+      "url": "https://www.oneindia.com/lucknow/up-blackout-mock-drill-today-at-6-pm-sirens-rescue-operations-and-temporary-power-cuts-across-75-d-8266821.html",
+      "source": "oneindia.com",
       "publishedAt": "2026-11-22T04:40:35.000Z",
       "latestAt": "2026-11-22T17:08:35.000Z",
       "firstSeenAt": "2026-11-22T14:35:43.292Z",
@@ -512,6 +489,23 @@
         "cedarnews.net"
       ],
       "score": 1.95
+    },
+    {
+      "id": "f9b8b15de8ad",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Centre considers new undersea cable link for remote Andaman islands",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWlqVFNBTHgzWl85R0NsdTVERF9OeXhhM0hKY3JUeFNweEJwZ2NtNmp5TUhJeG9sbDhRZDY5SnNNM3ZydWdUcXZqUWFZODNBY1g5dzhqY3BqYzhaMEhfcTZJRUJWeld3bnE5WF8yUnNpZUpLVkRMWjN3Zk9nTXRDeFZkWUE4Y3FqU0ZrcnZod2Z1Y2RGYkNIOElpbnUxQ1XSAawBQVVfeXFMTmhKU0tubHpEY0lmQ3dqVDAxc2pZMWRXVlVUeldmYmp0M3pOQjd5ZkR0Q04zdW9wVlI1b0hmWmN5NWxaTXpJYmR4QzVEZVdVTUcxQ3RicVRJNVZTY2VxSms3bVMwUWJ3VGIwbVVRazRmQjVudG45bEZPbFVsTDNBVlRocG1vMHE2SEJzMG5JTmxwYmI2MUk0TFFmTC1PS3h6bnA5T2pzUVNaWDM1dg?oc=5",
+      "source": "The Pioneer",
+      "publishedAt": "2026-11-22T09:30:19.000Z",
+      "latestAt": "2026-11-22T11:58:23.000Z",
+      "firstSeenAt": "2026-11-22T12:05:21.263Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Pioneer",
+        "MyIndMakers"
+      ],
+      "score": 1.91
     },
     {
       "id": "sig:faa-stop:MIA:2026-11-21",
@@ -634,23 +628,6 @@
       "score": 2.16
     },
     {
-      "id": "f9b8b15de8ad",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Centre considers new undersea cable link for remote Andaman islands",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWlqVFNBTHgzWl85R0NsdTVERF9OeXhhM0hKY3JUeFNweEJwZ2NtNmp5TUhJeG9sbDhRZDY5SnNNM3ZydWdUcXZqUWFZODNBY1g5dzhqY3BqYzhaMEhfcTZJRUJWeld3bnE5WF8yUnNpZUpLVkRMWjN3Zk9nTXRDeFZkWUE4Y3FqU0ZrcnZod2Z1Y2RGYkNIOElpbnUxQ1XSAawBQVVfeXFMTmhKU0tubHpEY0lmQ3dqVDAxc2pZMWRXVlVUeldmYmp0M3pOQjd5ZkR0Q04zdW9wVlI1b0hmWmN5NWxaTXpJYmR4QzVEZVdVTUcxQ3RicVRJNVZTY2VxSms3bVMwUWJ3VGIwbVVRazRmQjVudG45bEZPbFVsTDNBVlRocG1vMHE2SEJzMG5JTmxwYmI2MUk0TFFmTC1PS3h6bnA5T2pzUVNaWDM1dg?oc=5",
-      "source": "The Pioneer",
-      "publishedAt": "2026-11-22T09:30:19.000Z",
-      "latestAt": "2026-11-22T11:58:23.000Z",
-      "firstSeenAt": "2026-11-22T12:05:21.263Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Pioneer",
-        "MyIndMakers"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "9feb2a3e367f",
       "cat": "germs",
       "kind": "news",
@@ -768,6 +745,22 @@
       "score": 1.4
     },
     {
+      "id": "5834825823de",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Delta Flights Hit With Delays Nationwide Over Systems Failure, FAA Says",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdW5URDgzWFU0OXk0SmZncDIwb0UzdndPOU5IQ2tQYUtUUGNYWXFPNDlkUFREQkw4eFU4ZGxUWXBDVlNzeHU3M3VQUWd6ZlVoWVNDUERpZVROVWIyS3JhaENKWFdRQ1VidEUzZGFsRFpaSXlxN3BXRXJjS2RoU1pTcWp4dFB6RXVSM0VGRzRwVEE0c0MyOUtmNUEwMG9xRFdWTnZZci1B?oc=5",
+      "source": "NTD News",
+      "publishedAt": "2026-11-22T18:14:45.000Z",
+      "latestAt": "2026-11-22T18:14:45.000Z",
+      "firstSeenAt": "2026-11-22T18:36:27.451Z",
+      "outlets": 1,
+      "outletNames": [
+        "NTD News"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "ca68af327c34",
       "cat": "internet",
       "kind": "news",
@@ -883,7 +876,7 @@
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeUtCUHJVa1lqOENhWXhNVG15TGV1bVlZOGpjYTFHczJ1cW1fVUNWYkJwbjhONXJBWDJZUEgzT3pzYjdiXzdyeVFrVS1iOF9Zc2M5YlB4WjIxNGwxSV8ySGVGb1E1TTdtQkFJb0xiUWk0UkczWExCcU1JSm5DUjI2Sg?oc=5",
       "source": "Yahoo",
       "publishedAt": "2026-11-21T20:06:36.000Z",
-      "latestAt": "2026-11-22T15:34:21.000Z",
+      "latestAt": "2026-11-22T16:03:21.000Z",
       "firstSeenAt": "2026-11-22T03:03:49.946Z",
       "outlets": 3,
       "outletNames": [
@@ -901,7 +894,7 @@
       "url": "https://www.the-sun.com/travel/17340877/delta-air-line-outage-delays-thanksgiving-travel-atlanta/",
       "source": "The US Sun",
       "publishedAt": "2026-11-22T02:02:00.000Z",
-      "latestAt": "2026-11-22T07:02:00.000Z",
+      "latestAt": "2026-11-22T15:16:40.000Z",
       "firstSeenAt": "2026-11-22T15:50:52.043Z",
       "outlets": 2,
       "outletNames": [
@@ -962,6 +955,24 @@
       "score": 1.99
     },
     {
+      "id": "ee56f4124855",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA lifts ground stop on Atlanta-bound Delta flights after system outage",
+      "url": "https://www.wrganews.com/2026/11/22/faa-lifts-ground-stop-on-atlanta-bound-delta-flights-after-system-outage/",
+      "source": "WRGA",
+      "publishedAt": "2026-11-22T03:54:00.000Z",
+      "latestAt": "2026-11-22T17:20:00.000Z",
+      "firstSeenAt": "2026-11-22T18:36:27.451Z",
+      "outlets": 3,
+      "outletNames": [
+        "WRGA",
+        "Fox News",
+        "X"
+      ],
+      "score": 1.95
+    },
+    {
       "id": "9b18b9fb782e",
       "cat": "flights",
       "kind": "news",
@@ -977,6 +988,23 @@
         "ABC7 New York"
       ],
       "score": 1.93
+    },
+    {
+      "id": "2a2dcdf3cd29",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta flight delays caused by weight-and-balance system outage",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQampNNTAtQ2ZOamgxSzVrdlZVTDVURlpyUm1pYVlFRWxzYnhGYkpUVVVGeHlfZHVGOHdFbmV0dy0yS1h2THVEN2JfR0pTbW9Fd1lTV1ZLNGR5bnVJQzZzTWNxeWZJbUdPeU13Z3UzNWdBQjQ5dk9JVHMtU2RSclN4R1FUOE9haVJ0N0FzVXdLWjFVcjTSAZgBQVVfeXFMT0xVR1A1QTlPLUo4R05wMkM2VGZJQXQzN2lfc2EyT1E2eVROd0xNUEFqMl9ZRDBPWGFBUTNPaENMa1A4XzF3V001bnAyRzh0cU5mem9qTEhiTjEtSGJ4OHlfQkhkdm44d0RfVGFlQUNESklSYnFpWDhzY3h0X2loeWN4ajdZXzBmamJVdjB6WDU1MEY4YnRzc1A?oc=5",
+      "source": "ABC7 New York",
+      "publishedAt": "2026-11-22T15:43:03.000Z",
+      "latestAt": "2026-11-22T17:36:10.000Z",
+      "firstSeenAt": "2026-11-22T18:36:27.451Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC7 New York",
+        "Men's Journal"
+      ],
+      "score": 1.9
     },
     {
       "id": "41bda97d8bc2",
@@ -1096,24 +1124,6 @@
         "Forbes on MSN"
       ],
       "score": 1.7
-    },
-    {
-      "id": "1001ac6e1707",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers breach FBI National Crime Information Center",
-      "url": "https://www.foxnews.com/video/6408733845112",
-      "source": "Fox News",
-      "publishedAt": "2026-11-21T18:23:41.000Z",
-      "latestAt": "2026-11-22T13:21:51.000Z",
-      "firstSeenAt": "2026-11-22T16:22:10.931Z",
-      "outlets": 3,
-      "outletNames": [
-        "PJ Media",
-        "Fox News",
-        "Yahoo"
-      ],
-      "score": 1.64
     },
     {
       "id": "a2fa3f9e9cbc",
@@ -1416,7 +1426,7 @@
       "url": "https://townhall.com/news/frank-camp/2026/11/22/faa-issues-ground-stop-after-major-airline-suffers-outage-n2686863",
       "source": "Townhall",
       "publishedAt": "2026-11-21T23:55:00.000Z",
-      "latestAt": "2026-11-22T12:56:06.000Z",
+      "latestAt": "2026-11-22T13:00:06.000Z",
       "firstSeenAt": "2026-11-22T15:20:46.257Z",
       "outlets": 1,
       "outletNames": [
@@ -1473,38 +1483,6 @@
       "score": 1
     },
     {
-      "id": "fe8bc53cf095",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Local flights delayed due to Delta Airlines ground stop in Atlanta",
-      "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNY2tDNGo3TjJETzVkVFFkd3NGVTNfenZfNkRKMWlqZnhvalRxeXhfcFVmaWRRb2JyVURfaC1nWlVKY2lPaFlfNEo4UW9YMm4yVHVOcnFYeS1qRnNIeERMcFh6TFlGVnUxZ1llQ0tWM1BHZEJhZFpKNFhFZERwM2ZTNFA2dlZ6X2pSQmVjTi1sV0Itb09SVS15U1JWcTZqa09HSk1VNE1LMGs3WEJXWUtsM2E4Q3Jtbmt0OVE2M0lLUjRIUUF1OFJSOUpZVmk5ZGlqVnFxTWZUUkZ6V2tDUmpOTXZwY1dyQU1NdmUyTGJ4ZF8xNVNNOUctMC14NVBUN1hJV2tkNDhObw?oc=5",
-      "source": "WHP Harrisburg",
-      "publishedAt": "2026-11-22T17:27:12.000Z",
-      "latestAt": "2026-11-22T17:27:12.000Z",
-      "firstSeenAt": "2026-11-22T17:36:06.971Z",
-      "outlets": 1,
-      "outletNames": [
-        "WHP Harrisburg"
-      ],
-      "score": 1
-    },
-    {
-      "id": "ef6c28280f29",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta flights are delayed across the US after its weight-and-balance system fails, prompting an FAA ground stop in Atlanta",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPNFNnT0RUdG5najl3b3BtOVJTeFdwdHoxQjcyZ011T1ItTUJlRXpwY3QtaHFFRHVBN3BDYmNEYUlnRlZNZFM0S3I1ekZwc3h0NU9HbTRXSGJ4VjN0US1lcDFmU1pnTl94QWt5WDVBZEVNbDUzeGhMQUpGNXdZNXplLUJlNjg5bDNYU0o1bVdEY2NtWjZ6N2o0WXZiLVBwMmctbGkzVTVXLThvNTl3aWZta3pTVVFzSFpuRDJhZm0zbHltU2dPam1YakRSanZtVlAtVWhIV3BLc1E3Zw?oc=5",
-      "source": "MLQ.ai",
-      "publishedAt": "2026-11-22T17:26:51.000Z",
-      "latestAt": "2026-11-22T17:26:51.000Z",
-      "firstSeenAt": "2026-11-22T17:36:06.971Z",
-      "outlets": 1,
-      "outletNames": [
-        "MLQ.ai"
-      ],
-      "score": 1
-    },
-    {
       "id": "53c27646e947",
       "cat": "flights",
       "kind": "news",
@@ -1533,22 +1511,6 @@
       "outlets": 1,
       "outletNames": [
         "Demerara Waves Online News- Guyana"
-      ],
-      "score": 1
-    },
-    {
-      "id": "4aa4a1618b10",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air Lines Atlanta Ground Stop on Nov. 22: 400+ Flights Delayed and What Passengers Should Do",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNam1qZV9yemVWdlBmaFJaUlM5cVhqeGJDY0d1cnNYcVZTUThXaUYtb3U2N1BnVnFiWFZkcEdSQzIyUUljbDFOaHpUUWRIaXZnYTBLd3Z0akZ1QWRtQlB5emg4WlE2TkhwTjJ2SnhPdEZ2c0EyR0NVVHV4SU92dFR6aWJ5TlpXSmZlSEZ2ZEtOUkZpOWZHekVZdm1UQ3RqQXBVN2JlQ1p3akd2N2I4eG8zS2JfaHRxLVBXNUFreUs5X19UMGF1X2c?oc=5",
-      "source": "stupidDOPE",
-      "publishedAt": "2026-11-22T17:15:02.000Z",
-      "latestAt": "2026-11-22T17:15:02.000Z",
-      "firstSeenAt": "2026-11-22T17:21:07.804Z",
-      "outlets": 1,
-      "outletNames": [
-        "stupidDOPE"
       ],
       "score": 1
     },
@@ -1811,6 +1773,22 @@
       "score": 1
     },
     {
+      "id": "b8849ef29d85",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage affecting South Shore of Bay of Islands",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRlpLdHc4cDhiXy1jU2J6QXphd1VwSllvck9kZGJ6UnFDRk4xTktHbkpuNzBmbnYwMVE2TXpCR1pOanE0MjdPeExhX1Zkb0RNOTZfNFY1U3RkS0RqSjMxNUNNdDgwdUgtQmdqYzJBQnNWeGJQWWxONDlMdUpvNkRYbWNCdlNwRzYtN0JQT1Zn?oc=5",
+      "source": "100.1 BayFM",
+      "publishedAt": "2026-11-22T03:18:14.000Z",
+      "latestAt": "2026-11-22T09:03:15.000Z",
+      "firstSeenAt": "2026-11-22T03:33:57.721Z",
+      "outlets": 1,
+      "outletNames": [
+        "100.1 BayFM"
+      ],
+      "score": 1
+    },
+    {
       "id": "26a967944e74",
       "cat": "ai",
       "kind": "news",
@@ -1953,6 +1931,24 @@
         "Dagens.com on MSN"
       ],
       "score": 0.86
+    },
+    {
+      "id": "01aedb85876a",
+      "cat": "earth",
+      "kind": "news",
+      "title": "6.7-magnitude earthquake hits Peru, tremors felt in Lima",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMnMxb1IybUc4a1IxMGx4TkxNOXZWUzRoeXR1eWlTWjIzdHp5QlZYaW9NNV9oMlNZSV9URU10a0JUV0VKTHdnbG1mUHRCcE1aUTh4ODhrak8weXdnMmlHVG1jTWpyS2lkRGVRVEZYQ3hoU01tdVhvcXB2UXlTLVYxdU1OdExkZlFzMVBN?oc=5",
+      "source": "Myanmar International TV",
+      "publishedAt": "2026-11-22T08:33:46.000Z",
+      "latestAt": "2026-11-22T08:33:46.000Z",
+      "firstSeenAt": "2026-11-22T18:36:27.451Z",
+      "outlets": 1,
+      "outletNames": [
+        "Myanmar International TV"
+      ],
+      "score": 0.83,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "35ba0d50d024",
