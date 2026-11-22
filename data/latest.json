@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T09:19:53.152Z",
+  "buildTime": "2026-11-22T09:34:51.494Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 04:19 ET",
+  "etStamp": "2026-11-22 04:34 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -50,14 +50,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1104,
-  "lastSuccessAt": "2026-11-22T09:19:53.152Z",
+  "headlinesRead": 1071,
+  "lastSuccessAt": "2026-11-22T09:34:51.494Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
     "earth": 8,
-    "grid": 8,
-    "hacks": 24,
+    "grid": 9,
+    "hacks": 23,
     "internet": 10,
     "markets": 5,
     "germs": 7,
@@ -181,81 +181,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 821,
+      "count": 787,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "bing": {
       "ok": true,
-      "count": 252,
+      "count": 253,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-22T07:19:36.695Z"
     },
     "hn": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T08:34:41.544Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T09:19:53.152Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z"
     }
   },
   "stories": [
@@ -918,23 +917,6 @@
         "Hagadone News Network"
       ],
       "score": 1.45
-    },
-    {
-      "id": "fabbb719ddad",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Broadcom Patches VMware Zero Day Exploited by Chinese Hackers",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE84cldONUh1N3N5Rm1aajNKVXk0MG9TMFdwakNwNGpkd3d5ai1hejJIMVpzYzZPZ1ZPcUlhNUM3eFhuem5wMHQ1UVdoWEQ5Ykl0ZGlvX1R3WW1TSkJJZUhrSUpseFEzUQ?oc=5",
-      "source": "SuaraGarut.ID",
-      "publishedAt": "2026-11-21T09:20:30.000Z",
-      "latestAt": "2026-11-21T13:00:04.000Z",
-      "firstSeenAt": "2026-11-22T02:03:41.065Z",
-      "outlets": 2,
-      "outletNames": [
-        "SuaraGarut.ID",
-        "LinkedIn"
-      ],
-      "score": 1.44
     },
     {
       "id": "41bda97d8bc2",
@@ -1813,6 +1795,22 @@
       "score": 1
     },
     {
+      "id": "79d469f763f7",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Dumsor: ECG announces 3-day power cuts in Ashanti region, affected areas listed",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQllFSV9xaFlEX1FHN3BwT1Z0dU4tRWwtcF90Z0VRQWVVTmM4WXhfazRUSVZUOXJ5bk1ZYjAxLTlnclZyMF83d2UwOVh5bTBSdG9Xc29WUVZKTXVfakdCNVdqNnFjMlJ5OUs3cHVuUENkNTV0a0hyNVYwZDVpTVBySVBaVWVLdTVtMWc2NVBJWnUwa0MyZFpTdTJCeXJsb3NqQ3hhTGs0N0t3QnVXT2xxZQ?oc=5",
+      "source": "Yen News",
+      "publishedAt": "2026-11-21T22:49:08.000Z",
+      "latestAt": "2026-11-21T22:49:08.000Z",
+      "firstSeenAt": "2026-11-21T23:03:18.655Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yen News"
+      ],
+      "score": 1
+    },
+    {
       "id": "7ea48e0c9ab9",
       "cat": "space",
       "kind": "news",
@@ -1893,22 +1891,6 @@
       "score": 0.86
     },
     {
-      "id": "6bd2a72536cd",
-      "cat": "space",
-      "kind": "news",
-      "title": "Earth Captures Tiny Asteroid 2026 QQ8 as Temporary Mini Moon",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5BVHA0dnl1bzR5eUFiU2ZyVVRwbG9Wd05BaUFxWGxPM3RPVzhrcHJLR1JSYkZ0MGZCbl9jSEgtR090bXg1Q1RWYjFmZUExM3B1SW8xRXF4ZDkwNGJ4a0ttNHlYMVVka2M?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-21T20:10:00.000Z",
-      "latestAt": "2026-11-22T01:51:10.000Z",
-      "firstSeenAt": "2026-11-22T04:49:17.841Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 0.86
-    },
-    {
       "id": "4ee4e22b5039",
       "cat": "sun",
       "kind": "news",
@@ -1955,6 +1937,22 @@
         "news.com.au"
       ],
       "score": 0.8
+    },
+    {
+      "id": "682f9d418bfa",
+      "cat": "space",
+      "kind": "news",
+      "title": "Four asteroids sweep past Earth on Saturday, one the size of an airplane",
+      "url": "https://www.msn.com/en-us/news/other/four-asteroids-sweep-past-earth-on-saturday-one-the-size-of-an-airplane/ar-AA2hVUWR",
+      "source": "Morning Overview on MSN",
+      "publishedAt": "2026-11-21T15:25:00.000Z",
+      "latestAt": "2026-11-21T15:25:00.000Z",
+      "firstSeenAt": "2026-11-22T09:34:51.494Z",
+      "outlets": 1,
+      "outletNames": [
+        "Morning Overview on MSN"
+      ],
+      "score": 0.7
     }
   ]
 }
