@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T14:35:43.292Z",
+  "buildTime": "2026-11-22T14:50:43.057Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 09:35 ET",
+  "etStamp": "2026-11-22 09:50 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,12 +45,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1051,
-  "lastSuccessAt": "2026-11-22T14:35:43.292Z",
+  "headlinesRead": 896,
+  "lastSuccessAt": "2026-11-22T14:50:43.057Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 24,
-    "hacks": 29,
+    "flights": 23,
+    "hacks": 30,
     "grid": 7,
     "internet": 11,
     "germs": 5,
@@ -176,20 +176,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 771,
-      "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "count": 608,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     },
     "bing": {
       "ok": true,
-      "count": 249,
+      "count": 257,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,55 +201,56 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:35:43.292Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T14:35:43.292Z"
+      "lastOkAt": "2026-11-22T14:50:43.057Z"
     }
   },
   "stories": [
@@ -750,22 +751,6 @@
       "score": 1.4
     },
     {
-      "id": "0e45f28014fc",
-      "cat": "markets",
-      "kind": "news",
-      "title": "AI Investment Fears Trigger Global Market Selloff as Nasdaq 100 Suffers Worst Week Since 2020",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBBRVVjaEI1S0FXNXQta1NGalFUQ1NTNk4tV2ZXdHctcmhHbHlXNkhRMVI1MEsxSkd1MzF2WEEzUG4xVE1La1EyZlNPc1IzcWFydm16TE5lQ3VVbnJOOUJBakJDNGZLX3lTUHRkbUZuMDlRT1B1N2txTk9mWnE?oc=5",
-      "source": "Hokanews",
-      "publishedAt": "2026-11-21T14:36:00.000Z",
-      "latestAt": "2026-11-21T14:36:00.000Z",
-      "firstSeenAt": "2026-11-21T14:47:03.235Z",
-      "outlets": 1,
-      "outletNames": [
-        "Hokanews"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "ca68af327c34",
       "cat": "internet",
       "kind": "news",
@@ -838,6 +823,22 @@
       "score": 1.39
     },
     {
+      "id": "c46a4bb5c69b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Global tech sell-off deepens as Anthropic retreats near IPO price",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNU14RmhPUmV4cmp6dmtoQTBnbDVlcnRkTE9BekZOZnB1M3BIVEZ5dzE5TXJGQ0xtaEprblFQY1FwbFg2Tl95amlVN0hhUXlRSzllNWZQeGNNOU5KSnE5TEZwRGpsencyaDk3UFRXbnROWE9QYXNjV001R0JvSVRBVE4xeVZ1ZndybGY2dlhZTmJwd256TVBNU2Nqbms1d05P?oc=5",
+      "source": "Daily Voice Of Asia",
+      "publishedAt": "2026-11-21T15:57:56.000Z",
+      "latestAt": "2026-11-22T04:01:18.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 1,
+      "outletNames": [
+        "Daily Voice Of Asia"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "3382f550696a",
       "cat": "flights",
       "kind": "news",
@@ -891,6 +892,23 @@
         "The Morning"
       ],
       "score": 1.99
+    },
+    {
+      "id": "34f6be7416fc",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI's crime database in hackers' hands after shocking security breach",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMGxMMF9kMTFCRkcwSjVhc1FpVndSZy12TUg2U0lqbVdHUlFNb1FweWg5SDVqZ29FSkVhSmJBclRFUVM5Q0VwZ1VmNDFTT0VkQ2FvV0x2WHlWLThWaUtvc0xVUTA4TUk2blFYb3VZeGY0SU5aSlFKaGlRMEx3X3hCMXZVal9LcHY2dWVaazU5VkM3VUZU?oc=5",
+      "source": "MEAWW News",
+      "publishedAt": "2026-11-21T16:12:33.000Z",
+      "latestAt": "2026-11-21T20:01:04.000Z",
+      "firstSeenAt": "2026-11-21T20:32:57.937Z",
+      "outlets": 2,
+      "outletNames": [
+        "MEAWW News",
+        "Gistmania"
+      ],
+      "score": 1.86
     },
     {
       "id": "86d770a3a530",
@@ -960,24 +978,6 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 1.64
-    },
-    {
-      "id": "41bda97d8bc2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank customers may be affected after hackers access marketing data",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUHF2Rk5FNV9RWnhLVzBhTzg4cHkxSHB1ZXROc3NMeUpfNk9YX0xkdmtYTXdzNnBqQmtxQkhwamhOcm53d2x5b09hSFdVYzE0cUlKb1VkOXJMeTh6NV9sbmduUXl5OFJOSXcyb1RHN3hTdDVrdHpKY1dkZTAxYURCd0hnTXdiUWNrNy1pRU1naFRPa05yZW9uSG5HSjIwWjg4c1RpcTlMTm5Qdw?oc=5",
-      "source": "ktnv.com",
-      "publishedAt": "2026-11-21T14:50:16.000Z",
-      "latestAt": "2026-11-22T10:47:16.000Z",
-      "firstSeenAt": "2026-11-22T14:20:35.130Z",
-      "outlets": 3,
-      "outletNames": [
-        "ktnv.com",
-        "Scripps News",
-        "KSHB 41 Kansas City"
-      ],
-      "score": 1.57
     },
     {
       "id": "347cb0aab8f9",
@@ -1121,22 +1121,6 @@
       "source": "Daily Voice Of Asia",
       "publishedAt": "2026-11-21T16:01:11.000Z",
       "latestAt": "2026-11-22T04:00:50.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Voice Of Asia"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "c46a4bb5c69b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Global tech sell-off deepens as Anthropic retreats near IPO price",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNU14RmhPUmV4cmp6dmtoQTBnbDVlcnRkTE9BekZOZnB1M3BIVEZ5dzE5TXJGQ0xtaEprblFQY1FwbFg2Tl95amlVN0hhUXlRSzllNWZQeGNNOU5KSnE5TEZwRGpsencyaDk3UFRXbnROWE9QYXNjV001R0JvSVRBVE4xeVZ1ZndybGY2dlhZTmJwd256TVBNU2Nqbms1d05P?oc=5",
-      "source": "Daily Voice Of Asia",
-      "publishedAt": "2026-11-21T15:57:56.000Z",
-      "latestAt": "2026-11-22T04:01:18.000Z",
       "firstSeenAt": "2026-11-21T16:17:26.966Z",
       "outlets": 1,
       "outletNames": [
@@ -1320,22 +1304,6 @@
       "outlets": 1,
       "outletNames": [
         "Sonoma State Star"
-      ],
-      "score": 1.19
-    },
-    {
-      "id": "0b5333c42140",
-      "cat": "flights",
-      "kind": "news",
-      "title": "“This Administration Is Incompetent Beyond Repair”: Jim McGovern Reacts to Recent Major Outages, Including FAA Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPbWhMM1pqTGJLQ0paRVZVV3ZGS0JoTVFsWVRjdm1NVGprTjR1a004bHBvNUZ4MHVvUGVmQW1OSy1CYWp5Tnl1QmNnT2hqS3p4UjRHSzVyTVVHaHlKQXZNcGJoeFNOeFphVmlzY3hOall1dnIzRF85MUhZZGU0eVItcElHU2RTN3dOSWl0OHdnUVdrNTJ3TzZicFFNTGE1aWg1MkVDMnAyMlI0QjVFRk9TTXZoOXprdG1SNWVGS2UycEZRTDRtYWFXVUNvWklJX2pBUDFzN3VuaFhsQVJSeVViS0FLRlQyS3FSWjViZjEwZVk0bEoxZnlpanVCU1lUeDZHYXFjTEhYYWZlWk9wemhoVA?oc=5",
-      "source": "NewsBreak: Local News & Alerts",
-      "publishedAt": "2026-11-21T14:38:22.000Z",
-      "latestAt": "2026-11-21T14:38:22.000Z",
-      "firstSeenAt": "2026-11-21T23:48:23.967Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsBreak: Local News & Alerts"
       ],
       "score": 1.19
     },
@@ -1790,6 +1758,22 @@
       "score": 1
     },
     {
+      "id": "554ed76f9029",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPMorgan Data Breach: Vendor Hit, 16,000 Unconfirmed",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUEl2LWVfRWlnX2tidldTMklFQXg1RzB1VEdfUDNXVXpVdVE5NTZ6TVNPanBGWExzTkZneGdmbFowVU56YmVmaTFURjBJbkhIa3Fidnpwdm9sU2JsUm5pR01uZlZ2MDdEdjJPcUpldVV5cGNzcWF0cWlXcUtyNFQ1X1BFcDEwZ2RLbWk3TU14eGROOG9K?oc=5",
+      "source": "shattered.io",
+      "publishedAt": "2026-11-22T03:59:23.000Z",
+      "latestAt": "2026-11-22T03:59:23.000Z",
+      "firstSeenAt": "2026-11-22T04:04:03.667Z",
+      "outlets": 1,
+      "outletNames": [
+        "shattered.io"
+      ],
+      "score": 1
+    },
+    {
       "id": "57a979ec4cea",
       "cat": "markets",
       "kind": "news",
@@ -1820,6 +1804,22 @@
         "Mashable"
       ],
       "score": 0.97
+    },
+    {
+      "id": "e006155fda30",
+      "cat": "markets",
+      "kind": "news",
+      "title": "U.S. Stocks Extend Plunge as AI Boom Turns to Bust",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOY1h6VEhXUGRDcE9hX25QQllJOF9uSmhUNERBSVdBNjRkU0gyaGRySGN0MXVXZERzUmhmdXJIUms2cFJJU2ZvdkVjUlB0RjRxSTQ4RFBiYTV0T0MyUFB5cWw0RWtuZzZrQXFwLUJqb3VsZGhacHR0NF9wTVMwc0tYUW1obFhUNHNVX0JEQnFKX2pRc1RWRGsxVw?oc=5",
+      "source": "WSJ",
+      "publishedAt": "2026-11-22T11:24:11.000Z",
+      "latestAt": "2026-11-22T11:24:11.000Z",
+      "firstSeenAt": "2026-11-22T14:50:43.057Z",
+      "outlets": 1,
+      "outletNames": [
+        "WSJ"
+      ],
+      "score": 0.94
     },
     {
       "id": "605d3b57beb9",
