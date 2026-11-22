@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T14:50:43.057Z",
+  "buildTime": "2026-11-22T15:05:42.774Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 09:50 ET",
+  "etStamp": "2026-11-22 10:05 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,13 +45,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 896,
-  "lastSuccessAt": "2026-11-22T14:50:43.057Z",
+  "headlinesRead": 1000,
+  "lastSuccessAt": "2026-11-22T15:05:42.774Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
+    "flights": 24,
     "hacks": 30,
-    "grid": 7,
+    "grid": 6,
     "internet": 11,
     "germs": 5,
     "space": 3,
@@ -71,8 +71,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 0.33,
-      "time": "2026-11-22T09:00:00.000Z",
+      "value": 0,
+      "time": "2026-11-22T12:00:00.000Z",
       "max24": 2.33
     },
     "asteroid": {
@@ -87,7 +87,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 1,
+      "groundDelays": 2,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -181,15 +181,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 608,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "count": 761,
+      "error": null,
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     },
     "bing": {
       "ok": true,
-      "count": 257,
-      "error": null,
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "count": 208,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,37 +201,37 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T14:50:43.057Z"
+      "lastOkAt": "2026-11-22T15:05:42.774Z"
     }
   },
   "stories": [
@@ -860,6 +860,24 @@
       "score": 2.59
     },
     {
+      "id": "652eadbd4717",
+      "cat": "flights",
+      "kind": "news",
+      "title": "The FAA ground stop blame game",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeUtCUHJVa1lqOENhWXhNVG15TGV1bVlZOGpjYTFHczJ1cW1fVUNWYkJwbjhONXJBWDJZUEgzT3pzYjdiXzdyeVFrVS1iOF9Zc2M5YlB4WjIxNGwxSV8ySGVGb1E1TTdtQkFJb0xiUWk0UkczWExCcU1JSm5DUjI2Sg?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-21T20:06:36.000Z",
+      "latestAt": "2026-11-22T15:02:40.000Z",
+      "firstSeenAt": "2026-11-22T03:03:49.946Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "FOX One",
+        "WSJ"
+      ],
+      "score": 2.29
+    },
+    {
       "id": "bfe1d029b305",
       "cat": "hacks",
       "kind": "news",
@@ -928,38 +946,21 @@
       "score": 1.82
     },
     {
-      "id": "652eadbd4717",
-      "cat": "flights",
+      "id": "41bda97d8bc2",
+      "cat": "hacks",
       "kind": "news",
-      "title": "The FAA ground stop blame game",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeUtCUHJVa1lqOENhWXhNVG15TGV1bVlZOGpjYTFHczJ1cW1fVUNWYkJwbjhONXJBWDJZUEgzT3pzYjdiXzdyeVFrVS1iOF9Zc2M5YlB4WjIxNGwxSV8ySGVGb1E1TTdtQkFJb0xiUWk0UkczWExCcU1JSm5DUjI2Sg?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-21T20:06:36.000Z",
-      "latestAt": "2026-11-21T20:41:52.000Z",
-      "firstSeenAt": "2026-11-22T03:03:49.946Z",
+      "title": "Chase Bank customers may be affected after hackers access marketing data",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUHF2Rk5FNV9RWnhLVzBhTzg4cHkxSHB1ZXROc3NMeUpfNk9YX0xkdmtYTXdzNnBqQmtxQkhwamhOcm53d2x5b09hSFdVYzE0cUlKb1VkOXJMeTh6NV9sbmduUXl5OFJOSXcyb1RHN3hTdDVrdHpKY1dkZTAxYURCd0hnTXdiUWNrNy1pRU1naFRPa05yZW9uSG5HSjIwWjg4c1RpcTlMTm5Qdw?oc=5",
+      "source": "ktnv.com",
+      "publishedAt": "2026-11-22T06:56:03.000Z",
+      "latestAt": "2026-11-22T10:47:16.000Z",
+      "firstSeenAt": "2026-11-22T15:05:42.774Z",
       "outlets": 2,
       "outletNames": [
-        "Yahoo",
-        "FOX One"
+        "ktnv.com",
+        "Scripps News"
       ],
-      "score": 1.77
-    },
-    {
-      "id": "2d606b597b21",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Holiday travel concerns following FAA ground stop",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFByR3AtZVZ1WVZ4UkNFaFM3NHRYWmlleENWRm5fMXk0NmRyUWVuSE5nZXpmTFk5U1dmYkkzRFEyR05INm5CSkJvVDFVUTE?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-21T14:57:43.000Z",
-      "latestAt": "2026-11-21T15:30:00.000Z",
-      "firstSeenAt": "2026-11-21T22:48:19.775Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "Modern Ghana"
-      ],
-      "score": 1.74
+      "score": 1.73
     },
     {
       "id": "1001ac6e1707",
@@ -1260,22 +1261,6 @@
       "score": 1.29
     },
     {
-      "id": "ec360b010d91",
-      "cat": "grid",
-      "kind": "news",
-      "title": "‘Tinubu’s Renewed Hope Has Turned to Renewed Hopelessness’ — Bishop Ezeokafor Blasts Tinubu Over Nationwide Blackout, Escalating Hunger, Economic Hardship and Insecurity",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQZEc5OWNOS2pqMm5HbXhPaXZxRUJVTnozZy0zOWNycC1HMEROTWdMRGNzUndLbTExT2NHc3NFaS1yTGUwaEJQaEtlUnlKUlVyLWJzWnZkZGtndHV2MVJjamN1MjBXaHpBTFJqM3dWNzJfWEM4cXBJNm8yZ0pfQWxYcg?oc=5",
-      "source": "Parallel Facts News",
-      "publishedAt": "2026-11-21T14:56:17.000Z",
-      "latestAt": "2026-11-21T14:56:17.000Z",
-      "firstSeenAt": "2026-11-21T19:32:53.735Z",
-      "outlets": 1,
-      "outletNames": [
-        "Parallel Facts News"
-      ],
-      "score": 1.29
-    },
-    {
       "id": "e4ee3a724b8a",
       "cat": "internet",
       "kind": "news",
@@ -1338,6 +1323,38 @@
         "cedarnews.net"
       ],
       "score": 1.14
+    },
+    {
+      "id": "7246bd4d8ec7",
+      "cat": "flights",
+      "kind": "news",
+      "title": "US flights grounded nationwide as air traffic control communications fail",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNk9RQm1zelpFaTBsQklkZy14QVR4Y2V5ZkI3NGNKbzdQenlneDNtM09XNkxSeFMtalBlOXJOckI3Yk1RMUJGWGZGOU9fWU0wSGhQVkVjUzVKbklROFE5SmxJbHFkeXFrVVUzTzktZEFNWDlIc3N4VlpJZWthaTY1MVlObTVhXy1vX2hzVXdnSXVVVllFUzZ2dkVoSVlMdzF6ODNOdFlBN1N1S2h5Zmc?oc=5",
+      "source": "Herald.Wales",
+      "publishedAt": "2026-11-22T01:58:03.000Z",
+      "latestAt": "2026-11-22T01:58:03.000Z",
+      "firstSeenAt": "2026-11-22T15:05:42.774Z",
+      "outlets": 1,
+      "outletNames": [
+        "Herald.Wales"
+      ],
+      "score": 1.09
+    },
+    {
+      "id": "24d6c28fefbf",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Airlines outage as 3,500 flights delayed at airports including New York and Atlanta",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBBMW9XNUhybHRVT3FpT1JPSmM3NmJ1MzhuUXBucG9tQTY2NkRKS3RNbENDOFFUNS1aT3p5QjdUclRlSXdwcE1yTGpSZTUxZUtHNVR4ZUpJUWkwbjRRWTNaUHYxc3U4bnFOMVl4YzV2MHNJbWxSa2RlRzZsSm1XQQ?oc=5",
+      "source": "AOL.co.uk",
+      "publishedAt": "2026-11-22T14:58:49.000Z",
+      "latestAt": "2026-11-22T14:58:49.000Z",
+      "firstSeenAt": "2026-11-22T15:05:42.774Z",
+      "outlets": 1,
+      "outletNames": [
+        "AOL.co.uk"
+      ],
+      "score": 1
     },
     {
       "id": "d55f2aa8200a",
@@ -1754,22 +1771,6 @@
       "outlets": 1,
       "outletNames": [
         "Speaks Media"
-      ],
-      "score": 1
-    },
-    {
-      "id": "554ed76f9029",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Data Breach: Vendor Hit, 16,000 Unconfirmed",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUEl2LWVfRWlnX2tidldTMklFQXg1RzB1VEdfUDNXVXpVdVE5NTZ6TVNPanBGWExzTkZneGdmbFowVU56YmVmaTFURjBJbkhIa3Fidnpwdm9sU2JsUm5pR01uZlZ2MDdEdjJPcUpldVV5cGNzcWF0cWlXcUtyNFQ1X1BFcDEwZ2RLbWk3TU14eGROOG9K?oc=5",
-      "source": "shattered.io",
-      "publishedAt": "2026-11-22T03:59:23.000Z",
-      "latestAt": "2026-11-22T03:59:23.000Z",
-      "firstSeenAt": "2026-11-22T04:04:03.667Z",
-      "outlets": 1,
-      "outletNames": [
-        "shattered.io"
       ],
       "score": 1
     },
