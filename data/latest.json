@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T16:51:03.339Z",
+  "buildTime": "2026-11-22T17:06:04.972Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 11:51 ET",
+  "etStamp": "2026-11-22 12:06 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,14 +45,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1068,
-  "lastSuccessAt": "2026-11-22T16:51:03.339Z",
+  "headlinesRead": 1072,
+  "lastSuccessAt": "2026-11-22T17:06:04.972Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 22,
-    "hacks": 29,
-    "grid": 9,
-    "internet": 10,
+    "flights": 24,
+    "hacks": 26,
+    "grid": 8,
+    "internet": 12,
     "germs": 8,
     "space": 2,
     "earth": 4,
@@ -93,7 +93,7 @@
         }
       ],
       "nationwide": false,
-      "groundDelays": 2,
+      "groundDelays": 3,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 769,
+      "count": 781,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     },
     "bing": {
       "ok": true,
-      "count": 267,
+      "count": 259,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-22T12:50:28.187Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T16:51:03.339Z"
+      "lastOkAt": "2026-11-22T17:06:04.972Z"
     }
   },
   "stories": [
@@ -543,29 +543,6 @@
       }
     },
     {
-      "id": "sig:faa-stop:AUS:2026-11-21",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at AUS (low ceilings)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-21T17:02:24.582Z",
-      "latestAt": "2026-11-21T17:02:24.582Z",
-      "firstSeenAt": "2026-11-21T17:02:24.582Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "AUS",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low ceilings"
-      }
-    },
-    {
       "id": "3382f550696a",
       "cat": "flights",
       "kind": "news",
@@ -607,6 +584,24 @@
         "MLQ.ai"
       ],
       "score": 2.52
+    },
+    {
+      "id": "652eadbd4717",
+      "cat": "flights",
+      "kind": "news",
+      "title": "The FAA ground stop blame game",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeUtCUHJVa1lqOENhWXhNVG15TGV1bVlZOGpjYTFHczJ1cW1fVUNWYkJwbjhONXJBWDJZUEgzT3pzYjdiXzdyeVFrVS1iOF9Zc2M5YlB4WjIxNGwxSV8ySGVGb1E1TTdtQkFJb0xiUWk0UkczWExCcU1JSm5DUjI2Sg?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-21T20:06:36.000Z",
+      "latestAt": "2026-11-22T15:34:21.000Z",
+      "firstSeenAt": "2026-11-22T03:03:49.946Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "FOX One",
+        "WSJ"
+      ],
+      "score": 2.29
     },
     {
       "id": "a397ae9e51e0",
@@ -810,26 +805,6 @@
       "score": 1.39
     },
     {
-      "id": "160f1572ae30",
-      "cat": "weather",
-      "kind": "news",
-      "title": "After Record Rain and Tornadoes in the Northeast, Now Comes the Cold",
-      "url": "https://www.nytimes.com/2026/11/12/weather/noreaster-snow-cold.html",
-      "source": "The New York Times",
-      "publishedAt": "2026-11-21T17:00:00.000Z",
-      "latestAt": "2026-11-21T17:00:00.000Z",
-      "firstSeenAt": "2026-11-21T17:32:34.287Z",
-      "outlets": 1,
-      "outletNames": [
-        "The New York Times"
-      ],
-      "trending": 10000,
-      "trendTerm": "tornado warning",
-      "score": 1.39,
-      "quiet": true,
-      "quietReason": "headline mentions tornadoes"
-    },
-    {
       "id": "233cde5c351e",
       "cat": "earth",
       "kind": "news",
@@ -849,22 +824,20 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "652eadbd4717",
-      "cat": "flights",
+      "id": "aa603ae735f8",
+      "cat": "weather",
       "kind": "news",
-      "title": "The FAA ground stop blame game",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeUtCUHJVa1lqOENhWXhNVG15TGV1bVlZOGpjYTFHczJ1cW1fVUNWYkJwbjhONXJBWDJZUEgzT3pzYjdiXzdyeVFrVS1iOF9Zc2M5YlB4WjIxNGwxSV8ySGVGb1E1TTdtQkFJb0xiUWk0UkczWExCcU1JSm5DUjI2Sg?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-21T20:06:36.000Z",
-      "latestAt": "2026-11-22T15:34:21.000Z",
-      "firstSeenAt": "2026-11-22T03:03:49.946Z",
-      "outlets": 3,
+      "title": "Green Bay Sets Record High; Cold Front Arrives",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdGJrS25NcnRrVlFBZVpWT0lWVVhSeWdjNEJWeTZieE00VXBFbEppRGdtcHJnNThHcjM0LWhwWDhDeXdSQVJrX1lzcmV0bHRHbkdCWHhqUzFBdUlYRnNXcVpTSEw4c1hEQ2RMRjlFNHlXY1FZQmtmLUhkV042OTNteUYwdUZLSWNyakE1RE1lSG1EX0ZDT18xZFBEQQ?oc=5",
+      "source": "Wisevoter",
+      "publishedAt": "2026-11-22T00:13:52.000Z",
+      "latestAt": "2026-11-22T00:14:58.000Z",
+      "firstSeenAt": "2026-11-22T05:04:22.396Z",
+      "outlets": 1,
       "outletNames": [
-        "Yahoo",
-        "FOX One",
-        "WSJ"
+        "Wisevoter"
       ],
-      "score": 2.29
+      "score": 1.29
     },
     {
       "id": "ebe27cfc8a8f",
@@ -935,6 +908,40 @@
       "score": 1.73
     },
     {
+      "id": "975276c3210e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta tech issue delays Atlanta-bound flights head of Thanksgiving",
+      "url": "https://www.nbcnews.com/news/us-news/delta-tech-issues-thanksgiving-travel-rcna610685",
+      "source": "NBC News",
+      "publishedAt": "2026-11-22T08:38:00.000Z",
+      "latestAt": "2026-11-22T16:38:25.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 2,
+      "outletNames": [
+        "NBC News",
+        "AOL.com"
+      ],
+      "score": 1.72
+    },
+    {
+      "id": "93d7d5a65c1e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Ground Stop at World’s Busiest Airport Delays Delta Flights Across US",
+      "url": "https://www.newsweek.com/ground-stop-at-worlds-busiest-airport-delays-delta-flights-across-us-12753772",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-22T08:35:00.000Z",
+      "latestAt": "2026-11-22T16:45:22.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 2,
+      "outletNames": [
+        "Newsweek",
+        "AOL.com"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "d5a573541da5",
       "cat": "hacks",
       "kind": "news",
@@ -950,6 +957,23 @@
         "cedarnews.net"
       ],
       "score": 1.72
+    },
+    {
+      "id": "4147ab830552",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI investigating suspected hack of national crime database, AP reports",
+      "url": "https://www.wgal.com/article/fbi-suspected-hack-national-crime-database-ap-reports/74500671",
+      "source": "WGAL",
+      "publishedAt": "2026-11-22T07:08:00.000Z",
+      "latestAt": "2026-11-22T07:08:00.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 2,
+      "outletNames": [
+        "WGAL",
+        "WYFF News 4"
+      ],
+      "score": 1.67
     },
     {
       "id": "1001ac6e1707",
@@ -1053,6 +1077,22 @@
       "score": 1.39
     },
     {
+      "id": "5942f55a5ba8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Global tech outages expose need for stronger digital risk safeguards",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWjFUaFlIeENWbzJsUUpfR1F1V3pBVFVkcVVJLUN1d05xVEFqS3hGVTF5d0EyeTdZYThkNFo5cUFCbVVncENQZ09YN3BUMFpQMkFYWFBONm0xWUk5LXpfc2d6TnFoTmRwT0FNNkpsWmFoNFMwQkYzZEMtVmMxSUVJOGZOa2czTVRFdFA2RlVqTGxXSVd1TkdDQ0RYZFctdDJfQ1lGOWtlb0dPeUdDQmM0Z09MU0JmeVotTkg1QkdEUlRiZUw2MjhON09YRzdZSk13NWxYWmdGb9IB3AFBVV95cUxNS09ER1FOMncxM2I0UlZPUlJZSVoydWtCTnp2ak9DNG9DWXhrcnBTeV8zVFhCek9FR1FZSUl4ZDBGRFNld2I3YUhqY3VLYVlqVUNOM3d4RUdOX0hYdndGa1VsMEg1V1Q2Yk5FdUg1NEhuM1YzLWYtM29GS1N4c2FkMkt4eWp0b2VLR1NLUGI3OFhCWjRhd3kzWTNkQnFjMDdoRVpvR0duQW1XUklaOV9aRWV6T1Ezd0txbXBNMDBYTHZpa1dpeDZ4TjQ4TEloaFAzd0gxRng5ZUlab2Nq?oc=5",
+      "source": "Business Standard",
+      "publishedAt": "2026-11-22T16:25:22.000Z",
+      "latestAt": "2026-11-22T16:25:22.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 1,
+      "outletNames": [
+        "Business Standard"
+      ],
+      "score": 1.38
+    },
+    {
       "id": "a4728885485b",
       "cat": "internet",
       "kind": "news",
@@ -1099,22 +1139,6 @@
         "Townhall"
       ],
       "score": 1.34
-    },
-    {
-      "id": "aa603ae735f8",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Green Bay Sets Record High; Cold Front Arrives",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdGJrS25NcnRrVlFBZVpWT0lWVVhSeWdjNEJWeTZieE00VXBFbEppRGdtcHJnNThHcjM0LWhwWDhDeXdSQVJrX1lzcmV0bHRHbkdCWHhqUzFBdUlYRnNXcVpTSEw4c1hEQ2RMRjlFNHlXY1FZQmtmLUhkV042OTNteUYwdUZLSWNyakE1RE1lSG1EX0ZDT18xZFBEQQ?oc=5",
-      "source": "Wisevoter",
-      "publishedAt": "2026-11-22T00:13:52.000Z",
-      "latestAt": "2026-11-22T00:14:58.000Z",
-      "firstSeenAt": "2026-11-22T05:04:22.396Z",
-      "outlets": 1,
-      "outletNames": [
-        "Wisevoter"
-      ],
-      "score": 1.29
     },
     {
       "id": "f82582961a35",
@@ -1227,6 +1251,54 @@
         "Philstar.com"
       ],
       "score": 1.07
+    },
+    {
+      "id": "5bab5c44f992",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Rabbit control and Avian Influenza a focus by ORC",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSGpGZUlqaTNsOEhPVk8zYnJwcG5SSXlGNGVucDl6RXBRdUs4NzI2dUJGaDNTdVpZaDJ2ZnE2YTJ6Y1JpWTJTY0wzSTByeFNNdkV5akZvcW1yLTFqMmVTOHZ2M1hGcWJJMU1TUGpCZktMWFlkSF9RTENZMzNMNU16VzY5dzl5a3FnNzVsRWhKXzZjNzNfamN2X013b3dmSmhtcERGVm1zS0x3dw?oc=5",
+      "source": "The Central App",
+      "publishedAt": "2026-11-22T16:59:33.000Z",
+      "latestAt": "2026-11-22T16:59:33.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Central App"
+      ],
+      "score": 1
+    },
+    {
+      "id": "ee56f4124855",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA lifts ground stop on Atlanta-bound Delta flights after system outage",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSllMNVNYeXZ4Mlc5RjlsRFlweFRoWnJxUHE2cEw2d0VsSjB6clB6TWc1WGtYZXYzcUtoOHh3bnBRNkNNeVEtN3lrWk5OajdZY0FaWVdkdkhsRUpCT0tiOHpjWmczWVhnU3UxTDB6MHBkZ29nUXhnczlnT0gzQTBlTWw3UlFrMkY5UUlYUC14bXRya0xx0gGaAUFVX3lxTE5GbV8wMjFfSXVYOF9RQzF6UHZpWThoOEdrbU15Ym5BUTUxTlVKTEhscmtob193R1U2T0txX01fcWlQeGxKcmZhQTd0Z3lEeGx2N0NOcnZ1bThPbHRRRmc3TGtsY2NTcmRfdmpyRXRNVGFkVEd5QmUwVUFTLTZWeGRwVEN0ZklCSFFrc0VwR3VfbFlpUDdDNHBwQnc?oc=5",
+      "source": "Fox News",
+      "publishedAt": "2026-11-22T16:53:24.000Z",
+      "latestAt": "2026-11-22T16:53:24.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 1,
+      "outletNames": [
+        "Fox News"
+      ],
+      "score": 1
+    },
+    {
+      "id": "6a0487e5cde5",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft 365 went down for almost 24 hours due to a flaw that testing missed",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQQ29mNENvQ05aci1MTDN1b3MyRHJfRUhVQW5nRW1RWmtpT3NkZUcxYkhXZFJoVzZlNDhMR3NnSGVIakxlWXpvbHB3ZEdqdGxXUWlvSFE2SVRLUVNqOGRpTjNmUjFfYTR0aE1YWkhhWjgyZ2kyLXZwa1NReU1HcF9HOERkVUFQZG5kX1I1a1h0VGdkbENibGswa09faHctR1NQT293SGQza3o0M1hRRjVVOGRB?oc=5",
+      "source": "Foro3D",
+      "publishedAt": "2026-11-22T16:52:41.000Z",
+      "latestAt": "2026-11-22T16:52:41.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 1,
+      "outletNames": [
+        "Foro3D"
+      ],
+      "score": 1
     },
     {
       "id": "9e4bcffae69c",
@@ -1695,54 +1767,6 @@
       "score": 1
     },
     {
-      "id": "59e0327c3043",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK fixes fridge flaw after hackers hit European supermarkets",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQWtUUHFzMlRsQkQ0TWs5NG9wVTJaSGV0NEY2bzFHaE9ndVY3cDhfQWJSUTNiQlllT1Y0WFRVQmhQOHVQVjRNNGZrNTNCWEI3WnpJY3pVVk5aSWtSSkJZN2M3cXVrcXBRQnJ1VUgxa190VEFLUUhqWThvQ1BqYlIzOW1kaUtMa09MUTNHbm15T0k0VjdTUGx1ZjFhZFlNSW5pWGgzdnROWGptUQ?oc=5",
-      "source": "Big News Network.com",
-      "publishedAt": "2026-11-22T06:38:00.000Z",
-      "latestAt": "2026-11-22T06:38:00.000Z",
-      "firstSeenAt": "2026-11-22T06:49:27.924Z",
-      "outlets": 1,
-      "outletNames": [
-        "Big News Network.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "f7138030f94a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Visa, Mastercard and JPMorgan Face Cybersecurity Concerns After Third-Party Data Breach",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQc0otazBLcWNiem5NN1dTNVBaT3p3ZU1ycmZPZWRZb09fbm9iX2diQTMtMzI0eHB2WngyWmFGeWJCYUFYRmFqa3A2NTJFbmJzN1V1N1g0QTFJRFVXaFlJUzBFekR0TlJBbk1RZUJfT2dEeVFvbzBvSTY5NWxMQXgwZ3VIYWdYekE?oc=5",
-      "source": "Speaks Media",
-      "publishedAt": "2026-11-22T06:15:12.000Z",
-      "latestAt": "2026-11-22T06:15:12.000Z",
-      "firstSeenAt": "2026-11-22T06:19:24.497Z",
-      "outlets": 1,
-      "outletNames": [
-        "Speaks Media"
-      ],
-      "score": 1
-    },
-    {
-      "id": "554ed76f9029",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPMorgan Data Breach: Vendor Hit, 16,000 Unconfirmed",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUEl2LWVfRWlnX2tidldTMklFQXg1RzB1VEdfUDNXVXpVdVE5NTZ6TVNPanBGWExzTkZneGdmbFowVU56YmVmaTFURjBJbkhIa3Fidnpwdm9sU2JsUm5pR01uZlZ2MDdEdjJPcUpldVV5cGNzcWF0cWlXcUtyNFQ1X1BFcDEwZ2RLbWk3TU14eGROOG9K?oc=5",
-      "source": "shattered.io",
-      "publishedAt": "2026-11-22T03:59:23.000Z",
-      "latestAt": "2026-11-22T03:59:23.000Z",
-      "firstSeenAt": "2026-11-22T04:04:03.667Z",
-      "outlets": 1,
-      "outletNames": [
-        "shattered.io"
-      ],
-      "score": 1
-    },
-    {
       "id": "57a979ec4cea",
       "cat": "markets",
       "kind": "news",
@@ -1755,54 +1779,6 @@
       "outlets": 1,
       "outletNames": [
         "www.equiti.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "b8849ef29d85",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage affecting South Shore of Bay of Islands",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRlpLdHc4cDhiXy1jU2J6QXphd1VwSllvck9kZGJ6UnFDRk4xTktHbkpuNzBmbnYwMVE2TXpCR1pOanE0MjdPeExhX1Zkb0RNOTZfNFY1U3RkS0RqSjMxNUNNdDgwdUgtQmdqYzJBQnNWeGJQWWxONDlMdUpvNkRYbWNCdlNwRzYtN0JQT1Zn?oc=5",
-      "source": "100.1 BayFM",
-      "publishedAt": "2026-11-22T03:18:14.000Z",
-      "latestAt": "2026-11-22T09:03:15.000Z",
-      "firstSeenAt": "2026-11-22T03:33:57.721Z",
-      "outlets": 1,
-      "outletNames": [
-        "100.1 BayFM"
-      ],
-      "score": 1
-    },
-    {
-      "id": "82aeb0a5031e",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Canada Recalls ORB Funkee Toys Over Asbestos Contamination",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMWVluWGZJeDJtNjd3dFpraG9iSk5hMEdFMDFpMDVjNkRKMlZka3ZMaDN2akt6ZWdRQmozZXN4WFk3QkRFUklKTFYyYURDb3dWWFJKLUtFbk5sZnI3RE9pLVZhc29RSXhRMzhFZG9B?oc=5",
-      "source": "Peradaban.id",
-      "publishedAt": "2026-11-22T03:09:11.000Z",
-      "latestAt": "2026-11-22T03:09:11.000Z",
-      "firstSeenAt": "2026-11-22T03:19:01.686Z",
-      "outlets": 1,
-      "outletNames": [
-        "Peradaban.id"
-      ],
-      "score": 1
-    },
-    {
-      "id": "539d7a43f6fe",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Exploit Microsoft Entra Connect Health Flaw to Access Admin Emails and Organization Data",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9CRkFBeGNibWhuZHlBdkF2ek12cTU0ajlNSDA0R1EyaS1ZdDhmc3FabG9YWkZGZGQ0V3Q3TGdlS0dDVi15NTF2TTY5SHJWZXQ0M05NODJDR1hLSGRpbUJ2Y0I0c0Vja3FVUFVxeFRUUVZDRjZr0gF6QVVfeXFMT25SSjgzdGtWUzUyUjl1S3RzdW1tSUpRWC1jVUlLdF9Fem5kYWNrUy1LdVlYYUpyd1lOLWNjNGhzZWxxUjVocnlGbzNobTVPZUxIdmxmYTB3RlkxUUFnd1FBc0IyTlZmZTRrNTVJU0hEdnpCU0l6eEVVYXc?oc=5",
-      "source": "CyberSecurityNews",
-      "publishedAt": "2026-11-22T02:18:32.000Z",
-      "latestAt": "2026-11-22T02:18:32.000Z",
-      "firstSeenAt": "2026-11-22T02:33:48.142Z",
-      "outlets": 1,
-      "outletNames": [
-        "CyberSecurityNews"
       ],
       "score": 1
     },
@@ -1885,6 +1861,22 @@
         "ThePrint"
       ],
       "score": 0.89
+    },
+    {
+      "id": "4b54e25644c2",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Thanksgiving cold snap looms as temperatures take a nosedive for more than 200 million Americans",
+      "url": "https://www.foxweather.com/weather-news/thanksgiving-cold-snap-looms-temperatures-nosedive-millions-us",
+      "source": "FOX Weather",
+      "publishedAt": "2026-11-22T08:49:00.000Z",
+      "latestAt": "2026-11-22T08:49:00.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 1,
+      "outletNames": [
+        "FOX Weather"
+      ],
+      "score": 0.86
     },
     {
       "id": "382b197da3a9",
