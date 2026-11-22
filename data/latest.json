@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T21:06:43.630Z",
+  "buildTime": "2026-11-22T21:21:47.117Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 16:06 ET",
+  "etStamp": "2026-11-22 16:21 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,12 +44,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1107,
-  "lastSuccessAt": "2026-11-22T21:06:43.630Z",
+  "headlinesRead": 1100,
+  "lastSuccessAt": "2026-11-22T21:21:47.117Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 35,
-    "hacks": 21,
+    "flights": 36,
+    "hacks": 20,
     "internet": 13,
     "germs": 4,
     "grid": 4,
@@ -186,57 +186,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 795,
+      "count": 787,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     },
     "bing": {
       "ok": true,
       "count": 279,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-22T18:36:27.451Z"
     },
     "hn": {
       "ok": true,
-      "count": 3,
+      "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     },
     "x": {
       "ok": true,
@@ -249,13 +249,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T21:06:43.630Z"
+      "lastOkAt": "2026-11-22T21:21:47.117Z"
     }
   },
   "stories": [
@@ -347,29 +347,6 @@
       "score": 3.61
     },
     {
-      "id": "9a567984025b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Water supply hack warning: FBI says threats are rising",
-      "url": "https://www.msn.com/en-us/news/other/water-supply-hack-warning-fbi-says-threats-are-rising/ar-AA2hXhQo",
-      "source": "FOX8 WGHP on MSN",
-      "publishedAt": "2026-11-21T21:11:35.000Z",
-      "latestAt": "2026-11-22T07:29:10.000Z",
-      "firstSeenAt": "2026-11-22T05:34:14.943Z",
-      "outlets": 8,
-      "outletNames": [
-        "FOX8 WGHP on MSN",
-        "NewsNation",
-        "BigCountryHomepage on MSN",
-        "KETK.com on MSN",
-        "WYTV on MSN",
-        "WDHN on MSN",
-        "WRIC ABC 8News on MSN",
-        "WFLA on MSN"
-      ],
-      "score": 3.44
-    },
-    {
       "id": "9b3fe105e0e3",
       "cat": "internet",
       "kind": "news",
@@ -401,6 +378,24 @@
         "Investing.com Canada",
         "Investing.com",
         "Investing.com India"
+      ],
+      "score": 2.58
+    },
+    {
+      "id": "e1413fca8a91",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI crime database reportedly hit by suspected cyberattack",
+      "url": "https://news.az/news/fbi-crime-database-reportedly-hit-by-suspected-cyberattack",
+      "source": "news.az",
+      "publishedAt": "2026-11-22T09:17:08.000Z",
+      "latestAt": "2026-11-22T12:30:00.000Z",
+      "firstSeenAt": "2026-11-22T09:19:53.152Z",
+      "outlets": 3,
+      "outletNames": [
+        "Latest news from Azerbaijan",
+        "news.az",
+        "KOHA.net"
       ],
       "score": 2.58
     },
@@ -576,24 +571,6 @@
       "score": 3.13
     },
     {
-      "id": "e1413fca8a91",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI crime database reportedly hit by suspected cyberattack",
-      "url": "https://news.az/news/fbi-crime-database-reportedly-hit-by-suspected-cyberattack",
-      "source": "news.az",
-      "publishedAt": "2026-11-22T09:17:08.000Z",
-      "latestAt": "2026-11-22T12:30:00.000Z",
-      "firstSeenAt": "2026-11-22T09:19:53.152Z",
-      "outlets": 3,
-      "outletNames": [
-        "Latest news from Azerbaijan",
-        "news.az",
-        "KOHA.net"
-      ],
-      "score": 2.58
-    },
-    {
       "id": "b3f921dc9af6",
       "cat": "hacks",
       "kind": "news",
@@ -612,6 +589,25 @@
       "score": 2.52
     },
     {
+      "id": "4147ab830552",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI investigating suspected hack of national crime database, AP reports",
+      "url": "https://www.wgal.com/article/fbi-suspected-hack-national-crime-database-ap-reports/74500671",
+      "source": "WGAL",
+      "publishedAt": "2026-11-22T07:08:00.000Z",
+      "latestAt": "2026-11-22T07:08:00.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 4,
+      "outletNames": [
+        "WGAL",
+        "WYFF News 4",
+        "WMUR Channel 9",
+        "KSBW Channel 8"
+      ],
+      "score": 2.5
+    },
+    {
       "id": "a397ae9e51e0",
       "cat": "hacks",
       "kind": "news",
@@ -628,6 +624,23 @@
         "The Edge Singapore"
       ],
       "score": 2.21
+    },
+    {
+      "id": "8887c12d10d2",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage affects over 200 members north of Eminence",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1IVUY3UlR2SUx3UXdvbTdUa1N5RkRHQ1p1WVpJUExQbnhwUENHZ3ZsRFhvNUlmQjBfNUFzcTdCd1k5QUZVZW1UTmZMUFhVUUVhTVRoMXVhTDI0RFNhRUZyaENzQlZoVmRPN3fSAW9BVV95cUxNQjluQmZWeFF0UjRMZ19Kc3Zudlh6QWVTSzdxb0lERGxSbi1NZ3d2V2g4TjJ5UUFMUU5IS3p4ODBINjcxczAtaUVMMGRsOXdqOWFZYWFLd3hNVzQyRFBNLTdIOUZUOEg2Z3EzM1ZlcDQ?oc=5",
+      "source": "OzarksFirst.com",
+      "publishedAt": "2026-11-22T17:13:33.000Z",
+      "latestAt": "2026-11-22T17:13:33.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 2,
+      "outletNames": [
+        "OzarksFirst.com",
+        "Yahoo"
+      ],
+      "score": 1.86
     },
     {
       "id": "26a967944e74",
@@ -810,22 +823,6 @@
       "score": 1.07
     },
     {
-      "id": "df5a6554e327",
-      "cat": "grid",
-      "kind": "news",
-      "title": "IESCO announces power outage in Islamabad on November 23",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9JUno3WEdZU1RxaXpMbzV3UGNJdHpMeERLMGFSLVhvR1ZaTTBNZXZQWjJmNEliVi1xZ2xZU0UxLS1CNlpLN3hWSU5za0RKdzd3WlFZT3RacUNoYWZDNWNWUnlmdGpxUnpPOTVB?oc=5",
-      "source": "Pakistan Connect",
-      "publishedAt": "2026-11-22T19:41:58.000Z",
-      "latestAt": "2026-11-22T19:41:58.000Z",
-      "firstSeenAt": "2026-11-22T19:51:28.606Z",
-      "outlets": 1,
-      "outletNames": [
-        "Pakistan Connect"
-      ],
-      "score": 1
-    },
-    {
       "id": "d1431f408c53",
       "cat": "flights",
       "kind": "news",
@@ -901,24 +898,6 @@
       "score": 2.2
     },
     {
-      "id": "4147ab830552",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI investigating suspected hack of national crime database, AP reports",
-      "url": "https://www.wgal.com/article/fbi-suspected-hack-national-crime-database-ap-reports/74500671",
-      "source": "WGAL",
-      "publishedAt": "2026-11-22T07:08:00.000Z",
-      "latestAt": "2026-11-22T07:08:00.000Z",
-      "firstSeenAt": "2026-11-22T17:06:04.972Z",
-      "outlets": 3,
-      "outletNames": [
-        "WGAL",
-        "WYFF News 4",
-        "WMUR Channel 9"
-      ],
-      "score": 2.16
-    },
-    {
       "id": "ebe27cfc8a8f",
       "cat": "flights",
       "kind": "news",
@@ -926,7 +905,7 @@
       "url": "https://www.the-sun.com/travel/17340877/delta-air-line-outage-delays-thanksgiving-travel-atlanta/",
       "source": "The US Sun",
       "publishedAt": "2026-11-22T02:02:00.000Z",
-      "latestAt": "2026-11-22T18:33:45.000Z",
+      "latestAt": "2026-11-22T18:37:36.000Z",
       "firstSeenAt": "2026-11-22T15:50:52.043Z",
       "outlets": 2,
       "outletNames": [
@@ -1003,24 +982,6 @@
         "ABC7 New York"
       ],
       "score": 1.93
-    },
-    {
-      "id": "4921ed721946",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Equipment outage in Atlanta causes over 1,300 Delta flight delays",
-      "url": "https://www.yahoo.com/news/us/articles/equipment-outage-atlanta-causes-over-190445979.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T03:03:00.000Z",
-      "latestAt": "2026-11-22T19:09:45.000Z",
-      "firstSeenAt": "2026-11-22T19:51:28.606Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "ABC News on MSN",
-        "ABC News - Breaking News, Latest News and Videos"
-      ],
-      "score": 1.86
     },
     {
       "id": "c870b6e81aad",
@@ -1452,6 +1413,22 @@
       "score": 1.19
     },
     {
+      "id": "cd912245b84f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta outage delays more than 1,000 flights nationwide, disrupts travel at MSP",
+      "url": "https://www.msn.com/en-us/news/other/delta-outage-delays-more-than-1000-flights-nationwide-disrupts-travel-at-msp/ar-AA2hZazA",
+      "source": "Star Tribune on MSN",
+      "publishedAt": "2026-11-22T11:10:00.000Z",
+      "latestAt": "2026-11-22T11:10:00.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 1,
+      "outletNames": [
+        "Star Tribune on MSN"
+      ],
+      "score": 1.16
+    },
+    {
       "id": "cb11932ff8f0",
       "cat": "flights",
       "kind": "news",
@@ -1498,6 +1475,54 @@
         "Townhall"
       ],
       "score": 1.04
+    },
+    {
+      "id": "fe51cd80f5bd",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Popular Toothpaste and Mouthwash Recalled Amid Hormone Contamination Concerns",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQUEEyTFpTbDI1Zm91Vk5nYjlJT01Pb0ZzSVNmSVdMdFhfcGlUak5BTkxHdnYyU1Q5dWNXbS1lSzN3blU4QXZOSWZEZkRsbzZEV1E0XzZMSk43ektZWl80SkhQRjFwcFl0YVgzZ2drVFYwWmtheHJWMHk2V3lPS1NlVFNfeXQ2RVM4dW9IZGdXR1VmbmZzR01ic2tCRXdfbG9nN1A0OS1mbUpPWDg5Vmk0?oc=5",
+      "source": "Wide Open Country",
+      "publishedAt": "2026-11-22T21:15:00.000Z",
+      "latestAt": "2026-11-22T21:15:00.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 1,
+      "outletNames": [
+        "Wide Open Country"
+      ],
+      "score": 1
+    },
+    {
+      "id": "9c203136b2c3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta resolves system outage delaying flights out of Atlanta",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPZzJ4T21sbmd1R3dEVzZ2UG56a3V6UDh6RW9MNlg1ZzltVmFHMUd6akZSd2dBanRQVVNpOWwtLUV5NVVzQXhZV3gwaTIwX3lYSnIwV1lIWHQ4RTRmeUR1YUxYSUpDM0RCal9IUGhhVEp2WDRMUXhMU21HUEtPSkloOWxxbGZSbXhhTjZfbFpjZVZFUGM2RlNxUnI0dHYwTi1YTXNva2hQNmwtRzhXd1Rmb0E2blVaSy1GSWoyckVXUFB6c05yajRCT2YxTk1FRHk1TGxxc0ZpanVqb1pMWXE0VTA3eUhDQ2dDa1E1eDVTNHdNMTRCZnRZ?oc=5",
+      "source": "kare11.com",
+      "publishedAt": "2026-11-22T21:11:15.000Z",
+      "latestAt": "2026-11-22T21:11:15.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 1,
+      "outletNames": [
+        "kare11.com"
+      ],
+      "score": 1
+    },
+    {
+      "id": "174545db5029",
+      "cat": "markets",
+      "kind": "news",
+      "title": "S&P 500 Faces Thanksgiving Week After Sharp Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9xdHpLM2FUakZhTElfZGhrRVp0bVlnRlVIeV9VTzlFN3NRNTVRNENxRW1OdVg5RmdEemlNZXhHNmpvWjFFbU9wOU5YZC1seWd3Z21jLW9keUNWNW9vdzFjaklUX3BRU2Fv?oc=5",
+      "source": "Peradaban.id",
+      "publishedAt": "2026-11-22T21:09:00.000Z",
+      "latestAt": "2026-11-22T21:10:00.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 1,
+      "outletNames": [
+        "Peradaban.id"
+      ],
+      "score": 1
     },
     {
       "id": "6d231410a77a",
@@ -1560,6 +1585,22 @@
       "outlets": 1,
       "outletNames": [
         "ANI News"
+      ],
+      "score": 1
+    },
+    {
+      "id": "df5a6554e327",
+      "cat": "grid",
+      "kind": "news",
+      "title": "IESCO announces power outage in Islamabad on November 23",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9JUno3WEdZU1RxaXpMbzV3UGNJdHpMeERLMGFSLVhvR1ZaTTBNZXZQWjJmNEliVi1xZ2xZU0UxLS1CNlpLN3hWSU5za0RKdzd3WlFZT3RacUNoYWZDNWNWUnlmdGpxUnpPOTVB?oc=5",
+      "source": "Pakistan Connect",
+      "publishedAt": "2026-11-22T19:41:58.000Z",
+      "latestAt": "2026-11-22T19:41:58.000Z",
+      "firstSeenAt": "2026-11-22T19:51:28.606Z",
+      "outlets": 1,
+      "outletNames": [
+        "Pakistan Connect"
       ],
       "score": 1
     },
@@ -1676,38 +1717,6 @@
       "score": 1
     },
     {
-      "id": "59005cc1f0b6",
-      "cat": "grid",
-      "kind": "news",
-      "title": "50 percent cut in some East Berbice electricity bills due to prolonged blackout",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMkkyUmticDJFeFl1NnVESnpzMmdLd0tLOHhFWmRWT2llZjMxbnJRQ0JUck9tcXkzd3NBMkVMZms3azNsMWhJVklRalh0RTRpcjNmc2o2SjVDU2I1aVRhel9pemRoV181RXdrajlFWnlETHBYd1BwTEJXdEpKQnd6N1J6T21Qd1k5WkxEZ2ZpX0VwRE5BRHRKRVRka0Q4X3V6c2wwVTk4dHA1RTl6a1d5UnVpX296enFS?oc=5",
-      "source": "Demerara Waves Online News- Guyana",
-      "publishedAt": "2026-11-22T17:18:09.000Z",
-      "latestAt": "2026-11-22T17:18:09.000Z",
-      "firstSeenAt": "2026-11-22T17:36:06.971Z",
-      "outlets": 1,
-      "outletNames": [
-        "Demerara Waves Online News- Guyana"
-      ],
-      "score": 1
-    },
-    {
-      "id": "5bab5c44f992",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Rabbit control and Avian Influenza a focus by ORC",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSGpGZUlqaTNsOEhPVk8zYnJwcG5SSXlGNGVucDl6RXBRdUs4NzI2dUJGaDNTdVpZaDJ2ZnE2YTJ6Y1JpWTJTY0wzSTByeFNNdkV5akZvcW1yLTFqMmVTOHZ2M1hGcWJJMU1TUGpCZktMWFlkSF9RTENZMzNMNU16VzY5dzl5a3FnNzVsRWhKXzZjNzNfamN2X013b3dmSmhtcERGVm1zS0x3dw?oc=5",
-      "source": "The Central App",
-      "publishedAt": "2026-11-22T16:59:33.000Z",
-      "latestAt": "2026-11-22T16:59:33.000Z",
-      "firstSeenAt": "2026-11-22T17:06:04.972Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Central App"
-      ],
-      "score": 1
-    },
-    {
       "id": "58aa58d4f095",
       "cat": "markets",
       "kind": "news",
@@ -1754,22 +1763,6 @@
       "outlets": 1,
       "outletNames": [
         "Foro3D"
-      ],
-      "score": 1
-    },
-    {
-      "id": "57a979ec4cea",
-      "cat": "markets",
-      "kind": "news",
-      "title": "S&P 500 drops more than 3% as semiconductor stocks lead market selloff",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOOUYwQUZNMTc0ODR5eXlsdUhacFhUNXVlWGpkel9fRldXUlNUTU9CZXpKWjlZcTZJdkNBcEZ6bGdnRHBKVWgzbEJXT1NESHdneEp1ZU9vbThMVzcwaHZqXzlBUWFDemRUbHI4UWh0S2hpZ3k0WV81b2tGMW9IM0FXdkdWeW83T2t3RllTX25kQk0wbWtuYjJkWENia2RhZkltOTZqaUU5dlBFX0xteFJXSHUteHRGQ05XMlN2SDVIZUxmdw?oc=5",
-      "source": "www.equiti.com",
-      "publishedAt": "2026-11-22T03:39:02.000Z",
-      "latestAt": "2026-11-22T03:39:02.000Z",
-      "firstSeenAt": "2026-11-22T03:49:00.848Z",
-      "outlets": 1,
-      "outletNames": [
-        "www.equiti.com"
       ],
       "score": 1
     },
