@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T01:33:37.048Z",
+  "buildTime": "2026-11-22T01:48:41.812Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 20:33 ET",
+  "etStamp": "2026-11-21 20:48 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -50,19 +50,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1156,
-  "lastSuccessAt": "2026-11-22T01:33:37.048Z",
+  "headlinesRead": 1146,
+  "lastSuccessAt": "2026-11-22T01:48:41.812Z",
   "rollingFallback": false,
   "cats": {
     "flights": 25,
     "earth": 7,
-    "hacks": 23,
+    "hacks": 21,
     "grid": 5,
     "space": 4,
+    "internet": 15,
     "germs": 5,
     "markets": 6,
-    "ai": 3,
-    "internet": 14,
+    "ai": 4,
     "weather": 6,
     "sun": 2
   },
@@ -181,20 +181,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 867,
+      "count": 860,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     },
     "bing": {
       "ok": true,
-      "count": 255,
+      "count": 254,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,55 +206,56 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     },
     "x": {
       "ok": true,
-      "count": 2,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:33:37.048Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T01:33:37.048Z"
+      "lastOkAt": "2026-11-22T01:48:41.812Z"
     }
   },
   "stories": [
@@ -455,7 +456,7 @@
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbDJKazdRTDIzcV9pVnlETE1sem8tR2NhUF9VUFFLTTBaSmh2Z3lfcTZoTWZud2NnRGN6SWRZRXRlb0tJdzczR0RPT0xGZldINjlhWlZHbFNPdm1ZUjlIcEZPMmNRXzVNS3czTmZzTFh1anktaFNKaHk4NmdHTkNIR2pVSVNyQ2JyeDZsc3R3?oc=5",
       "source": "Norwalk Hour",
       "publishedAt": "2026-11-21T18:46:08.000Z",
-      "latestAt": "2026-11-21T19:12:30.000Z",
+      "latestAt": "2026-11-22T00:22:30.000Z",
       "firstSeenAt": "2026-11-21T19:02:44.392Z",
       "outlets": 4,
       "outletNames": [
@@ -507,6 +508,23 @@
       "score": 2.39
     },
     {
+      "id": "47e69d687422",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Analysts call for investigation, audit on nationwide outages",
+      "url": "https://www.aol.com/articles/analysts-call-investigation-audit-nationwide-143900000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-21T07:01:00.000Z",
+      "latestAt": "2026-11-21T15:59:00.000Z",
+      "firstSeenAt": "2026-11-21T22:03:19.113Z",
+      "outlets": 2,
+      "outletNames": [
+        "AOL",
+        "Eurasia Review"
+      ],
+      "score": 2.1
+    },
+    {
       "id": "3e4b1c709480",
       "cat": "germs",
       "kind": "news",
@@ -522,23 +540,6 @@
         "Limapagi"
       ],
       "score": 1.99
-    },
-    {
-      "id": "4a96a57e3052",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Wall Street tumbles as AI stocks plunge",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOR1VwVWFLWGlQM2VFWFdqWGJ2NURRT3FTcjVkQ1VxS3B1Wi1RckNBM3JYcmpQS05mRElPQkZlcTg4WlpFeW5iUjF2LW5vdTJzUmk1VHNRR0ctamE0M0oxRmpHdE45dHpUUEtBeUlQR3N4OWR6ZjN6SVNwRkJHNWxFZA?oc=5",
-      "source": "1News",
-      "publishedAt": "2026-11-21T11:05:28.000Z",
-      "latestAt": "2026-11-21T20:50:37.000Z",
-      "firstSeenAt": "2026-11-21T13:31:53.958Z",
-      "outlets": 2,
-      "outletNames": [
-        "1News",
-        "SSBCrack"
-      ],
-      "score": 1.92
     },
     {
       "id": "sig:faa-stop:YYZ:2026-11-21",
@@ -645,24 +646,6 @@
       "score": 2.58
     },
     {
-      "id": "e7ec2c2dedbb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Carson, Banks say ATC outage shows urgent need for upgrades",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRlo2anpqclJXYkJ5dk9EcWRoVVRaQ3lXZnZMeFE5cy1CbXpNRXNhekpSZVUxVG1EanQzVjg2dVRrSWxFNEl6eFNUVl83c1ZvaHhMc0psbTlGM2FUNzBhaTJjZ2plYU9FN0JWb0N5TEhWT2xxU2tZaU95MEIwOUlfQmtGZGZaYTN3WU5zVlRPZlFkUHh0OVJVbkliQXBPdk5iUUh2aXgycw?oc=5",
-      "source": "WRTV",
-      "publishedAt": "2026-11-21T01:47:00.000Z",
-      "latestAt": "2026-11-21T01:53:24.000Z",
-      "firstSeenAt": "2026-11-21T03:30:16.173Z",
-      "outlets": 3,
-      "outletNames": [
-        "WRTV",
-        "cedarnews.net",
-        "Yahoo"
-      ],
-      "score": 2.51
-    },
-    {
       "id": "1d17892f4747",
       "cat": "earth",
       "kind": "news",
@@ -701,6 +684,23 @@
       "score": 2.42
     },
     {
+      "id": "603f4b56ad5a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase reveals vendor cyberattack days after customers faced major outage",
+      "url": "https://finance.yahoo.com/technology/articles/chase-reveals-vendor-cyberattack-days-125432478.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-21T04:54:00.000Z",
+      "latestAt": "2026-11-21T12:54:32.000Z",
+      "firstSeenAt": "2026-11-21T14:47:03.235Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Yahoo Finance"
+      ],
+      "score": 2.34
+    },
+    {
       "id": "6aa8479c13bb",
       "cat": "earth",
       "kind": "news",
@@ -719,6 +719,23 @@
       "score": 2.16,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "4a96a57e3052",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Wall Street tumbles as AI stocks plunge",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOR1VwVWFLWGlQM2VFWFdqWGJ2NURRT3FTcjVkQ1VxS3B1Wi1RckNBM3JYcmpQS05mRElPQkZlcTg4WlpFeW5iUjF2LW5vdTJzUmk1VHNRR0ctamE0M0oxRmpHdE45dHpUUEtBeUlQR3N4OWR6ZjN6SVNwRkJHNWxFZA?oc=5",
+      "source": "1News",
+      "publishedAt": "2026-11-21T11:05:28.000Z",
+      "latestAt": "2026-11-21T20:50:37.000Z",
+      "firstSeenAt": "2026-11-21T13:31:53.958Z",
+      "outlets": 2,
+      "outletNames": [
+        "1News",
+        "SSBCrack"
+      ],
+      "score": 1.92
     },
     {
       "id": "fc6a032e6502",
@@ -855,22 +872,6 @@
       "score": 1.4
     },
     {
-      "id": "4f6393459502",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Executive Apologizes for Widespread Outage Affecting Users Worldwide and Reveals Three Factors Behind It",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1zZ3RIS0lRQTl6d0lIMFZBWndaemVlRUFWUU1MYWpza2F5VHlkSEp0aHdBMEhLdUE1V0JCVnVPUW44V1pIcG82VzlMQTNlMDZuenFvVmQ4ZW1pSm8tZVRhUG1pdWNYbThzNERWWUFmSi1RQ2phcHBvYmg1QQ?oc=5",
-      "source": "news.amomama.com",
-      "publishedAt": "2026-11-21T11:13:00.000Z",
-      "latestAt": "2026-11-21T11:13:00.000Z",
-      "firstSeenAt": "2026-11-21T11:16:31.801Z",
-      "outlets": 1,
-      "outletNames": [
-        "news.amomama.com"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "8b7dbde325bc",
       "cat": "flights",
       "kind": "news",
@@ -887,23 +888,6 @@
         "AOL.com"
       ],
       "score": 3.12
-    },
-    {
-      "id": "603f4b56ad5a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase reveals vendor cyberattack days after customers faced major outage",
-      "url": "https://finance.yahoo.com/technology/articles/chase-reveals-vendor-cyberattack-days-125432478.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-21T04:54:00.000Z",
-      "latestAt": "2026-11-21T12:54:32.000Z",
-      "firstSeenAt": "2026-11-21T14:47:03.235Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Yahoo Finance"
-      ],
-      "score": 2.34
     },
     {
       "id": "89dc7ef81ec8",
@@ -974,6 +958,24 @@
       "outletNames": [
         "MEAWW News",
         "Gistmania"
+      ],
+      "score": 1.86
+    },
+    {
+      "id": "f42eaad8c569",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says",
+      "url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-21T08:41:00.000Z",
+      "latestAt": "2026-11-21T14:28:00.000Z",
+      "firstSeenAt": "2026-11-22T01:33:37.048Z",
+      "outlets": 3,
+      "outletNames": [
+        "Associated Press News",
+        "Chicago Tribune",
+        "HuffPost"
       ],
       "score": 1.86
     },
@@ -1131,23 +1133,6 @@
       "score": 1.52
     },
     {
-      "id": "f42eaad8c569",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says",
-      "url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-21T08:41:00.000Z",
-      "latestAt": "2026-11-21T14:28:00.000Z",
-      "firstSeenAt": "2026-11-22T01:33:37.048Z",
-      "outlets": 2,
-      "outletNames": [
-        "Associated Press News",
-        "Chicago Tribune"
-      ],
-      "score": 1.44
-    },
-    {
       "id": "34dd1d2e5cdb",
       "cat": "flights",
       "kind": "news",
@@ -1160,6 +1145,22 @@
       "outlets": 1,
       "outletNames": [
         "www.frequencynews.ca"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "4f6393459502",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Executive Apologizes for Widespread Outage Affecting Users Worldwide and Reveals Three Factors Behind It",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1zZ3RIS0lRQTl6d0lIMFZBWndaemVlRUFWUU1MYWpza2F5VHlkSEp0aHdBMEhLdUE1V0JCVnVPUW44V1pIcG82VzlMQTNlMDZuenFvVmQ4ZW1pSm8tZVRhUG1pdWNYbThzNERWWUFmSi1RQ2phcHBvYmg1QQ?oc=5",
+      "source": "news.amomama.com",
+      "publishedAt": "2026-11-21T11:13:00.000Z",
+      "latestAt": "2026-11-21T11:13:00.000Z",
+      "firstSeenAt": "2026-11-21T11:16:31.801Z",
+      "outlets": 1,
+      "outletNames": [
+        "news.amomama.com"
       ],
       "score": 1.4
     },
@@ -1684,22 +1685,6 @@
       "score": 1.06
     },
     {
-      "id": "47e69d687422",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Analysts call for investigation, audit on nationwide outages",
-      "url": "https://www.aol.com/articles/analysts-call-investigation-audit-nationwide-143900000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-21T07:01:00.000Z",
-      "latestAt": "2026-11-21T07:01:00.000Z",
-      "firstSeenAt": "2026-11-21T22:03:19.113Z",
-      "outlets": 1,
-      "outletNames": [
-        "AOL"
-      ],
-      "score": 1.05
-    },
-    {
       "id": "2b1c154a4e08",
       "cat": "hacks",
       "kind": "news",
@@ -1730,6 +1715,22 @@
         "The Portugal News"
       ],
       "score": 1.01
+    },
+    {
+      "id": "704cf229d2ed",
+      "cat": "internet",
+      "kind": "news",
+      "title": "AI patching surge: Microsoft's 3,554 fixes and NZ outage risk",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUnlOS2hEVGlPMGdHT21QeWM0eVNBbDlnZEc3aU5rZFJDbEVZZE1wSmN5YzBwZjJWcnJkR056dnFrQ0hOdTd3bHNHcEZ5RW9mQldzdnlVeVpCS25VVjM3SnhYTUhkdTlST1k2QW82d0tyY0dzRDN1R3haZ1lDVk5ibjJMVDNEOFNxT1d5QWk1bw?oc=5",
+      "source": "B2B News",
+      "publishedAt": "2026-11-22T01:46:08.000Z",
+      "latestAt": "2026-11-22T01:46:08.000Z",
+      "firstSeenAt": "2026-11-22T01:48:41.812Z",
+      "outlets": 1,
+      "outletNames": [
+        "B2B News"
+      ],
+      "score": 1
     },
     {
       "id": "5bf83ef90d12",
@@ -1894,22 +1895,6 @@
       "score": 0.99
     },
     {
-      "id": "9a567984025b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Water supply hack warning: FBI says threats are rising",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZDB2RnY5Sy1RdVo2ZVpMMENyX1lieDJkNnNXZHE4a3ZWaHp0YUdjYkkwVVluOFpWTUgzQlcyMU1DVHZSeTdBRlJCdEdSdE51LVQ3WURLd254ckxiRi1OckhOOEZSR0hyZk5FMG1FdTVrQjl3dWVnWHQyY1IzVkRJa09sTVk4NHZTeEF2bNIBkgFBVV95cUxQbTlnRjJpVmktZGxTc2xpSllwUXYwVXhQejg2SHRJN2NFYWlpS3FHTDdZMEJhampaaWw1Z25DT3BPTGVDaDdRY285bXhLaElDVW5TRU9RalgzdmdoWVJHV3pCZGdoNmlHdzQwMks3bWF3bUR2SGpGNGNQaUoyd0pYc0h4MHJDeEdvMDhuX2txSjV5UQ?oc=5",
-      "source": "NewsNation",
-      "publishedAt": "2026-11-22T00:29:34.000Z",
-      "latestAt": "2026-11-22T00:29:34.000Z",
-      "firstSeenAt": "2026-11-22T01:03:34.511Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsNation"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "7ea48e0c9ab9",
       "cat": "space",
       "kind": "news",
@@ -2004,6 +1989,22 @@
         "NBC News"
       ],
       "score": 0.86
+    },
+    {
+      "id": "10deca123f63",
+      "cat": "ai",
+      "kind": "news",
+      "title": "‘Zero chance’: Experts warn rogue AI agents cannot be controlled amid cyber chaos",
+      "url": "https://www.news.com.au/technology/online/hacking/zero-chance-experts-warn-rogue-ai-agents-cannot-be-controlled-amid-cyber-chaos/news-story/982103592c7e9fc33a30ee1769ab7c69",
+      "source": "news.com.au",
+      "publishedAt": "2026-11-21T14:06:00.000Z",
+      "latestAt": "2026-11-21T14:06:00.000Z",
+      "firstSeenAt": "2026-11-22T01:48:41.812Z",
+      "outlets": 1,
+      "outletNames": [
+        "news.com.au"
+      ],
+      "score": 0.8
     }
   ]
 }
