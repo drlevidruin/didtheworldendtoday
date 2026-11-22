@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T04:49:17.841Z",
-  "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 23:49 ET",
+  "buildTime": "2026-11-22T05:04:22.396Z",
+  "etDate": "2026-11-22",
+  "etStamp": "2026-11-22 00:04 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -30,14 +30,13 @@
   ],
   "change": 0,
   "yesterday": {
-    "date": "2026-11-20",
+    "date": "2026-11-21",
     "score": 71,
     "fired": [
       "flights",
       "hacks",
       "internet",
       "space",
-      "sun",
       "earth",
       "markets",
       "ai",
@@ -50,18 +49,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1168,
-  "lastSuccessAt": "2026-11-22T04:49:17.841Z",
+  "headlinesRead": 1131,
+  "lastSuccessAt": "2026-11-22T05:04:22.396Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 24,
+    "flights": 21,
     "earth": 8,
-    "hacks": 27,
+    "hacks": 25,
     "grid": 6,
     "internet": 12,
-    "germs": 4,
+    "germs": 7,
     "markets": 6,
-    "weather": 4,
+    "weather": 6,
     "sun": 2,
     "space": 4,
     "ai": 3
@@ -186,57 +185,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 879,
+      "count": 833,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "bing": {
       "ok": true,
-      "count": 258,
+      "count": 259,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 8,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-21T23:51:30.361Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "hn": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "x": {
       "ok": true,
@@ -249,13 +248,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T04:49:17.841Z"
+      "lastOkAt": "2026-11-22T05:04:22.396Z"
     }
   },
   "stories": [
@@ -617,23 +616,6 @@
       "score": 2.34
     },
     {
-      "id": "603f4b56ad5a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase reveals vendor cyberattack days after customers faced major outage",
-      "url": "https://finance.yahoo.com/technology/articles/chase-reveals-vendor-cyberattack-days-125432478.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-21T04:54:00.000Z",
-      "latestAt": "2026-11-21T12:54:32.000Z",
-      "firstSeenAt": "2026-11-21T14:47:03.235Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Yahoo Finance"
-      ],
-      "score": 2.34
-    },
-    {
       "id": "6aa8479c13bb",
       "cat": "earth",
       "kind": "news",
@@ -652,6 +634,41 @@
       "score": 2.16,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "16a963138cec",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI Suffers Cyberattack as Hackers Breach Criminal Database",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVnVseFJuRWc0S3JrWUNrYkhNei1zZy1EczdxcmN6VkxWR0tXNjkxV2VqZ2dzQmVmRmwybmJNbHhudkwydmJWczUwako1QTlZZ3RaejlHaXVCMlhqbHl2U1JJa2U5bnJnWEhlRUpCZlpUa3pRTkZDamxIcjhSQTY5alA0b3JZd0kyUTNDSXNKbVhxVkdWWG1v?oc=5",
+      "source": "Wide Open Country",
+      "publishedAt": "2026-11-21T16:02:19.000Z",
+      "latestAt": "2026-11-22T03:35:22.000Z",
+      "firstSeenAt": "2026-11-22T04:19:03.670Z",
+      "outlets": 3,
+      "outletNames": [
+        "Wide Open Country",
+        "Euro Weekly News",
+        "FOX 32 Chicago"
+      ],
+      "score": 2.06
+    },
+    {
+      "id": "b2511d0c1f80",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Dept. of Agriculture says bird flu likely came from Idaho cattle",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNa0l2Q1JIMzlfV2Q1VUljUm5SNThsZDR4cXF5dWRieUJtNF9uRWpLTGVQcWZSR0tjaGFkVTdqR09yMFpkRXFiMmVlOHhmbDVFUG94Nm9MME5SaWRjZFBMQ1c1MkktUk5LakFBOWVEbFBNMTlXcTBTZ1NsMkdHRUNxRlNydmE3QQ?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T03:42:00.000Z",
+      "latestAt": "2026-11-22T03:45:05.000Z",
+      "firstSeenAt": "2026-11-22T05:04:22.396Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "KIRO 7 News Seattle"
+      ],
+      "score": 1.95
     },
     {
       "id": "4a96a57e3052",
@@ -811,6 +828,23 @@
       "score": 1.46
     },
     {
+      "id": "152fadc0e45b",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Oregon confirms human bird flu case",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVFlvZE9kdkxhX3JMVW5ab0dxR2dIWWlXYmF6M0c3QlZEeExIak1lSlFwN196YldzdHc3bEEyRlVvc05qbVdGeDN5T1ZyNlpHX1ZfMXZVTkpRNFdJNmxKTHVEamxEQjdNM3FuN0NxLW1uekpIQWZfOFZ5bG1Sc0VhNlp3?oc=5",
+      "source": "Kiowa County Press",
+      "publishedAt": "2026-11-21T12:00:00.000Z",
+      "latestAt": "2026-11-21T15:55:54.000Z",
+      "firstSeenAt": "2026-11-22T05:04:22.396Z",
+      "outlets": 2,
+      "outletNames": [
+        "Kiowa County Press",
+        "KATU"
+      ],
+      "score": 1.43
+    },
+    {
       "id": "4931af518ce8",
       "cat": "weather",
       "kind": "news",
@@ -825,56 +859,6 @@
         "WMTV 15 NEWS"
       ],
       "score": 1.4
-    },
-    {
-      "id": "0e45f28014fc",
-      "cat": "markets",
-      "kind": "news",
-      "title": "AI Investment Fears Trigger Global Market Selloff as Nasdaq 100 Suffers Worst Week Since 2020",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBBRVVjaEI1S0FXNXQta1NGalFUQ1NTNk4tV2ZXdHctcmhHbHlXNkhRMVI1MEsxSkd1MzF2WEEzUG4xVE1La1EyZlNPc1IzcWFydm16TE5lQ3VVbnJOOUJBakJDNGZLX3lTUHRkbUZuMDlRT1B1N2txTk9mWnE?oc=5",
-      "source": "Hokanews",
-      "publishedAt": "2026-11-21T14:36:00.000Z",
-      "latestAt": "2026-11-21T14:36:00.000Z",
-      "firstSeenAt": "2026-11-21T14:47:03.235Z",
-      "outlets": 1,
-      "outletNames": [
-        "Hokanews"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "4f6393459502",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Executive Apologizes for Widespread Outage Affecting Users Worldwide and Reveals Three Factors Behind It",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1zZ3RIS0lRQTl6d0lIMFZBWndaemVlRUFWUU1MYWpza2F5VHlkSEp0aHdBMEhLdUE1V0JCVnVPUW44V1pIcG82VzlMQTNlMDZuenFvVmQ4ZW1pSm8tZVRhUG1pdWNYbThzNERWWUFmSi1RQ2phcHBvYmg1QQ?oc=5",
-      "source": "news.amomama.com",
-      "publishedAt": "2026-11-21T11:13:00.000Z",
-      "latestAt": "2026-11-21T11:13:00.000Z",
-      "firstSeenAt": "2026-11-21T11:16:31.801Z",
-      "outlets": 1,
-      "outletNames": [
-        "news.amomama.com"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "16a963138cec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI Suffers Cyberattack as Hackers Breach Criminal Database",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVnVseFJuRWc0S3JrWUNrYkhNei1zZy1EczdxcmN6VkxWR0tXNjkxV2VqZ2dzQmVmRmwybmJNbHhudkwydmJWczUwako1QTlZZ3RaejlHaXVCMlhqbHl2U1JJa2U5bnJnWEhlRUpCZlpUa3pRTkZDamxIcjhSQTY5alA0b3JZd0kyUTNDSXNKbVhxVkdWWG1v?oc=5",
-      "source": "Wide Open Country",
-      "publishedAt": "2026-11-21T16:02:19.000Z",
-      "latestAt": "2026-11-22T03:35:22.000Z",
-      "firstSeenAt": "2026-11-22T04:19:03.670Z",
-      "outlets": 3,
-      "outletNames": [
-        "Wide Open Country",
-        "Euro Weekly News",
-        "FOX 32 Chicago"
-      ],
-      "score": 2.06
     },
     {
       "id": "b1224b4f8b73",
@@ -997,23 +981,6 @@
       "score": 1.68
     },
     {
-      "id": "cef185c52f33",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers atacan al FBI y al Departamento de Agricultura en Estados Unidos",
-      "url": "https://www.latercera.com/mundo/noticia/hackers-atacan-al-fbi-y-al-departamento-de-agricultura-en-estados-unidos/",
-      "source": "La Tercera",
-      "publishedAt": "2026-11-21T04:55:00.000Z",
-      "latestAt": "2026-11-21T05:51:00.000Z",
-      "firstSeenAt": "2026-11-21T16:32:25.046Z",
-      "outlets": 2,
-      "outletNames": [
-        "La Tercera",
-        "TVN"
-      ],
-      "score": 1.61
-    },
-    {
       "id": "8921c65897d0",
       "cat": "hacks",
       "kind": "news",
@@ -1029,23 +996,6 @@
         "https://www.findarticles.com/"
       ],
       "score": 1.58
-    },
-    {
-      "id": "305315cb563c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "How a reporter covered the FAA ground stop from 36,000 feet",
-      "url": "https://www.dallasnews.com/business/airlines/article/southwest-airlines-ground-stop-reporter-covers-faa-22538199.php",
-      "source": "The Dallas Morning News",
-      "publishedAt": "2026-11-21T04:50:00.000Z",
-      "latestAt": "2026-11-21T13:00:28.000Z",
-      "firstSeenAt": "2026-11-21T18:32:36.928Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Dallas Morning News",
-        "Dallas News"
-      ],
-      "score": 1.54
     },
     {
       "id": "6b3dbe729ed4",
@@ -1116,6 +1066,22 @@
       "score": 1.42
     },
     {
+      "id": "0e45f28014fc",
+      "cat": "markets",
+      "kind": "news",
+      "title": "AI Investment Fears Trigger Global Market Selloff as Nasdaq 100 Suffers Worst Week Since 2020",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBBRVVjaEI1S0FXNXQta1NGalFUQ1NTNk4tV2ZXdHctcmhHbHlXNkhRMVI1MEsxSkd1MzF2WEEzUG4xVE1La1EyZlNPc1IzcWFydm16TE5lQ3VVbnJOOUJBakJDNGZLX3lTUHRkbUZuMDlRT1B1N2txTk9mWnE?oc=5",
+      "source": "Hokanews",
+      "publishedAt": "2026-11-21T14:36:00.000Z",
+      "latestAt": "2026-11-21T14:36:00.000Z",
+      "firstSeenAt": "2026-11-21T14:47:03.235Z",
+      "outlets": 1,
+      "outletNames": [
+        "Hokanews"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "34dd1d2e5cdb",
       "cat": "flights",
       "kind": "news",
@@ -1128,6 +1094,22 @@
       "outlets": 1,
       "outletNames": [
         "www.frequencynews.ca"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "4f6393459502",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Executive Apologizes for Widespread Outage Affecting Users Worldwide and Reveals Three Factors Behind It",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1zZ3RIS0lRQTl6d0lIMFZBWndaemVlRUFWUU1MYWpza2F5VHlkSEp0aHdBMEhLdUE1V0JCVnVPUW44V1pIcG82VzlMQTNlMDZuenFvVmQ4ZW1pSm8tZVRhUG1pdWNYbThzNERWWUFmSi1RQ2phcHBvYmg1QQ?oc=5",
+      "source": "news.amomama.com",
+      "publishedAt": "2026-11-21T11:13:00.000Z",
+      "latestAt": "2026-11-21T11:13:00.000Z",
+      "firstSeenAt": "2026-11-21T11:16:31.801Z",
+      "outlets": 1,
+      "outletNames": [
+        "news.amomama.com"
       ],
       "score": 1.4
     },
@@ -1432,6 +1414,22 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "aa603ae735f8",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Green Bay Sets Record High; Cold Front Arrives",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdGJrS25NcnRrVlFBZVpWT0lWVVhSeWdjNEJWeTZieE00VXBFbEppRGdtcHJnNThHcjM0LWhwWDhDeXdSQVJrX1lzcmV0bHRHbkdCWHhqUzFBdUlYRnNXcVpTSEw4c1hEQ2RMRjlFNHlXY1FZQmtmLUhkV042OTNteUYwdUZLSWNyakE1RE1lSG1EX0ZDT18xZFBEQQ?oc=5",
+      "source": "Wisevoter",
+      "publishedAt": "2026-11-22T00:14:58.000Z",
+      "latestAt": "2026-11-22T00:14:58.000Z",
+      "firstSeenAt": "2026-11-22T05:04:22.396Z",
+      "outlets": 1,
+      "outletNames": [
+        "Wisevoter"
+      ],
+      "score": 1.29
+    },
+    {
       "id": "f82582961a35",
       "cat": "internet",
       "kind": "news",
@@ -1576,22 +1574,6 @@
       "score": 1.11
     },
     {
-      "id": "5df77ade6471",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA nationwide ground stop: Why it happened, according to officials",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9WQ0tKcG9WQmR6MldmRXJiMVJ3YmpyTHl0MGNMQlNnNkpIWDA0YmZLTWJWdW40QUlLVkVLYmxwMzd5clhxWlB4a3RERVVPM2ExOE8zZnFJVkV5elJDc2xlZkhVUmtmSFk?oc=5",
-      "source": "Mashable",
-      "publishedAt": "2026-11-21T05:03:46.000Z",
-      "latestAt": "2026-11-21T05:03:46.000Z",
-      "firstSeenAt": "2026-11-21T19:47:57.913Z",
-      "outlets": 1,
-      "outletNames": [
-        "Mashable"
-      ],
-      "score": 1.06
-    },
-    {
       "id": "eb797381b6bc",
       "cat": "earth",
       "kind": "news",
@@ -1622,6 +1604,38 @@
         "Irish Independent"
       ],
       "score": 1.01
+    },
+    {
+      "id": "9feb2a3e367f",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Cases of bird flu are on the rise, especially in the north",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNXRpX3B4SnRlQVRyWXhnLWhia19EdjdUMGRkRjFqWUVHOWxIY3loSG9HUnF5N3YwTmhITWJPZ3g1ZGtjRmZkdFpkVEgyWnBWM0psdkF1TnI1SjdfX1ZyVTY1Nk5QZHFyamVzb3pzSUtkbnJ5R2kwazQ2cVhDQUc0Wk1aSmptV0YyNEFNXzUzc0RuRHVyWjV3Z2ExZjdnYW56UlE0YmdOMA?oc=5",
+      "source": "blue News",
+      "publishedAt": "2026-11-22T05:04:19.000Z",
+      "latestAt": "2026-11-22T05:04:19.000Z",
+      "firstSeenAt": "2026-11-22T05:04:22.396Z",
+      "outlets": 1,
+      "outletNames": [
+        "blue News"
+      ],
+      "score": 1
+    },
+    {
+      "id": "35ba0d50d024",
+      "cat": "weather",
+      "kind": "news",
+      "title": "VIC Severe Thunderstorm Warning: Large Hail, Damaging Winds, Heavy Rain",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNSnBQNl9fX2cwYi1zcGZvV3J2dzBkVjIzcWRLc0QtR0ZzV3RCNEVZYVhXNUk4WTc3OXoyWkVzZjJXNWpFLVhocVE2ZVVPdzVsV1FvdFdnMnlZNnZRTDNvSzRWMjFIYksyMzIwNzhuZEtGZVdxZS1Nb1ZCSEJPb1JuemRJUHp3RldYcWZwaDNTcUxGZVhtUUs4Ym5uTnRRcDJ2emt3MzhPM2pJOXRzTXYyVHFkU0ZralhwRmNKY3VSbW1rTS1DNlktZFc3dUxRWG1mVXZwY1FBS0hQLTIyS1VySzdtMDFMeDdZajJsT3RFWXItME8xcWx1WURpR3FBS3BOcS1FeV9yRVJSQQ?oc=5",
+      "source": "Early Warning Network",
+      "publishedAt": "2026-11-22T05:00:11.000Z",
+      "latestAt": "2026-11-22T05:00:11.000Z",
+      "firstSeenAt": "2026-11-22T05:04:22.396Z",
+      "outlets": 1,
+      "outletNames": [
+        "Early Warning Network"
+      ],
+      "score": 1
     },
     {
       "id": "554ed76f9029",
@@ -1880,22 +1894,6 @@
       "score": 0.99
     },
     {
-      "id": "62e4fb7906dc",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Holiday travelers worry about federal systems following FAA's ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQR1AyLUE4THVFQVNzUUtSWHZrNlNuZlpnb2MyYzZockJQN2dvZzJQbTNOLTAyRUt1dC11Z2d1TE9Idm05a2JFMEV5R3p6c21xdzFXdlhQNkx5eU9rZmJZU3hSV2NPcWJwUmdteFI2WlAyTllTeUV0NGZGNW5FUEFOQklhbEtYMGR5YTc4VEtDUy1oU0g0VXE0aFhPUHBtLUw3VWdRTVBlWEpvRlNfMmh2bmYyV05BR1dweGhoUkYxcDV3N3UxYS1tdFh5cW0yQU90eGFpZkJpWlVrUEpjS3NDWlE1eUQ0RXdkR2w2QWdWNVY0QQ?oc=5",
-      "source": "WHAS11",
-      "publishedAt": "2026-11-22T03:51:00.000Z",
-      "latestAt": "2026-11-22T03:51:00.000Z",
-      "firstSeenAt": "2026-11-22T04:49:17.841Z",
-      "outlets": 1,
-      "outletNames": [
-        "WHAS11"
-      ],
-      "score": 0.98
-    },
-    {
       "id": "d1bfe0d98aab",
       "cat": "ai",
       "kind": "news",
@@ -1912,22 +1910,6 @@
       "score": 0.97
     },
     {
-      "id": "6bd2a72536cd",
-      "cat": "space",
-      "kind": "news",
-      "title": "Earth Captures Tiny Asteroid 2026 QQ8 as Temporary Mini Moon",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5BVHA0dnl1bzR5eUFiU2ZyVVRwbG9Wd05BaUFxWGxPM3RPVzhrcHJLR1JSYkZ0MGZCbl9jSEgtR090bXg1Q1RWYjFmZUExM3B1SW8xRXF4ZDkwNGJ4a0ttNHlYMVVka2M?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-22T01:51:10.000Z",
-      "latestAt": "2026-11-22T01:51:10.000Z",
-      "firstSeenAt": "2026-11-22T04:49:17.841Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 0.95
-    },
-    {
       "id": "6ba194e9c913",
       "cat": "space",
       "kind": "news",
@@ -1942,6 +1924,22 @@
         "SSBCrack"
       ],
       "score": 0.9
+    },
+    {
+      "id": "6bd2a72536cd",
+      "cat": "space",
+      "kind": "news",
+      "title": "Earth Captures Tiny Asteroid 2026 QQ8 as Temporary Mini Moon",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5BVHA0dnl1bzR5eUFiU2ZyVVRwbG9Wd05BaUFxWGxPM3RPVzhrcHJLR1JSYkZ0MGZCbl9jSEgtR090bXg1Q1RWYjFmZUExM3B1SW8xRXF4ZDkwNGJ4a0ttNHlYMVVka2M?oc=5",
+      "source": "cwibc.co.id",
+      "publishedAt": "2026-11-21T20:10:00.000Z",
+      "latestAt": "2026-11-22T01:51:10.000Z",
+      "firstSeenAt": "2026-11-22T04:49:17.841Z",
+      "outlets": 1,
+      "outletNames": [
+        "cwibc.co.id"
+      ],
+      "score": 0.86
     },
     {
       "id": "4ee4e22b5039",
