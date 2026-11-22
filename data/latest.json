@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T16:35:57.570Z",
+  "buildTime": "2026-11-22T16:51:03.339Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 11:35 ET",
+  "etStamp": "2026-11-22 11:51 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,19 +45,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1055,
-  "lastSuccessAt": "2026-11-22T16:35:57.570Z",
+  "headlinesRead": 1068,
+  "lastSuccessAt": "2026-11-22T16:51:03.339Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
-    "hacks": 28,
+    "hacks": 29,
     "grid": 9,
     "internet": 10,
     "germs": 8,
     "space": 2,
     "earth": 4,
     "markets": 4,
-    "weather": 5,
+    "weather": 4,
     "sun": 4,
     "ai": 4
   },
@@ -182,80 +182,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 760,
+      "count": 769,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     },
     "bing": {
       "ok": true,
-      "count": 263,
+      "count": 267,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-22T12:50:28.187Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:35:57.570Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T16:35:57.570Z"
+      "lastOkAt": "2026-11-22T16:51:03.339Z"
     }
   },
   "stories": [
@@ -572,18 +573,22 @@
       "url": "https://www.yahoo.com/news/us/articles/ground-stop-effect-hartsfield-jackson-133935592.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-22T05:38:00.000Z",
-      "latestAt": "2026-11-22T13:50:00.000Z",
+      "latestAt": "2026-11-22T16:20:16.000Z",
       "firstSeenAt": "2026-11-22T13:50:33.480Z",
-      "outlets": 4,
+      "outlets": 8,
       "outletNames": [
         "WSB-TV",
         "Yahoo",
         "WSB-TV Channel 2 on MSN",
-        "Atlanta News First"
+        "Atlanta News First",
+        "cedarnews.net",
+        "Speaks Media",
+        "Newsweek",
+        "NewsBreak: Local News & Alerts"
       ],
       "trending": 200,
       "trendTerm": "delta ground stop",
-      "score": 2.59
+      "score": 3.45
     },
     {
       "id": "b3f921dc9af6",
@@ -825,22 +830,23 @@
       "quietReason": "headline mentions tornadoes"
     },
     {
-      "id": "459513ce3d92",
-      "cat": "weather",
+      "id": "233cde5c351e",
+      "cat": "earth",
       "kind": "news",
-      "title": "Record warmth possible in Chicago, but forecast is about to change dramatically",
-      "url": "https://www.nbcchicago.com/news/local/record-warmth-possible-in-chicago-but-the-forecast-is-about-to-change-dramatically/4018978/",
-      "source": "NBC 5 Chicago",
-      "publishedAt": "2026-11-21T16:50:00.000Z",
-      "latestAt": "2026-11-22T13:20:00.000Z",
-      "firstSeenAt": "2026-11-21T17:17:32.491Z",
-      "outlets": 1,
+      "title": "Video | Peru Earthquake | 6.7 Magnitude Earthquake Strikes Peru, Tremors Felt In Capital Lima",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUTVRMGhwWmxWVzhvLTFNZkZBNzF3V3Y4RUxjZWpJRnlONUZRUnh3dlVuSWI5TzVFWDJmTFNEX2tyNkUxX21sZlh5Znp1WThtZ1JfNzM0eEt0SzR5ZEMxTVZQR3U1SGJmMnYyQmNiT3JRbFBYRFhLdTVpc3V3WW53Y2NpejVqMVJkMVJGcEhiWmtUV2N3QVExNTdoZ0Qxa3ZFbVV4d3Yxaml1b2dQWllKU09nT1JWRWZs?oc=5",
+      "source": "NDTV",
+      "publishedAt": "2026-11-21T18:17:48.000Z",
+      "latestAt": "2026-11-22T08:33:46.000Z",
+      "firstSeenAt": "2026-11-22T13:05:25.758Z",
+      "outlets": 2,
       "outletNames": [
-        "NBC 5 Chicago"
+        "NDTV",
+        "Myanmar International TV"
       ],
-      "trending": 1000,
-      "trendTerm": "weather chicago",
-      "score": 1.39
+      "score": 1.37,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "652eadbd4717",
@@ -1047,24 +1053,6 @@
       "score": 1.39
     },
     {
-      "id": "69ac125ac2fb",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Second consecutive day of near record warmth: Saturday’s predicted 72 degrees to tie 113-year-old record for the date",
-      "url": "https://wgntv.com/weather/chicago-weather-saturday-11212026/",
-      "source": "WGN-TV",
-      "publishedAt": "2026-11-21T16:50:00.000Z",
-      "latestAt": "2026-11-22T13:20:00.000Z",
-      "firstSeenAt": "2026-11-21T17:17:32.491Z",
-      "outlets": 1,
-      "outletNames": [
-        "WGN-TV"
-      ],
-      "trending": 1000,
-      "trendTerm": "weather chicago",
-      "score": 1.39
-    },
-    {
       "id": "a4728885485b",
       "cat": "internet",
       "kind": "news",
@@ -1079,25 +1067,6 @@
         "Neowin"
       ],
       "score": 1.38
-    },
-    {
-      "id": "233cde5c351e",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Video | Peru Earthquake | 6.7 Magnitude Earthquake Strikes Peru, Tremors Felt In Capital Lima",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUTVRMGhwWmxWVzhvLTFNZkZBNzF3V3Y4RUxjZWpJRnlONUZRUnh3dlVuSWI5TzVFWDJmTFNEX2tyNkUxX21sZlh5Znp1WThtZ1JfNzM0eEt0SzR5ZEMxTVZQR3U1SGJmMnYyQmNiT3JRbFBYRFhLdTVpc3V3WW53Y2NpejVqMVJkMVJGcEhiWmtUV2N3QVExNTdoZ0Qxa3ZFbVV4d3Yxaml1b2dQWllKU09nT1JWRWZs?oc=5",
-      "source": "NDTV",
-      "publishedAt": "2026-11-21T18:17:48.000Z",
-      "latestAt": "2026-11-22T08:33:46.000Z",
-      "firstSeenAt": "2026-11-22T13:05:25.758Z",
-      "outlets": 2,
-      "outletNames": [
-        "NDTV",
-        "Myanmar International TV"
-      ],
-      "score": 1.37,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "82218d53aaad",
@@ -1212,6 +1181,22 @@
       "score": 1.14
     },
     {
+      "id": "cb11932ff8f0",
+      "cat": "flights",
+      "kind": "news",
+      "title": "US airlines face USD 345m hit from nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaTR3em9oX3pPd2lkd3F2bmNLSGpBOExKS3prUkVRc0JaSkhCT2xhZ2UyNEVETVR3RmN1c1luLVMwcDJqQlV2RExuZFFrQldtNkJFa2R1VFRJV24zWVFqWHVOSzN6WUxDYjd1LUNvMmdUaDVtampPeGc2NjczVVVQYTBBdGFlS3psZkFuNVRMcXZKdTBzb0hzMnNHbU43QQ?oc=5",
+      "source": "The Bangladesh Monitor",
+      "publishedAt": "2026-11-22T05:00:27.000Z",
+      "latestAt": "2026-11-22T05:00:27.000Z",
+      "firstSeenAt": "2026-11-22T16:51:03.339Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Bangladesh Monitor"
+      ],
+      "score": 1.12
+    },
+    {
       "id": "7246bd4d8ec7",
       "cat": "flights",
       "kind": "news",
@@ -1244,6 +1229,22 @@
       "score": 1.07
     },
     {
+      "id": "9e4bcffae69c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Was the Delta outage a cyberattack? No sign so far, and no link to United's outage shown",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOTWF2dWVsWFJBZVUzRzJBVE0tOUJFMFNacW1wdlB4cnNLdU1XRzJObnFlY3VfRG5aVGNnLXA4Y2k3VEtMYWJxcklzcklKYjJnVTlENlZYa1Q1R0xLSm42LUI4THZab1RzcElIV2ZjcXBxMFJ4ME5pNEJMVjFzQlFxSk5ocmhhYXBXbFVTc2VxcEgtdktmbEtLT1dJcWxValBIYTJoTWxZYVZHZG92cF9hdDM5Mkk5UQ?oc=5",
+      "source": "Nacionale",
+      "publishedAt": "2026-11-22T16:41:10.000Z",
+      "latestAt": "2026-11-22T16:41:10.000Z",
+      "firstSeenAt": "2026-11-22T16:51:03.339Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nacionale"
+      ],
+      "score": 1
+    },
+    {
       "id": "58aa58d4f095",
       "cat": "markets",
       "kind": "news",
@@ -1256,22 +1257,6 @@
       "outlets": 1,
       "outletNames": [
         "X"
-      ],
-      "score": 1
-    },
-    {
-      "id": "4ccacfa9f769",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Flights Face More Than 3,500 Delays at Atlanta Airport as FAA Downgrades Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQaExIYnhFZ3BBNzdMUkdZS0JuMzNCaTR1M0pYNlRrbzJVQlRvVllwQUxIR3JrZ1NZWlJpamRTVzg2Qm92Y3N2RGZUTER4MkpFbGZkcWUxM3JVOUVqcG9CS0pWWW14Yk9JY1h0ekIwbTFHd3lkZ0JabHlpb1k0aDdNQi1uNzAydERzejNhWUU0VFlBaEFTRXFjZXJJRFlpQ29IenFQLWNjVnF2cTFid28xd09wSnFmWVk?oc=5",
-      "source": "Speaks Media",
-      "publishedAt": "2026-11-22T16:20:16.000Z",
-      "latestAt": "2026-11-22T16:20:16.000Z",
-      "firstSeenAt": "2026-11-22T16:22:10.931Z",
-      "outlets": 1,
-      "outletNames": [
-        "Speaks Media"
       ],
       "score": 1
     },
@@ -1336,22 +1321,6 @@
       "outlets": 1,
       "outletNames": [
         "AOL.co.uk"
-      ],
-      "score": 1
-    },
-    {
-      "id": "d55f2aa8200a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Flights to Atlanta Face Nearly Hourlong Delays After Ground Stop Is Lifted",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVlpieUltUHZNdFNwcmNZQnB2WDVVWFFJVjVSeGR0MkotdEt2Rm5PX09aOFBnMXRMR0FfWnVYRVV6NC0tVlMtYmx3aGNmRmZxWXZJa1hxR1B1OEpUTXd1cGFQQXc5N3lXUkF3eFJ6d0ItM01GRlZ5TlJXTWJSSG9oS3VGdHpNRVF4eU1QTTNKZFZ6U08zejU0d0RGSXd6aWl2SnNBWmo3TjdZamYyOU1vV2x2VFh4UzZPTE91Z2tLa1o5UTRCazVZ?oc=5",
-      "source": "cedarnews.net",
-      "publishedAt": "2026-11-22T14:21:30.000Z",
-      "latestAt": "2026-11-22T14:21:30.000Z",
-      "firstSeenAt": "2026-11-22T14:35:43.292Z",
-      "outlets": 1,
-      "outletNames": [
-        "cedarnews.net"
       ],
       "score": 1
     },
@@ -1557,7 +1526,7 @@
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWFhrcWEwY2JMcXFEQ1BtZVZWMFBMT1BIMHBmd2dwUldwRlRsMXE4bW9BSXNRdHU2Q3Q2azlHQU9RS1JGT2FhcE50UDlnSnFqTUZrZkNQYU5EMnEybmg2OTBQS2MzOGtiejJ6eTZGZ05oV3ExQXQ1ampZdU5aTTk5TXYwUlhtdHNU?oc=5",
       "source": "varindia",
       "publishedAt": "2026-11-22T10:33:19.000Z",
-      "latestAt": "2026-11-22T10:33:19.000Z",
+      "latestAt": "2026-11-22T14:27:11.000Z",
       "firstSeenAt": "2026-11-22T10:35:06.107Z",
       "outlets": 1,
       "outletNames": [
@@ -1822,6 +1791,22 @@
       "score": 1
     },
     {
+      "id": "539d7a43f6fe",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Exploit Microsoft Entra Connect Health Flaw to Access Admin Emails and Organization Data",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9CRkFBeGNibWhuZHlBdkF2ek12cTU0ajlNSDA0R1EyaS1ZdDhmc3FabG9YWkZGZGQ0V3Q3TGdlS0dDVi15NTF2TTY5SHJWZXQ0M05NODJDR1hLSGRpbUJ2Y0I0c0Vja3FVUFVxeFRUUVZDRjZr0gF6QVVfeXFMT25SSjgzdGtWUzUyUjl1S3RzdW1tSUpRWC1jVUlLdF9Fem5kYWNrUy1LdVlYYUpyd1lOLWNjNGhzZWxxUjVocnlGbzNobTVPZUxIdmxmYTB3RlkxUUFnd1FBc0IyTlZmZTRrNTVJU0hEdnpCU0l6eEVVYXc?oc=5",
+      "source": "CyberSecurityNews",
+      "publishedAt": "2026-11-22T02:18:32.000Z",
+      "latestAt": "2026-11-22T02:18:32.000Z",
+      "firstSeenAt": "2026-11-22T02:33:48.142Z",
+      "outlets": 1,
+      "outletNames": [
+        "CyberSecurityNews"
+      ],
+      "score": 1
+    },
+    {
       "id": "7738f54dbe03",
       "cat": "space",
       "kind": "news",
@@ -1964,6 +1949,22 @@
         "TechJuice"
       ],
       "score": 0.81
+    },
+    {
+      "id": "35ba0d50d024",
+      "cat": "weather",
+      "kind": "news",
+      "title": "VIC Severe Thunderstorm Warning: Large Hail, Damaging Winds, Heavy Rain",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNSnBQNl9fX2cwYi1zcGZvV3J2dzBkVjIzcWRLc0QtR0ZzV3RCNEVZYVhXNUk4WTc3OXoyWkVzZjJXNWpFLVhocVE2ZVVPdzVsV1FvdFdnMnlZNnZRTDNvSzRWMjFIYksyMzIwNzhuZEtGZVdxZS1Nb1ZCSEJPb1JuemRJUHp3RldYcWZwaDNTcUxGZVhtUUs4Ym5uTnRRcDJ2emt3MzhPM2pJOXRzTXYyVHFkU0ZralhwRmNKY3VSbW1rTS1DNlktZFc3dUxRWG1mVXZwY1FBS0hQLTIyS1VySzdtMDFMeDdZajJsT3RFWXItME8xcWx1WURpR3FBS3BOcS1FeV9yRVJSQQ?oc=5",
+      "source": "Early Warning Network",
+      "publishedAt": "2026-11-22T05:00:11.000Z",
+      "latestAt": "2026-11-22T05:12:35.000Z",
+      "firstSeenAt": "2026-11-22T16:51:03.339Z",
+      "outlets": 1,
+      "outletNames": [
+        "Early Warning Network"
+      ],
+      "score": 0.8
     }
   ]
 }
