@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T05:34:14.943Z",
+  "buildTime": "2026-11-22T05:49:17.401Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 00:34 ET",
+  "etStamp": "2026-11-22 00:49 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,15 +49,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1133,
-  "lastSuccessAt": "2026-11-22T05:34:14.943Z",
+  "headlinesRead": 1149,
+  "lastSuccessAt": "2026-11-22T05:49:17.401Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
+    "flights": 20,
     "earth": 9,
     "grid": 7,
-    "internet": 11,
     "hacks": 23,
+    "internet": 12,
     "germs": 7,
     "markets": 6,
     "weather": 6,
@@ -180,80 +180,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 847,
+      "count": 861,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     },
     "bing": {
       "ok": true,
-      "count": 255,
+      "count": 257,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-22T05:04:22.396Z"
     },
     "hn": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:34:14.943Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T05:34:14.943Z"
+      "lastOkAt": "2026-11-22T05:49:17.401Z"
     }
   },
   "stories": [
@@ -384,25 +385,44 @@
       "score": 2.58
     },
     {
-      "id": "1d17892f4747",
+      "id": "f42eaad8c569",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says",
+      "url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-21T08:41:00.000Z",
+      "latestAt": "2026-11-22T00:10:44.000Z",
+      "firstSeenAt": "2026-11-22T01:33:37.048Z",
+      "outlets": 6,
+      "outletNames": [
+        "Associated Press News",
+        "Chicago Tribune",
+        "HuffPost",
+        "BBC",
+        "Los Angeles Times on MSN",
+        "BOL News"
+      ],
+      "score": 2.58
+    },
+    {
+      "id": "6aa8479c13bb",
       "cat": "earth",
       "kind": "news",
-      "title": "Magnitude-7.2 earthquake strikes Indonesia's Maluku, no tsunami threat",
-      "url": "https://thepeninsulaqatar.com/article/21/11/2026/magnitude-72-earthquake-strikes-indonesias-maluku-no-tsunami-threat",
-      "source": "The Peninsula Qatar",
-      "publishedAt": "2026-11-21T06:48:00.000Z",
-      "latestAt": "2026-11-21T13:46:00.000Z",
-      "firstSeenAt": "2026-11-21T17:17:32.491Z",
+      "title": "4.8-Magnitude Earthquake Strikes Indonesia",
+      "url": "https://qna.org.qa/en/news/news-details?id=48-magnitude-earthquake-strikes-indonesia&date=22/11/2026",
+      "source": "Qatar News Agency",
+      "publishedAt": "2026-11-21T10:51:00.000Z",
+      "latestAt": "2026-11-21T15:59:00.000Z",
+      "firstSeenAt": "2026-11-21T20:47:56.763Z",
       "outlets": 4,
       "outletNames": [
-        "The Peninsula Qatar",
-        "The Star",
-        "The Malaysian Reserve",
-        "Latest news from Azerbaijan"
+        "TodayPress.tv",
+        "Report.az",
+        "Diari ARA",
+        "Qatar News Agency"
       ],
-      "score": 2.48,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
+      "score": 2.5
     },
     {
       "id": "517283866840",
@@ -420,26 +440,6 @@
         "Yahoo Tech"
       ],
       "score": 2.41
-    },
-    {
-      "id": "f42eaad8c569",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says",
-      "url": "https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-21T08:41:00.000Z",
-      "latestAt": "2026-11-22T00:10:44.000Z",
-      "firstSeenAt": "2026-11-22T01:33:37.048Z",
-      "outlets": 5,
-      "outletNames": [
-        "Associated Press News",
-        "Chicago Tribune",
-        "HuffPost",
-        "BBC",
-        "Los Angeles Times on MSN"
-      ],
-      "score": 2.39
     },
     {
       "id": "d1edf1a96217",
@@ -563,22 +563,23 @@
       }
     },
     {
-      "id": "6aa8479c13bb",
+      "id": "1d17892f4747",
       "cat": "earth",
       "kind": "news",
-      "title": "Magnitude 7.2 earthquake strikes Indonesia",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5LejlOTWpNOGpOYXd0bkpxaE9oeDRNUFMyVG5pQjlzT2RwVnFVRThvRG12YlFsSmZMaWJPNDJVRFIxeXFhX2s3T3RIaUQzRG9QVExxenhtNnBmTFJORE1FbDFsWEdDVFJDSm40azlhSHVBeG93ZWJNMlFVQVc?oc=5",
-      "source": "TodayPress.tv",
-      "publishedAt": "2026-11-21T10:51:00.000Z",
-      "latestAt": "2026-11-21T11:20:00.000Z",
-      "firstSeenAt": "2026-11-21T20:47:56.763Z",
-      "outlets": 3,
+      "title": "Magnitude-7.2 earthquake strikes Indonesia's Maluku, no tsunami threat",
+      "url": "https://thepeninsulaqatar.com/article/21/11/2026/magnitude-72-earthquake-strikes-indonesias-maluku-no-tsunami-threat",
+      "source": "The Peninsula Qatar",
+      "publishedAt": "2026-11-21T06:48:00.000Z",
+      "latestAt": "2026-11-21T13:46:00.000Z",
+      "firstSeenAt": "2026-11-21T17:17:32.491Z",
+      "outlets": 4,
       "outletNames": [
-        "TodayPress.tv",
-        "Report.az",
-        "Diari ARA"
+        "The Peninsula Qatar",
+        "The Star",
+        "The Malaysian Reserve",
+        "Latest news from Azerbaijan"
       ],
-      "score": 2.16,
+      "score": 2.48,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
     },
@@ -1138,7 +1139,7 @@
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNU14RmhPUmV4cmp6dmtoQTBnbDVlcnRkTE9BekZOZnB1M3BIVEZ5dzE5TXJGQ0xtaEprblFQY1FwbFg2Tl95amlVN0hhUXlRSzllNWZQeGNNOU5KSnE5TEZwRGpsencyaDk3UFRXbnROWE9QYXNjV001R0JvSVRBVE4xeVZ1ZndybGY2dlhZTmJwd256TVBNU2Nqbms1d05P?oc=5",
       "source": "Daily Voice Of Asia",
       "publishedAt": "2026-11-21T15:57:56.000Z",
-      "latestAt": "2026-11-21T15:57:56.000Z",
+      "latestAt": "2026-11-22T04:01:18.000Z",
       "firstSeenAt": "2026-11-21T16:17:26.966Z",
       "outlets": 1,
       "outletNames": [
@@ -1391,6 +1392,25 @@
       "score": 1.29
     },
     {
+      "id": "818a0ed6671e",
+      "cat": "earth",
+      "kind": "news",
+      "title": "6.7-Magnitude Earthquake Damages Infrastructure in Peru",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE16d28wLU54OHdja254eE9Kc3lGb3oyN096T21vRTMwQWh6Tk5jeXAwV1R4Vy1NREdJMW0tcjI1a3lMc3BPMmVlZ2hBdE1kdmRPeFV2SkNMU2d3R3ZMRUdhOVI2OTk3LU1rYkFBQzFTUWN4U2w2aXBQVU0tNW4?oc=5",
+      "source": "teleSUR English",
+      "publishedAt": "2026-11-21T06:32:00.000Z",
+      "latestAt": "2026-11-21T13:45:11.000Z",
+      "firstSeenAt": "2026-11-22T05:49:17.401Z",
+      "outlets": 2,
+      "outletNames": [
+        "teleSUR English",
+        "Rus Tourism News"
+      ],
+      "score": 1.22,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "e4ee3a724b8a",
       "cat": "internet",
       "kind": "news",
@@ -1558,7 +1578,7 @@
       "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNSnBQNl9fX2cwYi1zcGZvV3J2dzBkVjIzcWRLc0QtR0ZzV3RCNEVZYVhXNUk4WTc3OXoyWkVzZjJXNWpFLVhocVE2ZVVPdzVsV1FvdFdnMnlZNnZRTDNvSzRWMjFIYksyMzIwNzhuZEtGZVdxZS1Nb1ZCSEJPb1JuemRJUHp3RldYcWZwaDNTcUxGZVhtUUs4Ym5uTnRRcDJ2emt3MzhPM2pJOXRzTXYyVHFkU0ZralhwRmNKY3VSbW1rTS1DNlktZFc3dUxRWG1mVXZwY1FBS0hQLTIyS1VySzdtMDFMeDdZajJsT3RFWXItME8xcWx1WURpR3FBS3BOcS1FeV9yRVJSQQ?oc=5",
       "source": "Early Warning Network",
       "publishedAt": "2026-11-22T05:00:11.000Z",
-      "latestAt": "2026-11-22T05:00:11.000Z",
+      "latestAt": "2026-11-22T05:12:35.000Z",
       "firstSeenAt": "2026-11-22T05:04:22.396Z",
       "outlets": 1,
       "outletNames": [
@@ -1727,6 +1747,38 @@
       "score": 1
     },
     {
+      "id": "9e7f6fbe22c0",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Adrian Weckler: They call it ‘vulnageddon’ — it’s the reason that our IT networks will keep going down for the foreseeable future",
+      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNbHNJQURjRG1VcDF4OUsxQjZWSzNWSWZQZlpCczZISEJTQUNjZ3BsSHJXd1l2cDQyNTMxYUdpWWh6RUJxbnZfRjVBd1BaRkdQMG5Ucm9QNTBRTzJkSlR2SlR1YUNPX3BvTTduVFpUclhGLU1YUG42aDBuUm5iU0o2cFdYTEdTa08zb2dOQl9GVEZ2SlRZZ0w5TFEyNzZHX2hxNE9zUDJhdThOUmVVMlhhRURNdmpaU3lwanZPNG9hWHVZb19hS2pxRHZSZmdES2xEajVPR1VteWFzNzd6NWNpUGgzWjRJM0FMQmhYblZPQTBsN3dlTlE4bC1hcEd3Z3hwTXQzZDlHS216S0lMMHB3b3RTeF9OZw?oc=5",
+      "source": "Irish Independent",
+      "publishedAt": "2026-11-22T05:30:00.000Z",
+      "latestAt": "2026-11-22T05:30:00.000Z",
+      "firstSeenAt": "2026-11-22T05:49:17.401Z",
+      "outlets": 1,
+      "outletNames": [
+        "Irish Independent"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "5ec39784e30d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JoyRide reports possible data breach",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBkZmlCZGhCaU9INC1kb0dWTi1qbjJvWk1fNUJzSHpsa0t6RlhKd2pXT042NzNURVZIM0Y3WS0zRE1RYkNSLUk0TWFTd0o5bnNBQS1zOU5mUDJmSDY1b09zNFA1RVZybmN4N09IUTN2MHd5V1Z2RFE?oc=5",
+      "source": "YugaTech",
+      "publishedAt": "2026-11-22T05:26:15.000Z",
+      "latestAt": "2026-11-22T05:26:15.000Z",
+      "firstSeenAt": "2026-11-22T05:49:17.401Z",
+      "outlets": 1,
+      "outletNames": [
+        "YugaTech"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "26b2192b2567",
       "cat": "flights",
       "kind": "news",
@@ -1807,38 +1859,6 @@
       "score": 0.99
     },
     {
-      "id": "62e4fb7906dc",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Holiday travelers worry about federal systems following FAA's ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQR1AyLUE4THVFQVNzUUtSWHZrNlNuZlpnb2MyYzZockJQN2dvZzJQbTNOLTAyRUt1dC11Z2d1TE9Idm05a2JFMEV5R3p6c21xdzFXdlhQNkx5eU9rZmJZU3hSV2NPcWJwUmdteFI2WlAyTllTeUV0NGZGNW5FUEFOQklhbEtYMGR5YTc4VEtDUy1oU0g0VXE0aFhPUHBtLUw3VWdRTVBlWEpvRlNfMmh2bmYyV05BR1dweGhoUkYxcDV3N3UxYS1tdFh5cW0yQU90eGFpZkJpWlVrUEpjS3NDWlE1eUQ0RXdkR2w2QWdWNVY0QQ?oc=5",
-      "source": "WHAS11",
-      "publishedAt": "2026-11-22T03:51:00.000Z",
-      "latestAt": "2026-11-22T03:51:00.000Z",
-      "firstSeenAt": "2026-11-22T04:49:17.841Z",
-      "outlets": 1,
-      "outletNames": [
-        "WHAS11"
-      ],
-      "score": 0.98
-    },
-    {
-      "id": "87ea90ca6c72",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Darwin rocked by powerful 6.8 earth tremor",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRXI2VzM3TjFiUUwzUDN0YVpHY3dFSUM2N1BRRmdjUE4xRzJrSDBpYngyczd0WnhjMzFCNV9LQkxKWjVXUHE5cUotUnJ1bTZhTHFwV0J1MnNjMlNxU0VrWUZvRno2bVd3cVg4ZjVmLWNudkRiZWxJMGw3X2hzaTc3ekhXX0dHRTJhRzN6LW1YZml5cUx0OV9DNFRmM3F1WFJmUVhXdDVmVHVwb1h3dFJrLUphMFNPZW1Wa3JOel9LVmdOS3A1WGNseg?oc=5",
-      "source": "NT News",
-      "publishedAt": "2026-11-22T03:19:23.000Z",
-      "latestAt": "2026-11-22T03:19:23.000Z",
-      "firstSeenAt": "2026-11-22T05:19:13.328Z",
-      "outlets": 1,
-      "outletNames": [
-        "NT News"
-      ],
-      "score": 0.97
-    },
-    {
       "id": "d1bfe0d98aab",
       "cat": "ai",
       "kind": "news",
@@ -1853,22 +1873,6 @@
         "Mashable"
       ],
       "score": 0.97
-    },
-    {
-      "id": "64f38f08d8b6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Breach FBI’s Nationwide Criminal Database",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1OYVdITHFnU0psSFpDbllLRlRWOUUyNzFHX1ZTZDlsZmk1Ykt0UkJZMThXZlNXb2pZWXJkamJqTUEzNnFjTDVjV2R1RFV6VEE?oc=5",
-      "source": "MTV Lebanon",
-      "publishedAt": "2026-11-21T10:38:16.000Z",
-      "latestAt": "2026-11-21T10:38:16.000Z",
-      "firstSeenAt": "2026-11-22T05:34:14.943Z",
-      "outlets": 1,
-      "outletNames": [
-        "MTV Lebanon"
-      ],
-      "score": 0.96
     },
     {
       "id": "6ba194e9c913",
