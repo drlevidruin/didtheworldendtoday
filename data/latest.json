@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T09:34:51.494Z",
+  "buildTime": "2026-11-22T09:49:55.029Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 04:34 ET",
-  "score": 77,
+  "etStamp": "2026-11-22 04:49 ET",
+  "score": 72,
   "fired": [
     "flights",
     "hacks",
@@ -19,17 +19,12 @@
   ],
   "bumps": [
     {
-      "key": "quake",
-      "label": "Quake M6 or more",
-      "points": 5
-    },
-    {
       "key": "faa",
       "label": "Ground stop at a major hub",
       "points": 6
     }
   ],
-  "change": 6,
+  "change": 1,
   "yesterday": {
     "date": "2026-11-21",
     "score": 71,
@@ -50,13 +45,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1071,
-  "lastSuccessAt": "2026-11-22T09:34:51.494Z",
+  "headlinesRead": 1068,
+  "lastSuccessAt": "2026-11-22T09:49:55.029Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
-    "earth": 8,
     "grid": 9,
+    "earth": 7,
     "hacks": 23,
     "internet": 10,
     "markets": 5,
@@ -64,15 +59,15 @@
     "weather": 6,
     "sun": 3,
     "space": 4,
-    "ai": 3
+    "ai": 4
   },
   "vital": {
     "quake": {
-      "mag": 6.8,
-      "place": "105 km NE of Lospalos, Timor Leste",
-      "time": "2026-11-21T09:42:09.120Z",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucij",
-      "pager": "green",
+      "mag": 5.9,
+      "place": "238 km SW of Yanglong, China",
+      "time": "2026-11-21T10:45:33.230Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucly",
+      "pager": "yellow",
       "tsunami": false
     },
     "kp": {
@@ -181,20 +176,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 787,
+      "count": 788,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     },
     "bing": {
       "ok": true,
-      "count": 253,
+      "count": 249,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,55 +201,56 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     },
     "usgs": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:34:51.494Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z"
+      "lastOkAt": "2026-11-22T09:49:55.029Z"
     }
   },
   "stories": [
@@ -280,31 +276,6 @@
         "nationwide": false,
         "reason": "thunderstorms"
       }
-    },
-    {
-      "id": "sig:quake:us6000ucij",
-      "cat": "earth",
-      "kind": "signal",
-      "title": "M 6.8 - 103 km NE of Lospalos, Timor Leste",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucij",
-      "source": "USGS",
-      "publishedAt": "2026-11-21T09:42:09.120Z",
-      "latestAt": "2026-11-21T09:42:09.120Z",
-      "firstSeenAt": "2026-11-21T10:01:19.077Z",
-      "outlets": 1,
-      "outletNames": [
-        "USGS"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "quake",
-        "mag": 6.8,
-        "place": "103 km NE of Lospalos, Timor Leste",
-        "pager": "green",
-        "tsunami": false
-      },
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "c6ad84be3307",
@@ -462,6 +433,25 @@
       "score": 2.41
     },
     {
+      "id": "4cf8a94c3651",
+      "cat": "earth",
+      "kind": "news",
+      "title": "4.6-magnitude earthquake jolts Afghanistan; second moderate quake within three days",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOM0QwcXI2TmFSdnBvTVpEQTMybkVGdVBMOGVhX1NjZkN6bHd2WmwxQU1kODR0ME1LMTRGbGVYeVhMWXhWV1RiYWJSNDhHMkN0b3FUMnpJVkxGdFNla3BndmdPWjZpZTk0N1UybGJsbTRodHZZMlNER2JhbklEelBhT0tKY1JXb2pfNk1sM1VVcmFoNnRyUFFadzBFUzRuOXBQODhOOUNLM0VXUXRrTHdFNHk1dHM1TDFQM25wY1JocXVxZ19ocU0tSVFKaURuampGQ1FCelRSb1lobk5n0gHcAUFVX3lxTE4zRDBxcjZOYVJ2cG9NWkRBMzJuRUZ1UEw4ZWFfU2NmQ3psd3ZabDFBTWQ4NHQwTUsxNEZsZVh5WExZeFZXVGJhYlI0OEcyQ3RvcVQyeklWTEZ0U2VrcGd2Z09aNmllOTQ3VTJsYmxtNGh0dlkyU0RHYmFuSUR6UGFPS0pjUldval82TWwzVVVyYWg2dHJQUVp3MEVTNG45cFA4OE45Q0szRVdRdGtMd0U0eTV0czVMMVAzbnBjUmhxdXFnX2hxTS1JUUppRG5qakZDUUJ6VFJvWWhuTmc?oc=5",
+      "source": "Devdiscourse",
+      "publishedAt": "2026-11-21T11:23:00.000Z",
+      "latestAt": "2026-11-21T13:14:27.000Z",
+      "firstSeenAt": "2026-11-22T04:04:03.667Z",
+      "outlets": 4,
+      "outletNames": [
+        "Devdiscourse",
+        "Babushahi.com",
+        "ANI News",
+        "Kalinga TV"
+      ],
+      "score": 2.17
+    },
+    {
       "id": "8921c65897d0",
       "cat": "hacks",
       "kind": "news",
@@ -558,25 +548,6 @@
         "nationwide": false,
         "reason": "low visibility"
       }
-    },
-    {
-      "id": "4cf8a94c3651",
-      "cat": "earth",
-      "kind": "news",
-      "title": "4.6-magnitude earthquake jolts Afghanistan; second moderate quake within three days",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOM0QwcXI2TmFSdnBvTVpEQTMybkVGdVBMOGVhX1NjZkN6bHd2WmwxQU1kODR0ME1LMTRGbGVYeVhMWXhWV1RiYWJSNDhHMkN0b3FUMnpJVkxGdFNla3BndmdPWjZpZTk0N1UybGJsbTRodHZZMlNER2JhbklEelBhT0tKY1JXb2pfNk1sM1VVcmFoNnRyUFFadzBFUzRuOXBQODhOOUNLM0VXUXRrTHdFNHk1dHM1TDFQM25wY1JocXVxZ19ocU0tSVFKaURuampGQ1FCelRSb1lobk5n0gHcAUFVX3lxTE4zRDBxcjZOYVJ2cG9NWkRBMzJuRUZ1UEw4ZWFfU2NmQ3psd3ZabDFBTWQ4NHQwTUsxNEZsZVh5WExZeFZXVGJhYlI0OEcyQ3RvcVQyeklWTEZ0U2VrcGd2Z09aNmllOTQ3VTJsYmxtNGh0dlkyU0RHYmFuSUR6UGFPS0pjUldval82TWwzVVVyYWg2dHJQUVp3MEVTNG45cFA4OE45Q0szRVdRdGtMd0U0eTV0czVMMVAzbnBjUmhxdXFnX2hxTS1JUUppRG5qakZDUUJ6VFJvWWhuTmc?oc=5",
-      "source": "Devdiscourse",
-      "publishedAt": "2026-11-21T11:23:00.000Z",
-      "latestAt": "2026-11-21T13:14:27.000Z",
-      "firstSeenAt": "2026-11-22T04:04:03.667Z",
-      "outlets": 4,
-      "outletNames": [
-        "Devdiscourse",
-        "Babushahi.com",
-        "ANI News",
-        "Kalinga TV"
-      ],
-      "score": 2.17
     },
     {
       "id": "89dc7ef81ec8",
@@ -834,6 +805,22 @@
       "score": 1.4
     },
     {
+      "id": "288b7517e916",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Says Outlook Testing Missed Bug Behind Worldwide Outage",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMktjbmNDN0VrbFNBemJ1WnB1UE5LREJMaWs1bDdGY3NsM1hidGJ5WmQ2MUE3WUdiNDhmUE5SZVNZczZGUHhjMnNObTJkMWcxNVZYVk5ITThlS3N2bE9NbE5DUUUzdUg3amtxMW1TWjZVV0lRdTN5MVMzNjAxOWgzWGVHTDdDbWUyWVNuN2oydkl2bms?oc=5",
+      "source": "JournalArta",
+      "publishedAt": "2026-11-22T00:16:18.000Z",
+      "latestAt": "2026-11-22T00:16:18.000Z",
+      "firstSeenAt": "2026-11-22T00:33:30.018Z",
+      "outlets": 1,
+      "outletNames": [
+        "JournalArta"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "652eadbd4717",
       "cat": "flights",
       "kind": "news",
@@ -997,22 +984,6 @@
       "outlets": 1,
       "outletNames": [
         "NBC Los Angeles"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "288b7517e916",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Says Outlook Testing Missed Bug Behind Worldwide Outage",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMktjbmNDN0VrbFNBemJ1WnB1UE5LREJMaWs1bDdGY3NsM1hidGJ5WmQ2MUE3WUdiNDhmUE5SZVNZczZGUHhjMnNObTJkMWcxNVZYVk5ITThlS3N2bE9NbE5DUUUzdUg3amtxMW1TWjZVV0lRdTN5MVMzNjAxOWgzWGVHTDdDbWUyWVNuN2oydkl2bms?oc=5",
-      "source": "JournalArta",
-      "publishedAt": "2026-11-22T00:16:18.000Z",
-      "latestAt": "2026-11-22T00:16:18.000Z",
-      "firstSeenAt": "2026-11-22T00:33:30.018Z",
-      "outlets": 1,
-      "outletNames": [
-        "JournalArta"
       ],
       "score": 1.39
     },
@@ -1873,6 +1844,22 @@
         "SSBCrack"
       ],
       "score": 0.9
+    },
+    {
+      "id": "382b197da3a9",
+      "cat": "ai",
+      "kind": "news",
+      "title": "AI Could Cause More Tech Outages As Companies Rush To Fix Security Flaws",
+      "url": "https://www.ndtv.com/world-news/ai-could-cause-more-tech-outages-as-companies-rush-to-fix-security-flaws-12361387",
+      "source": "NDTV",
+      "publishedAt": "2026-11-22T01:08:00.000Z",
+      "latestAt": "2026-11-22T01:08:00.000Z",
+      "firstSeenAt": "2026-11-22T09:49:55.029Z",
+      "outlets": 1,
+      "outletNames": [
+        "NDTV"
+      ],
+      "score": 0.86
     },
     {
       "id": "ad858e977f25",
