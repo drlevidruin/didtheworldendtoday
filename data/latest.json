@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T10:19:56.728Z",
+  "buildTime": "2026-11-22T10:35:06.107Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 05:19 ET",
+  "etStamp": "2026-11-22 05:35 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -46,19 +46,19 @@
     "score": 80
   },
   "headlinesRead": 1102,
-  "lastSuccessAt": "2026-11-22T10:19:56.728Z",
+  "lastSuccessAt": "2026-11-22T10:35:06.107Z",
   "rollingFallback": false,
   "cats": {
     "flights": 20,
     "grid": 9,
-    "earth": 8,
-    "hacks": 25,
+    "earth": 7,
+    "hacks": 26,
     "internet": 10,
     "markets": 5,
     "germs": 6,
+    "space": 4,
     "weather": 6,
     "sun": 3,
-    "space": 4,
     "ai": 4
   },
   "vital": {
@@ -176,81 +176,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 818,
+      "count": 823,
       "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "bing": {
       "ok": true,
-      "count": 253,
-      "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "count": 248,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-22T07:19:36.695Z"
     },
     "hn": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T09:34:51.494Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T10:19:56.728Z"
+      "lastOkAt": "2026-11-22T10:35:06.107Z"
     }
   },
   "stories": [
@@ -532,27 +531,6 @@
       }
     },
     {
-      "id": "89dc7ef81ec8",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.8 earthquake strikes Banda Sea near Timor-Leste",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQOGRneHlCaTN3MzJ1SXVaaFBGbUt6Y0RFbU91bHVQb1E3NVlBWENVbGVQckFocnpIOXJFakJobHFOMXdaVDY5Q1JIV0xJUGdnU25fZEh0dm9RUHJUR1ZWUHFhd2hCNmtHRGxocDY3ZkgzeFhVbkNfZGFxSmkxLTEyTmV0NWNwc1VucGdaeUNWSE56THl0NVdJVkk2bms0S0R4OWprQTl1VktrdnhKeXBV0gG0AUFVX3lxTE1fM0o3bDN6OERTTS1ES0RKUTBlMGRqSllRWkd4alpZaVZieFVaT0czZWptMWJWT1dDWEltT3JQcUJabUVqa0ptZUNfVUFEYV8ta252N1M3R3lKandnMDBzeFVyZFhURGUtaERqMTFxZG1rRFRqLVBuNGVZekdDT0hGSlgyd0tJWEdrbHJKVHpzcmVtcVZTcHhiQzdKbHo3YzhCbXl6ZGNjaG85NDlzUm9zRTVrQw?oc=5",
-      "source": "NST Online",
-      "publishedAt": "2026-11-21T10:30:02.000Z",
-      "latestAt": "2026-11-21T11:26:00.000Z",
-      "firstSeenAt": "2026-11-22T04:19:03.670Z",
-      "outlets": 4,
-      "outletNames": [
-        "NST Online",
-        "https://www.businesstimes-bd.com/",
-        "Apa.az",
-        "Seoul Economic Daily"
-      ],
-      "score": 2.11,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "b3f921dc9af6",
       "cat": "hacks",
       "kind": "news",
@@ -636,6 +614,23 @@
         "Bluewin"
       ],
       "score": 1.73
+    },
+    {
+      "id": "6bd2a72536cd",
+      "cat": "space",
+      "kind": "news",
+      "title": "Earth Captures Tiny Asteroid 2026 QQ8 as Temporary Mini Moon",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5BVHA0dnl1bzR5eUFiU2ZyVVRwbG9Wd05BaUFxWGxPM3RPVzhrcHJLR1JSYkZ0MGZCbl9jSEgtR090bXg1Q1RWYjFmZUExM3B1SW8xRXF4ZDkwNGJ4a0ttNHlYMVVka2M?oc=5",
+      "source": "cwibc.co.id",
+      "publishedAt": "2026-11-21T20:10:00.000Z",
+      "latestAt": "2026-11-22T09:00:00.000Z",
+      "firstSeenAt": "2026-11-22T04:49:17.841Z",
+      "outlets": 2,
+      "outletNames": [
+        "cwibc.co.id",
+        "Chosunbiz"
+      ],
+      "score": 1.71
     },
     {
       "id": "733eb33f2940",
@@ -906,23 +901,6 @@
         "ktnv.com"
       ],
       "score": 1.43
-    },
-    {
-      "id": "9e199745790b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Indonesia's Financial Sector Hit by 1.2 Million Cyberattack Attempts in 24 Hours",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSmpncGRoYWoxZHIzY0ZuZURHVW43Q3lyRm5oYlJGbHZWTVM3Mm80ZGlhOUhEbmM4QUg2cnFYS01hWm9lQm1WSXcwdk9sUTZoOWVpRkFxbFZDNjNpcVYxaDk0ejRQajlSWVdfREFrS2hBa3dtdDd4SmZQUEFXUEI2Yll6aEJOcFZlWWdzeXdzeWFfSEZUYXF4cWx4R3pjQmtjaXE0REV2Um80TWoza0Yw?oc=5",
-      "source": "var india",
-      "publishedAt": "2026-11-21T10:31:57.000Z",
-      "latestAt": "2026-11-22T03:34:46.000Z",
-      "firstSeenAt": "2026-11-22T03:49:00.848Z",
-      "outlets": 2,
-      "outletNames": [
-        "var india",
-        "The 420.in"
-      ],
-      "score": 1.42
     },
     {
       "id": "cb452e32fec4",
@@ -1413,6 +1391,38 @@
         "ABC News & Headlines – Australian Broadcasting Corporation"
       ],
       "score": 1.04
+    },
+    {
+      "id": "75320b807dbe",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Target Supermarket Fridges: UK Acts Secretly",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWFhrcWEwY2JMcXFEQ1BtZVZWMFBMT1BIMHBmd2dwUldwRlRsMXE4bW9BSXNRdHU2Q3Q2azlHQU9RS1JGT2FhcE50UDlnSnFqTUZrZkNQYU5EMnEybmg2OTBQS2MzOGtiejJ6eTZGZ05oV3ExQXQ1ampZdU5aTTk5TXYwUlhtdHNU?oc=5",
+      "source": "varindia",
+      "publishedAt": "2026-11-22T10:33:19.000Z",
+      "latestAt": "2026-11-22T10:33:19.000Z",
+      "firstSeenAt": "2026-11-22T10:35:06.107Z",
+      "outlets": 1,
+      "outletNames": [
+        "varindia"
+      ],
+      "score": 1
+    },
+    {
+      "id": "f46140602cdd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Tower Records Japan reports data breach affecting 10.2 million accounts By Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdkxpLUpNQU1Fb0lIQm5zZ3I2RDdCbXJ3cHpZU2c2UlJEM09UQ0plb3FXUS1MSU90d2JmMHZaSnVHdkpQY2FVN1lLd21teHV3THFFdGQtSEFjcU1IdHVnQm51RWpfM2pHcVI0aGxiWHpvUUl2R0VNblB6NG5qeG1CX1ZvWVZVM2dXY2xlN0pGUmdVZE5STGNSazYyLTZYbmg1dFdKUHVXcjJadjh0c2xNal9SLXlFWjNGTWRMRWZB?oc=5",
+      "source": "Investing.com Canada",
+      "publishedAt": "2026-11-22T10:27:39.000Z",
+      "latestAt": "2026-11-22T10:27:39.000Z",
+      "firstSeenAt": "2026-11-22T10:35:06.107Z",
+      "outlets": 1,
+      "outletNames": [
+        "Investing.com Canada"
+      ],
+      "score": 1
     },
     {
       "id": "8334933c03ac",
@@ -1925,22 +1935,6 @@
         "news.com.au"
       ],
       "score": 0.8
-    },
-    {
-      "id": "682f9d418bfa",
-      "cat": "space",
-      "kind": "news",
-      "title": "Four asteroids sweep past Earth on Saturday, one the size of an airplane",
-      "url": "https://www.msn.com/en-us/news/other/four-asteroids-sweep-past-earth-on-saturday-one-the-size-of-an-airplane/ar-AA2hVUWR",
-      "source": "Morning Overview on MSN",
-      "publishedAt": "2026-11-21T15:25:00.000Z",
-      "latestAt": "2026-11-21T15:25:00.000Z",
-      "firstSeenAt": "2026-11-22T10:19:56.728Z",
-      "outlets": 1,
-      "outletNames": [
-        "Morning Overview on MSN"
-      ],
-      "score": 0.68
     }
   ]
 }
