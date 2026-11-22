@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T17:36:06.971Z",
+  "buildTime": "2026-11-22T17:51:11.929Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 12:36 ET",
+  "etStamp": "2026-11-22 12:51 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,15 +45,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1102,
-  "lastSuccessAt": "2026-11-22T17:36:06.971Z",
+  "headlinesRead": 1114,
+  "lastSuccessAt": "2026-11-22T17:51:11.929Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 34,
-    "hacks": 19,
-    "grid": 6,
-    "internet": 12,
-    "germs": 8,
+    "flights": 36,
+    "hacks": 20,
+    "grid": 5,
+    "internet": 11,
+    "germs": 7,
     "earth": 4,
     "space": 2,
     "markets": 4,
@@ -85,15 +85,9 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "SFO",
-          "hub": true,
-          "reason": "low ceilings"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
-      "groundDelays": 3,
+      "groundDelays": 4,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -168,9 +162,9 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
-      "headlines": 30,
+      "headlines": 26,
       "matched": 0,
       "tripAt": 3,
       "tripped": false,
@@ -182,20 +176,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 804,
+      "count": 812,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     },
     "bing": {
       "ok": true,
-      "count": 266,
+      "count": 270,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,55 +201,56 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     },
     "faa": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:36:06.971Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     },
     "topstories": {
       "ok": true,
-      "count": 30,
+      "count": 26,
       "error": null,
-      "lastOkAt": "2026-11-22T17:36:06.971Z"
+      "lastOkAt": "2026-11-22T17:51:11.929Z"
     }
   },
   "stories": [
@@ -546,19 +541,20 @@
       "cat": "flights",
       "kind": "news",
       "title": "Delta Airlines flights delayed nationwide amid ground stop slowing holiday travel",
-      "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxQTFFoQWRMeXdOWGJhZDN0Z20tdzdhRnpYTzAyQnNISUItclNDbDRYbzRZX1ItTUlncG5QaXk4cDdxMDU4ZTdDeTRCZ2hTMnlkVWNHMFR0T0xIczNQZUVsNTVVQ0JfX2xXOVJNOHB1VlplTmxGcFh0Q3BDd1prUV94Ry1hMEFnYVcyVEVNem5sY1doYjRTNm5TNUVKM1RJeS16R1VWSURueXlNa19HUDdWNmJabXhESmRRRXNTZ3k0M0pqWjZoNXBHZ003azNzTTF2QUJVMEdhOHZhWW02ZDBBWlhCY25TenNIb2lBYmhndWZacHdQbE9VbEFqaEI3OC1TOVg0dXVRMURlSlVXVy1FTG5FWmFjVmphUzZDVXFZNEdPNWVURjZZOW16Ql9hQzNkMjhNVjRFbVQ2NFY4aTBCbWxwQnFyS0NKSEdv?oc=5",
-      "source": "KBOI",
-      "publishedAt": "2026-11-22T17:22:33.000Z",
+      "url": "https://abc45.com/news/nation-world/delta-airlines-flights-delayed-nationwide-amid-ground-stop-slowing-holiday-travel-thanksgiving-federal-aviation-administration-faa-automation-hartsfield-jackson-atlanta-airport",
+      "source": "WXLV ABC 45",
+      "publishedAt": "2026-11-22T04:18:00.000Z",
       "latestAt": "2026-11-22T17:23:06.000Z",
       "firstSeenAt": "2026-11-22T17:36:06.971Z",
-      "outlets": 4,
+      "outlets": 5,
       "outletNames": [
         "KBOI",
         "KDBC",
         "13WHAM-TV",
-        "KBAK"
+        "KBAK",
+        "WXLV ABC 45"
       ],
-      "score": 4.18
+      "score": 3.62
     },
     {
       "id": "sig:faa-stop:HOU:2026-11-22",
@@ -865,6 +861,25 @@
       "score": 3.45
     },
     {
+      "id": "d1431f408c53",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta delays hundreds of flights over system outage",
+      "url": "https://www.msn.com/en-us/news/other/delta-delays-hundreds-of-flights-over-system-outage/ar-AA2hYty2",
+      "source": "The Wall Street Journal on MSN",
+      "publishedAt": "2026-11-22T09:28:00.000Z",
+      "latestAt": "2026-11-22T17:48:38.000Z",
+      "firstSeenAt": "2026-11-22T17:36:06.971Z",
+      "outlets": 4,
+      "outletNames": [
+        "TheTravel",
+        "WSJ",
+        "The Wall Street Journal on MSN",
+        "Beinsure"
+      ],
+      "score": 2.59
+    },
+    {
       "id": "652eadbd4717",
       "cat": "flights",
       "kind": "news",
@@ -949,23 +964,6 @@
         "The Morning"
       ],
       "score": 1.99
-    },
-    {
-      "id": "d1431f408c53",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air Lines Briefly Halts Flights Over Systemwide Computer Outage As Passengers Face Hundreds Of Delays",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWERZbGE2aUhTaHI1cFRNNkZWMXpqZWJ4djZ2NE1BWVJnNm5BS0plaW96c0syUHRZSnp1c0VBWE9ZNlUxS3dORldqbEFZaGFaSUFvTnota1BtXzUxM2ZJam5lVm5hWmg5Z2drY3ZmLUhhVDZ4UVF1SFlKMnEyNlhVckhsSHNsLVdsU0c3YTh0Wlo2c0JpTEtfSWdNdWF0VHRJd2RtMjVFSVBOcGczd2c?oc=5",
-      "source": "TheTravel",
-      "publishedAt": "2026-11-22T16:24:20.000Z",
-      "latestAt": "2026-11-22T17:28:00.000Z",
-      "firstSeenAt": "2026-11-22T17:36:06.971Z",
-      "outlets": 2,
-      "outletNames": [
-        "TheTravel",
-        "WSJ"
-      ],
-      "score": 1.96
     },
     {
       "id": "41bda97d8bc2",
@@ -1171,6 +1169,22 @@
       "score": 1.4
     },
     {
+      "id": "1d292ca98298",
+      "cat": "flights",
+      "kind": "news",
+      "title": "JUST IN: Delta Flights Grounded Nationwide Due to ‘Automation’ Issue",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQR2VoejZoQS1JZGVwdTUyd1VGWkFUMi1ob1NIajJ0LXF5aWtuNHVrTDdFZXRiQ0FNb3Z1UnJNd05OdDdRN0FhX0MtY3hMNzFCVUR5UGR0REk3OVR5dXhfR0lmMXZjbE9oZkpkSUFSdkk0UUtVcTJlWURFR0lKbFMzWTZ4MUFsTTdQVVhaT1ptUFVpNDY4bVpiY3VvOUxrQVdtREE?oc=5",
+      "source": "Mediaite",
+      "publishedAt": "2026-11-22T17:32:00.000Z",
+      "latestAt": "2026-11-22T17:32:00.000Z",
+      "firstSeenAt": "2026-11-22T17:51:11.929Z",
+      "outlets": 1,
+      "outletNames": [
+        "Mediaite"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "e56e6d210190",
       "cat": "flights",
       "kind": "news",
@@ -1267,22 +1281,6 @@
         "Townhall"
       ],
       "score": 1.34
-    },
-    {
-      "id": "f82582961a35",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Breaking down the surge in global technology outages",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPa1JlaWdkdnpsZVpBaXY3ak5TZHBfSTFxeVhPR3VUQkJUNVVYcjNVQzhIRmV3NDM5LTlra0theDJydUpwNTBoZ2U3OWo5YW8xM0lJUGUzT0tmUlBjUkZjdnNoanlxN2F6aU41TllqUUVwTVNtZ1dUd2I3VmR6cmx1VjlsYUpsTDFqZFZST2dJaXlLY1RU?oc=5",
-      "source": "Global News",
-      "publishedAt": "2026-11-21T17:42:59.000Z",
-      "latestAt": "2026-11-21T17:42:59.000Z",
-      "firstSeenAt": "2026-11-21T22:33:19.040Z",
-      "outlets": 1,
-      "outletNames": [
-        "Global News"
-      ],
-      "score": 1.29
     },
     {
       "id": "2dc2ae6e44f8",
@@ -1411,6 +1409,54 @@
         "Philstar.com"
       ],
       "score": 1.07
+    },
+    {
+      "id": "726e981bf372",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta flights in and out of Atlanta delayed due to system outage",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQR1R5aV84YWhfd29PekNxUm1UdExTcEdGbjViZGFCS3VBeTU1cjAyaURTcG1iQXhlbEdnT3JFOHVmLW1HYUVscGc2aFBCRGZxT19ObGU2X0VGNE9STGFMbm41cXJ3TDg3TWpVdnhrRUpKejR4TXhDU0Zvc25CbHdVSzVHS2I2ZkkyeGtV?oc=5",
+      "source": "The Verge",
+      "publishedAt": "2026-11-22T17:46:44.000Z",
+      "latestAt": "2026-11-22T17:46:44.000Z",
+      "firstSeenAt": "2026-11-22T17:51:11.929Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Verge"
+      ],
+      "score": 1
+    },
+    {
+      "id": "a121f89750ad",
+      "cat": "flights",
+      "kind": "news",
+      "title": "What Caused the Delta Outage? Inside the 'Weight and Balance' System Behind Sunday's Delays",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTWxfTThxVmNMZDlocHY1NVlBVF9tM0p2ZEdISG5tY2MxZ0JZVVpUTExaTmdLd2ZGV195MUUtWHR2WER3MF82bS1KQ0wza3VIOWZnVmJJQ2FQNkwzQkpQSzBBYmxLZy1ib1BIUTN0cG85cjZka0lCd3A1OUFwaHFVOXRKeHMteEU0?oc=5",
+      "source": "Men's Journal",
+      "publishedAt": "2026-11-22T17:36:10.000Z",
+      "latestAt": "2026-11-22T17:36:10.000Z",
+      "firstSeenAt": "2026-11-22T17:51:11.929Z",
+      "outlets": 1,
+      "outletNames": [
+        "Men's Journal"
+      ],
+      "score": 1
+    },
+    {
+      "id": "3dc081114219",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Target South Korean Power Giant KEPCO, Exposing Sensitive Customer Banking Details",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQnJYaXZwVVVnUFBBY2JQdjJUVFZVVGlTeUdDNWxFUGlYa0tFWFFTZUhWZkhUcmtaNXpwZFhzT295YlNuaUJzN05vdUdpMHZwTHZsYXRSX191czh0a3BCY05aX0lwQV9lRTFGd1l4ejZhemFCamw5VkFHV0RKS3c0bVA2dUtfeW5BRklmUGZRemdGTHlWZW1PR1lnc21kaVNkcnU4ZjFyZ0RBbDdq?oc=5",
+      "source": "The 420.in",
+      "publishedAt": "2026-11-22T17:34:25.000Z",
+      "latestAt": "2026-11-22T17:34:25.000Z",
+      "firstSeenAt": "2026-11-22T17:51:11.929Z",
+      "outlets": 1,
+      "outletNames": [
+        "The 420.in"
+      ],
+      "score": 1
     },
     {
       "id": "fe8bc53cf095",
@@ -1728,54 +1774,6 @@
       "publishedAt": "2026-11-22T13:52:00.000Z",
       "latestAt": "2026-11-22T13:52:00.000Z",
       "firstSeenAt": "2026-11-22T14:05:38.738Z",
-      "outlets": 1,
-      "outletNames": [
-        "Neowin"
-      ],
-      "score": 1
-    },
-    {
-      "id": "dbc25af0d467",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Namakkal egg price falls as Oman importers’ dilemma over bird flu looms",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaW9aOEZPUzVMWUR5dU5LYlRtSFd3eXBRaW84S08yQ2x2RlUtZ3B5akxNQlBLS3pIa3hRMGNWS2J4d0RKY2dJREpzejVyakc4bmZWaVhrMjhYRld0RzhZTENYMjlUNTM5MmlLZXVUWThFMjNCRU9Xc0R5NWJlYjNwd3BDblR6V2hfTXlpQmp4OTVBQ0I0Q0ZCdW1laVJsM0o0X1VoeTlFR19VWTg2Y3NxcWpabHZfNkZxbWk5RTJKMV9MY1JpcmFGMTU5Ti0wenJyekpBLdIB2wFBVV95cUxOZ0RrbzlTRjg3VlBiaHJIZHRHVkpzSjJVNzRPNHVQM3Y1c0tGX1FIOGxNWkFRZW4wSGNjM0VHMklqNGxBWkJadXEtM3pmMW95MC00TVplXzRKZksyOWNEVzNjRzJEeVRVZ2xfYmo1U3hCQlVJNnFreG4wSmRWQW5jN1dKU0Y3NmFseWtEbjBtQzNqQmpLTmRad21hb2RCVmpaVkNBdUNHUGdxODdPU21zRDZtTGZLenpXYmtSWjR2NDNmWGNPRW5VZ3Z4Xy1rdE9pXzVlb3p1YWZLMFU?oc=5",
-      "source": "The Hindu",
-      "publishedAt": "2026-11-22T13:33:37.000Z",
-      "latestAt": "2026-11-22T13:33:37.000Z",
-      "firstSeenAt": "2026-11-22T13:50:33.480Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Hindu"
-      ],
-      "score": 1
-    },
-    {
-      "id": "e53ca63fb563",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Noklak gets power back after nine-day blackout",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdXB0R2Q5OHd1bU14bGxKNWhTUGUybk9IVjBldHZZcTByZ1o3cW5uaFAxRzFvZmppNWNoQVl3cXhMcjRkRGJyM2N5UzVna1NjRllLN0tINFdoTlR0dURwWEpnMUJJMFh1clBBSUE5TFkyd1lKMl8zdGxlWVJXdlZ1NlBNUHJ0RUR4eWRSMw?oc=5",
-      "source": "Eastern Mirror",
-      "publishedAt": "2026-11-22T13:27:54.000Z",
-      "latestAt": "2026-11-22T13:27:54.000Z",
-      "firstSeenAt": "2026-11-22T13:35:30.169Z",
-      "outlets": 1,
-      "outletNames": [
-        "Eastern Mirror"
-      ],
-      "score": 1
-    },
-    {
-      "id": "806b1a5a5d63",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Possible Delta Airlines outage hits as passengers find themselves stuck",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOa2xtV09ZYTA4b1FWT2hVMXZGUm5sU1k1eTFPU2xXOWtpWmJxak1PM0k0bEpEakJpYnlORWlLVmhUdXpkZUlSSUxKYlIwbGV6UEthX2NwZ1pYRm5TOXY0SjI3SWk1Mnh0RW9nRmVHREN4YWNNMnF3bkh2RmN5Nl9LOUUtZjhWZjN3cGxzUlM3VXk3NFRXdTlkbVlta3pMRlRLYVE?oc=5",
-      "source": "Neowin",
-      "publishedAt": "2026-11-22T13:08:00.000Z",
-      "latestAt": "2026-11-22T13:08:00.000Z",
-      "firstSeenAt": "2026-11-22T13:20:30.927Z",
       "outlets": 1,
       "outletNames": [
         "Neowin"
