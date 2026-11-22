@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T08:19:38.356Z",
+  "buildTime": "2026-11-22T08:34:41.544Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 03:19 ET",
+  "etStamp": "2026-11-22 03:34 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -50,15 +50,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 990,
-  "lastSuccessAt": "2026-11-22T08:19:38.356Z",
+  "headlinesRead": 1114,
+  "lastSuccessAt": "2026-11-22T08:34:41.544Z",
   "rollingFallback": false,
   "cats": {
     "flights": 20,
-    "earth": 9,
+    "earth": 8,
     "grid": 8,
-    "hacks": 23,
-    "internet": 12,
+    "hacks": 25,
+    "internet": 11,
     "markets": 5,
     "germs": 7,
     "weather": 6,
@@ -181,20 +181,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 803,
+      "count": 823,
       "error": null,
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "bing": {
       "ok": true,
-      "count": 156,
-      "error": "11 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "count": 260,
+      "error": null,
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,56 +206,55 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T07:34:39.581Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T08:19:38.356Z"
+      "lastOkAt": "2026-11-22T08:34:41.544Z"
     }
   },
   "stories": [
@@ -463,25 +462,6 @@
       "score": 2.41
     },
     {
-      "id": "16a963138cec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI Suffers Cyberattack as Hackers Breach Criminal Database",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVnVseFJuRWc0S3JrWUNrYkhNei1zZy1EczdxcmN6VkxWR0tXNjkxV2VqZ2dzQmVmRmwybmJNbHhudkwydmJWczUwako1QTlZZ3RaejlHaXVCMlhqbHl2U1JJa2U5bnJnWEhlRUpCZlpUa3pRTkZDamxIcjhSQTY5alA0b3JZd0kyUTNDSXNKbVhxVkdWWG1v?oc=5",
-      "source": "Wide Open Country",
-      "publishedAt": "2026-11-21T16:02:19.000Z",
-      "latestAt": "2026-11-22T08:02:17.000Z",
-      "firstSeenAt": "2026-11-22T04:19:03.670Z",
-      "outlets": 4,
-      "outletNames": [
-        "Wide Open Country",
-        "Euro Weekly News",
-        "FOX 32 Chicago",
-        "CubaHeadlines"
-      ],
-      "score": 2.39
-    },
-    {
       "id": "f42eaad8c569",
       "cat": "hacks",
       "kind": "news",
@@ -500,6 +480,24 @@
         "Los Angeles Times on MSN"
       ],
       "score": 2.39
+    },
+    {
+      "id": "8921c65897d0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNS0RzYnRJVzA5MjhlSWJfODFMNDRMdDl3Zk81UkxlbklPbE8tQ2xMYWdzSElBdlF6eTJaeWRSdm9aa3JkYU5xbUZIUjUtc3VxZzlYUXhCOWplcHBDb1AzcEMzWXd1eTdndHdIVWlrUnVSMExWQnZaakd4Y3JYRkFZeE9POGNKTE5tRlhwTTJnWUs4QVBjM1l6OFpaYmVqNVZWa0ZIUU5R?oc=5",
+      "source": "SecurityWeek",
+      "publishedAt": "2026-11-21T12:08:50.000Z",
+      "latestAt": "2026-11-22T00:26:21.000Z",
+      "firstSeenAt": "2026-11-22T00:48:33.869Z",
+      "outlets": 3,
+      "outletNames": [
+        "SecurityWeek",
+        "https://www.findarticles.com/",
+        "findarticles.com"
+      ],
+      "score": 2.04
     },
     {
       "id": "4a96a57e3052",
@@ -586,24 +584,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "8921c65897d0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Amazon: China-Linked Hackers’ AI Agents Exploited Medical Software Zero-Day",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNS0RzYnRJVzA5MjhlSWJfODFMNDRMdDl3Zk81UkxlbklPbE8tQ2xMYWdzSElBdlF6eTJaeWRSdm9aa3JkYU5xbUZIUjUtc3VxZzlYUXhCOWplcHBDb1AzcEMzWXd1eTdndHdIVWlrUnVSMExWQnZaakd4Y3JYRkFZeE9POGNKTE5tRlhwTTJnWUs4QVBjM1l6OFpaYmVqNVZWa0ZIUU5R?oc=5",
-      "source": "SecurityWeek",
-      "publishedAt": "2026-11-21T12:08:50.000Z",
-      "latestAt": "2026-11-22T00:26:21.000Z",
-      "firstSeenAt": "2026-11-22T00:48:33.869Z",
-      "outlets": 3,
-      "outletNames": [
-        "SecurityWeek",
-        "https://www.findarticles.com/",
-        "findarticles.com"
-      ],
-      "score": 2.04
-    },
-    {
       "id": "eaceeef59447",
       "cat": "hacks",
       "kind": "news",
@@ -654,6 +634,23 @@
         "ANI News"
       ],
       "score": 1.87
+    },
+    {
+      "id": "34f6be7416fc",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI's crime database in hackers' hands after shocking security breach",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMGxMMF9kMTFCRkcwSjVhc1FpVndSZy12TUg2U0lqbVdHUlFNb1FweWg5SDVqZ29FSkVhSmJBclRFUVM5Q0VwZ1VmNDFTT0VkQ2FvV0x2WHlWLThWaUtvc0xVUTA4TUk2blFYb3VZeGY0SU5aSlFKaGlRMEx3X3hCMXZVal9LcHY2dWVaazU5VkM3VUZU?oc=5",
+      "source": "MEAWW News",
+      "publishedAt": "2026-11-21T16:12:33.000Z",
+      "latestAt": "2026-11-21T20:01:04.000Z",
+      "firstSeenAt": "2026-11-21T20:32:57.937Z",
+      "outlets": 2,
+      "outletNames": [
+        "MEAWW News",
+        "Gistmania"
+      ],
+      "score": 1.86
     },
     {
       "id": "86d770a3a530",
@@ -838,23 +835,6 @@
       "score": 1.39
     },
     {
-      "id": "34f6be7416fc",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI's crime database in hackers' hands after shocking security breach",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQMGxMMF9kMTFCRkcwSjVhc1FpVndSZy12TUg2U0lqbVdHUlFNb1FweWg5SDVqZ29FSkVhSmJBclRFUVM5Q0VwZ1VmNDFTT0VkQ2FvV0x2WHlWLThWaUtvc0xVUTA4TUk2blFYb3VZeGY0SU5aSlFKaGlRMEx3X3hCMXZVal9LcHY2dWVaazU5VkM3VUZU?oc=5",
-      "source": "MEAWW News",
-      "publishedAt": "2026-11-21T16:12:33.000Z",
-      "latestAt": "2026-11-21T20:01:04.000Z",
-      "firstSeenAt": "2026-11-21T20:32:57.937Z",
-      "outlets": 2,
-      "outletNames": [
-        "MEAWW News",
-        "Gistmania"
-      ],
-      "score": 1.86
-    },
-    {
       "id": "652eadbd4717",
       "cat": "flights",
       "kind": "news",
@@ -938,6 +918,23 @@
         "Menafn"
       ],
       "score": 1.5
+    },
+    {
+      "id": "84e3d40a9cbf",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Ground stop exposed weaknesses in air traffic control systems in rural states like Montana",
+      "url": "https://dailyinterlake.com/news/2026/nov/22/ground-stop-exposed-weaknesses-in-air-traffic-control-systems-in-rural-states-like-montana/",
+      "source": "Daily Inter Lake",
+      "publishedAt": "2026-11-21T15:59:00.000Z",
+      "latestAt": "2026-11-22T06:00:00.000Z",
+      "firstSeenAt": "2026-11-22T08:34:41.544Z",
+      "outlets": 2,
+      "outletNames": [
+        "Daily Inter Lake",
+        "Hagadone News Network"
+      ],
+      "score": 1.45
     },
     {
       "id": "fabbb719ddad",
@@ -1273,25 +1270,6 @@
       "score": 1.36
     },
     {
-      "id": "88bf84a676fa",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.8 Earthquake Strikes Peru, Shakes Capital Lima",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdjFVdloxUXlEMGZLY2JYbHhWa2RQWHF6SW1jMFhELTZERktXdGh4RF8tUlZtd09JTHhoRmpSMmlhYnBoZHNoSDZhVWlFdEJFS3JhYnp4MHlRVVRjd1hTMXZjdjJ1SFNnQmJLaTNoSjhhbnltUE1pUi1OeTN3QzEzcjIwQQ?oc=5",
-      "source": "Voice of Nigeria",
-      "publishedAt": "2026-11-21T12:53:50.000Z",
-      "latestAt": "2026-11-21T18:31:52.000Z",
-      "firstSeenAt": "2026-11-22T08:04:26.322Z",
-      "outlets": 2,
-      "outletNames": [
-        "Voice of Nigeria",
-        "NDTV"
-      ],
-      "score": 1.36,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "1c74ca3f3c4e",
       "cat": "flights",
       "kind": "news",
@@ -1423,22 +1401,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "383b0da3cb8a",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Near-global outage last week: Microsoft finally reveals the cause",
-      "url": "https://www.msn.com/en-in/news/other/near-global-outage-last-week-microsoft-finally-reveals-the-cause/vi-AA2hVuMC",
-      "source": "Dagens.com on MSN",
-      "publishedAt": "2026-11-21T08:30:00.000Z",
-      "latestAt": "2026-11-21T08:30:00.000Z",
-      "firstSeenAt": "2026-11-21T16:47:19.211Z",
-      "outlets": 1,
-      "outletNames": [
-        "Dagens.com on MSN"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "58ca15327d71",
       "cat": "internet",
       "kind": "news",
@@ -1551,20 +1513,36 @@
       "score": 1.04
     },
     {
-      "id": "6c8a88bd11bd",
-      "cat": "flights",
+      "id": "7e716d430e2c",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Inside the FAA router failure that grounded US flights nationwide",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOFoyZzdPSmNtT19JNGc4bUcxU0pidnlQU0drR0FULURjYkRsbmlldUh3RDBwQlRWWUlPOTdoSGk4NkpVV0lxcnBQNlFjMWZvRDNXU1FRVDYyOG1qOU8tNWJRaHlUVEpESVFPZ0UxTDdrd3VRekpsMHNMZlNES1lFVC1zTEgweHhVa1haTk02QnBlRVZaMHB4eFhfb19xX2sybDhNZg?oc=5",
-      "source": "USA Today",
-      "publishedAt": "2026-11-21T15:44:00.000Z",
-      "latestAt": "2026-11-21T15:44:00.000Z",
-      "firstSeenAt": "2026-11-22T08:19:38.356Z",
+      "title": "Cardinal Services Data Breach Settlement — $850K",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ05DdkNTSUd0VGxYYi1tbXRJcDIwcmN4QUE1d0tRVjhaYU9BWXVLQmxwZk1zVXVkc1l4aUxuUmlpWXFYdGJ5NmJiVy1DeGZRdWkxdFlRRmV3cjBPSzFSeXpTSjZya2dKaGlkNm9yMVdld3BYQmdLeVZNLThUY3Q5dmxWZ1hMSlFxN3NaZ2RDTGpjS0pjWVZuM3ZNLTBtYVFm?oc=5",
+      "source": "openclassactions.com",
+      "publishedAt": "2026-11-22T08:23:52.000Z",
+      "latestAt": "2026-11-22T08:23:52.000Z",
+      "firstSeenAt": "2026-11-22T08:34:41.544Z",
       "outlets": 1,
       "outletNames": [
-        "USA Today"
+        "openclassactions.com"
       ],
-      "score": 1.01
+      "score": 1
+    },
+    {
+      "id": "33d0fa033e9c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "UI Community HomeCare Data Breach Settlement — $2M",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVUNVRExjajFLSDVibUduUFFkajBOQmwxWDNVSlc3dW9BRDBJR0xNaEdEdDVtc1JBd29VbG1NQm1FX2g1VWVEOGY3dU5wak8zNS1xNEctbGpPb2sxWkt0S0VSTVY5N2hPZ0c4a1V3QkV0R1NteXE1cjFyeXlLZUh1c3NzaG41YWg0YnQ2eWJQbzZ3azZNMWlsc2JVeDJhdzBQXzlhQVlB?oc=5",
+      "source": "openclassactions.com",
+      "publishedAt": "2026-11-22T08:23:50.000Z",
+      "latestAt": "2026-11-22T08:23:50.000Z",
+      "firstSeenAt": "2026-11-22T08:34:41.544Z",
+      "outlets": 1,
+      "outletNames": [
+        "openclassactions.com"
+      ],
+      "score": 1
     },
     {
       "id": "8e7d26216a38",
@@ -1823,6 +1801,22 @@
       "score": 1
     },
     {
+      "id": "0f6d11b00f48",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Renfe tells customers ID numbers and passwords may have been exposed",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdDFYc3lTeDRVRi04NDJrQ3p0VFlTdEFMV3VMSlYxZ1BBSGdtUUUwOTdMMVFRd2YtVDBwS0FhakRpcGhuMU5FZGhDTDRTQzE3clpQam1fTFd5TnRCNDB3blpzeERxcEFYc3ptbFFaTFBaQjVUdnRGY19LU3J4OGc3T2cyVGZfTk94ODhQWXpfYzVaUFdodUxSVHZZdnQ?oc=5",
+      "source": "Railway Supply",
+      "publishedAt": "2026-11-22T08:15:15.000Z",
+      "latestAt": "2026-11-22T08:15:15.000Z",
+      "firstSeenAt": "2026-11-22T08:34:41.544Z",
+      "outlets": 1,
+      "outletNames": [
+        "Railway Supply"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "7ea48e0c9ab9",
       "cat": "space",
       "kind": "news",
@@ -1903,22 +1897,6 @@
       "score": 0.86
     },
     {
-      "id": "6bd2a72536cd",
-      "cat": "space",
-      "kind": "news",
-      "title": "Earth Captures Tiny Asteroid 2026 QQ8 as Temporary Mini Moon",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5BVHA0dnl1bzR5eUFiU2ZyVVRwbG9Wd05BaUFxWGxPM3RPVzhrcHJLR1JSYkZ0MGZCbl9jSEgtR090bXg1Q1RWYjFmZUExM3B1SW8xRXF4ZDkwNGJ4a0ttNHlYMVVka2M?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-21T20:10:00.000Z",
-      "latestAt": "2026-11-22T01:51:10.000Z",
-      "firstSeenAt": "2026-11-22T04:49:17.841Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 0.86
-    },
-    {
       "id": "4ee4e22b5039",
       "cat": "sun",
       "kind": "news",
@@ -1965,6 +1943,22 @@
         "news.com.au"
       ],
       "score": 0.8
+    },
+    {
+      "id": "682f9d418bfa",
+      "cat": "space",
+      "kind": "news",
+      "title": "Four asteroids sweep past Earth on Saturday, one the size of an airplane",
+      "url": "https://www.msn.com/en-us/news/other/four-asteroids-sweep-past-earth-on-saturday-one-the-size-of-an-airplane/ar-AA2hVUWR",
+      "source": "Morning Overview on MSN",
+      "publishedAt": "2026-11-21T15:25:00.000Z",
+      "latestAt": "2026-11-21T15:25:00.000Z",
+      "firstSeenAt": "2026-11-22T08:34:41.544Z",
+      "outlets": 1,
+      "outletNames": [
+        "Morning Overview on MSN"
+      ],
+      "score": 0.71
     }
   ]
 }
