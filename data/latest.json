@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T00:48:33.869Z",
+  "buildTime": "2026-11-22T01:03:34.511Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 19:48 ET",
+  "etStamp": "2026-11-21 20:03 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -50,20 +50,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1149,
-  "lastSuccessAt": "2026-11-22T00:48:33.869Z",
+  "headlinesRead": 1175,
+  "lastSuccessAt": "2026-11-22T01:03:34.511Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 24,
-    "earth": 10,
+    "flights": 25,
+    "earth": 7,
+    "hacks": 23,
     "grid": 5,
-    "hacks": 19,
     "space": 4,
-    "germs": 4,
+    "germs": 5,
     "markets": 7,
     "ai": 3,
-    "internet": 14,
-    "weather": 9,
+    "internet": 13,
+    "weather": 7,
     "sun": 1
   },
   "vital": {
@@ -186,15 +186,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 853,
+      "count": 890,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     },
     "bing": {
       "ok": true,
-      "count": 264,
+      "count": 253,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,37 +206,37 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     },
     "x": {
       "ok": true,
@@ -249,13 +249,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T00:48:33.869Z"
+      "lastOkAt": "2026-11-22T01:03:34.511Z"
     }
   },
   "stories": [
@@ -345,6 +345,29 @@
       "score": 3.61
     },
     {
+      "id": "21bb56ff9807",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI investigates apparent breach of national crime database",
+      "url": "https://mezha.net/eng/news/mezha-eec90f16c23b37c371d0ec7c_fbi_investigates_apparent/",
+      "source": "Mezha.net",
+      "publishedAt": "2026-11-21T02:25:08.000Z",
+      "latestAt": "2026-11-21T16:35:15.000Z",
+      "firstSeenAt": "2026-11-21T03:00:10.082Z",
+      "outlets": 6,
+      "outletNames": [
+        "Ticker News",
+        "Mezha.net",
+        "Kriptofoni",
+        "al.com",
+        "Chicago Tribune",
+        "BBC"
+      ],
+      "trending": 500,
+      "trendTerm": "fbi hacked",
+      "score": 3.55
+    },
+    {
       "id": "sig:faa-stop:AUS:2026-11-21",
       "cat": "flights",
       "kind": "signal",
@@ -366,6 +389,37 @@
         "nationwide": false,
         "reason": "low ceilings"
       }
+    },
+    {
+      "id": "38c9976186f8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers reportedly breach FBI crime database — the 2nd time the bureau was targeted in months",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMDV6MFJrMUhmc2VjS0VJczFiRXV1aG5QZDAxREVWYXhOaG85R3hYalRUeTZLaTZwVjVkYXNJWmpjOGVfN19ZYjN3WHZvNlYySHpmd29pZXdaVklfTXZzMlBMbDM5UTM2Q2pweFRLczIwd3BQTEVkbjJpV3FJaXNLc3JudFBsMzA3TFdiYnJRalRkVDJYOFZfa3F4ckdVMC01b3lzcUx3TW8yVTM5SklZWEM4MERxdmcxcDdwSUtFZk8zUHVJSnVURE9B?oc=5",
+      "source": "New York Post",
+      "publishedAt": "2026-11-21T04:43:00.000Z",
+      "latestAt": "2026-11-21T23:43:26.000Z",
+      "firstSeenAt": "2026-11-22T01:03:34.511Z",
+      "outlets": 16,
+      "outletNames": [
+        "New York Post",
+        "The Week",
+        "Ammon News",
+        "TodayPress.tv",
+        "News9live",
+        "Sandesh",
+        "PCMag",
+        "Fox News",
+        "Republic World",
+        "AOL.co.uk",
+        "cedarnews.net",
+        "NDTV Profit",
+        "Limapagi",
+        "Yahoo",
+        "Daily Finland",
+        "X"
+      ],
+      "score": 3.3
     },
     {
       "id": "d3ce25f05da5",
@@ -432,45 +486,6 @@
         "Winnipeg Free Press"
       ],
       "score": 2.92
-    },
-    {
-      "id": "2593cf91a89e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US Department of Agriculture Hit by Cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY3lqQWxtTDBiMk9wWGhNVldGVXJqMUN2NUZuZWlyRThiMXEtQjR5aGw3SWpGRkxhYTFkdkxMTlFfUXVmOG1LSXh1MTc0RHF0SnRYcS0tc3I4Y1AxXzFmREpyWHdVOEFtZE9iUEZEdXpqV1pra1M1d0JJTjh0bWxfMTRn?oc=5",
-      "source": "8AM Media",
-      "publishedAt": "2026-11-21T02:55:44.000Z",
-      "latestAt": "2026-11-21T14:10:57.000Z",
-      "firstSeenAt": "2026-11-21T16:17:26.966Z",
-      "outlets": 6,
-      "outletNames": [
-        "8AM Media",
-        "Afghanistan International",
-        "Ratopati",
-        "IANS LIVE",
-        "Report.az",
-        "Hamro Patro"
-      ],
-      "score": 2.79
-    },
-    {
-      "id": "e7ec2c2dedbb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Carson, Banks say ATC outage shows urgent need for upgrades",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRlo2anpqclJXYkJ5dk9EcWRoVVRaQ3lXZnZMeFE5cy1CbXpNRXNhekpSZVUxVG1EanQzVjg2dVRrSWxFNEl6eFNUVl83c1ZvaHhMc0psbTlGM2FUNzBhaTJjZ2plYU9FN0JWb0N5TEhWT2xxU2tZaU95MEIwOUlfQmtGZGZaYTN3WU5zVlRPZlFkUHh0OVJVbkliQXBPdk5iUUh2aXgycw?oc=5",
-      "source": "WRTV",
-      "publishedAt": "2026-11-21T01:47:00.000Z",
-      "latestAt": "2026-11-21T01:53:24.000Z",
-      "firstSeenAt": "2026-11-21T03:30:16.173Z",
-      "outlets": 3,
-      "outletNames": [
-        "WRTV",
-        "cedarnews.net",
-        "Yahoo"
-      ],
-      "score": 2.51
     },
     {
       "id": "276c4b2d0e1e",
@@ -591,6 +606,27 @@
       "score": 3.21
     },
     {
+      "id": "2593cf91a89e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US Department of Agriculture Hit by Cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY3lqQWxtTDBiMk9wWGhNVldGVXJqMUN2NUZuZWlyRThiMXEtQjR5aGw3SWpGRkxhYTFkdkxMTlFfUXVmOG1LSXh1MTc0RHF0SnRYcS0tc3I4Y1AxXzFmREpyWHdVOEFtZE9iUEZEdXpqV1pra1M1d0JJTjh0bWxfMTRn?oc=5",
+      "source": "8AM Media",
+      "publishedAt": "2026-11-21T02:55:44.000Z",
+      "latestAt": "2026-11-21T14:10:57.000Z",
+      "firstSeenAt": "2026-11-21T16:17:26.966Z",
+      "outlets": 6,
+      "outletNames": [
+        "8AM Media",
+        "Afghanistan International",
+        "Ratopati",
+        "IANS LIVE",
+        "Report.az",
+        "Hamro Patro"
+      ],
+      "score": 2.79
+    },
+    {
       "id": "516ba2900ebf",
       "cat": "earth",
       "kind": "news",
@@ -607,6 +643,24 @@
         "Devdiscourse"
       ],
       "score": 2.58
+    },
+    {
+      "id": "e7ec2c2dedbb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Carson, Banks say ATC outage shows urgent need for upgrades",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRlo2anpqclJXYkJ5dk9EcWRoVVRaQ3lXZnZMeFE5cy1CbXpNRXNhekpSZVUxVG1EanQzVjg2dVRrSWxFNEl6eFNUVl83c1ZvaHhMc0psbTlGM2FUNzBhaTJjZ2plYU9FN0JWb0N5TEhWT2xxU2tZaU95MEIwOUlfQmtGZGZaYTN3WU5zVlRPZlFkUHh0OVJVbkliQXBPdk5iUUh2aXgycw?oc=5",
+      "source": "WRTV",
+      "publishedAt": "2026-11-21T01:47:00.000Z",
+      "latestAt": "2026-11-21T01:53:24.000Z",
+      "firstSeenAt": "2026-11-21T03:30:16.173Z",
+      "outlets": 3,
+      "outletNames": [
+        "WRTV",
+        "cedarnews.net",
+        "Yahoo"
+      ],
+      "score": 2.51
     },
     {
       "id": "1d17892f4747",
@@ -647,23 +701,6 @@
       "score": 2.42
     },
     {
-      "id": "603f4b56ad5a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase reveals vendor cyberattack days after customers faced major outage",
-      "url": "https://finance.yahoo.com/technology/articles/chase-reveals-vendor-cyberattack-days-125432478.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-21T04:54:00.000Z",
-      "latestAt": "2026-11-21T12:54:32.000Z",
-      "firstSeenAt": "2026-11-21T14:47:03.235Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Yahoo Finance"
-      ],
-      "score": 2.34
-    },
-    {
       "id": "6aa8479c13bb",
       "cat": "earth",
       "kind": "news",
@@ -682,24 +719,6 @@
       "score": 2.16,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
-    },
-    {
-      "id": "b1224b4f8b73",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "South Portland library reopens after cyberattack, city hall remains closed",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdFd4YnlGeHQ4Wi1jTGl4UzNySFFMU0JOMlNsRmVMZ0JLZ3B2UllsQ29OcElwSVFvcjlmUkdMNWY4X2pJMzB1aVg5NjBJZURFVFY5d3lmNXJzMm1FWi1HYzJHMVJ3YnZvVlc4YnNTNHUxVDhqcWI1cEs5RTFOS1NGOGxhekNHVVJqZ3loY1h3LWJrcmhOVDRWQ0oxeTJBckRvN0FV?oc=5",
-      "source": "WGME",
-      "publishedAt": "2026-11-21T05:32:37.000Z",
-      "latestAt": "2026-11-21T19:01:56.000Z",
-      "firstSeenAt": "2026-11-21T19:17:43.821Z",
-      "outlets": 3,
-      "outletNames": [
-        "WGME",
-        "Newsradio WGAN |",
-        "fox23maine.com"
-      ],
-      "score": 1.99
     },
     {
       "id": "fc6a032e6502",
@@ -870,6 +889,23 @@
       "score": 3.12
     },
     {
+      "id": "603f4b56ad5a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase reveals vendor cyberattack days after customers faced major outage",
+      "url": "https://finance.yahoo.com/technology/articles/chase-reveals-vendor-cyberattack-days-125432478.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-21T04:54:00.000Z",
+      "latestAt": "2026-11-21T12:54:32.000Z",
+      "firstSeenAt": "2026-11-21T14:47:03.235Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Yahoo Finance"
+      ],
+      "score": 2.34
+    },
+    {
       "id": "89dc7ef81ec8",
       "cat": "earth",
       "kind": "news",
@@ -888,6 +924,24 @@
       "score": 2.01,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "b1224b4f8b73",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "South Portland library reopens after cyberattack, city hall remains closed",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdFd4YnlGeHQ4Wi1jTGl4UzNySFFMU0JOMlNsRmVMZ0JLZ3B2UllsQ29OcElwSVFvcjlmUkdMNWY4X2pJMzB1aVg5NjBJZURFVFY5d3lmNXJzMm1FWi1HYzJHMVJ3YnZvVlc4YnNTNHUxVDhqcWI1cEs5RTFOS1NGOGxhekNHVVJqZ3loY1h3LWJrcmhOVDRWQ0oxeTJBckRvN0FV?oc=5",
+      "source": "WGME",
+      "publishedAt": "2026-11-21T05:32:37.000Z",
+      "latestAt": "2026-11-21T19:01:56.000Z",
+      "firstSeenAt": "2026-11-21T19:17:43.821Z",
+      "outlets": 3,
+      "outletNames": [
+        "WGME",
+        "Newsradio WGAN |",
+        "fox23maine.com"
+      ],
+      "score": 1.99
     },
     {
       "id": "b3f921dc9af6",
@@ -1009,26 +1063,6 @@
       "score": 1.68
     },
     {
-      "id": "46325015c386",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Peru hit by magnitude 6.8 earthquake; no immediate damage reported",
-      "url": "https://www.thehindubusinessline.com/news/world/peru-hit-by-magnitude-68-earthquake-no-immediate-damage-reported/article71727426.ece",
-      "source": "The Hindu BusinessLine",
-      "publishedAt": "2026-11-21T03:32:00.000Z",
-      "latestAt": "2026-11-21T06:01:00.000Z",
-      "firstSeenAt": "2026-11-22T00:48:33.869Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Hindu BusinessLine",
-        "Ratopati",
-        "BusinessLine"
-      ],
-      "score": 1.67,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "cef185c52f33",
       "cat": "hacks",
       "kind": "news",
@@ -1061,6 +1095,23 @@
         "https://www.findarticles.com/"
       ],
       "score": 1.58
+    },
+    {
+      "id": "652eadbd4717",
+      "cat": "flights",
+      "kind": "news",
+      "title": "The FAA ground stop blame game",
+      "url": "https://www.yahoo.com/news/videos/faa-ground-stop-blame-game-200636943.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-21T12:06:00.000Z",
+      "latestAt": "2026-11-21T20:41:52.000Z",
+      "firstSeenAt": "2026-11-22T01:03:34.511Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX One"
+      ],
+      "score": 1.57
     },
     {
       "id": "305315cb563c",
@@ -1441,23 +1492,6 @@
       "score": 1.32
     },
     {
-      "id": "92a63eedcd46",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Mexican cell carriers facing widespread outages, users report",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPX1R2d2NoOVc0OGJuR2docEZlNUxNMEZkM1J2bmtyWXE4Y1Jma0NrVUVONTRfVWFNdHAyaXVmRUphbUhGQTFkNTRLZnRjMmpKZGdUa2MtcVZIT1dJR3NhcVUwcFRMdW9CMlppWWJxYnhyLVJ2cllnZ3F4Ti1KcVA2Zl94ampGUDktNmdXOHRXWDg1bmFLVFVTdDh3MNIBoAFBVV95cUxNTkxEZU9LdFVqaEt5eU1hNkdxcklyM054UDAxazBWWFBpRXpjZzdvaHRUWlNPRkt5VzZ5eEw3dFJFQzFhMUxpT0NkZUJScnMyV2Nmc2dUODZEU1VFdXJtTU1keEJBT01jVXNGX3VqV0hFWmJBMC1QUnlQMmdkdEhRYW5sX0l0N0dtdnhrTUZiUUtIWmpaM3VhV25CSmlIeWkx?oc=5",
-      "source": "ThePrint",
-      "publishedAt": "2026-11-21T01:00:05.000Z",
-      "latestAt": "2026-11-21T01:15:00.000Z",
-      "firstSeenAt": "2026-11-21T21:33:06.689Z",
-      "outlets": 2,
-      "outletNames": [
-        "ThePrint",
-        "The Straits Times"
-      ],
-      "score": 1.31
-    },
-    {
       "id": "f82582961a35",
       "cat": "internet",
       "kind": "news",
@@ -1714,6 +1748,22 @@
       "score": 1.01
     },
     {
+      "id": "9e8b72868837",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Delaware reports cases of bird flu in Kent, Sussex counties",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaGcweVNDbTM5Y2JQZlUwOVZEd3VnVC1DWFNCUmRHRE9wZFJOSm5UTmtNZzN4U21DcXR5WHF3S0lLeDZZbndneFJqQmZST0V3MFdQRUxNLWl0Uy12dlVGcjFDZjJXMENjUE9TWndUUFhqeE5MeXN3YzVUejU0UkFhVU5GWFZlYnBhYW16WVNFalpTSUpqYVIyaTNhcXZfS1FydXQxVQ?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-22T00:48:00.000Z",
+      "latestAt": "2026-11-22T00:48:00.000Z",
+      "firstSeenAt": "2026-11-22T01:03:34.511Z",
+      "outlets": 1,
+      "outletNames": [
+        "CBS News"
+      ],
+      "score": 1
+    },
+    {
       "id": "4be20b09da55",
       "cat": "hacks",
       "kind": "news",
@@ -1796,6 +1846,54 @@
       "score": 1
     },
     {
+      "id": "b39c43dac38d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "It has been confirmed that hackers accessed the FBI's database that police use to identify fugitives",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbUY2TkE3bHdaQ2VLTzJUWlZ6R0RXbnRmZUVZLVBBOF9zTDdUcVJqZzJ2VGVnVjltOVVsaXpIRkE5SFpmdlVHTktHQzlyYTkyU0MtcVNCSVhIZkZlT1lNeUVrRVM3djVlY1loOWFkYVVnUVdUbWJlRXoyNmRFN0k0dFNyZ0Y4NkFSaTdCamdxZHdmMElwLVlUQTdGdWF4MnptdEc1WGltcWcxNDdpMWZ0SmNLNHdMZk5nM2U0dHY0TkNtQQ?oc=5",
+      "source": "CiberCuba",
+      "publishedAt": "2026-11-22T00:40:25.000Z",
+      "latestAt": "2026-11-22T00:40:25.000Z",
+      "firstSeenAt": "2026-11-22T01:03:34.511Z",
+      "outlets": 1,
+      "outletNames": [
+        "CiberCuba"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "461164072183",
+      "cat": "markets",
+      "kind": "news",
+      "title": "GNR: Natural Resource Stocks Plunge To Support And Are A Value (NYSEARCA:GNR)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcHN4WXNDdGgyWmRlaEM4TFoxRmlWWlNpZ2NsNFdLX3dBUU8zeU5GNUw3ZWNJc0tnem43dkpoaHBobUlLNFA3WEc5cjFSbWhLaHBsVWdoWVBHaGZ5T0VUOTdUczFyVkhrT2xjVVk2dTk1T2RxczZ4eDlQVGtHWWFKc3EwVk9LOG5CellYVlhnUFZ3aXlSa3V2M0p2X1NzQTlIRjdydjdJdUNfUXROZGplemtnQlFEdGZvU3hlcTlkcTk0akxZc0E?oc=5",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-11-22T00:39:00.000Z",
+      "latestAt": "2026-11-22T00:39:00.000Z",
+      "firstSeenAt": "2026-11-22T01:03:34.511Z",
+      "outlets": 1,
+      "outletNames": [
+        "Seeking Alpha"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "9a567984025b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Water supply hack warning: FBI says threats are rising",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZDB2RnY5Sy1RdVo2ZVpMMENyX1lieDJkNnNXZHE4a3ZWaHp0YUdjYkkwVVluOFpWTUgzQlcyMU1DVHZSeTdBRlJCdEdSdE51LVQ3WURLd254ckxiRi1OckhOOEZSR0hyZk5FMG1FdTVrQjl3dWVnWHQyY1IzVkRJa09sTVk4NHZTeEF2bNIBkgFBVV95cUxQbTlnRjJpVmktZGxTc2xpSllwUXYwVXhQejg2SHRJN2NFYWlpS3FHTDdZMEJhampaaWw1Z25DT3BPTGVDaDdRY285bXhLaElDVW5TRU9RalgzdmdoWVJHV3pCZGdoNmlHdzQwMks3bWF3bUR2SGpGNGNQaUoyd0pYc0h4MHJDeEdvMDhuX2txSjV5UQ?oc=5",
+      "source": "NewsNation",
+      "publishedAt": "2026-11-22T00:29:34.000Z",
+      "latestAt": "2026-11-22T00:29:34.000Z",
+      "firstSeenAt": "2026-11-22T01:03:34.511Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsNation"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "d75c03a15d8d",
       "cat": "hacks",
       "kind": "news",
@@ -1826,46 +1924,6 @@
       "outlets": 1,
       "outletNames": [
         "CBS News"
-      ],
-      "trending": 50000,
-      "trendTerm": "tornado watch",
-      "score": 0.99,
-      "quiet": true,
-      "quietReason": "headline mentions tornado"
-    },
-    {
-      "id": "7a5c1310524f",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Tornado warning cancelled as storm rolls through Miami-Dade, Broward",
-      "url": "https://www.nbcmiami.com/weather/stories-weather/tornado-warning-cancelled-as-storm-rolls-through-miami-dade-broward/3891311/",
-      "source": "NBC 6 South Florida",
-      "publishedAt": "2026-11-21T23:40:00.000Z",
-      "latestAt": "2026-11-21T23:40:00.000Z",
-      "firstSeenAt": "2026-11-22T00:18:26.919Z",
-      "outlets": 1,
-      "outletNames": [
-        "NBC 6 South Florida"
-      ],
-      "trending": 50000,
-      "trendTerm": "tornado watch",
-      "score": 0.99,
-      "quiet": true,
-      "quietReason": "headline mentions tornado"
-    },
-    {
-      "id": "8bb885dc7608",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Tornado warning issued for parts of Miami-Dade, Broward as radar detects storm rotation",
-      "url": "https://www.local10.com/weather/2026/11/21/tornado-warning-issued-for-parts-of-miami-dade-broward-as-radar-detects-storm-rotation/",
-      "source": "WPLG Local 10",
-      "publishedAt": "2026-11-21T23:40:00.000Z",
-      "latestAt": "2026-11-21T23:40:00.000Z",
-      "firstSeenAt": "2026-11-22T00:18:26.919Z",
-      "outlets": 1,
-      "outletNames": [
-        "WPLG Local 10"
       ],
       "trending": 50000,
       "trendTerm": "tornado watch",
@@ -1920,54 +1978,6 @@
         "Mashable"
       ],
       "score": 0.97
-    },
-    {
-      "id": "95fd26ab8a13",
-      "cat": "earth",
-      "kind": "news",
-      "title": "2.6 magnitude earthquake shakes close to Calipatria, CA on Nov. 21",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1WOGxrZjFPSHF5TERzZm1TUnBaaDZXQlp4eUhEWVJSYlJ4SzFwYVdzeE44Q2NpWDNIZkhubEZCM1c3VDFZS0Y2LS1USnVoOXBWOXpMLXh2SVFZUXp5eHJlenBVU3pveHI5VThLaE1FSDVkaXhUUXAwS1FmRUk?oc=5",
-      "source": "Sacramento Bee",
-      "publishedAt": "2026-11-21T22:15:05.000Z",
-      "latestAt": "2026-11-21T22:15:05.000Z",
-      "firstSeenAt": "2026-11-22T00:48:33.869Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sacramento Bee"
-      ],
-      "score": 0.96
-    },
-    {
-      "id": "87ea90ca6c72",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Darwin rocked by powerful 6.8 earth tremor",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRXI2VzM3TjFiUUwzUDN0YVpHY3dFSUM2N1BRRmdjUE4xRzJrSDBpYngyczd0WnhjMzFCNV9LQkxKWjVXUHE5cUotUnJ1bTZhTHFwV0J1MnNjMlNxU0VrWUZvRno2bVd3cVg4ZjVmLWNudkRiZWxJMGw3X2hzaTc3ekhXX0dHRTJhRzN6LW1YZml5cUx0OV9DNFRmM3F1WFJmUVhXdDVmVHVwb1h3dFJrLUphMFNPZW1Wa3JOel9LVmdOS3A1WGNseg?oc=5",
-      "source": "NT News",
-      "publishedAt": "2026-11-21T22:05:03.000Z",
-      "latestAt": "2026-11-21T22:05:03.000Z",
-      "firstSeenAt": "2026-11-22T00:48:33.869Z",
-      "outlets": 1,
-      "outletNames": [
-        "NT News"
-      ],
-      "score": 0.95
-    },
-    {
-      "id": "7e4ad2140960",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Retail Investors Brace for Monday as U.S. Stocks Plunge Again",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOM3BMSzlCZUU5YmJlNGt4eGQ1eVpGdU5xelFHVEotV3owSTZoZHBjM3JwOUw0X0tZaDAyTFV3OUVicnZDbmZ5WmtYWmdsQXRsem84NlRjZ3ZzNUxoZkVhOFBuNVM0Z2lheHBtN01XbFhqT1ZkemlCbjJMdXZnU1ZqdGJURG1rckU0dDV6NGN2X2QtQXlrTXhSbHIzYW9tWFVLeHc?oc=5",
-      "source": "Seoul Economic Daily",
-      "publishedAt": "2026-11-21T22:00:05.000Z",
-      "latestAt": "2026-11-21T22:00:05.000Z",
-      "firstSeenAt": "2026-11-22T00:48:33.869Z",
-      "outlets": 1,
-      "outletNames": [
-        "Seoul Economic Daily"
-      ],
-      "score": 0.95
     },
     {
       "id": "6ba194e9c913",
