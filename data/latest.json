@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-22T02:33:48.142Z",
+  "buildTime": "2026-11-22T02:48:50.427Z",
   "etDate": "2026-11-21",
-  "etStamp": "2026-11-21 21:33 ET",
+  "etStamp": "2026-11-21 21:48 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -50,20 +50,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1141,
-  "lastSuccessAt": "2026-11-22T02:33:48.142Z",
+  "headlinesRead": 1151,
+  "lastSuccessAt": "2026-11-22T02:48:50.427Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
     "earth": 8,
-    "hacks": 22,
     "grid": 5,
+    "hacks": 21,
     "space": 4,
-    "internet": 15,
-    "germs": 5,
+    "internet": 14,
+    "germs": 4,
     "markets": 6,
     "ai": 4,
-    "weather": 6,
+    "weather": 9,
     "sun": 2
   },
   "vital": {
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 851,
+      "count": 853,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     },
     "bing": {
       "ok": true,
-      "count": 259,
+      "count": 266,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,55 +208,56 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:33:48.142Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-22T02:33:48.142Z"
+      "lastOkAt": "2026-11-22T02:48:50.427Z"
     }
   },
   "stories": [
@@ -369,38 +370,6 @@
       }
     },
     {
-      "id": "02a2a145a3ab",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI probes second cyberattack in months as hackers breach key crime database, sources say",
-      "url": "https://www.msn.com/en-us/news/other/fbi-probes-second-cyberattack-in-months-as-hackers-breach-key-crime-database-sources-say/ar-AA2hV0rY",
-      "source": "Fox News on MSN",
-      "publishedAt": "2026-11-21T04:34:04.000Z",
-      "latestAt": "2026-11-21T23:43:26.000Z",
-      "firstSeenAt": "2026-11-22T02:33:48.142Z",
-      "outlets": 17,
-      "outletNames": [
-        "People Daily",
-        "New York Post",
-        "The Week",
-        "Ammon News",
-        "Fox News on MSN",
-        "TodayPress.tv",
-        "News9live",
-        "Sandesh",
-        "PCMag",
-        "Republic World",
-        "AOL.co.uk",
-        "cedarnews.net",
-        "NDTV Profit",
-        "Limapagi",
-        "Yahoo",
-        "Daily Finland",
-        "X"
-      ],
-      "score": 3.22
-    },
-    {
       "id": "d3ce25f05da5",
       "cat": "earth",
       "kind": "news",
@@ -508,6 +477,23 @@
       "score": 2.64
     },
     {
+      "id": "c0ec02877349",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI crime database and USDA reportedly hacked following week of nationwide outages",
+      "url": "https://www.irishstar.com/news/us-news/fbi-crime-database-usda-reportedly-37901727",
+      "source": "Irish Star",
+      "publishedAt": "2026-11-21T03:34:00.000Z",
+      "latestAt": "2026-11-21T05:33:00.000Z",
+      "firstSeenAt": "2026-11-21T11:46:36.705Z",
+      "outlets": 2,
+      "outletNames": [
+        "Irish Star",
+        "The Mirror US"
+      ],
+      "score": 2.42
+    },
+    {
       "id": "47e69d687422",
       "cat": "internet",
       "kind": "news",
@@ -529,16 +515,18 @@
       "cat": "germs",
       "kind": "news",
       "title": "FDA Recalls ORL Oral Care Products Over Hormone Contamination",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5d3NFdGU5R1M4WDZvMWdrRk5ncktvNE1zNmNnN2J6elg4OElKUVRrZ3hSU1RqdnlRLW43WjZXRklaaXZOZ1VMMExjSkVoUXFhSFFTN2l0Y1VJOGs?oc=5",
+      "url": "https://cwibc.co.id/en/fda-orl-oral-care-recall",
       "source": "cwibc.co.id",
       "publishedAt": "2026-11-21T08:11:59.000Z",
-      "latestAt": "2026-11-21T08:29:47.000Z",
+      "latestAt": "2026-11-22T02:30:00.000Z",
       "firstSeenAt": "2026-11-21T08:31:10.813Z",
       "outlets": 2,
       "outletNames": [
         "cwibc.co.id",
         "Limapagi"
       ],
+      "trending": 1000,
+      "trendTerm": "product recall",
       "score": 1.99
     },
     {
@@ -627,23 +615,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "c0ec02877349",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FBI crime database and USDA reportedly hacked following week of nationwide outages",
-      "url": "https://www.irishstar.com/news/us-news/fbi-crime-database-usda-reportedly-37901727",
-      "source": "Irish Star",
-      "publishedAt": "2026-11-21T03:34:00.000Z",
-      "latestAt": "2026-11-21T05:33:00.000Z",
-      "firstSeenAt": "2026-11-21T11:46:36.705Z",
-      "outlets": 2,
-      "outletNames": [
-        "Irish Star",
-        "The Mirror US"
-      ],
-      "score": 2.42
-    },
-    {
       "id": "603f4b56ad5a",
       "cat": "hacks",
       "kind": "news",
@@ -698,6 +669,24 @@
         "BBC"
       ],
       "score": 2.16
+    },
+    {
+      "id": "b1224b4f8b73",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "South Portland library reopens after cyberattack, city hall remains closed",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdFd4YnlGeHQ4Wi1jTGl4UzNySFFMU0JOMlNsRmVMZ0JLZ3B2UllsQ29OcElwSVFvcjlmUkdMNWY4X2pJMzB1aVg5NjBJZURFVFY5d3lmNXJzMm1FWi1HYzJHMVJ3YnZvVlc4YnNTNHUxVDhqcWI1cEs5RTFOS1NGOGxhekNHVVJqZ3loY1h3LWJrcmhOVDRWQ0oxeTJBckRvN0FV?oc=5",
+      "source": "WGME",
+      "publishedAt": "2026-11-21T05:32:37.000Z",
+      "latestAt": "2026-11-21T19:04:35.000Z",
+      "firstSeenAt": "2026-11-21T19:17:43.821Z",
+      "outlets": 3,
+      "outletNames": [
+        "WGME",
+        "Newsradio WGAN |",
+        "fox23maine.com"
+      ],
+      "score": 1.99
     },
     {
       "id": "4a96a57e3052",
@@ -886,24 +875,6 @@
       "score": 2.01,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
-    },
-    {
-      "id": "b1224b4f8b73",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "South Portland library reopens after cyberattack, city hall remains closed",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdFd4YnlGeHQ4Wi1jTGl4UzNySFFMU0JOMlNsRmVMZ0JLZ3B2UllsQ29OcElwSVFvcjlmUkdMNWY4X2pJMzB1aVg5NjBJZURFVFY5d3lmNXJzMm1FWi1HYzJHMVJ3YnZvVlc4YnNTNHUxVDhqcWI1cEs5RTFOS1NGOGxhekNHVVJqZ3loY1h3LWJrcmhOVDRWQ0oxeTJBckRvN0FV?oc=5",
-      "source": "WGME",
-      "publishedAt": "2026-11-21T05:32:37.000Z",
-      "latestAt": "2026-11-21T19:04:35.000Z",
-      "firstSeenAt": "2026-11-21T19:17:43.821Z",
-      "outlets": 3,
-      "outletNames": [
-        "WGME",
-        "Newsradio WGAN |",
-        "fox23maine.com"
-      ],
-      "score": 1.99
     },
     {
       "id": "b3f921dc9af6",
@@ -1860,36 +1831,62 @@
       "score": 1
     },
     {
-      "id": "b99086ad461f",
-      "cat": "internet",
+      "id": "6f60a445e524",
+      "cat": "weather",
       "kind": "news",
-      "title": "When Downdetector warns of an outage, some hear it crying wolf",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOanZSR1NzMDFsU0R1cXdjUUJUeThvMDVxNHdtQmI0b1ZTandhczF4X183Y0RwdTRCaUxtSEw0VHJLRDBXc09CRjVtemxKclhrd1E5RkxsaS11UjBQVFNlemJOVTFzV2QwSmRob081TkhIaXc5blpUaUNUX2ktZUdqcVB5S2NySW1UOGxFc3BERnNFbzlWNENfRU9KQVhGU1ljUFRJTkVZVXdGRmhoRHNyRkE0YUE?oc=5",
-      "source": "The Star",
-      "publishedAt": "2026-11-22T02:00:00.000Z",
-      "latestAt": "2026-11-22T02:00:00.000Z",
-      "firstSeenAt": "2026-11-22T02:18:43.998Z",
+      "title": "Possible tornado brings down trees, causes damage in southern Palm Beach County",
+      "url": "https://cbs12.com/news/local/tornado-warning-in-effect-for-boca-raton-delray-beach-area",
+      "source": "WPEC",
+      "publishedAt": "2026-11-22T02:20:00.000Z",
+      "latestAt": "2026-11-22T02:20:00.000Z",
+      "firstSeenAt": "2026-11-22T02:48:50.427Z",
       "outlets": 1,
       "outletNames": [
-        "The Star"
+        "WPEC"
       ],
+      "trending": 50000,
+      "trendTerm": "florida tornado warnings",
+      "score": 0.99,
+      "quiet": true,
+      "quietReason": "headline mentions tornado"
+    },
+    {
+      "id": "a82a25d83627",
+      "cat": "weather",
+      "kind": "news",
+      "title": "WEATHER ALERT: STRONG STORMS IN WEST BOCA RATON",
+      "url": "https://bocanewsnow.com/2026/11/21/weather-alert-strong-storms-in-west-boca-raton/",
+      "source": "BocaNewsNow.com",
+      "publishedAt": "2026-11-22T02:20:00.000Z",
+      "latestAt": "2026-11-22T02:20:00.000Z",
+      "firstSeenAt": "2026-11-22T02:48:50.427Z",
+      "outlets": 1,
+      "outletNames": [
+        "BocaNewsNow.com"
+      ],
+      "trending": 50000,
+      "trendTerm": "florida tornado warnings",
       "score": 0.99
     },
     {
-      "id": "ed242b0944af",
-      "cat": "germs",
+      "id": "bfb2ca5689e8",
+      "cat": "weather",
       "kind": "news",
-      "title": "Central, state medical teams inspect bird flu-affected villages in Cuddalore",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQTGNHYVBQeW1LNXg0djhWdVh3a0FWSzdWVGFUU1QxR0dmWjVwRy1mT1IxWWJ1Z0VfaDRDQ1dtVl9hNFU5MU9jZWdpVFpoUS1WZ19xcHQ2TEtobVVzQXo1Ym1zN0Z6MnJjUm4xcXdmOGhQOVFYX2JRWlk0UGlLdkVlbmdKTld2R0Q0ckUyUWpHOEE5c0pGLWhqWnA4SmN3eVBKYnUyc0hYZURCR1ItaUM0ODM0aHc4YXhua2NhYzlkNWswVVk5b1pESUstRXpjb3M0WHRJUNIB4gFBVV95cUxPTG5YZFd4MXdWejlHeTJtM2ZsdUZ2YXJUNWFtOTlQU2IweFpUUmt2cU9TYzFLM0hTeEF3THpYVVh0OVBTdElnbjBLWjBqXzNWcmM5UTZwa0pIQk9LV2hLa295LUoxRW1mMGluek5qa21nTENDNVcxQWNWYmF5MDFrZXpUckxjM05uY1JDQ1FVaTEtcnRDUUNwc1NIUmlCTFVvZGxOU1RJb1VzQU94UW1rek5tUEVGRTBuVExZYU5JdThHbjNSTFNfUFF1ODFtWUYtdE1USFE3dENybFhTdDhFNU5n?oc=5",
-      "source": "The New Indian Express",
-      "publishedAt": "2026-11-22T01:14:22.000Z",
-      "latestAt": "2026-11-22T01:14:22.000Z",
-      "firstSeenAt": "2026-11-22T01:33:37.048Z",
+      "title": "Tornado warning in Palm Beach County near Boca Raton",
+      "url": "https://www.foxweather.com/watch/fmc-wlf795fu37yesl2w",
+      "source": "FOX Weather",
+      "publishedAt": "2026-11-22T02:20:00.000Z",
+      "latestAt": "2026-11-22T02:20:00.000Z",
+      "firstSeenAt": "2026-11-22T02:48:50.427Z",
       "outlets": 1,
       "outletNames": [
-        "The New Indian Express"
+        "FOX Weather"
       ],
-      "score": 0.99
+      "trending": 50000,
+      "trendTerm": "florida tornado warnings",
+      "score": 0.99,
+      "quiet": true,
+      "quietReason": "headline mentions tornado"
     },
     {
       "id": "7ea48e0c9ab9",
