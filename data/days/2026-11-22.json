@@ -24,6 +24,29 @@
   "change": 1,
   "stories": [
     {
+      "id": "sig:faa-stop:LGA:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at LGA (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T11:50:13.236Z",
+      "latestAt": "2026-11-22T11:50:13.236Z",
+      "firstSeenAt": "2026-11-22T11:50:13.236Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "LGA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
+    },
+    {
       "id": "sig:faa-stop:MIA:2026-11-21",
       "cat": "flights",
       "kind": "signal",
@@ -67,29 +90,6 @@
         "hub": false,
         "nationwide": false,
         "reason": "low ceilings"
-      }
-    },
-    {
-      "id": "sig:faa-stop:YYZ:2026-11-21",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at YYZ (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-21T15:15:34.480Z",
-      "latestAt": "2026-11-21T15:15:34.480Z",
-      "firstSeenAt": "2026-11-21T15:15:34.480Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "YYZ",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low visibility"
       }
     },
     {
@@ -171,22 +171,22 @@
       "score": 2.67
     },
     {
-      "id": "b3f921dc9af6",
+      "id": "f46140602cdd",
       "cat": "hacks",
       "kind": "news",
-      "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTXZ5b1htMjlSeEpBVFRKdFZ3U2JMSFA2MVVtaEZJTkhJcDlldkVzOHp1cHp1SHhDcDZSdEpBTDVONlp3bEhOcno1cHFjVVNucGF3Z3MyVmQtdXJXb0Q0RnkxSjRWV1RHaFdxV2hNT2Nnd1BQVXhTQk9WWDVvZ2xqYm9fX3lPOWpzWXFyb2NCN3lhY2pTbGItaGNZbEFFTVJobVdaOXZpMzlFeEVHX1JqdWtVb1NLTnc?oc=5",
-      "source": "BleepingComputer",
-      "publishedAt": "2026-11-21T22:59:58.000Z",
-      "latestAt": "2026-11-22T10:40:09.000Z",
-      "firstSeenAt": "2026-11-22T00:33:30.018Z",
+      "title": "Tower Records Japan reports data breach affecting 10.2 million accounts By Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdkxpLUpNQU1Fb0lIQm5zZ3I2RDdCbXJ3cHpZU2c2UlJEM09UQ0plb3FXUS1MSU90d2JmMHZaSnVHdkpQY2FVN1lLd21teHV3THFFdGQtSEFjcU1IdHVnQm51RWpfM2pHcVI0aGxiWHpvUUl2R0VNblB6NG5qeG1CX1ZvWVZVM2dXY2xlN0pGUmdVZE5STGNSazYyLTZYbmg1dFdKUHVXcjJadjh0c2xNal9SLXlFWjNGTWRMRWZB?oc=5",
+      "source": "Investing.com Canada",
+      "publishedAt": "2026-11-22T10:26:43.000Z",
+      "latestAt": "2026-11-22T10:29:03.000Z",
+      "firstSeenAt": "2026-11-22T10:35:06.107Z",
       "outlets": 3,
       "outletNames": [
-        "BleepingComputer",
-        "Mezha.net",
-        "MLQ.ai"
+        "Investing.com Canada",
+        "Investing.com",
+        "Investing.com India"
       ],
-      "score": 2.52
+      "score": 2.58
     },
     {
       "id": "517283866840",
@@ -223,23 +223,6 @@
       "score": 1.99
     },
     {
-      "id": "3810674c6e05",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Andaman and Nicobar to get undersea cable network, 4G coverage in 87 villages",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMXlpVDdkX2RuaTF1NHMtTndMOHlpQXp4QnhZRWtBWHJmU2NqRDBSaVR2WDBfVnNkcWhnLU1hT0pkSm40RVRNOVRuZndkWVJyNC1ScWZvdVBndGhhZlpBdTJpaFJYdEdjWlN5NlBTVGlTemFaS0JoTnhZd2hpM1lYZFVUMUtlSkJJTmxiNVNYd3pkaEpfaG9PZFpsU2U1Wkp3WWN3aEpoMFdrNXNBZzJRZ3VTZzdZUXY2RFFNedIBwgFBVV95cUxNRnVjVENRY1pjT2YwUGtaUWxvaDctR2EtWktzeXVPb1NJN3p0R3ZQejJrZzVzV2E1M0VMZl8tbjdzeHFpU1FoT1BuSEoxRXNxUzlaeXZGOGNnVDdvTUhlSnY4V0VjRGxnaDhjYW9OQjl6RTJGdzZaeGhkM0U2WTdZRTRzajI5cTZFblItMjNMYzNSdXY3bG5mMjNpdFBWNTRYTXY2eGNOTkV1V3JWd2VfVFlHa25pX3hOWFpESTA2Y2l2UQ?oc=5",
-      "source": "India Today",
-      "publishedAt": "2026-11-22T07:52:38.000Z",
-      "latestAt": "2026-11-22T11:25:01.000Z",
-      "firstSeenAt": "2026-11-22T11:35:10.685Z",
-      "outlets": 2,
-      "outletNames": [
-        "India Today",
-        "www.nationpathindia.com"
-      ],
-      "score": 1.88
-    },
-    {
       "id": "9feb2a3e367f",
       "cat": "germs",
       "kind": "news",
@@ -257,6 +240,23 @@
       "score": 1.73
     },
     {
+      "id": "3810674c6e05",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Centre Plans New Undersea Cable Network for 8 Andaman Islands; 87 Uncovered Villages May Get 4G Connectivity",
+      "url": "https://www.nationpathindia.com/technology/andaman-pani-undersea-cable-network-8-islands-4g-connectivity-2026",
+      "source": "nationpathindia.com",
+      "publishedAt": "2026-11-22T03:14:00.000Z",
+      "latestAt": "2026-11-22T11:25:01.000Z",
+      "firstSeenAt": "2026-11-22T11:35:10.685Z",
+      "outlets": 2,
+      "outletNames": [
+        "India Today",
+        "www.nationpathindia.com"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "6bd2a72536cd",
       "cat": "space",
       "kind": "news",
@@ -272,6 +272,29 @@
         "Chosunbiz"
       ],
       "score": 1.71
+    },
+    {
+      "id": "sig:faa-stop:YYZ:2026-11-21",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at YYZ (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-21T15:15:34.480Z",
+      "latestAt": "2026-11-21T15:15:34.480Z",
+      "firstSeenAt": "2026-11-21T15:15:34.480Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "YYZ",
+        "hub": false,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
     },
     {
       "id": "sig:faa-stop:YOW:2026-11-21",
@@ -297,6 +320,24 @@
       }
     },
     {
+      "id": "b3f921dc9af6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTXZ5b1htMjlSeEpBVFRKdFZ3U2JMSFA2MVVtaEZJTkhJcDlldkVzOHp1cHp1SHhDcDZSdEpBTDVONlp3bEhOcno1cHFjVVNucGF3Z3MyVmQtdXJXb0Q0RnkxSjRWV1RHaFdxV2hNT2Nnd1BQVXhTQk9WWDVvZ2xqYm9fX3lPOWpzWXFyb2NCN3lhY2pTbGItaGNZbEFFTVJobVdaOXZpMzlFeEVHX1JqdWtVb1NLTnc?oc=5",
+      "source": "BleepingComputer",
+      "publishedAt": "2026-11-21T22:59:58.000Z",
+      "latestAt": "2026-11-22T10:40:09.000Z",
+      "firstSeenAt": "2026-11-22T00:33:30.018Z",
+      "outlets": 3,
+      "outletNames": [
+        "BleepingComputer",
+        "Mezha.net",
+        "MLQ.ai"
+      ],
+      "score": 2.52
+    },
+    {
       "id": "8921c65897d0",
       "cat": "hacks",
       "kind": "news",
@@ -313,23 +354,6 @@
         "findarticles.com"
       ],
       "score": 2.04
-    },
-    {
-      "id": "f46140602cdd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Tower Records Japan reports data breach affecting 10.2 million accounts By Investing.com",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdkxpLUpNQU1Fb0lIQm5zZ3I2RDdCbXJ3cHpZU2c2UlJEM09UQ0plb3FXUS1MSU90d2JmMHZaSnVHdkpQY2FVN1lLd21teHV3THFFdGQtSEFjcU1IdHVnQm51RWpfM2pHcVI0aGxiWHpvUUl2R0VNblB6NG5qeG1CX1ZvWVZVM2dXY2xlN0pGUmdVZE5STGNSazYyLTZYbmg1dFdKUHVXcjJadjh0c2xNal9SLXlFWjNGTWRMRWZB?oc=5",
-      "source": "Investing.com Canada",
-      "publishedAt": "2026-11-22T10:26:43.000Z",
-      "latestAt": "2026-11-22T10:27:39.000Z",
-      "firstSeenAt": "2026-11-22T10:35:06.107Z",
-      "outlets": 2,
-      "outletNames": [
-        "Investing.com Canada",
-        "Investing.com"
-      ],
-      "score": 2
     },
     {
       "id": "eaceeef59447",
@@ -364,23 +388,6 @@
         "https://travelhost.com/"
       ],
       "score": 1.82
-    },
-    {
-      "id": "652eadbd4717",
-      "cat": "flights",
-      "kind": "news",
-      "title": "The FAA ground stop blame game",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeUtCUHJVa1lqOENhWXhNVG15TGV1bVlZOGpjYTFHczJ1cW1fVUNWYkJwbjhONXJBWDJZUEgzT3pzYjdiXzdyeVFrVS1iOF9Zc2M5YlB4WjIxNGwxSV8ySGVGb1E1TTdtQkFJb0xiUWk0UkczWExCcU1JSm5DUjI2Sg?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-21T20:06:36.000Z",
-      "latestAt": "2026-11-21T20:41:52.000Z",
-      "firstSeenAt": "2026-11-22T03:03:49.946Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX One"
-      ],
-      "score": 1.77
     },
     {
       "id": "733eb33f2940",
@@ -624,6 +631,23 @@
         "Scripps News"
       ],
       "score": 1.85
+    },
+    {
+      "id": "652eadbd4717",
+      "cat": "flights",
+      "kind": "news",
+      "title": "The FAA ground stop blame game",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeUtCUHJVa1lqOENhWXhNVG15TGV1bVlZOGpjYTFHczJ1cW1fVUNWYkJwbjhONXJBWDJZUEgzT3pzYjdiXzdyeVFrVS1iOF9Zc2M5YlB4WjIxNGwxSV8ySGVGb1E1TTdtQkFJb0xiUWk0UkczWExCcU1JSm5DUjI2Sg?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-21T20:06:36.000Z",
+      "latestAt": "2026-11-21T20:41:52.000Z",
+      "firstSeenAt": "2026-11-22T03:03:49.946Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX One"
+      ],
+      "score": 1.77
     },
     {
       "id": "2d606b597b21",
@@ -1542,22 +1566,6 @@
       "score": 1
     },
     {
-      "id": "7ea48e0c9ab9",
-      "cat": "space",
-      "kind": "news",
-      "title": "Earth’s temporary mini-moon is expected to leave in early December",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNDNDYXp2c1FHc2dvQzJldnhLcEJfbFNLNFVrOFBPUTFqMUd1S2pfOUVCSGhjcHZpWlg5V3EtX2JYV1hLTFVXQUh4N3J1NzIwdFkxT0RnQzZiZzdQVzY4RVNQcGRoN1QyM0VadFJSQTdudDhUTUhxa0kxcVY3bTdoZzMyRXkzc0tOWHE4UkNYaw?oc=5",
-      "source": "Mezha.net",
-      "publishedAt": "2026-11-21T11:37:24.000Z",
-      "latestAt": "2026-11-21T11:37:24.000Z",
-      "firstSeenAt": "2026-11-21T12:16:53.020Z",
-      "outlets": 1,
-      "outletNames": [
-        "Mezha.net"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "d1bfe0d98aab",
       "cat": "ai",
       "kind": "news",
@@ -1702,5 +1710,5 @@
       "score": 0.66
     }
   ],
-  "updatedAt": "2026-11-22T11:35:10.685Z"
+  "updatedAt": "2026-11-22T11:50:13.236Z"
 }
