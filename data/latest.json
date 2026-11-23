@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T21:55:50.295Z",
+  "buildTime": "2026-11-23T22:10:55.895Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 16:55 ET",
+  "etStamp": "2026-11-23 17:10 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -50,14 +50,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1343,
-  "lastSuccessAt": "2026-11-23T21:55:50.295Z",
+  "headlinesRead": 1345,
+  "lastSuccessAt": "2026-11-23T22:10:55.895Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
+    "flights": 21,
     "earth": 6,
-    "hacks": 32,
-    "markets": 8,
+    "hacks": 35,
+    "markets": 7,
     "germs": 6,
     "internet": 5,
     "ai": 4,
@@ -171,93 +171,92 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "New details released in Strathmore concert mass shooting"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1033,
+      "count": 1025,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
-      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "count": 286,
+      "error": null,
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-23T19:55:36.706Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T21:55:50.295Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z"
+      "lastOkAt": "2026-11-23T22:10:55.895Z"
     }
   },
   "stories": [
@@ -365,7 +364,7 @@
       "publishedAt": "2026-11-23T02:30:00.000Z",
       "latestAt": "2026-11-23T20:21:39.000Z",
       "firstSeenAt": "2026-11-23T17:40:06.517Z",
-      "outlets": 24,
+      "outlets": 25,
       "outletNames": [
         "NBC Chicago",
         "FOX 32 Chicago",
@@ -390,11 +389,12 @@
         "The Times of India",
         "Anadolu Ajansı",
         "Operativ Məlumat Mərkəzi",
-        "FOX 29 Philadelphia"
+        "FOX 29 Philadelphia",
+        "NBC 5 Chicago"
       ],
       "trending": 1000,
       "trendTerm": "ohare ground stop",
-      "score": 4.17
+      "score": 4.22
     },
     {
       "id": "00fefd72061e",
@@ -686,23 +686,24 @@
       "score": 2.78
     },
     {
-      "id": "3dfb63467fa7",
+      "id": "e55269ebb7e8",
       "cat": "flights",
       "kind": "news",
-      "title": "Flights grounded in Belgium due to strike against austerity measures",
-      "url": "https://www.bbc.co.uk/news/articles/cwdr155e2d05o",
-      "source": "BBC",
-      "publishedAt": "2026-11-23T03:26:00.000Z",
-      "latestAt": "2026-11-23T12:31:30.000Z",
-      "firstSeenAt": "2026-11-23T11:39:00.724Z",
-      "outlets": 4,
+      "title": "O’Hare ground stop lifted as Thanksgiving travel chaos looms",
+      "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
+      "source": "Central Illinois Proud on MSN",
+      "publishedAt": "2026-11-23T11:12:19.000Z",
+      "latestAt": "2026-11-23T22:03:25.000Z",
+      "firstSeenAt": "2026-11-23T20:55:41.076Z",
+      "outlets": 5,
       "outletNames": [
-        "BBC",
-        "Yahoo",
-        "cedarnews.net",
-        "The Star, Kenya"
+        "Central Illinois Proud on MSN",
+        "CIProud.com",
+        "WGN-TV",
+        "AOL.co.uk",
+        "Breitbart News"
       ],
-      "score": 2.59
+      "score": 2.78
     },
     {
       "id": "004141a71fd9",
@@ -897,22 +898,23 @@
       "score": 1.72
     },
     {
-      "id": "ed8122b35384",
+      "id": "3dfb63467fa7",
       "cat": "flights",
       "kind": "news",
-      "title": "Thanksgiving flyers face a bigger bill after a ground stop rattled air travel",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQM3Y1Q2xkeFlRMTRvZ1RRR0dUNTZ5ekFwSmV4Ykw4T1NiVXd3Ni1sWmwzdEtueXo0dGV1TExLeWRjb2dWOVdnbFFmUDdKMVJ5N3d4SFEwNWR1c3VwdUVxaGJxSWVfd19tNkk5bkxxeE5GTGp4bzZIZ21vYTlkOUdqenp0Q3RDYnpNMk5DQU1EemlkWDJXbTlZT3RYYTZhVlM0R2FaYnJsMmI?oc=5",
-      "source": "travelhost.com",
-      "publishedAt": "2026-11-22T22:10:31.000Z",
-      "latestAt": "2026-11-22T22:10:31.000Z",
-      "firstSeenAt": "2026-11-22T22:21:49.827Z",
-      "outlets": 3,
+      "title": "Flights grounded in Belgium due to strike against austerity measures",
+      "url": "https://www.bbc.co.uk/news/articles/cwdr155e2d05o",
+      "source": "BBC",
+      "publishedAt": "2026-11-23T03:26:00.000Z",
+      "latestAt": "2026-11-23T12:31:30.000Z",
+      "firstSeenAt": "2026-11-23T11:39:00.724Z",
+      "outlets": 4,
       "outletNames": [
-        "travelhost.com",
-        "https://travelhost.com/",
-        "Yahoo"
+        "BBC",
+        "Yahoo",
+        "cedarnews.net",
+        "The Star, Kenya"
       ],
-      "score": 2.58
+      "score": 2.59
     },
     {
       "id": "1009b9191373",
@@ -933,23 +935,22 @@
       "score": 2.54
     },
     {
-      "id": "e55269ebb7e8",
+      "id": "a910e55ce45c",
       "cat": "flights",
       "kind": "news",
-      "title": "O’Hare ground stop lifted as Thanksgiving travel chaos looms",
-      "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
-      "source": "Central Illinois Proud on MSN",
-      "publishedAt": "2026-11-23T11:12:19.000Z",
-      "latestAt": "2026-11-23T18:20:20.000Z",
-      "firstSeenAt": "2026-11-23T20:55:41.076Z",
-      "outlets": 4,
+      "title": "Delta aircraft faced manual calculations after a critical system outage",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNVk9wRlNjSmhMS2dfblZfYVFNMlJUQ1YwT0lNc21rOGxPVHUzcFZBUEI2THk1ZXNHbW85dkJDVmlMaTJUaFlBWXdNWjM5bTF3LVE0cFZ0UVIyUXNSejUxd09CWVNUQW93U085NXdnbkJ1UmRGdEN1NTFFU2pKckh3YTE3aFZvRE43cC1lb0h6anpMWnJXakdvQnhDUVZtQ0pKWERRcjNnMlRveDFaeUtHbGJOdm1vWEhlQmtFa28zVGdZUm44Y283d3lPc1o5cFFTY1NuX2JEMNIB6wFBVV95cUxQQTR1S21FSWltM1BjUDUyd1ItVGZEZnZ6YlNaMEVldmZiVVIxM0l0OW1ZMGFZMmpFMVRzVU82eThjZWl1bUo2TkdaSHd6eFh0Nk53Nkt5QnYwSHBaSjlPMmFBenhKb2xqQXVQOV8yR2VUVF8xUWRRZVNVY180ZzRfS01TOFUybHZDam9FTnhJdTFDSzFWblZ1blB2a1NCZjd6aGpJbkpjejJ2R0Rua2ZKTHcxQ05qTXkzTXAzZ3VEd1ZUeUVqdkpRR1lFdklMTG4weGVZczhlSWRCemJUMkVRbVdFcFktMVduMzlj?oc=5",
+      "source": "Boston 25 News",
+      "publishedAt": "2026-11-23T20:18:49.000Z",
+      "latestAt": "2026-11-23T20:18:49.000Z",
+      "firstSeenAt": "2026-11-23T21:55:50.295Z",
+      "outlets": 3,
       "outletNames": [
-        "Central Illinois Proud on MSN",
-        "CIProud.com",
-        "WGN-TV",
-        "AOL.co.uk"
+        "Boston 25 News",
+        "104.5 WOKV",
+        "WFTV"
       ],
-      "score": 2.51
+      "score": 2.52
     },
     {
       "id": "146aa5beb1a5",
@@ -1091,6 +1092,25 @@
         "TechRadar"
       ],
       "score": 2.31
+    },
+    {
+      "id": "0667eed29872",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Exclusive: China-backed hackers suspected behind ongoing EU Commission cyberattack",
+      "url": "https://www.yahoo.com/news/world/articles/exclusive-china-backed-hackers-suspected-123921669.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T07:58:00.000Z",
+      "latestAt": "2026-11-23T18:52:19.000Z",
+      "firstSeenAt": "2026-11-23T22:10:55.895Z",
+      "outlets": 4,
+      "outletNames": [
+        "Yahoo",
+        "Euronews.com",
+        "Yahoo News Canada",
+        "Dataconomy"
+      ],
+      "score": 2.29
     },
     {
       "id": "34ecddd85f48",
@@ -1236,23 +1256,6 @@
       "score": 1.96
     },
     {
-      "id": "a910e55ce45c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta aircraft faced manual calculations after a critical system outage",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNVk9wRlNjSmhMS2dfblZfYVFNMlJUQ1YwT0lNc21rOGxPVHUzcFZBUEI2THk1ZXNHbW85dkJDVmlMaTJUaFlBWXdNWjM5bTF3LVE0cFZ0UVIyUXNSejUxd09CWVNUQW93U085NXdnbkJ1UmRGdEN1NTFFU2pKckh3YTE3aFZvRE43cC1lb0h6anpMWnJXakdvQnhDUVZtQ0pKWERRcjNnMlRveDFaeUtHbGJOdm1vWEhlQmtFa28zVGdZUm44Y283d3lPc1o5cFFTY1NuX2JEMNIB6wFBVV95cUxQQTR1S21FSWltM1BjUDUyd1ItVGZEZnZ6YlNaMEVldmZiVVIxM0l0OW1ZMGFZMmpFMVRzVU82eThjZWl1bUo2TkdaSHd6eFh0Nk53Nkt5QnYwSHBaSjlPMmFBenhKb2xqQXVQOV8yR2VUVF8xUWRRZVNVY180ZzRfS01TOFUybHZDam9FTnhJdTFDSzFWblZ1blB2a1NCZjd6aGpJbkpjejJ2R0Rua2ZKTHcxQ05qTXkzTXAzZ3VEd1ZUeUVqdkpRR1lFdklMTG4weGVZczhlSWRCemJUMkVRbVdFcFktMVduMzlj?oc=5",
-      "source": "Boston 25 News",
-      "publishedAt": "2026-11-23T20:18:49.000Z",
-      "latestAt": "2026-11-23T20:18:49.000Z",
-      "firstSeenAt": "2026-11-23T21:55:50.295Z",
-      "outlets": 2,
-      "outletNames": [
-        "Boston 25 News",
-        "104.5 WOKV"
-      ],
-      "score": 1.95
-    },
-    {
       "id": "32e456df8417",
       "cat": "hacks",
       "kind": "news",
@@ -1355,23 +1358,6 @@
       "score": 1.78
     },
     {
-      "id": "c6c82f8bac8c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta outage snarls Thanksgiving travel in latest tech issue to plague US",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOQmlzTTdrbmRDQkxSekFSclE1YWM4SjJLTXlLUmFHRk56MG9TOXBOOHhfR3BRRzEwNlk0ZExRU2pGZGdhRk5JTmRGWnZpdUI4eThLbWlNT19HYW1MVVBJMDJaVUFJYU82bklGZy1hVS1EX2FFeURHQ0dWS2xabGZ5eHZJMFBWTGhDcEpoWW5LcmlQWlZJVU5Jdlc0NmJ6YnFWOExpQkhRZF9PU01zdFdnTDdUSGdTUQ?oc=5",
-      "source": "The Independent",
-      "publishedAt": "2026-11-23T14:03:00.000Z",
-      "latestAt": "2026-11-23T21:25:33.000Z",
-      "firstSeenAt": "2026-11-23T21:40:51.988Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Independent",
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.75
-    },
-    {
       "id": "07c12bb3a2f0",
       "cat": "hacks",
       "kind": "news",
@@ -1387,6 +1373,40 @@
         "Neowin"
       ],
       "score": 1.73
+    },
+    {
+      "id": "3abd8d35b651",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "GoFundMe says donor information was exposed in data breach",
+      "url": "https://www.khou.com/article/news/nation-world/gofundme-data-breach-donor-data-nonprofits/507-6efe578f-8a12-49f8-88d3-90bcc948b1b1",
+      "source": "KHOU",
+      "publishedAt": "2026-11-23T13:55:00.000Z",
+      "latestAt": "2026-11-23T21:56:07.000Z",
+      "firstSeenAt": "2026-11-23T22:10:55.895Z",
+      "outlets": 2,
+      "outletNames": [
+        "KHOU",
+        "WWLTV.com"
+      ],
+      "score": 1.72
+    },
+    {
+      "id": "b53f6265a294",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Prism Medical Products Data Breach Affects 1.3 Million Individuals",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBrcWp6UUVRMXhMT2o0VDNYaEptVWhiejVQUUg4LS11WUhKUi13VWN0TWlSb0FmSlVFSnZMTTd2bmNPVVBjMVNsaW9EWGpYTjZTeFlVTk1hRmMwM2h5Tk51WS1kQW5nWlpiNkVVVXZGMWJwZw?oc=5",
+      "source": "The HIPAA Journal",
+      "publishedAt": "2026-11-23T13:51:48.000Z",
+      "latestAt": "2026-11-23T22:00:10.000Z",
+      "firstSeenAt": "2026-11-23T22:10:55.895Z",
+      "outlets": 2,
+      "outletNames": [
+        "The HIPAA Journal",
+        "Claim Depot"
+      ],
+      "score": 1.72
     },
     {
       "id": "61c68303f936",
@@ -1678,6 +1698,23 @@
       "score": 1.51
     },
     {
+      "id": "c6c82f8bac8c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta outage snarls Thanksgiving travel in latest tech issue in US",
+      "url": "https://www.msn.com/en-us/news/other/delta-outage-snarls-thanksgiving-travel-in-latest-tech-issue-in-us/ar-AA2hDLXi",
+      "source": "The Independent on MSN",
+      "publishedAt": "2026-11-23T06:03:11.000Z",
+      "latestAt": "2026-11-23T21:25:33.000Z",
+      "firstSeenAt": "2026-11-23T21:40:51.988Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Independent",
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.48
+    },
+    {
       "id": "0759c97c3f39",
       "cat": "internet",
       "kind": "news",
@@ -1760,38 +1797,6 @@
       "score": 1.4
     },
     {
-      "id": "32dc77c35517",
-      "cat": "flights",
-      "kind": "news",
-      "title": "New York parent books backup rental car for Texas work trip after nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5rWHlZb3BRVXVoRXFGZVpBaGNNYTlLUnpBOWs1TzZ1RE9ZMTVqcGVlREdzOFhwYUdrTm9rZEVocl9QUkx4ZDVsVE5waDRrWko5d2phME1weG4wN0steXYza1NFLThydU05V0tJUFBBTEdvblBGQVp0Mlh0SnpYZw?oc=5",
-      "source": "The Cool Down",
-      "publishedAt": "2026-11-23T20:55:00.000Z",
-      "latestAt": "2026-11-23T20:55:00.000Z",
-      "firstSeenAt": "2026-11-23T21:10:48.587Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Cool Down"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "2fc8aea99cae",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Nvidia Rally Lifts Nasdaq-100 Following Sharp Global Stock Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQTJUZEJ6d25YN3B6MWx0bnJXV1FEdm5LQWQ2NHp3WlFyRTNsODZKR1BLRVlNUmlHN0oxQmsxSC12TFhPa3JUU0VjQWtydlhud3RVWGMzWUowbm1GTkJmZlVySmJjUXlheG9rTzVNcE9UekI4N1hJWVFNRnRpSW1IVzRhS1FvRW9CSENxU1c5cGpCd0xDZVoxdkVXNkNoNVRxWmk5ZWpxTUFHLUZFcUY5N2l0ZzdNVVBfVHdlYngtbjhZbXlw?oc=5",
-      "source": "Forbes Middle East",
-      "publishedAt": "2026-11-23T18:43:29.000Z",
-      "latestAt": "2026-11-23T18:44:54.000Z",
-      "firstSeenAt": "2026-11-23T19:10:20.571Z",
-      "outlets": 1,
-      "outletNames": [
-        "Forbes Middle East"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "d6dc0c529e70",
       "cat": "weather",
       "kind": "news",
@@ -1817,7 +1822,7 @@
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBmMHM1WU5VdS1jcEF0bHNRLUIyNXFEU1dWbm0wRjVuSHMwYWV2eW1aVThWSW9mUzVYZU9jeFlYMUEzWC1yUlk1endDanEtQUZtQzJ3eEctam5VaFc2eUVlc2hVSlhIYmEzTUhlS3ByMUdKeEZmblRN?oc=5",
       "source": "nwitimes.com",
       "publishedAt": "2026-11-23T21:28:27.000Z",
-      "latestAt": "2026-11-23T21:28:27.000Z",
+      "latestAt": "2026-11-23T22:00:00.000Z",
       "firstSeenAt": "2026-11-23T21:40:51.988Z",
       "outlets": 1,
       "outletNames": [
