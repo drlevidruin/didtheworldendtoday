@@ -1,38 +1,38 @@
 {
   "google": {
     "ok": true,
-    "count": 1025,
-    "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z"
+    "count": 344,
+    "error": "1 of 26 queries failed: HTTP 429 (blocked after 13 of 26 queries)",
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z"
   },
   "bing": {
     "ok": true,
-    "count": 286,
+    "count": 287,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z"
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z"
   },
   "gdelt": {
     "ok": false,
     "count": 0,
     "error": "rate limited (HTTP 429)",
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
     "lastOkAt": "2026-11-23T09:08:33.193Z"
   },
   "hn": {
     "ok": true,
-    "count": 6,
+    "count": 5,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z"
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z"
   },
   "usgs": {
     "ok": true,
     "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z",
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z",
     "vital": {
       "quake": {
         "mag": 6.5,
@@ -48,8 +48,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z",
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z",
     "vital": {
       "kp": {
         "value": 0.67,
@@ -62,8 +62,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z",
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z",
     "vital": {
       "asteroid": {
         "des": "2026 WD",
@@ -80,8 +80,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z",
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z",
     "vital": {
       "faa": {
         "groundStops": [],
@@ -96,8 +96,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z",
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z",
     "vital": {
       "status": {
         "worst": "minor",
@@ -117,8 +117,8 @@
           {
             "id": "openai",
             "name": "OpenAI",
-            "indicator": "none",
-            "description": "All Systems Operational"
+            "indicator": "minor",
+            "description": "Partial System Degradation"
           },
           {
             "id": "claude",
@@ -157,23 +157,23 @@
   },
   "x": {
     "ok": true,
-    "count": 0,
+    "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T14:54:37.005Z"
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z"
   },
   "trends": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z"
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z"
   },
   "topstories": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-23T15:39:45.273Z",
-    "lastOkAt": "2026-11-23T15:39:45.273Z"
+    "lastTryAt": "2026-11-23T15:54:47.975Z",
+    "lastOkAt": "2026-11-23T15:54:47.975Z"
   }
 }
