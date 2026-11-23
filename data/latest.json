@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T05:53:02.982Z",
+  "buildTime": "2026-11-23T06:08:04.006Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 00:53 ET",
+  "etStamp": "2026-11-23 01:08 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,8 +49,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 474,
-  "lastSuccessAt": "2026-11-23T05:53:02.982Z",
+  "headlinesRead": 301,
+  "lastSuccessAt": "2026-11-23T06:08:04.006Z",
   "rollingFallback": false,
   "cats": {
     "earth": 4,
@@ -75,9 +75,9 @@
       "tsunami": true
     },
     "kp": {
-      "value": 0.67,
-      "time": "2026-11-23T00:00:00.000Z",
-      "max24": 2.33
+      "value": 0.33,
+      "time": "2026-11-23T03:00:00.000Z",
+      "max24": 1.67
     },
     "asteroid": {
       "des": "2026 WD",
@@ -92,7 +92,7 @@
       "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
-      "closures": 0,
+      "closures": 1,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -185,57 +185,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 155,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 8 of 26 queries)",
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "count": 63,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     },
     "bing": {
       "ok": true,
-      "count": 282,
-      "error": null,
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "count": 201,
+      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-23T02:22:29.826Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     },
     "x": {
       "ok": true,
@@ -248,13 +248,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T05:53:02.982Z"
+      "lastOkAt": "2026-11-23T06:08:04.006Z"
     }
   },
   "stories": [
