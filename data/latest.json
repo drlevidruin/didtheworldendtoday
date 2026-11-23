@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T12:39:11.931Z",
+  "buildTime": "2026-11-23T12:54:19.459Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 07:39 ET",
+  "etStamp": "2026-11-23 07:54 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,16 +48,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1274,
-  "lastSuccessAt": "2026-11-23T12:39:11.931Z",
+  "headlinesRead": 1266,
+  "lastSuccessAt": "2026-11-23T12:54:19.459Z",
   "rollingFallback": false,
   "cats": {
-    "earth": 6,
-    "flights": 26,
-    "markets": 10,
-    "hacks": 29,
+    "earth": 7,
+    "flights": 22,
+    "markets": 11,
+    "hacks": 30,
     "grid": 4,
-    "internet": 7,
+    "internet": 8,
     "germs": 4,
     "ai": 3,
     "weather": 4,
@@ -180,20 +180,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 947,
+      "count": 937,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "bing": {
       "ok": true,
-      "count": 289,
+      "count": 291,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,56 +205,55 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T11:54:12.089Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T12:39:11.931Z"
+      "lastOkAt": "2026-11-23T12:54:19.459Z"
     }
   },
   "stories": [
@@ -556,29 +555,6 @@
       }
     },
     {
-      "id": "sig:faa-stop:HOU:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at HOU (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T12:50:28.187Z",
-      "latestAt": "2026-11-22T12:50:28.187Z",
-      "firstSeenAt": "2026-11-22T12:50:28.187Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "HOU",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low visibility"
-      }
-    },
-    {
       "id": "9c203136b2c3",
       "cat": "flights",
       "kind": "news",
@@ -597,6 +573,26 @@
         "12newsnow.com"
       ],
       "score": 3.06
+    },
+    {
+      "id": "0bd1b7ccd575",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Hundreds of Delta Air Lines flights delayed due to technical failure",
+      "url": "http://www.bignewsnetwork.com/news/279449149/hundreds-of-delta-air-lines-flights-delayed-due-to-technical-failure",
+      "source": "bignewsnetwork.com",
+      "publishedAt": "2026-11-22T18:45:00.000Z",
+      "latestAt": "2026-11-23T03:30:00.000Z",
+      "firstSeenAt": "2026-11-23T02:22:29.826Z",
+      "outlets": 5,
+      "outletNames": [
+        "bignewsnetwork.com",
+        "en.apa.az",
+        "Latest news from Azerbaijan",
+        "Free Malaysia Today",
+        "en.people.cn"
+      ],
+      "score": 2.9
     },
     {
       "id": "ba76c07629c7",
@@ -741,6 +737,23 @@
       "score": 1.99
     },
     {
+      "id": "08138a62e8c4",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Kilauea volcano LIVE: Eruption in Hawaii (Video)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQLUhKN3Q2NE5vVEZ3U2ZzcGY3NXJIcmdGOS1hSDNGZXJaTTRtNDRiNEYzVUNId1d1U2Vmclc4OTk5RzZjTnRzT1RZZWZ6MjBGbzNzSmRRTjRPYXpDbWFYUHZGLWQzRjlJTG9ZU1JaZnpDUkR2ZklHU0tqblV2RWU2b0RWZHE3Nl8wMFE3bGMwSGc?oc=5",
+      "source": "Social News XYZ",
+      "publishedAt": "2026-11-23T12:06:26.000Z",
+      "latestAt": "2026-11-23T12:25:46.000Z",
+      "firstSeenAt": "2026-11-23T12:54:19.459Z",
+      "outlets": 2,
+      "outletNames": [
+        "Social News XYZ",
+        "swiowanewssource.com"
+      ],
+      "score": 1.97
+    },
+    {
       "id": "5bbfa7de489f",
       "cat": "grid",
       "kind": "news",
@@ -843,60 +856,6 @@
         "Buzznews on MSN"
       ],
       "score": 1.72
-    },
-    {
-      "id": "3775a6d0e95a",
-      "cat": "markets",
-      "kind": "news",
-      "title": "LIVE: Sensex, Nifty slide, metal stocks plunge; AI selloff hits Asia, South Korea plunges 5%",
-      "url": "https://www.financialexpress.com/market/sensex-nifty-today-live-updates-ai-selloff-asia-kospi-wall-street-crude-gold-silver-rate-stock-market-november-23-2026-4391541/",
-      "source": "The Financial Express",
-      "publishedAt": "2026-11-22T20:49:00.000Z",
-      "latestAt": "2026-11-23T06:36:47.000Z",
-      "firstSeenAt": "2026-11-23T06:38:15.236Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Financial Express",
-        "IndiaIPO"
-      ],
-      "score": 1.67
-    },
-    {
-      "id": "0bd1b7ccd575",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Hundreds of Delta Air Lines flights delayed due to technical failure",
-      "url": "http://www.bignewsnetwork.com/news/279449149/hundreds-of-delta-air-lines-flights-delayed-due-to-technical-failure",
-      "source": "bignewsnetwork.com",
-      "publishedAt": "2026-11-22T18:45:00.000Z",
-      "latestAt": "2026-11-23T03:30:00.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 5,
-      "outletNames": [
-        "bignewsnetwork.com",
-        "en.apa.az",
-        "Latest news from Azerbaijan",
-        "Free Malaysia Today",
-        "en.people.cn"
-      ],
-      "score": 2.9
-    },
-    {
-      "id": "2541df40929e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air lines system outage prompts temporary ground stop, nationwide Thanksgiving travel delays",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPOUx2aHBxUVl3Tmo1bGdOUkhwTGxlWXdhUUN5Ykk4bVdUdThnMTJ4MGdlXzA4NU96c18xOVdCakItN2RVMXh1NXNFeTFORFVoTDA4VThscEU0ZTFiWHJFc1dFbDd2cGtjWWlER1g5NHVmUk96S3RNYVhESnNOdXcySl85QTJrZjU4T1Jiclc3YzVnMHU3TWNldk5FSWNLaUdlUnFvZkdVX1FGVWJwdk5qTlF6VGJ1djVoWUtFcUd0ZzJBdW1HTWJhMS1CenVTZW8?oc=5",
-      "source": "Dailyfly News",
-      "publishedAt": "2026-11-23T11:20:38.000Z",
-      "latestAt": "2026-11-23T12:25:22.000Z",
-      "firstSeenAt": "2026-11-23T11:24:03.036Z",
-      "outlets": 2,
-      "outletNames": [
-        "Dailyfly News",
-        "KWXX - Hawaii"
-      ],
-      "score": 2.8
     },
     {
       "id": "f257116fae03",
@@ -1111,23 +1070,6 @@
       "score": 1.95
     },
     {
-      "id": "9b18b9fb782e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta system outage causes flight delays in the US — Anadolu Agency",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQ0FBUDB2ekthcVhhcUxjSzlTcDJGZHlqSnVYcldQSl9NNS1FTDd6OXRDc0lCcG94VnRoOFdSQjNHeGozcHdUZERLUk5ieG9UUTB4WUdENHlLVi1TUkxGU3dhLVEzTGg3WG5XVUF4dW14b0tadldjb0U1dlhxWGVydnlQRThfNVhWSHJJYVZBeGNGZjJ0ZUptSjlveHl0dFJ0dW03VjVhcVhCeUc5QkhUQTc4Q3Y?oc=5",
-      "source": "UA.NEWS",
-      "publishedAt": "2026-11-22T15:38:45.000Z",
-      "latestAt": "2026-11-22T17:21:08.000Z",
-      "firstSeenAt": "2026-11-22T17:36:06.971Z",
-      "outlets": 2,
-      "outletNames": [
-        "UA.NEWS",
-        "ABC7 New York"
-      ],
-      "score": 1.93
-    },
-    {
       "id": "d463d6790420",
       "cat": "hacks",
       "kind": "news",
@@ -1332,6 +1274,23 @@
       "score": 1.68
     },
     {
+      "id": "3775a6d0e95a",
+      "cat": "markets",
+      "kind": "news",
+      "title": "LIVE: Sensex, Nifty slide, metal stocks plunge; AI selloff hits Asia, South Korea plunges 5%",
+      "url": "https://www.financialexpress.com/market/sensex-nifty-today-live-updates-ai-selloff-asia-kospi-wall-street-crude-gold-silver-rate-stock-market-november-23-2026-4391541/",
+      "source": "The Financial Express",
+      "publishedAt": "2026-11-22T20:49:00.000Z",
+      "latestAt": "2026-11-23T06:36:47.000Z",
+      "firstSeenAt": "2026-11-23T06:38:15.236Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Financial Express",
+        "IndiaIPO"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "2b8e26c13d08",
       "cat": "hacks",
       "kind": "news",
@@ -1502,23 +1461,6 @@
       "score": 1.52
     },
     {
-      "id": "b8c657415eaa",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta says system restored after tech issue causes flight delays at Atlanta airport",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOTFhYeDFhNTE3T0x2R2d2c3dNM2Y3MktIWTc4LVFKd0dwcGIzbXhJbEUtQTdNZUk4LWpJZzZZQ1MwaDBGQTdnTTdhak1qeEdfeTB2SEFaRG5jWTByTzV5anowWVpMTlU0WHhYamtPd3EtTjg3bEplVDBIZmY1bkV0ZVhXWXV1aG5oRHFPMmRvZmRpN2xKNmoyUDN30gGuAUFVX3lxTE01Rkt1eFNDeDNIRzc5ZTFha1NEU1pOYnZ3RDJmVXFSVFFwZThzeU54blQ4SW5wMzk2ZkJIUExTbzFNOUttVXltbC1GZ3hodUJ0dm1lS1dlaC1aZDNCZFRiZVpIdk12VG84YWtHM09YYWZyM0JfakRHdlZiM3FDVDRTNDI5NE1mdDZOY2NNanFIVXc0aFQzT09XV2VUYzJncWpQT2VYd0lsWlVJVGRpQQ?oc=5",
-      "source": "Atlanta News First",
-      "publishedAt": "2026-11-22T13:16:00.000Z",
-      "latestAt": "2026-11-22T16:49:00.000Z",
-      "firstSeenAt": "2026-11-23T03:37:44.457Z",
-      "outlets": 2,
-      "outletNames": [
-        "Atlanta News First",
-        "WBTV"
-      ],
-      "score": 1.52
-    },
-    {
       "id": "0d58c5ffd73f",
       "cat": "hacks",
       "kind": "news",
@@ -1593,7 +1535,7 @@
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQSDlKbm1HMG5ibFJjUXN4Z09lZGlRTDJISjN0RWg3VktidlhCRFJJY3VXOWlYT1RaLVBOLTJMMGhIVEszRGoycjhzT1laREhnU1M4ZVhUQXVPb1FnanRBMlJzdlNHM0tDVXhQMS04aFNLVFltdXdHRXVxSU5KQm5qekdXelBtM3NjMFdQSzBfTk53dWtubmRTSXBlU3BJbGZyUS1uTUE1Njgwb1piV0dfdm5rWUhMUHZXZnk1Zkppa2VkNHgtdW16d3VJUQ?oc=5",
       "source": "TheBusinessDesk.com",
       "publishedAt": "2026-11-23T06:50:31.000Z",
-      "latestAt": "2026-11-23T06:50:31.000Z",
+      "latestAt": "2026-11-23T11:36:47.000Z",
       "firstSeenAt": "2026-11-23T06:53:17.730Z",
       "outlets": 1,
       "outletNames": [
@@ -1635,20 +1577,22 @@
       "score": 1.4
     },
     {
-      "id": "58fabfb0567f",
-      "cat": "flights",
+      "id": "132ded6919af",
+      "cat": "markets",
       "kind": "news",
-      "title": "Belgium’s Airspace Closed 7 AM – 9 PM On Monday (November 23, 2026) & All Flights Canceled At Brussels Airport",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPbElwa0Jwckx3S3NseHVlS01RZi01NDI1dmlWUmtzVmhDXzIyMXMxRlA5SENXVGduU2h4YTlUYzJ5Tm9Ja1BfVy1FSWRWUGJ4YkhFNmdKbmM2VUZGOXdhTU1tUFB1bTZxYTg1djRHNVFnNlpQbWZob2JKbzBHSjNKNlpmdGZubm1qMTVOaVhVNERDXzRhV1hBYzdLdnlUUGlGMGJtTlpPRHRpRXRObm84SEFTZHFaM2xWX0otT0luZ1BtZC1UZG9vMFRYQm82Yk82RWNIdE5B?oc=5",
-      "source": "LoyaltyLobby",
-      "publishedAt": "2026-11-22T12:44:15.000Z",
-      "latestAt": "2026-11-22T12:44:15.000Z",
-      "firstSeenAt": "2026-11-22T12:50:28.187Z",
+      "title": "Anthropic, Nvidia shares rise in premarket trading after major tech sell-off",
+      "url": "https://www.cnbc.com/2026/11/23/anthropic-nvidia-shares.html",
+      "source": "CNBC",
+      "publishedAt": "2026-11-23T12:30:00.000Z",
+      "latestAt": "2026-11-23T12:30:00.000Z",
+      "firstSeenAt": "2026-11-23T12:54:19.459Z",
       "outlets": 1,
       "outletNames": [
-        "LoyaltyLobby"
+        "CNBC"
       ],
-      "score": 1.4
+      "trending": 5000,
+      "trendTerm": "premarket",
+      "score": 1.39
     },
     {
       "id": "a597312e933a",
@@ -1779,6 +1723,54 @@
         "International Business Times Australia"
       ],
       "score": 1.37
+    },
+    {
+      "id": "8552822df5bc",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Flights Delayed Nationwide as Technical Outage Hits Atlanta Hub",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSmFyeTlHczBRRTExLXBEdG9tdk5HZjJNSW9FU29yS3RqVVRtRldINUxrSmgxbTA0cU9uV3pSRUVXandvRm9IT21VcUU4NWsyZDZ1a041Q3YxMFhLSzRoVktoOEZpb3UzbUlYZ0RBSmtTbENRLUZZZ0dQYkh3cEVsYndoMEx2UjhDd2F2UnJNbGpHVFpIa3dsNGI4aTczMFg2blRVLXF1T0JuaXBNRWwzLTZB?oc=5",
+      "source": "Rus Tourism News",
+      "publishedAt": "2026-11-22T19:00:08.000Z",
+      "latestAt": "2026-11-22T19:00:08.000Z",
+      "firstSeenAt": "2026-11-22T21:06:43.630Z",
+      "outlets": 1,
+      "outletNames": [
+        "Rus Tourism News"
+      ],
+      "score": 1.35
+    },
+    {
+      "id": "2c3063035351",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Power restored in parts of Kenyan capital after major outage",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOUZyRmROLWs3dWdJNTZHQTdidDk5SGw4ZjhxbTMwRGpDZTBVUEpEZVQySzhCSzhNUFVhSVlUWlNYU1cyV2xSWDkxWE8xNWFEeThmMldPdDY5aTM3N2FMWGVvamV4SkVDamlLSmpXeExrRDlkYktOOTZpVkNscE5EM19YQzZQbGdLWDVHR0h3QllZMXp2LXNaak5PMWRSTTNt?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-22T18:34:39.000Z",
+      "latestAt": "2026-11-22T18:34:39.000Z",
+      "firstSeenAt": "2026-11-22T20:51:38.365Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yeni Safak English"
+      ],
+      "score": 1.35
+    },
+    {
+      "id": "88bab342b3bf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Telcos strengthen cyberattack defences, report no major vulnerabilities",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX2tRMGVNdkFwYXkzcEQ5d2lycTBDYzU3Y2pxbXgxejBQZVVlWGptMFVFLVZ4NE9BTXQwN3UzQ01RZ0ZEYWRlSTItSTJ5c3g3dXk2Q2k5SGJNX0hxbWNfZEN6UTZXUzhhNjF3SEFDd1BrWTNuLTZIdHpENWZlNWZpbGk5R01HanpOU0gyaGYxQW9jMV9WalAzNWNrdUkzdGczcFpaX1pHTTlFUzdabEVhWDhIT2kxdmUwZGN0ODNXb1NCcTNKdzRac0I4OE84Nm5iVzl5dkp1a9IB3AFBVV95cUxQZmFVVlg0QzJ1LTF6U1VwTDF2dzhEOTl4SEFubmgzWEE2Zm0yeldSbk9DbS1HSHh5LWJkLTRnQ1RDYk5HQXRnVGF6Q2E2NXF3ZDQtQmJXeXBKVzh1NFhsQlhORzFjVGt0cGNmcDRpLTEwRHNuNEYwVkZuTm1wbVFWc2ZMUFhFdGVXVWx4a1MyLU9OcHJES01aZ21JcXd4RE5PdW5Ic1ZUQkdFMnJha2N0RkNxNDBaZ05kUzNvcXJvSjNLR0d2OGhNbHJ5U2FPYUxIS3JrTnhGRVMxeENJ?oc=5",
+      "source": "The Economic Times",
+      "publishedAt": "2026-11-23T00:30:00.000Z",
+      "latestAt": "2026-11-23T00:30:00.000Z",
+      "firstSeenAt": "2026-11-23T04:22:49.114Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Economic Times"
+      ],
+      "score": 1.31
     },
     {
       "id": "0611150a2b20",
