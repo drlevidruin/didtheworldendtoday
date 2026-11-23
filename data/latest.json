@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T13:54:26.287Z",
+  "buildTime": "2026-11-23T14:09:26.891Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 08:54 ET",
+  "etStamp": "2026-11-23 09:09 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,13 +48,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1257,
-  "lastSuccessAt": "2026-11-23T13:54:26.287Z",
+  "headlinesRead": 1277,
+  "lastSuccessAt": "2026-11-23T14:09:26.891Z",
   "rollingFallback": false,
   "cats": {
     "earth": 7,
-    "flights": 21,
-    "hacks": 35,
+    "flights": 20,
+    "hacks": 36,
     "markets": 10,
     "grid": 4,
     "internet": 4,
@@ -180,20 +180,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 945,
+      "count": 963,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     },
     "bing": {
       "ok": true,
-      "count": 273,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "count": 276,
+      "error": null,
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,55 +205,56 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T13:54:26.287Z"
+      "lastOkAt": "2026-11-23T14:09:26.891Z"
     }
   },
   "stories": [
@@ -331,30 +332,6 @@
       }
     },
     {
-      "id": "26ac8de36de0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
-      "url": "https://www.politico.eu/article/european-commission-personal-data-leak-cyberattack-disruption/",
-      "source": "Politico Europe",
-      "publishedAt": "2026-11-23T05:08:00.000Z",
-      "latestAt": "2026-11-23T13:28:53.000Z",
-      "firstSeenAt": "2026-11-23T13:24:19.410Z",
-      "outlets": 9,
-      "outletNames": [
-        "Politico Europe",
-        "www.politico.eu",
-        "Mezha.net",
-        "Associated Press News",
-        "The Joplin Globe",
-        "WKMG",
-        "Corsicana Daily Sun",
-        "Toronto Star",
-        "Laredo Morning Times"
-      ],
-      "score": 3.6
-    },
-    {
       "id": "00fefd72061e",
       "cat": "earth",
       "kind": "news",
@@ -427,6 +404,31 @@
         "nationwide": false,
         "reason": "low ceilings"
       }
+    },
+    {
+      "id": "26ac8de36de0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
+      "url": "https://www.politico.eu/article/european-commission-personal-data-leak-cyberattack-disruption/",
+      "source": "Politico Europe",
+      "publishedAt": "2026-11-23T00:24:00.000Z",
+      "latestAt": "2026-11-23T13:28:53.000Z",
+      "firstSeenAt": "2026-11-23T13:24:19.410Z",
+      "outlets": 10,
+      "outletNames": [
+        "Politico Europe",
+        "www.politico.eu",
+        "Mezha.net",
+        "Associated Press News",
+        "The Joplin Globe",
+        "WKMG",
+        "Corsicana Daily Sun",
+        "Toronto Star",
+        "Laredo Morning Times",
+        "Newsday"
+      ],
+      "score": 3.39
     },
     {
       "id": "59993d00bf55",
@@ -603,18 +605,19 @@
       "url": "https://crypto.news/samsung-securities-data-breach-8241-customers/",
       "source": "Crypto News",
       "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T10:07:30.000Z",
+      "latestAt": "2026-11-23T14:01:26.000Z",
       "firstSeenAt": "2026-11-23T08:08:30.015Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "finance.biggo.com",
         "Korea JoongAng Daily",
         "Crypto News",
         "CyberSecurityNews",
         "cyberpress",
-        "Chosunbiz"
+        "Chosunbiz",
+        "shattered.io"
       ],
-      "score": 2.62
+      "score": 2.78
     },
     {
       "id": "08138a62e8c4",
@@ -653,21 +656,22 @@
       "score": 2.53
     },
     {
-      "id": "3b05aa687599",
+      "id": "0cd515516612",
       "cat": "hacks",
       "kind": "news",
-      "title": "China-linked hackers suspected in major EU Commission cyberattack: Report",
-      "url": "https://www.thenews.com.pk/latest/1424775-china-linked-hackers-suspected-in-major-eu-commission-cyberattack-report",
-      "source": "The News International",
-      "publishedAt": "2026-11-23T04:34:00.000Z",
-      "latestAt": "2026-11-23T12:17:40.000Z",
-      "firstSeenAt": "2026-11-23T12:39:11.931Z",
-      "outlets": 2,
+      "title": "Next reports data breach following cyber attack with 'investigations ongoing'",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQdXozOEMwSXI5NWIwTWxfTzVoMW5qMElvTkZDbzY3Y3VCOF9sUEtWRl9zTksyOV85a29mR0RiU1hIV1BIaUNpU1JGM1AyRlFfYjhobXZQWUpuVWZTdUc5SlZkUF9aNnQwMmpBS3RCbG1kb254eXhRc2pmZTdSRWIwd2lNV2l4b01MYUExdkVORzVlME5BWE9wZE9Sa0IwUVRRSTZDT2tiWi1MeVlGbUI5b2RhMFBqNm5SaEE?oc=5",
+      "source": "The Herald",
+      "publishedAt": "2026-11-23T12:02:31.000Z",
+      "latestAt": "2026-11-23T13:39:00.000Z",
+      "firstSeenAt": "2026-11-23T13:54:26.287Z",
+      "outlets": 3,
       "outletNames": [
-        "The News International",
-        "News18"
+        "The Herald",
+        "The Telegraph",
+        "Epping Forest Guardian"
       ],
-      "score": 2.42
+      "score": 2.5
     },
     {
       "id": "d7b3a9b62031",
@@ -914,6 +918,23 @@
       "score": 2.49
     },
     {
+      "id": "3b05aa687599",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "China-linked hackers suspected in major EU Commission cyberattack: Report",
+      "url": "https://www.thenews.com.pk/latest/1424775-china-linked-hackers-suspected-in-major-eu-commission-cyberattack-report",
+      "source": "The News International",
+      "publishedAt": "2026-11-23T04:34:00.000Z",
+      "latestAt": "2026-11-23T12:17:40.000Z",
+      "firstSeenAt": "2026-11-23T12:39:11.931Z",
+      "outlets": 2,
+      "outletNames": [
+        "The News International",
+        "News18"
+      ],
+      "score": 2.42
+    },
+    {
       "id": "ee9f98f0a5cb",
       "cat": "hacks",
       "kind": "news",
@@ -1088,23 +1109,6 @@
         "TheBusinessDesk.com"
       ],
       "score": 1.96
-    },
-    {
-      "id": "0cd515516612",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Next reports data breach following cyber attack with 'investigations ongoing'",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQdXozOEMwSXI5NWIwTWxfTzVoMW5qMElvTkZDbzY3Y3VCOF9sUEtWRl9zTksyOV85a29mR0RiU1hIV1BIaUNpU1JGM1AyRlFfYjhobXZQWUpuVWZTdUc5SlZkUF9aNnQwMmpBS3RCbG1kb254eXhRc2pmZTdSRWIwd2lNV2l4b01MYUExdkVORzVlME5BWE9wZE9Sa0IwUVRRSTZDT2tiWi1MeVlGbUI5b2RhMFBqNm5SaEE?oc=5",
-      "source": "The Herald",
-      "publishedAt": "2026-11-23T12:23:27.000Z",
-      "latestAt": "2026-11-23T13:39:00.000Z",
-      "firstSeenAt": "2026-11-23T13:54:26.287Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Herald",
-        "The Telegraph"
-      ],
-      "score": 1.95
     },
     {
       "id": "32e456df8417",
@@ -1488,7 +1492,7 @@
       "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-crashes-17-000-weekend-014926652.html",
       "source": "Yahoo Finance",
       "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T09:18:11.000Z",
+      "latestAt": "2026-11-23T13:10:59.000Z",
       "firstSeenAt": "2026-11-23T04:37:49.815Z",
       "outlets": 2,
       "outletNames": [
@@ -1581,6 +1585,22 @@
         "WGME on MSN"
       ],
       "score": 1.46
+    },
+    {
+      "id": "b26915e5f851",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack Targets Apple Phones, Crypto of Visitors to Major Websites",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQm54bmhMdXlZV3JyV25RYkVXeV8tNDlId09kcVRwU0REdm5JSHJkZm5jRl9aZ00xc09KNXg0Y1NJTEc2SG9YLVN4VTNkVV9ORl9iRjhSUi14SEZUMS1EanNzYmNHbHBCRDQzMW55ZXNyRnNta0VBcW5mZC1QTlM2OVUyNVRBWHNNM1VOTzA3Yk90LUprOUtwUXZkX015QW9WVWNrN0JRNA?oc=5",
+      "source": "Cybercrime Magazine",
+      "publishedAt": "2026-11-23T14:03:51.000Z",
+      "latestAt": "2026-11-23T14:03:51.000Z",
+      "firstSeenAt": "2026-11-23T14:09:26.891Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cybercrime Magazine"
+      ],
+      "score": 1.4
     },
     {
       "id": "ea5e00267b9a",
@@ -1753,45 +1773,13 @@
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UQUdIVGUzOWZyb0Q3aDRqM1FucXlXNDFINFNvMFJrX1Vjc1ZFZ213X1NVaU10b3pBbkl2cS1FRnB4RVpxd0RVSjk2aHNYeXg3blY0N1Fn?oc=5",
       "source": "IMDb",
       "publishedAt": "2026-11-23T05:16:12.000Z",
-      "latestAt": "2026-11-23T05:16:12.000Z",
+      "latestAt": "2026-11-23T12:18:35.000Z",
       "firstSeenAt": "2026-11-23T06:38:15.236Z",
       "outlets": 1,
       "outletNames": [
         "IMDb"
       ],
       "score": 1.37
-    },
-    {
-      "id": "8552822df5bc",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Flights Delayed Nationwide as Technical Outage Hits Atlanta Hub",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSmFyeTlHczBRRTExLXBEdG9tdk5HZjJNSW9FU29yS3RqVVRtRldINUxrSmgxbTA0cU9uV3pSRUVXandvRm9IT21VcUU4NWsyZDZ1a041Q3YxMFhLSzRoVktoOEZpb3UzbUlYZ0RBSmtTbENRLUZZZ0dQYkh3cEVsYndoMEx2UjhDd2F2UnJNbGpHVFpIa3dsNGI4aTczMFg2blRVLXF1T0JuaXBNRWwzLTZB?oc=5",
-      "source": "Rus Tourism News",
-      "publishedAt": "2026-11-22T19:00:08.000Z",
-      "latestAt": "2026-11-22T19:00:08.000Z",
-      "firstSeenAt": "2026-11-22T21:06:43.630Z",
-      "outlets": 1,
-      "outletNames": [
-        "Rus Tourism News"
-      ],
-      "score": 1.35
-    },
-    {
-      "id": "0611150a2b20",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Miami Forecast Nears Record Heat as Showers Return",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdEhHX0g0MVBHTEJ6NkEtWlZqSzRqQVlmWW9pWG85VF9ZZUJvRDMtOTRSMGxtQ09nZ1NubExNb3dNSGJiTU94V1VpZFFDSmFLb3FXQWdlaWxLYy1LLVVZd1ItVEN6SnJoOVR6LTVkNXBtbWNLeFFZNXhZc3MxTmVVUWxLRG82bHFIQ0xhdTdnQjV2US0wdm5RRw?oc=5",
-      "source": "Wisevoter",
-      "publishedAt": "2026-11-22T14:01:29.000Z",
-      "latestAt": "2026-11-22T14:01:29.000Z",
-      "firstSeenAt": "2026-11-22T20:06:33.048Z",
-      "outlets": 1,
-      "outletNames": [
-        "Wisevoter"
-      ],
-      "score": 1.26
     },
     {
       "id": "6095f0c5d225",
@@ -1962,6 +1950,22 @@
       "score": 0.97
     },
     {
+      "id": "535f3fb9ac40",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Winter Storm Watch, Warning and Advisory Mean Three Different Things, and a Blizzard Warning Needs 35 mph Gusts for 3 Hours",
+      "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPOHQxRVZBWVZPdUd5MUtQYmFNTjZoQV9DbVFqWjEwdW1KRjJaUGRlMGdkZ01BRHZxbjBHbzFGbjZzMmNBb2hvSFhCT0J1aHpidEhUaE9xNVMyZjlMUXRUM3YzOFQ1YnNSNUprOVZQOUNmWG15UkNab3BqVW5YLTdwZkxHclVUZFdMZmt0VkgtYS16M3lTejNtaGs4d0NQczZCTmpyVjVGTkk2WXl3YUd2REhFY1RHRkRRWjRBSDBhSVZaZjZEREZZVWRXMGVQeEZUQWYybUxJQlMzdEthVHktY2diRm50ZV9ieG5NelVkYkI1QzB6N3VWYnlmVUVNd01XV0xvSWw3MWJDbFNUeDJ6XzY2ZXhhR1FYbUE?oc=5",
+      "source": "NewsBreak: Local News & Alerts",
+      "publishedAt": "2026-11-23T11:31:59.000Z",
+      "latestAt": "2026-11-23T11:31:59.000Z",
+      "firstSeenAt": "2026-11-23T14:09:26.891Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 0.96
+    },
+    {
       "id": "f16ad6cc9507",
       "cat": "animals",
       "kind": "news",
@@ -1985,7 +1989,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-23T00:42:00.000Z",
-      "latestAt": "2026-11-23T05:08:00.000Z",
+      "latestAt": "2026-11-23T05:21:00.000Z",
       "firstSeenAt": "2026-11-23T08:53:34.044Z",
       "outlets": 1,
       "outletNames": [
