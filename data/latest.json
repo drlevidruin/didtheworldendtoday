@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T18:55:17.928Z",
+  "buildTime": "2026-11-23T19:10:20.571Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 13:55 ET",
+  "etStamp": "2026-11-23 14:10 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -50,15 +50,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1373,
-  "lastSuccessAt": "2026-11-23T18:55:17.928Z",
+  "headlinesRead": 1324,
+  "lastSuccessAt": "2026-11-23T19:10:20.571Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
-    "earth": 7,
+    "flights": 22,
+    "earth": 6,
     "hacks": 30,
-    "markets": 8,
-    "internet": 6,
+    "markets": 9,
+    "internet": 7,
     "germs": 5,
     "grid": 4,
     "ai": 4,
@@ -182,24 +182,24 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1005,
+      "count": 1003,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     },
     "bing": {
       "ok": true,
-      "count": 287,
+      "count": 286,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 46,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-23T18:55:17.928Z"
     },
@@ -207,55 +207,56 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T18:55:17.928Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T18:55:17.928Z"
+      "lastOkAt": "2026-11-23T19:10:20.571Z"
     }
   },
   "stories": [
@@ -340,9 +341,9 @@
       "url": "https://www.fox32chicago.com/news/ground-stop-ohare-airport-staffing",
       "source": "FOX 32 Chicago",
       "publishedAt": "2026-11-23T09:30:00.000Z",
-      "latestAt": "2026-11-23T18:24:12.000Z",
+      "latestAt": "2026-11-23T19:09:22.000Z",
       "firstSeenAt": "2026-11-23T17:40:06.517Z",
-      "outlets": 12,
+      "outlets": 13,
       "outletNames": [
         "NBC Chicago",
         "FOX 32 Chicago",
@@ -355,11 +356,31 @@
         "FOX 35 Orlando",
         "WINK News - Southwest Florida",
         "SSBCrack",
-        "FOX 26 Houston"
+        "FOX 26 Houston",
+        "NBC News"
       ],
       "trending": 1000,
       "trendTerm": "ohare ground stop",
-      "score": 3.96
+      "score": 4.06
+    },
+    {
+      "id": "2541df40929e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air lines system outage prompts temporary ground stop, nationwide Thanksgiving travel delays",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNMURhRG5PS05ZdHJaMVcyeVlfN0pHbld5OVF5ZnlxRTBnaVZwejZQdllIbm5kQ2JHaU1TYVRrNDBUMWs0Y2poV2w0SlU1WHowVTc5RmlSeU9CSXJNSGNLdklVZjFHSXQyaFlfR3EwVGVjTFdZT0tHSXVYSmU3M3Q0MGx3aGw0LXRQcVFZMXVaTDE5WWctSUE3RVRRdUNseDdKc2h2czd1OENwZXRIcldjWHBUaEZoeVU2MDRIQ1Z1amwwWG9fZUlIRUgyVDJfcE55b0E?oc=5",
+      "source": "KTNN",
+      "publishedAt": "2026-11-23T12:25:22.000Z",
+      "latestAt": "2026-11-23T13:36:55.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
+      "outlets": 4,
+      "outletNames": [
+        "KTNN",
+        "KCJJ",
+        "KWXX - Hawaii",
+        "KVEC News Talk 920 AM 96.5 FM"
+      ],
+      "score": 3.94
     },
     {
       "id": "00fefd72061e",
@@ -395,7 +416,7 @@
       "publishedAt": "2026-11-23T06:54:25.000Z",
       "latestAt": "2026-11-23T17:31:04.000Z",
       "firstSeenAt": "2026-11-23T15:09:42.957Z",
-      "outlets": 9,
+      "outlets": 10,
       "outletNames": [
         "The Canadian Press on MSN",
         "The Spec",
@@ -405,32 +426,10 @@
         "CityNews Vancouver",
         "CityNews Toronto",
         "The Globe and Mail",
-        "CityNews Calgary"
+        "CityNews Calgary",
+        "CityNews Kitchener"
       ],
-      "score": 3.6
-    },
-    {
-      "id": "sig:faa-stop:HPN:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at HPN (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T21:36:48.376Z",
-      "latestAt": "2026-11-22T21:36:48.376Z",
-      "firstSeenAt": "2026-11-22T21:36:48.376Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "HPN",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
+      "score": 3.73
     },
     {
       "id": "0cd515516612",
@@ -547,6 +546,29 @@
       "score": 2.52
     },
     {
+      "id": "sig:faa-stop:HPN:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at HPN (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T21:36:48.376Z",
+      "latestAt": "2026-11-22T21:36:48.376Z",
+      "firstSeenAt": "2026-11-22T21:36:48.376Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "HPN",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
+    },
+    {
       "id": "sig:faa-stop:TEB:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -592,24 +614,6 @@
       "score": 3.42
     },
     {
-      "id": "2541df40929e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air lines system outage prompts temporary ground stop, nationwide Thanksgiving travel delays",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNMURhRG5PS05ZdHJaMVcyeVlfN0pHbld5OVF5ZnlxRTBnaVZwejZQdllIbm5kQ2JHaU1TYVRrNDBUMWs0Y2poV2w0SlU1WHowVTc5RmlSeU9CSXJNSGNLdklVZjFHSXQyaFlfR3EwVGVjTFdZT0tHSXVYSmU3M3Q0MGx3aGw0LXRQcVFZMXVaTDE5WWctSUE3RVRRdUNseDdKc2h2czd1OENwZXRIcldjWHBUaEZoeVU2MDRIQ1Z1amwwWG9fZUlIRUgyVDJfcE55b0E?oc=5",
-      "source": "KTNN",
-      "publishedAt": "2026-11-23T12:25:22.000Z",
-      "latestAt": "2026-11-23T13:36:55.000Z",
-      "firstSeenAt": "2026-11-23T16:09:51.589Z",
-      "outlets": 3,
-      "outletNames": [
-        "KTNN",
-        "KCJJ",
-        "KWXX - Hawaii"
-      ],
-      "score": 3.39
-    },
-    {
       "id": "08138a62e8c4",
       "cat": "earth",
       "kind": "news",
@@ -627,6 +631,47 @@
         "Shoreline Media Group"
       ],
       "score": 2.96
+    },
+    {
+      "id": "1b909f38cf95",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cleverbridge alerts customers that hackers stole their credit card and CVV numbers",
+      "url": "https://www.helpnetsecurity.com/2026/11/23/cleverbridge-data-breach-card-numbers-cvv/",
+      "source": "Help Net Security",
+      "publishedAt": "2026-11-23T03:07:09.000Z",
+      "latestAt": "2026-11-23T17:13:42.000Z",
+      "firstSeenAt": "2026-11-23T04:22:49.114Z",
+      "outlets": 4,
+      "outletNames": [
+        "CyberSecurityNews",
+        "Pasquale Pillitteri",
+        "Help Net Security",
+        "Digg"
+      ],
+      "score": 2.94
+    },
+    {
+      "id": "0667eed29872",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Exclusive: China-backed hackers suspected behind ongoing EU Commission cyberattack",
+      "url": "https://www.msn.com/en-my/technology/cybersecurity/exclusive-china-backed-hackers-suspected-behind-ongoing-eu-commission-cyberattack/ar-AA2i23dk",
+      "source": "Euronews on MSN",
+      "publishedAt": "2026-11-22T21:53:00.000Z",
+      "latestAt": "2026-11-23T18:52:19.000Z",
+      "firstSeenAt": "2026-11-23T12:09:08.356Z",
+      "outlets": 7,
+      "outletNames": [
+        "Euronews on MSN",
+        "AOL.co.uk",
+        "NewsBytes",
+        "Yahoo",
+        "Proto Thema",
+        "Yahoo News Canada",
+        "Dataconomy"
+      ],
+      "score": 2.9
     },
     {
       "id": "1c2147a0cf11",
@@ -647,50 +692,6 @@
         "Korea JoongAng Daily"
       ],
       "score": 2.82
-    },
-    {
-      "id": "fd8f6b998fed",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
-      "url": "https://www.newsday.com/news/nation/european-commission-cyberattack-website-artex-ai-j61327",
-      "source": "Newsday",
-      "publishedAt": "2026-11-23T00:24:00.000Z",
-      "latestAt": "2026-11-23T18:52:04.000Z",
-      "firstSeenAt": "2026-11-23T18:40:16.216Z",
-      "outlets": 8,
-      "outletNames": [
-        "Newsday",
-        "POLITICO.eu",
-        "Mezha.net",
-        "AP News",
-        "Ottumwa Courier",
-        "Corsicana Daily Sun",
-        "The Spec",
-        "European Interest"
-      ],
-      "score": 2.78
-    },
-    {
-      "id": "0667eed29872",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Exclusive: China-backed hackers suspected behind ongoing EU Commission cyberattack",
-      "url": "https://www.msn.com/en-my/technology/cybersecurity/exclusive-china-backed-hackers-suspected-behind-ongoing-eu-commission-cyberattack/ar-AA2i23dk",
-      "source": "Euronews on MSN",
-      "publishedAt": "2026-11-22T21:53:00.000Z",
-      "latestAt": "2026-11-23T15:58:52.000Z",
-      "firstSeenAt": "2026-11-23T12:09:08.356Z",
-      "outlets": 6,
-      "outletNames": [
-        "Euronews on MSN",
-        "AOL.co.uk",
-        "NewsBytes",
-        "Yahoo",
-        "Proto Thema",
-        "Yahoo News Canada"
-      ],
-      "score": 2.73
     },
     {
       "id": "fca35b4472e6",
@@ -762,24 +763,6 @@
         "Yahoo Tech"
       ],
       "score": 2.15
-    },
-    {
-      "id": "d9234b2f0672",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Hawaii's Kīlauea volcano erupts for 57th time, sending spectacular fountains of lava into the sky",
-      "url": "https://www.yahoo.com/news/weather-news/articles/hawaiis-k-lauea-volcano-erupts-145111114.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T06:51:00.000Z",
-      "latestAt": "2026-11-23T14:51:11.000Z",
-      "firstSeenAt": "2026-11-23T17:40:06.517Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "FOX Weather",
-        "Yahoo News Canada"
-      ],
-      "score": 2.12
     },
     {
       "id": "d7b3a9b62031",
@@ -886,21 +869,44 @@
       "score": 1.78
     },
     {
-      "id": "f257116fae03",
-      "cat": "flights",
+      "id": "a63b967f255d",
+      "cat": "germs",
       "kind": "news",
-      "title": "Millions expected to travel for Thanksgiving as FAA investigates nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQTUMyVHZkWDNIT2xJLVNMOGZ6RUkyaHd2WnlGUFd1N0ZWaFlBN3hFQkxqUmlkQm9lZ1hhM1lyWnFZZW9wYVZVTzM1S3VKOVFQZldQODlHRkpRTXBNYUE1cVRYTUp4VDdmeEF0TnVOWlFDdHg3bzVCd3hZbVA2Vy04SW9vSmtjbW9vY3hvLVV4VFR2WTV2OTl3cjF3TnlPN2o1YWl1cTQ0bWVFdWo5c2N0S3UwalBId3dEV09IcllEMUJVQktfSTB2TEItRXR2UUlLUFFGZUprRGY?oc=5",
-      "source": "WFTV",
-      "publishedAt": "2026-11-22T19:10:15.000Z",
-      "latestAt": "2026-11-22T19:13:28.000Z",
-      "firstSeenAt": "2026-11-22T19:21:23.088Z",
+      "title": "Bird flu confirmed at commercial poultry farm",
+      "url": "https://www.bbc.co.uk/news/articles/cry86dg976vgo",
+      "source": "BBC",
+      "publishedAt": "2026-11-23T03:37:00.000Z",
+      "latestAt": "2026-11-23T11:37:26.000Z",
+      "firstSeenAt": "2026-11-23T12:09:08.356Z",
       "outlets": 2,
       "outletNames": [
-        "WFTV",
+        "BBC",
         "Yahoo"
       ],
-      "score": 2.79
+      "score": 1.72
+    },
+    {
+      "id": "fd8f6b998fed",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
+      "url": "https://www.newsday.com/news/nation/european-commission-cyberattack-website-artex-ai-j61327",
+      "source": "Newsday",
+      "publishedAt": "2026-11-23T00:24:00.000Z",
+      "latestAt": "2026-11-23T18:52:04.000Z",
+      "firstSeenAt": "2026-11-23T18:40:16.216Z",
+      "outlets": 8,
+      "outletNames": [
+        "Newsday",
+        "POLITICO.eu",
+        "Mezha.net",
+        "AP News",
+        "Ottumwa Courier",
+        "Corsicana Daily Sun",
+        "The Spec",
+        "European Interest"
+      ],
+      "score": 2.78
     },
     {
       "id": "3dfb63467fa7",
@@ -956,24 +962,6 @@
         "TheIndustry.beauty"
       ],
       "score": 2.54
-    },
-    {
-      "id": "1b909f38cf95",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cleverbridge alerts customers that hackers stole their credit card and CVV numbers",
-      "url": "https://www.helpnetsecurity.com/2026/11/23/cleverbridge-data-breach-card-numbers-cvv/",
-      "source": "Help Net Security",
-      "publishedAt": "2026-11-23T03:07:09.000Z",
-      "latestAt": "2026-11-23T13:00:14.000Z",
-      "firstSeenAt": "2026-11-23T04:22:49.114Z",
-      "outlets": 3,
-      "outletNames": [
-        "CyberSecurityNews",
-        "Pasquale Pillitteri",
-        "Help Net Security"
-      ],
-      "score": 2.53
     },
     {
       "id": "146aa5beb1a5",
@@ -1152,6 +1140,24 @@
       "score": 2.16
     },
     {
+      "id": "edf9c71a79d9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US Seeks to Recover More Than $1 Billion From Binance Hack",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/us-seeks-to-recover-more-than-1-billion-from-binance-hack",
+      "source": "Bloomberg",
+      "publishedAt": "2026-11-23T08:44:00.000Z",
+      "latestAt": "2026-11-23T18:58:08.000Z",
+      "firstSeenAt": "2026-11-23T19:10:20.571Z",
+      "outlets": 3,
+      "outletNames": [
+        "Bloomberg",
+        "The Defiant",
+        "bloomingbit"
+      ],
+      "score": 2.14
+    },
+    {
       "id": "60a2807cb248",
       "cat": "flights",
       "kind": "news",
@@ -1237,23 +1243,6 @@
         "Uzalendo News"
       ],
       "score": 1.92
-    },
-    {
-      "id": "d463d6790420",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "’Once it’s out, it’s out’: Tech analyst criticizes Staples Canada’s response to data breach",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeWt4bEtGMG5KUXpITXNtaE90V3pkdDJ6ZjNLMGJUc0hZaVNmSVpZUGhNdl9GMVk3T3NvMmVxcHdfQjRuMVBEQkRySFNUN1doR01ISTlpOElGcmhQYXhwY3F1MGY1bWp6T0tTXzFuaTR3VEJhb0pXR0thYWR1WmlSNGw5VkRsRFpHVjBuUVFjakExUUlRMDE2VVNtV2NkaXZfX0RmR29pUUVuMndKSkdwX3ptM19oTGx5S3lpU2VBcw?oc=5",
-      "source": "CTV News",
-      "publishedAt": "2026-11-22T19:00:34.000Z",
-      "latestAt": "2026-11-22T21:19:20.000Z",
-      "firstSeenAt": "2026-11-22T21:51:59.735Z",
-      "outlets": 2,
-      "outletNames": [
-        "CTV News",
-        "CP24"
-      ],
-      "score": 1.9
     },
     {
       "id": "0050c1d4f2d5",
@@ -1358,23 +1347,6 @@
       "score": 1.72
     },
     {
-      "id": "a63b967f255d",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed at commercial poultry farm",
-      "url": "https://www.bbc.co.uk/news/articles/cry86dg976vgo",
-      "source": "BBC",
-      "publishedAt": "2026-11-23T03:37:00.000Z",
-      "latestAt": "2026-11-23T11:37:26.000Z",
-      "firstSeenAt": "2026-11-23T12:09:08.356Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "Yahoo"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "61c68303f936",
       "cat": "hacks",
       "kind": "news",
@@ -1424,6 +1396,23 @@
         "Howl.Link"
       ],
       "score": 1.72
+    },
+    {
+      "id": "3af7e9fec1f3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta system outage continues to impact flights at Atlanta airport",
+      "url": "https://www.msn.com/en-us/news/other/delta-system-outage-continues-to-impact-flights-at-atlanta-airport/ar-AA2i2n4q",
+      "source": "FOX 5 Atlanta on MSN",
+      "publishedAt": "2026-11-23T10:02:39.000Z",
+      "latestAt": "2026-11-23T14:07:54.000Z",
+      "firstSeenAt": "2026-11-23T19:10:20.571Z",
+      "outlets": 2,
+      "outletNames": [
+        "FOX 5 Atlanta on MSN",
+        "AOL.com"
+      ],
+      "score": 1.7
     },
     {
       "id": "98ff89e4cae3",
@@ -1695,6 +1684,22 @@
       "score": 1.4
     },
     {
+      "id": "2fc8aea99cae",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Nvidia Rally Lifts Nasdaq-100 Following Sharp Global Stock Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQTJUZEJ6d25YN3B6MWx0bnJXV1FEdm5LQWQ2NHp3WlFyRTNsODZKR1BLRVlNUmlHN0oxQmsxSC12TFhPa3JUU0VjQWtydlhud3RVWGMzWUowbm1GTkJmZlVySmJjUXlheG9rTzVNcE9UekI4N1hJWVFNRnRpSW1IVzRhS1FvRW9CSENxU1c5cGpCd0xDZVoxdkVXNkNoNVRxWmk5ZWpxTUFHLUZFcUY5N2l0ZzdNVVBfVHdlYngtbjhZbXlw?oc=5",
+      "source": "Forbes Middle East",
+      "publishedAt": "2026-11-23T18:43:29.000Z",
+      "latestAt": "2026-11-23T18:43:29.000Z",
+      "firstSeenAt": "2026-11-23T19:10:20.571Z",
+      "outlets": 1,
+      "outletNames": [
+        "Forbes Middle East"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "ed08e024a241",
       "cat": "hacks",
       "kind": "news",
@@ -1743,22 +1748,6 @@
       "score": 1.37
     },
     {
-      "id": "8552822df5bc",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Flights Delayed Nationwide as Technical Outage Hits Atlanta Hub",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSmFyeTlHczBRRTExLXBEdG9tdk5HZjJNSW9FU29yS3RqVVRtRldINUxrSmgxbTA0cU9uV3pSRUVXandvRm9IT21VcUU4NWsyZDZ1a041Q3YxMFhLSzRoVktoOEZpb3UzbUlYZ0RBSmtTbENRLUZZZ0dQYkh3cEVsYndoMEx2UjhDd2F2UnJNbGpHVFpIa3dsNGI4aTczMFg2blRVLXF1T0JuaXBNRWwzLTZB?oc=5",
-      "source": "Rus Tourism News",
-      "publishedAt": "2026-11-22T19:00:08.000Z",
-      "latestAt": "2026-11-22T19:00:08.000Z",
-      "firstSeenAt": "2026-11-22T21:06:43.630Z",
-      "outlets": 1,
-      "outletNames": [
-        "Rus Tourism News"
-      ],
-      "score": 1.35
-    },
-    {
       "id": "f3afeed46078",
       "cat": "internet",
       "kind": "news",
@@ -1773,6 +1762,22 @@
         "Mezha.net"
       ],
       "score": 1.34
+    },
+    {
+      "id": "7f00de02c513",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Delta Recovers From Weight-System Crash That Delayed 1,800 Nationwide Flights in Third Major Aviation Outage",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMVVlUm8zTU4wbjJhTmZyMWotZGpyeWg4bmM0X0Q2NzRPSXFDZEtLYkhJNWM2UzhUeGdhVnUxV1E1OFpEdU5mNEhxVHkxaWVveHJhcUVPNUtlUFVWUHM5bDd3WlVhLTlVQjB2OUQ0aXF4aHBnSXNfaDFvUk00RHpibHZkVkNqa3RD?oc=5",
+      "source": "Latin Times",
+      "publishedAt": "2026-11-23T15:53:48.000Z",
+      "latestAt": "2026-11-23T15:53:48.000Z",
+      "firstSeenAt": "2026-11-23T19:10:20.571Z",
+      "outlets": 1,
+      "outletNames": [
+        "Latin Times"
+      ],
+      "score": 1.32
     },
     {
       "id": "d6dc0c529e70",
