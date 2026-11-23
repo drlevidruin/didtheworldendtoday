@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T00:07:08.713Z",
+  "buildTime": "2026-11-23T00:22:10.616Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 19:07 ET",
+  "etStamp": "2026-11-22 19:22 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,15 +44,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 416,
-  "lastSuccessAt": "2026-11-23T00:07:08.713Z",
+  "headlinesRead": 1121,
+  "lastSuccessAt": "2026-11-23T00:22:10.616Z",
   "rollingFallback": false,
   "cats": {
     "flights": 36,
     "hacks": 19,
     "internet": 14,
-    "germs": 4,
     "grid": 4,
+    "germs": 4,
     "markets": 4,
     "ai": 4,
     "weather": 4,
@@ -175,20 +175,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 106,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "count": 816,
+      "error": null,
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     },
     "gdelt": {
       "ok": false,
@@ -198,57 +198,58 @@
     },
     "hn": {
       "ok": true,
-      "count": 5,
+      "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:07:08.713Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 27,
+      "count": 25,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T00:07:08.713Z"
+      "lastOkAt": "2026-11-23T00:22:10.616Z"
     }
   },
   "stories": [
@@ -355,6 +356,24 @@
         "Yahoo"
       ],
       "score": 2.78
+    },
+    {
+      "id": "66e31cab567b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "More than 1,800 Ameren customers without power in Mattoon",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWmU2aHduT2gyRDRNYVpTSDd5cmRTcE1oaUVFdVVLOW0tSUJyV01JdjBicDZrZC1vZGdDbHU0WW1wSmVCeXVyV1FaRkxZNVB1bXBic3VVN0tVUGJKdjduaFdnZ1loUk9pdWtEZjhtdDF2Z3lBU21HZEhQd2ZFbkVxNXJ1VVRVMEhwZS11TXlndTc3Z9IBpgFBVV95cUxNT3ZpaF9kVFFrMGJEaGV4c2tOQ05ocVZucVBPcWJCdEV1aXU1ZHVLQnZ1MUhIM2M4VllvVnphYjExNDlHYUpGSXRqeFBQQWhqdFNiTmZCMmdKQ1RPcW4tUmhpRDVnWlAyODJ0NFU2SXp3UE9ubi01TFA4c29LcHdSZTNBME1ScG1mT3l2dUZkcWpKNzBQUFAzMS1MaE5fcEM4bDRaRnZ3?oc=5",
+      "source": "WAND",
+      "publishedAt": "2026-11-22T23:44:00.000Z",
+      "latestAt": "2026-11-23T00:04:57.000Z",
+      "firstSeenAt": "2026-11-22T23:52:08.258Z",
+      "outlets": 3,
+      "outletNames": [
+        "WAND",
+        "cedarnews.net",
+        "WCIA.com"
+      ],
+      "score": 2.58
     },
     {
       "id": "f46140602cdd",
@@ -481,23 +500,6 @@
       "score": 1.95
     },
     {
-      "id": "f9b8b15de8ad",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Centre considers new undersea cable link for remote Andaman islands",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWlqVFNBTHgzWl85R0NsdTVERF9OeXhhM0hKY3JUeFNweEJwZ2NtNmp5TUhJeG9sbDhRZDY5SnNNM3ZydWdUcXZqUWFZODNBY1g5dzhqY3BqYzhaMEhfcTZJRUJWeld3bnE5WF8yUnNpZUpLVkRMWjN3Zk9nTXRDeFZkWUE4Y3FqU0ZrcnZod2Z1Y2RGYkNIOElpbnUxQ1XSAawBQVVfeXFMTmhKU0tubHpEY0lmQ3dqVDAxc2pZMWRXVlVUeldmYmp0M3pOQjd5ZkR0Q04zdW9wVlI1b0hmWmN5NWxaTXpJYmR4QzVEZVdVTUcxQ3RicVRJNVZTY2VxSms3bVMwUWJ3VGIwbVVRazRmQjVudG45bEZPbFVsTDNBVlRocG1vMHE2SEJzMG5JTmxwYmI2MUk0TFFmTC1PS3h6bnA5T2pzUVNaWDM1dg?oc=5",
-      "source": "The Pioneer",
-      "publishedAt": "2026-11-22T09:30:19.000Z",
-      "latestAt": "2026-11-22T11:58:23.000Z",
-      "firstSeenAt": "2026-11-22T12:05:21.263Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Pioneer",
-        "MyIndMakers"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "d1431f408c53",
       "cat": "flights",
       "kind": "news",
@@ -505,7 +507,7 @@
       "url": "https://www.newsweek.com/ground-stop-at-worlds-busiest-airport-delays-delta-flights-across-us-12753772",
       "source": "Newsweek",
       "publishedAt": "2026-11-22T02:07:24.000Z",
-      "latestAt": "2026-11-22T23:22:14.000Z",
+      "latestAt": "2026-11-23T00:01:23.000Z",
       "firstSeenAt": "2026-11-22T17:36:06.971Z",
       "outlets": 32,
       "outletNames": [
@@ -646,6 +648,23 @@
       "score": 2
     },
     {
+      "id": "f9b8b15de8ad",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Centre considers new undersea cable link for remote Andaman islands",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWlqVFNBTHgzWl85R0NsdTVERF9OeXhhM0hKY3JUeFNweEJwZ2NtNmp5TUhJeG9sbDhRZDY5SnNNM3ZydWdUcXZqUWFZODNBY1g5dzhqY3BqYzhaMEhfcTZJRUJWeld3bnE5WF8yUnNpZUpLVkRMWjN3Zk9nTXRDeFZkWUE4Y3FqU0ZrcnZod2Z1Y2RGYkNIOElpbnUxQ1XSAawBQVVfeXFMTmhKU0tubHpEY0lmQ3dqVDAxc2pZMWRXVlVUeldmYmp0M3pOQjd5ZkR0Q04zdW9wVlI1b0hmWmN5NWxaTXpJYmR4QzVEZVdVTUcxQ3RicVRJNVZTY2VxSms3bVMwUWJ3VGIwbVVRazRmQjVudG45bEZPbFVsTDNBVlRocG1vMHE2SEJzMG5JTmxwYmI2MUk0TFFmTC1PS3h6bnA5T2pzUVNaWDM1dg?oc=5",
+      "source": "The Pioneer",
+      "publishedAt": "2026-11-22T09:30:19.000Z",
+      "latestAt": "2026-11-22T11:58:23.000Z",
+      "firstSeenAt": "2026-11-22T12:05:21.263Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Pioneer",
+        "MyIndMakers"
+      ],
+      "score": 1.91
+    },
+    {
       "id": "26a967944e74",
       "cat": "ai",
       "kind": "news",
@@ -695,6 +714,23 @@
         "Yahoo"
       ],
       "score": 1.6
+    },
+    {
+      "id": "3810674c6e05",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Andaman and Nicobar to get undersea cable network, 4G coverage in 87 villages",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMXlpVDdkX2RuaTF1NHMtTndMOHlpQXp4QnhZRWtBWHJmU2NqRDBSaVR2WDBfVnNkcWhnLU1hT0pkSm40RVRNOVRuZndkWVJyNC1ScWZvdVBndGhhZlpBdTJpaFJYdEdjWlN5NlBTVGlTemFaS0JoTnhZd2hpM1lYZFVUMUtlSkJJTmxiNVNYd3pkaEpfaG9PZFpsU2U1Wkp3WWN3aEpoMFdrNXNBZzJRZ3VTZzdZUXY2RFFNedIBwgFBVV95cUxNRnVjVENRY1pjT2YwUGtaUWxvaDctR2EtWktzeXVPb1NJN3p0R3ZQejJrZzVzV2E1M0VMZl8tbjdzeHFpU1FoT1BuSEoxRXNxUzlaeXZGOGNnVDdvTUhlSnY4V0VjRGxnaDhjYW9OQjl6RTJGdzZaeGhkM0U2WTdZRTRzajI5cTZFblItMjNMYzNSdXY3bG5mMjNpdFBWNTRYTXY2eGNOTkV1V3JWd2VfVFlHa25pX3hOWFpESTA2Y2l2UQ?oc=5",
+      "source": "India Today",
+      "publishedAt": "2026-11-22T07:52:38.000Z",
+      "latestAt": "2026-11-22T11:25:01.000Z",
+      "firstSeenAt": "2026-11-23T00:22:10.616Z",
+      "outlets": 2,
+      "outletNames": [
+        "India Today",
+        "www.nationpathindia.com"
+      ],
+      "score": 1.45
     },
     {
       "id": "b2511d0c1f80",
@@ -762,22 +798,6 @@
       "score": 1.39
     },
     {
-      "id": "288b7517e916",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Says Outlook Testing Missed Bug Behind Worldwide Outage",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMktjbmNDN0VrbFNBemJ1WnB1UE5LREJMaWs1bDdGY3NsM1hidGJ5WmQ2MUE3WUdiNDhmUE5SZVNZczZGUHhjMnNObTJkMWcxNVZYVk5ITThlS3N2bE9NbE5DUUUzdUg3amtxMW1TWjZVV0lRdTN5MVMzNjAxOWgzWGVHTDdDbWUyWVNuN2oydkl2bms?oc=5",
-      "source": "JournalArta",
-      "publishedAt": "2026-11-22T00:16:18.000Z",
-      "latestAt": "2026-11-22T00:16:18.000Z",
-      "firstSeenAt": "2026-11-22T00:33:30.018Z",
-      "outlets": 1,
-      "outletNames": [
-        "JournalArta"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "5942f55a5ba8",
       "cat": "internet",
       "kind": "news",
@@ -792,22 +812,6 @@
         "Business Standard"
       ],
       "score": 1.38
-    },
-    {
-      "id": "aa603ae735f8",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Green Bay Sets Record High; Cold Front Arrives",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdGJrS25NcnRrVlFBZVpWT0lWVVhSeWdjNEJWeTZieE00VXBFbEppRGdtcHJnNThHcjM0LWhwWDhDeXdSQVJrX1lzcmV0bHRHbkdCWHhqUzFBdUlYRnNXcVpTSEw4c1hEQ2RMRjlFNHlXY1FZQmtmLUhkV042OTNteUYwdUZLSWNyakE1RE1lSG1EX0ZDT18xZFBEQQ?oc=5",
-      "source": "Wisevoter",
-      "publishedAt": "2026-11-22T00:13:52.000Z",
-      "latestAt": "2026-11-22T00:14:58.000Z",
-      "firstSeenAt": "2026-11-22T05:04:22.396Z",
-      "outlets": 1,
-      "outletNames": [
-        "Wisevoter"
-      ],
-      "score": 1.29
     },
     {
       "id": "0611150a2b20",
@@ -1096,23 +1100,6 @@
       "score": 1.9
     },
     {
-      "id": "50bbc40a724b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta ground stop lifted in Atlanta, now in delays due to automation system issue",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVGs5U3Z0dmFoSmJvTjU5dVRCNGdDaExjN2RXM0pLeENKSW50MDN2ZzhXZXFranFRR0J2dEthclNySUkxaVVzeDRxbWxYQ0RPeWVwVEdXam5rYUllSTUwdHd1RmlGbDZyRGwtby12TVN6OHYwQ3RZcm1fRWNDZVR0NkdKRkloMGo3?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T18:46:17.000Z",
-      "latestAt": "2026-11-22T23:07:00.000Z",
-      "firstSeenAt": "2026-11-22T23:22:08.953Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "13WMAZ"
-      ],
-      "score": 1.85
-    },
-    {
       "id": "c870b6e81aad",
       "cat": "hacks",
       "kind": "news",
@@ -1281,6 +1268,22 @@
         "Newsweek"
       ],
       "score": 1.58
+    },
+    {
+      "id": "10d485e53c01",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers hit FBI again in nationwide police data breach",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB3Y0p2NW9yb0pfOUFZc0p6QVJ0US1DdmV4LXBXdDV4bE9lTHVxbmlGRFhYUVhudF9GeW12QlJTZml1Rk1MRzJ6YVRONXcxUm9TTFZORXN5OTNYdjNkV3hkVUtYcGNOdUN5REJyTk5B?oc=5",
+      "source": "geekspin",
+      "publishedAt": "2026-11-23T00:18:39.000Z",
+      "latestAt": "2026-11-23T00:18:39.000Z",
+      "firstSeenAt": "2026-11-23T00:22:10.616Z",
+      "outlets": 1,
+      "outletNames": [
+        "geekspin"
+      ],
+      "score": 1.4
     },
     {
       "id": "58fabfb0567f",
@@ -1574,6 +1577,22 @@
       "score": 1.19
     },
     {
+      "id": "9c81b5f77d2c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Issues Ground Stop After Major Airline Suffers Outage",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR05URzNvNHdzUnJhYjhkbHB3OVNxT1BYN01rQjZZSXF0cDNodVJLZXBEeHp0cTlDMWVlNjlhVEwzYnh4TUp3Z3dCaExZUlRjWjc4TWZmM3dRQkl0dFdCVkxEM2xSYnRfaVN1U3NoQ2JHN3MxMjVvcEpVUmZfZnZnVUQwNHFFT1M3c2ZDSUk5LTNDYWtKamV1VldORDJiYnAxU0hoWGktSEFORU53WlBQOEVUMmY?oc=5",
+      "source": "Townhall",
+      "publishedAt": "2026-11-22T13:00:06.000Z",
+      "latestAt": "2026-11-22T13:00:06.000Z",
+      "firstSeenAt": "2026-11-23T00:22:10.616Z",
+      "outlets": 1,
+      "outletNames": [
+        "Townhall"
+      ],
+      "score": 1.13
+    },
+    {
       "id": "cb11932ff8f0",
       "cat": "flights",
       "kind": "news",
@@ -1620,22 +1639,6 @@
         "Philstar.com"
       ],
       "score": 1.07
-    },
-    {
-      "id": "66e31cab567b",
-      "cat": "grid",
-      "kind": "news",
-      "title": "More than 1,800 Ameren customers without power in Mattoon",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWmU2aHduT2gyRDRNYVpTSDd5cmRTcE1oaUVFdVVLOW0tSUJyV01JdjBicDZrZC1vZGdDbHU0WW1wSmVCeXVyV1FaRkxZNVB1bXBic3VVN0tVUGJKdjduaFdnZ1loUk9pdWtEZjhtdDF2Z3lBU21HZEhQd2ZFbkVxNXJ1VVRVMEhwZS11TXlndTc3Z9IBpgFBVV95cUxNT3ZpaF9kVFFrMGJEaGV4c2tOQ05ocVZucVBPcWJCdEV1aXU1ZHVLQnZ1MUhIM2M4VllvVnphYjExNDlHYUpGSXRqeFBQQWhqdFNiTmZCMmdKQ1RPcW4tUmhpRDVnWlAyODJ0NFU2SXp3UE9ubi01TFA4c29LcHdSZTNBME1ScG1mT3l2dUZkcWpKNzBQUFAzMS1MaE5fcEM4bDRaRnZ3?oc=5",
-      "source": "WAND",
-      "publishedAt": "2026-11-22T23:44:00.000Z",
-      "latestAt": "2026-11-22T23:44:00.000Z",
-      "firstSeenAt": "2026-11-22T23:52:08.258Z",
-      "outlets": 1,
-      "outletNames": [
-        "WAND"
-      ],
-      "score": 1
     },
     {
       "id": "d4709656b163",
@@ -1714,22 +1717,6 @@
       "outlets": 1,
       "outletNames": [
         "Yeni Safak English"
-      ],
-      "score": 1
-    },
-    {
-      "id": "fb4e6302264e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US rivals, hackers could make cyber disruptions daily reality by 2027: Axios",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBDLWxxUzdDRHlIZDc2QWtRY0RQQjJ1bHdpeUxmTWk3MmxseV9WUFF0T0U3bjZTeXdsVWVFd0ZhSERLcmJBZHJVeQ?oc=5",
-      "source": "Roya News",
-      "publishedAt": "2026-11-22T20:19:03.000Z",
-      "latestAt": "2026-11-22T20:19:34.000Z",
-      "firstSeenAt": "2026-11-22T20:36:40.865Z",
-      "outlets": 1,
-      "outletNames": [
-        "Roya News"
       ],
       "score": 1
     },
@@ -1996,6 +1983,22 @@
         "swikblog"
       ],
       "score": 0.69
+    },
+    {
+      "id": "35ba0d50d024",
+      "cat": "weather",
+      "kind": "news",
+      "title": "VIC Severe Thunderstorm Warning: Large Hail, Damaging Winds, Heavy Rain",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNSnBQNl9fX2cwYi1zcGZvV3J2dzBkVjIzcWRLc0QtR0ZzV3RCNEVZYVhXNUk4WTc3OXoyWkVzZjJXNWpFLVhocVE2ZVVPdzVsV1FvdFdnMnlZNnZRTDNvSzRWMjFIYksyMzIwNzhuZEtGZVdxZS1Nb1ZCSEJPb1JuemRJUHp3RldYcWZwaDNTcUxGZVhtUUs4Ym5uTnRRcDJ2emt3MzhPM2pJOXRzTXYyVHFkU0ZralhwRmNKY3VSbW1rTS1DNlktZFc3dUxRWG1mVXZwY1FBS0hQLTIyS1VySzdtMDFMeDdZajJsT3RFWXItME8xcWx1WURpR3FBS3BOcS1FeV9yRVJSQQ?oc=5",
+      "source": "Early Warning Network",
+      "publishedAt": "2026-11-22T05:00:11.000Z",
+      "latestAt": "2026-11-22T05:12:35.000Z",
+      "firstSeenAt": "2026-11-23T00:22:10.616Z",
+      "outlets": 1,
+      "outletNames": [
+        "Early Warning Network"
+      ],
+      "score": 0.68
     }
   ]
 }
