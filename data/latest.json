@@ -1,13 +1,14 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T14:09:26.891Z",
+  "buildTime": "2026-11-23T14:24:31.661Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 09:09 ET",
-  "score": 65,
+  "etStamp": "2026-11-23 09:24 ET",
+  "score": 71,
   "fired": [
     "flights",
     "hacks",
     "internet",
+    "sun",
     "earth",
     "markets",
     "ai",
@@ -27,7 +28,7 @@
       "points": 6
     }
   ],
-  "change": -6,
+  "change": 0,
   "yesterday": {
     "date": "2026-11-22",
     "score": 71,
@@ -48,18 +49,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1277,
-  "lastSuccessAt": "2026-11-23T14:09:26.891Z",
+  "headlinesRead": 1316,
+  "lastSuccessAt": "2026-11-23T14:24:31.661Z",
   "rollingFallback": false,
   "cats": {
-    "earth": 7,
-    "flights": 20,
-    "hacks": 36,
+    "earth": 6,
+    "flights": 19,
+    "hacks": 37,
     "markets": 10,
     "grid": 4,
     "internet": 4,
     "germs": 4,
-    "ai": 3,
+    "ai": 4,
     "weather": 4,
     "animals": 2,
     "sun": 4,
@@ -185,57 +186,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 963,
+      "count": 992,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
+      "count": 286,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-23T09:08:33.193Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     },
     "x": {
       "ok": true,
@@ -248,13 +249,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T14:09:26.891Z"
+      "lastOkAt": "2026-11-23T14:24:31.661Z"
     }
   },
   "stories": [
@@ -332,6 +333,34 @@
       }
     },
     {
+      "id": "26ac8de36de0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
+      "url": "https://www.politico.eu/article/european-commission-personal-data-leak-cyberattack-disruption/",
+      "source": "Politico Europe",
+      "publishedAt": "2026-11-23T00:24:00.000Z",
+      "latestAt": "2026-11-23T14:17:33.000Z",
+      "firstSeenAt": "2026-11-23T13:24:19.410Z",
+      "outlets": 13,
+      "outletNames": [
+        "Politico Europe",
+        "www.politico.eu",
+        "Mezha.net",
+        "Associated Press News",
+        "The Joplin Globe",
+        "WKMG",
+        "Corsicana Daily Sun",
+        "Toronto Star",
+        "Laredo Morning Times",
+        "Newsday",
+        "U.S. News & World Report",
+        "Ottumwa Courier",
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "score": 3.68
+    },
+    {
       "id": "00fefd72061e",
       "cat": "earth",
       "kind": "news",
@@ -406,31 +435,6 @@
       }
     },
     {
-      "id": "26ac8de36de0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
-      "url": "https://www.politico.eu/article/european-commission-personal-data-leak-cyberattack-disruption/",
-      "source": "Politico Europe",
-      "publishedAt": "2026-11-23T00:24:00.000Z",
-      "latestAt": "2026-11-23T13:28:53.000Z",
-      "firstSeenAt": "2026-11-23T13:24:19.410Z",
-      "outlets": 10,
-      "outletNames": [
-        "Politico Europe",
-        "www.politico.eu",
-        "Mezha.net",
-        "Associated Press News",
-        "The Joplin Globe",
-        "WKMG",
-        "Corsicana Daily Sun",
-        "Toronto Star",
-        "Laredo Morning Times",
-        "Newsday"
-      ],
-      "score": 3.39
-    },
-    {
       "id": "59993d00bf55",
       "cat": "markets",
       "kind": "news",
@@ -467,24 +471,23 @@
       "score": 3.11
     },
     {
-      "id": "1c2147a0cf11",
+      "id": "0cd515516612",
       "cat": "hacks",
       "kind": "news",
-      "title": "KEPCO Data Breach Exposes Personal Information of 1.52 Million",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4xQkZiZl9aNXRrMTRwLTBBcXJielRaSzAya1NXVFdvc2w5QWZVYm5Fck4xT3Q4d0Q0MHZtclQ5Yk5EMUhwODRwYWQ3NHN2ZklId3NJUGJTTlBKbGdaa1hJNUM2d3RSR2RSYkZRano0eVhOdWlV?oc=5",
-      "source": "Businesskorea",
-      "publishedAt": "2026-11-22T20:30:05.000Z",
-      "latestAt": "2026-11-23T11:10:02.000Z",
-      "firstSeenAt": "2026-11-23T05:38:05.850Z",
-      "outlets": 5,
+      "title": "Next reports data breach following cyber attack with 'investigations ongoing'",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQdXozOEMwSXI5NWIwTWxfTzVoMW5qMElvTkZDbzY3Y3VCOF9sUEtWRl9zTksyOV85a29mR0RiU1hIV1BIaUNpU1JGM1AyRlFfYjhobXZQWUpuVWZTdUc5SlZkUF9aNnQwMmpBS3RCbG1kb254eXhRc2pmZTdSRWIwd2lNV2l4b01MYUExdkVORzVlME5BWE9wZE9Sa0IwUVRRSTZDT2tiWi1MeVlGbUI5b2RhMFBqNm5SaEE?oc=5",
+      "source": "The Herald",
+      "publishedAt": "2026-11-23T12:02:31.000Z",
+      "latestAt": "2026-11-23T13:39:00.000Z",
+      "firstSeenAt": "2026-11-23T13:54:26.287Z",
+      "outlets": 4,
       "outletNames": [
-        "Businesskorea",
-        "mkbn.mk.co.kr",
-        "Seoul Economic Daily",
-        "UrduPoint",
-        "Korea JoongAng Daily"
+        "The Herald",
+        "The Telegraph",
+        "Epping Forest Guardian",
+        "Times Series"
       ],
-      "score": 2.82
+      "score": 2.91
     },
     {
       "id": "66e31cab567b",
@@ -581,6 +584,26 @@
       "score": 2.9
     },
     {
+      "id": "1c2147a0cf11",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "KEPCO Data Breach Exposes Personal Information of 1.52 Million",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4xQkZiZl9aNXRrMTRwLTBBcXJielRaSzAya1NXVFdvc2w5QWZVYm5Fck4xT3Q4d0Q0MHZtclQ5Yk5EMUhwODRwYWQ3NHN2ZklId3NJUGJTTlBKbGdaa1hJNUM2d3RSR2RSYkZRano0eVhOdWlV?oc=5",
+      "source": "Businesskorea",
+      "publishedAt": "2026-11-22T20:30:05.000Z",
+      "latestAt": "2026-11-23T11:10:02.000Z",
+      "firstSeenAt": "2026-11-23T05:38:05.850Z",
+      "outlets": 5,
+      "outletNames": [
+        "Businesskorea",
+        "mkbn.mk.co.kr",
+        "Seoul Economic Daily",
+        "UrduPoint",
+        "Korea JoongAng Daily"
+      ],
+      "score": 2.82
+    },
+    {
       "id": "f257116fae03",
       "cat": "flights",
       "kind": "news",
@@ -654,24 +677,6 @@
         "Help Net Security"
       ],
       "score": 2.53
-    },
-    {
-      "id": "0cd515516612",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Next reports data breach following cyber attack with 'investigations ongoing'",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQdXozOEMwSXI5NWIwTWxfTzVoMW5qMElvTkZDbzY3Y3VCOF9sUEtWRl9zTksyOV85a29mR0RiU1hIV1BIaUNpU1JGM1AyRlFfYjhobXZQWUpuVWZTdUc5SlZkUF9aNnQwMmpBS3RCbG1kb254eXhRc2pmZTdSRWIwd2lNV2l4b01MYUExdkVORzVlME5BWE9wZE9Sa0IwUVRRSTZDT2tiWi1MeVlGbUI5b2RhMFBqNm5SaEE?oc=5",
-      "source": "The Herald",
-      "publishedAt": "2026-11-23T12:02:31.000Z",
-      "latestAt": "2026-11-23T13:39:00.000Z",
-      "firstSeenAt": "2026-11-23T13:54:26.287Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Herald",
-        "The Telegraph",
-        "Epping Forest Guardian"
-      ],
-      "score": 2.5
     },
     {
       "id": "d7b3a9b62031",
@@ -1383,6 +1388,23 @@
       "score": 1.64
     },
     {
+      "id": "fe740af2b933",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI warns AI hackers can breach systems in under 3 hours",
+      "url": "https://www.yahoo.com/news/us/articles/fbi-warns-ai-hackers-breach-112517213.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T03:25:00.000Z",
+      "latestAt": "2026-11-23T11:25:17.000Z",
+      "firstSeenAt": "2026-11-23T14:24:31.661Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Fox News"
+      ],
+      "score": 1.63
+    },
+    {
       "id": "ef7c6d8fe05a",
       "cat": "flights",
       "kind": "news",
@@ -1570,6 +1592,23 @@
       "score": 1.5
     },
     {
+      "id": "82f1dd77af22",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Equipment outage in Atlanta causes over 1,600 Delta flight delays",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWWRfMUlqa2NON3pHbWVBT3NuRDBNajZQYklJRlBlNTdrT2J6cGpxWU5FODBmU29sSnJ5QlhpaVRJY3dpSFN6dEVCcVlVWTVkcWVfSU5XS1l2MWNfUXl0ckZObS11ckVhV0Rsb0ZGcXBHN0NmZ2MxbUxRNmlZRHNfbW9XYkJUZFpmaXMxbDBadWRFRnJHajNCc2hSSDZkaVnSAaQBQVVfeXFMTXVUSGQ5N2Q1MWRVdGRyLTdITHVfWlNtdzhWSWwzZ1dYVzJiTnJuRzlTOEY4MDNTM2p5MUlMcGZvZnVTU3FOV0RMTEpDcUFqbnVrbms5UXlwb2IzUEE4SXZJU0RQZEtjYUtnbGRUZjBjUkF5aS1yUXRBenZsR215WEJZWWZHRUI3NWdXZ1RqYmxEZEhGS3ZaZHQtTGdZUUtjSDdNczM?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-22T22:21:52.000Z",
+      "latestAt": "2026-11-23T12:51:38.000Z",
+      "firstSeenAt": "2026-11-23T14:24:31.661Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos",
+        "connectradio.fm"
+      ],
+      "score": 1.47
+    },
+    {
       "id": "59da61197671",
       "cat": "hacks",
       "kind": "news",
@@ -1702,54 +1741,6 @@
       "score": 1.39
     },
     {
-      "id": "a597312e933a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Airlines Suffers Major IT Failure, Disrupting Travel Plans for Thousands",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02MFFNTjJNNkJFR2tiQk5CUHhDbE1odkVoMkkxdEkzdXFkU1YzSTFRR21jaGxyTzNLeHpubWlHb2dISkF4dlhidlc4VHRaeTBEY3pOLW1kWHg?oc=5",
-      "source": "CubaHeadlines",
-      "publishedAt": "2026-11-22T22:02:32.000Z",
-      "latestAt": "2026-11-22T22:02:32.000Z",
-      "firstSeenAt": "2026-11-22T22:21:49.827Z",
-      "outlets": 1,
-      "outletNames": [
-        "CubaHeadlines"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "2541df40929e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air lines system outage prompts temporary ground stop, nationwide Thanksgiving travel delays",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNMURhRG5PS05ZdHJaMVcyeVlfN0pHbld5OVF5ZnlxRTBnaVZwejZQdllIbm5kQ2JHaU1TYVRrNDBUMWs0Y2poV2w0SlU1WHowVTc5RmlSeU9CSXJNSGNLdklVZjFHSXQyaFlfR3EwVGVjTFdZT0tHSXVYSmU3M3Q0MGx3aGw0LXRQcVFZMXVaTDE5WWctSUE3RVRRdUNseDdKc2h2czd1OENwZXRIcldjWHBUaEZoeVU2MDRIQ1Z1amwwWG9fZUlIRUgyVDJfcE55b0E?oc=5",
-      "source": "KTNN",
-      "publishedAt": "2026-11-23T12:37:35.000Z",
-      "latestAt": "2026-11-23T12:37:35.000Z",
-      "firstSeenAt": "2026-11-23T13:39:23.015Z",
-      "outlets": 1,
-      "outletNames": [
-        "KTNN"
-      ],
-      "score": 1.38
-    },
-    {
-      "id": "867eb675987d",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Indonesia’s Semeru volcano erupts, spews massive ash cloud",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSVptMW1rVlhVaDlfUlZyVkdwcWxfRXRsRDQ5SHB6MVptUTVpSVdwSlZheXBsZ2oxT0piWFVGaW1Xc0tEOXVScE5ick1CQ3Q0b3JRWkZISjJBSVh5TUY4a2x3XzhuTEJ5em9ZaGhQTS1ibDhXbldmN2o1V1ZUeUJBTlZEYm5xb0tyelpWRENCV2N0ZW1KLV9uQU11Zw?oc=5",
-      "source": "Yeni Safak English",
-      "publishedAt": "2026-11-23T11:53:20.000Z",
-      "latestAt": "2026-11-23T11:53:20.000Z",
-      "firstSeenAt": "2026-11-23T12:39:11.931Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yeni Safak English"
-      ],
-      "score": 1.38
-    },
-    {
       "id": "5942f55a5ba8",
       "cat": "internet",
       "kind": "news",
@@ -1816,6 +1807,22 @@
       "quietReason": "headline mentions hurricane"
     },
     {
+      "id": "1507e65de9a1",
+      "cat": "weather",
+      "kind": "news",
+      "title": "TUESDAY WEATHER: Thunderstorm warnings up to LEVEL 4 with hail and a wind warning for the coast",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBwUzFQalk0dENwZ1pwcFdpdGtvTmo2WWJVTWNxNWhkZEcwVWFVaXY5T3VqSFh4UTlWZEM2RUFQbnNrbEUtQzNJNXNiRGh4YWZTdjJ5ZkI4RW9IY0p6UG13ZmRVZ21ibVRPTjgxRS1PSGZqb1R6VHB3bW1yTVA?oc=5",
+      "source": "Snow Report Southern Africa",
+      "publishedAt": "2026-11-23T14:11:00.000Z",
+      "latestAt": "2026-11-23T14:11:00.000Z",
+      "firstSeenAt": "2026-11-23T14:24:31.661Z",
+      "outlets": 1,
+      "outletNames": [
+        "Snow Report Southern Africa"
+      ],
+      "score": 1
+    },
+    {
       "id": "8b185c019760",
       "cat": "germs",
       "kind": "news",
@@ -1861,24 +1868,6 @@
       "outletNames": [
         "Early Warning Network"
       ],
-      "score": 1
-    },
-    {
-      "id": "d0472fe8dd9c",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Chamblee breaks down leader Kim's chances to win CME Tour Champ",
-      "url": "https://www.golfchannel.com/watch/golf-central/chamblee-breaks-down-leader-kims-chances-to-win-cme-crown",
-      "source": "Golf Channel",
-      "publishedAt": "2026-11-22T14:20:00.000Z",
-      "latestAt": "2026-11-22T14:20:00.000Z",
-      "firstSeenAt": "2026-11-22T14:35:43.292Z",
-      "outlets": 1,
-      "outletNames": [
-        "Golf Channel"
-      ],
-      "trending": 1000,
-      "trendTerm": "lpga",
       "score": 1
     },
     {
@@ -1934,6 +1923,22 @@
       "score": 0.99
     },
     {
+      "id": "30ff934ba46d",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Recap: Anthropic IPO, tech rout, Nvidia, and outage aftermath",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNVE9oSlVERzZzN1VsY0U4ei1EcWhvVGllM2tQR2hkOTZ4eWZGVXMxRUZMaUdqMnBuTDVXay00T1hyd21kbEtpNTMyUFRzRHRMRTBYeG9PUS1aZXotVmlhQ2VFb2VtX1JtOVg1clh2SzJQNkR2LTBHREsxNjFuSVZBeEpxQjF1SWw3enhYb2dR?oc=5",
+      "source": "Fortune",
+      "publishedAt": "2026-11-23T12:25:00.000Z",
+      "latestAt": "2026-11-23T12:25:00.000Z",
+      "firstSeenAt": "2026-11-23T14:24:31.661Z",
+      "outlets": 1,
+      "outletNames": [
+        "Fortune"
+      ],
+      "score": 0.97
+    },
+    {
       "id": "7738f54dbe03",
       "cat": "space",
       "kind": "news",
@@ -1948,22 +1953,6 @@
         "ESA"
       ],
       "score": 0.97
-    },
-    {
-      "id": "535f3fb9ac40",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Winter Storm Watch, Warning and Advisory Mean Three Different Things, and a Blizzard Warning Needs 35 mph Gusts for 3 Hours",
-      "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPOHQxRVZBWVZPdUd5MUtQYmFNTjZoQV9DbVFqWjEwdW1KRjJaUGRlMGdkZ01BRHZxbjBHbzFGbjZzMmNBb2hvSFhCT0J1aHpidEhUaE9xNVMyZjlMUXRUM3YzOFQ1YnNSNUprOVZQOUNmWG15UkNab3BqVW5YLTdwZkxHclVUZFdMZmt0VkgtYS16M3lTejNtaGs4d0NQczZCTmpyVjVGTkk2WXl3YUd2REhFY1RHRkRRWjRBSDBhSVZaZjZEREZZVWRXMGVQeEZUQWYybUxJQlMzdEthVHktY2diRm50ZV9ieG5NelVkYkI1QzB6N3VWYnlmVUVNd01XV0xvSWw3MWJDbFNUeDJ6XzY2ZXhhR1FYbUE?oc=5",
-      "source": "NewsBreak: Local News & Alerts",
-      "publishedAt": "2026-11-23T11:31:59.000Z",
-      "latestAt": "2026-11-23T11:31:59.000Z",
-      "firstSeenAt": "2026-11-23T14:09:26.891Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 0.96
     },
     {
       "id": "f16ad6cc9507",
@@ -2028,6 +2017,22 @@
         "Technobezz"
       ],
       "score": 0.86
+    },
+    {
+      "id": "bf99ab5acae6",
+      "cat": "sun",
+      "kind": "news",
+      "title": "NOAA issues G1 alert as aurora may be Visible across northern U.S.",
+      "url": "https://www.mogazmasr.com/158236",
+      "source": "Mogaz Masr",
+      "publishedAt": "2026-11-22T21:03:00.000Z",
+      "latestAt": "2026-11-22T21:03:00.000Z",
+      "firstSeenAt": "2026-11-23T14:24:31.661Z",
+      "outlets": 1,
+      "outletNames": [
+        "Mogaz Masr"
+      ],
+      "score": 0.71
     }
   ]
 }
