@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T03:37:44.457Z",
+  "buildTime": "2026-11-23T03:52:41.341Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 22:37 ET",
+  "etStamp": "2026-11-22 22:52 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,8 +49,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1137,
-  "lastSuccessAt": "2026-11-23T03:37:44.457Z",
+  "headlinesRead": 754,
+  "lastSuccessAt": "2026-11-23T03:52:41.341Z",
   "rollingFallback": false,
   "cats": {
     "earth": 4,
@@ -185,15 +185,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 821,
-      "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "count": 433,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 14 of 26 queries)",
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     },
     "bing": {
       "ok": true,
-      "count": 279,
+      "count": 284,
       "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,37 +205,37 @@
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     },
     "x": {
       "ok": true,
@@ -248,13 +248,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T03:37:44.457Z"
+      "lastOkAt": "2026-11-23T03:52:41.341Z"
     }
   },
   "stories": [
@@ -677,7 +677,7 @@
       "url": "https://finance.yahoo.com/markets/crypto/articles/mike-mcglone-says-crypto-crash-024241278.html",
       "source": "Yahoo Finance",
       "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T02:42:00.000Z",
+      "latestAt": "2026-11-23T02:42:41.000Z",
       "firstSeenAt": "2026-11-23T02:52:34.117Z",
       "outlets": 3,
       "outletNames": [
@@ -842,23 +842,6 @@
       "score": 1.57
     },
     {
-      "id": "b2511d0c1f80",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Dept. of Agriculture says bird flu likely came from Idaho cattle",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNa0l2Q1JIMzlfV2Q1VUljUm5SNThsZDR4cXF5dWRieUJtNF9uRWpLTGVQcWZSR0tjaGFkVTdqR09yMFpkRXFiMmVlOHhmbDVFUG94Nm9MME5SaWRjZFBMQ1c1MkktUk5LakFBOWVEbFBNMTlXcTBTZ1NsMkdHRUNxRlNydmE3QQ?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T03:42:00.000Z",
-      "latestAt": "2026-11-22T03:45:05.000Z",
-      "firstSeenAt": "2026-11-22T20:06:33.048Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "KIRO 7 News Seattle"
-      ],
-      "score": 1.45
-    },
-    {
       "id": "3810674c6e05",
       "cat": "internet",
       "kind": "news",
@@ -874,6 +857,22 @@
         "www.nationpathindia.com"
       ],
       "score": 1.41
+    },
+    {
+      "id": "59993d00bf55",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Oil prices fall as global market selloff weighs on sentiment; Gulf attacks limit losses",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQTU5YQWlmZzBFeFVvNjFqTEJuaGV4NWp2OUxqQzJJLXM3RXUtY0VpeTdpZkpaZ25HOTJlekZhSlJHODNYNG9iSk5hcWZ3VUo1RU9ORFdoRnIxcE5OcnR4YVJ2TjIwTnZ3cENjVDlKV3BtcTdCejY4Wi1vOVJ3ZUFXNDZZUDdpRGxRREFFN2hzZHBLenVfMGM2Zy0walExM3Fqa2xoOGUwQ3pKNXVtZkFLbWV2T01JME9INl9SYlVqN0l2a3V2V3pybDhnOU1TTVpYVzViSTI2WThqQjRkX3BySXdsVjBnWjF1OUxvVFB1a1hJX1pEN1I0YlpXc3Z3NU9SNW9vQ1k1aEt0TmxV0gGSAkFVX3lxTE1fQWR6NlFpendyQjA2a0NJVUdxanlVeV91b2VPOUtYLWxPN3ZMNXhFVUJTRXZGS3ZyLXRrajd6YkdnSXlXNG5tN0huOEpVazRzcW5MeGFheWQxLTJMYVlqOEpjV3MzaHNtN0Z3RnEwS1VNY1hzQm93V1cxbW13N0M0QU1hNEZTWnRCbTQ4SDN0OGlPa0swQzNoU0xxRl9mSDgxZXh4R2RHajQza0lDdDJrdUM2UnZNcVlWVWRuaExQckxvaWUzYUNPX096M2g3elNxUEM1cVJIMnZjYjlwd1BYd3pHd2kwOXBFaTdKby01T0V0VHhERjY3ZVFKajJkVmtZTlN3V0xMZHBXU2FmVDhacEE?oc=5",
+      "source": "The Times of India",
+      "publishedAt": "2026-11-23T03:28:00.000Z",
+      "latestAt": "2026-11-23T03:28:00.000Z",
+      "firstSeenAt": "2026-11-23T03:37:44.457Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Times of India"
+      ],
+      "score": 1.4
     },
     {
       "id": "sig:faa-stop:HOU:2026-11-22",
@@ -1459,22 +1458,6 @@
       "score": 1.44
     },
     {
-      "id": "59993d00bf55",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Oil prices fall as global market selloff weighs on sentiment; Gulf attacks limit losses",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQTU5YQWlmZzBFeFVvNjFqTEJuaGV4NWp2OUxqQzJJLXM3RXUtY0VpeTdpZkpaZ25HOTJlekZhSlJHODNYNG9iSk5hcWZ3VUo1RU9ORFdoRnIxcE5OcnR4YVJ2TjIwTnZ3cENjVDlKV3BtcTdCejY4Wi1vOVJ3ZUFXNDZZUDdpRGxRREFFN2hzZHBLenVfMGM2Zy0walExM3Fqa2xoOGUwQ3pKNXVtZkFLbWV2T01JME9INl9SYlVqN0l2a3V2V3pybDhnOU1TTVpYVzViSTI2WThqQjRkX3BySXdsVjBnWjF1OUxvVFB1a1hJX1pEN1I0YlpXc3Z3NU9SNW9vQ1k1aEt0TmxV0gGSAkFVX3lxTE1fQWR6NlFpendyQjA2a0NJVUdxanlVeV91b2VPOUtYLWxPN3ZMNXhFVUJTRXZGS3ZyLXRrajd6YkdnSXlXNG5tN0huOEpVazRzcW5MeGFheWQxLTJMYVlqOEpjV3MzaHNtN0Z3RnEwS1VNY1hzQm93V1cxbW13N0M0QU1hNEZTWnRCbTQ4SDN0OGlPa0swQzNoU0xxRl9mSDgxZXh4R2RHajQza0lDdDJrdUM2UnZNcVlWVWRuaExQckxvaWUzYUNPX096M2g3elNxUEM1cVJIMnZjYjlwd1BYd3pHd2kwOXBFaTdKby01T0V0VHhERjY3ZVFKajJkVmtZTlN3V0xMZHBXU2FmVDhacEE?oc=5",
-      "source": "The Times of India",
-      "publishedAt": "2026-11-23T03:28:00.000Z",
-      "latestAt": "2026-11-23T03:28:00.000Z",
-      "firstSeenAt": "2026-11-23T03:37:44.457Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Times of India"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "8eb9fac18f5d",
       "cat": "internet",
       "kind": "x",
@@ -1945,6 +1928,22 @@
         "ESA"
       ],
       "score": 0.97
+    },
+    {
+      "id": "5bab5c44f992",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Rabbit control and Avian Influenza a focus by ORC",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObDhlTFB1RXlISzdGQ2JKQXJ1WTV3ZmNTYzZFWV80X3paVFVXa2taTXRRMjBHTm8wa252QWt1amdzSnc4LVZuS3RxcERYaENsS0k4SlpGZklWclhPSl9RRVMzc3UzYndULWtSRFJxU3dqc0hvcERaam53eHlpemNXRjlYUGtHUnBGTEhSMlh1VmRFWGo0SXJmOXE0d3BDZC1kOE9hSWpnZy0?oc=5",
+      "source": "Wanaka App",
+      "publishedAt": "2026-11-23T01:19:29.000Z",
+      "latestAt": "2026-11-23T01:19:29.000Z",
+      "firstSeenAt": "2026-11-23T03:52:41.341Z",
+      "outlets": 1,
+      "outletNames": [
+        "Wanaka App"
+      ],
+      "score": 0.96
     },
     {
       "id": "605d3b57beb9",
