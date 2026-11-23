@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T03:52:41.341Z",
+  "buildTime": "2026-11-23T04:07:47.712Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 22:52 ET",
+  "etStamp": "2026-11-22 23:07 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,15 +49,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 754,
-  "lastSuccessAt": "2026-11-23T03:52:41.341Z",
+  "headlinesRead": 1149,
+  "lastSuccessAt": "2026-11-23T04:07:47.712Z",
   "rollingFallback": false,
   "cats": {
     "earth": 4,
     "flights": 33,
-    "hacks": 22,
+    "hacks": 21,
     "internet": 14,
-    "grid": 5,
+    "grid": 6,
     "germs": 4,
     "markets": 4,
     "ai": 3,
@@ -180,20 +180,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 433,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 14 of 26 queries)",
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "count": 831,
+      "error": null,
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "bing": {
       "ok": true,
-      "count": 284,
+      "count": 281,
       "error": null,
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,56 +205,55 @@
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T03:07:36.743Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T03:52:41.341Z"
+      "lastOkAt": "2026-11-23T04:07:47.712Z"
     }
   },
   "stories": [
@@ -808,6 +807,23 @@
       "score": 1.72
     },
     {
+      "id": "3baad17db0ca",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Three-day planned blackout to hit parts of Ashanti from 22 to 24 November",
+      "url": "https://www.ghanaweb.com/GhanaHomePage/business/Three-day-planned-blackout-to-hit-parts-of-Ashanti-from-22-to-24-November-2062511",
+      "source": "GhanaWeb",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-22T20:12:48.000Z",
+      "firstSeenAt": "2026-11-23T04:07:47.712Z",
+      "outlets": 2,
+      "outletNames": [
+        "GhanaWeb",
+        "Asaase Radio"
+      ],
+      "score": 1.6
+    },
+    {
       "id": "8887c12d10d2",
       "cat": "grid",
       "kind": "news",
@@ -857,22 +873,6 @@
         "www.nationpathindia.com"
       ],
       "score": 1.41
-    },
-    {
-      "id": "59993d00bf55",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Oil prices fall as global market selloff weighs on sentiment; Gulf attacks limit losses",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQTU5YQWlmZzBFeFVvNjFqTEJuaGV4NWp2OUxqQzJJLXM3RXUtY0VpeTdpZkpaZ25HOTJlekZhSlJHODNYNG9iSk5hcWZ3VUo1RU9ORFdoRnIxcE5OcnR4YVJ2TjIwTnZ3cENjVDlKV3BtcTdCejY4Wi1vOVJ3ZUFXNDZZUDdpRGxRREFFN2hzZHBLenVfMGM2Zy0walExM3Fqa2xoOGUwQ3pKNXVtZkFLbWV2T01JME9INl9SYlVqN0l2a3V2V3pybDhnOU1TTVpYVzViSTI2WThqQjRkX3BySXdsVjBnWjF1OUxvVFB1a1hJX1pEN1I0YlpXc3Z3NU9SNW9vQ1k1aEt0TmxV0gGSAkFVX3lxTE1fQWR6NlFpendyQjA2a0NJVUdxanlVeV91b2VPOUtYLWxPN3ZMNXhFVUJTRXZGS3ZyLXRrajd6YkdnSXlXNG5tN0huOEpVazRzcW5MeGFheWQxLTJMYVlqOEpjV3MzaHNtN0Z3RnEwS1VNY1hzQm93V1cxbW13N0M0QU1hNEZTWnRCbTQ4SDN0OGlPa0swQzNoU0xxRl9mSDgxZXh4R2RHajQza0lDdDJrdUM2UnZNcVlWVWRuaExQckxvaWUzYUNPX096M2g3elNxUEM1cVJIMnZjYjlwd1BYd3pHd2kwOXBFaTdKby01T0V0VHhERjY3ZVFKajJkVmtZTlN3V0xMZHBXU2FmVDhacEE?oc=5",
-      "source": "The Times of India",
-      "publishedAt": "2026-11-23T03:28:00.000Z",
-      "latestAt": "2026-11-23T03:28:00.000Z",
-      "firstSeenAt": "2026-11-23T03:37:44.457Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Times of India"
-      ],
-      "score": 1.4
     },
     {
       "id": "sig:faa-stop:HOU:2026-11-22",
@@ -1458,6 +1458,22 @@
       "score": 1.44
     },
     {
+      "id": "59993d00bf55",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Oil prices fall as global market selloff weighs on sentiment; Gulf attacks limit losses",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQTU5YQWlmZzBFeFVvNjFqTEJuaGV4NWp2OUxqQzJJLXM3RXUtY0VpeTdpZkpaZ25HOTJlekZhSlJHODNYNG9iSk5hcWZ3VUo1RU9ORFdoRnIxcE5OcnR4YVJ2TjIwTnZ3cENjVDlKV3BtcTdCejY4Wi1vOVJ3ZUFXNDZZUDdpRGxRREFFN2hzZHBLenVfMGM2Zy0walExM3Fqa2xoOGUwQ3pKNXVtZkFLbWV2T01JME9INl9SYlVqN0l2a3V2V3pybDhnOU1TTVpYVzViSTI2WThqQjRkX3BySXdsVjBnWjF1OUxvVFB1a1hJX1pEN1I0YlpXc3Z3NU9SNW9vQ1k1aEt0TmxV0gGSAkFVX3lxTE1fQWR6NlFpendyQjA2a0NJVUdxanlVeV91b2VPOUtYLWxPN3ZMNXhFVUJTRXZGS3ZyLXRrajd6YkdnSXlXNG5tN0huOEpVazRzcW5MeGFheWQxLTJMYVlqOEpjV3MzaHNtN0Z3RnEwS1VNY1hzQm93V1cxbW13N0M0QU1hNEZTWnRCbTQ4SDN0OGlPa0swQzNoU0xxRl9mSDgxZXh4R2RHajQza0lDdDJrdUM2UnZNcVlWVWRuaExQckxvaWUzYUNPX096M2g3elNxUEM1cVJIMnZjYjlwd1BYd3pHd2kwOXBFaTdKby01T0V0VHhERjY3ZVFKajJkVmtZTlN3V0xMZHBXU2FmVDhacEE?oc=5",
+      "source": "The Times of India",
+      "publishedAt": "2026-11-23T03:28:00.000Z",
+      "latestAt": "2026-11-23T03:28:00.000Z",
+      "firstSeenAt": "2026-11-23T03:37:44.457Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Times of India"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "8eb9fac18f5d",
       "cat": "internet",
       "kind": "x",
@@ -1780,22 +1796,6 @@
       "score": 1.2
     },
     {
-      "id": "88bab342b3bf",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Telcos strengthen cyberattack defences, report no major vulnerabilities",
-      "url": "https://economictimes.indiatimes.com/tech/technology/telcos-strengthen-cyberattack-defences-report-no-major-vulnerabilities/articleshow/136081972.cms",
-      "source": "The Economic Times",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T00:30:00.000Z",
-      "firstSeenAt": "2026-11-23T00:37:14.902Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Economic Times"
-      ],
-      "score": 1.2
-    },
-    {
       "id": "6095f0c5d225",
       "cat": "weather",
       "kind": "news",
@@ -1810,6 +1810,24 @@
         "The Cool Down on MSN"
       ],
       "score": 1.2
+    },
+    {
+      "id": "00fefd72061e",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Vanuatu region hit by 6.5-magnitude earthquake",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbW5NSmpyaHBRcUl1MjVYeEZiOEZWcUNLM1ZwbGNlLU01RDRPWlRqcm83MjlJeTROOVdRVGRnNTdYckhVSzhWWHF6NnV5MW4wSGNNTFlKOGFVUXlBTDJleHRJU0lITlFYRHkzLWQ1RkZpS2k1SXNaVnRVQjctODVlc041YzNmNi13UkZ5N3hZeHhjTWVQMXc?oc=5",
+      "source": "Breakingthenews.net",
+      "publishedAt": "2026-11-23T03:52:00.000Z",
+      "latestAt": "2026-11-23T03:52:00.000Z",
+      "firstSeenAt": "2026-11-23T04:07:47.712Z",
+      "outlets": 1,
+      "outletNames": [
+        "Breakingthenews.net"
+      ],
+      "score": 1,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "3cf0fe966ec1",
@@ -2008,22 +2026,6 @@
         "Chosunbiz"
       ],
       "score": 0.81
-    },
-    {
-      "id": "b9d173fcaa06",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Japan: Sakurajima volcano erupts – a 1,000-metre-high column of ash rises into the sky",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQMXl0UENnRUZEQ2xxQ2hXcnpxaVliTC0wUVZpSVRFdElVaExkRlFfNmE1bTdQM3EtOU5Fc1pVMS1OUTNOY1ZMQnRNTW9PV0tpUV9CWFJwS3gtRGllY0Q3U1k2XzRjSU5mcnBSaE05d3RQenBVX1pXSTgyMElHTVpSdW00U2RvTnZteHVtZFdQTldmZ0pkaHVJb1pYTDNGWnRIQTdyelg4NDcyZFFnaGhUT195alJZVC1pck9NZWQ4UlBXT28zLWJKSzViQ3pFdnF2VnJ3dmpLbGNDbm55NmVqWVRwX0xSMzVYdTl2OTVTZw?oc=5",
-      "source": "la Repubblica",
-      "publishedAt": "2026-11-22T11:32:00.000Z",
-      "latestAt": "2026-11-22T11:32:00.000Z",
-      "firstSeenAt": "2026-11-23T03:37:44.457Z",
-      "outlets": 1,
-      "outletNames": [
-        "la Repubblica"
-      ],
-      "score": 0.73
     },
     {
       "id": "35ba0d50d024",
