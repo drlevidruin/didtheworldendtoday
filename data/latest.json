@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T02:22:29.826Z",
+  "buildTime": "2026-11-23T02:30:12.754Z",
   "etDate": "2026-11-22",
-  "etStamp": "2026-11-22 21:22 ET",
+  "etStamp": "2026-11-22 21:30 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,15 +44,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1148,
-  "lastSuccessAt": "2026-11-23T02:22:29.826Z",
+  "headlinesRead": 1142,
+  "lastSuccessAt": "2026-11-23T02:30:12.754Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 38,
-    "hacks": 16,
+    "flights": 36,
+    "hacks": 18,
     "internet": 15,
-    "germs": 4,
     "grid": 5,
+    "germs": 4,
     "markets": 4,
     "ai": 3,
     "weather": 4,
@@ -180,57 +180,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 783,
+      "count": 826,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     },
     "bing": {
       "ok": true,
-      "count": 280,
+      "count": 279,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 50,
-      "error": "rate limited (HTTP 429)",
+      "ok": false,
+      "count": 0,
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-23T02:22:29.826Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     },
     "x": {
       "ok": true,
@@ -241,15 +241,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "lastOkAt": "2026-11-23T02:30:12.754Z"
     }
   },
   "stories": [
@@ -395,6 +395,25 @@
       "score": 2.78
     },
     {
+      "id": "66e31cab567b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "More than 1,800 people without power in Mattoon",
+      "url": "https://www.yahoo.com/news/weather-news/articles/more-1-800-people-without-000457927.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T00:04:57.000Z",
+      "firstSeenAt": "2026-11-22T23:52:08.258Z",
+      "outlets": 4,
+      "outletNames": [
+        "WAND",
+        "cedarnews.net",
+        "WCIA.com",
+        "Yahoo"
+      ],
+      "score": 2.61
+    },
+    {
       "id": "e309da46447d",
       "cat": "germs",
       "kind": "news",
@@ -411,24 +430,6 @@
         "Tripuratimes"
       ],
       "score": 2.57
-    },
-    {
-      "id": "66e31cab567b",
-      "cat": "grid",
-      "kind": "news",
-      "title": "More than 1,800 Ameren customers without power in Mattoon",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWmU2aHduT2gyRDRNYVpTSDd5cmRTcE1oaUVFdVVLOW0tSUJyV01JdjBicDZrZC1vZGdDbHU0WW1wSmVCeXVyV1FaRkxZNVB1bXBic3VVN0tVUGJKdjduaFdnZ1loUk9pdWtEZjhtdDF2Z3lBU21HZEhQd2ZFbkVxNXJ1VVRVMEhwZS11TXlndTc3Z9IBpgFBVV95cUxNT3ZpaF9kVFFrMGJEaGV4c2tOQ05ocVZucVBPcWJCdEV1aXU1ZHVLQnZ1MUhIM2M4VllvVnphYjExNDlHYUpGSXRqeFBQQWhqdFNiTmZCMmdKQ1RPcW4tUmhpRDVnWlAyODJ0NFU2SXp3UE9ubi01TFA4c29LcHdSZTNBME1ScG1mT3l2dUZkcWpKNzBQUFAzMS1MaE5fcEM4bDRaRnZ3?oc=5",
-      "source": "WAND",
-      "publishedAt": "2026-11-22T18:04:57.000Z",
-      "latestAt": "2026-11-23T00:04:57.000Z",
-      "firstSeenAt": "2026-11-22T23:52:08.258Z",
-      "outlets": 3,
-      "outletNames": [
-        "WAND",
-        "cedarnews.net",
-        "WCIA.com"
-      ],
-      "score": 2.34
     },
     {
       "id": "aef8ae7ce7c1",
@@ -992,6 +993,25 @@
       "score": 2.58
     },
     {
+      "id": "c74b0c93474d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta outage causes temporary ground stop in Atlanta",
+      "url": "https://www.yahoo.com/news/videos/delta-outage-causes-temporary-ground-000123477.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T00:01:23.000Z",
+      "firstSeenAt": "2026-11-23T02:22:29.826Z",
+      "outlets": 4,
+      "outletNames": [
+        "Yahoo",
+        "Yahoo Life UK",
+        "FOX 9 Minneapolis-St. Paul",
+        "AOL.com"
+      ],
+      "score": 2.48
+    },
+    {
       "id": "0bd1b7ccd575",
       "cat": "flights",
       "kind": "news",
@@ -1044,24 +1064,6 @@
         "travel"
       ],
       "score": 2.21
-    },
-    {
-      "id": "c74b0c93474d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta outage causes temporary ground stop in Atlanta",
-      "url": "https://www.yahoo.com/news/videos/delta-outage-causes-temporary-ground-000123477.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T00:01:23.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "Yahoo Life UK",
-        "FOX 9 Minneapolis-St. Paul"
-      ],
-      "score": 2.14
     },
     {
       "id": "bfe1d029b305",
@@ -1130,6 +1132,24 @@
         "CP24"
       ],
       "score": 1.9
+    },
+    {
+      "id": "a397ae9e51e0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Tower Records becomes latest Japan retailer hit by data breach",
+      "url": "https://www.japantimes.co.jp/business/2026/11/23/tower-records-data-breach/",
+      "source": "The Japan Times",
+      "publishedAt": "2026-11-22T10:08:29.000Z",
+      "latestAt": "2026-11-22T16:00:00.000Z",
+      "firstSeenAt": "2026-11-23T02:30:12.754Z",
+      "outlets": 3,
+      "outletNames": [
+        "Bloomberg.com",
+        "The Edge Singapore",
+        "The Japan Times"
+      ],
+      "score": 1.88
     },
     {
       "id": "50bbc40a724b",
@@ -1317,6 +1337,23 @@
         "Detroit Free Press"
       ],
       "score": 1.66
+    },
+    {
+      "id": "2b8e26c13d08",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack compromised personal cusomter information, Bell MTS says",
+      "url": "https://www.cbc.ca/news/canada/manitoba/cyberattack-compromised-customer-information-bell-mts-9.7432132",
+      "source": "CBC.ca",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T02:10:00.000Z",
+      "firstSeenAt": "2026-11-23T02:30:12.754Z",
+      "outlets": 2,
+      "outletNames": [
+        "CBC.ca",
+        "Yahoo News Canada"
+      ],
+      "score": 1.65
     },
     {
       "id": "a2fa3f9e9cbc",
@@ -1709,22 +1746,6 @@
       "score": 1.2
     },
     {
-      "id": "85b4e9a10a86",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Sonoma County Travelers Feel Effects of Nationwide FAA Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZy01RTZEZ0pXa2NHbDBmUUc0b19ueHNqSnkxQ2tFOHo3SXotaDBnQ09jaTdqdnVUSnhVeHRUQjN1U1BpdnBvNG9CM01YMV9jM1JxS0ViQkZ6SndiYkVoNTFsdEYyRlVoSGRNdi1JWFEwRHRLZmoySGx5azZVcThRNUJ5azh1Y0V0YTZXbjhmUlRxWFVQbFZyQTg3MWUzSzRSdnFJa29uN3V2dw?oc=5",
-      "source": "Sonoma State Star",
-      "publishedAt": "2026-11-22T04:17:40.000Z",
-      "latestAt": "2026-11-22T08:40:11.000Z",
-      "firstSeenAt": "2026-11-22T13:20:30.927Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sonoma State Star"
-      ],
-      "score": 1.19
-    },
-    {
       "id": "91912766c581",
       "cat": "markets",
       "kind": "news",
@@ -1739,22 +1760,6 @@
         "Philstar.com"
       ],
       "score": 1.16
-    },
-    {
-      "id": "9c81b5f77d2c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Issues Ground Stop After Major Airline Suffers Outage",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR05URzNvNHdzUnJhYjhkbHB3OVNxT1BYN01rQjZZSXF0cDNodVJLZXBEeHp0cTlDMWVlNjlhVEwzYnh4TUp3Z3dCaExZUlRjWjc4TWZmM3dRQkl0dFdCVkxEM2xSYnRfaVN1U3NoQ2JHN3MxMjVvcEpVUmZfZnZnVUQwNHFFT1M3c2ZDSUk5LTNDYWtKamV1VldORDJiYnAxU0hoWGktSEFORU53WlBQOEVUMmY?oc=5",
-      "source": "Townhall",
-      "publishedAt": "2026-11-22T13:00:06.000Z",
-      "latestAt": "2026-11-22T13:00:06.000Z",
-      "firstSeenAt": "2026-11-23T00:22:10.616Z",
-      "outlets": 1,
-      "outletNames": [
-        "Townhall"
-      ],
-      "score": 1.13
     },
     {
       "id": "5bab5c44f992",
