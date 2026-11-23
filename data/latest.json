@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T06:23:08.609Z",
+  "buildTime": "2026-11-23T06:38:15.236Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 01:23 ET",
+  "etStamp": "2026-11-23 01:38 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,17 +49,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 903,
-  "lastSuccessAt": "2026-11-23T06:23:08.609Z",
+  "headlinesRead": 1168,
+  "lastSuccessAt": "2026-11-23T06:38:15.236Z",
   "rollingFallback": false,
   "cats": {
     "earth": 4,
     "flights": 33,
     "hacks": 21,
     "internet": 10,
-    "grid": 6,
+    "grid": 5,
     "germs": 4,
-    "markets": 7,
+    "markets": 8,
     "ai": 4,
     "weather": 4,
     "space": 3,
@@ -180,20 +180,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 581,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "count": 842,
+      "error": null,
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     },
     "bing": {
       "ok": true,
-      "count": 285,
+      "count": 289,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,55 +205,56 @@
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:23:08.609Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T06:23:08.609Z"
+      "lastOkAt": "2026-11-23T06:38:15.236Z"
     }
   },
   "stories": [
@@ -826,6 +827,23 @@
       "score": 1.72
     },
     {
+      "id": "3775a6d0e95a",
+      "cat": "markets",
+      "kind": "news",
+      "title": "LIVE: Sensex, Nifty slide, metal stocks plunge; AI selloff hits Asia, South Korea plunges 5%",
+      "url": "https://www.financialexpress.com/market/sensex-nifty-today-live-updates-ai-selloff-asia-kospi-wall-street-crude-gold-silver-rate-stock-market-november-23-2026-4391541/",
+      "source": "The Financial Express",
+      "publishedAt": "2026-11-22T20:49:00.000Z",
+      "latestAt": "2026-11-23T06:36:47.000Z",
+      "firstSeenAt": "2026-11-23T06:38:15.236Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Financial Express",
+        "IndiaIPO"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "b9980c1fb134",
       "cat": "markets",
       "kind": "news",
@@ -858,23 +876,6 @@
         "JournalArta"
       ],
       "score": 1.62
-    },
-    {
-      "id": "3baad17db0ca",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Three-day planned blackout to hit parts of Ashanti from 22 to 24 November",
-      "url": "https://www.ghanaweb.com/GhanaHomePage/business/Three-day-planned-blackout-to-hit-parts-of-Ashanti-from-22-to-24-November-2062511",
-      "source": "GhanaWeb",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T03:39:39.000Z",
-      "firstSeenAt": "2026-11-23T04:07:47.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "GhanaWeb",
-        "Asaase Radio"
-      ],
-      "score": 1.6
     },
     {
       "id": "sig:faa-stop:HOU:2026-11-22",
@@ -1124,7 +1125,7 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOeWt4bEtGMG5KUXpITXNtaE90V3pkdDJ6ZjNLMGJUc0hZaVNmSVpZUGhNdl9GMVk3T3NvMmVxcHdfQjRuMVBEQkRySFNUN1doR01ISTlpOElGcmhQYXhwY3F1MGY1bWp6T0tTXzFuaTR3VEJhb0pXR0thYWR1WmlSNGw5VkRsRFpHVjBuUVFjakExUUlRMDE2VVNtV2NkaXZfX0RmR29pUUVuMndKSkdwX3ptM19oTGx5S3lpU2VBcw?oc=5",
       "source": "CTV News",
       "publishedAt": "2026-11-22T19:00:34.000Z",
-      "latestAt": "2026-11-22T19:00:34.000Z",
+      "latestAt": "2026-11-22T21:19:20.000Z",
       "firstSeenAt": "2026-11-22T21:51:59.735Z",
       "outlets": 2,
       "outletNames": [
@@ -1390,6 +1391,23 @@
       "score": 1.62
     },
     {
+      "id": "3baad17db0ca",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Three-day planned blackout to hit parts of Ashanti from 22 to 24 November",
+      "url": "https://www.ghanaweb.com/GhanaHomePage/business/Three-day-planned-blackout-to-hit-parts-of-Ashanti-from-22-to-24-November-2062511",
+      "source": "GhanaWeb",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T03:39:39.000Z",
+      "firstSeenAt": "2026-11-23T04:07:47.712Z",
+      "outlets": 2,
+      "outletNames": [
+        "GhanaWeb",
+        "Asaase Radio"
+      ],
+      "score": 1.6
+    },
+    {
       "id": "8887c12d10d2",
       "cat": "grid",
       "kind": "news",
@@ -1448,7 +1466,7 @@
       "url": "https://www.yahoo.com/news/science/articles/worlds-deepest-explosive-volcanic-eruption-050000581.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T05:04:23.000Z",
+      "latestAt": "2026-11-23T05:04:43.000Z",
       "firstSeenAt": "2026-11-23T05:53:02.982Z",
       "outlets": 2,
       "outletNames": [
@@ -1507,6 +1525,23 @@
         "WBTV"
       ],
       "score": 1.52
+    },
+    {
+      "id": "0d58c5ffd73f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Data breach at NC medical supply company affects more than 44,000 South Carolinians",
+      "url": "https://www.yahoo.com/news/videos/data-breach-nc-medical-supply-024330414.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T02:43:00.000Z",
+      "firstSeenAt": "2026-11-23T06:38:15.236Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "WLTX"
+      ],
+      "score": 1.51
     },
     {
       "id": "2028f3421bbf",
@@ -1587,22 +1622,6 @@
       "outlets": 1,
       "outletNames": [
         "Arise News"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "4ca98b6318b0",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Anthropic's $93.5 Billion IPO Marks Record Debut, Then US Stocks Plunge; Nasdaq Drops 5.28% in a Single Day, Erasing Year-to-Date Gains",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5YOXRQRW53T0VXZG5jNVpIb1RjUkZ6VlhIeWVhMC1IUEFOMXc2ME5ydHZZcWJuRTZCSXlBdTVscGQ0WmJ1dFVNVFlJa2VES1hCNXFBNzdMZFdmaVNoMW1lRGgxc0xsanNFWjNVTXhNVHZjbm5TVXc?oc=5",
-      "source": "finance.biggo.com",
-      "publishedAt": "2026-11-22T06:25:00.000Z",
-      "latestAt": "2026-11-22T06:25:00.000Z",
-      "firstSeenAt": "2026-11-22T06:34:28.347Z",
-      "outlets": 1,
-      "outletNames": [
-        "finance.biggo.com"
       ],
       "score": 1.4
     },
@@ -1689,6 +1708,22 @@
       "score": 1.38
     },
     {
+      "id": "ef951833ec7a",
+      "cat": "internet",
+      "kind": "news",
+      "title": "PlayStation Users Report Outages as ‘GTA 6’ Begins Global Launch",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UQUdIVGUzOWZyb0Q3aDRqM1FucXlXNDFINFNvMFJrX1Vjc1ZFZ213X1NVaU10b3pBbkl2cS1FRnB4RVpxd0RVSjk2aHNYeXg3blY0N1Fn?oc=5",
+      "source": "IMDb",
+      "publishedAt": "2026-11-23T05:16:12.000Z",
+      "latestAt": "2026-11-23T05:16:12.000Z",
+      "firstSeenAt": "2026-11-23T06:38:15.236Z",
+      "outlets": 1,
+      "outletNames": [
+        "IMDb"
+      ],
+      "score": 1.37
+    },
+    {
       "id": "7e8ec0840ff0",
       "cat": "internet",
       "kind": "news",
@@ -1769,53 +1804,20 @@
       "score": 1.35
     },
     {
-      "id": "7d29307cbb35",
-      "cat": "grid",
+      "id": "692908206c67",
+      "cat": "markets",
       "kind": "news",
-      "title": "UP Blackout Mock Drill Today At 6 PM: Sirens, Rescue Operations And Temporary Power Cuts Across 75 Districts",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZXAza0VMTG9SUWNMemZpT25rLWYtTzBEY2xQWmJTbGJWNW9rZVlnQWxoNzNtd1pnZllNXzJLOWFJdC0yeXJvOEgxT0VsNEdQMDhXTnNLMEM5enhpZWQzMlBSbWdJdElmVjRSSjNPeEozcHdlYVhpTVlmcGl6QzFCQi1oYzRXeHN0MVpyclhJX1JJRk44X1VtWjVWVGlOaG5FLThrZi1uYnozTkZDbWtOZi03VEJxd3VOYXJPaTZhTGpBd1d2azlNall0VG0yNnpwMk02emNUTWpIUWZH?oc=5",
-      "source": "Oneindia",
-      "publishedAt": "2026-11-22T09:11:28.000Z",
-      "latestAt": "2026-11-23T01:34:37.000Z",
-      "firstSeenAt": "2026-11-23T05:38:05.850Z",
-      "outlets": 2,
-      "outletNames": [
-        "Oneindia",
-        "theopenpress.in"
-      ],
-      "score": 1.32
-    },
-    {
-      "id": "88bab342b3bf",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Telcos strengthen cyberattack defences, report no major vulnerabilities",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX2tRMGVNdkFwYXkzcEQ5d2lycTBDYzU3Y2pxbXgxejBQZVVlWGptMFVFLVZ4NE9BTXQwN3UzQ01RZ0ZEYWRlSTItSTJ5c3g3dXk2Q2k5SGJNX0hxbWNfZEN6UTZXUzhhNjF3SEFDd1BrWTNuLTZIdHpENWZlNWZpbGk5R01HanpOU0gyaGYxQW9jMV9WalAzNWNrdUkzdGczcFpaX1pHTTlFUzdabEVhWDhIT2kxdmUwZGN0ODNXb1NCcTNKdzRac0I4OE84Nm5iVzl5dkp1a9IB3AFBVV95cUxQZmFVVlg0QzJ1LTF6U1VwTDF2dzhEOTl4SEFubmgzWEE2Zm0yeldSbk9DbS1HSHh5LWJkLTRnQ1RDYk5HQXRnVGF6Q2E2NXF3ZDQtQmJXeXBKVzh1NFhsQlhORzFjVGt0cGNmcDRpLTEwRHNuNEYwVkZuTm1wbVFWc2ZMUFhFdGVXVWx4a1MyLU9OcHJES01aZ21JcXd4RE5PdW5Ic1ZUQkdFMnJha2N0RkNxNDBaZ05kUzNvcXJvSjNLR0d2OGhNbHJ5U2FPYUxIS3JrTnhGRVMxeENJ?oc=5",
-      "source": "The Economic Times",
-      "publishedAt": "2026-11-23T00:30:00.000Z",
-      "latestAt": "2026-11-23T00:30:00.000Z",
-      "firstSeenAt": "2026-11-23T04:22:49.114Z",
+      "title": "Tech Sell-Off Rocks Wall Street as Nvidia Shares Fall Over 40% From Record High",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcUFlOG1fc3drV1c3Q0RqOUV3WVhTVjZzNldxdXlxZHkxOXNLMnBzMkVjb1pCNmVHMEp6V00tdHlWZm95WVFxYnBqNDB0bWhXeVlGemQwOHFsTmd1dE1fSE9rY3pyTVFOYWUwZEdNLUY3TThRVFhsYkREdWd1QlJDeW1tSVZMZw?oc=5",
+      "source": "Al-Bawaba",
+      "publishedAt": "2026-11-23T04:09:48.000Z",
+      "latestAt": "2026-11-23T04:09:48.000Z",
+      "firstSeenAt": "2026-11-23T06:38:15.236Z",
       "outlets": 1,
       "outletNames": [
-        "The Economic Times"
+        "Al-Bawaba"
       ],
-      "score": 1.31
-    },
-    {
-      "id": "004141a71fd9",
-      "cat": "internet",
-      "kind": "news",
-      "title": "We haven’t seen the last of the major tech outages",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUbU5QT0paMUU0a0hhdFJfTDNBWHVVN2YzaGVLM3pTU3o0ekhPTWVvaHJCbFY3Nkt1aldJRnlubDJNMDdyNVJadDVzcGR0RVROVmxTYW1VWktlRV9qdXpGTGx5NmZzeWM?oc=5",
-      "source": "The Verge",
-      "publishedAt": "2026-11-22T22:48:02.000Z",
-      "latestAt": "2026-11-22T22:48:02.000Z",
-      "firstSeenAt": "2026-11-23T04:52:55.212Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Verge"
-      ],
-      "score": 1.26
+      "score": 1.34
     },
     {
       "id": "0611150a2b20",
