@@ -28,27 +28,29 @@
   "change": 0,
   "stories": [
     {
-      "id": "91c05b38efd8",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Airlines flights delayed nationwide amid ground stop slowing holiday travel",
-      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNYk1iNVlfQndJb0UzWURneHI1bS1VSnpoTDZnNE1QT2Q0MWdOYUg1TFowZ0NCZm9rVlpRSmlOTVN1ZmRkWkhfZDI0ZEpqQXRKclkwR0JPN2V3STdFVzFyb2JWQllxamR4NVFzZEVVYThMWjRQMm5XNHgxM0kzRTNFcW1fclZKLXd0OG5QY3FobW9DSmRrLTdtbkt5dXpQaXEtcVlqM1pPbE1DWmZGUDF4RGQ5RlZiMGNWX1E1czdQMUF1VHZOeTd3X2EyWnMzbVJ3R2pGak1NU2NDNG9ZNUdDQ25qMkMwUVlxUmoyWFd5SW9TcUVGekY3Z3licEpCb2tsQWp2cHZwMVNGb2ZKbUU4SmhjYmVhS3UxVF9pS1lubURCVFVQZHFsVldKdUhzMDRYVzQzYklva0dPLXVfaG9WSjJGY0VfRzA?oc=5",
-      "source": "KBOI",
-      "publishedAt": "2026-11-22T17:22:34.000Z",
-      "latestAt": "2026-11-23T01:21:45.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 8,
+      "id": "sig:quake:us6000ucvm",
+      "cat": "earth",
+      "kind": "signal",
+      "title": "M 6.5 - Vanuatu region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucvm",
+      "source": "USGS",
+      "publishedAt": "2026-11-23T02:40:57.933Z",
+      "latestAt": "2026-11-23T02:40:57.933Z",
+      "firstSeenAt": "2026-11-23T03:07:36.743Z",
+      "outlets": 1,
       "outletNames": [
-        "KBOI",
-        "KFOX",
-        "wtvcfox",
-        "WJLA",
-        "WXLV",
-        "KPIC",
-        "KDBC",
-        "WLOS"
+        "USGS"
       ],
-      "score": 4.76
+      "score": 4.5,
+      "signal": {
+        "type": "quake",
+        "mag": 6.5,
+        "place": "Vanuatu region",
+        "pager": "green",
+        "tsunami": true
+      },
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "sig:quake:pt26327000",
@@ -119,6 +121,29 @@
         "hub": true,
         "nationwide": false,
         "reason": "other"
+      }
+    },
+    {
+      "id": "sig:faa-stop:LGA:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at LGA (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T11:50:13.236Z",
+      "latestAt": "2026-11-22T11:50:13.236Z",
+      "firstSeenAt": "2026-11-22T11:50:13.236Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "LGA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
       }
     },
     {
@@ -267,57 +292,31 @@
       "score": 2.16
     },
     {
-      "id": "174545db5029",
-      "cat": "markets",
-      "kind": "news",
-      "title": "S&P 500 Faces Thanksgiving Week After Sharp Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9xdHpLM2FUakZhTElfZGhrRVp0bVlnRlVIeV9VTzlFN3NRNTVRNENxRW1OdVg5RmdEemlNZXhHNmpvWjFFbU9wOU5YZC1seWd3Z21jLW9keUNWNW9vdzFjaklUX3BRU2Fv?oc=5",
-      "source": "Peradaban.id",
-      "publishedAt": "2026-11-22T21:09:00.000Z",
-      "latestAt": "2026-11-22T21:33:00.000Z",
-      "firstSeenAt": "2026-11-22T21:21:47.117Z",
-      "outlets": 2,
-      "outletNames": [
-        "Peradaban.id",
-        "Limapagi"
-      ],
-      "score": 1.99
-    },
-    {
-      "id": "sig:faa-stop:LGA:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at LGA (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T11:50:13.236Z",
-      "latestAt": "2026-11-22T11:50:13.236Z",
-      "firstSeenAt": "2026-11-22T11:50:13.236Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "LGA",
-        "hub": true,
-        "nationwide": false,
-        "reason": "low visibility"
-      }
-    },
-    {
-      "id": "ee56f4124855",
+      "id": "71b0134da548",
       "cat": "flights",
       "kind": "news",
       "title": "FAA lifts ground stop on Atlanta-bound Delta flights after system outage",
       "url": "https://travel.yahoo.com/news/articles/faa-lifts-ground-stop-atlanta-165324544.html",
       "source": "travel",
       "publishedAt": "2026-11-22T08:53:00.000Z",
-      "latestAt": "2026-11-22T22:55:08.000Z",
+      "latestAt": "2026-11-23T01:25:57.000Z",
       "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 20,
+      "outlets": 32,
       "outletNames": [
+        "WFAA",
+        "KBOI",
+        "KFOX",
+        "wtvcfox",
+        "WJLA",
+        "WXLV",
+        "KPIC",
+        "KDBC",
+        "WLOS",
+        "Newsweek",
+        "aol.com",
+        "Yahoo",
+        "Yahoo Life UK",
+        "FOX 9 Minneapolis-St. Paul",
         "travel",
         "cedarnews.net",
         "Speaks Media",
@@ -335,11 +334,9 @@
         "inquisitr.com",
         "MEAWW News",
         "MLQ.ai",
-        "Chosunbiz",
-        "Hollywood Unlocked",
-        "Avi-Go"
+        "Chosunbiz"
       ],
-      "score": 3.77
+      "score": 4.25
     },
     {
       "id": "sig:faa-stop:HPN:2026-11-22",
@@ -362,6 +359,29 @@
         "hub": false,
         "nationwide": false,
         "reason": "airport volume"
+      }
+    },
+    {
+      "id": "sig:faa-stop:TEB:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at TEB (low ceilings)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T19:21:23.088Z",
+      "latestAt": "2026-11-22T19:21:23.088Z",
+      "firstSeenAt": "2026-11-22T19:21:23.088Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "TEB",
+        "hub": false,
+        "nationwide": false,
+        "reason": "low ceilings"
       }
     },
     {
@@ -402,22 +422,55 @@
       "score": 2.5
     },
     {
-      "id": "8374f325c5e3",
+      "id": "00e2710c8f02",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
-      "source": "Bleeping Computer",
-      "publishedAt": "2026-11-22T05:45:00.000Z",
-      "latestAt": "2026-11-22T19:52:36.000Z",
-      "firstSeenAt": "2026-11-22T19:21:23.088Z",
-      "outlets": 3,
+      "title": "Hackers target major websites: Your iPhone could be compromised without a single click",
+      "url": "https://www.yahoo.com/news/videos/hackers-target-major-websites-iphone-023502285.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T02:35:02.000Z",
+      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "outlets": 2,
       "outletNames": [
-        "Bleeping Computer",
-        "Mezha.net",
-        "ShiftDelete.Net"
+        "FOX 5 DC",
+        "Yahoo"
       ],
-      "score": 2
+      "score": 2.29
+    },
+    {
+      "id": "cd88204ffba6",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Mike McGlone Says Crypto Crash Is A Preview Of The 'Everything Bubble' Bursting, Sees Bitcoin At $10,000 Again",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQYWloQklEOGViYTBBUEpoSVpYVDBiNXZuQkFIbkpmanBtbjU3Y2s1aWJxNWs5Y1Nud1Q4d05Kd1o3TWFXcS0zdy1wS19Id2lYam1YMHZ1THh1YW9TdHFTUVhNTktjdWU4dXlMZEh5TEozTXFweEpFZ0IxVzZEb3Nabjk0b3JZY1hQbXY2ZHdKbWh4TE40VTB0N1dyMWtBZGRqTkVLdHdoVDNLLThmWm1Kd2w1MUVBaEs1RG4tX0ZxY3Z6RWtndTg4WmppZDM?oc=5",
+      "source": "Stocktwits",
+      "publishedAt": "2026-11-23T02:42:00.000Z",
+      "latestAt": "2026-11-23T02:42:00.000Z",
+      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "outlets": 2,
+      "outletNames": [
+        "Stocktwits",
+        "TradingView"
+      ],
+      "score": 1.99
+    },
+    {
+      "id": "174545db5029",
+      "cat": "markets",
+      "kind": "news",
+      "title": "S&P 500 Faces Thanksgiving Week After Sharp Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9xdHpLM2FUakZhTElfZGhrRVp0bVlnRlVIeV9VTzlFN3NRNTVRNENxRW1OdVg5RmdEemlNZXhHNmpvWjFFbU9wOU5YZC1seWd3Z21jLW9keUNWNW9vdzFjaklUX3BRU2Fv?oc=5",
+      "source": "Peradaban.id",
+      "publishedAt": "2026-11-22T21:09:00.000Z",
+      "latestAt": "2026-11-22T21:33:00.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 2,
+      "outletNames": [
+        "Peradaban.id",
+        "Limapagi"
+      ],
+      "score": 1.99
     },
     {
       "id": "c33798f07b64",
@@ -469,6 +522,24 @@
         "MyIndMakers"
       ],
       "score": 1.91
+    },
+    {
+      "id": "7a7b1c09dfef",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Andaman's eight islands to be linked via undersea cable network",
+      "url": "https://www.newsbytesapp.com/news/science/indian-government-to-lay-undersea-optical-fiber-cable-linking-islands/story",
+      "source": "NewsBytes",
+      "publishedAt": "2026-11-22T08:29:00.000Z",
+      "latestAt": "2026-11-22T18:39:00.000Z",
+      "firstSeenAt": "2026-11-23T03:07:36.743Z",
+      "outlets": 3,
+      "outletNames": [
+        "NewsBytes",
+        "Deccan Chronicle",
+        "ET Telecom"
+      ],
+      "score": 1.78
     },
     {
       "id": "26a967944e74",
@@ -571,77 +642,6 @@
         "www.nationpathindia.com"
       ],
       "score": 1.41
-    },
-    {
-      "id": "8eb9fac18f5d",
-      "cat": "internet",
-      "kind": "x",
-      "title": "A technical outage affecting one of Delta Air Lines’ weight-and-balance systems delayed more than 1,600 flights nationwide on Sunday, the airline said.",
-      "url": "https://x.com/Breaking911/status/2124654147974639923",
-      "source": "@Breaking911 on X",
-      "publishedAt": "2026-11-22T23:59:57.000Z",
-      "latestAt": "2026-11-22T23:59:57.000Z",
-      "firstSeenAt": "2026-11-23T00:07:08.713Z",
-      "outlets": 1,
-      "outletNames": [
-        "@Breaking911 on X"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "4ca98b6318b0",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Anthropic's $93.5 Billion IPO Marks Record Debut, Then US Stocks Plunge; Nasdaq Drops 5.28% in a Single Day, Erasing Year-to-Date Gains",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5YOXRQRW53T0VXZG5jNVpIb1RjUkZ6VlhIeWVhMC1IUEFOMXc2ME5ydHZZcWJuRTZCSXlBdTVscGQ0WmJ1dFVNVFlJa2VES1hCNXFBNzdMZFdmaVNoMW1lRGgxc0xsanNFWjNVTXhNVHZjbm5TVXc?oc=5",
-      "source": "finance.biggo.com",
-      "publishedAt": "2026-11-22T06:25:00.000Z",
-      "latestAt": "2026-11-22T06:25:00.000Z",
-      "firstSeenAt": "2026-11-22T06:34:28.347Z",
-      "outlets": 1,
-      "outletNames": [
-        "finance.biggo.com"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "ca68af327c34",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft outage: Could have done more to prevent global disruption, says CEO Nadella",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNN3RWblhVQUNfcXI3RVZKaUxBTWx1b28yajFpbE5rb1g3eHFwNFF1eWpXZ3UzUjBEanFtbXVZNE5PeEhwcmpycXJwX0ZvRUZoSFB2dXNlR1RqMnZLS1FtUURpZmJoWWw0bG5nMTZzb05RZFZIM0RtRzl2WFZvcl8xemMycmhaalhEMXBnZW9FZjZ6QXRfaG11SnBSVlpaYm5lU1J5dXFGSE5hRlJybmNoLURLU0NPRk0tdmhr?oc=5",
-      "source": "Cityairnews",
-      "publishedAt": "2026-11-22T13:18:53.000Z",
-      "latestAt": "2026-11-22T13:18:53.000Z",
-      "firstSeenAt": "2026-11-22T13:35:30.169Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cityairnews"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "sig:faa-stop:TEB:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (low ceilings)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T19:21:23.088Z",
-      "latestAt": "2026-11-22T19:21:23.088Z",
-      "firstSeenAt": "2026-11-22T19:21:23.088Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low ceilings"
-      }
     },
     {
       "id": "sig:faa-stop:HOU:2026-11-22",
@@ -797,25 +797,6 @@
       "score": 2.58
     },
     {
-      "id": "c74b0c93474d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta outage causes temporary ground stop in Atlanta",
-      "url": "https://www.yahoo.com/news/videos/delta-outage-causes-temporary-ground-000123477.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T00:01:23.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 4,
-      "outletNames": [
-        "Yahoo",
-        "Yahoo Life UK",
-        "FOX 9 Minneapolis-St. Paul",
-        "AOL.com"
-      ],
-      "score": 2.48
-    },
-    {
       "id": "97d94439688d",
       "cat": "flights",
       "kind": "news",
@@ -850,6 +831,24 @@
         "travel"
       ],
       "score": 2.21
+    },
+    {
+      "id": "8374f325c5e3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
+      "source": "Bleeping Computer",
+      "publishedAt": "2026-11-22T05:45:00.000Z",
+      "latestAt": "2026-11-22T19:52:36.000Z",
+      "firstSeenAt": "2026-11-22T19:21:23.088Z",
+      "outlets": 3,
+      "outletNames": [
+        "Bleeping Computer",
+        "Mezha.net",
+        "ShiftDelete.Net"
+      ],
+      "score": 2
     },
     {
       "id": "bfe1d029b305",
@@ -1176,23 +1175,6 @@
       "score": 1.58
     },
     {
-      "id": "93d7d5a65c1e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Ground Stop at World’s Busiest Airport Delays Delta Flights Across US",
-      "url": "https://www.newsweek.com/ground-stop-at-worlds-busiest-airport-delays-delta-flights-across-us-12753772",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-22T12:48:00.000Z",
-      "latestAt": "2026-11-22T21:30:00.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 2,
-      "outletNames": [
-        "Newsweek",
-        "aol.com"
-      ],
-      "score": 1.55
-    },
-    {
       "id": "2028f3421bbf",
       "cat": "hacks",
       "kind": "news",
@@ -1208,6 +1190,22 @@
         "Financial Times"
       ],
       "score": 1.44
+    },
+    {
+      "id": "8eb9fac18f5d",
+      "cat": "internet",
+      "kind": "x",
+      "title": "A technical outage affecting one of Delta Air Lines’ weight-and-balance systems delayed more than 1,600 flights nationwide on Sunday, the airline said.",
+      "url": "https://x.com/Breaking911/status/2124654147974639923",
+      "source": "@Breaking911 on X",
+      "publishedAt": "2026-11-22T23:59:57.000Z",
+      "latestAt": "2026-11-22T23:59:57.000Z",
+      "firstSeenAt": "2026-11-23T00:07:08.713Z",
+      "outlets": 1,
+      "outletNames": [
+        "@Breaking911 on X"
+      ],
+      "score": 1.4
     },
     {
       "id": "58fabfb0567f",
@@ -1242,20 +1240,20 @@
       "score": 1.4
     },
     {
-      "id": "00e2710c8f02",
-      "cat": "hacks",
+      "id": "4ca98b6318b0",
+      "cat": "markets",
       "kind": "news",
-      "title": "Hackers target major websites: Your iPhone could be compromised without a single click",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1UNE4tSHdVQzlaRFM5MzdOemdfUnhiVDNEOTBMclZ1ejdFaXRsYXhYeFIwQTZHd21wWU12YjhkcnJtMl9ZLTc4VjFyMElxRzdzVHhPMW9ldHJtZG1jZWfSAWNBVV95cUxPN2JLc3VSZkl0eGpGUlhCRnd6SWVfS1BfODhpYS1pRFlPRmNDbW1hZ1g0aW5GcWd6aU1tc19XNTBybHZfajY5aWtVWEhieXBOX0NyMEx4NG9LVkJzamxxUnZ1OWc?oc=5",
-      "source": "FOX 5 DC",
-      "publishedAt": "2026-11-23T02:35:02.000Z",
-      "latestAt": "2026-11-23T02:35:02.000Z",
-      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "title": "Anthropic's $93.5 Billion IPO Marks Record Debut, Then US Stocks Plunge; Nasdaq Drops 5.28% in a Single Day, Erasing Year-to-Date Gains",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5YOXRQRW53T0VXZG5jNVpIb1RjUkZ6VlhIeWVhMC1IUEFOMXc2ME5ydHZZcWJuRTZCSXlBdTVscGQ0WmJ1dFVNVFlJa2VES1hCNXFBNzdMZFdmaVNoMW1lRGgxc0xsanNFWjNVTXhNVHZjbm5TVXc?oc=5",
+      "source": "finance.biggo.com",
+      "publishedAt": "2026-11-22T06:25:00.000Z",
+      "latestAt": "2026-11-22T06:25:00.000Z",
+      "firstSeenAt": "2026-11-22T06:34:28.347Z",
       "outlets": 1,
       "outletNames": [
-        "FOX 5 DC"
+        "finance.biggo.com"
       ],
-      "score": 1.39
+      "score": 1.4
     },
     {
       "id": "a597312e933a",
@@ -1292,6 +1290,22 @@
       "score": 1.39
     },
     {
+      "id": "ca68af327c34",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft outage: Could have done more to prevent global disruption, says CEO Nadella",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNN3RWblhVQUNfcXI3RVZKaUxBTWx1b28yajFpbE5rb1g3eHFwNFF1eWpXZ3UzUjBEanFtbXVZNE5PeEhwcmpycXJwX0ZvRUZoSFB2dXNlR1RqMnZLS1FtUURpZmJoWWw0bG5nMTZzb05RZFZIM0RtRzl2WFZvcl8xemMycmhaalhEMXBnZW9FZjZ6QXRfaG11SnBSVlpaYm5lU1J5dXFGSE5hRlJybmNoLURLU0NPRk0tdmhr?oc=5",
+      "source": "Cityairnews",
+      "publishedAt": "2026-11-22T13:18:53.000Z",
+      "latestAt": "2026-11-22T13:18:53.000Z",
+      "firstSeenAt": "2026-11-22T13:35:30.169Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cityairnews"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "b73aa53f870a",
       "cat": "flights",
       "kind": "news",
@@ -1306,22 +1320,6 @@
         "NBC Los Angeles"
       ],
       "score": 1.39
-    },
-    {
-      "id": "71b0134da548",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Airlines lifts ground stop after technical issue delays more than 1,600 flights nationwide",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQMlhQU3NSTV9ZeDg0TllqTmZhSGdWYThHcXAyT1JLWUVZR1ctTFNPYk5IU0RxU2txSTl6Ml80WHVVTUZhdG9kYXl3ZXhvekZfVWxjLWs5YzFPRDFJampwQkNFbFdOR25ETk5EbE9mQ2Nhc09HcUVPR2FSdnF2WGZROE9TNXNfWHBuSFc0Vk96SUdxLTdReW9Vay05dUdZMkkyQURwV3g4Z01wQ1BsRnZOTElNVURhdGhNakxnMVdtcWtQaWh1MW45Q2JzZ0lsSUxOS0lzSzJDU0FPRWFJMDZWcWltWEIzRkdXcm1nX1FEMDVHQQ?oc=5",
-      "source": "WFAA",
-      "publishedAt": "2026-11-23T01:25:57.000Z",
-      "latestAt": "2026-11-23T01:25:57.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 1,
-      "outletNames": [
-        "WFAA"
-      ],
-      "score": 1.38
     },
     {
       "id": "5942f55a5ba8",
@@ -1549,6 +1547,22 @@
       "score": 1.2
     },
     {
+      "id": "5834825823de",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Delta Flights Hit With Delays Nationwide Over Systems Failure, FAA Says",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdW5URDgzWFU0OXk0SmZncDIwb0UzdndPOU5IQ2tQYUtUUGNYWXFPNDlkUFREQkw4eFU4ZGxUWXBDVlNzeHU3M3VQUWd6ZlVoWVNDUERpZVROVWIyS3JhaENKWFdRQ1VidEUzZGFsRFpaSXlxN3BXRXJjS2RoU1pTcWp4dFB6RXVSM0VGRzRwVEE0c0MyOUtmNUEwMG9xRFdWTnZZci1B?oc=5",
+      "source": "NTD News",
+      "publishedAt": "2026-11-22T18:14:45.000Z",
+      "latestAt": "2026-11-22T18:14:45.000Z",
+      "firstSeenAt": "2026-11-23T03:07:36.743Z",
+      "outlets": 1,
+      "outletNames": [
+        "NTD News"
+      ],
+      "score": 1.19
+    },
+    {
       "id": "91912766c581",
       "cat": "markets",
       "kind": "news",
@@ -1565,34 +1579,50 @@
       "score": 1.16
     },
     {
-      "id": "cd88204ffba6",
-      "cat": "markets",
+      "id": "6eae4ce1021d",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Mike McGlone Says Crypto Crash Is A Preview Of The 'Everything Bubble' Bursting, Sees Bitcoin At $10,000 Again",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQYWloQklEOGViYTBBUEpoSVpYVDBiNXZuQkFIbkpmanBtbjU3Y2s1aWJxNWs5Y1Nud1Q4d05Kd1o3TWFXcS0zdy1wS19Id2lYam1YMHZ1THh1YW9TdHFTUVhNTktjdWU4dXlMZEh5TEozTXFweEpFZ0IxVzZEb3Nabjk0b3JZY1hQbXY2ZHdKbWh4TE40VTB0N1dyMWtBZGRqTkVLdHdoVDNLLThmWm1Kd2w1MUVBaEs1RG4tX0ZxY3Z6RWtndTg4WmppZDM?oc=5",
-      "source": "Stocktwits",
-      "publishedAt": "2026-11-23T02:42:00.000Z",
-      "latestAt": "2026-11-23T02:42:00.000Z",
-      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "title": "Cleverbridge Confirms Hackers Stole Customer Card Numbers and CVV Codes in a Major Data Breach",
+      "url": "https://cybersecuritynews.com/cleverbridge-data-breach/",
+      "source": "Cyber Security News",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-22T16:00:00.000Z",
+      "firstSeenAt": "2026-11-23T03:07:36.743Z",
       "outlets": 1,
       "outletNames": [
-        "Stocktwits"
+        "Cyber Security News"
       ],
-      "score": 1
+      "score": 1.14
     },
     {
-      "id": "5bab5c44f992",
-      "cat": "germs",
+      "id": "9c81b5f77d2c",
+      "cat": "flights",
       "kind": "news",
-      "title": "Rabbit control and Avian Influenza a focus by ORC",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObDhlTFB1RXlISzdGQ2JKQXJ1WTV3ZmNTYzZFWV80X3paVFVXa2taTXRRMjBHTm8wa252QWt1amdzSnc4LVZuS3RxcERYaENsS0k4SlpGZklWclhPSl9RRVMzc3UzYndULWtSRFJxU3dqc0hvcERaam53eHlpemNXRjlYUGtHUnBGTEhSMlh1VmRFWGo0SXJmOXE0d3BDZC1kOE9hSWpnZy0?oc=5",
-      "source": "Wanaka App",
-      "publishedAt": "2026-11-23T01:19:29.000Z",
-      "latestAt": "2026-11-23T01:19:29.000Z",
-      "firstSeenAt": "2026-11-23T01:37:19.721Z",
+      "title": "FAA Issues Ground Stop After Major Airline Suffers Outage",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR05URzNvNHdzUnJhYjhkbHB3OVNxT1BYN01rQjZZSXF0cDNodVJLZXBEeHp0cTlDMWVlNjlhVEwzYnh4TUp3Z3dCaExZUlRjWjc4TWZmM3dRQkl0dFdCVkxEM2xSYnRfaVN1U3NoQ2JHN3MxMjVvcEpVUmZfZnZnVUQwNHFFT1M3c2ZDSUk5LTNDYWtKamV1VldORDJiYnAxU0hoWGktSEFORU53WlBQOEVUMmY?oc=5",
+      "source": "Townhall",
+      "publishedAt": "2026-11-22T13:00:06.000Z",
+      "latestAt": "2026-11-22T13:00:06.000Z",
+      "firstSeenAt": "2026-11-23T03:07:36.743Z",
       "outlets": 1,
       "outletNames": [
-        "Wanaka App"
+        "Townhall"
+      ],
+      "score": 1.07
+    },
+    {
+      "id": "3cf0fe966ec1",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Japan Confirms Season’s 3rd Bird Flu Case",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1BY2kwZWxmaDV3ZmQ1TFJDeWItbmVJZmpNWE1WaUhFS3d0aVg4UFFxa0RySW5FcHFzZEh2aWdVelo3ZXNIYjZXdGJaVFJIWEZsZTA1VG14RkcyZnN6S3c?oc=5",
+      "source": "jiji press",
+      "publishedAt": "2026-11-23T02:56:55.000Z",
+      "latestAt": "2026-11-23T02:56:55.000Z",
+      "firstSeenAt": "2026-11-23T03:07:36.743Z",
+      "outlets": 1,
+      "outletNames": [
+        "jiji press"
       ],
       "score": 1
     },
@@ -1715,22 +1745,6 @@
       "score": 0.94
     },
     {
-      "id": "a6d8fe34d545",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.6-magnitude quake hits Qinghai in northwest China",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcTJLZzhYMGRTUzlQTlY4VzJUUGFPTFNjOFdQZklqcGlWSnBGR185NWtyUm56NlZUWWFtYXBJYXhRTjZEcGNXejBvRmFEamkySXlwR0lQdTY0LTRQQUZoVDJqODJFdjlDNGpDdDU0RFhjNkIwdTk1OHVfRGUtRVhQanBhbWZqQQ?oc=5",
-      "source": "Myanmar International TV",
-      "publishedAt": "2026-11-22T09:49:00.000Z",
-      "latestAt": "2026-11-22T09:49:00.000Z",
-      "firstSeenAt": "2026-11-22T15:50:52.043Z",
-      "outlets": 1,
-      "outletNames": [
-        "Myanmar International TV"
-      ],
-      "score": 0.9
-    },
-    {
       "id": "ae7af62ad2d5",
       "cat": "space",
       "kind": "news",
@@ -1795,5 +1809,5 @@
       "score": 0.68
     }
   ],
-  "updatedAt": "2026-11-23T02:52:34.117Z"
+  "updatedAt": "2026-11-23T03:07:36.743Z"
 }
