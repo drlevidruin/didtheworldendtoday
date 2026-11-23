@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T06:08:04.006Z",
+  "buildTime": "2026-11-23T06:23:08.609Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 01:08 ET",
+  "etStamp": "2026-11-23 01:23 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,14 +49,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 301,
-  "lastSuccessAt": "2026-11-23T06:08:04.006Z",
+  "headlinesRead": 903,
+  "lastSuccessAt": "2026-11-23T06:23:08.609Z",
   "rollingFallback": false,
   "cats": {
     "earth": 4,
-    "flights": 32,
+    "flights": 33,
     "hacks": 21,
-    "internet": 11,
+    "internet": 10,
     "grid": 6,
     "germs": 4,
     "markets": 7,
@@ -180,81 +180,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 63,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "count": 581,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "bing": {
       "ok": true,
-      "count": 201,
-      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "count": 285,
+      "error": null,
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-23T02:22:29.826Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T05:08:14.245Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T06:08:04.006Z"
+      "lastOkAt": "2026-11-23T06:23:08.609Z"
     }
   },
   "stories": [
@@ -706,6 +705,25 @@
       "score": 2.03
     },
     {
+      "id": "00fefd72061e",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Vanuatu region hit by 6.5-magnitude earthquake",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbW5NSmpyaHBRcUl1MjVYeEZiOEZWcUNLM1ZwbGNlLU01RDRPWlRqcm83MjlJeTROOVdRVGRnNTdYckhVSzhWWHF6NnV5MW4wSGNNTFlKOGFVUXlBTDJleHRJU0lITlFYRHkzLWQ1RkZpS2k1SXNaVnRVQjctODVlc041YzNmNi13UkZ5N3hZeHhjTWVQMXc?oc=5",
+      "source": "Breakingthenews.net",
+      "publishedAt": "2026-11-23T03:52:00.000Z",
+      "latestAt": "2026-11-23T06:01:55.000Z",
+      "firstSeenAt": "2026-11-23T04:07:47.712Z",
+      "outlets": 2,
+      "outletNames": [
+        "Breakingthenews.net",
+        "Anadolu Ajansı"
+      ],
+      "score": 1.99,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "174545db5029",
       "cat": "markets",
       "kind": "news",
@@ -721,25 +739,6 @@
         "Limapagi"
       ],
       "score": 1.99
-    },
-    {
-      "id": "7a7b1c09dfef",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Andaman's eight islands to be linked via undersea cable network",
-      "url": "https://www.newsbytesapp.com/news/science/indian-government-to-lay-undersea-optical-fiber-cable-linking-islands/story",
-      "source": "NewsBytes",
-      "publishedAt": "2026-11-22T06:18:57.000Z",
-      "latestAt": "2026-11-22T18:39:00.000Z",
-      "firstSeenAt": "2026-11-23T03:07:36.743Z",
-      "outlets": 4,
-      "outletNames": [
-        "NewsBytes",
-        "Deccan Chronicle",
-        "ET Telecom",
-        "The Hindu"
-      ],
-      "score": 1.96
     },
     {
       "id": "5bbfa7de489f",
@@ -868,7 +867,7 @@
       "url": "https://www.ghanaweb.com/GhanaHomePage/business/Three-day-planned-blackout-to-hit-parts-of-Ashanti-from-22-to-24-November-2062511",
       "source": "GhanaWeb",
       "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-22T20:12:48.000Z",
+      "latestAt": "2026-11-23T03:39:39.000Z",
       "firstSeenAt": "2026-11-23T04:07:47.712Z",
       "outlets": 2,
       "outletNames": [
@@ -1065,24 +1064,6 @@
         "WREG.com"
       ],
       "score": 2.16
-    },
-    {
-      "id": "a2fa3f9e9cbc",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US Ports Face Rising Wave of Cyberattacks",
-      "url": "https://www.yahoo.com/news/us/articles/us-ports-face-rising-wave-141353021.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T06:13:00.000Z",
-      "latestAt": "2026-11-22T17:01:05.000Z",
-      "firstSeenAt": "2026-11-22T17:21:07.804Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "Gulf News",
-        "MEAWW News"
-      ],
-      "score": 2.11
     },
     {
       "id": "c965b23d3f28",
@@ -1331,7 +1312,7 @@
       "url": "https://www.newstalkzb.co.nz/news/national/travel-scam-widens-campgrounds-and-holiday-parks-hit-by-hackers/",
       "source": "Newstalk ZB",
       "publishedAt": "2026-11-22T17:50:00.000Z",
-      "latestAt": "2026-11-23T04:07:30.000Z",
+      "latestAt": "2026-11-23T05:06:38.000Z",
       "firstSeenAt": "2026-11-23T03:22:39.694Z",
       "outlets": 2,
       "outletNames": [
@@ -1475,6 +1456,40 @@
         "National Geographic"
       ],
       "score": 1.54
+    },
+    {
+      "id": "e6afecabf4ef",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Amazon Exposes Chinese-Nexus Hackers Using AI Agents to Exploit Zero-Day Flaw in Just 11 Minutes",
+      "url": "https://www.ibtimes.sg/amazon-exposes-chinese-nexus-hackers-using-ai-agents-exploit-zero-day-flaw-just-11-minutes-96528",
+      "source": "International Business Times Singapore",
+      "publishedAt": "2026-11-22T16:16:00.000Z",
+      "latestAt": "2026-11-23T06:16:01.000Z",
+      "firstSeenAt": "2026-11-23T06:23:08.609Z",
+      "outlets": 2,
+      "outletNames": [
+        "International Business Times Singapore",
+        "International Business Times, Singapore Edition"
+      ],
+      "score": 1.53
+    },
+    {
+      "id": "d814bff6614b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Microsoft Outage and FAA Ground Stop Are 'Just the Opening Chapter' Top Cyber Expert Says as AI Gives Hackers a 'Negative Seven Days' Head Start",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/microsoft-outage-faa-ground-stop-043005723.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T04:30:00.000Z",
+      "firstSeenAt": "2026-11-23T06:23:08.609Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "Yahoo Tech"
+      ],
+      "score": 1.52
     },
     {
       "id": "b8c657415eaa",
@@ -1849,24 +1864,6 @@
         "Rayo"
       ],
       "score": 1
-    },
-    {
-      "id": "00fefd72061e",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Vanuatu region hit by 6.5-magnitude earthquake",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbW5NSmpyaHBRcUl1MjVYeEZiOEZWcUNLM1ZwbGNlLU01RDRPWlRqcm83MjlJeTROOVdRVGRnNTdYckhVSzhWWHF6NnV5MW4wSGNNTFlKOGFVUXlBTDJleHRJU0lITlFYRHkzLWQ1RkZpS2k1SXNaVnRVQjctODVlc041YzNmNi13UkZ5N3hZeHhjTWVQMXc?oc=5",
-      "source": "Breakingthenews.net",
-      "publishedAt": "2026-11-23T03:52:00.000Z",
-      "latestAt": "2026-11-23T03:52:00.000Z",
-      "firstSeenAt": "2026-11-23T04:07:47.712Z",
-      "outlets": 1,
-      "outletNames": [
-        "Breakingthenews.net"
-      ],
-      "score": 1,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "3cf0fe966ec1",
