@@ -123,30 +123,30 @@
       }
     },
     {
-      "id": "sig:faa-stop:LGA:2026-11-22",
+      "id": "sig:faa-stop:HPN:2026-11-22",
       "cat": "flights",
       "kind": "signal",
-      "title": "FAA ground stop at LGA (low visibility)",
+      "title": "FAA ground stop at HPN (airport volume)",
       "url": "https://nasstatus.faa.gov/",
       "source": "FAA",
-      "publishedAt": "2026-11-22T11:50:13.236Z",
-      "latestAt": "2026-11-22T11:50:13.236Z",
-      "firstSeenAt": "2026-11-22T11:50:13.236Z",
+      "publishedAt": "2026-11-22T21:36:48.376Z",
+      "latestAt": "2026-11-22T21:36:48.376Z",
+      "firstSeenAt": "2026-11-22T21:36:48.376Z",
       "outlets": 1,
       "outletNames": [
         "FAA"
       ],
-      "score": 4.5,
+      "score": 3.5,
       "signal": {
         "type": "faa-ground-stop",
-        "airport": "LGA",
-        "hub": true,
+        "airport": "HPN",
+        "hub": false,
         "nationwide": false,
-        "reason": "low visibility"
+        "reason": "airport volume"
       }
     },
     {
-      "id": "00fefd72061e",
+      "id": "0e0c18f8540b",
       "cat": "earth",
       "kind": "news",
       "title": "Magnitude 6.5 earthquake strikes off coast of Vanuatu",
@@ -298,29 +298,6 @@
       "score": 2.52
     },
     {
-      "id": "sig:faa-stop:HPN:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at HPN (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T21:36:48.376Z",
-      "latestAt": "2026-11-22T21:36:48.376Z",
-      "firstSeenAt": "2026-11-22T21:36:48.376Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "HPN",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
-    },
-    {
       "id": "sig:faa-stop:TEB:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -365,6 +342,26 @@
         "nationwide": false,
         "reason": "low visibility"
       }
+    },
+    {
+      "id": "9c203136b2c3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta resolves system outage delaying flights out of Atlanta",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPZzJ4T21sbmd1R3dEVzZ2UG56a3V6UDh6RW9MNlg1ZzltVmFHMUd6akZSd2dBanRQVVNpOWwtLUV5NVVzQXhZV3gwaTIwX3lYSnIwV1lIWHQ4RTRmeUR1YUxYSUpDM0RCal9IUGhhVEp2WDRMUXhMU21HUEtPSkloOWxxbGZSbXhhTjZfbFpjZVZFUGM2RlNxUnI0dHYwTi1YTXNva2hQNmwtRzhXd1Rmb0E2blVaSy1GSWoyckVXUFB6c05yajRCT2YxTk1FRHk1TGxxc0ZpanVqb1pMWXE0VTA3eUhDQ2dDa1E1eDVTNHdNMTRCZnRZ?oc=5",
+      "source": "kare11.com",
+      "publishedAt": "2026-11-22T16:33:00.000Z",
+      "latestAt": "2026-11-22T22:11:16.000Z",
+      "firstSeenAt": "2026-11-22T21:21:47.117Z",
+      "outlets": 5,
+      "outletNames": [
+        "kare11.com",
+        "WWLTV.com",
+        "WCNC",
+        "9NEWS",
+        "12newsnow.com"
+      ],
+      "score": 3.06
     },
     {
       "id": "ba76c07629c7",
@@ -627,26 +624,6 @@
         "Peradaban.id"
       ],
       "score": 1.59
-    },
-    {
-      "id": "9c203136b2c3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta resolves system outage delaying flights out of Atlanta",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPZzJ4T21sbmd1R3dEVzZ2UG56a3V6UDh6RW9MNlg1ZzltVmFHMUd6akZSd2dBanRQVVNpOWwtLUV5NVVzQXhZV3gwaTIwX3lYSnIwV1lIWHQ4RTRmeUR1YUxYSUpDM0RCal9IUGhhVEp2WDRMUXhMU21HUEtPSkloOWxxbGZSbXhhTjZfbFpjZVZFUGM2RlNxUnI0dHYwTi1YTXNva2hQNmwtRzhXd1Rmb0E2blVaSy1GSWoyckVXUFB6c05yajRCT2YxTk1FRHk1TGxxc0ZpanVqb1pMWXE0VTA3eUhDQ2dDa1E1eDVTNHdNMTRCZnRZ?oc=5",
-      "source": "kare11.com",
-      "publishedAt": "2026-11-22T16:33:00.000Z",
-      "latestAt": "2026-11-22T22:11:16.000Z",
-      "firstSeenAt": "2026-11-22T21:21:47.117Z",
-      "outlets": 5,
-      "outletNames": [
-        "kare11.com",
-        "WWLTV.com",
-        "WCNC",
-        "9NEWS",
-        "12newsnow.com"
-      ],
-      "score": 3.06
     },
     {
       "id": "0bd1b7ccd575",
@@ -1378,22 +1355,6 @@
       "score": 1.36
     },
     {
-      "id": "82218d53aaad",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Timeline of the FAA nationwide ground stop: How it developed",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSGtmU3BzdllUMng4SXBOQzk1TWdnOFRTLUZQNkJManhIb1RQNXFNRWh3b3JNZnlhcVhydlNUa1VCWDc2Z01Lem5vOVZ3eFhKRUt0ZmdjLV9rbTFjRUNjLVJOSTBycmlGbVRZMjRodUhWWVpfaEt1Ny1jUWQybW5kd0U4MVZEYUdZa3dhT0d0NlfSAZYBQVVfeXFMTzhqZl81M2hodnN2dl8xYjFWay01bXNZRnF1aWdTejdKZUxGZ2lWa3pNWldIdlAwMC1YVjhZSUFHaTNHdnozUmZ0YkI0OHZJOFNmRVYtU1BneldYTHZTclZ4d0NZR1ZSdlhMbnJrY3VFd0pGUXNBdEw2T05relZIbFRDbkJ3UGYyNDhwTS1naEt3WDBTR1h3?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-22T11:54:04.000Z",
-      "latestAt": "2026-11-22T11:54:04.000Z",
-      "firstSeenAt": "2026-11-22T13:35:30.169Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos"
-      ],
-      "score": 1.36
-    },
-    {
       "id": "f150b1858f39",
       "cat": "hacks",
       "kind": "news",
@@ -1555,19 +1516,37 @@
       "score": 1.2
     },
     {
-      "id": "1c7686ed50ba",
-      "cat": "germs",
+      "id": "66ce6427012f",
+      "cat": "internet",
       "kind": "news",
-      "title": "Bird flu confirmed at poultry farm near Driffield",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5BaDFNNXNNNW5hN1BrLTg3VnRqS2J6NkxpNE51a1pyRHo5QV9wZ1ktLUZ6bFo3QnN6UW9TalpkZ0dFOHk5bnRnRFI4X3BBbi1RWTVVZ2xIdTFGek9O?oc=5",
-      "source": "BBC",
-      "publishedAt": "2026-11-23T11:37:21.000Z",
-      "latestAt": "2026-11-23T11:37:21.000Z",
-      "firstSeenAt": "2026-11-23T11:39:00.724Z",
+      "title": "Days after global Outlook outage, Microsoft warns more disruptions ahead. Here's why",
+      "url": "https://www.msn.com/en-in/technology/tech-companies/days-after-global-outlook-outage-microsoft-warns-more-disruptions-ahead-here-s-why/ar-AA2i1d0E",
+      "source": "NDTV on MSN",
+      "publishedAt": "2026-11-22T23:58:12.000Z",
+      "latestAt": "2026-11-22T23:58:12.000Z",
+      "firstSeenAt": "2026-11-23T11:54:12.089Z",
       "outlets": 1,
       "outletNames": [
-        "BBC"
+        "NDTV on MSN"
       ],
+      "score": 1.12
+    },
+    {
+      "id": "05d6c4e2032b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "MSTR Stock Jumps In Premarket As Bitcoin Reclaims $61K After Brutal Nasdaq Sell-Off",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/mstr-stock-jumps-premarket-bitcoin-094438906.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-23T11:40:00.000Z",
+      "latestAt": "2026-11-23T11:40:00.000Z",
+      "firstSeenAt": "2026-11-23T11:54:12.089Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yahoo Finance"
+      ],
+      "trending": 100,
+      "trendTerm": "mstr stock",
       "score": 1
     },
     {
@@ -1635,6 +1614,22 @@
       "score": 1
     },
     {
+      "id": "3cf0fe966ec1",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Japan Confirms Season’s 3rd Bird Flu Case",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1BY2kwZWxmaDV3ZmQ1TFJDeWItbmVJZmpNWE1WaUhFS3d0aVg4UFFxa0RySW5FcHFzZEh2aWdVelo3ZXNIYjZXdGJaVFJIWEZsZTA1VG14RkcyZnN6S3c?oc=5",
+      "source": "jiji press",
+      "publishedAt": "2026-11-23T02:56:55.000Z",
+      "latestAt": "2026-11-23T02:56:55.000Z",
+      "firstSeenAt": "2026-11-23T03:07:36.743Z",
+      "outlets": 1,
+      "outletNames": [
+        "jiji press"
+      ],
+      "score": 1
+    },
+    {
       "id": "d0472fe8dd9c",
       "cat": "sun",
       "kind": "news",
@@ -1650,22 +1645,6 @@
       ],
       "trending": 1000,
       "trendTerm": "lpga",
-      "score": 1
-    },
-    {
-      "id": "653fd08229eb",
-      "cat": "sun",
-      "kind": "news",
-      "title": "The May 2024 solar storm split the Van Allen belts into four rings",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQeFVSN1VLWHdRbzU0aUdGdUQzbDBSS0tQNFhVOGpWakNxR2J0dGdBQ1QzdTJPekRwMVpUTF9YNnBXSlJGZE9iZWVzT0NfSVRWdm5ZbldHMzRocVdTVDhUOWoyNHpWTTlFTXYycThPTERUNzVKbEdoaW5yNUE4bWFxZkN3eW5VY0ZFS3ZUenM1X0QzR19icWQtYlhMVE1MdngyRHhYZXBzcGdBVlFLZnlqUkxn?oc=5",
-      "source": "Foro3D",
-      "publishedAt": "2026-11-22T11:50:07.000Z",
-      "latestAt": "2026-11-22T11:50:07.000Z",
-      "firstSeenAt": "2026-11-22T12:05:21.263Z",
-      "outlets": 1,
-      "outletNames": [
-        "Foro3D"
-      ],
       "score": 1
     },
     {
@@ -1783,7 +1762,23 @@
         "Technobezz"
       ],
       "score": 0.86
+    },
+    {
+      "id": "bf99ab5acae6",
+      "cat": "sun",
+      "kind": "news",
+      "title": "NOAA issues G1 alert as aurora may be Visible across northern U.S.",
+      "url": "https://www.mogazmasr.com/158236",
+      "source": "Mogaz Masr",
+      "publishedAt": "2026-11-22T21:03:00.000Z",
+      "latestAt": "2026-11-22T21:03:00.000Z",
+      "firstSeenAt": "2026-11-23T11:54:12.089Z",
+      "outlets": 1,
+      "outletNames": [
+        "Mogaz Masr"
+      ],
+      "score": 0.75
     }
   ],
-  "updatedAt": "2026-11-23T11:39:00.724Z"
+  "updatedAt": "2026-11-23T11:54:12.089Z"
 }
