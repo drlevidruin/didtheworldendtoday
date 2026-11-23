@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T15:54:47.975Z",
+  "buildTime": "2026-11-23T16:09:51.589Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 10:54 ET",
+  "etStamp": "2026-11-23 11:09 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,17 +49,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 667,
-  "lastSuccessAt": "2026-11-23T15:54:47.975Z",
+  "headlinesRead": 1316,
+  "lastSuccessAt": "2026-11-23T16:09:51.589Z",
   "rollingFallback": false,
   "cats": {
-    "earth": 6,
-    "flights": 21,
-    "hacks": 34,
-    "markets": 11,
-    "grid": 4,
-    "internet": 4,
+    "earth": 5,
+    "flights": 22,
+    "hacks": 33,
+    "markets": 10,
+    "internet": 6,
     "germs": 4,
+    "grid": 4,
     "ai": 4,
     "weather": 4,
     "space": 2,
@@ -181,80 +181,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 344,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 13 of 26 queries)",
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "count": 995,
+      "error": null,
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     },
     "bing": {
       "ok": true,
       "count": 287,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-23T09:08:33.193Z"
     },
     "hn": {
       "ok": true,
-      "count": 5,
+      "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T15:54:47.975Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T15:54:47.975Z"
+      "lastOkAt": "2026-11-23T16:09:51.589Z"
     }
   },
   "stories": [
@@ -332,64 +333,6 @@
       }
     },
     {
-      "id": "26ac8de36de0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
-      "url": "https://www.politico.eu/article/european-commission-personal-data-leak-cyberattack-disruption/",
-      "source": "Politico Europe",
-      "publishedAt": "2026-11-23T00:24:00.000Z",
-      "latestAt": "2026-11-23T14:17:33.000Z",
-      "firstSeenAt": "2026-11-23T13:24:19.410Z",
-      "outlets": 15,
-      "outletNames": [
-        "Politico Europe",
-        "www.politico.eu",
-        "Mezha.net",
-        "Associated Press News",
-        "The Joplin Globe",
-        "WKMG",
-        "Corsicana Daily Sun",
-        "Toronto Star",
-        "Laredo Morning Times",
-        "Newsday",
-        "U.S. News & World Report",
-        "Ottumwa Courier",
-        "ABC News - Breaking News, Latest News and Videos",
-        "The Spec",
-        "The Seattle Times"
-      ],
-      "score": 3.84
-    },
-    {
-      "id": "00fefd72061e",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.5 earthquake strikes off coast of Vanuatu",
-      "url": "https://www.wam.ae/en/article/17jfxy4-magnitude-65-earthquake-strikes-off-coast-vanuatu",
-      "source": "Emirates News Agency",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T09:23:02.000Z",
-      "firstSeenAt": "2026-11-23T04:07:47.712Z",
-      "outlets": 11,
-      "outletNames": [
-        "Breakingthenews.net",
-        "Anadolu Ajansı",
-        "UrduPoint",
-        "Emirates News Agency",
-        "Daily Observer",
-        "Aktualita.co",
-        "Fana News -",
-        "uaebarq.ae",
-        "US Muslims",
-        "Qatar news agency",
-        "ynetnews"
-      ],
-      "score": 3.56,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "sig:faa-stop:HPN:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -436,6 +379,59 @@
       }
     },
     {
+      "id": "26ac8de36de0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
+      "url": "https://www.politico.eu/article/european-commission-personal-data-leak-cyberattack-disruption/",
+      "source": "Politico Europe",
+      "publishedAt": "2026-11-22T18:14:00.000Z",
+      "latestAt": "2026-11-23T14:17:33.000Z",
+      "firstSeenAt": "2026-11-23T13:24:19.410Z",
+      "outlets": 16,
+      "outletNames": [
+        "Politico Europe",
+        "www.politico.eu",
+        "Mezha.net",
+        "Associated Press News",
+        "The Joplin Globe",
+        "WKMG",
+        "Corsicana Daily Sun",
+        "Toronto Star",
+        "Laredo Morning Times",
+        "Newsday",
+        "U.S. News & World Report",
+        "Ottumwa Courier",
+        "ABC News - Breaking News, Latest News and Videos",
+        "The Spec",
+        "The Seattle Times",
+        "ABC News"
+      ],
+      "score": 3.4
+    },
+    {
+      "id": "0cd515516612",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Next warns of data breach after cyber attack",
+      "url": "https://finance.yahoo.com/technology/articles/next-warns-data-breach-cyber-133909511.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-23T05:39:00.000Z",
+      "latestAt": "2026-11-23T13:39:09.000Z",
+      "firstSeenAt": "2026-11-23T13:54:26.287Z",
+      "outlets": 7,
+      "outletNames": [
+        "The Herald",
+        "The Telegraph",
+        "Epping Forest Guardian",
+        "Times Series",
+        "Knutsford Guardian",
+        "Yahoo Finance",
+        "AOL.com"
+      ],
+      "score": 3.28
+    },
+    {
       "id": "59993d00bf55",
       "cat": "markets",
       "kind": "news",
@@ -454,62 +450,25 @@
       "score": 3.13
     },
     {
-      "id": "10d485e53c01",
+      "id": "3b49b8baaf14",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers hit FBI again in nationwide police data breach",
-      "url": "https://www.yahoo.com/news/us/articles/hackers-hit-fbi-again-nationwide-001839613.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T00:19:27.000Z",
-      "firstSeenAt": "2026-11-23T00:22:10.616Z",
-      "outlets": 3,
-      "outletNames": [
-        "geekspin",
-        "Yahoo",
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 3.11
-    },
-    {
-      "id": "0cd515516612",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Next warns of data breach after cyber attack",
-      "url": "https://finance.yahoo.com/technology/articles/next-warns-data-breach-cyber-133909511.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-23T05:39:00.000Z",
-      "latestAt": "2026-11-23T13:39:00.000Z",
-      "firstSeenAt": "2026-11-23T13:54:26.287Z",
+      "title": "Bell investigating cyberattack that exposed customer information last week",
+      "url": "https://www.msn.com/en-ca/news/other/bell-investigating-cyberattack-that-exposed-customer-information-last-week/ar-AA2i33Bg",
+      "source": "The Canadian Press on MSN",
+      "publishedAt": "2026-11-23T06:54:25.000Z",
+      "latestAt": "2026-11-23T15:12:46.000Z",
+      "firstSeenAt": "2026-11-23T15:09:42.957Z",
       "outlets": 6,
       "outletNames": [
-        "The Herald",
-        "The Telegraph",
-        "Epping Forest Guardian",
-        "Times Series",
-        "Knutsford Guardian",
-        "Yahoo Finance"
+        "The Canadian Press on MSN",
+        "The Spec",
+        "Castanet",
+        "Toronto Star",
+        "BNN Bloomberg",
+        "CityNews Vancouver"
       ],
       "score": 3.09
-    },
-    {
-      "id": "66e31cab567b",
-      "cat": "grid",
-      "kind": "news",
-      "title": "More than 1,800 people without power in Mattoon",
-      "url": "https://www.yahoo.com/news/weather-news/articles/more-1-800-people-without-000457927.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T00:04:57.000Z",
-      "firstSeenAt": "2026-11-22T23:52:08.258Z",
-      "outlets": 4,
-      "outletNames": [
-        "WAND",
-        "cedarnews.net",
-        "WCIA.com",
-        "Yahoo"
-      ],
-      "score": 2.61
     },
     {
       "id": "0bd864176a5d",
@@ -531,6 +490,24 @@
       "score": 2.58
     },
     {
+      "id": "08138a62e8c4",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Kilauea volcano LIVE: Eruption in Hawaii (Video)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQLUhKN3Q2NE5vVEZ3U2ZzcGY3NXJIcmdGOS1hSDNGZXJaTTRtNDRiNEYzVUNId1d1U2Vmclc4OTk5RzZjTnRzT1RZZWZ6MjBGbzNzSmRRTjRPYXpDbWFYUHZGLWQzRjlJTG9ZU1JaZnpDUkR2ZklHU0tqblV2RWU2b0RWZHE3Nl8wMFE3bGMwSGc?oc=5",
+      "source": "Social News XYZ",
+      "publishedAt": "2026-11-23T12:06:26.000Z",
+      "latestAt": "2026-11-23T12:25:46.000Z",
+      "firstSeenAt": "2026-11-23T12:54:19.459Z",
+      "outlets": 3,
+      "outletNames": [
+        "Social News XYZ",
+        "swiowanewssource.com",
+        "Daily Gate City"
+      ],
+      "score": 2.55
+    },
+    {
       "id": "004141a71fd9",
       "cat": "internet",
       "kind": "news",
@@ -546,6 +523,24 @@
         "CediRates"
       ],
       "score": 2.52
+    },
+    {
+      "id": "ad51fd2de4de",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Morgan Stanley Strategists Spot A ‘Fat Pitch’ In Market Selloff — See Buying Opportunities In Hyperscalers",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-strategists-spot-fat-120812913.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-23T04:09:00.000Z",
+      "latestAt": "2026-11-23T12:30:07.000Z",
+      "firstSeenAt": "2026-11-23T12:24:12.244Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo Finance",
+        "Stocktwits",
+        "Asianet Newsable"
+      ],
+      "score": 2.23
     },
     {
       "id": "91c05b38efd8",
@@ -609,26 +604,6 @@
       "score": 2.9
     },
     {
-      "id": "3b49b8baaf14",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Bell investigating cyberattack that exposed customer information last week",
-      "url": "https://www.msn.com/en-ca/news/other/bell-investigating-cyberattack-that-exposed-customer-information-last-week/ar-AA2i33Bg",
-      "source": "The Canadian Press on MSN",
-      "publishedAt": "2026-11-23T06:54:25.000Z",
-      "latestAt": "2026-11-23T15:03:03.000Z",
-      "firstSeenAt": "2026-11-23T15:09:42.957Z",
-      "outlets": 5,
-      "outletNames": [
-        "The Canadian Press on MSN",
-        "The Spec",
-        "Castanet",
-        "Toronto Star",
-        "BNN Bloomberg"
-      ],
-      "score": 2.86
-    },
-    {
       "id": "1c2147a0cf11",
       "cat": "hacks",
       "kind": "news",
@@ -649,80 +624,40 @@
       "score": 2.82
     },
     {
-      "id": "ba76c07629c7",
+      "id": "30f9e199e0a5",
       "cat": "hacks",
       "kind": "news",
-      "title": "Samsung Securities confirms data breach affecting 8,241 clients",
-      "url": "https://crypto.news/samsung-securities-data-breach-8241-customers/",
-      "source": "Crypto News",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T14:01:26.000Z",
-      "firstSeenAt": "2026-11-23T08:08:30.015Z",
-      "outlets": 7,
-      "outletNames": [
-        "finance.biggo.com",
-        "Korea JoongAng Daily",
-        "Crypto News",
-        "CyberSecurityNews",
-        "cyberpress",
-        "Chosunbiz",
-        "shattered.io"
-      ],
-      "score": 2.78
-    },
-    {
-      "id": "08138a62e8c4",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Kilauea volcano LIVE: Eruption in Hawaii (Video)",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQLUhKN3Q2NE5vVEZ3U2ZzcGY3NXJIcmdGOS1hSDNGZXJaTTRtNDRiNEYzVUNId1d1U2Vmclc4OTk5RzZjTnRzT1RZZWZ6MjBGbzNzSmRRTjRPYXpDbWFYUHZGLWQzRjlJTG9ZU1JaZnpDUkR2ZklHU0tqblV2RWU2b0RWZHE3Nl8wMFE3bGMwSGc?oc=5",
-      "source": "Social News XYZ",
-      "publishedAt": "2026-11-23T12:06:26.000Z",
-      "latestAt": "2026-11-23T12:25:46.000Z",
-      "firstSeenAt": "2026-11-23T12:54:19.459Z",
+      "title": "Binance hackers route $247 million through bitcoin mixers while $2.35 billion sits unlaundered",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOU09RcS1pOWM0YURLelQ0VVhwZHlnZktIRHc0SUZHaFR5cjR4ZlYydHpZaHkyaUh5amRzU1RLV2FrMm1hNHVMS1Aza0t6WEp6MHNORkUwaWtkWW45bzlOZXdvMXRuRC1GSzdnTkdJVXJrUWJyQkZGN1cxVzBoMVBQUjV4QXJyMzNoeW93TmpyUVBsX3pfR19DbXFtRHRJMGh2Z3J2SUZLZ2N2Um9oN2FqbjZFN3AxbW5jUXJyaFI3MUxwTkRxa1dfcnJn?oc=5",
+      "source": "CoinDesk",
+      "publishedAt": "2026-11-23T15:29:01.000Z",
+      "latestAt": "2026-11-23T15:33:19.000Z",
+      "firstSeenAt": "2026-11-23T15:39:45.273Z",
       "outlets": 3,
       "outletNames": [
-        "Social News XYZ",
-        "swiowanewssource.com",
-        "Daily Gate City"
+        "CoinDesk",
+        "Crypto Briefing",
+        "TradingView"
       ],
-      "score": 2.55
+      "score": 2.58
     },
     {
-      "id": "ad51fd2de4de",
-      "cat": "markets",
+      "id": "1009b9191373",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Morgan Stanley Strategists Spot A ‘Fat Pitch’ In Market Selloff — See Buying Opportunities In Hyperscalers",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-strategists-spot-fat-120812913.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-23T04:09:00.000Z",
-      "latestAt": "2026-11-23T12:30:07.000Z",
-      "firstSeenAt": "2026-11-23T12:24:12.244Z",
+      "title": "NEXT investigates cyber incident after supplier data breach",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWmpxNk1RNXl4dmlmQ01HWkF1TnBhVHdPMFRZOTlrMWxZal9jSDc1cGRKbTdRZjdwVnFYMmZfbHhVeEpFeHBBQ1A0SUpQdnBqcUFYNjdSaWNBTllHMUlQQVYtYy0wcGRKVkVKQzBKdDZKNDc4R3NCYUdiTjhPRmZVcnpwY3ZoY2ppaWY0RlUwYnBERG1SMnNV?oc=5",
+      "source": "TheIndustry.fashion",
+      "publishedAt": "2026-11-23T12:05:44.000Z",
+      "latestAt": "2026-11-23T13:08:14.000Z",
+      "firstSeenAt": "2026-11-23T13:09:18.321Z",
       "outlets": 3,
       "outletNames": [
-        "Yahoo Finance",
-        "Stocktwits",
-        "Asianet Newsable"
+        "TheIndustry.fashion",
+        "TheBusinessDesk.com",
+        "TheIndustry.beauty"
       ],
-      "score": 2.23
-    },
-    {
-      "id": "cd88204ffba6",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Mike McGlone Says Crypto Crash Is A Preview Of The 'Everything Bubble' Bursting, Sees Bitcoin At $10,000 Again",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/mike-mcglone-says-crypto-crash-024241278.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T02:42:41.000Z",
-      "firstSeenAt": "2026-11-23T02:52:34.117Z",
-      "outlets": 3,
-      "outletNames": [
-        "Stocktwits",
-        "TradingView",
-        "Yahoo Finance"
-      ],
-      "score": 2.12
+      "score": 2.54
     },
     {
       "id": "d7b3a9b62031",
@@ -772,24 +707,6 @@
       "outletNames": [
         "Peradaban.id",
         "Limapagi"
-      ],
-      "score": 1.99
-    },
-    {
-      "id": "0de25e7cedf8",
-      "cat": "earth",
-      "kind": "news",
-      "title": "World's Deepest Explosive Volcanic Eruption Just Discovered in an Oceanic Trench",
-      "url": "https://www.yahoo.com/news/science/articles/worlds-deepest-explosive-volcanic-eruption-050000581.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T05:04:43.000Z",
-      "firstSeenAt": "2026-11-23T05:53:02.982Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "National Geographic",
-        "AOL"
       ],
       "score": 1.99
     },
@@ -864,6 +781,23 @@
       "score": 1.72
     },
     {
+      "id": "3775a6d0e95a",
+      "cat": "markets",
+      "kind": "news",
+      "title": "LIVE: Sensex, Nifty slide, metal stocks plunge; AI selloff hits Asia, South Korea plunges 5%",
+      "url": "https://www.financialexpress.com/market/sensex-nifty-today-live-updates-ai-selloff-asia-kospi-wall-street-crude-gold-silver-rate-stock-market-november-23-2026-4391541/",
+      "source": "The Financial Express",
+      "publishedAt": "2026-11-22T20:49:00.000Z",
+      "latestAt": "2026-11-23T06:36:47.000Z",
+      "firstSeenAt": "2026-11-23T06:38:15.236Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Financial Express",
+        "IndiaIPO"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "5bab5c44f992",
       "cat": "germs",
       "kind": "news",
@@ -879,6 +813,54 @@
         "The Central App"
       ],
       "score": 1.64
+    },
+    {
+      "id": "8eb9fac18f5d",
+      "cat": "internet",
+      "kind": "x",
+      "title": "A technical outage affecting one of Delta Air Lines’ weight-and-balance systems delayed more than 1,600 flights nationwide on Sunday, the airline said.",
+      "url": "https://x.com/Breaking911/status/2124654147974639923",
+      "source": "@Breaking911 on X",
+      "publishedAt": "2026-11-22T23:59:57.000Z",
+      "latestAt": "2026-11-22T23:59:57.000Z",
+      "firstSeenAt": "2026-11-23T00:07:08.713Z",
+      "outlets": 1,
+      "outletNames": [
+        "@Breaking911 on X"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "5c0c36c83989",
+      "cat": "internet",
+      "kind": "news",
+      "title": "CyberCube activates cyber catastrophe response after global Microsoft outage",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBUb1BoTTlpa2pERzd4WW10eWhsSlRRMVFZc3R3RlZJaUdpNV9hcEJ5NmlIYzgzMzRiRnZjYzNGQlBJR1NhaXlpVlV5TDduNzlTck9mbDNUdDdHcFpldEgtVjQ0WWI2Uk0tTEVzZERpN3g0cThNd1BhMXhHaTNEZw?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-23T14:49:13.000Z",
+      "latestAt": "2026-11-23T14:49:13.000Z",
+      "firstSeenAt": "2026-11-23T15:39:45.273Z",
+      "outlets": 1,
+      "outletNames": [
+        "Beinsure"
+      ],
+      "score": 1.38
+    },
+    {
+      "id": "5942f55a5ba8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Global tech outages expose need for stronger digital risk safeguards",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWjFUaFlIeENWbzJsUUpfR1F1V3pBVFVkcVVJLUN1d05xVEFqS3hGVTF5d0EyeTdZYThkNFo5cUFCbVVncENQZ09YN3BUMFpQMkFYWFBONm0xWUk5LXpfc2d6TnFoTmRwT0FNNkpsWmFoNFMwQkYzZEMtVmMxSUVJOGZOa2czTVRFdFA2RlVqTGxXSVd1TkdDQ0RYZFctdDJfQ1lGOWtlb0dPeUdDQmM0Z09MU0JmeVotTkg1QkdEUlRiZUw2MjhON09YRzdZSk13NWxYWmdGb9IB3AFBVV95cUxNS09ER1FOMncxM2I0UlZPUlJZSVoydWtCTnp2ak9DNG9DWXhrcnBTeV8zVFhCek9FR1FZSUl4ZDBGRFNld2I3YUhqY3VLYVlqVUNOM3d4RUdOX0hYdndGa1VsMEg1V1Q2Yk5FdUg1NEhuM1YzLWYtM29GS1N4c2FkMkt4eWp0b2VLR1NLUGI3OFhCWjRhd3kzWTNkQnFjMDdoRVpvR0duQW1XUklaOV9aRWV6T1Ezd0txbXBNMDBYTHZpa1dpeDZ4TjQ4TEloaFAzd0gxRng5ZUlab2Nq?oc=5",
+      "source": "Business Standard",
+      "publishedAt": "2026-11-22T16:25:22.000Z",
+      "latestAt": "2026-11-22T16:25:22.000Z",
+      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "outlets": 1,
+      "outletNames": [
+        "Business Standard"
+      ],
+      "score": 1.38
     },
     {
       "id": "f257116fae03",
@@ -914,24 +896,6 @@
         "Yahoo"
       ],
       "score": 2.58
-    },
-    {
-      "id": "1009b9191373",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "NEXT investigates cyber incident after supplier data breach",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWmpxNk1RNXl4dmlmQ01HWkF1TnBhVHdPMFRZOTlrMWxZal9jSDc1cGRKbTdRZjdwVnFYMmZfbHhVeEpFeHBBQ1A0SUpQdnBqcUFYNjdSaWNBTllHMUlQQVYtYy0wcGRKVkVKQzBKdDZKNDc4R3NCYUdiTjhPRmZVcnpwY3ZoY2ppaWY0RlUwYnBERG1SMnNV?oc=5",
-      "source": "TheIndustry.fashion",
-      "publishedAt": "2026-11-23T12:05:44.000Z",
-      "latestAt": "2026-11-23T13:08:14.000Z",
-      "firstSeenAt": "2026-11-23T13:09:18.321Z",
-      "outlets": 3,
-      "outletNames": [
-        "TheIndustry.fashion",
-        "TheBusinessDesk.com",
-        "TheIndustry.beauty"
-      ],
-      "score": 2.54
     },
     {
       "id": "1b909f38cf95",
@@ -1055,23 +1019,6 @@
       "score": 2.31
     },
     {
-      "id": "00e2710c8f02",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers target major websites: Your iPhone could be compromised without a single click",
-      "url": "https://www.yahoo.com/news/videos/hackers-target-major-websites-iphone-023502285.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T02:35:02.000Z",
-      "firstSeenAt": "2026-11-23T02:52:34.117Z",
-      "outlets": 2,
-      "outletNames": [
-        "FOX 5 DC",
-        "Yahoo"
-      ],
-      "score": 2.29
-    },
-    {
       "id": "3dfb63467fa7",
       "cat": "flights",
       "kind": "news",
@@ -1143,23 +1090,6 @@
         "GBHackers News"
       ],
       "score": 2.16
-    },
-    {
-      "id": "30f9e199e0a5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Binance hackers route $247 million through bitcoin mixers while $2.35 billion sits unlaundered",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOU09RcS1pOWM0YURLelQ0VVhwZHlnZktIRHc0SUZHaFR5cjR4ZlYydHpZaHkyaUh5amRzU1RLV2FrMm1hNHVMS1Aza0t6WEp6MHNORkUwaWtkWW45bzlOZXdvMXRuRC1GSzdnTkdJVXJrUWJyQkZGN1cxVzBoMVBQUjV4QXJyMzNoeW93TmpyUVBsX3pfR19DbXFtRHRJMGh2Z3J2SUZLZ2N2Um9oN2FqbjZFN3AxbW5jUXJyaFI3MUxwTkRxa1dfcnJn?oc=5",
-      "source": "CoinDesk",
-      "publishedAt": "2026-11-23T15:29:01.000Z",
-      "latestAt": "2026-11-23T15:33:19.000Z",
-      "firstSeenAt": "2026-11-23T15:39:45.273Z",
-      "outlets": 2,
-      "outletNames": [
-        "CoinDesk",
-        "Crypto Briefing"
-      ],
-      "score": 1.99
     },
     {
       "id": "c965b23d3f28",
@@ -1435,57 +1365,6 @@
       "score": 1.68
     },
     {
-      "id": "3775a6d0e95a",
-      "cat": "markets",
-      "kind": "news",
-      "title": "LIVE: Sensex, Nifty slide, metal stocks plunge; AI selloff hits Asia, South Korea plunges 5%",
-      "url": "https://www.financialexpress.com/market/sensex-nifty-today-live-updates-ai-selloff-asia-kospi-wall-street-crude-gold-silver-rate-stock-market-november-23-2026-4391541/",
-      "source": "The Financial Express",
-      "publishedAt": "2026-11-22T20:49:00.000Z",
-      "latestAt": "2026-11-23T06:36:47.000Z",
-      "firstSeenAt": "2026-11-23T06:38:15.236Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Financial Express",
-        "IndiaIPO"
-      ],
-      "score": 1.67
-    },
-    {
-      "id": "0035574e73f2",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta outage impacts hundreds of flights Sunday",
-      "url": "https://www.yahoo.com/news/us/articles/delta-outage-impacts-hundreds-flights-002753556.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T00:42:00.000Z",
-      "firstSeenAt": "2026-11-23T01:52:24.108Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "AOL.com"
-      ],
-      "score": 1.67
-    },
-    {
-      "id": "2b8e26c13d08",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack compromised personal cusomter information, Bell MTS says",
-      "url": "https://www.cbc.ca/news/canada/manitoba/cyberattack-compromised-customer-information-bell-mts-9.7432132",
-      "source": "CBC.ca",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T02:10:00.000Z",
-      "firstSeenAt": "2026-11-23T02:30:12.754Z",
-      "outlets": 2,
-      "outletNames": [
-        "CBC.ca",
-        "Yahoo News Canada"
-      ],
-      "score": 1.65
-    },
-    {
       "id": "fe740af2b933",
       "cat": "hacks",
       "kind": "news",
@@ -1554,40 +1433,6 @@
       "score": 1.62
     },
     {
-      "id": "3baad17db0ca",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Three-day planned blackout to hit parts of Ashanti from 22 to 24 November",
-      "url": "https://www.ghanaweb.com/GhanaHomePage/business/Three-day-planned-blackout-to-hit-parts-of-Ashanti-from-22-to-24-November-2062511",
-      "source": "GhanaWeb",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T03:39:39.000Z",
-      "firstSeenAt": "2026-11-23T04:07:47.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "GhanaWeb",
-        "Asaase Radio"
-      ],
-      "score": 1.6
-    },
-    {
-      "id": "62481cf316b8",
-      "cat": "markets",
-      "kind": "news",
-      "title": "KOSPI Crashes 5% To 10-Month Low As Program Trading Halted",
-      "url": "https://coinpedia.org/crypto-live-news/kospi-crashes-5-to-10-month-low-as-program-trading-halted/",
-      "source": "Coinpedia",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T07:42:32.000Z",
-      "firstSeenAt": "2026-11-23T04:22:49.114Z",
-      "outlets": 2,
-      "outletNames": [
-        "Coinpedia",
-        "Peradaban.id"
-      ],
-      "score": 1.59
-    },
-    {
       "id": "11ae6954dae5",
       "cat": "hacks",
       "kind": "news",
@@ -1601,23 +1446,6 @@
       "outletNames": [
         "cyberpress",
         "CyberSecurityNews"
-      ],
-      "score": 1.58
-    },
-    {
-      "id": "c4d88409ae34",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Bitcoin Crashes to $17,000 This Weekend: Inside the Bizarre Flash Crash Mystery",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-crashes-17-000-weekend-014926652.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T13:10:59.000Z",
-      "firstSeenAt": "2026-11-23T04:37:49.815Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "BeInCrypto"
       ],
       "score": 1.58
     },
@@ -1639,21 +1467,21 @@
       "score": 1.53
     },
     {
-      "id": "d814bff6614b",
-      "cat": "flights",
+      "id": "726adfc56b14",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Microsoft Outage and FAA Ground Stop Are 'Just the Opening Chapter' Top Cyber Expert Says as AI Gives Hackers a 'Negative Seven Days' Head Start",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/microsoft-outage-faa-ground-stop-043005723.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T04:30:00.000Z",
-      "firstSeenAt": "2026-11-23T06:23:08.609Z",
+      "title": "Austrian Foreign Ministry website breached by hackers",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPVUowZVZzeG9CMGw5MWlLTzQxRWlBWGItbEwzeF8xWjBkcmgzRFZCdzUwMUhHQ3U2YWdUWHJTcXZvVW9PUW9HeGFsZ25ObGpLcE5JbUhvTG9Pem9KSVgycDZqRkZHZnZONXd2LS0yRHBRRC1IZ2RVUmNLYWhheWx3MXY5bVR4cnVKOTVR?oc=5",
+      "source": "SC Media",
+      "publishedAt": "2026-11-23T01:34:10.000Z",
+      "latestAt": "2026-11-23T15:55:25.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
       "outlets": 2,
       "outletNames": [
-        "YAHOO!",
-        "Yahoo Tech"
+        "SC Media",
+        "MLQ.ai"
       ],
-      "score": 1.52
+      "score": 1.51
     },
     {
       "id": "96a892a99aa0",
@@ -1669,23 +1497,6 @@
       "outletNames": [
         "Bloomberg.com",
         "marketscreener.com"
-      ],
-      "score": 1.51
-    },
-    {
-      "id": "0d58c5ffd73f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Data breach at NC medical supply company affects more than 44,000 South Carolinians",
-      "url": "https://www.yahoo.com/news/videos/data-breach-nc-medical-supply-024330414.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T02:43:00.000Z",
-      "firstSeenAt": "2026-11-23T06:38:15.236Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WLTX"
       ],
       "score": 1.51
     },
@@ -1724,52 +1535,180 @@
       "score": 1.47
     },
     {
-      "id": "8eb9fac18f5d",
-      "cat": "internet",
-      "kind": "x",
-      "title": "A technical outage affecting one of Delta Air Lines’ weight-and-balance systems delayed more than 1,600 flights nationwide on Sunday, the airline said.",
-      "url": "https://x.com/Breaking911/status/2124654147974639923",
-      "source": "@Breaking911 on X",
-      "publishedAt": "2026-11-22T23:59:57.000Z",
-      "latestAt": "2026-11-22T23:59:57.000Z",
-      "firstSeenAt": "2026-11-23T00:07:08.713Z",
+      "id": "a597312e933a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Airlines Suffers Major IT Failure, Disrupting Travel Plans for Thousands",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02MFFNTjJNNkJFR2tiQk5CUHhDbE1odkVoMkkxdEkzdXFkU1YzSTFRR21jaGxyTzNLeHpubWlHb2dISkF4dlhidlc4VHRaeTBEY3pOLW1kWHg?oc=5",
+      "source": "CubaHeadlines",
+      "publishedAt": "2026-11-22T22:02:32.000Z",
+      "latestAt": "2026-11-22T22:02:32.000Z",
+      "firstSeenAt": "2026-11-22T22:21:49.827Z",
       "outlets": 1,
       "outletNames": [
-        "@Breaking911 on X"
+        "CubaHeadlines"
       ],
-      "score": 1.4
+      "score": 1.39
     },
     {
-      "id": "5c0c36c83989",
-      "cat": "internet",
+      "id": "b26915e5f851",
+      "cat": "hacks",
       "kind": "news",
-      "title": "CyberCube activates cyber catastrophe response after global Microsoft outage",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBUb1BoTTlpa2pERzd4WW10eWhsSlRRMVFZc3R3RlZJaUdpNV9hcEJ5NmlIYzgzMzRiRnZjYzNGQlBJR1NhaXlpVlV5TDduNzlTck9mbDNUdDdHcFpldEgtVjQ0WWI2Uk0tTEVzZERpN3g0cThNd1BhMXhHaTNEZw?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-23T14:49:13.000Z",
-      "latestAt": "2026-11-23T14:49:13.000Z",
-      "firstSeenAt": "2026-11-23T15:39:45.273Z",
+      "title": "Cyberattack Targets Apple Phones, Crypto of Visitors to Major Websites",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQm54bmhMdXlZV3JyV25RYkVXeV8tNDlId09kcVRwU0REdm5JSHJkZm5jRl9aZ00xc09KNXg0Y1NJTEc2SG9YLVN4VTNkVV9ORl9iRjhSUi14SEZUMS1EanNzYmNHbHBCRDQzMW55ZXNyRnNta0VBcW5mZC1QTlM2OVUyNVRBWHNNM1VOTzA3Yk90LUprOUtwUXZkX015QW9WVWNrN0JRNA?oc=5",
+      "source": "Cybercrime Magazine",
+      "publishedAt": "2026-11-23T14:03:51.000Z",
+      "latestAt": "2026-11-23T14:03:51.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
       "outlets": 1,
       "outletNames": [
-        "Beinsure"
+        "Cybercrime Magazine"
       ],
-      "score": 1.38
+      "score": 1.35
     },
     {
-      "id": "5942f55a5ba8",
-      "cat": "internet",
+      "id": "8552822df5bc",
+      "cat": "flights",
       "kind": "news",
-      "title": "Global tech outages expose need for stronger digital risk safeguards",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWjFUaFlIeENWbzJsUUpfR1F1V3pBVFVkcVVJLUN1d05xVEFqS3hGVTF5d0EyeTdZYThkNFo5cUFCbVVncENQZ09YN3BUMFpQMkFYWFBONm0xWUk5LXpfc2d6TnFoTmRwT0FNNkpsWmFoNFMwQkYzZEMtVmMxSUVJOGZOa2czTVRFdFA2RlVqTGxXSVd1TkdDQ0RYZFctdDJfQ1lGOWtlb0dPeUdDQmM0Z09MU0JmeVotTkg1QkdEUlRiZUw2MjhON09YRzdZSk13NWxYWmdGb9IB3AFBVV95cUxNS09ER1FOMncxM2I0UlZPUlJZSVoydWtCTnp2ak9DNG9DWXhrcnBTeV8zVFhCek9FR1FZSUl4ZDBGRFNld2I3YUhqY3VLYVlqVUNOM3d4RUdOX0hYdndGa1VsMEg1V1Q2Yk5FdUg1NEhuM1YzLWYtM29GS1N4c2FkMkt4eWp0b2VLR1NLUGI3OFhCWjRhd3kzWTNkQnFjMDdoRVpvR0duQW1XUklaOV9aRWV6T1Ezd0txbXBNMDBYTHZpa1dpeDZ4TjQ4TEloaFAzd0gxRng5ZUlab2Nq?oc=5",
-      "source": "Business Standard",
-      "publishedAt": "2026-11-22T16:25:22.000Z",
-      "latestAt": "2026-11-22T16:25:22.000Z",
-      "firstSeenAt": "2026-11-22T17:06:04.972Z",
+      "title": "Delta Flights Delayed Nationwide as Technical Outage Hits Atlanta Hub",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSmFyeTlHczBRRTExLXBEdG9tdk5HZjJNSW9FU29yS3RqVVRtRldINUxrSmgxbTA0cU9uV3pSRUVXandvRm9IT21VcUU4NWsyZDZ1a041Q3YxMFhLSzRoVktoOEZpb3UzbUlYZ0RBSmtTbENRLUZZZ0dQYkh3cEVsYndoMEx2UjhDd2F2UnJNbGpHVFpIa3dsNGI4aTczMFg2blRVLXF1T0JuaXBNRWwzLTZB?oc=5",
+      "source": "Rus Tourism News",
+      "publishedAt": "2026-11-22T19:00:08.000Z",
+      "latestAt": "2026-11-22T19:00:08.000Z",
+      "firstSeenAt": "2026-11-22T21:06:43.630Z",
       "outlets": 1,
       "outletNames": [
-        "Business Standard"
+        "Rus Tourism News"
       ],
-      "score": 1.38
+      "score": 1.35
+    },
+    {
+      "id": "2c3063035351",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Power restored in parts of Kenyan capital after major outage",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOUZyRmROLWs3dWdJNTZHQTdidDk5SGw4ZjhxbTMwRGpDZTBVUEpEZVQySzhCSzhNUFVhSVlUWlNYU1cyV2xSWDkxWE8xNWFEeThmMldPdDY5aTM3N2FMWGVvamV4SkVDamlLSmpXeExrRDlkYktOOTZpVkNscE5EM19YQzZQbGdLWDVHR0h3QllZMXp2LXNaak5PMWRSTTNt?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-22T18:34:39.000Z",
+      "latestAt": "2026-11-22T18:34:39.000Z",
+      "firstSeenAt": "2026-11-22T20:51:38.365Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yeni Safak English"
+      ],
+      "score": 1.35
+    },
+    {
+      "id": "3fe7a3a59131",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Shekel depreciation continues amid global market selloff",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNakNyUko1T2pGYml3RU1pLXktUWQ2ZXhCSEJHQ0pMVmVTXzk1Y1JmRUZJck90OTRjVHhGdTMtMEh4RHVkS01NcjVTc2xTX001eXdxSU9CYUpIczlTOUI3cGFudVhGSVduMmE3QUhSdHRuUUdwcWk4amtZTFQwU20ySnROMHVueDlJVXROd1N1cFZ6Zw?oc=5",
+      "source": "Globes - Israel Business News",
+      "publishedAt": "2026-11-23T12:41:04.000Z",
+      "latestAt": "2026-11-23T12:41:04.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
+      "outlets": 1,
+      "outletNames": [
+        "Globes - Israel Business News"
+      ],
+      "score": 1.32
+    },
+    {
+      "id": "2541df40929e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air lines system outage prompts temporary ground stop, nationwide Thanksgiving travel delays",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNMURhRG5PS05ZdHJaMVcyeVlfN0pHbld5OVF5ZnlxRTBnaVZwejZQdllIbm5kQ2JHaU1TYVRrNDBUMWs0Y2poV2w0SlU1WHowVTc5RmlSeU9CSXJNSGNLdklVZjFHSXQyaFlfR3EwVGVjTFdZT0tHSXVYSmU3M3Q0MGx3aGw0LXRQcVFZMXVaTDE5WWctSUE3RVRRdUNseDdKc2h2czd1OENwZXRIcldjWHBUaEZoeVU2MDRIQ1Z1amwwWG9fZUlIRUgyVDJfcE55b0E?oc=5",
+      "source": "KTNN",
+      "publishedAt": "2026-11-23T12:37:35.000Z",
+      "latestAt": "2026-11-23T12:37:35.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
+      "outlets": 1,
+      "outletNames": [
+        "KTNN"
+      ],
+      "score": 1.32
+    },
+    {
+      "id": "ef951833ec7a",
+      "cat": "internet",
+      "kind": "news",
+      "title": "PlayStation Users Report Outages as ‘GTA 6’ Begins Global Launch",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1Sd0RkdjduMk4tVEtmRDhGOUxiYWJyWXRCS0dRUEJNb2VMQXRiWmU1cENXM2JHd0dCUUJMMU9rNF9jNEo5bHplQjUyQkZlQQ?oc=5",
+      "source": "IMDb",
+      "publishedAt": "2026-11-23T12:18:35.000Z",
+      "latestAt": "2026-11-23T12:18:35.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
+      "outlets": 1,
+      "outletNames": [
+        "IMDb"
+      ],
+      "score": 1.31
+    },
+    {
+      "id": "88bab342b3bf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Telcos strengthen cyberattack defences, report no major vulnerabilities",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX2tRMGVNdkFwYXkzcEQ5d2lycTBDYzU3Y2pxbXgxejBQZVVlWGptMFVFLVZ4NE9BTXQwN3UzQ01RZ0ZEYWRlSTItSTJ5c3g3dXk2Q2k5SGJNX0hxbWNfZEN6UTZXUzhhNjF3SEFDd1BrWTNuLTZIdHpENWZlNWZpbGk5R01HanpOU0gyaGYxQW9jMV9WalAzNWNrdUkzdGczcFpaX1pHTTlFUzdabEVhWDhIT2kxdmUwZGN0ODNXb1NCcTNKdzRac0I4OE84Nm5iVzl5dkp1a9IB3AFBVV95cUxQZmFVVlg0QzJ1LTF6U1VwTDF2dzhEOTl4SEFubmgzWEE2Zm0yeldSbk9DbS1HSHh5LWJkLTRnQ1RDYk5HQXRnVGF6Q2E2NXF3ZDQtQmJXeXBKVzh1NFhsQlhORzFjVGt0cGNmcDRpLTEwRHNuNEYwVkZuTm1wbVFWc2ZMUFhFdGVXVWx4a1MyLU9OcHJES01aZ21JcXd4RE5PdW5Ic1ZUQkdFMnJha2N0RkNxNDBaZ05kUzNvcXJvSjNLR0d2OGhNbHJ5U2FPYUxIS3JrTnhGRVMxeENJ?oc=5",
+      "source": "The Economic Times",
+      "publishedAt": "2026-11-23T00:30:00.000Z",
+      "latestAt": "2026-11-23T00:30:00.000Z",
+      "firstSeenAt": "2026-11-23T04:22:49.114Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Economic Times"
+      ],
+      "score": 1.31
+    },
+    {
+      "id": "867eb675987d",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Indonesia’s Semeru volcano erupts, spews massive ash cloud",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSVptMW1rVlhVaDlfUlZyVkdwcWxfRXRsRDQ5SHB6MVptUTVpSVdwSlZheXBsZ2oxT0piWFVGaW1Xc0tEOXVScE5ick1CQ3Q0b3JRWkZISjJBSVh5TUY4a2x3XzhuTEJ5em9ZaGhQTS1ibDhXbldmN2o1V1ZUeUJBTlZEYm5xb0tyelpWRENCV2N0ZW1KLV9uQU11Zw?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-23T11:53:20.000Z",
+      "latestAt": "2026-11-23T11:53:20.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yeni Safak English"
+      ],
+      "score": 1.3
+    },
+    {
+      "id": "9ae72155d867",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Creditors owed £12.7m after cyberattack brought down major logistics group",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQSDlKbm1HMG5ibFJjUXN4Z09lZGlRTDJISjN0RWg3VktidlhCRFJJY3VXOWlYT1RaLVBOLTJMMGhIVEszRGoycjhzT1laREhnU1M4ZVhUQXVPb1FnanRBMlJzdlNHM0tDVXhQMS04aFNLVFltdXdHRXVxSU5KQm5qekdXelBtM3NjMFdQSzBfTk53dWtubmRTSXBlU3BJbGZyUS1uTUE1Njgwb1piV0dfdm5rWUhMUHZXZnk1Zkppa2VkNHgtdW16d3VJUQ?oc=5",
+      "source": "TheBusinessDesk.com",
+      "publishedAt": "2026-11-23T11:36:47.000Z",
+      "latestAt": "2026-11-23T11:36:47.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
+      "outlets": 1,
+      "outletNames": [
+        "TheBusinessDesk.com"
+      ],
+      "score": 1.29
+    },
+    {
+      "id": "22f886f8beaf",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Taiwan Stocks Plunge 2,728 Points in October; Securities Transfer Deposits Shed NT$501.8 Billion in a Single Month, the Largest Drop on Record",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1MM0JqRHg3STUzRU9tenBYNHN4NDNDX2ZGNGYwZDhzRGMzTEpEZHpZSDY3UVl6MW83Z1ZNT1lvS2xIQ0J3UVkwTEJEUFVVLUhNWEEtWkQ4a3RBb1EwSGtfbmhEdU9tT2doRFNGeU9qcFE4cGd2SWc?oc=5",
+      "source": "finance.biggo.com",
+      "publishedAt": "2026-11-23T11:05:00.000Z",
+      "latestAt": "2026-11-23T11:05:00.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
+      "outlets": 1,
+      "outletNames": [
+        "finance.biggo.com"
+      ],
+      "score": 1.28
     },
     {
       "id": "d6dc0c529e70",
@@ -1968,6 +1907,38 @@
         "Fortune"
       ],
       "score": 0.97
+    },
+    {
+      "id": "c69d3531b127",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Gettysburg Power Outage: Transformer Blast Cuts Power, Traffic Lights",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOaVJGNVBmaUJPeDBCODBxMTJrMVhER1ptUFBrVEUtWTZUcnZ0bk1kNzNEb1d5OXpBVFZMdWtnVjFDSjVCX3FUYXo1TGxSU3JoYzZvQUZIUW1jb3RwcUNIMHJTRi1LZnFSOEZEeEYwUHVxcnRlemtDZFJpTVlHWmQxdmtTMWVfV2NVLWJVSTFUWjIwaFZHUE92aWZLc2g4dlAzU0U3b3Zwbw?oc=5",
+      "source": "Hoodline",
+      "publishedAt": "2026-11-23T13:07:30.000Z",
+      "latestAt": "2026-11-23T13:07:30.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
+      "outlets": 1,
+      "outletNames": [
+        "Hoodline"
+      ],
+      "score": 0.95
+    },
+    {
+      "id": "8e044680e9bf",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Kimberley Power Outage – Many Areas – 23/11/2026",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB1LTRUU2RHSXFNU2F6RTFFenlpVTFKSnI4THdoRUFwNEZWVXJIR2g3YjhXYWFqMGxWclFTRVJBZ0NBbm5hR1JEVUJldThtS2ZvRXZQdjdsZDdadnBPTHJ4bFBSOEQ0WFZqZmoxTktybEExYUphSmRldERFUmFtUWs?oc=5",
+      "source": "Kimberley City Info -",
+      "publishedAt": "2026-11-23T12:45:30.000Z",
+      "latestAt": "2026-11-23T12:45:30.000Z",
+      "firstSeenAt": "2026-11-23T16:09:51.589Z",
+      "outlets": 1,
+      "outletNames": [
+        "Kimberley City Info -"
+      ],
+      "score": 0.94
     },
     {
       "id": "f16ad6cc9507",
