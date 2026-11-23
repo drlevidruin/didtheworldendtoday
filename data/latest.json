@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T20:25:35.313Z",
+  "buildTime": "2026-11-23T20:40:41.500Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 15:25 ET",
+  "etStamp": "2026-11-23 15:40 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -50,16 +50,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1323,
-  "lastSuccessAt": "2026-11-23T20:25:35.313Z",
+  "headlinesRead": 1253,
+  "lastSuccessAt": "2026-11-23T20:40:41.500Z",
   "rollingFallback": false,
   "cats": {
     "flights": 21,
-    "earth": 5,
-    "hacks": 32,
+    "earth": 6,
+    "hacks": 31,
     "markets": 9,
-    "internet": 6,
     "germs": 6,
+    "internet": 6,
     "ai": 4,
     "animals": 4,
     "weather": 4,
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1000,
-      "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "count": 931,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 24 of 26 queries)",
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     },
     "bing": {
       "ok": true,
-      "count": 289,
+      "count": 288,
       "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-23T19:55:36.706Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T20:25:35.313Z"
+      "lastOkAt": "2026-11-23T20:40:41.500Z"
     }
   },
   "stories": [
@@ -374,6 +374,31 @@
       "score": 4.13
     },
     {
+      "id": "00fefd72061e",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Vanuatu region hit by 6.5-magnitude earthquake",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbW5NSmpyaHBRcUl1MjVYeEZiOEZWcUNLM1ZwbGNlLU01RDRPWlRqcm83MjlJeTROOVdRVGRnNTdYckhVSzhWWHF6NnV5MW4wSGNNTFlKOGFVUXlBTDJleHRJU0lITlFYRHkzLWQ1RkZpS2k1SXNaVnRVQjctODVlc041YzNmNi13UkZ5N3hZeHhjTWVQMXc?oc=5",
+      "source": "Breakingthenews.net",
+      "publishedAt": "2026-11-23T03:28:31.000Z",
+      "latestAt": "2026-11-23T09:23:02.000Z",
+      "firstSeenAt": "2026-11-23T04:07:47.712Z",
+      "outlets": 8,
+      "outletNames": [
+        "Breakingthenews.net",
+        "Anadolu Ajansı",
+        "Qatar news agency",
+        "UrduPoint",
+        "Aktualita.co",
+        "uaebarq.ae",
+        "US Muslims",
+        "Facebook"
+      ],
+      "score": 3.96,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "2541df40929e",
       "cat": "flights",
       "kind": "news",
@@ -391,30 +416,6 @@
         "KVEC News Talk 920 AM 96.5 FM"
       ],
       "score": 3.94
-    },
-    {
-      "id": "00fefd72061e",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Vanuatu region hit by 6.5-magnitude earthquake",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbW5NSmpyaHBRcUl1MjVYeEZiOEZWcUNLM1ZwbGNlLU01RDRPWlRqcm83MjlJeTROOVdRVGRnNTdYckhVSzhWWHF6NnV5MW4wSGNNTFlKOGFVUXlBTDJleHRJU0lITlFYRHkzLWQ1RkZpS2k1SXNaVnRVQjctODVlc041YzNmNi13UkZ5N3hZeHhjTWVQMXc?oc=5",
-      "source": "Breakingthenews.net",
-      "publishedAt": "2026-11-23T03:52:00.000Z",
-      "latestAt": "2026-11-23T09:23:02.000Z",
-      "firstSeenAt": "2026-11-23T04:07:47.712Z",
-      "outlets": 7,
-      "outletNames": [
-        "Breakingthenews.net",
-        "Anadolu Ajansı",
-        "Qatar news agency",
-        "UrduPoint",
-        "Aktualita.co",
-        "uaebarq.ae",
-        "US Muslims"
-      ],
-      "score": 3.79,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "3b49b8baaf14",
@@ -543,21 +544,23 @@
       "score": 2.58
     },
     {
-      "id": "004141a71fd9",
-      "cat": "internet",
+      "id": "fca35b4472e6",
+      "cat": "germs",
       "kind": "news",
-      "title": "We haven’t seen the last of the major tech outages",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUbU5QT0paMUU0a0hhdFJfTDNBWHVVN2YzaGVLM3pTU3o0ekhPTWVvaHJCbFY3Nkt1aldJRnlubDJNMDdyNVJadDVzcGR0RVROVmxTYW1VWktlRV9qdXpGTGx5NmZzeWM?oc=5",
-      "source": "The Verge",
-      "publishedAt": "2026-11-22T22:48:02.000Z",
-      "latestAt": "2026-11-23T08:42:45.000Z",
-      "firstSeenAt": "2026-11-23T04:52:55.212Z",
-      "outlets": 2,
+      "title": "Green Giant Canned Corn Is Being Recalled for Potential Hard Plastic Contamination",
+      "url": "https://www.yahoo.com/news/world/articles/green-giant-canned-corn-being-173000977.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T09:30:00.000Z",
+      "latestAt": "2026-11-23T17:30:00.000Z",
+      "firstSeenAt": "2026-11-23T18:25:13.605Z",
+      "outlets": 4,
       "outletNames": [
-        "The Verge",
-        "CediRates"
+        "Yahoo",
+        "Allrecipes",
+        "AOL.com",
+        "Yahoo News Singapore"
       ],
-      "score": 2.52
+      "score": 2.55
     },
     {
       "id": "sig:faa-stop:HPN:2026-11-22",
@@ -703,22 +706,21 @@
       "score": 2.59
     },
     {
-      "id": "fca35b4472e6",
-      "cat": "germs",
+      "id": "004141a71fd9",
+      "cat": "internet",
       "kind": "news",
-      "title": "Green Giant Canned Corn Is Being Recalled for Potential Hard Plastic Contamination",
-      "url": "https://www.yahoo.com/news/world/articles/green-giant-canned-corn-being-173000977.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T09:30:00.000Z",
-      "latestAt": "2026-11-23T17:30:00.000Z",
-      "firstSeenAt": "2026-11-23T18:25:13.605Z",
-      "outlets": 3,
+      "title": "We haven’t seen the last of the major tech outages",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUbU5QT0paMUU0a0hhdFJfTDNBWHVVN2YzaGVLM3pTU3o0ekhPTWVvaHJCbFY3Nkt1aldJRnlubDJNMDdyNVJadDVzcGR0RVROVmxTYW1VWktlRV9qdXpGTGx5NmZzeWM?oc=5",
+      "source": "The Verge",
+      "publishedAt": "2026-11-22T22:48:02.000Z",
+      "latestAt": "2026-11-23T08:42:45.000Z",
+      "firstSeenAt": "2026-11-23T04:52:55.212Z",
+      "outlets": 2,
       "outletNames": [
-        "Yahoo",
-        "Allrecipes",
-        "AOL.com"
+        "The Verge",
+        "CediRates"
       ],
-      "score": 2.2
+      "score": 2.52
     },
     {
       "id": "497d4e148f54",
@@ -808,6 +810,24 @@
       "score": 1.99
     },
     {
+      "id": "d9234b2f0672",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Hawaii's Kīlauea volcano erupts for 57th time, sending spectacular fountains of lava into the sky",
+      "url": "https://www.yahoo.com/news/weather-news/articles/hawaiis-k-lauea-volcano-erupts-145111114.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T06:51:00.000Z",
+      "latestAt": "2026-11-23T14:51:11.000Z",
+      "firstSeenAt": "2026-11-23T20:40:41.500Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "Yahoo News Canada",
+        "AOL.com"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "174545db5029",
       "cat": "markets",
       "kind": "news",
@@ -876,43 +896,6 @@
         "news.lavx.hu"
       ],
       "score": 1.92
-    },
-    {
-      "id": "a63b967f255d",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed at commercial poultry farm",
-      "url": "https://www.bbc.co.uk/news/articles/cry86dg976vgo",
-      "source": "BBC",
-      "publishedAt": "2026-11-23T03:37:00.000Z",
-      "latestAt": "2026-11-23T11:37:26.000Z",
-      "firstSeenAt": "2026-11-23T12:09:08.356Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "Yahoo"
-      ],
-      "score": 1.72
-    },
-    {
-      "id": "1c2147a0cf11",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "KEPCO Data Breach Exposes Personal Information of 1.52 Million",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4xQkZiZl9aNXRrMTRwLTBBcXJielRaSzAya1NXVFdvc2w5QWZVYm5Fck4xT3Q4d0Q0MHZtclQ5Yk5EMUhwODRwYWQ3NHN2ZklId3NJUGJTTlBKbGdaa1hJNUM2d3RSR2RSYkZRano0eVhOdWlV?oc=5",
-      "source": "Businesskorea",
-      "publishedAt": "2026-11-22T20:30:05.000Z",
-      "latestAt": "2026-11-23T11:10:02.000Z",
-      "firstSeenAt": "2026-11-23T05:38:05.850Z",
-      "outlets": 5,
-      "outletNames": [
-        "Businesskorea",
-        "mkbn.mk.co.kr",
-        "Seoul Economic Daily",
-        "UrduPoint",
-        "Korea JoongAng Daily"
-      ],
-      "score": 2.82
     },
     {
       "id": "ed8122b35384",
@@ -1165,6 +1148,24 @@
       "score": 2.16
     },
     {
+      "id": "c87e0fba0864",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Staffing issue prompts ground stop at O’Hare Airport",
+      "url": "https://www.msn.com/en-us/news/other/staffing-issue-prompts-ground-stop-at-o-hare-airport/ar-AA2i3LAY",
+      "source": "WGN-TV on MSN",
+      "publishedAt": "2026-11-23T06:20:00.000Z",
+      "latestAt": "2026-11-23T17:45:21.000Z",
+      "firstSeenAt": "2026-11-23T18:10:22.978Z",
+      "outlets": 3,
+      "outletNames": [
+        "WGN-TV on MSN",
+        "AOL.com",
+        "The Gateway Pundit"
+      ],
+      "score": 2.07
+    },
+    {
       "id": "c965b23d3f28",
       "cat": "hacks",
       "kind": "news",
@@ -1302,19 +1303,19 @@
       "score": 1.73
     },
     {
-      "id": "c87e0fba0864",
-      "cat": "flights",
+      "id": "a63b967f255d",
+      "cat": "germs",
       "kind": "news",
-      "title": "Staffing issue prompts ground stop at O’Hare Airport",
-      "url": "https://www.msn.com/en-us/news/other/staffing-issue-prompts-ground-stop-at-o-hare-airport/ar-AA2i3LAY",
-      "source": "WGN-TV on MSN",
-      "publishedAt": "2026-11-23T09:45:21.000Z",
-      "latestAt": "2026-11-23T17:45:21.000Z",
-      "firstSeenAt": "2026-11-23T18:10:22.978Z",
+      "title": "Bird flu confirmed at commercial poultry farm",
+      "url": "https://www.bbc.co.uk/news/articles/cry86dg976vgo",
+      "source": "BBC",
+      "publishedAt": "2026-11-23T03:37:00.000Z",
+      "latestAt": "2026-11-23T11:37:26.000Z",
+      "firstSeenAt": "2026-11-23T12:09:08.356Z",
       "outlets": 2,
       "outletNames": [
-        "WGN-TV on MSN",
-        "AOL.com"
+        "BBC",
+        "Yahoo"
       ],
       "score": 1.72
     },
