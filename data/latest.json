@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T11:10:53.373Z",
+  "buildTime": "2026-11-23T11:24:03.036Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 06:10 ET",
+  "etStamp": "2026-11-23 06:24 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,19 +48,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 687,
-  "lastSuccessAt": "2026-11-23T11:10:53.373Z",
+  "headlinesRead": 1260,
+  "lastSuccessAt": "2026-11-23T11:24:03.036Z",
   "rollingFallback": false,
   "cats": {
     "earth": 5,
-    "flights": 28,
+    "flights": 29,
     "markets": 8,
-    "hacks": 26,
+    "hacks": 24,
     "internet": 12,
     "grid": 4,
     "germs": 4,
     "ai": 3,
     "weather": 4,
+    "animals": 1,
     "sun": 4,
     "space": 2
   },
@@ -184,57 +185,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 364,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 11 of 26 queries)",
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "count": 938,
+      "error": null,
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     },
     "bing": {
       "ok": true,
-      "count": 286,
+      "count": 285,
       "error": null,
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-23T09:08:33.193Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     },
     "x": {
       "ok": true,
@@ -247,13 +248,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T11:10:53.373Z"
+      "lastOkAt": "2026-11-23T11:24:03.036Z"
     }
   },
   "stories": [
@@ -377,7 +378,7 @@
       }
     },
     {
-      "id": "0e0c18f8540b",
+      "id": "00fefd72061e",
       "cat": "earth",
       "kind": "news",
       "title": "Magnitude 6.5 earthquake strikes off coast of Vanuatu",
@@ -848,7 +849,7 @@
       "url": "https://coinpedia.org/crypto-live-news/kospi-crashes-5-to-10-month-low-as-program-trading-halted/",
       "source": "Coinpedia",
       "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T04:04:58.000Z",
+      "latestAt": "2026-11-23T07:42:32.000Z",
       "firstSeenAt": "2026-11-23T04:22:49.114Z",
       "outlets": 2,
       "outletNames": [
@@ -949,6 +950,23 @@
         "https://streamlinefeed.co.ke/"
       ],
       "score": 2.49
+    },
+    {
+      "id": "e72e43845205",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Belgium Airports Shut Down After Nationwide Strike Grounds Flights, Leaving Thousands Stranded",
+      "url": "https://www.ibtimes.co.uk/belgium-airport-strike-flight-cancellations-skeyes-1834044",
+      "source": "IBTimes UK",
+      "publishedAt": "2026-11-23T02:57:00.000Z",
+      "latestAt": "2026-11-23T02:57:00.000Z",
+      "firstSeenAt": "2026-11-23T11:08:57.816Z",
+      "outlets": 2,
+      "outletNames": [
+        "IBTimes UK",
+        "International Business Times UK"
+      ],
+      "score": 2.42
     },
     {
       "id": "0035574e73f2",
@@ -1106,21 +1124,21 @@
       "score": 1.73
     },
     {
-      "id": "c870b6e81aad",
+      "id": "61c68303f936",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers took 62mn pages of Bulgarian government documents in five-year breach",
-      "url": "https://www.yahoo.com/news/world/articles/hackers-took-62mn-pages-bulgarian-192113849.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T11:22:00.000Z",
-      "latestAt": "2026-11-22T19:21:13.000Z",
-      "firstSeenAt": "2026-11-22T19:21:23.088Z",
+      "title": "Hackers Use AI to Discover Zero-Day in 11 Minutes, Then Take Full Control of Server",
+      "url": "https://cybersecuritynews.com/hackers-use-ai/",
+      "source": "Cyber Security News",
+      "publishedAt": "2026-11-23T03:08:00.000Z",
+      "latestAt": "2026-11-23T07:13:51.000Z",
+      "firstSeenAt": "2026-11-23T11:24:03.036Z",
       "outlets": 2,
       "outletNames": [
-        "IntelliNews",
-        "Yahoo"
+        "Cyber Security News",
+        "Cyber Press"
       ],
-      "score": 1.73
+      "score": 1.72
     },
     {
       "id": "73a4aa5fd63f",
@@ -1189,6 +1207,23 @@
         "Yahoo News Canada"
       ],
       "score": 1.65
+    },
+    {
+      "id": "ef7c6d8fe05a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Thanksgiving travel: Most Delta flights from Rochester back on schedule after system issue",
+      "url": "https://www.whec.com/top-news/thanksgiving-travel-most-delta-flights-from-rochester-back-on-schedule-after-system-issue/",
+      "source": "News10NBC",
+      "publishedAt": "2026-11-23T00:01:42.000Z",
+      "latestAt": "2026-11-23T03:10:00.000Z",
+      "firstSeenAt": "2026-11-23T11:24:03.036Z",
+      "outlets": 2,
+      "outletNames": [
+        "WHEC.com",
+        "News10NBC"
+      ],
+      "score": 1.62
     },
     {
       "id": "c1812514f929",
@@ -1325,6 +1360,22 @@
         "International Business Times, Singapore Edition"
       ],
       "score": 1.5
+    },
+    {
+      "id": "2541df40929e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air lines system outage prompts temporary ground stop, nationwide Thanksgiving travel delays",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPOUx2aHBxUVl3Tmo1bGdOUkhwTGxlWXdhUUN5Ykk4bVdUdThnMTJ4MGdlXzA4NU96c18xOVdCakItN2RVMXh1NXNFeTFORFVoTDA4VThscEU0ZTFiWHJFc1dFbDd2cGtjWWlER1g5NHVmUk96S3RNYVhESnNOdXcySl85QTJrZjU4T1Jiclc3YzVnMHU3TWNldk5FSWNLaUdlUnFvZkdVX1FGVWJwdk5qTlF6VGJ1djVoWUtFcUd0ZzJBdW1HTWJhMS1CenVTZW8?oc=5",
+      "source": "Dailyfly News",
+      "publishedAt": "2026-11-23T11:20:38.000Z",
+      "latestAt": "2026-11-23T11:20:38.000Z",
+      "firstSeenAt": "2026-11-23T11:24:03.036Z",
+      "outlets": 1,
+      "outletNames": [
+        "Dailyfly News"
+      ],
+      "score": 1.4
     },
     {
       "id": "ea5e00267b9a",
@@ -1650,22 +1701,6 @@
       "score": 1.21
     },
     {
-      "id": "e72e43845205",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Belgium Airports Shut Down After Nationwide Strike Grounds Flights, Leaving Thousands Stranded",
-      "url": "https://www.ibtimes.co.uk/belgium-airport-strike-flight-cancellations-skeyes-1834044",
-      "source": "IBTimes UK",
-      "publishedAt": "2026-11-23T02:57:00.000Z",
-      "latestAt": "2026-11-23T02:57:00.000Z",
-      "firstSeenAt": "2026-11-23T11:08:57.816Z",
-      "outlets": 1,
-      "outletNames": [
-        "IBTimes UK"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "7d6eb3e9491b",
       "cat": "internet",
       "kind": "news",
@@ -1680,6 +1715,22 @@
         "Hindustan Times on MSN"
       ],
       "score": 1.21
+    },
+    {
+      "id": "4cf1a42edc29",
+      "cat": "internet",
+      "kind": "news",
+      "title": "TEMA, CSAI push for new cyber policy, sovereign solutions database amid global outages, AI risks",
+      "url": "https://telecom.economictimes.indiatimes.com/news/industry/tema-csai-push-for-new-cyber-policy-sovereign-solutions-database-amid-global-outages-ai-risks/136099446",
+      "source": "ET Telecom",
+      "publishedAt": "2026-11-23T03:01:00.000Z",
+      "latestAt": "2026-11-23T03:01:00.000Z",
+      "firstSeenAt": "2026-11-23T11:24:03.036Z",
+      "outlets": 1,
+      "outletNames": [
+        "ET Telecom"
+      ],
+      "score": 1.2
     },
     {
       "id": "0a8eb1316c09",
@@ -1730,82 +1781,18 @@
       "score": 1.19
     },
     {
-      "id": "286191d45638",
-      "cat": "hacks",
+      "id": "a22a8ff5071f",
+      "cat": "animals",
       "kind": "news",
-      "title": "Hackers Spy on Bulgarian Government for Five Years, Stealing Millions of Sensitive Documents",
-      "url": "https://cyberpress.org/hackers-spied-on-bulgaria/",
-      "source": "cyberpress",
-      "publishedAt": "2026-11-22T22:08:00.000Z",
-      "latestAt": "2026-11-22T22:08:00.000Z",
-      "firstSeenAt": "2026-11-23T09:23:36.744Z",
+      "title": "Police go ‘whole hog’ in surprise incident on patrol as pigs spotted on the loose",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPenJwMzFzbFhfWXZvNFhfbEtmaFlUdFdTWVZkV2pQTDZGeGVjNTN3U0JqN2U2TDFVVzRFcEhGekhhR00tVGpzNnU2NXcyaGFMMEdGMWxFQVA4cDdLMWpqRzE3ZUQtdkpYb2FITUs4b0tXUmc0SzhaMEc2THZNd2pMUW5KRzhIRVFPSXhQeXVTVFFHT0RhSnVwVVBEN2Z0UFZreGZrNFRHejZMM2hnWkRQRHV4WFlWdFJBQXdHZDZ5M0JHZm9vdHc?oc=5",
+      "source": "Portsmouth News",
+      "publishedAt": "2026-11-23T11:12:00.000Z",
+      "latestAt": "2026-11-23T11:12:00.000Z",
+      "firstSeenAt": "2026-11-23T11:24:03.036Z",
       "outlets": 1,
       "outletNames": [
-        "cyberpress"
-      ],
-      "score": 1.14
-    },
-    {
-      "id": "2573a87645e1",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft outage affects global travel communications",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNdjZrUXA4a0FLUFFKN05MendLdXIwTVpnYWl2UnVHSE1Ocy01UnlBV3hQbjJWVFdfNUlWT243bmlfUU5IVGNjOGM3dFVxelJqVEVTR0k3TGlBWG5UdzdpeS1xeGtlOW85bm1XWlRCYmhFZmdaMXFGWUdMN2ZmNEEtdHVNeHN2RWFNVVNuMEdBc0NaekxKbkI3M1ZNY2QtT1l0cFVLM2ptNHN3cGVDQ1E?oc=5",
-      "source": "The Portugal News",
-      "publishedAt": "2026-11-22T18:58:03.000Z",
-      "latestAt": "2026-11-22T18:58:03.000Z",
-      "firstSeenAt": "2026-11-23T09:23:36.744Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Portugal News"
-      ],
-      "score": 1.06
-    },
-    {
-      "id": "c020386ed880",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission hit by major cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQamcyMXNSb1p3V3RRdTYtb3FXcDJXWGpnSmYzdDEyQWs0c3RuWklqSzhCaExpakFrSUk1MVExM0NvSkZNNXlOTy13UE5ud2RrRWRRN2ZOVDNXNXVMeGJxbnpvTTNHcUdCTEo1WjFKU3VDbFpJRWtRMEU0bnpnZkF2R2FYSUFzbHBmTC0wa3RxN0k1czdHSGszWjdhelJ5RGJhbHc?oc=5",
-      "source": "The Portugal News",
-      "publishedAt": "2026-11-22T19:02:03.000Z",
-      "latestAt": "2026-11-22T19:02:03.000Z",
-      "firstSeenAt": "2026-11-23T10:23:50.442Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Portugal News"
-      ],
-      "score": 1.04
-    },
-    {
-      "id": "ebe27cfc8a8f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "At least 3,500 Delta flights delayed at major US airports as airline hit with outage sparking Thanksgiving travel chaos",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQT0pkMkxTVVowTGtvTTF1VVJmdUl0eE1tODRUbmctamZ5SmxwTEFQX2VKMUpTeTZDekNJRUdIWFBHOGlybUVSS254M3NYdWZnRzZhTjE5TWFjaG1ncmRNOUl3eWduZFBUX1JndThxYjZnUzVHczBrQ1FnYzJyVnJkeWpzcmNlREdIVUt0STgta0Y0eldVaDNKandRaVl3Zw?oc=5",
-      "source": "The Sun",
-      "publishedAt": "2026-11-22T18:37:36.000Z",
-      "latestAt": "2026-11-22T18:37:36.000Z",
-      "firstSeenAt": "2026-11-23T10:08:46.048Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Sun"
-      ],
-      "score": 1.04
-    },
-    {
-      "id": "ae9139e4e5a8",
-      "cat": "germs",
-      "kind": "news",
-      "title": "China reports human case of H5N1 bird flu in traveler from Vietnam",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNaHNYU0JHc3NiY3JwOFAxNTJMQVMtRk93NndTazBnOGhQV241SUh4ZWZqaVdwdTRURzNTVFFHVnVYVl9yRXZMd0tEbkc0dm5pUGE0ZGdmcWNmdjJpclE4ZE1ZSV9aS3NtSzJpNnJQLWxmQVMwZEZ2clR2WmtIMGVoWHQzTEF4Tkd5QVRXZm42bEM0R1cwOXlNZmh5SlBxOEVQTDRuNnBjWlM?oc=5",
-      "source": "BNO News",
-      "publishedAt": "2026-11-23T10:44:05.000Z",
-      "latestAt": "2026-11-23T10:44:05.000Z",
-      "firstSeenAt": "2026-11-23T10:54:07.670Z",
-      "outlets": 1,
-      "outletNames": [
-        "BNO News"
+        "Portsmouth News"
       ],
       "score": 1
     },
@@ -1854,6 +1841,22 @@
       "outlets": 1,
       "outletNames": [
         "Rayo"
+      ],
+      "score": 1
+    },
+    {
+      "id": "3cf0fe966ec1",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Japan Confirms Season’s 3rd Bird Flu Case",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1BY2kwZWxmaDV3ZmQ1TFJDeWItbmVJZmpNWE1WaUhFS3d0aVg4UFFxa0RySW5FcHFzZEh2aWdVelo3ZXNIYjZXdGJaVFJIWEZsZTA1VG14RkcyZnN6S3c?oc=5",
+      "source": "jiji press",
+      "publishedAt": "2026-11-23T02:56:55.000Z",
+      "latestAt": "2026-11-23T02:56:55.000Z",
+      "firstSeenAt": "2026-11-23T03:07:36.743Z",
+      "outlets": 1,
+      "outletNames": [
+        "jiji press"
       ],
       "score": 1
     },
@@ -1967,7 +1970,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-23T00:42:00.000Z",
-      "latestAt": "2026-11-23T01:45:00.000Z",
+      "latestAt": "2026-11-23T02:46:00.000Z",
       "firstSeenAt": "2026-11-23T08:53:34.044Z",
       "outlets": 1,
       "outletNames": [
