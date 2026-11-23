@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T13:39:23.015Z",
+  "buildTime": "2026-11-23T13:54:26.287Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 08:39 ET",
+  "etStamp": "2026-11-23 08:54 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,14 +48,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1261,
-  "lastSuccessAt": "2026-11-23T13:39:23.015Z",
+  "headlinesRead": 1257,
+  "lastSuccessAt": "2026-11-23T13:54:26.287Z",
   "rollingFallback": false,
   "cats": {
     "earth": 7,
-    "flights": 22,
+    "flights": 21,
+    "hacks": 35,
     "markets": 10,
-    "hacks": 34,
     "grid": 4,
     "internet": 4,
     "germs": 4,
@@ -180,20 +180,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 937,
+      "count": 945,
       "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "bing": {
       "ok": true,
-      "count": 286,
-      "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "count": 273,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,56 +205,55 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T12:54:19.459Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T13:39:23.015Z"
+      "lastOkAt": "2026-11-23T13:54:26.287Z"
     }
   },
   "stories": [
@@ -330,6 +329,30 @@
         "nationwide": false,
         "reason": "low ceilings"
       }
+    },
+    {
+      "id": "26ac8de36de0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
+      "url": "https://www.politico.eu/article/european-commission-personal-data-leak-cyberattack-disruption/",
+      "source": "Politico Europe",
+      "publishedAt": "2026-11-23T05:08:00.000Z",
+      "latestAt": "2026-11-23T13:28:53.000Z",
+      "firstSeenAt": "2026-11-23T13:24:19.410Z",
+      "outlets": 9,
+      "outletNames": [
+        "Politico Europe",
+        "www.politico.eu",
+        "Mezha.net",
+        "Associated Press News",
+        "The Joplin Globe",
+        "WKMG",
+        "Corsicana Daily Sun",
+        "Toronto Star",
+        "Laredo Morning Times"
+      ],
+      "score": 3.6
     },
     {
       "id": "00fefd72061e",
@@ -440,27 +463,6 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 3.11
-    },
-    {
-      "id": "26ac8de36de0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
-      "url": "https://www.politico.eu/article/european-commission-personal-data-leak-cyberattack-disruption/",
-      "source": "Politico Europe",
-      "publishedAt": "2026-11-23T05:08:00.000Z",
-      "latestAt": "2026-11-23T13:24:08.000Z",
-      "firstSeenAt": "2026-11-23T13:24:19.410Z",
-      "outlets": 6,
-      "outletNames": [
-        "Politico Europe",
-        "www.politico.eu",
-        "Mezha.net",
-        "Associated Press News",
-        "The Joplin Globe",
-        "WKMG"
-      ],
-      "score": 3.09
     },
     {
       "id": "1c2147a0cf11",
@@ -1088,6 +1090,23 @@
       "score": 1.96
     },
     {
+      "id": "0cd515516612",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Next reports data breach following cyber attack with 'investigations ongoing'",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQdXozOEMwSXI5NWIwTWxfTzVoMW5qMElvTkZDbzY3Y3VCOF9sUEtWRl9zTksyOV85a29mR0RiU1hIV1BIaUNpU1JGM1AyRlFfYjhobXZQWUpuVWZTdUc5SlZkUF9aNnQwMmpBS3RCbG1kb254eXhRc2pmZTdSRWIwd2lNV2l4b01MYUExdkVORzVlME5BWE9wZE9Sa0IwUVRRSTZDT2tiWi1MeVlGbUI5b2RhMFBqNm5SaEE?oc=5",
+      "source": "The Herald",
+      "publishedAt": "2026-11-23T12:23:27.000Z",
+      "latestAt": "2026-11-23T13:39:00.000Z",
+      "firstSeenAt": "2026-11-23T13:54:26.287Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Herald",
+        "The Telegraph"
+      ],
+      "score": 1.95
+    },
+    {
       "id": "32e456df8417",
       "cat": "hacks",
       "kind": "news",
@@ -1292,23 +1311,6 @@
       "score": 1.72
     },
     {
-      "id": "63d1373aae2f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Resolves Automation Outage that Led to Over 1,000 Flight Delays",
-      "url": "https://www.wsj.com/business/airlines/delta-delays-hundreds-of-flights-over-system-outage-6bbba92c",
-      "source": "The Wall Street Journal",
-      "publishedAt": "2026-11-22T13:49:00.000Z",
-      "latestAt": "2026-11-22T21:50:19.000Z",
-      "firstSeenAt": "2026-11-22T22:36:54.968Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Wall Street Journal",
-        "WSJ"
-      ],
-      "score": 1.71
-    },
-    {
       "id": "781a66721922",
       "cat": "hacks",
       "kind": "news",
@@ -1358,6 +1360,23 @@
         "Yahoo News Canada"
       ],
       "score": 1.65
+    },
+    {
+      "id": "5bab5c44f992",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Rabbit control and Avian Influenza a focus by ORC",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObDhlTFB1RXlISzdGQ2JKQXJ1WTV3ZmNTYzZFWV80X3paVFVXa2taTXRRMjBHTm8wa252QWt1amdzSnc4LVZuS3RxcERYaENsS0k4SlpGZklWclhPSl9RRVMzc3UzYndULWtSRFJxU3dqc0hvcERaam53eHlpemNXRjlYUGtHUnBGTEhSMlh1VmRFWGo0SXJmOXE0d3BDZC1kOE9hSWpnZy0?oc=5",
+      "source": "Wanaka App",
+      "publishedAt": "2026-11-22T17:04:17.000Z",
+      "latestAt": "2026-11-23T01:19:29.000Z",
+      "firstSeenAt": "2026-11-23T03:52:41.341Z",
+      "outlets": 2,
+      "outletNames": [
+        "Wanaka App",
+        "The Central App"
+      ],
+      "score": 1.64
     },
     {
       "id": "ef7c6d8fe05a",
@@ -1679,24 +1698,6 @@
       "score": 1.39
     },
     {
-      "id": "e56e6d210190",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta CEO thanks employees who helped travelers after nationwide FAA outage",
-      "url": "https://www.cbsnews.com/atlanta/news/delta-ceo-thanks-employees-after-nationwide-faa-outage/",
-      "source": "CBS News",
-      "publishedAt": "2026-11-22T13:50:00.000Z",
-      "latestAt": "2026-11-22T13:50:00.000Z",
-      "firstSeenAt": "2026-11-22T14:05:38.738Z",
-      "outlets": 1,
-      "outletNames": [
-        "CBS News"
-      ],
-      "trending": 200,
-      "trendTerm": "delta ground stop",
-      "score": 1.39
-    },
-    {
       "id": "2541df40929e",
       "cat": "flights",
       "kind": "news",
@@ -1761,6 +1762,22 @@
       "score": 1.37
     },
     {
+      "id": "8552822df5bc",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Flights Delayed Nationwide as Technical Outage Hits Atlanta Hub",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSmFyeTlHczBRRTExLXBEdG9tdk5HZjJNSW9FU29yS3RqVVRtRldINUxrSmgxbTA0cU9uV3pSRUVXandvRm9IT21VcUU4NWsyZDZ1a041Q3YxMFhLSzRoVktoOEZpb3UzbUlYZ0RBSmtTbENRLUZZZ0dQYkh3cEVsYndoMEx2UjhDd2F2UnJNbGpHVFpIa3dsNGI4aTczMFg2blRVLXF1T0JuaXBNRWwzLTZB?oc=5",
+      "source": "Rus Tourism News",
+      "publishedAt": "2026-11-22T19:00:08.000Z",
+      "latestAt": "2026-11-22T19:00:08.000Z",
+      "firstSeenAt": "2026-11-22T21:06:43.630Z",
+      "outlets": 1,
+      "outletNames": [
+        "Rus Tourism News"
+      ],
+      "score": 1.35
+    },
+    {
       "id": "0611150a2b20",
       "cat": "weather",
       "kind": "news",
@@ -1811,34 +1828,18 @@
       "quietReason": "headline mentions hurricane"
     },
     {
-      "id": "a585614a80c1",
+      "id": "8b185c019760",
       "cat": "germs",
       "kind": "news",
-      "title": "Warnings not to feed the birds as bird flu cases found in Caversham",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOM05VYnVDUlktdGh5NnRkSkhPZHV0TUdGaHVVMkFxeFFlcTFYaDVyQUJPd1pkSTVVR2tpRnJ2cUJIc0xJOEJubXFnaElHaDZZWFJXYWRwYWJxZTlyb0Q4SDlBajM5TC1ZcVJ6eVFPZkluX2hSV3RJZFloRnlrNWotQ05VR1VtTEdrQ0c4b25qRG1ZYUJzc1JzR2xIWXl6WDBqREpfOHA0eVVGc0h4ejhGeWYyel9CQzJCZXZFVjdGMVVZUUtYeERlTA?oc=5",
-      "source": "Henley Standard",
-      "publishedAt": "2026-11-23T13:33:22.000Z",
-      "latestAt": "2026-11-23T13:33:22.000Z",
-      "firstSeenAt": "2026-11-23T13:39:23.015Z",
+      "title": "H5N1 avian influenza case reported in China, in man entering from Vietnam",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOR1ZVT3V4NjFDc29hbEhYV0REempJZXI5cTVjRTMzZjgzYmkzeERyd0xvTVNHUGtneWtyMUxXa3hqSHRQQ3czQm1qeFljZFFIZXR5OWg2TTBneWZmWFZLU3FrQnVVczZWU1g5WnQzU1gxQVJubF9mc1BPN0lpOWVfTg?oc=5",
+      "source": "Outbreak News Today",
+      "publishedAt": "2026-11-23T13:42:15.000Z",
+      "latestAt": "2026-11-23T13:42:15.000Z",
+      "firstSeenAt": "2026-11-23T13:54:26.287Z",
       "outlets": 1,
       "outletNames": [
-        "Henley Standard"
-      ],
-      "score": 1
-    },
-    {
-      "id": "4e926ccb7921",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Housing order comes into effect as bird flu is detected in Offaly",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1pVm04Tk9mMldQM29uRHBkOXF3WDdkUmgwcTY0Q09PR2l0VEFoM05LQWpDNnhLMlB2U0ZqQWFGZVZlWF9CTTM2ZENFb1hGeTl2WmtKbnRyWGF4eTVuSkd3R2ZPMll6dm8?oc=5",
-      "source": "Irish Examiner",
-      "publishedAt": "2026-11-23T12:10:00.000Z",
-      "latestAt": "2026-11-23T12:10:00.000Z",
-      "firstSeenAt": "2026-11-23T12:24:12.244Z",
-      "outlets": 1,
-      "outletNames": [
-        "Irish Examiner"
+        "Outbreak News Today"
       ],
       "score": 1
     },
