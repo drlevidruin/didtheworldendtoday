@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T11:08:57.816Z",
+  "buildTime": "2026-11-23T11:10:53.373Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 06:08 ET",
+  "etStamp": "2026-11-23 06:10 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,8 +48,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1238,
-  "lastSuccessAt": "2026-11-23T11:08:57.816Z",
+  "headlinesRead": 687,
+  "lastSuccessAt": "2026-11-23T11:10:53.373Z",
   "rollingFallback": false,
   "cats": {
     "earth": 5,
@@ -184,57 +184,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 919,
-      "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "count": 364,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 11 of 26 queries)",
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     },
     "bing": {
       "ok": true,
-      "count": 282,
+      "count": 286,
       "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-23T09:08:33.193Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     },
     "x": {
       "ok": true,
@@ -247,13 +247,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T11:08:57.816Z"
+      "lastOkAt": "2026-11-23T11:10:53.373Z"
     }
   },
   "stories": [
@@ -377,7 +377,7 @@
       }
     },
     {
-      "id": "00fefd72061e",
+      "id": "0e0c18f8540b",
       "cat": "earth",
       "kind": "news",
       "title": "Magnitude 6.5 earthquake strikes off coast of Vanuatu",
