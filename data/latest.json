@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T10:08:46.048Z",
+  "buildTime": "2026-11-23T10:23:50.442Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 05:08 ET",
+  "etStamp": "2026-11-23 05:23 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,17 +48,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1244,
-  "lastSuccessAt": "2026-11-23T10:08:46.048Z",
+  "headlinesRead": 1207,
+  "lastSuccessAt": "2026-11-23T10:23:50.442Z",
   "rollingFallback": false,
   "cats": {
     "earth": 5,
     "flights": 27,
-    "hacks": 27,
-    "internet": 11,
+    "hacks": 26,
+    "markets": 8,
+    "internet": 13,
     "grid": 4,
     "germs": 4,
-    "markets": 9,
     "ai": 3,
     "weather": 4,
     "sun": 4,
@@ -184,15 +184,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 928,
+      "count": 894,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     },
     "bing": {
       "ok": true,
-      "count": 279,
+      "count": 276,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     },
     "gdelt": {
       "ok": false,
@@ -204,37 +204,37 @@
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     },
     "x": {
       "ok": true,
@@ -247,13 +247,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T10:08:46.048Z"
+      "lastOkAt": "2026-11-23T10:23:50.442Z"
     }
   },
   "stories": [
@@ -405,7 +405,7 @@
       "publishedAt": "2026-11-22T16:00:00.000Z",
       "latestAt": "2026-11-23T09:23:02.000Z",
       "firstSeenAt": "2026-11-23T04:07:47.712Z",
-      "outlets": 9,
+      "outlets": 10,
       "outletNames": [
         "Breakingthenews.net",
         "Anadolu Ajansı",
@@ -415,11 +415,30 @@
         "Aktualita.co",
         "Fana News -",
         "uaebarq.ae",
-        "US Muslims"
+        "US Muslims",
+        "Qatar news agency"
       ],
-      "score": 3.33,
+      "score": 3.45,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "59993d00bf55",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Oil prices fall as global market selloff weighs on sentiment; Gulf attacks limit losses",
+      "url": "https://www.msn.com/en-in/news/other/oil-prices-fall-as-global-market-selloff-weighs-on-sentiment-gulf-attacks-limit-losses/ar-AA2hZMh4",
+      "source": "The Times of India on MSN",
+      "publishedAt": "2026-11-22T19:28:00.000Z",
+      "latestAt": "2026-11-23T10:10:11.000Z",
+      "firstSeenAt": "2026-11-23T03:37:44.457Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Times of India",
+        "Bloom Pakistan",
+        "SSBCrack"
+      ],
+      "score": 3.13
     },
     {
       "id": "10d485e53c01",
@@ -513,23 +532,6 @@
       "score": 2.57
     },
     {
-      "id": "004141a71fd9",
-      "cat": "internet",
-      "kind": "news",
-      "title": "We haven’t seen the last of the major tech outages",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUbU5QT0paMUU0a0hhdFJfTDNBWHVVN2YzaGVLM3pTU3o0ekhPTWVvaHJCbFY3Nkt1aldJRnlubDJNMDdyNVJadDVzcGR0RVROVmxTYW1VWktlRV9qdXpGTGx5NmZzeWM?oc=5",
-      "source": "The Verge",
-      "publishedAt": "2026-11-22T22:48:02.000Z",
-      "latestAt": "2026-11-23T07:52:30.000Z",
-      "firstSeenAt": "2026-11-23T04:52:55.212Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Verge",
-        "CediRates"
-      ],
-      "score": 2.52
-    },
-    {
       "id": "sig:faa-stop:HPN:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -616,21 +618,21 @@
       "score": 2.74
     },
     {
-      "id": "59993d00bf55",
-      "cat": "markets",
+      "id": "004141a71fd9",
+      "cat": "internet",
       "kind": "news",
-      "title": "Oil prices fall as global market selloff weighs on sentiment; Gulf attacks limit losses",
-      "url": "https://www.msn.com/en-in/news/other/oil-prices-fall-as-global-market-selloff-weighs-on-sentiment-gulf-attacks-limit-losses/ar-AA2hZMh4",
-      "source": "The Times of India on MSN",
-      "publishedAt": "2026-11-22T19:28:00.000Z",
-      "latestAt": "2026-11-23T05:42:22.000Z",
-      "firstSeenAt": "2026-11-23T03:37:44.457Z",
+      "title": "We haven’t seen the last of the major tech outages",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUbU5QT0paMUU0a0hhdFJfTDNBWHVVN2YzaGVLM3pTU3o0ekhPTWVvaHJCbFY3Nkt1aldJRnlubDJNMDdyNVJadDVzcGR0RVROVmxTYW1VWktlRV9qdXpGTGx5NmZzeWM?oc=5",
+      "source": "The Verge",
+      "publishedAt": "2026-11-22T22:48:02.000Z",
+      "latestAt": "2026-11-23T07:52:30.000Z",
+      "firstSeenAt": "2026-11-23T04:52:55.212Z",
       "outlets": 2,
       "outletNames": [
-        "The Times of India",
-        "Bloom Pakistan"
+        "The Verge",
+        "CediRates"
       ],
-      "score": 2.42
+      "score": 2.52
     },
     {
       "id": "00e2710c8f02",
@@ -1232,7 +1234,7 @@
       "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-crashes-17-000-weekend-014926652.html",
       "source": "Yahoo Finance",
       "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T07:00:00.000Z",
+      "latestAt": "2026-11-23T09:18:11.000Z",
       "firstSeenAt": "2026-11-23T04:37:49.815Z",
       "outlets": 2,
       "outletNames": [
@@ -1668,6 +1670,22 @@
       "score": 1.25
     },
     {
+      "id": "7d6eb3e9491b",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft president warns global technology outage risks could persist for months amid security upgrades",
+      "url": "https://www.msn.com/en-in/technology/hardware-and-devices/microsoft-president-warns-global-technology-outage-risks-could-persist-for-months-amid-security-upgrades/ar-AA2i0Sxh",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-23T02:05:01.000Z",
+      "latestAt": "2026-11-23T02:05:01.000Z",
+      "firstSeenAt": "2026-11-23T10:23:50.442Z",
+      "outlets": 1,
+      "outletNames": [
+        "Hindustan Times on MSN"
+      ],
+      "score": 1.21
+    },
+    {
       "id": "6095f0c5d225",
       "cat": "weather",
       "kind": "news",
@@ -1732,6 +1750,22 @@
       "score": 1.06
     },
     {
+      "id": "c020386ed880",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission hit by major cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQamcyMXNSb1p3V3RRdTYtb3FXcDJXWGpnSmYzdDEyQWs0c3RuWklqSzhCaExpakFrSUk1MVExM0NvSkZNNXlOTy13UE5ud2RrRWRRN2ZOVDNXNXVMeGJxbnpvTTNHcUdCTEo1WjFKU3VDbFpJRWtRMEU0bnpnZkF2R2FYSUFzbHBmTC0wa3RxN0k1czdHSGszWjdhelJ5RGJhbHc?oc=5",
+      "source": "The Portugal News",
+      "publishedAt": "2026-11-22T19:02:03.000Z",
+      "latestAt": "2026-11-22T19:02:03.000Z",
+      "firstSeenAt": "2026-11-23T10:23:50.442Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Portugal News"
+      ],
+      "score": 1.04
+    },
+    {
       "id": "ebe27cfc8a8f",
       "cat": "flights",
       "kind": "news",
@@ -1748,50 +1782,50 @@
       "score": 1.04
     },
     {
-      "id": "e844413bd4d7",
-      "cat": "hacks",
+      "id": "5834825823de",
+      "cat": "internet",
       "kind": "news",
-      "title": "Amazon documents autonomous AI agents discovering and exploiting a zero-day",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5WTTVJbVdXWVFTTjdQRU0wNnRweFFvZk1CbkxJaXF4RkdqOUtZVUptZjlwM1dkbl83LUJJc1NLTWE1am5WSml3THh3emtySTdVS0hldktGUmlJOHpRUVZ0SW1oUlczLUFlNzc3b3F6T24?oc=5",
-      "source": "Digital Watch Observatory",
-      "publishedAt": "2026-11-23T10:03:04.000Z",
-      "latestAt": "2026-11-23T10:03:04.000Z",
-      "firstSeenAt": "2026-11-23T10:08:46.048Z",
+      "title": "Delta Flights Hit With Delays Nationwide Over Systems Failure, FAA Says",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdW5URDgzWFU0OXk0SmZncDIwb0UzdndPOU5IQ2tQYUtUUGNYWXFPNDlkUFREQkw4eFU4ZGxUWXBDVlNzeHU3M3VQUWd6ZlVoWVNDUERpZVROVWIyS3JhaENKWFdRQ1VidEUzZGFsRFpaSXlxN3BXRXJjS2RoU1pTcWp4dFB6RXVSM0VGRzRwVEE0c0MyOUtmNUEwMG9xRFdWTnZZci1B?oc=5",
+      "source": "NTD News",
+      "publishedAt": "2026-11-22T18:14:45.000Z",
+      "latestAt": "2026-11-22T18:14:45.000Z",
+      "firstSeenAt": "2026-11-23T10:23:50.442Z",
       "outlets": 1,
       "outletNames": [
-        "Digital Watch Observatory"
+        "NTD News"
+      ],
+      "score": 1.02
+    },
+    {
+      "id": "d7b3a9b62031",
+      "cat": "germs",
+      "kind": "news",
+      "title": "10km surveillance zone set up in Yorkshire after bird flu confirmed",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZzdGYS03RDVxUkt2a3FoWHBXMkVkOHFTQmpidnh4RDFfNThnWFBpeXdoQzhOTEdfbGdTMEoyczZWNDc3WDVCTm1NakUzeUwtbHI0aE4wcURpR2xjSndzbDlvM25wVm5MQ2Rkd1hrUm9iamFyeFZJUEVhWHlrdkVFY2g2X2YwenVrZ29BM1ZOQXQ?oc=5",
+      "source": "Leeds Live",
+      "publishedAt": "2026-11-23T10:15:00.000Z",
+      "latestAt": "2026-11-23T10:15:00.000Z",
+      "firstSeenAt": "2026-11-23T10:23:50.442Z",
+      "outlets": 1,
+      "outletNames": [
+        "Leeds Live"
       ],
       "score": 1
     },
     {
-      "id": "1be503fa46cf",
-      "cat": "markets",
+      "id": "1ceb2e3fbd29",
+      "cat": "weather",
       "kind": "news",
-      "title": "Micron, SanDisk Stocks Plunge — Here’s Why Citi Says the Selloff Is Overdone",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNYVcxQVR4Vm1zWFd4LXM4MVFCN2NWOURLejFybDFxY3YtLWc1bmZPNS1FUzJKQ2xfdVVKRExtOTg5ZW1YOTZpcVNwRUd2eERIaFdLYXMycVhlRVlrRkprZEZWeGFjM1hvY25EM1M5bTlvS0R6ZHM4UmpzVFZZRHI2QzljSzAwcVl3bXBHR3NxOEdFU1BtUm5tYUlZaEQ2N1lDbDRkaA?oc=5",
-      "source": "TipRanks",
-      "publishedAt": "2026-11-23T10:02:10.000Z",
-      "latestAt": "2026-11-23T10:02:10.000Z",
-      "firstSeenAt": "2026-11-23T10:08:46.048Z",
+      "title": "NSW Severe Thunderstorm Warning: Large Hail, Damaging Winds, Heavy Rain",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQWGRSeDE0SXhHcDBWVEY2akJwUnhzc1J6Sl9MZHRDVmx3SWZlMFRjNFNDU2VDanBSZk9oU1ZhNUdNWTFnQnZELXYtWmcyZmdiVUVtSEduc3lMdkZjZXhlTXljcWI2TENRcjZqT0tZVkdBMTJ5NHJ5d2ZvN2gzOUdJaGppMDhLdDkxSnV5MHhoVnZTSjNtTFZzelRjWUJsUW5oOGVuMFJRcVlKMkpPeHV2YldXeUY4OFB4OWhFWGkxSFhRMFdhY0VCLUs4TG9hdW1pS0ZSdzh2Z1lxaTNIZmpRZ0RVUnYyODdPT1N2ekhLLWhwVmNNYV8zb1BXT28zR1FpMEZTVmNubTYwZw?oc=5",
+      "source": "Early Warning Network",
+      "publishedAt": "2026-11-23T10:10:17.000Z",
+      "latestAt": "2026-11-23T10:10:17.000Z",
+      "firstSeenAt": "2026-11-23T10:23:50.442Z",
       "outlets": 1,
       "outletNames": [
-        "TipRanks"
-      ],
-      "score": 1
-    },
-    {
-      "id": "e3b5b6c2a6f9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack Exposed Customer Contact Info, Some Employee Emails, Chase Confirms",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZVo2ZlRGQVZqSEhXV2hDbERURHpnMWxSQnVyam9hZmtZT1M2TWNReF9xU1FFd1I2QWw1NHJBYjlEVDF1YjR2YkxIMG1EYzBwNGxZNUVXekVWVWpCSll6RHpHbmtkWXlmVWtTMUFjQzZwcHduOEdMMWtXeHkyRXhYUUpHVlh6TG9wbGFDX1pXdk5RQ2ZtaGY1VEpRX3owLXZpLWNR?oc=5",
-      "source": "Credit Union Daily",
-      "publishedAt": "2026-11-23T09:44:02.000Z",
-      "latestAt": "2026-11-23T09:44:02.000Z",
-      "firstSeenAt": "2026-11-23T09:53:41.578Z",
-      "outlets": 1,
-      "outletNames": [
-        "Credit Union Daily"
+        "Early Warning Network"
       ],
       "score": 1
     },
@@ -1928,38 +1962,6 @@
         "ESA"
       ],
       "score": 0.97
-    },
-    {
-      "id": "c55779f56136",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Sunday Weather: KZN on high alert after severe storm warning; heatwave for highveld",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxON2JXTGpvQXpyLVdyZXVOM25ObDA3aUdjbWZnYnFIT3had0hyRTIwQU5lNkh6azFJVFliaWZLbGtnbUdsZ3lUVF9CTDZURkVEVFBOWkdGRlhJUTYtWm5IcEZXZnVIZFVoWWNoLW9lY0tlY2ZkbjRqS3l4SlBKSFUyVkJ0MUpIbG43QXNjVFRQN0FJbEF2dmotMG5NMFNyc0ZuT2FvX1Jtd3BnVm5STHJ4TWJVSkJUVVNISW1yc3RwUjY3aEdPUndhTw?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-23T02:01:23.000Z",
-      "latestAt": "2026-11-23T02:01:23.000Z",
-      "firstSeenAt": "2026-11-23T04:37:49.815Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 0.96
-    },
-    {
-      "id": "5bab5c44f992",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Rabbit control and Avian Influenza a focus by ORC",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObDhlTFB1RXlISzdGQ2JKQXJ1WTV3ZmNTYzZFWV80X3paVFVXa2taTXRRMjBHTm8wa252QWt1amdzSnc4LVZuS3RxcERYaENsS0k4SlpGZklWclhPSl9RRVMzc3UzYndULWtSRFJxU3dqc0hvcERaam53eHlpemNXRjlYUGtHUnBGTEhSMlh1VmRFWGo0SXJmOXE0d3BDZC1kOE9hSWpnZy0?oc=5",
-      "source": "Wanaka App",
-      "publishedAt": "2026-11-23T01:19:29.000Z",
-      "latestAt": "2026-11-23T01:19:29.000Z",
-      "firstSeenAt": "2026-11-23T03:52:41.341Z",
-      "outlets": 1,
-      "outletNames": [
-        "Wanaka App"
-      ],
-      "score": 0.96
     },
     {
       "id": "3f99b2a2a3e3",
