@@ -1,6 +1,6 @@
 {
   "date": "2026-11-22",
-  "score": 66,
+  "score": 71,
   "fired": [
     "flights",
     "hacks",
@@ -15,13 +15,66 @@
   ],
   "bumps": [
     {
+      "key": "quake",
+      "label": "Quake M6 or more",
+      "points": 5
+    },
+    {
       "key": "faa",
       "label": "Ground stop at a major hub",
       "points": 6
     }
   ],
-  "change": -5,
+  "change": 0,
   "stories": [
+    {
+      "id": "91c05b38efd8",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Airlines flights delayed nationwide amid ground stop slowing holiday travel",
+      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNYk1iNVlfQndJb0UzWURneHI1bS1VSnpoTDZnNE1QT2Q0MWdOYUg1TFowZ0NCZm9rVlpRSmlOTVN1ZmRkWkhfZDI0ZEpqQXRKclkwR0JPN2V3STdFVzFyb2JWQllxamR4NVFzZEVVYThMWjRQMm5XNHgxM0kzRTNFcW1fclZKLXd0OG5QY3FobW9DSmRrLTdtbkt5dXpQaXEtcVlqM1pPbE1DWmZGUDF4RGQ5RlZiMGNWX1E1czdQMUF1VHZOeTd3X2EyWnMzbVJ3R2pGak1NU2NDNG9ZNUdDQ25qMkMwUVlxUmoyWFd5SW9TcUVGekY3Z3licEpCb2tsQWp2cHZwMVNGb2ZKbUU4SmhjYmVhS3UxVF9pS1lubURCVFVQZHFsVldKdUhzMDRYVzQzYklva0dPLXVfaG9WSjJGY0VfRzA?oc=5",
+      "source": "KBOI",
+      "publishedAt": "2026-11-22T17:22:34.000Z",
+      "latestAt": "2026-11-23T01:21:45.000Z",
+      "firstSeenAt": "2026-11-23T02:22:29.826Z",
+      "outlets": 8,
+      "outletNames": [
+        "KBOI",
+        "KFOX",
+        "wtvcfox",
+        "WJLA",
+        "WXLV",
+        "KPIC",
+        "KDBC",
+        "WLOS"
+      ],
+      "score": 4.76
+    },
+    {
+      "id": "sig:quake:pt26327000",
+      "cat": "earth",
+      "kind": "signal",
+      "title": "M 6.5 - Vanuatu region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pt26327000",
+      "source": "USGS",
+      "publishedAt": "2026-11-23T02:40:57.000Z",
+      "latestAt": "2026-11-23T02:40:57.000Z",
+      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "outlets": 1,
+      "outletNames": [
+        "USGS"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "quake",
+        "mag": 6.5,
+        "place": "Vanuatu region",
+        "pager": null,
+        "tsunami": true
+      },
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
     {
       "id": "sig:faa-stop:SFO:2026-11-22",
       "cat": "flights",
@@ -66,29 +119,6 @@
         "hub": true,
         "nationwide": false,
         "reason": "other"
-      }
-    },
-    {
-      "id": "sig:faa-stop:LGA:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at LGA (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T11:50:13.236Z",
-      "latestAt": "2026-11-22T11:50:13.236Z",
-      "firstSeenAt": "2026-11-22T11:50:13.236Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "LGA",
-        "hub": true,
-        "nationwide": false,
-        "reason": "low visibility"
       }
     },
     {
@@ -254,42 +284,27 @@
       "score": 1.99
     },
     {
-      "id": "c33798f07b64",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage impacting Gettysburg residents; crews responding",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQT2tiOFplX2hVekZ3b040bXB4cGRBMF9BQ0RvaVdWZHRvVTFkdXVMb21ibm9GcnhVYjEzQmpsbXVoUEZ1SU1WRmNyYlVsZ1JCNTFBckNHQzY1SE11M0M2ckRBbnRWckxJNnRub21qYTlCLWR1ZGJMdXpCQndiaFNNa0NvU2JFbzJSY1Z4WlNhRTFFUGNuRlBQMmd3?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T00:33:00.000Z",
-      "latestAt": "2026-11-23T00:33:23.000Z",
-      "firstSeenAt": "2026-11-23T02:07:31.892Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "ABC27"
-      ],
-      "score": 1.95
-    },
-    {
-      "id": "91c05b38efd8",
+      "id": "sig:faa-stop:LGA:2026-11-22",
       "cat": "flights",
-      "kind": "news",
-      "title": "Delta Airlines flights delayed nationwide amid ground stop slowing holiday travel",
-      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNYk1iNVlfQndJb0UzWURneHI1bS1VSnpoTDZnNE1QT2Q0MWdOYUg1TFowZ0NCZm9rVlpRSmlOTVN1ZmRkWkhfZDI0ZEpqQXRKclkwR0JPN2V3STdFVzFyb2JWQllxamR4NVFzZEVVYThMWjRQMm5XNHgxM0kzRTNFcW1fclZKLXd0OG5QY3FobW9DSmRrLTdtbkt5dXpQaXEtcVlqM1pPbE1DWmZGUDF4RGQ5RlZiMGNWX1E1czdQMUF1VHZOeTd3X2EyWnMzbVJ3R2pGak1NU2NDNG9ZNUdDQ25qMkMwUVlxUmoyWFd5SW9TcUVGekY3Z3licEpCb2tsQWp2cHZwMVNGb2ZKbUU4SmhjYmVhS3UxVF9pS1lubURCVFVQZHFsVldKdUhzMDRYVzQzYklva0dPLXVfaG9WSjJGY0VfRzA?oc=5",
-      "source": "KBOI",
-      "publishedAt": "2026-11-22T17:22:34.000Z",
-      "latestAt": "2026-11-23T01:21:45.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 6,
+      "kind": "signal",
+      "title": "FAA ground stop at LGA (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T11:50:13.236Z",
+      "latestAt": "2026-11-22T11:50:13.236Z",
+      "firstSeenAt": "2026-11-22T11:50:13.236Z",
+      "outlets": 1,
       "outletNames": [
-        "KBOI",
-        "KFOX",
-        "wtvcfox",
-        "WJLA",
-        "WXLV",
-        "KPIC"
+        "FAA"
       ],
-      "score": 4.27
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "LGA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
     },
     {
       "id": "ee56f4124855",
@@ -403,6 +418,23 @@
         "ShiftDelete.Net"
       ],
       "score": 2
+    },
+    {
+      "id": "c33798f07b64",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage impacting Gettysburg residents; crews responding",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQT2tiOFplX2hVekZ3b040bXB4cGRBMF9BQ0RvaVdWZHRvVTFkdXVMb21ibm9GcnhVYjEzQmpsbXVoUEZ1SU1WRmNyYlVsZ1JCNTFBckNHQzY1SE11M0M2ckRBbnRWckxJNnRub21qYTlCLWR1ZGJMdXpCQndiaFNNa0NvU2JFbzJSY1Z4WlNhRTFFUGNuRlBQMmd3?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T00:33:00.000Z",
+      "latestAt": "2026-11-23T00:33:23.000Z",
+      "firstSeenAt": "2026-11-23T02:07:31.892Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "ABC27"
+      ],
+      "score": 1.95
     },
     {
       "id": "5bbfa7de489f",
@@ -589,22 +621,6 @@
       "score": 1.39
     },
     {
-      "id": "0611150a2b20",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Miami Forecast Nears Record Heat as Showers Return",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdEhHX0g0MVBHTEJ6NkEtWlZqSzRqQVlmWW9pWG85VF9ZZUJvRDMtOTRSMGxtQ09nZ1NubExNb3dNSGJiTU94V1VpZFFDSmFLb3FXQWdlaWxLYy1LLVVZd1ItVEN6SnJoOVR6LTVkNXBtbWNLeFFZNXhZc3MxTmVVUWxLRG82bHFIQ0xhdTdnQjV2US0wdm5RRw?oc=5",
-      "source": "Wisevoter",
-      "publishedAt": "2026-11-22T14:01:29.000Z",
-      "latestAt": "2026-11-22T14:01:29.000Z",
-      "firstSeenAt": "2026-11-22T20:06:33.048Z",
-      "outlets": 1,
-      "outletNames": [
-        "Wisevoter"
-      ],
-      "score": 1.26
-    },
-    {
       "id": "sig:faa-stop:TEB:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -744,6 +760,25 @@
       "score": 2.76
     },
     {
+      "id": "0bd1b7ccd575",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Hundreds of Delta Air Lines flights delayed due to technical failure",
+      "url": "http://www.bignewsnetwork.com/news/279449149/hundreds-of-delta-air-lines-flights-delayed-due-to-technical-failure",
+      "source": "bignewsnetwork.com",
+      "publishedAt": "2026-11-22T18:45:00.000Z",
+      "latestAt": "2026-11-23T02:26:30.000Z",
+      "firstSeenAt": "2026-11-23T02:22:29.826Z",
+      "outlets": 4,
+      "outletNames": [
+        "bignewsnetwork.com",
+        "en.apa.az",
+        "Latest news from Azerbaijan",
+        "Free Malaysia Today"
+      ],
+      "score": 2.62
+    },
+    {
       "id": "ed8122b35384",
       "cat": "flights",
       "kind": "news",
@@ -779,24 +814,6 @@
         "AOL.com"
       ],
       "score": 2.48
-    },
-    {
-      "id": "0bd1b7ccd575",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Hundreds of Delta Air Lines flights delayed due to technical failure",
-      "url": "http://www.bignewsnetwork.com/news/279449149/hundreds-of-delta-air-lines-flights-delayed-due-to-technical-failure",
-      "source": "bignewsnetwork.com",
-      "publishedAt": "2026-11-22T18:45:00.000Z",
-      "latestAt": "2026-11-22T22:09:43.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 3,
-      "outletNames": [
-        "bignewsnetwork.com",
-        "en.apa.az",
-        "Latest news from Azerbaijan"
-      ],
-      "score": 2.26
     },
     {
       "id": "97d94439688d",
@@ -1176,6 +1193,23 @@
       "score": 1.55
     },
     {
+      "id": "2028f3421bbf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US ports face onslaught of cyber attacks",
+      "url": "https://thehill.com/policy/technology/6235972-us-ports-ai-cyberattacks/",
+      "source": "The Hill",
+      "publishedAt": "2026-11-22T10:05:00.000Z",
+      "latestAt": "2026-11-22T12:00:06.000Z",
+      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Hill",
+        "Financial Times"
+      ],
+      "score": 1.44
+    },
+    {
       "id": "58fabfb0567f",
       "cat": "flights",
       "kind": "news",
@@ -1206,6 +1240,22 @@
         "Arise News"
       ],
       "score": 1.4
+    },
+    {
+      "id": "00e2710c8f02",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers target major websites: Your iPhone could be compromised without a single click",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1UNE4tSHdVQzlaRFM5MzdOemdfUnhiVDNEOTBMclZ1ejdFaXRsYXhYeFIwQTZHd21wWU12YjhkcnJtMl9ZLTc4VjFyMElxRzdzVHhPMW9ldHJtZG1jZWfSAWNBVV95cUxPN2JLc3VSZkl0eGpGUlhCRnd6SWVfS1BfODhpYS1pRFlPRmNDbW1hZ1g0aW5GcWd6aU1tc19XNTBybHZfajY5aWtVWEhieXBOX0NyMEx4NG9LVkJzamxxUnZ1OWc?oc=5",
+      "source": "FOX 5 DC",
+      "publishedAt": "2026-11-23T02:35:02.000Z",
+      "latestAt": "2026-11-23T02:35:02.000Z",
+      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "outlets": 1,
+      "outletNames": [
+        "FOX 5 DC"
+      ],
+      "score": 1.39
     },
     {
       "id": "a597312e933a",
@@ -1370,6 +1420,22 @@
       "score": 1.31
     },
     {
+      "id": "0611150a2b20",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Miami Forecast Nears Record Heat as Showers Return",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdEhHX0g0MVBHTEJ6NkEtWlZqSzRqQVlmWW9pWG85VF9ZZUJvRDMtOTRSMGxtQ09nZ1NubExNb3dNSGJiTU94V1VpZFFDSmFLb3FXQWdlaWxLYy1LLVVZd1ItVEN6SnJoOVR6LTVkNXBtbWNLeFFZNXhZc3MxTmVVUWxLRG82bHFIQ0xhdTdnQjV2US0wdm5RRw?oc=5",
+      "source": "Wisevoter",
+      "publishedAt": "2026-11-22T14:01:29.000Z",
+      "latestAt": "2026-11-22T14:01:29.000Z",
+      "firstSeenAt": "2026-11-22T20:06:33.048Z",
+      "outlets": 1,
+      "outletNames": [
+        "Wisevoter"
+      ],
+      "score": 1.26
+    },
+    {
       "id": "ce006bec2043",
       "cat": "earth",
       "kind": "news",
@@ -1483,38 +1549,6 @@
       "score": 1.2
     },
     {
-      "id": "a45fcdc38c32",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Global: States’ Failure to Launch Negotiations on an Autonomous Weapons Treaty Is a Wasted Opportunity",
-      "url": "https://www.amnestyusa.org/press-releases/global-states-failure-to-launch-negotiations-on-an-autonomous-weapons-treaty-is-a-wasted-opportunity/",
-      "source": "Amnesty International USA",
-      "publishedAt": "2026-11-22T12:15:00.000Z",
-      "latestAt": "2026-11-22T12:15:00.000Z",
-      "firstSeenAt": "2026-11-22T20:51:38.365Z",
-      "outlets": 1,
-      "outletNames": [
-        "Amnesty International USA"
-      ],
-      "score": 1.2
-    },
-    {
-      "id": "5834825823de",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Delta Flights Hit With Delays Nationwide Over Systems Failure, FAA Says",
-      "url": "https://www.ntd.com/delta-flights-hit-with-delays-nationwide-over-systems-failure-faa-says_1186827.html",
-      "source": "NTD News",
-      "publishedAt": "2026-11-22T10:14:00.000Z",
-      "latestAt": "2026-11-22T18:14:45.000Z",
-      "firstSeenAt": "2026-11-22T18:36:27.451Z",
-      "outlets": 1,
-      "outletNames": [
-        "NTD News"
-      ],
-      "score": 1.2
-    },
-    {
       "id": "91912766c581",
       "cat": "markets",
       "kind": "news",
@@ -1529,6 +1563,22 @@
         "Philstar.com"
       ],
       "score": 1.16
+    },
+    {
+      "id": "cd88204ffba6",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Mike McGlone Says Crypto Crash Is A Preview Of The 'Everything Bubble' Bursting, Sees Bitcoin At $10,000 Again",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQYWloQklEOGViYTBBUEpoSVpYVDBiNXZuQkFIbkpmanBtbjU3Y2s1aWJxNWs5Y1Nud1Q4d05Kd1o3TWFXcS0zdy1wS19Id2lYam1YMHZ1THh1YW9TdHFTUVhNTktjdWU4dXlMZEh5TEozTXFweEpFZ0IxVzZEb3Nabjk0b3JZY1hQbXY2ZHdKbWh4TE40VTB0N1dyMWtBZGRqTkVLdHdoVDNLLThmWm1Kd2w1MUVBaEs1RG4tX0ZxY3Z6RWtndTg4WmppZDM?oc=5",
+      "source": "Stocktwits",
+      "publishedAt": "2026-11-23T02:42:00.000Z",
+      "latestAt": "2026-11-23T02:42:00.000Z",
+      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "outlets": 1,
+      "outletNames": [
+        "Stocktwits"
+      ],
+      "score": 1
     },
     {
       "id": "5bab5c44f992",
@@ -1593,22 +1643,6 @@
       "outlets": 1,
       "outletNames": [
         "Foro3D"
-      ],
-      "score": 1
-    },
-    {
-      "id": "57a979ec4cea",
-      "cat": "markets",
-      "kind": "news",
-      "title": "S&P 500 drops more than 3% as semiconductor stocks lead market selloff",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOOUYwQUZNMTc0ODR5eXlsdUhacFhUNXVlWGpkel9fRldXUlNUTU9CZXpKWjlZcTZJdkNBcEZ6bGdnRHBKVWgzbEJXT1NESHdneEp1ZU9vbThMVzcwaHZqXzlBUWFDemRUbHI4UWh0S2hpZ3k0WV81b2tGMW9IM0FXdkdWeW83T2t3RllTX25kQk0wbWtuYjJkWENia2RhZkltOTZqaUU5dlBFX0xteFJXSHUteHRGQ05XMlN2SDVIZUxmdw?oc=5",
-      "source": "www.equiti.com",
-      "publishedAt": "2026-11-22T03:39:02.000Z",
-      "latestAt": "2026-11-22T03:39:02.000Z",
-      "firstSeenAt": "2026-11-22T03:49:00.848Z",
-      "outlets": 1,
-      "outletNames": [
-        "www.equiti.com"
       ],
       "score": 1
     },
@@ -1697,22 +1731,6 @@
       "score": 0.9
     },
     {
-      "id": "13b34f7d2321",
-      "cat": "earth",
-      "kind": "news",
-      "title": "2.8 magnitude earthquake hits Himachal Pradesh’s Shimla",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQT1VvUUQxSWFrUms2Vld0dzItY2N1RnlWX01QcFQxUXRyU25YT09FOTlrNHh5TlJra0RpMUwtaEc5S0VsRXFKdk9UWDdhTmVtY0IybnY3UWIwaDNVWldZTlk0NUxCLWxtcWZialFnaXppLVRvSHM4cUFyTzVpakRNTWlsck42NzI3TjJEUDVZbzNoSEHSAZgBQVVfeXFMTzFIMnplWGVycTYzcU5UT3kwMmt5cnBXMVRDeFp4dmFaS3BuY24yX0p6X3E3YU15TVNrV0lPSzhVQXV5SHhrZnFUQUh4ZUpldXUwcEZOdW5pY3NuZUd2YmFUTHQxM0tJUi11QXJGanQ5NHNuUEFkRDZYSnE4QUNic2xRNXRkWXFQcDRxaGtOc0RXNDBudmNYdi0?oc=5",
-      "source": "ThePrint",
-      "publishedAt": "2026-11-22T04:52:40.000Z",
-      "latestAt": "2026-11-22T04:52:40.000Z",
-      "firstSeenAt": "2026-11-22T11:35:10.685Z",
-      "outlets": 1,
-      "outletNames": [
-        "ThePrint"
-      ],
-      "score": 0.89
-    },
-    {
       "id": "ae7af62ad2d5",
       "cat": "space",
       "kind": "news",
@@ -1777,5 +1795,5 @@
       "score": 0.68
     }
   ],
-  "updatedAt": "2026-11-23T02:30:12.754Z"
+  "updatedAt": "2026-11-23T02:52:34.117Z"
 }
