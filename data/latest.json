@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T21:10:48.587Z",
+  "buildTime": "2026-11-23T21:25:44.587Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 16:10 ET",
+  "etStamp": "2026-11-23 16:25 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -50,8 +50,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1346,
-  "lastSuccessAt": "2026-11-23T21:10:48.587Z",
+  "headlinesRead": 1303,
+  "lastSuccessAt": "2026-11-23T21:25:44.587Z",
   "rollingFallback": false,
   "cats": {
     "flights": 22,
@@ -171,11 +171,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "New details released in Strathmore concert mass shooting"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -187,57 +189,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1020,
+      "count": 991,
       "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     },
     "bing": {
       "ok": true,
-      "count": 292,
-      "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "count": 278,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-23T19:55:36.706Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +252,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T21:10:48.587Z"
+      "lastOkAt": "2026-11-23T21:25:44.587Z"
     }
   },
   "stories": [
@@ -363,7 +365,7 @@
       "publishedAt": "2026-11-23T02:30:00.000Z",
       "latestAt": "2026-11-23T20:21:39.000Z",
       "firstSeenAt": "2026-11-23T17:40:06.517Z",
-      "outlets": 23,
+      "outlets": 24,
       "outletNames": [
         "NBC Chicago",
         "FOX 32 Chicago",
@@ -387,11 +389,12 @@
         "AOL.co.uk",
         "The Times of India",
         "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi"
+        "Operativ Məlumat Mərkəzi",
+        "FOX 29 Philadelphia"
       ],
       "trending": 1000,
       "trendTerm": "ohare ground stop",
-      "score": 4.13
+      "score": 4.17
     },
     {
       "id": "00fefd72061e",
@@ -899,6 +902,23 @@
         "Yahoo"
       ],
       "score": 1.72
+    },
+    {
+      "id": "6ba8cf23d88f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Alberta seeks to tighten criteria to access provincial voters list after massive data breach impacted 2.9 million Albertans",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTlFzR09Bd2o4d1ozanZ1aW94anktTVIxUERwaFBJUHJoREQzcU5ZMjBUalpIZ0xHUEtoUWVqNWtrS1pzZkFsSmRfMHNEOUxadmNSNi1IZU85NnRCczBqd1ZIYUxiV0VLRmdJTXhRVGpyTXlWUzg2TnNGQXJuaVlzYXVJbUI?oc=5",
+      "source": "Yahoo News Canada",
+      "publishedAt": "2026-11-23T20:54:26.000Z",
+      "latestAt": "2026-11-23T20:55:22.000Z",
+      "firstSeenAt": "2026-11-23T21:25:44.587Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo News Canada",
+        "Edmonton Journal"
+      ],
+      "score": 2.78
     },
     {
       "id": "3dfb63467fa7",
@@ -1771,27 +1791,11 @@
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQTJUZEJ6d25YN3B6MWx0bnJXV1FEdm5LQWQ2NHp3WlFyRTNsODZKR1BLRVlNUmlHN0oxQmsxSC12TFhPa3JUU0VjQWtydlhud3RVWGMzWUowbm1GTkJmZlVySmJjUXlheG9rTzVNcE9UekI4N1hJWVFNRnRpSW1IVzRhS1FvRW9CSENxU1c5cGpCd0xDZVoxdkVXNkNoNVRxWmk5ZWpxTUFHLUZFcUY5N2l0ZzdNVVBfVHdlYngtbjhZbXlw?oc=5",
       "source": "Forbes Middle East",
       "publishedAt": "2026-11-23T18:43:29.000Z",
-      "latestAt": "2026-11-23T18:43:29.000Z",
+      "latestAt": "2026-11-23T18:44:54.000Z",
       "firstSeenAt": "2026-11-23T19:10:20.571Z",
       "outlets": 1,
       "outletNames": [
         "Forbes Middle East"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "ed08e024a241",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Travel brands caught in global cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNa2FicHRuM2ppd2Q0WmFsMlFSN2dDcUJXQm05SGFqdkJzY0otd21rVzM4anJiU2Y4LXRqdUJkTjBDVTdNbTN1bHk1MnZLWXhTdG04Y2REY2V6akg4eUFQcnJJNy1mQVpiNXN5TVdUczJjZXFuZWJQWWEtb1ZuZEN4ZUdETnV0UQ?oc=5",
-      "source": "www.travelnews.co.za",
-      "publishedAt": "2026-11-23T16:40:00.000Z",
-      "latestAt": "2026-11-23T16:40:00.000Z",
-      "firstSeenAt": "2026-11-23T16:54:57.340Z",
-      "outlets": 1,
-      "outletNames": [
-        "www.travelnews.co.za"
       ],
       "score": 1.39
     },
