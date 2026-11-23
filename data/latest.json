@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T22:43:13.806Z",
+  "buildTime": "2026-11-23T23:11:05.488Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 17:43 ET",
+  "etStamp": "2026-11-23 18:11 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -50,8 +50,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1398,
-  "lastSuccessAt": "2026-11-23T22:43:13.806Z",
+  "headlinesRead": 1357,
+  "lastSuccessAt": "2026-11-23T23:11:05.488Z",
   "rollingFallback": false,
   "cats": {
     "flights": 21,
@@ -59,13 +59,13 @@
     "hacks": 36,
     "markets": 7,
     "germs": 6,
-    "internet": 4,
-    "ai": 4,
+    "internet": 5,
     "animals": 4,
     "weather": 4,
     "grid": 4,
     "space": 1,
-    "sun": 3
+    "sun": 3,
+    "ai": 3
   },
   "vital": {
     "quake": {
@@ -182,81 +182,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1072,
+      "count": 1036,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "bing": {
       "ok": true,
-      "count": 292,
+      "count": 287,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-23T19:55:36.706Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T21:55:50.295Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T22:43:13.806Z"
+      "lastOkAt": "2026-11-23T23:11:05.488Z"
     }
   },
   "stories": [
@@ -591,28 +590,6 @@
       "score": 3.47
     },
     {
-      "id": "c87e0fba0864",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Staffing issue prompts ground stop at O’Hare Airport",
-      "url": "https://www.msn.com/en-us/news/other/staffing-issue-prompts-ground-stop-at-o-hare-airport/ar-AA2i3LAY",
-      "source": "WGN-TV on MSN",
-      "publishedAt": "2026-11-23T06:20:00.000Z",
-      "latestAt": "2026-11-23T21:48:51.000Z",
-      "firstSeenAt": "2026-11-23T18:10:22.978Z",
-      "outlets": 7,
-      "outletNames": [
-        "WGN-TV on MSN",
-        "AOL.com",
-        "The Gateway Pundit",
-        "cedarnews.net",
-        "AVweb",
-        "ABC7 Chicago",
-        "FlipItMoney"
-      ],
-      "score": 3.06
-    },
-    {
       "id": "30f9e199e0a5",
       "cat": "hacks",
       "kind": "news",
@@ -670,6 +647,25 @@
       "score": 2.94
     },
     {
+      "id": "a910e55ce45c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta aircraft faced manual calculations after a critical system outage",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNVk9wRlNjSmhMS2dfblZfYVFNMlJUQ1YwT0lNc21rOGxPVHUzcFZBUEI2THk1ZXNHbW85dkJDVmlMaTJUaFlBWXdNWjM5bTF3LVE0cFZ0UVIyUXNSejUxd09CWVNUQW93U085NXdnbkJ1UmRGdEN1NTFFU2pKckh3YTE3aFZvRE43cC1lb0h6anpMWnJXakdvQnhDUVZtQ0pKWERRcjNnMlRveDFaeUtHbGJOdm1vWEhlQmtFa28zVGdZUm44Y283d3lPc1o5cFFTY1NuX2JEMNIB6wFBVV95cUxQQTR1S21FSWltM1BjUDUyd1ItVGZEZnZ6YlNaMEVldmZiVVIxM0l0OW1ZMGFZMmpFMVRzVU82eThjZWl1bUo2TkdaSHd6eFh0Nk53Nkt5QnYwSHBaSjlPMmFBenhKb2xqQXVQOV8yR2VUVF8xUWRRZVNVY180ZzRfS01TOFUybHZDam9FTnhJdTFDSzFWblZ1blB2a1NCZjd6aGpJbkpjejJ2R0Rua2ZKTHcxQ05qTXkzTXAzZ3VEd1ZUeUVqdkpRR1lFdklMTG4weGVZczhlSWRCemJUMkVRbVdFcFktMVduMzlj?oc=5",
+      "source": "Boston 25 News",
+      "publishedAt": "2026-11-23T20:18:49.000Z",
+      "latestAt": "2026-11-23T20:18:49.000Z",
+      "firstSeenAt": "2026-11-23T21:55:50.295Z",
+      "outlets": 4,
+      "outletNames": [
+        "Boston 25 News",
+        "104.5 WOKV",
+        "WFTV",
+        "WPXI"
+      ],
+      "score": 2.92
+    },
+    {
       "id": "3abd8d35b651",
       "cat": "hacks",
       "kind": "news",
@@ -708,23 +704,6 @@
         "Breitbart News"
       ],
       "score": 2.78
-    },
-    {
-      "id": "004141a71fd9",
-      "cat": "internet",
-      "kind": "news",
-      "title": "We haven’t seen the last of the major tech outages",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUbU5QT0paMUU0a0hhdFJfTDNBWHVVN2YzaGVLM3pTU3o0ekhPTWVvaHJCbFY3Nkt1aldJRnlubDJNMDdyNVJadDVzcGR0RVROVmxTYW1VWktlRV9qdXpGTGx5NmZzeWM?oc=5",
-      "source": "The Verge",
-      "publishedAt": "2026-11-22T22:48:02.000Z",
-      "latestAt": "2026-11-23T08:42:45.000Z",
-      "firstSeenAt": "2026-11-23T04:52:55.212Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Verge",
-        "CediRates"
-      ],
-      "score": 2.52
     },
     {
       "id": "497d4e148f54",
@@ -902,6 +881,23 @@
       "score": 1.72
     },
     {
+      "id": "721a1c93af1d",
+      "cat": "animals",
+      "kind": "news",
+      "title": "Female langur escapes zoo enclosure yet again",
+      "url": "https://www.thehindu.com/news/national/kerala/female-langur-escapes-zoo-enclosure-yet-again/article71734676.ece",
+      "source": "The Hindu",
+      "publishedAt": "2026-11-23T05:33:00.000Z",
+      "latestAt": "2026-11-23T08:15:00.000Z",
+      "firstSeenAt": "2026-11-23T16:40:01.858Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Hindu",
+        "The Times of India"
+      ],
+      "score": 1.63
+    },
+    {
       "id": "6ba8cf23d88f",
       "cat": "hacks",
       "kind": "news",
@@ -917,6 +913,28 @@
         "Edmonton Journal"
       ],
       "score": 2.78
+    },
+    {
+      "id": "c87e0fba0864",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Staffing issue prompts ground stop at O’Hare Airport",
+      "url": "https://www.msn.com/en-us/news/other/staffing-issue-prompts-ground-stop-at-o-hare-airport/ar-AA2i3LAY",
+      "source": "WGN-TV on MSN",
+      "publishedAt": "2026-11-23T01:43:00.000Z",
+      "latestAt": "2026-11-23T21:48:51.000Z",
+      "firstSeenAt": "2026-11-23T18:10:22.978Z",
+      "outlets": 7,
+      "outletNames": [
+        "WGN-TV on MSN",
+        "AOL.com",
+        "The Gateway Pundit",
+        "cedarnews.net",
+        "AVweb",
+        "ABC7 Chicago",
+        "FlipItMoney"
+      ],
+      "score": 2.76
     },
     {
       "id": "3dfb63467fa7",
@@ -954,24 +972,6 @@
         "TheIndustry.beauty"
       ],
       "score": 2.54
-    },
-    {
-      "id": "a910e55ce45c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta aircraft faced manual calculations after a critical system outage",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNVk9wRlNjSmhMS2dfblZfYVFNMlJUQ1YwT0lNc21rOGxPVHUzcFZBUEI2THk1ZXNHbW85dkJDVmlMaTJUaFlBWXdNWjM5bTF3LVE0cFZ0UVIyUXNSejUxd09CWVNUQW93U085NXdnbkJ1UmRGdEN1NTFFU2pKckh3YTE3aFZvRE43cC1lb0h6anpMWnJXakdvQnhDUVZtQ0pKWERRcjNnMlRveDFaeUtHbGJOdm1vWEhlQmtFa28zVGdZUm44Y283d3lPc1o5cFFTY1NuX2JEMNIB6wFBVV95cUxQQTR1S21FSWltM1BjUDUyd1ItVGZEZnZ6YlNaMEVldmZiVVIxM0l0OW1ZMGFZMmpFMVRzVU82eThjZWl1bUo2TkdaSHd6eFh0Nk53Nkt5QnYwSHBaSjlPMmFBenhKb2xqQXVQOV8yR2VUVF8xUWRRZVNVY180ZzRfS01TOFUybHZDam9FTnhJdTFDSzFWblZ1blB2a1NCZjd6aGpJbkpjejJ2R0Rua2ZKTHcxQ05qTXkzTXAzZ3VEd1ZUeUVqdkpRR1lFdklMTG4weGVZczhlSWRCemJUMkVRbVdFcFktMVduMzlj?oc=5",
-      "source": "Boston 25 News",
-      "publishedAt": "2026-11-23T20:18:49.000Z",
-      "latestAt": "2026-11-23T20:18:49.000Z",
-      "firstSeenAt": "2026-11-23T21:55:50.295Z",
-      "outlets": 3,
-      "outletNames": [
-        "Boston 25 News",
-        "104.5 WOKV",
-        "WFTV"
-      ],
-      "score": 2.52
     },
     {
       "id": "146aa5beb1a5",
@@ -1447,40 +1447,6 @@
       "score": 1.72
     },
     {
-      "id": "bce872af99f8",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Woman goes to Goodwill. Then a Waymo blocks the only exit in the parking lot and refuses to budge",
-      "url": "https://www.msn.com/en-us/autos/self-driving-cars/woman-goes-to-goodwill-then-a-waymo-blocks-the-only-exit-in-the-parking-lot-and-refuses-to-budge/ar-AA2i14pm",
-      "source": "MSN",
-      "publishedAt": "2026-11-22T23:00:00.000Z",
-      "latestAt": "2026-11-22T23:00:00.000Z",
-      "firstSeenAt": "2026-11-23T07:23:26.352Z",
-      "outlets": 2,
-      "outletNames": [
-        "MSN",
-        "Buzznews on MSN"
-      ],
-      "score": 1.72
-    },
-    {
-      "id": "73a4aa5fd63f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US airline restores system after outage disrupts Thanksgiving travel",
-      "url": "https://www.siasat.com/us-airline-restores-system-after-outage-disrupts-thanksgiving-travel-3584391/",
-      "source": "The Siasat Daily",
-      "publishedAt": "2026-11-22T22:48:00.000Z",
-      "latestAt": "2026-11-23T02:58:34.000Z",
-      "firstSeenAt": "2026-11-23T07:08:15.953Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Siasat Daily",
-        "Howl.Link"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "63d4dee8ab39",
       "cat": "hacks",
       "kind": "news",
@@ -1583,23 +1549,6 @@
       "score": 1.65
     },
     {
-      "id": "721a1c93af1d",
-      "cat": "animals",
-      "kind": "news",
-      "title": "Female langur escapes zoo enclosure yet again",
-      "url": "https://www.thehindu.com/news/national/kerala/female-langur-escapes-zoo-enclosure-yet-again/article71734676.ece",
-      "source": "The Hindu",
-      "publishedAt": "2026-11-23T05:33:00.000Z",
-      "latestAt": "2026-11-23T08:15:00.000Z",
-      "firstSeenAt": "2026-11-23T16:40:01.858Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Hindu",
-        "The Times of India"
-      ],
-      "score": 1.63
-    },
-    {
       "id": "fe740af2b933",
       "cat": "hacks",
       "kind": "news",
@@ -1632,23 +1581,6 @@
         "News10NBC"
       ],
       "score": 1.62
-    },
-    {
-      "id": "11ae6954dae5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "AI-Powered Hackers Access Over 1 Million Personal Records in Attacks on 10 Organizations",
-      "url": "https://cyberpress.org/ai-hackers-access-millions/",
-      "source": "cyberpress",
-      "publishedAt": "2026-11-22T23:01:00.000Z",
-      "latestAt": "2026-11-23T10:48:33.000Z",
-      "firstSeenAt": "2026-11-23T11:39:00.724Z",
-      "outlets": 2,
-      "outletNames": [
-        "cyberpress",
-        "CyberSecurityNews"
-      ],
-      "score": 1.58
     },
     {
       "id": "662e0fa97383",
@@ -1801,6 +1733,70 @@
         "biztalknews.com"
       ],
       "score": 1.4
+    },
+    {
+      "id": "8eb9fac18f5d",
+      "cat": "internet",
+      "kind": "x",
+      "title": "A technical outage affecting one of Delta Air Lines’ weight-and-balance systems delayed more than 1,600 flights nationwide on Sunday, the airline said.",
+      "url": "https://x.com/Breaking911/status/2124654147974639923",
+      "source": "@Breaking911 on X",
+      "publishedAt": "2026-11-22T23:59:57.000Z",
+      "latestAt": "2026-11-22T23:59:57.000Z",
+      "firstSeenAt": "2026-11-23T00:07:08.713Z",
+      "outlets": 1,
+      "outletNames": [
+        "@Breaking911 on X"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "32dc77c35517",
+      "cat": "flights",
+      "kind": "news",
+      "title": "New York parent books backup rental car for Texas work trip after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5rWHlZb3BRVXVoRXFGZVpBaGNNYTlLUnpBOWs1TzZ1RE9ZMTVqcGVlREdzOFhwYUdrTm9rZEVocl9QUkx4ZDVsVE5waDRrWko5d2phME1weG4wN0steXYza1NFLThydU05V0tJUFBBTEdvblBGQVp0Mlh0SnpYZw?oc=5",
+      "source": "The Cool Down",
+      "publishedAt": "2026-11-23T20:55:00.000Z",
+      "latestAt": "2026-11-23T20:55:00.000Z",
+      "firstSeenAt": "2026-11-23T23:11:05.488Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Cool Down"
+      ],
+      "score": 1.35
+    },
+    {
+      "id": "a461bbd73119",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Joe Rogan 'Nervious' & Sounds Alarm Over Major 'Worldwide' Tech Outages",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSGhrVVVUYWl5UHprNV93TmtoZVBBV3pxbzhTcTZBWmtTaUsxMkJZNnRMUjM1MzdXcHhjeTFrMjVOSG56OWJDX2FodTRldm1oeF9RTzFsQVFIODVQbFl0Vm5leE1wUFdaUEJ1cUtLMmp1VU9aTUw3NFQ2Mnk0cFlINzlkUDBNVDE3RXd0MDAzbw?oc=5",
+      "source": "RadarOnline",
+      "publishedAt": "2026-11-23T19:10:26.000Z",
+      "latestAt": "2026-11-23T19:10:26.000Z",
+      "firstSeenAt": "2026-11-23T23:11:05.488Z",
+      "outlets": 1,
+      "outletNames": [
+        "RadarOnline"
+      ],
+      "score": 1.31
+    },
+    {
+      "id": "88bab342b3bf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Telcos strengthen cyberattack defences, report no major vulnerabilities",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX2tRMGVNdkFwYXkzcEQ5d2lycTBDYzU3Y2pxbXgxejBQZVVlWGptMFVFLVZ4NE9BTXQwN3UzQ01RZ0ZEYWRlSTItSTJ5c3g3dXk2Q2k5SGJNX0hxbWNfZEN6UTZXUzhhNjF3SEFDd1BrWTNuLTZIdHpENWZlNWZpbGk5R01HanpOU0gyaGYxQW9jMV9WalAzNWNrdUkzdGczcFpaX1pHTTlFUzdabEVhWDhIT2kxdmUwZGN0ODNXb1NCcTNKdzRac0I4OE84Nm5iVzl5dkp1a9IB3AFBVV95cUxQZmFVVlg0QzJ1LTF6U1VwTDF2dzhEOTl4SEFubmgzWEE2Zm0yeldSbk9DbS1HSHh5LWJkLTRnQ1RDYk5HQXRnVGF6Q2E2NXF3ZDQtQmJXeXBKVzh1NFhsQlhORzFjVGt0cGNmcDRpLTEwRHNuNEYwVkZuTm1wbVFWc2ZMUFhFdGVXVWx4a1MyLU9OcHJES01aZ21JcXd4RE5PdW5Ic1ZUQkdFMnJha2N0RkNxNDBaZ05kUzNvcXJvSjNLR0d2OGhNbHJ5U2FPYUxIS3JrTnhGRVMxeENJ?oc=5",
+      "source": "The Economic Times",
+      "publishedAt": "2026-11-23T00:30:00.000Z",
+      "latestAt": "2026-11-23T00:30:00.000Z",
+      "firstSeenAt": "2026-11-23T04:22:49.114Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Economic Times"
+      ],
+      "score": 1.31
     },
     {
       "id": "d6dc0c529e70",
@@ -2020,7 +2016,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-23T00:42:00.000Z",
-      "latestAt": "2026-11-23T13:30:00.000Z",
+      "latestAt": "2026-11-23T14:57:00.000Z",
       "firstSeenAt": "2026-11-23T08:53:34.044Z",
       "outlets": 1,
       "outletNames": [
