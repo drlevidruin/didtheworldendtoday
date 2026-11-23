@@ -29,6 +29,29 @@
   "change": 6,
   "stories": [
     {
+      "id": "sig:faa-stop:ORD:2026-11-23",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at ORD (STAFFING)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-23T17:10:03.099Z",
+      "latestAt": "2026-11-23T17:10:03.099Z",
+      "firstSeenAt": "2026-11-23T17:10:03.099Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "ORD",
+        "hub": true,
+        "nationwide": false,
+        "reason": "STAFFING"
+      }
+    },
+    {
       "id": "sig:quake:us6000ucvm",
       "cat": "earth",
       "kind": "signal",
@@ -152,29 +175,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "sig:faa-stop:HPN:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at HPN (airport volume)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T21:36:48.376Z",
-      "latestAt": "2026-11-22T21:36:48.376Z",
-      "firstSeenAt": "2026-11-22T21:36:48.376Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "HPN",
-        "hub": false,
-        "nationwide": false,
-        "reason": "airport volume"
-      }
-    },
-    {
       "id": "26ac8de36de0",
       "cat": "hacks",
       "kind": "news",
@@ -205,6 +205,28 @@
         "Rutland Herald"
       ],
       "score": 3.46
+    },
+    {
+      "id": "3b49b8baaf14",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Bell investigating cyberattack that exposed customer information last week",
+      "url": "https://www.msn.com/en-ca/news/other/bell-investigating-cyberattack-that-exposed-customer-information-last-week/ar-AA2i33Bg",
+      "source": "The Canadian Press on MSN",
+      "publishedAt": "2026-11-23T06:54:25.000Z",
+      "latestAt": "2026-11-23T16:52:36.000Z",
+      "firstSeenAt": "2026-11-23T15:09:42.957Z",
+      "outlets": 7,
+      "outletNames": [
+        "The Canadian Press on MSN",
+        "The Spec",
+        "Castanet",
+        "Toronto Star",
+        "BNN Bloomberg",
+        "CityNews Vancouver",
+        "CityNews Toronto"
+      ],
+      "score": 3.28
     },
     {
       "id": "0cd515516612",
@@ -245,27 +267,6 @@
         "SSBCrack"
       ],
       "score": 3.13
-    },
-    {
-      "id": "3b49b8baaf14",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Bell investigating cyberattack that exposed customer information last week",
-      "url": "https://www.msn.com/en-ca/news/other/bell-investigating-cyberattack-that-exposed-customer-information-last-week/ar-AA2i33Bg",
-      "source": "The Canadian Press on MSN",
-      "publishedAt": "2026-11-23T06:54:25.000Z",
-      "latestAt": "2026-11-23T16:52:36.000Z",
-      "firstSeenAt": "2026-11-23T15:09:42.957Z",
-      "outlets": 6,
-      "outletNames": [
-        "The Canadian Press on MSN",
-        "The Spec",
-        "Castanet",
-        "Toronto Star",
-        "BNN Bloomberg",
-        "CityNews Vancouver"
-      ],
-      "score": 3.09
     },
     {
       "id": "0bd864176a5d",
@@ -320,6 +321,29 @@
         "Asianet Newsable"
       ],
       "score": 2.23
+    },
+    {
+      "id": "sig:faa-stop:HPN:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at HPN (airport volume)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T21:36:48.376Z",
+      "latestAt": "2026-11-22T21:36:48.376Z",
+      "firstSeenAt": "2026-11-22T21:36:48.376Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "HPN",
+        "hub": false,
+        "nationwide": false,
+        "reason": "airport volume"
+      }
     },
     {
       "id": "sig:faa-stop:TEB:2026-11-22",
@@ -383,23 +407,6 @@
         "Korea JoongAng Daily"
       ],
       "score": 2.82
-    },
-    {
-      "id": "f257116fae03",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Millions expected to travel for Thanksgiving as FAA investigates nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQTUMyVHZkWDNIT2xJLVNMOGZ6RUkyaHd2WnlGUFd1N0ZWaFlBN3hFQkxqUmlkQm9lZ1hhM1lyWnFZZW9wYVZVTzM1S3VKOVFQZldQODlHRkpRTXBNYUE1cVRYTUp4VDdmeEF0TnVOWlFDdHg3bzVCd3hZbVA2Vy04SW9vSmtjbW9vY3hvLVV4VFR2WTV2OTl3cjF3TnlPN2o1YWl1cTQ0bWVFdWo5c2N0S3UwalBId3dEV09IcllEMUJVQktfSTB2TEItRXR2UUlLUFFGZUprRGY?oc=5",
-      "source": "WFTV",
-      "publishedAt": "2026-11-22T19:10:15.000Z",
-      "latestAt": "2026-11-22T19:13:28.000Z",
-      "firstSeenAt": "2026-11-22T19:21:23.088Z",
-      "outlets": 2,
-      "outletNames": [
-        "WFTV",
-        "Yahoo"
-      ],
-      "score": 2.79
     },
     {
       "id": "0667eed29872",
@@ -597,23 +604,6 @@
       "score": 1.7
     },
     {
-      "id": "5bab5c44f992",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Rabbit control and Avian Influenza a focus by ORC",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObDhlTFB1RXlISzdGQ2JKQXJ1WTV3ZmNTYzZFWV80X3paVFVXa2taTXRRMjBHTm8wa252QWt1amdzSnc4LVZuS3RxcERYaENsS0k4SlpGZklWclhPSl9RRVMzc3UzYndULWtSRFJxU3dqc0hvcERaam53eHlpemNXRjlYUGtHUnBGTEhSMlh1VmRFWGo0SXJmOXE0d3BDZC1kOE9hSWpnZy0?oc=5",
-      "source": "Wanaka App",
-      "publishedAt": "2026-11-22T17:04:17.000Z",
-      "latestAt": "2026-11-23T01:19:29.000Z",
-      "firstSeenAt": "2026-11-23T03:52:41.341Z",
-      "outlets": 2,
-      "outletNames": [
-        "Wanaka App",
-        "The Central App"
-      ],
-      "score": 1.64
-    },
-    {
       "id": "721a1c93af1d",
       "cat": "animals",
       "kind": "news",
@@ -645,6 +635,39 @@
         "biztalknews.com"
       ],
       "score": 1.4
+    },
+    {
+      "id": "8eb9fac18f5d",
+      "cat": "internet",
+      "kind": "x",
+      "title": "A technical outage affecting one of Delta Air Lines’ weight-and-balance systems delayed more than 1,600 flights nationwide on Sunday, the airline said.",
+      "url": "https://x.com/Breaking911/status/2124654147974639923",
+      "source": "@Breaking911 on X",
+      "publishedAt": "2026-11-22T23:59:57.000Z",
+      "latestAt": "2026-11-22T23:59:57.000Z",
+      "firstSeenAt": "2026-11-23T00:07:08.713Z",
+      "outlets": 1,
+      "outletNames": [
+        "@Breaking911 on X"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "f257116fae03",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Millions expected to travel for Thanksgiving as FAA investigates nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQTUMyVHZkWDNIT2xJLVNMOGZ6RUkyaHd2WnlGUFd1N0ZWaFlBN3hFQkxqUmlkQm9lZ1hhM1lyWnFZZW9wYVZVTzM1S3VKOVFQZldQODlHRkpRTXBNYUE1cVRYTUp4VDdmeEF0TnVOWlFDdHg3bzVCd3hZbVA2Vy04SW9vSmtjbW9vY3hvLVV4VFR2WTV2OTl3cjF3TnlPN2o1YWl1cTQ0bWVFdWo5c2N0S3UwalBId3dEV09IcllEMUJVQktfSTB2TEItRXR2UUlLUFFGZUprRGY?oc=5",
+      "source": "WFTV",
+      "publishedAt": "2026-11-22T19:10:15.000Z",
+      "latestAt": "2026-11-22T19:13:28.000Z",
+      "firstSeenAt": "2026-11-22T19:21:23.088Z",
+      "outlets": 2,
+      "outletNames": [
+        "WFTV",
+        "Yahoo"
+      ],
+      "score": 2.79
     },
     {
       "id": "2541df40929e",
@@ -1237,23 +1260,6 @@
       "score": 1.62
     },
     {
-      "id": "b9980c1fb134",
-      "cat": "markets",
-      "kind": "news",
-      "title": "New 19-month low: Hong Kong stocks plunge as AI sell-off spreads to Asia",
-      "url": "https://www.scmp.com/business/markets/article/3375424/new-19-month-low-hong-kong-stocks-plunge-ai-sell-spreads-asia",
-      "source": "scmp.com",
-      "publishedAt": "2026-11-22T17:09:00.000Z",
-      "latestAt": "2026-11-23T04:20:57.000Z",
-      "firstSeenAt": "2026-11-23T04:37:49.815Z",
-      "outlets": 2,
-      "outletNames": [
-        "scmp.com",
-        "South China Morning Post"
-      ],
-      "score": 1.62
-    },
-    {
       "id": "11ae6954dae5",
       "cat": "hacks",
       "kind": "news",
@@ -1356,18 +1362,18 @@
       "score": 1.47
     },
     {
-      "id": "8eb9fac18f5d",
-      "cat": "internet",
-      "kind": "x",
-      "title": "A technical outage affecting one of Delta Air Lines’ weight-and-balance systems delayed more than 1,600 flights nationwide on Sunday, the airline said.",
-      "url": "https://x.com/Breaking911/status/2124654147974639923",
-      "source": "@Breaking911 on X",
-      "publishedAt": "2026-11-22T23:59:57.000Z",
-      "latestAt": "2026-11-22T23:59:57.000Z",
-      "firstSeenAt": "2026-11-23T00:07:08.713Z",
+      "id": "3226c91796d3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "America's Biggest Oil Export Port Faces Thousands of Cyberattack Attempts",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZEl2d2N0eTBYZ2E0WmI3Y0FrRWJWaEZDV1ZldndoMHRYQ2VpTDZ4UklobE5CMzZuN0ZtZDRVUmZ1YmxSNi1yeGZrVFBrY3VSWVdZY1hDV3JaREF5SXFsRGl4VlhPZWRnZjUzQko0Y0g2SnF5RWpqQmRuWmpmRDJxYzZBX2VIdWRRSjV1eXA0LTI0alBlSHZUamt1UlFwckJTZDFRVDZvaDRUUkNOck1Qc0I1OUJuaUtRUFJ1VdIBwgFBVV95cUxOSVFlb3JJQ1BFMF9oOG5LVjV3RmdlOTBBQVhQS1NGLUJCZ21oRjFJQTA2anZEN2JUbXRQdmQzZzdlSjB2RnlfZmVNNmliUDNGYVloaGtiQ1MtS1hJUmdfN3RwYzE0Wl9NRFFseHlBM290akh4WmpkV3Y1OThhb1VvUVFQLVVPcDQ0U3Q2UmNORndXS1lCYXotY3dtbHd5MVMtaElTNDdlLTQtTXVCRjZSZGFrVGtWcVZZSlFGbm1rZVNMQQ?oc=5",
+      "source": "Crude Oil Prices Today | OilPrice.com",
+      "publishedAt": "2026-11-23T17:00:00.000Z",
+      "latestAt": "2026-11-23T17:00:00.000Z",
+      "firstSeenAt": "2026-11-23T17:10:03.099Z",
       "outlets": 1,
       "outletNames": [
-        "@Breaking911 on X"
+        "Crude Oil Prices Today | OilPrice.com"
       ],
       "score": 1.4
     },
@@ -1500,22 +1506,6 @@
       "score": 1.32
     },
     {
-      "id": "7246bd4d8ec7",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US flights grounded nationwide as air traffic control communications fail",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNk9RQm1zelpFaTBsQklkZy14QVR4Y2V5ZkI3NGNKbzdQenlneDNtM09XNkxSeFMtalBlOXJOckI3Yk1RMUJGWGZGOU9fWU0wSGhQVkVjUzVKbklROFE5SmxJbHFkeXFrVVUzTzktZEFNWDlIc3N4VlpJZWthaTY1MVlObTVhXy1vX2hzVXdnSXVVVllFUzZ2dkVoSVlMdzF6ODNOdFlBN1N1S2h5Zmc?oc=5",
-      "source": "Herald.Wales",
-      "publishedAt": "2026-11-23T13:09:19.000Z",
-      "latestAt": "2026-11-23T13:09:19.000Z",
-      "firstSeenAt": "2026-11-23T16:54:57.340Z",
-      "outlets": 1,
-      "outletNames": [
-        "Herald.Wales"
-      ],
-      "score": 1.31
-    },
-    {
       "id": "d6dc0c529e70",
       "cat": "weather",
       "kind": "news",
@@ -1548,6 +1538,38 @@
         "The US Sun"
       ],
       "score": 1.09
+    },
+    {
+      "id": "37557e47a977",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Tuesday Blackout: Kenya Power lists areas to face 10-hour power outages in 5 counties",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZEpnWnFMd2pIbFRMT3R0MUFzNVZSa0lWbW9RVkNkWnVNREQ1aU1EUloyMXBFdEpnazFCYnJad1pfOUZrSkRCY3MzZEVVMkhiSlZKYjZ4V05OU3J0emx1NFBqS0Q1Tjh4NVoxWHpVbkhCT1ZUSU9mV1dpdkV2Nk5HWng5M3p6M0ZCSGNVNVQ1UktOSU9TZmFIc2M3OWFIb0tjRHkzeUZ2MFhITV9jdnc?oc=5",
+      "source": "K24 Digital",
+      "publishedAt": "2026-11-23T16:54:46.000Z",
+      "latestAt": "2026-11-23T16:54:46.000Z",
+      "firstSeenAt": "2026-11-23T17:10:03.099Z",
+      "outlets": 1,
+      "outletNames": [
+        "K24 Digital"
+      ],
+      "score": 1
+    },
+    {
+      "id": "2d89eb75f36f",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Nearly 1.8 million chickens to be depopulated after bird flu detected at Okeechobee County facility",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQLTJHWnBkVGtxTGV3OEd0dGljSkNoQm1FZi1PX2Z6c1ppcGY2bFpVV2tabllhc3gyZk1WWVZpaUdtTEFsN2tHZkpmSVFmQjJCS05NeFFYbjZlbUJrRWtrMXRrbWlYRmh6UkZweGZwT2lBTVZjc1VzNno5dFFJQ0d4Zkhka0lXS09aTmRTQnotRG9HdTlmbUtyUjF2TFlVeG5NVEtuamdWVUk2S0xNdkNKTHpZRmlyV0FZUU9tbXFpRjdDYmM1VUlsejVzdHNESGFZMnFKNWRNUzBfb005U1lMNlBzek1wRGpjcXpLVC04NzNiaDM4bGNabA?oc=5",
+      "source": "WPTV",
+      "publishedAt": "2026-11-23T16:53:28.000Z",
+      "latestAt": "2026-11-23T16:53:28.000Z",
+      "firstSeenAt": "2026-11-23T17:10:03.099Z",
+      "outlets": 1,
+      "outletNames": [
+        "WPTV"
+      ],
+      "score": 1
     },
     {
       "id": "eaa65633f434",
@@ -1644,22 +1666,6 @@
         "Portsmouth News"
       ],
       "score": 1
-    },
-    {
-      "id": "2b856f898001",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Ashanti Region: 26 communities to experience power outage due to emergency maintenance on Nov 24",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbmFadVNZdERLS2EwVGNzc3lPM2dFdEhudHlaWTRKZjExN21YU3hiLVJDUW5TSUJLZFg1N2R1S3JYdGVjdTBVdV92LVRwcUZ4UFBuaWUyMnVOODhja0YxREppRkJHVTc4cXhJOTZmWlktZjZBVzZIUzlsQ2Yxbmd5OWp1R2JaYTREQWxJTVNHMHRFNEhzMm1tUGR3Yi1CLUtOVlNKV201N3V1Y2R6MkZlQWRZNGJ2VDN2VUxUeWJ6WQ?oc=5",
-      "source": "3News",
-      "publishedAt": "2026-11-23T16:34:42.000Z",
-      "latestAt": "2026-11-23T16:34:42.000Z",
-      "firstSeenAt": "2026-11-23T16:54:57.340Z",
-      "outlets": 1,
-      "outletNames": [
-        "3News"
-      ],
-      "score": 0.99
     },
     {
       "id": "e0873ecb46aa",
@@ -1794,21 +1800,21 @@
       "score": 0.82
     },
     {
-      "id": "bf99ab5acae6",
+      "id": "61072e848730",
       "cat": "sun",
       "kind": "news",
-      "title": "NOAA issues G1 alert as aurora may be Visible across northern U.S.",
-      "url": "https://www.mogazmasr.com/158236",
-      "source": "Mogaz Masr",
-      "publishedAt": "2026-11-22T21:03:00.000Z",
-      "latestAt": "2026-11-22T21:03:00.000Z",
-      "firstSeenAt": "2026-11-23T14:24:31.661Z",
+      "title": "Magnetic Storms on November 23–24, 2026, and the Solar Activity Forecast",
+      "url": "https://ua.news/en/health/magnitni-buri-23-24-listopada-2026-roku-ta-prognoz-soniachnoyi-aktivnosti",
+      "source": "UA.NEWS",
+      "publishedAt": "2026-11-22T23:57:00.000Z",
+      "latestAt": "2026-11-22T23:57:00.000Z",
+      "firstSeenAt": "2026-11-23T17:10:03.099Z",
       "outlets": 1,
       "outletNames": [
-        "Mogaz Masr"
+        "UA.NEWS"
       ],
       "score": 0.71
     }
   ],
-  "updatedAt": "2026-11-23T16:54:57.340Z"
+  "updatedAt": "2026-11-23T17:10:03.099Z"
 }
