@@ -111,7 +111,7 @@
       "publishedAt": "2026-11-23T09:30:00.000Z",
       "latestAt": "2026-11-23T19:09:22.000Z",
       "firstSeenAt": "2026-11-23T17:40:06.517Z",
-      "outlets": 13,
+      "outlets": 14,
       "outletNames": [
         "NBC Chicago",
         "FOX 32 Chicago",
@@ -125,11 +125,12 @@
         "WINK News - Southwest Florida",
         "SSBCrack",
         "FOX 26 Houston",
-        "NBC News"
+        "NBC News",
+        "FOX 5 New York"
       ],
       "trending": 1000,
       "trendTerm": "ohare ground stop",
-      "score": 4.06
+      "score": 4.15
     },
     {
       "id": "2541df40929e",
@@ -337,29 +338,6 @@
       }
     },
     {
-      "id": "sig:faa-stop:TEB:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at TEB (low ceilings)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T19:21:23.088Z",
-      "latestAt": "2026-11-22T19:21:23.088Z",
-      "firstSeenAt": "2026-11-22T19:21:23.088Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "TEB",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low ceilings"
-      }
-    },
-    {
       "id": "91c05b38efd8",
       "cat": "flights",
       "kind": "news",
@@ -460,6 +438,25 @@
         "Korea JoongAng Daily"
       ],
       "score": 2.82
+    },
+    {
+      "id": "3dfb63467fa7",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Flights grounded in Belgium due to strike against austerity measures",
+      "url": "https://www.bbc.co.uk/news/articles/cwdr155e2d05o",
+      "source": "BBC",
+      "publishedAt": "2026-11-23T03:26:00.000Z",
+      "latestAt": "2026-11-23T12:30:00.000Z",
+      "firstSeenAt": "2026-11-23T11:39:00.724Z",
+      "outlets": 4,
+      "outletNames": [
+        "BBC",
+        "Yahoo",
+        "cedarnews.net",
+        "The Star, Kenya"
+      ],
+      "score": 2.59
     },
     {
       "id": "fca35b4472e6",
@@ -584,6 +581,23 @@
       "score": 1.99
     },
     {
+      "id": "34dc482ff4ed",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Recent Bird Flu cases likely came from Idaho Cattle, says Dept. of Ag.",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOb2M3cEtqMzFVdzVGMmdNaVd5U29tRERkcVNocGs0VGNyTkJNZHNuOFo4TV9DNlNwb0dIT1dRRTVaU1VRMUoxV2ZDZlhISE1LaXdwRlcwRHE4MWo2VDJRSkFVNUU1SEZ1ajF4TS1pUWNETXA3Tm43UVNqcE5Xam5MQ3J0UQ?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T18:22:52.000Z",
+      "latestAt": "2026-11-23T18:26:04.000Z",
+      "firstSeenAt": "2026-11-23T19:25:24.603Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "KIRO 7 News Seattle"
+      ],
+      "score": 1.97
+    },
+    {
       "id": "fa67427e007c",
       "cat": "earth",
       "kind": "news",
@@ -637,23 +651,6 @@
       "score": 1.78
     },
     {
-      "id": "a63b967f255d",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed at commercial poultry farm",
-      "url": "https://www.bbc.co.uk/news/articles/cry86dg976vgo",
-      "source": "BBC",
-      "publishedAt": "2026-11-23T03:37:00.000Z",
-      "latestAt": "2026-11-23T11:37:26.000Z",
-      "firstSeenAt": "2026-11-23T12:09:08.356Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "Yahoo"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "fd8f6b998fed",
       "cat": "hacks",
       "kind": "news",
@@ -675,25 +672,6 @@
         "European Interest"
       ],
       "score": 2.78
-    },
-    {
-      "id": "3dfb63467fa7",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Flights grounded in Belgium due to strike against austerity measures",
-      "url": "https://www.bbc.co.uk/news/articles/cwdr155e2d05o",
-      "source": "BBC",
-      "publishedAt": "2026-11-23T03:26:00.000Z",
-      "latestAt": "2026-11-23T12:30:00.000Z",
-      "firstSeenAt": "2026-11-23T11:39:00.724Z",
-      "outlets": 4,
-      "outletNames": [
-        "BBC",
-        "Yahoo",
-        "cedarnews.net",
-        "The Star, Kenya"
-      ],
-      "score": 2.59
     },
     {
       "id": "ed8122b35384",
@@ -1115,6 +1093,23 @@
       "score": 1.72
     },
     {
+      "id": "a63b967f255d",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed at commercial poultry farm",
+      "url": "https://www.bbc.co.uk/news/articles/cry86dg976vgo",
+      "source": "BBC",
+      "publishedAt": "2026-11-23T03:37:00.000Z",
+      "latestAt": "2026-11-23T11:37:26.000Z",
+      "firstSeenAt": "2026-11-23T12:09:08.356Z",
+      "outlets": 2,
+      "outletNames": [
+        "BBC",
+        "Yahoo"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "61c68303f936",
       "cat": "hacks",
       "kind": "news",
@@ -1232,6 +1227,40 @@
         "IndiaIPO"
       ],
       "score": 1.67
+    },
+    {
+      "id": "38224e174dbb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Nvidia confirms it is investigating possible third-party data breach, says it will 'continue to monitor the situation'",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/nvidia-confirms-investigating-possible-third-170500614.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-23T09:05:00.000Z",
+      "latestAt": "2026-11-23T17:05:00.000Z",
+      "firstSeenAt": "2026-11-23T19:25:24.603Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "TechRadar"
+      ],
+      "score": 1.66
+    },
+    {
+      "id": "a36699cb078e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA: The upgrade that grounded flights",
+      "url": "https://www.yahoo.com/news/us/articles/faa-upgrade-grounded-flights-164816767.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T08:48:00.000Z",
+      "latestAt": "2026-11-23T16:48:16.000Z",
+      "firstSeenAt": "2026-11-23T19:25:24.603Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "The Week"
+      ],
+      "score": 1.65
     },
     {
       "id": "721a1c93af1d",
@@ -1516,38 +1545,6 @@
       "score": 1.37
     },
     {
-      "id": "f3afeed46078",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft details causes of Outlook outage that affected millions",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVk5KNGtqNGIycGVSdDFtdHIxM0ZaM0Z4N1NTTjZOb2UwMWNiVHhPbVFXY205Mm5rNlRCcGxneXk0MDlteXhNNmJYYk1XWHFVU3Q1Um9jaURTSGdaYk1zbWx3UzI0aFpLT1FxWmJZVXhOVXhoWnEzUm5zMEVuVTg1N1JqeElFbkp6dVBz?oc=5",
-      "source": "Mezha.net",
-      "publishedAt": "2026-11-23T16:28:29.000Z",
-      "latestAt": "2026-11-23T16:28:29.000Z",
-      "firstSeenAt": "2026-11-23T18:55:17.928Z",
-      "outlets": 1,
-      "outletNames": [
-        "Mezha.net"
-      ],
-      "score": 1.34
-    },
-    {
-      "id": "7f00de02c513",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Delta Recovers From Weight-System Crash That Delayed 1,800 Nationwide Flights in Third Major Aviation Outage",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMVVlUm8zTU4wbjJhTmZyMWotZGpyeWg4bmM0X0Q2NzRPSXFDZEtLYkhJNWM2UzhUeGdhVnUxV1E1OFpEdU5mNEhxVHkxaWVveHJhcUVPNUtlUFVWUHM5bDd3WlVhLTlVQjB2OUQ0aXF4aHBnSXNfaDFvUk00RHpibHZkVkNqa3RD?oc=5",
-      "source": "Latin Times",
-      "publishedAt": "2026-11-23T15:53:48.000Z",
-      "latestAt": "2026-11-23T15:53:48.000Z",
-      "firstSeenAt": "2026-11-23T19:10:20.571Z",
-      "outlets": 1,
-      "outletNames": [
-        "Latin Times"
-      ],
-      "score": 1.32
-    },
-    {
       "id": "d6dc0c529e70",
       "cat": "weather",
       "kind": "news",
@@ -1826,5 +1823,5 @@
       "score": 0.71
     }
   ],
-  "updatedAt": "2026-11-23T19:10:20.571Z"
+  "updatedAt": "2026-11-23T19:25:24.603Z"
 }
