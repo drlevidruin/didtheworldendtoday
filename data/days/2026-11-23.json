@@ -166,6 +166,28 @@
       "score": 4.19
     },
     {
+      "id": "f9b8b15de8ad",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Andaman's eight islands to be linked via undersea cable network",
+      "url": "https://www.newsbytesapp.com/news/science/indian-government-to-lay-undersea-optical-fiber-cable-linking-islands/story",
+      "source": "NewsBytes",
+      "publishedAt": "2026-11-22T08:29:00.000Z",
+      "latestAt": "2026-11-23T06:17:27.000Z",
+      "firstSeenAt": "2026-11-22T12:05:21.263Z",
+      "outlets": 7,
+      "outletNames": [
+        "The Pioneer",
+        "MyIndMakers",
+        "NewsBytes",
+        "Deccan Chronicle",
+        "ET Telecom",
+        "Voice&Data",
+        "GK Today"
+      ],
+      "score": 3.58
+    },
+    {
       "id": "10d485e53c01",
       "cat": "hacks",
       "kind": "news",
@@ -281,70 +303,6 @@
       "score": 2.57
     },
     {
-      "id": "004141a71fd9",
-      "cat": "internet",
-      "kind": "news",
-      "title": "We haven’t seen the last of the major tech outages",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUbU5QT0paMUU0a0hhdFJfTDNBWHVVN2YzaGVLM3pTU3o0ekhPTWVvaHJCbFY3Nkt1aldJRnlubDJNMDdyNVJadDVzcGR0RVROVmxTYW1VWktlRV9qdXpGTGx5NmZzeWM?oc=5",
-      "source": "The Verge",
-      "publishedAt": "2026-11-22T22:48:02.000Z",
-      "latestAt": "2026-11-23T07:11:33.000Z",
-      "firstSeenAt": "2026-11-23T04:52:55.212Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Verge",
-        "CediRates"
-      ],
-      "score": 2.52
-    },
-    {
-      "id": "71b0134da548",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA lifts ground stop on Atlanta-bound Delta flights after system outage",
-      "url": "https://travel.yahoo.com/news/articles/faa-lifts-ground-stop-atlanta-165324544.html",
-      "source": "travel",
-      "publishedAt": "2026-11-22T08:18:00.000Z",
-      "latestAt": "2026-11-23T07:40:22.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 32,
-      "outletNames": [
-        "WFAA",
-        "KBOI",
-        "KFOX",
-        "wtvcfox",
-        "WJLA",
-        "WXLV",
-        "KPIC",
-        "KDBC",
-        "WLOS",
-        "Newsweek",
-        "aol.com",
-        "Yahoo",
-        "Yahoo Life UK",
-        "FOX 9 Minneapolis-St. Paul",
-        "travel",
-        "cedarnews.net",
-        "Speaks Media",
-        "Fox News",
-        "stupidDOPE",
-        "X",
-        "WHP Harrisburg",
-        "Beinsure",
-        "Open Jaw",
-        "Financial-News.co.uk",
-        "ShiftDelete.Net",
-        "Ticker News",
-        "SSBCrack",
-        "Firstpost",
-        "inquisitr.com",
-        "MEAWW News",
-        "MLQ.ai",
-        "Chosunbiz"
-      ],
-      "score": 4.19
-    },
-    {
       "id": "sig:faa-stop:HPN:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -391,6 +349,29 @@
       }
     },
     {
+      "id": "sig:faa-stop:HOU:2026-11-22",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at HOU (low visibility)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-22T12:50:28.187Z",
+      "latestAt": "2026-11-22T12:50:28.187Z",
+      "firstSeenAt": "2026-11-22T12:50:28.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "HOU",
+        "hub": false,
+        "nationwide": false,
+        "reason": "low visibility"
+      }
+    },
+    {
       "id": "6eae4ce1021d",
       "cat": "hacks",
       "kind": "news",
@@ -426,6 +407,23 @@
       "score": 2.58
     },
     {
+      "id": "004141a71fd9",
+      "cat": "internet",
+      "kind": "news",
+      "title": "We haven’t seen the last of the major tech outages",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUbU5QT0paMUU0a0hhdFJfTDNBWHVVN2YzaGVLM3pTU3o0ekhPTWVvaHJCbFY3Nkt1aldJRnlubDJNMDdyNVJadDVzcGR0RVROVmxTYW1VWktlRV9qdXpGTGx5NmZzeWM?oc=5",
+      "source": "The Verge",
+      "publishedAt": "2026-11-22T22:48:02.000Z",
+      "latestAt": "2026-11-23T07:11:33.000Z",
+      "firstSeenAt": "2026-11-23T04:52:55.212Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Verge",
+        "CediRates"
+      ],
+      "score": 2.52
+    },
+    {
       "id": "59993d00bf55",
       "cat": "markets",
       "kind": "news",
@@ -443,22 +441,21 @@
       "score": 2.42
     },
     {
-      "id": "ba76c07629c7",
+      "id": "00e2710c8f02",
       "cat": "hacks",
       "kind": "news",
-      "title": "South Korea's Samsung Securities Hit by Data Breach Affecting 8,241 Customers as Brokerage Hacking Worries Mount",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9CeTJUeFVhQ1lOem1OSjdjM0Z5T2pVUkhjT0M0RDcwNXRpemRfSTB2WlBMMGdpNWJsa3Mzc09MaGM1Yk5LbUc1TkFnUi1pNTRDS3JXelk5akhCMXotT3NRdHE4MHZhRXphMDJBeHJXWmJseW1hU1E?oc=5",
-      "source": "finance.biggo.com",
-      "publishedAt": "2026-11-23T01:55:00.000Z",
-      "latestAt": "2026-11-23T07:55:00.000Z",
-      "firstSeenAt": "2026-11-23T08:08:30.015Z",
-      "outlets": 3,
+      "title": "Hackers target major websites: Your iPhone could be compromised without a single click",
+      "url": "https://www.yahoo.com/news/videos/hackers-target-major-websites-iphone-023502285.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T02:35:02.000Z",
+      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "outlets": 2,
       "outletNames": [
-        "finance.biggo.com",
-        "Korea JoongAng Daily",
-        "Crypto News"
+        "FOX 5 DC",
+        "Yahoo"
       ],
-      "score": 2.32
+      "score": 2.29
     },
     {
       "id": "cd88204ffba6",
@@ -477,25 +474,6 @@
         "Yahoo Finance"
       ],
       "score": 2.12
-    },
-    {
-      "id": "7a7b1c09dfef",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Andaman's eight islands to be linked via undersea cable network",
-      "url": "https://www.newsbytesapp.com/news/science/indian-government-to-lay-undersea-optical-fiber-cable-linking-islands/story",
-      "source": "NewsBytes",
-      "publishedAt": "2026-11-22T08:29:00.000Z",
-      "latestAt": "2026-11-23T02:39:43.000Z",
-      "firstSeenAt": "2026-11-23T03:07:36.743Z",
-      "outlets": 4,
-      "outletNames": [
-        "NewsBytes",
-        "Deccan Chronicle",
-        "ET Telecom",
-        "Voice&Data"
-      ],
-      "score": 2.07
     },
     {
       "id": "02775e79ef84",
@@ -569,23 +547,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "f9b8b15de8ad",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Centre considers new undersea cable link for remote Andaman islands",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWlqVFNBTHgzWl85R0NsdTVERF9OeXhhM0hKY3JUeFNweEJwZ2NtNmp5TUhJeG9sbDhRZDY5SnNNM3ZydWdUcXZqUWFZODNBY1g5dzhqY3BqYzhaMEhfcTZJRUJWeld3bnE5WF8yUnNpZUpLVkRMWjN3Zk9nTXRDeFZkWUE4Y3FqU0ZrcnZod2Z1Y2RGYkNIOElpbnUxQ1XSAawBQVVfeXFMTmhKU0tubHpEY0lmQ3dqVDAxc2pZMWRXVlVUeldmYmp0M3pOQjd5ZkR0Q04zdW9wVlI1b0hmWmN5NWxaTXpJYmR4QzVEZVdVTUcxQ3RicVRJNVZTY2VxSms3bVMwUWJ3VGIwbVVRazRmQjVudG45bEZPbFVsTDNBVlRocG1vMHE2SEJzMG5JTmxwYmI2MUk0TFFmTC1PS3h6bnA5T2pzUVNaWDM1dg?oc=5",
-      "source": "The Pioneer",
-      "publishedAt": "2026-11-22T09:30:19.000Z",
-      "latestAt": "2026-11-22T11:58:23.000Z",
-      "firstSeenAt": "2026-11-22T12:05:21.263Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Pioneer",
-        "MyIndMakers"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "c33798f07b64",
       "cat": "grid",
       "kind": "news",
@@ -654,27 +615,21 @@
       "score": 1.72
     },
     {
-      "id": "sig:faa-stop:HOU:2026-11-22",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at HOU (low visibility)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-22T12:50:28.187Z",
-      "latestAt": "2026-11-22T12:50:28.187Z",
-      "firstSeenAt": "2026-11-22T12:50:28.187Z",
-      "outlets": 1,
+      "id": "3775a6d0e95a",
+      "cat": "markets",
+      "kind": "news",
+      "title": "LIVE: Sensex, Nifty slide, metal stocks plunge; AI selloff hits Asia, South Korea plunges 5%",
+      "url": "https://www.financialexpress.com/market/sensex-nifty-today-live-updates-ai-selloff-asia-kospi-wall-street-crude-gold-silver-rate-stock-market-november-23-2026-4391541/",
+      "source": "The Financial Express",
+      "publishedAt": "2026-11-22T20:49:00.000Z",
+      "latestAt": "2026-11-23T06:36:47.000Z",
+      "firstSeenAt": "2026-11-23T06:38:15.236Z",
+      "outlets": 2,
       "outletNames": [
-        "FAA"
+        "The Financial Express",
+        "IndiaIPO"
       ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "HOU",
-        "hub": false,
-        "nationwide": false,
-        "reason": "low visibility"
-      }
+      "score": 1.67
     },
     {
       "id": "2dc2ae6e44f8",
@@ -788,23 +743,6 @@
         "Yahoo"
       ],
       "score": 2.58
-    },
-    {
-      "id": "00e2710c8f02",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers target major websites: Your iPhone could be compromised without a single click",
-      "url": "https://www.yahoo.com/news/videos/hackers-target-major-websites-iphone-023502285.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T02:35:02.000Z",
-      "firstSeenAt": "2026-11-23T02:52:34.117Z",
-      "outlets": 2,
-      "outletNames": [
-        "FOX 5 DC",
-        "Yahoo"
-      ],
-      "score": 2.29
     },
     {
       "id": "97d94439688d",
@@ -927,6 +865,24 @@
         "CP24"
       ],
       "score": 1.9
+    },
+    {
+      "id": "ba76c07629c7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Samsung Securities confirms data breach affecting 8,241 clients",
+      "url": "https://crypto.news/samsung-securities-data-breach-8241-customers/",
+      "source": "Crypto News",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T07:55:00.000Z",
+      "firstSeenAt": "2026-11-23T08:08:30.015Z",
+      "outlets": 3,
+      "outletNames": [
+        "finance.biggo.com",
+        "Korea JoongAng Daily",
+        "Crypto News"
+      ],
+      "score": 1.89
     },
     {
       "id": "a397ae9e51e0",
@@ -1066,23 +1022,6 @@
       "score": 1.71
     },
     {
-      "id": "dd78ea70c221",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Declares Ground Delay For Delta Flights In Atlanta",
-      "url": "https://www.yahoo.com/news/us/articles/faa-declares-ground-delay-delta-162148510.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T08:21:00.000Z",
-      "latestAt": "2026-11-22T13:08:51.000Z",
-      "firstSeenAt": "2026-11-22T17:21:07.804Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Forbes on MSN"
-      ],
-      "score": 1.7
-    },
-    {
       "id": "af40ebd5c104",
       "cat": "hacks",
       "kind": "news",
@@ -1115,23 +1054,6 @@
         "The Cincinnati Enquirer on MSN"
       ],
       "score": 1.68
-    },
-    {
-      "id": "3775a6d0e95a",
-      "cat": "markets",
-      "kind": "news",
-      "title": "LIVE: Sensex, Nifty slide, metal stocks plunge; AI selloff hits Asia, South Korea plunges 5%",
-      "url": "https://www.financialexpress.com/market/sensex-nifty-today-live-updates-ai-selloff-asia-kospi-wall-street-crude-gold-silver-rate-stock-market-november-23-2026-4391541/",
-      "source": "The Financial Express",
-      "publishedAt": "2026-11-22T20:49:00.000Z",
-      "latestAt": "2026-11-23T06:36:47.000Z",
-      "firstSeenAt": "2026-11-23T06:38:15.236Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Financial Express",
-        "IndiaIPO"
-      ],
-      "score": 1.67
     },
     {
       "id": "b029af771dd1",
@@ -1567,6 +1489,22 @@
       "score": 1.36
     },
     {
+      "id": "f150b1858f39",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FBI launches Operation Winter Shield and Riptide to nab Global Hackers",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNb2x6endPMVVkUFVLZkVnTE9sbVVSLW1keE1iWkxtbFY2bkxLd2V5QXd3ZHFVN29PRDdQeFlsRHNkVUFyMHdyeU05dUx5UWlsRnpFMFNzUGZQYzhwTk5aaTJFdFlsTmVjbUZWcmNON0NqOUdxYk1Fazc1dFRBSXBYRFlDaExKVnA4RWoxam9RZFQ5UmgzRmszRjFkaWNrdTQyekxoTmNZUnpiV2hVRXNv?oc=5",
+      "source": "Cybersecurity Insiders",
+      "publishedAt": "2026-11-23T06:20:42.000Z",
+      "latestAt": "2026-11-23T06:20:42.000Z",
+      "firstSeenAt": "2026-11-23T08:23:39.700Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cybersecurity Insiders"
+      ],
+      "score": 1.35
+    },
+    {
       "id": "8552822df5bc",
       "cat": "flights",
       "kind": "news",
@@ -1597,6 +1535,38 @@
         "Yeni Safak English"
       ],
       "score": 1.35
+    },
+    {
+      "id": "8bebabe29a09",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Crude Oil Falls as Global Selloff Offsets Middle East Risks",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPbUpvRC1IR2pKcWh5TXJCNDAzNzNmNU4zRVlleFdZRnJrQ1hwQnBOel82WVFHbnk3RWRWZzhYUmJEb2QySEFJcHl5NFdqNWt6X0ZocUx4SVJWMFZ3TDVES01zMU9oYUszY2NKMkxvWHZWTURtdmJidnBGMXBla1JjVzJRV0NGbE9XeHo5TnpvQTlaV0tKdzBaOGoxdWZucldnSi1SdGZRS3RHaVEyQ2NfNGtlS2RIaE41ODkyT0V2NTdnekJLd0V0Wl9neDVuVHZnMlE3VnAxbER1VkpLckZCRV9jUkF4ZkdQLVNrcGlzUkNfbmxlanpB?oc=5",
+      "source": "HDFC Sky",
+      "publishedAt": "2026-11-23T04:58:08.000Z",
+      "latestAt": "2026-11-23T04:58:08.000Z",
+      "firstSeenAt": "2026-11-23T08:23:39.700Z",
+      "outlets": 1,
+      "outletNames": [
+        "HDFC Sky"
+      ],
+      "score": 1.32
+    },
+    {
+      "id": "88bab342b3bf",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Telcos strengthen cyberattack defences, report no major vulnerabilities",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX2tRMGVNdkFwYXkzcEQ5d2lycTBDYzU3Y2pxbXgxejBQZVVlWGptMFVFLVZ4NE9BTXQwN3UzQ01RZ0ZEYWRlSTItSTJ5c3g3dXk2Q2k5SGJNX0hxbWNfZEN6UTZXUzhhNjF3SEFDd1BrWTNuLTZIdHpENWZlNWZpbGk5R01HanpOU0gyaGYxQW9jMV9WalAzNWNrdUkzdGczcFpaX1pHTTlFUzdabEVhWDhIT2kxdmUwZGN0ODNXb1NCcTNKdzRac0I4OE84Nm5iVzl5dkp1a9IB3AFBVV95cUxQZmFVVlg0QzJ1LTF6U1VwTDF2dzhEOTl4SEFubmgzWEE2Zm0yeldSbk9DbS1HSHh5LWJkLTRnQ1RDYk5HQXRnVGF6Q2E2NXF3ZDQtQmJXeXBKVzh1NFhsQlhORzFjVGt0cGNmcDRpLTEwRHNuNEYwVkZuTm1wbVFWc2ZMUFhFdGVXVWx4a1MyLU9OcHJES01aZ21JcXd4RE5PdW5Ic1ZUQkdFMnJha2N0RkNxNDBaZ05kUzNvcXJvSjNLR0d2OGhNbHJ5U2FPYUxIS3JrTnhGRVMxeENJ?oc=5",
+      "source": "The Economic Times",
+      "publishedAt": "2026-11-23T00:30:00.000Z",
+      "latestAt": "2026-11-23T00:30:00.000Z",
+      "firstSeenAt": "2026-11-23T04:22:49.114Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Economic Times"
+      ],
+      "score": 1.31
     },
     {
       "id": "0611150a2b20",
@@ -1829,5 +1799,5 @@
       "score": 0.86
     }
   ],
-  "updatedAt": "2026-11-23T08:08:30.015Z"
+  "updatedAt": "2026-11-23T08:23:39.700Z"
 }
