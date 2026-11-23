@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T07:53:30.185Z",
+  "buildTime": "2026-11-23T08:08:30.015Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 02:53 ET",
+  "etStamp": "2026-11-23 03:08 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,17 +49,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1200,
-  "lastSuccessAt": "2026-11-23T07:53:30.185Z",
+  "headlinesRead": 1229,
+  "lastSuccessAt": "2026-11-23T08:08:30.015Z",
   "rollingFallback": false,
   "cats": {
     "earth": 5,
     "flights": 33,
     "hacks": 20,
-    "internet": 10,
+    "internet": 11,
     "grid": 5,
     "germs": 4,
-    "markets": 8,
+    "markets": 7,
     "ai": 4,
     "weather": 4,
     "space": 3,
@@ -185,57 +185,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 880,
+      "count": 905,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     },
     "bing": {
       "ok": true,
-      "count": 283,
+      "count": 287,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     },
     "x": {
       "ok": true,
@@ -248,13 +248,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T07:53:30.185Z"
+      "lastOkAt": "2026-11-23T08:08:30.015Z"
     }
   },
   "stories": [
@@ -415,6 +415,30 @@
       "score": 3.11
     },
     {
+      "id": "00fefd72061e",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6.5 earthquake strikes off coast of Vanuatu",
+      "url": "https://www.wam.ae/en/article/17jfxy4-magnitude-65-earthquake-strikes-off-coast-vanuatu",
+      "source": "Emirates News Agency",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T07:24:45.000Z",
+      "firstSeenAt": "2026-11-23T04:07:47.712Z",
+      "outlets": 7,
+      "outletNames": [
+        "Breakingthenews.net",
+        "Anadolu Ajansı",
+        "UrduPoint",
+        "Emirates News Agency",
+        "Daily Observer",
+        "Aktualita.co",
+        "Fana News -"
+      ],
+      "score": 3.04,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "f46140602cdd",
       "cat": "hacks",
       "kind": "news",
@@ -432,29 +456,6 @@
         "Mezha.net"
       ],
       "score": 2.99
-    },
-    {
-      "id": "00fefd72061e",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.5 earthquake strikes off coast of Vanuatu",
-      "url": "https://www.wam.ae/en/article/17jfxy4-magnitude-65-earthquake-strikes-off-coast-vanuatu",
-      "source": "Emirates News Agency",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T07:24:45.000Z",
-      "firstSeenAt": "2026-11-23T04:07:47.712Z",
-      "outlets": 6,
-      "outletNames": [
-        "Breakingthenews.net",
-        "Anadolu Ajansı",
-        "UrduPoint",
-        "Emirates News Agency",
-        "Daily Observer",
-        "Aktualita.co"
-      ],
-      "score": 2.86,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "9b3fe105e0e3",
@@ -511,21 +512,21 @@
       "score": 2.57
     },
     {
-      "id": "59993d00bf55",
-      "cat": "markets",
+      "id": "004141a71fd9",
+      "cat": "internet",
       "kind": "news",
-      "title": "Oil prices fall as global market selloff weighs on sentiment; Gulf attacks limit losses",
-      "url": "https://www.msn.com/en-in/news/other/oil-prices-fall-as-global-market-selloff-weighs-on-sentiment-gulf-attacks-limit-losses/ar-AA2hZMh4",
-      "source": "The Times of India on MSN",
-      "publishedAt": "2026-11-22T19:28:00.000Z",
-      "latestAt": "2026-11-23T05:42:22.000Z",
-      "firstSeenAt": "2026-11-23T03:37:44.457Z",
+      "title": "We haven’t seen the last of the major tech outages",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUbU5QT0paMUU0a0hhdFJfTDNBWHVVN2YzaGVLM3pTU3o0ekhPTWVvaHJCbFY3Nkt1aldJRnlubDJNMDdyNVJadDVzcGR0RVROVmxTYW1VWktlRV9qdXpGTGx5NmZzeWM?oc=5",
+      "source": "The Verge",
+      "publishedAt": "2026-11-22T22:48:02.000Z",
+      "latestAt": "2026-11-23T07:11:33.000Z",
+      "firstSeenAt": "2026-11-23T04:52:55.212Z",
       "outlets": 2,
       "outletNames": [
-        "The Times of India",
-        "Bloom Pakistan"
+        "The Verge",
+        "CediRates"
       ],
-      "score": 2.42
+      "score": 2.52
     },
     {
       "id": "71b0134da548",
@@ -656,21 +657,39 @@
       "score": 2.58
     },
     {
-      "id": "00e2710c8f02",
-      "cat": "hacks",
+      "id": "59993d00bf55",
+      "cat": "markets",
       "kind": "news",
-      "title": "Hackers target major websites: Your iPhone could be compromised without a single click",
-      "url": "https://www.yahoo.com/news/videos/hackers-target-major-websites-iphone-023502285.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-22T16:00:00.000Z",
-      "latestAt": "2026-11-23T02:35:02.000Z",
-      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "title": "Oil prices fall as global market selloff weighs on sentiment; Gulf attacks limit losses",
+      "url": "https://www.msn.com/en-in/news/other/oil-prices-fall-as-global-market-selloff-weighs-on-sentiment-gulf-attacks-limit-losses/ar-AA2hZMh4",
+      "source": "The Times of India on MSN",
+      "publishedAt": "2026-11-22T19:28:00.000Z",
+      "latestAt": "2026-11-23T05:42:22.000Z",
+      "firstSeenAt": "2026-11-23T03:37:44.457Z",
       "outlets": 2,
       "outletNames": [
-        "FOX 5 DC",
-        "Yahoo"
+        "The Times of India",
+        "Bloom Pakistan"
       ],
-      "score": 2.29
+      "score": 2.42
+    },
+    {
+      "id": "ba76c07629c7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "South Korea's Samsung Securities Hit by Data Breach Affecting 8,241 Customers as Brokerage Hacking Worries Mount",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9CeTJUeFVhQ1lOem1OSjdjM0Z5T2pVUkhjT0M0RDcwNXRpemRfSTB2WlBMMGdpNWJsa3Mzc09MaGM1Yk5LbUc1TkFnUi1pNTRDS3JXelk5akhCMXotT3NRdHE4MHZhRXphMDJBeHJXWmJseW1hU1E?oc=5",
+      "source": "finance.biggo.com",
+      "publishedAt": "2026-11-23T01:55:00.000Z",
+      "latestAt": "2026-11-23T07:55:00.000Z",
+      "firstSeenAt": "2026-11-23T08:08:30.015Z",
+      "outlets": 3,
+      "outletNames": [
+        "finance.biggo.com",
+        "Korea JoongAng Daily",
+        "Crypto News"
+      ],
+      "score": 2.32
     },
     {
       "id": "cd88204ffba6",
@@ -866,23 +885,6 @@
       "score": 1.72
     },
     {
-      "id": "3775a6d0e95a",
-      "cat": "markets",
-      "kind": "news",
-      "title": "LIVE: Sensex, Nifty slide, metal stocks plunge; AI selloff hits Asia, South Korea plunges 5%",
-      "url": "https://www.financialexpress.com/market/sensex-nifty-today-live-updates-ai-selloff-asia-kospi-wall-street-crude-gold-silver-rate-stock-market-november-23-2026-4391541/",
-      "source": "The Financial Express",
-      "publishedAt": "2026-11-22T20:49:00.000Z",
-      "latestAt": "2026-11-23T06:36:47.000Z",
-      "firstSeenAt": "2026-11-23T06:38:15.236Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Financial Express",
-        "IndiaIPO"
-      ],
-      "score": 1.67
-    },
-    {
       "id": "sig:faa-stop:HOU:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -1017,6 +1019,23 @@
         "Yahoo"
       ],
       "score": 2.58
+    },
+    {
+      "id": "00e2710c8f02",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers target major websites: Your iPhone could be compromised without a single click",
+      "url": "https://www.yahoo.com/news/videos/hackers-target-major-websites-iphone-023502285.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-22T16:00:00.000Z",
+      "latestAt": "2026-11-23T02:35:02.000Z",
+      "firstSeenAt": "2026-11-23T02:52:34.117Z",
+      "outlets": 2,
+      "outletNames": [
+        "FOX 5 DC",
+        "Yahoo"
+      ],
+      "score": 2.29
     },
     {
       "id": "97d94439688d",
@@ -1329,6 +1348,23 @@
       "score": 1.68
     },
     {
+      "id": "3775a6d0e95a",
+      "cat": "markets",
+      "kind": "news",
+      "title": "LIVE: Sensex, Nifty slide, metal stocks plunge; AI selloff hits Asia, South Korea plunges 5%",
+      "url": "https://www.financialexpress.com/market/sensex-nifty-today-live-updates-ai-selloff-asia-kospi-wall-street-crude-gold-silver-rate-stock-market-november-23-2026-4391541/",
+      "source": "The Financial Express",
+      "publishedAt": "2026-11-22T20:49:00.000Z",
+      "latestAt": "2026-11-23T06:36:47.000Z",
+      "firstSeenAt": "2026-11-23T06:38:15.236Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Financial Express",
+        "IndiaIPO"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "b029af771dd1",
       "cat": "flights",
       "kind": "news",
@@ -1632,22 +1668,6 @@
       "score": 1.4
     },
     {
-      "id": "cb452e32fec4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Binance Wins $6.5bn Freezing Order Over October’s Record Crypto Hack",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVkFON1ItckwyNVdza1l4alI5dXVmRUNiQWZDTVRMS3ZVd0RPRE5zMmM0amgxbWhMWUJQUHU5WXVxejJMOEN4VWV0aWFtQmp5UmdoSFlJaUNSbTFHampnSGpOcmpYaEhhYWFBUW15WjYxTUgxc3ZjNWxTZF8tNUpPLWo3eXNrWXJRWFNtYjBTUzV0Zw?oc=5",
-      "source": "Arise News",
-      "publishedAt": "2026-11-22T08:07:58.000Z",
-      "latestAt": "2026-11-22T08:07:58.000Z",
-      "firstSeenAt": "2026-11-22T08:19:38.356Z",
-      "outlets": 1,
-      "outletNames": [
-        "Arise News"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "a597312e933a",
       "cat": "flights",
       "kind": "news",
@@ -1808,22 +1828,6 @@
         "Yeni Safak English"
       ],
       "score": 1.35
-    },
-    {
-      "id": "8bebabe29a09",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Crude Oil Falls as Global Selloff Offsets Middle East Risks",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPbUpvRC1IR2pKcWh5TXJCNDAzNzNmNU4zRVlleFdZRnJrQ1hwQnBOel82WVFHbnk3RWRWZzhYUmJEb2QySEFJcHl5NFdqNWt6X0ZocUx4SVJWMFZ3TDVES01zMU9oYUszY2NKMkxvWHZWTURtdmJidnBGMXBla1JjVzJRV0NGbE9XeHo5TnpvQTlaV0tKdzBaOGoxdWZucldnSi1SdGZRS3RHaVEyQ2NfNGtlS2RIaE41ODkyT0V2NTdnekJLd0V0Wl9neDVuVHZnMlE3VnAxbER1VkpLckZCRV9jUkF4ZkdQLVNrcGlzUkNfbmxlanpB?oc=5",
-      "source": "HDFC Sky",
-      "publishedAt": "2026-11-23T04:58:08.000Z",
-      "latestAt": "2026-11-23T04:58:08.000Z",
-      "firstSeenAt": "2026-11-23T07:53:30.185Z",
-      "outlets": 1,
-      "outletNames": [
-        "HDFC Sky"
-      ],
-      "score": 1.33
     },
     {
       "id": "0611150a2b20",
