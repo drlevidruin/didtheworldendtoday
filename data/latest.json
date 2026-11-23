@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T06:38:15.236Z",
+  "buildTime": "2026-11-23T06:53:17.730Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 01:38 ET",
+  "etStamp": "2026-11-23 01:53 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,17 +49,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1168,
-  "lastSuccessAt": "2026-11-23T06:38:15.236Z",
+  "headlinesRead": 1224,
+  "lastSuccessAt": "2026-11-23T06:53:17.730Z",
   "rollingFallback": false,
   "cats": {
     "earth": 4,
     "flights": 33,
-    "hacks": 21,
+    "hacks": 22,
     "internet": 10,
     "grid": 5,
     "germs": 4,
-    "markets": 8,
+    "markets": 7,
     "ai": 4,
     "weather": 4,
     "space": 3,
@@ -185,57 +185,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 842,
+      "count": 855,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "bing": {
       "ok": true,
-      "count": 289,
+      "count": 282,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
-      "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-23T02:22:29.826Z"
+      "ok": true,
+      "count": 50,
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "x": {
       "ok": true,
@@ -248,13 +248,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T06:38:15.236Z"
+      "lastOkAt": "2026-11-23T06:53:17.730Z"
     }
   },
   "stories": [
@@ -470,6 +470,26 @@
       "score": 2.61
     },
     {
+      "id": "00fefd72061e",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Vanuatu region hit by 6.5-magnitude earthquake",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbW5NSmpyaHBRcUl1MjVYeEZiOEZWcUNLM1ZwbGNlLU01RDRPWlRqcm83MjlJeTROOVdRVGRnNTdYckhVSzhWWHF6NnV5MW4wSGNNTFlKOGFVUXlBTDJleHRJU0lITlFYRHkzLWQ1RkZpS2k1SXNaVnRVQjctODVlc041YzNmNi13UkZ5N3hZeHhjTWVQMXc?oc=5",
+      "source": "Breakingthenews.net",
+      "publishedAt": "2026-11-23T03:52:00.000Z",
+      "latestAt": "2026-11-23T06:45:04.000Z",
+      "firstSeenAt": "2026-11-23T04:07:47.712Z",
+      "outlets": 3,
+      "outletNames": [
+        "Breakingthenews.net",
+        "Anadolu Ajansı",
+        "UrduPoint"
+      ],
+      "score": 2.57,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "e309da46447d",
       "cat": "germs",
       "kind": "news",
@@ -503,24 +523,6 @@
         "Bloom Pakistan"
       ],
       "score": 2.42
-    },
-    {
-      "id": "aef8ae7ce7c1",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Third case of bird flu found in commercial poultry",
-      "url": "https://www.msn.com/en-xl/news/other/third-case-of-bird-flu-found-in-commercial-poultry/ar-AA2hYX6F",
-      "source": "BBC on MSN",
-      "publishedAt": "2026-11-22T07:22:00.000Z",
-      "latestAt": "2026-11-22T15:22:44.000Z",
-      "firstSeenAt": "2026-11-22T15:35:47.159Z",
-      "outlets": 3,
-      "outletNames": [
-        "BBC on MSN",
-        "AOL.com",
-        "Yahoo"
-      ],
-      "score": 2.23
     },
     {
       "id": "71b0134da548",
@@ -670,6 +672,24 @@
       "score": 2.29
     },
     {
+      "id": "aef8ae7ce7c1",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Third case of bird flu found in commercial poultry",
+      "url": "https://www.msn.com/en-xl/news/other/third-case-of-bird-flu-found-in-commercial-poultry/ar-AA2hYX6F",
+      "source": "BBC on MSN",
+      "publishedAt": "2026-11-22T07:22:00.000Z",
+      "latestAt": "2026-11-22T15:22:44.000Z",
+      "firstSeenAt": "2026-11-22T15:35:47.159Z",
+      "outlets": 3,
+      "outletNames": [
+        "BBC on MSN",
+        "AOL.com",
+        "Yahoo"
+      ],
+      "score": 2.23
+    },
+    {
       "id": "cd88204ffba6",
       "cat": "markets",
       "kind": "news",
@@ -704,25 +724,6 @@
         "AOL"
       ],
       "score": 2.03
-    },
-    {
-      "id": "00fefd72061e",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Vanuatu region hit by 6.5-magnitude earthquake",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbW5NSmpyaHBRcUl1MjVYeEZiOEZWcUNLM1ZwbGNlLU01RDRPWlRqcm83MjlJeTROOVdRVGRnNTdYckhVSzhWWHF6NnV5MW4wSGNNTFlKOGFVUXlBTDJleHRJU0lITlFYRHkzLWQ1RkZpS2k1SXNaVnRVQjctODVlc041YzNmNi13UkZ5N3hZeHhjTWVQMXc?oc=5",
-      "source": "Breakingthenews.net",
-      "publishedAt": "2026-11-23T03:52:00.000Z",
-      "latestAt": "2026-11-23T06:01:55.000Z",
-      "firstSeenAt": "2026-11-23T04:07:47.712Z",
-      "outlets": 2,
-      "outletNames": [
-        "Breakingthenews.net",
-        "Anadolu Ajansı"
-      ],
-      "score": 1.99,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "174545db5029",
@@ -789,6 +790,24 @@
       "outletNames": [
         "Yahoo",
         "ABC27"
+      ],
+      "score": 1.78
+    },
+    {
+      "id": "7a7b1c09dfef",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Andaman's eight islands to be linked via undersea cable network",
+      "url": "https://www.newsbytesapp.com/news/science/indian-government-to-lay-undersea-optical-fiber-cable-linking-islands/story",
+      "source": "NewsBytes",
+      "publishedAt": "2026-11-22T08:29:00.000Z",
+      "latestAt": "2026-11-23T02:39:43.000Z",
+      "firstSeenAt": "2026-11-23T03:07:36.743Z",
+      "outlets": 3,
+      "outletNames": [
+        "NewsBytes",
+        "Deccan Chronicle",
+        "ET Telecom"
       ],
       "score": 1.78
     },
@@ -861,23 +880,6 @@
       "score": 1.62
     },
     {
-      "id": "a605ce90a190",
-      "cat": "space",
-      "kind": "news",
-      "title": "Tiny asteroid orbits Earth as temporary mini-moon until early December",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPSEQ3QmVlQ2MtWWF0ZGxaaDZFbXBvall1SE5MOU5oaEo3LTFCMFZnODNBbVUtNWVaQmVvbFg1UUw3VEtNcU9Ub1cxVDZ5NS14TjkzYmE1SzBQSHFGTTdqdHlaRlR1SWFVV0ZReVR3UlhuX2dKQm9fb0JFb2YxMXVjN9IBlAFBVV95cUxPLW8xbTVsV3B0WWlXcl8zOVk0Y0Vib3FFUzNiaC1kd0o5NGp3RGw4WndCT2ZISzFKcGt2YUllWXlxWHdfVEw4MzNuOElzNzl3alIzX3R2ajhabkp0NWMtbHVrTWJmZ2QzeHBWdzBhWXQ0b1JTS1RmUmdLbG92aDdMRWdPOVVPSXhYUjV2Z3dxRHZaYy1w?oc=5",
-      "source": "Chosunbiz",
-      "publishedAt": "2026-11-22T09:00:00.000Z",
-      "latestAt": "2026-11-22T14:52:03.000Z",
-      "firstSeenAt": "2026-11-22T20:21:35.022Z",
-      "outlets": 2,
-      "outletNames": [
-        "Chosunbiz",
-        "JournalArta"
-      ],
-      "score": 1.62
-    },
-    {
       "id": "sig:faa-stop:HOU:2026-11-22",
       "cat": "flights",
       "kind": "signal",
@@ -939,6 +941,26 @@
       "score": 3.06
     },
     {
+      "id": "0bd1b7ccd575",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Hundreds of Delta Air Lines flights delayed due to technical failure",
+      "url": "http://www.bignewsnetwork.com/news/279449149/hundreds-of-delta-air-lines-flights-delayed-due-to-technical-failure",
+      "source": "bignewsnetwork.com",
+      "publishedAt": "2026-11-22T18:45:00.000Z",
+      "latestAt": "2026-11-23T03:30:00.000Z",
+      "firstSeenAt": "2026-11-23T02:22:29.826Z",
+      "outlets": 5,
+      "outletNames": [
+        "bignewsnetwork.com",
+        "en.apa.az",
+        "Latest news from Azerbaijan",
+        "Free Malaysia Today",
+        "en.people.cn"
+      ],
+      "score": 2.9
+    },
+    {
       "id": "2a2dcdf3cd29",
       "cat": "flights",
       "kind": "news",
@@ -974,25 +996,6 @@
         "Yahoo"
       ],
       "score": 2.79
-    },
-    {
-      "id": "0bd1b7ccd575",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Hundreds of Delta Air Lines flights delayed due to technical failure",
-      "url": "http://www.bignewsnetwork.com/news/279449149/hundreds-of-delta-air-lines-flights-delayed-due-to-technical-failure",
-      "source": "bignewsnetwork.com",
-      "publishedAt": "2026-11-22T18:45:00.000Z",
-      "latestAt": "2026-11-23T02:26:30.000Z",
-      "firstSeenAt": "2026-11-23T02:22:29.826Z",
-      "outlets": 4,
-      "outletNames": [
-        "bignewsnetwork.com",
-        "en.apa.az",
-        "Latest news from Azerbaijan",
-        "Free Malaysia Today"
-      ],
-      "score": 2.62
     },
     {
       "id": "ed8122b35384",
@@ -1391,6 +1394,23 @@
       "score": 1.62
     },
     {
+      "id": "a605ce90a190",
+      "cat": "space",
+      "kind": "news",
+      "title": "Tiny asteroid orbits Earth as temporary mini-moon until early December",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPSEQ3QmVlQ2MtWWF0ZGxaaDZFbXBvall1SE5MOU5oaEo3LTFCMFZnODNBbVUtNWVaQmVvbFg1UUw3VEtNcU9Ub1cxVDZ5NS14TjkzYmE1SzBQSHFGTTdqdHlaRlR1SWFVV0ZReVR3UlhuX2dKQm9fb0JFb2YxMXVjN9IBlAFBVV95cUxPLW8xbTVsV3B0WWlXcl8zOVk0Y0Vib3FFUzNiaC1kd0o5NGp3RGw4WndCT2ZISzFKcGt2YUllWXlxWHdfVEw4MzNuOElzNzl3alIzX3R2ajhabkp0NWMtbHVrTWJmZ2QzeHBWdzBhWXQ0b1JTS1RmUmdLbG92aDdMRWdPOVVPSXhYUjV2Z3dxRHZaYy1w?oc=5",
+      "source": "Chosunbiz",
+      "publishedAt": "2026-11-22T09:00:00.000Z",
+      "latestAt": "2026-11-22T14:52:03.000Z",
+      "firstSeenAt": "2026-11-22T20:21:35.022Z",
+      "outlets": 2,
+      "outletNames": [
+        "Chosunbiz",
+        "JournalArta"
+      ],
+      "score": 1.62
+    },
+    {
       "id": "3baad17db0ca",
       "cat": "grid",
       "kind": "news",
@@ -1576,6 +1596,22 @@
         "www.nationpathindia.com"
       ],
       "score": 1.41
+    },
+    {
+      "id": "9ae72155d867",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Creditors owed £12.7m after cyberattack brought down major logistics group",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQSDlKbm1HMG5ibFJjUXN4Z09lZGlRTDJISjN0RWg3VktidlhCRFJJY3VXOWlYT1RaLVBOLTJMMGhIVEszRGoycjhzT1laREhnU1M4ZVhUQXVPb1FnanRBMlJzdlNHM0tDVXhQMS04aFNLVFltdXdHRXVxSU5KQm5qekdXelBtM3NjMFdQSzBfTk53dWtubmRTSXBlU3BJbGZyUS1uTUE1Njgwb1piV0dfdm5rWUhMUHZXZnk1Zkppa2VkNHgtdW16d3VJUQ?oc=5",
+      "source": "TheBusinessDesk.com",
+      "publishedAt": "2026-11-23T06:50:31.000Z",
+      "latestAt": "2026-11-23T06:50:31.000Z",
+      "firstSeenAt": "2026-11-23T06:53:17.730Z",
+      "outlets": 1,
+      "outletNames": [
+        "TheBusinessDesk.com"
+      ],
+      "score": 1.4
     },
     {
       "id": "8eb9fac18f5d",
@@ -1788,38 +1824,6 @@
       "score": 1.35
     },
     {
-      "id": "2c3063035351",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Power restored in parts of Kenyan capital after major outage",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOUZyRmROLWs3dWdJNTZHQTdidDk5SGw4ZjhxbTMwRGpDZTBVUEpEZVQySzhCSzhNUFVhSVlUWlNYU1cyV2xSWDkxWE8xNWFEeThmMldPdDY5aTM3N2FMWGVvamV4SkVDamlLSmpXeExrRDlkYktOOTZpVkNscE5EM19YQzZQbGdLWDVHR0h3QllZMXp2LXNaak5PMWRSTTNt?oc=5",
-      "source": "Yeni Safak English",
-      "publishedAt": "2026-11-22T18:34:39.000Z",
-      "latestAt": "2026-11-22T18:34:39.000Z",
-      "firstSeenAt": "2026-11-22T20:51:38.365Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yeni Safak English"
-      ],
-      "score": 1.35
-    },
-    {
-      "id": "692908206c67",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Tech Sell-Off Rocks Wall Street as Nvidia Shares Fall Over 40% From Record High",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcUFlOG1fc3drV1c3Q0RqOUV3WVhTVjZzNldxdXlxZHkxOXNLMnBzMkVjb1pCNmVHMEp6V00tdHlWZm95WVFxYnBqNDB0bWhXeVlGemQwOHFsTmd1dE1fSE9rY3pyTVFOYWUwZEdNLUY3TThRVFhsYkREdWd1QlJDeW1tSVZMZw?oc=5",
-      "source": "Al-Bawaba",
-      "publishedAt": "2026-11-23T04:09:48.000Z",
-      "latestAt": "2026-11-23T04:09:48.000Z",
-      "firstSeenAt": "2026-11-23T06:38:15.236Z",
-      "outlets": 1,
-      "outletNames": [
-        "Al-Bawaba"
-      ],
-      "score": 1.34
-    },
-    {
       "id": "0611150a2b20",
       "cat": "weather",
       "kind": "news",
@@ -1954,6 +1958,22 @@
       "score": 0.99
     },
     {
+      "id": "08258aa41362",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Freak storm wipes out ‘once-in-2000-year’ harvest",
+      "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPTDNYQ0xRb3dCNVgwbFdoY0JIMm91RC0tQ2xKSl9IUkhRRUhUSXdDWk9oUWVzTG5pWGRMcUV5MEhNa21CZXVKc3F5VHdhREliSE9jcURXLU1SUzR2dGtKMWhoSjZmZU9nRU1SaVEyLUJ1WGNvLWw2Ym5XTEhBMmwtT3VWQWhTdi1lUjl2TUhBU3hqOTdMYzdpdFNRVk4wdnR6ZHlDRUdiNkx3SjFFVHVwTGF0NWNOeUNRT3U0QW5SQjFCQk56b0tVdTNoaVUzSVlrb3lvNDVCY3BIeXd1dThJMXdQeWd2QkdCWnVEdlQ2c2R0MjM1d2VVM2h4RUZLUUJYeDNiQjRWZmRpMXJqaGJlNl8ycw?oc=5",
+      "source": "Adelaide Now",
+      "publishedAt": "2026-11-23T05:51:11.000Z",
+      "latestAt": "2026-11-23T05:51:11.000Z",
+      "firstSeenAt": "2026-11-23T06:53:17.730Z",
+      "outlets": 1,
+      "outletNames": [
+        "Adelaide Now"
+      ],
+      "score": 0.98
+    },
+    {
       "id": "7738f54dbe03",
       "cat": "space",
       "kind": "news",
@@ -1968,22 +1988,6 @@
         "ESA"
       ],
       "score": 0.97
-    },
-    {
-      "id": "c55779f56136",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Sunday Weather: KZN on high alert after severe storm warning; heatwave for highveld",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxON2JXTGpvQXpyLVdyZXVOM25ObDA3aUdjbWZnYnFIT3had0hyRTIwQU5lNkh6azFJVFliaWZLbGtnbUdsZ3lUVF9CTDZURkVEVFBOWkdGRlhJUTYtWm5IcEZXZnVIZFVoWWNoLW9lY0tlY2ZkbjRqS3l4SlBKSFUyVkJ0MUpIbG43QXNjVFRQN0FJbEF2dmotMG5NMFNyc0ZuT2FvX1Jtd3BnVm5STHJ4TWJVSkJUVVNISW1yc3RwUjY3aEdPUndhTw?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-23T02:01:23.000Z",
-      "latestAt": "2026-11-23T02:01:23.000Z",
-      "firstSeenAt": "2026-11-23T04:37:49.815Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 0.96
     },
     {
       "id": "605d3b57beb9",
