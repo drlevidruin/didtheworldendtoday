@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T22:10:55.895Z",
+  "buildTime": "2026-11-23T22:25:52.649Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 17:10 ET",
+  "etStamp": "2026-11-23 17:25 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -50,13 +50,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1345,
-  "lastSuccessAt": "2026-11-23T22:10:55.895Z",
+  "headlinesRead": 1365,
+  "lastSuccessAt": "2026-11-23T22:25:52.649Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
+    "flights": 20,
     "earth": 6,
-    "hacks": 35,
+    "hacks": 36,
     "markets": 7,
     "germs": 6,
     "internet": 5,
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1025,
+      "count": 1041,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     },
     "bing": {
       "ok": true,
-      "count": 286,
+      "count": 290,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-23T19:55:36.706Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T22:10:55.895Z"
+      "lastOkAt": "2026-11-23T22:25:52.649Z"
     }
   },
   "stories": [
@@ -270,16 +270,17 @@
       "publishedAt": "2026-11-23T12:08:29.000Z",
       "latestAt": "2026-11-23T15:52:55.000Z",
       "firstSeenAt": "2026-11-23T16:09:51.589Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "KTNN",
         "KCJJ",
         "KWXX - Hawaii",
         "KVEC News Talk 920 AM 96.5 FM",
         "KBRX",
-        "Radio NWTN"
+        "Radio NWTN",
+        "Dailyfly News"
       ],
-      "score": 4.68
+      "score": 4.97
     },
     {
       "id": "sig:faa-stop:ORD:2026-11-23",
@@ -1132,6 +1133,24 @@
       "score": 2.28
     },
     {
+      "id": "3abd8d35b651",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "GoFundMe says donor information was exposed in data breach",
+      "url": "https://www.khou.com/article/news/nation-world/gofundme-data-breach-donor-data-nonprofits/507-6efe578f-8a12-49f8-88d3-90bcc948b1b1",
+      "source": "KHOU",
+      "publishedAt": "2026-11-23T13:55:00.000Z",
+      "latestAt": "2026-11-23T21:56:07.000Z",
+      "firstSeenAt": "2026-11-23T22:10:55.895Z",
+      "outlets": 3,
+      "outletNames": [
+        "KHOU",
+        "WWLTV.com",
+        "FOX43"
+      ],
+      "score": 2.23
+    },
+    {
       "id": "25e7d108ccae",
       "cat": "hacks",
       "kind": "news",
@@ -1373,23 +1392,6 @@
         "Neowin"
       ],
       "score": 1.73
-    },
-    {
-      "id": "3abd8d35b651",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "GoFundMe says donor information was exposed in data breach",
-      "url": "https://www.khou.com/article/news/nation-world/gofundme-data-breach-donor-data-nonprofits/507-6efe578f-8a12-49f8-88d3-90bcc948b1b1",
-      "source": "KHOU",
-      "publishedAt": "2026-11-23T13:55:00.000Z",
-      "latestAt": "2026-11-23T21:56:07.000Z",
-      "firstSeenAt": "2026-11-23T22:10:55.895Z",
-      "outlets": 2,
-      "outletNames": [
-        "KHOU",
-        "WWLTV.com"
-      ],
-      "score": 1.72
     },
     {
       "id": "b53f6265a294",
@@ -1732,21 +1734,21 @@
       "score": 1.48
     },
     {
-      "id": "82f1dd77af22",
-      "cat": "flights",
+      "id": "09f298e76c5f",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Equipment outage in Atlanta causes over 1,600 Delta flight delays",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWWRfMUlqa2NON3pHbWVBT3NuRDBNajZQYklJRlBlNTdrT2J6cGpxWU5FODBmU29sSnJ5QlhpaVRJY3dpSFN6dEVCcVlVWTVkcWVfSU5XS1l2MWNfUXl0ckZObS11ckVhV0Rsb0ZGcXBHN0NmZ2MxbUxRNmlZRHNfbW9XYkJUZFpmaXMxbDBadWRFRnJHajNCc2hSSDZkaVnSAaQBQVVfeXFMTXVUSGQ5N2Q1MWRVdGRyLTdITHVfWlNtdzhWSWwzZ1dYVzJiTnJuRzlTOEY4MDNTM2p5MUlMcGZvZnVTU3FOV0RMTEpDcUFqbnVrbms5UXlwb2IzUEE4SXZJU0RQZEtjYUtnbGRUZjBjUkF5aS1yUXRBenZsR215WEJZWWZHRUI3NWdXZ1RqYmxEZEhGS3ZaZHQtTGdZUUtjSDdNczM?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-22T22:21:52.000Z",
-      "latestAt": "2026-11-23T12:51:38.000Z",
-      "firstSeenAt": "2026-11-23T14:24:31.661Z",
+      "title": "Fort Smith city leaders address security concerns following cyberattack",
+      "url": "https://www.yahoo.com/news/videos/fort-smith-city-leaders-address-125637803.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T04:56:00.000Z",
+      "latestAt": "2026-11-23T13:03:52.000Z",
+      "firstSeenAt": "2026-11-23T22:25:52.649Z",
       "outlets": 2,
       "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "connectradio.fm"
+        "Yahoo",
+        "5newsonline.com"
       ],
-      "score": 1.47
+      "score": 1.42
     },
     {
       "id": "3226c91796d3",
@@ -1815,6 +1817,24 @@
       "quietReason": "headline mentions hurricane"
     },
     {
+      "id": "2ea0022434d5",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Laurel County residents affected by power outage following electrical pole fire",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc3FBTjdOSE1sRmdVeThNZHJIUmZQNmVwYUN5Zy0zQXFEQlJWY0ZNRUlqa2lVUlVzclkwVThpX3NKNWZrZGN4akxQS1Y0OXNaQ1VmU3U1RnI4UGs1Z0hWWExxdUtucmZqenhzSDN1aTloV3M5VWlZWTlvMDR5TmtwemI0M2I4VmZaSWdsYUprTE9KV2xqcXFNR09wbUhSUlByWlZIYnQ2c1Z6Y0JTZm5PT3VB?oc=5",
+      "source": "WKYT",
+      "publishedAt": "2026-11-23T22:11:00.000Z",
+      "latestAt": "2026-11-23T22:11:00.000Z",
+      "firstSeenAt": "2026-11-23T22:25:52.649Z",
+      "outlets": 1,
+      "outletNames": [
+        "WKYT"
+      ],
+      "score": 1,
+      "quiet": true,
+      "quietReason": "headline mentions fire"
+    },
+    {
       "id": "b5c50c48a8e5",
       "cat": "weather",
       "kind": "news",
@@ -1838,7 +1858,7 @@
       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPTDNYQ0xRb3dCNVgwbFdoY0JIMm91RC0tQ2xKSl9IUkhRRUhUSXdDWk9oUWVzTG5pWGRMcUV5MEhNa21CZXVKc3F5VHdhREliSE9jcURXLU1SUzR2dGtKMWhoSjZmZU9nRU1SaVEyLUJ1WGNvLWw2Ym5XTEhBMmwtT3VWQWhTdi1lUjl2TUhBU3hqOTdMYzdpdFNRVk4wdnR6ZHlDRUdiNkx3SjFFVHVwTGF0NWNOeUNRT3U0QW5SQjFCQk56b0tVdTNoaVUzSVlrb3lvNDVCY3BIeXd1dThJMXdQeWd2QkdCWnVEdlQ2c2R0MjM1d2VVM2h4RUZLUUJYeDNiQjRWZmRpMXJqaGJlNl8ycw?oc=5",
       "source": "Adelaide Now",
       "publishedAt": "2026-11-23T21:05:21.000Z",
-      "latestAt": "2026-11-23T21:05:21.000Z",
+      "latestAt": "2026-11-23T22:23:43.000Z",
       "firstSeenAt": "2026-11-23T21:10:48.587Z",
       "outlets": 1,
       "outletNames": [
@@ -1941,22 +1961,6 @@
         "SpaceWeatherLive.com"
       ],
       "score": 0.99
-    },
-    {
-      "id": "33b6a05fc51e",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage in Halifax - Kearney Lake area",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOc3FLSDRrbXBfRHVoRXg1bldrZ0tmOFdUQ3ZwcXk4WkRsRFRoOUk3ZU5UajQ5Yzg4Zk5RRHFSVFM3SFFOZWZ0NHQzUlQ1NWlacXJpX2JESzBpaTRoQUNZTWRyM0J2ckY5R1RSNFZySUNxa1ZZQ0tzam1yalpDaFJIaXJR?oc=5",
-      "source": "Waterfront Media HFX",
-      "publishedAt": "2026-11-23T18:20:00.000Z",
-      "latestAt": "2026-11-23T18:20:00.000Z",
-      "firstSeenAt": "2026-11-23T19:40:37.607Z",
-      "outlets": 1,
-      "outletNames": [
-        "Waterfront Media HFX"
-      ],
-      "score": 0.98
     },
     {
       "id": "30ff934ba46d",
