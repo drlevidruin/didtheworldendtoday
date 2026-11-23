@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-23T22:25:52.649Z",
+  "buildTime": "2026-11-23T22:41:00.851Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 17:25 ET",
+  "etStamp": "2026-11-23 17:41 ET",
   "score": 77,
   "fired": [
     "flights",
@@ -50,16 +50,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1365,
-  "lastSuccessAt": "2026-11-23T22:25:52.649Z",
+  "headlinesRead": 1363,
+  "lastSuccessAt": "2026-11-23T22:41:00.851Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 20,
+    "flights": 21,
     "earth": 6,
     "hacks": 36,
     "markets": 7,
     "germs": 6,
-    "internet": 5,
+    "internet": 4,
     "ai": 4,
     "animals": 4,
     "weather": 4,
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1041,
+      "count": 1037,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     },
     "bing": {
       "ok": true,
-      "count": 290,
+      "count": 292,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-23T19:55:36.706Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-23T22:25:52.649Z"
+      "lastOkAt": "2026-11-23T22:41:00.851Z"
     }
   },
   "stories": [
@@ -899,6 +899,25 @@
       "score": 1.72
     },
     {
+      "id": "3abd8d35b651",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "GoFundMe says donor information was exposed in data breach",
+      "url": "https://www.khou.com/article/news/nation-world/gofundme-data-breach-donor-data-nonprofits/507-6efe578f-8a12-49f8-88d3-90bcc948b1b1",
+      "source": "KHOU",
+      "publishedAt": "2026-11-23T13:55:00.000Z",
+      "latestAt": "2026-11-23T21:56:07.000Z",
+      "firstSeenAt": "2026-11-23T22:10:55.895Z",
+      "outlets": 4,
+      "outletNames": [
+        "KHOU",
+        "WWLTV.com",
+        "FOX43",
+        "KGW"
+      ],
+      "score": 2.59
+    },
+    {
       "id": "3dfb63467fa7",
       "cat": "flights",
       "kind": "news",
@@ -1131,24 +1150,6 @@
         "finance.biggo.com"
       ],
       "score": 2.28
-    },
-    {
-      "id": "3abd8d35b651",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "GoFundMe says donor information was exposed in data breach",
-      "url": "https://www.khou.com/article/news/nation-world/gofundme-data-breach-donor-data-nonprofits/507-6efe578f-8a12-49f8-88d3-90bcc948b1b1",
-      "source": "KHOU",
-      "publishedAt": "2026-11-23T13:55:00.000Z",
-      "latestAt": "2026-11-23T21:56:07.000Z",
-      "firstSeenAt": "2026-11-23T22:10:55.895Z",
-      "outlets": 3,
-      "outletNames": [
-        "KHOU",
-        "WWLTV.com",
-        "FOX43"
-      ],
-      "score": 2.23
     },
     {
       "id": "25e7d108ccae",
@@ -1394,6 +1395,23 @@
       "score": 1.73
     },
     {
+      "id": "0dbe51447ff9",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta operations stabilize at Atlanta airport after weight-and-balance system outage",
+      "url": "https://www.msn.com/en-us/news/other/delta-operations-stabilize-at-atlanta-airport-after-weight-and-balance-system-outage/ar-AA2i4gzr",
+      "source": "WSB-TV Channel 2 on MSN",
+      "publishedAt": "2026-11-23T14:17:28.000Z",
+      "latestAt": "2026-11-23T22:17:28.000Z",
+      "firstSeenAt": "2026-11-23T22:41:00.851Z",
+      "outlets": 2,
+      "outletNames": [
+        "WSB-TV Channel 2 on MSN",
+        "WSB-TV"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "b53f6265a294",
       "cat": "hacks",
       "kind": "news",
@@ -1528,6 +1546,23 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 1.68
+    },
+    {
+      "id": "f968c3ae32c8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPeWxTRGhBN3lyYy1RZ19wQTRScHhLYzVkT043OXlUaC0zYjZscUVjeDZVTDlKc28xWUtzQXMtd2ZhSXRrVEstdDFxeW9pWndKbWU0blUzdUQ1QjI0UG9Yb21WemJqRExoS2FIOVdzdUdVSUNrUWQ5ZElkWDQ1bzFZRlJnYw?oc=5",
+      "source": "The Hacker News",
+      "publishedAt": "2026-11-23T12:41:00.000Z",
+      "latestAt": "2026-11-23T22:26:47.000Z",
+      "firstSeenAt": "2026-11-23T22:41:00.851Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Hacker News",
+        "news.lavx.hu"
+      ],
+      "score": 1.67
     },
     {
       "id": "a36699cb078e",
@@ -1751,22 +1786,6 @@
       "score": 1.42
     },
     {
-      "id": "3226c91796d3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "America's Biggest Oil Export Port Faces Thousands of Cyberattack Attempts",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZEl2d2N0eTBYZ2E0WmI3Y0FrRWJWaEZDV1ZldndoMHRYQ2VpTDZ4UklobE5CMzZuN0ZtZDRVUmZ1YmxSNi1yeGZrVFBrY3VSWVdZY1hDV3JaREF5SXFsRGl4VlhPZWRnZjUzQko0Y0g2SnF5RWpqQmRuWmpmRDJxYzZBX2VIdWRRSjV1eXA0LTI0alBlSHZUamt1UlFwckJTZDFRVDZvaDRUUkNOck1Qc0I1OUJuaUtRUFJ1VdIBwgFBVV95cUxOSVFlb3JJQ1BFMF9oOG5LVjV3RmdlOTBBQVhQS1NGLUJCZ21oRjFJQTA2anZEN2JUbXRQdmQzZzdlSjB2RnlfZmVNNmliUDNGYVloaGtiQ1MtS1hJUmdfN3RwYzE0Wl9NRFFseHlBM290akh4WmpkV3Y1OThhb1VvUVFQLVVPcDQ0U3Q2UmNORndXS1lCYXotY3dtbHd5MVMtaElTNDdlLTQtTXVCRjZSZGFrVGtWcVZZSlFGbm1rZVNMQQ?oc=5",
-      "source": "Crude Oil Prices Today | OilPrice.com",
-      "publishedAt": "2026-11-23T17:00:00.000Z",
-      "latestAt": "2026-11-23T17:00:00.000Z",
-      "firstSeenAt": "2026-11-23T17:10:03.099Z",
-      "outlets": 1,
-      "outletNames": [
-        "Crude Oil Prices Today | OilPrice.com"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "1e9bf2c684e7",
       "cat": "weather",
       "kind": "news",
@@ -1779,22 +1798,6 @@
       "outlets": 1,
       "outletNames": [
         "biztalknews.com"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "8eb9fac18f5d",
-      "cat": "internet",
-      "kind": "x",
-      "title": "A technical outage affecting one of Delta Air Lines’ weight-and-balance systems delayed more than 1,600 flights nationwide on Sunday, the airline said.",
-      "url": "https://x.com/Breaking911/status/2124654147974639923",
-      "source": "@Breaking911 on X",
-      "publishedAt": "2026-11-22T23:59:57.000Z",
-      "latestAt": "2026-11-22T23:59:57.000Z",
-      "firstSeenAt": "2026-11-23T00:07:08.713Z",
-      "outlets": 1,
-      "outletNames": [
-        "@Breaking911 on X"
       ],
       "score": 1.4
     },
@@ -1815,24 +1818,6 @@
       "score": 1.13,
       "quiet": true,
       "quietReason": "headline mentions hurricane"
-    },
-    {
-      "id": "2ea0022434d5",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Laurel County residents affected by power outage following electrical pole fire",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc3FBTjdOSE1sRmdVeThNZHJIUmZQNmVwYUN5Zy0zQXFEQlJWY0ZNRUlqa2lVUlVzclkwVThpX3NKNWZrZGN4akxQS1Y0OXNaQ1VmU3U1RnI4UGs1Z0hWWExxdUtucmZqenhzSDN1aTloV3M5VWlZWTlvMDR5TmtwemI0M2I4VmZaSWdsYUprTE9KV2xqcXFNR09wbUhSUlByWlZIYnQ2c1Z6Y0JTZm5PT3VB?oc=5",
-      "source": "WKYT",
-      "publishedAt": "2026-11-23T22:11:00.000Z",
-      "latestAt": "2026-11-23T22:11:00.000Z",
-      "firstSeenAt": "2026-11-23T22:25:52.649Z",
-      "outlets": 1,
-      "outletNames": [
-        "WKYT"
-      ],
-      "score": 1,
-      "quiet": true,
-      "quietReason": "headline mentions fire"
     },
     {
       "id": "b5c50c48a8e5",
@@ -1977,6 +1962,22 @@
         "Fortune"
       ],
       "score": 0.97
+    },
+    {
+      "id": "33b6a05fc51e",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage in Halifax - Kearney Lake area",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOc3FLSDRrbXBfRHVoRXg1bldrZ0tmOFdUQ3ZwcXk4WkRsRFRoOUk3ZU5UajQ5Yzg4Zk5RRHFSVFM3SFFOZWZ0NHQzUlQ1NWlacXJpX2JESzBpaTRoQUNZTWRyM0J2ckY5R1RSNFZySUNxa1ZZQ0tzam1yalpDaFJIaXJR?oc=5",
+      "source": "Waterfront Media HFX",
+      "publishedAt": "2026-11-23T18:20:00.000Z",
+      "latestAt": "2026-11-23T18:20:00.000Z",
+      "firstSeenAt": "2026-11-23T22:41:00.851Z",
+      "outlets": 1,
+      "outletNames": [
+        "Waterfront Media HFX"
+      ],
+      "score": 0.93
     },
     {
       "id": "59b1484e85d2",
