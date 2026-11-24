@@ -1,14 +1,13 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T02:26:39.927Z",
+  "buildTime": "2026-11-24T02:41:37.482Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 21:26 ET",
-  "score": 77,
+  "etStamp": "2026-11-23 21:41 ET",
+  "score": 66,
   "fired": [
     "flights",
     "hacks",
     "internet",
-    "sun",
     "earth",
     "markets",
     "ai",
@@ -19,17 +18,12 @@
   ],
   "bumps": [
     {
-      "key": "quake",
-      "label": "Quake M6 or more",
-      "points": 5
-    },
-    {
       "key": "faa",
       "label": "Ground stop at a major hub",
       "points": 6
     }
   ],
-  "change": 6,
+  "change": -5,
   "yesterday": {
     "date": "2026-11-22",
     "score": 71,
@@ -50,31 +44,31 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 320,
-  "lastSuccessAt": "2026-11-24T02:26:39.927Z",
+  "headlinesRead": 1324,
+  "lastSuccessAt": "2026-11-24T02:41:37.482Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
-    "earth": 6,
-    "hacks": 37,
-    "markets": 7,
-    "germs": 6,
+    "flights": 23,
+    "earth": 4,
+    "hacks": 36,
+    "markets": 8,
+    "germs": 7,
     "internet": 4,
     "animals": 4,
     "weather": 4,
     "grid": 4,
     "space": 1,
-    "sun": 3,
+    "sun": 2,
     "ai": 3
   },
   "vital": {
     "quake": {
-      "mag": 6.5,
-      "place": "Vanuatu region",
-      "time": "2026-11-23T02:40:58.052Z",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucvm",
+      "mag": 5.5,
+      "place": "west of Macquarie Island",
+      "time": "2026-11-23T08:01:26.457Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucxi",
       "pager": "green",
-      "tsunami": true
+      "tsunami": false
     },
     "kp": {
       "value": 1,
@@ -168,7 +162,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -186,16 +180,16 @@
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-24T02:11:28.163Z"
+      "ok": true,
+      "count": 1004,
+      "error": null,
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     },
     "bing": {
       "ok": true,
       "count": 284,
       "error": null,
-      "lastOkAt": "2026-11-24T02:26:39.927Z"
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,37 +201,37 @@
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-24T02:26:39.927Z"
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     },
     "usgs": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T02:26:39.927Z"
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T02:26:39.927Z"
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T02:26:39.927Z"
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T02:26:39.927Z"
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T02:26:39.927Z"
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T02:26:39.927Z"
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T02:26:39.927Z"
+      "lastOkAt": "2026-11-24T02:41:37.482Z"
     }
   },
   "stories": [
@@ -306,56 +300,6 @@
       }
     },
     {
-      "id": "sig:quake:us6000ucvm",
-      "cat": "earth",
-      "kind": "signal",
-      "title": "M 6.5 - Vanuatu region",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucvm",
-      "source": "USGS",
-      "publishedAt": "2026-11-23T02:40:57.933Z",
-      "latestAt": "2026-11-23T02:40:57.933Z",
-      "firstSeenAt": "2026-11-23T03:07:36.743Z",
-      "outlets": 1,
-      "outletNames": [
-        "USGS"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "quake",
-        "mag": 6.5,
-        "place": "Vanuatu region",
-        "pager": "green",
-        "tsunami": true
-      },
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
-      "id": "sig:quake:pt26327000",
-      "cat": "earth",
-      "kind": "signal",
-      "title": "M 6.5 - Vanuatu region",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pt26327000",
-      "source": "USGS",
-      "publishedAt": "2026-11-23T02:40:57.000Z",
-      "latestAt": "2026-11-23T02:40:57.000Z",
-      "firstSeenAt": "2026-11-23T02:52:34.117Z",
-      "outlets": 1,
-      "outletNames": [
-        "USGS"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "quake",
-        "mag": 6.5,
-        "place": "Vanuatu region",
-        "pager": null,
-        "tsunami": true
-      },
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "90481647aba9",
       "cat": "flights",
       "kind": "news",
@@ -363,9 +307,9 @@
       "url": "https://ijr.com/discover/travel-2026-11-23-hare-ground-stop-lifted-staffing-shortage-b078eb42",
       "source": "Independent Journal Review",
       "publishedAt": "2026-11-23T13:59:00.000Z",
-      "latestAt": "2026-11-23T21:48:51.000Z",
+      "latestAt": "2026-11-24T01:44:16.000Z",
       "firstSeenAt": "2026-11-24T02:11:28.163Z",
-      "outlets": 19,
+      "outlets": 21,
       "outletNames": [
         "Independent Journal Review",
         "NBC 5 Chicago",
@@ -385,9 +329,11 @@
         "Anadolu Ajansı",
         "Operativ Məlumat Mərkəzi",
         "AVweb",
-        "FlipItMoney"
+        "FlipItMoney",
+        "WABC Radio",
+        "US Muslims"
       ],
-      "score": 4.18
+      "score": 4.3
     },
     {
       "id": "00fefd72061e",
@@ -504,6 +450,25 @@
       "score": 3.28
     },
     {
+      "id": "08138a62e8c4",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Kilauea volcano LIVE: Eruption in Hawaii (Video)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQLUhKN3Q2NE5vVEZ3U2ZzcGY3NXJIcmdGOS1hSDNGZXJaTTRtNDRiNEYzVUNId1d1U2Vmclc4OTk5RzZjTnRzT1RZZWZ6MjBGbzNzSmRRTjRPYXpDbWFYUHZGLWQzRjlJTG9ZU1JaZnpDUkR2ZklHU0tqblV2RWU2b0RWZHE3Nl8wMFE3bGMwSGc?oc=5",
+      "source": "Social News XYZ",
+      "publishedAt": "2026-11-23T12:06:26.000Z",
+      "latestAt": "2026-11-24T00:08:13.000Z",
+      "firstSeenAt": "2026-11-23T12:54:19.459Z",
+      "outlets": 4,
+      "outletNames": [
+        "Social News XYZ",
+        "swiowanewssource.com",
+        "Daily Gate City",
+        "Shoreline Media Group"
+      ],
+      "score": 2.96
+    },
+    {
       "id": "ad51fd2de4de",
       "cat": "markets",
       "kind": "news",
@@ -561,6 +526,25 @@
       "score": 2.55
     },
     {
+      "id": "d9234b2f0672",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Hawaii's Kīlauea volcano erupts for 57th time, sending spectacular fountains of lava into the sky",
+      "url": "https://www.yahoo.com/news/weather-news/articles/hawaiis-k-lauea-volcano-erupts-145111114.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T06:51:00.000Z",
+      "latestAt": "2026-11-23T14:51:11.000Z",
+      "firstSeenAt": "2026-11-23T20:40:41.500Z",
+      "outlets": 4,
+      "outletNames": [
+        "Yahoo",
+        "Yahoo News Canada",
+        "AOL.com",
+        "FOX Weather"
+      ],
+      "score": 2.31
+    },
+    {
       "id": "sig:faa-stop:LEX:2026-11-23",
       "cat": "flights",
       "kind": "signal",
@@ -584,24 +568,25 @@
       }
     },
     {
-      "id": "a910e55ce45c",
+      "id": "91c05b38efd8",
       "cat": "flights",
       "kind": "news",
-      "title": "Delta aircraft faced manual calculations after a critical system outage",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNVk9wRlNjSmhMS2dfblZfYVFNMlJUQ1YwT0lNc21rOGxPVHUzcFZBUEI2THk1ZXNHbW85dkJDVmlMaTJUaFlBWXdNWjM5bTF3LVE0cFZ0UVIyUXNSejUxd09CWVNUQW93U085NXdnbkJ1UmRGdEN1NTFFU2pKckh3YTE3aFZvRE43cC1lb0h6anpMWnJXakdvQnhDUVZtQ0pKWERRcjNnMlRveDFaeUtHbGJOdm1vWEhlQmtFa28zVGdZUm44Y283d3lPc1o5cFFTY1NuX2JEMNIB6wFBVV95cUxQQTR1S21FSWltM1BjUDUyd1ItVGZEZnZ6YlNaMEVldmZiVVIxM0l0OW1ZMGFZMmpFMVRzVU82eThjZWl1bUo2TkdaSHd6eFh0Nk53Nkt5QnYwSHBaSjlPMmFBenhKb2xqQXVQOV8yR2VUVF8xUWRRZVNVY180ZzRfS01TOFUybHZDam9FTnhJdTFDSzFWblZ1blB2a1NCZjd6aGpJbkpjejJ2R0Rua2ZKTHcxQ05qTXkzTXAzZ3VEd1ZUeUVqdkpRR1lFdklMTG4weGVZczhlSWRCemJUMkVRbVdFcFktMVduMzlj?oc=5",
-      "source": "Boston 25 News",
-      "publishedAt": "2026-11-23T20:18:49.000Z",
-      "latestAt": "2026-11-23T20:18:49.000Z",
-      "firstSeenAt": "2026-11-23T21:55:50.295Z",
-      "outlets": 5,
+      "title": "Delta Airlines flights delayed nationwide amid ground stop slowing holiday travel",
+      "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxPZjZQaG5xNFdTcWpVYnUwa2JUOFBKSlV5X0V4MVpkR1hPLW1WcGtUZXlRTDRQMk44d0ZYOWdKeG1zSkZnT2lBckVYOHdaaFR2cW1Bd2ZwRlg2MFZnXzZRRTEwZk1OZEg1WkZ2WWRlaUFBNFhNdzI1U0sweG1wZExIV3A4WnkwcDJ6NVI2WnlUSjNkMF9DSjhHZXBNY0V4elhJLXUxRHAxSm5LSDZYNjc2YXh1NXhNLUcwZ1NKOVhKREEyZWJrVklTazd3Sy1SS2xBOVdqME94QTdzX2tha01lY2loaWpoaWotYndhU29Wa3laNkRfV1BJU3VPc05JNDNkMzNhM0wzRDFjcXNqMzYzZUZDU1RQOXVsOWRCaHdMekNHSHFzVDkxWWs4QWh5RkFHYmtBZWhadW1QOE9GWXJxMlNEYjhRVzV1REtVaWg1b0pnQnM?oc=5",
+      "source": "WPDE",
+      "publishedAt": "2026-11-23T04:01:11.000Z",
+      "latestAt": "2026-11-23T11:45:34.000Z",
+      "firstSeenAt": "2026-11-24T02:41:37.482Z",
+      "outlets": 6,
       "outletNames": [
-        "Boston 25 News",
-        "104.5 WOKV",
-        "WFTV",
-        "WPXI",
-        "WHIO TV"
+        "WPDE",
+        "WLOS",
+        "KVAL",
+        "WCYB",
+        "WUHF",
+        "Fox 28"
       ],
-      "score": 3.23
+      "score": 3.12
     },
     {
       "id": "e55269ebb7e8",
@@ -644,25 +629,6 @@
       "score": 2.99
     },
     {
-      "id": "08138a62e8c4",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Kilauea volcano LIVE: Eruption in Hawaii (Video)",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQLUhKN3Q2NE5vVEZ3U2ZzcGY3NXJIcmdGOS1hSDNGZXJaTTRtNDRiNEYzVUNId1d1U2Vmclc4OTk5RzZjTnRzT1RZZWZ6MjBGbzNzSmRRTjRPYXpDbWFYUHZGLWQzRjlJTG9ZU1JaZnpDUkR2ZklHU0tqblV2RWU2b0RWZHE3Nl8wMFE3bGMwSGc?oc=5",
-      "source": "Social News XYZ",
-      "publishedAt": "2026-11-23T12:06:26.000Z",
-      "latestAt": "2026-11-24T00:08:13.000Z",
-      "firstSeenAt": "2026-11-23T12:54:19.459Z",
-      "outlets": 4,
-      "outletNames": [
-        "Social News XYZ",
-        "swiowanewssource.com",
-        "Daily Gate City",
-        "Shoreline Media Group"
-      ],
-      "score": 2.96
-    },
-    {
       "id": "edf9c71a79d9",
       "cat": "hacks",
       "kind": "news",
@@ -701,25 +667,6 @@
         "Digg"
       ],
       "score": 2.94
-    },
-    {
-      "id": "d9234b2f0672",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Hawaii's Kīlauea volcano erupts for 57th time, sending spectacular fountains of lava into the sky",
-      "url": "https://www.yahoo.com/news/weather-news/articles/hawaiis-k-lauea-volcano-erupts-145111114.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T06:51:00.000Z",
-      "latestAt": "2026-11-23T14:51:11.000Z",
-      "firstSeenAt": "2026-11-23T20:40:41.500Z",
-      "outlets": 4,
-      "outletNames": [
-        "Yahoo",
-        "Yahoo News Canada",
-        "AOL.com",
-        "FOX Weather"
-      ],
-      "score": 2.31
     },
     {
       "id": "ca98ae1755e5",
@@ -898,6 +845,60 @@
       "score": 1.92
     },
     {
+      "id": "a63b967f255d",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed at commercial poultry farm",
+      "url": "https://www.bbc.co.uk/news/articles/cry86dg976vgo",
+      "source": "BBC",
+      "publishedAt": "2026-11-23T03:37:00.000Z",
+      "latestAt": "2026-11-23T11:37:26.000Z",
+      "firstSeenAt": "2026-11-23T12:09:08.356Z",
+      "outlets": 2,
+      "outletNames": [
+        "BBC",
+        "Yahoo"
+      ],
+      "score": 1.72
+    },
+    {
+      "id": "0fc9f53e8229",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu detected at Okeechobee County poultry facility",
+      "url": "https://www.yahoo.com/news/videos/bird-flu-detected-okeechobee-county-231737271.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T15:18:00.000Z",
+      "latestAt": "2026-11-23T23:03:25.000Z",
+      "firstSeenAt": "2026-11-23T23:56:06.341Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "WFLX"
+      ],
+      "score": 1.71
+    },
+    {
+      "id": "a910e55ce45c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta aircraft faced manual calculations after a critical system outage",
+      "url": "https://www.wpxi.com/news/trending/delta-aircraft-faced-manual-calculations-after-critical-system-outage/7S3LP4IVHFH2NNU6CGY22D344E/",
+      "source": "WPXI",
+      "publishedAt": "2026-11-23T12:18:00.000Z",
+      "latestAt": "2026-11-23T20:18:49.000Z",
+      "firstSeenAt": "2026-11-23T21:55:50.295Z",
+      "outlets": 5,
+      "outletNames": [
+        "Boston 25 News",
+        "104.5 WOKV",
+        "WFTV",
+        "WPXI",
+        "WHIO TV"
+      ],
+      "score": 2.79
+    },
+    {
       "id": "6ba8cf23d88f",
       "cat": "hacks",
       "kind": "news",
@@ -970,6 +971,24 @@
         "Newsquawk"
       ],
       "score": 2.53
+    },
+    {
+      "id": "6f33acb2709d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "U.S. takes action to recover over US$1.1 bln in cryptocurrency stolen by N. Korean hackers",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iR2lFdUdxd2hHU213cEVrQ2FUU2VJMzFQX2RSNThHV0RjN1o4c3RYVVA2NVVsS0g4MjVtYjdrcFc4MWdVX1lGUGNKUE1jX3YzckMtX05KaU9NQQ?oc=5",
+      "source": "Yonhap News Agency",
+      "publishedAt": "2026-11-23T22:11:31.000Z",
+      "latestAt": "2026-11-23T22:35:02.000Z",
+      "firstSeenAt": "2026-11-23T23:41:08.404Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yonhap News Agency",
+        "The Korea Times",
+        "K-VIBE"
+      ],
+      "score": 2.52
     },
     {
       "id": "146aa5beb1a5",
@@ -1048,7 +1067,7 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/delta-air-lines-hit-major-153805570.html",
       "source": "Yahoo Finance",
       "publishedAt": "2026-11-23T07:39:00.000Z",
-      "latestAt": "2026-11-23T15:47:21.000Z",
+      "latestAt": "2026-11-23T23:15:00.000Z",
       "firstSeenAt": "2026-11-23T15:54:47.975Z",
       "outlets": 2,
       "outletNames": [
@@ -1202,6 +1221,26 @@
       "score": 2.11
     },
     {
+      "id": "789a7de46ad5",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta system outage delays 3,500 flights ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQclJRYWhGV2dsY0dhcmJPVTBpMmpNaWJNN1hkWnhZOVVwRmJGVW11RU03QzRFeHF3bkp6TU1nTk1ERnpiMlkyX2I0UXdXaXZBUFk5VVFBUTJXOVlkRldTXzZuWElEQW5GR2w4ZUhMTDgyNnR3Sy1BTm5OSG1PNFBqQlBDOVBidHdiMElDazhRbDlEbVdZMnhB?oc=5",
+      "source": "FOX 10 Phoenix",
+      "publishedAt": "2026-11-23T04:13:40.000Z",
+      "latestAt": "2026-11-24T02:30:00.000Z",
+      "firstSeenAt": "2026-11-24T02:11:28.163Z",
+      "outlets": 5,
+      "outletNames": [
+        "FOX 10 Phoenix",
+        "JournalArta",
+        "FL360aero",
+        "Aviation Pros",
+        "Speaks Media"
+      ],
+      "score": 2.11
+    },
+    {
       "id": "c965b23d3f28",
       "cat": "hacks",
       "kind": "news",
@@ -1236,23 +1275,6 @@
       "score": 1.98
     },
     {
-      "id": "6f33acb2709d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "U.S. takes action to recover over US$1.1 bln in cryptocurrency stolen by N. Korean hackers",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iR2lFdUdxd2hHU213cEVrQ2FUU2VJMzFQX2RSNThHV0RjN1o4c3RYVVA2NVVsS0g4MjVtYjdrcFc4MWdVX1lGUGNKUE1jX3YzckMtX05KaU9NQQ?oc=5",
-      "source": "Yonhap News Agency",
-      "publishedAt": "2026-11-23T22:11:31.000Z",
-      "latestAt": "2026-11-23T22:35:02.000Z",
-      "firstSeenAt": "2026-11-23T23:41:08.404Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yonhap News Agency",
-        "The Korea Times"
-      ],
-      "score": 1.95
-    },
-    {
       "id": "32e456df8417",
       "cat": "hacks",
       "kind": "news",
@@ -1285,25 +1307,6 @@
         "Uzalendo News"
       ],
       "score": 1.92
-    },
-    {
-      "id": "789a7de46ad5",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta system outage delays 3,500 flights ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQclJRYWhGV2dsY0dhcmJPVTBpMmpNaWJNN1hkWnhZOVVwRmJGVW11RU03QzRFeHF3bkp6TU1nTk1ERnpiMlkyX2I0UXdXaXZBUFk5VVFBUTJXOVlkRldTXzZuWElEQW5GR2w4ZUhMTDgyNnR3Sy1BTm5OSG1PNFBqQlBDOVBidHdiMElDazhRbDlEbVdZMnhB?oc=5",
-      "source": "FOX 10 Phoenix",
-      "publishedAt": "2026-11-23T04:13:40.000Z",
-      "latestAt": "2026-11-23T19:15:01.000Z",
-      "firstSeenAt": "2026-11-24T02:11:28.163Z",
-      "outlets": 4,
-      "outletNames": [
-        "FOX 10 Phoenix",
-        "JournalArta",
-        "FL360aero",
-        "Aviation Pros"
-      ],
-      "score": 1.9
     },
     {
       "id": "c447c3c3df5b",
@@ -1425,23 +1428,6 @@
       "score": 1.72
     },
     {
-      "id": "a63b967f255d",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed at commercial poultry farm",
-      "url": "https://www.bbc.co.uk/news/articles/cry86dg976vgo",
-      "source": "BBC",
-      "publishedAt": "2026-11-23T03:37:00.000Z",
-      "latestAt": "2026-11-23T11:37:26.000Z",
-      "firstSeenAt": "2026-11-23T12:09:08.356Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "Yahoo"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "61c68303f936",
       "cat": "hacks",
       "kind": "news",
@@ -1457,23 +1443,6 @@
         "Cyber Press"
       ],
       "score": 1.72
-    },
-    {
-      "id": "0fc9f53e8229",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu detected at Okeechobee County poultry facility",
-      "url": "https://www.yahoo.com/news/videos/bird-flu-detected-okeechobee-county-231737271.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T15:18:00.000Z",
-      "latestAt": "2026-11-23T23:03:25.000Z",
-      "firstSeenAt": "2026-11-23T23:56:06.341Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WFLX"
-      ],
-      "score": 1.71
     },
     {
       "id": "63d4dee8ab39",
@@ -1506,24 +1475,6 @@
       "outletNames": [
         "The Cool Down",
         "Yahoo"
-      ],
-      "score": 1.7
-    },
-    {
-      "id": "fd8f6b998fed",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
-      "url": "https://who13.com/technology/ap-technology/ap-european-commission-warns-eu-academy-users-of-data-leak-after-ai-driven-cyberattack/",
-      "source": "WHO13",
-      "publishedAt": "2026-11-23T05:24:00.000Z",
-      "latestAt": "2026-11-23T18:52:04.000Z",
-      "firstSeenAt": "2026-11-24T01:56:26.971Z",
-      "outlets": 3,
-      "outletNames": [
-        "AP News",
-        "European Interest",
-        "WHO13"
       ],
       "score": 1.7
     },
@@ -1579,23 +1530,6 @@
       "score": 1.68
     },
     {
-      "id": "781a66721922",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Worried about another bank outage? 5 simple things you can do to prepare now",
-      "url": "https://finance.yahoo.com/markets/articles/worried-another-bank-outage-5-103054375.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-23T02:30:00.000Z",
-      "latestAt": "2026-11-23T10:30:37.000Z",
-      "firstSeenAt": "2026-11-23T12:09:08.356Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 1.68
-    },
-    {
       "id": "55b0ddbb712a",
       "cat": "hacks",
       "kind": "news",
@@ -1645,6 +1579,23 @@
         "The Week"
       ],
       "score": 1.65
+    },
+    {
+      "id": "6f4a804949b8",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu detected among cows at Grant County dairy farm",
+      "url": "https://www.yahoo.com/news/science/articles/bird-flu-detected-among-cows-003845508.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T00:38:00.000Z",
+      "firstSeenAt": "2026-11-24T02:41:37.482Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "KREM"
+      ],
+      "score": 1.64
     },
     {
       "id": "96a892a99aa0",
@@ -1782,20 +1733,68 @@
       "score": 1.4
     },
     {
-      "id": "6eae4ce1021d",
+      "id": "caf17f46a7f1",
       "cat": "hacks",
       "kind": "news",
-      "title": "Cleverbridge Confirms Hackers Stole Customer Card Numbers and CVV Codes in a Major Data Breach",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9pbnd2bGVvTUJweHpiVURfRG16VEphdW5sOGpPbURZUVRzSDNweDNiWGNMUVRIVDJja2RrVktadFp4bHdSS3RFMU1JN0NwZVNBV191dEZEemJpWDRvSk1MYk1IZ0FTZ9IBa0FVX3lxTE8yQVRhOHVaQmxYRzVCOURMM1lCbHRtcG54V2hhVmpRTFlWdWlYUUNTSEdIRC0zalpsQ2YwZDhrUlU3aXg2VVFsWV9yaC03YzZhLTA4VXZPSkdqal82T3UxZ0RGRURGUkhJU2NZ?oc=5",
-      "source": "CyberSecurityNews",
-      "publishedAt": "2026-11-23T03:07:09.000Z",
-      "latestAt": "2026-11-23T03:07:09.000Z",
-      "firstSeenAt": "2026-11-23T04:22:49.114Z",
+      "title": "Rakuten Securities Data Breach Exposes Information From Millions of Customer Accounts",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMFo3RFo5ZEsyejlocTBLaG9wZ2dzLW1yLUJqNExBb1ozcHZsOXAwY1FObmJPdE1jNlRGeWh5TEZhWENlVFpfLVh3cE5nWVhJbkN5dEktRFRGUGJoQlEwZG1yQzlUU0s3V0czd05HQTFuSGtrbk1DYTZZSFlzTlVLc2s0OXc5WmZ4eG1oNGRWLVNRNzlOWGZZRWVWSG5UeUk5a3Q5Tml1eTZnQ1NkQTViUnlVZjlkUnJSQldtWXppekZCaFh1cFJoWQ?oc=5",
+      "source": "CPO Magazine",
+      "publishedAt": "2026-11-23T22:00:00.000Z",
+      "latestAt": "2026-11-23T22:00:00.000Z",
+      "firstSeenAt": "2026-11-24T02:41:37.482Z",
       "outlets": 1,
       "outletNames": [
-        "CyberSecurityNews"
+        "CPO Magazine"
       ],
-      "score": 1.37
+      "score": 1.29
+    },
+    {
+      "id": "32dc77c35517",
+      "cat": "flights",
+      "kind": "news",
+      "title": "New York parent books backup rental car for Texas work trip after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5rWHlZb3BRVXVoRXFGZVpBaGNNYTlLUnpBOWs1TzZ1RE9ZMTVqcGVlREdzOFhwYUdrTm9rZEVocl9QUkx4ZDVsVE5waDRrWko5d2phME1weG4wN0steXYza1NFLThydU05V0tJUFBBTEdvblBGQVp0Mlh0SnpYZw?oc=5",
+      "source": "The Cool Down",
+      "publishedAt": "2026-11-23T20:55:00.000Z",
+      "latestAt": "2026-11-23T20:55:00.000Z",
+      "firstSeenAt": "2026-11-24T02:41:37.482Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Cool Down"
+      ],
+      "score": 1.27
+    },
+    {
+      "id": "2fc8aea99cae",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Nvidia Rally Lifts Nasdaq-100 Following Sharp Global Stock Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQTJUZEJ6d25YN3B6MWx0bnJXV1FEdm5LQWQ2NHp3WlFyRTNsODZKR1BLRVlNUmlHN0oxQmsxSC12TFhPa3JUU0VjQWtydlhud3RVWGMzWUowbm1GTkJmZlVySmJjUXlheG9rTzVNcE9UekI4N1hJWVFNRnRpSW1IVzRhS1FvRW9CSENxU1c5cGpCd0xDZVoxdkVXNkNoNVRxWmk5ZWpxTUFHLUZFcUY5N2l0ZzdNVVBfVHdlYngtbjhZbXlw?oc=5",
+      "source": "Forbes Middle East",
+      "publishedAt": "2026-11-23T20:53:38.000Z",
+      "latestAt": "2026-11-23T20:53:38.000Z",
+      "firstSeenAt": "2026-11-24T02:41:37.482Z",
+      "outlets": 1,
+      "outletNames": [
+        "Forbes Middle East"
+      ],
+      "score": 1.26
+    },
+    {
+      "id": "0856f3a0fa48",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack Targets FBI System Used by Police Nationwide",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQTB2d0l2Uk03WGhjZzBaMWJPRkhuU21LczVUWFQ4NjZFT3NYVHd6RGZEdkM1RWNFTVU2M0Q0cmpscl9tRFBVVDNZUmpLMEVIRWZWNUNhT2ZXeVU4NklBZ0pHYjdIdXQxRURWREktNVdzU2c0SUl2OF9yZ2hwSURsYTZDLVN6M296RjJMSkRzckJWbU9PUUlNYnQwbGdEb3BvUkZDOFdhZ3NOTmpPclROd2F2T1ppNHNy?oc=5",
+      "source": "The National CIO Review",
+      "publishedAt": "2026-11-23T19:14:32.000Z",
+      "latestAt": "2026-11-23T19:14:32.000Z",
+      "firstSeenAt": "2026-11-24T02:41:37.482Z",
+      "outlets": 1,
+      "outletNames": [
+        "The National CIO Review"
+      ],
+      "score": 1.23
     },
     {
       "id": "26bf773283de",
@@ -2052,22 +2051,6 @@
         "TechJuice"
       ],
       "score": 0.77
-    },
-    {
-      "id": "86533c1a6faa",
-      "cat": "sun",
-      "kind": "news",
-      "title": "NOAA : No Space Weather Storms Expected Through November 29",
-      "url": "https://newsroomamerica.com/a/6ivRNo3nX8CdFlliqjTEe899WNd/noaa_s_space_weather_prediction_center_reports_minor_radio_blackouts_and_a_minor_geomagnetic_storm_last_week_but_forecasts_a_quiet_period_with_no_space_weather_storms_through_november_29.html",
-      "source": "newsroomamerica.com",
-      "publishedAt": "2026-11-23T02:30:00.000Z",
-      "latestAt": "2026-11-23T02:30:00.000Z",
-      "firstSeenAt": "2026-11-23T19:55:36.706Z",
-      "outlets": 1,
-      "outletNames": [
-        "newsroomamerica.com"
-      ],
-      "score": 0.71
     }
   ]
 }
