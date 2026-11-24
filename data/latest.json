@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T20:29:47.178Z",
+  "buildTime": "2026-11-24T20:44:52.543Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 15:29 ET",
+  "etStamp": "2026-11-24 15:44 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,20 +48,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1366,
-  "lastSuccessAt": "2026-11-24T20:29:47.178Z",
+  "headlinesRead": 1403,
+  "lastSuccessAt": "2026-11-24T20:44:52.543Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
-    "earth": 6,
-    "internet": 21,
+    "flights": 15,
+    "earth": 7,
+    "internet": 20,
     "grid": 10,
-    "hacks": 29,
+    "hacks": 30,
     "germs": 4,
     "weather": 4,
     "animals": 2,
-    "markets": 4,
     "space": 1,
+    "markets": 4,
     "ai": 2,
     "sun": 1
   },
@@ -180,80 +180,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1032,
+      "count": 1068,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     },
     "bing": {
       "ok": true,
-      "count": 293,
+      "count": 296,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-24T16:59:11.725Z"
     },
     "hn": {
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     },
     "x": {
       "ok": true,
-      "count": 2,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T20:29:47.178Z"
+      "lastOkAt": "2026-11-24T20:44:52.543Z"
     }
   },
   "stories": [
@@ -545,22 +546,40 @@
       "score": 2.78
     },
     {
-      "id": "d4e9532e7b32",
-      "cat": "germs",
+      "id": "1f7a9dd08c2f",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Wisconsin reports 10th case of bird flu this year in Polk County",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWTBLeVFERUE3UUJNUVdCRmtxUWNRUFQwR1NlOGd3WHRoa3R3VllVbGtnajl6Mm9DWVpfZGVDNXpGZFk0bDNlR0NSM19CenUyRWpWOUM3RmlBaExnRkRDaWRJVXR0U2w1ZUlJWW0zd09BNlVQQmticU8zYm5uX1lrUWFnTmxnNmVrc1BlRnZSelRob1Y3TDlRUjdNMU9BNlZNS0dSV0dsOEZ3dUIxUEJQeWZrZFZOdFk?oc=5",
-      "source": "Lake Geneva News",
-      "publishedAt": "2026-11-24T18:50:00.000Z",
-      "latestAt": "2026-11-24T18:50:00.000Z",
-      "firstSeenAt": "2026-11-24T18:59:34.832Z",
-      "outlets": 3,
+      "title": "An unclassified CIA system was breached in a cyberattack, AP source says",
+      "url": "https://www.yahoo.com/news/us/articles/unclassified-cia-system-breached-cyberattack-202923626.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T12:30:00.000Z",
+      "latestAt": "2026-11-24T20:37:01.000Z",
+      "firstSeenAt": "2026-11-24T20:44:52.543Z",
+      "outlets": 4,
       "outletNames": [
-        "Lake Geneva News",
-        "La Crosse Tribune",
-        "Wisconsin State Journal"
+        "Yahoo",
+        "WDAM-TV",
+        "Ottumwa Courier",
+        "WJTV"
       ],
-      "score": 2.58
+      "score": 2.59
+    },
+    {
+      "id": "4144781d773d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Government watchdog warned of potential disruptions from FAA upgrades before nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQamxVVVhHWGZUM1NrRE9YNVloQ1A4UFVaYWdfbDM2dDVDZU5rdXl4MW1yQzBMOGptd1U0OTZKQnBldnZVU25uMlByMlVFclVlT2gwdjJCNmhPeWY5RnJXX3Vfc203SmJ2ZnNyUnlFNzROY3Z0bHZxR3IxMDBTWkpVbEhxOG95WkRpSEdpRHRMRERjUkttZHpEVEM0Z3pka0dDOUJhSkFlVVhrNi1TWWVjcWxWdHg2d25oS0RrRDRNZEdHYzdRMnZjQnN0UHJ4TkQtR2Jxd05lamx4Q2dDQXpNR0RjWmxFc2M?oc=5",
+      "source": "WNEP",
+      "publishedAt": "2026-11-24T20:29:00.000Z",
+      "latestAt": "2026-11-24T20:32:37.000Z",
+      "firstSeenAt": "2026-11-24T20:44:52.543Z",
+      "outlets": 2,
+      "outletNames": [
+        "WNEP",
+        "WQAD"
+      ],
+      "score": 2.79
     },
     {
       "id": "b71cd8e479e0",
@@ -595,6 +614,24 @@
         "THV11"
       ],
       "score": 2.59
+    },
+    {
+      "id": "d4e9532e7b32",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Wisconsin reports 10th case of bird flu this year in Polk County",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWTBLeVFERUE3UUJNUVdCRmtxUWNRUFQwR1NlOGd3WHRoa3R3VllVbGtnajl6Mm9DWVpfZGVDNXpGZFk0bDNlR0NSM19CenUyRWpWOUM3RmlBaExnRkRDaWRJVXR0U2w1ZUlJWW0zd09BNlVQQmticU8zYm5uX1lrUWFnTmxnNmVrc1BlRnZSelRob1Y3TDlRUjdNMU9BNlZNS0dSV0dsOEZ3dUIxUEJQeWZrZFZOdFk?oc=5",
+      "source": "Lake Geneva News",
+      "publishedAt": "2026-11-24T18:50:00.000Z",
+      "latestAt": "2026-11-24T18:50:00.000Z",
+      "firstSeenAt": "2026-11-24T18:59:34.832Z",
+      "outlets": 3,
+      "outletNames": [
+        "Lake Geneva News",
+        "La Crosse Tribune",
+        "Wisconsin State Journal"
+      ],
+      "score": 2.58
     },
     {
       "id": "fb4faf2589e7",
@@ -687,38 +724,38 @@
       "score": 2.42
     },
     {
-      "id": "0bc4c2c85c92",
+      "id": "42f87fae315d",
       "cat": "hacks",
       "kind": "news",
-      "title": "McDonald’s Japan Confirms Data Breach – Customer Information and Location Data Exposed",
-      "url": "https://cybersecuritynews.com/mcdonalds-japan-data-breach/",
-      "source": "Cyber Security News",
-      "publishedAt": "2026-11-24T07:39:00.000Z",
-      "latestAt": "2026-11-24T14:13:33.000Z",
-      "firstSeenAt": "2026-11-24T15:44:04.612Z",
+      "title": "Latest headlines | Data breach keeps myColorado app offline as Thanksgiving travel nears",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxONXNpdkVlNE1WV01DY3AtUllTeFFUcVJLLWt1b2N0X3N4XzZiMmlFSTRaZXlQY3J4THVVTld1aVZrN3RmcV9Gb0dpZVRDZnpCYm9pOGpKZmRHY0Q2c1FuUVd1Vnlxcm8zTXhEQmZ4cThRM3pHTFhEZDdvay1FUzRreElRd2lfMFNOdWV0MmZjOHVDSmdIUkdGSlljQmpha2FwMTBBS3pIWVh5MnBhLWh6MGVCWVZTMFV3SzlIOFZLa3Qxc0ZhaVpvSHAySkQ0ekNaWmJmUlJza29PV0IyMWxQdUljRjc2dVRwdFZmclN2VXAySkJBZG5XVHJ3dzV5UTdFRFk2RXoydmxVc2pG?oc=5",
+      "source": "9News",
+      "publishedAt": "2026-11-24T13:30:00.000Z",
+      "latestAt": "2026-11-24T17:59:29.000Z",
+      "firstSeenAt": "2026-11-24T18:44:26.551Z",
       "outlets": 3,
       "outletNames": [
-        "Cyber Security News",
-        "BleepingComputer",
-        "Mezha.net"
+        "9News",
+        "Yahoo",
+        "AOL.com"
       ],
-      "score": 2.24
+      "score": 2.36
     },
     {
-      "id": "1a720a4301b8",
-      "cat": "hacks",
+      "id": "c6aec4b84c8b",
+      "cat": "internet",
       "kind": "news",
-      "title": "Airport customers hit by payment data breach",
-      "url": "https://www.bbc.co.uk/news/articles/ckx283l7n17ro",
-      "source": "BBC",
-      "publishedAt": "2026-11-24T08:25:00.000Z",
-      "latestAt": "2026-11-24T16:47:19.000Z",
-      "firstSeenAt": "2026-11-24T16:44:09.238Z",
+      "title": "TikTok is down with thousands of outage reports in the US",
+      "url": "https://tech.yahoo.com/apps/breaking-news/article/tiktok-is-down-with-thousands-of-outage-reports-in-the-us-202612575.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-24T12:26:00.000Z",
+      "latestAt": "2026-11-24T20:42:43.000Z",
+      "firstSeenAt": "2026-11-24T20:44:52.543Z",
       "outlets": 3,
       "outletNames": [
-        "BBC",
-        "Yahoo",
-        "Yahoo News Canada"
+        "YAHOO!",
+        "Yahoo Tech",
+        "X"
       ],
       "score": 2.23
     },
@@ -777,23 +814,6 @@
         "TradingView"
       ],
       "score": 2.13
-    },
-    {
-      "id": "fad84ef0d0fc",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Spotify outage hit thousands of users before service was restored",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE55SHVENTUwMThWWi1rMktTVV9Ja0dHTVJpVDM4WWpOSVpyZjBKTTdzUkwzdFZUUlVBRjFaMVVGZXJiYnUwcXF6U0hfcmhrX0ZkNG5wbEYtdUZpTV9iQjNvSXNXbVJFTTM2TTRDVmdncURlYjIyME0yRA?oc=5",
-      "source": "qz.com",
-      "publishedAt": "2026-11-24T13:26:44.000Z",
-      "latestAt": "2026-11-24T13:31:09.000Z",
-      "firstSeenAt": "2026-11-24T13:28:32.062Z",
-      "outlets": 2,
-      "outletNames": [
-        "qz.com",
-        "Quartz"
-      ],
-      "score": 2
     },
     {
       "id": "21bc813321c6",
@@ -868,21 +888,40 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "7f4b4a58044b",
-      "cat": "flights",
+      "id": "0bc4c2c85c92",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Air Zimbabwe London Flights Grounded as Lessor Reclaims Airbus A330",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPOUR2ajc2QTdITlV1azl0MHVhaTNyVDJoMUc0RWk0Q1hNS092cFdPWm91VUlpTVVPNHJZU25FR2NNWFlFTGVyMUgtOElnb0xWcVZhZUc2a1I2SGNha3pvbEdCV1Judk5ld043U2hJZUVPYWFDLUxJUzlVbGlhdWJzUVkxWDN3U1BZYUhQYWVUemthVHlyQ0d1eVVTSEhZOTRuNWpnOA?oc=5",
-      "source": "The Zimbabwe Mail",
-      "publishedAt": "2026-11-24T11:26:15.000Z",
-      "latestAt": "2026-11-24T12:45:23.000Z",
-      "firstSeenAt": "2026-11-24T19:29:41.268Z",
-      "outlets": 2,
+      "title": "McDonald’s Japan Confirms Data Breach – Customer Information and Location Data Exposed",
+      "url": "https://cybersecuritynews.com/mcdonalds-japan-data-breach/",
+      "source": "Cyber Security News",
+      "publishedAt": "2026-11-24T07:39:00.000Z",
+      "latestAt": "2026-11-24T14:13:33.000Z",
+      "firstSeenAt": "2026-11-24T15:44:04.612Z",
+      "outlets": 3,
       "outletNames": [
-        "The Zimbabwe Mail",
-        "iHarare News"
+        "Cyber Security News",
+        "BleepingComputer",
+        "Mezha.net"
       ],
-      "score": 1.73
+      "score": 2.24
+    },
+    {
+      "id": "1a720a4301b8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Airport customers hit by payment data breach",
+      "url": "https://www.bbc.co.uk/news/articles/ckx283l7n17ro",
+      "source": "BBC",
+      "publishedAt": "2026-11-24T08:25:00.000Z",
+      "latestAt": "2026-11-24T16:47:19.000Z",
+      "firstSeenAt": "2026-11-24T16:44:09.238Z",
+      "outlets": 3,
+      "outletNames": [
+        "BBC",
+        "Yahoo",
+        "Yahoo News Canada"
+      ],
+      "score": 2.23
     },
     {
       "id": "b56e85e00af0",
@@ -954,6 +993,40 @@
         "Hoodline"
       ],
       "score": 2.08
+    },
+    {
+      "id": "fad84ef0d0fc",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Spotify outage hit thousands of users before service was restored",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE55SHVENTUwMThWWi1rMktTVV9Ja0dHTVJpVDM4WWpOSVpyZjBKTTdzUkwzdFZUUlVBRjFaMVVGZXJiYnUwcXF6U0hfcmhrX0ZkNG5wbEYtdUZpTV9iQjNvSXNXbVJFTTM2TTRDVmdncURlYjIyME0yRA?oc=5",
+      "source": "qz.com",
+      "publishedAt": "2026-11-24T13:26:44.000Z",
+      "latestAt": "2026-11-24T13:31:09.000Z",
+      "firstSeenAt": "2026-11-24T13:28:32.062Z",
+      "outlets": 2,
+      "outletNames": [
+        "qz.com",
+        "Quartz"
+      ],
+      "score": 2
+    },
+    {
+      "id": "d2d65e9a6a90",
+      "cat": "internet",
+      "kind": "news",
+      "title": "TikTok Faces Widespread Outage Across the US",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB2eldzU1Bram1nTlpiQjFYSHNZeDBiNlFWRi1xLWdreHJITUNHcUJ0eWpxVHN0T0tXclZEUVdUVmRoZVNKcDFZUFJwcDFxMDRZSXlOaTJTNGNyYnhG?oc=5",
+      "source": "Peradaban.id",
+      "publishedAt": "2026-11-24T20:26:00.000Z",
+      "latestAt": "2026-11-24T20:27:00.000Z",
+      "firstSeenAt": "2026-11-24T20:44:52.543Z",
+      "outlets": 2,
+      "outletNames": [
+        "Peradaban.id",
+        "Limapagi"
+      ],
+      "score": 1.99
     },
     {
       "id": "8806779a070d",
@@ -1043,23 +1116,6 @@
       "score": 1.85
     },
     {
-      "id": "42f87fae315d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Latest headlines | Data breach keeps myColorado app offline as Thanksgiving travel nears",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxONXNpdkVlNE1WV01DY3AtUllTeFFUcVJLLWt1b2N0X3N4XzZiMmlFSTRaZXlQY3J4THVVTld1aVZrN3RmcV9Gb0dpZVRDZnpCYm9pOGpKZmRHY0Q2c1FuUVd1Vnlxcm8zTXhEQmZ4cThRM3pHTFhEZDdvay1FUzRreElRd2lfMFNOdWV0MmZjOHVDSmdIUkdGSlljQmpha2FwMTBBS3pIWVh5MnBhLWh6MGVCWVZTMFV3SzlIOFZLa3Qxc0ZhaVpvSHAySkQ0ekNaWmJmUlJza29PV0IyMWxQdUljRjc2dVRwdFZmclN2VXAySkJBZG5XVHJ3dzV5UTdFRFk2RXoydmxVc2pG?oc=5",
-      "source": "9News",
-      "publishedAt": "2026-11-24T13:30:00.000Z",
-      "latestAt": "2026-11-24T17:59:29.000Z",
-      "firstSeenAt": "2026-11-24T18:44:26.551Z",
-      "outlets": 2,
-      "outletNames": [
-        "9News",
-        "Yahoo"
-      ],
-      "score": 1.83
-    },
-    {
       "id": "9286ca501c52",
       "cat": "hacks",
       "kind": "news",
@@ -1128,6 +1184,23 @@
       "score": 1.75
     },
     {
+      "id": "7f4b4a58044b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Air Zimbabwe London Flights Grounded as Lessor Reclaims Airbus A330",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPOUR2ajc2QTdITlV1azl0MHVhaTNyVDJoMUc0RWk0Q1hNS092cFdPWm91VUlpTVVPNHJZU25FR2NNWFlFTGVyMUgtOElnb0xWcVZhZUc2a1I2SGNha3pvbEdCV1Judk5ld043U2hJZUVPYWFDLUxJUzlVbGlhdWJzUVkxWDN3U1BZYUhQYWVUemthVHlyQ0d1eVVTSEhZOTRuNWpnOA?oc=5",
+      "source": "The Zimbabwe Mail",
+      "publishedAt": "2026-11-24T11:26:15.000Z",
+      "latestAt": "2026-11-24T12:45:23.000Z",
+      "firstSeenAt": "2026-11-24T19:29:41.268Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Zimbabwe Mail",
+        "iHarare News"
+      ],
+      "score": 1.73
+    },
+    {
       "id": "bb9b348a287e",
       "cat": "grid",
       "kind": "news",
@@ -1162,6 +1235,23 @@
       "score": 1.72
     },
     {
+      "id": "5efab0861ea0",
+      "cat": "space",
+      "kind": "news",
+      "title": "Learn about: NASA's Lucy spacecraft flyby with asteroid Donaldjohanson",
+      "url": "https://www.msn.com/en-us/science/astronomy/learn-about-nasa-s-lucy-spacecraft-flyby-with-asteroid-donaldjohanson/vi-AA2i8NlX",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-24T11:40:00.000Z",
+      "latestAt": "2026-11-24T12:02:40.000Z",
+      "firstSeenAt": "2026-11-24T20:14:43.533Z",
+      "outlets": 2,
+      "outletNames": [
+        "Space on MSN",
+        "Dailymotion on MSN"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "4767b2e343c5",
       "cat": "hacks",
       "kind": "news",
@@ -1194,6 +1284,25 @@
         "AOL.com"
       ],
       "score": 1.69
+    },
+    {
+      "id": "0ad23a0bee4b",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Magnitude 6.5 earthquake recorded in Indian Ocean; no tsunami threat to Sri Lanka",
+      "url": "https://www.dailymirror.lk/breaking-news/Magnitude-6-5-earthquake-recorded-in-Indian-Ocean-no-tsunami-threat-to-Sri-Lanka/108-355647",
+      "source": "Daily Mirror",
+      "publishedAt": "2026-11-24T10:27:00.000Z",
+      "latestAt": "2026-11-24T12:29:42.000Z",
+      "firstSeenAt": "2026-11-24T20:44:52.543Z",
+      "outlets": 2,
+      "outletNames": [
+        "Daily Mirror",
+        "Newswire"
+      ],
+      "score": 1.66,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "0994db2f75d3",
@@ -1740,22 +1849,6 @@
       "score": 1.29
     },
     {
-      "id": "32dc77c35517",
-      "cat": "flights",
-      "kind": "news",
-      "title": "New York parent books backup rental car for Texas work trip after nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5rWHlZb3BRVXVoRXFGZVpBaGNNYTlLUnpBOWs1TzZ1RE9ZMTVqcGVlREdzOFhwYUdrTm9rZEVocl9QUkx4ZDVsVE5waDRrWko5d2phME1weG4wN0steXYza1NFLThydU05V0tJUFBBTEdvblBGQVp0Mlh0SnpYZw?oc=5",
-      "source": "The Cool Down",
-      "publishedAt": "2026-11-23T20:55:00.000Z",
-      "latestAt": "2026-11-23T20:55:00.000Z",
-      "firstSeenAt": "2026-11-24T02:41:37.482Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Cool Down"
-      ],
-      "score": 1.27
-    },
-    {
       "id": "2fc8aea99cae",
       "cat": "markets",
       "kind": "news",
@@ -1772,54 +1865,6 @@
       "score": 1.26
     },
     {
-      "id": "9a8b9d1e7d1c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "The Impact of the F.A.A. Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUE5Cb3hYdDY2YkJkUXRIRFZlX2JNUm9EbVpTUVd6VWs2d3hQZlpRXzd3N09zRG1VaFRQOHgxaVI0RE40Ti14V1ZET1JrRl9KODFvdFVHZWd1LWpsWUtuVmJRLTVVZXFIc214TGtiSjd3WGFXMlptVzdwTDNZbXpUOHpmbGpGQ2tuM2c?oc=5",
-      "source": "The Watchdog",
-      "publishedAt": "2026-11-23T22:37:49.000Z",
-      "latestAt": "2026-11-23T22:37:49.000Z",
-      "firstSeenAt": "2026-11-24T05:12:03.715Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Watchdog"
-      ],
-      "score": 1.25
-    },
-    {
-      "id": "2e8d1ec49867",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Code Red: Global Microsoft 365 outage exposes cloud infrastructure failures",
-      "url": "https://beinsure.com/news/microsoft-code-red-global-outage/",
-      "source": "beinsure",
-      "publishedAt": "2026-11-24T12:19:00.000Z",
-      "latestAt": "2026-11-24T12:19:00.000Z",
-      "firstSeenAt": "2026-11-24T20:29:47.178Z",
-      "outlets": 1,
-      "outletNames": [
-        "beinsure"
-      ],
-      "score": 1.21
-    },
-    {
-      "id": "473136f0309f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Global Microsoft outage forces internal \"Code Red\" response at Redmond",
-      "url": "https://www.neowin.net/news/global-microsoft-outage-forces-internal-code-red-response-at-redmond/",
-      "source": "Neowin",
-      "publishedAt": "2026-11-24T11:17:00.000Z",
-      "latestAt": "2026-11-24T19:18:00.000Z",
-      "firstSeenAt": "2026-11-24T19:29:41.268Z",
-      "outlets": 1,
-      "outletNames": [
-        "Neowin"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "52091bdfb5f9",
       "cat": "markets",
       "kind": "news",
@@ -1834,22 +1879,6 @@
         "Investopedia on MSN"
       ],
       "score": 1.18
-    },
-    {
-      "id": "80e5e5d63e98",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Spotify Login Not Working? Thousands Report Errors During Global Outage",
-      "url": "https://www.analyticsinsight.net/news/spotify-login-not-working-thousands-report-errors-during-global-outage",
-      "source": "Analytics Insight",
-      "publishedAt": "2026-11-24T10:01:00.000Z",
-      "latestAt": "2026-11-24T10:01:00.000Z",
-      "firstSeenAt": "2026-11-24T20:29:47.178Z",
-      "outlets": 1,
-      "outletNames": [
-        "Analytics Insight"
-      ],
-      "score": 1.16
     },
     {
       "id": "c12cb954b403",
@@ -1946,22 +1975,6 @@
         "TradingView"
       ],
       "score": 0.98
-    },
-    {
-      "id": "5efab0861ea0",
-      "cat": "space",
-      "kind": "news",
-      "title": "Learn about: NASA's Lucy spacecraft flyby with asteroid Donaldjohanson",
-      "url": "https://www.msn.com/en-us/science/astronomy/learn-about-nasa-s-lucy-spacecraft-flyby-with-asteroid-donaldjohanson/vi-AA2i8NlX",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-24T11:40:00.000Z",
-      "latestAt": "2026-11-24T11:40:00.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
-      "outlets": 1,
-      "outletNames": [
-        "Space on MSN"
-      ],
-      "score": 0.86
     },
     {
       "id": "3f99b2a2a3e3",
