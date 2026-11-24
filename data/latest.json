@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T13:43:33.749Z",
+  "buildTime": "2026-11-24T13:58:34.717Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 08:43 ET",
+  "etStamp": "2026-11-24 08:58 ET",
   "score": 59,
   "fired": [
     "flights",
@@ -47,16 +47,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1399,
-  "lastSuccessAt": "2026-11-24T13:43:33.749Z",
+  "headlinesRead": 1379,
+  "lastSuccessAt": "2026-11-24T13:58:34.717Z",
   "rollingFallback": false,
   "cats": {
     "flights": 13,
-    "earth": 7,
-    "hacks": 39,
+    "earth": 8,
     "internet": 19,
     "grid": 6,
     "germs": 4,
+    "hacks": 38,
     "weather": 4,
     "markets": 4,
     "space": 1,
@@ -100,8 +100,8 @@
         {
           "id": "github",
           "name": "GitHub",
-          "indicator": "none",
-          "description": "All Systems Operational"
+          "indicator": "minor",
+          "description": "Partially Degraded Service"
         },
         {
           "id": "cloudflare",
@@ -184,57 +184,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1019,
+      "count": 1047,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     },
     "bing": {
       "ok": true,
-      "count": 293,
+      "count": 296,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 50,
-      "error": "rate limited (HTTP 429)",
+      "ok": false,
+      "count": 0,
+      "error": "timeout",
       "lastOkAt": "2026-11-24T13:43:33.749Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     },
     "x": {
       "ok": true,
@@ -245,15 +245,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T13:43:33.749Z"
+      "lastOkAt": "2026-11-24T13:58:34.717Z"
     }
   },
   "stories": [
@@ -331,32 +331,6 @@
       "score": 4.45
     },
     {
-      "id": "3abd8d35b651",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "GoFundMe says donor information was exposed in data breach",
-      "url": "https://www.khou.com/article/news/nation-world/gofundme-data-breach-donor-data-nonprofits/507-6efe578f-8a12-49f8-88d3-90bcc948b1b1",
-      "source": "KHOU",
-      "publishedAt": "2026-11-23T13:55:00.000Z",
-      "latestAt": "2026-11-23T21:56:58.000Z",
-      "firstSeenAt": "2026-11-23T22:10:55.895Z",
-      "outlets": 11,
-      "outletNames": [
-        "KHOU",
-        "WWLTV.com",
-        "FOX43",
-        "KGW",
-        "13WMAZ",
-        "13newsnow.com",
-        "cbs19.tv",
-        "localmemphis.com",
-        "10TV",
-        "KSDK",
-        "KIII-TV"
-      ],
-      "score": 3.85
-    },
-    {
       "id": "d6951d480f01",
       "cat": "internet",
       "kind": "news",
@@ -364,7 +338,7 @@
       "url": "https://www.straitstimes.com/world/spotify-down-for-thousands-of-users-downdetector-shows1",
       "source": "The Straits Times",
       "publishedAt": "2026-11-23T22:20:00.000Z",
-      "latestAt": "2026-11-24T13:16:54.000Z",
+      "latestAt": "2026-11-24T13:30:00.000Z",
       "firstSeenAt": "2026-11-24T11:58:15.110Z",
       "outlets": 13,
       "outletNames": [
@@ -700,6 +674,25 @@
       "score": 2.42
     },
     {
+      "id": "857010ed9caa",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Spotify back online after brief outage, Downdetector shows",
+      "url": "https://www.reuters.com/technology/spotify-down-thousands-users-downdetector-shows-2026-11-24/",
+      "source": "Reuters",
+      "publishedAt": "2026-11-23T22:11:00.000Z",
+      "latestAt": "2026-11-24T13:05:17.000Z",
+      "firstSeenAt": "2026-11-24T13:28:32.062Z",
+      "outlets": 4,
+      "outletNames": [
+        "Reuters",
+        "The Lufkin Daily News",
+        "CNA",
+        "The Straits Times"
+      ],
+      "score": 2.24
+    },
+    {
       "id": "0dbe51447ff9",
       "cat": "flights",
       "kind": "news",
@@ -752,6 +745,24 @@
         "FOX Carolina News"
       ],
       "score": 2.2
+    },
+    {
+      "id": "aa9ae243afe8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers may soon need to do the impossible to steal: hit light speed",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-may-soon-impossible-steal-050334544.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T05:03:00.000Z",
+      "firstSeenAt": "2026-11-24T05:27:02.510Z",
+      "outlets": 3,
+      "outletNames": [
+        "YAHOO!",
+        "Yahoo Tech",
+        "DPA International on MSN"
+      ],
+      "score": 2.01
     },
     {
       "id": "fad84ef0d0fc",
@@ -823,23 +834,6 @@
       "score": 1.94
     },
     {
-      "id": "b1a257bc9c5b",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft mega outage: Report reveals testing gaps and emails that never arrived",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdVZ0UjlwbFE3ZkMwSXZ2dkN0NXRtaWVkVWowWVNKd1gzenN0SG9ydmVJZ1VDUzBkLUpqS2tLbnkxY1BCa3NYbG56VWx1aXZlSnFjTzFsUlBkLWZ3bG0zeEJldGRQTnVJT2N6aFlfaWhwbUhTblE3d3dGcUdNM2Z3dWNOb1FQRndFUUhMVFhJV0luSTlEM2haRG1SR3BKdTRDYTdUN1NMXzNlVVJ0Tlp4VkxxSV9ta2otNEJlX0FWN2EwdUVveFRfWm55OA?oc=5",
-      "source": "The Register",
-      "publishedAt": "2026-11-23T16:16:00.000Z",
-      "latestAt": "2026-11-23T16:57:36.000Z",
-      "firstSeenAt": "2026-11-23T18:40:16.216Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Register",
-        "news.lavx.hu"
-      ],
-      "score": 1.92
-    },
-    {
       "id": "7c6ceebd6163",
       "cat": "earth",
       "kind": "news",
@@ -876,22 +870,21 @@
       "score": 1.72
     },
     {
-      "id": "aa9ae243afe8",
-      "cat": "hacks",
+      "id": "b1a257bc9c5b",
+      "cat": "internet",
       "kind": "news",
-      "title": "Hackers may soon need to do the impossible to steal: hit light speed",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/hackers-may-soon-impossible-steal-050334544.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-23T16:00:00.000Z",
-      "latestAt": "2026-11-24T05:03:00.000Z",
-      "firstSeenAt": "2026-11-24T05:27:02.510Z",
-      "outlets": 3,
+      "title": "Microsoft mega outage: Report reveals testing gaps and emails that never arrived",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdVZ0UjlwbFE3ZkMwSXZ2dkN0NXRtaWVkVWowWVNKd1gzenN0SG9ydmVJZ1VDUzBkLUpqS2tLbnkxY1BCa3NYbG56VWx1aXZlSnFjTzFsUlBkLWZ3bG0zeEJldGRQTnVJT2N6aFlfaWhwbUhTblE3d3dGcUdNM2Z3dWNOb1FQRndFUUhMVFhJV0luSTlEM2haRG1SR3BKdTRDYTdUN1NMXzNlVVJ0Tlp4VkxxSV9ta2otNEJlX0FWN2EwdUVveFRfWm55OA?oc=5",
+      "source": "The Register",
+      "publishedAt": "2026-11-23T16:16:00.000Z",
+      "latestAt": "2026-11-23T16:57:36.000Z",
+      "firstSeenAt": "2026-11-23T18:40:16.216Z",
+      "outlets": 2,
       "outletNames": [
-        "YAHOO!",
-        "Yahoo Tech",
-        "DPA International on MSN"
+        "The Register",
+        "news.lavx.hu"
       ],
-      "score": 2.01
+      "score": 1.92
     },
     {
       "id": "c447c3c3df5b",
@@ -962,23 +955,6 @@
       "score": 1.75
     },
     {
-      "id": "b53f6265a294",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Prism Medical Products Data Breach Affects 1.3 Million Individuals",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBrcWp6UUVRMXhMT2o0VDNYaEptVWhiejVQUUg4LS11WUhKUi13VWN0TWlSb0FmSlVFSnZMTTd2bmNPVVBjMVNsaW9EWGpYTjZTeFlVTk1hRmMwM2h5Tk51WS1kQW5nWlpiNkVVVXZGMWJwZw?oc=5",
-      "source": "The HIPAA Journal",
-      "publishedAt": "2026-11-23T13:51:48.000Z",
-      "latestAt": "2026-11-24T02:23:05.000Z",
-      "firstSeenAt": "2026-11-23T22:10:55.895Z",
-      "outlets": 2,
-      "outletNames": [
-        "The HIPAA Journal",
-        "Claim Depot"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "4767b2e343c5",
       "cat": "hacks",
       "kind": "news",
@@ -1029,23 +1005,6 @@
         "Yahoo"
       ],
       "score": 1.7
-    },
-    {
-      "id": "857010ed9caa",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Spotify back online after brief outage, Downdetector shows",
-      "url": "https://www.reuters.com/technology/spotify-down-thousands-users-downdetector-shows-2026-11-24/",
-      "source": "Reuters",
-      "publishedAt": "2026-11-24T04:10:00.000Z",
-      "latestAt": "2026-11-24T13:05:17.000Z",
-      "firstSeenAt": "2026-11-24T13:28:32.062Z",
-      "outlets": 2,
-      "outletNames": [
-        "Reuters",
-        "The Lufkin Daily News"
-      ],
-      "score": 1.69
     },
     {
       "id": "69b8f1901d8c",
@@ -1416,6 +1375,24 @@
       "score": 1.4
     },
     {
+      "id": "2301fe56c583",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Massive dataset of 2 billion records exposes passwords, emails, cookies and more",
+      "url": "https://cybernews.com/security/supersized-dataset-2-billion-records-exposed/",
+      "source": "Cybernews",
+      "publishedAt": "2026-11-24T13:30:00.000Z",
+      "latestAt": "2026-11-24T13:30:00.000Z",
+      "firstSeenAt": "2026-11-24T13:58:34.717Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cybernews"
+      ],
+      "trending": 200,
+      "trendTerm": "3.5 billion records exposed database leak",
+      "score": 1.39
+    },
+    {
       "id": "a91e2797c720",
       "cat": "internet",
       "kind": "news",
@@ -1772,6 +1749,38 @@
       "score": 1.02
     },
     {
+      "id": "9470cb65f8e2",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Hawaii's Kīlauea Volcano erupts for 57th time, spewing lava 200 meters high",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZzFkTVhMdDY5aDJBaVJ0LTBUbWZIeVlScW5KVnhpS1dHeUJpbThwcjVhSjVQN3RGRE9FZXh2MTFYeExUalIteEhTZ2tlXzRmQmtrbVZNY3hzX1hPYVI5bmp2dkJqRFZ0aDl4d01LWU0zUVU5b3F0Yy10ZUxsc3pjYm13ZS1ab2R0WnV5aERVenQ2djJFWF9NZXhNVDk1UDdMdXhKWll4cnRqRDZtcHh0dUxhWVpQRzky?oc=5",
+      "source": "İlke Haber Ajansı",
+      "publishedAt": "2026-11-24T13:53:40.000Z",
+      "latestAt": "2026-11-24T13:53:40.000Z",
+      "firstSeenAt": "2026-11-24T13:58:34.717Z",
+      "outlets": 1,
+      "outletNames": [
+        "İlke Haber Ajansı"
+      ],
+      "score": 1
+    },
+    {
+      "id": "e6d0015d3383",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "French sports retailer Decathlon hit by cyberattack, data of more than 130,000 customers exposed",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPdnZNamhkbjJBclhycVhmbkdLZTd2OHFycVZVd2tCRWljY1hEYXdmcEluY2hlUlZEVjFtUEo3S211UlFWQ285WTJiRmtnMHYtY0R4YnAxaElTOXFkRUptNjVaOU90OGF4ck1WR1VIU3RzN3lSSGE4U29ZQkVac1RiZXVKenRsOVcyVzVmVG15cUxlUDB3TTVQcElMWTdHTFJzcWhWd1FBRWw0Uk43MHRwSG4yUHBjZmc1NE0wZWlHMG51clpqUVdYX2QtMk4tNEVW?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-24T13:52:57.000Z",
+      "latestAt": "2026-11-24T13:52:57.000Z",
+      "firstSeenAt": "2026-11-24T13:58:34.717Z",
+      "outlets": 1,
+      "outletNames": [
+        "Anadolu Ajansı"
+      ],
+      "score": 1
+    },
+    {
       "id": "20fb0ec90f43",
       "cat": "internet",
       "kind": "news",
@@ -1784,22 +1793,6 @@
       "outlets": 1,
       "outletNames": [
         "theopenpress.in"
-      ],
-      "score": 1
-    },
-    {
-      "id": "6e72cd101ba8",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Troy Hunt analyzes corporate responses to data breach notifications",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTWc4U1RtQVBEYVFwSnBOU1FfVmFGcVJvYi1rT01RT1dJb0Q4Vk91Tm1yWVQ0M2poQm13ZjItVE9GV2VVMWJZaFhYZjFsY1pnWjFPS3M4cVF2NlRXenVRZk1tTDNvOW5OdWRHWGdyMU9yUGZvR1RxY09Xcm9WSUExdDFuYmNScWtaaHY1dnFGeFd2eHd0VTdVU1pqdkVsdw?oc=5",
-      "source": "SC Media",
-      "publishedAt": "2026-11-24T13:33:33.000Z",
-      "latestAt": "2026-11-24T13:33:33.000Z",
-      "firstSeenAt": "2026-11-24T13:43:33.749Z",
-      "outlets": 1,
-      "outletNames": [
-        "SC Media"
       ],
       "score": 1
     },
