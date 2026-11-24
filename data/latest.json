@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T17:59:22.427Z",
+  "buildTime": "2026-11-24T18:11:12.627Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 12:59 ET",
+  "etStamp": "2026-11-24 13:11 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,13 +48,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1361,
-  "lastSuccessAt": "2026-11-24T17:59:22.427Z",
+  "headlinesRead": 378,
+  "lastSuccessAt": "2026-11-24T18:11:12.627Z",
   "rollingFallback": false,
   "cats": {
-    "internet": 20,
+    "internet": 19,
     "flights": 16,
-    "earth": 6,
+    "earth": 7,
     "grid": 9,
     "hacks": 33,
     "germs": 4,
@@ -73,8 +73,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 1,
-      "time": "2026-11-24T12:00:00.000Z",
+      "value": 0.67,
+      "time": "2026-11-24T15:00:00.000Z",
       "max24": 1.67
     },
     "asteroid": {
@@ -183,57 +183,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1034,
-      "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "count": 53,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     },
     "bing": {
       "ok": true,
       "count": 290,
       "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-24T16:59:11.725Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     },
     "x": {
       "ok": true,
@@ -244,15 +244,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T17:59:22.427Z"
+      "lastOkAt": "2026-11-24T18:11:12.627Z"
     }
   },
   "stories": [
@@ -305,7 +305,7 @@
       }
     },
     {
-      "id": "76df64bdaeb1",
+      "id": "9daf9ac39693",
       "cat": "earth",
       "kind": "news",
       "title": "Nepal earthquake: 5.6 magnitude tremor strikes near China border",
@@ -616,6 +616,24 @@
       "score": 2.54
     },
     {
+      "id": "76df64bdaeb1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6-magnitude earthquake jolts Nepal-Tibet border",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yUUtSYXJTZjJVWEs4aWN2WTlRSVdFMXFPOVJVWkFUNm9hcE1nc2lrT1dnV3ZWVHZ2NGlUZE02UTNTVUxlMHUxMkZmc0lSMFJCZzZwVjVkMA?oc=5",
+      "source": "The Annapurna Express",
+      "publishedAt": "2026-11-24T03:45:18.000Z",
+      "latestAt": "2026-11-24T04:46:12.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Annapurna Express",
+        "The Himalayan Times",
+        "The Business Standard"
+      ],
+      "score": 2.53
+    },
+    {
       "id": "6f33acb2709d",
       "cat": "hacks",
       "kind": "news",
@@ -850,23 +868,6 @@
       "score": 1.73
     },
     {
-      "id": "45bbdc9905b8",
-      "cat": "grid",
-      "kind": "news",
-      "title": "West Oahu residents voice power outage concerns at HECO town hall",
-      "url": "https://www.msn.com/en-us/news/other/west-oahu-residents-voice-power-outage-concerns-at-heco-town-hall/ar-AA2i6bCX",
-      "source": "Hawaii News Now on MSN",
-      "publishedAt": "2026-11-23T23:46:39.000Z",
-      "latestAt": "2026-11-24T07:56:14.000Z",
-      "firstSeenAt": "2026-11-24T08:12:32.261Z",
-      "outlets": 2,
-      "outletNames": [
-        "Hawaii News Now on MSN",
-        "cedarnews.net"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "a8a13da37248",
       "cat": "hacks",
       "kind": "news",
@@ -937,6 +938,23 @@
         "The Sunday Guardian"
       ],
       "score": 1.99
+    },
+    {
+      "id": "730aaf1f8e49",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US seeks forfeiture of over $1.1B in crypto tied to North Korean hackers",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbG91WVhZb2V0TkxISnZ3aU1MWnVpUnVSSm9nb0g1T1pDVTU3V09HbUkxaV8yYlNGZE9Nc3lKbzVBSXM3ODhDLWpYdTZXRUdxYUJUUEZYU0dTanlaS2FaSml2dmQyRXdXWEpzMlM0NzU1OVpjRGlNMGlrNW1WeDc4bXZpZmZNSWFLZkxIYklxaVRuc0dDakVjZ3NnNFc2WXRGcUJJend4MVFCV2VYZU5WcnNn?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-23T20:18:28.000Z",
+      "latestAt": "2026-11-23T20:30:39.000Z",
+      "firstSeenAt": "2026-11-23T20:55:41.076Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "Operativ Məlumat Mərkəzi"
+      ],
+      "score": 1.98
     },
     {
       "id": "fa521173b32e",
@@ -1071,6 +1089,23 @@
       "outletNames": [
         "BBC",
         "Yahoo"
+      ],
+      "score": 1.72
+    },
+    {
+      "id": "45bbdc9905b8",
+      "cat": "grid",
+      "kind": "news",
+      "title": "West Oahu residents voice power outage concerns at HECO town hall",
+      "url": "https://www.msn.com/en-us/news/other/west-oahu-residents-voice-power-outage-concerns-at-heco-town-hall/ar-AA2i6bCX",
+      "source": "Hawaii News Now on MSN",
+      "publishedAt": "2026-11-23T23:46:39.000Z",
+      "latestAt": "2026-11-24T07:56:14.000Z",
+      "firstSeenAt": "2026-11-24T08:12:32.261Z",
+      "outlets": 2,
+      "outletNames": [
+        "Hawaii News Now on MSN",
+        "cedarnews.net"
       ],
       "score": 1.72
     },
@@ -1540,6 +1575,24 @@
       "score": 1.39
     },
     {
+      "id": "181df138aefb",
+      "cat": "internet",
+      "kind": "news",
+      "title": "U.S. Travelers Issued Nationwide Flight Disruption Warning Over New FAA Rule At All Airports From November 24",
+      "url": "https://www.thetravel.com/us-travelers-issued-nationwide-flight-disruption-warning-over-new-faa-rule-at-all-airports-from-november-24/",
+      "source": "TheTravel",
+      "publishedAt": "2026-11-24T17:20:00.000Z",
+      "latestAt": "2026-11-24T17:20:00.000Z",
+      "firstSeenAt": "2026-11-24T18:11:12.627Z",
+      "outlets": 1,
+      "outletNames": [
+        "TheTravel"
+      ],
+      "trending": 2000,
+      "trendTerm": "new faa rule line up and wait",
+      "score": 1.38
+    },
+    {
       "id": "9934a7fa0067",
       "cat": "internet",
       "kind": "news",
@@ -1606,6 +1659,22 @@
         "Herald.Wales"
       ],
       "score": 1.35
+    },
+    {
+      "id": "57688e206264",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air System Outage Disrupts More Than 1,000 Flights Nationwide Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ0I5dUZRUmkxSVpRZHJ4UTZpZG5QN3c5ZDFvZEg2XzJWdHdjR2VsRUR2aTVOWnN6Q0NKRjZMSTBTOHhjT21jNDZIamhpY0htZjEybGxFcWhVczVWYUhWNGlhX3d5Z0hkd2hkeEJSeFU2d2I3dGlFaHNjR00yWGhCX3loMjU2RTVSVkVtOGxTTlRQVzcxVVR4a21TWG1EajRXNWEtSlJzZWlpMlhjVkE5ZldLSnZaNENWMEJN?oc=5",
+      "source": "Speaks Media",
+      "publishedAt": "2026-11-24T02:30:00.000Z",
+      "latestAt": "2026-11-24T02:30:00.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 1,
+      "outletNames": [
+        "Speaks Media"
+      ],
+      "score": 1.34
     },
     {
       "id": "caf17f46a7f1",
@@ -1736,22 +1805,6 @@
       "score": 1.2
     },
     {
-      "id": "1c65edc076fd",
-      "cat": "flights",
-      "kind": "news",
-      "title": "North Dakota woman buys car in Charlotte to drive home amid nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMGtGMXRWQ1NDX2ROcWRnd3FEVG4xM2puUzNFS2RZNmx6bGNTa3R4RmFrNzJUQllOUWQ4TER2cllydzdSUmd0eldGdzdlMVBzdHMwdzZpNzlUbXAtT0Y4SzZBSmFwaG5peTVMcG90VE15d09pWlBCbS1ib0pLOTJwYmRKNVQ4YkVQRFFOYkNRQU1QbjJfd2w0Zk9CZEdpekd1LTZ4N0J1VlIxNUluWldoX1pjNDhXdEtYUXN1YXNFQXF2TFZrd2c?oc=5",
-      "source": "Queen City News",
-      "publishedAt": "2026-11-23T18:03:59.000Z",
-      "latestAt": "2026-11-23T18:03:59.000Z",
-      "firstSeenAt": "2026-11-24T03:11:40.911Z",
-      "outlets": 1,
-      "outletNames": [
-        "Queen City News"
-      ],
-      "score": 1.19
-    },
-    {
       "id": "52091bdfb5f9",
       "cat": "markets",
       "kind": "news",
@@ -1774,14 +1827,14 @@
       "title": "Stock market today: Nasdaq, S&P 500 tumble after Monday’s massive gains as Nvidia leads AI stock sell-off",
       "url": "https://www.msn.com/en-us/news/other/stock-market-today-nasdaq-s-p-500-tumble-after-monday-s-massive-gains-as-nvidia-leads-ai-stock-sell-off/ar-AA2i893a",
       "source": "Investopedia on MSN",
-      "publishedAt": "2026-11-24T07:45:03.000Z",
+      "publishedAt": "2026-11-24T07:24:55.000Z",
       "latestAt": "2026-11-24T07:45:03.000Z",
       "firstSeenAt": "2026-11-24T17:44:21.791Z",
       "outlets": 1,
       "outletNames": [
         "Investopedia on MSN"
       ],
-      "score": 1.17
+      "score": 1.16
     },
     {
       "id": "d06dc178c991",
@@ -1830,54 +1883,6 @@
         "El Cronista"
       ],
       "score": 1.02
-    },
-    {
-      "id": "891c6926c932",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Seclore Data Breach Exposes Names and Social Security Numbers",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBLbXNxUVBsYjNzZ0NUcXdhZzlxMTNjeDNPTTZPaml3Z0VVZ0tydHlYYVpWREZ1bUdLdUZYX2hmX1pUY0VKb0VwVktzbWQwQmZ5NGhUeGZrVTFzUGdXenBYT0tMVHY?oc=5",
-      "source": "Claim Depot",
-      "publishedAt": "2026-11-24T17:25:25.000Z",
-      "latestAt": "2026-11-24T17:25:25.000Z",
-      "firstSeenAt": "2026-11-24T17:29:24.804Z",
-      "outlets": 1,
-      "outletNames": [
-        "Claim Depot"
-      ],
-      "score": 1
-    },
-    {
-      "id": "6c21db715145",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Reveals Testing Failures Behind 365 Outage",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBwejRTczRVREx1Z1NtTXB3dlhQdm9EOUhnSllQc2k1WE4ybjJaQmQ4X3A2dEtYUDZ0WnB1LURJbXM0cEd3Yy1TeF9pSVNKSXliXy1Xak9IRXpGRDl0LVZOcXAxa2dsSGYzOVZhVG9zLS1wZGc?oc=5",
-      "source": "Demokratis.co.id",
-      "publishedAt": "2026-11-24T17:04:00.000Z",
-      "latestAt": "2026-11-24T17:04:00.000Z",
-      "firstSeenAt": "2026-11-24T17:14:14.139Z",
-      "outlets": 1,
-      "outletNames": [
-        "Demokratis.co.id"
-      ],
-      "score": 1
-    },
-    {
-      "id": "b9585d6bce5c",
-      "cat": "internet",
-      "kind": "news",
-      "title": "After a Day of Disruption, Microsoft Wants AI to Help Diagnose Its Next Outage",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9hLVVxNEdhTnVublQ1V3dsWUdVMGJrNHVOZkZWQ3BxY3J2RDQzNFktUHBNWWFnemthMzN3RElhVG9OWWZjcjY0aW1NbHk3U1c0U3VDcHVMdHkzeUlYM1V0UXczbDI3UVE?oc=5",
-      "source": "The 420.in",
-      "publishedAt": "2026-11-24T16:58:55.000Z",
-      "latestAt": "2026-11-24T16:58:55.000Z",
-      "firstSeenAt": "2026-11-24T17:14:14.139Z",
-      "outlets": 1,
-      "outletNames": [
-        "The 420.in"
-      ],
-      "score": 1
     },
     {
       "id": "bea8997a534d",
