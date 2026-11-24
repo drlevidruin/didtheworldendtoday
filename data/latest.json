@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T05:57:16.986Z",
+  "buildTime": "2026-11-24T06:12:12.796Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 00:57 ET",
+  "etStamp": "2026-11-24 01:12 ET",
   "score": 54,
   "fired": [
     "flights",
@@ -42,17 +42,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 395,
-  "lastSuccessAt": "2026-11-24T05:57:16.986Z",
+  "headlinesRead": 1360,
+  "lastSuccessAt": "2026-11-24T06:12:12.796Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 27,
-    "hacks": 30,
+    "flights": 25,
+    "hacks": 31,
     "earth": 6,
     "grid": 4,
     "markets": 10,
     "germs": 6,
-    "internet": 6,
+    "internet": 7,
     "weather": 4,
     "space": 1,
     "animals": 2,
@@ -69,8 +69,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 1,
-      "time": "2026-11-24T00:00:00.000Z",
+      "value": 0.33,
+      "time": "2026-11-24T03:00:00.000Z",
       "max24": 1.67
     },
     "asteroid": {
@@ -92,7 +92,7 @@
       ],
       "nationwide": false,
       "groundDelays": 1,
-      "closures": 0,
+      "closures": 1,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -166,7 +166,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -180,81 +180,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-24T05:42:08.773Z"
+      "ok": true,
+      "count": 1040,
+      "error": null,
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "bing": {
       "ok": true,
-      "count": 283,
+      "count": 284,
       "error": null,
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 76,
-      "error": "rate limited (HTTP 429)",
+      "ok": false,
+      "count": 0,
+      "error": "timeout",
       "lastOkAt": "2026-11-24T05:57:16.986Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T05:12:03.715Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z"
     }
   },
   "stories": [
@@ -378,6 +377,31 @@
       "score": 3.73
     },
     {
+      "id": "edf9c71a79d9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US Seeks to Recover More Than $1 Billion From Binance Hack",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/us-seeks-to-recover-more-than-1-billion-from-binance-hack",
+      "source": "Bloomberg",
+      "publishedAt": "2026-11-23T08:44:00.000Z",
+      "latestAt": "2026-11-24T05:47:02.000Z",
+      "firstSeenAt": "2026-11-23T19:10:20.571Z",
+      "outlets": 10,
+      "outletNames": [
+        "Bloomberg",
+        "The Defiant",
+        "bloomingbit",
+        "MLQ.ai",
+        "TradingView",
+        "The Straits Times",
+        "Anadolu Ajansı",
+        "Operativ Məlumat Mərkəzi",
+        "Fox Business",
+        "NK News"
+      ],
+      "score": 3.57
+    },
+    {
       "id": "08138a62e8c4",
       "cat": "earth",
       "kind": "news",
@@ -396,25 +420,6 @@
         "Facebook"
       ],
       "score": 3.28
-    },
-    {
-      "id": "30f9e199e0a5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Binance hackers route $247 million through bitcoin mixers while $2.35 billion sits unlaundered",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOU09RcS1pOWM0YURLelQ0VVhwZHlnZktIRHc0SUZHaFR5cjR4ZlYydHpZaHkyaUh5amRzU1RLV2FrMm1hNHVMS1Aza0t6WEp6MHNORkUwaWtkWW45bzlOZXdvMXRuRC1GSzdnTkdJVXJrUWJyQkZGN1cxVzBoMVBQUjV4QXJyMzNoeW93TmpyUVBsX3pfR19DbXFtRHRJMGh2Z3J2SUZLZ2N2Um9oN2FqbjZFN3AxbW5jUXJyaFI3MUxwTkRxa1dfcnJn?oc=5",
-      "source": "CoinDesk",
-      "publishedAt": "2026-11-23T15:29:01.000Z",
-      "latestAt": "2026-11-23T17:42:58.000Z",
-      "firstSeenAt": "2026-11-23T15:39:45.273Z",
-      "outlets": 4,
-      "outletNames": [
-        "CoinDesk",
-        "Crypto Briefing",
-        "TradingView",
-        "Cryptonews.net"
-      ],
-      "score": 2.99
     },
     {
       "id": "76df64bdaeb1",
@@ -498,6 +503,24 @@
       "score": 2.55
     },
     {
+      "id": "682b3f1ddc03",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQTBqdXJLcFBfcG1wYUxlRmdJVl9fb1NCcG0xM2NSeW1MQ0d5V2RjalpEbm1EdEFSRmwyVmczV1NPVWdNN1BQODhKeUdqMEhwb2szX2dNSGRVRDFUaTZ1cGdWa25RTGRCQXRLcXUxS1d0UGVzUTFjODNyUVZPZkhycEZ3aHE2YVZwSlhHTnRpNzdZdXQ1R1llbXc1SEvSAaIBQVVfeXFMT0d4NzJTcDI5VzBzb2paMmNybklGR1dXWlRtY2d0bi0tcGJ1czZ1RldEbC0tTS1UZFBDQUctakEyWXVFVmF1cFFPUEFGRGRUbkkzdTNQTGlVT3NRR0E2UGo1dUhuRUtoRWRNbUhWTmdrdGtuNWNCSG1yQk5WTll3TEloSkZiSmxrd1dUM2dmYnBDbWs0eTk4QXdNbWRvNUlwZWlB?oc=5",
+      "source": "The Mirror US",
+      "publishedAt": "2026-11-24T03:07:00.000Z",
+      "latestAt": "2026-11-24T03:15:00.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Mirror US",
+        "NewsBreak: Local News & Alerts",
+        "AOL.com"
+      ],
+      "score": 2.54
+    },
+    {
       "id": "ca98ae1755e5",
       "cat": "markets",
       "kind": "news",
@@ -516,25 +539,6 @@
         "The Manila Times on MSN"
       ],
       "score": 2.53
-    },
-    {
-      "id": "d9234b2f0672",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Hawaii's Kīlauea volcano erupts for 57th time, sending spectacular fountains of lava into the sky",
-      "url": "https://www.yahoo.com/news/weather-news/articles/hawaiis-k-lauea-volcano-erupts-145111114.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T06:51:00.000Z",
-      "latestAt": "2026-11-23T14:51:11.000Z",
-      "firstSeenAt": "2026-11-23T20:40:41.500Z",
-      "outlets": 4,
-      "outletNames": [
-        "Yahoo",
-        "Yahoo News Canada",
-        "AOL.com",
-        "FOX Weather"
-      ],
-      "score": 2.31
     },
     {
       "id": "90481647aba9",
@@ -617,25 +621,23 @@
       "score": 3
     },
     {
-      "id": "edf9c71a79d9",
+      "id": "30f9e199e0a5",
       "cat": "hacks",
       "kind": "news",
-      "title": "US Seeks to Recover More Than $1 Billion From Binance Hack",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-23/us-seeks-to-recover-more-than-1-billion-from-binance-hack",
-      "source": "Bloomberg",
-      "publishedAt": "2026-11-23T08:44:00.000Z",
-      "latestAt": "2026-11-23T21:04:03.000Z",
-      "firstSeenAt": "2026-11-23T19:10:20.571Z",
-      "outlets": 6,
+      "title": "Binance hackers route $247 million through bitcoin mixers while $2.35 billion sits unlaundered",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOU09RcS1pOWM0YURLelQ0VVhwZHlnZktIRHc0SUZHaFR5cjR4ZlYydHpZaHkyaUh5amRzU1RLV2FrMm1hNHVMS1Aza0t6WEp6MHNORkUwaWtkWW45bzlOZXdvMXRuRC1GSzdnTkdJVXJrUWJyQkZGN1cxVzBoMVBQUjV4QXJyMzNoeW93TmpyUVBsX3pfR19DbXFtRHRJMGh2Z3J2SUZLZ2N2Um9oN2FqbjZFN3AxbW5jUXJyaFI3MUxwTkRxa1dfcnJn?oc=5",
+      "source": "CoinDesk",
+      "publishedAt": "2026-11-23T15:29:01.000Z",
+      "latestAt": "2026-11-23T17:42:58.000Z",
+      "firstSeenAt": "2026-11-23T15:39:45.273Z",
+      "outlets": 4,
       "outletNames": [
-        "Bloomberg",
-        "The Defiant",
-        "bloomingbit",
-        "MLQ.ai",
+        "CoinDesk",
+        "Crypto Briefing",
         "TradingView",
-        "The Straits Times"
+        "Cryptonews.net"
       ],
-      "score": 2.96
+      "score": 2.99
     },
     {
       "id": "6ba8cf23d88f",
@@ -671,6 +673,25 @@
         "TheIndustry.beauty"
       ],
       "score": 2.54
+    },
+    {
+      "id": "d9234b2f0672",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Hawaii's Kīlauea volcano erupts for 57th time, sending spectacular fountains of lava into the sky",
+      "url": "https://www.yahoo.com/news/weather-news/articles/hawaiis-k-lauea-volcano-erupts-145111114.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T06:51:00.000Z",
+      "latestAt": "2026-11-23T14:51:11.000Z",
+      "firstSeenAt": "2026-11-23T20:40:41.500Z",
+      "outlets": 4,
+      "outletNames": [
+        "Yahoo",
+        "Yahoo News Canada",
+        "AOL.com",
+        "FOX Weather"
+      ],
+      "score": 2.31
     },
     {
       "id": "a461bbd73119",
@@ -794,40 +815,22 @@
       "score": 1.97
     },
     {
-      "id": "682b3f1ddc03",
+      "id": "e1fbedebda8f",
       "cat": "grid",
       "kind": "news",
-      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQTBqdXJLcFBfcG1wYUxlRmdJVl9fb1NCcG0xM2NSeW1MQ0d5V2RjalpEbm1EdEFSRmwyVmczV1NPVWdNN1BQODhKeUdqMEhwb2szX2dNSGRVRDFUaTZ1cGdWa25RTGRCQXRLcXUxS1d0UGVzUTFjODNyUVZPZkhycEZ3aHE2YVZwSlhHTnRpNzdZdXQ1R1llbXc1SEvSAaIBQVVfeXFMT0d4NzJTcDI5VzBzb2paMmNybklGR1dXWlRtY2d0bi0tcGJ1czZ1RldEbC0tTS1UZFBDQUctakEyWXVFVmF1cFFPUEFGRGRUbkkzdTNQTGlVT3NRR0E2UGo1dUhuRUtoRWRNbUhWTmdrdGtuNWNCSG1yQk5WTll3TEloSkZiSmxrd1dUM2dmYnBDbWs0eTk4QXdNbWRvNUlwZWlB?oc=5",
-      "source": "The Mirror US",
-      "publishedAt": "2026-11-24T03:07:00.000Z",
-      "latestAt": "2026-11-24T03:07:38.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 2,
+      "title": "Power outage interrupts Bengals-Commanders Monday night",
+      "url": "https://www.dispatch.com/story/sports/nfl/bengals/2026/11/23/power-outage-interrupts-bengals-commanders-monday-night/92910297007/",
+      "source": "The Columbus Dispatch",
+      "publishedAt": "2026-11-23T14:41:00.000Z",
+      "latestAt": "2026-11-24T03:08:00.000Z",
+      "firstSeenAt": "2026-11-24T05:42:08.773Z",
+      "outlets": 3,
       "outletNames": [
-        "The Mirror US",
-        "NewsBreak: Local News & Alerts"
+        "The Columbus Dispatch",
+        "Cincinnati Enquirer",
+        "Miami Herald"
       ],
-      "score": 1.96
-    },
-    {
-      "id": "fa67427e007c",
-      "cat": "earth",
-      "kind": "news",
-      "title": "6.5-magnitude quake hits Vanuatu region",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB0RUhZdUlWN2ZHSFZvSzhmMXRJRVpsLThvd3BTZzg1OF9pUkxUNi1wWDZRdGEzMkxqSVFBeEhWeExZdzd4VXc2SGJSZUtCcjBoSzlDZW9UMm41aVJEdVo2bWZ0MVlYMmZMY0NjWHJyTzBZdVE3eXF3YnB4Vi1kNDg?oc=5",
-      "source": "Azərtac",
-      "publishedAt": "2026-11-23T06:03:00.000Z",
-      "latestAt": "2026-11-23T10:11:40.000Z",
-      "firstSeenAt": "2026-11-23T07:53:30.185Z",
-      "outlets": 2,
-      "outletNames": [
-        "Azərtac",
-        "Sharjah24"
-      ],
-      "score": 1.94,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
+      "score": 1.94
     },
     {
       "id": "af4f61912279",
@@ -1009,6 +1012,25 @@
       "score": 2.22
     },
     {
+      "id": "fd8f6b998fed",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
+      "url": "https://www.wgal.com/article/eu-academy-data-leak-ai-driven-cyberattack/74515041",
+      "source": "WGAL",
+      "publishedAt": "2026-11-23T13:24:00.000Z",
+      "latestAt": "2026-11-24T06:04:41.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 4,
+      "outletNames": [
+        "AP News",
+        "European Interest",
+        "WGAL",
+        "khbs"
+      ],
+      "score": 2.22
+    },
+    {
       "id": "3af7e9fec1f3",
       "cat": "flights",
       "kind": "news",
@@ -1098,23 +1120,6 @@
         "JournalArta"
       ],
       "score": 2.01
-    },
-    {
-      "id": "730aaf1f8e49",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US seeks forfeiture of over $1.1B in crypto tied to North Korean hackers",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbG91WVhZb2V0TkxISnZ3aU1MWnVpUnVSSm9nb0g1T1pDVTU3V09HbUkxaV8yYlNGZE9Nc3lKbzVBSXM3ODhDLWpYdTZXRUdxYUJUUEZYU0dTanlaS2FaSml2dmQyRXdXWEpzMlM0NzU1OVpjRGlNMGlrNW1WeDc4bXZpZmZNSWFLZkxIYklxaVRuc0dDakVjZ3NnNFc2WXRGcUJJend4MVFCV2VYZU5WcnNn?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-23T20:18:28.000Z",
-      "latestAt": "2026-11-23T20:30:39.000Z",
-      "firstSeenAt": "2026-11-23T20:55:41.076Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi"
-      ],
-      "score": 1.98
     },
     {
       "id": "32e456df8417",
@@ -1227,7 +1232,7 @@
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxON2trWm1UT0k1WFJ5TGpwWkFyRF9TRFVQZWNicjQ3RlFsOTdVWl8tY0UyaG93TFEwbF9HYlVSNE14WVhmTlg3TUNEM2xYRkY5bzNmV0draTE3a3dndWJSZ2ZkSlBGeVFyc1FiNzV3ZlZvdDJrdlNGNXJOWHoyR2xFdFhqWU1ORk1ubHc?oc=5",
       "source": "Mezha.net",
       "publishedAt": "2026-11-23T18:47:39.000Z",
-      "latestAt": "2026-11-24T00:02:22.000Z",
+      "latestAt": "2026-11-24T00:04:09.000Z",
       "firstSeenAt": "2026-11-24T00:26:11.501Z",
       "outlets": 2,
       "outletNames": [
@@ -1339,23 +1344,6 @@
       "score": 1.68
     },
     {
-      "id": "e1fbedebda8f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage interrupts Bengals-Commanders Monday night",
-      "url": "https://www.dispatch.com/story/sports/nfl/bengals/2026/11/23/power-outage-interrupts-bengals-commanders-monday-night/92910297007/",
-      "source": "The Columbus Dispatch",
-      "publishedAt": "2026-11-23T19:41:00.000Z",
-      "latestAt": "2026-11-24T03:08:00.000Z",
-      "firstSeenAt": "2026-11-24T05:42:08.773Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Columbus Dispatch",
-        "Cincinnati Enquirer"
-      ],
-      "score": 1.67
-    },
-    {
       "id": "55b0ddbb712a",
       "cat": "hacks",
       "kind": "news",
@@ -1465,7 +1453,7 @@
       "url": "https://sports.yahoo.com/articles/manningcast-perfect-reaction-bengals-commanders-034818152.html",
       "source": "Yahoo Sports",
       "publishedAt": "2026-11-23T16:00:00.000Z",
-      "latestAt": "2026-11-24T04:07:30.000Z",
+      "latestAt": "2026-11-24T04:12:09.000Z",
       "firstSeenAt": "2026-11-24T04:11:52.219Z",
       "outlets": 2,
       "outletNames": [
@@ -1492,6 +1480,26 @@
       "score": 1.57
     },
     {
+      "id": "b14d3f4b11a1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "6.5-Magnitude Earthquake Strikes off Coast of Vanuatu Islands",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMnlVNUJiZmF4ejM2b0hNdG9LQWtUWWx1bVYyQU9aeV9uMndWLWNNY3U1Z1NuLU1UamJyMDJVSnVjdmZUQ3lTbktjNEx2Nnk4azZkczFkNV9tMWtwaFJJYVpyYnRBbElBRW9Zd2UtdzBJaDl3UUV3NDZOVlhQOHF4dlVJNE40YUhBTk1KTzJTVXE3NGtvM3pyWHA1QXpPMHRLMlRQNWZMTUx2MEtj?oc=5",
+      "source": "Qatar news agency",
+      "publishedAt": "2026-11-23T06:21:52.000Z",
+      "latestAt": "2026-11-23T09:23:02.000Z",
+      "firstSeenAt": "2026-11-24T06:12:12.796Z",
+      "outlets": 3,
+      "outletNames": [
+        "Qatar news agency",
+        "Aktualita.co",
+        "uaebarq.ae"
+      ],
+      "score": 1.56,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "55a2c05cfbcc",
       "cat": "internet",
       "kind": "news",
@@ -1509,21 +1517,21 @@
       "score": 1.55
     },
     {
-      "id": "fd8f6b998fed",
+      "id": "3a4a334e81b2",
       "cat": "hacks",
       "kind": "news",
-      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSjNGakREcTJSN1N6bHM5aVhFY2lGVTY4aENmNU5PWHdvQ2JLV0tLZmFweTF1Zk1hQmNFRGFDa25MNkNlQ3dYbEFjNXNfbi16em85LXFkaFhHelB6Y2R0RDJ3TlJJX3dleDE2S0tSZWs4dVgyRU1sYzF4NWZ6a0hxWkxLTEkxUmJVWlR6eDE3djJ4U1MyczI1Mnh5VFNJSGtQRnpJTUNZQXExLXlJ?oc=5",
-      "source": "AP News",
-      "publishedAt": "2026-11-23T13:24:00.000Z",
-      "latestAt": "2026-11-23T18:52:04.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "title": "JAL Reports Data Breach Affecting 167,824 CLASS EXPLORER Members",
+      "url": "https://en.traicy.com/posts/2026112442642/",
+      "source": "en.traicy",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T05:46:38.000Z",
+      "firstSeenAt": "2026-11-24T06:12:12.796Z",
       "outlets": 2,
       "outletNames": [
-        "AP News",
-        "European Interest"
+        "en.traicy",
+        "TRAICY Global"
       ],
-      "score": 1.48
+      "score": 1.53
     },
     {
       "id": "1af77f7b9b66",
@@ -1609,39 +1617,6 @@
       "score": 1.36
     },
     {
-      "id": "c6c82f8bac8c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta outage snarls Thanksgiving travel in latest tech issue in US",
-      "url": "https://www.msn.com/en-au/news/other/delta-outage-snarls-thanksgiving-travel-in-latest-tech-issue-in-us/ar-AA2hDzlG",
-      "source": "The Independent on MSN",
-      "publishedAt": "2026-11-23T06:03:11.000Z",
-      "latestAt": "2026-11-23T21:25:33.000Z",
-      "firstSeenAt": "2026-11-24T01:26:23.593Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Independent",
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.35
-    },
-    {
-      "id": "57688e206264",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air System Outage Disrupts More Than 1,000 Flights Nationwide Ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ0I5dUZRUmkxSVpRZHJ4UTZpZG5QN3c5ZDFvZEg2XzJWdHdjR2VsRUR2aTVOWnN6Q0NKRjZMSTBTOHhjT21jNDZIamhpY0htZjEybGxFcWhVczVWYUhWNGlhX3d5Z0hkd2hkeEJSeFU2d2I3dGlFaHNjR00yWGhCX3loMjU2RTVSVkVtOGxTTlRQVzcxVVR4a21TWG1EajRXNWEtSlJzZWlpMlhjVkE5ZldLSnZaNENWMEJN?oc=5",
-      "source": "Speaks Media",
-      "publishedAt": "2026-11-24T02:30:00.000Z",
-      "latestAt": "2026-11-24T02:30:00.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 1,
-      "outletNames": [
-        "Speaks Media"
-      ],
-      "score": 1.34
-    },
-    {
       "id": "50bdf4af626c",
       "cat": "hacks",
       "kind": "news",
@@ -1657,23 +1632,6 @@
         "Dealroom"
       ],
       "score": 1.33
-    },
-    {
-      "id": "f4503ed2d2bb",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta System Outage Delays 2,000 Flights Across US, Airline Confirms Fix",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ0pYcWhNbm1uRVY3NFc2OVE4WWQ3Z285S2JTaVhka3FsSTZRM3ZSdUR3NTBrZzEtRmpVZHhadG41WThtLUVKMXdDT2NlM1gySHhvQnlnMm1rYWs2OTJ5clNwWVN2alA2bWVqT2F0UnJsMUVROGdnR3hBaFFYTXl6Unk0VVJTb1h4OEsxVTMyaTh5SnVPVkdlc21UNi1ybVkza19ucl9sU2libkRKWm1CeEVR0gG3AUFVX3lxTE5iZm1zSm9odmo3Q2pKNkxjRzdmN0Jiek9JWHlmRzZUckFTTWJsRjR6aDdqWlJfQWl4N3RiT2Q5NVdSRGRBV2cxQldKTHczbmFkX1hvMlFkX3JSMUVYNXJEb0ZIank2RVViTnZaRG4xVl9DbFdyWUhGelZfSEEyNXpHSXhYT0E4NDlVdFV2WEk3THJHSHUwby01NVNlaWFSei1aeVBFRTFkSVN1NG5LZHNaY2syb0IwNA?oc=5",
-      "source": "The Hans India",
-      "publishedAt": "2026-11-23T08:42:15.000Z",
-      "latestAt": "2026-11-23T11:01:19.000Z",
-      "firstSeenAt": "2026-11-24T05:42:08.773Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Hans India",
-        "Gujarat Samachar"
-      ],
-      "score": 1.3
     },
     {
       "id": "caf17f46a7f1",
@@ -1882,6 +1840,54 @@
         "Globes - Israel Business News"
       ],
       "score": 1.04
+    },
+    {
+      "id": "01c30770f816",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Air Zimbabwe London Flights Grounded As Spanish Lessor Reclaims Aircraft",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQSTVDb2JVVHFNUXoteDAwOHJMVjhBYjhUMEZKZVlJOFU4N3FwYjVjZnFIQTREYmtaTE1GWGZramxKdkoxdzQxZFNXaXJkYk9HbHFiREdjLWtIcUZMaDZnQVQ5VVQ5SHItV0N6MDNpSHZTbkYwZGNoZnJZX2VDcWlCUVpfeWp3M0FXLWFOazdWLVVjbllIUWVyLQ?oc=5",
+      "source": "iHarare News",
+      "publishedAt": "2026-11-24T06:09:22.000Z",
+      "latestAt": "2026-11-24T06:09:22.000Z",
+      "firstSeenAt": "2026-11-24T06:12:12.796Z",
+      "outlets": 1,
+      "outletNames": [
+        "iHarare News"
+      ],
+      "score": 1
+    },
+    {
+      "id": "20fb0ec90f43",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Outage Warning: Brad Smith Says More Disruptions Likely After Perfect Storm Failure",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaDBvNTNfZUZCUF9hUU9wQU04aDBnbFZGdlIzMWZ2SzF1aG9TTUpXM1FLSm5IMWg3Y24yV2w5RFdJSWQ2ek91cUk4b3h4cFotVlBFUEQtQTJpYTBvOHFpUDAyZFcxX1Z2RXBDY0x2QzhRWmdON3BqMGxWQ3U3VXNneW1GNUc2SDFSV0tMbkQtdjhZdTZqQzFmdUxpaU1DX3c?oc=5",
+      "source": "theopenpress.in",
+      "publishedAt": "2026-11-24T06:06:33.000Z",
+      "latestAt": "2026-11-24T06:06:33.000Z",
+      "firstSeenAt": "2026-11-24T06:12:12.796Z",
+      "outlets": 1,
+      "outletNames": [
+        "theopenpress.in"
+      ],
+      "score": 1
+    },
+    {
+      "id": "bfa6e1dd3cf7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPd2x5SEZWQ2k3aWFJaDJYc3NuMDJJWWNXN05fYldzVUpoYWZ4NmZIeWZwVGxKemJZWE9QbTZZdzM1SzU1WVp5OG5xLVhsTWJqRlIwcDdtalJoOG1Ma3NLTWZXU0xsUHVjUjhNSXQ0MFc3TG96V2RRbmJQQzhzOEN3NERJMA?oc=5",
+      "source": "The Hacker News",
+      "publishedAt": "2026-11-24T06:02:00.000Z",
+      "latestAt": "2026-11-24T06:02:00.000Z",
+      "firstSeenAt": "2026-11-24T06:12:12.796Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Hacker News"
+      ],
+      "score": 1
     },
     {
       "id": "b5c50c48a8e5",
