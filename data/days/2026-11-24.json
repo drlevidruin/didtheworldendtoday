@@ -26,28 +26,6 @@
   "change": -7,
   "stories": [
     {
-      "id": "2541df40929e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air lines system outage prompts temporary ground stop, nationwide Thanksgiving travel delays",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNMURhRG5PS05ZdHJaMVcyeVlfN0pHbld5OVF5ZnlxRTBnaVZwejZQdllIbm5kQ2JHaU1TYVRrNDBUMWs0Y2poV2w0SlU1WHowVTc5RmlSeU9CSXJNSGNLdklVZjFHSXQyaFlfR3EwVGVjTFdZT0tHSXVYSmU3M3Q0MGx3aGw0LXRQcVFZMXVaTDE5WWctSUE3RVRRdUNseDdKc2h2czd1OENwZXRIcldjWHBUaEZoeVU2MDRIQ1Z1amwwWG9fZUlIRUgyVDJfcE55b0E?oc=5",
-      "source": "KTNN",
-      "publishedAt": "2026-11-23T12:08:29.000Z",
-      "latestAt": "2026-11-23T15:52:55.000Z",
-      "firstSeenAt": "2026-11-23T16:09:51.589Z",
-      "outlets": 7,
-      "outletNames": [
-        "KTNN",
-        "KCJJ",
-        "KWXX - Hawaii",
-        "KVEC News Talk 920 AM 96.5 FM",
-        "KBRX",
-        "Radio NWTN",
-        "Dailyfly News"
-      ],
-      "score": 4.97
-    },
-    {
       "id": "sig:faa-stop:LAS:2026-11-24",
       "cat": "flights",
       "kind": "signal",
@@ -129,7 +107,7 @@
       "publishedAt": "2026-11-23T13:24:00.000Z",
       "latestAt": "2026-11-24T07:00:34.000Z",
       "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 16,
+      "outlets": 17,
       "outletNames": [
         "AP News",
         "European Interest",
@@ -146,9 +124,10 @@
         "EU Today",
         "WJCL",
         "KOAT Channel 7",
-        "WTAE-TV Pittsburgh Action News 4"
+        "WTAE-TV Pittsburgh Action News 4",
+        "KSBW Channel 8"
       ],
-      "score": 3.7
+      "score": 3.77
     },
     {
       "id": "sig:quake:us6000ud6h",
@@ -171,6 +150,29 @@
         "place": "Mauritius - Reunion region",
         "pager": null,
         "tsunami": false
+      }
+    },
+    {
+      "id": "sig:faa-stop:LEX:2026-11-23",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at LEX (disabled aircraft on the runway)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-24T00:26:11.501Z",
+      "latestAt": "2026-11-24T00:26:11.501Z",
+      "firstSeenAt": "2026-11-24T00:26:11.501Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "LEX",
+        "hub": false,
+        "nationwide": false,
+        "reason": "disabled aircraft on the runway"
       }
     },
     {
@@ -223,26 +225,6 @@
         "The Avenue Mail"
       ],
       "score": 3.32
-    },
-    {
-      "id": "08138a62e8c4",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Kilauea volcano LIVE: Eruption in Hawaii (Video)",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQLUhKN3Q2NE5vVEZ3U2ZzcGY3NXJIcmdGOS1hSDNGZXJaTTRtNDRiNEYzVUNId1d1U2Vmclc4OTk5RzZjTnRzT1RZZWZ6MjBGbzNzSmRRTjRPYXpDbWFYUHZGLWQzRjlJTG9ZU1JaZnpDUkR2ZklHU0tqblV2RWU2b0RWZHE3Nl8wMFE3bGMwSGc?oc=5",
-      "source": "Social News XYZ",
-      "publishedAt": "2026-11-23T12:06:26.000Z",
-      "latestAt": "2026-11-24T00:08:13.000Z",
-      "firstSeenAt": "2026-11-23T12:54:19.459Z",
-      "outlets": 5,
-      "outletNames": [
-        "Social News XYZ",
-        "swiowanewssource.com",
-        "Daily Gate City",
-        "Shoreline Media Group",
-        "Facebook"
-      ],
-      "score": 3.28
     },
     {
       "id": "6f4a804949b8",
@@ -322,27 +304,23 @@
       "score": 2.65
     },
     {
-      "id": "sig:faa-stop:LEX:2026-11-23",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at LEX (disabled aircraft on the runway)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-24T00:26:11.501Z",
-      "latestAt": "2026-11-24T00:26:11.501Z",
-      "firstSeenAt": "2026-11-24T00:26:11.501Z",
-      "outlets": 1,
+      "id": "af4f61912279",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
+      "url": "https://www.thehindu.com/news/international/earthquake-strikes-nepals-koshi-province-close-to-china-border/article71737092.ece",
+      "source": "The Hindu",
+      "publishedAt": "2026-11-23T19:33:00.000Z",
+      "latestAt": "2026-11-24T06:36:52.000Z",
+      "firstSeenAt": "2026-11-24T05:12:03.715Z",
+      "outlets": 4,
       "outletNames": [
-        "FAA"
+        "ThePrint",
+        "The Hindu",
+        "Daily Excelsior",
+        "Press Trust of India on MSN"
       ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "LEX",
-        "hub": false,
-        "nationwide": false,
-        "reason": "disabled aircraft on the runway"
-      }
+      "score": 2.52
     },
     {
       "id": "a910e55ce45c",
@@ -420,41 +398,57 @@
       "score": 2.59
     },
     {
-      "id": "1009b9191373",
+      "id": "6f33acb2709d",
       "cat": "hacks",
       "kind": "news",
-      "title": "NEXT investigates cyber incident after supplier data breach",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWmpxNk1RNXl4dmlmQ01HWkF1TnBhVHdPMFRZOTlrMWxZal9jSDc1cGRKbTdRZjdwVnFYMmZfbHhVeEpFeHBBQ1A0SUpQdnBqcUFYNjdSaWNBTllHMUlQQVYtYy0wcGRKVkVKQzBKdDZKNDc4R3NCYUdiTjhPRmZVcnpwY3ZoY2ppaWY0RlUwYnBERG1SMnNV?oc=5",
-      "source": "TheIndustry.fashion",
-      "publishedAt": "2026-11-23T12:05:44.000Z",
-      "latestAt": "2026-11-23T13:08:14.000Z",
-      "firstSeenAt": "2026-11-23T13:09:18.321Z",
+      "title": "U.S. takes action to recover over US$1.1 bln in cryptocurrency stolen by N. Korean hackers",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iR2lFdUdxd2hHU213cEVrQ2FUU2VJMzFQX2RSNThHV0RjN1o4c3RYVVA2NVVsS0g4MjVtYjdrcFc4MWdVX1lGUGNKUE1jX3YzckMtX05KaU9NQQ?oc=5",
+      "source": "Yonhap News Agency",
+      "publishedAt": "2026-11-23T22:11:31.000Z",
+      "latestAt": "2026-11-23T22:35:02.000Z",
+      "firstSeenAt": "2026-11-23T23:41:08.404Z",
       "outlets": 3,
       "outletNames": [
-        "TheIndustry.fashion",
-        "TheBusinessDesk.com",
-        "TheIndustry.beauty"
-      ],
-      "score": 2.54
-    },
-    {
-      "id": "af4f61912279",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
-      "url": "https://www.thehindu.com/news/international/earthquake-strikes-nepals-koshi-province-close-to-china-border/article71737092.ece",
-      "source": "The Hindu",
-      "publishedAt": "2026-11-23T19:33:00.000Z",
-      "latestAt": "2026-11-24T06:36:52.000Z",
-      "firstSeenAt": "2026-11-24T05:12:03.715Z",
-      "outlets": 4,
-      "outletNames": [
-        "ThePrint",
-        "The Hindu",
-        "Daily Excelsior",
-        "Press Trust of India on MSN"
+        "Yonhap News Agency",
+        "The Korea Times",
+        "K-VIBE"
       ],
       "score": 2.52
+    },
+    {
+      "id": "9e573b6a148c",
+      "cat": "weather",
+      "kind": "news",
+      "title": "EU gas stores sink to record low for late November as the cold returns - IntelliNews Lambda",
+      "url": "https://finance.yahoo.com/energy/articles/eu-gas-stores-sink-record-112127788.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-24T03:21:00.000Z",
+      "latestAt": "2026-11-24T11:26:15.000Z",
+      "firstSeenAt": "2026-11-24T11:28:09.115Z",
+      "outlets": 2,
+      "outletNames": [
+        "IntelliNews",
+        "Yahoo Finance"
+      ],
+      "score": 2.42
+    },
+    {
+      "id": "0dbe51447ff9",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta operations stabilize at Atlanta airport after weight-and-balance system outage",
+      "url": "https://www.msn.com/en-us/news/other/delta-operations-stabilize-at-atlanta-airport-after-weight-and-balance-system-outage/ar-AA2i4gzr",
+      "source": "WSB-TV Channel 2 on MSN",
+      "publishedAt": "2026-11-23T14:17:00.000Z",
+      "latestAt": "2026-11-23T22:17:28.000Z",
+      "firstSeenAt": "2026-11-23T22:41:00.851Z",
+      "outlets": 3,
+      "outletNames": [
+        "WSB-TV Channel 2 on MSN",
+        "WSB-TV",
+        "Yahoo"
+      ],
+      "score": 2.22
     },
     {
       "id": "0fc9f53e8229",
@@ -602,7 +596,7 @@
       "url": "https://www.wspa.com/news/top-stories/thousands-without-power-in-greenville-county/",
       "source": "WSPA 7News",
       "publishedAt": "2026-11-24T03:07:00.000Z",
-      "latestAt": "2026-11-24T11:07:00.000Z",
+      "latestAt": "2026-11-24T11:55:03.000Z",
       "firstSeenAt": "2026-11-24T11:58:15.110Z",
       "outlets": 2,
       "outletNames": [
@@ -646,24 +640,6 @@
       "score": 1.59
     },
     {
-      "id": "6f33acb2709d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "U.S. takes action to recover over US$1.1 bln in cryptocurrency stolen by N. Korean hackers",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iR2lFdUdxd2hHU213cEVrQ2FUU2VJMzFQX2RSNThHV0RjN1o4c3RYVVA2NVVsS0g4MjVtYjdrcFc4MWdVX1lGUGNKUE1jX3YzckMtX05KaU9NQQ?oc=5",
-      "source": "Yonhap News Agency",
-      "publishedAt": "2026-11-23T22:11:31.000Z",
-      "latestAt": "2026-11-23T22:35:02.000Z",
-      "firstSeenAt": "2026-11-23T23:41:08.404Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yonhap News Agency",
-        "The Korea Times",
-        "K-VIBE"
-      ],
-      "score": 2.52
-    },
-    {
       "id": "0dbfd76e28d2",
       "cat": "hacks",
       "kind": "news",
@@ -683,24 +659,6 @@
       "score": 2.44
     },
     {
-      "id": "0dbe51447ff9",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta operations stabilize at Atlanta airport after weight-and-balance system outage",
-      "url": "https://www.msn.com/en-us/news/other/delta-operations-stabilize-at-atlanta-airport-after-weight-and-balance-system-outage/ar-AA2i4gzr",
-      "source": "WSB-TV Channel 2 on MSN",
-      "publishedAt": "2026-11-23T14:17:00.000Z",
-      "latestAt": "2026-11-23T22:17:28.000Z",
-      "firstSeenAt": "2026-11-23T22:41:00.851Z",
-      "outlets": 3,
-      "outletNames": [
-        "WSB-TV Channel 2 on MSN",
-        "WSB-TV",
-        "Yahoo"
-      ],
-      "score": 2.22
-    },
-    {
       "id": "aa9ae243afe8",
       "cat": "hacks",
       "kind": "news",
@@ -717,6 +675,23 @@
         "DPA International on MSN"
       ],
       "score": 2.01
+    },
+    {
+      "id": "e6e47f1883d4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission confirms personal data stolen in AI-assisted cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZlFPckFXMHlrb1Rta29xNDF1NGplZVh3UllLVGttWWZwdGhTWEhBT0xpcG5ka3I1Ul9CZ25jdC1PVWVBdUhSQzBST1hqNlBUOUtYaDdnN3hGMVB6RTFreUpMalZyN2RsOGo1ZjRUZkVkbmkxLXNsUGxWWDI3M0hpeURUaVozdnU2aUFrc1A0dmEwcHZnZ2JUal9ONmpDb1dXQzZ0bjNqN2d4cWdVQ0YxWjM1SjBuQ3NzN1doWFB4YmwyT2xHdThnOE1GclU4RXEz?oc=5",
+      "source": "The Register",
+      "publishedAt": "2026-11-24T11:32:41.000Z",
+      "latestAt": "2026-11-24T12:08:46.000Z",
+      "firstSeenAt": "2026-11-24T11:43:07.497Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Register",
+        "Crypto Briefing"
+      ],
+      "score": 1.99
     },
     {
       "id": "1af77f7b9b66",
@@ -924,6 +899,23 @@
       "score": 1.62
     },
     {
+      "id": "b0a1ce22246b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Suspected cyberattack targets city of El Cajon",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOa2tGSlo5OTZYa3JBcllSYjZ5NjV0U1k5UzZqaXZKU0VNVFNJbXM4M1NXaFlnWldLOWZFNUVNbHFCWGhnUzRxNUMyMjVDT1hDOWJOVy1JYS04N005aTZDSmtlSXhHcDYtQnp4d1NMWk9iUDFIaW9STXotcThTMzdpQmFDMHJHVXc2dkJSZGxMald4bWZhY3fSAZ4BQVVfeXFMUFNUeFRlQmd4NnEzQ2RIUTg1d2I1TlBfV1lPcFRFMGtDXzFKdk5jMkkxTjRCbmM5d2FXazQ4bmhFeExtLTFvUjBJVzE2ME5xTHk3S2F2OWY1dGFod0I1ZGNNWkRsdHV4dHNqR1ZOTjJsODNwazFpZjJ2R3c1bjRrbHd4Tm5TTERDSkU2Y05rVkVmQU1vSUNhTlg3WE43NEE?oc=5",
+      "source": "NBC 7 San Diego",
+      "publishedAt": "2026-11-24T00:26:03.000Z",
+      "latestAt": "2026-11-24T11:39:00.000Z",
+      "firstSeenAt": "2026-11-24T12:13:15.703Z",
+      "outlets": 2,
+      "outletNames": [
+        "NBC 7 San Diego",
+        "Newsradio 600 KOGO"
+      ],
+      "score": 1.61
+    },
+    {
       "id": "7e9775e88ab9",
       "cat": "hacks",
       "kind": "news",
@@ -1104,22 +1096,6 @@
         "biztalknews.com"
       ],
       "score": 1.4
-    },
-    {
-      "id": "9e573b6a148c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "EU gas stores sink to record low for late November as the cold returns - IntelliNews Lambda",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOVkt1TVVYamlnUEMtWmFZLVlfajRUNTdNZnZfVEhqUGpScGpZYjJ6M1pmWXllVTJOTmppeVY5cXQyelFkVkFQS2h0SjNYWXk3MHhjSDJiaWdnWTY1TmFwMElqUUFlay1kbmtwbDlKMmQ0dEdaYXlCQ3lEY09fWHgwZVJIZERGUnVBTU5RX21kR2tITF8ybTRpVFpFSHdUR3ptcWxkVWg1U0Uwc3RZSDhsOGFSekhGUUFvWG5RSUZRWmtpM2h1dkNNc0kxaWpoaEhsOXU1LUNfZUlWbm9sd21J?oc=5",
-      "source": "IntelliNews",
-      "publishedAt": "2026-11-24T11:10:02.000Z",
-      "latestAt": "2026-11-24T11:26:15.000Z",
-      "firstSeenAt": "2026-11-24T11:28:09.115Z",
-      "outlets": 1,
-      "outletNames": [
-        "IntelliNews"
-      ],
-      "score": 1.39
     },
     {
       "id": "31be995c85e2",
@@ -1494,18 +1470,82 @@
       "score": 1.02
     },
     {
-      "id": "45a8a399b1f7",
-      "cat": "hacks",
+      "id": "d03594aa09ed",
+      "cat": "internet",
       "kind": "news",
-      "title": "Rapid7: How NEXT Data Breach Exposes Retail Supplier Risk",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRmUzSmRwemFaZnpnRXJ6dUdid0w1dkdTUFJNWHVwNTktVlVFTjNtZ19rOW05cU84emF0bmJnTTd1cW4zQVJaZm1RbDRIbnNsYWFtQWF4bWFJdXZyTzkzX1dBRVgyN1VtemhqUmFaM3FFdWd4TWFQdEl6OElmRGJvckNlYTZNUVQ1NWZr?oc=5",
-      "source": "Cyber Magazine",
-      "publishedAt": "2026-11-24T11:56:25.000Z",
-      "latestAt": "2026-11-24T11:56:25.000Z",
-      "firstSeenAt": "2026-11-24T11:58:15.110Z",
+      "title": "Is Spotify down right now (November 24, 2026)? Outage status explored",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcEstQU1NOU1QRzZYMVhTZzhRRWFDcUh4NEhIYmVIblBBdkRrNmhKWU1pTmJENVh0dlBTakY3SFQ0TUtiT0o4ZU9HYUJsa19zRm5vT3BqU1V3VHZoU1M2d3Bld2ZReE9vVHJSSlRwSEpPQmplZS1GQlZGLTZNc0puOHJJUUphM2szNjRTVmdIWXBpVmc2eEtIbVBIZEJXVjh4dWRxQQ?oc=5",
+      "source": "Sportskeeda Tech",
+      "publishedAt": "2026-11-24T12:06:02.000Z",
+      "latestAt": "2026-11-24T12:06:02.000Z",
+      "firstSeenAt": "2026-11-24T12:13:15.703Z",
       "outlets": 1,
       "outletNames": [
-        "Cyber Magazine"
+        "Sportskeeda Tech"
+      ],
+      "score": 1
+    },
+    {
+      "id": "909cafb6c42b",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Spotify Down? Users Report Outage, May Kick You Out of Your Account",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOVVlYzBvWUxaSVRoX1lXbDY3R2pOeHpmYnlOamc2cnV1Smoxa3hlYjB4SG9SdUdxcUlXRGZKRzFQTVoxQUV6ellVaTdOblJuOFJ2UktTRllrMmVrNHFxcFZZWG5PcFUwNnJWR1cxSWFyWGdOOXkwVlFaODhPWXNaWTl6Tkt6Z3NBazRTaFN6Tnc0VUVLcmZfYTROaGdSajVyU1pKUDlkblZmV0RHX3l3OVpYZzlTUmtFdmc?oc=5",
+      "source": "PCMag UK",
+      "publishedAt": "2026-11-24T12:02:10.000Z",
+      "latestAt": "2026-11-24T12:02:10.000Z",
+      "firstSeenAt": "2026-11-24T12:13:15.703Z",
+      "outlets": 1,
+      "outletNames": [
+        "PCMag UK"
+      ],
+      "score": 1
+    },
+    {
+      "id": "414a4f4ee7c3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "State shuts down myColorado app after data breach; up to 150,000 people may be affected",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMmRVdFdxakpiSUFKSGlfNkptNF9EZm9mOFdBemVTS1FCRnU3eXM4b3NHUUdWSm4yS0t4NlgwYUNxYTdITWlkanBJY0FLLXIwVXBhLUdxZnJpM25XOG9YWGtKSE9LdGN4eWEwR1hZQkVheE5VbVMxNUNHdG81QXFPZ3hBMDFBUnVIYllZLWFxWEFTdkp5Z0JXQUwtNVFGU3FhQWJ2cmJhZXd2Nk9qZUF0N3BQRFFxenM?oc=5",
+      "source": "Kiowa County Press",
+      "publishedAt": "2026-11-24T12:01:00.000Z",
+      "latestAt": "2026-11-24T12:01:00.000Z",
+      "firstSeenAt": "2026-11-24T12:13:15.703Z",
+      "outlets": 1,
+      "outletNames": [
+        "Kiowa County Press"
+      ],
+      "score": 1
+    },
+    {
+      "id": "fbc9f0a47746",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Microsoft Confirms Hackers Accessed Customer Data, Warns of Targeted Phishing",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1PQmUxNjJERTBLRXVYOWpTaVA2T0VvS0VWZFdaREhJNldLekpwTGVROUNvUHQ3YkYxcWxwbXVGSjFWVGZjMEREOXloU01DdWFQMmN0SkMzaGo1VjBNOXlhanhUN0FXWi13SWlWbkpn?oc=5",
+      "source": "The 420.in",
+      "publishedAt": "2026-11-24T12:01:00.000Z",
+      "latestAt": "2026-11-24T12:01:00.000Z",
+      "firstSeenAt": "2026-11-24T12:13:15.703Z",
+      "outlets": 1,
+      "outletNames": [
+        "The 420.in"
+      ],
+      "score": 1
+    },
+    {
+      "id": "9e21b2b1f80e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Ransomware threat actors’ ‘playbooks still hold’ despite evolution of AI: Travelers’ Winchester",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPNFZ2ZWpjeEpEaFA0OERpb2NheUFsS1dsWmNQeTAwRUZ4c2dCeVJ2Mng2MjZHanY2Zi1iU19vc3h0TGF5MlpvR29McDFWX1h5SXhvUExlVWV2LTlKeVRRaU9DTG9MMmFBdHY3Z1pjTVFCRDdSQkJVNnU2VExiSDlpT1hsenVDZXdqUEhRMV95aXdnMk9FdWlSUDRSa0xUdjJXTVFtNWhsZElqdHRWbmRCYmxPWHdhOVFBR1EtLXpzX1hVeEl6bnlOMjBMUndlRXJJ?oc=5",
+      "source": "The Insurer",
+      "publishedAt": "2026-11-24T11:59:50.000Z",
+      "latestAt": "2026-11-24T11:59:50.000Z",
+      "firstSeenAt": "2026-11-24T12:13:15.703Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Insurer"
       ],
       "score": 1
     },
@@ -1538,22 +1578,6 @@
       "outlets": 1,
       "outletNames": [
         "SDxCentral"
-      ],
-      "score": 1
-    },
-    {
-      "id": "e6e47f1883d4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission confirms personal data stolen in AI-assisted cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZlFPckFXMHlrb1Rta29xNDF1NGplZVh3UllLVGttWWZwdGhTWEhBT0xpcG5ka3I1Ul9CZ25jdC1PVWVBdUhSQzBST1hqNlBUOUtYaDdnN3hGMVB6RTFreUpMalZyN2RsOGo1ZjRUZkVkbmkxLXNsUGxWWDI3M0hpeURUaVozdnU2aUFrc1A0dmEwcHZnZ2JUal9ONmpDb1dXQzZ0bjNqN2d4cWdVQ0YxWjM1SjBuQ3NzN1doWFB4YmwyT2xHdThnOE1GclU4RXEz?oc=5",
-      "source": "The Register",
-      "publishedAt": "2026-11-24T11:32:41.000Z",
-      "latestAt": "2026-11-24T11:32:41.000Z",
-      "firstSeenAt": "2026-11-24T11:43:07.497Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Register"
       ],
       "score": 1
     },
@@ -1638,22 +1662,6 @@
       "score": 1
     },
     {
-      "id": "20fb0ec90f43",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Outage Warning: Brad Smith Says More Disruptions Likely After Perfect Storm Failure",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaDBvNTNfZUZCUF9hUU9wQU04aDBnbFZGdlIzMWZ2SzF1aG9TTUpXM1FLSm5IMWg3Y24yV2w5RFdJSWQ2ek91cUk4b3h4cFotVlBFUEQtQTJpYTBvOHFpUDAyZFcxX1Z2RXBDY0x2QzhRWmdON3BqMGxWQ3U3VXNneW1GNUc2SDFSV0tMbkQtdjhZdTZqQzFmdUxpaU1DX3c?oc=5",
-      "source": "theopenpress.in",
-      "publishedAt": "2026-11-24T10:29:53.000Z",
-      "latestAt": "2026-11-24T10:29:53.000Z",
-      "firstSeenAt": "2026-11-24T10:42:59.805Z",
-      "outlets": 1,
-      "outletNames": [
-        "theopenpress.in"
-      ],
-      "score": 1
-    },
-    {
       "id": "b5c50c48a8e5",
       "cat": "weather",
       "kind": "news",
@@ -1720,22 +1728,6 @@
       "score": 0.99
     },
     {
-      "id": "e0873ecb46aa",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Minor G1 geomagnetic storm",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOd1M3ZExwTkVTS0ZWdXYxR2tjTTA5dmEyZFpodU1IQU0zenVLZjRsWU4tSVgtMDRoVko2Ql9XMlZ2aF9qVlQxU0MxWUt1Qm9rRUdWZlA5OXhnUWlkRjNTVXNtdHItRW9ZWF84eXkzbzNyQ1BhUHVXZnZybXdKdFJhVTM4MWN1RE9XRXVTZlZrd2FJcjVY?oc=5",
-      "source": "SpaceWeatherLive.com",
-      "publishedAt": "2026-11-23T11:59:35.000Z",
-      "latestAt": "2026-11-23T11:59:35.000Z",
-      "firstSeenAt": "2026-11-23T12:24:12.244Z",
-      "outlets": 1,
-      "outletNames": [
-        "SpaceWeatherLive.com"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "30ff934ba46d",
       "cat": "ai",
       "kind": "news",
@@ -1759,7 +1751,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-24T02:09:00.000Z",
-      "latestAt": "2026-11-24T02:09:00.000Z",
+      "latestAt": "2026-11-24T04:00:00.000Z",
       "firstSeenAt": "2026-11-24T10:27:55.694Z",
       "outlets": 1,
       "outletNames": [
@@ -1784,5 +1776,5 @@
       "score": 0.81
     }
   ],
-  "updatedAt": "2026-11-24T11:58:15.110Z"
+  "updatedAt": "2026-11-24T12:13:15.703Z"
 }
