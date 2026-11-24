@@ -1,13 +1,12 @@
 {
   "date": "2026-11-24",
-  "score": 60,
+  "score": 54,
   "fired": [
     "flights",
     "hacks",
     "internet",
     "earth",
     "markets",
-    "ai",
     "grid",
     "germs",
     "weather"
@@ -19,7 +18,7 @@
       "points": 6
     }
   ],
-  "change": -6,
+  "change": -12,
   "stories": [
     {
       "id": "2541df40929e",
@@ -44,49 +43,6 @@
       "score": 4.97
     },
     {
-      "id": "e55269ebb7e8",
-      "cat": "flights",
-      "kind": "news",
-      "title": "O’Hare ground stop lifted as Thanksgiving travel chaos looms",
-      "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
-      "source": "Central Illinois Proud on MSN",
-      "publishedAt": "2026-11-23T11:12:19.000Z",
-      "latestAt": "2026-11-24T07:18:06.000Z",
-      "firstSeenAt": "2026-11-23T20:55:41.076Z",
-      "outlets": 28,
-      "outletNames": [
-        "Central Illinois Proud on MSN",
-        "CIProud.com",
-        "WGN-TV",
-        "AOL.co.uk",
-        "Breitbart News",
-        "Yahoo",
-        "Independent Journal Review",
-        "NBC 5 Chicago",
-        "NBC Chicago",
-        "FOX 32 Chicago",
-        "ABC7 Chicago",
-        "cedarnews.net",
-        "Patch",
-        "NewsNation",
-        "WINK News - Southwest Florida",
-        "Shaw Local",
-        "NBC News",
-        "One America News Network",
-        "The Times of India",
-        "Modern Ghana",
-        "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi",
-        "AVweb",
-        "FlipItMoney",
-        "WABC Radio",
-        "US Muslims",
-        "SSBCrack",
-        "fish4news.co.uk"
-      ],
-      "score": 4.87
-    },
-    {
       "id": "sig:faa-stop:LAS:2026-11-24",
       "cat": "flights",
       "kind": "signal",
@@ -104,6 +60,29 @@
       "signal": {
         "type": "faa-ground-stop",
         "airport": "LAS",
+        "hub": true,
+        "nationwide": false,
+        "reason": "STAFFING"
+      }
+    },
+    {
+      "id": "sig:faa-stop:ORD:2026-11-23",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at ORD (STAFFING)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-23T17:10:03.099Z",
+      "latestAt": "2026-11-23T17:10:03.099Z",
+      "firstSeenAt": "2026-11-23T17:10:03.099Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "ORD",
         "hub": true,
         "nationwide": false,
         "reason": "STAFFING"
@@ -292,23 +271,6 @@
       "score": 2.52
     },
     {
-      "id": "a461bbd73119",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Joe Rogan Sounds Alarm Over Major 'Worldwide' Tech Outages — as Controversial Podcaster Warns 'They're Not Totally in Control'",
-      "url": "https://radaronline.com/p/joe-rogan-sounds-alarm-major-worldwide-tech-outages-nervous/",
-      "source": "Radar Online",
-      "publishedAt": "2026-11-23T11:10:00.000Z",
-      "latestAt": "2026-11-23T19:14:34.000Z",
-      "firstSeenAt": "2026-11-23T23:11:05.488Z",
-      "outlets": 2,
-      "outletNames": [
-        "RadarOnline",
-        "AOL.com"
-      ],
-      "score": 2.24
-    },
-    {
       "id": "0fc9f53e8229",
       "cat": "germs",
       "kind": "news",
@@ -327,27 +289,22 @@
       "score": 2.21
     },
     {
-      "id": "sig:faa-stop:ORD:2026-11-23",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at ORD (STAFFING)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-23T17:10:03.099Z",
-      "latestAt": "2026-11-23T17:10:03.099Z",
-      "firstSeenAt": "2026-11-23T17:10:03.099Z",
-      "outlets": 1,
+      "id": "682b3f1ddc03",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
+      "url": "https://www.aol.com/articles/breaking-bengals-commanders-game-interrupted-030708000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T03:15:00.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 3,
       "outletNames": [
-        "FAA"
+        "The Mirror US",
+        "NewsBreak: Local News & Alerts",
+        "AOL.com"
       ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "ORD",
-        "hub": true,
-        "nationwide": false,
-        "reason": "STAFFING"
-      }
+      "score": 2.06
     },
     {
       "id": "sig:faa-stop:LEX:2026-11-23",
@@ -412,6 +369,23 @@
       "score": 2.78
     },
     {
+      "id": "8116b401c695",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide ground stop adds new stress to holiday travel",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUnIzdVpZRUFUZDM3b2hXYjBCcFRLQ1otMGZBV1JIUEdUb1pocTNBcU1zVmFRdW9rYUdRZDU4UGxneDFfOWc4cVRlazUwSnkxUVZrS3hVdjFQQUpsNkZBa05SeE1vemdSYWRvRHFkUTVDTEpMQ3dkZXRta19faGlRa2kzTVJ0TGhSZ2xzNWEzV0I5c1h1ekhGMXlWbncyNkQ2M21tUDJCQUhLelFCNGc?oc=5",
+      "source": "NewsBreak: Local News & Alerts",
+      "publishedAt": "2026-11-23T23:14:39.000Z",
+      "latestAt": "2026-11-23T23:21:04.000Z",
+      "firstSeenAt": "2026-11-24T03:41:47.705Z",
+      "outlets": 2,
+      "outletNames": [
+        "NewsBreak: Local News & Alerts",
+        "THV11"
+      ],
+      "score": 2.59
+    },
+    {
       "id": "1009b9191373",
       "cat": "hacks",
       "kind": "news",
@@ -446,24 +420,6 @@
         "K-VIBE"
       ],
       "score": 2.52
-    },
-    {
-      "id": "682b3f1ddc03",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
-      "url": "https://www.aol.com/articles/breaking-bengals-commanders-game-interrupted-030708000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-23T16:00:00.000Z",
-      "latestAt": "2026-11-24T03:15:00.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Mirror US",
-        "NewsBreak: Local News & Alerts",
-        "AOL.com"
-      ],
-      "score": 2.06
     },
     {
       "id": "4f0fed26e460",
@@ -654,21 +610,21 @@
       "score": 1.45
     },
     {
-      "id": "8116b401c695",
-      "cat": "flights",
+      "id": "95f40136244b",
+      "cat": "markets",
       "kind": "news",
-      "title": "Nationwide ground stop adds new stress to holiday travel",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUnIzdVpZRUFUZDM3b2hXYjBCcFRLQ1otMGZBV1JIUEdUb1pocTNBcU1zVmFRdW9rYUdRZDU4UGxneDFfOWc4cVRlazUwSnkxUVZrS3hVdjFQQUpsNkZBa05SeE1vemdSYWRvRHFkUTVDTEpMQ3dkZXRta19faGlRa2kzTVJ0TGhSZ2xzNWEzV0I5c1h1ekhGMXlWbncyNkQ2M21tUDJCQUhLelFCNGc?oc=5",
-      "source": "NewsBreak: Local News & Alerts",
-      "publishedAt": "2026-11-23T23:14:39.000Z",
-      "latestAt": "2026-11-23T23:21:04.000Z",
-      "firstSeenAt": "2026-11-24T03:41:47.705Z",
+      "title": "Market selloff and falling oil will likely force a 2018-style Fed pivot: BCA",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPYkV6dmgyZ196dm1NN054RUZvY2NJdHo3b2NHUmVWdWg5MHBPd2oyRDNlQkVHQ3RrX2tFMWFVRGV3MXloRVF6X1FGay1NUnB1bW1HNFpRbXE4UzRIWW5pNjJ1X2h0TEZNUEswUzNsTmRJR3dtbFhXNURGZUpyZE1YMkVSdFI4ckVWN3BYQW5yYzFvTTRRMDF3Q010QTdINDJMejgwb0RxSGpxbDdBUDloblIzXzdFQ1hsUGJEZDNmeUxiOWdLTzR3ZkdCWQ?oc=5",
+      "source": "Investing.com",
+      "publishedAt": "2026-11-23T11:47:52.000Z",
+      "latestAt": "2026-11-23T12:16:25.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
       "outlets": 2,
       "outletNames": [
-        "NewsBreak: Local News & Alerts",
-        "THV11"
+        "Investing.com",
+        "Yahoo Finance"
       ],
-      "score": 2.59
+      "score": 1.45
     },
     {
       "id": "0dbfd76e28d2",
@@ -742,6 +698,23 @@
         "DPA International on MSN"
       ],
       "score": 2.01
+    },
+    {
+      "id": "730aaf1f8e49",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US seeks forfeiture of over $1.1B in crypto tied to North Korean hackers",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbG91WVhZb2V0TkxISnZ3aU1MWnVpUnVSSm9nb0g1T1pDVTU3V09HbUkxaV8yYlNGZE9Nc3lKbzVBSXM3ODhDLWpYdTZXRUdxYUJUUEZYU0dTanlaS2FaSml2dmQyRXdXWEpzMlM0NzU1OVpjRGlNMGlrNW1WeDc4bXZpZmZNSWFLZkxIYklxaVRuc0dDakVjZ3NnNFc2WXRGcUJJend4MVFCV2VYZU5WcnNn?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-23T20:18:28.000Z",
+      "latestAt": "2026-11-23T20:30:39.000Z",
+      "firstSeenAt": "2026-11-23T20:55:41.076Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "Operativ Məlumat Mərkəzi"
+      ],
+      "score": 1.98
     },
     {
       "id": "1af77f7b9b66",
@@ -1018,23 +991,6 @@
       "score": 1.53
     },
     {
-      "id": "95f40136244b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Market selloff and falling oil will likely force a 2018-style Fed pivot: BCA",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPYkV6dmgyZ196dm1NN054RUZvY2NJdHo3b2NHUmVWdWg5MHBPd2oyRDNlQkVHQ3RrX2tFMWFVRGV3MXloRVF6X1FGay1NUnB1bW1HNFpRbXE4UzRIWW5pNjJ1X2h0TEZNUEswUzNsTmRJR3dtbFhXNURGZUpyZE1YMkVSdFI4ckVWN3BYQW5yYzFvTTRRMDF3Q010QTdINDJMejgwb0RxSGpxbDdBUDloblIzXzdFQ1hsUGJEZDNmeUxiOWdLTzR3ZkdCWQ?oc=5",
-      "source": "Investing.com",
-      "publishedAt": "2026-11-23T11:47:52.000Z",
-      "latestAt": "2026-11-23T12:16:25.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 2,
-      "outletNames": [
-        "Investing.com",
-        "Yahoo Finance"
-      ],
-      "score": 1.45
-    },
-    {
       "id": "3d1c7586b2df",
       "cat": "hacks",
       "kind": "news",
@@ -1182,6 +1138,22 @@
         "The Seattle Times"
       ],
       "score": 1.36
+    },
+    {
+      "id": "57688e206264",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air System Outage Disrupts More Than 1,000 Flights Nationwide Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ0I5dUZRUmkxSVpRZHJ4UTZpZG5QN3c5ZDFvZEg2XzJWdHdjR2VsRUR2aTVOWnN6Q0NKRjZMSTBTOHhjT21jNDZIamhpY0htZjEybGxFcWhVczVWYUhWNGlhX3d5Z0hkd2hkeEJSeFU2d2I3dGlFaHNjR00yWGhCX3loMjU2RTVSVkVtOGxTTlRQVzcxVVR4a21TWG1EajRXNWEtSlJzZWlpMlhjVkE5ZldLSnZaNENWMEJN?oc=5",
+      "source": "Speaks Media",
+      "publishedAt": "2026-11-24T02:30:00.000Z",
+      "latestAt": "2026-11-24T02:30:00.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 1,
+      "outletNames": [
+        "Speaks Media"
+      ],
+      "score": 1.34
     },
     {
       "id": "caf17f46a7f1",
@@ -1408,6 +1380,22 @@
       "score": 1.1
     },
     {
+      "id": "137b1feecce5",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Weather may pose bigger threat to Thanksgiving air travel than another nationwide ground stop",
+      "url": "https://www.nj.com/news/2026/11/weather-may-pose-bigger-threat-to-thanksgiving-air-travel-than-another-nationwide-ground-stop.html",
+      "source": "NJ.com",
+      "publishedAt": "2026-11-23T22:00:00.000Z",
+      "latestAt": "2026-11-23T22:00:00.000Z",
+      "firstSeenAt": "2026-11-24T11:13:12.439Z",
+      "outlets": 1,
+      "outletNames": [
+        "NJ.com"
+      ],
+      "score": 1.09
+    },
+    {
       "id": "b26915e5f851",
       "cat": "hacks",
       "kind": "news",
@@ -1616,6 +1604,22 @@
       "score": 1
     },
     {
+      "id": "87ac530a3e31",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Transcript: Tucker Interviews Luke Gromen on Cyberattacks & Grid Failure",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOaUFxZU9QV1NmSTFnZlNDRVFYbi12UTFZNmd1ME85ckFVaDJraWFEbGpwSlVVa0lROEVBb013M0txeThONnlIeXgtZ2Z3ZDdVWEJFWjJ1empoODV4cVBxWTJzSGdmMWtOcTR4QWFBZGhONG11UGFrRG9EdTl0VkxEUmxCcXB2ckt3c09tM2FoTklDdC1DQXV6Qw?oc=5",
+      "source": "The Singju Post",
+      "publishedAt": "2026-11-24T03:58:51.000Z",
+      "latestAt": "2026-11-24T03:58:51.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Singju Post"
+      ],
+      "score": 1
+    },
+    {
       "id": "b5c50c48a8e5",
       "cat": "weather",
       "kind": "news",
@@ -1660,22 +1664,6 @@
       "outlets": 1,
       "outletNames": [
         "The Watchers - Watching the world evolve and transform"
-      ],
-      "score": 1
-    },
-    {
-      "id": "a22a8ff5071f",
-      "cat": "animals",
-      "kind": "news",
-      "title": "Police go ‘whole hog’ in surprise incident on patrol as pigs spotted on the loose",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPenJwMzFzbFhfWXZvNFhfbEtmaFlUdFdTWVZkV2pQTDZGeGVjNTN3U0JqN2U2TDFVVzRFcEhGekhhR00tVGpzNnU2NXcyaGFMMEdGMWxFQVA4cDdLMWpqRzE3ZUQtdkpYb2FITUs4b0tXUmc0SzhaMEc2THZNd2pMUW5KRzhIRVFPSXhQeXVTVFFHT0RhSnVwVVBEN2Z0UFZreGZrNFRHejZMM2hnWkRQRHV4WFlWdFJBQXdHZDZ5M0JHZm9vdHc?oc=5",
-      "source": "Portsmouth News",
-      "publishedAt": "2026-11-23T11:12:00.000Z",
-      "latestAt": "2026-11-23T11:12:00.000Z",
-      "firstSeenAt": "2026-11-23T11:24:03.036Z",
-      "outlets": 1,
-      "outletNames": [
-        "Portsmouth News"
       ],
       "score": 1
     },
@@ -1776,23 +1764,7 @@
         "Starlust.org"
       ],
       "score": 0.81
-    },
-    {
-      "id": "af7444082351",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Claude AI Outage Disrupts Users Across Multiple Regions",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9SR3pIYm42aGlKSVQ4SkhZMUJnMWpYR3J6T1FobmFsaUpDajdleHlwS1dQMkpOTEdTem9vQ3MxbTBoenIwdUJ3UGZ5WVdyYkFFUkhPVFFhVXdhc2dmYncyUXNnbTUyOU5xcDVZc0E2MkQyVDg?oc=5",
-      "source": "TechJuice",
-      "publishedAt": "2026-11-23T11:08:35.000Z",
-      "latestAt": "2026-11-23T11:08:35.000Z",
-      "firstSeenAt": "2026-11-24T01:11:19.009Z",
-      "outlets": 1,
-      "outletNames": [
-        "TechJuice"
-      ],
-      "score": 0.77
     }
   ],
-  "updatedAt": "2026-11-24T10:58:13.481Z"
+  "updatedAt": "2026-11-24T11:13:12.439Z"
 }
