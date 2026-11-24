@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "score": 54,
+  "score": 59,
   "fired": [
     "flights",
     "hacks",
@@ -13,12 +13,17 @@
   ],
   "bumps": [
     {
+      "key": "quake",
+      "label": "Quake M6 or more",
+      "points": 5
+    },
+    {
       "key": "faa",
       "label": "Ground stop at a major hub",
       "points": 6
     }
   ],
-  "change": -12,
+  "change": -7,
   "stories": [
     {
       "id": "2541df40929e",
@@ -146,6 +151,29 @@
       "score": 3.7
     },
     {
+      "id": "sig:quake:us6000ud6h",
+      "cat": "earth",
+      "kind": "signal",
+      "title": "M 6.4 - Mauritius - Reunion region",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud6h",
+      "source": "USGS",
+      "publishedAt": "2026-11-24T11:06:14.036Z",
+      "latestAt": "2026-11-24T11:06:14.036Z",
+      "firstSeenAt": "2026-11-24T11:28:09.115Z",
+      "outlets": 1,
+      "outletNames": [
+        "USGS"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "quake",
+        "mag": 6.4,
+        "place": "Mauritius - Reunion region",
+        "pager": null,
+        "tsunami": false
+      }
+    },
+    {
       "id": "b89cb6073b85",
       "cat": "grid",
       "kind": "news",
@@ -170,6 +198,33 @@
       "score": 3.37
     },
     {
+      "id": "76df64bdaeb1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6-magnitude earthquake strikes near Nepal-Tibet border in Taplejung",
+      "url": "https://thehimalayantimes.com/nepal/56-magnitude-earthquake-strikes-near-nepal-tibet-border-in-taplejung",
+      "source": "The Himalayan Times",
+      "publishedAt": "2026-11-23T12:22:00.000Z",
+      "latestAt": "2026-11-24T10:18:45.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 12,
+      "outletNames": [
+        "The Annapurna Express",
+        "The Himalayan Times",
+        "The Business Standard",
+        "Mid-Day on MSN",
+        "India TV News",
+        "Rediff.com",
+        "OnlineKhabar English News",
+        "Qazinform",
+        "The Kathmandu Post on MSN",
+        "News On AIR",
+        "Hindusthan Samachar English",
+        "The Avenue Mail"
+      ],
+      "score": 3.32
+    },
+    {
       "id": "08138a62e8c4",
       "cat": "earth",
       "kind": "news",
@@ -190,30 +245,25 @@
       "score": 3.28
     },
     {
-      "id": "76df64bdaeb1",
-      "cat": "earth",
+      "id": "529823829eed",
+      "cat": "germs",
       "kind": "news",
-      "title": "5.6-magnitude earthquake strikes near Nepal-Tibet border in Taplejung",
-      "url": "https://thehimalayantimes.com/nepal/56-magnitude-earthquake-strikes-near-nepal-tibet-border-in-taplejung",
-      "source": "The Himalayan Times",
-      "publishedAt": "2026-11-23T12:22:00.000Z",
-      "latestAt": "2026-11-24T10:18:45.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 11,
+      "title": "Bird flu detected among cows at Grant County dairy farm",
+      "url": "https://www.yahoo.com/news/science/articles/bird-flu-detected-among-cows-003845508.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T07:49:00.000Z",
+      "firstSeenAt": "2026-11-24T00:41:14.207Z",
+      "outlets": 6,
       "outletNames": [
-        "The Annapurna Express",
-        "The Himalayan Times",
-        "The Business Standard",
-        "Mid-Day on MSN",
-        "India TV News",
-        "Rediff.com",
-        "OnlineKhabar English News",
-        "Qazinform",
-        "The Kathmandu Post on MSN",
-        "News On AIR",
-        "Hindusthan Samachar English"
+        "Dailyfly News",
+        "NonStop Local KHQ",
+        "Yahoo",
+        "KREM",
+        "KOMO",
+        "KXLY.com"
       ],
-      "score": 3.23
+      "score": 3.07
     },
     {
       "id": "30f9e199e0a5",
@@ -252,25 +302,6 @@
       "score": 2.79
     },
     {
-      "id": "af4f61912279",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
-      "url": "https://www.thehindu.com/news/international/earthquake-strikes-nepals-koshi-province-close-to-china-border/article71737092.ece",
-      "source": "The Hindu",
-      "publishedAt": "2026-11-23T19:33:00.000Z",
-      "latestAt": "2026-11-24T06:36:52.000Z",
-      "firstSeenAt": "2026-11-24T05:12:03.715Z",
-      "outlets": 4,
-      "outletNames": [
-        "ThePrint",
-        "The Hindu",
-        "Daily Excelsior",
-        "Press Trust of India on MSN"
-      ],
-      "score": 2.52
-    },
-    {
       "id": "0fc9f53e8229",
       "cat": "germs",
       "kind": "news",
@@ -287,24 +318,6 @@
         "WPTV"
       ],
       "score": 2.21
-    },
-    {
-      "id": "682b3f1ddc03",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
-      "url": "https://www.aol.com/articles/breaking-bengals-commanders-game-interrupted-030708000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-23T16:00:00.000Z",
-      "latestAt": "2026-11-24T03:15:00.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Mirror US",
-        "NewsBreak: Local News & Alerts",
-        "AOL.com"
-      ],
-      "score": 2.06
     },
     {
       "id": "sig:faa-stop:LEX:2026-11-23",
@@ -422,6 +435,43 @@
       "score": 2.52
     },
     {
+      "id": "af4f61912279",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
+      "url": "https://www.thehindu.com/news/international/earthquake-strikes-nepals-koshi-province-close-to-china-border/article71737092.ece",
+      "source": "The Hindu",
+      "publishedAt": "2026-11-23T19:33:00.000Z",
+      "latestAt": "2026-11-24T06:36:52.000Z",
+      "firstSeenAt": "2026-11-24T05:12:03.715Z",
+      "outlets": 4,
+      "outletNames": [
+        "ThePrint",
+        "The Hindu",
+        "Daily Excelsior",
+        "Press Trust of India on MSN"
+      ],
+      "score": 2.52
+    },
+    {
+      "id": "682b3f1ddc03",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
+      "url": "https://www.aol.com/articles/breaking-bengals-commanders-game-interrupted-030708000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T03:15:00.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Mirror US",
+        "NewsBreak: Local News & Alerts",
+        "AOL.com"
+      ],
+      "score": 2.06
+    },
+    {
       "id": "4f0fed26e460",
       "cat": "markets",
       "kind": "news",
@@ -437,23 +487,6 @@
         "bsinews.id"
       ],
       "score": 1.99
-    },
-    {
-      "id": "529823829eed",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Washington Confirms Bird Flu in Grant County Dairy Herd",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWUdpa2tSWUF1YTRQalYwWktzRUs3UDNIN2VSWHpyOTUyOTJNUTJzaXZBY3hpNUJzcFdwYTFZUWJNWHNHajB3UXBOR0RnT21JaFRXczRjeFQzZ0xDVlJVNGlWOWxreDQtVUdVc21zYXZraEtKOVp4a2pIdjR3OVJKVXlZYjk2Z0R1SndZUU5TMXBEX0hlUWhR?oc=5",
-      "source": "Dailyfly News",
-      "publishedAt": "2026-11-23T23:43:12.000Z",
-      "latestAt": "2026-11-24T00:00:00.000Z",
-      "firstSeenAt": "2026-11-24T00:41:14.207Z",
-      "outlets": 2,
-      "outletNames": [
-        "Dailyfly News",
-        "NonStop Local KHQ"
-      ],
-      "score": 1.97
     },
     {
       "id": "34dc482ff4ed",
@@ -523,23 +556,6 @@
         "cedarnews.net"
       ],
       "score": 1.72
-    },
-    {
-      "id": "6f4a804949b8",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu detected among cows at Grant County dairy farm",
-      "url": "https://www.yahoo.com/news/science/articles/bird-flu-detected-among-cows-003845508.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T16:00:00.000Z",
-      "latestAt": "2026-11-24T00:38:00.000Z",
-      "firstSeenAt": "2026-11-24T02:41:37.482Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "KREM"
-      ],
-      "score": 1.64
     },
     {
       "id": "96a892a99aa0",
@@ -700,23 +716,6 @@
       "score": 2.01
     },
     {
-      "id": "730aaf1f8e49",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US seeks forfeiture of over $1.1B in crypto tied to North Korean hackers",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbG91WVhZb2V0TkxISnZ3aU1MWnVpUnVSSm9nb0g1T1pDVTU3V09HbUkxaV8yYlNGZE9Nc3lKbzVBSXM3ODhDLWpYdTZXRUdxYUJUUEZYU0dTanlaS2FaSml2dmQyRXdXWEpzMlM0NzU1OVpjRGlNMGlrNW1WeDc4bXZpZmZNSWFLZkxIYklxaVRuc0dDakVjZ3NnNFc2WXRGcUJJend4MVFCV2VYZU5WcnNn?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-23T20:18:28.000Z",
-      "latestAt": "2026-11-23T20:30:39.000Z",
-      "firstSeenAt": "2026-11-23T20:55:41.076Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi"
-      ],
-      "score": 1.98
-    },
-    {
       "id": "1af77f7b9b66",
       "cat": "flights",
       "kind": "news",
@@ -748,24 +747,6 @@
       "outletNames": [
         "Claim Depot",
         "ClassAction.org"
-      ],
-      "score": 1.88
-    },
-    {
-      "id": "22010bd169c6",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Strike against austerity measures Forces Flights grounded in Belgium",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOaVFPNjBvRFdsNkZWOGZqN21GbU9Qb2JTOGtHVEF2LWpDWXRONnItOUJwdTQ5ajZXZVFqS1BDNjN4TWZ6RDQ1dWoxbWNTS0duZUhRMW55aUl6S0MzMzVZVzFXckhCQVpUMkRIQW1nTm9UMjVpMjdoUUZ1X1JsZkJuR2twQlVaaGFLY0xVUW5ZZWZBVmFvTXIwTDdVdjNfYUE?oc=5",
-      "source": "cedarnews.net",
-      "publishedAt": "2026-11-23T11:26:12.000Z",
-      "latestAt": "2026-11-23T12:30:00.000Z",
-      "firstSeenAt": "2026-11-24T03:41:47.705Z",
-      "outlets": 3,
-      "outletNames": [
-        "cedarnews.net",
-        "The Star, Kenya",
-        "BBC"
       ],
       "score": 1.88
     },
@@ -819,23 +800,6 @@
         "Claim Depot"
       ],
       "score": 1.72
-    },
-    {
-      "id": "63d4dee8ab39",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "GlobeTopper Cyberattack: $70K in Gift Cards Stolen, $2.5M Lost to Downtime",
-      "url": "https://finance.yahoo.com/technology/ai/articles/globetopper-cyberattack-70k-gift-cards-192831582.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-23T11:28:00.000Z",
-      "latestAt": "2026-11-23T19:28:31.000Z",
-      "firstSeenAt": "2026-11-23T20:10:31.980Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "Gadget Review"
-      ],
-      "score": 1.71
     },
     {
       "id": "60acdd78b0a4",
@@ -1008,6 +972,22 @@
       "score": 1.44
     },
     {
+      "id": "6f5e13dca876",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Ransomware attacks hit record high",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE54SXRHN3B1RUoyRDJ3RXY2RWRmaV9iQWhPQ2VwTnVISlM1X3gtTVR3MmwzU1VPR09VSmRDQ3ppYVNDQXNPcGxJMGRNUllFdTdpc0FpdjRWMGRvelNoY1JtSUYtNXpYMEc3V1V2OXM0MUY4TUZvNjhUREpGa1k?oc=5",
+      "source": "CAJ News Africa",
+      "publishedAt": "2026-11-24T11:17:47.000Z",
+      "latestAt": "2026-11-24T11:17:47.000Z",
+      "firstSeenAt": "2026-11-24T11:28:09.115Z",
+      "outlets": 1,
+      "outletNames": [
+        "CAJ News Africa"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "f6ed3d56c12f",
       "cat": "hacks",
       "kind": "news",
@@ -1070,6 +1050,22 @@
         "biztalknews.com"
       ],
       "score": 1.4
+    },
+    {
+      "id": "9e573b6a148c",
+      "cat": "weather",
+      "kind": "news",
+      "title": "EU gas stores sink to record low for late November as the cold returns - IntelliNews Lambda",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOVkt1TVVYamlnUEMtWmFZLVlfajRUNTdNZnZfVEhqUGpScGpZYjJ6M1pmWXllVTJOTmppeVY5cXQyelFkVkFQS2h0SjNYWXk3MHhjSDJiaWdnWTY1TmFwMElqUUFlay1kbmtwbDlKMmQ0dEdaYXlCQ3lEY09fWHgwZVJIZERGUnVBTU5RX21kR2tITF8ybTRpVFpFSHdUR3ptcWxkVWg1U0Uwc3RZSDhsOGFSekhGUUFvWG5RSUZRWmtpM2h1dkNNc0kxaWpoaEhsOXU1LUNfZUlWbm9sd21J?oc=5",
+      "source": "IntelliNews",
+      "publishedAt": "2026-11-24T11:10:02.000Z",
+      "latestAt": "2026-11-24T11:10:02.000Z",
+      "firstSeenAt": "2026-11-24T11:28:09.115Z",
+      "outlets": 1,
+      "outletNames": [
+        "IntelliNews"
+      ],
+      "score": 1.39
     },
     {
       "id": "31be995c85e2",
@@ -1138,22 +1134,6 @@
         "The Seattle Times"
       ],
       "score": 1.36
-    },
-    {
-      "id": "57688e206264",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air System Outage Disrupts More Than 1,000 Flights Nationwide Ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ0I5dUZRUmkxSVpRZHJ4UTZpZG5QN3c5ZDFvZEg2XzJWdHdjR2VsRUR2aTVOWnN6Q0NKRjZMSTBTOHhjT21jNDZIamhpY0htZjEybGxFcWhVczVWYUhWNGlhX3d5Z0hkd2hkeEJSeFU2d2I3dGlFaHNjR00yWGhCX3loMjU2RTVSVkVtOGxTTlRQVzcxVVR4a21TWG1EajRXNWEtSlJzZWlpMlhjVkE5ZldLSnZaNENWMEJN?oc=5",
-      "source": "Speaks Media",
-      "publishedAt": "2026-11-24T02:30:00.000Z",
-      "latestAt": "2026-11-24T02:30:00.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 1,
-      "outletNames": [
-        "Speaks Media"
-      ],
-      "score": 1.34
     },
     {
       "id": "caf17f46a7f1",
@@ -1387,7 +1367,7 @@
       "url": "https://www.nj.com/news/2026/11/weather-may-pose-bigger-threat-to-thanksgiving-air-travel-than-another-nationwide-ground-stop.html",
       "source": "NJ.com",
       "publishedAt": "2026-11-23T22:00:00.000Z",
-      "latestAt": "2026-11-23T22:00:00.000Z",
+      "latestAt": "2026-11-24T11:00:00.000Z",
       "firstSeenAt": "2026-11-24T11:13:12.439Z",
       "outlets": 1,
       "outletNames": [
@@ -1442,6 +1422,38 @@
         "Globes - Israel Business News"
       ],
       "score": 1.04
+    },
+    {
+      "id": "73a1b04c12a5",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft explains, step by step, how its major global outage happened and why it took so long to restore services",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxORmlKcUljRDlpWHptSk5JRllaRUsxSm1MTG56UW5xQU16Yl9SUnRXeVlJck1BNG1PcnNhbngtejZNU21wVUtOQUozcmstdkJ4Ti1jMnpiYUtyTmhZUXpCeC10V2VJTTZtT3hSNkpBTDBfZlhockxRdU1XTVlzWWFZejAwcW56eHFfNUlrTThsS19WY1N1aFZPaGE2SlNEMXM0aDVpX25WakhLZzlfQmRDaFpxZ1RUSVF6RDhlNUFKR1NQLUJ4WmdqSi1meUtJQXlqLXB5S2Nkek44TG52QVM0?oc=5",
+      "source": "El Cronista",
+      "publishedAt": "2026-11-23T19:17:46.000Z",
+      "latestAt": "2026-11-23T19:17:46.000Z",
+      "firstSeenAt": "2026-11-24T11:28:09.115Z",
+      "outlets": 1,
+      "outletNames": [
+        "El Cronista"
+      ],
+      "score": 1.02
+    },
+    {
+      "id": "c1812514f929",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Catch Me Up: How the ground stop unfolded, and a huge launch for 'GTA IV'",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPS2YxWlI0dXJVaUtMbkJFNXB3bzB5ZDlZU0hhdlY2anpBQ3Aya1QxQnFuNEROXzNQVWM3NkFKMk1HTWVaWGM2YlhSZ0dEY1cwZ2NZcC1xY0JWNWgtTm42TkpQZFdoazBUTTVQMmxOYURqTXlidGJad0lkcXItUkdYR2VBUWZtcEpSSGNSQkZsSng0SmxnQ3NWUHZCU3J5eFVZNTF2RFFGemREQTRzVUVaQnlncUdBdw?oc=5",
+      "source": "Scripps News",
+      "publishedAt": "2026-11-24T11:17:32.000Z",
+      "latestAt": "2026-11-24T11:17:32.000Z",
+      "firstSeenAt": "2026-11-24T11:28:09.115Z",
+      "outlets": 1,
+      "outletNames": [
+        "Scripps News"
+      ],
+      "score": 1
     },
     {
       "id": "b411ac8bd738",
@@ -1668,6 +1680,22 @@
       "score": 1
     },
     {
+      "id": "d6a4df711213",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Brussels Airport strike grounds flights until 9pm on Monday",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZFlvMnJhSFlDTDF6cVJvNnEyQ0xBZjRPeE9pSnlLRWk2SlBqV3BOWmR1aDdmV3g4Tndtd0sycFNMOXJSVTBfdTFnakNseFZkSE1EeHJPSi1hYk0zTFJfQ19lazFDcnJfd3Y0TXBERnB3S2FwZWVhd1hXZDRDRXRKTzB5UkZIdkFyWkE0?oc=5",
+      "source": "Travelling for Business",
+      "publishedAt": "2026-11-24T11:10:04.000Z",
+      "latestAt": "2026-11-24T11:10:04.000Z",
+      "firstSeenAt": "2026-11-24T11:28:09.115Z",
+      "outlets": 1,
+      "outletNames": [
+        "Travelling for Business"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "a4f1c4f1c544",
       "cat": "animals",
       "kind": "news",
@@ -1718,22 +1746,6 @@
       "score": 0.97
     },
     {
-      "id": "1ceb2e3fbd29",
-      "cat": "weather",
-      "kind": "news",
-      "title": "NSW Severe Thunderstorm Warning: Large Hail, Damaging Winds, Heavy Rain",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcGhYVUtqZ3Q4QXhLdGhTR2QxUC1jYlFVZS1RTkNSeFVLeXpuOEdXWVF6MEdCV2NtZXZCUEZmc252TkdJMjhGTGJsd0xTSkxNR19JZFpEYmNoUFYwUXBRRDc1WVoxZmo1T05KemZBdlc0N0JRaklLcW1kcGhSUVRlMGlfNTBaOWVVa0tZZnc1N3pjTDRr?oc=5",
-      "source": "Early Warning Network",
-      "publishedAt": "2026-11-24T06:12:37.000Z",
-      "latestAt": "2026-11-24T06:12:37.000Z",
-      "firstSeenAt": "2026-11-24T10:42:59.805Z",
-      "outlets": 1,
-      "outletNames": [
-        "Early Warning Network"
-      ],
-      "score": 0.92
-    },
-    {
       "id": "3f99b2a2a3e3",
       "cat": "ai",
       "kind": "news",
@@ -1766,5 +1778,5 @@
       "score": 0.81
     }
   ],
-  "updatedAt": "2026-11-24T11:13:12.439Z"
+  "updatedAt": "2026-11-24T11:28:09.115Z"
 }
