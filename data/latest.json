@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T09:57:53.083Z",
+  "buildTime": "2026-11-24T10:12:52.256Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 04:57 ET",
+  "etStamp": "2026-11-24 05:12 ET",
   "score": 60,
   "fired": [
     "flights",
@@ -43,12 +43,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1382,
-  "lastSuccessAt": "2026-11-24T09:57:53.083Z",
+  "headlinesRead": 1358,
+  "lastSuccessAt": "2026-11-24T10:12:52.256Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
-    "hacks": 33,
+    "flights": 19,
+    "hacks": 35,
     "grid": 6,
     "earth": 5,
     "internet": 10,
@@ -175,81 +175,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1056,
+      "count": 1037,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "bing": {
       "ok": true,
-      "count": 291,
+      "count": 286,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T09:12:40.945Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T09:57:53.083Z"
+      "lastOkAt": "2026-11-24T10:12:52.256Z"
     }
   },
   "stories": [
@@ -938,24 +937,6 @@
       "score": 2.22
     },
     {
-      "id": "3af7e9fec1f3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta system outage continues to impact flights at Atlanta airport",
-      "url": "https://www.msn.com/en-us/news/other/delta-system-outage-continues-to-impact-flights-at-atlanta-airport/ar-AA2i2n4q",
-      "source": "FOX 5 Atlanta on MSN",
-      "publishedAt": "2026-11-23T10:02:39.000Z",
-      "latestAt": "2026-11-23T14:07:54.000Z",
-      "firstSeenAt": "2026-11-23T19:10:20.571Z",
-      "outlets": 3,
-      "outletNames": [
-        "FOX 5 Atlanta on MSN",
-        "AOL.com",
-        "Yahoo"
-      ],
-      "score": 2.19
-    },
-    {
       "id": "aa9ae243afe8",
       "cat": "hacks",
       "kind": "news",
@@ -1384,6 +1365,22 @@
       "score": 1.44
     },
     {
+      "id": "f6ed3d56c12f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Major Samsung subsidiary hit by data breach affecting customers",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1JN1lESGYwRmNMMXB4d0ZfejZWV1NObEs5blVEdDdVX2xldzRBc0VYdXM2VFFOT0xxSllaLTRwN0d4THcxMHN6YmZ5bnFjMzJXY2NfWXAxSHhDNU80Z1pSa2lLQTJrZkVLZFgtVGhjdw?oc=5",
+      "source": "Cybernews",
+      "publishedAt": "2026-11-24T10:03:16.000Z",
+      "latestAt": "2026-11-24T10:03:16.000Z",
+      "firstSeenAt": "2026-11-24T10:12:52.256Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cybernews"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "0594edf473bb",
       "cat": "earth",
       "kind": "news",
@@ -1722,6 +1719,38 @@
       "score": 1.04
     },
     {
+      "id": "679e63d05e26",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Frederick Health data breach suit continues after mediation attempt",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQbm1sN2xlLWVpTW5Qem53RXB6eGNITkVIeVYwSGk0TkNMTnZ2azZKT051em5VQ1FjbzN1MEQ3ODdGeXh3dF9tdk9PX0h5MlpjRmFJOEtLX3NXaThHbVRwVmY4ekJRNXpoakJxX2ZkQ3lGa3M1dFB5Q3NGNVlkMjRRSk9JQXJ2VDc2M3YzbFpZZUlOcnVmSjdweWc2VDRJelB5eXk5NFk5UWItTzRVaHVpYjd6RWhZRUZhWUVvYXNaQ1dnd1JsZlRMWTAtMk84WWozLXdjUWgyMA?oc=5",
+      "source": "The Herald-Mail",
+      "publishedAt": "2026-11-24T10:06:00.000Z",
+      "latestAt": "2026-11-24T10:06:00.000Z",
+      "firstSeenAt": "2026-11-24T10:12:52.256Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Herald-Mail"
+      ],
+      "score": 1
+    },
+    {
+      "id": "e4500e021385",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "East-West Center’s participant database target of cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONjZLT1YtSXFhUnl1cmVhZy1NcjByUjFlem1ZUzBQM2ZqRVI0M2JpTHFoY045alVfeHNFcUZzQm1HZlczNGI0QjVxb3NkV1JGZS1uVGloT1BoZ2RSTFRVRzNkczVkNUVfSjVfblNVdnJNMmdMeHlyWk9Ga3NlbjNlUGI2aEl4bnNPeGtsR0gtQ3M4SU1oUWxNeV80VElIVlJaQmM4aEh3aWhsSEJTSGhoZVNIdw?oc=5",
+      "source": "The Garden Island",
+      "publishedAt": "2026-11-24T10:03:00.000Z",
+      "latestAt": "2026-11-24T10:03:00.000Z",
+      "firstSeenAt": "2026-11-24T10:12:52.256Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Garden Island"
+      ],
+      "score": 1
+    },
+    {
       "id": "095deca83d8a",
       "cat": "flights",
       "kind": "news",
@@ -1818,38 +1847,6 @@
       "outlets": 1,
       "outletNames": [
         "Notebookcheck"
-      ],
-      "score": 1
-    },
-    {
-      "id": "3b768c0075a2",
-      "cat": "flights",
-      "kind": "news",
-      "title": "The Flight King Offers Private Jet Charters After FAA Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQX0hPejdqMlJmTnhkbzdjck9fNFEwbU95SDVBZzVVM0VEbEhTeWxCNk42dUJBYXk0OEQyM2xoa3hpclRjbEUtY3NPRTA0Z3ZFNzB4MlhkdTRrcFF4R1ZNY25XSzl3Y0FUWXhURGJzM1p2UGNGd01KZWFzREdDVlRIM3hiWk81cF9MZ0E0ZjNzQzlVRkN1cFRYR0RYNDRuN1pNRlo5MWFfYUZ1eE8zZ21WSV9VcWRGeFZ5MnBjMg?oc=5",
-      "source": "PR Underground",
-      "publishedAt": "2026-11-24T09:08:09.000Z",
-      "latestAt": "2026-11-24T09:08:09.000Z",
-      "firstSeenAt": "2026-11-24T09:12:40.945Z",
-      "outlets": 1,
-      "outletNames": [
-        "PR Underground"
-      ],
-      "score": 1
-    },
-    {
-      "id": "8c15347d5a5c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Fortinet reports surge in ransomware groups targeting Korea, warns of AI threats",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBQTnpiUVBCcFAySDViUGZFUmwwQzRkcjJQSUZZSDUtVUFWbjJXS1BYM1dkQTM1SlVZVzdUUWY0cl95OTN5OGxaeVI4MTFjRnRweklRVkRjQU5PZFZhQUxhakJkRTlLellMdWRwaWZQdl9peHotOWxlS3Fn0gGOAUFVX3lxTE1kUVNfSVgxeWw4cWRUYW9rNUl2Y1pjd1RhN2FlelVJU0t1YWc5VFZNODQzM2lnazN0QXkzeEx2c1A4dVRNQXg5NU82LV9FZjJObEw4anNQcHZMWTVZWFlESFNjQ2dYWldzbVRqOHJGclRvUmlEaEl4TGtjeUF4bVRraFJlNG9kNVRtVHhfZ1E?oc=5",
-      "source": "Chosunbiz",
-      "publishedAt": "2026-11-24T08:40:00.000Z",
-      "latestAt": "2026-11-24T08:40:00.000Z",
-      "firstSeenAt": "2026-11-24T08:57:49.197Z",
-      "outlets": 1,
-      "outletNames": [
-        "Chosunbiz"
       ],
       "score": 1
     },
