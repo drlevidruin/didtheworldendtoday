@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "score": 54,
+  "score": 60,
   "fired": [
     "flights",
     "hacks",
@@ -9,7 +9,8 @@
     "markets",
     "grid",
     "germs",
-    "weather"
+    "weather",
+    "animals"
   ],
   "bumps": [
     {
@@ -18,7 +19,7 @@
       "points": 6
     }
   ],
-  "change": -12,
+  "change": -6,
   "stories": [
     {
       "id": "2541df40929e",
@@ -43,6 +44,49 @@
       "score": 4.97
     },
     {
+      "id": "e55269ebb7e8",
+      "cat": "flights",
+      "kind": "news",
+      "title": "O’Hare ground stop lifted as Thanksgiving travel chaos looms",
+      "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
+      "source": "Central Illinois Proud on MSN",
+      "publishedAt": "2026-11-23T11:12:19.000Z",
+      "latestAt": "2026-11-24T07:18:06.000Z",
+      "firstSeenAt": "2026-11-23T20:55:41.076Z",
+      "outlets": 28,
+      "outletNames": [
+        "Central Illinois Proud on MSN",
+        "CIProud.com",
+        "WGN-TV",
+        "AOL.co.uk",
+        "Breitbart News",
+        "Yahoo",
+        "Independent Journal Review",
+        "NBC 5 Chicago",
+        "NBC Chicago",
+        "FOX 32 Chicago",
+        "ABC7 Chicago",
+        "cedarnews.net",
+        "Patch",
+        "NewsNation",
+        "WINK News - Southwest Florida",
+        "Shaw Local",
+        "NBC News",
+        "One America News Network",
+        "The Times of India",
+        "Modern Ghana",
+        "Anadolu Ajansı",
+        "Operativ Məlumat Mərkəzi",
+        "AVweb",
+        "FlipItMoney",
+        "WABC Radio",
+        "US Muslims",
+        "SSBCrack",
+        "fish4news.co.uk"
+      ],
+      "score": 4.87
+    },
+    {
       "id": "sig:faa-stop:LAS:2026-11-24",
       "cat": "flights",
       "kind": "signal",
@@ -60,29 +104,6 @@
       "signal": {
         "type": "faa-ground-stop",
         "airport": "LAS",
-        "hub": true,
-        "nationwide": false,
-        "reason": "STAFFING"
-      }
-    },
-    {
-      "id": "sig:faa-stop:ORD:2026-11-23",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at ORD (STAFFING)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-23T17:10:03.099Z",
-      "latestAt": "2026-11-23T17:10:03.099Z",
-      "firstSeenAt": "2026-11-23T17:10:03.099Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "ORD",
         "hub": true,
         "nationwide": false,
         "reason": "STAFFING"
@@ -190,6 +211,30 @@
       "score": 3.28
     },
     {
+      "id": "76df64bdaeb1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6-magnitude earthquake strikes near Nepal-Tibet border in Taplejung",
+      "url": "https://thehimalayantimes.com/nepal/56-magnitude-earthquake-strikes-near-nepal-tibet-border-in-taplejung",
+      "source": "The Himalayan Times",
+      "publishedAt": "2026-11-23T12:22:00.000Z",
+      "latestAt": "2026-11-24T05:43:00.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 9,
+      "outletNames": [
+        "The Annapurna Express",
+        "The Himalayan Times",
+        "The Business Standard",
+        "Mid-Day on MSN",
+        "India TV News",
+        "Rediff.com",
+        "OnlineKhabar English News",
+        "Qazinform",
+        "The Kathmandu Post on MSN"
+      ],
+      "score": 3.02
+    },
+    {
       "id": "30f9e199e0a5",
       "cat": "hacks",
       "kind": "news",
@@ -207,29 +252,6 @@
         "Cryptonews.net"
       ],
       "score": 2.99
-    },
-    {
-      "id": "76df64bdaeb1",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.6-magnitude earthquake strikes near Nepal-Tibet border in Taplejung",
-      "url": "https://thehimalayantimes.com/nepal/56-magnitude-earthquake-strikes-near-nepal-tibet-border-in-taplejung",
-      "source": "The Himalayan Times",
-      "publishedAt": "2026-11-23T12:22:00.000Z",
-      "latestAt": "2026-11-24T05:43:00.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 8,
-      "outletNames": [
-        "The Annapurna Express",
-        "The Himalayan Times",
-        "The Business Standard",
-        "Mid-Day on MSN",
-        "India TV News",
-        "Rediff.com",
-        "OnlineKhabar English News",
-        "Qazinform"
-      ],
-      "score": 2.89
     },
     {
       "id": "b71cd8e479e0",
@@ -303,42 +325,27 @@
       "score": 2.24
     },
     {
-      "id": "90481647aba9",
+      "id": "sig:faa-stop:ORD:2026-11-23",
       "cat": "flights",
-      "kind": "news",
-      "title": "O’Hare Ground Stop Lifted After Staffing Shortage",
-      "url": "https://ijr.com/discover/travel-2026-11-23-hare-ground-stop-lifted-staffing-shortage-b078eb42",
-      "source": "Independent Journal Review",
-      "publishedAt": "2026-11-23T13:59:00.000Z",
-      "latestAt": "2026-11-24T07:18:06.000Z",
-      "firstSeenAt": "2026-11-24T02:11:28.163Z",
-      "outlets": 23,
+      "kind": "signal",
+      "title": "FAA ground stop at ORD (STAFFING)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-23T17:10:03.099Z",
+      "latestAt": "2026-11-23T17:10:03.099Z",
+      "firstSeenAt": "2026-11-23T17:10:03.099Z",
+      "outlets": 1,
       "outletNames": [
-        "Independent Journal Review",
-        "NBC 5 Chicago",
-        "NBC Chicago",
-        "FOX 32 Chicago",
-        "ABC7 Chicago",
-        "cedarnews.net",
-        "Patch",
-        "NewsNation",
-        "WINK News - Southwest Florida",
-        "Shaw Local",
-        "AOL.co.uk",
-        "NBC News",
-        "One America News Network",
-        "The Times of India",
-        "Modern Ghana",
-        "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi",
-        "AVweb",
-        "FlipItMoney",
-        "WABC Radio",
-        "US Muslims",
-        "SSBCrack",
-        "fish4news.co.uk"
+        "FAA"
       ],
-      "score": 4.4
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "ORD",
+        "hub": true,
+        "nationwide": false,
+        "reason": "STAFFING"
+      }
     },
     {
       "id": "sig:faa-stop:LEX:2026-11-23",
@@ -644,27 +651,6 @@
       "score": 1.55
     },
     {
-      "id": "e55269ebb7e8",
-      "cat": "flights",
-      "kind": "news",
-      "title": "O’Hare ground stop lifted as Thanksgiving travel chaos looms",
-      "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
-      "source": "Central Illinois Proud on MSN",
-      "publishedAt": "2026-11-23T11:12:19.000Z",
-      "latestAt": "2026-11-24T04:03:25.000Z",
-      "firstSeenAt": "2026-11-23T20:55:41.076Z",
-      "outlets": 6,
-      "outletNames": [
-        "Central Illinois Proud on MSN",
-        "CIProud.com",
-        "WGN-TV",
-        "AOL.co.uk",
-        "Breitbart News",
-        "Yahoo"
-      ],
-      "score": 3
-    },
-    {
       "id": "8116b401c695",
       "cat": "flights",
       "kind": "news",
@@ -961,23 +947,6 @@
       "score": 1.69
     },
     {
-      "id": "98ff89e4cae3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta flights grounded and delayed following automation issues",
-      "url": "https://www.yahoo.com/news/videos/delta-flights-grounded-delayed-following-171241506.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T09:13:00.000Z",
-      "latestAt": "2026-11-23T17:15:08.000Z",
-      "firstSeenAt": "2026-11-23T18:25:13.605Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WHIO TV"
-      ],
-      "score": 1.69
-    },
-    {
       "id": "4501ebdcfe14",
       "cat": "flights",
       "kind": "news",
@@ -1131,23 +1100,6 @@
       "score": 1.52
     },
     {
-      "id": "ad51fd2de4de",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Morgan Stanley Strategists Spot A ‘Fat Pitch’ In Market Selloff — See Buying Opportunities In Hyperscalers",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQVUI5UnV4dmthelBkZ2ZQc0NocUpfbXN1NzMxZ3pMQnFNOEJqeko2QUFkWUxaeVVjV2VuaDNZOXZjcU1GbEluVGdJVlRVRmtfbWRwZDJEbjIyYk1oYk9USXBhZmlhVGpLN0o5TWNtMldKQjRkTHFMVnBfM2FJaDBCRWFIODNxYjhhdFZ6UWp3SzdzcjdSQjgyNlhJbE9MSll5WDZPcDNrMng1SEduNXBGdXcxbU1jWmVQdjJvNXRRU3hqRW5UbjVKTmFjVzJZelhjczQtMHFDNW03ZWt3ejBkUHpuT3FJVTZfaTdYVzhZSHk2VlNXMGN5V1hB?oc=5",
-      "source": "Stocktwits",
-      "publishedAt": "2026-11-23T12:08:00.000Z",
-      "latestAt": "2026-11-23T14:19:02.000Z",
-      "firstSeenAt": "2026-11-24T04:41:58.829Z",
-      "outlets": 2,
-      "outletNames": [
-        "Stocktwits",
-        "Forbes"
-      ],
-      "score": 1.45
-    },
-    {
       "id": "95f40136244b",
       "cat": "markets",
       "kind": "news",
@@ -1163,6 +1115,22 @@
         "Yahoo Finance"
       ],
       "score": 1.45
+    },
+    {
+      "id": "0594edf473bb",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Japan’s Sakurajima volcano erupts, sends massive ash plumes into sky",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUEtJMG8tRTJXT3NXTGNNQkVzNFUyOUp6ckJqNU1TamtobjRMb3pSMUI0RTF2Y0RPd1dPTXBQdkxyN1JJV2YxOXg3OHFiQW9nYlhWRS1yUmdCWFFxQm1WRXpOaHV5dXRZZmU2UDdmbEc0bVJGa0xzeDhLNFdaN2NoTHJyalBmR0l2VHVKZm1ZRWg4Z2RaM3VUWDZPYjZmeVlPUzFmUlhwX3d6b3Uz?oc=5",
+      "source": "News Karnataka",
+      "publishedAt": "2026-11-24T09:21:12.000Z",
+      "latestAt": "2026-11-24T09:21:12.000Z",
+      "firstSeenAt": "2026-11-24T09:28:02.902Z",
+      "outlets": 1,
+      "outletNames": [
+        "News Karnataka"
+      ],
+      "score": 1.4
     },
     {
       "id": "b199dab3d5ea",
@@ -1209,22 +1177,6 @@
       "outlets": 1,
       "outletNames": [
         "ABNA English"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "9ec8d659b25e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "People lose access to funds for days as one of South Africa’s biggest banks is hit by global outage",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOVGV0RlZmNF9naHE5MWZjUjV3cFpGTHVBWm83WEw3RE9QMFRzYmozQl9JYkhpb18zUGgzcUFVeEdCejJDQWJQTXlsWkJDbWN3OUs2Y01uSGxGMDFJSGJidHJ0Wkl6bnNfWTJXb0RnTnBCczJZOHE5TW9CaHdUQlVUanA2ako0alNJbWNFWVZjZS1qQmlrT3Y0b0tWeDh2QnZSRFhseWJJMU9PN3dJMU5aRm96OGxJZWNLMUZyNmJrc28yZkxUNWtRN3ZoMXJlYnI2bHR5c2lUaFBJMk5pYmNfczQ1Yw?oc=5",
-      "source": "MyBroadband",
-      "publishedAt": "2026-11-24T07:00:13.000Z",
-      "latestAt": "2026-11-24T07:00:13.000Z",
-      "firstSeenAt": "2026-11-24T07:27:30.628Z",
-      "outlets": 1,
-      "outletNames": [
-        "MyBroadband"
       ],
       "score": 1.39
     },
@@ -1323,6 +1275,22 @@
         "The National CIO Review"
       ],
       "score": 1.23
+    },
+    {
+      "id": "9ec8d659b25e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "People lose access to funds for days as one of South Africa’s biggest banks is hit by global outage",
+      "url": "https://mybroadband.co.za/news/banking/679665-people-lose-access-to-funds-for-days-as-one-of-south-africas-biggest-banks-is-hit-by-global-outage.html",
+      "source": "MyBroadband",
+      "publishedAt": "2026-11-23T23:00:00.000Z",
+      "latestAt": "2026-11-24T07:00:13.000Z",
+      "firstSeenAt": "2026-11-24T07:27:30.628Z",
+      "outlets": 1,
+      "outletNames": [
+        "MyBroadband"
+      ],
+      "score": 1.2
     },
     {
       "id": "1c65edc076fd",
@@ -1453,6 +1421,22 @@
       "score": 1.04
     },
     {
+      "id": "058d23e8c5f5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cairn AI agents took over server via zero-day flagged by CISA",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTXdNS0NRa1VtQVFwRHRjcE55OXV6X184Q0NpX2VlNFR3QnVGVlE0VHVqQklTWWlTU2NpNXB6eWltSEJnQk1GY2VabTl5dGt3TFhXeC10ZWl2aGxmaGNvb1d1cjdPLW9xb2hHSWlRSnJQMnJKMzhLOUdsdk9fMDAwb0Z2bXlsSW1YMHc0RmJJSG9nNU1uYnVadnRMMUx2NEpHWjQ3V2FiWXN1dw?oc=5",
+      "source": "Notebookcheck",
+      "publishedAt": "2026-11-24T09:19:00.000Z",
+      "latestAt": "2026-11-24T09:19:00.000Z",
+      "firstSeenAt": "2026-11-24T09:28:02.902Z",
+      "outlets": 1,
+      "outletNames": [
+        "Notebookcheck"
+      ],
+      "score": 1
+    },
+    {
       "id": "3b768c0075a2",
       "cat": "flights",
       "kind": "news",
@@ -1572,7 +1556,7 @@
       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPTDNYQ0xRb3dCNVgwbFdoY0JIMm91RC0tQ2xKSl9IUkhRRUhUSXdDWk9oUWVzTG5pWGRMcUV5MEhNa21CZXVKc3F5VHdhREliSE9jcURXLU1SUzR2dGtKMWhoSjZmZU9nRU1SaVEyLUJ1WGNvLWw2Ym5XTEhBMmwtT3VWQWhTdi1lUjl2TUhBU3hqOTdMYzdpdFNRVk4wdnR6ZHlDRUdiNkx3SjFFVHVwTGF0NWNOeUNRT3U0QW5SQjFCQk56b0tVdTNoaVUzSVlrb3lvNDVCY3BIeXd1dThJMXdQeWd2QkdCWnVEdlQ2c2R0MjM1d2VVM2h4RUZLUUJYeDNiQjRWZmRpMXJqaGJlNl8ycw?oc=5",
       "source": "Adelaide Now",
       "publishedAt": "2026-11-23T21:05:21.000Z",
-      "latestAt": "2026-11-23T22:23:43.000Z",
+      "latestAt": "2026-11-24T09:18:08.000Z",
       "firstSeenAt": "2026-11-23T21:10:48.587Z",
       "outlets": 1,
       "outletNames": [
@@ -1611,6 +1595,40 @@
         "Portsmouth News"
       ],
       "score": 1
+    },
+    {
+      "id": "a4f1c4f1c544",
+      "cat": "animals",
+      "kind": "news",
+      "title": "Escaped horse wanders to a Virginia McDonalds before leading police chase through neighborhood",
+      "url": "https://nypost.com/2026/11/24/us-news/escaped-virginia-horse-rollo-shows-up-at-mcdonalds-and-captured-by-police-in-colonial-heights/",
+      "source": "New York Post",
+      "publishedAt": "2026-11-24T09:10:00.000Z",
+      "latestAt": "2026-11-24T09:10:00.000Z",
+      "firstSeenAt": "2026-11-24T09:28:02.902Z",
+      "outlets": 1,
+      "outletNames": [
+        "New York Post"
+      ],
+      "trending": 100,
+      "trendTerm": "horse",
+      "score": 0.99
+    },
+    {
+      "id": "24e2c6fbd95f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "GTA 6 still has no PC release date, and hackers are already developing an unofficial port; Take-Two CEO S",
+      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxNR3RVLUFCcWNURVVaOHpWQzJqQ1R6M3NIX3hPOC1CQzlSVW81YW1SdXQ3eVpRVjRtdFkzLUYxRmtJc2QwNFBaR2M2M1F4M3R2RGliemZWaklZbWdxNDVWX0g2RlNyUnE3TlVNR24zM0dPSzhka3hyS1NKT3I0N2Eyekg0ZVk0VFpuMkl3SzNLZFNzSlprdW01dkpSdEVrb2pYT19uVjZ6WUxuaWtZZnRfOVJsSUs2OWY3QWVXVUkweFdPbzNyNC1pb1BwLVpBaExXSlJEcEJTT0F0TXl6YzQxTjdrZEZnQ0xTWWNlMkQ3VlM2RnJEeG5lVDhpU2t0OF8zYUZsT1hNX2dKS25XaUc2NnpzUXNLeDZ1RDBMQWF4aDYwdHVxd0MxZ3lZdk0zMTN4bDVReHBRYzhLYlY1YjhpcWRB0gHHAkFVX3lxTE1yc3dCMW5mZWxsamlLdEx3N1FtSy15Y1JyM3ZIYUk2NzkwQm1MNUkxbFR3M0pZOHJUZklJcUc3MFRvVEJTR1NnR0R3MkRzZlBGUXJtTGhZaVBwTFVIRWlXdGpFX21YR2pVaXdCX25qeUpWVXZ0RVRscHIwZmNycGNGcndaNFZqZ0gxSTkyODUtb2tSaWxwaktEdi1NVHJpUk9lWmVkVzFsZVJDS2FtVGtRdnlMTzZTS05mWjBmNjk5NERhSzNpRzhicThZYVdwbTNrQnM2STJjc1lkSHM3TlFxV1U5bXI4dzdhQjV1bXJMeHNta3k5czd3TGVDWkVuS2szWXJ1eWxVSFF1UlRVdWwxeDVuQWxqd0trcWlRTVoxeWpTcDdoSS1lMTlSVHdDN2NSYUJqaV9FdU9CdXZpVFlQRUxVVnRRTQ?oc=5",
+      "source": "The Times of India",
+      "publishedAt": "2026-11-24T09:03:00.000Z",
+      "latestAt": "2026-11-24T09:03:00.000Z",
+      "firstSeenAt": "2026-11-24T09:28:02.902Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Times of India"
+      ],
+      "score": 0.99
     },
     {
       "id": "0f59ad9b9fd5",
@@ -1661,6 +1679,22 @@
       "score": 0.99
     },
     {
+      "id": "b284707bcdfd",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Liberia’s Digital Economy Faces Cybersecurity Risks Amid Reliance on Single Undersea Cable, Expert Warns",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNUGxKa0RQYVVETUlhT3dxOVBKcmFnQjJSVms0OVVmUEpIbFRXbllQX3ZwcXRkY1ZkSUVoUTdia0FodG5HMVM3UWlvV1NkaTdPNVNLUnFUcHo3aV9mVmp1VTU1RmpSYWtreUJNbjZBd3REYVVjOURBaFo5MUdyV0xrRERtbE9tRlB3dTVCMHg4dUVUZW1ZZW93UnZFRUp1ekNjQm0tY0lVTUxtbDNyNy1ZcUtONDBqVDlaZjBtNUNoczNRUnNzV1lXLWNhbWxPMW8xNlhF?oc=5",
+      "source": "Front Page Africa",
+      "publishedAt": "2026-11-24T08:13:40.000Z",
+      "latestAt": "2026-11-24T08:13:40.000Z",
+      "firstSeenAt": "2026-11-24T09:28:02.902Z",
+      "outlets": 1,
+      "outletNames": [
+        "Front Page Africa"
+      ],
+      "score": 0.98
+    },
+    {
       "id": "7cfe7a02a326",
       "cat": "hacks",
       "kind": "news",
@@ -1707,38 +1741,6 @@
         "GBHackers News"
       ],
       "score": 0.96
-    },
-    {
-      "id": "8558666b47c2",
-      "cat": "markets",
-      "kind": "news",
-      "title": "AI Fears Drive Market Selloff as VIX Closes at 36",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcldBYXpmUnhGWTNranJHbWlWMXZiOW5oLTQ3aGRoaDVJZ3pQTVF6UWlXYWh4M1RWdm9zS2NsQktuZDc3NThQbTd4eXM1ckhfbG56TTAyRjRwMEtGTExlQl9vN291TW5SdXpMeV9WcmVzRmI4dVlLREhnUGhKZjBaQjUyYlVOMXNh?oc=5",
-      "source": "Wisevoter",
-      "publishedAt": "2026-11-24T06:29:48.000Z",
-      "latestAt": "2026-11-24T06:29:48.000Z",
-      "firstSeenAt": "2026-11-24T08:57:49.197Z",
-      "outlets": 1,
-      "outletNames": [
-        "Wisevoter"
-      ],
-      "score": 0.96
-    },
-    {
-      "id": "29666fb7d8f8",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Steal Data From Korea Electric Power, Raising Misuse Fears",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOU05KVGFIcXppTkUyaF9qaUJ0dDJFanZ6c1RMdzN4RDZSdlFreDhpQTM2amhpNlJaU1pIbFVTdFpTdEJFNGg3RElQcktvZ1VDSXZRaENRTWhGVWppOU5wNVBwVDR0ZWlPT200eE91MDR1MWdudk9WMW1LNlo3Y244NUtFOWRwZHZpWHBscUlUSjA1UnRQbTBQYnFfN1drdmRNSHJz?oc=5",
-      "source": "Seoul Economic Daily",
-      "publishedAt": "2026-11-24T06:05:03.000Z",
-      "latestAt": "2026-11-24T06:05:03.000Z",
-      "firstSeenAt": "2026-11-24T08:57:49.197Z",
-      "outlets": 1,
-      "outletNames": [
-        "Seoul Economic Daily"
-      ],
-      "score": 0.95
     },
     {
       "id": "59b1484e85d2",
@@ -1789,5 +1791,5 @@
       "score": 0.77
     }
   ],
-  "updatedAt": "2026-11-24T09:12:40.945Z"
+  "updatedAt": "2026-11-24T09:28:02.902Z"
 }
