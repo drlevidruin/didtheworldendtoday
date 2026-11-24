@@ -1,38 +1,38 @@
 {
   "google": {
     "ok": true,
-    "count": 1107,
-    "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z"
+    "count": 0,
+    "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z"
   },
   "bing": {
     "ok": true,
-    "count": 283,
-    "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z"
+    "count": 57,
+    "error": "4 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z"
   },
   "gdelt": {
     "ok": false,
     "count": 0,
     "error": "rate limited (HTTP 429)",
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
     "lastOkAt": "2026-11-23T19:55:36.706Z"
   },
   "hn": {
     "ok": true,
     "count": 4,
     "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z"
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z"
   },
   "usgs": {
     "ok": true,
     "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z",
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z",
     "vital": {
       "quake": {
         "mag": 6.5,
@@ -48,12 +48,12 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z",
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z",
     "vital": {
       "kp": {
-        "value": 0.67,
-        "time": "2026-11-23T18:00:00.000Z",
+        "value": 1,
+        "time": "2026-11-23T21:00:00.000Z",
         "max24": 1.67
       }
     }
@@ -62,8 +62,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z",
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z",
     "vital": {
       "asteroid": {
         "des": "2026 WD",
@@ -80,8 +80,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z",
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z",
     "vital": {
       "faa": {
         "groundStops": [],
@@ -96,8 +96,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z",
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z",
     "vital": {
       "status": {
         "worst": "minor",
@@ -123,8 +123,8 @@
           {
             "id": "claude",
             "name": "Claude",
-            "indicator": "none",
-            "description": "All Systems Operational"
+            "indicator": "minor",
+            "description": "Partially Degraded Service"
           },
           {
             "id": "discord",
@@ -157,23 +157,23 @@
   },
   "x": {
     "ok": true,
-    "count": 0,
+    "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:11:05.488Z"
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z"
   },
   "trends": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z"
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z"
   },
   "topstories": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-23T23:56:06.341Z",
-    "lastOkAt": "2026-11-23T23:56:06.341Z"
+    "lastTryAt": "2026-11-24T00:11:09.890Z",
+    "lastOkAt": "2026-11-24T00:11:09.890Z"
   }
 }
