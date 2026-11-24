@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T07:12:26.243Z",
+  "buildTime": "2026-11-24T07:27:30.628Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 02:12 ET",
+  "etStamp": "2026-11-24 02:27 ET",
   "score": 54,
   "fired": [
     "flights",
@@ -42,17 +42,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 322,
-  "lastSuccessAt": "2026-11-24T07:12:26.243Z",
+  "headlinesRead": 1413,
+  "lastSuccessAt": "2026-11-24T07:27:30.628Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 26,
-    "hacks": 32,
-    "earth": 5,
-    "grid": 5,
-    "germs": 6,
+    "flights": 25,
+    "hacks": 34,
+    "grid": 4,
+    "earth": 4,
     "internet": 8,
-    "markets": 7,
+    "germs": 6,
+    "markets": 8,
     "weather": 4,
     "space": 1,
     "animals": 2,
@@ -160,7 +160,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -174,80 +174,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-24T06:57:23.736Z"
+      "ok": true,
+      "count": 1066,
+      "error": null,
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "bing": {
       "ok": true,
-      "count": 284,
+      "count": 283,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 27,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-24T05:57:16.986Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:12:26.243Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T07:12:26.243Z"
+      "lastOkAt": "2026-11-24T07:27:30.628Z"
     }
   },
   "stories": [
@@ -371,6 +372,58 @@
       "score": 3.57
     },
     {
+      "id": "fd8f6b998fed",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
+      "url": "https://www.wgal.com/article/eu-academy-data-leak-ai-driven-cyberattack/74515041",
+      "source": "WGAL",
+      "publishedAt": "2026-11-23T13:24:00.000Z",
+      "latestAt": "2026-11-24T07:00:34.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 13,
+      "outletNames": [
+        "AP News",
+        "European Interest",
+        "WGAL",
+        "khbs",
+        "KMBC Kansas City",
+        "Plainview Herald on MSN",
+        "KMBC",
+        "ABC News - Breaking News, Latest News and Videos",
+        "Connecticut Post on MSN",
+        "WISN 12 News",
+        "The News-Times on MSN",
+        "Midland Reporter-Telegram on MSN",
+        "EU Today"
+      ],
+      "score": 3.48
+    },
+    {
+      "id": "b89cb6073b85",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Bengals vs. Commanders game briefly delayed by power outage",
+      "url": "https://sports.yahoo.com/articles/bengals-vs-commanders-game-briefly-030946896.html",
+      "source": "Yahoo Sports",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T05:53:16.000Z",
+      "firstSeenAt": "2026-11-24T03:26:46.898Z",
+      "outlets": 9,
+      "outletNames": [
+        "The Spun",
+        "USA Today",
+        "Larry Brown Sports",
+        "Yahoo Sports",
+        "Independent Journal Review",
+        "The Mirror US",
+        "NewsBreak: Local News & Alerts",
+        "AOL.com",
+        "Wisevoter"
+      ],
+      "score": 3.37
+    },
+    {
       "id": "08138a62e8c4",
       "cat": "earth",
       "kind": "news",
@@ -391,31 +444,6 @@
       "score": 3.28
     },
     {
-      "id": "fd8f6b998fed",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
-      "url": "https://www.wgal.com/article/eu-academy-data-leak-ai-driven-cyberattack/74515041",
-      "source": "WGAL",
-      "publishedAt": "2026-11-23T13:24:00.000Z",
-      "latestAt": "2026-11-24T06:04:41.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 10,
-      "outletNames": [
-        "AP News",
-        "European Interest",
-        "WGAL",
-        "khbs",
-        "KMBC Kansas City",
-        "Plainview Herald on MSN",
-        "KMBC",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Connecticut Post on MSN",
-        "WISN 12 News"
-      ],
-      "score": 3.2
-    },
-    {
       "id": "76df64bdaeb1",
       "cat": "earth",
       "kind": "news",
@@ -423,7 +451,7 @@
       "url": "https://thehimalayantimes.com/nepal/56-magnitude-earthquake-strikes-near-nepal-tibet-border-in-taplejung",
       "source": "The Himalayan Times",
       "publishedAt": "2026-11-23T12:22:00.000Z",
-      "latestAt": "2026-11-24T05:25:08.000Z",
+      "latestAt": "2026-11-24T05:43:00.000Z",
       "firstSeenAt": "2026-11-24T04:57:01.340Z",
       "outlets": 8,
       "outletNames": [
@@ -439,24 +467,21 @@
       "score": 2.89
     },
     {
-      "id": "b89cb6073b85",
-      "cat": "grid",
+      "id": "b71cd8e479e0",
+      "cat": "internet",
       "kind": "news",
-      "title": "Bengals vs. Commanders game briefly delayed by power outage",
-      "url": "https://sports.yahoo.com/articles/bengals-vs-commanders-game-briefly-030946896.html",
-      "source": "Yahoo Sports",
-      "publishedAt": "2026-11-23T16:00:00.000Z",
-      "latestAt": "2026-11-24T03:19:54.000Z",
-      "firstSeenAt": "2026-11-24T03:26:46.898Z",
-      "outlets": 5,
+      "title": "What two global outages mean for TZ’s digital finance",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPeGpwTEdXcHdsdTlwWkVIcG4yb2ZhcnhRbHJVQzQtOVE1VllMZ2VlX0pObkU5UXBIMmNLZDZfN1ZBRjc2dHJDR0FpQjJQbElGNk95aU43TldVeU1jT1oxN3RXRXpDai15UVVkXy11ZE03RFhTZGwzZ0s0ajR6RXZKcXp3SQ?oc=5",
+      "source": "dailynews.co.tz",
+      "publishedAt": "2026-11-24T06:44:42.000Z",
+      "latestAt": "2026-11-24T06:44:42.000Z",
+      "firstSeenAt": "2026-11-24T06:57:23.736Z",
+      "outlets": 2,
       "outletNames": [
-        "The Spun",
-        "USA Today",
-        "Larry Brown Sports",
-        "Yahoo Sports",
-        "Independent Journal Review"
+        "dailynews.co.tz",
+        "Daily News"
       ],
-      "score": 2.69
+      "score": 2.79
     },
     {
       "id": "fca35b4472e6",
@@ -476,24 +501,6 @@
         "Yahoo News Singapore"
       ],
       "score": 2.55
-    },
-    {
-      "id": "682b3f1ddc03",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQTBqdXJLcFBfcG1wYUxlRmdJVl9fb1NCcG0xM2NSeW1MQ0d5V2RjalpEbm1EdEFSRmwyVmczV1NPVWdNN1BQODhKeUdqMEhwb2szX2dNSGRVRDFUaTZ1cGdWa25RTGRCQXRLcXUxS1d0UGVzUTFjODNyUVZPZkhycEZ3aHE2YVZwSlhHTnRpNzdZdXQ1R1llbXc1SEvSAaIBQVVfeXFMT0d4NzJTcDI5VzBzb2paMmNybklGR1dXWlRtY2d0bi0tcGJ1czZ1RldEbC0tTS1UZFBDQUctakEyWXVFVmF1cFFPUEFGRGRUbkkzdTNQTGlVT3NRR0E2UGo1dUhuRUtoRWRNbUhWTmdrdGtuNWNCSG1yQk5WTll3TEloSkZiSmxrd1dUM2dmYnBDbWs0eTk4QXdNbWRvNUlwZWlB?oc=5",
-      "source": "The Mirror US",
-      "publishedAt": "2026-11-24T03:07:00.000Z",
-      "latestAt": "2026-11-24T03:15:00.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Mirror US",
-        "NewsBreak: Local News & Alerts",
-        "AOL.com"
-      ],
-      "score": 2.54
     },
     {
       "id": "a461bbd73119",
@@ -538,9 +545,9 @@
       "url": "https://ijr.com/discover/travel-2026-11-23-hare-ground-stop-lifted-staffing-shortage-b078eb42",
       "source": "Independent Journal Review",
       "publishedAt": "2026-11-23T13:59:00.000Z",
-      "latestAt": "2026-11-24T01:44:16.000Z",
+      "latestAt": "2026-11-24T07:18:06.000Z",
       "firstSeenAt": "2026-11-24T02:11:28.163Z",
-      "outlets": 22,
+      "outlets": 23,
       "outletNames": [
         "Independent Journal Review",
         "NBC 5 Chicago",
@@ -563,9 +570,10 @@
         "FlipItMoney",
         "WABC Radio",
         "US Muslims",
-        "SSBCrack"
+        "SSBCrack",
+        "fish4news.co.uk"
       ],
-      "score": 4.35
+      "score": 4.4
     },
     {
       "id": "sig:faa-stop:LEX:2026-11-23",
@@ -591,25 +599,25 @@
       }
     },
     {
-      "id": "e55269ebb7e8",
+      "id": "a910e55ce45c",
       "cat": "flights",
       "kind": "news",
-      "title": "O’Hare ground stop lifted as Thanksgiving travel chaos looms",
-      "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
-      "source": "Central Illinois Proud on MSN",
-      "publishedAt": "2026-11-23T11:12:19.000Z",
-      "latestAt": "2026-11-24T04:03:25.000Z",
-      "firstSeenAt": "2026-11-23T20:55:41.076Z",
+      "title": "Delta aircraft faced manual calculations after a critical system outage",
+      "url": "https://www.wpxi.com/news/trending/delta-aircraft-faced-manual-calculations-after-critical-system-outage/7S3LP4IVHFH2NNU6CGY22D344E/",
+      "source": "WPXI",
+      "publishedAt": "2026-11-23T12:18:00.000Z",
+      "latestAt": "2026-11-23T20:18:49.000Z",
+      "firstSeenAt": "2026-11-23T21:55:50.295Z",
       "outlets": 6,
       "outletNames": [
-        "Central Illinois Proud on MSN",
-        "CIProud.com",
-        "WGN-TV",
-        "AOL.co.uk",
-        "Breitbart News",
-        "Yahoo"
+        "Boston 25 News",
+        "104.5 WOKV",
+        "WFTV",
+        "WPXI",
+        "WHIO TV",
+        "95.5 WSB"
       ],
-      "score": 3
+      "score": 3.01
     },
     {
       "id": "30f9e199e0a5",
@@ -872,24 +880,25 @@
       "score": 1.59
     },
     {
-      "id": "a910e55ce45c",
+      "id": "e55269ebb7e8",
       "cat": "flights",
       "kind": "news",
-      "title": "Delta aircraft faced manual calculations after a critical system outage",
-      "url": "https://www.wpxi.com/news/trending/delta-aircraft-faced-manual-calculations-after-critical-system-outage/7S3LP4IVHFH2NNU6CGY22D344E/",
-      "source": "WPXI",
-      "publishedAt": "2026-11-23T12:18:00.000Z",
-      "latestAt": "2026-11-23T20:18:49.000Z",
-      "firstSeenAt": "2026-11-23T21:55:50.295Z",
-      "outlets": 5,
+      "title": "O’Hare ground stop lifted as Thanksgiving travel chaos looms",
+      "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
+      "source": "Central Illinois Proud on MSN",
+      "publishedAt": "2026-11-23T11:12:19.000Z",
+      "latestAt": "2026-11-24T04:03:25.000Z",
+      "firstSeenAt": "2026-11-23T20:55:41.076Z",
+      "outlets": 6,
       "outletNames": [
-        "Boston 25 News",
-        "104.5 WOKV",
-        "WFTV",
-        "WPXI",
-        "WHIO TV"
+        "Central Illinois Proud on MSN",
+        "CIProud.com",
+        "WGN-TV",
+        "AOL.co.uk",
+        "Breitbart News",
+        "Yahoo"
       ],
-      "score": 2.79
+      "score": 3
     },
     {
       "id": "8116b401c695",
@@ -1073,23 +1082,6 @@
         "DPA International on MSN"
       ],
       "score": 2.01
-    },
-    {
-      "id": "730aaf1f8e49",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US seeks forfeiture of over $1.1B in crypto tied to North Korean hackers",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbG91WVhZb2V0TkxISnZ3aU1MWnVpUnVSSm9nb0g1T1pDVTU3V09HbUkxaV8yYlNGZE9Nc3lKbzVBSXM3ODhDLWpYdTZXRUdxYUJUUEZYU0dTanlaS2FaSml2dmQyRXdXWEpzMlM0NzU1OVpjRGlNMGlrNW1WeDc4bXZpZmZNSWFLZkxIYklxaVRuc0dDakVjZ3NnNFc2WXRGcUJJend4MVFCV2VYZU5WcnNn?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-23T20:18:28.000Z",
-      "latestAt": "2026-11-23T20:30:39.000Z",
-      "firstSeenAt": "2026-11-23T20:55:41.076Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi"
-      ],
-      "score": 1.98
     },
     {
       "id": "32e456df8417",
@@ -1365,6 +1357,23 @@
       "score": 1.65
     },
     {
+      "id": "269d8e75679b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Bendigo to pay $8m after cyberattack targeted weak passwords",
+      "url": "https://www.afr.com/companies/financial-services/bendigo-to-pay-8m-after-cyberattack-targeted-weak-passwords-20261124-p61gwx",
+      "source": "Australian Financial Review",
+      "publishedAt": "2026-11-23T20:02:00.000Z",
+      "latestAt": "2026-11-24T07:02:00.000Z",
+      "firstSeenAt": "2026-11-24T07:27:30.628Z",
+      "outlets": 2,
+      "outletNames": [
+        "Australian Financial Review",
+        "AFR"
+      ],
+      "score": 1.62
+    },
+    {
       "id": "7e9775e88ab9",
       "cat": "hacks",
       "kind": "news",
@@ -1450,6 +1459,23 @@
       "score": 1.47
     },
     {
+      "id": "ad51fd2de4de",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Morgan Stanley Strategists Spot A ‘Fat Pitch’ In Market Selloff — See Buying Opportunities In Hyperscalers",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQVUI5UnV4dmthelBkZ2ZQc0NocUpfbXN1NzMxZ3pMQnFNOEJqeko2QUFkWUxaeVVjV2VuaDNZOXZjcU1GbEluVGdJVlRVRmtfbWRwZDJEbjIyYk1oYk9USXBhZmlhVGpLN0o5TWNtMldKQjRkTHFMVnBfM2FJaDBCRWFIODNxYjhhdFZ6UWp3SzdzcjdSQjgyNlhJbE9MSll5WDZPcDNrMng1SEduNXBGdXcxbU1jWmVQdjJvNXRRU3hqRW5UbjVKTmFjVzJZelhjczQtMHFDNW03ZWt3ejBkUHpuT3FJVTZfaTdYVzhZSHk2VlNXMGN5V1hB?oc=5",
+      "source": "Stocktwits",
+      "publishedAt": "2026-11-23T12:08:00.000Z",
+      "latestAt": "2026-11-23T14:19:02.000Z",
+      "firstSeenAt": "2026-11-24T04:41:58.829Z",
+      "outlets": 2,
+      "outletNames": [
+        "Stocktwits",
+        "Forbes"
+      ],
+      "score": 1.45
+    },
+    {
       "id": "95f40136244b",
       "cat": "markets",
       "kind": "news",
@@ -1467,18 +1493,18 @@
       "score": 1.45
     },
     {
-      "id": "b71cd8e479e0",
-      "cat": "internet",
+      "id": "b199dab3d5ea",
+      "cat": "hacks",
       "kind": "news",
-      "title": "What two global outages mean for TZ’s digital finance",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPeGpwTEdXcHdsdTlwWkVIcG4yb2ZhcnhRbHJVQzQtOVE1VllMZ2VlX0pObkU5UXBIMmNLZDZfN1ZBRjc2dHJDR0FpQjJQbElGNk95aU43TldVeU1jT1oxN3RXRXpDai15UVVkXy11ZE03RFhTZGwzZ0s0ajR6RXZKcXp3SQ?oc=5",
-      "source": "dailynews.co.tz",
-      "publishedAt": "2026-11-24T06:44:42.000Z",
-      "latestAt": "2026-11-24T06:44:42.000Z",
-      "firstSeenAt": "2026-11-24T06:57:23.736Z",
+      "title": "Hackers May Have Breached FBI Database Used by Police Nationwide",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSG16U1oyN1dUbGI2c0JreFAxV1lYamVOb2RUS1FIVUlicF9VT1dmN2FReUhzSVh5Q3dhb2twYkR5NXZ5RE9ObEFGaktoUncwRzlLMndVRi1nRnU4SFg1TmJnTXV4Wk9FVldRYVB4QVBSOXF2dUFOU3QwTFRuNnlqSjhHLVlGNmFJbm85SEpGZU9BbjlPSXN5VzV5Nl9JXzlxVGltTUROZldUNEwyN0duOXFKM1NkbnPSAbwBQVVfeXFMT0pRLW9Ia2w4c2xZckdNTlNsT2gwVXR4dFliRklNUXhTRnhaMzlYc0NpRTlvWWZHUEJhMkI3bXJkc1htSWVwel9wQlFoaTExVzhDbTYtS2tzVVMybW1YVzhkNkQ4aDVLUkFMc20zQkwyTS1ZcU5qcEhFU3Rla3RzRlRaeWJkSlhvU0FWVU9OVnY1UGVWUXhLZzZIYlZ2WmFfVHluNmZxU3BRNXN1SmZpbVhiS196eE5pTlF1MFM?oc=5",
+      "source": "Security Affairs",
+      "publishedAt": "2026-11-24T07:19:09.000Z",
+      "latestAt": "2026-11-24T07:19:09.000Z",
+      "firstSeenAt": "2026-11-24T07:27:30.628Z",
       "outlets": 1,
       "outletNames": [
-        "dailynews.co.tz"
+        "Security Affairs"
       ],
       "score": 1.4
     },
@@ -1499,6 +1525,22 @@
       "score": 1.4
     },
     {
+      "id": "9ec8d659b25e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "People lose access to funds for days as one of South Africa’s biggest banks is hit by global outage",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOVGV0RlZmNF9naHE5MWZjUjV3cFpGTHVBWm83WEw3RE9QMFRzYmozQl9JYkhpb18zUGgzcUFVeEdCejJDQWJQTXlsWkJDbWN3OUs2Y01uSGxGMDFJSGJidHJ0Wkl6bnNfWTJXb0RnTnBCczJZOHE5TW9CaHdUQlVUanA2ako0alNJbWNFWVZjZS1qQmlrT3Y0b0tWeDh2QnZSRFhseWJJMU9PN3dJMU5aRm96OGxJZWNLMUZyNmJrc28yZkxUNWtRN3ZoMXJlYnI2bHR5c2lUaFBJMk5pYmNfczQ1Yw?oc=5",
+      "source": "MyBroadband",
+      "publishedAt": "2026-11-24T07:00:13.000Z",
+      "latestAt": "2026-11-24T07:00:13.000Z",
+      "firstSeenAt": "2026-11-24T07:27:30.628Z",
+      "outlets": 1,
+      "outletNames": [
+        "MyBroadband"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "7e175ed82324",
       "cat": "internet",
       "kind": "news",
@@ -1513,22 +1555,6 @@
         "The Seattle Times"
       ],
       "score": 1.36
-    },
-    {
-      "id": "57688e206264",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air System Outage Disrupts More Than 1,000 Flights Nationwide Ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ0I5dUZRUmkxSVpRZHJ4UTZpZG5QN3c5ZDFvZEg2XzJWdHdjR2VsRUR2aTVOWnN6Q0NKRjZMSTBTOHhjT21jNDZIamhpY0htZjEybGxFcWhVczVWYUhWNGlhX3d5Z0hkd2hkeEJSeFU2d2I3dGlFaHNjR00yWGhCX3loMjU2RTVSVkVtOGxTTlRQVzcxVVR4a21TWG1EajRXNWEtSlJzZWlpMlhjVkE5ZldLSnZaNENWMEJN?oc=5",
-      "source": "Speaks Media",
-      "publishedAt": "2026-11-24T02:30:00.000Z",
-      "latestAt": "2026-11-24T02:30:00.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 1,
-      "outletNames": [
-        "Speaks Media"
-      ],
-      "score": 1.34
     },
     {
       "id": "50bdf4af626c",
@@ -1643,25 +1669,6 @@
         "The National CIO Review"
       ],
       "score": 1.23
-    },
-    {
-      "id": "7229b1fd3020",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Earthquake Now: Magnitude 6.5 Strikes Vanuatu, Officials Confirm No Tsunami Threat",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVHE4cmhxMGtfU2tKeEs4ejJfazkwUUF0ZUVRNzRybHZTaENyRXZpMmdNZ21HRmczVEM1bWxHSF96TWRCMzhPOEktSjVDb0FPRFI4OVJ4WFhKMjJEMWJBU1NnazJXdGtOY0pFaGJ2RV9iajA2eThDQlBrWjdTb24wbXlvOERQc0tCdlpvUFpwampNV0xHMmZV?oc=5",
-      "source": "Aktualita.co",
-      "publishedAt": "2026-11-23T07:24:45.000Z",
-      "latestAt": "2026-11-23T09:23:02.000Z",
-      "firstSeenAt": "2026-11-24T06:29:27.838Z",
-      "outlets": 2,
-      "outletNames": [
-        "Aktualita.co",
-        "uaebarq.ae"
-      ],
-      "score": 1.23,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "1c65edc076fd",
