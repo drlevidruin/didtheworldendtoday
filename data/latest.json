@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T13:13:28.247Z",
+  "buildTime": "2026-11-24T13:28:32.062Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 08:13 ET",
+  "etStamp": "2026-11-24 08:28 ET",
   "score": 59,
   "fired": [
     "flights",
@@ -47,14 +47,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1100,
-  "lastSuccessAt": "2026-11-24T13:13:28.247Z",
+  "headlinesRead": 1419,
+  "lastSuccessAt": "2026-11-24T13:28:32.062Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
+    "flights": 13,
     "earth": 7,
-    "hacks": 40,
-    "internet": 16,
+    "hacks": 37,
+    "internet": 20,
     "grid": 7,
     "germs": 4,
     "weather": 4,
@@ -179,20 +179,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 767,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 18 of 26 queries)",
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "count": 1090,
+      "error": null,
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     },
     "bing": {
       "ok": true,
-      "count": 296,
+      "count": 292,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     },
     "gdelt": {
       "ok": false,
@@ -204,55 +204,56 @@
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T13:13:28.247Z"
+      "lastOkAt": "2026-11-24T13:28:32.062Z"
     }
   },
   "stories": [
@@ -303,7 +304,7 @@
       }
     },
     {
-      "id": "9daf9ac39693",
+      "id": "76df64bdaeb1",
       "cat": "earth",
       "kind": "news",
       "title": "Nepal earthquake: 5.6 magnitude tremor strikes near China border",
@@ -312,7 +313,7 @@
       "publishedAt": "2026-11-24T03:13:42.000Z",
       "latestAt": "2026-11-24T10:20:24.000Z",
       "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 10,
+      "outlets": 11,
       "outletNames": [
         "The Annapurna Express",
         "The Himalayan Times",
@@ -323,9 +324,10 @@
         "Rediff.com",
         "The Avenue Mail",
         "Qazinform",
-        "News On AIR"
+        "News On AIR",
+        "NKTV"
       ],
-      "score": 4.2
+      "score": 4.33
     },
     {
       "id": "3abd8d35b651",
@@ -354,36 +356,31 @@
       "score": 3.85
     },
     {
-      "id": "fd8f6b998fed",
-      "cat": "hacks",
+      "id": "d6951d480f01",
+      "cat": "internet",
       "kind": "news",
-      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
-      "url": "https://www.wgal.com/article/eu-academy-data-leak-ai-driven-cyberattack/74515041",
-      "source": "WGAL",
-      "publishedAt": "2026-11-23T13:24:00.000Z",
-      "latestAt": "2026-11-24T07:00:34.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 17,
+      "title": "Spotify down for thousands of users, Downdetector shows",
+      "url": "https://www.straitstimes.com/world/spotify-down-for-thousands-of-users-downdetector-shows1",
+      "source": "The Straits Times",
+      "publishedAt": "2026-11-23T22:20:00.000Z",
+      "latestAt": "2026-11-24T13:16:54.000Z",
+      "firstSeenAt": "2026-11-24T11:58:15.110Z",
+      "outlets": 12,
       "outletNames": [
-        "AP News",
-        "European Interest",
-        "WGAL",
-        "khbs",
-        "KMBC Kansas City",
-        "Plainview Herald on MSN",
-        "KMBC",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Connecticut Post on MSN",
-        "WISN 12 News",
-        "The News-Times on MSN",
-        "Midland Reporter-Telegram on MSN",
-        "EU Today",
-        "WJCL",
-        "KOAT Channel 7",
-        "WTAE-TV Pittsburgh Action News 4",
-        "KSBW Channel 8"
+        "PIX11",
+        "The Straits Times",
+        "Reuters",
+        "Global Banking & Finance Review",
+        "Bradenton Herald",
+        "Investing.com",
+        "The Jerusalem Post",
+        "Khaleej Times on MSN",
+        "Bellingham Herald",
+        "NDTV",
+        "AOL",
+        "Aaj English TV"
       ],
-      "score": 3.77
+      "score": 3.54
     },
     {
       "id": "sig:quake:us6000ud6h",
@@ -430,32 +427,6 @@
         "nationwide": false,
         "reason": "disabled aircraft on the runway"
       }
-    },
-    {
-      "id": "d6951d480f01",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Spotify down for thousands of users, Downdetector shows",
-      "url": "https://www.straitstimes.com/world/spotify-down-for-thousands-of-users-downdetector-shows1",
-      "source": "The Straits Times",
-      "publishedAt": "2026-11-23T22:20:00.000Z",
-      "latestAt": "2026-11-24T12:28:32.000Z",
-      "firstSeenAt": "2026-11-24T11:58:15.110Z",
-      "outlets": 11,
-      "outletNames": [
-        "PIX11",
-        "The Straits Times",
-        "Reuters",
-        "Global Banking & Finance Review",
-        "Bradenton Herald",
-        "Investing.com",
-        "The Jerusalem Post",
-        "Khaleej Times on MSN",
-        "Bellingham Herald",
-        "NDTV",
-        "AOL"
-      ],
-      "score": 3.45
     },
     {
       "id": "b89cb6073b85",
@@ -523,6 +494,26 @@
       "score": 2.99
     },
     {
+      "id": "b0d98bb927fa",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Bank name rule as 'money was first to go' in UK 2026 outages",
+      "url": "https://www.somersetlive.co.uk/news/uk-world-news/bank-name-rule-money-first-11253429",
+      "source": "Somerset Live",
+      "publishedAt": "2026-11-24T02:22:00.000Z",
+      "latestAt": "2026-11-24T10:27:00.000Z",
+      "firstSeenAt": "2026-11-24T10:27:55.694Z",
+      "outlets": 5,
+      "outletNames": [
+        "Cambridge News",
+        "Somerset Live",
+        "Yorkshire Live",
+        "Grimsby Live",
+        "Surrey Live"
+      ],
+      "score": 2.87
+    },
+    {
       "id": "682b3f1ddc03",
       "cat": "grid",
       "kind": "news",
@@ -561,24 +552,24 @@
       "score": 2.79
     },
     {
-      "id": "b0d98bb927fa",
-      "cat": "hacks",
+      "id": "af4f61912279",
+      "cat": "earth",
       "kind": "news",
-      "title": "Bank name rule as 'money was first to go' in UK 2026 outages",
-      "url": "https://www.somersetlive.co.uk/news/uk-world-news/bank-name-rule-money-first-11253429",
-      "source": "Somerset Live",
-      "publishedAt": "2026-11-24T02:22:00.000Z",
-      "latestAt": "2026-11-24T10:27:00.000Z",
-      "firstSeenAt": "2026-11-24T10:27:55.694Z",
+      "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
+      "url": "https://www.thehindu.com/news/international/earthquake-strikes-nepals-koshi-province-close-to-china-border/article71737092.ece",
+      "source": "The Hindu",
+      "publishedAt": "2026-11-23T19:33:00.000Z",
+      "latestAt": "2026-11-24T06:36:52.000Z",
+      "firstSeenAt": "2026-11-24T05:12:03.715Z",
       "outlets": 5,
       "outletNames": [
-        "Cambridge News",
-        "Somerset Live",
-        "Yorkshire Live",
-        "Grimsby Live",
-        "Surrey Live"
+        "ThePrint",
+        "The Hindu",
+        "Daily Excelsior",
+        "Press Trust of India on MSN",
+        "Singrauli Mirror"
       ],
-      "score": 2.87
+      "score": 2.79
     },
     {
       "id": "6ba8cf23d88f",
@@ -615,22 +606,42 @@
       "score": 2.59
     },
     {
-      "id": "76df64bdaeb1",
+      "id": "9f415d099e3a",
       "cat": "earth",
       "kind": "news",
-      "title": "5.6-magnitude earthquake jolts Nepal-Tibet border",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yUUtSYXJTZjJVWEs4aWN2WTlRSVdFMXFPOVJVWkFUNm9hcE1nc2lrT1dnV3ZWVHZ2NGlUZE02UTNTVUxlMHUxMkZmc0lSMFJCZzZwVjVkMA?oc=5",
-      "source": "The Annapurna Express",
-      "publishedAt": "2026-11-24T03:45:18.000Z",
-      "latestAt": "2026-11-24T04:46:12.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "title": "No tsunami threat to Sri Lanka following magnitude 6.5 earthquake in Indian Ocean",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY1JVdDZQQm1KUVhFYS1qVEJ2ZFpVNVk5N2RwUFljZE1QUDlLbk5vSTRMcHNKUGxNREdOU3Zvb1lOTkJyU1Q5QUVuVDYzNGlGWDZkc0JYR3h4czR1eHR6YUhibk5nZVNnelNwVTVFSTVrUzVkdDc1S1dTa3NJaC0zMTRtWVA3VjAzc192c1JsU1JLNERXUUJKTjBzRkQ5ZXVXakdXQzZpMng4OU1IdTgzcU5XMWxCTFhm?oc=5",
+      "source": "Newswire",
+      "publishedAt": "2026-11-24T12:29:42.000Z",
+      "latestAt": "2026-11-24T12:57:00.000Z",
+      "firstSeenAt": "2026-11-24T13:28:32.062Z",
       "outlets": 3,
       "outletNames": [
-        "The Annapurna Express",
-        "The Himalayan Times",
-        "The Business Standard"
+        "Newswire",
+        "Ada Derana",
+        "Daily Mirror - Sri Lanka"
       ],
-      "score": 2.53
+      "score": 2.54,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "34dc482ff4ed",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Recent Bird Flu cases likely came from Idaho Cattle, says Dept. of Ag.",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOb2M3cEtqMzFVdzVGMmdNaVd5U29tRERkcVNocGs0VGNyTkJNZHNuOFo4TV9DNlNwb0dIT1dRRTVaU1VRMUoxV2ZDZlhISE1LaXdwRlcwRHE4MWo2VDJRSkFVNUU1SEZ1ajF4TS1pUWNETXA3Tm43UVNqcE5Xam5MQ3J0UQ?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T18:22:52.000Z",
+      "latestAt": "2026-11-24T13:13:19.000Z",
+      "firstSeenAt": "2026-11-23T19:25:24.603Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "KIRO 7 News Seattle",
+        "Anadolu Ajansı"
+      ],
+      "score": 2.54
     },
     {
       "id": "6f33acb2709d",
@@ -651,23 +662,23 @@
       "score": 2.52
     },
     {
-      "id": "af4f61912279",
-      "cat": "earth",
+      "id": "0dbfd76e28d2",
+      "cat": "hacks",
       "kind": "news",
-      "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
-      "url": "https://www.thehindu.com/news/international/earthquake-strikes-nepals-koshi-province-close-to-china-border/article71737092.ece",
-      "source": "The Hindu",
-      "publishedAt": "2026-11-23T19:33:00.000Z",
-      "latestAt": "2026-11-24T06:36:52.000Z",
-      "firstSeenAt": "2026-11-24T05:12:03.715Z",
+      "title": "Microsoft admits hackers accessed clients’ private data",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/microsoft-admits-hackers-accessed-clients-003531208.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-23T14:19:13.000Z",
+      "latestAt": "2026-11-24T00:43:07.000Z",
+      "firstSeenAt": "2026-11-24T01:26:23.593Z",
       "outlets": 4,
       "outletNames": [
-        "ThePrint",
-        "The Hindu",
-        "Daily Excelsior",
-        "Press Trust of India on MSN"
+        "Cybernews",
+        "YAHOO!",
+        "NewsBreak: Local News & Alerts",
+        "Yahoo Tech"
       ],
-      "score": 2.52
+      "score": 2.44
     },
     {
       "id": "9e573b6a148c",
@@ -775,23 +786,6 @@
       "score": 1.97
     },
     {
-      "id": "34dc482ff4ed",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Recent Bird Flu cases likely came from Idaho Cattle, says Dept. of Ag.",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOb2M3cEtqMzFVdzVGMmdNaVd5U29tRERkcVNocGs0VGNyTkJNZHNuOFo4TV9DNlNwb0dIT1dRRTVaU1VRMUoxV2ZDZlhISE1LaXdwRlcwRHE4MWo2VDJRSkFVNUU1SEZ1ajF4TS1pUWNETXA3Tm43UVNqcE5Xam5MQ3J0UQ?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T18:22:52.000Z",
-      "latestAt": "2026-11-23T18:26:04.000Z",
-      "firstSeenAt": "2026-11-23T19:25:24.603Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "KIRO 7 News Seattle"
-      ],
-      "score": 1.97
-    },
-    {
       "id": "e1fbedebda8f",
       "cat": "grid",
       "kind": "news",
@@ -834,7 +828,7 @@
       "url": "https://www.msn.com/en-gb/news/other/no-tsunami-threat-after-64-magnitude-earthquake-strikes-near-mauritius/ar-AA2i7q1z",
       "source": "International Business Times UK on MSN",
       "publishedAt": "2026-11-24T04:50:45.000Z",
-      "latestAt": "2026-11-24T04:59:00.000Z",
+      "latestAt": "2026-11-24T12:59:36.000Z",
       "firstSeenAt": "2026-11-24T13:13:28.247Z",
       "outlets": 2,
       "outletNames": [
@@ -863,40 +857,21 @@
       "score": 1.72
     },
     {
-      "id": "69b8f1901d8c",
+      "id": "857010ed9caa",
       "cat": "internet",
       "kind": "news",
-      "title": "Is Spotify down? Company gives update after users report issues",
-      "url": "https://www.usatoday.com/story/tech/2026/11/24/spotify-down-outage/92938497007/",
-      "source": "USA TODAY",
-      "publishedAt": "2026-11-24T03:45:00.000Z",
-      "latestAt": "2026-11-24T12:28:35.000Z",
-      "firstSeenAt": "2026-11-24T12:58:28.993Z",
+      "title": "Spotify back online after brief outage, Downdetector shows",
+      "url": "https://www.reuters.com/technology/spotify-down-thousands-users-downdetector-shows-2026-11-24/",
+      "source": "Reuters",
+      "publishedAt": "2026-11-24T04:10:00.000Z",
+      "latestAt": "2026-11-24T13:05:17.000Z",
+      "firstSeenAt": "2026-11-24T13:28:32.062Z",
       "outlets": 2,
       "outletNames": [
-        "USA TODAY",
-        "AOL.com"
+        "Reuters",
+        "The Lufkin Daily News"
       ],
       "score": 1.69
-    },
-    {
-      "id": "0dbfd76e28d2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Microsoft admits hackers accessed clients’ private data",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/microsoft-admits-hackers-accessed-clients-003531208.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-23T14:19:13.000Z",
-      "latestAt": "2026-11-24T00:43:07.000Z",
-      "firstSeenAt": "2026-11-24T01:26:23.593Z",
-      "outlets": 4,
-      "outletNames": [
-        "Cybernews",
-        "YAHOO!",
-        "NewsBreak: Local News & Alerts",
-        "Yahoo Tech"
-      ],
-      "score": 2.44
     },
     {
       "id": "aa9ae243afe8",
@@ -1019,6 +994,24 @@
       "score": 1.71
     },
     {
+      "id": "3e45c84b36b6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Google says the first autonomous AI cyberattack has happened. Expect a lot more like it.",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/google-says-first-autonomous-ai-235637020.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-23T15:57:00.000Z",
+      "latestAt": "2026-11-24T12:44:40.000Z",
+      "firstSeenAt": "2026-11-24T12:28:16.665Z",
+      "outlets": 3,
+      "outletNames": [
+        "YAHOO!",
+        "Mashable",
+        "MSN"
+      ],
+      "score": 1.7
+    },
+    {
       "id": "60acdd78b0a4",
       "cat": "hacks",
       "kind": "news",
@@ -1034,6 +1027,23 @@
         "Yahoo"
       ],
       "score": 1.7
+    },
+    {
+      "id": "69b8f1901d8c",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is Spotify down? Company gives update after users report issues",
+      "url": "https://www.usatoday.com/story/tech/2026/11/24/spotify-down-outage/92938497007/",
+      "source": "USA TODAY",
+      "publishedAt": "2026-11-24T03:45:00.000Z",
+      "latestAt": "2026-11-24T12:28:35.000Z",
+      "firstSeenAt": "2026-11-24T12:58:28.993Z",
+      "outlets": 2,
+      "outletNames": [
+        "USA TODAY",
+        "AOL.com"
+      ],
+      "score": 1.69
     },
     {
       "id": "075f7b80ee95",
@@ -1370,6 +1380,22 @@
       "score": 1.4
     },
     {
+      "id": "a91e2797c720",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Spotify Fixes Login and App Issues After Massive Outage Briefly Knocked It Down Earlier Today",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNLTJycS16UWJvc201Y1NBbkdVVWdfa3Jod3dtaEN4THJhMnlLSFZzNmlLWDF5QzhKQVUxRDhmNDltT1FYRTNTVVZESDVkdFlsRlpmWjhVUkkzZWhqQm02V2RYUmtHRnZjWjJqY19sdXpXVEhlX01RYVlsdHk5YjN2V1NWNEhhYkdMTkZ3RlZ0WnZIbG1lZjhtelpLVGNRMDY0dmJ4b2ZZQ245ckVMbjNMOWZ6cGpwdktLMkRlaA?oc=5",
+      "source": "Windows Report",
+      "publishedAt": "2026-11-24T13:02:05.000Z",
+      "latestAt": "2026-11-24T13:02:05.000Z",
+      "firstSeenAt": "2026-11-24T13:28:32.062Z",
+      "outlets": 1,
+      "outletNames": [
+        "Windows Report"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "31be995c85e2",
       "cat": "internet",
       "kind": "news",
@@ -1436,40 +1462,6 @@
         "The Seattle Times"
       ],
       "score": 1.36
-    },
-    {
-      "id": "2b81ae40c10e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Weight-and-Balance Outage Delays More Than 1,600 Flights",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1Cd2FEamFmOFVRLV8wMTM5MVYzclFZZkFWMlBUNVYyQjYwM0UwTHl1NTQ4N0dhM05lUWtkOUY0SWhoQmVHOS1sLW1KR2FjeXh2aExVeFE2akUxMjNJT0V1MDZaVlhfRUZuUHk2bF82SHpqWjZiOUpMd3VFYmM?oc=5",
-      "source": "AVweb",
-      "publishedAt": "2026-11-23T16:25:45.000Z",
-      "latestAt": "2026-11-24T06:20:38.000Z",
-      "firstSeenAt": "2026-11-24T12:43:22.711Z",
-      "outlets": 2,
-      "outletNames": [
-        "AVweb",
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.32
-    },
-    {
-      "id": "3e45c84b36b6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Google says the first autonomous AI cyberattack has happened. Expect a lot more like it.",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/google-says-first-autonomous-ai-235637020.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-23T15:57:00.000Z",
-      "latestAt": "2026-11-24T12:44:40.000Z",
-      "firstSeenAt": "2026-11-24T12:28:16.665Z",
-      "outlets": 2,
-      "outletNames": [
-        "YAHOO!",
-        "Mashable"
-      ],
-      "score": 1.32
     },
     {
       "id": "caf17f46a7f1",
@@ -1744,6 +1736,38 @@
       "score": 1.02
     },
     {
+      "id": "fad84ef0d0fc",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Spotify outage hit thousands of users before service was restored",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE55SHVENTUwMThWWi1rMktTVV9Ja0dHTVJpVDM4WWpOSVpyZjBKTTdzUkwzdFZUUlVBRjFaMVVGZXJiYnUwcXF6U0hfcmhrX0ZkNG5wbEYtdUZpTV9iQjNvSXNXbVJFTTM2TTRDVmdncURlYjIyME0yRA?oc=5",
+      "source": "qz.com",
+      "publishedAt": "2026-11-24T13:26:44.000Z",
+      "latestAt": "2026-11-24T13:26:44.000Z",
+      "firstSeenAt": "2026-11-24T13:28:32.062Z",
+      "outlets": 1,
+      "outletNames": [
+        "qz.com"
+      ],
+      "score": 1
+    },
+    {
+      "id": "2c15c38c5e3c",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is Spotify down? A login outage logged users out Tuesday morning, and Spotify says it's much better now",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNTc4OG1kUWtWVEQwQ29Xb056bEhlNEdCcURKdXpNd2xGQ2h2SDN2cUFTUDktaTloejlhbDVqaVN1MHVlMUFXOXU3ME9ZOXFoT0I0elpJbXRTTG1vYUhVYU14MkpyckZGUzNqbkUzc0pQYlFNc1AwaVBhUTIybnh1RzhJV3pEcjlib1Y5U0I5ZHVnVmlfbERRTlJXdVlBWkNmeG9J?oc=5",
+      "source": "Nacionale",
+      "publishedAt": "2026-11-24T13:17:40.000Z",
+      "latestAt": "2026-11-24T13:17:40.000Z",
+      "firstSeenAt": "2026-11-24T13:28:32.062Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nacionale"
+      ],
+      "score": 1
+    },
+    {
       "id": "ebe8ed24ac59",
       "cat": "hacks",
       "kind": "news",
@@ -1868,38 +1892,6 @@
       "outlets": 1,
       "outletNames": [
         "iHarare News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "e9ac73931f6f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Many of us have received an email or a letter in the mail saying our personal information was compromised in a data breach. Most people toss it and go about their day. But experts say ignoring that notice could spell real financial trouble.",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQSVNPTlZnd0FPY2RVcUI4XzBpMFlvaUpQSnhWcmV0QnFOaFlZeWQ1NlZrUjNVM2FoRVp3WFVyZm5ucU5xUlpiUWM3UjFrMnpWaU1kbEkwdkFvOE9zTGdHN0dzWkhMVHVnYUI2b2hLWF8zb2w0VnhsWG8xU1JJOFhDZEtBZjBTMXZZdkI1X0F2Z1FzeUV3dElnN181WlRjTWwzcGZNeGp2aVNDNjNDWHZld2psQ3E1TDBSaWlCdTJPRHRsVGppWmVRbjFHSEQ5TkMxLWg5MkZGMWVfUDA?oc=5",
-      "source": "Facebook",
-      "publishedAt": "2026-11-24T12:40:56.000Z",
-      "latestAt": "2026-11-24T12:40:56.000Z",
-      "firstSeenAt": "2026-11-24T12:58:28.993Z",
-      "outlets": 1,
-      "outletNames": [
-        "Facebook"
-      ],
-      "score": 1
-    },
-    {
-      "id": "24ba7bd408a0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Amazon says AI agents found and exploited a zero-day with almost no human help",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5BeTE3d2t0S1VHV1lxZ2NoQmw3M0JtUlJoMUo2OTlLVW5kb1ktWVliMGcyZXVLM2ZYQXNXeWpfZ0dfWXlSQmd2YzdwUm1Bd3c1Y2xaMGFBWWMzVmxncVZ5bUV0YzJSeC12S3lvNEV3?oc=5",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-24T12:39:05.000Z",
-      "latestAt": "2026-11-24T12:39:05.000Z",
-      "firstSeenAt": "2026-11-24T12:43:22.711Z",
-      "outlets": 1,
-      "outletNames": [
-        "Crypto Briefing"
       ],
       "score": 1
     },
