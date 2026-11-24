@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T07:42:26.331Z",
+  "buildTime": "2026-11-24T07:57:26.258Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 02:42 ET",
+  "etStamp": "2026-11-24 02:57 ET",
   "score": 54,
   "fired": [
     "flights",
@@ -42,17 +42,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1364,
-  "lastSuccessAt": "2026-11-24T07:42:26.331Z",
+  "headlinesRead": 323,
+  "lastSuccessAt": "2026-11-24T07:57:26.258Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
-    "hacks": 37,
+    "flights": 24,
+    "hacks": 35,
     "grid": 4,
     "earth": 4,
     "internet": 9,
     "germs": 6,
-    "markets": 6,
+    "markets": 7,
     "weather": 4,
     "space": 1,
     "animals": 2,
@@ -160,7 +160,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -178,58 +178,58 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 1044,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-24T07:42:26.331Z"
     },
     "bing": {
       "ok": true,
-      "count": 283,
+      "count": 286,
       "error": null,
-      "lastOkAt": "2026-11-24T07:42:26.331Z"
+      "lastOkAt": "2026-11-24T07:57:26.258Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-24T07:27:30.628Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-24T07:42:26.331Z"
+      "lastOkAt": "2026-11-24T07:57:26.258Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:42:26.331Z"
+      "lastOkAt": "2026-11-24T07:57:26.258Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:42:26.331Z"
+      "lastOkAt": "2026-11-24T07:57:26.258Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:42:26.331Z"
+      "lastOkAt": "2026-11-24T07:57:26.258Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:42:26.331Z"
+      "lastOkAt": "2026-11-24T07:57:26.258Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T07:42:26.331Z"
+      "lastOkAt": "2026-11-24T07:57:26.258Z"
     },
     "x": {
       "ok": true,
@@ -242,13 +242,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T07:42:26.331Z"
+      "lastOkAt": "2026-11-24T07:57:26.258Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T07:42:26.331Z"
+      "lastOkAt": "2026-11-24T07:57:26.258Z"
     }
   },
   "stories": [
@@ -762,6 +762,23 @@
       "score": 1.97
     },
     {
+      "id": "682b3f1ddc03",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQTBqdXJLcFBfcG1wYUxlRmdJVl9fb1NCcG0xM2NSeW1MQ0d5V2RjalpEbm1EdEFSRmwyVmczV1NPVWdNN1BQODhKeUdqMEhwb2szX2dNSGRVRDFUaTZ1cGdWa25RTGRCQXRLcXUxS1d0UGVzUTFjODNyUVZPZkhycEZ3aHE2YVZwSlhHTnRpNzdZdXQ1R1llbXc1SEvSAaIBQVVfeXFMT0d4NzJTcDI5VzBzb2paMmNybklGR1dXWlRtY2d0bi0tcGJ1czZ1RldEbC0tTS1UZFBDQUctakEyWXVFVmF1cFFPUEFGRGRUbkkzdTNQTGlVT3NRR0E2UGo1dUhuRUtoRWRNbUhWTmdrdGtuNWNCSG1yQk5WTll3TEloSkZiSmxrd1dUM2dmYnBDbWs0eTk4QXdNbWRvNUlwZWlB?oc=5",
+      "source": "The Mirror US",
+      "publishedAt": "2026-11-24T03:07:00.000Z",
+      "latestAt": "2026-11-24T03:07:38.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Mirror US",
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 1.96
+    },
+    {
       "id": "e1fbedebda8f",
       "cat": "grid",
       "kind": "news",
@@ -863,23 +880,6 @@
         "The Big Lead"
       ],
       "score": 1.59
-    },
-    {
-      "id": "55a2c05cfbcc",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Ocean City town hall puts Amazon’s undersea cable plan before residents",
-      "url": "https://www.yahoo.com/news/articles/ocean-city-town-hall-puts-182300077.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T10:23:00.000Z",
-      "latestAt": "2026-11-23T19:51:05.000Z",
-      "firstSeenAt": "2026-11-23T23:56:06.341Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Baltimore Sun"
-      ],
-      "score": 1.55
     },
     {
       "id": "e55269ebb7e8",
@@ -1067,6 +1067,23 @@
         "DPA International on MSN"
       ],
       "score": 2.01
+    },
+    {
+      "id": "730aaf1f8e49",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US seeks forfeiture of over $1.1B in crypto tied to North Korean hackers",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbG91WVhZb2V0TkxISnZ3aU1MWnVpUnVSSm9nb0g1T1pDVTU3V09HbUkxaV8yYlNGZE9Nc3lKbzVBSXM3ODhDLWpYdTZXRUdxYUJUUEZYU0dTanlaS2FaSml2dmQyRXdXWEpzMlM0NzU1OVpjRGlNMGlrNW1WeDc4bXZpZmZNSWFLZkxIYklxaVRuc0dDakVjZ3NnNFc2WXRGcUJJend4MVFCV2VYZU5WcnNn?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-23T20:18:28.000Z",
+      "latestAt": "2026-11-23T20:30:39.000Z",
+      "firstSeenAt": "2026-11-23T20:55:41.076Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "Operativ Məlumat Mərkəzi"
+      ],
+      "score": 1.98
     },
     {
       "id": "32e456df8417",
@@ -1393,6 +1410,23 @@
       "score": 1.57
     },
     {
+      "id": "55a2c05cfbcc",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Ocean City town hall puts Amazon’s undersea cable plan before residents",
+      "url": "https://www.yahoo.com/news/articles/ocean-city-town-hall-puts-182300077.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T10:23:00.000Z",
+      "latestAt": "2026-11-23T19:51:05.000Z",
+      "firstSeenAt": "2026-11-23T23:56:06.341Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Baltimore Sun"
+      ],
+      "score": 1.55
+    },
+    {
       "id": "3a4a334e81b2",
       "cat": "hacks",
       "kind": "news",
@@ -1442,6 +1476,23 @@
         "FOX One"
       ],
       "score": 1.47
+    },
+    {
+      "id": "ad51fd2de4de",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Morgan Stanley Strategists Spot A ‘Fat Pitch’ In Market Selloff — See Buying Opportunities In Hyperscalers",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQVUI5UnV4dmthelBkZ2ZQc0NocUpfbXN1NzMxZ3pMQnFNOEJqeko2QUFkWUxaeVVjV2VuaDNZOXZjcU1GbEluVGdJVlRVRmtfbWRwZDJEbjIyYk1oYk9USXBhZmlhVGpLN0o5TWNtMldKQjRkTHFMVnBfM2FJaDBCRWFIODNxYjhhdFZ6UWp3SzdzcjdSQjgyNlhJbE9MSll5WDZPcDNrMng1SEduNXBGdXcxbU1jWmVQdjJvNXRRU3hqRW5UbjVKTmFjVzJZelhjczQtMHFDNW03ZWt3ejBkUHpuT3FJVTZfaTdYVzhZSHk2VlNXMGN5V1hB?oc=5",
+      "source": "Stocktwits",
+      "publishedAt": "2026-11-23T12:08:00.000Z",
+      "latestAt": "2026-11-23T14:19:02.000Z",
+      "firstSeenAt": "2026-11-24T04:41:58.829Z",
+      "outlets": 2,
+      "outletNames": [
+        "Stocktwits",
+        "Forbes"
+      ],
+      "score": 1.45
     },
     {
       "id": "95f40136244b",
@@ -1539,6 +1590,22 @@
         "The Seattle Times"
       ],
       "score": 1.36
+    },
+    {
+      "id": "57688e206264",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air System Outage Disrupts More Than 1,000 Flights Nationwide Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ0I5dUZRUmkxSVpRZHJ4UTZpZG5QN3c5ZDFvZEg2XzJWdHdjR2VsRUR2aTVOWnN6Q0NKRjZMSTBTOHhjT21jNDZIamhpY0htZjEybGxFcWhVczVWYUhWNGlhX3d5Z0hkd2hkeEJSeFU2d2I3dGlFaHNjR00yWGhCX3loMjU2RTVSVkVtOGxTTlRQVzcxVVR4a21TWG1EajRXNWEtSlJzZWlpMlhjVkE5ZldLSnZaNENWMEJN?oc=5",
+      "source": "Speaks Media",
+      "publishedAt": "2026-11-24T02:30:00.000Z",
+      "latestAt": "2026-11-24T02:30:00.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 1,
+      "outletNames": [
+        "Speaks Media"
+      ],
+      "score": 1.34
     },
     {
       "id": "50bdf4af626c",
@@ -1814,38 +1881,6 @@
       "score": 1
     },
     {
-      "id": "bfa6e1dd3cf7",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPd2x5SEZWQ2k3aWFJaDJYc3NuMDJJWWNXN05fYldzVUpoYWZ4NmZIeWZwVGxKemJZWE9QbTZZdzM1SzU1WVp5OG5xLVhsTWJqRlIwcDdtalJoOG1Ma3NLTWZXU0xsUHVjUjhNSXQ0MFc3TG96V2RRbmJQQzhzOEN3NERJMA?oc=5",
-      "source": "The Hacker News",
-      "publishedAt": "2026-11-24T06:02:00.000Z",
-      "latestAt": "2026-11-24T06:02:00.000Z",
-      "firstSeenAt": "2026-11-24T06:12:12.796Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Hacker News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "87ac530a3e31",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Transcript: Tucker Interviews Luke Gromen on Cyberattacks & Grid Failure",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOaUFxZU9QV1NmSTFnZlNDRVFYbi12UTFZNmd1ME85ckFVaDJraWFEbGpwSlVVa0lROEVBb013M0txeThONnlIeXgtZ2Z3ZDdVWEJFWjJ1empoODV4cVBxWTJzSGdmMWtOcTR4QWFBZGhONG11UGFrRG9EdTl0VkxEUmxCcXB2ckt3c09tM2FoTklDdC1DQXV6Qw?oc=5",
-      "source": "The Singju Post",
-      "publishedAt": "2026-11-24T03:58:51.000Z",
-      "latestAt": "2026-11-24T03:58:51.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Singju Post"
-      ],
-      "score": 1
-    },
-    {
       "id": "b5c50c48a8e5",
       "cat": "weather",
       "kind": "news",
@@ -1940,38 +1975,6 @@
         "Sheridan Media"
       ],
       "score": 0.99
-    },
-    {
-      "id": "29666fb7d8f8",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Steal Data From Korea Electric Power, Raising Misuse Fears",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOU05KVGFIcXppTkUyaF9qaUJ0dDJFanZ6c1RMdzN4RDZSdlFreDhpQTM2amhpNlJaU1pIbFVTdFpTdEJFNGg3RElQcktvZ1VDSXZRaENRTWhGVWppOU5wNVBwVDR0ZWlPT200eE91MDR1MWdudk9WMW1LNlo3Y244NUtFOWRwZHZpWHBscUlUSjA1UnRQbTBQYnFfN1drdmRNSHJz?oc=5",
-      "source": "Seoul Economic Daily",
-      "publishedAt": "2026-11-24T06:05:03.000Z",
-      "latestAt": "2026-11-24T06:05:03.000Z",
-      "firstSeenAt": "2026-11-24T07:42:26.331Z",
-      "outlets": 1,
-      "outletNames": [
-        "Seoul Economic Daily"
-      ],
-      "score": 0.97
-    },
-    {
-      "id": "0ce6d835f7ab",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Data Breach Puts Customer Names and Emails at Risk",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNLUJRSjc1T0t2Z1BwRGFVekhfdGJCaEdZNkRIbEJMNklUREhhT0JBSExKRERVQ3RObElWREd6TkZqU3dKYWhPbTJIVkxzVXlhZERDc01YN1psTWgtWHRNRnlyX2hYUG5nbDBwSWlEM0dReGlZTTRfdjlyT202T3JyOWRpQTU2V0lCZzJzeUhxYw?oc=5",
-      "source": "varindia",
-      "publishedAt": "2026-11-24T05:45:10.000Z",
-      "latestAt": "2026-11-24T05:45:10.000Z",
-      "firstSeenAt": "2026-11-24T07:42:26.331Z",
-      "outlets": 1,
-      "outletNames": [
-        "varindia"
-      ],
-      "score": 0.97
     },
     {
       "id": "30ff934ba46d",
