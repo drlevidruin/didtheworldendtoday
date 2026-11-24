@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T03:41:47.705Z",
+  "buildTime": "2026-11-24T03:56:50.793Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 22:41 ET",
+  "etStamp": "2026-11-23 22:56 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,14 +44,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1408,
-  "lastSuccessAt": "2026-11-24T03:41:47.705Z",
+  "headlinesRead": 1345,
+  "lastSuccessAt": "2026-11-24T03:56:50.793Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
+    "flights": 24,
     "hacks": 34,
     "earth": 4,
-    "markets": 9,
+    "markets": 8,
     "germs": 6,
     "grid": 4,
     "internet": 6,
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1091,
+      "count": 1026,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     },
     "bing": {
       "ok": true,
       "count": 283,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     },
     "x": {
       "ok": true,
@@ -242,15 +242,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T03:41:47.705Z"
+      "lastOkAt": "2026-11-24T03:56:50.793Z"
     }
   },
   "stories": [
@@ -1073,24 +1073,6 @@
       "score": 2.22
     },
     {
-      "id": "db19367ee12f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Next issues cyber-attack warning after ‘benign’ data accessed by hackers",
-      "url": "https://www.aol.co.uk/articles/next-issues-cyber-attack-warning-115345000.html",
-      "source": "AOL.co.uk",
-      "publishedAt": "2026-11-23T03:56:00.000Z",
-      "latestAt": "2026-11-23T12:10:22.000Z",
-      "firstSeenAt": "2026-11-23T12:24:12.244Z",
-      "outlets": 3,
-      "outletNames": [
-        "AOL.co.uk",
-        "The Guardian",
-        "cedarnews.net"
-      ],
-      "score": 2.22
-    },
-    {
       "id": "3af7e9fec1f3",
       "cat": "flights",
       "kind": "news",
@@ -1226,6 +1208,24 @@
       "outletNames": [
         "Claim Depot",
         "ClassAction.org"
+      ],
+      "score": 1.88
+    },
+    {
+      "id": "22010bd169c6",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Strike against austerity measures Forces Flights grounded in Belgium",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOaVFPNjBvRFdsNkZWOGZqN21GbU9Qb2JTOGtHVEF2LWpDWXRONnItOUJwdTQ5ajZXZVFqS1BDNjN4TWZ6RDQ1dWoxbWNTS0duZUhRMW55aUl6S0MzMzVZVzFXckhCQVpUMkRIQW1nTm9UMjVpMjdoUUZ1X1JsZkJuR2twQlVaaGFLY0xVUW5ZZWZBVmFvTXIwTDdVdjNfYUE?oc=5",
+      "source": "cedarnews.net",
+      "publishedAt": "2026-11-23T11:26:12.000Z",
+      "latestAt": "2026-11-23T12:30:00.000Z",
+      "firstSeenAt": "2026-11-24T03:41:47.705Z",
+      "outlets": 3,
+      "outletNames": [
+        "cedarnews.net",
+        "The Star, Kenya",
+        "BBC"
       ],
       "score": 1.88
     },
@@ -1502,6 +1502,24 @@
       "score": 1.57
     },
     {
+      "id": "789a7de46ad5",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta system outage delays 3,500 flights ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQclJRYWhGV2dsY0dhcmJPVTBpMmpNaWJNN1hkWnhZOVVwRmJGVW11RU03QzRFeHF3bkp6TU1nTk1ERnpiMlkyX2I0UXdXaXZBUFk5VVFBUTJXOVlkRldTXzZuWElEQW5GR2w4ZUhMTDgyNnR3Sy1BTm5OSG1PNFBqQlBDOVBidHdiMElDazhRbDlEbVdZMnhB?oc=5",
+      "source": "FOX 10 Phoenix",
+      "publishedAt": "2026-11-23T04:13:40.000Z",
+      "latestAt": "2026-11-24T02:30:00.000Z",
+      "firstSeenAt": "2026-11-24T03:56:50.793Z",
+      "outlets": 3,
+      "outletNames": [
+        "FOX 10 Phoenix",
+        "FL360aero",
+        "Speaks Media"
+      ],
+      "score": 1.56
+    },
+    {
       "id": "55a2c05cfbcc",
       "cat": "internet",
       "kind": "news",
@@ -1519,21 +1537,21 @@
       "score": 1.55
     },
     {
-      "id": "22010bd169c6",
-      "cat": "flights",
+      "id": "fd8f6b998fed",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Strike against austerity measures Forces Flights grounded in Belgium",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOaVFPNjBvRFdsNkZWOGZqN21GbU9Qb2JTOGtHVEF2LWpDWXRONnItOUJwdTQ5ajZXZVFqS1BDNjN4TWZ6RDQ1dWoxbWNTS0duZUhRMW55aUl6S0MzMzVZVzFXckhCQVpUMkRIQW1nTm9UMjVpMjdoUUZ1X1JsZkJuR2twQlVaaGFLY0xVUW5ZZWZBVmFvTXIwTDdVdjNfYUE?oc=5",
-      "source": "cedarnews.net",
-      "publishedAt": "2026-11-23T11:32:26.000Z",
-      "latestAt": "2026-11-23T12:30:00.000Z",
-      "firstSeenAt": "2026-11-24T03:41:47.705Z",
+      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSjNGakREcTJSN1N6bHM5aVhFY2lGVTY4aENmNU5PWHdvQ2JLV0tLZmFweTF1Zk1hQmNFRGFDa25MNkNlQ3dYbEFjNXNfbi16em85LXFkaFhHelB6Y2R0RDJ3TlJJX3dleDE2S0tSZWs4dVgyRU1sYzF4NWZ6a0hxWkxLTEkxUmJVWlR6eDE3djJ4U1MyczI1Mnh5VFNJSGtQRnpJTUNZQXExLXlJ?oc=5",
+      "source": "AP News",
+      "publishedAt": "2026-11-23T13:24:00.000Z",
+      "latestAt": "2026-11-23T18:52:04.000Z",
+      "firstSeenAt": "2026-11-24T03:56:50.793Z",
       "outlets": 2,
       "outletNames": [
-        "cedarnews.net",
-        "The Star, Kenya"
+        "AP News",
+        "European Interest"
       ],
-      "score": 1.46
+      "score": 1.52
     },
     {
       "id": "1e9bf2c684e7",
@@ -1564,6 +1582,23 @@
       "outlets": 1,
       "outletNames": [
         "The Seattle Times"
+      ],
+      "score": 1.36
+    },
+    {
+      "id": "f4503ed2d2bb",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta System Outage Delays 2,000 Flights Across US, Airline Confirms Fix",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ0pYcWhNbm1uRVY3NFc2OVE4WWQ3Z285S2JTaVhka3FsSTZRM3ZSdUR3NTBrZzEtRmpVZHhadG41WThtLUVKMXdDT2NlM1gySHhvQnlnMm1rYWs2OTJ5clNwWVN2alA2bWVqT2F0UnJsMUVROGdnR3hBaFFYTXl6Unk0VVJTb1h4OEsxVTMyaTh5SnVPVkdlc21UNi1ybVkza19ucl9sU2libkRKWm1CeEVR0gG3AUFVX3lxTE5iZm1zSm9odmo3Q2pKNkxjRzdmN0Jiek9JWHlmRzZUckFTTWJsRjR6aDdqWlJfQWl4N3RiT2Q5NVdSRGRBV2cxQldKTHczbmFkX1hvMlFkX3JSMUVYNXJEb0ZIank2RVViTnZaRG4xVl9DbFdyWUhGelZfSEEyNXpHSXhYT0E4NDlVdFV2WEk3THJHSHUwby01NVNlaWFSei1aeVBFRTFkSVN1NG5LZHNaY2syb0IwNA?oc=5",
+      "source": "The Hans India",
+      "publishedAt": "2026-11-23T08:42:15.000Z",
+      "latestAt": "2026-11-23T11:01:19.000Z",
+      "firstSeenAt": "2026-11-24T03:56:50.793Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Hans India",
+        "Gujarat Samachar"
       ],
       "score": 1.36
     },
@@ -1761,38 +1796,6 @@
       "score": 1.09
     },
     {
-      "id": "7246bd4d8ec7",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US flights grounded nationwide as air traffic control communications fail",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNk9RQm1zelpFaTBsQklkZy14QVR4Y2V5ZkI3NGNKbzdQenlneDNtM09XNkxSeFMtalBlOXJOckI3Yk1RMUJGWGZGOU9fWU0wSGhQVkVjUzVKbklROFE5SmxJbHFkeXFrVVUzTzktZEFNWDlIc3N4VlpJZWthaTY1MVlObTVhXy1vX2hzVXdnSXVVVllFUzZ2dkVoSVlMdzF6ODNOdFlBN1N1S2h5Zmc?oc=5",
-      "source": "Herald.Wales",
-      "publishedAt": "2026-11-23T13:09:19.000Z",
-      "latestAt": "2026-11-23T13:09:19.000Z",
-      "firstSeenAt": "2026-11-24T03:41:47.705Z",
-      "outlets": 1,
-      "outletNames": [
-        "Herald.Wales"
-      ],
-      "score": 1.06
-    },
-    {
-      "id": "3fe7a3a59131",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Shekel depreciation continues amid global market selloff",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNakNyUko1T2pGYml3RU1pLXktUWQ2ZXhCSEJHQ0pMVmVTXzk1Y1JmRUZJck90OTRjVHhGdTMtMEh4RHVkS01NcjVTc2xTX001eXdxSU9CYUpIczlTOUI3cGFudVhGSVduMmE3QUhSdHRuUUdwcWk4amtZTFQwU20ySnROMHVueDlJVXROd1N1cFZ6Zw?oc=5",
-      "source": "Globes - Israel Business News",
-      "publishedAt": "2026-11-23T12:41:04.000Z",
-      "latestAt": "2026-11-23T12:41:04.000Z",
-      "firstSeenAt": "2026-11-24T03:41:47.705Z",
-      "outlets": 1,
-      "outletNames": [
-        "Globes - Israel Business News"
-      ],
-      "score": 1.05
-    },
-    {
       "id": "92287632b14f",
       "cat": "grid",
       "kind": "news",
@@ -1921,6 +1924,22 @@
       "score": 0.99
     },
     {
+      "id": "ea9297d7c74b",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Sheridan Ties Record High Temperature Again",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNTdtWVMwSnBscUNPVzlMZDltaUd4d0tSb3Q0ZUxNSUFWQzRwSURBTnVxbEpuWVMzX3g2elcxYWFiNU5JczBwTHZCQ0FDM25ZQWhyQUZLbWd3SmNMSVVVaGppeWNpV1N4UEFxeG53NFlwQmZCSXpJc1gxY2hqMlZpTGtnZ0lNLXNh?oc=5",
+      "source": "Sheridan Media",
+      "publishedAt": "2026-11-23T10:27:59.000Z",
+      "latestAt": "2026-11-23T10:27:59.000Z",
+      "firstSeenAt": "2026-11-24T03:56:50.793Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sheridan Media"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "30ff934ba46d",
       "cat": "ai",
       "kind": "news",
@@ -1935,22 +1954,6 @@
         "Fortune"
       ],
       "score": 0.97
-    },
-    {
-      "id": "1ceb2e3fbd29",
-      "cat": "weather",
-      "kind": "news",
-      "title": "NSW Severe Thunderstorm Warning: Large Hail, Damaging Winds, Heavy Rain",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQVjVUTEk0MkU0cTg0NlhGZFVZWjFZNHV3V01EVTlUYU5qZy1aZE0wWVNlY01Gbnp1ZjJPV1dSWFBrVVNaRkgydS12UjJMNTFTckQ1cV9NaFlnTnltaWtpRjNtdFVMMVZhN1ZVd1dtbHM3OHRvTGNJWFd3QVQ2dmNvT2Y4N1lfcVRMaHBhOW1zc2xXR0NR?oc=5",
-      "source": "Early Warning Network",
-      "publishedAt": "2026-11-23T19:44:29.000Z",
-      "latestAt": "2026-11-23T19:44:29.000Z",
-      "firstSeenAt": "2026-11-24T02:56:36.951Z",
-      "outlets": 1,
-      "outletNames": [
-        "Early Warning Network"
-      ],
-      "score": 0.88
     },
     {
       "id": "59b1484e85d2",
