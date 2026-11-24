@@ -43,6 +43,29 @@
       "score": 4.97
     },
     {
+      "id": "sig:faa-stop:LAS:2026-11-24",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at LAS (STAFFING)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-24T05:57:16.986Z",
+      "latestAt": "2026-11-24T05:57:16.986Z",
+      "firstSeenAt": "2026-11-24T05:57:16.986Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "LAS",
+        "hub": true,
+        "nationwide": false,
+        "reason": "STAFFING"
+      }
+    },
+    {
       "id": "sig:faa-stop:ORD:2026-11-23",
       "cat": "flights",
       "kind": "signal",
@@ -64,42 +87,6 @@
         "nationwide": false,
         "reason": "STAFFING"
       }
-    },
-    {
-      "id": "90481647aba9",
-      "cat": "flights",
-      "kind": "news",
-      "title": "O’Hare Ground Stop Lifted After Staffing Shortage",
-      "url": "https://ijr.com/discover/travel-2026-11-23-hare-ground-stop-lifted-staffing-shortage-b078eb42",
-      "source": "Independent Journal Review",
-      "publishedAt": "2026-11-23T13:59:00.000Z",
-      "latestAt": "2026-11-24T01:44:16.000Z",
-      "firstSeenAt": "2026-11-24T02:11:28.163Z",
-      "outlets": 21,
-      "outletNames": [
-        "Independent Journal Review",
-        "NBC 5 Chicago",
-        "NBC Chicago",
-        "FOX 32 Chicago",
-        "ABC7 Chicago",
-        "cedarnews.net",
-        "Patch",
-        "NewsNation",
-        "WINK News - Southwest Florida",
-        "Shaw Local",
-        "AOL.co.uk",
-        "NBC News",
-        "One America News Network",
-        "The Times of India",
-        "Modern Ghana",
-        "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi",
-        "AVweb",
-        "FlipItMoney",
-        "WABC Radio",
-        "US Muslims"
-      ],
-      "score": 4.3
     },
     {
       "id": "3abd8d35b651",
@@ -312,6 +299,42 @@
       "score": 2.31
     },
     {
+      "id": "90481647aba9",
+      "cat": "flights",
+      "kind": "news",
+      "title": "O’Hare Ground Stop Lifted After Staffing Shortage",
+      "url": "https://ijr.com/discover/travel-2026-11-23-hare-ground-stop-lifted-staffing-shortage-b078eb42",
+      "source": "Independent Journal Review",
+      "publishedAt": "2026-11-23T13:59:00.000Z",
+      "latestAt": "2026-11-24T01:44:16.000Z",
+      "firstSeenAt": "2026-11-24T02:11:28.163Z",
+      "outlets": 21,
+      "outletNames": [
+        "Independent Journal Review",
+        "NBC 5 Chicago",
+        "NBC Chicago",
+        "FOX 32 Chicago",
+        "ABC7 Chicago",
+        "cedarnews.net",
+        "Patch",
+        "NewsNation",
+        "WINK News - Southwest Florida",
+        "Shaw Local",
+        "AOL.co.uk",
+        "NBC News",
+        "One America News Network",
+        "The Times of India",
+        "Modern Ghana",
+        "Anadolu Ajansı",
+        "Operativ Məlumat Mərkəzi",
+        "AVweb",
+        "FlipItMoney",
+        "WABC Radio",
+        "US Muslims"
+      ],
+      "score": 4.3
+    },
+    {
       "id": "sig:faa-stop:LEX:2026-11-23",
       "cat": "flights",
       "kind": "signal",
@@ -375,26 +398,6 @@
         "The Straits Times"
       ],
       "score": 2.96
-    },
-    {
-      "id": "a910e55ce45c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta aircraft faced manual calculations after a critical system outage",
-      "url": "https://www.wpxi.com/news/trending/delta-aircraft-faced-manual-calculations-after-critical-system-outage/7S3LP4IVHFH2NNU6CGY22D344E/",
-      "source": "WPXI",
-      "publishedAt": "2026-11-23T12:18:00.000Z",
-      "latestAt": "2026-11-23T20:18:49.000Z",
-      "firstSeenAt": "2026-11-23T21:55:50.295Z",
-      "outlets": 5,
-      "outletNames": [
-        "Boston 25 News",
-        "104.5 WOKV",
-        "WFTV",
-        "WPXI",
-        "WHIO TV"
-      ],
-      "score": 2.79
     },
     {
       "id": "6ba8cf23d88f",
@@ -638,6 +641,26 @@
         "WFLX"
       ],
       "score": 1.71
+    },
+    {
+      "id": "a910e55ce45c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta aircraft faced manual calculations after a critical system outage",
+      "url": "https://www.wpxi.com/news/trending/delta-aircraft-faced-manual-calculations-after-critical-system-outage/7S3LP4IVHFH2NNU6CGY22D344E/",
+      "source": "WPXI",
+      "publishedAt": "2026-11-23T12:18:00.000Z",
+      "latestAt": "2026-11-23T20:18:49.000Z",
+      "firstSeenAt": "2026-11-23T21:55:50.295Z",
+      "outlets": 5,
+      "outletNames": [
+        "Boston 25 News",
+        "104.5 WOKV",
+        "WFTV",
+        "WPXI",
+        "WHIO TV"
+      ],
+      "score": 2.79
     },
     {
       "id": "8116b401c695",
@@ -1248,6 +1271,23 @@
       "score": 1.55
     },
     {
+      "id": "fd8f6b998fed",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSjNGakREcTJSN1N6bHM5aVhFY2lGVTY4aENmNU5PWHdvQ2JLV0tLZmFweTF1Zk1hQmNFRGFDa25MNkNlQ3dYbEFjNXNfbi16em85LXFkaFhHelB6Y2R0RDJ3TlJJX3dleDE2S0tSZWs4dVgyRU1sYzF4NWZ6a0hxWkxLTEkxUmJVWlR6eDE3djJ4U1MyczI1Mnh5VFNJSGtQRnpJTUNZQXExLXlJ?oc=5",
+      "source": "AP News",
+      "publishedAt": "2026-11-23T13:24:00.000Z",
+      "latestAt": "2026-11-23T18:52:04.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 2,
+      "outletNames": [
+        "AP News",
+        "European Interest"
+      ],
+      "score": 1.48
+    },
+    {
       "id": "1af77f7b9b66",
       "cat": "flights",
       "kind": "news",
@@ -1346,6 +1386,22 @@
         "https://www.thetraveler.org/"
       ],
       "score": 1.35
+    },
+    {
+      "id": "57688e206264",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air System Outage Disrupts More Than 1,000 Flights Nationwide Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ0I5dUZRUmkxSVpRZHJ4UTZpZG5QN3c5ZDFvZEg2XzJWdHdjR2VsRUR2aTVOWnN6Q0NKRjZMSTBTOHhjT21jNDZIamhpY0htZjEybGxFcWhVczVWYUhWNGlhX3d5Z0hkd2hkeEJSeFU2d2I3dGlFaHNjR00yWGhCX3loMjU2RTVSVkVtOGxTTlRQVzcxVVR4a21TWG1EajRXNWEtSlJzZWlpMlhjVkE5ZldLSnZaNENWMEJN?oc=5",
+      "source": "Speaks Media",
+      "publishedAt": "2026-11-24T02:30:00.000Z",
+      "latestAt": "2026-11-24T02:30:00.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 1,
+      "outletNames": [
+        "Speaks Media"
+      ],
+      "score": 1.34
     },
     {
       "id": "50bdf4af626c",
@@ -1590,54 +1646,6 @@
       "score": 1.04
     },
     {
-      "id": "e91dd7d79607",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Bitcoin Flash Crash Sends Kraken CAD Pair Down 70 Percent",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9od2NUcmRfaEZDYTN4RDJLc3I5UTlHc09PRXdiRi1GT0o3SEh4cUVXZXdRdlU0UGlfMkJhUUdRUjR1LWZCUXo4TGpSZ3BVMjdHOTdaOVdRbzhxVFV3T3JLTzlkYkxxeGlxeWc?oc=5",
-      "source": "Demokratis.co.id",
-      "publishedAt": "2026-11-24T05:32:52.000Z",
-      "latestAt": "2026-11-24T05:32:52.000Z",
-      "firstSeenAt": "2026-11-24T05:42:08.773Z",
-      "outlets": 1,
-      "outletNames": [
-        "Demokratis.co.id"
-      ],
-      "score": 1
-    },
-    {
-      "id": "e644332ee7fb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack on Allied Media disrupts systems, delays newspapers",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdWFjUkEtVWdOOXVpVUM5dzVtV3huRG12Z0tsMTA3NE1mRkpIZjQtcEVlU0pPRHgyclVxTUVXUGpETG5NZWdsMHhZSFJDc1dPbnBHaUtHalBKY1hvdXRIakxobkJUYnJTM0ViWFpubXFKR19odGFCdWlXSHdlUURhX1hzVEFnbVFzZ1BjNEl1VHQ2VUM3YWZpSW1UY1RkNkE?oc=5",
-      "source": "1News",
-      "publishedAt": "2026-11-24T05:31:59.000Z",
-      "latestAt": "2026-11-24T05:31:59.000Z",
-      "firstSeenAt": "2026-11-24T05:42:08.773Z",
-      "outlets": 1,
-      "outletNames": [
-        "1News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "2a0107835497",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Kraken Upholds Trades After Bitcoin Flash Crash to 17000 Dollars",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1HOGhYRE0xNVFpaEVlQS1JNGcxR3ctVXhhOElndGF3ay1EWE9Dd3R4bDlzcW1UUkZUeTBramxkZWZIalp0anZMd0M2RFlxRmNCOGlYWXl3WHdUb05kZUE?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-24T05:31:55.000Z",
-      "latestAt": "2026-11-24T05:31:55.000Z",
-      "firstSeenAt": "2026-11-24T05:42:08.773Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 1
-    },
-    {
       "id": "b5c50c48a8e5",
       "cat": "weather",
       "kind": "news",
@@ -1798,5 +1806,5 @@
       "score": 0.77
     }
   ],
-  "updatedAt": "2026-11-24T05:42:08.773Z"
+  "updatedAt": "2026-11-24T05:57:16.986Z"
 }
