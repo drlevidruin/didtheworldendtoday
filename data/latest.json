@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T20:59:49.860Z",
+  "buildTime": "2026-11-24T21:14:54.414Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 15:59 ET",
+  "etStamp": "2026-11-24 16:14 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,17 +48,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1345,
-  "lastSuccessAt": "2026-11-24T20:59:49.860Z",
+  "headlinesRead": 1347,
+  "lastSuccessAt": "2026-11-24T21:14:54.414Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
+    "flights": 15,
     "earth": 7,
-    "internet": 21,
-    "hacks": 28,
-    "grid": 10,
+    "internet": 22,
+    "hacks": 30,
+    "grid": 9,
     "germs": 4,
-    "weather": 4,
+    "weather": 3,
     "animals": 2,
     "space": 1,
     "markets": 4,
@@ -75,8 +75,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 0.67,
-      "time": "2026-11-24T15:00:00.000Z",
+      "value": 1.33,
+      "time": "2026-11-24T18:00:00.000Z",
       "max24": 1.67
     },
     "asteroid": {
@@ -169,13 +169,11 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "One every four minutes: 720,000 Russian soldiers killed since start of Ukraine war, new data suggests"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
@@ -187,57 +185,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1022,
+      "count": 1016,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     },
     "bing": {
       "ok": true,
-      "count": 285,
+      "count": 293,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-24T16:59:11.725Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +248,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T20:59:49.860Z"
+      "lastOkAt": "2026-11-24T21:14:54.414Z"
     }
   },
   "stories": [
@@ -270,7 +268,7 @@
       "publishedAt": "2026-11-24T11:13:00.000Z",
       "latestAt": "2026-11-24T19:13:00.000Z",
       "firstSeenAt": "2026-11-24T19:29:41.268Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "KPTV",
         "KWTX",
@@ -278,9 +276,10 @@
         "WCAX",
         "wandtv.com",
         "WABI",
-        "KBTX News 3"
+        "KBTX News 3",
+        "www.investigatetv.com"
       ],
-      "score": 4.59
+      "score": 4.83
     },
     {
       "id": "sig:faa-stop:LAS:2026-11-24",
@@ -340,9 +339,9 @@
       "url": "https://www.msn.com/en-us/news/other/exclusive-microsoft-declares-code-red-after-historic-outage-internal-memos-show/ar-AA2i8YNF",
       "source": "Reuters on MSN",
       "publishedAt": "2026-11-24T08:56:58.000Z",
-      "latestAt": "2026-11-24T20:20:16.000Z",
+      "latestAt": "2026-11-24T20:24:00.000Z",
       "firstSeenAt": "2026-11-24T19:59:40.773Z",
-      "outlets": 19,
+      "outlets": 20,
       "outletNames": [
         "Reuters on MSN",
         "Hindustan Times",
@@ -362,10 +361,11 @@
         "Education Times",
         "Fox News",
         "Parallel Facts News",
-        "@Reuters on X"
+        "@Reuters on X",
+        "Talk 650 KSTE"
       ],
       "xUrl": "https://x.com/Reuters/status/2125323636110209066",
-      "score": 4.28
+      "score": 4.34
     },
     {
       "id": "1f7a9dd08c2f",
@@ -375,9 +375,9 @@
       "url": "https://www.yahoo.com/news/us/articles/unclassified-cia-system-breached-cyberattack-202923626.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-24T07:29:00.000Z",
-      "latestAt": "2026-11-24T20:58:07.000Z",
+      "latestAt": "2026-11-24T21:13:10.000Z",
       "firstSeenAt": "2026-11-24T20:44:52.543Z",
-      "outlets": 17,
+      "outlets": 23,
       "outletNames": [
         "Yahoo",
         "WDAM-TV",
@@ -395,11 +395,17 @@
         "AP News",
         "The Independent",
         "WISN",
-        "5 EYEWITNESS NEWS"
+        "5 EYEWITNESS NEWS",
+        "KCCI 8 News",
+        "MSN",
+        "The Killeen Daily Herald",
+        "Herald Bulletin",
+        "KOCO",
+        "WBAL News Radio"
       ],
       "trending": 1000,
       "trendTerm": "cia",
-      "score": 3.96
+      "score": 4.3
     },
     {
       "id": "d6951d480f01",
@@ -541,6 +547,26 @@
       "score": 3.1
     },
     {
+      "id": "1c1f8c83d3f0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "GoFundMe alerts donors of data breach",
+      "url": "https://www.wsbtv.com/news/trending/gofundme-alerts-donors-data-breach/WSYJCTJU3BD4XPYVUBIKF7SFUM/",
+      "source": "WSB-TV Channel 2",
+      "publishedAt": "2026-11-24T07:39:00.000Z",
+      "latestAt": "2026-11-24T15:39:15.000Z",
+      "firstSeenAt": "2026-11-24T15:58:57.995Z",
+      "outlets": 5,
+      "outletNames": [
+        "WSB-TV Channel 2",
+        "WHIO TV",
+        "104.5 WOKV on MSN",
+        "WGAU Radio | Athens, GA",
+        "95.5 WSB"
+      ],
+      "score": 2.86
+    },
+    {
       "id": "c69597c30f49",
       "cat": "grid",
       "kind": "news",
@@ -559,24 +585,6 @@
         "Yahoo"
       ],
       "score": 2.83
-    },
-    {
-      "id": "d4e9532e7b32",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Wisconsin reports 10th case of bird flu this year in Polk County",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWTBLeVFERUE3UUJNUVdCRmtxUWNRUFQwR1NlOGd3WHRoa3R3VllVbGtnajl6Mm9DWVpfZGVDNXpGZFk0bDNlR0NSM19CenUyRWpWOUM3RmlBaExnRkRDaWRJVXR0U2w1ZUlJWW0zd09BNlVQQmticU8zYm5uX1lrUWFnTmxnNmVrc1BlRnZSelRob1Y3TDlRUjdNMU9BNlZNS0dSV0dsOEZ3dUIxUEJQeWZrZFZOdFk?oc=5",
-      "source": "Lake Geneva News",
-      "publishedAt": "2026-11-24T18:50:00.000Z",
-      "latestAt": "2026-11-24T18:50:00.000Z",
-      "firstSeenAt": "2026-11-24T18:59:34.832Z",
-      "outlets": 3,
-      "outletNames": [
-        "Lake Geneva News",
-        "La Crosse Tribune",
-        "Wisconsin State Journal"
-      ],
-      "score": 2.58
     },
     {
       "id": "sig:faa-stop:LEX:2026-11-23",
@@ -636,6 +644,24 @@
       "score": 2.59
     },
     {
+      "id": "d4e9532e7b32",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Wisconsin reports 10th case of bird flu this year in Polk County",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWTBLeVFERUE3UUJNUVdCRmtxUWNRUFQwR1NlOGd3WHRoa3R3VllVbGtnajl6Mm9DWVpfZGVDNXpGZFk0bDNlR0NSM19CenUyRWpWOUM3RmlBaExnRkRDaWRJVXR0U2w1ZUlJWW0zd09BNlVQQmticU8zYm5uX1lrUWFnTmxnNmVrc1BlRnZSelRob1Y3TDlRUjdNMU9BNlZNS0dSV0dsOEZ3dUIxUEJQeWZrZFZOdFk?oc=5",
+      "source": "Lake Geneva News",
+      "publishedAt": "2026-11-24T18:50:00.000Z",
+      "latestAt": "2026-11-24T18:50:00.000Z",
+      "firstSeenAt": "2026-11-24T18:59:34.832Z",
+      "outlets": 3,
+      "outletNames": [
+        "Lake Geneva News",
+        "La Crosse Tribune",
+        "Wisconsin State Journal"
+      ],
+      "score": 2.58
+    },
+    {
       "id": "fb4faf2589e7",
       "cat": "grid",
       "kind": "news",
@@ -650,25 +676,6 @@
         "News12 | Brooklyn",
         "News12 | Westchester",
         "News12 | Long Island"
-      ],
-      "score": 2.58
-    },
-    {
-      "id": "1c1f8c83d3f0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "GoFundMe alerts donors of data breach",
-      "url": "https://www.wsbtv.com/news/trending/gofundme-alerts-donors-data-breach/WSYJCTJU3BD4XPYVUBIKF7SFUM/",
-      "source": "WSB-TV Channel 2",
-      "publishedAt": "2026-11-24T07:39:00.000Z",
-      "latestAt": "2026-11-24T15:39:15.000Z",
-      "firstSeenAt": "2026-11-24T15:58:57.995Z",
-      "outlets": 4,
-      "outletNames": [
-        "WSB-TV Channel 2",
-        "WHIO TV",
-        "104.5 WOKV on MSN",
-        "WGAU Radio | Athens, GA"
       ],
       "score": 2.58
     },
@@ -1019,7 +1026,7 @@
       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB2eldzU1Bram1nTlpiQjFYSHNZeDBiNlFWRi1xLWdreHJITUNHcUJ0eWpxVHN0T0tXclZEUVdUVmRoZVNKcDFZUFJwcDFxMDRZSXlOaTJTNGNyYnhG?oc=5",
       "source": "Peradaban.id",
       "publishedAt": "2026-11-24T20:26:00.000Z",
-      "latestAt": "2026-11-24T20:27:00.000Z",
+      "latestAt": "2026-11-24T21:04:00.000Z",
       "firstSeenAt": "2026-11-24T20:44:52.543Z",
       "outlets": 2,
       "outletNames": [
@@ -1044,6 +1051,23 @@
         "The Sunday Guardian"
       ],
       "score": 1.99
+    },
+    {
+      "id": "88b30b5dc925",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Thousands report brief TikTok outage: Downdetector",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMFBQdngtdGd0c21ZX0VKa0l5MmJ0T1FkVFA5N3pLS2UwSHFLbUlhZTVVNXVzRktYMmFTdTNKeGVVdnk4dzZJMXdXdDgtdXVlVGo1TFRFbjloU1ZGYnVUMHRKWFB2MkgxbURqYU0tYWdJbFRUdGZnb2NMWVY2NUlnQmRjVlpBZmtoQUHSAY8BQVVfeXFMTU5uVTRkMUdVdVZzYkx0bFRKQk9tNXVVTll3ZnhOdTZpWWt1THJhREVOUGoxTTlrLVAzWlJRaVBvWndiUzJfNEFueXcycGdDUmZqbEY2SndzTjh6czFsZUU3bEtTa0puTTVWQWl6SjlHVEtyQVg4QnpVZjF4a05abnlCMnFMZlF0U0UxaVZxRWc?oc=5",
+      "source": "PIX11",
+      "publishedAt": "2026-11-24T20:18:21.000Z",
+      "latestAt": "2026-11-24T20:18:21.000Z",
+      "firstSeenAt": "2026-11-24T21:14:54.414Z",
+      "outlets": 2,
+      "outletNames": [
+        "PIX11",
+        "Yahoo Tech"
+      ],
+      "score": 1.97
     },
     {
       "id": "fa521173b32e",
@@ -1112,23 +1136,6 @@
         "Cryptonews.net"
       ],
       "score": 1.83
-    },
-    {
-      "id": "d9dcfe35bf4e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Queens Public Library restores nearly all services after ransomware attack",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQc2VwSjRfVzZncG10TE5Hbmp5TUZoOV9lcmNvZzZyalQxVHZtSVZZRk1GUVhtelllcm1kM0NxdmJKa05tUnduOEljZDF4UDJDNWo3bDhJaHlORGdleUw4OE5QcVJqMGhQN25BdGNkTmRUQk82TWczNTlEWTkxTnV0cm9uUks3NE1PMHdkdGVydmwxSFk5VHR3NDNuMk00U0NIQW9Heml0YXZ6bmRmVWJTUjVDWnlxLVBYS1RiMC1jbGRUWjlRLVVlOHRaOFNUbHBkVnc?oc=5",
-      "source": "Spectrum News NY1",
-      "publishedAt": "2026-11-24T14:10:00.000Z",
-      "latestAt": "2026-11-24T15:31:13.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
-      "outlets": 2,
-      "outletNames": [
-        "Spectrum News NY1",
-        "Patch"
-      ],
-      "score": 1.8
     },
     {
       "id": "2eac2cff2878",
@@ -1235,6 +1242,23 @@
       "score": 1.72
     },
     {
+      "id": "9cf2baa542c9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chase, Visa And Mastercard Confirm Vendor Cyber Incidents After Hackers Post Data",
+      "url": "https://finance.yahoo.com/technology/ai/articles/chase-visa-mastercard-confirm-vendor-203329973.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-24T12:33:00.000Z",
+      "latestAt": "2026-11-24T12:33:00.000Z",
+      "firstSeenAt": "2026-11-24T21:14:54.414Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Finance",
+        "Forbes"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "5efab0861ea0",
       "cat": "space",
       "kind": "news",
@@ -1322,6 +1346,24 @@
       "score": 1.64
     },
     {
+      "id": "d9dcfe35bf4e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Queens Public Library restores nearly all services after ransomware attack",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQc2VwSjRfVzZncG10TE5Hbmp5TUZoOV9lcmNvZzZyalQxVHZtSVZZRk1GUVhtelllcm1kM0NxdmJKa05tUnduOEljZDF4UDJDNWo3bDhJaHlORGdleUw4OE5QcVJqMGhQN25BdGNkTmRUQk82TWczNTlEWTkxTnV0cm9uUks3NE1PMHdkdGVydmwxSFk5VHR3NDNuMk00U0NIQW9Heml0YXZ6bmRmVWJTUjVDWnlxLVBYS1RiMC1jbGRUWjlRLVVlOHRaOFNUbHBkVnc?oc=5",
+      "source": "Spectrum News NY1",
+      "publishedAt": "2026-11-23T21:38:00.000Z",
+      "latestAt": "2026-11-24T15:31:13.000Z",
+      "firstSeenAt": "2026-11-24T20:14:43.533Z",
+      "outlets": 3,
+      "outletNames": [
+        "Spectrum News NY1",
+        "Patch",
+        "Gothamist"
+      ],
+      "score": 1.61
+    },
+    {
       "id": "32630c27776e",
       "cat": "flights",
       "kind": "news",
@@ -1337,6 +1379,24 @@
         "Yahoo"
       ],
       "score": 1.6
+    },
+    {
+      "id": "0ddc4f0bf8fd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "KEPCO confirms a data breach affecting more than 1.5 million people",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZFhtQXRkOWxlT1gyTWV2V0ZWajc1RFFTUnhDUmNHc191NjkwRFd2RTVEa1RfRTVHeVFLeGtXQ3RoYnFvd1pqMUlOVEhlSnNrNzZ0dVp2elZCRHBUOUFpWExTZi1qYWJKTVdoZHVCaFdOdUpyeWdZOEYyRGdjZk9kLU52b21TVmhqOWZuZ09hWk0?oc=5",
+      "source": "MLQ.ai",
+      "publishedAt": "2026-11-23T21:38:11.000Z",
+      "latestAt": "2026-11-24T17:17:43.000Z",
+      "firstSeenAt": "2026-11-24T21:14:54.414Z",
+      "outlets": 3,
+      "outletNames": [
+        "MLQ.ai",
+        "Yahoo",
+        "Mezha.net"
+      ],
+      "score": 1.57
     },
     {
       "id": "4d554d38301d",
@@ -1534,6 +1594,22 @@
         "Security Affairs"
       ],
       "score": 1.4
+    },
+    {
+      "id": "fc659e486edd",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Why is TikTok Down? Users Report 'Something Went Wrong' Message Amid Major Outage",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQb1hSbEFMWTV5NHE1VTQ1Wk5Sc3RuT2c5VVlGZjlUZEczUjVYS1FiUmJHb0dLNTYwV2J0SU04TTVFb05zWmtaaDdoRVNZZEpKZFh5QjVWRmpzbEhJUHhCaEg4VHlWNERMdkJpV29PUzliT0llSG9veUR5SHZ4eWdyMEFNcm5OcGFwOG5HMFJMS0F0bTN1LThuSVpNMkF4NkRzNnlPWGsxMEo3ekZST2gtaHJiYTJoRVFhU2k1UXBueUg0c01HODdOYVRfb3V4d3BCS3VVSDc5VHBjUdIB3wFBVV95cUxQMWlzU1lqQ1htakduREE5T1RmM3YtWlMybS1qTlBvcnJ3dnltT1ZPUEV1T2I3TFhlTW8xSGNlOFd3eVNrdks4a0hRSXBXTlFPOG83ZnpHNGRUSUEwR3ppTExjSEVfLVNCcnNGdWJQWDMzMkZFMjZRWWh3YjNDeUNkR3dJQjhjUk5zTmpvUUgxak9XdEtWY1F0MG5IeDVvTTdPYXU5X1FzVWxDSWMzSlpPRDNWcmNkRnBfUTlJVktTb0pEREF3cWVlOEV4d1EyaDBWVkpfaXBzV3pqMVBNa21J?oc=5",
+      "source": "Times Now",
+      "publishedAt": "2026-11-24T20:38:59.000Z",
+      "latestAt": "2026-11-24T20:38:59.000Z",
+      "firstSeenAt": "2026-11-24T21:14:54.414Z",
+      "outlets": 1,
+      "outletNames": [
+        "Times Now"
+      ],
+      "score": 1.39
     },
     {
       "id": "e5b9c8050aac",
@@ -1834,54 +1910,6 @@
       "score": 1.36
     },
     {
-      "id": "9a87059b2e4b",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Major outages strike the U.S.",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5RUmlEVnpMc05rSG5PQWxabE9tRVEtUy1SRTI2UnY4NmtEYkFnT250VC1FbnBFc1RpaWY4QVdyLTN2aW1VUm1LbHJkNWUxcU96SUhYZHk1cGF0b0NnQ1JUTjBPR3V0TUFGbWxFYjB5WjdmVEJZMVpDaw?oc=5",
-      "source": "Tennessee Tech Oracle",
-      "publishedAt": "2026-11-24T18:04:08.000Z",
-      "latestAt": "2026-11-24T18:04:08.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
-      "outlets": 1,
-      "outletNames": [
-        "Tennessee Tech Oracle"
-      ],
-      "score": 1.35
-    },
-    {
-      "id": "4a89ce93752e",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Inside the ‘Black Sky’ plans for a nationwide blackout",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQWEyOTd5eElOMGZzZFdFOGJMRUlLcV9DYm9DZlBxV2dLQnJlbVN4cjZ4RzdxZWpZYWJtcV9HblJvS251QUs2MFhILWdyREFKWGVSN0JRSjREbDhRWXFGNWVpN1JxMzlYREI5VktSanJfQlloQjNFTzdxNVBSVUZabkh0UHQ?oc=5",
-      "source": "Herald.Wales",
-      "publishedAt": "2026-11-24T12:40:23.000Z",
-      "latestAt": "2026-11-24T12:40:23.000Z",
-      "firstSeenAt": "2026-11-24T14:58:54.366Z",
-      "outlets": 1,
-      "outletNames": [
-        "Herald.Wales"
-      ],
-      "score": 1.35
-    },
-    {
-      "id": "c3e2b2715f7b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Thanksgiving travel rush hits Chicago as O'Hare expects record crowds after ground stop",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9LZ3VqUDl2aGVOY25oOGtiXzhFZG53N0doVEdfR2ZLYXdhSkRDTzFZMGluLTRYQTZ4REpJLTBVRFQ2NEZuUE16Q0ktNFpmejlwTmFuN0JrZDIzV3ZfOXYwUmR3empsd9IBa0FVX3lxTE9oZHpWRGEyVU5LSVMxYjdzck4xSnljdlQ5NVNzNUQ1bDR0Ry1ILVZHOXE3dTM5LTJDSkRvUFlkV0hERW9GYjhvSnYyVDVjS3NjTWVCOHhCSFlXbExkalAwQXdJOGtIVlNCWVNN?oc=5",
-      "source": "FOX 32 Chicago",
-      "publishedAt": "2026-11-24T17:36:08.000Z",
-      "latestAt": "2026-11-24T17:36:08.000Z",
-      "firstSeenAt": "2026-11-24T19:59:40.773Z",
-      "outlets": 1,
-      "outletNames": [
-        "FOX 32 Chicago"
-      ],
-      "score": 1.34
-    },
-    {
       "id": "52091bdfb5f9",
       "cat": "markets",
       "kind": "news",
@@ -1926,22 +1954,6 @@
       "outlets": 1,
       "outletNames": [
         "nwitimes.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "08258aa41362",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Freak storm wipes out ‘once-in-2000-year’ harvest",
-      "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPTDNYQ0xRb3dCNVgwbFdoY0JIMm91RC0tQ2xKSl9IUkhRRUhUSXdDWk9oUWVzTG5pWGRMcUV5MEhNa21CZXVKc3F5VHdhREliSE9jcURXLU1SUzR2dGtKMWhoSjZmZU9nRU1SaVEyLUJ1WGNvLWw2Ym5XTEhBMmwtT3VWQWhTdi1lUjl2TUhBU3hqOTdMYzdpdFNRVk4wdnR6ZHlDRUdiNkx3SjFFVHVwTGF0NWNOeUNRT3U0QW5SQjFCQk56b0tVdTNoaVUzSVlrb3lvNDVCY3BIeXd1dThJMXdQeWd2QkdCWnVEdlQ2c2R0MjM1d2VVM2h4RUZLUUJYeDNiQjRWZmRpMXJqaGJlNl8ycw?oc=5",
-      "source": "Adelaide Now",
-      "publishedAt": "2026-11-23T21:05:21.000Z",
-      "latestAt": "2026-11-24T09:18:08.000Z",
-      "firstSeenAt": "2026-11-23T21:10:48.587Z",
-      "outlets": 1,
-      "outletNames": [
-        "Adelaide Now"
       ],
       "score": 1
     },
