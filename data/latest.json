@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T20:14:43.533Z",
+  "buildTime": "2026-11-24T20:29:47.178Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 15:14 ET",
+  "etStamp": "2026-11-24 15:29 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,15 +48,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1373,
-  "lastSuccessAt": "2026-11-24T20:14:43.533Z",
+  "headlinesRead": 1366,
+  "lastSuccessAt": "2026-11-24T20:29:47.178Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
-    "earth": 7,
-    "internet": 19,
+    "flights": 16,
+    "earth": 6,
+    "internet": 21,
     "grid": 10,
-    "hacks": 31,
+    "hacks": 29,
     "germs": 4,
     "weather": 4,
     "animals": 2,
@@ -169,33 +169,31 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "One every four minutes: 720,000 Russian soldiers killed since start of Ukraine war, new data suggests"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1045,
+      "count": 1032,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "bing": {
       "ok": true,
-      "count": 289,
+      "count": 293,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,56 +205,55 @@
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-24T19:29:41.268Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T20:14:43.533Z"
+      "lastOkAt": "2026-11-24T20:29:47.178Z"
     }
   },
   "stories": [
@@ -311,6 +308,27 @@
       "score": 4.45
     },
     {
+      "id": "40774ab77624",
+      "cat": "flights",
+      "kind": "news",
+      "title": "A nationwide ground stop was unusual. Air traffic control equipment failures aren’t.",
+      "url": "https://www.kktv.com/2026/11/24/nationwide-ground-stop-was-unusual-air-traffic-control-equipment-failures-arent/",
+      "source": "KKTV",
+      "publishedAt": "2026-11-24T11:13:00.000Z",
+      "latestAt": "2026-11-24T19:13:00.000Z",
+      "firstSeenAt": "2026-11-24T19:29:41.268Z",
+      "outlets": 6,
+      "outletNames": [
+        "KPTV",
+        "KWTX",
+        "KKTV",
+        "WCAX",
+        "wandtv.com",
+        "WABI"
+      ],
+      "score": 4.33
+    },
+    {
       "id": "206e9a53af20",
       "cat": "internet",
       "kind": "news",
@@ -318,9 +336,9 @@
       "url": "https://www.msn.com/en-us/news/other/exclusive-microsoft-declares-code-red-after-historic-outage-internal-memos-show/ar-AA2i8YNF",
       "source": "Reuters on MSN",
       "publishedAt": "2026-11-24T08:56:58.000Z",
-      "latestAt": "2026-11-24T19:47:52.000Z",
+      "latestAt": "2026-11-24T20:20:16.000Z",
       "firstSeenAt": "2026-11-24T19:59:40.773Z",
-      "outlets": 17,
+      "outlets": 19,
       "outletNames": [
         "Reuters on MSN",
         "Hindustan Times",
@@ -338,29 +356,12 @@
         "News18",
         "Men's Journal on MSN",
         "Education Times",
-        "Fox News"
+        "Fox News",
+        "Parallel Facts News",
+        "@Reuters on X"
       ],
-      "score": 4.15
-    },
-    {
-      "id": "40774ab77624",
-      "cat": "flights",
-      "kind": "news",
-      "title": "A nationwide ground stop was unusual. Air traffic control equipment failures aren’t.",
-      "url": "https://www.kktv.com/2026/11/24/nationwide-ground-stop-was-unusual-air-traffic-control-equipment-failures-arent/",
-      "source": "KKTV",
-      "publishedAt": "2026-11-24T11:13:00.000Z",
-      "latestAt": "2026-11-24T19:13:00.000Z",
-      "firstSeenAt": "2026-11-24T19:29:41.268Z",
-      "outlets": 5,
-      "outletNames": [
-        "KPTV",
-        "KWTX",
-        "KKTV",
-        "WCAX",
-        "wandtv.com"
-      ],
-      "score": 4.01
+      "xUrl": "https://x.com/Reuters/status/2125323636110209066",
+      "score": 4.28
     },
     {
       "id": "d6951d480f01",
@@ -462,26 +463,6 @@
       }
     },
     {
-      "id": "730aaf1f8e49",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US seeks forfeiture of over $1.1B in crypto tied to North Korean hackers",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbG91WVhZb2V0TkxISnZ3aU1MWnVpUnVSSm9nb0g1T1pDVTU3V09HbUkxaV8yYlNGZE9Nc3lKbzVBSXM3ODhDLWpYdTZXRUdxYUJUUEZYU0dTanlaS2FaSml2dmQyRXdXWEpzMlM0NzU1OVpjRGlNMGlrNW1WeDc4bXZpZmZNSWFLZkxIYklxaVRuc0dDakVjZ3NnNFc2WXRGcUJJend4MVFCV2VYZU5WcnNn?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-23T20:18:28.000Z",
-      "latestAt": "2026-11-24T17:29:28.000Z",
-      "firstSeenAt": "2026-11-23T20:55:41.076Z",
-      "outlets": 5,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi",
-        "Fox Business",
-        "NK News",
-        "UG Diplomat"
-      ],
-      "score": 3.29
-    },
-    {
       "id": "857010ed9caa",
       "cat": "internet",
       "kind": "news",
@@ -525,6 +506,26 @@
         "Devon Live"
       ],
       "score": 3.1
+    },
+    {
+      "id": "c69597c30f49",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands Without Power in Greenville County",
+      "url": "https://www.wspa.com/news/top-stories/thousands-without-power-in-greenville-county/",
+      "source": "WSPA 7News",
+      "publishedAt": "2026-11-24T03:07:00.000Z",
+      "latestAt": "2026-11-24T19:23:59.000Z",
+      "firstSeenAt": "2026-11-24T11:58:15.110Z",
+      "outlets": 5,
+      "outletNames": [
+        "WSPA 7News",
+        "WYFF",
+        "FOX Carolina News",
+        "KIRO 7 News Seattle",
+        "Yahoo"
+      ],
+      "score": 2.83
     },
     {
       "id": "6ba8cf23d88f",
@@ -651,25 +652,6 @@
       "score": 2.57
     },
     {
-      "id": "c69597c30f49",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands Without Power in Greenville County",
-      "url": "https://www.wspa.com/news/top-stories/thousands-without-power-in-greenville-county/",
-      "source": "WSPA 7News",
-      "publishedAt": "2026-11-24T03:07:00.000Z",
-      "latestAt": "2026-11-24T19:23:59.000Z",
-      "firstSeenAt": "2026-11-24T11:58:15.110Z",
-      "outlets": 4,
-      "outletNames": [
-        "WSPA 7News",
-        "WYFF",
-        "FOX Carolina News",
-        "KIRO 7 News Seattle"
-      ],
-      "score": 2.56
-    },
-    {
       "id": "6f33acb2709d",
       "cat": "hacks",
       "kind": "news",
@@ -723,6 +705,24 @@
       "score": 2.24
     },
     {
+      "id": "1a720a4301b8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Airport customers hit by payment data breach",
+      "url": "https://www.bbc.co.uk/news/articles/ckx283l7n17ro",
+      "source": "BBC",
+      "publishedAt": "2026-11-24T08:25:00.000Z",
+      "latestAt": "2026-11-24T16:47:19.000Z",
+      "firstSeenAt": "2026-11-24T16:44:09.238Z",
+      "outlets": 3,
+      "outletNames": [
+        "BBC",
+        "Yahoo",
+        "Yahoo News Canada"
+      ],
+      "score": 2.23
+    },
+    {
       "id": "7c6ceebd6163",
       "cat": "earth",
       "kind": "news",
@@ -759,27 +759,6 @@
         "AOL.com"
       ],
       "score": 2.18
-    },
-    {
-      "id": "9f415d099e3a",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.5 earthquake recorded in Indian Ocean; no tsunami threat to Sri Lanka",
-      "url": "https://www.dailymirror.lk/breaking-news/Magnitude-6-5-earthquake-recorded-in-Indian-Ocean-no-tsunami-threat-to-Sri-Lanka/108-355647",
-      "source": "Daily Mirror",
-      "publishedAt": "2026-11-23T20:28:00.000Z",
-      "latestAt": "2026-11-24T12:57:00.000Z",
-      "firstSeenAt": "2026-11-24T13:28:32.062Z",
-      "outlets": 4,
-      "outletNames": [
-        "Newswire",
-        "Ada Derana",
-        "Daily Mirror - Sri Lanka",
-        "Daily Mirror"
-      ],
-      "score": 2.15,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "edfc3c91a52c",
@@ -887,6 +866,23 @@
       "score": 1.77,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "7f4b4a58044b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Air Zimbabwe London Flights Grounded as Lessor Reclaims Airbus A330",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPOUR2ajc2QTdITlV1azl0MHVhaTNyVDJoMUc0RWk0Q1hNS092cFdPWm91VUlpTVVPNHJZU25FR2NNWFlFTGVyMUgtOElnb0xWcVZhZUc2a1I2SGNha3pvbEdCV1Judk5ld043U2hJZUVPYWFDLUxJUzlVbGlhdWJzUVkxWDN3U1BZYUhQYWVUemthVHlyQ0d1eVVTSEhZOTRuNWpnOA?oc=5",
+      "source": "The Zimbabwe Mail",
+      "publishedAt": "2026-11-24T11:26:15.000Z",
+      "latestAt": "2026-11-24T12:45:23.000Z",
+      "firstSeenAt": "2026-11-24T19:29:41.268Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Zimbabwe Mail",
+        "iHarare News"
+      ],
+      "score": 1.73
     },
     {
       "id": "b56e85e00af0",
@@ -1132,23 +1128,6 @@
       "score": 1.75
     },
     {
-      "id": "7f4b4a58044b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Air Zimbabwe London Flights Grounded as Lessor Reclaims Airbus A330",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPOUR2ajc2QTdITlV1azl0MHVhaTNyVDJoMUc0RWk0Q1hNS092cFdPWm91VUlpTVVPNHJZU25FR2NNWFlFTGVyMUgtOElnb0xWcVZhZUc2a1I2SGNha3pvbEdCV1Judk5ld043U2hJZUVPYWFDLUxJUzlVbGlhdWJzUVkxWDN3U1BZYUhQYWVUemthVHlyQ0d1eVVTSEhZOTRuNWpnOA?oc=5",
-      "source": "The Zimbabwe Mail",
-      "publishedAt": "2026-11-24T11:26:15.000Z",
-      "latestAt": "2026-11-24T12:45:23.000Z",
-      "firstSeenAt": "2026-11-24T19:29:41.268Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Zimbabwe Mail",
-        "iHarare News"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "bb9b348a287e",
       "cat": "grid",
       "kind": "news",
@@ -1164,23 +1143,6 @@
         "blue News"
       ],
       "score": 1.73
-    },
-    {
-      "id": "1a720a4301b8",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Airport customers hit by payment data breach",
-      "url": "https://www.bbc.co.uk/news/articles/ckx283l7n17ro",
-      "source": "BBC",
-      "publishedAt": "2026-11-24T08:25:00.000Z",
-      "latestAt": "2026-11-24T16:25:31.000Z",
-      "firstSeenAt": "2026-11-24T16:44:09.238Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "Yahoo"
-      ],
-      "score": 1.72
     },
     {
       "id": "45bbdc9905b8",
@@ -1251,6 +1213,23 @@
       "score": 1.64
     },
     {
+      "id": "32630c27776e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Ground Stop Could Cost Travel Industry $26B in 2027",
+      "url": "https://travel.yahoo.com/news/articles/faa-ground-stop-could-cost-163124776.html",
+      "source": "travel",
+      "publishedAt": "2026-11-24T08:31:00.000Z",
+      "latestAt": "2026-11-24T16:31:24.000Z",
+      "firstSeenAt": "2026-11-24T20:29:47.178Z",
+      "outlets": 2,
+      "outletNames": [
+        "travel",
+        "Yahoo"
+      ],
+      "score": 1.6
+    },
+    {
       "id": "4d554d38301d",
       "cat": "markets",
       "kind": "news",
@@ -1283,23 +1262,6 @@
         "The Spokesman-Review"
       ],
       "score": 1.56
-    },
-    {
-      "id": "80dae33c2659",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack hits Peninsula’s Wyoming uranium mine",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeC0xaDRoWUVKRW4yZXg2RTUtTFZPbHgwbGlnWmExbFBlcTcxcjJ3b2EwTWdHWkJVY0NjQjVvNk5YWUJwTTBqVFRQdlJnUldnZjZ2QzRObFE1UEc2WXpHX3JaeDhMTWs5bUJON3VZd0pUV09IZDZqX3BDeXZNSDN5SzZjTV9XSDVTWEkxbk9hazRlNGJtdkxEa0NjQQ?oc=5",
-      "source": "The Northern Miner",
-      "publishedAt": "2026-11-23T20:26:02.000Z",
-      "latestAt": "2026-11-24T11:01:31.000Z",
-      "firstSeenAt": "2026-11-24T11:58:15.110Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Northern Miner",
-        "MLQ.ai"
-      ],
-      "score": 1.48
     },
     {
       "id": "03bd50bedffa",
@@ -1826,6 +1788,22 @@
       "score": 1.25
     },
     {
+      "id": "2e8d1ec49867",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Code Red: Global Microsoft 365 outage exposes cloud infrastructure failures",
+      "url": "https://beinsure.com/news/microsoft-code-red-global-outage/",
+      "source": "beinsure",
+      "publishedAt": "2026-11-24T12:19:00.000Z",
+      "latestAt": "2026-11-24T12:19:00.000Z",
+      "firstSeenAt": "2026-11-24T20:29:47.178Z",
+      "outlets": 1,
+      "outletNames": [
+        "beinsure"
+      ],
+      "score": 1.21
+    },
+    {
       "id": "473136f0309f",
       "cat": "internet",
       "kind": "news",
@@ -1856,6 +1834,22 @@
         "Investopedia on MSN"
       ],
       "score": 1.18
+    },
+    {
+      "id": "80e5e5d63e98",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Spotify Login Not Working? Thousands Report Errors During Global Outage",
+      "url": "https://www.analyticsinsight.net/news/spotify-login-not-working-thousands-report-errors-during-global-outage",
+      "source": "Analytics Insight",
+      "publishedAt": "2026-11-24T10:01:00.000Z",
+      "latestAt": "2026-11-24T10:01:00.000Z",
+      "firstSeenAt": "2026-11-24T20:29:47.178Z",
+      "outlets": 1,
+      "outletNames": [
+        "Analytics Insight"
+      ],
+      "score": 1.16
     },
     {
       "id": "c12cb954b403",
