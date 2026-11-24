@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T12:58:28.993Z",
+  "buildTime": "2026-11-24T13:13:28.247Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 07:58 ET",
+  "etStamp": "2026-11-24 08:13 ET",
   "score": 59,
   "fired": [
     "flights",
@@ -47,14 +47,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1407,
-  "lastSuccessAt": "2026-11-24T12:58:28.993Z",
+  "headlinesRead": 1100,
+  "lastSuccessAt": "2026-11-24T13:13:28.247Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 17,
-    "earth": 5,
+    "flights": 14,
+    "earth": 7,
     "hacks": 40,
-    "internet": 15,
+    "internet": 16,
     "grid": 7,
     "germs": 4,
     "weather": 4,
@@ -179,20 +179,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1075,
-      "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "count": 767,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 18 of 26 queries)",
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "bing": {
       "ok": true,
       "count": 296,
       "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "gdelt": {
       "ok": false,
@@ -202,58 +202,57 @@
     },
     "hn": {
       "ok": true,
-      "count": 6,
+      "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T12:13:15.703Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T12:58:28.993Z"
+      "lastOkAt": "2026-11-24T13:13:28.247Z"
     }
   },
   "stories": [
@@ -304,7 +303,7 @@
       }
     },
     {
-      "id": "76df64bdaeb1",
+      "id": "9daf9ac39693",
       "cat": "earth",
       "kind": "news",
       "title": "Nepal earthquake: 5.6 magnitude tremor strikes near China border",
@@ -483,25 +482,26 @@
       "score": 3.37
     },
     {
-      "id": "6f4a804949b8",
+      "id": "529823829eed",
       "cat": "germs",
       "kind": "news",
       "title": "Bird flu detected among cows at Grant County dairy farm",
       "url": "https://www.yahoo.com/news/science/articles/bird-flu-detected-among-cows-003845508.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-23T16:00:00.000Z",
-      "latestAt": "2026-11-24T07:49:00.000Z",
+      "latestAt": "2026-11-24T12:50:38.000Z",
       "firstSeenAt": "2026-11-24T00:41:14.207Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "Dailyfly News",
         "NonStop Local KHQ",
+        "KIRO 7 News Seattle",
         "Yahoo",
         "KREM",
         "KOMO",
         "KXLY.com"
       ],
-      "score": 3.07
+      "score": 3.26
     },
     {
       "id": "30f9e199e0a5",
@@ -523,6 +523,27 @@
       "score": 2.99
     },
     {
+      "id": "682b3f1ddc03",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
+      "url": "https://www.aol.com/articles/breaking-bengals-commanders-game-interrupted-030708000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T11:45:31.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 6,
+      "outletNames": [
+        "The Mirror US",
+        "NewsBreak: Local News & Alerts",
+        "AOL.com",
+        "Yahoo Sports",
+        "Daily Express US on MSN",
+        "Irish Star"
+      ],
+      "score": 2.86
+    },
+    {
       "id": "b71cd8e479e0",
       "cat": "internet",
       "kind": "news",
@@ -538,26 +559,6 @@
         "Daily News"
       ],
       "score": 2.79
-    },
-    {
-      "id": "682b3f1ddc03",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Bengals-Commanders game interrupted by power outage as stadium lights fail during MNF",
-      "url": "https://www.aol.com/articles/breaking-bengals-commanders-game-interrupted-030708000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-23T16:00:00.000Z",
-      "latestAt": "2026-11-24T11:45:31.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 5,
-      "outletNames": [
-        "The Mirror US",
-        "NewsBreak: Local News & Alerts",
-        "AOL.com",
-        "Yahoo Sports",
-        "Daily Express US on MSN"
-      ],
-      "score": 2.65
     },
     {
       "id": "b0d98bb927fa",
@@ -614,22 +615,22 @@
       "score": 2.59
     },
     {
-      "id": "529823829eed",
-      "cat": "germs",
+      "id": "76df64bdaeb1",
+      "cat": "earth",
       "kind": "news",
-      "title": "Washington Confirms Bird Flu in Grant County Dairy Herd",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWUdpa2tSWUF1YTRQalYwWktzRUs3UDNIN2VSWHpyOTUyOTJNUTJzaXZBY3hpNUJzcFdwYTFZUWJNWHNHajB3UXBOR0RnT21JaFRXczRjeFQzZ0xDVlJVNGlWOWxreDQtVUdVc21zYXZraEtKOVp4a2pIdjR3OVJKVXlZYjk2Z0R1SndZUU5TMXBEX0hlUWhR?oc=5",
-      "source": "Dailyfly News",
-      "publishedAt": "2026-11-23T23:43:12.000Z",
-      "latestAt": "2026-11-24T12:50:38.000Z",
-      "firstSeenAt": "2026-11-24T00:41:14.207Z",
+      "title": "5.6-magnitude earthquake jolts Nepal-Tibet border",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yUUtSYXJTZjJVWEs4aWN2WTlRSVdFMXFPOVJVWkFUNm9hcE1nc2lrT1dnV3ZWVHZ2NGlUZE02UTNTVUxlMHUxMkZmc0lSMFJCZzZwVjVkMA?oc=5",
+      "source": "The Annapurna Express",
+      "publishedAt": "2026-11-24T03:45:18.000Z",
+      "latestAt": "2026-11-24T04:46:12.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
       "outlets": 3,
       "outletNames": [
-        "Dailyfly News",
-        "NonStop Local KHQ",
-        "KIRO 7 News Seattle"
+        "The Annapurna Express",
+        "The Himalayan Times",
+        "The Business Standard"
       ],
-      "score": 2.54
+      "score": 2.53
     },
     {
       "id": "6f33acb2709d",
@@ -826,22 +827,23 @@
       "score": 1.92
     },
     {
-      "id": "1af77f7b9b66",
-      "cat": "flights",
+      "id": "7c6ceebd6163",
+      "cat": "earth",
       "kind": "news",
-      "title": "Delta system outage, FAA ground stop raise concerns ahead of holiday travel season",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE56UWNqMThQWk1uM1dmTksycmJaYUc1WG42azdnQl9KMGlEdHlfZ0ZTZWdSZWhhTGVIZlVlWEIxamFvVkd4YUdXMmZ4ZjI4SXBFa01YM2FR?oc=5",
-      "source": "Fox News",
-      "publishedAt": "2026-11-23T13:12:07.000Z",
-      "latestAt": "2026-11-23T13:37:37.000Z",
-      "firstSeenAt": "2026-11-24T05:12:03.715Z",
-      "outlets": 3,
+      "title": "No tsunami threat after 6.4-magnitude earthquake strikes near Mauritius",
+      "url": "https://www.msn.com/en-gb/news/other/no-tsunami-threat-after-64-magnitude-earthquake-strikes-near-mauritius/ar-AA2i7q1z",
+      "source": "International Business Times UK on MSN",
+      "publishedAt": "2026-11-24T04:50:45.000Z",
+      "latestAt": "2026-11-24T04:59:00.000Z",
+      "firstSeenAt": "2026-11-24T13:13:28.247Z",
+      "outlets": 2,
       "outletNames": [
-        "Fox News",
-        "FOX One",
-        "Yahoo"
+        "International Business Times UK on MSN",
+        "India TV News"
       ],
-      "score": 1.9
+      "score": 1.72,
+      "quiet": true,
+      "quietReason": "headline mentions tsunami"
     },
     {
       "id": "45bbdc9905b8",
@@ -1460,7 +1462,7 @@
       "url": "https://tech.yahoo.com/cybersecurity/articles/google-says-first-autonomous-ai-235637020.html",
       "source": "YAHOO!",
       "publishedAt": "2026-11-23T15:57:00.000Z",
-      "latestAt": "2026-11-24T10:41:46.000Z",
+      "latestAt": "2026-11-24T12:44:40.000Z",
       "firstSeenAt": "2026-11-24T12:28:16.665Z",
       "outlets": 2,
       "outletNames": [
@@ -1573,7 +1575,7 @@
       "url": "https://www.nytimes.com/2026/11/24/business/l3harris-ground-stop-aviation.html",
       "source": "The New York Times",
       "publishedAt": "2026-11-24T02:03:00.000Z",
-      "latestAt": "2026-11-24T10:03:49.000Z",
+      "latestAt": "2026-11-24T13:06:17.000Z",
       "firstSeenAt": "2026-11-24T10:27:55.694Z",
       "outlets": 1,
       "outletNames": [
@@ -1726,22 +1728,6 @@
       "score": 1.09
     },
     {
-      "id": "7246bd4d8ec7",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US flights grounded nationwide as air traffic control communications fail",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNk9RQm1zelpFaTBsQklkZy14QVR4Y2V5ZkI3NGNKbzdQenlneDNtM09XNkxSeFMtalBlOXJOckI3Yk1RMUJGWGZGOU9fWU0wSGhQVkVjUzVKbklROFE5SmxJbHFkeXFrVVUzTzktZEFNWDlIc3N4VlpJZWthaTY1MVlObTVhXy1vX2hzVXdnSXVVVllFUzZ2dkVoSVlMdzF6ODNOdFlBN1N1S2h5Zmc?oc=5",
-      "source": "Herald.Wales",
-      "publishedAt": "2026-11-23T13:09:19.000Z",
-      "latestAt": "2026-11-23T13:09:19.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 1,
-      "outletNames": [
-        "Herald.Wales"
-      ],
-      "score": 1.05
-    },
-    {
       "id": "73a1b04c12a5",
       "cat": "internet",
       "kind": "news",
@@ -1756,6 +1742,54 @@
         "El Cronista"
       ],
       "score": 1.02
+    },
+    {
+      "id": "ebe8ed24ac59",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Amazon says AI agents found a zero-day vulnerability in 11 minutes — Ars Technica",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ0cwTmFBazBrU2VjX0lDdTcyUFRYUTNtZU1lZ250bnQ1aXdUYWMxbnF6bnBtN2k0bFl4eXBuOWtTTGhuMnJjSnRSYlRyRnZGcEkwTEpzcjJTUDVReDFZem9Ca3BBcTU0ZVd1eUkyR1ZjWjhhcF95NU52UkFJZWp0T3NXTWV1X0R5NjBISTV5dGt5QUxhZHhDQXEwWVRjNkpyeDUzcmtpa0VkYm9NaW1lU0dLaHJtZ1JSQXhpMnRVa21MbkNw?oc=5",
+      "source": "UA.NEWS",
+      "publishedAt": "2026-11-24T13:06:23.000Z",
+      "latestAt": "2026-11-24T13:06:23.000Z",
+      "firstSeenAt": "2026-11-24T13:13:28.247Z",
+      "outlets": 1,
+      "outletNames": [
+        "UA.NEWS"
+      ],
+      "score": 1
+    },
+    {
+      "id": "8e2dfa573694",
+      "cat": "internet",
+      "kind": "news",
+      "title": "The Microsoft Outage Brought a Surge of Phishing Email",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9vazJPb003eWgyRmh4bFBfRVhLZkhFa3U1M0pSZnRqdDNHd1lCVkFscGpIdkRLMHc4c0xnckxNLW0zWU1ZYTdtMHplaHo5WHdROGM2ckoydkhHdGIycUJTdDV1NDV0UTZSby1WaXZnQQ?oc=5",
+      "source": "KnowBe4 Blog",
+      "publishedAt": "2026-11-24T13:04:36.000Z",
+      "latestAt": "2026-11-24T13:04:36.000Z",
+      "firstSeenAt": "2026-11-24T13:13:28.247Z",
+      "outlets": 1,
+      "outletNames": [
+        "KnowBe4 Blog"
+      ],
+      "score": 1
+    },
+    {
+      "id": "939d8b2ce8cf",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Nearly all Yakima County dairies impacted by bird flu; no new human cases reported",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQNjJ0ZS1xYkpFQzYtN2RCVUhoYS1Ha3ZuSXlQblJHQjVMUWhJUWJrZ3AyTWk5VHF2b3hmb2tiNGEwUUhJSE9LZ1JGZGJmbm03N3ZzeU9HNklMajNEQkRaaEdqbmZzR25tRmczWFhTWkpBZlFndnBCLWhiX2d5TlNFaEFjY1BnNFJtQWV1RHcwZnNKNVVkaXdaZFpwbDRReXh0cXlBSzUtcGRFZTAwcERpdFBkS0NHQTlTaGI3OENBdWJEdjRBSjEySGMtQjUwc0hheXZXZUxVNjJ3UXVienNBWnB2X2lYU0tQRExDWkRqV3FnY2FFSnN6aDFLWDZ6Mkxrc29mTG5MSlIyRW1H0gGSAkFVX3lxTE9udm5tX2QyV0dGRXhzdUROaTVvYTF3azkyMVBoSFR0QnpVelp2YjlNYjJwR2NCazI3d2MtbmpaQnEwUHNFcmp2N1FpMEdrMWpZc0psNFlqQlpSU0Zvak9ST3NtUTM2OS10QW0zVVE1R2FKcnFtYXlQQ2JmTzhoM1FYX0JKMTZBQUxCdF80TDNXX0VySVFQN0FpRFRGUnZMRHNBb2l5VkxMMDR4TU5Dd0ZKZmp5Q2dMNXVudzZJN09hZFJyWTFHTC1WbXdpbVZfQy1qem9hODZJeEtMZXR1alRPUTVicER1SWhjNlBDRzlwR1BFWWVGaXlGdE50X2d6Q01yRWJlT1FYU0VyZllWN29TSGc?oc=5",
+      "source": "Yakima Herald-Republic",
+      "publishedAt": "2026-11-24T13:00:00.000Z",
+      "latestAt": "2026-11-24T13:00:00.000Z",
+      "firstSeenAt": "2026-11-24T13:13:28.247Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yakima Herald-Republic"
+      ],
+      "score": 1
     },
     {
       "id": "7e79f4b682cd",
@@ -1866,38 +1900,6 @@
       "outlets": 1,
       "outletNames": [
         "Crypto Briefing"
-      ],
-      "score": 1
-    },
-    {
-      "id": "128b47b4cfdc",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Andover Expects to Send Cyberattack Notices Within a Month",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNWTZlek5vRVN1VHhaMjJEVmVJS1RBdm55VG5XSkp4MTBQZF9FYTJFUE90U2hEVm1jREt5QlBXRlRJY3RDcXpDaWRza2NoNjlDc0laR0g2YVE0WXRzaC1IcUMwNDU2WHpEZEw1MjNmVW45cjZpM3ZSMFUwNzA1clZvWEFIQmpLZDR2ajBzQm5R?oc=5",
-      "source": "Andover News",
-      "publishedAt": "2026-11-24T12:36:29.000Z",
-      "latestAt": "2026-11-24T12:36:29.000Z",
-      "firstSeenAt": "2026-11-24T12:43:22.711Z",
-      "outlets": 1,
-      "outletNames": [
-        "Andover News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "f7e7683bb18b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Brief ground stop at Chicago O’Hare heightens holiday travel jitters",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbDNQank4bHI3cG9UWEFSWUhMN2liWTdKdUt5UUlhcHJZTHUyT2xsR0MwcUQzVVM2ZGhZUnRIQjBVS2ZQMFdEdENtZmZWSG42QTBMS2FHUS01Y25aYW43dnpPZVdVczJRWU5JR2lJcEZtdGZCbDZFUjQ5aEl3bUhwSFJNb0gwWjdnLXRqT2lWY2N2Q0NzQWhWQjhTT1A?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-24T12:30:39.000Z",
-      "latestAt": "2026-11-24T12:30:39.000Z",
-      "firstSeenAt": "2026-11-24T12:43:22.711Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
       ],
       "score": 1
     },
