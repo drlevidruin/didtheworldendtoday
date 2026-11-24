@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T16:59:11.725Z",
+  "buildTime": "2026-11-24T17:14:14.139Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 11:59 ET",
+  "etStamp": "2026-11-24 12:14 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,17 +48,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1407,
-  "lastSuccessAt": "2026-11-24T16:59:11.725Z",
+  "headlinesRead": 1362,
+  "lastSuccessAt": "2026-11-24T17:14:14.139Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 18,
+    "internet": 22,
+    "flights": 16,
     "earth": 7,
-    "internet": 20,
-    "grid": 8,
-    "hacks": 32,
+    "grid": 9,
+    "hacks": 30,
     "germs": 4,
-    "weather": 3,
+    "weather": 4,
     "animals": 2,
     "markets": 4,
     "ai": 2
@@ -178,84 +178,105 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1073,
+      "count": 1079,
       "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "bing": {
       "ok": true,
-      "count": 297,
-      "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "count": 244,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "gdelt": {
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-24T16:59:11.725Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-24T16:14:03.172Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T16:59:11.725Z"
+      "lastOkAt": "2026-11-24T17:14:14.139Z"
     }
   },
   "stories": [
+    {
+      "id": "603a3ae90fe2",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft declares ‘code red’ for M365 service health after global outage",
+      "url": "https://cryptobriefing.com/microsoft-code-red-m365-service-health/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-24T08:11:00.000Z",
+      "latestAt": "2026-11-24T17:11:45.000Z",
+      "firstSeenAt": "2026-11-24T16:29:05.231Z",
+      "outlets": 7,
+      "outletNames": [
+        "Crypto Briefing",
+        "Hindustan Times",
+        "Reuters",
+        "AOL",
+        "Virginia Business",
+        "Pragativadi",
+        "bsinews.id"
+      ],
+      "score": 4.59
+    },
     {
       "id": "sig:faa-stop:LAS:2026-11-24",
       "cat": "flights",
@@ -274,29 +295,6 @@
       "signal": {
         "type": "faa-ground-stop",
         "airport": "LAS",
-        "hub": true,
-        "nationwide": false,
-        "reason": "STAFFING"
-      }
-    },
-    {
-      "id": "sig:faa-stop:ORD:2026-11-23",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at ORD (STAFFING)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-23T17:10:03.099Z",
-      "latestAt": "2026-11-23T17:10:03.099Z",
-      "firstSeenAt": "2026-11-23T17:10:03.099Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "ORD",
         "hub": true,
         "nationwide": false,
         "reason": "STAFFING"
@@ -359,25 +357,6 @@
         "102.7 WBOW"
       ],
       "score": 3.86
-    },
-    {
-      "id": "603a3ae90fe2",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft declares ‘code red’ for M365 service health after global outage",
-      "url": "https://cryptobriefing.com/microsoft-code-red-m365-service-health/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-24T08:11:00.000Z",
-      "latestAt": "2026-11-24T16:21:01.000Z",
-      "firstSeenAt": "2026-11-24T16:29:05.231Z",
-      "outlets": 4,
-      "outletNames": [
-        "Crypto Briefing",
-        "Hindustan Times",
-        "Reuters",
-        "AOL"
-      ],
-      "score": 3.62
     },
     {
       "id": "sig:quake:us6000ud6h",
@@ -526,6 +505,23 @@
       "score": 2.78
     },
     {
+      "id": "8116b401c695",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Nationwide ground stop adds new stress to holiday travel",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUnIzdVpZRUFUZDM3b2hXYjBCcFRLQ1otMGZBV1JIUEdUb1pocTNBcU1zVmFRdW9rYUdRZDU4UGxneDFfOWc4cVRlazUwSnkxUVZrS3hVdjFQQUpsNkZBa05SeE1vemdSYWRvRHFkUTVDTEpMQ3dkZXRta19faGlRa2kzTVJ0TGhSZ2xzNWEzV0I5c1h1ekhGMXlWbncyNkQ2M21tUDJCQUhLelFCNGc?oc=5",
+      "source": "NewsBreak: Local News & Alerts",
+      "publishedAt": "2026-11-23T23:14:39.000Z",
+      "latestAt": "2026-11-23T23:21:04.000Z",
+      "firstSeenAt": "2026-11-24T03:41:47.705Z",
+      "outlets": 2,
+      "outletNames": [
+        "NewsBreak: Local News & Alerts",
+        "THV11"
+      ],
+      "score": 2.59
+    },
+    {
       "id": "34dc482ff4ed",
       "cat": "germs",
       "kind": "news",
@@ -559,23 +555,6 @@
         "Daily News"
       ],
       "score": 2.79
-    },
-    {
-      "id": "8116b401c695",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Nationwide ground stop adds new stress to holiday travel",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUnIzdVpZRUFUZDM3b2hXYjBCcFRLQ1otMGZBV1JIUEdUb1pocTNBcU1zVmFRdW9rYUdRZDU4UGxneDFfOWc4cVRlazUwSnkxUVZrS3hVdjFQQUpsNkZBa05SeE1vemdSYWRvRHFkUTVDTEpMQ3dkZXRta19faGlRa2kzTVJ0TGhSZ2xzNWEzV0I5c1h1ekhGMXlWbncyNkQ2M21tUDJCQUhLelFCNGc?oc=5",
-      "source": "NewsBreak: Local News & Alerts",
-      "publishedAt": "2026-11-23T23:14:39.000Z",
-      "latestAt": "2026-11-23T23:21:04.000Z",
-      "firstSeenAt": "2026-11-24T03:41:47.705Z",
-      "outlets": 2,
-      "outletNames": [
-        "NewsBreak: Local News & Alerts",
-        "THV11"
-      ],
-      "score": 2.59
     },
     {
       "id": "6f33acb2709d",
@@ -865,6 +844,23 @@
       "score": 1.64
     },
     {
+      "id": "4d554d38301d",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Chinese authorities look to halt stock market sell-off",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/chinese-authorities-look-halt-stock-115906516.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-24T03:59:00.000Z",
+      "latestAt": "2026-11-24T11:59:00.000Z",
+      "firstSeenAt": "2026-11-24T17:14:14.139Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Finance",
+        "Semafor"
+      ],
+      "score": 1.56
+    },
+    {
       "id": "b0a1ce22246b",
       "cat": "hacks",
       "kind": "news",
@@ -879,6 +875,25 @@
         "NBC 7 San Diego",
         "Newsradio 600 KOGO",
         "Hoodline"
+      ],
+      "score": 2.08
+    },
+    {
+      "id": "0a890f9c5b61",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Queens Public Library restores nearly all public tech services after cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1iaDFQZUt4SGdNQnFVcWtQUXdKZ2s4TmZpa0pYcEJYNDl2VlpZckd4VjY1aE1aV2ZSZU16TUVTbkhaay1pVHROZUhnVHdaOFJvejIzdGZqWVdQdEhfdEVN?oc=5",
+      "source": "QNS.com",
+      "publishedAt": "2026-11-23T19:50:26.000Z",
+      "latestAt": "2026-11-24T15:31:13.000Z",
+      "firstSeenAt": "2026-11-24T14:13:41.101Z",
+      "outlets": 4,
+      "outletNames": [
+        "QNS.com",
+        "Gothamist",
+        "Spectrum News NY1",
+        "Patch"
       ],
       "score": 2.08
     },
@@ -981,24 +996,6 @@
       "outletNames": [
         "SOC Prime",
         "Industrial Cyber"
-      ],
-      "score": 1.79
-    },
-    {
-      "id": "0a890f9c5b61",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Queens Public Library restores nearly all public tech services after cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1iaDFQZUt4SGdNQnFVcWtQUXdKZ2s4TmZpa0pYcEJYNDl2VlpZckd4VjY1aE1aV2ZSZU16TUVTbkhaay1pVHROZUhnVHdaOFJvejIzdGZqWVdQdEhfdEVN?oc=5",
-      "source": "QNS.com",
-      "publishedAt": "2026-11-23T19:50:26.000Z",
-      "latestAt": "2026-11-24T14:10:00.000Z",
-      "firstSeenAt": "2026-11-24T14:13:41.101Z",
-      "outlets": 3,
-      "outletNames": [
-        "QNS.com",
-        "Gothamist",
-        "Spectrum News NY1"
       ],
       "score": 1.79
     },
@@ -1302,6 +1299,22 @@
       "score": 1.4
     },
     {
+      "id": "848448d3ef19",
+      "cat": "grid",
+      "kind": "x",
+      "title": "FBI Director Kash Patel lays out the results of Operation Blackout, a global FBI enforcement campaign to combat cybercrime: \"We have seized nearly $17B in illicit funds, we have taken over more than…",
+      "url": "https://x.com/Breaking911/status/2125269067569279163",
+      "source": "@Breaking911 on X",
+      "publishedAt": "2026-11-24T16:43:25.000Z",
+      "latestAt": "2026-11-24T16:43:25.000Z",
+      "firstSeenAt": "2026-11-24T17:14:14.139Z",
+      "outlets": 1,
+      "outletNames": [
+        "@Breaking911 on X"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "60be44f5f9fe",
       "cat": "flights",
       "kind": "news",
@@ -1449,7 +1462,7 @@
       "outletNames": [
         "The Seattle Times"
       ],
-      "trending": 200,
+      "trending": 500,
       "trendTerm": "microsoft code red",
       "score": 1.36
     },
@@ -1468,6 +1481,23 @@
         "Herald.Wales"
       ],
       "score": 1.35
+    },
+    {
+      "id": "62ffc5269e72",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQS3RGRXNXRkdWZGhsZTlPRVBjZWNjenNCc2VEZV9mSlV6bWlfaXpGa214b0ZGSmd6NVRRZk5UQzhkQ25iT1huVWNFaXBGNVZJSnprVktrSkVEUjdiR0Z3YlhITF9wX3NFTDhMX2VpaUdqQU5VM1FmV3lmYl9XSDNBZFk0am5KQVR3V242dG83VmJGOUxQeEVRMWZmdlR5SE1Qdko1MWpmLUJOTGEtR2ZzNVlWTFkwd2JHd3d5RQ?oc=5",
+      "source": "BleepingComputer",
+      "publishedAt": "2026-11-23T20:54:51.000Z",
+      "latestAt": "2026-11-24T17:10:00.000Z",
+      "firstSeenAt": "2026-11-24T17:14:14.139Z",
+      "outlets": 2,
+      "outletNames": [
+        "BleepingComputer",
+        "TechRadar"
+      ],
+      "score": 1.32
     },
     {
       "id": "caf17f46a7f1",
@@ -1598,22 +1628,6 @@
       "score": 1.2
     },
     {
-      "id": "8ca9b14f75aa",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stock market today: Nasdaq, S&P 500 tumble after Monday’s massive gains as Nvidia leads AI stock sell-off",
-      "url": "https://www.msn.com/en-us/money/general/stock-market-today-nasdaq-s-p-500-tumble-after-monday-s-huge-gains-as-nvidia-leads-ai-stocks-lower/ar-AA2i893a",
-      "source": "Investopedia on MSN",
-      "publishedAt": "2026-11-24T07:24:55.000Z",
-      "latestAt": "2026-11-24T07:45:03.000Z",
-      "firstSeenAt": "2026-11-24T16:14:03.172Z",
-      "outlets": 1,
-      "outletNames": [
-        "Investopedia on MSN"
-      ],
-      "score": 1.19
-    },
-    {
       "id": "1c65edc076fd",
       "cat": "flights",
       "kind": "news",
@@ -1678,22 +1692,6 @@
       "score": 1.16
     },
     {
-      "id": "3226c91796d3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "America's Biggest Oil Export Port Faces Thousands of Cyberattack Attempts",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZEl2d2N0eTBYZ2E0WmI3Y0FrRWJWaEZDV1ZldndoMHRYQ2VpTDZ4UklobE5CMzZuN0ZtZDRVUmZ1YmxSNi1yeGZrVFBrY3VSWVdZY1hDV3JaREF5SXFsRGl4VlhPZWRnZjUzQko0Y0g2SnF5RWpqQmRuWmpmRDJxYzZBX2VIdWRRSjV1eXA0LTI0alBlSHZUamt1UlFwckJTZDFRVDZvaDRUUkNOck1Qc0I1OUJuaUtRUFJ1VdIBwgFBVV95cUxOSVFlb3JJQ1BFMF9oOG5LVjV3RmdlOTBBQVhQS1NGLUJCZ21oRjFJQTA2anZEN2JUbXRQdmQzZzdlSjB2RnlfZmVNNmliUDNGYVloaGtiQ1MtS1hJUmdfN3RwYzE0Wl9NRFFseHlBM290akh4WmpkV3Y1OThhb1VvUVFQLVVPcDQ0U3Q2UmNORndXS1lCYXotY3dtbHd5MVMtaElTNDdlLTQtTXVCRjZSZGFrVGtWcVZZSlFGbm1rZVNMQQ?oc=5",
-      "source": "Crude Oil Prices Today | OilPrice.com",
-      "publishedAt": "2026-11-23T17:00:00.000Z",
-      "latestAt": "2026-11-23T17:00:00.000Z",
-      "firstSeenAt": "2026-11-24T03:11:40.911Z",
-      "outlets": 1,
-      "outletNames": [
-        "Crude Oil Prices Today | OilPrice.com"
-      ],
-      "score": 1.16
-    },
-    {
       "id": "137b1feecce5",
       "cat": "flights",
       "kind": "news",
@@ -1724,6 +1722,38 @@
         "El Cronista"
       ],
       "score": 1.02
+    },
+    {
+      "id": "6c21db715145",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Reveals Testing Failures Behind 365 Outage",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBwejRTczRVREx1Z1NtTXB3dlhQdm9EOUhnSllQc2k1WE4ybjJaQmQ4X3A2dEtYUDZ0WnB1LURJbXM0cEd3Yy1TeF9pSVNKSXliXy1Xak9IRXpGRDl0LVZOcXAxa2dsSGYzOVZhVG9zLS1wZGc?oc=5",
+      "source": "Demokratis.co.id",
+      "publishedAt": "2026-11-24T17:04:00.000Z",
+      "latestAt": "2026-11-24T17:04:00.000Z",
+      "firstSeenAt": "2026-11-24T17:14:14.139Z",
+      "outlets": 1,
+      "outletNames": [
+        "Demokratis.co.id"
+      ],
+      "score": 1
+    },
+    {
+      "id": "b9585d6bce5c",
+      "cat": "internet",
+      "kind": "news",
+      "title": "After a Day of Disruption, Microsoft Wants AI to Help Diagnose Its Next Outage",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9hLVVxNEdhTnVublQ1V3dsWUdVMGJrNHVOZkZWQ3BxY3J2RDQzNFktUHBNWWFnemthMzN3RElhVG9OWWZjcjY0aW1NbHk3U1c0U3VDcHVMdHkzeUlYM1V0UXczbDI3UVE?oc=5",
+      "source": "The 420.in",
+      "publishedAt": "2026-11-24T16:58:55.000Z",
+      "latestAt": "2026-11-24T16:58:55.000Z",
+      "firstSeenAt": "2026-11-24T17:14:14.139Z",
+      "outlets": 1,
+      "outletNames": [
+        "The 420.in"
+      ],
+      "score": 1
     },
     {
       "id": "6c07337f4d1a",
@@ -1806,54 +1836,6 @@
       "score": 1
     },
     {
-      "id": "32630c27776e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Ground Stop Could Cost Travel Industry $26B in 2027",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPV0lGdE5sOFZOYkhBVTViWGdmelRvYm5UZ2lramZ3VmFEVmxHZ2x1cU1SODN5MmZNb3R4ZUU0TnVXNFZ1Y1gzaDFSVUxRZmkzMjgtMDZhTlJsY0JMS2FvQVhxdGN1NEFsR2VGWG44MWlMeGp5WUc4LXNnaDhOV1dSeTVuZTAxbFU?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T16:31:24.000Z",
-      "latestAt": "2026-11-24T16:31:24.000Z",
-      "firstSeenAt": "2026-11-24T16:44:09.238Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yahoo"
-      ],
-      "score": 1
-    },
-    {
-      "id": "dee762c9bdfe",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Zhong's Accounting & Tax Services Data Breach: SSNs Exposed",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbkRMYXJTRkZnb3lZUUJ1SDhEeW9fa3FhajdkM2xzN2FOR3AyLUxlODN0NzE0M1Q0TGdrYWlNTEU3X09VUjBGamdwX1lyVmlEZnFyZ3ZWTWFhYTV2TndwVW9jblEtSzF6akZsRk5yWE14UURBODFuWWpwVm95ZXVyRnhRbw?oc=5",
-      "source": "Claim Depot",
-      "publishedAt": "2026-11-24T16:30:40.000Z",
-      "latestAt": "2026-11-24T16:30:40.000Z",
-      "firstSeenAt": "2026-11-24T16:44:09.238Z",
-      "outlets": 1,
-      "outletNames": [
-        "Claim Depot"
-      ],
-      "score": 1
-    },
-    {
-      "id": "f62e2a25cf3e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "GoFundMe Pro Suffers Data Breach Exposing Contact Information of Individuals",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0wZE9wMC1oVzBUcHRrdTRnOXFPeGM3UThwSHc0NU40RGM0QkstU09XeXVKY0FjcWdlME1VOVFhMEtQR0JMUnNCQ05zYU1XLVgwVVhGTUJ2c0p1YTNOWDhBTnhCaE1xQQ?oc=5",
-      "source": "Claim Depot",
-      "publishedAt": "2026-11-24T16:20:27.000Z",
-      "latestAt": "2026-11-24T16:20:27.000Z",
-      "firstSeenAt": "2026-11-24T16:29:05.231Z",
-      "outlets": 1,
-      "outletNames": [
-        "Claim Depot"
-      ],
-      "score": 1
-    },
-    {
       "id": "bea8997a534d",
       "cat": "germs",
       "kind": "news",
@@ -1920,6 +1902,22 @@
       "score": 0.99
     },
     {
+      "id": "8043fd0465d7",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Tomball-based Greenwich Rx recalls injections over contamination concerns",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTUREWDZRLTF0TDNmTVgtd0g1RG9kS2o3ZVUwWlpoSGxZQWJPdjd4bWdNaTBrZzc4eE8xZUl3QzVsLXVJRG0wRVI2SzFDRDFRejRwNWw3aXdGZFpnd2phTnduY25kVE5fOUQ4S2tReFk3UFFGZEdpb1lOaGRoREFaaFFJcjQwS1BTYWJqNDZVQkcxWHNSczgtRm1wdjdtLURLRjY2Q3JuSkJhd0FoQ1c4SkNBWm8yV28?oc=5",
+      "source": "Houston Chronicle",
+      "publishedAt": "2026-11-24T15:59:14.000Z",
+      "latestAt": "2026-11-24T15:59:14.000Z",
+      "firstSeenAt": "2026-11-24T17:14:14.139Z",
+      "outlets": 1,
+      "outletNames": [
+        "Houston Chronicle"
+      ],
+      "score": 0.98
+    },
+    {
       "id": "939d8b2ce8cf",
       "cat": "germs",
       "kind": "news",
@@ -1932,22 +1930,6 @@
       "outlets": 1,
       "outletNames": [
         "Yakima Herald-Republic"
-      ],
-      "score": 0.93
-    },
-    {
-      "id": "0b5eb2018117",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Illustration shows test tubes labelled \"Bird Flu\" words",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPRk1FOHBqRF9pRGFPQzZtV3VIX2tQMGlFbTkyS1RvVTBNdE9oRU9EVzJNWHBWOU9ickRObWxCSEJZdHFkQS1XSzEtdUVES1RybFdoZlduOWtvekFJNnJpcDQyclczSFhFNWM5X0hPalk2UWRKbTdSQUdUZWI3eWhSWHVkVmJDNGRZWHZjSXYwUzVhakpvQkFkWm1Hb2oyUDN4dFd1RE9EMmFadll5RFpCZmU1WFFmSExwVUMyR3MxOTRmYkpGdTVWS20wOTRwVXVPYjk4TVM5bF9Cejc2dGI3QzRfV09Edw?oc=5",
-      "source": "The Lufkin Daily News",
-      "publishedAt": "2026-11-24T12:36:08.000Z",
-      "latestAt": "2026-11-24T12:36:08.000Z",
-      "firstSeenAt": "2026-11-24T16:59:11.725Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Lufkin Daily News"
       ],
       "score": 0.93
     },
@@ -2000,6 +1982,24 @@
       "trending": 100,
       "trendTerm": "horse",
       "score": 0.82
+    },
+    {
+      "id": "fc0297c3c903",
+      "cat": "weather",
+      "kind": "news",
+      "title": "'Godzilla' El Niño raises tornado risk",
+      "url": "https://www.floridatoday.com/story/news/local/2026/11/24/florida-tornado-risk-rises-with-strong-el-nio/92825888007/",
+      "source": "Florida Today",
+      "publishedAt": "2026-11-24T02:03:00.000Z",
+      "latestAt": "2026-11-24T02:03:00.000Z",
+      "firstSeenAt": "2026-11-24T17:14:14.139Z",
+      "outlets": 1,
+      "outletNames": [
+        "Florida Today"
+      ],
+      "score": 0.75,
+      "quiet": true,
+      "quietReason": "headline mentions tornado"
     }
   ]
 }
