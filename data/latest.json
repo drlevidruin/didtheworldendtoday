@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T14:58:54.366Z",
+  "buildTime": "2026-11-24T15:13:49.241Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 09:58 ET",
+  "etStamp": "2026-11-24 10:13 ET",
   "score": 59,
   "fired": [
     "flights",
@@ -47,16 +47,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1323,
-  "lastSuccessAt": "2026-11-24T14:58:54.366Z",
+  "headlinesRead": 1409,
+  "lastSuccessAt": "2026-11-24T15:13:49.241Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 12,
-    "earth": 8,
+    "flights": 14,
+    "earth": 7,
     "internet": 19,
-    "grid": 7,
+    "grid": 9,
     "germs": 4,
-    "hacks": 38,
+    "hacks": 35,
     "weather": 4,
     "markets": 4,
     "ai": 2,
@@ -73,7 +73,7 @@
     },
     "kp": {
       "value": 1,
-      "time": "2026-11-24T09:00:00.000Z",
+      "time": "2026-11-24T12:00:00.000Z",
       "max24": 1.67
     },
     "asteroid": {
@@ -177,81 +177,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 991,
+      "count": 1082,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "bing": {
       "ok": true,
-      "count": 298,
+      "count": 291,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-24T13:43:33.749Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-24T14:13:41.101Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "trends": {
       "ok": true,
       "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T14:58:54.366Z"
+      "lastOkAt": "2026-11-24T15:13:49.241Z"
     }
   },
   "stories": [
@@ -657,6 +656,26 @@
       "score": 2.42
     },
     {
+      "id": "7c6ceebd6163",
+      "cat": "earth",
+      "kind": "news",
+      "title": "No tsunami threat after 6.4-magnitude earthquake strikes near Mauritius",
+      "url": "https://www.msn.com/en-gb/news/other/no-tsunami-threat-after-64-magnitude-earthquake-strikes-near-mauritius/ar-AA2i7q1z",
+      "source": "International Business Times UK on MSN",
+      "publishedAt": "2026-11-24T04:50:45.000Z",
+      "latestAt": "2026-11-24T12:59:36.000Z",
+      "firstSeenAt": "2026-11-24T13:13:28.247Z",
+      "outlets": 3,
+      "outletNames": [
+        "International Business Times UK on MSN",
+        "India TV News",
+        "inkl"
+      ],
+      "score": 2.22,
+      "quiet": true,
+      "quietReason": "headline mentions tsunami"
+    },
+    {
       "id": "0fc9f53e8229",
       "cat": "germs",
       "kind": "news",
@@ -800,23 +819,38 @@
       "score": 1.88
     },
     {
-      "id": "7c6ceebd6163",
-      "cat": "earth",
+      "id": "3b768c0075a2",
+      "cat": "flights",
       "kind": "news",
-      "title": "No tsunami threat after 6.4-magnitude earthquake strikes near Mauritius",
-      "url": "https://www.msn.com/en-gb/news/other/no-tsunami-threat-after-64-magnitude-earthquake-strikes-near-mauritius/ar-AA2i7q1z",
-      "source": "International Business Times UK on MSN",
-      "publishedAt": "2026-11-24T04:50:45.000Z",
-      "latestAt": "2026-11-24T12:59:36.000Z",
-      "firstSeenAt": "2026-11-24T13:13:28.247Z",
+      "title": "The Flight King Offers Private Jet Charters After FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPR1h0ZEt0bzRhVnBzRTFfMEZ5QVo2WFlnRDVjVDFZWTdEeTRzVlExd1ZFUmhzQXNuS3ZBNE5BUk85OFV0ZDV0T1NVUkpnRXhrX3hKY2JkdU5zc25LZkl4Q0hybFhhSEdzYVlfLWRmUTU4c01famd3Y2lUVkljYmpWSkhNUkdoeG5ScEZab2M2NlVHTmRKOUNJcUZRYnl4Q3E1ZmhHS1luYkI1TE5YejhqQU5iNjMwR2ZRS1B3bW03TFEzNXljc3FIZl9NMUZMcEN6ZHZYX2Rzak5tdU5UaElEejhBT1JJMzJpc29IZGJJNmtzY1pHYTNSWDM4RQ?oc=5",
+      "source": "WBOC TV",
+      "publishedAt": "2026-11-24T09:06:24.000Z",
+      "latestAt": "2026-11-24T09:07:40.000Z",
+      "firstSeenAt": "2026-11-24T15:13:49.241Z",
       "outlets": 2,
       "outletNames": [
-        "International Business Times UK on MSN",
-        "India TV News"
+        "WBOC TV",
+        "PR Underground"
       ],
-      "score": 1.72,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
+      "score": 1.8
+    },
+    {
+      "id": "bb9b348a287e",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Austria's National Security Service is investigating following a power outage",
+      "url": "https://www.bluewin.ch/en/news/austria-s-national-security-service-is-investigating-following-a-power-outage-li.3685591",
+      "source": "Bluewin",
+      "publishedAt": "2026-11-24T07:07:00.000Z",
+      "latestAt": "2026-11-24T15:09:25.000Z",
+      "firstSeenAt": "2026-11-24T15:13:49.241Z",
+      "outlets": 2,
+      "outletNames": [
+        "Bluewin",
+        "blue News"
+      ],
+      "score": 1.73
     },
     {
       "id": "45bbdc9905b8",
@@ -834,40 +868,6 @@
         "cedarnews.net"
       ],
       "score": 1.72
-    },
-    {
-      "id": "04d4c83b5688",
-      "cat": "grid",
-      "kind": "news",
-      "title": "How a 'weekday thing' caused brief Commanders power outage",
-      "url": "https://ftw.usatoday.com/story/sports/nfl/2026/11/24/why-commanders-power-outage-happened/92938721007/",
-      "source": "For The Win",
-      "publishedAt": "2026-11-24T04:51:00.000Z",
-      "latestAt": "2026-11-24T12:50:00.000Z",
-      "firstSeenAt": "2026-11-24T14:13:41.101Z",
-      "outlets": 2,
-      "outletNames": [
-        "For The Win",
-        "USA Today"
-      ],
-      "score": 1.69
-    },
-    {
-      "id": "20273a7b51bd",
-      "cat": "grid",
-      "kind": "news",
-      "title": "ManningCast has perfect reaction to Bengals-Commanders power outage",
-      "url": "https://sports.yahoo.com/articles/manningcast-perfect-reaction-bengals-commanders-034818152.html",
-      "source": "Yahoo Sports",
-      "publishedAt": "2026-11-23T16:00:00.000Z",
-      "latestAt": "2026-11-24T04:12:09.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Sports",
-        "The Big Lead"
-      ],
-      "score": 1.59
     },
     {
       "id": "b1a257bc9c5b",
@@ -919,6 +919,23 @@
         "teiss"
       ],
       "score": 1.81
+    },
+    {
+      "id": "2eac2cff2878",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Osaki Electric Ransomware Attack Halts Smart-Meter Production",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPanZuYnJhdFBkeU5UN2pCekRIbkFjQi1vS2VyMEpBN0k2TWtzQ0xqYm9GamZnZVppS2JnMURHajlXbnFLN2tfdmpLZzUwRGdUMzF5Q1hlSUhaeFhOY1lvMk81N25YWXRtN29BN3l5YWVoV0RiNXViVWNjUm1zOExQaEFnel9sUmdnbE42SF9pYk0xYzM1aGktbDBmZ0R5dDA?oc=5",
+      "source": "SOC Prime",
+      "publishedAt": "2026-11-24T08:49:28.000Z",
+      "latestAt": "2026-11-24T15:11:40.000Z",
+      "firstSeenAt": "2026-11-24T15:13:49.241Z",
+      "outlets": 2,
+      "outletNames": [
+        "SOC Prime",
+        "Industrial Cyber"
+      ],
+      "score": 1.79
     },
     {
       "id": "0a890f9c5b61",
@@ -1008,6 +1025,23 @@
       "score": 1.7
     },
     {
+      "id": "04d4c83b5688",
+      "cat": "grid",
+      "kind": "news",
+      "title": "How a 'weekday thing' caused brief Commanders power outage",
+      "url": "https://ftw.usatoday.com/story/sports/nfl/2026/11/24/why-commanders-power-outage-happened/92938721007/",
+      "source": "For The Win",
+      "publishedAt": "2026-11-24T04:51:00.000Z",
+      "latestAt": "2026-11-24T12:50:00.000Z",
+      "firstSeenAt": "2026-11-24T14:13:41.101Z",
+      "outlets": 2,
+      "outletNames": [
+        "For The Win",
+        "USA Today"
+      ],
+      "score": 1.69
+    },
+    {
       "id": "69b8f1901d8c",
       "cat": "internet",
       "kind": "news",
@@ -1076,6 +1110,23 @@
       "score": 1.65
     },
     {
+      "id": "0994db2f75d3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Thanksgiving Travel Rush Begins for 81.5 Million Americans After FAA Ground Stop and Airline Outages",
+      "url": "https://www.latintimes.com/aaa-thanksgiving-2026-travel-forecast-601731",
+      "source": "Latin Times",
+      "publishedAt": "2026-11-24T04:32:00.000Z",
+      "latestAt": "2026-11-24T12:32:21.000Z",
+      "firstSeenAt": "2026-11-24T15:13:49.241Z",
+      "outlets": 2,
+      "outletNames": [
+        "Latin Times",
+        "inkl"
+      ],
+      "score": 1.64
+    },
+    {
       "id": "edfc3c91a52c",
       "cat": "internet",
       "kind": "news",
@@ -1142,6 +1193,23 @@
         "Yahoo News UK"
       ],
       "score": 1.61
+    },
+    {
+      "id": "20273a7b51bd",
+      "cat": "grid",
+      "kind": "news",
+      "title": "ManningCast has perfect reaction to Bengals-Commanders power outage",
+      "url": "https://sports.yahoo.com/articles/manningcast-perfect-reaction-bengals-commanders-034818152.html",
+      "source": "Yahoo Sports",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T04:12:09.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo Sports",
+        "The Big Lead"
+      ],
+      "score": 1.59
     },
     {
       "id": "1435774e9dc5",
@@ -1261,6 +1329,22 @@
         "Help Net Security"
       ],
       "score": 1.44
+    },
+    {
+      "id": "6d2907cac32f",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Nearly 7,000 homes lose power during first major snowfall in Barrie",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVTJNYUNmM2VxNUF1ZkJQRHhydjlTYVpKdXpmYXFHazVjWEhkNk9yR0pBTk5tblBDNDJGN2FmaHo5YkZVd0N5QnRfc0FxYlAxRHBHbnZSNE5KUUFFSmJ6RlE3dzYtazVRdFZGa29mSDZSMmt3Y002Y2dVYk0wckZ6eUpwdFE2MFVpeWwyN2JNRG4wSmhPRDlLWHItMzlHLTl3M2hVeGFIVzU?oc=5",
+      "source": "CTV News",
+      "publishedAt": "2026-11-24T15:03:16.000Z",
+      "latestAt": "2026-11-24T15:03:16.000Z",
+      "firstSeenAt": "2026-11-24T15:13:49.241Z",
+      "outlets": 1,
+      "outletNames": [
+        "CTV News"
+      ],
+      "score": 1.4
     },
     {
       "id": "27f23767c391",
@@ -1597,7 +1681,7 @@
       "url": "https://www.nytimes.com/2026/11/24/business/l3harris-ground-stop-aviation.html",
       "source": "The New York Times",
       "publishedAt": "2026-11-24T02:03:00.000Z",
-      "latestAt": "2026-11-24T13:06:17.000Z",
+      "latestAt": "2026-11-24T14:10:03.000Z",
       "firstSeenAt": "2026-11-24T10:27:55.694Z",
       "outlets": 1,
       "outletNames": [
@@ -1750,6 +1834,22 @@
       "score": 1.02
     },
     {
+      "id": "1424576b98ea",
+      "cat": "internet",
+      "kind": "x",
+      "title": "User reports indicate problems with Vinted since 10:03 AM EST.",
+      "url": "https://x.com/downdetector/status/2125245875123257841",
+      "source": "@downdetector on X",
+      "publishedAt": "2026-11-24T15:11:16.000Z",
+      "latestAt": "2026-11-24T15:11:16.000Z",
+      "firstSeenAt": "2026-11-24T15:13:49.241Z",
+      "outlets": 1,
+      "outletNames": [
+        "@downdetector on X"
+      ],
+      "score": 1
+    },
+    {
       "id": "7dff6ec9391d",
       "cat": "hacks",
       "kind": "news",
@@ -1763,106 +1863,6 @@
       "outletNames": [
         "The Mac Observer"
       ],
-      "score": 1
-    },
-    {
-      "id": "e644332ee7fb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack on Allied Media disrupts systems, delays newspapers",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdWFjUkEtVWdOOXVpVUM5dzVtV3huRG12Z0tsMTA3NE1mRkpIZjQtcEVlU0pPRHgyclVxTUVXUGpETG5NZWdsMHhZSFJDc1dPbnBHaUtHalBKY1hvdXRIakxobkJUYnJTM0ViWFpubXFKR19odGFCdWlXSHdlUURhX1hzVEFnbVFzZ1BjNEl1VHQ2VUM3YWZpSW1UY1RkNkE?oc=5",
-      "source": "1News",
-      "publishedAt": "2026-11-24T13:56:04.000Z",
-      "latestAt": "2026-11-24T13:56:04.000Z",
-      "firstSeenAt": "2026-11-24T14:13:41.101Z",
-      "outlets": 1,
-      "outletNames": [
-        "1News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "9470cb65f8e2",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Hawaii's Kīlauea Volcano erupts for 57th time, spewing lava 200 meters high",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZzFkTVhMdDY5aDJBaVJ0LTBUbWZIeVlScW5KVnhpS1dHeUJpbThwcjVhSjVQN3RGRE9FZXh2MTFYeExUalIteEhTZ2tlXzRmQmtrbVZNY3hzX1hPYVI5bmp2dkJqRFZ0aDl4d01LWU0zUVU5b3F0Yy10ZUxsc3pjYm13ZS1ab2R0WnV5aERVenQ2djJFWF9NZXhNVDk1UDdMdXhKWll4cnRqRDZtcHh0dUxhWVpQRzky?oc=5",
-      "source": "İlke Haber Ajansı",
-      "publishedAt": "2026-11-24T13:53:40.000Z",
-      "latestAt": "2026-11-24T13:53:40.000Z",
-      "firstSeenAt": "2026-11-24T13:58:34.717Z",
-      "outlets": 1,
-      "outletNames": [
-        "İlke Haber Ajansı"
-      ],
-      "score": 1
-    },
-    {
-      "id": "e6d0015d3383",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "French sports retailer Decathlon hit by cyberattack, data of more than 130,000 customers exposed",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPdnZNamhkbjJBclhycVhmbkdLZTd2OHFycVZVd2tCRWljY1hEYXdmcEluY2hlUlZEVjFtUEo3S211UlFWQ285WTJiRmtnMHYtY0R4YnAxaElTOXFkRUptNjVaOU90OGF4ck1WR1VIU3RzN3lSSGE4U29ZQkVac1RiZXVKenRsOVcyVzVmVG15cUxlUDB3TTVQcElMWTdHTFJzcWhWd1FBRWw0Uk43MHRwSG4yUHBjZmc1NE0wZWlHMG51clpqUVdYX2QtMk4tNEVW?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-24T13:52:36.000Z",
-      "latestAt": "2026-11-24T13:52:57.000Z",
-      "firstSeenAt": "2026-11-24T13:58:34.717Z",
-      "outlets": 1,
-      "outletNames": [
-        "Anadolu Ajansı"
-      ],
-      "score": 1
-    },
-    {
-      "id": "20fb0ec90f43",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Outage Warning: Brad Smith Says More Disruptions Likely After Perfect Storm Failure",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaDBvNTNfZUZCUF9hUU9wQU04aDBnbFZGdlIzMWZ2SzF1aG9TTUpXM1FLSm5IMWg3Y24yV2w5RFdJSWQ2ek91cUk4b3h4cFotVlBFUEQtQTJpYTBvOHFpUDAyZFcxX1Z2RXBDY0x2QzhRWmdON3BqMGxWQ3U3VXNneW1GNUc2SDFSV0tMbkQtdjhZdTZqQzFmdUxpaU1DX3c?oc=5",
-      "source": "theopenpress.in",
-      "publishedAt": "2026-11-24T13:36:38.000Z",
-      "latestAt": "2026-11-24T13:36:38.000Z",
-      "firstSeenAt": "2026-11-24T13:43:33.749Z",
-      "outlets": 1,
-      "outletNames": [
-        "theopenpress.in"
-      ],
-      "score": 1
-    },
-    {
-      "id": "2fc3c988e24f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Database Leaks Expose 3.5 Billion Usernames, Passwords, and Documents",
-      "url": "https://www.wired.com/story/3-billion-usernames-passwords-and-documents-leaked-online/",
-      "source": "WIRED",
-      "publishedAt": "2026-11-24T13:30:00.000Z",
-      "latestAt": "2026-11-24T13:30:00.000Z",
-      "firstSeenAt": "2026-11-24T13:43:33.749Z",
-      "outlets": 1,
-      "outletNames": [
-        "WIRED"
-      ],
-      "trending": 500,
-      "trendTerm": "3.5 billion records exposed database leak",
-      "score": 1
-    },
-    {
-      "id": "530ac8ef10fd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Two billion credentials publicly exposed, including everything needed for identity theft",
-      "url": "https://9to5mac.com/2026/11/24/two-billion-credentials-publicly-exposed-including-everything-needed-for-identity-theft/",
-      "source": "9to5Mac",
-      "publishedAt": "2026-11-24T13:30:00.000Z",
-      "latestAt": "2026-11-24T13:30:00.000Z",
-      "firstSeenAt": "2026-11-24T13:43:33.749Z",
-      "outlets": 1,
-      "outletNames": [
-        "9to5Mac"
-      ],
-      "trending": 200,
-      "trendTerm": "3.5 billion records exposed database leak",
       "score": 1
     },
     {
@@ -1953,7 +1953,7 @@
       "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
       "source": "JKN",
       "publishedAt": "2026-11-24T02:09:00.000Z",
-      "latestAt": "2026-11-24T04:00:00.000Z",
+      "latestAt": "2026-11-24T06:51:00.000Z",
       "firstSeenAt": "2026-11-24T10:27:55.694Z",
       "outlets": 1,
       "outletNames": [
