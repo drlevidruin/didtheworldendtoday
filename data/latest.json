@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T00:11:09.890Z",
+  "buildTime": "2026-11-24T00:26:11.501Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 19:11 ET",
+  "etStamp": "2026-11-23 19:26 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,16 +49,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 92,
-  "lastSuccessAt": "2026-11-24T00:11:09.890Z",
+  "headlinesRead": 1037,
+  "lastSuccessAt": "2026-11-24T00:26:11.501Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
+    "flights": 22,
     "earth": 6,
-    "hacks": 37,
-    "markets": 6,
-    "internet": 5,
+    "hacks": 36,
+    "markets": 7,
     "germs": 7,
+    "internet": 4,
     "animals": 4,
     "weather": 4,
     "grid": 4,
@@ -90,7 +90,13 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "LEX",
+          "hub": false,
+          "reason": "disabled aircraft on the runway"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 0,
       "closures": 0,
@@ -181,20 +187,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "count": 718,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 18 of 26 queries)",
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     },
     "bing": {
       "ok": true,
-      "count": 57,
-      "error": "4 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "count": 285,
+      "error": null,
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,55 +212,56 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "lastOkAt": "2026-11-24T00:11:09.890Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z"
+      "lastOkAt": "2026-11-24T00:26:11.501Z"
     }
   },
   "stories": [
@@ -508,23 +515,6 @@
       "score": 3.28
     },
     {
-      "id": "a461bbd73119",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Joe Rogan 'Nervious' & Sounds Alarm Over Major 'Worldwide' Tech Outages",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSGhrVVVUYWl5UHprNV93TmtoZVBBV3pxbzhTcTZBWmtTaUsxMkJZNnRMUjM1MzdXcHhjeTFrMjVOSG56OWJDX2FodTRldm1oeF9RTzFsQVFIODVQbFl0Vm5leE1wUFdaUEJ1cUtLMmp1VU9aTUw3NFQ2Mnk0cFlINzlkUDBNVDE3RXd0MDAzbw?oc=5",
-      "source": "RadarOnline",
-      "publishedAt": "2026-11-23T19:10:26.000Z",
-      "latestAt": "2026-11-23T19:14:34.000Z",
-      "firstSeenAt": "2026-11-23T23:11:05.488Z",
-      "outlets": 2,
-      "outletNames": [
-        "RadarOnline",
-        "AOL.com"
-      ],
-      "score": 2.61
-    },
-    {
       "id": "ad51fd2de4de",
       "cat": "markets",
       "kind": "news",
@@ -563,6 +553,48 @@
       "score": 2.58
     },
     {
+      "id": "fca35b4472e6",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Green Giant Canned Corn Is Being Recalled for Potential Hard Plastic Contamination",
+      "url": "https://www.yahoo.com/news/world/articles/green-giant-canned-corn-being-173000977.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-23T09:30:00.000Z",
+      "latestAt": "2026-11-23T17:30:00.000Z",
+      "firstSeenAt": "2026-11-23T18:25:13.605Z",
+      "outlets": 4,
+      "outletNames": [
+        "Yahoo",
+        "Allrecipes",
+        "AOL.com",
+        "Yahoo News Singapore"
+      ],
+      "score": 2.55
+    },
+    {
+      "id": "sig:faa-stop:LEX:2026-11-23",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at LEX (disabled aircraft on the runway)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-24T00:26:11.501Z",
+      "latestAt": "2026-11-24T00:26:11.501Z",
+      "firstSeenAt": "2026-11-24T00:26:11.501Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "LEX",
+        "hub": false,
+        "nationwide": false,
+        "reason": "disabled aircraft on the runway"
+      }
+    },
+    {
       "id": "91c05b38efd8",
       "cat": "flights",
       "kind": "news",
@@ -582,32 +614,6 @@
         "KVAL"
       ],
       "score": 3.47
-    },
-    {
-      "id": "fd8f6b998fed",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
-      "url": "https://www.newsday.com/news/nation/european-commission-cyberattack-website-artex-ai-j61327",
-      "source": "Newsday",
-      "publishedAt": "2026-11-23T00:24:00.000Z",
-      "latestAt": "2026-11-23T18:52:04.000Z",
-      "firstSeenAt": "2026-11-23T18:40:16.216Z",
-      "outlets": 11,
-      "outletNames": [
-        "Newsday",
-        "POLITICO.eu",
-        "Mezha.net",
-        "AP News",
-        "Ottumwa Courier",
-        "Corsicana Daily Sun",
-        "The Spec",
-        "European Interest",
-        "Tech Xplore",
-        "Toronto Star",
-        "Associated Press News"
-      ],
-      "score": 3.1
     },
     {
       "id": "30f9e199e0a5",
@@ -686,43 +692,38 @@
       "score": 2.92
     },
     {
-      "id": "e55269ebb7e8",
-      "cat": "flights",
+      "id": "6ba8cf23d88f",
+      "cat": "hacks",
       "kind": "news",
-      "title": "O’Hare ground stop lifted as Thanksgiving travel chaos looms",
-      "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
-      "source": "Central Illinois Proud on MSN",
-      "publishedAt": "2026-11-23T11:12:19.000Z",
-      "latestAt": "2026-11-23T23:50:52.000Z",
-      "firstSeenAt": "2026-11-23T20:55:41.076Z",
-      "outlets": 5,
+      "title": "Alberta seeks to tighten criteria to access provincial voters list after massive data breach impacted 2.9 million Albertans",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTlFzR09Bd2o4d1ozanZ1aW94anktTVIxUERwaFBJUHJoREQzcU5ZMjBUalpIZ0xHUEtoUWVqNWtrS1pzZkFsSmRfMHNEOUxadmNSNi1IZU85NnRCczBqd1ZIYUxiV0VLRmdJTXhRVGpyTXlWUzg2TnNGQXJuaVlzYXVJbUI?oc=5",
+      "source": "Yahoo News Canada",
+      "publishedAt": "2026-11-23T20:54:26.000Z",
+      "latestAt": "2026-11-23T21:32:30.000Z",
+      "firstSeenAt": "2026-11-23T21:25:44.587Z",
+      "outlets": 2,
       "outletNames": [
-        "Central Illinois Proud on MSN",
-        "CIProud.com",
-        "WGN-TV",
-        "AOL.co.uk",
-        "Breitbart News"
+        "Yahoo News Canada",
+        "Edmonton Journal"
       ],
       "score": 2.78
     },
     {
-      "id": "fca35b4472e6",
-      "cat": "germs",
+      "id": "a461bbd73119",
+      "cat": "internet",
       "kind": "news",
-      "title": "Green Giant Canned Corn Is Being Recalled for Potential Hard Plastic Contamination",
-      "url": "https://www.yahoo.com/news/world/articles/green-giant-canned-corn-being-173000977.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-23T09:30:00.000Z",
-      "latestAt": "2026-11-23T17:30:00.000Z",
-      "firstSeenAt": "2026-11-23T18:25:13.605Z",
-      "outlets": 4,
+      "title": "Joe Rogan Sounds Alarm Over Major 'Worldwide' Tech Outages — as Controversial Podcaster Warns 'They're Not Totally in Control'",
+      "url": "https://radaronline.com/p/joe-rogan-sounds-alarm-major-worldwide-tech-outages-nervous/",
+      "source": "Radar Online",
+      "publishedAt": "2026-11-23T11:10:00.000Z",
+      "latestAt": "2026-11-23T19:14:34.000Z",
+      "firstSeenAt": "2026-11-23T23:11:05.488Z",
+      "outlets": 2,
       "outletNames": [
-        "Yahoo",
-        "Allrecipes",
-        "AOL.com",
-        "Yahoo News Singapore"
+        "RadarOnline",
+        "AOL.com"
       ],
-      "score": 2.55
+      "score": 2.24
     },
     {
       "id": "497d4e148f54",
@@ -901,23 +902,6 @@
       "score": 1.92
     },
     {
-      "id": "6ba8cf23d88f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Alberta seeks to tighten criteria to access provincial voters list after massive data breach impacted 2.9 million Albertans",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTlFzR09Bd2o4d1ozanZ1aW94anktTVIxUERwaFBJUHJoREQzcU5ZMjBUalpIZ0xHUEtoUWVqNWtrS1pzZkFsSmRfMHNEOUxadmNSNi1IZU85NnRCczBqd1ZIYUxiV0VLRmdJTXhRVGpyTXlWUzg2TnNGQXJuaVlzYXVJbUI?oc=5",
-      "source": "Yahoo News Canada",
-      "publishedAt": "2026-11-23T20:54:26.000Z",
-      "latestAt": "2026-11-23T21:32:30.000Z",
-      "firstSeenAt": "2026-11-23T21:25:44.587Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo News Canada",
-        "Edmonton Journal"
-      ],
-      "score": 2.78
-    },
-    {
       "id": "c87e0fba0864",
       "cat": "flights",
       "kind": "news",
@@ -927,7 +911,7 @@
       "publishedAt": "2026-11-23T01:43:00.000Z",
       "latestAt": "2026-11-23T21:48:51.000Z",
       "firstSeenAt": "2026-11-23T18:10:22.978Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "WGN-TV on MSN",
         "AOL.com",
@@ -935,9 +919,30 @@
         "cedarnews.net",
         "AVweb",
         "ABC7 Chicago",
-        "FlipItMoney"
+        "FlipItMoney",
+        "Independent Journal Review"
       ],
-      "score": 2.76
+      "score": 2.9
+    },
+    {
+      "id": "e55269ebb7e8",
+      "cat": "flights",
+      "kind": "news",
+      "title": "O’Hare ground stop lifted as Thanksgiving travel chaos looms",
+      "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
+      "source": "Central Illinois Proud on MSN",
+      "publishedAt": "2026-11-23T11:12:19.000Z",
+      "latestAt": "2026-11-23T23:50:52.000Z",
+      "firstSeenAt": "2026-11-23T20:55:41.076Z",
+      "outlets": 5,
+      "outletNames": [
+        "Central Illinois Proud on MSN",
+        "CIProud.com",
+        "WGN-TV",
+        "AOL.co.uk",
+        "Breitbart News"
+      ],
+      "score": 2.78
     },
     {
       "id": "edf9c71a79d9",
@@ -1090,7 +1095,7 @@
       "url": "https://www.the-sun.com/travel/17346070/ohare-ground-stop-chicago/",
       "source": "The US Sun",
       "publishedAt": "2026-11-23T05:19:00.000Z",
-      "latestAt": "2026-11-23T19:18:13.000Z",
+      "latestAt": "2026-11-23T22:37:35.000Z",
       "firstSeenAt": "2026-11-23T18:25:13.605Z",
       "outlets": 4,
       "outletNames": [
@@ -1383,6 +1388,23 @@
       "score": 1.85
     },
     {
+      "id": "4db387b8910b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "LaLiga says cyberattack exposed users’ personal data",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxON2trWm1UT0k1WFJ5TGpwWkFyRF9TRFVQZWNicjQ3RlFsOTdVWl8tY0UyaG93TFEwbF9HYlVSNE14WVhmTlg3TUNEM2xYRkY5bzNmV0draTE3a3dndWJSZ2ZkSlBGeVFyc1FiNzV3ZlZvdDJrdlNGNXJOWHoyR2xFdFhqWU1ORk1ubHc?oc=5",
+      "source": "Mezha.net",
+      "publishedAt": "2026-11-23T18:47:39.000Z",
+      "latestAt": "2026-11-24T00:02:22.000Z",
+      "firstSeenAt": "2026-11-24T00:26:11.501Z",
+      "outlets": 2,
+      "outletNames": [
+        "Mezha.net",
+        "teiss"
+      ],
+      "score": 1.81
+    },
+    {
       "id": "c216d1102ec0",
       "cat": "hacks",
       "kind": "news",
@@ -1519,6 +1541,23 @@
       "score": 1.71
     },
     {
+      "id": "60acdd78b0a4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "EU urges 3-day emergency supplies after hackers switch supermarket fridges to 'defrost'",
+      "url": "https://www.thecooldown.com/green-home/eu-three-day-emergency-supplies-guidance/",
+      "source": "The Cool Down",
+      "publishedAt": "2026-11-23T15:32:00.000Z",
+      "latestAt": "2026-11-23T23:32:00.000Z",
+      "firstSeenAt": "2026-11-24T00:26:11.501Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Cool Down",
+        "Yahoo"
+      ],
+      "score": 1.7
+    },
+    {
       "id": "3af7e9fec1f3",
       "cat": "flights",
       "kind": "news",
@@ -1619,6 +1658,23 @@
         "The Week"
       ],
       "score": 1.65
+    },
+    {
+      "id": "96a892a99aa0",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Watch Citi Wealth CIO Moore Says ‘Going to Wait It Out’ on Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSEJ3dWxtVmlmS0VFcFdILTdOWTlVRkxrcTdqeDlGaGRaZ3d2bHZpenpneEx0RUxuZ05NckdQUXFHdVI1eW9UMVFsQVNuazhyZjhaNjJYZTc3dXRhVTZRYXVIWDVaV3RJd0RTbVNoc1NnQ1hvTWlESG9sZEFJcWtWU05xS3NyNF9odXp0TTRoMlhCTDF3anpFUUs3cU1pb0FjUWliakRoNHBZdWlJ?oc=5",
+      "source": "Bloomberg.com",
+      "publishedAt": "2026-11-23T13:40:13.000Z",
+      "latestAt": "2026-11-23T14:21:29.000Z",
+      "firstSeenAt": "2026-11-24T00:26:11.501Z",
+      "outlets": 2,
+      "outletNames": [
+        "Bloomberg.com",
+        "marketscreener.com"
+      ],
+      "score": 1.64
     },
     {
       "id": "721a1c93af1d",
@@ -1773,38 +1829,6 @@
       "score": 1.4
     },
     {
-      "id": "6eae4ce1021d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cleverbridge Confirms Hackers Stole Customer Card Numbers and CVV Codes in a Major Data Breach",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9pbnd2bGVvTUJweHpiVURfRG16VEphdW5sOGpPbURZUVRzSDNweDNiWGNMUVRIVDJja2RrVktadFp4bHdSS3RFMU1JN0NwZVNBV191dEZEemJpWDRvSk1MYk1IZ0FTZ9IBa0FVX3lxTE8yQVRhOHVaQmxYRzVCOURMM1lCbHRtcG54V2hhVmpRTFlWdWlYUUNTSEdIRC0zalpsQ2YwZDhrUlU3aXg2VVFsWV9yaC03YzZhLTA4VXZPSkdqal82T3UxZ0RGRURGUkhJU2NZ?oc=5",
-      "source": "CyberSecurityNews",
-      "publishedAt": "2026-11-23T03:07:09.000Z",
-      "latestAt": "2026-11-23T03:07:09.000Z",
-      "firstSeenAt": "2026-11-23T04:22:49.114Z",
-      "outlets": 1,
-      "outletNames": [
-        "CyberSecurityNews"
-      ],
-      "score": 1.37
-    },
-    {
-      "id": "88bab342b3bf",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Telcos strengthen cyberattack defences, report no major vulnerabilities",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX2tRMGVNdkFwYXkzcEQ5d2lycTBDYzU3Y2pxbXgxejBQZVVlWGptMFVFLVZ4NE9BTXQwN3UzQ01RZ0ZEYWRlSTItSTJ5c3g3dXk2Q2k5SGJNX0hxbWNfZEN6UTZXUzhhNjF3SEFDd1BrWTNuLTZIdHpENWZlNWZpbGk5R01HanpOU0gyaGYxQW9jMV9WalAzNWNrdUkzdGczcFpaX1pHTTlFUzdabEVhWDhIT2kxdmUwZGN0ODNXb1NCcTNKdzRac0I4OE84Nm5iVzl5dkp1a9IB3AFBVV95cUxQZmFVVlg0QzJ1LTF6U1VwTDF2dzhEOTl4SEFubmgzWEE2Zm0yeldSbk9DbS1HSHh5LWJkLTRnQ1RDYk5HQXRnVGF6Q2E2NXF3ZDQtQmJXeXBKVzh1NFhsQlhORzFjVGt0cGNmcDRpLTEwRHNuNEYwVkZuTm1wbVFWc2ZMUFhFdGVXVWx4a1MyLU9OcHJES01aZ21JcXd4RE5PdW5Ic1ZUQkdFMnJha2N0RkNxNDBaZ05kUzNvcXJvSjNLR0d2OGhNbHJ5U2FPYUxIS3JrTnhGRVMxeENJ?oc=5",
-      "source": "The Economic Times",
-      "publishedAt": "2026-11-23T00:30:00.000Z",
-      "latestAt": "2026-11-23T00:30:00.000Z",
-      "firstSeenAt": "2026-11-23T04:22:49.114Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Economic Times"
-      ],
-      "score": 1.31
-    },
-    {
       "id": "d6dc0c529e70",
       "cat": "weather",
       "kind": "news",
@@ -1821,22 +1845,6 @@
       "score": 1.13,
       "quiet": true,
       "quietReason": "headline mentions hurricane"
-    },
-    {
-      "id": "e940b2c65fc9",
-      "cat": "internet",
-      "kind": "x",
-      "title": "User reports indicate problems with Gamestop since 6:43 PM EST.",
-      "url": "https://x.com/downdetector/status/2125015032769511492",
-      "source": "@downdetector on X",
-      "publishedAt": "2026-11-23T23:53:59.000Z",
-      "latestAt": "2026-11-23T23:53:59.000Z",
-      "firstSeenAt": "2026-11-24T00:11:09.890Z",
-      "outlets": 1,
-      "outletNames": [
-        "@downdetector on X"
-      ],
-      "score": 1
     },
     {
       "id": "b5c50c48a8e5",
