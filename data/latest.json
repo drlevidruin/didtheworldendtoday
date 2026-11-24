@@ -1,15 +1,16 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T00:56:23.286Z",
+  "buildTime": "2026-11-24T01:11:19.009Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 19:56 ET",
-  "score": 65,
+  "etStamp": "2026-11-23 20:11 ET",
+  "score": 71,
   "fired": [
     "flights",
     "hacks",
     "internet",
     "earth",
     "markets",
+    "ai",
     "grid",
     "germs",
     "weather",
@@ -27,7 +28,7 @@
       "points": 6
     }
   ],
-  "change": -6,
+  "change": 0,
   "yesterday": {
     "date": "2026-11-22",
     "score": 71,
@@ -48,11 +49,11 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1368,
-  "lastSuccessAt": "2026-11-24T00:56:23.286Z",
+  "headlinesRead": 1342,
+  "lastSuccessAt": "2026-11-24T01:11:19.009Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
+    "flights": 20,
     "earth": 6,
     "hacks": 37,
     "markets": 7,
@@ -63,7 +64,7 @@
     "grid": 4,
     "space": 1,
     "sun": 2,
-    "ai": 2
+    "ai": 3
   },
   "vital": {
     "quake": {
@@ -180,20 +181,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1046,
+      "count": 1030,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "bing": {
       "ok": true,
-      "count": 288,
+      "count": 280,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,56 +206,55 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T00:11:09.890Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T00:56:23.286Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z"
     }
   },
   "stories": [
@@ -1181,6 +1181,24 @@
       "score": 2.23
     },
     {
+      "id": "0dbe51447ff9",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta operations stabilize at Atlanta airport after weight-and-balance system outage",
+      "url": "https://www.msn.com/en-us/news/other/delta-operations-stabilize-at-atlanta-airport-after-weight-and-balance-system-outage/ar-AA2i4gzr",
+      "source": "WSB-TV Channel 2 on MSN",
+      "publishedAt": "2026-11-23T14:17:00.000Z",
+      "latestAt": "2026-11-23T22:17:28.000Z",
+      "firstSeenAt": "2026-11-23T22:41:00.851Z",
+      "outlets": 3,
+      "outletNames": [
+        "WSB-TV Channel 2 on MSN",
+        "WSB-TV",
+        "Yahoo"
+      ],
+      "score": 2.22
+    },
+    {
       "id": "db19367ee12f",
       "cat": "hacks",
       "kind": "news",
@@ -1457,23 +1475,6 @@
       "score": 1.73
     },
     {
-      "id": "0dbe51447ff9",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta operations stabilize at Atlanta airport after weight-and-balance system outage",
-      "url": "https://www.msn.com/en-us/news/other/delta-operations-stabilize-at-atlanta-airport-after-weight-and-balance-system-outage/ar-AA2i4gzr",
-      "source": "WSB-TV Channel 2 on MSN",
-      "publishedAt": "2026-11-23T14:17:28.000Z",
-      "latestAt": "2026-11-23T22:17:28.000Z",
-      "firstSeenAt": "2026-11-23T22:41:00.851Z",
-      "outlets": 2,
-      "outletNames": [
-        "WSB-TV Channel 2 on MSN",
-        "WSB-TV"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "b53f6265a294",
       "cat": "hacks",
       "kind": "news",
@@ -1591,6 +1592,23 @@
         "AOL.com"
       ],
       "score": 1.7
+    },
+    {
+      "id": "075f7b80ee95",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack attempt at suburban dam raises concerns about infrastructure security",
+      "url": "https://abc7chicago.com/post/cyberattack-attempt-algonquin-illinois-dam-raises-concerns-infrastructure-security/20072013/",
+      "source": "ABC7 Chicago",
+      "publishedAt": "2026-11-23T16:00:00.000Z",
+      "latestAt": "2026-11-24T00:42:55.000Z",
+      "firstSeenAt": "2026-11-24T01:11:19.009Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC7 Chicago",
+        "Yahoo"
+      ],
+      "score": 1.69
     },
     {
       "id": "98ff89e4cae3",
@@ -1797,23 +1815,6 @@
       "score": 1.55
     },
     {
-      "id": "47d612217764",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ochsner Health confirms data breach in Microsoft system",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYkE2cUNzZ2JSOWNWdWdsaUl0OEV0YU16WHg3TXhKeldCY2xyODBxdUZveVZad2h4R2V6M0daZkxBUk9Tc3FiUXoxUDB5dVc2V0NtamM4RXJXNDFoNXFUSDRFc1Vhb1hXUFlnQVB0UEd6UHZDMG5DaDlUTk9JZ3RhYXJWNGJESTRtWnpEY3kzSjBWSWNycVhJ?oc=5",
-      "source": "KLFY.com",
-      "publishedAt": "2026-11-23T03:07:29.000Z",
-      "latestAt": "2026-11-23T08:36:22.000Z",
-      "firstSeenAt": "2026-11-23T16:40:01.858Z",
-      "outlets": 2,
-      "outletNames": [
-        "KLFY.com",
-        "WNTZ-TV FOX 48"
-      ],
-      "score": 1.55
-    },
-    {
       "id": "1e9bf2c684e7",
       "cat": "weather",
       "kind": "news",
@@ -1828,23 +1829,6 @@
         "biztalknews.com"
       ],
       "score": 1.4
-    },
-    {
-      "id": "f0933011b700",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta outage snarls Thanksgiving travel in latest tech issue in US",
-      "url": "https://www.msn.com/en-us/news/other/delta-outage-snarls-thanksgiving-travel-in-latest-tech-issue-in-us/ar-AA2hDLXi",
-      "source": "The Independent on MSN",
-      "publishedAt": "2026-11-23T06:03:11.000Z",
-      "latestAt": "2026-11-23T21:25:33.000Z",
-      "firstSeenAt": "2026-11-24T00:56:23.286Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Independent on MSN",
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.37
     },
     {
       "id": "d6dc0c529e70",
@@ -2073,6 +2057,22 @@
         "GQ on MSN"
       ],
       "score": 0.82
+    },
+    {
+      "id": "af7444082351",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Claude AI Outage Disrupts Users Across Multiple Regions",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9SR3pIYm42aGlKSVQ4SkhZMUJnMWpYR3J6T1FobmFsaUpDajdleHlwS1dQMkpOTEdTem9vQ3MxbTBoenIwdUJ3UGZ5WVdyYkFFUkhPVFFhVXdhc2dmYncyUXNnbTUyOU5xcDVZc0E2MkQyVDg?oc=5",
+      "source": "TechJuice",
+      "publishedAt": "2026-11-23T11:08:35.000Z",
+      "latestAt": "2026-11-23T11:08:35.000Z",
+      "firstSeenAt": "2026-11-24T01:11:19.009Z",
+      "outlets": 1,
+      "outletNames": [
+        "TechJuice"
+      ],
+      "score": 0.77
     },
     {
       "id": "86533c1a6faa",
