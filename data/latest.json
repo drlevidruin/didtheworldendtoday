@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T01:11:19.009Z",
+  "buildTime": "2026-11-24T01:26:23.593Z",
   "etDate": "2026-11-23",
-  "etStamp": "2026-11-23 20:11 ET",
+  "etStamp": "2026-11-23 20:26 ET",
   "score": 71,
   "fired": [
     "flights",
@@ -49,15 +49,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1342,
-  "lastSuccessAt": "2026-11-24T01:11:19.009Z",
+  "headlinesRead": 1386,
+  "lastSuccessAt": "2026-11-24T01:26:23.593Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 20,
+    "flights": 21,
     "earth": 6,
     "hacks": 37,
     "markets": 7,
-    "germs": 8,
+    "germs": 7,
     "internet": 4,
     "animals": 4,
     "weather": 4,
@@ -181,80 +181,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1030,
+      "count": 1063,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "bing": {
       "ok": true,
-      "count": 280,
+      "count": 277,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 11,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-23T19:55:36.706Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "hn": {
       "ok": true,
-      "count": 4,
+      "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:11:19.009Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T01:11:19.009Z"
+      "lastOkAt": "2026-11-24T01:26:23.593Z"
     }
   },
   "stories": [
@@ -363,7 +364,7 @@
       "publishedAt": "2026-11-23T02:30:00.000Z",
       "latestAt": "2026-11-23T20:21:39.000Z",
       "firstSeenAt": "2026-11-23T17:40:06.517Z",
-      "outlets": 25,
+      "outlets": 26,
       "outletNames": [
         "NBC Chicago",
         "FOX 32 Chicago",
@@ -389,11 +390,12 @@
         "Anadolu Ajansı",
         "Operativ Məlumat Mərkəzi",
         "FOX 29 Philadelphia",
-        "NBC 5 Chicago"
+        "NBC 5 Chicago",
+        "US Muslims"
       ],
       "trending": 1000,
       "trendTerm": "ohare ground stop",
-      "score": 4.22
+      "score": 4.26
     },
     {
       "id": "00fefd72061e",
@@ -934,7 +936,7 @@
       "url": "https://www.msn.com/en-us/news/other/o-hare-ground-stop-lifted-as-thanksgiving-travel-chaos-looms/ar-AA2i44hZ",
       "source": "Central Illinois Proud on MSN",
       "publishedAt": "2026-11-23T11:12:19.000Z",
-      "latestAt": "2026-11-23T23:50:52.000Z",
+      "latestAt": "2026-11-24T01:01:26.000Z",
       "firstSeenAt": "2026-11-23T20:55:41.076Z",
       "outlets": 6,
       "outletNames": [
@@ -1215,6 +1217,24 @@
         "cedarnews.net"
       ],
       "score": 2.22
+    },
+    {
+      "id": "3af7e9fec1f3",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta system outage continues to impact flights at Atlanta airport",
+      "url": "https://www.msn.com/en-us/news/other/delta-system-outage-continues-to-impact-flights-at-atlanta-airport/ar-AA2i2n4q",
+      "source": "FOX 5 Atlanta on MSN",
+      "publishedAt": "2026-11-23T10:02:39.000Z",
+      "latestAt": "2026-11-23T14:07:54.000Z",
+      "firstSeenAt": "2026-11-23T19:10:20.571Z",
+      "outlets": 3,
+      "outletNames": [
+        "FOX 5 Atlanta on MSN",
+        "AOL.com",
+        "Yahoo"
+      ],
+      "score": 2.19
     },
     {
       "id": "64bf57412f3f",
@@ -1577,23 +1597,6 @@
       "score": 1.7
     },
     {
-      "id": "3af7e9fec1f3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta system outage continues to impact flights at Atlanta airport",
-      "url": "https://www.msn.com/en-us/news/other/delta-system-outage-continues-to-impact-flights-at-atlanta-airport/ar-AA2i2n4q",
-      "source": "FOX 5 Atlanta on MSN",
-      "publishedAt": "2026-11-23T10:02:39.000Z",
-      "latestAt": "2026-11-23T14:07:54.000Z",
-      "firstSeenAt": "2026-11-23T19:10:20.571Z",
-      "outlets": 2,
-      "outletNames": [
-        "FOX 5 Atlanta on MSN",
-        "AOL.com"
-      ],
-      "score": 1.7
-    },
-    {
       "id": "075f7b80ee95",
       "cat": "hacks",
       "kind": "news",
@@ -1713,6 +1716,23 @@
       "score": 1.64
     },
     {
+      "id": "0dbfd76e28d2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Microsoft admits hackers accessed clients’ private data",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/microsoft-admits-hackers-accessed-clients-003531208.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-23T14:19:13.000Z",
+      "latestAt": "2026-11-23T16:00:00.000Z",
+      "firstSeenAt": "2026-11-24T01:26:23.593Z",
+      "outlets": 2,
+      "outletNames": [
+        "Cybernews",
+        "YAHOO!"
+      ],
+      "score": 1.63
+    },
+    {
       "id": "721a1c93af1d",
       "cat": "animals",
       "kind": "news",
@@ -1747,19 +1767,19 @@
       "score": 1.63
     },
     {
-      "id": "fd8f6b998fed",
-      "cat": "hacks",
+      "id": "c6c82f8bac8c",
+      "cat": "flights",
       "kind": "news",
-      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSjNGakREcTJSN1N6bHM5aVhFY2lGVTY4aENmNU5PWHdvQ2JLV0tLZmFweTF1Zk1hQmNFRGFDa25MNkNlQ3dYbEFjNXNfbi16em85LXFkaFhHelB6Y2R0RDJ3TlJJX3dleDE2S0tSZWs4dVgyRU1sYzF4NWZ6a0hxWkxLTEkxUmJVWlR6eDE3djJ4U1MyczI1Mnh5VFNJSGtQRnpJTUNZQXExLXlJ?oc=5",
-      "source": "AP News",
-      "publishedAt": "2026-11-23T13:24:00.000Z",
-      "latestAt": "2026-11-23T18:52:04.000Z",
-      "firstSeenAt": "2026-11-24T00:41:14.207Z",
+      "title": "Delta outage snarls Thanksgiving travel in latest tech issue to plague US",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOQmlzTTdrbmRDQkxSekFSclE1YWM4SjJLTXlLUmFHRk56MG9TOXBOOHhfR3BRRzEwNlk0ZExRU2pGZGdhRk5JTmRGWnZpdUI4eThLbWlNT19HYW1MVVBJMDJaVUFJYU82bklGZy1hVS1EX2FFeURHQ0dWS2xabGZ5eHZJMFBWTGhDcEpoWW5LcmlQWlZJVU5Jdlc0NmJ6YnFWOExpQkhRZF9PU01zdFdnTDdUSGdTUQ?oc=5",
+      "source": "The Independent",
+      "publishedAt": "2026-11-23T14:03:00.000Z",
+      "latestAt": "2026-11-23T21:25:33.000Z",
+      "firstSeenAt": "2026-11-24T01:26:23.593Z",
       "outlets": 2,
       "outletNames": [
-        "AP News",
-        "European Interest"
+        "The Independent",
+        "https://www.thetraveler.org/"
       ],
       "score": 1.62
     },
@@ -1779,23 +1799,6 @@
         "Newsweek"
       ],
       "score": 1.57
-    },
-    {
-      "id": "662e0fa97383",
-      "cat": "germs",
-      "kind": "news",
-      "title": "USDA shuts down largest egg farm in the US after positive tests for bird flu",
-      "url": "https://www.the-sun.com/news/17345677/usda-egg-farm-shut-down-florida-bird-flu/",
-      "source": "The US Sun",
-      "publishedAt": "2026-11-23T04:32:00.000Z",
-      "latestAt": "2026-11-23T17:34:21.000Z",
-      "firstSeenAt": "2026-11-23T17:40:06.517Z",
-      "outlets": 2,
-      "outletNames": [
-        "The US Sun",
-        "The Sun"
-      ],
-      "score": 1.56
     },
     {
       "id": "55a2c05cfbcc",
