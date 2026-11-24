@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T11:28:09.115Z",
+  "buildTime": "2026-11-24T11:43:07.497Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 06:28 ET",
+  "etStamp": "2026-11-24 06:43 ET",
   "score": 59,
   "fired": [
     "flights",
@@ -47,16 +47,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1374,
-  "lastSuccessAt": "2026-11-24T11:28:09.115Z",
+  "headlinesRead": 1370,
+  "lastSuccessAt": "2026-11-24T11:43:07.497Z",
   "rollingFallback": false,
   "cats": {
     "flights": 19,
     "hacks": 36,
     "earth": 6,
-    "grid": 6,
+    "grid": 5,
     "germs": 6,
-    "internet": 10,
+    "internet": 11,
     "markets": 7,
     "weather": 4,
     "space": 1,
@@ -70,7 +70,7 @@
       "place": "Mauritius - Reunion region",
       "time": "2026-11-24T11:06:14.036Z",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud6h",
-      "pager": null,
+      "pager": "green",
       "tsunami": false
     },
     "kp": {
@@ -107,7 +107,7 @@
           "id": "cloudflare",
           "name": "Cloudflare",
           "indicator": "minor",
-          "description": "Partially Degraded Service"
+          "description": "Minor Service Outage"
         },
         {
           "id": "openai",
@@ -184,15 +184,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1052,
+      "count": 1061,
       "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     },
     "bing": {
       "ok": true,
-      "count": 288,
-      "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "count": 277,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     },
     "gdelt": {
       "ok": false,
@@ -204,37 +204,37 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     },
     "x": {
       "ok": true,
@@ -245,15 +245,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T11:28:09.115Z"
+      "lastOkAt": "2026-11-24T11:43:07.497Z"
     }
   },
   "stories": [
@@ -477,7 +477,7 @@
       "score": 3.28
     },
     {
-      "id": "529823829eed",
+      "id": "6f4a804949b8",
       "cat": "germs",
       "kind": "news",
       "title": "Bird flu detected among cows at Grant County dairy farm",
@@ -721,6 +721,40 @@
       "score": 1.99
     },
     {
+      "id": "fa521173b32e",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Is Fortnite down right now? Why servers went offline for the v43.11 update and when they’re back online",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQOXNDSkg0MlBZN0JzbThoa0ZHbFVaa3hwWFp5ZkJjQjhnYXJSOGN6ZkNWQi1LTXZsNFJ0ZHhJdVZ0dzVwVjk0SkQ4d2VIMjFLdG5XQURfVEk0RGpkSGM0UjVJNE1WeGlNTkNwQUlGdFhDd0VlR09ZZ2pib0hHOXByZ2lXblJwNnFyM25lVTl4aUhmcDZ2aUcxQ3ozcHhNeUNiMjc4TnI0Vk03SlZIbnJSWVNFQ2o0c01wYkFURGZVVll0ZWRpQVJFeVRvWTgwaUhKUFRUSnBPYzlRTEd3OUVISktNb9IB6AFBVV95cUxNNmItOFk1dkpZVXpqT29VNnY1S1NjZkJaSFhocEU1UHdaUFN0YUczMTl6LUtjc1lEZ3JfT2pVLTVFS0IxdTNaZ3hucWN4SEo0VnpjQXdUOHhORXBYMDFXc2JfYTF1QnRuenpBcDlNQlZTTlhuaTNuQlNMa0dmQThpWUY0TktEejlPN0Ixa2xiUmlCd0I5bWRkUGhNRjFleTZZVk5nTmd6V1c0NDA4NVl5LVRMQzJsbWs4RmZWTWlqYnJEdENSeVZlekpYcWFUczZabTF1SU1nTjhqQUE1aGx1dkgxelV1WURt?oc=5",
+      "source": "Clarin.com",
+      "publishedAt": "2026-11-24T10:48:36.000Z",
+      "latestAt": "2026-11-24T11:27:04.000Z",
+      "firstSeenAt": "2026-11-24T11:43:07.497Z",
+      "outlets": 2,
+      "outletNames": [
+        "Clarin.com",
+        "The Economic Times"
+      ],
+      "score": 1.97
+    },
+    {
+      "id": "529823829eed",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Washington Confirms Bird Flu in Grant County Dairy Herd",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWUdpa2tSWUF1YTRQalYwWktzRUs3UDNIN2VSWHpyOTUyOTJNUTJzaXZBY3hpNUJzcFdwYTFZUWJNWHNHajB3UXBOR0RnT21JaFRXczRjeFQzZ0xDVlJVNGlWOWxreDQtVUdVc21zYXZraEtKOVp4a2pIdjR3OVJKVXlZYjk2Z0R1SndZUU5TMXBEX0hlUWhR?oc=5",
+      "source": "Dailyfly News",
+      "publishedAt": "2026-11-23T23:43:12.000Z",
+      "latestAt": "2026-11-24T00:00:00.000Z",
+      "firstSeenAt": "2026-11-24T00:41:14.207Z",
+      "outlets": 2,
+      "outletNames": [
+        "Dailyfly News",
+        "NonStop Local KHQ"
+      ],
+      "score": 1.97
+    },
+    {
       "id": "34dc482ff4ed",
       "cat": "germs",
       "kind": "news",
@@ -839,40 +873,6 @@
         "Windows Central"
       ],
       "score": 1.52
-    },
-    {
-      "id": "ad51fd2de4de",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Morgan Stanley Strategists Spot A ‘Fat Pitch’ In Market Selloff — See Buying Opportunities In Hyperscalers",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQVUI5UnV4dmthelBkZ2ZQc0NocUpfbXN1NzMxZ3pMQnFNOEJqeko2QUFkWUxaeVVjV2VuaDNZOXZjcU1GbEluVGdJVlRVRmtfbWRwZDJEbjIyYk1oYk9USXBhZmlhVGpLN0o5TWNtMldKQjRkTHFMVnBfM2FJaDBCRWFIODNxYjhhdFZ6UWp3SzdzcjdSQjgyNlhJbE9MSll5WDZPcDNrMng1SEduNXBGdXcxbU1jWmVQdjJvNXRRU3hqRW5UbjVKTmFjVzJZelhjczQtMHFDNW03ZWt3ejBkUHpuT3FJVTZfaTdYVzhZSHk2VlNXMGN5V1hB?oc=5",
-      "source": "Stocktwits",
-      "publishedAt": "2026-11-23T12:08:00.000Z",
-      "latestAt": "2026-11-23T14:19:02.000Z",
-      "firstSeenAt": "2026-11-24T04:41:58.829Z",
-      "outlets": 2,
-      "outletNames": [
-        "Stocktwits",
-        "Forbes"
-      ],
-      "score": 1.45
-    },
-    {
-      "id": "95f40136244b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Market selloff and falling oil will likely force a 2018-style Fed pivot: BCA",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPYkV6dmgyZ196dm1NN054RUZvY2NJdHo3b2NHUmVWdWg5MHBPd2oyRDNlQkVHQ3RrX2tFMWFVRGV3MXloRVF6X1FGay1NUnB1bW1HNFpRbXE4UzRIWW5pNjJ1X2h0TEZNUEswUzNsTmRJR3dtbFhXNURGZUpyZE1YMkVSdFI4ckVWN3BYQW5yYzFvTTRRMDF3Q010QTdINDJMejgwb0RxSGpxbDdBUDloblIzXzdFQ1hsUGJEZDNmeUxiOWdLTzR3ZkdCWQ?oc=5",
-      "source": "Investing.com",
-      "publishedAt": "2026-11-23T11:47:52.000Z",
-      "latestAt": "2026-11-23T12:16:25.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 2,
-      "outletNames": [
-        "Investing.com",
-        "Yahoo Finance"
-      ],
-      "score": 1.45
     },
     {
       "id": "0dbfd76e28d2",
@@ -1034,6 +1034,23 @@
       "score": 1.72
     },
     {
+      "id": "4767b2e343c5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hiltzik: Who's to blame for tech outages? Clue: It's not AI or hackers",
+      "url": "https://www.yahoo.com/news/politics/articles/hiltzik-whos-blame-tech-outages-110000899.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T02:59:00.000Z",
+      "latestAt": "2026-11-24T11:00:00.000Z",
+      "firstSeenAt": "2026-11-24T11:43:07.497Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Los Angeles Times on MSN"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "60acdd78b0a4",
       "cat": "hacks",
       "kind": "news",
@@ -1187,6 +1204,40 @@
       "score": 1.53
     },
     {
+      "id": "ad51fd2de4de",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Morgan Stanley Strategists Spot A ‘Fat Pitch’ In Market Selloff — See Buying Opportunities In Hyperscalers",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQVUI5UnV4dmthelBkZ2ZQc0NocUpfbXN1NzMxZ3pMQnFNOEJqeko2QUFkWUxaeVVjV2VuaDNZOXZjcU1GbEluVGdJVlRVRmtfbWRwZDJEbjIyYk1oYk9USXBhZmlhVGpLN0o5TWNtMldKQjRkTHFMVnBfM2FJaDBCRWFIODNxYjhhdFZ6UWp3SzdzcjdSQjgyNlhJbE9MSll5WDZPcDNrMng1SEduNXBGdXcxbU1jWmVQdjJvNXRRU3hqRW5UbjVKTmFjVzJZelhjczQtMHFDNW03ZWt3ejBkUHpuT3FJVTZfaTdYVzhZSHk2VlNXMGN5V1hB?oc=5",
+      "source": "Stocktwits",
+      "publishedAt": "2026-11-23T12:08:00.000Z",
+      "latestAt": "2026-11-23T14:19:02.000Z",
+      "firstSeenAt": "2026-11-24T04:41:58.829Z",
+      "outlets": 2,
+      "outletNames": [
+        "Stocktwits",
+        "Forbes"
+      ],
+      "score": 1.45
+    },
+    {
+      "id": "95f40136244b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Market selloff and falling oil will likely force a 2018-style Fed pivot: BCA",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPYkV6dmgyZ196dm1NN054RUZvY2NJdHo3b2NHUmVWdWg5MHBPd2oyRDNlQkVHQ3RrX2tFMWFVRGV3MXloRVF6X1FGay1NUnB1bW1HNFpRbXE4UzRIWW5pNjJ1X2h0TEZNUEswUzNsTmRJR3dtbFhXNURGZUpyZE1YMkVSdFI4ckVWN3BYQW5yYzFvTTRRMDF3Q010QTdINDJMejgwb0RxSGpxbDdBUDloblIzXzdFQ1hsUGJEZDNmeUxiOWdLTzR3ZkdCWQ?oc=5",
+      "source": "Investing.com",
+      "publishedAt": "2026-11-23T11:47:52.000Z",
+      "latestAt": "2026-11-23T12:16:25.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 2,
+      "outletNames": [
+        "Investing.com",
+        "Yahoo Finance"
+      ],
+      "score": 1.45
+    },
+    {
       "id": "3d1c7586b2df",
       "cat": "hacks",
       "kind": "news",
@@ -1291,7 +1342,7 @@
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOVkt1TVVYamlnUEMtWmFZLVlfajRUNTdNZnZfVEhqUGpScGpZYjJ6M1pmWXllVTJOTmppeVY5cXQyelFkVkFQS2h0SjNYWXk3MHhjSDJiaWdnWTY1TmFwMElqUUFlay1kbmtwbDlKMmQ0dEdaYXlCQ3lEY09fWHgwZVJIZERGUnVBTU5RX21kR2tITF8ybTRpVFpFSHdUR3ptcWxkVWg1U0Uwc3RZSDhsOGFSekhGUUFvWG5RSUZRWmtpM2h1dkNNc0kxaWpoaEhsOXU1LUNfZUlWbm9sd21J?oc=5",
       "source": "IntelliNews",
       "publishedAt": "2026-11-24T11:10:02.000Z",
-      "latestAt": "2026-11-24T11:10:02.000Z",
+      "latestAt": "2026-11-24T11:26:15.000Z",
       "firstSeenAt": "2026-11-24T11:28:09.115Z",
       "outlets": 1,
       "outletNames": [
@@ -1672,6 +1723,38 @@
       "score": 1.02
     },
     {
+      "id": "b73fac92c019",
+      "cat": "flights",
+      "kind": "news",
+      "title": "HPE CEO clarifies FAA smoking gun not router in latest twist to aviation outage saga",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUEJSWU56Z2xtQXQ4NGRvZ25WTmZMTm9zWk9idFJPMFRXLTVCNXFnUVZUUldtNzRSbldOTUNmX1RUZ2loWmlLODFzN0dfaDlienR3RDh2X01ma1FGOEQ3Zm1UNV9uMXlXSEFvN3JjT0Z0alpnQUpBYjdpenZMSFhKWC10c1FaWDVrdVozbmUxa1ZuREZMVWFsUVotdWkxSGktcHJlRkFuQld5TzM2STA5V1ZYcGpOc2R6?oc=5",
+      "source": "SDxCentral",
+      "publishedAt": "2026-11-24T11:38:23.000Z",
+      "latestAt": "2026-11-24T11:38:23.000Z",
+      "firstSeenAt": "2026-11-24T11:43:07.497Z",
+      "outlets": 1,
+      "outletNames": [
+        "SDxCentral"
+      ],
+      "score": 1
+    },
+    {
+      "id": "e6e47f1883d4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "European Commission confirms personal data stolen in AI-assisted cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZlFPckFXMHlrb1Rta29xNDF1NGplZVh3UllLVGttWWZwdGhTWEhBT0xpcG5ka3I1Ul9CZ25jdC1PVWVBdUhSQzBST1hqNlBUOUtYaDdnN3hGMVB6RTFreUpMalZyN2RsOGo1ZjRUZkVkbmkxLXNsUGxWWDI3M0hpeURUaVozdnU2aUFrc1A0dmEwcHZnZ2JUal9ONmpDb1dXQzZ0bjNqN2d4cWdVQ0YxWjM1SjBuQ3NzN1doWFB4YmwyT2xHdThnOE1GclU4RXEz?oc=5",
+      "source": "The Register",
+      "publishedAt": "2026-11-24T11:32:41.000Z",
+      "latestAt": "2026-11-24T11:32:41.000Z",
+      "firstSeenAt": "2026-11-24T11:43:07.497Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Register"
+      ],
+      "score": 1
+    },
+    {
       "id": "c1812514f929",
       "cat": "flights",
       "kind": "news",
@@ -1800,70 +1883,6 @@
       "score": 1
     },
     {
-      "id": "a8a13da37248",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Next hit by third-party data breach — says 'no customer personal data has been compromised' but shoppers should still be on their guard",
-      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPZEx5NWFOV2E1WWJESXF6VUtkMzZnRkxPNjNXT1VocG1KQUJlMmFEMXAwVVdIYVR3cnoxdkQ3SGlMbXBfNHM1VmdUVjJxX0VlZlNlNGRqVjAzSHg4N28wejZXVWtHbWtXUzZKUHM1WHBybWRncDlDa3FTRzNSMzFGTkR1Tm1IYm1aXzRnNlBZRXVHVG9QTW9qYTJiOS1iRFBqY2FHRVhpeExwWWtKdFpmUEhRZndCQURnM0cxMTE3elprQ203NHBxMUhLb1B1X19nUUppelZPWUlKMHhOWjZraEtsOFZzejVqZWk3OTRXcVRkeU9FZk1WWTJURVN3TTBVbU9B?oc=5",
-      "source": "TechRadar",
-      "publishedAt": "2026-11-24T10:22:46.000Z",
-      "latestAt": "2026-11-24T10:22:46.000Z",
-      "firstSeenAt": "2026-11-24T10:27:55.694Z",
-      "outlets": 1,
-      "outletNames": [
-        "TechRadar"
-      ],
-      "score": 1
-    },
-    {
-      "id": "019e9ddd329c",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Routine wastewater sample in Kittitas County tests positive for bird flu",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOWlRiMk1PQl9mNTE5emtqVDlmY2UxYWJsVG1RMlNYdXVLczV0YXBYckpPUXFQV1ppTUVYNmVFckoxMFYxYTRBQzhTT19uWFQyQWVQZV8yejExUGZJZWJUSWwwUXFmVFdCMjNpdnFsLWJJTHViUDhaald4N2VaV0NMWElERVVKc3c3d2RjVVVBcll2dklsMlRmMlZZcWd2VXppUnpYYy1va3NUbVhVUEp3NG5DNEhEdFJ1RlFYdW9wVjRGZGRVVTROYmFGZTZHZkEwVzdYZUxQR0cwQlVtNzBvOFdTTk1kLXA0RnAycDBXWUR4YW5M?oc=5",
-      "source": "AppleValleyNewsNow.com",
-      "publishedAt": "2026-11-24T10:17:57.000Z",
-      "latestAt": "2026-11-24T10:17:57.000Z",
-      "firstSeenAt": "2026-11-24T10:27:55.694Z",
-      "outlets": 1,
-      "outletNames": [
-        "AppleValleyNewsNow.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "679e63d05e26",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Frederick Health data breach suit continues after mediation attempt",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQbm1sN2xlLWVpTW5Qem53RXB6eGNITkVIeVYwSGk0TkNMTnZ2azZKT051em5VQ1FjbzN1MEQ3ODdGeXh3dF9tdk9PX0h5MlpjRmFJOEtLX3NXaThHbVRwVmY4ekJRNXpoakJxX2ZkQ3lGa3M1dFB5Q3NGNVlkMjRRSk9JQXJ2VDc2M3YzbFpZZUlOcnVmSjdweWc2VDRJelB5eXk5NFk5UWItTzRVaHVpYjd6RWhZRUZhWUVvYXNaQ1dnd1JsZlRMWTAtMk84WWozLXdjUWgyMA?oc=5",
-      "source": "The Herald-Mail",
-      "publishedAt": "2026-11-24T10:06:00.000Z",
-      "latestAt": "2026-11-24T10:06:00.000Z",
-      "firstSeenAt": "2026-11-24T10:12:52.256Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Herald-Mail"
-      ],
-      "score": 1
-    },
-    {
-      "id": "87ac530a3e31",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Transcript: Tucker Interviews Luke Gromen on Cyberattacks & Grid Failure",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOaUFxZU9QV1NmSTFnZlNDRVFYbi12UTFZNmd1ME85ckFVaDJraWFEbGpwSlVVa0lROEVBb013M0txeThONnlIeXgtZ2Z3ZDdVWEJFWjJ1empoODV4cVBxWTJzSGdmMWtOcTR4QWFBZGhONG11UGFrRG9EdTl0VkxEUmxCcXB2ckt3c09tM2FoTklDdC1DQXV6Qw?oc=5",
-      "source": "The Singju Post",
-      "publishedAt": "2026-11-24T03:58:51.000Z",
-      "latestAt": "2026-11-24T03:58:51.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Singju Post"
-      ],
-      "score": 1
-    },
-    {
       "id": "b5c50c48a8e5",
       "cat": "weather",
       "kind": "news",
@@ -1910,22 +1929,6 @@
         "The Watchers - Watching the world evolve and transform"
       ],
       "score": 1
-    },
-    {
-      "id": "d6a4df711213",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Brussels Airport strike grounds flights until 9pm on Monday",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZFlvMnJhSFlDTDF6cVJvNnEyQ0xBZjRPeE9pSnlLRWk2SlBqV3BOWmR1aDdmV3g4Tndtd0sycFNMOXJSVTBfdTFnakNseFZkSE1EeHJPSi1hYk0zTFJfQ19lazFDcnJfd3Y0TXBERnB3S2FwZWVhd1hXZDRDRXRKTzB5UkZIdkFyWkE0?oc=5",
-      "source": "Travelling for Business",
-      "publishedAt": "2026-11-24T11:10:04.000Z",
-      "latestAt": "2026-11-24T11:10:04.000Z",
-      "firstSeenAt": "2026-11-24T11:28:09.115Z",
-      "outlets": 1,
-      "outletNames": [
-        "Travelling for Business"
-      ],
-      "score": 0.99
     },
     {
       "id": "a4f1c4f1c544",
