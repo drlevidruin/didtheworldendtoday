@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-24T06:12:12.796Z",
+  "buildTime": "2026-11-24T06:27:18.981Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 01:12 ET",
+  "etStamp": "2026-11-24 01:27 ET",
   "score": 54,
   "fired": [
     "flights",
@@ -42,14 +42,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1360,
-  "lastSuccessAt": "2026-11-24T06:12:12.796Z",
+  "headlinesRead": 1372,
+  "lastSuccessAt": "2026-11-24T06:27:18.981Z",
   "rollingFallback": false,
   "cats": {
     "flights": 25,
     "hacks": 31,
-    "earth": 6,
-    "grid": 4,
+    "earth": 5,
+    "grid": 5,
     "markets": 10,
     "germs": 6,
     "internet": 7,
@@ -180,80 +180,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1040,
+      "count": 1050,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     },
     "bing": {
       "ok": true,
-      "count": 284,
+      "count": 285,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-24T05:57:16.986Z"
     },
     "hn": {
       "ok": true,
-      "count": 6,
+      "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:12:12.796Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-24T06:12:12.796Z"
+      "lastOkAt": "2026-11-24T06:27:18.981Z"
     }
   },
   "stories": [
@@ -657,22 +658,25 @@
       "score": 2.78
     },
     {
-      "id": "1009b9191373",
+      "id": "fd8f6b998fed",
       "cat": "hacks",
       "kind": "news",
-      "title": "NEXT investigates cyber incident after supplier data breach",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWmpxNk1RNXl4dmlmQ01HWkF1TnBhVHdPMFRZOTlrMWxZal9jSDc1cGRKbTdRZjdwVnFYMmZfbHhVeEpFeHBBQ1A0SUpQdnBqcUFYNjdSaWNBTllHMUlQQVYtYy0wcGRKVkVKQzBKdDZKNDc4R3NCYUdiTjhPRmZVcnpwY3ZoY2ppaWY0RlUwYnBERG1SMnNV?oc=5",
-      "source": "TheIndustry.fashion",
-      "publishedAt": "2026-11-23T12:05:44.000Z",
-      "latestAt": "2026-11-23T13:08:14.000Z",
-      "firstSeenAt": "2026-11-23T13:09:18.321Z",
-      "outlets": 3,
+      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
+      "url": "https://www.wgal.com/article/eu-academy-data-leak-ai-driven-cyberattack/74515041",
+      "source": "WGAL",
+      "publishedAt": "2026-11-23T13:24:00.000Z",
+      "latestAt": "2026-11-24T06:04:41.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 6,
       "outletNames": [
-        "TheIndustry.fashion",
-        "TheBusinessDesk.com",
-        "TheIndustry.beauty"
+        "AP News",
+        "European Interest",
+        "WGAL",
+        "khbs",
+        "KMBC Kansas City",
+        "Plainview Herald on MSN"
       ],
-      "score": 2.54
+      "score": 2.66
     },
     {
       "id": "d9234b2f0672",
@@ -921,6 +925,24 @@
       "score": 2.59
     },
     {
+      "id": "1009b9191373",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "NEXT investigates cyber incident after supplier data breach",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWmpxNk1RNXl4dmlmQ01HWkF1TnBhVHdPMFRZOTlrMWxZal9jSDc1cGRKbTdRZjdwVnFYMmZfbHhVeEpFeHBBQ1A0SUpQdnBqcUFYNjdSaWNBTllHMUlQQVYtYy0wcGRKVkVKQzBKdDZKNDc4R3NCYUdiTjhPRmZVcnpwY3ZoY2ppaWY0RlUwYnBERG1SMnNV?oc=5",
+      "source": "TheIndustry.fashion",
+      "publishedAt": "2026-11-23T12:05:44.000Z",
+      "latestAt": "2026-11-23T13:08:14.000Z",
+      "firstSeenAt": "2026-11-23T13:09:18.321Z",
+      "outlets": 3,
+      "outletNames": [
+        "TheIndustry.fashion",
+        "TheBusinessDesk.com",
+        "TheIndustry.beauty"
+      ],
+      "score": 2.54
+    },
+    {
       "id": "0667eed29872",
       "cat": "hacks",
       "kind": "news",
@@ -959,24 +981,6 @@
       "score": 2.52
     },
     {
-      "id": "146aa5beb1a5",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Belgian Air Traffic Strike Grounds Flights Across Country",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQX3o5bUljMC1OWGNIVTBoRjFIRkNxNTJ1MDFLQVhQVHVNWFF6cmtkUUg1TGx4RkNHUmdhc0tvMVpYUHFmMnZsWXg4VUxaUGMyak9YTm1hVXNWSzRoTV9MRDVwVS1qOGZTOXhMcHR0T1lDZ3BuRzFEdmVNVzlNcjdpZnZKU0VhMHJseUNPMFg0SW9mU2FmWmc?oc=5",
-      "source": "streamlinefeed.co.ke",
-      "publishedAt": "2026-11-23T06:25:00.000Z",
-      "latestAt": "2026-11-23T08:30:56.000Z",
-      "firstSeenAt": "2026-11-23T08:38:44.073Z",
-      "outlets": 3,
-      "outletNames": [
-        "streamlinefeed.co.ke",
-        "TravelWires",
-        "https://streamlinefeed.co.ke/"
-      ],
-      "score": 2.49
-    },
-    {
       "id": "6b8ed457ea98",
       "cat": "flights",
       "kind": "news",
@@ -994,6 +998,26 @@
       "score": 2.41
     },
     {
+      "id": "99ac5ec1f9b1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air Lines Battles Operational Disruption After Weight-and-Balance System Outage, Nearly 2,100 Flights Delayed Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxONUswY1dVaENVZmZhQXRiZ2M5XzVfTDFYOTA5Ty1uQ0ZlXzFqR0phalVQMDFRVmNKVTh2bkxVVzFxSzA1dGNROUVDOHh6b0NEdm11Q2RISldLMzZKWWN1aVN4Z3JKbWJ0UDNiM0VrSG1iVW1Md25PUmxYZnNqT0dHWFNzU29vZkIyWkJ6OWY5YVpCcWtSV0pBcVhlWUhUVWxBcGxnc0s4Z0V2c3hXdWdIdFJkTDdPenJqZW5mb0c2Rlk1QWoxazY1NktHTnV2ZWJkNV96djNZYzRNNk5QN0pobmQySFdNUHdRM1FLbzAwZDBpeGxDM1VES1lJckJWdUU?oc=5",
+      "source": "FL360aero",
+      "publishedAt": "2026-11-23T08:55:31.000Z",
+      "latestAt": "2026-11-24T02:30:00.000Z",
+      "firstSeenAt": "2026-11-24T04:41:58.829Z",
+      "outlets": 5,
+      "outletNames": [
+        "FL360aero",
+        "Aviation Pros",
+        "Speaks Media",
+        "JournalArta",
+        "Aviation News.eu"
+      ],
+      "score": 2.23
+    },
+    {
       "id": "0dbe51447ff9",
       "cat": "flights",
       "kind": "news",
@@ -1008,25 +1032,6 @@
         "WSB-TV Channel 2 on MSN",
         "WSB-TV",
         "Yahoo"
-      ],
-      "score": 2.22
-    },
-    {
-      "id": "fd8f6b998fed",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "European Commission warns EU Academy users of data leak after AI-driven cyberattack",
-      "url": "https://www.wgal.com/article/eu-academy-data-leak-ai-driven-cyberattack/74515041",
-      "source": "WGAL",
-      "publishedAt": "2026-11-23T13:24:00.000Z",
-      "latestAt": "2026-11-24T06:04:41.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 4,
-      "outletNames": [
-        "AP News",
-        "European Interest",
-        "WGAL",
-        "khbs"
       ],
       "score": 2.22
     },
@@ -1099,25 +1104,6 @@
         "YAHOO!",
         "Yahoo Tech",
         "DPA International on MSN"
-      ],
-      "score": 2.01
-    },
-    {
-      "id": "99ac5ec1f9b1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta Air Lines Battles Operational Disruption After Weight-and-Balance System Outage, Nearly 2,100 Flights Delayed Ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxONUswY1dVaENVZmZhQXRiZ2M5XzVfTDFYOTA5Ty1uQ0ZlXzFqR0phalVQMDFRVmNKVTh2bkxVVzFxSzA1dGNROUVDOHh6b0NEdm11Q2RISldLMzZKWWN1aVN4Z3JKbWJ0UDNiM0VrSG1iVW1Md25PUmxYZnNqT0dHWFNzU29vZkIyWkJ6OWY5YVpCcWtSV0pBcVhlWUhUVWxBcGxnc0s4Z0V2c3hXdWdIdFJkTDdPenJqZW5mb0c2Rlk1QWoxazY1NktHTnV2ZWJkNV96djNZYzRNNk5QN0pobmQySFdNUHdRM1FLbzAwZDBpeGxDM1VES1lJckJWdUU?oc=5",
-      "source": "FL360aero",
-      "publishedAt": "2026-11-23T08:55:31.000Z",
-      "latestAt": "2026-11-24T02:30:00.000Z",
-      "firstSeenAt": "2026-11-24T04:41:58.829Z",
-      "outlets": 4,
-      "outletNames": [
-        "FL360aero",
-        "Aviation Pros",
-        "Speaks Media",
-        "JournalArta"
       ],
       "score": 2.01
     },
@@ -1215,7 +1201,7 @@
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPYWZlYXhTRUt4SmVueE1lR2RPN2tERXlqNGJ1YjlESzRRVVhCWGd1NURvd3NTb3d2eVctNmg5UkE2bVhKaXZMdlU5dDk5b3pkU2JLRlB0bHFiTHRCaDllenVScTcxT05BMmQ1NVhUalFoejJvV1NlZkN0RGZqWEN2eFhRX1psR2FtUW4xb1dfMXpsVXlmdWVBSFFnYmVSSlVGOE4yd0E5NDM?oc=5",
       "source": "Bitcoin News",
       "publishedAt": "2026-11-23T23:57:40.000Z",
-      "latestAt": "2026-11-24T03:59:40.000Z",
+      "latestAt": "2026-11-24T04:45:52.000Z",
       "firstSeenAt": "2026-11-24T04:57:01.340Z",
       "outlets": 2,
       "outletNames": [
@@ -1480,26 +1466,6 @@
       "score": 1.57
     },
     {
-      "id": "b14d3f4b11a1",
-      "cat": "earth",
-      "kind": "news",
-      "title": "6.5-Magnitude Earthquake Strikes off Coast of Vanuatu Islands",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMnlVNUJiZmF4ejM2b0hNdG9LQWtUWWx1bVYyQU9aeV9uMndWLWNNY3U1Z1NuLU1UamJyMDJVSnVjdmZUQ3lTbktjNEx2Nnk4azZkczFkNV9tMWtwaFJJYVpyYnRBbElBRW9Zd2UtdzBJaDl3UUV3NDZOVlhQOHF4dlVJNE40YUhBTk1KTzJTVXE3NGtvM3pyWHA1QXpPMHRLMlRQNWZMTUx2MEtj?oc=5",
-      "source": "Qatar news agency",
-      "publishedAt": "2026-11-23T06:21:52.000Z",
-      "latestAt": "2026-11-23T09:23:02.000Z",
-      "firstSeenAt": "2026-11-24T06:12:12.796Z",
-      "outlets": 3,
-      "outletNames": [
-        "Qatar news agency",
-        "Aktualita.co",
-        "uaebarq.ae"
-      ],
-      "score": 1.56,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "55a2c05cfbcc",
       "cat": "internet",
       "kind": "news",
@@ -1662,6 +1628,23 @@
       "outlets": 1,
       "outletNames": [
         "The Cool Down"
+      ],
+      "score": 1.27
+    },
+    {
+      "id": "f4503ed2d2bb",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta System Outage Delays 2,000 Flights Across US, Airline Confirms Fix",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOQ0pYcWhNbm1uRVY3NFc2OVE4WWQ3Z285S2JTaVhka3FsSTZRM3ZSdUR3NTBrZzEtRmpVZHhadG41WThtLUVKMXdDT2NlM1gySHhvQnlnMm1rYWs2OTJ5clNwWVN2alA2bWVqT2F0UnJsMUVROGdnR3hBaFFYTXl6Unk0VVJTb1h4OEsxVTMyaTh5SnVPVkdlc21UNi1ybVkza19ucl9sU2libkRKWm1CeEVR0gG3AUFVX3lxTE5iZm1zSm9odmo3Q2pKNkxjRzdmN0Jiek9JWHlmRzZUckFTTWJsRjR6aDdqWlJfQWl4N3RiT2Q5NVdSRGRBV2cxQldKTHczbmFkX1hvMlFkX3JSMUVYNXJEb0ZIank2RVViTnZaRG4xVl9DbFdyWUhGelZfSEEyNXpHSXhYT0E4NDlVdFV2WEk3THJHSHUwby01NVNlaWFSei1aeVBFRTFkSVN1NG5LZHNaY2syb0IwNA?oc=5",
+      "source": "The Hans India",
+      "publishedAt": "2026-11-23T08:42:15.000Z",
+      "latestAt": "2026-11-23T11:01:19.000Z",
+      "firstSeenAt": "2026-11-24T06:27:18.981Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Hans India",
+        "Gujarat Samachar"
       ],
       "score": 1.27
     },
@@ -1886,6 +1869,22 @@
       "outlets": 1,
       "outletNames": [
         "The Hacker News"
+      ],
+      "score": 1
+    },
+    {
+      "id": "87ac530a3e31",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Transcript: Tucker Interviews Luke Gromen on Cyberattacks & Grid Failure",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOaUFxZU9QV1NmSTFnZlNDRVFYbi12UTFZNmd1ME85ckFVaDJraWFEbGpwSlVVa0lROEVBb013M0txeThONnlIeXgtZ2Z3ZDdVWEJFWjJ1empoODV4cVBxWTJzSGdmMWtOcTR4QWFBZGhONG11UGFrRG9EdTl0VkxEUmxCcXB2ckt3c09tM2FoTklDdC1DQXV6Qw?oc=5",
+      "source": "The Singju Post",
+      "publishedAt": "2026-11-24T03:58:51.000Z",
+      "latestAt": "2026-11-24T03:58:51.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Singju Post"
       ],
       "score": 1
     },
