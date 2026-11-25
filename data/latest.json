@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T18:23:11.615Z",
+  "buildTime": "2026-11-25T18:38:14.223Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 13:23 ET",
+  "etStamp": "2026-11-25 13:38 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,16 +49,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1415,
-  "lastSuccessAt": "2026-11-25T18:23:11.615Z",
+  "headlinesRead": 472,
+  "lastSuccessAt": "2026-11-25T18:38:14.223Z",
   "rollingFallback": false,
   "cats": {
     "flights": 17,
     "hacks": 31,
     "internet": 14,
     "germs": 4,
-    "markets": 5,
-    "grid": 6,
+    "markets": 6,
+    "grid": 5,
     "sun": 4,
     "weather": 5,
     "ai": 4,
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1111,
-      "error": null,
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "count": 152,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 6 of 26 queries)",
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "bing": {
       "ok": true,
-      "count": 269,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "count": 285,
+      "error": null,
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,56 +208,55 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:38:04.045Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T18:23:11.615Z"
+      "lastOkAt": "2026-11-25T18:38:14.223Z"
     }
   },
   "stories": [
@@ -840,23 +839,21 @@
       "score": 1.72
     },
     {
-      "id": "8dcdb02c469b",
-      "cat": "weather",
+      "id": "f89caf439c55",
+      "cat": "markets",
       "kind": "news",
-      "title": "Three days to evacuate, two weeks at home: what the Red Cross says Americans should keep for a disaster, and what a January ice storm taught",
-      "url": "https://www.msn.com/en-us/news/other/three-days-to-evacuate-two-weeks-at-home-what-the-red-cross-says-americans-should-keep-for-a-disaster-and-what-a-january-ice-storm-taught/ar-AA2ibZM2",
-      "source": "Futura-Sciences on MSN",
-      "publishedAt": "2026-11-25T02:00:00.000Z",
-      "latestAt": "2026-11-25T11:11:26.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
+      "title": "CoreWeave Stocks Plunge 10.27% as Credit Markets Price 68% Default Risk",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-stocks-plunge-10-27-174415599.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-25T09:44:00.000Z",
+      "latestAt": "2026-11-25T18:02:42.000Z",
+      "firstSeenAt": "2026-11-25T18:38:14.223Z",
       "outlets": 2,
       "outletNames": [
-        "Futura-Sciences on MSN",
-        "Futura, le média qui explore le monde"
+        "Yahoo Finance",
+        "GuruFocus"
       ],
-      "score": 1.69,
-      "quiet": true,
-      "quietReason": "headline mentions evacuate"
+      "score": 1.7
     },
     {
       "id": "640f507300f2",
@@ -1150,6 +1147,25 @@
         "KTVU"
       ],
       "score": 1.69
+    },
+    {
+      "id": "8dcdb02c469b",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Three days to evacuate, two weeks at home: what the Red Cross says Americans should keep for a disaster, and what a January ice storm taught",
+      "url": "https://www.msn.com/en-us/news/other/three-days-to-evacuate-two-weeks-at-home-what-the-red-cross-says-americans-should-keep-for-a-disaster-and-what-a-january-ice-storm-taught/ar-AA2ibZM2",
+      "source": "Futura-Sciences on MSN",
+      "publishedAt": "2026-11-25T02:00:00.000Z",
+      "latestAt": "2026-11-25T11:11:26.000Z",
+      "firstSeenAt": "2026-11-25T11:17:22.706Z",
+      "outlets": 2,
+      "outletNames": [
+        "Futura-Sciences on MSN",
+        "Futura, le média qui explore le monde"
+      ],
+      "score": 1.69,
+      "quiet": true,
+      "quietReason": "headline mentions evacuate"
     },
     {
       "id": "45dbbf969cc4",
@@ -1718,22 +1734,6 @@
       "outlets": 1,
       "outletNames": [
         "VMblog"
-      ],
-      "score": 1
-    },
-    {
-      "id": "08c358507a00",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Ohafia To Enjoy Electricity After Nine-Year Blackout",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUWtaQ25aRkVHTUJvYVg1YzJYdXhpeml4dFVUSVB6ZldOM1R6dXExeEZDX01jZlUxNHlxNUdjdTZZNnRpbDN3Q18xN2tkbDR6WEgwSWt0VzZ2TjlObkpZaVNNOER6WV9EVUVlbWJjVXA5d2VuMFpLUHBDdXhpQWR2SDlB?oc=5",
-      "source": "The Whistler Newspaper",
-      "publishedAt": "2026-11-25T17:46:24.000Z",
-      "latestAt": "2026-11-25T17:46:24.000Z",
-      "firstSeenAt": "2026-11-25T17:53:14.146Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Whistler Newspaper"
       ],
       "score": 1
     },
