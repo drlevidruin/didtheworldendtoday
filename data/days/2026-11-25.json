@@ -50,29 +50,6 @@
       "score": 5
     },
     {
-      "id": "3654f280be86",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "CIA hit by major cyberattack on key intelligence system",
-      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T08:27:00.000Z",
-      "firstSeenAt": "2026-11-25T01:15:36.251Z",
-      "outlets": 8,
-      "outletNames": [
-        "Yahoo",
-        "geekspin",
-        "NewsBreak: Local News & Alerts",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Modern Ghana",
-        "Firstpost",
-        "The Mirror US",
-        "WE News English"
-      ],
-      "score": 4.73
-    },
-    {
       "id": "sig:faa-stop:SFO:2026-11-24",
       "cat": "flights",
       "kind": "signal",
@@ -144,6 +121,28 @@
       "score": 4.05
     },
     {
+      "id": "sig:status:github:2026-11-25",
+      "cat": "internet",
+      "kind": "signal",
+      "title": "GitHub reports a major outage on its status page",
+      "url": "https://www.githubstatus.com/",
+      "source": "GitHub status",
+      "publishedAt": "2026-11-25T16:23:01.784Z",
+      "latestAt": "2026-11-25T16:23:01.784Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
+      "outlets": 1,
+      "outletNames": [
+        "GitHub status"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "status",
+        "indicator": "major",
+        "page": "github",
+        "description": "Partial System Outage"
+      }
+    },
+    {
       "id": "sig:status:cloudflare:2026-11-25",
       "cat": "internet",
       "kind": "signal",
@@ -164,48 +163,6 @@
         "page": "cloudflare",
         "description": "Partial System Outage"
       }
-    },
-    {
-      "id": "95a87fd705d5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers compromise Check Point Servers in 22 organizations",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYmlzRW5zcFppdnI1NWdVaXJyXzAwTFZQMEVkdjVUdjJMcDFuSF93Q2pldTlibld1LU1CcHl3bWVWdFpRdWpqbkx6ZXBvMERGcF9xT3lqT3BFbFhpS2pFY2lNVmM5UHVCVTN4NHpTLUVBZ3Q4QWZnSlM5SVI2eDZhejkxai02bGtFbEc3TE1RWnlsWG9fU3paUWZBWUpDZVBoMURUMVBNNVN5dw?oc=5",
-      "source": "BleepingComputer",
-      "publishedAt": "2026-11-24T16:15:23.000Z",
-      "latestAt": "2026-11-25T12:48:14.000Z",
-      "firstSeenAt": "2026-11-24T17:59:22.427Z",
-      "outlets": 6,
-      "outletNames": [
-        "BleepingComputer",
-        "The 420.in",
-        "TechGig",
-        "CyberSecurityNews",
-        "The Hacker News",
-        "Security Affairs"
-      ],
-      "score": 3.48
-    },
-    {
-      "id": "d4e9532e7b32",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed in commercial poultry flock in Polk County",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPOUJnYzcwNG9tU2VWMjhPTjhyNXNlWDhtZndVTWYtRnRJWHNxUnFpd0dmaGU3d2VzdUxUeHZON1p0UEQxXzRwN0Q4UU0zWWVUeUNkc2pPNXVCcFN6TjhXeXdoM0U4SUdlM2x5SWIyQXlQOVQyaXVVNFNkOTBGcU5UdHhIbHFNUWdGSVJfNk1YcnlXUdIBpgFBVV95cUxNNFRNSXNXZDZkSk56T1RWb2NISldWUDJVWXFWVmtrdFRWdWphbHVERG0tUW1QUURvSHcySDhmeGhOZGstS2tFRUFVQVJMYVp0UUI4VFY1cFNDVWhYSE5tWmE3LWs3RE9EMFhDY0ZLVDRrM1JLeklUUVlKeldiRFVHRUxqMVNHNUkxck9OVUdzQ0xXdExjb1o3VTFtajNjYllpa3hxYTBB?oc=5",
-      "source": "WEAU",
-      "publishedAt": "2026-11-24T16:12:00.000Z",
-      "latestAt": "2026-11-25T00:55:44.000Z",
-      "firstSeenAt": "2026-11-24T18:59:34.832Z",
-      "outlets": 6,
-      "outletNames": [
-        "Lake Geneva News",
-        "La Crosse Tribune",
-        "Wisconsin State Journal",
-        "WEAU",
-        "715Newsroom.com",
-        "RadioPlusInfo.com"
-      ],
-      "score": 3.42
     },
     {
       "id": "fb4faf2589e7",
@@ -248,6 +205,47 @@
       "score": 3.29
     },
     {
+      "id": "8ecf313fde5f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Report: Cyberattack breaches CIA and two other US intelligence agencies",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9SNmFHT2lvNWxud0ltWU5hZzNCMV82N0ZEaWFPM3ozMlhOU0tXMjFIcnRxeDJ5SlhnZFlucUVaUVdPck5keWQ2eUI2bWtldFBHcGRVeDV4T1U3Zw?oc=5",
+      "source": "Israel National News",
+      "publishedAt": "2026-11-25T03:09:13.000Z",
+      "latestAt": "2026-11-25T11:16:14.000Z",
+      "firstSeenAt": "2026-11-25T06:16:29.636Z",
+      "outlets": 4,
+      "outletNames": [
+        "Israel National News",
+        "BW Businessworld",
+        "Pajhwok Afghan News",
+        "Hungarian Conservative"
+      ],
+      "score": 2.84
+    },
+    {
+      "id": "2a247c5e6a2a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach CIA’s unclassified computer system",
+      "url": "https://www.wsbtv.com/news/trending/hackers-breach-cias-unclassified-computer-system/HQJGMWXE2VH3TPCVPCSQ377ZQY/",
+      "source": "WSB-TV Channel 2",
+      "publishedAt": "2026-11-24T22:22:02.000Z",
+      "latestAt": "2026-11-25T11:57:31.000Z",
+      "firstSeenAt": "2026-11-25T15:37:49.330Z",
+      "outlets": 7,
+      "outletNames": [
+        "Bloomberg",
+        "TradingView",
+        "Investing.com",
+        "WSB-TV Channel 2",
+        "Seoul Economic Daily",
+        "The Washington Post",
+        "95.5 WSB"
+      ],
+      "score": 2.71
+    },
+    {
       "id": "c12cb954b403",
       "cat": "germs",
       "kind": "news",
@@ -284,42 +282,23 @@
       "score": 2.54
     },
     {
-      "id": "fb9a5b3b1cec",
-      "cat": "internet",
+      "id": "601f9e9bf7c2",
+      "cat": "grid",
       "kind": "news",
-      "title": "Microsoft Overhauls Its Outage Response Plan After Major Outlook Problems",
-      "url": "https://uk.pcmag.com/office-suites/168586/microsoft-overhauls-its-outage-response-plan-after-major-outlook-problems",
-      "source": "PCMag UK",
-      "publishedAt": "2026-11-25T04:49:00.000Z",
-      "latestAt": "2026-11-25T12:49:25.000Z",
-      "firstSeenAt": "2026-11-25T13:07:22.139Z",
+      "title": "Millions of Americans face possible power outages on Thanksgiving as powerful storm threatens 60mph winds and flooding",
+      "url": "https://www.the-sun.com/news/17354889/us-thanksgiving-power-outages-blackout-east-coast-storm/",
+      "source": "The US Sun",
+      "publishedAt": "2026-11-24T22:15:00.000Z",
+      "latestAt": "2026-11-25T11:16:27.000Z",
+      "firstSeenAt": "2026-11-25T11:32:27.686Z",
       "outlets": 2,
       "outletNames": [
-        "PCMag Australia",
-        "PCMag UK"
+        "The US Sun",
+        "The Sun"
       ],
-      "score": 2.41
-    },
-    {
-      "id": "02f0d15c4df1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Exclusive: FAA probe zeros in on culprit of nationwide ground stop, but agency still faces tough questions",
-      "url": "https://www.msn.com/en-us/news/other/exclusive-faa-probe-zeros-in-on-culprit-of-nationwide-ground-stop-but-agency-still-faces-tough-questions/ar-AA2i9wcB",
-      "source": "CNN on MSN",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T12:18:00.000Z",
-      "firstSeenAt": "2026-11-25T00:15:26.751Z",
-      "outlets": 6,
-      "outletNames": [
-        "CNN",
-        "KRDO",
-        "Yahoo News Singapore",
-        "Yahoo",
-        "Yahoo News UK",
-        "KOMU 8"
-      ],
-      "score": 4.33
+      "score": 2.18,
+      "quiet": true,
+      "quietReason": "headline mentions flooding"
     },
     {
       "id": "423698a4ff54",
@@ -365,47 +344,6 @@
       "score": 3.59
     },
     {
-      "id": "8ecf313fde5f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Report: Cyberattack breaches CIA and two other US intelligence agencies",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9SNmFHT2lvNWxud0ltWU5hZzNCMV82N0ZEaWFPM3ozMlhOU0tXMjFIcnRxeDJ5SlhnZFlucUVaUVdPck5keWQ2eUI2bWtldFBHcGRVeDV4T1U3Zw?oc=5",
-      "source": "Israel National News",
-      "publishedAt": "2026-11-25T03:09:13.000Z",
-      "latestAt": "2026-11-25T11:16:14.000Z",
-      "firstSeenAt": "2026-11-25T06:16:29.636Z",
-      "outlets": 4,
-      "outletNames": [
-        "Israel National News",
-        "BW Businessworld",
-        "Pajhwok Afghan News",
-        "Hungarian Conservative"
-      ],
-      "score": 2.84
-    },
-    {
-      "id": "2a247c5e6a2a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers breach CIA’s unclassified computer system",
-      "url": "https://www.wsbtv.com/news/trending/hackers-breach-cias-unclassified-computer-system/HQJGMWXE2VH3TPCVPCSQ377ZQY/",
-      "source": "WSB-TV Channel 2",
-      "publishedAt": "2026-11-24T22:22:02.000Z",
-      "latestAt": "2026-11-25T11:57:31.000Z",
-      "firstSeenAt": "2026-11-25T15:37:49.330Z",
-      "outlets": 7,
-      "outletNames": [
-        "Bloomberg",
-        "TradingView",
-        "Investing.com",
-        "WSB-TV Channel 2",
-        "Seoul Economic Daily",
-        "The Washington Post",
-        "95.5 WSB"
-      ],
-      "score": 2.71
-    },
-    {
       "id": "dd86ac7e3b59",
       "cat": "hacks",
       "kind": "news",
@@ -424,6 +362,58 @@
       "score": 2.56
     },
     {
+      "id": "e724a6fe278b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "VHV Company Data Breach Investigation: Edelson Lechtzin LLP Probes Class Action Claims After Social Security Numbers Are Exposed",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSFdIcUE3TVdBWHpMY3VrRjRiN1NJMU9HQm5RNHJ4UDU0bVVlVVUxNC1yOWgyYU9rMENmNUV3YjE1OFVfWGE4SHRuMVNLMEhSaFJGYy1oV1JCa2RpS2gyYVRSZDZ4YldXTWNzcXFEejctZnFhZ0U1U2FTb1p1OGxLazZ1SkI3MU5RNjAwd1FOM1Z2Qm42a0R0b3pTS1JkMTBKMTFONFduNkVqUDIySHRieHhUUFJVTXc?oc=5",
+      "source": "Carroll County Mirror-Democrat",
+      "publishedAt": "2026-11-25T00:11:49.000Z",
+      "latestAt": "2026-11-25T00:17:09.000Z",
+      "firstSeenAt": "2026-11-25T01:15:36.251Z",
+      "outlets": 3,
+      "outletNames": [
+        "Carroll County Mirror-Democrat",
+        "mykxlg.com",
+        "lincolnjournal.com"
+      ],
+      "score": 2.54
+    },
+    {
+      "id": "bf7fee70bac6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/massive-data-breach-exposes-2-122500776.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-25T04:25:00.000Z",
+      "latestAt": "2026-11-25T12:25:00.000Z",
+      "firstSeenAt": "2026-11-25T12:32:35.873Z",
+      "outlets": 2,
+      "outletNames": [
+        "TechRadar",
+        "YAHOO!"
+      ],
+      "score": 2.42
+    },
+    {
+      "id": "fb9a5b3b1cec",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Overhauls Its Outage Response Plan After Major Outlook Problems",
+      "url": "https://uk.pcmag.com/office-suites/168586/microsoft-overhauls-its-outage-response-plan-after-major-outlook-problems",
+      "source": "PCMag UK",
+      "publishedAt": "2026-11-25T04:49:00.000Z",
+      "latestAt": "2026-11-25T12:49:25.000Z",
+      "firstSeenAt": "2026-11-25T13:07:22.139Z",
+      "outlets": 2,
+      "outletNames": [
+        "PCMag Australia",
+        "PCMag UK"
+      ],
+      "score": 2.41
+    },
+    {
       "id": "3ada2f639399",
       "cat": "internet",
       "kind": "news",
@@ -439,25 +429,6 @@
         "Le Défi Media Group"
       ],
       "score": 2.41
-    },
-    {
-      "id": "601f9e9bf7c2",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Millions of Americans face possible power outages on Thanksgiving as powerful storm threatens 60mph winds and flooding",
-      "url": "https://www.the-sun.com/news/17354889/us-thanksgiving-power-outages-blackout-east-coast-storm/",
-      "source": "The US Sun",
-      "publishedAt": "2026-11-24T22:15:00.000Z",
-      "latestAt": "2026-11-25T11:16:27.000Z",
-      "firstSeenAt": "2026-11-25T11:32:27.686Z",
-      "outlets": 2,
-      "outletNames": [
-        "The US Sun",
-        "The Sun"
-      ],
-      "score": 2.18,
-      "quiet": true,
-      "quietReason": "headline mentions flooding"
     },
     {
       "id": "0edb9f27fed7",
@@ -509,6 +480,23 @@
         "Limapagi"
       ],
       "score": 1.99
+    },
+    {
+      "id": "3b15d213ea1a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Another ground stop delays travelers at O'Hare airport",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T04:16:00.000Z",
+      "latestAt": "2026-11-25T04:16:48.000Z",
+      "firstSeenAt": "2026-11-25T05:16:26.751Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "ABC7 Chicago"
+      ],
+      "score": 1.97
     },
     {
       "id": "8d6184cd4994",
@@ -579,23 +567,6 @@
       "score": 1.72
     },
     {
-      "id": "bfac433ea064",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Stock Falls 7% in a Month as 24-Hour Outage Triggers \"Code Red\"",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMmswXzV3QXUxa3JXUFpWUEtGWHZyZzdjdUpsN0pmZzgxM2pqaFMzeXVidDV1ZEY1ZmNJbDIxMHJ5WkVaUF9ValMwdTZzSVQ2Qjdid0RvX3NISXNlLTNiYmx5dTlWdVNvcUVEX2RNNElFeDU5WjlaRTF3a3UzaHBTeXIzZFUxdDFTeDJ1Q1ozdGlJX2FXVmNKSXhaMHV6QVk?oc=5",
-      "source": "Coinpaper",
-      "publishedAt": "2026-11-24T16:29:14.000Z",
-      "latestAt": "2026-11-24T16:43:22.000Z",
-      "firstSeenAt": "2026-11-25T01:00:39.327Z",
-      "outlets": 2,
-      "outletNames": [
-        "Coinpaper",
-        "Blockonomi"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "8dcdb02c469b",
       "cat": "weather",
       "kind": "news",
@@ -615,56 +586,37 @@
       "quietReason": "headline mentions evacuate"
     },
     {
-      "id": "be09b5dc5b1a",
-      "cat": "germs",
+      "id": "b34a9b912993",
+      "cat": "markets",
       "kind": "news",
-      "title": "Poultry farmers' 'constant anxiety' over bird flu",
-      "url": "https://www.bbc.co.uk/news/articles/cxvg2n8ed199o",
-      "source": "BBC",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T06:01:18.000Z",
-      "firstSeenAt": "2026-11-25T06:16:29.636Z",
+      "title": "Samsung Electronics Stocks Plunge 9.87%, Market Value Drops Below 1,000 Trillion Won",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/samsung-electronics-stocks-plunge-9-153253407.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-25T04:00:00.000Z",
+      "latestAt": "2026-11-25T16:00:49.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
       "outlets": 2,
       "outletNames": [
-        "BBC",
-        "Yahoo"
+        "Yahoo Finance",
+        "GuruFocus"
       ],
-      "score": 1.52
+      "score": 1.59
     },
     {
-      "id": "e724a6fe278b",
-      "cat": "hacks",
+      "id": "abcb674b3c03",
+      "cat": "weather",
       "kind": "news",
-      "title": "VHV Company Data Breach Investigation: Edelson Lechtzin LLP Probes Class Action Claims After Social Security Numbers Are Exposed",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSFdIcUE3TVdBWHpMY3VrRjRiN1NJMU9HQm5RNHJ4UDU0bVVlVVUxNC1yOWgyYU9rMENmNUV3YjE1OFVfWGE4SHRuMVNLMEhSaFJGYy1oV1JCa2RpS2gyYVRSZDZ4YldXTWNzcXFEejctZnFhZ0U1U2FTb1p1OGxLazZ1SkI3MU5RNjAwd1FOM1Z2Qm42a0R0b3pTS1JkMTBKMTFONFduNkVqUDIySHRieHhUUFJVTXc?oc=5",
-      "source": "Carroll County Mirror-Democrat",
-      "publishedAt": "2026-11-25T00:11:49.000Z",
-      "latestAt": "2026-11-25T00:17:09.000Z",
-      "firstSeenAt": "2026-11-25T01:15:36.251Z",
-      "outlets": 3,
+      "title": "Festivalgoer struck by lightning, locust plague, freak storm causes major blackout",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQakhIYm44WHlLQl92N2pwYXNIOXg5UWVDUTRzb1hpVkZpQ0wyd0pUV3Z4V05JS1ZtUmF0UEd2czFPMUFDc1B6OHJET285c0l5WERNN0RjNWpoV3N5Mk8wOTZoTUQwY01vRjlsS1ZMUHdJeko2SnYteWQ4QUNzeHp2cDIxelQ3QTN6?oc=5",
+      "source": "9Now",
+      "publishedAt": "2026-11-25T06:54:14.000Z",
+      "latestAt": "2026-11-25T06:54:14.000Z",
+      "firstSeenAt": "2026-11-25T07:16:38.099Z",
+      "outlets": 1,
       "outletNames": [
-        "Carroll County Mirror-Democrat",
-        "mykxlg.com",
-        "lincolnjournal.com"
+        "9Now"
       ],
-      "score": 2.54
-    },
-    {
-      "id": "bf7fee70bac6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/massive-data-breach-exposes-2-122500776.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-25T04:25:00.000Z",
-      "latestAt": "2026-11-25T12:25:00.000Z",
-      "firstSeenAt": "2026-11-25T12:32:35.873Z",
-      "outlets": 2,
-      "outletNames": [
-        "TechRadar",
-        "YAHOO!"
-      ],
-      "score": 2.42
+      "score": 1.39
     },
     {
       "id": "8a4d591cbf3b",
@@ -702,24 +654,6 @@
       "score": 2.29
     },
     {
-      "id": "2bb07ffc981b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "'We're not worried': ROC passengers talk ticket prices, recent FAA ground stop during busy travel week",
-      "url": "https://www.yahoo.com/news/videos/were-not-worried-roc-passengers-040424722.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T04:14:43.000Z",
-      "firstSeenAt": "2026-11-25T05:01:18.990Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "RochesterFirst",
-        "AOL.com"
-      ],
-      "score": 2.02
-    },
-    {
       "id": "c0a263ebd895",
       "cat": "hacks",
       "kind": "news",
@@ -733,23 +667,6 @@
       "outletNames": [
         "Bioengineer.org",
         "cedarnews.net"
-      ],
-      "score": 1.97
-    },
-    {
-      "id": "3b15d213ea1a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Another ground stop delays travelers at O'Hare airport",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T04:16:00.000Z",
-      "latestAt": "2026-11-25T04:16:48.000Z",
-      "firstSeenAt": "2026-11-25T05:16:26.751Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "ABC7 Chicago"
       ],
       "score": 1.97
     },
@@ -942,6 +859,23 @@
       "score": 1.72
     },
     {
+      "id": "bfac433ea064",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Stock Falls 7% in a Month as 24-Hour Outage Triggers \"Code Red\"",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMmswXzV3QXUxa3JXUFpWUEtGWHZyZzdjdUpsN0pmZzgxM2pqaFMzeXVidDV1ZEY1ZmNJbDIxMHJ5WkVaUF9ValMwdTZzSVQ2Qjdid0RvX3NISXNlLTNiYmx5dTlWdVNvcUVEX2RNNElFeDU5WjlaRTF3a3UzaHBTeXIzZFUxdDFTeDJ1Q1ozdGlJX2FXVmNKSXhaMHV6QVk?oc=5",
+      "source": "Coinpaper",
+      "publishedAt": "2026-11-24T16:29:14.000Z",
+      "latestAt": "2026-11-24T16:43:22.000Z",
+      "firstSeenAt": "2026-11-25T01:00:39.327Z",
+      "outlets": 2,
+      "outletNames": [
+        "Coinpaper",
+        "Blockonomi"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "70f436c09f34",
       "cat": "hacks",
       "kind": "news",
@@ -976,6 +910,23 @@
       "score": 1.7
     },
     {
+      "id": "5e14f636be1f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "New government cyberattack targets the CIA",
+      "url": "https://www.yahoo.com/news/videos/government-cyberattack-targets-cia-151410402.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T07:14:00.000Z",
+      "latestAt": "2026-11-25T15:14:10.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "KTVU"
+      ],
+      "score": 1.69
+    },
+    {
       "id": "45dbbf969cc4",
       "cat": "hacks",
       "kind": "news",
@@ -1008,57 +959,6 @@
         "lex18.com"
       ],
       "score": 1.65
-    },
-    {
-      "id": "b9909a780170",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Chicago O’Hare’s ground stop downgraded to delay stop with some flights paused",
-      "url": "https://ca.news.yahoo.com/ground-stop-issued-chicago-o-214302480.html",
-      "source": "Yahoo News Canada",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T00:24:00.000Z",
-      "firstSeenAt": "2026-11-25T03:00:56.149Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo News Canada",
-        "The Independent"
-      ],
-      "score": 1.63
-    },
-    {
-      "id": "0a358d7961e7",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft sets up “code red” after it’s 24-hour outage. But what does it mean?",
-      "url": "https://www.7hofm.com.au/trending/technology/microsoft-sets-up-code-red-after-its-24-hour-outage-but-what-does-it-mean/",
-      "source": "7HOFM",
-      "publishedAt": "2026-11-24T16:12:00.000Z",
-      "latestAt": "2026-11-25T03:15:22.000Z",
-      "firstSeenAt": "2026-11-25T04:31:12.371Z",
-      "outlets": 2,
-      "outletNames": [
-        "7HOFM",
-        "91.1 Hot Fm"
-      ],
-      "score": 1.59
-    },
-    {
-      "id": "d6b8ce642e78",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers target California city, potentially exposing undercover police identities and sensitive records",
-      "url": "https://www.yahoo.com/news/us/articles/hackers-target-california-city-potentially-035628359.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T03:56:00.000Z",
-      "firstSeenAt": "2026-11-25T04:46:11.815Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "New York Post"
-      ],
-      "score": 1.57
     },
     {
       "id": "d946ff356967",
@@ -1171,22 +1071,6 @@
       "outlets": 1,
       "outletNames": [
         "Latest news from Azerbaijan"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "abcb674b3c03",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Festivalgoer struck by lightning, locust plague, freak storm causes major blackout",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQakhIYm44WHlLQl92N2pwYXNIOXg5UWVDUTRzb1hpVkZpQ0wyd0pUV3Z4V05JS1ZtUmF0UEd2czFPMUFDc1B6OHJET285c0l5WERNN0RjNWpoV3N5Mk8wOTZoTUQwY01vRjlsS1ZMUHdJeko2SnYteWQ4QUNzeHp2cDIxelQ3QTN6?oc=5",
-      "source": "9Now",
-      "publishedAt": "2026-11-25T06:54:14.000Z",
-      "latestAt": "2026-11-25T06:54:14.000Z",
-      "firstSeenAt": "2026-11-25T07:16:38.099Z",
-      "outlets": 1,
-      "outletNames": [
-        "9Now"
       ],
       "score": 1.39
     },
@@ -1484,6 +1368,38 @@
       "score": 1.2
     },
     {
+      "id": "4591fa5047bb",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Rolls Out 'Code Red' Initiative to Avert Major Outages",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPN1g4Qm9palRoRlhRaEpoaHJxa0dubS1MWEJSazJlTmg4eEc0Z0dNZ29mbGpmTU9XanlWM1BzZ0hBang0Z1MxRHpKay1xSllzYUJQejFUd2gzX2drVnlvblBWNXdqb2JHWjBJaHJueXgtQVBwVnp1TV8wN244X3VTNk9pSVZZTnU1aDZRY2xyeXBpYlRBSXhSYmdR?oc=5",
+      "source": "Tempo.co English",
+      "publishedAt": "2026-11-25T03:37:00.000Z",
+      "latestAt": "2026-11-25T03:37:00.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
+      "outlets": 1,
+      "outletNames": [
+        "Tempo.co English"
+      ],
+      "score": 1.1
+    },
+    {
+      "id": "3b9d2968bcc0",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Great Lakes water temperatures hit record highs for late November",
+      "url": "https://www.jsonline.com/story/news/environment/2026/11/25/lake-michigan-water-at-near-record-high-thats-bad-news-for-some-fish/92941859007/",
+      "source": "Milwaukee Journal Sentinel",
+      "publishedAt": "2026-11-25T03:06:00.000Z",
+      "latestAt": "2026-11-25T11:06:00.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
+      "outlets": 1,
+      "outletNames": [
+        "Milwaukee Journal Sentinel"
+      ],
+      "score": 1.09
+    },
+    {
       "id": "7dc531d5f964",
       "cat": "markets",
       "kind": "news",
@@ -1498,6 +1414,22 @@
         "KSAT"
       ],
       "score": 1.06
+    },
+    {
+      "id": "9bfbc96567fb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Palo Alto Networks Soars 11% in a Week on Cyberattack Fears and a Guidance Hike: “An Unprecedented Threat Environment”",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPeWlMcnZoSXEySFBOS3VMS1cycWpwdWNRTXhYNnMzY1FqR1pHcTdMdjhlLUZOVFo3c3JlT3VMWEtBZnRWaXlfRGgzdHIzdkRJUG9ScmVnZjlvTEh1SzZtUWFhSFNBbzR1UE1mOGZKMnF6WWloOXZHcm5PNUJTdHk2TjNpdmV2c1V4Q0dKMjlCLXp2d2NXcWxFWHRLd2hoamZBQ2VVYlVySTV2eVNhWFhnaUlxejlGSE5LMlQtRndlR1dwYjhkSFQwMVNLNW5ZXzk2UDlEb0FhVWpNWFhESGxrMGJhLVZWS2ZhR1ZXcS1rVnIxNW4zb3JSQk9fd2Z6UEYtZ0ZwNEJhT2MwOXJ3UlE?oc=5",
+      "source": "TIKR.com",
+      "publishedAt": "2026-11-25T16:15:20.000Z",
+      "latestAt": "2026-11-25T16:15:20.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
+      "outlets": 1,
+      "outletNames": [
+        "TIKR.com"
+      ],
+      "score": 1
     },
     {
       "id": "2604bc2b9d96",
@@ -1580,20 +1512,72 @@
       "score": 1
     },
     {
-      "id": "b6b4dcbf7e62",
-      "cat": "space",
+      "id": "c0cf963bcc73",
+      "cat": "germs",
       "kind": "news",
-      "title": "Meet Earth's New 'Mini-Moon' 2026 QQ8, a Six-Foot-Wide Asteroid That's Temporarily Circling Our Planet",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNaE82YUhVSG5haW1VeUw5RXBOdFlDaTVOQTg0WUNBa205b251OWpMa3Y4RUhXdlM0bWtHdkNndGxkeE9xSnhBOUJGZzQyWXRDS2c5TlFKanl5bmVuR1UybUJHWFl1QW0wQnAxTWNiTXJaeHVIUlM1alBubksxYnFFZWVNaWpma1JEejVWc0FRRnhSYk9NMi1xMjl5TXA3TXUyekFTdzU4UHFZcjdmVDQzQ1VRUUFzUkpNSy1ELTdrUUtCc0xDMC02bFV6UkZUVnhJRGw4YmdnSkJReHczSU5CZHRDWG0?oc=5",
-      "source": "Smithsonian Magazine",
-      "publishedAt": "2026-11-25T14:00:00.000Z",
-      "latestAt": "2026-11-25T14:00:00.000Z",
-      "firstSeenAt": "2026-11-25T14:52:37.551Z",
+      "title": "Epiemiological Alert - Epidemiological Alert Avian Influenza A(H5N1) in the Americas Region - 24 November 2026",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLXVEMFNLaDlPdko0T01pVFVKTEdySDZua0dZNWVMNW1KanhqQ1pfU2tEQXlmdzdRQS15RDZBdmh2RVg3MHIzWUdjR2kyU3g3OTh3bGV1MjlnZFR2dmgwUE50MHVqT3lRXzFmR0RXV3JVcXJ1b0FoYTlWbF8wQzZDVS00aG5CQWZNeVR3MTZzUjF5TVVHSU92eGJjanlTTVFpQ21PNldFVmJvQU83MnRfTmpBZk1YZmZa?oc=5",
+      "source": "Pan American Health Organization (PAHO)",
+      "publishedAt": "2026-11-25T02:50:47.000Z",
+      "latestAt": "2026-11-25T02:50:47.000Z",
+      "firstSeenAt": "2026-11-25T03:00:56.149Z",
       "outlets": 1,
       "outletNames": [
-        "Smithsonian Magazine"
+        "Pan American Health Organization (PAHO)"
+      ],
+      "score": 1
+    },
+    {
+      "id": "0ca50871b20b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Utah asks to drop charges against Kalshi and its founders after Kalshi halts trading there",
+      "url": "https://abcnews.com/Business/wireStory/utah-asks-drop-charges-kalshi-founders-after-kalshi-138416910",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-25T02:00:00.000Z",
+      "latestAt": "2026-11-25T02:00:00.000Z",
+      "firstSeenAt": "2026-11-25T02:15:50.239Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "trending": 1000,
+      "trendTerm": "kalshi",
+      "score": 1
+    },
+    {
+      "id": "7868d855bc82",
+      "cat": "animals",
+      "kind": "news",
+      "title": "Bradenton Police Respond to Escaped Flock of Sheep in Manatee County",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOeHRobk9pRk5sWmV0RkxSWW90LW8xWjk1UHZxbElSdjc5U1k2ajREbmVmbV9WVWk0N1V6bF9PMmV4U3lYbS15MmRrTU5JNGgzVlZsZ1hzMjktZHRsYjZ6eEJaVGxTSlF2R3F6WjN6VU9WSk4zckFpWFRRQzkySkRQcWQySkdFMVZtZTIya1NkWWlGbHlGNUpxLVRzSVpjREEyOGR4dzNIQTJOTllKZDk3MWlJOTR1US1mV0Vtd1A3dVVVRlA3a1pwUVUwYzlrZjDSAboBQVVfeXFMUENfM1JMYno1QThwMXZNd2J0NThTcDV6bk03NmpoUWxIMUdtMDhVaXFxWC1xeGhMT0tCVVNZd2JaT0p1dUcwa2ZzUVFpMDhhYzdWMzEzYWxqYktEaXVac0x3dUM4WXhQNy1lRlpFZVlQeER4Y1FRNWY4OUJTSUZfR2xQTmNiWFJ1M0xLcS10WnVFS0RPVW1OdlQ3Z3IxYkk5NFlvMEoxLWwwRC1jNGRXRFZIV3lRNEJfZjN3?oc=5",
+      "source": "WIOD",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-25T16:00:00.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
+      "outlets": 1,
+      "outletNames": [
+        "WIOD"
       ],
       "score": 0.99
+    },
+    {
+      "id": "7b76e1f248e1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "M6.4 Undersea Quake Puts Rodrigues Under Tsunami Watch",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPd0c0bFR6c0g4SzdodVhXRmgyUHZPYUhxUGNCeE9mNW9Kb2dxdUZrRXEtSTE1NlU5X09yNHR6V1BkSllTcmw5SFRJZDVTVmlUMHJ5WW5vVkw2TUJ6SXNjTTZtUFU5S0YxVlpfam90N1ZnT09NSElXeDNWdGh5YnFtNUdtLVJjZUMzdnhUdnRHUUdFbVlxYzJyeWJsdkgyYlFDMGdzeWNRRk83eHdXNmxuMF93WXAwSGN2eVhtUVp3VndWWGE1MXN1RV9BOWc?oc=5",
+      "source": "Nature World News",
+      "publishedAt": "2026-11-25T15:29:25.000Z",
+      "latestAt": "2026-11-25T15:29:25.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nature World News"
+      ],
+      "score": 0.99,
+      "quiet": true,
+      "quietReason": "headline mentions tsunami"
     },
     {
       "id": "5074e4bf73e1",
@@ -1756,23 +1740,21 @@
       "score": 0.86
     },
     {
-      "id": "07da99347d54",
-      "cat": "earth",
+      "id": "872fee2f7740",
+      "cat": "space",
       "kind": "news",
-      "title": "He survived a 7.8-magnitude earthquake in Nepal and returned to the same village with food and supplies",
-      "url": "https://www.msn.com/en-us/news/other/he-survived-a-78-magnitude-earthquake-in-nepal-and-returned-to-the-same-village-with-food-and-supplies/vi-AA2icBuv",
-      "source": "Indigo Traveller on MSN",
-      "publishedAt": "2026-11-25T04:35:13.000Z",
-      "latestAt": "2026-11-25T04:35:13.000Z",
-      "firstSeenAt": "2026-11-25T13:52:36.116Z",
+      "title": "Watch live: Europe unveils 1st close-up views of asteroid Dimorphos after NASA's DART impact",
+      "url": "https://www.space.com/space-exploration/asteroid-comet-missions/watch-live-europe-unveils-1st-close-up-views-of-asteroid-dimorphos-after-nasas-dart-impact",
+      "source": "Space.com",
+      "publishedAt": "2026-11-25T06:01:00.000Z",
+      "latestAt": "2026-11-25T14:00:00.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
       "outlets": 1,
       "outletNames": [
-        "Indigo Traveller on MSN"
+        "Space.com"
       ],
-      "score": 0.85,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
+      "score": 0.83
     }
   ],
-  "updatedAt": "2026-11-25T15:37:49.330Z"
+  "updatedAt": "2026-11-25T16:23:01.784Z"
 }
