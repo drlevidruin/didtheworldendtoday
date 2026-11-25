@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T03:00:56.149Z",
+  "buildTime": "2026-11-25T03:15:56.814Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 22:00 ET",
+  "etStamp": "2026-11-24 22:15 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,17 +48,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1360,
-  "lastSuccessAt": "2026-11-25T03:00:56.149Z",
+  "headlinesRead": 1035,
+  "lastSuccessAt": "2026-11-25T03:15:56.814Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 22,
+    "flights": 23,
     "internet": 18,
-    "earth": 8,
     "hacks": 28,
-    "grid": 8,
+    "earth": 8,
     "germs": 4,
     "weather": 4,
+    "grid": 7,
     "space": 1,
     "markets": 4,
     "ai": 3
@@ -73,9 +73,9 @@
       "tsunami": false
     },
     "kp": {
-      "value": 1.33,
-      "time": "2026-11-24T21:00:00.000Z",
-      "max24": 1.67
+      "value": 3,
+      "time": "2026-11-25T00:00:00.000Z",
+      "max24": 3
     },
     "asteroid": {
       "des": "2026 VQ19",
@@ -183,15 +183,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1035,
-      "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "count": 713,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     },
     "bing": {
       "ok": true,
-      "count": 290,
+      "count": 284,
       "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,37 +203,37 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     },
     "x": {
       "ok": true,
@@ -244,15 +244,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 27,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T03:00:56.149Z"
+      "lastOkAt": "2026-11-25T03:15:56.814Z"
     }
   },
   "stories": [
@@ -396,33 +396,6 @@
       }
     },
     {
-      "id": "76df64bdaeb1",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.6-magnitude earthquake jolts Nepal-Tibet border",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yUUtSYXJTZjJVWEs4aWN2WTlRSVdFMXFPOVJVWkFUNm9hcE1nc2lrT1dnV3ZWVHZ2NGlUZE02UTNTVUxlMHUxMkZmc0lSMFJCZzZwVjVkMA?oc=5",
-      "source": "The Annapurna Express",
-      "publishedAt": "2026-11-24T03:36:36.000Z",
-      "latestAt": "2026-11-24T10:20:24.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 12,
-      "outletNames": [
-        "The Annapurna Express",
-        "The Himalayan Times",
-        "The Business Standard",
-        "OnlineKhabar English News",
-        "Rediff.com",
-        "Hindusthan Samachar English",
-        "The Avenue Mail",
-        "Qazinform",
-        "News On AIR",
-        "India TV News",
-        "NKTV",
-        "Mid-Day"
-      ],
-      "score": 4.48
-    },
-    {
       "id": "1f7a9dd08c2f",
       "cat": "hacks",
       "kind": "news",
@@ -468,28 +441,6 @@
         "U.S. News & World Report"
       ],
       "score": 3.82
-    },
-    {
-      "id": "682b3f1ddc03",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Bengals vs Commanders MNF game halted by power outage as lights go out",
-      "url": "https://www.aol.com/articles/bengals-vs-commanders-mnf-game-114500000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-24T03:07:00.000Z",
-      "latestAt": "2026-11-24T13:00:00.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 7,
-      "outletNames": [
-        "The Mirror US",
-        "NewsBreak: Local News & Alerts",
-        "Yahoo Sports",
-        "AOL.com",
-        "Irish Star",
-        "College Sports Network",
-        "Daily Express US"
-      ],
-      "score": 3.74
     },
     {
       "id": "sig:quake:us6000ud6h",
@@ -616,6 +567,45 @@
       "score": 2.97
     },
     {
+      "id": "d6951d480f01",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Thousands report outages on Spotify: Downdetector",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOV3dmZmt4T3otS2ZaLUV0VU1JZ0VsVmpaMkIxcVprbnNQTy1GUmxoQ0h2b0xoandta0ljVTRTdm0ySVAyZDFJc1RyYVdaY0lKZ2k5TGpxQ3h5SjJiYXVLZXV1RFdTZTl6QWVzOXctWkEzcFlYVmZCWlgzUXRVNm1hTUhmWUJ4VEg1bmJv0gGQAUFVX3lxTE9RdW5GSjM0VnZNZ2p3aHJKcGhnenB1anp1eTdna1hZQVNwcE5GZzJMU3BnVnVGSW53REx4WkFXUXV4bjRmM1VodWVQTEF0ZVpDV0FPbmNpLXE2cFZDQUJVcjZNR0x6QzFVQXMxakNxR1Uwbm1lRGI4bEVpTXBPU0lGa19EU0lGajZVaDB6T3dldg?oc=5",
+      "source": "PIX11",
+      "publishedAt": "2026-11-24T11:50:31.000Z",
+      "latestAt": "2026-11-24T13:30:00.000Z",
+      "firstSeenAt": "2026-11-24T22:45:11.907Z",
+      "outlets": 6,
+      "outletNames": [
+        "PIX11",
+        "Global Banking & Finance Review",
+        "Aaj English TV",
+        "AOL.com",
+        "The News International",
+        "Khaleej Times"
+      ],
+      "score": 2.93
+    },
+    {
+      "id": "c12cb954b403",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Kindopp says Agribition monitoring the bird flu situation",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQllMaWhCYXRwSm1DNkRJUm1GekdLY0dBZjR4WTdlaHRzUmVnM29odlI5SFNFTWFWOUpxY2l4OFlld2tqSUYxMTM2eXgxWnhfajcwS3B3M1lsMzFjVkJSdXdkTURuN1lQQ2dEczVqOVZCRUxFb0xJZXR4Y1hpWU5FckV6LWktbHg5U0VQWmR5NU1sQ1JTdTJQTw?oc=5",
+      "source": "620 CKRM",
+      "publishedAt": "2026-11-24T20:05:00.000Z",
+      "latestAt": "2026-11-24T20:15:20.000Z",
+      "firstSeenAt": "2026-11-24T20:14:43.533Z",
+      "outlets": 3,
+      "outletNames": [
+        "620 CKRM",
+        "MooseJawToday.com",
+        "GX94 Radio"
+      ],
+      "score": 2.58
+    },
+    {
       "id": "sig:faa-stop:ORD:2026-11-24",
       "cat": "flights",
       "kind": "signal",
@@ -682,47 +672,6 @@
       "score": 4.01
     },
     {
-      "id": "d6951d480f01",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Thousands report outages on Spotify: Downdetector",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOV3dmZmt4T3otS2ZaLUV0VU1JZ0VsVmpaMkIxcVprbnNQTy1GUmxoQ0h2b0xoandta0ljVTRTdm0ySVAyZDFJc1RyYVdaY0lKZ2k5TGpxQ3h5SjJiYXVLZXV1RFdTZTl6QWVzOXctWkEzcFlYVmZCWlgzUXRVNm1hTUhmWUJ4VEg1bmJv0gGQAUFVX3lxTE9RdW5GSjM0VnZNZ2p3aHJKcGhnenB1anp1eTdna1hZQVNwcE5GZzJMU3BnVnVGSW53REx4WkFXUXV4bjRmM1VodWVQTEF0ZVpDV0FPbmNpLXE2cFZDQUJVcjZNR0x6QzFVQXMxakNxR1Uwbm1lRGI4bEVpTXBPU0lGa19EU0lGajZVaDB6T3dldg?oc=5",
-      "source": "PIX11",
-      "publishedAt": "2026-11-24T11:50:31.000Z",
-      "latestAt": "2026-11-24T13:30:00.000Z",
-      "firstSeenAt": "2026-11-24T22:45:11.907Z",
-      "outlets": 6,
-      "outletNames": [
-        "PIX11",
-        "Global Banking & Finance Review",
-        "Aaj English TV",
-        "AOL.com",
-        "The News International",
-        "Khaleej Times"
-      ],
-      "score": 2.93
-    },
-    {
-      "id": "c69597c30f49",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands Without Power in Greenville County",
-      "url": "https://www.wspa.com/news/top-stories/thousands-without-power-in-greenville-county/",
-      "source": "WSPA 7News",
-      "publishedAt": "2026-11-24T03:07:00.000Z",
-      "latestAt": "2026-11-24T19:23:59.000Z",
-      "firstSeenAt": "2026-11-24T11:58:15.110Z",
-      "outlets": 5,
-      "outletNames": [
-        "WSPA 7News",
-        "WYFF",
-        "FOX Carolina News",
-        "KIRO 7 News Seattle",
-        "Yahoo"
-      ],
-      "score": 2.83
-    },
-    {
       "id": "b71cd8e479e0",
       "cat": "internet",
       "kind": "news",
@@ -757,24 +706,6 @@
         "The Coloradoan"
       ],
       "score": 2.74
-    },
-    {
-      "id": "c12cb954b403",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Kindopp says Agribition monitoring the bird flu situation",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQllMaWhCYXRwSm1DNkRJUm1GekdLY0dBZjR4WTdlaHRzUmVnM29odlI5SFNFTWFWOUpxY2l4OFlld2tqSUYxMTM2eXgxWnhfajcwS3B3M1lsMzFjVkJSdXdkTURuN1lQQ2dEczVqOVZCRUxFb0xJZXR4Y1hpWU5FckV6LWktbHg5U0VQWmR5NU1sQ1JTdTJQTw?oc=5",
-      "source": "620 CKRM",
-      "publishedAt": "2026-11-24T20:05:00.000Z",
-      "latestAt": "2026-11-24T20:15:20.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
-      "outlets": 3,
-      "outletNames": [
-        "620 CKRM",
-        "MooseJawToday.com",
-        "GX94 Radio"
-      ],
-      "score": 2.58
     },
     {
       "id": "fb4faf2589e7",
@@ -959,6 +890,59 @@
       "score": 2.14,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "8d6184cd4994",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu cases continue in Oregon, Washington",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX2s5UEpXV3BWSzFTbFBtVUpKcjZZT2J0dmpkX3dwek8tVk8tZFl4THlzYm5BeHZnZXY5YkZuOVRRY1Zfb3pOcjBnOGxncWx3djZFSVlWSlZWUEpKbTVIeU9rYlFWWkR6bko2b3k5UGFVX3RYNEtQb3o1Wm9VZmdVVnRCNnhTUTI5am9z?oc=5",
+      "source": "Your Oregon News",
+      "publishedAt": "2026-11-24T22:56:57.000Z",
+      "latestAt": "2026-11-25T00:25:31.000Z",
+      "firstSeenAt": "2026-11-25T01:45:42.574Z",
+      "outlets": 2,
+      "outletNames": [
+        "Your Oregon News",
+        "Capital Press"
+      ],
+      "score": 1.91
+    },
+    {
+      "id": "f60198f20192",
+      "cat": "earth",
+      "kind": "news",
+      "title": "6.8 magnitude Earthquake strikes central Peru",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oQW5McjlMQTNUeFNjWnpDNDB5R3lBVFVoODhBemQyVGxEaW01Yld0eEZ6QktIQU4yNng5elBVbnE4ZVZDY2FaT0dVTEFTdGVkN1AyT1NtSGRob1BUQkNjN25LTGZHZFR0ZUs0SlBYRXotcFNHbzl5NFhJcw?oc=5",
+      "source": "News On AIR",
+      "publishedAt": "2026-11-24T12:44:25.000Z",
+      "latestAt": "2026-11-24T20:41:43.000Z",
+      "firstSeenAt": "2026-11-24T19:44:39.275Z",
+      "outlets": 2,
+      "outletNames": [
+        "News On AIR",
+        "The Daily Star"
+      ],
+      "score": 1.77,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "bb9b348a287e",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Austria's National Security Service is investigating following a power outage",
+      "url": "https://www.bluewin.ch/en/news/austria-s-national-security-service-is-investigating-following-a-power-outage-li.3685591",
+      "source": "Bluewin",
+      "publishedAt": "2026-11-24T07:07:00.000Z",
+      "latestAt": "2026-11-24T15:09:25.000Z",
+      "firstSeenAt": "2026-11-24T15:13:49.241Z",
+      "outlets": 2,
+      "outletNames": [
+        "Bluewin",
+        "blue News"
+      ],
+      "score": 1.73
     },
     {
       "id": "899c23b9703f",
@@ -1297,23 +1281,6 @@
       "score": 1.96
     },
     {
-      "id": "8d6184cd4994",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu cases continue in Oregon, Washington",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX2s5UEpXV3BWSzFTbFBtVUpKcjZZT2J0dmpkX3dwek8tVk8tZFl4THlzYm5BeHZnZXY5YkZuOVRRY1Zfb3pOcjBnOGxncWx3djZFSVlWSlZWUEpKbTVIeU9rYlFWWkR6bko2b3k5UGFVX3RYNEtQb3o1Wm9VZmdVVnRCNnhTUTI5am9z?oc=5",
-      "source": "Your Oregon News",
-      "publishedAt": "2026-11-24T22:56:57.000Z",
-      "latestAt": "2026-11-25T00:25:31.000Z",
-      "firstSeenAt": "2026-11-25T01:45:42.574Z",
-      "outlets": 2,
-      "outletNames": [
-        "Your Oregon News",
-        "Capital Press"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "bfe91f57818e",
       "cat": "hacks",
       "kind": "news",
@@ -1416,25 +1383,6 @@
       "score": 1.77
     },
     {
-      "id": "f60198f20192",
-      "cat": "earth",
-      "kind": "news",
-      "title": "6.8 magnitude Earthquake strikes central Peru",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oQW5McjlMQTNUeFNjWnpDNDB5R3lBVFVoODhBemQyVGxEaW01Yld0eEZ6QktIQU4yNng5elBVbnE4ZVZDY2FaT0dVTEFTdGVkN1AyT1NtSGRob1BUQkNjN25LTGZHZFR0ZUs0SlBYRXotcFNHbzl5NFhJcw?oc=5",
-      "source": "News On AIR",
-      "publishedAt": "2026-11-24T12:44:25.000Z",
-      "latestAt": "2026-11-24T20:41:43.000Z",
-      "firstSeenAt": "2026-11-24T19:44:39.275Z",
-      "outlets": 2,
-      "outletNames": [
-        "News On AIR",
-        "The Daily Star"
-      ],
-      "score": 1.77,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "e6e47f1883d4",
       "cat": "hacks",
       "kind": "news",
@@ -1482,23 +1430,6 @@
       "outletNames": [
         "The Zimbabwe Mail",
         "iHarare News"
-      ],
-      "score": 1.73
-    },
-    {
-      "id": "bb9b348a287e",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Austria's National Security Service is investigating following a power outage",
-      "url": "https://www.bluewin.ch/en/news/austria-s-national-security-service-is-investigating-following-a-power-outage-li.3685591",
-      "source": "Bluewin",
-      "publishedAt": "2026-11-24T07:07:00.000Z",
-      "latestAt": "2026-11-24T15:09:25.000Z",
-      "firstSeenAt": "2026-11-24T15:13:49.241Z",
-      "outlets": 2,
-      "outletNames": [
-        "Bluewin",
-        "blue News"
       ],
       "score": 1.73
     },
@@ -1760,6 +1691,24 @@
       "score": 1.56
     },
     {
+      "id": "af4f61912279",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQzhBcXphR3dIWm5uTFlrekUzOUdTYnAxNHJDVW9pYndLWTAzTEtURUlZV0k2MDBiSW1GSDh4M1Znd2N0X0t1dlRzSVhTM1BORzYtYWxTREVoZmhGNFRSQ3JyclBhcERnVzJHMzRudkNaVVFTaGl4bE9obi1tbU1VTlRkZHh4cVhqVGgySWZqSnlINEluNVlrZVREVWlYcXlFRXlaN1NsaE9HaDJJaE04cmdRZ21vTWJDV25IODN3WENpS0J30gHLAUFVX3lxTFB5Rl9mWkoyMFV6MmJTa1lSWDJwY0ZmVEpibnM3NnpvbXRZMWVMaG0tdGtNYnZLUVFTSmphSzlSSlludDFUNXdiM1V1YURMRklYU0pDbjgzMTdXV2dfMGxoMGVxQ2RYU0pwMGtwQkhabHBjUFQtUVhXQ1VrTm56bXJ2SWtONGhuVTJVOHAxdEtHREZ6M1h0eDJQMEpVV0NSTTVXam0waS1xWGFDb2o4MU5zSEM2UDV4cWI2eGREaGRyQ2ZHdHpBTG1wcWY0?oc=5",
+      "source": "The Hindu",
+      "publishedAt": "2026-11-24T03:33:12.000Z",
+      "latestAt": "2026-11-24T06:36:52.000Z",
+      "firstSeenAt": "2026-11-25T03:15:56.814Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Hindu",
+        "Singrauli Mirror",
+        "Daily Excelsior"
+      ],
+      "score": 1.56
+    },
+    {
       "id": "c33a777bc6da",
       "cat": "earth",
       "kind": "news",
@@ -2017,6 +1966,39 @@
         "CBS News"
       ],
       "score": 1.32
+    },
+    {
+      "id": "af4a18bde127",
+      "cat": "grid",
+      "kind": "news",
+      "title": "West Oahu representatives raise power outage concerns at HECO town hall",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSUhOOGV0WXRXSXpfX1VZV0ppMHBVYzRaRHpHV3A0bUNMTFZRWUVSME02cmVYOF9DU0tLRll5eDkzVF9lbEc0OGJod1pxSk53eUlWN2VWQVkyWE9kcU5HdlJGcGN5SVFVRFdXUm9tTzZXR0ZnaHlyTkh1eHJIS2luVmk2T0hlOHB2VU5GSUc2Q1FYM1VkWlh3QXBmalNEMC00ZDlZWVN6QW9yUmpZLTlVOFpMRE9XTFk?oc=5",
+      "source": "Hawaii News Now",
+      "publishedAt": "2026-11-24T06:17:08.000Z",
+      "latestAt": "2026-11-24T07:56:14.000Z",
+      "firstSeenAt": "2026-11-25T03:15:56.814Z",
+      "outlets": 2,
+      "outletNames": [
+        "Hawaii News Now",
+        "cedarnews.net"
+      ],
+      "score": 1.3
+    },
+    {
+      "id": "fb0465e3999d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Editorial: Nationwide Ground Stop Highlights Vulnerable Air Traffic Systems",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNbVVnU2k5Mmk0dTZMNVNXZlNGLUxINUxKQnRhcTlfVnY1dXNEbUtVSFZqdnkxa0w5OTk4c1BZaHhjRmxCaU0zaWYxbWRPbjZtcmxzNm1QTm41T1dDdENtaWpfWEQtLVVlQ05rbUNKVG5kWnRUOURBT083X3lFcFBtR0FlTVhzRDVFSFI4dEJ3Y20tc2czUHJDRDV3Mm9fVlJybmpXXzdfaVEzTWUtQmc4ZWRhRDl0dFFTbXJuOVVxV3Z2alJjd1EzQTQwWHlvc0tReUFwOTVBb0JCWE1CTUFXU0VraDFpUGs3RmhyRzFvM01sbEN5ZE1yTWFCZUM?oc=5",
+      "source": "Aviation Pros",
+      "publishedAt": "2026-11-24T19:19:31.000Z",
+      "latestAt": "2026-11-24T19:19:31.000Z",
+      "firstSeenAt": "2026-11-25T03:15:56.814Z",
+      "outlets": 1,
+      "outletNames": [
+        "Aviation Pros"
+      ],
+      "score": 1.21
     },
     {
       "id": "52091bdfb5f9",
