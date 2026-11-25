@@ -1,14 +1,13 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T11:32:27.686Z",
+  "buildTime": "2026-11-25T11:46:54.939Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 06:32 ET",
-  "score": 74,
+  "etStamp": "2026-11-25 06:46 ET",
+  "score": 68,
   "fired": [
     "flights",
     "hacks",
     "internet",
-    "space",
     "earth",
     "markets",
     "ai",
@@ -28,7 +27,7 @@
       "points": 8
     }
   ],
-  "change": 9,
+  "change": 3,
   "yesterday": {
     "date": "2026-11-24",
     "score": 65,
@@ -48,20 +47,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1432,
-  "lastSuccessAt": "2026-11-25T11:32:27.686Z",
+  "headlinesRead": 1411,
+  "lastSuccessAt": "2026-11-25T11:46:54.939Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 19,
+    "flights": 21,
     "hacks": 28,
     "internet": 17,
     "germs": 5,
-    "weather": 6,
+    "weather": 5,
     "grid": 8,
     "earth": 4,
-    "space": 3,
     "markets": 4,
     "sun": 3,
+    "space": 2,
     "ai": 3
   },
   "vital": {
@@ -179,80 +178,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1104,
+      "count": 1088,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     },
     "bing": {
       "ok": true,
-      "count": 290,
+      "count": 286,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-25T11:17:22.706Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:32:27.686Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T11:32:27.686Z"
+      "lastOkAt": "2026-11-25T11:46:54.939Z"
     }
   },
   "stories": [
@@ -607,6 +607,26 @@
       "score": 3.48
     },
     {
+      "id": "423698a4ff54",
+      "cat": "flights",
+      "kind": "news",
+      "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAxZkVWQ0lYdVhCWFBhVVBrbEE0dEt4RTgwVTNydWFYeXAzTXBiMG9FQVl0ZE5hM00zN2czSXVhQmNOd0ZMRU1YWUtsUlFrLWNXQU40MGU4MjY0cm9tOEVjV1RlSkZkNHRtV2ZEbXJSbFRRcVVKSGxEQ2R3UVY?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T11:00:00.000Z",
+      "latestAt": "2026-11-25T11:40:52.000Z",
+      "firstSeenAt": "2026-11-25T11:17:22.706Z",
+      "outlets": 5,
+      "outletNames": [
+        "Yahoo",
+        "Reuters",
+        "The Lufkin Daily News",
+        "TradingView",
+        "WHTC"
+      ],
+      "score": 3.31
+    },
+    {
       "id": "8ecf313fde5f",
       "cat": "hacks",
       "kind": "news",
@@ -643,24 +663,6 @@
         "The Coloradoan"
       ],
       "score": 2.74
-    },
-    {
-      "id": "0dd78f3eb490",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Major Airport Disrupted by Another Ground Stop Before Thanksgiving Holiday",
-      "url": "https://www.newsweek.com/ground-stop-chicago-ohare-airport-third-thanksgiving-travel-12765115",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-24T15:23:00.000Z",
-      "latestAt": "2026-11-25T00:30:00.000Z",
-      "firstSeenAt": "2026-11-25T06:16:29.636Z",
-      "outlets": 3,
-      "outletNames": [
-        "Newsweek",
-        "Yahoo",
-        "AOL"
-      ],
-      "score": 2.72
     },
     {
       "id": "88b30b5dc925",
@@ -857,39 +859,41 @@
       "score": 1.72
     },
     {
-      "id": "5efab0861ea0",
-      "cat": "space",
+      "id": "8dcdb02c469b",
+      "cat": "weather",
       "kind": "news",
-      "title": "Learn about: NASA's Lucy spacecraft flyby with asteroid Donaldjohanson",
-      "url": "https://www.msn.com/en-us/science/astronomy/learn-about-nasa-s-lucy-spacecraft-flyby-with-asteroid-donaldjohanson/vi-AA2i8NlX",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-24T11:40:00.000Z",
-      "latestAt": "2026-11-24T12:02:40.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
+      "title": "Three days to evacuate, two weeks at home: what the Red Cross says Americans should keep for a disaster, and what a January ice storm taught",
+      "url": "https://www.msn.com/en-us/news/other/three-days-to-evacuate-two-weeks-at-home-what-the-red-cross-says-americans-should-keep-for-a-disaster-and-what-a-january-ice-storm-taught/ar-AA2ibZM2",
+      "source": "Futura-Sciences on MSN",
+      "publishedAt": "2026-11-25T02:00:00.000Z",
+      "latestAt": "2026-11-25T11:11:26.000Z",
+      "firstSeenAt": "2026-11-25T11:17:22.706Z",
       "outlets": 2,
       "outletNames": [
-        "Space on MSN",
-        "Dailymotion on MSN"
+        "Futura-Sciences on MSN",
+        "Futura, le média qui explore le monde"
       ],
-      "score": 1.71
+      "score": 1.69,
+      "quiet": true,
+      "quietReason": "headline mentions evacuate"
     },
     {
-      "id": "423698a4ff54",
+      "id": "0dd78f3eb490",
       "cat": "flights",
       "kind": "news",
-      "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAxZkVWQ0lYdVhCWFBhVVBrbEE0dEt4RTgwVTNydWFYeXAzTXBiMG9FQVl0ZE5hM00zN2czSXVhQmNOd0ZMRU1YWUtsUlFrLWNXQU40MGU4MjY0cm9tOEVjV1RlSkZkNHRtV2ZEbXJSbFRRcVVKSGxEQ2R3UVY?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T11:04:17.000Z",
-      "latestAt": "2026-11-25T11:04:50.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
+      "title": "Major Airport Disrupted by Another Ground Stop Before Thanksgiving Holiday",
+      "url": "https://www.newsweek.com/ground-stop-chicago-ohare-airport-third-thanksgiving-travel-12765115",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-24T15:23:00.000Z",
+      "latestAt": "2026-11-25T00:30:00.000Z",
+      "firstSeenAt": "2026-11-25T06:16:29.636Z",
       "outlets": 3,
       "outletNames": [
+        "Newsweek",
         "Yahoo",
-        "Reuters",
-        "The Lufkin Daily News"
+        "AOL"
       ],
-      "score": 2.58
+      "score": 2.72
     },
     {
       "id": "dd86ac7e3b59",
@@ -1398,25 +1402,6 @@
       "score": 1.71
     },
     {
-      "id": "8dcdb02c469b",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Three days to evacuate, two weeks at home: what the Red Cross says Americans should keep for a disaster, and what a January ice storm taught",
-      "url": "https://www.msn.com/en-us/news/other/three-days-to-evacuate-two-weeks-at-home-what-the-red-cross-says-americans-should-keep-for-a-disaster-and-what-a-january-ice-storm-taught/ar-AA2ibZM2",
-      "source": "Futura-Sciences on MSN",
-      "publishedAt": "2026-11-25T02:00:00.000Z",
-      "latestAt": "2026-11-25T11:11:26.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
-      "outlets": 2,
-      "outletNames": [
-        "Futura-Sciences on MSN",
-        "Futura, le média qui explore le monde"
-      ],
-      "score": 1.69,
-      "quiet": true,
-      "quietReason": "headline mentions evacuate"
-    },
-    {
       "id": "a0f1e5023f00",
       "cat": "grid",
       "kind": "news",
@@ -1585,22 +1570,6 @@
         "Houston Chronicle"
       ],
       "score": 1.41
-    },
-    {
-      "id": "3b9d2968bcc0",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Great Lakes water temperatures hit record highs for late November",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNUWNMWWk4eW8tSkRJYlRkd0NQbC1hbWthVFloNmxJNFlXeWRCUElDRjNfVlgzejR2WjVoaHYzVGhZSGYwOUNuV0JGNWNCel9USWE5UFV5YURHM2I0VTRXamlva00wTmhBc2x3VWZJSmV5Q3I1Wk9wc3JOTkJhYnpJY0RQR1NlcjlxdFllR0Rlc3pyQVlTaVNkcFQ2MVBaTTJoWXRfUUdPbkxFV0lQbkppeG92bFhpLWYxU0kybThaaHlJdlNnaldJWHk3RlBzSDJjbUExeEVIcw?oc=5",
-      "source": "Milwaukee Journal Sentinel",
-      "publishedAt": "2026-11-25T11:06:00.000Z",
-      "latestAt": "2026-11-25T11:06:00.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
-      "outlets": 1,
-      "outletNames": [
-        "Milwaukee Journal Sentinel"
-      ],
-      "score": 1.4
     },
     {
       "id": "52f1674d700a",
@@ -1809,6 +1778,38 @@
         "Metro Mode"
       ],
       "score": 1.38
+    },
+    {
+      "id": "d186de7312b2",
+      "cat": "flights",
+      "kind": "news",
+      "title": "DFW Airport expects 3.1 million Thanksgiving travelers after recent nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOX2JnZTFjMmp6NHpZRGxHS3pmUmRvbWdZbG96VVZkVk9tam1tclpJaTNKNTlIeXB4czhndU5rUHBKQ1JZNnZFa3g0aTBRdUJUMWpWaEpkaWlZMWFWNEV6M1U4dVBPdGh5ZnRNRmRJM3E5a0UzaGFiVDFSZlVGdWl1ZHhjVTZ6Q21IemVaTUtUQ2E0NDBQZ3lXNU1WbU1PVEhfNE9paGNjTThRQTRpbFF4amhVNmpQMU85UzRqUktMQzk1MGN5bU9QXzV5UDNMb2pqVkRqTHpGX1dUdExybHd0UkdiS0ZQTEFHbzlBbG81cHZjS2JZNzJB?oc=5",
+      "source": "WFAA",
+      "publishedAt": "2026-11-25T00:19:32.000Z",
+      "latestAt": "2026-11-25T00:19:32.000Z",
+      "firstSeenAt": "2026-11-25T04:16:08.225Z",
+      "outlets": 1,
+      "outletNames": [
+        "WFAA"
+      ],
+      "score": 1.31
+    },
+    {
+      "id": "df2874c01125",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA probe points to router setting behind nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPMVUwYl9iSmJZeFZybXBGNFZVZFE4VWZKbXh0d0dTYjdmbmhwZ0xwbkZHUU9sYmJGWUtQTDJtUzJlNk92eGF4Mm92VnRfaUpaRTRKWVhRWmxGdXd5MzFReGNwWnBIVE5xSk5fR3dxaUR2cDBTS3pYMmFGY05EYlZTOA?oc=5",
+      "source": "Mezha.net",
+      "publishedAt": "2026-11-25T00:16:05.000Z",
+      "latestAt": "2026-11-25T00:16:05.000Z",
+      "firstSeenAt": "2026-11-25T04:16:08.225Z",
+      "outlets": 1,
+      "outletNames": [
+        "Mezha.net"
+      ],
+      "score": 1.31
     },
     {
       "id": "7dc531d5f964",
