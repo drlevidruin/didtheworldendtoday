@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T09:32:04.891Z",
+  "buildTime": "2026-11-25T09:47:07.407Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 04:32 ET",
+  "etStamp": "2026-11-25 04:47 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -53,8 +53,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 762,
-  "lastSuccessAt": "2026-11-25T09:32:04.891Z",
+  "headlinesRead": 1055,
+  "lastSuccessAt": "2026-11-25T09:47:07.407Z",
   "rollingFallback": false,
   "cats": {
     "flights": 21,
@@ -62,11 +62,11 @@
     "internet": 18,
     "earth": 5,
     "germs": 4,
-    "weather": 5,
+    "weather": 4,
     "grid": 6,
     "space": 2,
     "markets": 4,
-    "sun": 1,
+    "sun": 2,
     "ai": 3
   },
   "vital": {
@@ -184,80 +184,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 433,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 7 of 26 queries)",
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "count": 723,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 20 of 26 queries)",
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     },
     "bing": {
       "ok": true,
-      "count": 290,
+      "count": 294,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-25T06:16:29.636Z"
     },
     "hn": {
       "ok": true,
-      "count": 9,
+      "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:32:04.891Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z"
+      "lastOkAt": "2026-11-25T09:47:07.407Z"
     }
   },
   "stories": [
@@ -1842,6 +1843,23 @@
       "score": 1.36
     },
     {
+      "id": "e55c564c17ff",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Chicago's O’Hare Airport ground stop lifted, flight delays continue after outage",
+      "url": "https://www.yahoo.com/news/us/articles/chicagos-o-hare-airport-ground-214231766.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T13:42:00.000Z",
+      "latestAt": "2026-11-24T21:42:31.000Z",
+      "firstSeenAt": "2026-11-25T09:47:07.407Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 32 Chicago"
+      ],
+      "score": 1.33
+    },
+    {
       "id": "d186de7312b2",
       "cat": "flights",
       "kind": "news",
@@ -1888,40 +1906,6 @@
         "Modern Ghana"
       ],
       "score": 1.3
-    },
-    {
-      "id": "f2c3b5bc12f4",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Another brief ground stop at O'Hare as record numbers expected at Chicago airports for Thanksgiving travel",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa0RvVUZSQUhaSzVNdjl3TzZCQmhpOWt3dV9sMTBKWTROdnZucHlrbDlXYlk0UWEwc1M0TkRYLTJ3YklRZFh1M2Jod1RPelRfLVoydHZpcm5OMFh3Mkh3d25NaTBqNnJDYXBUNE1DcFJXQ1pZaUtiRDBERTlNMm9QUFo0Zk5BN2d3T1g4?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-24T23:37:48.000Z",
-      "latestAt": "2026-11-24T23:37:48.000Z",
-      "firstSeenAt": "2026-11-25T04:46:11.815Z",
-      "outlets": 1,
-      "outletNames": [
-        "CBS News"
-      ],
-      "score": 1.28
-    },
-    {
-      "id": "d1f8478fdf6c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Watch King tides flood Mill Valley streets as California braces for record high waters - America's Weather Center",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONHlCUFQtekVDSDhscW5FZHY0aXhNUXNYUFd2OElIMFViODFMZGdvT0t1c21XNzAteWR0VW1fLUZteV9PeW5URl9hYTZ6TEswdUktUzRiSzhrLWlqbE9tazdYbG4yMWUwRWFJTlh4TXgtb2pna0dwYkFsMnFNMjNsS3V0bG5fd2RaN0VSMDFCMnJoaVRYc0lqbDNMWjRTSnR4NVB1S2wyRHRHbDJEVklUMTdsUkVGajdkTUNsdnVkRmdtTmw1TUhzaWxwdUg?oc=5",
-      "source": "FOX One",
-      "publishedAt": "2026-11-24T20:19:02.000Z",
-      "latestAt": "2026-11-24T20:19:02.000Z",
-      "firstSeenAt": "2026-11-25T03:30:57.644Z",
-      "outlets": 1,
-      "outletNames": [
-        "FOX One"
-      ],
-      "score": 1.23,
-      "quiet": true,
-      "quietReason": "headline mentions flood"
     },
     {
       "id": "e944941ab0c9",
@@ -2020,6 +2004,22 @@
         "The Jerusalem Post"
       ],
       "score": 0.99
+    },
+    {
+      "id": "868c3706542d",
+      "cat": "sun",
+      "kind": "news",
+      "title": "NASA astronaut shares video of auroras from space as Earth braces for solar storm",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPTHItOTRHRHR5MDJnd2gxaXZNc3N3WHNSdnJHXzJ2OWNvdVZJamVEeW9tSFdaSW9lQkRiYjJzMm9BS1VTRV9PWnRXeGNtcXRNaERvVWM4Sm1iZDJNc2lsVmJBMzN1dDRzbzBZdW4zTS1oeERBRElzYlduTGxCbTRNRXhZRmk5VHJLdTh6NnNzeGVFZDZFQjIzN1IybHdJYWVqMnJTby00WDNDSWlBWHVKblJBYw?oc=5",
+      "source": "Starlust.org",
+      "publishedAt": "2026-11-25T08:05:59.000Z",
+      "latestAt": "2026-11-25T08:05:59.000Z",
+      "firstSeenAt": "2026-11-25T09:47:07.407Z",
+      "outlets": 1,
+      "outletNames": [
+        "Starlust.org"
+      ],
+      "score": 0.97
     },
     {
       "id": "96faf5280248",
