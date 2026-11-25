@@ -1,38 +1,38 @@
 {
   "google": {
-    "ok": true,
-    "count": 1057,
-    "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
+    "ok": false,
+    "count": 0,
+    "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
     "lastOkAt": "2026-11-25T02:15:50.239Z"
   },
   "bing": {
     "ok": true,
-    "count": 293,
-    "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T02:15:50.239Z"
+    "count": 278,
+    "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z"
   },
   "gdelt": {
     "ok": false,
     "count": 0,
-    "error": "timeout",
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
+    "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
     "lastOkAt": "2026-11-24T16:59:11.725Z"
   },
   "hn": {
     "ok": true,
-    "count": 9,
+    "count": 8,
     "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T02:15:50.239Z"
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z"
   },
   "usgs": {
     "ok": true,
     "count": 1,
     "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T02:15:50.239Z",
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z",
     "vital": {
       "quake": {
         "mag": 6.4,
@@ -48,8 +48,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T02:15:50.239Z",
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z",
     "vital": {
       "kp": {
         "value": 1.33,
@@ -62,8 +62,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T02:15:50.239Z",
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z",
     "vital": {
       "asteroid": {
         "des": "2026 VQ19",
@@ -78,21 +78,15 @@
   },
   "faa": {
     "ok": true,
-    "count": 1,
+    "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T02:15:50.239Z",
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z",
     "vital": {
       "faa": {
-        "groundStops": [
-          {
-            "airport": "SFO",
-            "hub": true,
-            "reason": "wind"
-          }
-        ],
+        "groundStops": [],
         "nationwide": false,
-        "groundDelays": 1,
+        "groundDelays": 2,
         "closures": 0,
         "url": "https://nasstatus.faa.gov/"
       }
@@ -102,8 +96,8 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T02:15:50.239Z",
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z",
     "vital": {
       "status": {
         "worst": "minor",
@@ -165,21 +159,21 @@
     "ok": true,
     "count": 0,
     "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T01:30:43.725Z"
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z"
   },
   "trends": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T02:15:50.239Z"
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z"
   },
   "topstories": {
     "ok": true,
     "count": 30,
     "error": null,
-    "lastTryAt": "2026-11-25T02:15:50.239Z",
-    "lastOkAt": "2026-11-25T02:15:50.239Z"
+    "lastTryAt": "2026-11-25T02:30:52.329Z",
+    "lastOkAt": "2026-11-25T02:30:52.329Z"
   }
 }
