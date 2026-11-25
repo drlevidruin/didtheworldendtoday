@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T17:53:14.146Z",
+  "buildTime": "2026-11-25T18:08:07.848Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 12:53 ET",
+  "etStamp": "2026-11-25 13:08 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,18 +49,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1421,
-  "lastSuccessAt": "2026-11-25T17:53:14.146Z",
+  "headlinesRead": 814,
+  "lastSuccessAt": "2026-11-25T18:08:07.848Z",
   "rollingFallback": false,
   "cats": {
     "flights": 17,
-    "hacks": 31,
+    "hacks": 30,
     "internet": 12,
-    "weather": 6,
-    "germs": 4,
+    "germs": 5,
     "grid": 7,
-    "markets": 5,
+    "markets": 6,
     "sun": 4,
+    "weather": 5,
     "ai": 4,
     "earth": 4,
     "animals": 2,
@@ -76,8 +76,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 0.67,
-      "time": "2026-11-25T12:00:00.000Z",
+      "value": 1,
+      "time": "2026-11-25T15:00:00.000Z",
       "max24": 3
     },
     "asteroid": {
@@ -170,11 +170,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "6 killed, including 2 children, in Mississippi plane crash. What we know"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -186,15 +188,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1103,
-      "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "count": 494,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 9 of 26 queries)",
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     },
     "bing": {
       "ok": true,
-      "count": 283,
+      "count": 285,
       "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,37 +208,37 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     },
     "x": {
       "ok": true,
@@ -249,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T17:53:14.146Z"
+      "lastOkAt": "2026-11-25T18:08:07.848Z"
     }
   },
   "stories": [
@@ -397,26 +399,6 @@
       }
     },
     {
-      "id": "19618d3109d7",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Big Easy Roofing Publishes Homeowner Guide on Identifying and Documenting Hail Damage to Residential Roofs",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxON2hWVklPb2ZqbG11eGRPcEtsejBYa01fcEd3VnZsX1JzbVg0UlZha2ViXzZ0Y1FmVXZ6NGtuOWdGUjZJRm5wZXlSV1MwTWZBX0FfQl9yTmJNd1UxcXFReE5Ja2ZqSW53bzlYQzV6M2QwQnRqcFVDd1pSWUJvU3VuNXh0aFJFa3FVZm9LcF9QbmhLcjZ6eEd4cFhQY1VtSURVMm9GRk5UNThVajNnamtjaEUzVnhXUEZhWV96QjVuRHlUQnE0TExpZmhrTnFNOEhta2gzTHFRV2hQcFAyaG5mODJzUGstWnR2b3BsRkF6YU13cC11UEJNWkZIT1g?oc=5",
-      "source": "The Des Moines Register",
-      "publishedAt": "2026-11-24T17:56:21.000Z",
-      "latestAt": "2026-11-24T18:53:56.000Z",
-      "firstSeenAt": "2026-11-24T18:29:28.066Z",
-      "outlets": 5,
-      "outletNames": [
-        "The Des Moines Register",
-        "The Detroit News",
-        "USA Today",
-        "Milwaukee Journal Sentinel",
-        "IndyStar"
-      ],
-      "score": 3.29
-    },
-    {
       "id": "2a247c5e6a2a",
       "cat": "hacks",
       "kind": "news",
@@ -426,7 +408,7 @@
       "publishedAt": "2026-11-24T22:22:02.000Z",
       "latestAt": "2026-11-25T16:30:00.000Z",
       "firstSeenAt": "2026-11-25T15:37:49.330Z",
-      "outlets": 9,
+      "outlets": 10,
       "outletNames": [
         "Bloomberg",
         "TradingView",
@@ -436,9 +418,10 @@
         "The Washington Post",
         "95.5 WSB",
         "WSB-TV",
-        "Facebook"
+        "Facebook",
+        "KIRO 7 News Seattle"
       ],
-      "score": 2.97
+      "score": 3.08
     },
     {
       "id": "8ecf313fde5f",
@@ -533,6 +516,44 @@
       "score": 2.05
     },
     {
+      "id": "1df2f0651f27",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Nearly 2,000 customers without power in Greenville County again",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWU5ybjBFb25QTTR5eWIyYzBkSmdkTzBjT1R3cWVkQURBTkxTVDU4ZGl6QVdoRlpVaTFNcHRUZU0tUUhjQWRtRlNVcms1UVhCNW9uZTBTYU1uZjZTbk12NXNQcjVGSlhiMlJtN19rNWJma0MtNmhkb3VrenpEZkdzaUtxazF0NDFDZjlHUmZTdFZTSkFJMy1aeHg4dkpWNzNC?oc=5",
+      "source": "FOX Carolina News",
+      "publishedAt": "2026-11-25T10:27:00.000Z",
+      "latestAt": "2026-11-25T10:31:19.000Z",
+      "firstSeenAt": "2026-11-25T10:47:20.414Z",
+      "outlets": 2,
+      "outletNames": [
+        "FOX Carolina News",
+        "cedarnews.net"
+      ],
+      "score": 1.99
+    },
+    {
+      "id": "9016f726f4d0",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Investigators believe they now know what caused the nationwide ground stop",
+      "url": "https://www.wthitv.com/2026/11/25/investigators-believe-they-now-know-what-caused-nationwide-ground-stop/",
+      "source": "WTHI News10",
+      "publishedAt": "2026-11-25T08:47:00.000Z",
+      "latestAt": "2026-11-25T16:47:00.000Z",
+      "firstSeenAt": "2026-11-25T16:52:57.421Z",
+      "outlets": 6,
+      "outletNames": [
+        "WTHI News10",
+        "WABI",
+        "WTVA 9 News",
+        "Upper Michigan's Source",
+        "WWNY",
+        "WSAW"
+      ],
+      "score": 4.34
+    },
+    {
       "id": "423698a4ff54",
       "cat": "flights",
       "kind": "news",
@@ -556,26 +577,6 @@
         "Yahoo Finance"
       ],
       "score": 4.3
-    },
-    {
-      "id": "9016f726f4d0",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Investigators believe they now know what caused the nationwide ground stop",
-      "url": "https://www.wthitv.com/2026/11/25/investigators-believe-they-now-know-what-caused-nationwide-ground-stop/",
-      "source": "WTHI News10",
-      "publishedAt": "2026-11-25T08:47:00.000Z",
-      "latestAt": "2026-11-25T16:47:00.000Z",
-      "firstSeenAt": "2026-11-25T16:52:57.421Z",
-      "outlets": 5,
-      "outletNames": [
-        "WTHI News10",
-        "WABI",
-        "WTVA 9 News",
-        "Upper Michigan's Source",
-        "WWNY"
-      ],
-      "score": 4.02
     },
     {
       "id": "899c23b9703f",
@@ -664,23 +665,6 @@
         "PCMag UK"
       ],
       "score": 2.41
-    },
-    {
-      "id": "1df2f0651f27",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Nearly 2,000 customers without power in Greenville County again",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWU5ybjBFb25QTTR5eWIyYzBkSmdkTzBjT1R3cWVkQURBTkxTVDU4ZGl6QVdoRlpVaTFNcHRUZU0tUUhjQWRtRlNVcms1UVhCNW9uZTBTYU1uZjZTbk12NXNQcjVGSlhiMlJtN19rNWJma0MtNmhkb3VrenpEZkdzaUtxazF0NDFDZjlHUmZTdFZTSkFJMy1aeHg4dkpWNzNC?oc=5",
-      "source": "FOX Carolina News",
-      "publishedAt": "2026-11-25T10:27:00.000Z",
-      "latestAt": "2026-11-25T10:31:19.000Z",
-      "firstSeenAt": "2026-11-25T10:47:20.414Z",
-      "outlets": 2,
-      "outletNames": [
-        "FOX Carolina News",
-        "cedarnews.net"
-      ],
-      "score": 1.99
     },
     {
       "id": "d2d65e9a6a90",
@@ -784,6 +768,23 @@
         "KIRO 7 News Seattle"
       ],
       "score": 1.73
+    },
+    {
+      "id": "ae91e5d0ebbc",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Lam Research Stocks Plunge 9.54% With 35% of Sales Tied to China",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/lam-research-stocks-plunge-9-173756556.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-25T09:37:00.000Z",
+      "latestAt": "2026-11-25T17:44:29.000Z",
+      "firstSeenAt": "2026-11-25T17:53:14.146Z",
+      "outlets": 2,
+      "outletNames": [
+        "GuruFocus",
+        "Yahoo Finance"
+      ],
+      "score": 1.72
     },
     {
       "id": "4ba712e3e9fe",
@@ -1081,23 +1082,6 @@
       "score": 1.79
     },
     {
-      "id": "781a66721922",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Worried About Another Bank Outage? 5 Simple Things You Can Do to Prepare Now",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQeHdDRV8tbTUwRnFIR0pDdUxIVEZRVV83VHFlM21ZSnNlUG80WGU1NTFUZU9rQ0JSVlJ0NjhHNlJxc3RkbHRkWm5xZWcybFNUTXRFLW9uVFNHVHh5QTctVFZob0JLaEdwXzVRVWtNWkR4bWtFZE9lTFpBamNnRnJRVTdBY3U?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T17:58:18.000Z",
-      "latestAt": "2026-11-24T21:40:24.000Z",
-      "firstSeenAt": "2026-11-25T00:45:33.233Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Yahoo Finance"
-      ],
-      "score": 1.77
-    },
-    {
       "id": "866031a6d079",
       "cat": "hacks",
       "kind": "news",
@@ -1263,6 +1247,22 @@
         "cbs19.tv"
       ],
       "score": 1.4
+    },
+    {
+      "id": "fae6145286ca",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
+      "source": "Coinpaper",
+      "publishedAt": "2026-11-25T17:34:59.000Z",
+      "latestAt": "2026-11-25T17:34:59.000Z",
+      "firstSeenAt": "2026-11-25T18:08:07.848Z",
+      "outlets": 1,
+      "outletNames": [
+        "Coinpaper"
+      ],
+      "score": 1.39
     },
     {
       "id": "cd30a07ae631",
@@ -1687,22 +1687,6 @@
       "score": 1
     },
     {
-      "id": "ae91e5d0ebbc",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Lam Research Stocks Plunge 9.54% With 35% of Sales Tied to China",
-      "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOUkFGaVYyejI4QU5RaDNCTjVUX1loM1Z5QU1zYy1PY1A2dmp2N0xMNHlSaEpPa3BEWU81Wlk3WklPSDYtUHp2b0hRZERKd3BxZFIwUGE5TkVUSV9RNjZXWUhSdU5VQUVjVVYtUnhiYXd0MmpqTXhiRGVXNjY2NkJsemlDeW1wa3dUeHhXVXFZMVZHNzhUNkJCNFkwSHM2bzVhSUlKU0J1YkxPU1ViQjF3dlRjZG83Qm1mUDdvbHViUnpWMDJmZVZFdTVOSXl5bVpWWk1MUVpDZHR0dGptdW1lS2ZTXy1UX252S2luaUlaUlJSdGU1VEZMVGRhXzg4WXI1bEMwTUw3ZFF1NW5uY2g0VXBGSzljdUszanNrS19PODE4eWdVT08xbzkxOXFFd3c?oc=5",
-      "source": "GuruFocus",
-      "publishedAt": "2026-11-25T17:44:29.000Z",
-      "latestAt": "2026-11-25T17:44:29.000Z",
-      "firstSeenAt": "2026-11-25T17:53:14.146Z",
-      "outlets": 1,
-      "outletNames": [
-        "GuruFocus"
-      ],
-      "score": 1
-    },
-    {
       "id": "a87d5bed42ff",
       "cat": "grid",
       "kind": "news",
@@ -1764,6 +1748,40 @@
       "outletNames": [
         "Starlust.org"
       ],
+      "score": 1
+    },
+    {
+      "id": "c0cf963bcc73",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Epiemiological Alert - Epidemiological Alert Avian Influenza A(H5N1) in the Americas Region - 24 November 2026",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLXVEMFNLaDlPdko0T01pVFVKTEdySDZua0dZNWVMNW1KanhqQ1pfU2tEQXlmdzdRQS15RDZBdmh2RVg3MHIzWUdjR2kyU3g3OTh3bGV1MjlnZFR2dmgwUE50MHVqT3lRXzFmR0RXV3JVcXJ1b0FoYTlWbF8wQzZDVS00aG5CQWZNeVR3MTZzUjF5TVVHSU92eGJjanlTTVFpQ21PNldFVmJvQU83MnRfTmpBZk1YZmZa?oc=5",
+      "source": "Pan American Health Organization (PAHO)",
+      "publishedAt": "2026-11-25T02:50:47.000Z",
+      "latestAt": "2026-11-25T02:50:47.000Z",
+      "firstSeenAt": "2026-11-25T03:00:56.149Z",
+      "outlets": 1,
+      "outletNames": [
+        "Pan American Health Organization (PAHO)"
+      ],
+      "score": 1
+    },
+    {
+      "id": "0ca50871b20b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Utah asks to drop charges against Kalshi and its founders after Kalshi halts trading there",
+      "url": "https://abcnews.com/Business/wireStory/utah-asks-drop-charges-kalshi-founders-after-kalshi-138416910",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-25T02:00:00.000Z",
+      "latestAt": "2026-11-25T02:00:00.000Z",
+      "firstSeenAt": "2026-11-25T02:15:50.239Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "trending": 1000,
+      "trendTerm": "kalshi",
       "score": 1
     },
     {
@@ -1865,22 +1883,6 @@
       "score": 0.97
     },
     {
-      "id": "b6b4dcbf7e62",
-      "cat": "space",
-      "kind": "news",
-      "title": "Meet Earth's New 'Mini-Moon' 2026 QQ8, a Six-Foot-Wide Asteroid That's Temporarily Circling Our Planet",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNaE82YUhVSG5haW1VeUw5RXBOdFlDaTVOQTg0WUNBa205b251OWpMa3Y4RUhXdlM0bWtHdkNndGxkeE9xSnhBOUJGZzQyWXRDS2c5TlFKanl5bmVuR1UybUJHWFl1QW0wQnAxTWNiTXJaeHVIUlM1alBubksxYnFFZWVNaWpma1JEejVWc0FRRnhSYk9NMi1xMjl5TXA3TXUyekFTdzU4UHFZcjdmVDQzQ1VRUUFzUkpNSy1ELTdrUUtCc0xDMC02bFV6UkZUVnhJRGw4YmdnSkJReHczSU5CZHRDWG0?oc=5",
-      "source": "Smithsonian Magazine",
-      "publishedAt": "2026-11-25T14:00:00.000Z",
-      "latestAt": "2026-11-25T14:00:00.000Z",
-      "firstSeenAt": "2026-11-25T17:38:04.045Z",
-      "outlets": 1,
-      "outletNames": [
-        "Smithsonian Magazine"
-      ],
-      "score": 0.94
-    },
-    {
       "id": "75a22d43d43e",
       "cat": "earth",
       "kind": "news",
@@ -1961,20 +1963,20 @@
       "score": 0.86
     },
     {
-      "id": "96faf5280248",
-      "cat": "ai",
+      "id": "872fee2f7740",
+      "cat": "space",
       "kind": "news",
-      "title": "User asks Google's Gemini why KFC is called KFC 15 times, chatbot jokes about shutting down its servers and 'finding' him after ChatGPT mention",
-      "url": "https://www.moneycontrol.com/technology/user-asks-google-s-gemini-why-kfc-is-called-kfc-15-times-chatbot-jokes-about-shutting-down-its-servers-and-finding-him-after-chatgpt-mention-article-14088676.html",
-      "source": "Moneycontrol",
-      "publishedAt": "2026-11-24T23:51:00.000Z",
-      "latestAt": "2026-11-24T23:51:00.000Z",
-      "firstSeenAt": "2026-11-25T08:16:50.681Z",
+      "title": "Watch live: Europe unveils 1st close-up views of asteroid Dimorphos after NASA's DART impact",
+      "url": "https://www.space.com/space-exploration/asteroid-comet-missions/watch-live-europe-unveils-1st-close-up-views-of-asteroid-dimorphos-after-nasas-dart-impact",
+      "source": "Space.com",
+      "publishedAt": "2026-11-25T06:01:00.000Z",
+      "latestAt": "2026-11-25T06:01:00.000Z",
+      "firstSeenAt": "2026-11-25T18:08:07.848Z",
       "outlets": 1,
       "outletNames": [
-        "Moneycontrol"
+        "Space.com"
       ],
-      "score": 0.86
+      "score": 0.8
     },
     {
       "id": "d4a8f50e5c22",
