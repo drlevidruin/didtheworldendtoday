@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T00:15:26.751Z",
+  "buildTime": "2026-11-25T00:30:43.264Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 19:15 ET",
+  "etStamp": "2026-11-24 19:30 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,14 +48,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1276,
-  "lastSuccessAt": "2026-11-25T00:15:26.751Z",
+  "headlinesRead": 333,
+  "lastSuccessAt": "2026-11-25T00:30:43.264Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 20,
+    "flights": 21,
     "internet": 17,
-    "earth": 8,
-    "hacks": 30,
+    "earth": 9,
+    "hacks": 28,
     "grid": 9,
     "weather": 4,
     "germs": 4,
@@ -164,7 +164,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -178,20 +178,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 1005,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "2 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "bing": {
       "ok": true,
-      "count": 231,
-      "error": "6 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-25T00:15:26.751Z"
+      "count": 291,
+      "error": null,
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,56 +203,55 @@
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-25T00:15:26.751Z"
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T00:15:26.751Z"
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:15:26.751Z"
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:15:26.751Z"
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:15:26.751Z"
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:15:26.751Z"
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-24T23:30:19.861Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T00:15:26.751Z"
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T00:15:26.751Z"
+      "lastOkAt": "2026-11-25T00:30:43.264Z"
     }
   },
   "stories": [
@@ -328,7 +327,7 @@
       "url": "https://www.msn.com/en-us/news/other/exclusive-microsoft-declares-code-red-after-historic-outage-internal-memos-show/ar-AA2i8YNF",
       "source": "Reuters on MSN",
       "publishedAt": "2026-11-24T05:31:00.000Z",
-      "latestAt": "2026-11-24T23:59:59.000Z",
+      "latestAt": "2026-11-25T00:30:09.000Z",
       "firstSeenAt": "2026-11-24T19:59:40.773Z",
       "outlets": 32,
       "outletNames": [
@@ -392,7 +391,7 @@
       }
     },
     {
-      "id": "76df64bdaeb1",
+      "id": "9daf9ac39693",
       "cat": "earth",
       "kind": "news",
       "title": "Nepal earthquake: 5.6 magnitude tremor strikes near China border",
@@ -657,29 +656,6 @@
       "score": 3.59
     },
     {
-      "id": "sig:faa-stop:LEX:2026-11-23",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at LEX (disabled aircraft on the runway)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-24T00:26:11.501Z",
-      "latestAt": "2026-11-24T00:26:11.501Z",
-      "firstSeenAt": "2026-11-24T00:26:11.501Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 3.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "LEX",
-        "hub": false,
-        "nationwide": false,
-        "reason": "disabled aircraft on the runway"
-      }
-    },
-    {
       "id": "c69597c30f49",
       "cat": "grid",
       "kind": "news",
@@ -808,6 +784,24 @@
       "score": 2.54
     },
     {
+      "id": "76df64bdaeb1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6-magnitude earthquake jolts Nepal-Tibet border",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yUUtSYXJTZjJVWEs4aWN2WTlRSVdFMXFPOVJVWkFUNm9hcE1nc2lrT1dnV3ZWVHZ2NGlUZE02UTNTVUxlMHUxMkZmc0lSMFJCZzZwVjVkMA?oc=5",
+      "source": "The Annapurna Express",
+      "publishedAt": "2026-11-24T03:45:18.000Z",
+      "latestAt": "2026-11-24T04:46:12.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Annapurna Express",
+        "The Himalayan Times",
+        "The Business Standard"
+      ],
+      "score": 2.53
+    },
+    {
       "id": "edfc3c91a52c",
       "cat": "internet",
       "kind": "news",
@@ -918,6 +912,23 @@
       "score": 2.18
     },
     {
+      "id": "3326599c43a4",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Second O’Hare ground stop in two days hits Thanksgiving travel",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVEs0RHI1bjFsSC1mNXFaV3B2aUlqSUZydDN3aTJkXzBuQkpHODVQMzUxT0JzNTZVVVk2eHo1NjRDeVcwQVFzVnRhN2I2VHlZd05SVG9MLXB1MlFrVHpBRWw5MXdhN3k3MkZuY0Ywc29QNXlocEVucnVTWWV6LTNYajBKcFUteDJVb0RNQnNWVE1rSWtR?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-24T22:40:46.000Z",
+      "latestAt": "2026-11-24T23:18:00.000Z",
+      "firstSeenAt": "2026-11-25T00:15:26.751Z",
+      "outlets": 2,
+      "outletNames": [
+        "https://www.thetraveler.org/",
+        "Rus Tourism News"
+      ],
+      "score": 1.95
+    },
+    {
       "id": "af4f61912279",
       "cat": "earth",
       "kind": "news",
@@ -934,25 +945,6 @@
         "Daily Excelsior"
       ],
       "score": 1.84
-    },
-    {
-      "id": "f60198f20192",
-      "cat": "earth",
-      "kind": "news",
-      "title": "6.8 magnitude Earthquake strikes central Peru",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oQW5McjlMQTNUeFNjWnpDNDB5R3lBVFVoODhBemQyVGxEaW01Yld0eEZ6QktIQU4yNng5elBVbnE4ZVZDY2FaT0dVTEFTdGVkN1AyT1NtSGRob1BUQkNjN25LTGZHZFR0ZUs0SlBYRXotcFNHbzl5NFhJcw?oc=5",
-      "source": "News On AIR",
-      "publishedAt": "2026-11-24T12:44:25.000Z",
-      "latestAt": "2026-11-24T20:41:43.000Z",
-      "firstSeenAt": "2026-11-24T19:44:39.275Z",
-      "outlets": 2,
-      "outletNames": [
-        "News On AIR",
-        "The Daily Star"
-      ],
-      "score": 1.77,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "c6aec4b84c8b",
@@ -1080,24 +1072,6 @@
       "score": 2.14
     },
     {
-      "id": "b0a1ce22246b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "El Cajon Hit by Suspected Cyberattack, Nearly 8TB of City Data Surfaces Online",
-      "url": "https://hoodline.com/2026/11/el-cajon-hit-by-suspected-cyberattack-nearly-8tb-of-city-data-surfaces-online/",
-      "source": "Hoodline",
-      "publishedAt": "2026-11-24T00:26:03.000Z",
-      "latestAt": "2026-11-24T11:39:00.000Z",
-      "firstSeenAt": "2026-11-24T12:13:15.703Z",
-      "outlets": 3,
-      "outletNames": [
-        "NBC 7 San Diego",
-        "Newsradio 600 KOGO",
-        "Hoodline"
-      ],
-      "score": 2.08
-    },
-    {
       "id": "fad84ef0d0fc",
       "cat": "internet",
       "kind": "news",
@@ -1200,23 +1174,6 @@
       "score": 1.96
     },
     {
-      "id": "3326599c43a4",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Second O’Hare ground stop in two days hits Thanksgiving travel",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVEs0RHI1bjFsSC1mNXFaV3B2aUlqSUZydDN3aTJkXzBuQkpHODVQMzUxT0JzNTZVVVk2eHo1NjRDeVcwQVFzVnRhN2I2VHlZd05SVG9MLXB1MlFrVHpBRWw5MXdhN3k3MkZuY0Ywc29QNXlocEVucnVTWWV6LTNYajBKcFUteDJVb0RNQnNWVE1rSWtR?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-24T22:40:46.000Z",
-      "latestAt": "2026-11-24T23:18:00.000Z",
-      "firstSeenAt": "2026-11-25T00:15:26.751Z",
-      "outlets": 2,
-      "outletNames": [
-        "https://www.thetraveler.org/",
-        "Rus Tourism News"
-      ],
-      "score": 1.95
-    },
-    {
       "id": "95a87fd705d5",
       "cat": "hacks",
       "kind": "news",
@@ -1300,6 +1257,25 @@
         "Industrial Cyber"
       ],
       "score": 1.79
+    },
+    {
+      "id": "f60198f20192",
+      "cat": "earth",
+      "kind": "news",
+      "title": "6.8 magnitude Earthquake strikes central Peru",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oQW5McjlMQTNUeFNjWnpDNDB5R3lBVFVoODhBemQyVGxEaW01Yld0eEZ6QktIQU4yNng5elBVbnE4ZVZDY2FaT0dVTEFTdGVkN1AyT1NtSGRob1BUQkNjN25LTGZHZFR0ZUs0SlBYRXotcFNHbzl5NFhJcw?oc=5",
+      "source": "News On AIR",
+      "publishedAt": "2026-11-24T12:44:25.000Z",
+      "latestAt": "2026-11-24T20:41:43.000Z",
+      "firstSeenAt": "2026-11-24T19:44:39.275Z",
+      "outlets": 2,
+      "outletNames": [
+        "News On AIR",
+        "The Daily Star"
+      ],
+      "score": 1.77,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "e6e47f1883d4",
@@ -1646,23 +1622,6 @@
       "score": 1.56
     },
     {
-      "id": "1435774e9dc5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US spy chief sees no sign of coordinated cyberattack amid tech outages",
-      "url": "https://www.spokesman.com/stories/2026/nov/17/us-spy-chief-sees-no-sign-of-coordinated-cyberatta/",
-      "source": "spokesman.com",
-      "publishedAt": "2026-11-24T00:30:00.000Z",
-      "latestAt": "2026-11-24T04:42:00.000Z",
-      "firstSeenAt": "2026-11-24T13:43:33.749Z",
-      "outlets": 2,
-      "outletNames": [
-        "spokesman.com",
-        "The Spokesman-Review"
-      ],
-      "score": 1.56
-    },
-    {
       "id": "4d33d5ae09fb",
       "cat": "hacks",
       "kind": "news",
@@ -1678,23 +1637,6 @@
         "nm.news"
       ],
       "score": 1.46
-    },
-    {
-      "id": "bfac433ea064",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Stock Falls 7% in a Month as 24-Hour Outage Triggers \"Code Red\"",
-      "url": "https://coinpaper.com/39362/microsoft-stock-falls-7-in-a-month-as-24-hour-outage-triggers-code-red",
-      "source": "coinpaper.com",
-      "publishedAt": "2026-11-24T00:27:00.000Z",
-      "latestAt": "2026-11-24T16:43:22.000Z",
-      "firstSeenAt": "2026-11-24T16:59:11.725Z",
-      "outlets": 2,
-      "outletNames": [
-        "coinpaper.com",
-        "Blockonomi"
-      ],
-      "score": 1.45
     },
     {
       "id": "52f1674d700a",
@@ -1823,22 +1765,6 @@
         "Security Affairs"
       ],
       "score": 1.4
-    },
-    {
-      "id": "02f0d15c4df1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Exclusive: FAA probe zeros in on culprit of nationwide ground stop, but agency still faces tough questions",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNWXFVNlR6emtFRXlUbk0zVmlvQ2otcWR1bU9vMG9DVGVXaTMxVEtOX1c0R1gtVkVWMmFTQTAxZUFHaENaNm5ucHpKdjRMRDM2RTdPY1dueG43RkRrb0RCMGJ5RWhaNDFGN3JaSVZDM05YckU0UllCZkdteml1X3NMOVhBd3RUamhiNEZBRy14cjJIQi1WVGs3NXhxOHVVZnk0NE5SMFRob2tyampzcHU0VEJZWUxZV0ZfMlFMQVF0Uk1pRU0xc2loMEdVeVU5d05kMVE?oc=5",
-      "source": "CNN",
-      "publishedAt": "2026-11-25T00:02:00.000Z",
-      "latestAt": "2026-11-25T00:02:00.000Z",
-      "firstSeenAt": "2026-11-25T00:15:26.751Z",
-      "outlets": 1,
-      "outletNames": [
-        "CNN"
-      ],
-      "score": 1.39
     },
     {
       "id": "f2c3b5bc12f4",
@@ -1989,6 +1915,38 @@
       "score": 1.38
     },
     {
+      "id": "7e175ed82324",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft explains tech failures that triggered global outage",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTVg1LURBWFdTR3gwN1ZrVXZkQnFwaHA0MHBITmFnZFhXcm5tMkJPc0tDMDlMbWZQUHg2emxUdzY3TnRuNjBxUnFneVpNRWlfTFd0TjJ6OVpNc29vclFJZGl2SnN3RlZvV1MxdUxJZDdZQ1JydkVfT3lJeFd5TG1YVEpHM3lFTVp0QkdqLUtrRENMY2tmSmowc3hiZGVKeko0V2hTT1NmMXlPaEs1RlRj?oc=5",
+      "source": "The Seattle Times",
+      "publishedAt": "2026-11-24T01:22:55.000Z",
+      "latestAt": "2026-11-24T01:22:55.000Z",
+      "firstSeenAt": "2026-11-24T02:56:36.951Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Seattle Times"
+      ],
+      "score": 1.36
+    },
+    {
+      "id": "57688e206264",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta Air System Outage Disrupts More Than 1,000 Flights Nationwide Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ0I5dUZRUmkxSVpRZHJ4UTZpZG5QN3c5ZDFvZEg2XzJWdHdjR2VsRUR2aTVOWnN6Q0NKRjZMSTBTOHhjT21jNDZIamhpY0htZjEybGxFcWhVczVWYUhWNGlhX3d5Z0hkd2hkeEJSeFU2d2I3dGlFaHNjR00yWGhCX3loMjU2RTVSVkVtOGxTTlRQVzcxVVR4a21TWG1EajRXNWEtSlJzZWlpMlhjVkE5ZldLSnZaNENWMEJN?oc=5",
+      "source": "Speaks Media",
+      "publishedAt": "2026-11-24T02:30:00.000Z",
+      "latestAt": "2026-11-24T02:30:00.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 1,
+      "outletNames": [
+        "Speaks Media"
+      ],
+      "score": 1.34
+    },
+    {
       "id": "8043fd0465d7",
       "cat": "germs",
       "kind": "news",
@@ -2004,6 +1962,38 @@
         "Yahoo"
       ],
       "score": 1.34
+    },
+    {
+      "id": "02f0d15c4df1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Exclusive: FAA probe zeros in on culprit of nationwide ground stop, but agency still faces tough questions",
+      "url": "https://www.msn.com/en-us/news/other/exclusive-faa-probe-zeros-in-on-culprit-of-nationwide-ground-stop-but-agency-still-faces-tough-questions/ar-AA2i9wcB",
+      "source": "CNN on MSN",
+      "publishedAt": "2026-11-24T16:02:07.000Z",
+      "latestAt": "2026-11-25T00:02:00.000Z",
+      "firstSeenAt": "2026-11-25T00:15:26.751Z",
+      "outlets": 1,
+      "outletNames": [
+        "CNN"
+      ],
+      "score": 1.21
+    },
+    {
+      "id": "0dd78f3eb490",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Major Airport Disrupted by Another Ground Stop Before Thanksgiving Holiday",
+      "url": "https://www.newsweek.com/ground-stop-chicago-ohare-airport-third-thanksgiving-travel-12765115",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-24T15:23:00.000Z",
+      "latestAt": "2026-11-24T15:23:00.000Z",
+      "firstSeenAt": "2026-11-25T00:30:43.264Z",
+      "outlets": 1,
+      "outletNames": [
+        "Newsweek"
+      ],
+      "score": 1.19
     },
     {
       "id": "52091bdfb5f9",
