@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T14:52:37.551Z",
+  "buildTime": "2026-11-25T15:07:48.798Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 09:52 ET",
+  "etStamp": "2026-11-25 10:07 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,16 +49,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1452,
-  "lastSuccessAt": "2026-11-25T14:52:37.551Z",
+  "headlinesRead": 678,
+  "lastSuccessAt": "2026-11-25T15:07:48.798Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 22,
+    "flights": 21,
     "hacks": 31,
-    "internet": 11,
+    "internet": 12,
     "germs": 5,
-    "grid": 6,
-    "weather": 5,
+    "grid": 5,
+    "weather": 6,
     "markets": 4,
     "ai": 4,
     "sun": 4,
@@ -75,8 +75,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 2,
-      "time": "2026-11-25T09:00:00.000Z",
+      "value": 0.67,
+      "time": "2026-11-25T12:00:00.000Z",
       "max24": 3
     },
     "asteroid": {
@@ -91,7 +91,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 1,
+      "groundDelays": 2,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -185,19 +185,19 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1080,
-      "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "count": 357,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 9 of 26 queries)",
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     },
     "bing": {
       "ok": true,
-      "count": 288,
+      "count": 287,
       "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 50,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
@@ -205,37 +205,37 @@
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     },
     "x": {
       "ok": true,
@@ -248,13 +248,13 @@
       "ok": true,
       "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T14:52:37.551Z"
+      "lastOkAt": "2026-11-25T15:07:48.798Z"
     }
   },
   "stories": [
@@ -845,22 +845,6 @@
       "score": 1.52
     },
     {
-      "id": "6d2907cac32f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Nearly 7,000 homes lose power during first major snowfall in Barrie",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVTJNYUNmM2VxNUF1ZkJQRHhydjlTYVpKdXpmYXFHazVjWEhkNk9yR0pBTk5tblBDNDJGN2FmaHo5YkZVd0N5QnRfc0FxYlAxRHBHbnZSNE5KUUFFSmJ6RlE3dzYtazVRdFZGa29mSDZSMmt3Y002Y2dVYk0wckZ6eUpwdFE2MFVpeWwyN2JNRG4wSmhPRDlLWHItMzlHLTl3M2hVeGFIVzU?oc=5",
-      "source": "CTV News",
-      "publishedAt": "2026-11-24T15:03:16.000Z",
-      "latestAt": "2026-11-24T15:03:16.000Z",
-      "firstSeenAt": "2026-11-24T15:13:49.241Z",
-      "outlets": 1,
-      "outletNames": [
-        "CTV News"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "abcb674b3c03",
       "cat": "weather",
       "kind": "news",
@@ -875,6 +859,22 @@
         "9Now"
       ],
       "score": 1.39
+    },
+    {
+      "id": "24cd97c645da",
+      "cat": "weather",
+      "kind": "news",
+      "title": "The record heat is changing champagne – now it can be stronger than ever before",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNnREeHB6aGlPcWluZHNEdC1VYVg5RnlpQlhLZ1dPV240MDYwUThUMFFaMU5UeV9ZaGJvd0tWeE01Y2FfbHZWT1VZdTA2d3QySFVXaXRYVnJXOW5rOWJacTFmVlFPdkZZS0hrLWRQOWI0bl8zYXFvWmZ1eFg2ZHRqY3ZZdnpXaG1wYWJ2WnJEMUZWcWJEcVlTUlZXQ1ZQemVleFpNMlpjTWY?oc=5",
+      "source": "Metro Mode",
+      "publishedAt": "2026-11-24T21:17:19.000Z",
+      "latestAt": "2026-11-24T21:17:19.000Z",
+      "firstSeenAt": "2026-11-24T22:00:06.043Z",
+      "outlets": 1,
+      "outletNames": [
+        "Metro Mode"
+      ],
+      "score": 1.38
     },
     {
       "id": "0dd78f3eb490",
@@ -911,6 +911,23 @@
         "lincolnjournal.com"
       ],
       "score": 2.54
+    },
+    {
+      "id": "bf7fee70bac6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/massive-data-breach-exposes-2-122500776.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-25T04:25:00.000Z",
+      "latestAt": "2026-11-25T12:25:00.000Z",
+      "firstSeenAt": "2026-11-25T12:32:35.873Z",
+      "outlets": 2,
+      "outletNames": [
+        "TechRadar",
+        "YAHOO!"
+      ],
+      "score": 2.42
     },
     {
       "id": "8a4d591cbf3b",
@@ -1322,22 +1339,6 @@
       "score": 1.4
     },
     {
-      "id": "bf7fee70bac6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
-      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxORDBJbERWb1JRUTZzTVduSk5BQVVwX0xkRlVtYVdGQ0JfbzhON0FNajU4NGRyQlQ5OW9hb3RJUGdZSzcyN3paMXJFUkp4eTAwa3ZzZXFLSmxUdUlpbEFFSzNBMkc1VC1ienFxeFgxLXFxMkxDaTMtNmlDdUc3MDJaSGpTZ3BaWU1OVHoyTXVkbERGdU5iUWs4emVtSWM4ZU1JekhJSTVVNVl5UGxfZEdTcTdKcGExN1R4UXFGLWVHNEZLV2lqOWVCdjMzcnhMMVRTWm1QdU9jaWdEeDI1OGdsMTBDaVc4MHVrVzNvNW44ekczWFlWNDdOOXZ0dmQ1UTFmRWUzZHZXdmhFdw?oc=5",
-      "source": "TechRadar",
-      "publishedAt": "2026-11-25T12:25:00.000Z",
-      "latestAt": "2026-11-25T12:25:00.000Z",
-      "firstSeenAt": "2026-11-25T12:32:35.873Z",
-      "outlets": 1,
-      "outletNames": [
-        "TechRadar"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "52f1674d700a",
       "cat": "flights",
       "kind": "news",
@@ -1500,22 +1501,6 @@
       "score": 1.38
     },
     {
-      "id": "24cd97c645da",
-      "cat": "weather",
-      "kind": "news",
-      "title": "The record heat is changing champagne – now it can be stronger than ever before",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNnREeHB6aGlPcWluZHNEdC1VYVg5RnlpQlhLZ1dPV240MDYwUThUMFFaMU5UeV9ZaGJvd0tWeE01Y2FfbHZWT1VZdTA2d3QySFVXaXRYVnJXOW5rOWJacTFmVlFPdkZZS0hrLWRQOWI0bl8zYXFvWmZ1eFg2ZHRqY3ZZdnpXaG1wYWJ2WnJEMUZWcWJEcVlTUlZXQ1ZQemVleFpNMlpjTWY?oc=5",
-      "source": "Metro Mode",
-      "publishedAt": "2026-11-24T21:17:19.000Z",
-      "latestAt": "2026-11-24T21:17:19.000Z",
-      "firstSeenAt": "2026-11-24T22:00:06.043Z",
-      "outlets": 1,
-      "outletNames": [
-        "Metro Mode"
-      ],
-      "score": 1.38
-    },
-    {
       "id": "82218d53aaad",
       "cat": "flights",
       "kind": "news",
@@ -1629,23 +1614,6 @@
       "score": 1.28
     },
     {
-      "id": "5498b09fdb72",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA issues and lifts ground stop at Chicago’s O’Hare",
-      "url": "https://thehill.com/homenews/administration/6241322-faa-ohare-ground-stop/",
-      "source": "The Hill",
-      "publishedAt": "2026-11-24T14:57:00.000Z",
-      "latestAt": "2026-11-24T23:49:45.000Z",
-      "firstSeenAt": "2026-11-25T13:52:36.116Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Hill",
-        "AOL.co.uk"
-      ],
-      "score": 1.24
-    },
-    {
       "id": "d1f8478fdf6c",
       "cat": "weather",
       "kind": "news",
@@ -1694,6 +1662,38 @@
         "Leadership"
       ],
       "score": 1.2
+    },
+    {
+      "id": "80423de95ed0",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft launches 'Code Red' after 24-hour outage, wants critical fixes deployed worldwide in just 1 hour: report",
+      "url": "https://www.msn.com/en-us/technology/software/microsoft-launches-code-red-after-24-hour-outage-wants-critical-fixes-deployed-worldwide-in-just-1-hour-report/ar-AA2idf6b",
+      "source": "MSN",
+      "publishedAt": "2026-11-25T05:54:00.000Z",
+      "latestAt": "2026-11-25T05:54:00.000Z",
+      "firstSeenAt": "2026-11-25T15:07:48.798Z",
+      "outlets": 1,
+      "outletNames": [
+        "MSN"
+      ],
+      "score": 1.18
+    },
+    {
+      "id": "3b9d2968bcc0",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Great Lakes water temperatures hit record highs for late November",
+      "url": "https://www.jsonline.com/story/news/environment/2026/11/25/lake-michigan-water-at-near-record-high-thats-bad-news-for-some-fish/92941859007/",
+      "source": "Milwaukee Journal Sentinel",
+      "publishedAt": "2026-11-25T03:06:00.000Z",
+      "latestAt": "2026-11-25T11:06:00.000Z",
+      "firstSeenAt": "2026-11-25T15:07:48.798Z",
+      "outlets": 1,
+      "outletNames": [
+        "Milwaukee Journal Sentinel"
+      ],
+      "score": 1.12
     },
     {
       "id": "7dc531d5f964",
