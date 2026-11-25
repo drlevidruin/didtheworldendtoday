@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T20:23:32.754Z",
+  "buildTime": "2026-11-25T20:38:35.898Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 15:23 ET",
+  "etStamp": "2026-11-25 15:38 ET",
   "score": 86,
   "fired": [
     "flights",
@@ -50,13 +50,13 @@
     "date": "2026-11-25",
     "score": 86
   },
-  "headlinesRead": 1379,
-  "lastSuccessAt": "2026-11-25T20:23:32.754Z",
+  "headlinesRead": 1414,
+  "lastSuccessAt": "2026-11-25T20:38:35.898Z",
   "rollingFallback": false,
   "cats": {
     "flights": 20,
-    "hacks": 31,
-    "internet": 12,
+    "hacks": 32,
+    "internet": 11,
     "germs": 5,
     "markets": 5,
     "grid": 5,
@@ -182,106 +182,83 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
       "count": 1097,
       "error": null,
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "bing": {
       "ok": true,
-      "count": 248,
-      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "count": 283,
+      "error": null,
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-25T20:08:32.112Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T19:38:22.696Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T20:23:32.754Z"
+      "lastOkAt": "2026-11-25T20:38:35.898Z"
     }
   },
   "stories": [
-    {
-      "id": "4144781d773d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Government watchdog warned of potential disruptions from FAA upgrades before nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQamxVVVhHWGZUM1NrRE9YNVloQ1A4UFVaYWdfbDM2dDVDZU5rdXl4MW1yQzBMOGptd1U0OTZKQnBldnZVU25uMlByMlVFclVlT2gwdjJCNmhPeWY5RnJXX3Vfc203SmJ2ZnNyUnlFNzROY3Z0bHZxR3IxMDBTWkpVbEhxOG95WkRpSEdpRHRMRERjUkttZHpEVEM0Z3pka0dDOUJhSkFlVVhrNi1TWWVjcWxWdHg2d25oS0RrRDRNZEdHYzdRMnZjQnN0UHJ4TkQtR2Jxd05lamx4Q2dDQXpNR0RjWmxFc2M?oc=5",
-      "source": "WNEP",
-      "publishedAt": "2026-11-24T20:29:00.000Z",
-      "latestAt": "2026-11-24T20:35:06.000Z",
-      "firstSeenAt": "2026-11-24T20:44:52.543Z",
-      "outlets": 7,
-      "outletNames": [
-        "WNEP",
-        "WQAD",
-        "5newsonline.com",
-        "12newsnow.com",
-        "WFAA",
-        "WUSA9",
-        "12News"
-      ],
-      "score": 5.31
-    },
     {
       "id": "9016f726f4d0",
       "cat": "flights",
@@ -328,6 +305,29 @@
         "hub": true,
         "nationwide": false,
         "reason": "wind"
+      }
+    },
+    {
+      "id": "sig:faa-stop:ORD:2026-11-24",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at ORD (equipment outage)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-24T21:29:56.381Z",
+      "latestAt": "2026-11-24T21:29:56.381Z",
+      "firstSeenAt": "2026-11-24T21:29:56.381Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "ORD",
+        "hub": true,
+        "nationwide": false,
+        "reason": "equipment outage"
       }
     },
     {
@@ -527,29 +527,6 @@
       "score": 2.2
     },
     {
-      "id": "sig:faa-stop:ORD:2026-11-24",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at ORD (equipment outage)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-24T21:29:56.381Z",
-      "latestAt": "2026-11-24T21:29:56.381Z",
-      "firstSeenAt": "2026-11-24T21:29:56.381Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "ORD",
-        "hub": true,
-        "nationwide": false,
-        "reason": "equipment outage"
-      }
-    },
-    {
       "id": "423698a4ff54",
       "cat": "flights",
       "kind": "news",
@@ -591,6 +568,23 @@
         "WTHR"
       ],
       "score": 3.59
+    },
+    {
+      "id": "640f507300f2",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Traces Nationwide Ground Stop to Network Configuration Error",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4yNjk0R2I4WlNPdThSN2NsWUI0Q2RrSS1tM2dEVU1taU5XVlNnTk9ITGVZTnNxSi1md1lPZS1oeFg4eGZqTDB1NER3a3R5R2M3WnRnQTRFd1NNSDNaTkdKcFlJc1NCR0d4SExWVk1pZjlZWmx5?oc=5",
+      "source": "www.suaralandak.co.id",
+      "publishedAt": "2026-11-25T01:28:03.000Z",
+      "latestAt": "2026-11-25T16:40:51.000Z",
+      "firstSeenAt": "2026-11-25T02:00:48.580Z",
+      "outlets": 2,
+      "outletNames": [
+        "www.suaralandak.co.id",
+        "Avi-Go"
+      ],
+      "score": 2.77
     },
     {
       "id": "e724a6fe278b",
@@ -733,23 +727,6 @@
       "score": 1.99
     },
     {
-      "id": "d2d65e9a6a90",
-      "cat": "internet",
-      "kind": "news",
-      "title": "TikTok Faces Widespread Outage Across the US",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB2eldzU1Bram1nTlpiQjFYSHNZeDBiNlFWRi1xLWdreHJITUNHcUJ0eWpxVHN0T0tXclZEUVdUVmRoZVNKcDFZUFJwcDFxMDRZSXlOaTJTNGNyYnhG?oc=5",
-      "source": "Peradaban.id",
-      "publishedAt": "2026-11-24T20:26:00.000Z",
-      "latestAt": "2026-11-24T21:04:00.000Z",
-      "firstSeenAt": "2026-11-24T20:44:52.543Z",
-      "outlets": 2,
-      "outletNames": [
-        "Peradaban.id",
-        "Limapagi"
-      ],
-      "score": 1.99
-    },
-    {
       "id": "0edb9f27fed7",
       "cat": "sun",
       "kind": "news",
@@ -853,21 +830,23 @@
       "score": 1.72
     },
     {
-      "id": "640f507300f2",
-      "cat": "flights",
+      "id": "8dcdb02c469b",
+      "cat": "weather",
       "kind": "news",
-      "title": "FAA Traces Nationwide Ground Stop to Network Configuration Error",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4yNjk0R2I4WlNPdThSN2NsWUI0Q2RrSS1tM2dEVU1taU5XVlNnTk9ITGVZTnNxSi1md1lPZS1oeFg4eGZqTDB1NER3a3R5R2M3WnRnQTRFd1NNSDNaTkdKcFlJc1NCR0d4SExWVk1pZjlZWmx5?oc=5",
-      "source": "www.suaralandak.co.id",
-      "publishedAt": "2026-11-25T01:28:03.000Z",
-      "latestAt": "2026-11-25T16:40:51.000Z",
-      "firstSeenAt": "2026-11-25T02:00:48.580Z",
+      "title": "Three days to evacuate, two weeks at home: what the Red Cross says Americans should keep for a disaster, and what a January ice storm taught",
+      "url": "https://www.msn.com/en-us/news/other/three-days-to-evacuate-two-weeks-at-home-what-the-red-cross-says-americans-should-keep-for-a-disaster-and-what-a-january-ice-storm-taught/ar-AA2ibZM2",
+      "source": "Futura-Sciences on MSN",
+      "publishedAt": "2026-11-25T02:00:00.000Z",
+      "latestAt": "2026-11-25T11:11:26.000Z",
+      "firstSeenAt": "2026-11-25T11:17:22.706Z",
       "outlets": 2,
       "outletNames": [
-        "www.suaralandak.co.id",
-        "Avi-Go"
+        "Futura-Sciences on MSN",
+        "Futura, le média qui explore le monde"
       ],
-      "score": 2.77
+      "score": 1.69,
+      "quiet": true,
+      "quietReason": "headline mentions evacuate"
     },
     {
       "id": "fee22940b1fa",
@@ -1163,25 +1142,6 @@
       "score": 1.69
     },
     {
-      "id": "8dcdb02c469b",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Three days to evacuate, two weeks at home: what the Red Cross says Americans should keep for a disaster, and what a January ice storm taught",
-      "url": "https://www.msn.com/en-us/news/other/three-days-to-evacuate-two-weeks-at-home-what-the-red-cross-says-americans-should-keep-for-a-disaster-and-what-a-january-ice-storm-taught/ar-AA2ibZM2",
-      "source": "Futura-Sciences on MSN",
-      "publishedAt": "2026-11-25T02:00:00.000Z",
-      "latestAt": "2026-11-25T11:11:26.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
-      "outlets": 2,
-      "outletNames": [
-        "Futura-Sciences on MSN",
-        "Futura, le média qui explore le monde"
-      ],
-      "score": 1.69,
-      "quiet": true,
-      "quietReason": "headline mentions evacuate"
-    },
-    {
       "id": "45dbbf969cc4",
       "cat": "hacks",
       "kind": "news",
@@ -1214,6 +1174,23 @@
         "lex18.com"
       ],
       "score": 1.65
+    },
+    {
+      "id": "6aa45fe14c94",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Standard Baking Co. warns customers of data breach",
+      "url": "https://www.yahoo.com/news/articles/standard-baking-co-warns-customers-162241856.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T08:22:00.000Z",
+      "latestAt": "2026-11-25T16:22:00.000Z",
+      "firstSeenAt": "2026-11-25T20:38:35.898Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "newscentermaine.com"
+      ],
+      "score": 1.59
     },
     {
       "id": "d946ff356967",
@@ -1492,6 +1469,22 @@
       "score": 1.38
     },
     {
+      "id": "a973bdfe6d38",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Inside memos reveal Microsoft's ‘code red' response to massive email failure",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTDdGdDkwTmY3bGpXdno1ekxmSEN4X3dnSmNLV0JkR0RIckZ3MDlCYXJadVZyaElmaWVpYW9VdThQXzloZENFbWxUZElSR3lhUTViWkRhMGpBMTJocHZGd0huNzRxbjU5eWc5Y20yRWtUY2NsMU9yRDhfNjNERVQ3cUN6eGdrSk5ITS1KLW1FNEpuZTVyVmtZeTZqUTM3R2ZsU0VydGNQLVBqdw?oc=5",
+      "source": "Geo News",
+      "publishedAt": "2026-11-25T18:43:00.000Z",
+      "latestAt": "2026-11-25T18:43:00.000Z",
+      "firstSeenAt": "2026-11-25T20:38:35.898Z",
+      "outlets": 1,
+      "outletNames": [
+        "Geo News"
+      ],
+      "score": 1.36
+    },
+    {
       "id": "82218d53aaad",
       "cat": "flights",
       "kind": "news",
@@ -1655,23 +1648,6 @@
       "score": 1.28
     },
     {
-      "id": "11c676b614f8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Breaking: TikTok App Is Down and Not Working for Thousands Right Now, Causing Video, Feed, and Login Issues",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNFZ5U0Z3S05aWngtX3haRDBRRlJLRG1OMVpTWEM0U1k3Tlc3TTBTZnhCMVBNZThIOVNvcHhSSjJrdl9mNmJrdjBRNzA5R3VHQTJwQk9NLUw3NmNhTnB3dW84a0tZU254X1hNX0VTd1ZNWXNQUU1ObmlJZ2FlbXV6ZzFadFZfLXIxU3lKX1JHbkR1T3QwOGdfRmIzaXdrQUlPbXgzTHJBNmhSMUxBQ25Yd3Y2T1VWLWZrOVFRdTgyWlJ4Qy0yRk1fUm9n?oc=5",
-      "source": "Windows Report",
-      "publishedAt": "2026-11-24T20:28:30.000Z",
-      "latestAt": "2026-11-24T22:22:27.000Z",
-      "firstSeenAt": "2026-11-25T19:08:25.285Z",
-      "outlets": 2,
-      "outletNames": [
-        "Windows Report",
-        "PopTV Culture"
-      ],
-      "score": 1.24
-    },
-    {
       "id": "325cd3c46cea",
       "cat": "internet",
       "kind": "news",
@@ -1750,6 +1726,22 @@
         "Milwaukee Journal Sentinel"
       ],
       "score": 1.19
+    },
+    {
+      "id": "a93e381af825",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Savannah airport travelers brace for Thanksgiving travel rush after recent nationwide ground stop",
+      "url": "https://www.wjcl.com/article/savannah-airport-thanksgiving-travel-rush/74532615",
+      "source": "WJCL",
+      "publishedAt": "2026-11-25T08:29:00.000Z",
+      "latestAt": "2026-11-25T08:29:00.000Z",
+      "firstSeenAt": "2026-11-25T20:38:35.898Z",
+      "outlets": 1,
+      "outletNames": [
+        "WJCL"
+      ],
+      "score": 1.12
     },
     {
       "id": "3f8fdb3f1a21",
