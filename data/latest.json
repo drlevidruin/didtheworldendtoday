@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T13:37:23.185Z",
+  "buildTime": "2026-11-25T13:52:36.116Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 08:37 ET",
+  "etStamp": "2026-11-25 08:52 ET",
   "score": 74,
   "fired": [
     "flights",
@@ -48,13 +48,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1290,
-  "lastSuccessAt": "2026-11-25T13:37:23.185Z",
+  "headlinesRead": 1075,
+  "lastSuccessAt": "2026-11-25T13:52:36.116Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
-    "hacks": 30,
-    "internet": 11,
+    "hacks": 29,
+    "internet": 12,
     "germs": 5,
     "grid": 7,
     "weather": 6,
@@ -168,91 +168,94 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Plane crash off the coast of Mississippi kills 6, including 2 children"
+      ]
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1106,
-      "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "count": 753,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 21 of 26 queries)",
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "bing": {
       "ok": true,
-      "count": 96,
-      "error": "6 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "count": 284,
+      "error": null,
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "gdelt": {
       "ok": true,
-      "count": 50,
-      "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "count": 1,
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T13:37:23.185Z"
+      "lastOkAt": "2026-11-25T13:52:36.116Z"
     }
   },
   "stories": [
@@ -310,7 +313,7 @@
       "publishedAt": "2026-11-24T15:13:00.000Z",
       "latestAt": "2026-11-25T11:57:31.000Z",
       "firstSeenAt": "2026-11-25T01:15:36.251Z",
-      "outlets": 23,
+      "outlets": 24,
       "outletNames": [
         "Yahoo",
         "geekspin",
@@ -334,9 +337,10 @@
         "Boston 25 News",
         "Action News Jax",
         "WSB-TV Channel 2",
-        "WSB-TV"
+        "WSB-TV",
+        "WPXI"
       ],
-      "score": 4.6
+      "score": 4.65
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-24",
@@ -985,24 +989,6 @@
       "score": 2.22
     },
     {
-      "id": "f459bfec5c0c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Flights delayed after another ground stop at O’Hare Airport",
-      "url": "https://www.yahoo.com/news/us/articles/flights-delayed-another-ground-stop-214617471.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T13:46:00.000Z",
-      "latestAt": "2026-11-25T02:44:55.000Z",
-      "firstSeenAt": "2026-11-25T00:45:33.233Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "AOL.com",
-        "NewsNation"
-      ],
-      "score": 2.11
-    },
-    {
       "id": "2bb07ffc981b",
       "cat": "flights",
       "kind": "news",
@@ -1207,23 +1193,6 @@
         "The Business Standard"
       ],
       "score": 1.76
-    },
-    {
-      "id": "e6d0015d3383",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "French Sports Retailer Decathlon Hit by Cyberattack, Data of More Than 130,000 Customers Exposed",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNaGpvNnFxY2V0Wk1ITmlxbGZhYjI2SlE2bm1Udjg0LVNVSHhmZ1ZFX2cwOXhvMVlHcGx0MGFFMnBuR2NBUGZ0NHYtVEozMEl5TXQxdEZoQ1NoUjd5ZFZZcWdGcVMtSnhxajFpR1JjZ09FVXBHV1NCWEJlczR0NkVac05DNVpIMUZhZ1hFc0RidFE1cTFpUkFvdGpjUGRadTBpUFRUMlJuRkZacm1OY3p4RUlsdFpCOUNrWUY3VVZUWnBaMUZ20gHEAUFVX3lxTE1oam82cXFjZXRaTUhOaXFsZmFiMjZKUTZubVR2ODQtU1VIeGZnVkVfZzA5eG8xWUdwbHQwYUUycG5HY0FQZnQ0di1USjMwSXlNdDF0RmhDU2hSN3lkVllxZ0ZxUy1KeHFqMWlHUmNnT0VVcEdXU0JYQmVzNHQ2RVpzTkM1WkgxRmFnWEVzRGJ0UTVxMWlSQW90amNQZFp1MGlQVFQyUm5GRlpybU5jenhFSWx0WkI5Q2tZRjdVVlRacFoxRnY?oc=5",
-      "source": "US Muslims",
-      "publishedAt": "2026-11-24T13:47:00.000Z",
-      "latestAt": "2026-11-24T13:52:36.000Z",
-      "firstSeenAt": "2026-11-24T21:29:56.381Z",
-      "outlets": 2,
-      "outletNames": [
-        "US Muslims",
-        "Anadolu Ajansı"
-      ],
-      "score": 1.74
     },
     {
       "id": "039d95e58922",
@@ -1719,6 +1688,23 @@
       "score": 1.28
     },
     {
+      "id": "5498b09fdb72",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA issues and lifts ground stop at Chicago’s O’Hare",
+      "url": "https://thehill.com/homenews/administration/6241322-faa-ohare-ground-stop/",
+      "source": "The Hill",
+      "publishedAt": "2026-11-24T14:57:00.000Z",
+      "latestAt": "2026-11-24T23:49:45.000Z",
+      "firstSeenAt": "2026-11-25T13:52:36.116Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Hill",
+        "AOL.co.uk"
+      ],
+      "score": 1.24
+    },
+    {
       "id": "d1f8478fdf6c",
       "cat": "weather",
       "kind": "news",
@@ -1735,6 +1721,22 @@
       "score": 1.23,
       "quiet": true,
       "quietReason": "headline mentions flood"
+    },
+    {
+      "id": "4591fa5047bb",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Rolls Out 'Code Red' Initiative to Avert Major Outages",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPN1g4Qm9palRoRlhRaEpoaHJxa0dubS1MWEJSazJlTmg4eEc0Z0dNZ29mbGpmTU9XanlWM1BzZ0hBang0Z1MxRHpKay1xSllzYUJQejFUd2gzX2drVnlvblBWNXdqb2JHWjBJaHJueXgtQVBwVnp1TV8wN244X3VTNk9pSVZZTnU1aDZRY2xyeXBpYlRBSXhSYmdR?oc=5",
+      "source": "Tempo.co English",
+      "publishedAt": "2026-11-25T03:37:00.000Z",
+      "latestAt": "2026-11-25T03:37:00.000Z",
+      "firstSeenAt": "2026-11-25T13:52:36.116Z",
+      "outlets": 1,
+      "outletNames": [
+        "Tempo.co English"
+      ],
+      "score": 1.16
     },
     {
       "id": "7dc531d5f964",
@@ -1945,6 +1947,22 @@
       "score": 0.88
     },
     {
+      "id": "52c559ca9fb4",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Hawaiis Kilauea Volcano Erupts Again Shoots Lava Fountain 200 Metres Into The Air",
+      "url": "https://www.msn.com/en-in/news/other/hawaiis-kilauea-volcano-erupts-again-shoots-lava-fountain-200-metres-into-the-air/vi-AA2ibXEk",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-25T05:40:20.000Z",
+      "latestAt": "2026-11-25T05:40:20.000Z",
+      "firstSeenAt": "2026-11-25T13:52:36.116Z",
+      "outlets": 1,
+      "outletNames": [
+        "Hindustan Times on MSN"
+      ],
+      "score": 0.86
+    },
+    {
       "id": "d25bb94e53dd",
       "cat": "ai",
       "kind": "news",
@@ -1993,36 +2011,22 @@
       "score": 0.86
     },
     {
-      "id": "09070eceeaed",
+      "id": "07da99347d54",
       "cat": "earth",
       "kind": "news",
-      "title": "5.9-magnitude earthquake strikes Balleny Islands: No damage reported so far; further details awaited",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPSGIyamU2Q0F3VXhqUUJRY2I0ZTBXS2hobnI4V2sxSU5TZjJiaFhvcE1YZ2JtZWloMXRtNnFFNmI0Nm5tYzFUSFRXeHVTTkdDcVNLWW1nYkFHenlMM0IzVmZ0VE9rU3dpUjVDa05CcUdNa21sWlllVnhfdVM0N1JBVGVtcW5MSjdHWWJ4RkViMk5DTS0wOE9oalg1UC1DT0hiMm5pRC1iQ2hjLVFtY3ZFaXYtMHlvVEFtczNDb3BnQ0FhUdIBxwFBVV95cUxOaVF2a3d1YjdvYTBRTEZPU0tBbTV4SEVGbDdtcU1NQkdObEJBRmsxWi1hS1hfZ09wN2pBYXREdXFfTjc1UFBTY1VGM0hoQi11bTJIV0oxcWxTUURiNGQ4TUNhaW1Ockd4Y1N6MWZaQVZxR1BaeE93MlhuNktETkpHakgxZmZYTHlka0ZkWHAxOHVtdE9hTUNXUHdJTEpyakI2S3dSMk1UNHBHMkFhaTNCTlVyZ201bW9HV2U2UXdQN3daY2hldEZj?oc=5",
-      "source": "Bhaskar English",
-      "publishedAt": "2026-11-25T02:56:36.000Z",
-      "latestAt": "2026-11-25T02:56:36.000Z",
-      "firstSeenAt": "2026-11-25T12:02:28.195Z",
+      "title": "He survived a 7.8-magnitude earthquake in Nepal and returned to the same village with food and supplies",
+      "url": "https://www.msn.com/en-us/news/other/he-survived-a-78-magnitude-earthquake-in-nepal-and-returned-to-the-same-village-with-food-and-supplies/vi-AA2icBuv",
+      "source": "Indigo Traveller on MSN",
+      "publishedAt": "2026-11-25T04:35:13.000Z",
+      "latestAt": "2026-11-25T04:35:13.000Z",
+      "firstSeenAt": "2026-11-25T13:52:36.116Z",
       "outlets": 1,
       "outletNames": [
-        "Bhaskar English"
+        "Indigo Traveller on MSN"
       ],
-      "score": 0.85
-    },
-    {
-      "id": "aefe7185df46",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Kilauea eruption starts and stops again, marking 26th episode",
-      "url": "https://spectrumlocalnews.com/hi/hawaii/news/2025/06/20/kilauea-26th-episode",
-      "source": "Spectrum News",
-      "publishedAt": "2026-11-25T00:20:00.000Z",
-      "latestAt": "2026-11-25T00:20:00.000Z",
-      "firstSeenAt": "2026-11-25T12:52:13.969Z",
-      "outlets": 1,
-      "outletNames": [
-        "Spectrum News"
-      ],
-      "score": 0.79
+      "score": 0.85,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     }
   ]
 }
