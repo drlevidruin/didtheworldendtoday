@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T16:52:57.421Z",
+  "buildTime": "2026-11-25T17:08:02.330Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 11:52 ET",
+  "etStamp": "2026-11-25 12:08 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,12 +49,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1447,
-  "lastSuccessAt": "2026-11-25T16:52:57.421Z",
+  "headlinesRead": 1431,
+  "lastSuccessAt": "2026-11-25T17:08:02.330Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 18,
-    "hacks": 34,
+    "flights": 19,
+    "hacks": 32,
     "internet": 13,
     "weather": 6,
     "germs": 4,
@@ -63,7 +63,7 @@
     "sun": 4,
     "ai": 4,
     "earth": 4,
-    "animals": 1,
+    "animals": 2,
     "space": 4
   },
   "vital": {
@@ -186,57 +186,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1127,
+      "count": 1118,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     },
     "bing": {
       "ok": true,
-      "count": 285,
+      "count": 278,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "hn": {
       "ok": true,
-      "count": 6,
+      "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     },
     "x": {
       "ok": true,
@@ -247,15 +247,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T16:52:57.421Z"
+      "lastOkAt": "2026-11-25T17:08:02.330Z"
     }
   },
   "stories": [
@@ -269,16 +269,17 @@
       "publishedAt": "2026-11-24T20:29:00.000Z",
       "latestAt": "2026-11-24T20:35:06.000Z",
       "firstSeenAt": "2026-11-24T20:44:52.543Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "WNEP",
         "WQAD",
         "5newsonline.com",
         "12newsnow.com",
         "WFAA",
-        "WUSA9"
+        "WUSA9",
+        "12News"
       ],
-      "score": 5
+      "score": 5.31
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-24",
@@ -557,6 +558,25 @@
       "score": 4.3
     },
     {
+      "id": "9016f726f4d0",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Investigators believe they now know what caused the nationwide ground stop",
+      "url": "https://www.wthitv.com/2026/11/25/investigators-believe-they-now-know-what-caused-nationwide-ground-stop/",
+      "source": "WTHI News10",
+      "publishedAt": "2026-11-25T08:47:00.000Z",
+      "latestAt": "2026-11-25T16:47:00.000Z",
+      "firstSeenAt": "2026-11-25T16:52:57.421Z",
+      "outlets": 4,
+      "outletNames": [
+        "WTHI News10",
+        "WABI",
+        "WTVA 9 News",
+        "Upper Michigan's Source"
+      ],
+      "score": 3.63
+    },
+    {
       "id": "899c23b9703f",
       "cat": "flights",
       "kind": "news",
@@ -573,23 +593,6 @@
         "WTHR"
       ],
       "score": 3.59
-    },
-    {
-      "id": "640f507300f2",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Traces Nationwide Ground Stop to Network Configuration Error",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4yNjk0R2I4WlNPdThSN2NsWUI0Q2RrSS1tM2dEVU1taU5XVlNnTk9ITGVZTnNxSi1md1lPZS1oeFg4eGZqTDB1NER3a3R5R2M3WnRnQTRFd1NNSDNaTkdKcFlJc1NCR0d4SExWVk1pZjlZWmx5?oc=5",
-      "source": "www.suaralandak.co.id",
-      "publishedAt": "2026-11-25T01:28:03.000Z",
-      "latestAt": "2026-11-25T16:40:51.000Z",
-      "firstSeenAt": "2026-11-25T02:00:48.580Z",
-      "outlets": 2,
-      "outletNames": [
-        "www.suaralandak.co.id",
-        "Avi-Go"
-      ],
-      "score": 2.77
     },
     {
       "id": "dd86ac7e3b59",
@@ -851,21 +854,21 @@
       "score": 1.39
     },
     {
-      "id": "9016f726f4d0",
+      "id": "640f507300f2",
       "cat": "flights",
       "kind": "news",
-      "title": "Investigators believe they now know what caused the nationwide ground stop",
-      "url": "https://www.wthitv.com/2026/11/25/investigators-believe-they-now-know-what-caused-nationwide-ground-stop/",
-      "source": "WTHI News10",
-      "publishedAt": "2026-11-25T08:47:00.000Z",
-      "latestAt": "2026-11-25T16:47:00.000Z",
-      "firstSeenAt": "2026-11-25T16:52:57.421Z",
+      "title": "FAA Traces Nationwide Ground Stop to Network Configuration Error",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4yNjk0R2I4WlNPdThSN2NsWUI0Q2RrSS1tM2dEVU1taU5XVlNnTk9ITGVZTnNxSi1md1lPZS1oeFg4eGZqTDB1NER3a3R5R2M3WnRnQTRFd1NNSDNaTkdKcFlJc1NCR0d4SExWVk1pZjlZWmx5?oc=5",
+      "source": "www.suaralandak.co.id",
+      "publishedAt": "2026-11-25T01:28:03.000Z",
+      "latestAt": "2026-11-25T16:40:51.000Z",
+      "firstSeenAt": "2026-11-25T02:00:48.580Z",
       "outlets": 2,
       "outletNames": [
-        "WTHI News10",
-        "WABI"
+        "www.suaralandak.co.id",
+        "Avi-Go"
       ],
-      "score": 2.42
+      "score": 2.77
     },
     {
       "id": "8a4d591cbf3b",
@@ -1227,23 +1230,6 @@
         "SecNews.gr"
       ],
       "score": 1.56
-    },
-    {
-      "id": "d6b9d869e642",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Belgian municipalities hit by data breach affecting 1.2M people",
-      "url": "https://www.aa.com.tr/en/europe/belgian-municipalities-hit-by-data-breach-affecting-12m-people/4137063",
-      "source": "Anadolu Agency",
-      "publishedAt": "2026-11-24T17:02:00.000Z",
-      "latestAt": "2026-11-25T10:06:05.000Z",
-      "firstSeenAt": "2026-11-25T10:17:11.652Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Agency",
-        "Anadolu Ajansı"
-      ],
-      "score": 1.42
     },
     {
       "id": "2bb07ffc981b",
@@ -1668,6 +1654,38 @@
       "score": 1.06
     },
     {
+      "id": "4b4a7935b8a6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Possible cyberattack causing issues in Cherokee County",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbEtHY3RTV0NnSG55MkdsNERQX0tEb2h3SDhYMW5YMEREU3lSNW5EQjZwbmpGUk1kRnJFV0RDUGdVVW5FSGVMU1Y2OFFWWnpBU1ZBWUk1dEt0a1oydkxEX01pbnN2ZWdnaFpET0pOX1AzaTFMTWRVSHVueDlDVGZ4eE1RNC10Y1FnR1l3RVFHMzh5UVVKMFN1SU5maw?oc=5",
+      "source": "Newstalk KZRG",
+      "publishedAt": "2026-11-25T17:02:55.000Z",
+      "latestAt": "2026-11-25T17:02:55.000Z",
+      "firstSeenAt": "2026-11-25T17:08:02.330Z",
+      "outlets": 1,
+      "outletNames": [
+        "Newstalk KZRG"
+      ],
+      "score": 1
+    },
+    {
+      "id": "8c8ae5f4f6d9",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Floppy disks and paper strips: How Montana’s air traffic system fared in the FAA ground stop",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaWJGUmhsQzk5ak1ndHpzUXVsWXY1Q2lYWnhQb0xTWXJEbTlHV0pWN1lqN1R0NmM5ZDlSaTdZSDc0eHNkY3hLb29NSGNnal95MlpGVTc1ck1HaVpSWVNDMEVNcU9yYkdmQ25oaGltOWwybXFvMDVLRmlwVzZsRmttMl82bm92QjdEMFlGcVNKTjRLVnY0U3NsOUJ0Sy1rZ09yc3dDNEMyaW5xdTBDM3FN?oc=5",
+      "source": "The Independent Record",
+      "publishedAt": "2026-11-25T17:00:00.000Z",
+      "latestAt": "2026-11-25T17:00:00.000Z",
+      "firstSeenAt": "2026-11-25T17:08:02.330Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Independent Record"
+      ],
+      "score": 1
+    },
+    {
       "id": "3b64cf13e1b4",
       "cat": "internet",
       "kind": "news",
@@ -1680,38 +1698,6 @@
       "outlets": 1,
       "outletNames": [
         "PaidFreeDroid"
-      ],
-      "score": 1
-    },
-    {
-      "id": "6aa45fe14c94",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Standard Baking Co. warns customers of data breach",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOdy1OQnhaZmxSME1ROTJySHZCd0syelNQZFBOV0FQNF9nMWlHYzZTV2lpeGJCeFktUFNhQjg0Q1YwRWRubmZvZS0yRFJpR0FqQmR1RUdhMzNJVThYSzc2NXd3Tzk2bThuYWZkMUV0YnFSLXlES1RkLWhHU1RXQzNMZ2ljY2Rpb1lNOURBVndzYlo5RldBOU9tZS1OSzlJVG9EQXRVTFJFRkR6RzVhczJjdFh4d1RGSC03Z3pma2Q4aTVjMk1FT0x2amxBd0VBUzZBcnVrazF6UHNreEZ5QlpSM0ZHUUM1cndla3hLdFk0X21IajI0QWdNRDBn?oc=5",
-      "source": "newscentermaine.com",
-      "publishedAt": "2026-11-25T16:22:00.000Z",
-      "latestAt": "2026-11-25T16:22:00.000Z",
-      "firstSeenAt": "2026-11-25T16:38:02.730Z",
-      "outlets": 1,
-      "outletNames": [
-        "newscentermaine.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "9bfbc96567fb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Palo Alto Networks Soars 11% in a Week on Cyberattack Fears and a Guidance Hike: “An Unprecedented Threat Environment”",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPeWlMcnZoSXEySFBOS3VMS1cycWpwdWNRTXhYNnMzY1FqR1pHcTdMdjhlLUZOVFo3c3JlT3VMWEtBZnRWaXlfRGgzdHIzdkRJUG9ScmVnZjlvTEh1SzZtUWFhSFNBbzR1UE1mOGZKMnF6WWloOXZHcm5PNUJTdHk2TjNpdmV2c1V4Q0dKMjlCLXp2d2NXcWxFWHRLd2hoamZBQ2VVYlVySTV2eVNhWFhnaUlxejlGSE5LMlQtRndlR1dwYjhkSFQwMVNLNW5ZXzk2UDlEb0FhVWpNWFhESGxrMGJhLVZWS2ZhR1ZXcS1rVnIxNW4zb3JSQk9fd2Z6UEYtZ0ZwNEJhT2MwOXJ3UlE?oc=5",
-      "source": "TIKR.com",
-      "publishedAt": "2026-11-25T16:15:20.000Z",
-      "latestAt": "2026-11-25T16:15:20.000Z",
-      "firstSeenAt": "2026-11-25T16:23:01.784Z",
-      "outlets": 1,
-      "outletNames": [
-        "TIKR.com"
       ],
       "score": 1
     },
@@ -1988,6 +1974,22 @@
         "Space.com"
       ],
       "score": 0.82
+    },
+    {
+      "id": "d4a8f50e5c22",
+      "cat": "animals",
+      "kind": "news",
+      "title": "THIS DANGEROUS CHIMP ESCAPED FROM THE ZOO!",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUmFqQkQwRlNCcEJ4XzdfMFVrRVN0NVZaS2twMlFUZEszSHI0dG4yTXNfb09uZUJxQXJCTDJZNGpuMzJFTThNdzdSbEhSRTh5ZmRzU3Zmc3lZZWJmeDBoU3U1U3N4M0tZQnpzQVJObnQ2SEZ0QzAyVjU2SGtudnN6aUkyaWw1YzBpbUVQc1lmRF9TSDFiV1Foc2dZV0x0YmkxMUFWQVlLMi1xa0xMaXc?oc=5",
+      "source": "NewsBreak: Local News & Alerts",
+      "publishedAt": "2026-11-24T23:32:43.000Z",
+      "latestAt": "2026-11-24T23:32:43.000Z",
+      "firstSeenAt": "2026-11-25T17:08:02.330Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 0.71
     }
   ]
 }
