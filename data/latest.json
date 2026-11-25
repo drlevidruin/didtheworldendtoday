@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T17:23:04.397Z",
+  "buildTime": "2026-11-25T17:38:04.045Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 12:23 ET",
+  "etStamp": "2026-11-25 12:38 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,16 +49,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1423,
-  "lastSuccessAt": "2026-11-25T17:23:04.397Z",
+  "headlinesRead": 1381,
+  "lastSuccessAt": "2026-11-25T17:38:04.045Z",
   "rollingFallback": false,
   "cats": {
     "flights": 18,
-    "hacks": 34,
+    "hacks": 32,
     "internet": 12,
     "weather": 6,
-    "germs": 4,
-    "grid": 4,
+    "germs": 5,
+    "grid": 5,
     "markets": 4,
     "sun": 4,
     "ai": 4,
@@ -181,81 +181,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1117,
+      "count": 1082,
       "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "bing": {
       "ok": true,
-      "count": 271,
-      "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "count": 262,
+      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T17:23:04.397Z"
+      "lastOkAt": "2026-11-25T17:38:04.045Z"
     }
   },
   "stories": [
@@ -567,14 +566,15 @@
       "publishedAt": "2026-11-25T08:47:00.000Z",
       "latestAt": "2026-11-25T16:47:00.000Z",
       "firstSeenAt": "2026-11-25T16:52:57.421Z",
-      "outlets": 4,
+      "outlets": 5,
       "outletNames": [
         "WTHI News10",
         "WABI",
         "WTVA 9 News",
-        "Upper Michigan's Source"
+        "Upper Michigan's Source",
+        "WWNY"
       ],
-      "score": 3.63
+      "score": 4.02
     },
     {
       "id": "899c23b9703f",
@@ -661,23 +661,6 @@
       "outletNames": [
         "PCMag Australia",
         "PCMag UK"
-      ],
-      "score": 2.41
-    },
-    {
-      "id": "3ada2f639399",
-      "cat": "internet",
-      "kind": "news",
-      "title": "MICROSOFT 365 : a Global Outage, a Local Test",
-      "url": "https://defimedia.info/microsoft-365-global-outage-local-test",
-      "source": "Le Défi Media Group",
-      "publishedAt": "2026-11-24T17:29:00.000Z",
-      "latestAt": "2026-11-25T01:28:00.000Z",
-      "firstSeenAt": "2026-11-25T01:45:42.574Z",
-      "outlets": 2,
-      "outletNames": [
-        "Defimedia",
-        "Le Défi Media Group"
       ],
       "score": 2.41
     },
@@ -836,6 +819,23 @@
       "score": 1.69,
       "quiet": true,
       "quietReason": "headline mentions evacuate"
+    },
+    {
+      "id": "d946ff356967",
+      "cat": "internet",
+      "kind": "news",
+      "title": "TikTok outage tops 56,000 reports: What users are seeing",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2alBzV3FHTXJ1TFc1RWl3enBpT2FEakxrOTBvcFlFeTBWRUZpNk1mX2VyOFZ0OEtLMVhGRXVGWG4zTEVPV19DRG95TWRaWlRqemlvTE9LNWNhNUM4bkNxajI2UGlGbzJ1bzBZbk55d3JFUQ?oc=5",
+      "source": "Rolling Out",
+      "publishedAt": "2026-11-24T20:41:28.000Z",
+      "latestAt": "2026-11-25T08:17:34.000Z",
+      "firstSeenAt": "2026-11-25T10:02:10.816Z",
+      "outlets": 2,
+      "outletNames": [
+        "Rolling Out",
+        "SecNews.gr"
+      ],
+      "score": 1.56
     },
     {
       "id": "abcb674b3c03",
@@ -1213,23 +1213,6 @@
         "lex18.com"
       ],
       "score": 1.65
-    },
-    {
-      "id": "d946ff356967",
-      "cat": "internet",
-      "kind": "news",
-      "title": "TikTok outage tops 56,000 reports: What users are seeing",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2alBzV3FHTXJ1TFc1RWl3enBpT2FEakxrOTBvcFlFeTBWRUZpNk1mX2VyOFZ0OEtLMVhGRXVGWG4zTEVPV19DRG95TWRaWlRqemlvTE9LNWNhNUM4bkNxajI2UGlGbzJ1bzBZbk55d3JFUQ?oc=5",
-      "source": "Rolling Out",
-      "publishedAt": "2026-11-24T20:41:28.000Z",
-      "latestAt": "2026-11-25T08:17:34.000Z",
-      "firstSeenAt": "2026-11-25T10:02:10.816Z",
-      "outlets": 2,
-      "outletNames": [
-        "Rolling Out",
-        "SecNews.gr"
-      ],
-      "score": 1.56
     },
     {
       "id": "2bb07ffc981b",
@@ -1670,50 +1653,66 @@
       "score": 1.06
     },
     {
-      "id": "8197fe3fe291",
+      "id": "2f2199d7d05f",
       "cat": "hacks",
       "kind": "news",
-      "title": "Bethany Village Data Breach Exposes Personal and Protected Health Data",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9TUmkxTnRfX2JraUVKb1Jlb0x1Y1lad3lueHZta0hDUUlJRVNNeS04TFZyZjJXYmdRUE82b0FjQ01LNHYzaWhaX1FaLWZ5UEZKS1RQdTY5ZGd5NWJrTG1BRElIcmFSY3dhSW5uSGdPdw?oc=5",
-      "source": "Claim Depot",
-      "publishedAt": "2026-11-25T17:20:42.000Z",
-      "latestAt": "2026-11-25T17:20:42.000Z",
-      "firstSeenAt": "2026-11-25T17:23:04.397Z",
+      "title": "Florida ransomware recovery CEO indicted for paying hacker ransoms",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9scTIwb05vaGp4c3Uwd3hhYUk3TFVlcG03N0tNeVItWDVwcWRwSlpjYkhCTUJDOXBlcndpak43eWxCWnk4Z0ZyaGtBbjFGRzNjd09mdHFUQUFINTVJRG85NlhYa0o5TTFsRXc?oc=5",
+      "source": "The Record from Recorded Future News",
+      "publishedAt": "2026-11-25T17:33:32.000Z",
+      "latestAt": "2026-11-25T17:33:32.000Z",
+      "firstSeenAt": "2026-11-25T17:38:04.045Z",
       "outlets": 1,
       "outletNames": [
-        "Claim Depot"
+        "The Record from Recorded Future News"
       ],
       "score": 1
     },
     {
-      "id": "be6067a39a48",
-      "cat": "hacks",
+      "id": "a87d5bed42ff",
+      "cat": "grid",
       "kind": "news",
-      "title": "Popular Maine bakery warns customers about possible credit card data breach",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQVEtMRk00RlRCTS01QzF6d0NyQkJheDVRMjRzMjNXbHhodjhQUnIyeG0yWUdqeEtPa29wLW1LQ1BlMmJiRnVLVDNnOUtyWGlHRmlEMFV4RWxNTk9CMEliOTlVOTRlM09FTXVwMmxhQnNfLWxUSnljVXdpYjEzdVF6a0gtNXVNdVhOY01yVVhnM2NWNXBkU0t5N1FuRkRIQ2Q1a2xHdXBMMlJhUmt1VFVER3pHamlXRG03ejNiakVSckRtN1ZtZ2tIWnp2TEpaZm9jQklSa1VOZWtlVXpXMFZ2My1kaVFPT0NFV3Y2bDJYSEJJcEJ6SFlV?oc=5",
-      "source": "newscentermaine.com",
-      "publishedAt": "2026-11-25T17:10:00.000Z",
-      "latestAt": "2026-11-25T17:10:00.000Z",
-      "firstSeenAt": "2026-11-25T17:23:04.397Z",
+      "title": "Two power outages affect more than 1,900 BC Hydro customers near Salmon Arm",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPaXFZS2lxcU9ZLTJBQ0M2RENtNEJKZVZtU0Z4MEd4YzZsSkJQSGNEZF9FWTh0aWE1Y1EtTGpGVHJmcDl4TGNncWFXcTBwcTZBeXU0R1JHcjZzTGs0WHdGbF9ZYmh0MlFLdTVqVkJDN0FKeU1sc2sxa3RtNmpNWXZNMDVORjJ5N2JaeDRybENJbDlRQzhpbUN4eWxNc2hhTEZZTGRheENOM3F5YVZBbEJGaUFiSi1kVDR3NVJzNnpyVQ?oc=5",
+      "source": "Castanet",
+      "publishedAt": "2026-11-25T17:27:41.000Z",
+      "latestAt": "2026-11-25T17:27:41.000Z",
+      "firstSeenAt": "2026-11-25T17:38:04.045Z",
       "outlets": 1,
       "outletNames": [
-        "newscentermaine.com"
+        "Castanet"
       ],
       "score": 1
     },
     {
-      "id": "4b4a7935b8a6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Possible cyberattack causing issues in Cherokee County",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbEtHY3RTV0NnSG55MkdsNERQX0tEb2h3SDhYMW5YMEREU3lSNW5EQjZwbmpGUk1kRnJFV0RDUGdVVW5FSGVMU1Y2OFFWWnpBU1ZBWUk1dEt0a1oydkxEX01pbnN2ZWdnaFpET0pOX1AzaTFMTWRVSHVueDlDVGZ4eE1RNC10Y1FnR1l3RVFHMzh5UVVKMFN1SU5maw?oc=5",
-      "source": "Newstalk KZRG",
-      "publishedAt": "2026-11-25T17:02:55.000Z",
-      "latestAt": "2026-11-25T17:02:55.000Z",
-      "firstSeenAt": "2026-11-25T17:08:02.330Z",
+      "id": "274dfe14036d",
+      "cat": "internet",
+      "kind": "x",
+      "title": "Nvidia’s Huang rally is fading fast. $NVDA is down another 7.4% today to $144, after an 8% drop yesterday. That’s about 13% lost in two days. Roughly $500 billion of Monday’s $1 trillion gain is alre…",
+      "url": "https://x.com/unusual_whales/status/2125642420389888365",
+      "source": "@unusual_whales on X",
+      "publishedAt": "2026-11-25T17:27:00.000Z",
+      "latestAt": "2026-11-25T17:27:00.000Z",
+      "firstSeenAt": "2026-11-25T17:38:04.045Z",
       "outlets": 1,
       "outletNames": [
-        "Newstalk KZRG"
+        "@unusual_whales on X"
+      ],
+      "score": 1
+    },
+    {
+      "id": "12816a4401cf",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Uptick in H5N1 avian flu activity continues across North America",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPckp0dVU3RVZFSDJFN18yaEF4YWpmV2Y1MnBneDdscm42bG9CQ0Z1aVZ1dVdaZGU2eE5JbWt4WG9IdU1oZDlPRkw1TTYzdFdxa0s1WHY3SDFVMXJ5YUFQNGRVX1R1dUJyY3JvYmt5RjF4cXFiaTJSVXhqaU5HR0RDeTNyc1RlV1ptaDVrUHJJV0Rma0ROOUdqMDVlV0JPb3p6aHBPZlZWUWswdU9LZ3JFXzBocw?oc=5",
+      "source": "CIDRAP",
+      "publishedAt": "2026-11-25T17:26:00.000Z",
+      "latestAt": "2026-11-25T17:26:00.000Z",
+      "firstSeenAt": "2026-11-25T17:38:04.045Z",
+      "outlets": 1,
+      "outletNames": [
+        "CIDRAP"
       ],
       "score": 1
     },
@@ -1864,6 +1863,22 @@
       "score": 0.97
     },
     {
+      "id": "b6b4dcbf7e62",
+      "cat": "space",
+      "kind": "news",
+      "title": "Meet Earth's New 'Mini-Moon' 2026 QQ8, a Six-Foot-Wide Asteroid That's Temporarily Circling Our Planet",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNaE82YUhVSG5haW1VeUw5RXBOdFlDaTVOQTg0WUNBa205b251OWpMa3Y4RUhXdlM0bWtHdkNndGxkeE9xSnhBOUJGZzQyWXRDS2c5TlFKanl5bmVuR1UybUJHWFl1QW0wQnAxTWNiTXJaeHVIUlM1alBubksxYnFFZWVNaWpma1JEejVWc0FRRnhSYk9NMi1xMjl5TXA3TXUyekFTdzU4UHFZcjdmVDQzQ1VRUUFzUkpNSy1ELTdrUUtCc0xDMC02bFV6UkZUVnhJRGw4YmdnSkJReHczSU5CZHRDWG0?oc=5",
+      "source": "Smithsonian Magazine",
+      "publishedAt": "2026-11-25T14:00:00.000Z",
+      "latestAt": "2026-11-25T14:00:00.000Z",
+      "firstSeenAt": "2026-11-25T17:38:04.045Z",
+      "outlets": 1,
+      "outletNames": [
+        "Smithsonian Magazine"
+      ],
+      "score": 0.94
+    },
+    {
       "id": "75a22d43d43e",
       "cat": "earth",
       "kind": "news",
@@ -1958,22 +1973,6 @@
         "Moneycontrol"
       ],
       "score": 0.86
-    },
-    {
-      "id": "872fee2f7740",
-      "cat": "space",
-      "kind": "news",
-      "title": "Watch live: Europe unveils 1st close-up views of asteroid Dimorphos after NASA's DART impact",
-      "url": "https://www.space.com/space-exploration/asteroid-comet-missions/watch-live-europe-unveils-1st-close-up-views-of-asteroid-dimorphos-after-nasas-dart-impact",
-      "source": "Space.com",
-      "publishedAt": "2026-11-25T06:01:00.000Z",
-      "latestAt": "2026-11-25T14:00:00.000Z",
-      "firstSeenAt": "2026-11-25T16:52:57.421Z",
-      "outlets": 1,
-      "outletNames": [
-        "Space.com"
-      ],
-      "score": 0.82
     },
     {
       "id": "d4a8f50e5c22",
