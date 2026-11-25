@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T22:53:56.287Z",
+  "buildTime": "2026-11-25T23:09:03.842Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 17:53 ET",
+  "etStamp": "2026-11-25 18:09 ET",
   "score": 86,
   "fired": [
     "flights",
@@ -50,17 +50,17 @@
     "date": "2026-11-25",
     "score": 86
   },
-  "headlinesRead": 1342,
-  "lastSuccessAt": "2026-11-25T22:53:56.287Z",
+  "headlinesRead": 1046,
+  "lastSuccessAt": "2026-11-25T23:09:03.842Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
-    "hacks": 34,
-    "internet": 13,
-    "germs": 5,
+    "hacks": 37,
+    "internet": 12,
+    "germs": 4,
     "markets": 5,
     "animals": 2,
-    "grid": 5,
+    "grid": 4,
     "ai": 4,
     "weather": 4,
     "earth": 4,
@@ -187,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1028,
-      "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "count": 728,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 13 of 26 queries)",
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     },
     "bing": {
       "ok": true,
-      "count": 282,
+      "count": 286,
       "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "timeout",
       "lastOkAt": "2026-11-25T21:38:41.112Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     },
     "x": {
       "ok": true,
@@ -250,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T22:53:56.287Z"
+      "lastOkAt": "2026-11-25T23:09:03.842Z"
     }
   },
   "stories": [
@@ -424,6 +424,28 @@
       "score": 3.15
     },
     {
+      "id": "583be33757a5",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Breach Unclassified CIA, ODNI Analysis System as Microsoft Declares 'Code Red'",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQV2NXSFp3OTRCUnVWMkc1ZWljVmktZHlxM0FJODFVR2dtMk54Qk51LVl3SEVueHZHTHRZUklrWVByODR2VUVmSjBZRGRaQXEyaE1yMVpqZkgyN05uVjlqaXlXX05CSTU1amdoVVYxLUtIYzJ0NzlIcmdYU0tRQm82dVNCZmhNMzBZLXo3TTlKSnkyUVprT0xMdndmVkNsQQ?oc=5",
+      "source": "Seoul Economic Daily",
+      "publishedAt": "2026-11-25T06:22:34.000Z",
+      "latestAt": "2026-11-25T22:20:32.000Z",
+      "firstSeenAt": "2026-11-25T23:09:03.842Z",
+      "outlets": 7,
+      "outletNames": [
+        "Seoul Economic Daily",
+        "The Washington Post",
+        "95.5 WSB",
+        "Insurance Journal",
+        "Security Boulevard",
+        "LinkedIn",
+        "Facebook"
+      ],
+      "score": 2.74
+    },
+    {
       "id": "f80797f2b955",
       "cat": "germs",
       "kind": "news",
@@ -441,24 +463,6 @@
         "Yahoo News UK"
       ],
       "score": 2.61
-    },
-    {
-      "id": "e724a6fe278b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "VHV Company Data Breach Investigation: Edelson Lechtzin LLP Probes Class Action Claims After Social Security Numbers Are Exposed",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSFdIcUE3TVdBWHpMY3VrRjRiN1NJMU9HQm5RNHJ4UDU0bVVlVVUxNC1yOWgyYU9rMENmNUV3YjE1OFVfWGE4SHRuMVNLMEhSaFJGYy1oV1JCa2RpS2gyYVRSZDZ4YldXTWNzcXFEejctZnFhZ0U1U2FTb1p1OGxLazZ1SkI3MU5RNjAwd1FOM1Z2Qm42a0R0b3pTS1JkMTBKMTFONFduNkVqUDIySHRieHhUUFJVTXc?oc=5",
-      "source": "Carroll County Mirror-Democrat",
-      "publishedAt": "2026-11-25T00:11:49.000Z",
-      "latestAt": "2026-11-25T00:17:09.000Z",
-      "firstSeenAt": "2026-11-25T01:15:36.251Z",
-      "outlets": 3,
-      "outletNames": [
-        "Carroll County Mirror-Democrat",
-        "mykxlg.com",
-        "lincolnjournal.com"
-      ],
-      "score": 2.54
     },
     {
       "id": "fb9a5b3b1cec",
@@ -566,6 +570,24 @@
       "score": 2.77
     },
     {
+      "id": "e724a6fe278b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "VHV Company Data Breach Investigation: Edelson Lechtzin LLP Probes Class Action Claims After Social Security Numbers Are Exposed",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSFdIcUE3TVdBWHpMY3VrRjRiN1NJMU9HQm5RNHJ4UDU0bVVlVVUxNC1yOWgyYU9rMENmNUV3YjE1OFVfWGE4SHRuMVNLMEhSaFJGYy1oV1JCa2RpS2gyYVRSZDZ4YldXTWNzcXFEejctZnFhZ0U1U2FTb1p1OGxLazZ1SkI3MU5RNjAwd1FOM1Z2Qm42a0R0b3pTS1JkMTBKMTFONFduNkVqUDIySHRieHhUUFJVTXc?oc=5",
+      "source": "Carroll County Mirror-Democrat",
+      "publishedAt": "2026-11-25T00:11:49.000Z",
+      "latestAt": "2026-11-25T00:17:09.000Z",
+      "firstSeenAt": "2026-11-25T01:15:36.251Z",
+      "outlets": 3,
+      "outletNames": [
+        "Carroll County Mirror-Democrat",
+        "mykxlg.com",
+        "lincolnjournal.com"
+      ],
+      "score": 2.54
+    },
+    {
       "id": "530e0e2931cc",
       "cat": "hacks",
       "kind": "news",
@@ -600,23 +622,6 @@
         "YAHOO!"
       ],
       "score": 2.42
-    },
-    {
-      "id": "8a4d591cbf3b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "McDonald’s Japan hit by data breach — customer purchase and location data leaked in latest major incident in the country",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/mcdonald-japan-hit-data-breach-114224380.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-25T03:43:00.000Z",
-      "latestAt": "2026-11-25T11:42:24.000Z",
-      "firstSeenAt": "2026-11-25T14:22:32.622Z",
-      "outlets": 2,
-      "outletNames": [
-        "YAHOO!",
-        "TechRadar"
-      ],
-      "score": 2.3
     },
     {
       "id": "f89caf439c55",
@@ -723,23 +728,6 @@
       "score": 1.97
     },
     {
-      "id": "8d6184cd4994",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu cases continue in Oregon, Washington",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX2s5UEpXV3BWSzFTbFBtVUpKcjZZT2J0dmpkX3dwek8tVk8tZFl4THlzYm5BeHZnZXY5YkZuOVRRY1Zfb3pOcjBnOGxncWx3djZFSVlWSlZWUEpKbTVIeU9rYlFWWkR6bko2b3k5UGFVX3RYNEtQb3o1Wm9VZmdVVnRCNnhTUTI5am9z?oc=5",
-      "source": "Your Oregon News",
-      "publishedAt": "2026-11-24T22:56:57.000Z",
-      "latestAt": "2026-11-25T00:25:31.000Z",
-      "firstSeenAt": "2026-11-25T01:45:42.574Z",
-      "outlets": 2,
-      "outletNames": [
-        "Your Oregon News",
-        "Capital Press"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "4f0994ffe67a",
       "cat": "grid",
       "kind": "news",
@@ -791,23 +779,6 @@
       "score": 1.72
     },
     {
-      "id": "e4d5095e322e",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Storm-related power outage affects thousands of PG&E customers in Santa Cruz",
-      "url": "https://www.ksbw.com/article/storm-related-power-outage-thousands-pge-santa-cruz/74527151",
-      "source": "KSBW Channel 8",
-      "publishedAt": "2026-11-24T22:59:00.000Z",
-      "latestAt": "2026-11-25T16:33:00.000Z",
-      "firstSeenAt": "2026-11-25T07:31:39.232Z",
-      "outlets": 2,
-      "outletNames": [
-        "KSBW Channel 8",
-        "KSBW"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "8dcdb02c469b",
       "cat": "weather",
       "kind": "news",
@@ -841,6 +812,55 @@
         "De Último Minuto"
       ],
       "score": 1.39
+    },
+    {
+      "id": "fae6145286ca",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
+      "source": "Coinpaper",
+      "publishedAt": "2026-11-25T17:34:59.000Z",
+      "latestAt": "2026-11-25T17:34:59.000Z",
+      "firstSeenAt": "2026-11-25T18:08:07.848Z",
+      "outlets": 1,
+      "outletNames": [
+        "Coinpaper"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "abcb674b3c03",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Festivalgoer struck by lightning, locust plague, freak storm causes major blackout",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQakhIYm44WHlLQl92N2pwYXNIOXg5UWVDUTRzb1hpVkZpQ0wyd0pUV3Z4V05JS1ZtUmF0UEd2czFPMUFDc1B6OHJET285c0l5WERNN0RjNWpoV3N5Mk8wOTZoTUQwY01vRjlsS1ZMUHdJeko2SnYteWQ4QUNzeHp2cDIxelQ3QTN6?oc=5",
+      "source": "9Now",
+      "publishedAt": "2026-11-25T06:54:14.000Z",
+      "latestAt": "2026-11-25T06:54:14.000Z",
+      "firstSeenAt": "2026-11-25T07:16:38.099Z",
+      "outlets": 1,
+      "outletNames": [
+        "9Now"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "8a4d591cbf3b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "McDonald’s Japan hit by data breach — customer purchase and location data leaked in latest major incident in the country",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/mcdonald-japan-hit-data-breach-114224380.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-25T03:43:00.000Z",
+      "latestAt": "2026-11-25T11:42:24.000Z",
+      "firstSeenAt": "2026-11-25T14:22:32.622Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "TechRadar"
+      ],
+      "score": 2.3
     },
     {
       "id": "fee22940b1fa",
@@ -929,6 +949,25 @@
         "cedarnews.net"
       ],
       "score": 1.97
+    },
+    {
+      "id": "5900139ad908",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Microsoft: China’s Salt Typhoon hackers are using Artex",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5fTzRPVmxMSk9Ua2tyb2s0a05sVVJuS280ZDU0dkZOVnFIbm91TkNaT0NvSHAxRHdlUGFENlI3bGRsbHNQSVQ0U0FRQm1mU0NpejlQcFJWd2hmWUVmaTVMdm9nTmg5Z3lyTkxzSF81aWh3cjdjRHFsY0hGTVU?oc=5",
+      "source": "The Record from Recorded Future News",
+      "publishedAt": "2026-11-25T21:35:35.000Z",
+      "latestAt": "2026-11-25T23:03:52.000Z",
+      "firstSeenAt": "2026-11-25T23:09:03.842Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Record from Recorded Future News",
+        "MLQ.ai"
+      ],
+      "score": 1.95,
+      "quiet": true,
+      "quietReason": "headline mentions typhoon"
     },
     {
       "id": "a7ca4e09e904",
@@ -1142,7 +1181,7 @@
       "url": "https://www.yahoo.com/news/us/articles/sacramento-court-portal-partially-back-203527974.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-25T12:35:00.000Z",
-      "latestAt": "2026-11-25T12:35:27.000Z",
+      "latestAt": "2026-11-25T20:35:27.000Z",
       "firstSeenAt": "2026-11-25T22:53:56.287Z",
       "outlets": 2,
       "outletNames": [
@@ -1184,6 +1223,23 @@
         "newscentermaine.com"
       ],
       "score": 1.59
+    },
+    {
+      "id": "5c6dcf2bbab6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach networks at CIA, top US intelligence office",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOU1ZvcFJBV0FTR0xNSzBoVVVCWXpqQV9VZnVaWTZwQUIyQ291VUFtREtHVnJzb1Z6aGRIQms3RTNXOXlsYWllZDhYbW9TX0hvbmtYQ2ZucVYzaGpaeWYxYnp1Uy05cUF2Y1pfd2lHYXZXSmVNRjZSdWtoOTVwQ1BXWjRtODJNWWpySzM2VW1ZNGhGdw?oc=5",
+      "source": "Middle East Online",
+      "publishedAt": "2026-11-25T05:43:15.000Z",
+      "latestAt": "2026-11-25T12:51:46.000Z",
+      "firstSeenAt": "2026-11-25T23:09:03.842Z",
+      "outlets": 2,
+      "outletNames": [
+        "Middle East Online",
+        "Daily Times Of Bangladesh"
+      ],
+      "score": 1.42
     },
     {
       "id": "2208b23f6093",
@@ -1250,22 +1306,6 @@
       "score": 1.4
     },
     {
-      "id": "fae6145286ca",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
-      "source": "Coinpaper",
-      "publishedAt": "2026-11-25T17:34:59.000Z",
-      "latestAt": "2026-11-25T17:34:59.000Z",
-      "firstSeenAt": "2026-11-25T18:08:07.848Z",
-      "outlets": 1,
-      "outletNames": [
-        "Coinpaper"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "cd30a07ae631",
       "cat": "hacks",
       "kind": "news",
@@ -1294,22 +1334,6 @@
       "outlets": 1,
       "outletNames": [
         "Latest news from Azerbaijan"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "abcb674b3c03",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Festivalgoer struck by lightning, locust plague, freak storm causes major blackout",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQakhIYm44WHlLQl92N2pwYXNIOXg5UWVDUTRzb1hpVkZpQ0wyd0pUV3Z4V05JS1ZtUmF0UEd2czFPMUFDc1B6OHJET285c0l5WERNN0RjNWpoV3N5Mk8wOTZoTUQwY01vRjlsS1ZMUHdJeko2SnYteWQ4QUNzeHp2cDIxelQ3QTN6?oc=5",
-      "source": "9Now",
-      "publishedAt": "2026-11-25T06:54:14.000Z",
-      "latestAt": "2026-11-25T06:54:14.000Z",
-      "firstSeenAt": "2026-11-25T07:16:38.099Z",
-      "outlets": 1,
-      "outletNames": [
-        "9Now"
       ],
       "score": 1.39
     },
@@ -1429,6 +1453,23 @@
       "score": 1.36
     },
     {
+      "id": "2bb07ffc981b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "‘We’re not worried’: ROC passengers talk ticket prices, recent FAA ground stop during busy travel week",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPT3otOG54TndobmwxaXQwaWhvb0s1UzBFaTFJdkYyMnZXUDRjbmFROVlaTjBsT1lIeFR0QjJsbTRseEd1b2dWVHdvOWZ4a0lNX0lzU0FQQ0EtUGxocjBvYlpaSWFHRTA4R0NQeDdkLWlrY212VFM4b1RsSFh0TFRxNHJVaV9pMllKZG4zejZn?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T03:52:00.000Z",
+      "latestAt": "2026-11-25T04:10:07.000Z",
+      "firstSeenAt": "2026-11-25T23:09:03.842Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "RochesterFirst"
+      ],
+      "score": 1.36
+    },
+    {
       "id": "82218d53aaad",
       "cat": "flights",
       "kind": "news",
@@ -1474,23 +1515,6 @@
       "outlets": 1,
       "outletNames": [
         "CCB Belgium"
-      ],
-      "score": 1.34
-    },
-    {
-      "id": "5498b09fdb72",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA issues and lifts ground stop at Chicago’s O’Hare",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBNZFNyMDUwSUloYXNDWVBOYzNpQ0RscVlaMXhpN2hBcWd4TVhzODZwLWljdkg0NU9GXzBLZkljZkh2bElVZXpIRmFSUEpwUTFQNkg3QnpRYy0xd21leE4xZUg4ZGJlVkRxNWpsZ1pHcExmWEJ2NXVsVnRoMkNkalXSAYQBQVVfeXFMTlJ0TTdHUVdEb3RCdDhfYU81Rk9oMlpaM2hmZ0pKckZsRGM0SGFzWmdCODRNblhscUFEY2c4WWJ2WXBPU3ZNR2tqQ0V4c0pPMk9LVTBRRW5iTGpEM2RCbmtOcDhGaEprSUJrTjJDTjlSVUVfbW9iakd3WWphM3ZIZFE1MURx?oc=5",
-      "source": "The Hill",
-      "publishedAt": "2026-11-24T22:57:00.000Z",
-      "latestAt": "2026-11-24T23:49:45.000Z",
-      "firstSeenAt": "2026-11-25T18:53:19.113Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Hill",
-        "AOL.co.uk"
       ],
       "score": 1.34
     },
@@ -1701,22 +1725,6 @@
         "SecNews.gr"
       ],
       "score": 1.07
-    },
-    {
-      "id": "042a569c0da8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft saw 10 years' worth of failures in just 2 hours during global outage",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQU0VPcGtXWHpNQ0NNWjZBTlEwOGU3V0o4aXREREpENGFvMWtScnhLbDJfWDdreWFfOVc3a0ZVclFkSERBNG5yZVR1RU5jYXR1c3ZuM0lwVjNEZE5OMnNPX1pCZmJKUnhIMVp3ZGxNSGdMbmxJSlhBSlU1ODBvTnJTMkJjQXBPd3cyRFV1aXBXMGlMOTljSHJRUUZSazhiMExjaGFyLUQtV2xqYzVVNG1Kb3AxVkZuVkdtMHZ6YU8tVVA?oc=5",
-      "source": "Inshorts",
-      "publishedAt": "2026-11-25T07:24:46.000Z",
-      "latestAt": "2026-11-25T07:24:46.000Z",
-      "firstSeenAt": "2026-11-25T22:53:56.287Z",
-      "outlets": 1,
-      "outletNames": [
-        "Inshorts"
-      ],
-      "score": 1.04
     },
     {
       "id": "3f8fdb3f1a21",
