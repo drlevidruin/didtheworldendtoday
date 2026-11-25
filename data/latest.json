@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T13:22:21.083Z",
+  "buildTime": "2026-11-25T13:37:23.185Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 08:22 ET",
+  "etStamp": "2026-11-25 08:37 ET",
   "score": 74,
   "fired": [
     "flights",
@@ -48,21 +48,21 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1370,
-  "lastSuccessAt": "2026-11-25T13:22:21.083Z",
+  "headlinesRead": 1290,
+  "lastSuccessAt": "2026-11-25T13:37:23.185Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 22,
-    "hacks": 31,
-    "internet": 12,
+    "flights": 23,
+    "hacks": 30,
+    "internet": 11,
     "germs": 5,
     "grid": 7,
-    "weather": 5,
+    "weather": 6,
     "markets": 4,
+    "ai": 4,
     "sun": 4,
     "earth": 4,
-    "space": 2,
-    "ai": 4
+    "space": 2
   },
   "vital": {
     "quake": {
@@ -168,144 +168,94 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "A leak from Russia’s federal statistics agency made it possible to estimate the country’s military death toll in the war against Ukraine. What else did it reveal?"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1043,
+      "count": 1106,
       "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "bing": {
       "ok": true,
-      "count": 290,
-      "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "count": 96,
+      "error": "6 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 50,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-25T11:17:22.706Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T12:32:35.873Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T13:22:21.083Z"
+      "lastOkAt": "2026-11-25T13:37:23.185Z"
     }
   },
   "stories": [
-    {
-      "id": "a6c55f50f1ef",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Ground stop at Chicago O'Hare Airport For Second Day In a Row Amid Thanksgiving Travel Rush",
-      "url": "https://www.timesnownews.com/world/us/us-news/ground-stop-at-chicago-ohare-airport-for-second-day-in-a-row-amid-thanksgiving-travel-rush-article-156561878",
-      "source": "Times Now",
-      "publishedAt": "2026-11-24T13:42:00.000Z",
-      "latestAt": "2026-11-25T11:07:55.000Z",
-      "firstSeenAt": "2026-11-24T22:15:04.259Z",
-      "outlets": 32,
-      "outletNames": [
-        "Times Now",
-        "NBC 5 Chicago",
-        "JournalArta",
-        "https://www.thetraveler.org/",
-        "Rus Tourism News",
-        "Yahoo",
-        "Fox News",
-        "StreetInsider",
-        "FOX 32 Chicago",
-        "WGN-TV",
-        "WABC Radio",
-        "Operativ Məlumat Mərkəzi",
-        "9NEWS",
-        "KXLH News Helena",
-        "WTXL ABC 27 Tallahassee News",
-        "KSBY News",
-        "10News.com",
-        "Idaho News 6",
-        "23ABC News Bakersfield",
-        "FOX 13 News Utah",
-        "Scripps News",
-        "Shaw Local",
-        "KTVQ",
-        "WCPO 9 Cincinnati",
-        "Mezha.net",
-        "Hindustan Times",
-        "wrganews.com",
-        "Peradaban.id",
-        "National News Desk",
-        "WOAI",
-        "KTUL",
-        "NewsNation"
-      ],
-      "score": 5.14
-    },
     {
       "id": "4144781d773d",
       "cat": "flights",
@@ -409,6 +359,29 @@
         "hub": true,
         "nationwide": false,
         "reason": "wind"
+      }
+    },
+    {
+      "id": "sig:faa-stop:ORD:2026-11-24",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at ORD (equipment outage)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-24T21:29:56.381Z",
+      "latestAt": "2026-11-24T21:29:56.381Z",
+      "firstSeenAt": "2026-11-24T21:29:56.381Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "ORD",
+        "hub": true,
+        "nationwide": false,
+        "reason": "equipment outage"
       }
     },
     {
@@ -573,29 +546,6 @@
       "score": 2.41
     },
     {
-      "id": "sig:faa-stop:ORD:2026-11-24",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at ORD (equipment outage)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-24T21:29:56.381Z",
-      "latestAt": "2026-11-24T21:29:56.381Z",
-      "firstSeenAt": "2026-11-24T21:29:56.381Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "ORD",
-        "hub": true,
-        "nationwide": false,
-        "reason": "equipment outage"
-      }
-    },
-    {
       "id": "423698a4ff54",
       "cat": "flights",
       "kind": "news",
@@ -640,6 +590,24 @@
       "score": 4.01
     },
     {
+      "id": "899c23b9703f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "A government watchdog warned about disruptions before the FAA grounded flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOejltVVg1ZUV5Rml4cV9hZ0RoaFkxejFDSlVTRVNrRFlnbk15ay02cjd5QWZaenFBUV9HSUVwTkVCNG9udGJETS1VV21WVkZxRHJ5TE5nYTlTWUhVN3M0emlqNnVfNVpaS1Exd0FId0tvVXE4X1A1RGFjTkhPTXhsT1hlQ3Y0TDh4RVRuZ193ZlM0X3JlVFAwVzJ0RzJQYjM1MTk0ZXVORkxrY2J4S2ZZYUdTZ0xDUldGVGpOSEpVaXFQZEd1eVJ6bmFQX3N2bjZZV25EODhwZTkyVW4yby1mTWFEYlpaODkwWGt1QjlOVC02c2Rac1FVSGhmc0tINHhwdGtyMnVMRWg0c3ZH?oc=5",
+      "source": "weareiowa.com",
+      "publishedAt": "2026-11-24T22:19:00.000Z",
+      "latestAt": "2026-11-24T22:19:00.000Z",
+      "firstSeenAt": "2026-11-24T22:45:11.907Z",
+      "outlets": 3,
+      "outletNames": [
+        "weareiowa.com",
+        "WKYC",
+        "WTHR"
+      ],
+      "score": 3.59
+    },
+    {
       "id": "95a87fd705d5",
       "cat": "hacks",
       "kind": "news",
@@ -680,23 +648,22 @@
       "score": 2.84
     },
     {
-      "id": "42f87fae315d",
+      "id": "dd86ac7e3b59",
       "cat": "hacks",
       "kind": "news",
-      "title": "Latest headlines | Data breach keeps myColorado app offline as Thanksgiving travel nears",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxONXNpdkVlNE1WV01DY3AtUllTeFFUcVJLLWt1b2N0X3N4XzZiMmlFSTRaZXlQY3J4THVVTld1aVZrN3RmcV9Gb0dpZVRDZnpCYm9pOGpKZmRHY0Q2c1FuUVd1Vnlxcm8zTXhEQmZ4cThRM3pHTFhEZDdvay1FUzRreElRd2lfMFNOdWV0MmZjOHVDSmdIUkdGSlljQmpha2FwMTBBS3pIWVh5MnBhLWh6MGVCWVZTMFV3SzlIOFZLa3Qxc0ZhaVpvSHAySkQ0ekNaWmJmUlJza29PV0IyMWxQdUljRjc2dVRwdFZmclN2VXAySkJBZG5XVHJ3dzV5UTdFRFk2RXoydmxVc2pG?oc=5",
-      "source": "9News",
-      "publishedAt": "2026-11-24T13:30:00.000Z",
-      "latestAt": "2026-11-24T23:33:00.000Z",
-      "firstSeenAt": "2026-11-24T18:44:26.551Z",
-      "outlets": 4,
+      "title": "Cyberattack reportedly exposes unclassified data at CIA, US intelligence office",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02Y2xRNUxPeGtXbHRseWpqdXB3UWpYVk93ZjRtUlluQ2tWOTR6QmNLZTBFQUpfb1RGZDhudE9kLU9TcEMyT3Zkb0NvdGRxb3otbmFzVXA0ZHc?oc=5",
+      "source": "TRT World",
+      "publishedAt": "2026-11-24T21:40:19.000Z",
+      "latestAt": "2026-11-25T07:17:35.000Z",
+      "firstSeenAt": "2026-11-24T22:15:04.259Z",
+      "outlets": 3,
       "outletNames": [
-        "9News",
-        "Yahoo",
-        "AOL.com",
-        "The Coloradoan"
+        "TRT World",
+        "Baller Alert",
+        "Speaks Media"
       ],
-      "score": 2.74
+      "score": 2.56
     },
     {
       "id": "3ada2f639399",
@@ -910,24 +877,6 @@
       "score": 1.52
     },
     {
-      "id": "899c23b9703f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "A government watchdog warned about disruptions before the FAA grounded flights nationwide",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOejltVVg1ZUV5Rml4cV9hZ0RoaFkxejFDSlVTRVNrRFlnbk15ay02cjd5QWZaenFBUV9HSUVwTkVCNG9udGJETS1VV21WVkZxRHJ5TE5nYTlTWUhVN3M0emlqNnVfNVpaS1Exd0FId0tvVXE4X1A1RGFjTkhPTXhsT1hlQ3Y0TDh4RVRuZ193ZlM0X3JlVFAwVzJ0RzJQYjM1MTk0ZXVORkxrY2J4S2ZZYUdTZ0xDUldGVGpOSEpVaXFQZEd1eVJ6bmFQX3N2bjZZV25EODhwZTkyVW4yby1mTWFEYlpaODkwWGt1QjlOVC02c2Rac1FVSGhmc0tINHhwdGtyMnVMRWg0c3ZH?oc=5",
-      "source": "weareiowa.com",
-      "publishedAt": "2026-11-24T22:19:00.000Z",
-      "latestAt": "2026-11-24T22:19:00.000Z",
-      "firstSeenAt": "2026-11-24T22:45:11.907Z",
-      "outlets": 3,
-      "outletNames": [
-        "weareiowa.com",
-        "WKYC",
-        "WTHR"
-      ],
-      "score": 3.59
-    },
-    {
       "id": "0dd78f3eb490",
       "cat": "flights",
       "kind": "news",
@@ -944,24 +893,6 @@
         "AOL"
       ],
       "score": 2.72
-    },
-    {
-      "id": "dd86ac7e3b59",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack reportedly exposes unclassified data at CIA, US intelligence office",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02Y2xRNUxPeGtXbHRseWpqdXB3UWpYVk93ZjRtUlluQ2tWOTR6QmNLZTBFQUpfb1RGZDhudE9kLU9TcEMyT3Zkb0NvdGRxb3otbmFzVXA0ZHc?oc=5",
-      "source": "TRT World",
-      "publishedAt": "2026-11-24T21:40:19.000Z",
-      "latestAt": "2026-11-25T07:17:35.000Z",
-      "firstSeenAt": "2026-11-24T22:15:04.259Z",
-      "outlets": 3,
-      "outletNames": [
-        "TRT World",
-        "Baller Alert",
-        "Speaks Media"
-      ],
-      "score": 2.56
     },
     {
       "id": "e724a6fe278b",
@@ -1088,23 +1019,6 @@
         "AOL.com"
       ],
       "score": 2.02
-    },
-    {
-      "id": "fad84ef0d0fc",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Spotify outage hit thousands of users before service was restored",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE55SHVENTUwMThWWi1rMktTVV9Ja0dHTVJpVDM4WWpOSVpyZjBKTTdzUkwzdFZUUlVBRjFaMVVGZXJiYnUwcXF6U0hfcmhrX0ZkNG5wbEYtdUZpTV9iQjNvSXNXbVJFTTM2TTRDVmdncURlYjIyME0yRA?oc=5",
-      "source": "qz.com",
-      "publishedAt": "2026-11-24T13:26:44.000Z",
-      "latestAt": "2026-11-24T13:31:09.000Z",
-      "firstSeenAt": "2026-11-24T13:28:32.062Z",
-      "outlets": 2,
-      "outletNames": [
-        "qz.com",
-        "Quartz"
-      ],
-      "score": 2
     },
     {
       "id": "d2d65e9a6a90",
@@ -1708,22 +1622,6 @@
       "score": 1.38
     },
     {
-      "id": "8a4d591cbf3b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "McDonald’s Japan hit by data breach — customer purchase and location data leaked in latest major incident in the country",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQVnNJOEdIaTE4TENFZm1vU2JqTnVuNkE0dUk4d1NhU1dQSnYxVWtKb2JzSHJfSHpyd3lnUmt2NTZuWVE2V3UzcEhuem91bWxTYVZJUkI1RFdpSURtMjRmbXJtSHo4bEItOFUzQ3RlXzZ2Y0xmdmxJdW42SkdQNDZ6Zk9ncS1Zem1rMTViODlOcW5LZ3g0dUozQkJtdnF5WGpheVhnM0hnaXA3eTg0S0ZsRUlyRG5jWGROLVNHbjNXd1JHYkJ2cWFKdGI2VktKSDFsUlhXTGduM2dNekRzRXF6YjVEZkUzVkVFeHpzdQ?oc=5",
-      "source": "TechRadar",
-      "publishedAt": "2026-11-25T11:42:24.000Z",
-      "latestAt": "2026-11-25T11:42:24.000Z",
-      "firstSeenAt": "2026-11-25T13:22:21.083Z",
-      "outlets": 1,
-      "outletNames": [
-        "TechRadar"
-      ],
-      "score": 1.36
-    },
-    {
       "id": "82218d53aaad",
       "cat": "flights",
       "kind": "news",
@@ -1772,6 +1670,73 @@
       "score": 1.31
     },
     {
+      "id": "ca043b17770a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA system hacked in latest major data breach",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5fUldpM1hHV2RXZDM3MU1NTlg0N0VPTjhDUTFNYzZBeGZMVEVNeEVYU1ZsRmRYS0diM0NHRjJKYWFpdUZEcTYxRHBDYzQ2TkgzY2pKRnJNTFowTVpJek5R0gFcQVVfeXFMTUVWYWJTNVJfWDhsdnl6UEd6V0ZEZWx1RlEyZVpIbUYwaXZ4SHl4dEJYYlJKY2tsLWNsSUo1c29nMmN1QV9ldHo2cG94M0RxN2tjZkNLSGpkZDA3MmI?oc=5",
+      "source": "Modern Ghana",
+      "publishedAt": "2026-11-25T00:10:00.000Z",
+      "latestAt": "2026-11-25T00:10:00.000Z",
+      "firstSeenAt": "2026-11-25T04:31:12.371Z",
+      "outlets": 1,
+      "outletNames": [
+        "Modern Ghana"
+      ],
+      "score": 1.3
+    },
+    {
+      "id": "08c3cef74baf",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta restores key system after Atlanta outage disrupts flights",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOTlBjWW1tZ0xXRi1fMURGSEZtOEJxSnVwQ0stcW45ZmhnYkV4cmNmQjJROFNFekhhcFdhaUVyc0c4NmpxSmNRNzBHeWxVRXV2bzRqUExMMElnYkNxNU9BdU94ZUhWZ1gwbWZTOGhoUkoxc0d1aV9TTUJKdHJPbGsyY3Rrb2FvSHlkRVpmSE9PQjB4TWV3WVRF?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-24T16:30:39.000Z",
+      "latestAt": "2026-11-25T13:36:47.000Z",
+      "firstSeenAt": "2026-11-25T13:37:23.185Z",
+      "outlets": 2,
+      "outletNames": [
+        "https://www.thetraveler.org/",
+        "www.thetraveler.org"
+      ],
+      "score": 1.3
+    },
+    {
+      "id": "f2c3b5bc12f4",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Another brief ground stop at O'Hare as record numbers expected at Chicago airports for Thanksgiving travel",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa0RvVUZSQUhaSzVNdjl3TzZCQmhpOWt3dV9sMTBKWTROdnZucHlrbDlXYlk0UWEwc1M0TkRYLTJ3YklRZFh1M2Jod1RPelRfLVoydHZpcm5OMFh3Mkh3d25NaTBqNnJDYXBUNE1DcFJXQ1pZaUtiRDBERTlNMm9QUFo0Zk5BN2d3T1g4?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-24T23:37:48.000Z",
+      "latestAt": "2026-11-24T23:37:48.000Z",
+      "firstSeenAt": "2026-11-25T04:46:11.815Z",
+      "outlets": 1,
+      "outletNames": [
+        "CBS News"
+      ],
+      "score": 1.28
+    },
+    {
+      "id": "d1f8478fdf6c",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Watch King tides flood Mill Valley streets as California braces for record high waters - America's Weather Center",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONHlCUFQtekVDSDhscW5FZHY0aXhNUXNYUFd2OElIMFViODFMZGdvT0t1c21XNzAteWR0VW1fLUZteV9PeW5URl9hYTZ6TEswdUktUzRiSzhrLWlqbE9tazdYbG4yMWUwRWFJTlh4TXgtb2pna0dwYkFsMnFNMjNsS3V0bG5fd2RaN0VSMDFCMnJoaVRYc0lqbDNMWjRTSnR4NVB1S2wyRHRHbDJEVklUMTdsUkVGajdkTUNsdnVkRmdtTmw1TUhzaWxwdUg?oc=5",
+      "source": "FOX One",
+      "publishedAt": "2026-11-24T20:19:02.000Z",
+      "latestAt": "2026-11-24T20:19:02.000Z",
+      "firstSeenAt": "2026-11-25T03:30:57.644Z",
+      "outlets": 1,
+      "outletNames": [
+        "FOX One"
+      ],
+      "score": 1.23,
+      "quiet": true,
+      "quietReason": "headline mentions flood"
+    },
+    {
       "id": "7dc531d5f964",
       "cat": "markets",
       "kind": "news",
@@ -1788,6 +1753,22 @@
       "score": 1.06
     },
     {
+      "id": "b802790718c1",
+      "cat": "ai",
+      "kind": "news",
+      "title": "OpenAI Outage Today: Is OpenAI Down in the UK? Users Report ChatGPT, API, Login, AI Response & Website Issues | Check Latest Downdetector Status",
+      "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOTFVwa29yVVRmYkhNS1JWcUVSWnVpQmh6WU4tRDZEOGE2a3JNZE1TQmx2NjdFNjltQmlXdV9zXzc5aHdzd1Z0dGw1X0p1V1A0aUNLcVRPbkl6czFyT1dVc3hRRGhrZHlNcGJ1bGE2akVpS0Nxa0FOdVkyM3pZVEt3QnN1MnJLQWY5LUZ6TGFjLUpPRzl0UGlZLUd1aUhrRVdRLWJZWDlRb0h1anRhaF9JblJ6MFRsT0FxTnJCYUhiTEEwTVM5eHBZTW5EN25fNVZXMldKekNCVFl5dDVxR0ItY0YtQlVtaE5PM2tHb2RxamlFTmxySUhCNzVnM1dPUXF2OXFWRWcxcXFLN3FVRy1lMtIBlgJBVV95cUxNT2hBVzkydWVJdmppa19fSDVLNng3WFB2alRUaW9adXZrY1lWdFhYY0tyWUJvWFVOc1U4dVNSUGY2ekZLcGU5am5TbFZQS2JrV0MyS1pHS2RHcEpOU2tPOHhseGIwcG05X3dvams5QmRMR0ItZHF4QTItdl9aX0kxMlBFcGtjODNJTjVxeVhRUWRxcjRaSlQ2bmFXRUxhcXlMbFNkb3YtajdHVUhsMTh1RlIxNHc1TDdQdnVFN21mdmN1OWdSbjZWMHFqLV9hSnNFWHE4VlhBWThoRjQ0em9yMFBmVjNtMlBId19TQXJZUGl4WjRSZGQzMjNRRndLdmpTWVBqNkk0Q0MwRTlHc0d0NlRDY25zUQ?oc=5",
+      "source": "The Sunday Guardian",
+      "publishedAt": "2026-11-25T13:24:06.000Z",
+      "latestAt": "2026-11-25T13:24:06.000Z",
+      "firstSeenAt": "2026-11-25T13:37:23.185Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Sunday Guardian"
+      ],
+      "score": 1
+    },
+    {
       "id": "0edb9f27fed7",
       "cat": "sun",
       "kind": "news",
@@ -1795,7 +1776,7 @@
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZngtMG1pblMtUnprbFc5bHdLaXd1Q1B1X0tPOFJRd3F1c25Wdk9QUXpXWVdtNXVuNmE3el9xdWNQT0tVeVFqTjdIUHhxamlyd0xsa3NRM09abTRNQmJuQXRwdHIxaWdYSDcyS1BGdEF4cVVqbXdZYlRRNExLWFp0QjJIY0RzalpzR3l3TzY1eUVwNlRQaGFDanRSWmprUQ?oc=5",
       "source": "Vancouver Is Awesome",
       "publishedAt": "2026-11-25T13:19:34.000Z",
-      "latestAt": "2026-11-25T13:19:34.000Z",
+      "latestAt": "2026-11-25T13:29:16.000Z",
       "firstSeenAt": "2026-11-25T13:22:21.083Z",
       "outlets": 1,
       "outletNames": [
@@ -2008,22 +1989,6 @@
       "outlets": 1,
       "outletNames": [
         "Moneycontrol"
-      ],
-      "score": 0.86
-    },
-    {
-      "id": "9c77cfaf2dab",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Anthropic Has Been Straight Down Since Its IPO",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-straight-down-since-ipo-220815392.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-24T14:08:00.000Z",
-      "latestAt": "2026-11-24T14:08:00.000Z",
-      "firstSeenAt": "2026-11-24T22:30:08.734Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yahoo Finance"
       ],
       "score": 0.86
     },
