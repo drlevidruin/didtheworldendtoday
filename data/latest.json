@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T00:45:33.233Z",
+  "buildTime": "2026-11-25T01:00:39.327Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 19:45 ET",
+  "etStamp": "2026-11-24 20:00 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,14 +48,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1014,
-  "lastSuccessAt": "2026-11-25T00:45:33.233Z",
+  "headlinesRead": 466,
+  "lastSuccessAt": "2026-11-25T01:00:39.327Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 22,
-    "internet": 15,
-    "earth": 8,
-    "hacks": 30,
+    "flights": 21,
+    "internet": 16,
+    "earth": 9,
+    "hacks": 29,
     "grid": 9,
     "weather": 4,
     "germs": 4,
@@ -183,15 +183,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 686,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "count": 137,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 6 of 26 queries)",
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     },
     "bing": {
       "ok": true,
-      "count": 288,
+      "count": 289,
       "error": null,
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,37 +203,37 @@
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +246,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T00:45:33.233Z"
+      "lastOkAt": "2026-11-25T01:00:39.327Z"
     }
   },
   "stories": [
@@ -328,7 +328,7 @@
       "url": "https://www.msn.com/en-us/news/other/exclusive-microsoft-declares-code-red-after-historic-outage-internal-memos-show/ar-AA2i8YNF",
       "source": "Reuters on MSN",
       "publishedAt": "2026-11-24T05:31:00.000Z",
-      "latestAt": "2026-11-25T00:30:09.000Z",
+      "latestAt": "2026-11-25T00:59:09.000Z",
       "firstSeenAt": "2026-11-24T19:59:40.773Z",
       "outlets": 32,
       "outletNames": [
@@ -392,7 +392,7 @@
       }
     },
     {
-      "id": "76df64bdaeb1",
+      "id": "9daf9ac39693",
       "cat": "earth",
       "kind": "news",
       "title": "Nepal earthquake: 5.6 magnitude tremor strikes near China border",
@@ -513,6 +513,28 @@
       }
     },
     {
+      "id": "857010ed9caa",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Spotify back online after brief outage, Downdetector shows",
+      "url": "https://www.channelnewsasia.com/business/spotify-back-online-after-brief-outage-downdetector-shows-6578296",
+      "source": "CNA",
+      "publishedAt": "2026-11-24T12:11:00.000Z",
+      "latestAt": "2026-11-24T20:22:54.000Z",
+      "firstSeenAt": "2026-11-24T22:30:08.734Z",
+      "outlets": 7,
+      "outletNames": [
+        "TradingView",
+        "Reuters",
+        "Newswav",
+        "The Straits Times",
+        "101 WIXX",
+        "CNA",
+        "AOL.co.uk"
+      ],
+      "score": 3.15
+    },
+    {
       "id": "b0d98bb927fa",
       "cat": "hacks",
       "kind": "news",
@@ -570,27 +592,6 @@
         "The Detroit News",
         "USA Today",
         "Milwaukee Journal Sentinel"
-      ],
-      "score": 2.97
-    },
-    {
-      "id": "857010ed9caa",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Spotify back online after brief outage, Downdetector shows",
-      "url": "https://www.channelnewsasia.com/business/spotify-back-online-after-brief-outage-downdetector-shows-6578296",
-      "source": "CNA",
-      "publishedAt": "2026-11-24T12:11:00.000Z",
-      "latestAt": "2026-11-24T20:22:54.000Z",
-      "firstSeenAt": "2026-11-24T22:30:08.734Z",
-      "outlets": 6,
-      "outletNames": [
-        "TradingView",
-        "Reuters",
-        "Newswav",
-        "The Straits Times",
-        "101 WIXX",
-        "CNA"
       ],
       "score": 2.97
     },
@@ -803,6 +804,24 @@
       "score": 2.53
     },
     {
+      "id": "76df64bdaeb1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6-magnitude earthquake jolts Nepal-Tibet border",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yUUtSYXJTZjJVWEs4aWN2WTlRSVdFMXFPOVJVWkFUNm9hcE1nc2lrT1dnV3ZWVHZ2NGlUZE02UTNTVUxlMHUxMkZmc0lSMFJCZzZwVjVkMA?oc=5",
+      "source": "The Annapurna Express",
+      "publishedAt": "2026-11-24T03:45:18.000Z",
+      "latestAt": "2026-11-24T04:46:12.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Annapurna Express",
+        "The Himalayan Times",
+        "The Business Standard"
+      ],
+      "score": 2.53
+    },
+    {
       "id": "edfc3c91a52c",
       "cat": "internet",
       "kind": "news",
@@ -928,25 +947,6 @@
         "Daily Excelsior"
       ],
       "score": 1.84
-    },
-    {
-      "id": "f60198f20192",
-      "cat": "earth",
-      "kind": "news",
-      "title": "6.8 magnitude Earthquake strikes central Peru",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oQW5McjlMQTNUeFNjWnpDNDB5R3lBVFVoODhBemQyVGxEaW01Yld0eEZ6QktIQU4yNng5elBVbnE4ZVZDY2FaT0dVTEFTdGVkN1AyT1NtSGRob1BUQkNjN25LTGZHZFR0ZUs0SlBYRXotcFNHbzl5NFhJcw?oc=5",
-      "source": "News On AIR",
-      "publishedAt": "2026-11-24T12:44:25.000Z",
-      "latestAt": "2026-11-24T20:41:43.000Z",
-      "firstSeenAt": "2026-11-24T19:44:39.275Z",
-      "outlets": 2,
-      "outletNames": [
-        "News On AIR",
-        "The Daily Star"
-      ],
-      "score": 1.77,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "0bc4c2c85c92",
@@ -1296,6 +1296,25 @@
       "score": 1.77
     },
     {
+      "id": "f60198f20192",
+      "cat": "earth",
+      "kind": "news",
+      "title": "6.8 magnitude Earthquake strikes central Peru",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oQW5McjlMQTNUeFNjWnpDNDB5R3lBVFVoODhBemQyVGxEaW01Yld0eEZ6QktIQU4yNng5elBVbnE4ZVZDY2FaT0dVTEFTdGVkN1AyT1NtSGRob1BUQkNjN25LTGZHZFR0ZUs0SlBYRXotcFNHbzl5NFhJcw?oc=5",
+      "source": "News On AIR",
+      "publishedAt": "2026-11-24T12:44:25.000Z",
+      "latestAt": "2026-11-24T20:41:43.000Z",
+      "firstSeenAt": "2026-11-24T19:44:39.275Z",
+      "outlets": 2,
+      "outletNames": [
+        "News On AIR",
+        "The Daily Star"
+      ],
+      "score": 1.77,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "e6e47f1883d4",
       "cat": "hacks",
       "kind": "news",
@@ -1396,6 +1415,23 @@
         "blue News"
       ],
       "score": 1.73
+    },
+    {
+      "id": "bfac433ea064",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Stock Falls 7% in a Month as 24-Hour Outage Triggers \"Code Red\"",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMmswXzV3QXUxa3JXUFpWUEtGWHZyZzdjdUpsN0pmZzgxM2pqaFMzeXVidDV1ZEY1ZmNJbDIxMHJ5WkVaUF9ValMwdTZzSVQ2Qjdid0RvX3NISXNlLTNiYmx5dTlWdVNvcUVEX2RNNElFeDU5WjlaRTF3a3UzaHBTeXIzZFUxdDFTeDJ1Q1ozdGlJX2FXVmNKSXhaMHV6QVk?oc=5",
+      "source": "Coinpaper",
+      "publishedAt": "2026-11-24T16:29:14.000Z",
+      "latestAt": "2026-11-24T16:43:22.000Z",
+      "firstSeenAt": "2026-11-25T01:00:39.327Z",
+      "outlets": 2,
+      "outletNames": [
+        "Coinpaper",
+        "Blockonomi"
+      ],
+      "score": 1.72
     },
     {
       "id": "c2d129a0cce4",
@@ -1570,6 +1606,23 @@
         "inkl"
       ],
       "score": 1.64
+    },
+    {
+      "id": "54719ad59404",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA issues ground-stop for some flights at Chicago O’Hare airport",
+      "url": "https://www.yahoo.com/news/videos/faa-issues-ground-stop-flights-215400632.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T13:54:00.000Z",
+      "latestAt": "2026-11-24T13:57:00.000Z",
+      "firstSeenAt": "2026-11-25T01:00:39.327Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "fox"
+      ],
+      "score": 1.63
     },
     {
       "id": "f459bfec5c0c",
@@ -1913,56 +1966,6 @@
       "outletNames": [
         "@Breaking911 on X"
       ],
-      "score": 1.39
-    },
-    {
-      "id": "60be44f5f9fe",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Router Failure Triggers Nationwide Flight Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4xaW00X0loTTZnbEpVZUtNVmV2N0h6QnpXMWd0QXdWVXVqMUJaVHFoRGdJSUJVS3piTGZ5TnVTbUJycmNCa05TOWVXR2dGcEE3WWhjUlFwa01pbG1hNXpKaXJn?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-24T15:45:09.000Z",
-      "latestAt": "2026-11-24T15:45:09.000Z",
-      "firstSeenAt": "2026-11-24T15:58:57.995Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "b207266f3529",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Family denied refund after nationwide ground stop ruined cruise trip",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbFB4ZW5YMXJzX3NncjJBTDBoQ1c2YVZDMUs5ZU9hYVIzcjJPQjY2MXkxaDlzN3A3QUFWbTVWUXNTSW10MUZkZmhaRVZCUzhiblN3R1o5eEx2WXRHOUZ6UUdFaHZhQ01STXRhRXVlT3JQNEZXLUlaSHBRTUY4OVlWWVNSZUktczhreFVqdW1PRFowRjd2bHBLaFRR?oc=5",
-      "source": "Daily Mail",
-      "publishedAt": "2026-11-24T15:37:40.000Z",
-      "latestAt": "2026-11-24T15:37:40.000Z",
-      "firstSeenAt": "2026-11-24T15:58:57.995Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Mail"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "2301fe56c583",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Massive dataset of 2 billion records exposes passwords, emails, cookies and more",
-      "url": "https://cybernews.com/security/supersized-dataset-2-billion-records-exposed/",
-      "source": "Cybernews",
-      "publishedAt": "2026-11-24T13:30:00.000Z",
-      "latestAt": "2026-11-24T13:30:00.000Z",
-      "firstSeenAt": "2026-11-24T13:58:34.717Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cybernews"
-      ],
-      "trending": 500,
-      "trendTerm": "3.5 billion records exposed database leak",
       "score": 1.39
     },
     {
