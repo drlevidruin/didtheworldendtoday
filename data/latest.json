@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T23:39:01.672Z",
+  "buildTime": "2026-11-25T23:54:07.166Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 18:39 ET",
+  "etStamp": "2026-11-25 18:54 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,17 +49,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1362,
-  "lastSuccessAt": "2026-11-25T23:39:01.672Z",
+  "headlinesRead": 1367,
+  "lastSuccessAt": "2026-11-25T23:54:07.166Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
+    "flights": 16,
     "hacks": 36,
-    "internet": 14,
+    "internet": 12,
     "germs": 5,
     "markets": 5,
     "animals": 1,
-    "grid": 4,
+    "grid": 5,
     "ai": 4,
     "weather": 4,
     "earth": 4,
@@ -181,20 +181,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1046,
+      "count": 1076,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     },
     "bing": {
       "ok": true,
-      "count": 283,
-      "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "count": 262,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,55 +206,56 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:39:01.672Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T23:39:01.672Z"
+      "lastOkAt": "2026-11-25T23:54:07.166Z"
     }
   },
   "stories": [
@@ -431,7 +432,7 @@
       "publishedAt": "2026-11-25T06:22:34.000Z",
       "latestAt": "2026-11-25T22:20:32.000Z",
       "firstSeenAt": "2026-11-25T23:39:01.672Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "Seoul Economic Daily",
         "The Washington Post",
@@ -439,9 +440,10 @@
         "Insurance Journal",
         "Security Boulevard",
         "LinkedIn",
-        "Facebook"
+        "Facebook",
+        "WSB-TV"
       ],
-      "score": 2.71
+      "score": 2.85
     },
     {
       "id": "f80797f2b955",
@@ -532,6 +534,36 @@
         "AOL.com"
       ],
       "score": 2.22
+    },
+    {
+      "id": "e734ac6588cd",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Equipment outage triggers brief FAA ground stop on flights to O’Hare",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxON25qUzVCUHluS2NLUXdJOXJfNGlNeU42ME9LY3V4ZmhMWG5jd2VWcnFuT0FZYW5FYmMzc0JSaG9sVlZjX29JZzJaaE85NTZET0FNU1REZnU2cnluWi1ldGlqbmNFSWZnblE0SHZwRHVHWVA3LWQ3N3ZQVExNSmNMc1h5VHRnRFRDVVIwdGZUekFwc3BCTXdpY0lTM2U?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-25T00:25:46.000Z",
+      "latestAt": "2026-11-25T21:37:00.000Z",
+      "firstSeenAt": "2026-11-25T23:54:07.166Z",
+      "outlets": 15,
+      "outletNames": [
+        "https://www.thetraveler.org/",
+        "Newsmax",
+        "AeroTime",
+        "AOL.com",
+        "WJAR",
+        "Saudi Gazette",
+        "KEYE",
+        "The City University of New York",
+        "The Lufkin Daily News",
+        "Demokratis.co.id",
+        "Aviation A2Z",
+        "The Mirror US",
+        "Avi-Go",
+        "cedarnews.net",
+        "Yahoo"
+      ],
+      "score": 2.99
     },
     {
       "id": "a9e3c4d84247",
@@ -709,23 +741,6 @@
       "score": 1.99
     },
     {
-      "id": "3b15d213ea1a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Another ground stop delays travelers at O'Hare airport",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T04:16:00.000Z",
-      "latestAt": "2026-11-25T04:16:48.000Z",
-      "firstSeenAt": "2026-11-25T05:16:26.751Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "ABC7 Chicago"
-      ],
-      "score": 1.97
-    },
-    {
       "id": "4f0994ffe67a",
       "cat": "grid",
       "kind": "news",
@@ -813,6 +828,23 @@
       "score": 1.67
     },
     {
+      "id": "c9a6d38cc05d",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Map Shows States at Risk of Thanksgiving Power Outages",
+      "url": "https://www.newsweek.com/map-shows-states-at-risk-of-thanksgiving-power-outages-12768464",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-25T12:17:00.000Z",
+      "latestAt": "2026-11-25T12:49:00.000Z",
+      "firstSeenAt": "2026-11-25T23:54:07.166Z",
+      "outlets": 2,
+      "outletNames": [
+        "Newsweek",
+        "AOL"
+      ],
+      "score": 1.61
+    },
+    {
       "id": "a7980bb2bb2c",
       "cat": "grid",
       "kind": "news",
@@ -825,22 +857,6 @@
       "outlets": 1,
       "outletNames": [
         "De Último Minuto"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "fae6145286ca",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
-      "source": "Coinpaper",
-      "publishedAt": "2026-11-25T17:34:59.000Z",
-      "latestAt": "2026-11-25T17:34:59.000Z",
-      "firstSeenAt": "2026-11-25T18:08:07.848Z",
-      "outlets": 1,
-      "outletNames": [
-        "Coinpaper"
       ],
       "score": 1.39
     },
@@ -946,6 +962,23 @@
       "outletNames": [
         "Bioengineer.org",
         "cedarnews.net"
+      ],
+      "score": 1.97
+    },
+    {
+      "id": "3b15d213ea1a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Another ground stop delays travelers at O'Hare airport",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T04:16:00.000Z",
+      "latestAt": "2026-11-25T04:16:48.000Z",
+      "firstSeenAt": "2026-11-25T05:16:26.751Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "ABC7 Chicago"
       ],
       "score": 1.97
     },
@@ -1321,6 +1354,22 @@
         "cbs19.tv"
       ],
       "score": 1.4
+    },
+    {
+      "id": "fae6145286ca",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
+      "source": "Coinpaper",
+      "publishedAt": "2026-11-25T17:34:59.000Z",
+      "latestAt": "2026-11-25T17:34:59.000Z",
+      "firstSeenAt": "2026-11-25T18:08:07.848Z",
+      "outlets": 1,
+      "outletNames": [
+        "Coinpaper"
+      ],
+      "score": 1.39
     },
     {
       "id": "cd30a07ae631",
@@ -1711,36 +1760,20 @@
       "score": 1.13
     },
     {
-      "id": "853791ba62a4",
-      "cat": "internet",
+      "id": "efa721a1dcea",
+      "cat": "weather",
       "kind": "news",
-      "title": "TikTok: Major outage with 25,000 reports",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOOG5YcE1WUUoyd2ZQdmhVWGViZmtIQjZobWs2VElTOU1TejJyVzh1M25hRUJLSm91anRTcW5BNzdNYjFUa1hCbkdfMEFLMTMxV1pOVGRGM0NmU3lFWEJxcDlvRklFbHdRM3cyT1AwdGQyczNYckM1OEVuUldSS1M2WUdR?oc=5",
-      "source": "SecNews.gr",
-      "publishedAt": "2026-11-25T08:17:34.000Z",
-      "latestAt": "2026-11-25T08:17:34.000Z",
-      "firstSeenAt": "2026-11-25T23:39:01.672Z",
+      "title": "West Nashville homeowner still waiting to rebuild more than 300 days after ice storm",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWEZ2UkRETWp1TnVyTUpUYkE1b1JqOW5LRFp2aS1vNlhGSWdFYW5sVXEzZ3RYNTF3NlVkTEs3M2F5Q3ZSd2JZMjNabVVSZUF0ZDd6RkJpam9mVm8tUmhENXlwZDUyazJsQkIya0xpd0RPODFqYXdwQkdWbmhwUE5tOHVnY3ZxRTM2bWpISWFvRVpScDVuMzI2R1duQ2xtbGd0eWVReVN1aGpYVjF5RXotNFZBTnI?oc=5",
+      "source": "WSMV",
+      "publishedAt": "2026-11-25T23:50:00.000Z",
+      "latestAt": "2026-11-25T23:50:00.000Z",
+      "firstSeenAt": "2026-11-25T23:54:07.166Z",
       "outlets": 1,
       "outletNames": [
-        "SecNews.gr"
+        "WSMV"
       ],
-      "score": 1.04
-    },
-    {
-      "id": "042a569c0da8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft saw 10 years' worth of failures in just 2 hours during global outage",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQU0VPcGtXWHpNQ0NNWjZBTlEwOGU3V0o4aXREREpENGFvMWtScnhLbDJfWDdreWFfOVc3a0ZVclFkSERBNG5yZVR1RU5jYXR1c3ZuM0lwVjNEZE5OMnNPX1pCZmJKUnhIMVp3ZGxNSGdMbmxJSlhBSlU1ODBvTnJTMkJjQXBPd3cyRFV1aXBXMGlMOTljSHJRUUZSazhiMExjaGFyLUQtV2xqYzVVNG1Kb3AxVkZuVkdtMHZ6YU8tVVA?oc=5",
-      "source": "Inshorts",
-      "publishedAt": "2026-11-25T07:24:46.000Z",
-      "latestAt": "2026-11-25T07:24:46.000Z",
-      "firstSeenAt": "2026-11-25T23:39:01.672Z",
-      "outlets": 1,
-      "outletNames": [
-        "Inshorts"
-      ],
-      "score": 1.02
+      "score": 1
     },
     {
       "id": "3f8fdb3f1a21",
@@ -1805,22 +1838,6 @@
         "Starlust.org"
       ],
       "score": 1
-    },
-    {
-      "id": "251d291f0bd0",
-      "cat": "weather",
-      "kind": "news",
-      "title": "London’s Lights in La Vergne repair after ice storm",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOTlCVGpRS3Q4UjJDckFBc0RZNE5kb3NwV0RILXZzaGpzdkFadjZxbTFGNHpLQlNQaDM0WEJGT1dMaTJacEluQkU4alhWbV9LalpnSUkzRHlfenZvOUtmLUgwbFprQUNJNC1kWnpWUV9QazNiYlpyNDRkQy0xVkp4ZTM3WXc1aWdGOGpKdkNCY2c?oc=5",
-      "source": "WKRN News 2",
-      "publishedAt": "2026-11-25T21:33:00.000Z",
-      "latestAt": "2026-11-25T21:33:00.000Z",
-      "firstSeenAt": "2026-11-25T22:09:04.167Z",
-      "outlets": 1,
-      "outletNames": [
-        "WKRN News 2"
-      ],
-      "score": 0.99
     },
     {
       "id": "2729017858cd",
@@ -1955,18 +1972,18 @@
       "score": 0.86
     },
     {
-      "id": "9222663a737e",
+      "id": "b6b4dcbf7e62",
       "cat": "space",
       "kind": "news",
-      "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
-      "url": "https://tech.yahoo.com/science/articles/four-years-huge-asteroid-crash-060041617.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-25T11:41:00.000Z",
-      "latestAt": "2026-11-25T11:41:00.000Z",
-      "firstSeenAt": "2026-11-25T21:53:50.204Z",
+      "title": "Meet Earth's New 'Mini-Moon' 2026 QQ8, a Six-Foot-Wide Asteroid That's Temporarily Circling Our Planet",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNaE82YUhVSG5haW1VeUw5RXBOdFlDaTVOQTg0WUNBa205b251OWpMa3Y4RUhXdlM0bWtHdkNndGxkeE9xSnhBOUJGZzQyWXRDS2c5TlFKanl5bmVuR1UybUJHWFl1QW0wQnAxTWNiTXJaeHVIUlM1alBubksxYnFFZWVNaWpma1JEejVWc0FRRnhSYk9NMi1xMjl5TXA3TXUyekFTdzU4UHFZcjdmVDQzQ1VRUUFzUkpNSy1ELTdrUUtCc0xDMC02bFV6UkZUVnhJRGw4YmdnSkJReHczSU5CZHRDWG0?oc=5",
+      "source": "Smithsonian Magazine",
+      "publishedAt": "2026-11-25T14:00:00.000Z",
+      "latestAt": "2026-11-25T14:00:00.000Z",
+      "firstSeenAt": "2026-11-25T23:54:07.166Z",
       "outlets": 1,
       "outletNames": [
-        "YAHOO!"
+        "Smithsonian Magazine"
       ],
       "score": 0.83
     },
