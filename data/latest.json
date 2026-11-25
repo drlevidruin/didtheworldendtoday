@@ -1,15 +1,16 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T02:30:52.329Z",
+  "buildTime": "2026-11-25T02:34:32.159Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 21:30 ET",
-  "score": 59,
+  "etStamp": "2026-11-24 21:34 ET",
+  "score": 65,
   "fired": [
     "flights",
     "hacks",
     "internet",
     "earth",
     "markets",
+    "ai",
     "grid",
     "germs",
     "weather"
@@ -26,7 +27,7 @@
       "points": 6
     }
   ],
-  "change": -7,
+  "change": -1,
   "yesterday": {
     "date": "2026-11-23",
     "score": 66,
@@ -47,20 +48,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 316,
-  "lastSuccessAt": "2026-11-25T02:30:52.329Z",
+  "headlinesRead": 1394,
+  "lastSuccessAt": "2026-11-25T02:34:32.159Z",
   "rollingFallback": false,
   "cats": {
     "flights": 21,
-    "internet": 20,
-    "grid": 8,
-    "hacks": 29,
+    "internet": 18,
     "earth": 8,
-    "germs": 3,
+    "hacks": 29,
+    "grid": 8,
+    "germs": 4,
     "weather": 4,
     "space": 1,
     "markets": 4,
-    "ai": 2
+    "ai": 3
   },
   "vital": {
     "quake": {
@@ -177,20 +178,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
-      "lastOkAt": "2026-11-25T02:15:50.239Z"
+      "ok": true,
+      "count": 1070,
+      "error": null,
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "count": 288,
+      "error": null,
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     },
     "gdelt": {
       "ok": false,
@@ -202,55 +203,56 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "lastOkAt": "2026-11-25T02:30:52.329Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z"
+      "lastOkAt": "2026-11-25T02:34:32.159Z"
     }
   },
   "stories": [
@@ -394,26 +396,28 @@
       }
     },
     {
-      "id": "682b3f1ddc03",
-      "cat": "grid",
+      "id": "76df64bdaeb1",
+      "cat": "earth",
       "kind": "news",
-      "title": "Bengals vs Commanders MNF game halted by power outage as lights go out",
-      "url": "https://www.aol.com/articles/bengals-vs-commanders-mnf-game-114500000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-24T03:07:00.000Z",
-      "latestAt": "2026-11-24T13:00:00.000Z",
-      "firstSeenAt": "2026-11-24T04:11:52.219Z",
-      "outlets": 7,
+      "title": "5.6-magnitude earthquake jolts Nepal-Tibet border",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yUUtSYXJTZjJVWEs4aWN2WTlRSVdFMXFPOVJVWkFUNm9hcE1nc2lrT1dnV3ZWVHZ2NGlUZE02UTNTVUxlMHUxMkZmc0lSMFJCZzZwVjVkMA?oc=5",
+      "source": "The Annapurna Express",
+      "publishedAt": "2026-11-24T03:45:18.000Z",
+      "latestAt": "2026-11-24T10:20:24.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 9,
       "outletNames": [
-        "The Mirror US",
-        "NewsBreak: Local News & Alerts",
-        "Yahoo Sports",
-        "AOL.com",
-        "Irish Star",
-        "College Sports Network",
-        "Daily Express US"
+        "The Annapurna Express",
+        "The Himalayan Times",
+        "The Business Standard",
+        "OnlineKhabar English News",
+        "Rediff.com",
+        "Hindusthan Samachar English",
+        "The Avenue Mail",
+        "Qazinform",
+        "News On AIR"
       ],
-      "score": 3.74
+      "score": 4.09
     },
     {
       "id": "1f7a9dd08c2f",
@@ -423,9 +427,9 @@
       "url": "https://www.bangordailynews.com/2026/11/24/nation/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/",
       "source": "Bangor Daily News",
       "publishedAt": "2026-11-24T04:29:00.000Z",
-      "latestAt": "2026-11-25T02:14:46.000Z",
+      "latestAt": "2026-11-25T02:28:00.000Z",
       "firstSeenAt": "2026-11-25T02:15:50.239Z",
-      "outlets": 28,
+      "outlets": 31,
       "outletNames": [
         "Bangor Daily News",
         "Times Union",
@@ -454,9 +458,34 @@
         "India TV News",
         "The Business Standard",
         "Chron",
-        "Newsday"
+        "Newsday",
+        "Press Trust of India on MSN",
+        "NDTV Profit",
+        "Times of Oman"
       ],
-      "score": 3.7
+      "score": 3.79
+    },
+    {
+      "id": "682b3f1ddc03",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Bengals vs Commanders MNF game halted by power outage as lights go out",
+      "url": "https://www.aol.com/articles/bengals-vs-commanders-mnf-game-114500000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-24T03:07:00.000Z",
+      "latestAt": "2026-11-24T13:00:00.000Z",
+      "firstSeenAt": "2026-11-24T04:11:52.219Z",
+      "outlets": 7,
+      "outletNames": [
+        "The Mirror US",
+        "NewsBreak: Local News & Alerts",
+        "Yahoo Sports",
+        "AOL.com",
+        "Irish Star",
+        "College Sports Network",
+        "Daily Express US"
+      ],
+      "score": 3.74
     },
     {
       "id": "sig:quake:us6000ud6h",
@@ -583,27 +612,6 @@
       "score": 2.97
     },
     {
-      "id": "d6951d480f01",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Thousands report outages on Spotify: Downdetector",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOV3dmZmt4T3otS2ZaLUV0VU1JZ0VsVmpaMkIxcVprbnNQTy1GUmxoQ0h2b0xoandta0ljVTRTdm0ySVAyZDFJc1RyYVdaY0lKZ2k5TGpxQ3h5SjJiYXVLZXV1RFdTZTl6QWVzOXctWkEzcFlYVmZCWlgzUXRVNm1hTUhmWUJ4VEg1bmJv0gGQAUFVX3lxTE9RdW5GSjM0VnZNZ2p3aHJKcGhnenB1anp1eTdna1hZQVNwcE5GZzJMU3BnVnVGSW53REx4WkFXUXV4bjRmM1VodWVQTEF0ZVpDV0FPbmNpLXE2cFZDQUJVcjZNR0x6QzFVQXMxakNxR1Uwbm1lRGI4bEVpTXBPU0lGa19EU0lGajZVaDB6T3dldg?oc=5",
-      "source": "PIX11",
-      "publishedAt": "2026-11-24T11:50:31.000Z",
-      "latestAt": "2026-11-24T13:30:00.000Z",
-      "firstSeenAt": "2026-11-24T22:45:11.907Z",
-      "outlets": 6,
-      "outletNames": [
-        "PIX11",
-        "Global Banking & Finance Review",
-        "Aaj English TV",
-        "AOL.com",
-        "The News International",
-        "Khaleej Times"
-      ],
-      "score": 2.93
-    },
-    {
       "id": "sig:faa-stop:ORD:2026-11-24",
       "cat": "flights",
       "kind": "signal",
@@ -657,7 +665,7 @@
       "url": "https://www.msn.com/en-us/news/other/exclusive-faa-probe-zeros-in-on-culprit-of-nationwide-ground-stop-but-agency-still-faces-tough-questions/ar-AA2i9wcB",
       "source": "CNN on MSN",
       "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T00:41:04.000Z",
+      "latestAt": "2026-11-25T02:26:15.000Z",
       "firstSeenAt": "2026-11-25T00:15:26.751Z",
       "outlets": 5,
       "outletNames": [
@@ -668,6 +676,27 @@
         "Yahoo News UK"
       ],
       "score": 4.01
+    },
+    {
+      "id": "d6951d480f01",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Thousands report outages on Spotify: Downdetector",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOV3dmZmt4T3otS2ZaLUV0VU1JZ0VsVmpaMkIxcVprbnNQTy1GUmxoQ0h2b0xoandta0ljVTRTdm0ySVAyZDFJc1RyYVdaY0lKZ2k5TGpxQ3h5SjJiYXVLZXV1RFdTZTl6QWVzOXctWkEzcFlYVmZCWlgzUXRVNm1hTUhmWUJ4VEg1bmJv0gGQAUFVX3lxTE9RdW5GSjM0VnZNZ2p3aHJKcGhnenB1anp1eTdna1hZQVNwcE5GZzJMU3BnVnVGSW53REx4WkFXUXV4bjRmM1VodWVQTEF0ZVpDV0FPbmNpLXE2cFZDQUJVcjZNR0x6QzFVQXMxakNxR1Uwbm1lRGI4bEVpTXBPU0lGa19EU0lGajZVaDB6T3dldg?oc=5",
+      "source": "PIX11",
+      "publishedAt": "2026-11-24T11:50:31.000Z",
+      "latestAt": "2026-11-24T13:30:00.000Z",
+      "firstSeenAt": "2026-11-24T22:45:11.907Z",
+      "outlets": 6,
+      "outletNames": [
+        "PIX11",
+        "Global Banking & Finance Review",
+        "Aaj English TV",
+        "AOL.com",
+        "The News International",
+        "Khaleej Times"
+      ],
+      "score": 2.93
     },
     {
       "id": "c69597c30f49",
@@ -778,24 +807,6 @@
         "AOL.com"
       ],
       "score": 2.54
-    },
-    {
-      "id": "76df64bdaeb1",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.6-magnitude earthquake jolts Nepal-Tibet border",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yUUtSYXJTZjJVWEs4aWN2WTlRSVdFMXFPOVJVWkFUNm9hcE1nc2lrT1dnV3ZWVHZ2NGlUZE02UTNTVUxlMHUxMkZmc0lSMFJCZzZwVjVkMA?oc=5",
-      "source": "The Annapurna Express",
-      "publishedAt": "2026-11-24T03:45:18.000Z",
-      "latestAt": "2026-11-24T04:46:12.000Z",
-      "firstSeenAt": "2026-11-24T04:57:01.340Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Annapurna Express",
-        "The Himalayan Times",
-        "The Business Standard"
-      ],
-      "score": 2.53
     },
     {
       "id": "95a87fd705d5",
@@ -926,22 +937,21 @@
       "score": 2.18
     },
     {
-      "id": "af4f61912279",
-      "cat": "earth",
+      "id": "8d6184cd4994",
+      "cat": "germs",
       "kind": "news",
-      "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdm9uVWtkeTgwd1hjUHVZS3JoNGdHYjZLNTgzNVBxaFB2OHBYekhQRVZBWG5weFF6Skk1S29nbnRmX2VHdTJIZEZmVnJzWUhycThqVlNENzI0Z2QzSzlLdGNLTXN2SFJUdVJCdWtSeVQxQXlKUmJRN2FRT1ZWYzE3WDVmbnZ5ZUVENWhibjAzX04zQ3Q3Y3JyS3pYN2trVTVXYVdmT0Q4UE01S0NHcWp5M9IBtgFBVV95cUxOb2NxX0FOaGFSRVBMdDEtSVlxT0JJYkoxeXNFUU84eGtJRUZpZnlMZUpkUmtPVS16MXZmY3dyRFhkcXN6YXZYQW91b0EwMUE3WGI4TW0xQnBidldFd05ibktjZjhWZGNlREFoTF9qTk9TdHQtSmhNb1JnSzhKLUEyNWNoR29xby03cDBuLV9hZnZJcFMzeXBfMHVkNXVMNmZrczJoWG5Od2hMUnhfbjdJRzlSSWNLZw?oc=5",
-      "source": "ThePrint",
-      "publishedAt": "2026-11-24T02:45:41.000Z",
-      "latestAt": "2026-11-24T06:36:52.000Z",
-      "firstSeenAt": "2026-11-24T19:59:40.773Z",
-      "outlets": 3,
+      "title": "Bird flu cases continue in Oregon, Washington",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX2s5UEpXV3BWSzFTbFBtVUpKcjZZT2J0dmpkX3dwek8tVk8tZFl4THlzYm5BeHZnZXY5YkZuOVRRY1Zfb3pOcjBnOGxncWx3djZFSVlWSlZWUEpKbTVIeU9rYlFWWkR6bko2b3k5UGFVX3RYNEtQb3o1Wm9VZmdVVnRCNnhTUTI5am9z?oc=5",
+      "source": "Your Oregon News",
+      "publishedAt": "2026-11-24T22:56:57.000Z",
+      "latestAt": "2026-11-25T00:25:31.000Z",
+      "firstSeenAt": "2026-11-25T01:45:42.574Z",
+      "outlets": 2,
       "outletNames": [
-        "ThePrint",
-        "The Hindu",
-        "Daily Excelsior"
+        "Your Oregon News",
+        "Capital Press"
       ],
-      "score": 1.84
+      "score": 1.91
     },
     {
       "id": "899c23b9703f",
@@ -1042,7 +1052,7 @@
       "url": "https://tech.yahoo.com/apps/breaking-news/article/tiktok-is-down-with-thousands-of-outage-reports-in-the-us-202612575.html",
       "source": "YAHOO!",
       "publishedAt": "2026-11-24T12:26:00.000Z",
-      "latestAt": "2026-11-24T20:42:43.000Z",
+      "latestAt": "2026-11-24T21:10:52.000Z",
       "firstSeenAt": "2026-11-24T20:44:52.543Z",
       "outlets": 3,
       "outletNames": [
@@ -1140,6 +1150,24 @@
         "AOL"
       ],
       "score": 2.17
+    },
+    {
+      "id": "f459bfec5c0c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Flights delayed after another ground stop at O’Hare Airport",
+      "url": "https://www.yahoo.com/news/us/articles/flights-delayed-another-ground-stop-214617471.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T13:46:00.000Z",
+      "latestAt": "2026-11-25T01:18:48.000Z",
+      "firstSeenAt": "2026-11-25T00:45:33.233Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "AOL.com",
+        "NewsNation"
+      ],
+      "score": 2.11
     },
     {
       "id": "250f71690cc4",
@@ -1294,6 +1322,24 @@
         "FourWeekMBA"
       ],
       "score": 1.85
+    },
+    {
+      "id": "af4f61912279",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6 magnitude earthquake strikes Nepal’s Koshi province close to China border",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdm9uVWtkeTgwd1hjUHVZS3JoNGdHYjZLNTgzNVBxaFB2OHBYekhQRVZBWG5weFF6Skk1S29nbnRmX2VHdTJIZEZmVnJzWUhycThqVlNENzI0Z2QzSzlLdGNLTXN2SFJUdVJCdWtSeVQxQXlKUmJRN2FRT1ZWYzE3WDVmbnZ5ZUVENWhibjAzX04zQ3Q3Y3JyS3pYN2trVTVXYVdmT0Q4UE01S0NHcWp5M9IBtgFBVV95cUxOb2NxX0FOaGFSRVBMdDEtSVlxT0JJYkoxeXNFUU84eGtJRUZpZnlMZUpkUmtPVS16MXZmY3dyRFhkcXN6YXZYQW91b0EwMUE3WGI4TW0xQnBidldFd05ibktjZjhWZGNlREFoTF9qTk9TdHQtSmhNb1JnSzhKLUEyNWNoR29xby03cDBuLV9hZnZJcFMzeXBfMHVkNXVMNmZrczJoWG5Od2hMUnhfbjdJRzlSSWNLZw?oc=5",
+      "source": "ThePrint",
+      "publishedAt": "2026-11-24T02:45:41.000Z",
+      "latestAt": "2026-11-24T06:36:52.000Z",
+      "firstSeenAt": "2026-11-24T19:59:40.773Z",
+      "outlets": 3,
+      "outletNames": [
+        "ThePrint",
+        "The Hindu",
+        "Daily Excelsior"
+      ],
+      "score": 1.84
     },
     {
       "id": "3b768c0075a2",
@@ -1625,23 +1671,6 @@
       "score": 1.64
     },
     {
-      "id": "f459bfec5c0c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Flights delayed after another ground stop at O’Hare Airport",
-      "url": "https://www.yahoo.com/news/us/articles/flights-delayed-another-ground-stop-214617471.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T13:46:00.000Z",
-      "latestAt": "2026-11-24T23:01:10.000Z",
-      "firstSeenAt": "2026-11-25T00:45:33.233Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "AOL.com"
-      ],
-      "score": 1.63
-    },
-    {
       "id": "080e74c3f3f8",
       "cat": "internet",
       "kind": "news",
@@ -1691,6 +1720,23 @@
         "Yahoo"
       ],
       "score": 1.6
+    },
+    {
+      "id": "e55c564c17ff",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Chicago's O’Hare Airport ground stop lifted, flight delays continue after outage",
+      "url": "https://www.yahoo.com/news/us/articles/chicagos-o-hare-airport-ground-214231766.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T13:42:00.000Z",
+      "latestAt": "2026-11-24T21:42:31.000Z",
+      "firstSeenAt": "2026-11-25T02:34:32.159Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 32 Chicago"
+      ],
+      "score": 1.57
     },
     {
       "id": "de1e0e492977",
@@ -1970,22 +2016,6 @@
       "score": 1.36
     },
     {
-      "id": "b2efcf0cc5a3",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft launches 'Code Red' overhaul after 24-hour global outage exposes system failures",
-      "url": "https://www.msn.com/en-in/news/other/microsoft-launches-code-red-overhaul-after-24-hour-global-outage-exposes-system-failures/vi-AA2iadx2",
-      "source": "NDTV on MSN",
-      "publishedAt": "2026-11-24T18:10:36.000Z",
-      "latestAt": "2026-11-24T18:10:36.000Z",
-      "firstSeenAt": "2026-11-25T02:30:52.329Z",
-      "outlets": 1,
-      "outletNames": [
-        "NDTV on MSN"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "52091bdfb5f9",
       "cat": "markets",
       "kind": "news",
@@ -2000,38 +2030,6 @@
         "Investopedia on MSN"
       ],
       "score": 1.18
-    },
-    {
-      "id": "e07a6e10edc8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "What is Microsoft’s ‘Code Red’? Why did global Outlook, Teams outage force urgent action?",
-      "url": "https://www.financialexpress.com/world-news/what-is-microsofts-code-red-why-did-global-outlook-teams-outage-force-urgent-action/4393034/",
-      "source": "The Financial Express",
-      "publishedAt": "2026-11-24T16:41:00.000Z",
-      "latestAt": "2026-11-24T16:41:00.000Z",
-      "firstSeenAt": "2026-11-25T02:30:52.329Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Financial Express"
-      ],
-      "score": 1.17
-    },
-    {
-      "id": "0dd78f3eb490",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Major Airport Disrupted by Another Ground Stop Before Thanksgiving Holiday",
-      "url": "https://www.newsweek.com/ground-stop-chicago-ohare-airport-third-thanksgiving-travel-12765115",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-24T15:23:00.000Z",
-      "latestAt": "2026-11-24T15:23:00.000Z",
-      "firstSeenAt": "2026-11-25T02:30:52.329Z",
-      "outlets": 1,
-      "outletNames": [
-        "Newsweek"
-      ],
-      "score": 1.14
     },
     {
       "id": "8ca9b14f75aa",
@@ -2068,20 +2066,20 @@
       "score": 1
     },
     {
-      "id": "8d6184cd4994",
+      "id": "aa41d8f28bdd",
       "cat": "germs",
       "kind": "news",
-      "title": "Bird flu cases continue in Oregon, Washington",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX2s5UEpXV3BWSzFTbFBtVUpKcjZZT2J0dmpkX3dwek8tVk8tZFl4THlzYm5BeHZnZXY5YkZuOVRRY1Zfb3pOcjBnOGxncWx3djZFSVlWSlZWUEpKbTVIeU9rYlFWWkR6bko2b3k5UGFVX3RYNEtQb3o1Wm9VZmdVVnRCNnhTUTI5am9z?oc=5",
-      "source": "Your Oregon News",
-      "publishedAt": "2026-11-25T00:25:31.000Z",
-      "latestAt": "2026-11-25T00:25:31.000Z",
-      "firstSeenAt": "2026-11-25T01:45:42.574Z",
+      "title": "Bird flu doesn’t threaten Thanksgiving poultry safety, Idaho state veterinarian says",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaUVIc3NBYVZzSmRiTHl0YjkzMWJ0bHExbnZQNDlxNmRkcFp2ZWJnbDc4N2pmdGl3NE9YU2NqaVJ0V19VV1RUd2FWRjNFWmVPNXI1TDMta1FfV0ZqSXZtcDZEeV8xV1d2QTJQN3hYWUx0TWVleG1nMEdWU2pqcDA0dG5xdG44T254TkF0dzNJUHJnRUxQbERyRnVtMFFDME80TTExM2oycDhNUTZUbWlrQ0M1aTBoZ9IBygFBVV95cUxQZDJiYjNnd2ZPRjFNLXdXZ0NmVG1EN0RidVZuT0xOQWFqVFg3YWV2ejdIOUhPLUZOd2wwbTVXdnlqc1Vrd000NEVYY1dhQ1FQMU9nRnk5RUZhMHlQcnhPUVRidVZnaFc5cURSWERIUkhOWG5pX1lybHdGRzVXNU41Y2NpZXZaRXR5Q1ZxcFZSNUNRcWJhU2l3aVhrWjkwdC1URFVCVUhhT0plblotTnNDTWhMcGh0YjRGWFJLTHU3c2dNVW02VEtWNkFR?oc=5",
+      "source": "KMVT",
+      "publishedAt": "2026-11-24T23:43:00.000Z",
+      "latestAt": "2026-11-24T23:43:00.000Z",
+      "firstSeenAt": "2026-11-25T02:34:32.159Z",
       "outlets": 1,
       "outletNames": [
-        "Your Oregon News"
+        "KMVT"
       ],
-      "score": 0.98
+      "score": 0.95
     },
     {
       "id": "9c77cfaf2dab",
@@ -2114,6 +2112,22 @@
         "KOAT Channel 7 on MSN"
       ],
       "score": 0.85
+    },
+    {
+      "id": "3f99b2a2a3e3",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Is ChatGPT down right now?",
+      "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
+      "source": "JKN",
+      "publishedAt": "2026-11-24T15:59:00.000Z",
+      "latestAt": "2026-11-24T15:59:00.000Z",
+      "firstSeenAt": "2026-11-25T02:34:32.159Z",
+      "outlets": 1,
+      "outletNames": [
+        "JKN"
+      ],
+      "score": 0.82
     }
   ]
 }
