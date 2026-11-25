@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T08:01:46.947Z",
+  "buildTime": "2026-11-25T08:16:50.681Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 03:01 ET",
-  "score": 73,
+  "etStamp": "2026-11-25 03:16 ET",
+  "score": 79,
   "fired": [
     "flights",
     "hacks",
@@ -11,6 +11,7 @@
     "space",
     "earth",
     "markets",
+    "ai",
     "grid",
     "germs",
     "weather"
@@ -32,7 +33,7 @@
       "points": 8
     }
   ],
-  "change": 8,
+  "change": 14,
   "yesterday": {
     "date": "2026-11-24",
     "score": 65,
@@ -52,8 +53,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 526,
-  "lastSuccessAt": "2026-11-25T08:01:46.947Z",
+  "headlinesRead": 555,
+  "lastSuccessAt": "2026-11-25T08:16:50.681Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
@@ -61,12 +62,12 @@
     "earth": 6,
     "germs": 4,
     "weather": 4,
-    "hacks": 30,
+    "hacks": 29,
     "grid": 6,
     "space": 2,
     "markets": 4,
     "sun": 1,
-    "ai": 2
+    "ai": 3
   },
   "vital": {
     "quake": {
@@ -190,15 +191,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 200,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "count": 259,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 10 of 26 queries)",
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     },
     "bing": {
       "ok": true,
-      "count": 287,
-      "error": null,
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "count": 257,
+      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     },
     "gdelt": {
       "ok": false,
@@ -210,37 +211,37 @@
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     },
     "status": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     },
     "x": {
       "ok": true,
@@ -253,13 +254,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T08:01:46.947Z"
+      "lastOkAt": "2026-11-25T08:16:50.681Z"
     }
   },
   "stories": [
@@ -1070,24 +1071,6 @@
       "score": 2.2
     },
     {
-      "id": "96983bcf19a7",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "St James’s Place latest wealth giant hit by cyberattack",
-      "url": "https://finance.yahoo.com/technology/ai/articles/st-james-place-latest-wealth-160634838.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-24T08:06:00.000Z",
-      "latestAt": "2026-11-24T16:06:00.000Z",
-      "firstSeenAt": "2026-11-24T17:44:21.791Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo Finance",
-        "The Telegraph",
-        "AOL"
-      ],
-      "score": 2.17
-    },
-    {
       "id": "f459bfec5c0c",
       "cat": "flights",
       "kind": "news",
@@ -1553,6 +1536,23 @@
       "score": 1.63
     },
     {
+      "id": "1b46f5e3eca2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Critical OpenSSH Flaw Lets Hackers Bypass Password Authentication on Alpine Linux With 257-Byte Password",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBVVThOdmNkaFhsTWN3SHhqem1oMG4tYU5kNERUMS00ZDQtd0J2ajMzMVlQVE5sXzk3TExSZW9zaUZSWHhBOGE2N0xSdmRNVjNvdTZ6WldYcXUxZVR6VHBNVdIBYEFVX3lxTFBVVThOdmNkaFhsTWN3SHhqem1oMG4tYU5kNERUMS00ZDQtd0J2ajMzMVlQVE5sXzk3TExSZW9zaUZSWHhBOGE2N0xSdmRNVjNvdTZ6WldYcXUxZVR6VHBNVQ?oc=5",
+      "source": "Cyber Press",
+      "publishedAt": "2026-11-24T09:51:53.000Z",
+      "latestAt": "2026-11-24T11:28:35.000Z",
+      "firstSeenAt": "2026-11-24T21:44:59.738Z",
+      "outlets": 2,
+      "outletNames": [
+        "Cyber Press",
+        "CyberSecurityNews"
+      ],
+      "score": 1.6
+    },
+    {
       "id": "32630c27776e",
       "cat": "flights",
       "kind": "news",
@@ -1670,23 +1670,6 @@
         "Hiru News"
       ],
       "score": 1.5
-    },
-    {
-      "id": "f49f84f0e1a9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Sighs and skepticism after stunning data breaches hit US spy agencies",
-      "url": "https://www.mlive.com/politics/2026/11/sighs-and-skepticism-after-stunning-data-breaches-hit-us-spy-agencies.html",
-      "source": "mlive",
-      "publishedAt": "2026-11-24T08:08:00.000Z",
-      "latestAt": "2026-11-24T22:08:00.000Z",
-      "firstSeenAt": "2026-11-25T00:45:33.233Z",
-      "outlets": 2,
-      "outletNames": [
-        "mlive",
-        "AL.com"
-      ],
-      "score": 1.45
     },
     {
       "id": "52f1674d700a",
@@ -2043,20 +2026,36 @@
       "score": 0.99
     },
     {
-      "id": "80f8b8c94585",
+      "id": "6f9e5ba72820",
       "cat": "markets",
       "kind": "news",
-      "title": "Jim Cramer Targets Corning and Boeing Amid Stock Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCcC0yQ0tCRjlSOThZQng3WHhCQmJvbmtmT2ozVkdMRkJtMmR2MGNsQTdmVjRkaUJXT2pqalFoVS14d0sxZ3dWTXhEODA5cnRkazZRUlhLUkRTRkJuQlp1YnFMaWhOMmNlSFE?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-24T23:33:00.000Z",
-      "latestAt": "2026-11-24T23:33:00.000Z",
-      "firstSeenAt": "2026-11-25T04:16:08.225Z",
+      "title": "Markets news, Nov. 24, 2026: S&P 500, Nasdaq fall after massive rally as Nvidia leads AI sell-off; Anthropic drops below IPO price",
+      "url": "https://www.msn.com/en-us/news/other/stock-market-today-nasdaq-s-p-500-fall-after-monday-s-big-gains-as-nvidia-leads-ai-stock-sell-off/ar-AA2i893a",
+      "source": "Investopedia on MSN",
+      "publishedAt": "2026-11-24T13:19:30.000Z",
+      "latestAt": "2026-11-24T13:19:30.000Z",
+      "firstSeenAt": "2026-11-25T08:16:50.681Z",
       "outlets": 1,
       "outletNames": [
-        "cwibc.co.id"
+        "Investopedia on MSN"
       ],
-      "score": 0.92
+      "score": 0.96
+    },
+    {
+      "id": "96faf5280248",
+      "cat": "ai",
+      "kind": "news",
+      "title": "User asks Google's Gemini why KFC is called KFC 15 times, chatbot jokes about shutting down its servers and 'finding' him after ChatGPT mention",
+      "url": "https://www.moneycontrol.com/technology/user-asks-google-s-gemini-why-kfc-is-called-kfc-15-times-chatbot-jokes-about-shutting-down-its-servers-and-finding-him-after-chatgpt-mention-article-14088676.html",
+      "source": "Moneycontrol",
+      "publishedAt": "2026-11-24T23:51:00.000Z",
+      "latestAt": "2026-11-24T23:51:00.000Z",
+      "firstSeenAt": "2026-11-25T08:16:50.681Z",
+      "outlets": 1,
+      "outletNames": [
+        "Moneycontrol"
+      ],
+      "score": 0.86
     },
     {
       "id": "9c77cfaf2dab",
