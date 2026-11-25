@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T10:17:11.652Z",
+  "buildTime": "2026-11-25T10:32:12.969Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 05:17 ET",
+  "etStamp": "2026-11-25 05:32 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -53,18 +53,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1373,
-  "lastSuccessAt": "2026-11-25T10:17:11.652Z",
+  "headlinesRead": 1326,
+  "lastSuccessAt": "2026-11-25T10:32:12.969Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
-    "hacks": 30,
+    "flights": 20,
+    "hacks": 29,
     "internet": 19,
     "earth": 4,
-    "germs": 4,
+    "germs": 5,
     "weather": 4,
     "grid": 6,
-    "space": 2,
+    "space": 3,
     "markets": 4,
     "sun": 3,
     "ai": 3
@@ -178,7 +178,7 @@
       "tripped": false,
       "reason": null,
       "matches": [
-        "6 killed when plane crashes off Mississippi"
+        "Plane crash off the coast of Mississippi kills 6, including 2 children"
       ]
     },
     "holdUntil": null,
@@ -186,81 +186,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1048,
+      "count": 1056,
       "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "bing": {
       "ok": true,
-      "count": 287,
-      "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "count": 231,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-25T06:16:29.636Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T09:32:04.891Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T10:17:11.652Z"
+      "lastOkAt": "2026-11-25T10:32:12.969Z"
     }
   },
   "stories": [
@@ -765,27 +764,6 @@
       "score": 2.54
     },
     {
-      "id": "0ad23a0bee4b",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Magnitude 6.5 earthquake recorded in Indian Ocean; no tsunami threat to Sri Lanka",
-      "url": "https://www.dailymirror.lk/breaking-news/Magnitude-6-5-earthquake-recorded-in-Indian-Ocean-no-tsunami-threat-to-Sri-Lanka/108-355647",
-      "source": "Daily Mirror",
-      "publishedAt": "2026-11-24T10:27:00.000Z",
-      "latestAt": "2026-11-24T14:09:50.000Z",
-      "firstSeenAt": "2026-11-24T20:44:52.543Z",
-      "outlets": 4,
-      "outletNames": [
-        "Daily Mirror",
-        "Newswire",
-        "Daily Mirror - Sri Lanka",
-        "Ada Derana"
-      ],
-      "score": 2.49,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "3ada2f639399",
       "cat": "internet",
       "kind": "news",
@@ -941,6 +919,23 @@
         "Dailymotion on MSN"
       ],
       "score": 1.71
+    },
+    {
+      "id": "a0f1e5023f00",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage for stop lights disrupting traffic in the area of the National Mall",
+      "url": "https://www.yahoo.com/news/articles/power-outage-stop-lights-disrupting-205302318.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T12:53:00.000Z",
+      "latestAt": "2026-11-24T20:53:02.000Z",
+      "firstSeenAt": "2026-11-24T23:00:31.025Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "DC News Now"
+      ],
+      "score": 1.66
     },
     {
       "id": "899c23b9703f",
@@ -1518,23 +1513,6 @@
       "score": 1.71
     },
     {
-      "id": "a0f1e5023f00",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage for stop lights disrupting traffic in the area of the National Mall",
-      "url": "https://www.yahoo.com/news/articles/power-outage-stop-lights-disrupting-205302318.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T12:53:00.000Z",
-      "latestAt": "2026-11-24T20:53:02.000Z",
-      "firstSeenAt": "2026-11-24T23:00:31.025Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "DC News Now"
-      ],
-      "score": 1.66
-    },
-    {
       "id": "b9909a780170",
       "cat": "flights",
       "kind": "news",
@@ -1652,6 +1630,23 @@
         "Anadolu Ajansı"
       ],
       "score": 1.42
+    },
+    {
+      "id": "8043fd0465d7",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Tomball-based Greenwich Rx recalls injections over contamination concerns",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYUhjZzVKZWZqYTE4d3dsYk4tOEhFbVRrMzV1bkpMQ0hma2draF9GQWlpLU5RWDhFUEVXbXhVM21STDBaNWo2ZmlySHFmUVlJVlotTDcwdUJDbFRnekstOWZtcHA5SkhhN0t5d2diZE81TDJtUXJ2V0tsSTZEZ0tONEZLQTBFRWNOemZjNnFR?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T16:54:21.000Z",
+      "latestAt": "2026-11-24T21:55:34.000Z",
+      "firstSeenAt": "2026-11-25T10:32:12.969Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Houston Chronicle"
+      ],
+      "score": 1.41
     },
     {
       "id": "52f1674d700a",
@@ -1894,38 +1889,6 @@
       "score": 1.31
     },
     {
-      "id": "df2874c01125",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA probe points to router setting behind nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPMVUwYl9iSmJZeFZybXBGNFZVZFE4VWZKbXh0d0dTYjdmbmhwZ0xwbkZHUU9sYmJGWUtQTDJtUzJlNk92eGF4Mm92VnRfaUpaRTRKWVhRWmxGdXd5MzFReGNwWnBIVE5xSk5fR3dxaUR2cDBTS3pYMmFGY05EYlZTOA?oc=5",
-      "source": "Mezha.net",
-      "publishedAt": "2026-11-25T00:16:05.000Z",
-      "latestAt": "2026-11-25T00:16:05.000Z",
-      "firstSeenAt": "2026-11-25T04:16:08.225Z",
-      "outlets": 1,
-      "outletNames": [
-        "Mezha.net"
-      ],
-      "score": 1.31
-    },
-    {
-      "id": "ca043b17770a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "CIA system hacked in latest major data breach",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5fUldpM1hHV2RXZDM3MU1NTlg0N0VPTjhDUTFNYzZBeGZMVEVNeEVYU1ZsRmRYS0diM0NHRjJKYWFpdUZEcTYxRHBDYzQ2TkgzY2pKRnJNTFowTVpJek5R0gFcQVVfeXFMTUVWYWJTNVJfWDhsdnl6UEd6V0ZEZWx1RlEyZVpIbUYwaXZ4SHl4dEJYYlJKY2tsLWNsSUo1c29nMmN1QV9ldHo2cG94M0RxN2tjZkNLSGpkZDA3MmI?oc=5",
-      "source": "Modern Ghana",
-      "publishedAt": "2026-11-25T00:10:00.000Z",
-      "latestAt": "2026-11-25T00:10:00.000Z",
-      "firstSeenAt": "2026-11-25T04:31:12.371Z",
-      "outlets": 1,
-      "outletNames": [
-        "Modern Ghana"
-      ],
-      "score": 1.3
-    },
-    {
       "id": "7dc531d5f964",
       "cat": "markets",
       "kind": "news",
@@ -2006,6 +1969,22 @@
       "score": 1
     },
     {
+      "id": "5074e4bf73e1",
+      "cat": "space",
+      "kind": "news",
+      "title": "Hera Spacecraft Examines NASA's Asteroid Impact Test",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9JOTBlNGFJVzA2SkwyVnRZQzdJTEtwRk1JajA1SnZTSm1GMVhjWlBIdEhIdzVJd3VtZUFFSFpNT3BNSzBXWFo2NWZ2UVBJVHAtRTc5ZWt1Y29kYUgtNzV3QnpfcTVlMDdBUG0walVoZw?oc=5",
+      "source": "Demokratis.co.id",
+      "publishedAt": "2026-11-25T10:05:16.000Z",
+      "latestAt": "2026-11-25T10:05:16.000Z",
+      "firstSeenAt": "2026-11-25T10:32:12.969Z",
+      "outlets": 1,
+      "outletNames": [
+        "Demokratis.co.id"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "4db93e3c6858",
       "cat": "sun",
       "kind": "news",
@@ -2052,6 +2031,22 @@
         "Starlust.org"
       ],
       "score": 0.97
+    },
+    {
+      "id": "75a22d43d43e",
+      "cat": "earth",
+      "kind": "news",
+      "title": "4.6 magnitude earthquake in Muğla",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1GSlJNRnRNYzdoMlFFT0hwakZoOEo5bkRwYktpUVk2dTZBSU14MFgxWVlBd1hVMWtySmN4ZENIMEhIYnBxYWFyY2NQejk0ZnNpem1wOXlvSXBaWXhqdHhzZ1R0emFMb20wQ3JMUDQ3UTJnWXlI?oc=5",
+      "source": "Haberler.com",
+      "publishedAt": "2026-11-25T03:49:28.000Z",
+      "latestAt": "2026-11-25T03:49:28.000Z",
+      "firstSeenAt": "2026-11-25T10:32:12.969Z",
+      "outlets": 1,
+      "outletNames": [
+        "Haberler.com"
+      ],
+      "score": 0.89
     },
     {
       "id": "96faf5280248",
