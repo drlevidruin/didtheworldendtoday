@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T05:46:30.876Z",
+  "buildTime": "2026-11-25T06:01:26.930Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 00:46 ET",
+  "etStamp": "2026-11-25 01:01 ET",
   "score": 59,
   "fired": [
     "flights",
@@ -46,16 +46,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1433,
-  "lastSuccessAt": "2026-11-25T05:46:30.876Z",
+  "headlinesRead": 425,
+  "lastSuccessAt": "2026-11-25T06:01:26.930Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
     "hacks": 31,
-    "earth": 7,
+    "earth": 6,
     "germs": 4,
     "internet": 18,
-    "grid": 6,
+    "grid": 7,
     "weather": 4,
     "space": 1,
     "markets": 4,
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1103,
-      "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "count": 100,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 1 of 26 queries)",
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     },
     "bing": {
       "ok": true,
-      "count": 292,
+      "count": 286,
       "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-24T16:59:11.725Z"
     },
     "hn": {
       "ok": true,
-      "count": 8,
+      "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T05:46:30.876Z"
+      "lastOkAt": "2026-11-25T06:01:26.930Z"
     }
   },
   "stories": [
@@ -353,7 +353,7 @@
       "url": "https://www.usnews.com/news/politics/articles/2026-11-24/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says",
       "source": "U.S. News & World Report",
       "publishedAt": "2026-11-24T07:29:00.000Z",
-      "latestAt": "2026-11-25T04:18:40.000Z",
+      "latestAt": "2026-11-25T05:17:35.000Z",
       "firstSeenAt": "2026-11-25T04:46:11.815Z",
       "outlets": 32,
       "outletNames": [
@@ -437,30 +437,6 @@
       "score": 3.42
     },
     {
-      "id": "031e0f43c9a0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers breach CIA unclassified computer system",
-      "url": "https://www.washingtonpost.com/national-security/2026/11/24/hackers-breach-cia-unclassified-computer-system/",
-      "source": "The Washington Post",
-      "publishedAt": "2026-11-24T15:13:00.000Z",
-      "latestAt": "2026-11-25T05:17:35.000Z",
-      "firstSeenAt": "2026-11-25T05:16:26.751Z",
-      "outlets": 9,
-      "outletNames": [
-        "The Washington Post",
-        "Bloomberg.com",
-        "TradingView",
-        "Investing.com",
-        "Deccan Chronicle",
-        "Moneycontrol.com",
-        "India TV News",
-        "Times of Oman",
-        "Firstpost"
-      ],
-      "score": 3.19
-    },
-    {
       "id": "857010ed9caa",
       "cat": "internet",
       "kind": "news",
@@ -502,6 +478,24 @@
         "95.3 and 101.1 FM The Eagle"
       ],
       "score": 3.09
+    },
+    {
+      "id": "3654f280be86",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA hit by major cyberattack on key intelligence system",
+      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T15:59:00.000Z",
+      "latestAt": "2026-11-25T00:46:18.000Z",
+      "firstSeenAt": "2026-11-25T01:15:36.251Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "geekspin",
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 3.06
     },
     {
       "id": "fb4faf2589e7",
@@ -603,29 +597,6 @@
       }
     },
     {
-      "id": "sig:faa-stop:LAS:2026-11-24",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at LAS (STAFFING)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-24T05:57:16.986Z",
-      "latestAt": "2026-11-24T05:57:16.986Z",
-      "firstSeenAt": "2026-11-24T05:57:16.986Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "LAS",
-        "hub": true,
-        "nationwide": false,
-        "reason": "STAFFING"
-      }
-    },
-    {
       "id": "02f0d15c4df1",
       "cat": "flights",
       "kind": "news",
@@ -646,22 +617,22 @@
       "score": 4.01
     },
     {
-      "id": "3654f280be86",
-      "cat": "hacks",
+      "id": "899c23b9703f",
+      "cat": "flights",
       "kind": "news",
-      "title": "CIA hit by major cyberattack on key intelligence system",
-      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T00:46:18.000Z",
-      "firstSeenAt": "2026-11-25T01:15:36.251Z",
+      "title": "A government watchdog warned about disruptions before the FAA grounded flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOejltVVg1ZUV5Rml4cV9hZ0RoaFkxejFDSlVTRVNrRFlnbk15ay02cjd5QWZaenFBUV9HSUVwTkVCNG9udGJETS1VV21WVkZxRHJ5TE5nYTlTWUhVN3M0emlqNnVfNVpaS1Exd0FId0tvVXE4X1A1RGFjTkhPTXhsT1hlQ3Y0TDh4RVRuZ193ZlM0X3JlVFAwVzJ0RzJQYjM1MTk0ZXVORkxrY2J4S2ZZYUdTZ0xDUldGVGpOSEpVaXFQZEd1eVJ6bmFQX3N2bjZZV25EODhwZTkyVW4yby1mTWFEYlpaODkwWGt1QjlOVC02c2Rac1FVSGhmc0tINHhwdGtyMnVMRWg0c3ZH?oc=5",
+      "source": "weareiowa.com",
+      "publishedAt": "2026-11-24T22:19:00.000Z",
+      "latestAt": "2026-11-24T22:19:00.000Z",
+      "firstSeenAt": "2026-11-24T22:45:11.907Z",
       "outlets": 3,
       "outletNames": [
-        "Yahoo",
-        "geekspin",
-        "NewsBreak: Local News & Alerts"
+        "weareiowa.com",
+        "WKYC",
+        "WTHR"
       ],
-      "score": 3.06
+      "score": 3.59
     },
     {
       "id": "95a87fd705d5",
@@ -700,6 +671,25 @@
         "NBC26"
       ],
       "score": 2.81
+    },
+    {
+      "id": "42f87fae315d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Latest headlines | Data breach keeps myColorado app offline as Thanksgiving travel nears",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxONXNpdkVlNE1WV01DY3AtUllTeFFUcVJLLWt1b2N0X3N4XzZiMmlFSTRaZXlQY3J4THVVTld1aVZrN3RmcV9Gb0dpZVRDZnpCYm9pOGpKZmRHY0Q2c1FuUVd1Vnlxcm8zTXhEQmZ4cThRM3pHTFhEZDdvay1FUzRreElRd2lfMFNOdWV0MmZjOHVDSmdIUkdGSlljQmpha2FwMTBBS3pIWVh5MnBhLWh6MGVCWVZTMFV3SzlIOFZLa3Qxc0ZhaVpvSHAySkQ0ekNaWmJmUlJza29PV0IyMWxQdUljRjc2dVRwdFZmclN2VXAySkJBZG5XVHJ3dzV5UTdFRFk2RXoydmxVc2pG?oc=5",
+      "source": "9News",
+      "publishedAt": "2026-11-24T13:30:00.000Z",
+      "latestAt": "2026-11-24T23:33:00.000Z",
+      "firstSeenAt": "2026-11-24T18:44:26.551Z",
+      "outlets": 4,
+      "outletNames": [
+        "9News",
+        "Yahoo",
+        "AOL.com",
+        "The Coloradoan"
+      ],
+      "score": 2.74
     },
     {
       "id": "c12cb954b403",
@@ -916,24 +906,6 @@
       "score": 1.71
     },
     {
-      "id": "899c23b9703f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "A government watchdog warned about disruptions before the FAA grounded flights nationwide",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOejltVVg1ZUV5Rml4cV9hZ0RoaFkxejFDSlVTRVNrRFlnbk15ay02cjd5QWZaenFBUV9HSUVwTkVCNG9udGJETS1VV21WVkZxRHJ5TE5nYTlTWUhVN3M0emlqNnVfNVpaS1Exd0FId0tvVXE4X1A1RGFjTkhPTXhsT1hlQ3Y0TDh4RVRuZ193ZlM0X3JlVFAwVzJ0RzJQYjM1MTk0ZXVORkxrY2J4S2ZZYUdTZ0xDUldGVGpOSEpVaXFQZEd1eVJ6bmFQX3N2bjZZV25EODhwZTkyVW4yby1mTWFEYlpaODkwWGt1QjlOVC02c2Rac1FVSGhmc0tINHhwdGtyMnVMRWg0c3ZH?oc=5",
-      "source": "weareiowa.com",
-      "publishedAt": "2026-11-24T22:19:00.000Z",
-      "latestAt": "2026-11-24T22:19:00.000Z",
-      "firstSeenAt": "2026-11-24T22:45:11.907Z",
-      "outlets": 3,
-      "outletNames": [
-        "weareiowa.com",
-        "WKYC",
-        "WTHR"
-      ],
-      "score": 3.59
-    },
-    {
       "id": "a6c55f50f1ef",
       "cat": "flights",
       "kind": "news",
@@ -952,25 +924,6 @@
         "Rus Tourism News"
       ],
       "score": 2.87
-    },
-    {
-      "id": "42f87fae315d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Latest headlines | Data breach keeps myColorado app offline as Thanksgiving travel nears",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxONXNpdkVlNE1WV01DY3AtUllTeFFUcVJLLWt1b2N0X3N4XzZiMmlFSTRaZXlQY3J4THVVTld1aVZrN3RmcV9Gb0dpZVRDZnpCYm9pOGpKZmRHY0Q2c1FuUVd1Vnlxcm8zTXhEQmZ4cThRM3pHTFhEZDdvay1FUzRreElRd2lfMFNOdWV0MmZjOHVDSmdIUkdGSlljQmpha2FwMTBBS3pIWVh5MnBhLWh6MGVCWVZTMFV3SzlIOFZLa3Qxc0ZhaVpvSHAySkQ0ekNaWmJmUlJza29PV0IyMWxQdUljRjc2dVRwdFZmclN2VXAySkJBZG5XVHJ3dzV5UTdFRFk2RXoydmxVc2pG?oc=5",
-      "source": "9News",
-      "publishedAt": "2026-11-24T13:30:00.000Z",
-      "latestAt": "2026-11-24T23:33:00.000Z",
-      "firstSeenAt": "2026-11-24T18:44:26.551Z",
-      "outlets": 4,
-      "outletNames": [
-        "9News",
-        "Yahoo",
-        "AOL.com",
-        "The Coloradoan"
-      ],
-      "score": 2.74
     },
     {
       "id": "0bc4c2c85c92",
@@ -1548,24 +1501,6 @@
       "score": 1.63
     },
     {
-      "id": "af4f61912279",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.6 magnitude earthquake strikes Nepals Koshi province close to China border",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQW5haW9vX3BDWHM1TEJkVWd0dGo5WDNpTVFPdDlINi1jOXN5OGo4azhFeXNscjZyRmkwSmxoZTk3RjZuRmtWNU1JNnlBSERSQlRnSjdGNU9jS1dJVFA5clNTOXEzZXFqYUtlckpONTl5MHlDdXFiSi1JVHpZMWpJVHlWeUNLNUhEN3BwaUFyNkdBWDZrd1ZnU3VMQ1Z5blBrU0tZTXdJX0E1TjlrQkNpd9IBsAFBVV95cUxQQW5haW9vX3BDWHM1TEJkVWd0dGo5WDNpTVFPdDlINi1jOXN5OGo4azhFeXNscjZyRmkwSmxoZTk3RjZuRmtWNU1JNnlBSERSQlRnSjdGNU9jS1dJVFA5clNTOXEzZXFqYUtlckpONTl5MHlDdXFiSi1JVHpZMWpJVHlWeUNLNUhEN3BwaUFyNkdBWDZrd1ZnU3VMQ1Z5blBrU0tZTXdJX0E1TjlrQkNpdw?oc=5",
-      "source": "Daily Excelsior",
-      "publishedAt": "2026-11-24T05:59:00.000Z",
-      "latestAt": "2026-11-24T10:09:30.000Z",
-      "firstSeenAt": "2026-11-25T04:16:08.225Z",
-      "outlets": 3,
-      "outletNames": [
-        "Daily Excelsior",
-        "www.thesamaja.com",
-        "Singrauli Mirror"
-      ],
-      "score": 1.62
-    },
-    {
       "id": "1b46f5e3eca2",
       "cat": "hacks",
       "kind": "news",
@@ -1957,6 +1892,55 @@
         "Mezha.net"
       ],
       "score": 1.31
+    },
+    {
+      "id": "ca043b17770a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA system hacked in latest major data breach",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5fUldpM1hHV2RXZDM3MU1NTlg0N0VPTjhDUTFNYzZBeGZMVEVNeEVYU1ZsRmRYS0diM0NHRjJKYWFpdUZEcTYxRHBDYzQ2TkgzY2pKRnJNTFowTVpJek5R0gFcQVVfeXFMTUVWYWJTNVJfWDhsdnl6UEd6V0ZEZWx1RlEyZVpIbUYwaXZ4SHl4dEJYYlJKY2tsLWNsSUo1c29nMmN1QV9ldHo2cG94M0RxN2tjZkNLSGpkZDA3MmI?oc=5",
+      "source": "Modern Ghana",
+      "publishedAt": "2026-11-25T00:10:00.000Z",
+      "latestAt": "2026-11-25T00:10:00.000Z",
+      "firstSeenAt": "2026-11-25T04:31:12.371Z",
+      "outlets": 1,
+      "outletNames": [
+        "Modern Ghana"
+      ],
+      "score": 1.3
+    },
+    {
+      "id": "f2c3b5bc12f4",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Another brief ground stop at O'Hare as record numbers expected at Chicago airports for Thanksgiving travel",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa0RvVUZSQUhaSzVNdjl3TzZCQmhpOWt3dV9sMTBKWTROdnZucHlrbDlXYlk0UWEwc1M0TkRYLTJ3YklRZFh1M2Jod1RPelRfLVoydHZpcm5OMFh3Mkh3d25NaTBqNnJDYXBUNE1DcFJXQ1pZaUtiRDBERTlNMm9QUFo0Zk5BN2d3T1g4?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-24T23:37:48.000Z",
+      "latestAt": "2026-11-24T23:37:48.000Z",
+      "firstSeenAt": "2026-11-25T04:46:11.815Z",
+      "outlets": 1,
+      "outletNames": [
+        "CBS News"
+      ],
+      "score": 1.28
+    },
+    {
+      "id": "af4a18bde127",
+      "cat": "grid",
+      "kind": "news",
+      "title": "West Oahu representatives raise power outage concerns at HECO town hall",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSUhOOGV0WXRXSXpfX1VZV0ppMHBVYzRaRHpHV3A0bUNMTFZRWUVSME02cmVYOF9DU0tLRll5eDkzVF9lbEc0OGJod1pxSk53eUlWN2VWQVkyWE9kcU5HdlJGcGN5SVFVRFdXUm9tTzZXR0ZnaHlyTkh1eHJIS2luVmk2T0hlOHB2VU5GSUc2Q1FYM1VkWlh3QXBmalNEMC00ZDlZWVN6QW9yUmpZLTlVOFpMRE9XTFk?oc=5",
+      "source": "Hawaii News Now",
+      "publishedAt": "2026-11-24T06:17:08.000Z",
+      "latestAt": "2026-11-24T07:56:14.000Z",
+      "firstSeenAt": "2026-11-25T04:16:08.225Z",
+      "outlets": 2,
+      "outletNames": [
+        "Hawaii News Now",
+        "cedarnews.net"
+      ],
+      "score": 1.27
     },
     {
       "id": "d1f8478fdf6c",
