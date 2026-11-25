@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T15:22:43.868Z",
+  "buildTime": "2026-11-25T15:37:49.330Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 10:22 ET",
+  "etStamp": "2026-11-25 10:37 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,12 +49,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1353,
-  "lastSuccessAt": "2026-11-25T15:22:43.868Z",
+  "headlinesRead": 1409,
+  "lastSuccessAt": "2026-11-25T15:37:49.330Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
-    "hacks": 32,
+    "flights": 19,
+    "hacks": 34,
     "internet": 12,
     "germs": 5,
     "grid": 5,
@@ -180,81 +180,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1028,
+      "count": 1088,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "bing": {
       "ok": true,
-      "count": 288,
+      "count": 284,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T15:22:43.868Z"
+      "lastOkAt": "2026-11-25T15:37:49.330Z"
     }
   },
   "stories": [
@@ -614,6 +613,28 @@
       "score": 2.84
     },
     {
+      "id": "2a247c5e6a2a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach CIA’s unclassified computer system",
+      "url": "https://www.wsbtv.com/news/trending/hackers-breach-cias-unclassified-computer-system/HQJGMWXE2VH3TPCVPCSQ377ZQY/",
+      "source": "WSB-TV Channel 2",
+      "publishedAt": "2026-11-24T22:22:02.000Z",
+      "latestAt": "2026-11-25T11:57:31.000Z",
+      "firstSeenAt": "2026-11-25T15:37:49.330Z",
+      "outlets": 7,
+      "outletNames": [
+        "Bloomberg",
+        "TradingView",
+        "Investing.com",
+        "WSB-TV Channel 2",
+        "Seoul Economic Daily",
+        "The Washington Post",
+        "95.5 WSB"
+      ],
+      "score": 2.71
+    },
+    {
       "id": "dd86ac7e3b59",
       "cat": "hacks",
       "kind": "news",
@@ -630,24 +651,6 @@
         "Speaks Media"
       ],
       "score": 2.56
-    },
-    {
-      "id": "e724a6fe278b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "VHV Company Data Breach Investigation: Edelson Lechtzin LLP Probes Class Action Claims After Social Security Numbers Are Exposed",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSFdIcUE3TVdBWHpMY3VrRjRiN1NJMU9HQm5RNHJ4UDU0bVVlVVUxNC1yOWgyYU9rMENmNUV3YjE1OFVfWGE4SHRuMVNLMEhSaFJGYy1oV1JCa2RpS2gyYVRSZDZ4YldXTWNzcXFEejctZnFhZ0U1U2FTb1p1OGxLazZ1SkI3MU5RNjAwd1FOM1Z2Qm42a0R0b3pTS1JkMTBKMTFONFduNkVqUDIySHRieHhUUFJVTXc?oc=5",
-      "source": "Carroll County Mirror-Democrat",
-      "publishedAt": "2026-11-25T00:11:49.000Z",
-      "latestAt": "2026-11-25T00:17:09.000Z",
-      "firstSeenAt": "2026-11-25T01:15:36.251Z",
-      "outlets": 3,
-      "outletNames": [
-        "Carroll County Mirror-Democrat",
-        "mykxlg.com",
-        "lincolnjournal.com"
-      ],
-      "score": 2.54
     },
     {
       "id": "3ada2f639399",
@@ -858,22 +861,22 @@
       "score": 1.52
     },
     {
-      "id": "0dd78f3eb490",
-      "cat": "flights",
+      "id": "e724a6fe278b",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Major Airport Disrupted by Another Ground Stop Before Thanksgiving Holiday",
-      "url": "https://www.newsweek.com/ground-stop-chicago-ohare-airport-third-thanksgiving-travel-12765115",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-24T15:23:00.000Z",
-      "latestAt": "2026-11-25T00:30:00.000Z",
-      "firstSeenAt": "2026-11-25T06:16:29.636Z",
+      "title": "VHV Company Data Breach Investigation: Edelson Lechtzin LLP Probes Class Action Claims After Social Security Numbers Are Exposed",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSFdIcUE3TVdBWHpMY3VrRjRiN1NJMU9HQm5RNHJ4UDU0bVVlVVUxNC1yOWgyYU9rMENmNUV3YjE1OFVfWGE4SHRuMVNLMEhSaFJGYy1oV1JCa2RpS2gyYVRSZDZ4YldXTWNzcXFEejctZnFhZ0U1U2FTb1p1OGxLazZ1SkI3MU5RNjAwd1FOM1Z2Qm42a0R0b3pTS1JkMTBKMTFONFduNkVqUDIySHRieHhUUFJVTXc?oc=5",
+      "source": "Carroll County Mirror-Democrat",
+      "publishedAt": "2026-11-25T00:11:49.000Z",
+      "latestAt": "2026-11-25T00:17:09.000Z",
+      "firstSeenAt": "2026-11-25T01:15:36.251Z",
       "outlets": 3,
       "outletNames": [
-        "Newsweek",
-        "Yahoo",
-        "AOL"
+        "Carroll County Mirror-Democrat",
+        "mykxlg.com",
+        "lincolnjournal.com"
       ],
-      "score": 2.72
+      "score": 2.54
     },
     {
       "id": "bf7fee70bac6",
@@ -1049,23 +1052,6 @@
       "score": 1.91
     },
     {
-      "id": "70f436c09f34",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack against CIA didn't disrupt classified systems, officials say",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWVFKWjFMaFA2dW5SLXBiaFNSeDNpSFQ5OTloVFpseWtpVWpFcDVBaHA2UjhBNHRSWk1RcHlMc2JybjVUU1ZYczVEeWdBb0VDSmZLZnBJVkZCME5GTmpyTlpyRWEwMGp0dWV6M3pGR3hJUXBONG1paHJ3eFhKZVZUMGhHLVIxRl9kTVpCRDJac0dudF9FdThKTA?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-25T12:23:00.000Z",
-      "latestAt": "2026-11-25T14:42:34.000Z",
-      "firstSeenAt": "2026-11-25T15:22:43.868Z",
-      "outlets": 2,
-      "outletNames": [
-        "CBS News",
-        "Yahoo"
-      ],
-      "score": 1.9
-    },
-    {
       "id": "c7b77e744a64",
       "cat": "hacks",
       "kind": "news",
@@ -1151,6 +1137,23 @@
       "score": 1.76
     },
     {
+      "id": "dfcf1fa0e43b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Access Customer Data at Ochsner Sport",
+      "url": "https://www.bluewin.ch/en/news/hackers-access-customer-data-at-ochsner-sport-li.3686999",
+      "source": "Bluewin",
+      "publishedAt": "2026-11-25T07:25:00.000Z",
+      "latestAt": "2026-11-25T15:29:42.000Z",
+      "firstSeenAt": "2026-11-25T15:37:49.330Z",
+      "outlets": 2,
+      "outletNames": [
+        "Bluewin",
+        "blue News"
+      ],
+      "score": 1.73
+    },
+    {
       "id": "039d95e58922",
       "cat": "hacks",
       "kind": "news",
@@ -1166,6 +1169,23 @@
         "Silicon UK"
       ],
       "score": 1.72
+    },
+    {
+      "id": "70f436c09f34",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack against CIA didn't disrupt classified systems, officials say",
+      "url": "https://www.yahoo.com/news/videos/cyberattack-against-cia-didnt-disrupt-144234218.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T06:42:00.000Z",
+      "latestAt": "2026-11-25T14:42:34.000Z",
+      "firstSeenAt": "2026-11-25T15:22:43.868Z",
+      "outlets": 2,
+      "outletNames": [
+        "CBS News",
+        "Yahoo"
+      ],
+      "score": 1.71
     },
     {
       "id": "3873296babda",
@@ -1348,22 +1368,6 @@
       "outlets": 1,
       "outletNames": [
         "cbs19.tv"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "c82866214abf",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Family spent years saving $6k for once-in-a-lifetime cruise... but greedy Royal Caribbean bosses refused to refund them after nationwide airport ground stop made them miss embarkation",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbFB4ZW5YMXJzX3NncjJBTDBoQ1c2YVZDMUs5ZU9hYVIzcjJPQjY2MXkxaDlzN3A3QUFWbTVWUXNTSW10MUZkZmhaRVZCUzhiblN3R1o5eEx2WXRHOUZ6UUdFaHZhQ01STXRhRXVlT3JQNEZXLUlaSHBRTUY4OVlWWVNSZUktczhreFVqdW1PRFowRjd2bHBLaFRR0gGfAUFVX3lxTFA4LUlBcXlndmUtNHhPWkVhREZzVTJZWjJwMHdHb3JvdmJfSUVVdHJYOG52dk44YWpkbE5YU1hfc09nRzhEU1pMR2prc2pEakZzLTVNblljX1RfRVY1ek9weFY3MjBFMGJPZHl5QlJvc25IeGhEODk4a3dYSENaVzNlNDljRlRZb2pSNWNDSWhoeEhQUm5MMGwwdWN6dUZ1Zw?oc=5",
-      "source": "Daily Mail",
-      "publishedAt": "2026-11-24T15:37:40.000Z",
-      "latestAt": "2026-11-24T15:37:40.000Z",
-      "firstSeenAt": "2026-11-24T15:44:04.612Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Mail"
       ],
       "score": 1.4
     },
@@ -1725,6 +1729,22 @@
       "score": 1.06
     },
     {
+      "id": "2604bc2b9d96",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Goldman Sachs stock hits 52-week low amid broad market selloff",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWGJXQl9jZUVjaGh6RnFhbkVpN1lQTnlhRlZBcnMwaF9LSW9VclBLdEljZk1VWFNiWEtOZnRsaWZwTE1BeXBRaG9QaTFUUDJpTl9rSmQzNWk0ZHQwVkk1N2dGcXc0VWJicnhwM0VVd3RpX2hNeTF4MjAwYVMzU0ZieGxhQk5HMFNCVnU2SmxONGpibWFNTnZNNDNQNXpFUEwzTWNqcTFiV3BmWmtOV1VZMkdFOWxIQWc?oc=5",
+      "source": "StreetInsider",
+      "publishedAt": "2026-11-25T15:32:14.000Z",
+      "latestAt": "2026-11-25T15:32:14.000Z",
+      "firstSeenAt": "2026-11-25T15:37:49.330Z",
+      "outlets": 1,
+      "outletNames": [
+        "StreetInsider"
+      ],
+      "score": 1
+    },
+    {
       "id": "6bf8050947ba",
       "cat": "markets",
       "kind": "news",
@@ -1737,22 +1757,6 @@
       "outlets": 1,
       "outletNames": [
         "GuruFocus"
-      ],
-      "score": 1
-    },
-    {
-      "id": "64f6258d9a46",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Crypto Crash: Bitcoin Falls Below $58K as November Losses Exceed 25%",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNdGNfcGYtWklkU0FsOEJ3WG5DVml0OUVRTDZTaGdvcW11QzJkMVJQc0lWSDZKZ29zdk9YYlBJYlNDWG5SUTF6TDJUZi1Xam9aNUZkZjFiSWRiMU94UFRnTWwySzY4VXNBSXZfUDU2Q1dXUmxTZ011LVhrRVhvSW5uLTNwb3Y4Y0RKeTkxM0FDVFV4aVh1dGs3Ynhn?oc=5",
-      "source": "Coinpaper",
-      "publishedAt": "2026-11-25T15:14:57.000Z",
-      "latestAt": "2026-11-25T15:14:57.000Z",
-      "firstSeenAt": "2026-11-25T15:22:43.868Z",
-      "outlets": 1,
-      "outletNames": [
-        "Coinpaper"
       ],
       "score": 1
     },
