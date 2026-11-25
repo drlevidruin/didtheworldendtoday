@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T09:47:07.407Z",
+  "buildTime": "2026-11-25T10:02:10.816Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 04:47 ET",
+  "etStamp": "2026-11-25 05:02 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -53,20 +53,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1055,
-  "lastSuccessAt": "2026-11-25T09:47:07.407Z",
+  "headlinesRead": 1408,
+  "lastSuccessAt": "2026-11-25T10:02:10.816Z",
   "rollingFallback": false,
   "cats": {
     "flights": 21,
-    "hacks": 31,
-    "internet": 18,
-    "earth": 5,
+    "hacks": 30,
+    "internet": 19,
+    "earth": 4,
     "germs": 4,
     "weather": 4,
     "grid": 6,
     "space": 2,
     "markets": 4,
-    "sun": 2,
+    "sun": 3,
     "ai": 3
   },
   "vital": {
@@ -189,57 +189,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 723,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 20 of 26 queries)",
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "count": 1080,
+      "error": null,
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     },
     "bing": {
       "ok": true,
-      "count": 294,
+      "count": 290,
       "error": null,
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-25T06:16:29.636Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     },
     "x": {
       "ok": true,
@@ -252,13 +252,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T09:47:07.407Z"
+      "lastOkAt": "2026-11-25T10:02:10.816Z"
     }
   },
   "stories": [
@@ -329,6 +329,29 @@
         "WUSA9"
       ],
       "score": 5
+    },
+    {
+      "id": "3654f280be86",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA hit by major cyberattack on key intelligence system",
+      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T15:59:00.000Z",
+      "latestAt": "2026-11-25T08:27:00.000Z",
+      "firstSeenAt": "2026-11-25T01:15:36.251Z",
+      "outlets": 8,
+      "outletNames": [
+        "Yahoo",
+        "geekspin",
+        "NewsBreak: Local News & Alerts",
+        "ABC News - Breaking News, Latest News and Videos",
+        "Modern Ghana",
+        "Firstpost",
+        "The Mirror US",
+        "WE News English"
+      ],
+      "score": 4.73
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-24",
@@ -495,26 +518,6 @@
       "score": 3.29
     },
     {
-      "id": "95a87fd705d5",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers compromise Check Point Servers in 22 organizations",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYmlzRW5zcFppdnI1NWdVaXJyXzAwTFZQMEVkdjVUdjJMcDFuSF93Q2pldTlibld1LU1CcHl3bWVWdFpRdWpqbkx6ZXBvMERGcF9xT3lqT3BFbFhpS2pFY2lNVmM5UHVCVTN4NHpTLUVBZ3Q4QWZnSlM5SVI2eDZhejkxai02bGtFbEc3TE1RWnlsWG9fU3paUWZBWUpDZVBoMURUMVBNNVN5dw?oc=5",
-      "source": "BleepingComputer",
-      "publishedAt": "2026-11-24T16:15:23.000Z",
-      "latestAt": "2026-11-25T06:50:00.000Z",
-      "firstSeenAt": "2026-11-24T17:59:22.427Z",
-      "outlets": 5,
-      "outletNames": [
-        "BleepingComputer",
-        "The 420.in",
-        "TechGig",
-        "CyberSecurityNews",
-        "The Hacker News"
-      ],
-      "score": 3.23
-    },
-    {
       "id": "857010ed9caa",
       "cat": "internet",
       "kind": "news",
@@ -638,22 +641,24 @@
       "score": 3.59
     },
     {
-      "id": "3654f280be86",
+      "id": "95a87fd705d5",
       "cat": "hacks",
       "kind": "news",
-      "title": "CIA hit by major cyberattack on key intelligence system",
-      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T00:46:18.000Z",
-      "firstSeenAt": "2026-11-25T01:15:36.251Z",
-      "outlets": 3,
+      "title": "Hackers compromise Check Point Servers in 22 organizations",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYmlzRW5zcFppdnI1NWdVaXJyXzAwTFZQMEVkdjVUdjJMcDFuSF93Q2pldTlibld1LU1CcHl3bWVWdFpRdWpqbkx6ZXBvMERGcF9xT3lqT3BFbFhpS2pFY2lNVmM5UHVCVTN4NHpTLUVBZ3Q4QWZnSlM5SVI2eDZhejkxai02bGtFbEc3TE1RWnlsWG9fU3paUWZBWUpDZVBoMURUMVBNNVN5dw?oc=5",
+      "source": "BleepingComputer",
+      "publishedAt": "2026-11-24T16:15:23.000Z",
+      "latestAt": "2026-11-25T06:50:00.000Z",
+      "firstSeenAt": "2026-11-24T17:59:22.427Z",
+      "outlets": 5,
       "outletNames": [
-        "Yahoo",
-        "geekspin",
-        "NewsBreak: Local News & Alerts"
+        "BleepingComputer",
+        "The 420.in",
+        "TechGig",
+        "CyberSecurityNews",
+        "The Hacker News"
       ],
-      "score": 3.06
+      "score": 3.23
     },
     {
       "id": "42f87fae315d",
@@ -765,25 +770,6 @@
         "Le Défi Media Group"
       ],
       "score": 2.41
-    },
-    {
-      "id": "552e4e82b6ba",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Volcanic Eruption Adds 125 Acres to Iwo Jima's Historic Black Sand Beaches",
-      "url": "https://www.kitv.com/video/volcanic-eruption-adds-125-acres-to-iwo-jimas-historic-black-sand-beaches/video_8e64c951-f261-5c09-a9dd-8c92232b373a.html",
-      "source": "KITV 4 Island News",
-      "publishedAt": "2026-11-24T09:54:00.000Z",
-      "latestAt": "2026-11-24T21:45:59.000Z",
-      "firstSeenAt": "2026-11-24T23:00:31.025Z",
-      "outlets": 4,
-      "outletNames": [
-        "KITV 4 Island News",
-        "KSDK on MSN",
-        "MSN",
-        "KGW on MSN"
-      ],
-      "score": 2.34
     },
     {
       "id": "c6aec4b84c8b",
@@ -907,6 +893,23 @@
         "Yahoo"
       ],
       "score": 1.72
+    },
+    {
+      "id": "5efab0861ea0",
+      "cat": "space",
+      "kind": "news",
+      "title": "Learn about: NASA's Lucy spacecraft flyby with asteroid Donaldjohanson",
+      "url": "https://www.msn.com/en-us/science/astronomy/learn-about-nasa-s-lucy-spacecraft-flyby-with-asteroid-donaldjohanson/vi-AA2i8NlX",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-24T11:40:00.000Z",
+      "latestAt": "2026-11-24T12:02:40.000Z",
+      "firstSeenAt": "2026-11-24T20:14:43.533Z",
+      "outlets": 2,
+      "outletNames": [
+        "Space on MSN",
+        "Dailymotion on MSN"
+      ],
+      "score": 1.71
     },
     {
       "id": "0dd78f3eb490",
@@ -1379,23 +1382,6 @@
       "score": 1.74
     },
     {
-      "id": "2fdeff134421",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "CIA and Director of National Intelligence hit with cyberattack, according to reports",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9ySUZyN19wd3hMd2RZMHRfQVI5VDVUUFJxY0hPUjJXUzRjSkpGbUtoZnc1S0tXNGtQN1JtSnRITXBtNFowallUNjVfb0k?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-25T00:32:19.000Z",
-      "latestAt": "2026-11-25T00:50:00.000Z",
-      "firstSeenAt": "2026-11-25T08:47:00.279Z",
-      "outlets": 2,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos",
-        "Modern Ghana"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "7f4b4a58044b",
       "cat": "flights",
       "kind": "news",
@@ -1483,23 +1469,6 @@
       "score": 1.71
     },
     {
-      "id": "5efab0861ea0",
-      "cat": "space",
-      "kind": "news",
-      "title": "Learn about: NASA's Lucy spacecraft flyby with asteroid Donaldjohanson",
-      "url": "https://www.msn.com/en-us/science/astronomy/learn-about-nasa-s-lucy-spacecraft-flyby-with-asteroid-donaldjohanson/vi-AA2i8NlX",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-24T11:40:00.000Z",
-      "latestAt": "2026-11-24T12:02:40.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
-      "outlets": 2,
-      "outletNames": [
-        "Space on MSN",
-        "Dailymotion on MSN"
-      ],
-      "score": 1.71
-    },
-    {
       "id": "a0f1e5023f00",
       "cat": "grid",
       "kind": "news",
@@ -1534,23 +1503,6 @@
       "score": 1.63
     },
     {
-      "id": "1b46f5e3eca2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Critical OpenSSH Flaw Lets Hackers Bypass Password Authentication on Alpine Linux With 257-Byte Password",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBVVThOdmNkaFhsTWN3SHhqem1oMG4tYU5kNERUMS00ZDQtd0J2ajMzMVlQVE5sXzk3TExSZW9zaUZSWHhBOGE2N0xSdmRNVjNvdTZ6WldYcXUxZVR6VHBNVdIBYEFVX3lxTFBVVThOdmNkaFhsTWN3SHhqem1oMG4tYU5kNERUMS00ZDQtd0J2ajMzMVlQVE5sXzk3TExSZW9zaUZSWHhBOGE2N0xSdmRNVjNvdTZ6WldYcXUxZVR6VHBNVQ?oc=5",
-      "source": "Cyber Press",
-      "publishedAt": "2026-11-24T09:51:53.000Z",
-      "latestAt": "2026-11-24T11:28:35.000Z",
-      "firstSeenAt": "2026-11-24T21:44:59.738Z",
-      "outlets": 2,
-      "outletNames": [
-        "Cyber Press",
-        "CyberSecurityNews"
-      ],
-      "score": 1.6
-    },
-    {
       "id": "0a358d7961e7",
       "cat": "internet",
       "kind": "news",
@@ -1583,6 +1535,23 @@
         "New York Post"
       ],
       "score": 1.57
+    },
+    {
+      "id": "d946ff356967",
+      "cat": "internet",
+      "kind": "news",
+      "title": "TikTok outage tops 56,000 reports: What users are seeing",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2alBzV3FHTXJ1TFc1RWl3enBpT2FEakxrOTBvcFlFeTBWRUZpNk1mX2VyOFZ0OEtLMVhGRXVGWG4zTEVPV19DRG95TWRaWlRqemlvTE9LNWNhNUM4bkNxajI2UGlGbzJ1bzBZbk55d3JFUQ?oc=5",
+      "source": "Rolling Out",
+      "publishedAt": "2026-11-24T20:41:28.000Z",
+      "latestAt": "2026-11-25T08:17:34.000Z",
+      "firstSeenAt": "2026-11-25T10:02:10.816Z",
+      "outlets": 2,
+      "outletNames": [
+        "Rolling Out",
+        "SecNews.gr"
+      ],
+      "score": 1.56
     },
     {
       "id": "be09b5dc5b1a",
@@ -1843,6 +1812,22 @@
       "score": 1.36
     },
     {
+      "id": "5599768ffc30",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Major Cybersecurity Scare in US: CIA & ODNI systems targeted in apparent cyberattack, classified data unaffected",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOc3Q5UFkxbVEzY1VFZTQ4QWVEQ0paVkFMLUhla3JwZWU1UzQwcFFiQjQzVU54S1prUmdXcWwtSkpJSUd2dFpsWTFucjFBOWV3U083QXpXekU0UFFsUVFlYUtUYUJkOTdJUXJKcUlESEdwMmlKc0pqdXFKUFJCOWVyRDRlZTUwT0dmZXUwR2VKeGNjMDFCZXJKdkNRaFl2S2k1OUw3YlMxbEN2SFF3ZVR5NzlCbzVZWkY3YklsQlVVTHZTWVpjeldpaXotclRCSjBOTDhWQWV0cjc0M21nVkVBTklkcmc2V2hINnpOQmxiZ0swaDNHSHfSAfsBQVVfeXFMUDVJVVN0TDJfZGk3RmVoRHEzbG1WMEh3N0g0OXFZNnRVdFZMazk4U3NhSFZ5djZKR3hHQ3EwT3RZaVpkSWZvMkR0WGcxVDVjaDQ2emlHNjF3RG45SkFtal9LWm5FWllTZDRMR2l1dnFROEpwS1VVejRIdG1VT2o1Zm1VYmlGc0NzUTVmM2hWemU3aEZ4cXFVRE40M2ZXaVVwN2VPT2FqeTZ3Q082dHBWdEN6djJ4c1RpaTIzblZRZmdicTJZUjIzNzE4X29jX2c5QXR3UjVIV2NmNWhHd0tCdnJBanhTWjZkb2pJNDY4S09xcDVQTFJIVmJUZzg?oc=5",
+      "source": "Organiser",
+      "publishedAt": "2026-11-25T08:05:17.000Z",
+      "latestAt": "2026-11-25T08:05:17.000Z",
+      "firstSeenAt": "2026-11-25T10:02:10.816Z",
+      "outlets": 1,
+      "outletNames": [
+        "Organiser"
+      ],
+      "score": 1.35
+    },
+    {
       "id": "e55c564c17ff",
       "cat": "flights",
       "kind": "news",
@@ -1906,6 +1891,22 @@
         "Modern Ghana"
       ],
       "score": 1.3
+    },
+    {
+      "id": "e142fe2fb20b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "AI Film & Television Stocks Plunge to Daily Limit: The \"Story Premium\" of AI Concepts Has Expired",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5SeGZ0ODYyc3Z0NlVSNXJvY3dNcFMxc2dNdDV4ZkJFd3I4Qkp4VVU0eUxLbmdKalNSMGZEMWVXeTM0eDB3R0ZteUIxbnhaQUZ0eEY0?oc=5",
+      "source": "eu.36kr.com",
+      "publishedAt": "2026-11-25T09:53:05.000Z",
+      "latestAt": "2026-11-25T09:53:05.000Z",
+      "firstSeenAt": "2026-11-25T10:02:10.816Z",
+      "outlets": 1,
+      "outletNames": [
+        "eu.36kr.com"
+      ],
+      "score": 1
     },
     {
       "id": "e944941ab0c9",
@@ -1972,22 +1973,20 @@
       "score": 1
     },
     {
-      "id": "0ca50871b20b",
-      "cat": "markets",
+      "id": "4db93e3c6858",
+      "cat": "sun",
       "kind": "news",
-      "title": "Utah asks to drop charges against Kalshi and its founders after Kalshi halts trading there",
-      "url": "https://abcnews.com/Business/wireStory/utah-asks-drop-charges-kalshi-founders-after-kalshi-138416910",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-25T02:00:00.000Z",
-      "latestAt": "2026-11-25T02:00:00.000Z",
-      "firstSeenAt": "2026-11-25T02:15:50.239Z",
+      "title": "M7.9 solar flare",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPelBIWk9Hdkh5cGR0Y1hWRGdFVlhzaUduRmIxX0pmZVNVRUlSamNyTkhTV0tPZ1lxRFRKcFF2Z3MtaXRRS3Viem1Wc2dmMWhzd2RSWEFsWlhSWjZKd0hWelMzNUpXNDM4S1M2M2hoSTZZR1VwR3M0ZmVDZnZha1d6VWFQV2xRbnM?oc=5",
+      "source": "SpaceWeatherLive.com",
+      "publishedAt": "2026-11-25T09:23:19.000Z",
+      "latestAt": "2026-11-25T09:23:19.000Z",
+      "firstSeenAt": "2026-11-25T10:02:10.816Z",
       "outlets": 1,
       "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos"
+        "SpaceWeatherLive.com"
       ],
-      "trending": 1000,
-      "trendTerm": "kalshi",
-      "score": 1
+      "score": 0.99
     },
     {
       "id": "bd363a2e2034",
