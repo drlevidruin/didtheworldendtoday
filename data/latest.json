@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T06:46:33.536Z",
+  "buildTime": "2026-11-25T07:01:35.001Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 01:46 ET",
+  "etStamp": "2026-11-25 02:01 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -47,8 +47,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 330,
-  "lastSuccessAt": "2026-11-25T06:46:33.536Z",
+  "headlinesRead": 383,
+  "lastSuccessAt": "2026-11-25T07:01:35.001Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
@@ -89,7 +89,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 2,
+      "groundDelays": 1,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -182,16 +182,16 @@
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
-      "lastOkAt": "2026-11-25T06:31:28.864Z"
+      "ok": true,
+      "count": 61,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 2 of 26 queries)",
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     },
     "bing": {
       "ok": true,
-      "count": 291,
+      "count": 283,
       "error": null,
-      "lastOkAt": "2026-11-25T06:46:33.536Z"
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,37 +203,37 @@
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-25T06:46:33.536Z"
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T06:46:33.536Z"
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T06:46:33.536Z"
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T06:46:33.536Z"
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T06:46:33.536Z"
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T06:46:33.536Z"
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +246,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T06:46:33.536Z"
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T06:46:33.536Z"
+      "lastOkAt": "2026-11-25T07:01:35.001Z"
     }
   },
   "stories": [
@@ -1969,6 +1969,22 @@
       "score": 1.07
     },
     {
+      "id": "23de3ce9e502",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Japan's Nikkei falls nearly 3% as AI stocks plunge",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZWtoN0RJRi1UdUhiOE9hamxRejk0VjVmWkUzYWdlMTVIVWFnQXRUMkwxSV9kYVozRk15NkIwSVdnUmFUeFEyRDFfZWJpejdwQzdHcnlmREZOdjNONlpUY1RRdnM5eFVuLWpEOVB2azJqOEIxcUM4SFp2VFRfSmZPOG1uWkk4STJ2SzctUEkxbkZZRGpUNGZvVjJMNlV0M25zc1h4TQ?oc=5",
+      "source": "marketscreener.com",
+      "publishedAt": "2026-11-25T06:55:33.000Z",
+      "latestAt": "2026-11-25T06:55:33.000Z",
+      "firstSeenAt": "2026-11-25T07:01:35.001Z",
+      "outlets": 1,
+      "outletNames": [
+        "marketscreener.com"
+      ],
+      "score": 1
+    },
+    {
       "id": "9804d63defa9",
       "cat": "sun",
       "kind": "news",
@@ -1992,7 +2008,7 @@
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5wYncxeURRVFRrZ0x5RGdna2MyTXRKcC1LTHlPeGlpS2pkNkRCYjBxTGZFUlpxX1ppRXZJSGdXbi1DNG1ZTFRGNWpXQkhIeGozSGtvUDExcXhmRmZTVHc?oc=5",
       "source": "SuaraGarut.ID",
       "publishedAt": "2026-11-25T05:34:24.000Z",
-      "latestAt": "2026-11-25T05:34:24.000Z",
+      "latestAt": "2026-11-25T05:34:53.000Z",
       "firstSeenAt": "2026-11-25T05:46:30.876Z",
       "outlets": 1,
       "outletNames": [
@@ -2033,22 +2049,6 @@
         "The Jerusalem Post"
       ],
       "score": 0.99
-    },
-    {
-      "id": "80f8b8c94585",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Jim Cramer Targets Corning and Boeing Amid Stock Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCcC0yQ0tCRjlSOThZQng3WHhCQmJvbmtmT2ozVkdMRkJtMmR2MGNsQTdmVjRkaUJXT2pqalFoVS14d0sxZ3dWTXhEODA5cnRkazZRUlhLUkRTRkJuQlp1YnFMaWhOMmNlSFE?oc=5",
-      "source": "cwibc.co.id",
-      "publishedAt": "2026-11-24T23:33:00.000Z",
-      "latestAt": "2026-11-24T23:33:00.000Z",
-      "firstSeenAt": "2026-11-25T04:16:08.225Z",
-      "outlets": 1,
-      "outletNames": [
-        "cwibc.co.id"
-      ],
-      "score": 0.92
     },
     {
       "id": "9c77cfaf2dab",
