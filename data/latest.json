@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T08:47:00.279Z",
+  "buildTime": "2026-11-25T09:01:58.575Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 03:47 ET",
+  "etStamp": "2026-11-25 04:01 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -53,16 +53,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 782,
-  "lastSuccessAt": "2026-11-25T08:47:00.279Z",
+  "headlinesRead": 326,
+  "lastSuccessAt": "2026-11-25T09:01:58.575Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
-    "hacks": 29,
+    "hacks": 28,
     "internet": 18,
     "earth": 6,
     "germs": 4,
-    "weather": 4,
+    "weather": 5,
     "grid": 6,
     "space": 2,
     "markets": 4,
@@ -188,16 +188,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 455,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 8 of 26 queries)",
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "bing": {
       "ok": true,
-      "count": 288,
+      "count": 287,
       "error": null,
-      "lastOkAt": "2026-11-25T08:47:00.279Z"
+      "lastOkAt": "2026-11-25T09:01:58.575Z"
     },
     "gdelt": {
       "ok": false,
@@ -209,37 +209,37 @@
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-25T08:47:00.279Z"
+      "lastOkAt": "2026-11-25T09:01:58.575Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T08:47:00.279Z"
+      "lastOkAt": "2026-11-25T09:01:58.575Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:47:00.279Z"
+      "lastOkAt": "2026-11-25T09:01:58.575Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:47:00.279Z"
+      "lastOkAt": "2026-11-25T09:01:58.575Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:47:00.279Z"
+      "lastOkAt": "2026-11-25T09:01:58.575Z"
     },
     "status": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T08:47:00.279Z"
+      "lastOkAt": "2026-11-25T09:01:58.575Z"
     },
     "x": {
       "ok": true,
@@ -252,13 +252,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T08:47:00.279Z"
+      "lastOkAt": "2026-11-25T09:01:58.575Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T08:47:00.279Z"
+      "lastOkAt": "2026-11-25T09:01:58.575Z"
     }
   },
   "stories": [
@@ -1374,23 +1374,6 @@
       "score": 1.79
     },
     {
-      "id": "2eac2cff2878",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Osaki Electric Ransomware Attack Halts Smart-Meter Production",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPanZuYnJhdFBkeU5UN2pCekRIbkFjQi1vS2VyMEpBN0k2TWtzQ0xqYm9GamZnZVppS2JnMURHajlXbnFLN2tfdmpLZzUwRGdUMzF5Q1hlSUhaeFhOY1lvMk81N25YWXRtN29BN3l5YWVoV0RiNXViVWNjUm1zOExQaEFnel9sUmdnbE42SF9pYk0xYzM1aGktbDBmZ0R5dDA?oc=5",
-      "source": "SOC Prime",
-      "publishedAt": "2026-11-24T08:49:28.000Z",
-      "latestAt": "2026-11-24T15:11:40.000Z",
-      "firstSeenAt": "2026-11-24T15:13:49.241Z",
-      "outlets": 2,
-      "outletNames": [
-        "SOC Prime",
-        "Industrial Cyber"
-      ],
-      "score": 1.79
-    },
-    {
       "id": "781a66721922",
       "cat": "hacks",
       "kind": "news",
@@ -1950,6 +1933,24 @@
         "CBS News"
       ],
       "score": 1.28
+    },
+    {
+      "id": "d1f8478fdf6c",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Watch King tides flood Mill Valley streets as California braces for record high waters - America's Weather Center",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONHlCUFQtekVDSDhscW5FZHY0aXhNUXNYUFd2OElIMFViODFMZGdvT0t1c21XNzAteWR0VW1fLUZteV9PeW5URl9hYTZ6TEswdUktUzRiSzhrLWlqbE9tazdYbG4yMWUwRWFJTlh4TXgtb2pna0dwYkFsMnFNMjNsS3V0bG5fd2RaN0VSMDFCMnJoaVRYc0lqbDNMWjRTSnR4NVB1S2wyRHRHbDJEVklUMTdsUkVGajdkTUNsdnVkRmdtTmw1TUhzaWxwdUg?oc=5",
+      "source": "FOX One",
+      "publishedAt": "2026-11-24T20:19:02.000Z",
+      "latestAt": "2026-11-24T20:19:02.000Z",
+      "firstSeenAt": "2026-11-25T03:30:57.644Z",
+      "outlets": 1,
+      "outletNames": [
+        "FOX One"
+      ],
+      "score": 1.23,
+      "quiet": true,
+      "quietReason": "headline mentions flood"
     },
     {
       "id": "23de3ce9e502",
