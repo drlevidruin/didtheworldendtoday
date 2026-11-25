@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T05:31:26.842Z",
+  "buildTime": "2026-11-25T05:46:30.876Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 00:31 ET",
+  "etStamp": "2026-11-25 00:46 ET",
   "score": 59,
   "fired": [
     "flights",
@@ -46,13 +46,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 327,
-  "lastSuccessAt": "2026-11-25T05:31:26.842Z",
+  "headlinesRead": 1433,
+  "lastSuccessAt": "2026-11-25T05:46:30.876Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
-    "hacks": 32,
-    "earth": 6,
+    "hacks": 31,
+    "earth": 7,
     "germs": 4,
     "internet": 18,
     "grid": 6,
@@ -162,7 +162,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -176,80 +176,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
-      "lastOkAt": "2026-11-25T05:16:26.751Z"
+      "ok": true,
+      "count": 1103,
+      "error": null,
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     },
     "bing": {
       "ok": true,
-      "count": 289,
+      "count": 292,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-24T16:59:11.725Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:31:26.842Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T05:31:26.842Z"
+      "lastOkAt": "2026-11-25T05:46:30.876Z"
     }
   },
   "stories": [
@@ -436,6 +437,30 @@
       "score": 3.42
     },
     {
+      "id": "031e0f43c9a0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach CIA unclassified computer system",
+      "url": "https://www.washingtonpost.com/national-security/2026/11/24/hackers-breach-cia-unclassified-computer-system/",
+      "source": "The Washington Post",
+      "publishedAt": "2026-11-24T15:13:00.000Z",
+      "latestAt": "2026-11-25T05:17:35.000Z",
+      "firstSeenAt": "2026-11-25T05:16:26.751Z",
+      "outlets": 9,
+      "outletNames": [
+        "The Washington Post",
+        "Bloomberg.com",
+        "TradingView",
+        "Investing.com",
+        "Deccan Chronicle",
+        "Moneycontrol.com",
+        "India TV News",
+        "Times of Oman",
+        "Firstpost"
+      ],
+      "score": 3.19
+    },
+    {
       "id": "857010ed9caa",
       "cat": "internet",
       "kind": "news",
@@ -477,24 +502,6 @@
         "95.3 and 101.1 FM The Eagle"
       ],
       "score": 3.09
-    },
-    {
-      "id": "3654f280be86",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "CIA hit by major cyberattack on key intelligence system",
-      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T00:46:18.000Z",
-      "firstSeenAt": "2026-11-25T01:15:36.251Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "geekspin",
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 3.06
     },
     {
       "id": "fb4faf2589e7",
@@ -619,66 +626,40 @@
       }
     },
     {
-      "id": "17124be0110f",
+      "id": "02f0d15c4df1",
       "cat": "flights",
       "kind": "news",
-      "title": "Chicago O'Hare International Airport briefly issues ground stop amid equipment outage during Thanksgiving week",
-      "url": "https://www.kgw.com/article/news/nation-world/chicago-o-hare-airport-ground-stop-equipment-outage-thanksgiving-travel/507-6a9f6bab-0a4f-4166-bca5-9733e5e8dde0",
-      "source": "KGW",
-      "publishedAt": "2026-11-24T14:14:00.000Z",
-      "latestAt": "2026-11-25T02:29:58.000Z",
-      "firstSeenAt": "2026-11-25T05:16:26.751Z",
-      "outlets": 26,
+      "title": "Exclusive: FAA probe zeros in on culprit of nationwide ground stop, but agency still faces tough questions",
+      "url": "https://www.msn.com/en-us/news/other/exclusive-faa-probe-zeros-in-on-culprit-of-nationwide-ground-stop-but-agency-still-faces-tough-questions/ar-AA2i9wcB",
+      "source": "CNN on MSN",
+      "publishedAt": "2026-11-24T15:59:00.000Z",
+      "latestAt": "2026-11-25T02:26:15.000Z",
+      "firstSeenAt": "2026-11-25T00:15:26.751Z",
+      "outlets": 5,
       "outletNames": [
-        "StreetInsider",
-        "FOX 32 Chicago",
-        "WGN-TV",
+        "CNN",
+        "KRDO",
+        "Yahoo News Singapore",
         "Yahoo",
-        "Fox News",
-        "NewsNation",
-        "WUSA9",
-        "WTXL ABC 27 Tallahassee News",
-        "10News.com",
-        "Idaho News 6",
-        "23ABC News Bakersfield",
-        "FOX 13 News Utah",
-        "Scripps News",
-        "Shaw Local",
-        "KTVQ",
-        "WCPO 9 Cincinnati",
-        "Mezha.net",
-        "wrganews.com",
-        "National News Desk",
-        "WOAI",
-        "KTUL",
-        "WBMA",
-        "Around Prague",
-        "Howl.Link",
-        "KEYE",
-        "KGW"
+        "Yahoo News UK"
       ],
-      "score": 4.27
+      "score": 4.01
     },
     {
-      "id": "031e0f43c9a0",
+      "id": "3654f280be86",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers breach CIA unclassified computer system",
-      "url": "https://www.washingtonpost.com/national-security/2026/11/24/hackers-breach-cia-unclassified-computer-system/",
-      "source": "The Washington Post",
-      "publishedAt": "2026-11-24T15:13:00.000Z",
-      "latestAt": "2026-11-25T03:47:35.000Z",
-      "firstSeenAt": "2026-11-25T05:16:26.751Z",
-      "outlets": 8,
+      "title": "CIA hit by major cyberattack on key intelligence system",
+      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T15:59:00.000Z",
+      "latestAt": "2026-11-25T00:46:18.000Z",
+      "firstSeenAt": "2026-11-25T01:15:36.251Z",
+      "outlets": 3,
       "outletNames": [
-        "The Washington Post",
-        "Bloomberg.com",
-        "TradingView",
-        "Investing.com",
-        "Deccan Chronicle",
-        "Moneycontrol.com",
-        "India TV News",
-        "Times of Oman"
+        "Yahoo",
+        "geekspin",
+        "NewsBreak: Local News & Alerts"
       ],
       "score": 3.06
     },
@@ -935,26 +916,6 @@
       "score": 1.71
     },
     {
-      "id": "02f0d15c4df1",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Exclusive: FAA probe zeros in on culprit of nationwide ground stop, but agency still faces tough questions",
-      "url": "https://www.msn.com/en-us/news/other/exclusive-faa-probe-zeros-in-on-culprit-of-nationwide-ground-stop-but-agency-still-faces-tough-questions/ar-AA2i9wcB",
-      "source": "CNN on MSN",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T02:26:15.000Z",
-      "firstSeenAt": "2026-11-25T00:15:26.751Z",
-      "outlets": 5,
-      "outletNames": [
-        "CNN",
-        "KRDO",
-        "Yahoo News Singapore",
-        "Yahoo",
-        "Yahoo News UK"
-      ],
-      "score": 4.01
-    },
-    {
       "id": "899c23b9703f",
       "cat": "flights",
       "kind": "news",
@@ -1012,6 +973,25 @@
       "score": 2.74
     },
     {
+      "id": "0bc4c2c85c92",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "McDonald’s Japan Confirms Data Breach – Customer Information and Location Data Exposed",
+      "url": "https://cybersecuritynews.com/mcdonalds-japan-data-breach/",
+      "source": "Cyber Security News",
+      "publishedAt": "2026-11-24T07:39:00.000Z",
+      "latestAt": "2026-11-24T15:59:00.000Z",
+      "firstSeenAt": "2026-11-24T15:44:04.612Z",
+      "outlets": 4,
+      "outletNames": [
+        "Cyber Security News",
+        "BleepingComputer",
+        "Mezha.net",
+        "cyberpress"
+      ],
+      "score": 2.6
+    },
+    {
       "id": "e724a6fe278b",
       "cat": "hacks",
       "kind": "news",
@@ -1062,24 +1042,6 @@
         "Anadolu Agency",
         "Anadolu Ajansı",
         "US Muslims"
-      ],
-      "score": 2.24
-    },
-    {
-      "id": "0bc4c2c85c92",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "McDonald’s Japan Confirms Data Breach – Customer Information and Location Data Exposed",
-      "url": "https://cybersecuritynews.com/mcdonalds-japan-data-breach/",
-      "source": "Cyber Security News",
-      "publishedAt": "2026-11-24T07:39:00.000Z",
-      "latestAt": "2026-11-24T14:13:33.000Z",
-      "firstSeenAt": "2026-11-24T15:44:04.612Z",
-      "outlets": 3,
-      "outletNames": [
-        "Cyber Security News",
-        "BleepingComputer",
-        "Mezha.net"
       ],
       "score": 2.24
     },
@@ -1276,6 +1238,23 @@
         "Baller Alert"
       ],
       "score": 1.98
+    },
+    {
+      "id": "c0a263ebd895",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Enhanced BiLSTM Architecture Improves IoT Cyberattack Classification Accuracy and Sensitivity",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZEVFZUNKVmlEcjk1cTRLdGRzTjNZY0JhSi1JYVp3MHdBTHFibEs4aVZ6VmVSUGpWVGQtR0xVNXpUb1NYb3QwQzVmUkZXano4QWtEeFhsTDZXM3MwXzZIb3FOZ0Utd2tXNnRtYnFaRFQwVTl4YXRoY0tvR2ZzMWFFaVdzSzNOZWlPWFFINHlrVk9ZY1l3VkVrcXZ0Q0p5Z2sxNzRSUG84V0VYVjFzYWlVREdoQ0p1MFpZYXc?oc=5",
+      "source": "Bioengineer.org",
+      "publishedAt": "2026-11-25T04:54:54.000Z",
+      "latestAt": "2026-11-25T04:59:30.000Z",
+      "firstSeenAt": "2026-11-25T05:46:30.876Z",
+      "outlets": 2,
+      "outletNames": [
+        "Bioengineer.org",
+        "cedarnews.net"
+      ],
+      "score": 1.97
     },
     {
       "id": "3b15d213ea1a",
@@ -1482,23 +1461,6 @@
       "score": 1.73
     },
     {
-      "id": "ca0aa6b55291",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft declares Code Red after 24-hour outage disrupts Outlook, Teams and Copilot: Check details",
-      "url": "https://www.digit.in/news/general/microsoft-declares-code-red-after-24-hour-outage-disrupts-outlook-teams-and-copilot-check-details.html",
-      "source": "Digit",
-      "publishedAt": "2026-11-24T21:02:00.000Z",
-      "latestAt": "2026-11-24T21:11:00.000Z",
-      "firstSeenAt": "2026-11-25T05:31:26.842Z",
-      "outlets": 2,
-      "outletNames": [
-        "Digit",
-        "Moneycontrol"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "bfac433ea064",
       "cat": "internet",
       "kind": "news",
@@ -1586,6 +1548,24 @@
       "score": 1.63
     },
     {
+      "id": "af4f61912279",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6 magnitude earthquake strikes Nepals Koshi province close to China border",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQW5haW9vX3BDWHM1TEJkVWd0dGo5WDNpTVFPdDlINi1jOXN5OGo4azhFeXNscjZyRmkwSmxoZTk3RjZuRmtWNU1JNnlBSERSQlRnSjdGNU9jS1dJVFA5clNTOXEzZXFqYUtlckpONTl5MHlDdXFiSi1JVHpZMWpJVHlWeUNLNUhEN3BwaUFyNkdBWDZrd1ZnU3VMQ1Z5blBrU0tZTXdJX0E1TjlrQkNpd9IBsAFBVV95cUxQQW5haW9vX3BDWHM1TEJkVWd0dGo5WDNpTVFPdDlINi1jOXN5OGo4azhFeXNscjZyRmkwSmxoZTk3RjZuRmtWNU1JNnlBSERSQlRnSjdGNU9jS1dJVFA5clNTOXEzZXFqYUtlckpONTl5MHlDdXFiSi1JVHpZMWpJVHlWeUNLNUhEN3BwaUFyNkdBWDZrd1ZnU3VMQ1Z5blBrU0tZTXdJX0E1TjlrQkNpdw?oc=5",
+      "source": "Daily Excelsior",
+      "publishedAt": "2026-11-24T05:59:00.000Z",
+      "latestAt": "2026-11-24T10:09:30.000Z",
+      "firstSeenAt": "2026-11-25T04:16:08.225Z",
+      "outlets": 3,
+      "outletNames": [
+        "Daily Excelsior",
+        "www.thesamaja.com",
+        "Singrauli Mirror"
+      ],
+      "score": 1.62
+    },
+    {
       "id": "1b46f5e3eca2",
       "cat": "hacks",
       "kind": "news",
@@ -1644,7 +1624,7 @@
       "url": "https://www.yahoo.com/news/videos/were-not-worried-roc-passengers-040424722.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T04:04:24.000Z",
+      "latestAt": "2026-11-25T04:10:07.000Z",
       "firstSeenAt": "2026-11-25T05:01:18.990Z",
       "outlets": 2,
       "outletNames": [
@@ -1867,6 +1847,22 @@
       "score": 1.4
     },
     {
+      "id": "03a9f2cafcdc",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Orders One Hour Response After Global Outage",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5lRTc3QVFaOXlZMWRNQ3NsZDQxRUR1ZzZYdmZFeUYxOVQyYnhvOTN4TWx0VlpKTkxTOUhwTHQxWEFGUDFrRnpVVV93MnFoUEJjd18wWHJqaWxjQUpseHRKZ2lGYklkY2N5?oc=5",
+      "source": "cwibc.co.id",
+      "publishedAt": "2026-11-25T05:22:45.000Z",
+      "latestAt": "2026-11-25T05:22:45.000Z",
+      "firstSeenAt": "2026-11-25T05:46:30.876Z",
+      "outlets": 1,
+      "outletNames": [
+        "cwibc.co.id"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "640f507300f2",
       "cat": "flights",
       "kind": "news",
@@ -1881,6 +1877,22 @@
         "www.suaralandak.co.id"
       ],
       "score": 1.39
+    },
+    {
+      "id": "d8bad2fdd7fe",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Following nationwide shutdown, ground stops hit Chicago and Atlanta airports during Thanksgiving week",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBzTzEtdW5GLTVZRU8wOF9wcEVKeGcyQjBqU1BEREppV3Z2NzZrczBvNXBta1ZxeVdqS2kxS2NiZFJQUkhoZ3h5WGM3bjZlcnc4Tm52a0J2dmZEZ0N6ZkFiR0k1ZWxoMDFt?oc=5",
+      "source": "World Socialist Web Site",
+      "publishedAt": "2026-11-25T04:59:35.000Z",
+      "latestAt": "2026-11-25T04:59:35.000Z",
+      "firstSeenAt": "2026-11-25T05:46:30.876Z",
+      "outlets": 1,
+      "outletNames": [
+        "World Socialist Web Site"
+      ],
+      "score": 1.38
     },
     {
       "id": "24cd97c645da",
@@ -1947,38 +1959,6 @@
       "score": 1.31
     },
     {
-      "id": "ca043b17770a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "CIA system hacked in latest major data breach",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5fUldpM1hHV2RXZDM3MU1NTlg0N0VPTjhDUTFNYzZBeGZMVEVNeEVYU1ZsRmRYS0diM0NHRjJKYWFpdUZEcTYxRHBDYzQ2TkgzY2pKRnJNTFowTVpJek5R0gFcQVVfeXFMTUVWYWJTNVJfWDhsdnl6UEd6V0ZEZWx1RlEyZVpIbUYwaXZ4SHl4dEJYYlJKY2tsLWNsSUo1c29nMmN1QV9ldHo2cG94M0RxN2tjZkNLSGpkZDA3MmI?oc=5",
-      "source": "Modern Ghana",
-      "publishedAt": "2026-11-25T00:10:00.000Z",
-      "latestAt": "2026-11-25T00:10:00.000Z",
-      "firstSeenAt": "2026-11-25T04:31:12.371Z",
-      "outlets": 1,
-      "outletNames": [
-        "Modern Ghana"
-      ],
-      "score": 1.3
-    },
-    {
-      "id": "1575b11704a7",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major Websites Targeted by Hackers Through Compromised Optimizely Code",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOeDhEUWN3VHEtak1sbnRQNHNXaXo4WEF6UnQtd2lNMkNIQ0dfbDZhR1RhRUVxbGU4T3h1OUEzcUVFZm0tRVI1VFdacTgzQ0Y1b1NJejFkZVI0ZnltMW40XzBfMTdmeWVqZ2QyRGpUTzFDOUJ4dlpUYkFYaGtMZkxPaF9XczNJVG1CQW8xYXdJWS1SLWkzQmVsUkt3LVRNWU1TMFVGWE9lbTNLb3o2Qk43OA?oc=5",
-      "source": "Newswav",
-      "publishedAt": "2026-11-25T00:00:21.000Z",
-      "latestAt": "2026-11-25T00:00:21.000Z",
-      "firstSeenAt": "2026-11-25T05:16:26.751Z",
-      "outlets": 1,
-      "outletNames": [
-        "Newswav"
-      ],
-      "score": 1.28
-    },
-    {
       "id": "d1f8478fdf6c",
       "cat": "weather",
       "kind": "news",
@@ -2011,6 +1991,22 @@
         "Investopedia on MSN"
       ],
       "score": 1.07
+    },
+    {
+      "id": "5803ad2f8baa",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Cramer and Lee Buy AI Stocks Amid Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5wYncxeURRVFRrZ0x5RGdna2MyTXRKcC1LTHlPeGlpS2pkNkRCYjBxTGZFUlpxX1ppRXZJSGdXbi1DNG1ZTFRGNWpXQkhIeGozSGtvUDExcXhmRmZTVHc?oc=5",
+      "source": "SuaraGarut.ID",
+      "publishedAt": "2026-11-25T05:34:24.000Z",
+      "latestAt": "2026-11-25T05:34:24.000Z",
+      "firstSeenAt": "2026-11-25T05:46:30.876Z",
+      "outlets": 1,
+      "outletNames": [
+        "SuaraGarut.ID"
+      ],
+      "score": 1
     },
     {
       "id": "c0cf963bcc73",
@@ -2061,22 +2057,6 @@
         "cwibc.co.id"
       ],
       "score": 0.92
-    },
-    {
-      "id": "f389f9bc3796",
-      "cat": "markets",
-      "kind": "news",
-      "title": "KOSPI plunges 5%, triggers sell-side circuit breaker, drops below 5,000",
-      "url": "https://www.msn.com/en-xl/news/other/kospi-plunges-5-triggers-sell-side-circuit-breaker-drops-below-5000/ar-AA2i9wc5",
-      "source": "The Chosun Ilbo on MSN",
-      "publishedAt": "2026-11-24T20:52:00.000Z",
-      "latestAt": "2026-11-24T20:52:00.000Z",
-      "firstSeenAt": "2026-11-25T05:31:26.842Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Chosun Ilbo on MSN"
-      ],
-      "score": 0.86
     },
     {
       "id": "9c77cfaf2dab",
