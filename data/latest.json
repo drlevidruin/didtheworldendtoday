@@ -1,16 +1,15 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T04:46:11.815Z",
-  "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 23:46 ET",
-  "score": 65,
+  "buildTime": "2026-11-25T05:01:18.990Z",
+  "etDate": "2026-11-25",
+  "etStamp": "2026-11-25 00:01 ET",
+  "score": 59,
   "fired": [
     "flights",
     "hacks",
     "internet",
     "earth",
     "markets",
-    "ai",
     "grid",
     "germs",
     "weather"
@@ -27,10 +26,10 @@
       "points": 6
     }
   ],
-  "change": -1,
+  "change": -6,
   "yesterday": {
-    "date": "2026-11-23",
-    "score": 66,
+    "date": "2026-11-24",
+    "score": 65,
     "fired": [
       "flights",
       "hacks",
@@ -40,28 +39,27 @@
       "ai",
       "grid",
       "germs",
-      "weather",
-      "animals"
+      "weather"
     ]
   },
   "record": {
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1398,
-  "lastSuccessAt": "2026-11-25T04:46:11.815Z",
+  "headlinesRead": 695,
+  "lastSuccessAt": "2026-11-25T05:01:18.990Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
-    "internet": 17,
-    "hacks": 30,
-    "earth": 8,
+    "flights": 24,
+    "internet": 18,
+    "hacks": 29,
+    "earth": 7,
     "germs": 4,
-    "grid": 8,
+    "grid": 7,
     "weather": 4,
     "space": 1,
     "markets": 4,
-    "ai": 3
+    "ai": 2
   },
   "vital": {
     "quake": {
@@ -183,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1075,
-      "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "count": 417,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 8 of 26 queries)",
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     },
     "bing": {
       "ok": true,
-      "count": 285,
-      "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "count": 240,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-24T16:59:11.725Z"
     },
     "hn": {
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T04:46:11.815Z"
+      "lastOkAt": "2026-11-25T05:01:18.990Z"
     }
   },
   "stories": [
@@ -819,26 +817,6 @@
       "score": 2.41
     },
     {
-      "id": "7c6ceebd6163",
-      "cat": "earth",
-      "kind": "news",
-      "title": "No tsunami threat after 6.4-magnitude earthquake strikes near Mauritius",
-      "url": "https://www.msn.com/en-gb/news/other/no-tsunami-threat-after-64-magnitude-earthquake-strikes-near-mauritius/ar-AA2i7q1z",
-      "source": "International Business Times UK on MSN",
-      "publishedAt": "2026-11-24T04:50:45.000Z",
-      "latestAt": "2026-11-24T12:59:36.000Z",
-      "firstSeenAt": "2026-11-24T13:13:28.247Z",
-      "outlets": 3,
-      "outletNames": [
-        "International Business Times UK on MSN",
-        "India TV News",
-        "inkl"
-      ],
-      "score": 2.22,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
-    },
-    {
       "id": "58121433910a",
       "cat": "grid",
       "kind": "news",
@@ -853,24 +831,6 @@
         "Patiala Politics",
         "Living India News",
         "Punjab News Express"
-      ],
-      "score": 2.18
-    },
-    {
-      "id": "04d4c83b5688",
-      "cat": "grid",
-      "kind": "news",
-      "title": "How a 'weekday thing' caused brief Commanders power outage",
-      "url": "https://ftw.usatoday.com/story/sports/nfl/2026/11/24/why-commanders-power-outage-happened/92938721007/",
-      "source": "For The Win",
-      "publishedAt": "2026-11-24T04:51:00.000Z",
-      "latestAt": "2026-11-24T12:50:45.000Z",
-      "firstSeenAt": "2026-11-24T14:13:41.101Z",
-      "outlets": 3,
-      "outletNames": [
-        "For The Win",
-        "USA Today",
-        "AOL.com"
       ],
       "score": 2.18
     },
@@ -943,6 +903,40 @@
         "blue News"
       ],
       "score": 1.73
+    },
+    {
+      "id": "c2d129a0cce4",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Tennessee utility reportedly turned away help offers as ice storm left 230,000 customers without power",
+      "url": "https://www.msn.com/en-us/news/other/tennessee-utility-reportedly-turned-away-help-offers-as-ice-storm-left-230000-customers-without-power/ar-AA2i95Qu",
+      "source": "The Cool Down on MSN",
+      "publishedAt": "2026-11-24T14:30:00.000Z",
+      "latestAt": "2026-11-24T22:30:00.000Z",
+      "firstSeenAt": "2026-11-24T23:00:31.025Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Cool Down on MSN",
+        "Yahoo"
+      ],
+      "score": 1.72
+    },
+    {
+      "id": "5efab0861ea0",
+      "cat": "space",
+      "kind": "news",
+      "title": "Learn about: NASA's Lucy spacecraft flyby with asteroid Donaldjohanson",
+      "url": "https://www.msn.com/en-us/science/astronomy/learn-about-nasa-s-lucy-spacecraft-flyby-with-asteroid-donaldjohanson/vi-AA2i8NlX",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-24T11:40:00.000Z",
+      "latestAt": "2026-11-24T12:02:40.000Z",
+      "firstSeenAt": "2026-11-24T20:14:43.533Z",
+      "outlets": 2,
+      "outletNames": [
+        "Space on MSN",
+        "Dailymotion on MSN"
+      ],
+      "score": 1.71
     },
     {
       "id": "899c23b9703f",
@@ -1436,23 +1430,6 @@
       "score": 1.72
     },
     {
-      "id": "c2d129a0cce4",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Tennessee utility reportedly turned away help offers as ice storm left 230,000 customers without power",
-      "url": "https://www.msn.com/en-us/news/other/tennessee-utility-reportedly-turned-away-help-offers-as-ice-storm-left-230000-customers-without-power/ar-AA2i95Qu",
-      "source": "The Cool Down on MSN",
-      "publishedAt": "2026-11-24T14:30:00.000Z",
-      "latestAt": "2026-11-24T22:30:00.000Z",
-      "firstSeenAt": "2026-11-24T23:00:31.025Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Cool Down on MSN",
-        "Yahoo"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "88ba468ff8f3",
       "cat": "flights",
       "kind": "news",
@@ -1485,23 +1462,6 @@
       "outletNames": [
         "Yahoo Finance",
         "Forbes"
-      ],
-      "score": 1.71
-    },
-    {
-      "id": "5efab0861ea0",
-      "cat": "space",
-      "kind": "news",
-      "title": "Learn about: NASA's Lucy spacecraft flyby with asteroid Donaldjohanson",
-      "url": "https://www.msn.com/en-us/science/astronomy/learn-about-nasa-s-lucy-spacecraft-flyby-with-asteroid-donaldjohanson/vi-AA2i8NlX",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-24T11:40:00.000Z",
-      "latestAt": "2026-11-24T12:02:40.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
-      "outlets": 2,
-      "outletNames": [
-        "Space on MSN",
-        "Dailymotion on MSN"
       ],
       "score": 1.71
     },
@@ -1608,6 +1568,23 @@
       "score": 1.59
     },
     {
+      "id": "2bb07ffc981b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "'We're not worried': ROC passengers talk ticket prices, recent FAA ground stop during busy travel week",
+      "url": "https://www.yahoo.com/news/videos/were-not-worried-roc-passengers-040424722.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T15:59:00.000Z",
+      "latestAt": "2026-11-25T04:04:24.000Z",
+      "firstSeenAt": "2026-11-25T05:01:18.990Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "RochesterFirst"
+      ],
+      "score": 1.57
+    },
+    {
       "id": "d6b8ce642e78",
       "cat": "hacks",
       "kind": "news",
@@ -1674,23 +1651,6 @@
         "Hiru News"
       ],
       "score": 1.5
-    },
-    {
-      "id": "4d33d5ae09fb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Bernalillo still logged out six weeks after cyberattack",
-      "url": "https://sandovalsignpost.com/2026/11/bernalillo-still-logged-out-six-weeks-after-cyberattack/",
-      "source": "sandovalsignpost",
-      "publishedAt": "2026-11-24T04:51:00.000Z",
-      "latestAt": "2026-11-24T20:50:32.000Z",
-      "firstSeenAt": "2026-11-24T20:59:49.860Z",
-      "outlets": 2,
-      "outletNames": [
-        "sandovalsignpost",
-        "nm.news"
-      ],
-      "score": 1.46
     },
     {
       "id": "f49f84f0e1a9",
@@ -1968,6 +1928,38 @@
       "score": 1.27
     },
     {
+      "id": "0dd78f3eb490",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Major Airport Disrupted by Another Ground Stop Before Thanksgiving Holiday",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQeVBudUVzVkNqdEdxMFBvQlUxVXU4MTBGSW1jY3JmbDI1V1VRZ2hNMzlVakdhanRFMy1ta2tOTmV5RTBqUFRsVGZaX0Z4V1c2YXpKak80ZWsxZUJNWmd0ZEdqQVh5czFBWTFMcnVScUlEN2NxRWg0VnhyOFZjRmpxT1lCcHlDbnpLYXhfR0dVWlpRLUJaQzdGNw?oc=5",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-24T22:07:00.000Z",
+      "latestAt": "2026-11-24T22:07:00.000Z",
+      "firstSeenAt": "2026-11-25T05:01:18.990Z",
+      "outlets": 1,
+      "outletNames": [
+        "Newsweek"
+      ],
+      "score": 1.24
+    },
+    {
+      "id": "fb0465e3999d",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Editorial: Nationwide Ground Stop Highlights Vulnerable Air Traffic Systems",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNbVVnU2k5Mmk0dTZMNVNXZlNGLUxINUxKQnRhcTlfVnY1dXNEbUtVSFZqdnkxa0w5OTk4c1BZaHhjRmxCaU0zaWYxbWRPbjZtcmxzNm1QTm41T1dDdENtaWpfWEQtLVVlQ05rbUNKVG5kWnRUOURBT083X3lFcFBtR0FlTVhzRDVFSFI4dEJ3Y20tc2czUHJDRDV3Mm9fVlJybmpXXzdfaVEzTWUtQmc4ZWRhRDl0dFFTbXJuOVVxV3Z2alJjd1EzQTQwWHlvc0tReUFwOTVBb0JCWE1CTUFXU0VraDFpUGs3RmhyRzFvM01sbEN5ZE1yTWFCZUM?oc=5",
+      "source": "Aviation Pros",
+      "publishedAt": "2026-11-24T21:40:28.000Z",
+      "latestAt": "2026-11-24T21:40:28.000Z",
+      "firstSeenAt": "2026-11-25T05:01:18.990Z",
+      "outlets": 1,
+      "outletNames": [
+        "Aviation Pros"
+      ],
+      "score": 1.23
+    },
+    {
       "id": "d1f8478fdf6c",
       "cat": "weather",
       "kind": "news",
@@ -2000,6 +1992,22 @@
         "Investopedia on MSN"
       ],
       "score": 1.18
+    },
+    {
+      "id": "53050a2b1c92",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft's Code Red initiative launched after major outage disrupts global services",
+      "url": "https://cio.economictimes.indiatimes.com/news/corporate-news/microsofts-code-red-initiative-launched-after-major-outage-disrupts-global-services/136146333",
+      "source": "ET CIO",
+      "publishedAt": "2026-11-24T18:45:00.000Z",
+      "latestAt": "2026-11-24T18:45:00.000Z",
+      "firstSeenAt": "2026-11-25T05:01:18.990Z",
+      "outlets": 1,
+      "outletNames": [
+        "ET CIO"
+      ],
+      "score": 1.16
     },
     {
       "id": "8ca9b14f75aa",
@@ -2082,22 +2090,6 @@
         "Yahoo Finance"
       ],
       "score": 0.86
-    },
-    {
-      "id": "955c4ecb9a48",
-      "cat": "ai",
-      "kind": "news",
-      "title": "AI-driven security updates fuel string of tech outages",
-      "url": "https://www.msn.com/en-us/technology/cybersecurity/ai-driven-security-updates-fuel-string-of-tech-outages/ar-AA2i4Opi",
-      "source": "KOAT Channel 7 on MSN",
-      "publishedAt": "2026-11-24T05:01:00.000Z",
-      "latestAt": "2026-11-24T05:01:00.000Z",
-      "firstSeenAt": "2026-11-24T14:13:41.101Z",
-      "outlets": 1,
-      "outletNames": [
-        "KOAT Channel 7 on MSN"
-      ],
-      "score": 0.85
     },
     {
       "id": "3f99b2a2a3e3",
