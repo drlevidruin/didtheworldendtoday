@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T03:15:56.814Z",
+  "buildTime": "2026-11-25T03:30:57.644Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 22:15 ET",
+  "etStamp": "2026-11-24 22:30 ET",
   "score": 65,
   "fired": [
     "flights",
@@ -48,14 +48,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1035,
-  "lastSuccessAt": "2026-11-25T03:15:56.814Z",
+  "headlinesRead": 1294,
+  "lastSuccessAt": "2026-11-25T03:30:57.644Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
-    "internet": 18,
-    "hacks": 28,
-    "earth": 8,
+    "flights": 20,
+    "internet": 19,
+    "earth": 9,
+    "hacks": 29,
     "germs": 4,
     "weather": 4,
     "grid": 7,
@@ -178,20 +178,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 713,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "count": 973,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 21 of 26 queries)",
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "bing": {
       "ok": true,
-      "count": 284,
+      "count": 283,
       "error": null,
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,56 +203,55 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T02:30:52.329Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T03:15:56.814Z"
+      "lastOkAt": "2026-11-25T03:30:57.644Z"
     }
   },
   "stories": [
@@ -394,6 +393,32 @@
         "nationwide": false,
         "reason": "wind"
       }
+    },
+    {
+      "id": "76df64bdaeb1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "5.6-magnitude earthquake jolts Nepal-Tibet border",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yUUtSYXJTZjJVWEs4aWN2WTlRSVdFMXFPOVJVWkFUNm9hcE1nc2lrT1dnV3ZWVHZ2NGlUZE02UTNTVUxlMHUxMkZmc0lSMFJCZzZwVjVkMA?oc=5",
+      "source": "The Annapurna Express",
+      "publishedAt": "2026-11-24T03:36:36.000Z",
+      "latestAt": "2026-11-24T10:20:24.000Z",
+      "firstSeenAt": "2026-11-24T04:57:01.340Z",
+      "outlets": 11,
+      "outletNames": [
+        "The Annapurna Express",
+        "The Himalayan Times",
+        "The Business Standard",
+        "India TV News",
+        "OnlineKhabar English News",
+        "Rediff.com",
+        "NKTV",
+        "The Avenue Mail",
+        "Qazinform",
+        "Mid-Day",
+        "News On AIR"
+      ],
+      "score": 4.36
     },
     {
       "id": "1f7a9dd08c2f",
@@ -588,24 +613,6 @@
       "score": 2.93
     },
     {
-      "id": "c12cb954b403",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Kindopp says Agribition monitoring the bird flu situation",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQllMaWhCYXRwSm1DNkRJUm1GekdLY0dBZjR4WTdlaHRzUmVnM29odlI5SFNFTWFWOUpxY2l4OFlld2tqSUYxMTM2eXgxWnhfajcwS3B3M1lsMzFjVkJSdXdkTURuN1lQQ2dEczVqOVZCRUxFb0xJZXR4Y1hpWU5FckV6LWktbHg5U0VQWmR5NU1sQ1JTdTJQTw?oc=5",
-      "source": "620 CKRM",
-      "publishedAt": "2026-11-24T20:05:00.000Z",
-      "latestAt": "2026-11-24T20:15:20.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
-      "outlets": 3,
-      "outletNames": [
-        "620 CKRM",
-        "MooseJawToday.com",
-        "GX94 Radio"
-      ],
-      "score": 2.58
-    },
-    {
       "id": "sig:faa-stop:ORD:2026-11-24",
       "cat": "flights",
       "kind": "signal",
@@ -672,6 +679,28 @@
       "score": 4.01
     },
     {
+      "id": "031e0f43c9a0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach CIA unclassified computer system",
+      "url": "https://www.washingtonpost.com/national-security/2026/11/24/hackers-breach-cia-unclassified-computer-system/",
+      "source": "The Washington Post",
+      "publishedAt": "2026-11-24T15:13:00.000Z",
+      "latestAt": "2026-11-25T03:10:14.000Z",
+      "firstSeenAt": "2026-11-25T03:30:57.644Z",
+      "outlets": 7,
+      "outletNames": [
+        "The Washington Post",
+        "Bloomberg.com",
+        "TradingView",
+        "Investing.com",
+        "Firstpost",
+        "India TV News",
+        "Daijiworld"
+      ],
+      "score": 3.03
+    },
+    {
       "id": "b71cd8e479e0",
       "cat": "internet",
       "kind": "news",
@@ -706,6 +735,24 @@
         "The Coloradoan"
       ],
       "score": 2.74
+    },
+    {
+      "id": "c12cb954b403",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Kindopp says Agribition monitoring the bird flu situation",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQllMaWhCYXRwSm1DNkRJUm1GekdLY0dBZjR4WTdlaHRzUmVnM29odlI5SFNFTWFWOUpxY2l4OFlld2tqSUYxMTM2eXgxWnhfajcwS3B3M1lsMzFjVkJSdXdkTURuN1lQQ2dEczVqOVZCRUxFb0xJZXR4Y1hpWU5FckV6LWktbHg5U0VQWmR5NU1sQ1JTdTJQTw?oc=5",
+      "source": "620 CKRM",
+      "publishedAt": "2026-11-24T20:05:00.000Z",
+      "latestAt": "2026-11-24T20:15:20.000Z",
+      "firstSeenAt": "2026-11-24T20:14:43.533Z",
+      "outlets": 3,
+      "outletNames": [
+        "620 CKRM",
+        "MooseJawToday.com",
+        "GX94 Radio"
+      ],
+      "score": 2.58
     },
     {
       "id": "fb4faf2589e7",
@@ -779,41 +826,6 @@
         "www.suaralandak.co.id"
       ],
       "score": 2.47
-    },
-    {
-      "id": "9e573b6a148c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "EU gas stores sink to record low for late November as the cold returns - IntelliNews Lambda",
-      "url": "https://finance.yahoo.com/energy/articles/eu-gas-stores-sink-record-112127788.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-24T03:21:00.000Z",
-      "latestAt": "2026-11-24T11:26:15.000Z",
-      "firstSeenAt": "2026-11-24T11:28:09.115Z",
-      "outlets": 2,
-      "outletNames": [
-        "IntelliNews",
-        "Yahoo Finance"
-      ],
-      "score": 2.42
-    },
-    {
-      "id": "d9dcfe35bf4e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Queens Public Library restores nearly all services after ransomware attack",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQc2VwSjRfVzZncG10TE5Hbmp5TUZoOV9lcmNvZzZyalQxVHZtSVZZRk1GUVhtelllcm1kM0NxdmJKa05tUnduOEljZDF4UDJDNWo3bDhJaHlORGdleUw4OE5QcVJqMGhQN25BdGNkTmRUQk82TWczNTlEWTkxTnV0cm9uUks3NE1PMHdkdGVydmwxSFk5VHR3NDNuMk00U0NIQW9Heml0YXZ6bmRmVWJTUjVDWnlxLVBYS1RiMC1jbGRUWjlRLVVlOHRaOFNUbHBkVnc?oc=5",
-      "source": "Spectrum News NY1",
-      "publishedAt": "2026-11-24T14:10:00.000Z",
-      "latestAt": "2026-11-24T15:31:13.000Z",
-      "firstSeenAt": "2026-11-24T22:00:06.043Z",
-      "outlets": 3,
-      "outletNames": [
-        "Spectrum News NY1",
-        "Spectrum Noticias",
-        "Patch"
-      ],
-      "score": 2.25
     },
     {
       "id": "7c6ceebd6163",
@@ -928,19 +940,19 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "bb9b348a287e",
+      "id": "759a2fb6e1e3",
       "cat": "grid",
       "kind": "news",
-      "title": "Austria's National Security Service is investigating following a power outage",
-      "url": "https://www.bluewin.ch/en/news/austria-s-national-security-service-is-investigating-following-a-power-outage-li.3685591",
-      "source": "Bluewin",
-      "publishedAt": "2026-11-24T07:07:00.000Z",
-      "latestAt": "2026-11-24T15:09:25.000Z",
-      "firstSeenAt": "2026-11-24T15:13:49.241Z",
+      "title": "Thousands without power after PSE outages in Snohomish County",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaUNlNWpFRkl5cmhLb3Y3WFZhaUdINnhUY0xtSm5jMlpYS3lMSXdLRktDQTZWLS1CUWNYeU5UMjZXUW9FZnhzWTR2Z2Rza1lmZ2ppRXk5ZXV5WF84cHE3OEcxcU5JOWhhcm5zRk9VNkZPbC05MDVZeVRpcU1vYXdGZENMRFpoYW12Ul9ibg?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T19:19:56.000Z",
+      "latestAt": "2026-11-24T19:23:59.000Z",
+      "firstSeenAt": "2026-11-25T03:30:57.644Z",
       "outlets": 2,
       "outletNames": [
-        "Bluewin",
-        "blue News"
+        "Yahoo",
+        "KIRO 7 News Seattle"
       ],
       "score": 1.73
     },
@@ -998,6 +1010,24 @@
         "Le Défi Media Group"
       ],
       "score": 2.41
+    },
+    {
+      "id": "d9dcfe35bf4e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Queens Public Library restores nearly all services after ransomware attack",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQc2VwSjRfVzZncG10TE5Hbmp5TUZoOV9lcmNvZzZyalQxVHZtSVZZRk1GUVhtelllcm1kM0NxdmJKa05tUnduOEljZDF4UDJDNWo3bDhJaHlORGdleUw4OE5QcVJqMGhQN25BdGNkTmRUQk82TWczNTlEWTkxTnV0cm9uUks3NE1PMHdkdGVydmwxSFk5VHR3NDNuMk00U0NIQW9Heml0YXZ6bmRmVWJTUjVDWnlxLVBYS1RiMC1jbGRUWjlRLVVlOHRaOFNUbHBkVnc?oc=5",
+      "source": "Spectrum News NY1",
+      "publishedAt": "2026-11-24T14:10:00.000Z",
+      "latestAt": "2026-11-24T15:31:13.000Z",
+      "firstSeenAt": "2026-11-24T22:00:06.043Z",
+      "outlets": 3,
+      "outletNames": [
+        "Spectrum News NY1",
+        "Spectrum Noticias",
+        "Patch"
+      ],
+      "score": 2.25
     },
     {
       "id": "5cf974aaba7d",
@@ -1434,6 +1464,23 @@
       "score": 1.73
     },
     {
+      "id": "bb9b348a287e",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Austria's National Security Service is investigating following a power outage",
+      "url": "https://www.bluewin.ch/en/news/austria-s-national-security-service-is-investigating-following-a-power-outage-li.3685591",
+      "source": "Bluewin",
+      "publishedAt": "2026-11-24T07:07:00.000Z",
+      "latestAt": "2026-11-24T15:09:25.000Z",
+      "firstSeenAt": "2026-11-24T15:13:49.241Z",
+      "outlets": 2,
+      "outletNames": [
+        "Bluewin",
+        "blue News"
+      ],
+      "score": 1.73
+    },
+    {
       "id": "bfac433ea064",
       "cat": "internet",
       "kind": "news",
@@ -1589,6 +1636,23 @@
       "score": 1.63
     },
     {
+      "id": "0a358d7961e7",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft sets up “code red” after it’s 24-hour outage. But what does it mean?",
+      "url": "https://www.7hofm.com.au/trending/technology/microsoft-sets-up-code-red-after-its-24-hour-outage-but-what-does-it-mean/",
+      "source": "7HOFM",
+      "publishedAt": "2026-11-24T16:12:00.000Z",
+      "latestAt": "2026-11-25T03:15:22.000Z",
+      "firstSeenAt": "2026-11-25T03:30:57.644Z",
+      "outlets": 2,
+      "outletNames": [
+        "7HOFM",
+        "91.1 Hot Fm"
+      ],
+      "score": 1.62
+    },
+    {
       "id": "080e74c3f3f8",
       "cat": "internet",
       "kind": "news",
@@ -1707,6 +1771,23 @@
         "Daily Excelsior"
       ],
       "score": 1.56
+    },
+    {
+      "id": "e55c564c17ff",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Chicago's O’Hare Airport ground stop lifted, flight delays continue after outage",
+      "url": "https://www.yahoo.com/news/us/articles/chicagos-o-hare-airport-ground-214231766.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T13:42:00.000Z",
+      "latestAt": "2026-11-24T21:42:31.000Z",
+      "firstSeenAt": "2026-11-25T03:30:57.644Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 32 Chicago"
+      ],
+      "score": 1.54
     },
     {
       "id": "c33a777bc6da",
@@ -1904,22 +1985,6 @@
       "score": 1.39
     },
     {
-      "id": "d186de7312b2",
-      "cat": "flights",
-      "kind": "news",
-      "title": "DFW Airport expects 3.1 million Thanksgiving travelers after recent nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOX2JnZTFjMmp6NHpZRGxHS3pmUmRvbWdZbG96VVZkVk9tam1tclpJaTNKNTlIeXB4czhndU5rUHBKQ1JZNnZFa3g0aTBRdUJUMWpWaEpkaWlZMWFWNEV6M1U4dVBPdGh5ZnRNRmRJM3E5a0UzaGFiVDFSZlVGdWl1ZHhjVTZ6Q21IemVaTUtUQ2E0NDBQZ3lXNU1WbU1PVEhfNE9paGNjTThRQTRpbFF4amhVNmpQMU85UzRqUktMQzk1MGN5bU9QXzV5UDNMb2pqVkRqTHpGX1dUdExybHd0UkdiS0ZQTEFHbzlBbG81cHZjS2JZNzJB?oc=5",
-      "source": "WFAA",
-      "publishedAt": "2026-11-25T00:19:32.000Z",
-      "latestAt": "2026-11-25T00:19:32.000Z",
-      "firstSeenAt": "2026-11-25T00:45:33.233Z",
-      "outlets": 1,
-      "outletNames": [
-        "WFAA"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "24cd97c645da",
       "cat": "weather",
       "kind": "news",
@@ -1936,69 +2001,22 @@
       "score": 1.38
     },
     {
-      "id": "df2874c01125",
-      "cat": "flights",
+      "id": "d1f8478fdf6c",
+      "cat": "weather",
       "kind": "news",
-      "title": "FAA probe points to router setting behind nationwide ground stop",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPMVUwYl9iSmJZeFZybXBGNFZVZFE4VWZKbXh0d0dTYjdmbmhwZ0xwbkZHUU9sYmJGWUtQTDJtUzJlNk92eGF4Mm92VnRfaUpaRTRKWVhRWmxGdXd5MzFReGNwWnBIVE5xSk5fR3dxaUR2cDBTS3pYMmFGY05EYlZTOA?oc=5",
-      "source": "Mezha.net",
-      "publishedAt": "2026-11-25T00:16:05.000Z",
-      "latestAt": "2026-11-25T00:16:05.000Z",
-      "firstSeenAt": "2026-11-25T02:00:48.580Z",
+      "title": "Watch King tides flood Mill Valley streets as California braces for record high waters - America's Weather Center",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONHlCUFQtekVDSDhscW5FZHY0aXhNUXNYUFd2OElIMFViODFMZGdvT0t1c21XNzAteWR0VW1fLUZteV9PeW5URl9hYTZ6TEswdUktUzRiSzhrLWlqbE9tazdYbG4yMWUwRWFJTlh4TXgtb2pna0dwYkFsMnFNMjNsS3V0bG5fd2RaN0VSMDFCMnJoaVRYc0lqbDNMWjRTSnR4NVB1S2wyRHRHbDJEVklUMTdsUkVGajdkTUNsdnVkRmdtTmw1TUhzaWxwdUg?oc=5",
+      "source": "FOX One",
+      "publishedAt": "2026-11-24T20:19:02.000Z",
+      "latestAt": "2026-11-24T20:19:02.000Z",
+      "firstSeenAt": "2026-11-25T03:30:57.644Z",
       "outlets": 1,
       "outletNames": [
-        "Mezha.net"
+        "FOX One"
       ],
-      "score": 1.36
-    },
-    {
-      "id": "f2c3b5bc12f4",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Another brief ground stop at O'Hare as record numbers expected at Chicago airports for Thanksgiving travel",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa0RvVUZSQUhaSzVNdjl3TzZCQmhpOWt3dV9sMTBKWTROdnZucHlrbDlXYlk0UWEwc1M0TkRYLTJ3YklRZFh1M2Jod1RPelRfLVoydHZpcm5OMFh3Mkh3d25NaTBqNnJDYXBUNE1DcFJXQ1pZaUtiRDBERTlNMm9QUFo0Zk5BN2d3T1g4?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-24T23:37:48.000Z",
-      "latestAt": "2026-11-24T23:37:48.000Z",
-      "firstSeenAt": "2026-11-25T03:00:56.149Z",
-      "outlets": 1,
-      "outletNames": [
-        "CBS News"
-      ],
-      "score": 1.32
-    },
-    {
-      "id": "af4a18bde127",
-      "cat": "grid",
-      "kind": "news",
-      "title": "West Oahu representatives raise power outage concerns at HECO town hall",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSUhOOGV0WXRXSXpfX1VZV0ppMHBVYzRaRHpHV3A0bUNMTFZRWUVSME02cmVYOF9DU0tLRll5eDkzVF9lbEc0OGJod1pxSk53eUlWN2VWQVkyWE9kcU5HdlJGcGN5SVFVRFdXUm9tTzZXR0ZnaHlyTkh1eHJIS2luVmk2T0hlOHB2VU5GSUc2Q1FYM1VkWlh3QXBmalNEMC00ZDlZWVN6QW9yUmpZLTlVOFpMRE9XTFk?oc=5",
-      "source": "Hawaii News Now",
-      "publishedAt": "2026-11-24T06:17:08.000Z",
-      "latestAt": "2026-11-24T07:56:14.000Z",
-      "firstSeenAt": "2026-11-25T03:15:56.814Z",
-      "outlets": 2,
-      "outletNames": [
-        "Hawaii News Now",
-        "cedarnews.net"
-      ],
-      "score": 1.3
-    },
-    {
-      "id": "fb0465e3999d",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Editorial: Nationwide Ground Stop Highlights Vulnerable Air Traffic Systems",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNbVVnU2k5Mmk0dTZMNVNXZlNGLUxINUxKQnRhcTlfVnY1dXNEbUtVSFZqdnkxa0w5OTk4c1BZaHhjRmxCaU0zaWYxbWRPbjZtcmxzNm1QTm41T1dDdENtaWpfWEQtLVVlQ05rbUNKVG5kWnRUOURBT083X3lFcFBtR0FlTVhzRDVFSFI4dEJ3Y20tc2czUHJDRDV3Mm9fVlJybmpXXzdfaVEzTWUtQmc4ZWRhRDl0dFFTbXJuOVVxV3Z2alJjd1EzQTQwWHlvc0tReUFwOTVBb0JCWE1CTUFXU0VraDFpUGs3RmhyRzFvM01sbEN5ZE1yTWFCZUM?oc=5",
-      "source": "Aviation Pros",
-      "publishedAt": "2026-11-24T19:19:31.000Z",
-      "latestAt": "2026-11-24T19:19:31.000Z",
-      "firstSeenAt": "2026-11-25T03:15:56.814Z",
-      "outlets": 1,
-      "outletNames": [
-        "Aviation Pros"
-      ],
-      "score": 1.21
+      "score": 1.23,
+      "quiet": true,
+      "quietReason": "headline mentions flood"
     },
     {
       "id": "52091bdfb5f9",
