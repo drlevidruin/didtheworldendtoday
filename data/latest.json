@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T16:38:02.730Z",
+  "buildTime": "2026-11-25T16:52:57.421Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 11:38 ET",
+  "etStamp": "2026-11-25 11:52 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,18 +49,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1485,
-  "lastSuccessAt": "2026-11-25T16:38:02.730Z",
+  "headlinesRead": 1447,
+  "lastSuccessAt": "2026-11-25T16:52:57.421Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
+    "flights": 18,
     "hacks": 34,
     "internet": 13,
-    "grid": 5,
     "weather": 6,
     "germs": 4,
+    "grid": 4,
+    "markets": 4,
     "sun": 4,
-    "markets": 5,
     "ai": 4,
     "earth": 4,
     "animals": 1,
@@ -181,80 +181,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1165,
+      "count": 1127,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     },
     "bing": {
       "ok": true,
-      "count": 286,
+      "count": 285,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "hn": {
       "ok": true,
-      "count": 7,
+      "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:38:02.730Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 26,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T16:38:02.730Z"
+      "lastOkAt": "2026-11-25T16:52:57.421Z"
     }
   },
   "stories": [
@@ -395,26 +396,6 @@
       }
     },
     {
-      "id": "fb4faf2589e7",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thanksgiving storm to disrupt travel, could cause power outages. Here’s some resources to help you prepare.",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZW10RU1Mb1VBQnJ4NGV5THAzUEp0a09xR1V0WDRKcWRnSlpRVk5zT3otRlRzQzcwamNSc2tIQlhFWlNsRDJNTDJwREQxdFVzQzM3RFh5X3RSbk1OanluSGZvNVNseWFmQXg0VW5jQ0w1QzJiX3M3VGJJVTR3Z3ZHdWpzUGNyXzBPWU1OdkFaWTdKVjRGMVNDRXBmaUZCc1lfRGxGX251TVlJREk1NEswSTRjWHo0ZVctZ1YwaWt4TU44R1ZqRDVIUFZJMA?oc=5",
-      "source": "News12 | Brooklyn",
-      "publishedAt": "2026-11-24T16:38:04.000Z",
-      "latestAt": "2026-11-24T16:53:17.000Z",
-      "firstSeenAt": "2026-11-24T16:44:09.238Z",
-      "outlets": 5,
-      "outletNames": [
-        "News12 | Brooklyn",
-        "News12 | Westchester",
-        "News12 | Long Island",
-        "News12 | New Jersey",
-        "News 12 - Hudson Valley"
-      ],
-      "score": 3.32
-    },
-    {
       "id": "19618d3109d7",
       "cat": "weather",
       "kind": "news",
@@ -533,6 +514,24 @@
       "quietReason": "headline mentions flooding"
     },
     {
+      "id": "b34a9b912993",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Samsung Electronics Stocks Plunge 9.87%, Market Value Drops Below 1,000 Trillion Won",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/samsung-electronics-stocks-plunge-9-153253407.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-25T04:00:00.000Z",
+      "latestAt": "2026-11-25T16:00:49.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo Finance",
+        "GuruFocus",
+        "TradingView"
+      ],
+      "score": 2.05
+    },
+    {
       "id": "423698a4ff54",
       "cat": "flights",
       "kind": "news",
@@ -574,6 +573,23 @@
         "WTHR"
       ],
       "score": 3.59
+    },
+    {
+      "id": "640f507300f2",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Traces Nationwide Ground Stop to Network Configuration Error",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4yNjk0R2I4WlNPdThSN2NsWUI0Q2RrSS1tM2dEVU1taU5XVlNnTk9ITGVZTnNxSi1md1lPZS1oeFg4eGZqTDB1NER3a3R5R2M3WnRnQTRFd1NNSDNaTkdKcFlJc1NCR0d4SExWVk1pZjlZWmx5?oc=5",
+      "source": "www.suaralandak.co.id",
+      "publishedAt": "2026-11-25T01:28:03.000Z",
+      "latestAt": "2026-11-25T16:40:51.000Z",
+      "firstSeenAt": "2026-11-25T02:00:48.580Z",
+      "outlets": 2,
+      "outletNames": [
+        "www.suaralandak.co.id",
+        "Avi-Go"
+      ],
+      "score": 2.77
     },
     {
       "id": "dd86ac7e3b59",
@@ -663,23 +679,6 @@
       "score": 2.41
     },
     {
-      "id": "0edb9f27fed7",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Geomagnetic storms may show northern lights in Metro Vancouver as storms clear",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZngtMG1pblMtUnprbFc5bHdLaXd1Q1B1X0tPOFJRd3F1c25Wdk9QUXpXWVdtNXVuNmE3el9xdWNQT0tVeVFqTjdIUHhxamlyd0xsa3NRM09abTRNQmJuQXRwdHIxaWdYSDcyS1BGdEF4cVVqbXdZYlRRNExLWFp0QjJIY0RzalpzR3l3TzY1eUVwNlRQaGFDanRSWmprUQ?oc=5",
-      "source": "Vancouver Is Awesome",
-      "publishedAt": "2026-11-25T13:15:00.000Z",
-      "latestAt": "2026-11-25T13:29:16.000Z",
-      "firstSeenAt": "2026-11-25T13:22:21.083Z",
-      "outlets": 2,
-      "outletNames": [
-        "Vancouver Is Awesome",
-        "Richmond News"
-      ],
-      "score": 2
-    },
-    {
       "id": "1df2f0651f27",
       "cat": "grid",
       "kind": "news",
@@ -714,21 +713,22 @@
       "score": 1.99
     },
     {
-      "id": "3b15d213ea1a",
-      "cat": "flights",
+      "id": "0edb9f27fed7",
+      "cat": "sun",
       "kind": "news",
-      "title": "Another ground stop delays travelers at O'Hare airport",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T04:16:00.000Z",
-      "latestAt": "2026-11-25T04:16:48.000Z",
-      "firstSeenAt": "2026-11-25T05:16:26.751Z",
-      "outlets": 2,
+      "title": "Geomagnetic storms may show northern lights in Metro Vancouver as storms clear",
+      "url": "https://www.nsnews.com/highlights/northern-lights-vancouver-weather-nov-2026-13056020",
+      "source": "North Shore News",
+      "publishedAt": "2026-11-24T22:15:00.000Z",
+      "latestAt": "2026-11-25T13:29:16.000Z",
+      "firstSeenAt": "2026-11-25T13:22:21.083Z",
+      "outlets": 3,
       "outletNames": [
-        "Yahoo",
-        "ABC7 Chicago"
+        "Vancouver Is Awesome",
+        "Richmond News",
+        "North Shore News"
       ],
-      "score": 1.97
+      "score": 1.93
     },
     {
       "id": "8d6184cd4994",
@@ -782,6 +782,23 @@
       "score": 1.73
     },
     {
+      "id": "4ba712e3e9fe",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Turkey producers report bird flu cases at two farms",
+      "url": "https://www.msn.com/en-us/news/other/turkey-producers-report-bird-flu-cases-at-two-farms/ar-AA2idOqn",
+      "source": "BBC on MSN",
+      "publishedAt": "2026-11-25T08:29:13.000Z",
+      "latestAt": "2026-11-25T16:29:18.000Z",
+      "firstSeenAt": "2026-11-25T16:52:57.421Z",
+      "outlets": 2,
+      "outletNames": [
+        "BBC on MSN",
+        "Yahoo"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "e4d5095e322e",
       "cat": "grid",
       "kind": "news",
@@ -789,7 +806,7 @@
       "url": "https://www.ksbw.com/article/storm-related-power-outage-thousands-pge-santa-cruz/74527151",
       "source": "KSBW Channel 8",
       "publishedAt": "2026-11-24T22:59:00.000Z",
-      "latestAt": "2026-11-25T06:59:00.000Z",
+      "latestAt": "2026-11-25T16:33:00.000Z",
       "firstSeenAt": "2026-11-25T07:31:39.232Z",
       "outlets": 2,
       "outletNames": [
@@ -818,23 +835,6 @@
       "quietReason": "headline mentions evacuate"
     },
     {
-      "id": "b34a9b912993",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Samsung Electronics Stocks Plunge 9.87%, Market Value Drops Below 1,000 Trillion Won",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/samsung-electronics-stocks-plunge-9-153253407.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-25T04:00:00.000Z",
-      "latestAt": "2026-11-25T16:00:49.000Z",
-      "firstSeenAt": "2026-11-25T16:23:01.784Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "GuruFocus"
-      ],
-      "score": 1.59
-    },
-    {
       "id": "abcb674b3c03",
       "cat": "weather",
       "kind": "news",
@@ -849,6 +849,23 @@
         "9Now"
       ],
       "score": 1.39
+    },
+    {
+      "id": "9016f726f4d0",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Investigators believe they now know what caused the nationwide ground stop",
+      "url": "https://www.wthitv.com/2026/11/25/investigators-believe-they-now-know-what-caused-nationwide-ground-stop/",
+      "source": "WTHI News10",
+      "publishedAt": "2026-11-25T08:47:00.000Z",
+      "latestAt": "2026-11-25T16:47:00.000Z",
+      "firstSeenAt": "2026-11-25T16:52:57.421Z",
+      "outlets": 2,
+      "outletNames": [
+        "WTHI News10",
+        "WABI"
+      ],
+      "score": 2.42
     },
     {
       "id": "8a4d591cbf3b",
@@ -935,6 +952,23 @@
       "outletNames": [
         "Bioengineer.org",
         "cedarnews.net"
+      ],
+      "score": 1.97
+    },
+    {
+      "id": "3b15d213ea1a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Another ground stop delays travelers at O'Hare airport",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T04:16:00.000Z",
+      "latestAt": "2026-11-25T04:16:48.000Z",
+      "firstSeenAt": "2026-11-25T05:16:26.751Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "ABC7 Chicago"
       ],
       "score": 1.97
     },
@@ -1325,22 +1359,6 @@
       "score": 1.39
     },
     {
-      "id": "640f507300f2",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Traces Nationwide Ground Stop to Network Configuration Error",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4yNjk0R2I4WlNPdThSN2NsWUI0Q2RrSS1tM2dEVU1taU5XVlNnTk9ITGVZTnNxSi1md1lPZS1oeFg4eGZqTDB1NER3a3R5R2M3WnRnQTRFd1NNSDNaTkdKcFlJc1NCR0d4SExWVk1pZjlZWmx5?oc=5",
-      "source": "www.suaralandak.co.id",
-      "publishedAt": "2026-11-25T01:28:03.000Z",
-      "latestAt": "2026-11-25T01:28:03.000Z",
-      "firstSeenAt": "2026-11-25T02:00:48.580Z",
-      "outlets": 1,
-      "outletNames": [
-        "www.suaralandak.co.id"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "3c2a977f31f0",
       "cat": "internet",
       "kind": "news",
@@ -1453,6 +1471,23 @@
         "CCB Belgium"
       ],
       "score": 1.34
+    },
+    {
+      "id": "15564c82167c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta restores key system after Atlanta tech outage delays flights",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdV91cVNVcTlWMGNkSkF6ZWxLaUExeC1BRjZxMGQ2NGZ1WmJaMHJyUm9obDZLVmZWSkNTc0xEVDd0U1hqekxlT0tzSjlhVm5PZWNfYXlwN2o4a1EtUlBSY1ctM3lCX3lraVl4cS1sLTI3ZHBuQml0SGpreTRpSUpMUVpNdmxmTVVMSFlzYWR4MFdsemNFXy1pYmlHTQ?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-24T20:40:45.000Z",
+      "latestAt": "2026-11-25T13:36:47.000Z",
+      "firstSeenAt": "2026-11-25T16:52:57.421Z",
+      "outlets": 2,
+      "outletNames": [
+        "https://www.thetraveler.org/",
+        "www.thetraveler.org"
+      ],
+      "score": 1.33
     },
     {
       "id": "b389f439ad24",
@@ -1697,22 +1732,6 @@
       "score": 1
     },
     {
-      "id": "6bf8050947ba",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Aterian (ATER) Stock Is Down 13.6% Today Without Company News in Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxPOXB3emd1UkxqdFBGVFBMVDR5NGFmUVNZeEtBQnU4RExBZzAybjZIV3l5WWFDUDJwNWdxSUlSMXdMcFZZVXE4UnpFZUdjQm8tY1F1ZUhxeXdFMlRldG5DN21SZl9PaXZhUHFFYnRDbzgwSWxZR0UwZkhLNGd2UFFTU21MTlpzWHJGUEhCd3dDbERQVjRXcUluZXdQR21mTEFMTkRfeUlXRHhaZFFZZ0tzYnA3ZjQtVGd4c0JKanpVYUhxLV8xZjBCYUFLeWU0Rk1BT1N0dHJ3MU1hNXdob1I2YzNDaS1wcmxHaEg4cExiQ3pRZDlNdXdKMmhNUGdMTjRHNnVkbG9EMExmY01fS2pWekRicG1UamJqTFVYcFZVQWR5QWdNdEU2VFRZV2dqaTdtcFFmZ1lGeGFkTGZXMjlrbkhn?oc=5",
-      "source": "GuruFocus",
-      "publishedAt": "2026-11-25T15:21:41.000Z",
-      "latestAt": "2026-11-25T15:21:41.000Z",
-      "firstSeenAt": "2026-11-25T15:22:43.868Z",
-      "outlets": 1,
-      "outletNames": [
-        "GuruFocus"
-      ],
-      "score": 1
-    },
-    {
       "id": "b802790718c1",
       "cat": "ai",
       "kind": "news",
@@ -1757,22 +1776,6 @@
       "outlets": 1,
       "outletNames": [
         "Starlust.org"
-      ],
-      "score": 1
-    },
-    {
-      "id": "c0cf963bcc73",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Epiemiological Alert - Epidemiological Alert Avian Influenza A(H5N1) in the Americas Region - 24 November 2026",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLXVEMFNLaDlPdko0T01pVFVKTEdySDZua0dZNWVMNW1KanhqQ1pfU2tEQXlmdzdRQS15RDZBdmh2RVg3MHIzWUdjR2kyU3g3OTh3bGV1MjlnZFR2dmgwUE50MHVqT3lRXzFmR0RXV3JVcXJ1b0FoYTlWbF8wQzZDVS00aG5CQWZNeVR3MTZzUjF5TVVHSU92eGJjanlTTVFpQ21PNldFVmJvQU83MnRfTmpBZk1YZmZa?oc=5",
-      "source": "Pan American Health Organization (PAHO)",
-      "publishedAt": "2026-11-25T02:50:47.000Z",
-      "latestAt": "2026-11-25T02:50:47.000Z",
-      "firstSeenAt": "2026-11-25T03:00:56.149Z",
-      "outlets": 1,
-      "outletNames": [
-        "Pan American Health Organization (PAHO)"
       ],
       "score": 1
     },
@@ -1875,22 +1878,6 @@
       "score": 0.97
     },
     {
-      "id": "b6b4dcbf7e62",
-      "cat": "space",
-      "kind": "news",
-      "title": "Meet Earth's New 'Mini-Moon' 2026 QQ8, a Six-Foot-Wide Asteroid That's Temporarily Circling Our Planet",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNaE82YUhVSG5haW1VeUw5RXBOdFlDaTVOQTg0WUNBa205b251OWpMa3Y4RUhXdlM0bWtHdkNndGxkeE9xSnhBOUJGZzQyWXRDS2c5TlFKanl5bmVuR1UybUJHWFl1QW0wQnAxTWNiTXJaeHVIUlM1alBubksxYnFFZWVNaWpma1JEejVWc0FRRnhSYk9NMi1xMjl5TXA3TXUyekFTdzU4UHFZcjdmVDQzQ1VRUUFzUkpNSy1ELTdrUUtCc0xDMC02bFV6UkZUVnhJRGw4YmdnSkJReHczSU5CZHRDWG0?oc=5",
-      "source": "Smithsonian Magazine",
-      "publishedAt": "2026-11-25T14:00:00.000Z",
-      "latestAt": "2026-11-25T14:00:00.000Z",
-      "firstSeenAt": "2026-11-25T16:38:02.730Z",
-      "outlets": 1,
-      "outletNames": [
-        "Smithsonian Magazine"
-      ],
-      "score": 0.96
-    },
-    {
       "id": "75a22d43d43e",
       "cat": "earth",
       "kind": "news",
@@ -1985,6 +1972,22 @@
         "Moneycontrol"
       ],
       "score": 0.86
+    },
+    {
+      "id": "872fee2f7740",
+      "cat": "space",
+      "kind": "news",
+      "title": "Watch live: Europe unveils 1st close-up views of asteroid Dimorphos after NASA's DART impact",
+      "url": "https://www.space.com/space-exploration/asteroid-comet-missions/watch-live-europe-unveils-1st-close-up-views-of-asteroid-dimorphos-after-nasas-dart-impact",
+      "source": "Space.com",
+      "publishedAt": "2026-11-25T06:01:00.000Z",
+      "latestAt": "2026-11-25T14:00:00.000Z",
+      "firstSeenAt": "2026-11-25T16:52:57.421Z",
+      "outlets": 1,
+      "outletNames": [
+        "Space.com"
+      ],
+      "score": 0.82
     }
   ]
 }
