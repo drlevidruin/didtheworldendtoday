@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T07:16:38.099Z",
+  "buildTime": "2026-11-25T07:31:39.232Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 02:16 ET",
-  "score": 65,
+  "etStamp": "2026-11-25 02:31 ET",
+  "score": 73,
   "fired": [
     "flights",
     "hacks",
@@ -25,9 +25,14 @@
       "key": "faa",
       "label": "Ground stop at a major hub",
       "points": 6
+    },
+    {
+      "key": "status",
+      "label": "Big status page in major outage",
+      "points": 8
     }
   ],
-  "change": 0,
+  "change": 8,
   "yesterday": {
     "date": "2026-11-24",
     "score": 65,
@@ -47,17 +52,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1065,
-  "lastSuccessAt": "2026-11-25T07:16:38.099Z",
+  "headlinesRead": 1380,
+  "lastSuccessAt": "2026-11-25T07:31:39.232Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 23,
-    "hacks": 32,
+    "flights": 22,
+    "internet": 18,
     "earth": 6,
     "germs": 4,
     "weather": 4,
-    "internet": 17,
-    "grid": 5,
+    "hacks": 31,
+    "grid": 6,
     "space": 2,
     "markets": 4,
     "sun": 1,
@@ -94,7 +99,7 @@
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
-      "worst": "minor",
+      "worst": "major",
       "pages": [
         {
           "id": "github",
@@ -105,8 +110,8 @@
         {
           "id": "cloudflare",
           "name": "Cloudflare",
-          "indicator": "minor",
-          "description": "Minor Service Outage"
+          "indicator": "major",
+          "description": "Partial System Outage"
         },
         {
           "id": "openai",
@@ -135,8 +140,8 @@
         {
           "id": "zoom",
           "name": "Zoom",
-          "indicator": "none",
-          "description": "All Systems Operational"
+          "indicator": "minor",
+          "description": "Partially Degraded Service"
         },
         {
           "id": "coinbase",
@@ -180,81 +185,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 748,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 21 of 26 queries)",
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "count": 1054,
+      "error": null,
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "bing": {
       "ok": true,
-      "count": 278,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "count": 287,
+      "error": null,
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-25T06:16:29.636Z"
     },
     "hn": {
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "status": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T06:31:28.864Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T07:16:38.099Z"
+      "lastOkAt": "2026-11-25T07:31:39.232Z"
     }
   },
   "stories": [
@@ -350,51 +354,26 @@
       }
     },
     {
-      "id": "1f7a9dd08c2f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says",
-      "url": "https://www.usnews.com/news/politics/articles/2026-11-24/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says",
-      "source": "U.S. News & World Report",
-      "publishedAt": "2026-11-24T07:29:00.000Z",
-      "latestAt": "2026-11-25T05:17:35.000Z",
-      "firstSeenAt": "2026-11-25T04:46:11.815Z",
-      "outlets": 32,
+      "id": "sig:status:cloudflare:2026-11-25",
+      "cat": "internet",
+      "kind": "signal",
+      "title": "Cloudflare reports a major outage on its status page",
+      "url": "https://www.cloudflarestatus.com/",
+      "source": "Cloudflare status",
+      "publishedAt": "2026-11-25T07:31:39.232Z",
+      "latestAt": "2026-11-25T07:31:39.232Z",
+      "firstSeenAt": "2026-11-25T07:31:39.232Z",
+      "outlets": 1,
       "outletNames": [
-        "U.S. News & World Report",
-        "Times Union",
-        "HuffPost",
-        "The San Diego Union-Tribune",
-        "The Washington Post",
-        "Bangor Daily News",
-        "Daily Sabah",
-        "Yahoo",
-        "WRAL",
-        "5 EYEWITNESS NEWS",
-        "Cyber Kendra",
-        "WESH",
-        "Spectrum News",
-        "WBAL News Radio",
-        "apnews.com",
-        "WLOS",
-        "MLQ.ai",
-        "The Independent",
-        "El Dorado News-Times",
-        "Bloomberg.com",
-        "CBS News",
-        "TradingView",
-        "Investing.com",
-        "Star Beacon",
-        "The News-Item",
-        "Firstpost",
-        "Moneycontrol.com",
-        "India TV News",
-        "The Business Standard",
-        "CXO Digitalpulse",
-        "Yahoo News UK",
-        "WKRG"
+        "Cloudflare status"
       ],
-      "score": 3.87
+      "score": 3.5,
+      "signal": {
+        "type": "status",
+        "indicator": "major",
+        "page": "cloudflare",
+        "description": "Partial System Outage"
+      }
     },
     {
       "id": "sig:quake:us6000ud6h",
@@ -427,7 +406,7 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPOUJnYzcwNG9tU2VWMjhPTjhyNXNlWDhtZndVTWYtRnRJWHNxUnFpd0dmaGU3d2VzdUxUeHZON1p0UEQxXzRwN0Q4UU0zWWVUeUNkc2pPNXVCcFN6TjhXeXdoM0U4SUdlM2x5SWIyQXlQOVQyaXVVNFNkOTBGcU5UdHhIbHFNUWdGSVJfNk1YcnlXUdIBpgFBVV95cUxNNFRNSXNXZDZkSk56T1RWb2NISldWUDJVWXFWVmtrdFRWdWphbHVERG0tUW1QUURvSHcySDhmeGhOZGstS2tFRUFVQVJMYVp0UUI4VFY1cFNDVWhYSE5tWmE3LWs3RE9EMFhDY0ZLVDRrM1JLeklUUVlKeldiRFVHRUxqMVNHNUkxck9OVUdzQ0xXdExjb1o3VTFtajNjYllpa3hxYTBB?oc=5",
       "source": "WEAU",
       "publishedAt": "2026-11-24T16:12:00.000Z",
-      "latestAt": "2026-11-25T00:51:06.000Z",
+      "latestAt": "2026-11-25T00:55:44.000Z",
       "firstSeenAt": "2026-11-24T18:59:34.832Z",
       "outlets": 6,
       "outletNames": [
@@ -524,6 +503,24 @@
       "score": 3.09
     },
     {
+      "id": "3654f280be86",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA hit by major cyberattack on key intelligence system",
+      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T15:59:00.000Z",
+      "latestAt": "2026-11-25T00:46:18.000Z",
+      "firstSeenAt": "2026-11-25T01:15:36.251Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "geekspin",
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 3.06
+    },
+    {
       "id": "fb4faf2589e7",
       "cat": "grid",
       "kind": "news",
@@ -562,24 +559,6 @@
         "Khaleej Times"
       ],
       "score": 2.93
-    },
-    {
-      "id": "c12cb954b403",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Kindopp says Agribition monitoring the bird flu situation",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQllMaWhCYXRwSm1DNkRJUm1GekdLY0dBZjR4WTdlaHRzUmVnM29odlI5SFNFTWFWOUpxY2l4OFlld2tqSUYxMTM2eXgxWnhfajcwS3B3M1lsMzFjVkJSdXdkTURuN1lQQ2dEczVqOVZCRUxFb0xJZXR4Y1hpWU5FckV6LWktbHg5U0VQWmR5NU1sQ1JTdTJQTw?oc=5",
-      "source": "620 CKRM",
-      "publishedAt": "2026-11-24T20:05:00.000Z",
-      "latestAt": "2026-11-24T20:15:20.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
-      "outlets": 3,
-      "outletNames": [
-        "620 CKRM",
-        "MooseJawToday.com",
-        "GX94 Radio"
-      ],
-      "score": 2.58
     },
     {
       "id": "sig:faa-stop:ORD:2026-11-24",
@@ -643,24 +622,6 @@
       "score": 3.59
     },
     {
-      "id": "3654f280be86",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "CIA hit by major cyberattack on key intelligence system",
-      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T00:46:18.000Z",
-      "firstSeenAt": "2026-11-25T01:15:36.251Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "geekspin",
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 3.06
-    },
-    {
       "id": "0bc4c2c85c92",
       "cat": "hacks",
       "kind": "news",
@@ -698,6 +659,46 @@
         "NBC26"
       ],
       "score": 2.81
+    },
+    {
+      "id": "031e0f43c9a0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach CIA unclassified computer system",
+      "url": "https://www.washingtonpost.com/national-security/2026/11/24/hackers-breach-cia-unclassified-computer-system/",
+      "source": "The Washington Post",
+      "publishedAt": "2026-11-24T15:13:00.000Z",
+      "latestAt": "2026-11-25T06:47:35.000Z",
+      "firstSeenAt": "2026-11-25T07:16:38.099Z",
+      "outlets": 7,
+      "outletNames": [
+        "The Washington Post",
+        "Bloomberg.com",
+        "TradingView",
+        "Investing.com",
+        "India TV News",
+        "Seoul Economic Daily",
+        "Firstpost"
+      ],
+      "score": 2.79
+    },
+    {
+      "id": "c12cb954b403",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Kindopp says Agribition monitoring the bird flu situation",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQllMaWhCYXRwSm1DNkRJUm1GekdLY0dBZjR4WTdlaHRzUmVnM29odlI5SFNFTWFWOUpxY2l4OFlld2tqSUYxMTM2eXgxWnhfajcwS3B3M1lsMzFjVkJSdXdkTURuN1lQQ2dEczVqOVZCRUxFb0xJZXR4Y1hpWU5FckV6LWktbHg5U0VQWmR5NU1sQ1JTdTJQTw?oc=5",
+      "source": "620 CKRM",
+      "publishedAt": "2026-11-24T20:05:00.000Z",
+      "latestAt": "2026-11-24T20:15:20.000Z",
+      "firstSeenAt": "2026-11-24T20:14:43.533Z",
+      "outlets": 3,
+      "outletNames": [
+        "620 CKRM",
+        "MooseJawToday.com",
+        "GX94 Radio"
+      ],
+      "score": 2.58
     },
     {
       "id": "88b30b5dc925",
@@ -793,24 +794,6 @@
       "score": 2.23
     },
     {
-      "id": "634202746766",
-      "cat": "internet",
-      "kind": "news",
-      "title": "TikTok goes down in latest mass outages to hit the US",
-      "url": "https://www.msn.com/en-ca/news/other/tiktok-goes-down-in-latest-mass-outages-to-hit-the-us/ar-AA2hDzli",
-      "source": "The Independent on MSN",
-      "publishedAt": "2026-11-24T13:53:57.000Z",
-      "latestAt": "2026-11-24T21:53:57.000Z",
-      "firstSeenAt": "2026-11-24T22:45:11.907Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Independent on MSN",
-        "Yahoo News UK",
-        "Newswav"
-      ],
-      "score": 2.2
-    },
-    {
       "id": "58121433910a",
       "cat": "grid",
       "kind": "news",
@@ -882,6 +865,23 @@
       "score": 1.73
     },
     {
+      "id": "e4d5095e322e",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Storm-related power outage affects thousands of PG&E customers in Santa Cruz",
+      "url": "https://www.ksbw.com/article/storm-related-power-outage-thousands-pge-santa-cruz/74527151",
+      "source": "KSBW Channel 8",
+      "publishedAt": "2026-11-24T22:59:00.000Z",
+      "latestAt": "2026-11-25T06:59:00.000Z",
+      "firstSeenAt": "2026-11-25T07:31:39.232Z",
+      "outlets": 2,
+      "outletNames": [
+        "KSBW Channel 8",
+        "KSBW"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "c2d129a0cce4",
       "cat": "weather",
       "kind": "news",
@@ -897,23 +897,6 @@
         "Yahoo"
       ],
       "score": 1.72
-    },
-    {
-      "id": "5efab0861ea0",
-      "cat": "space",
-      "kind": "news",
-      "title": "Learn about: NASA's Lucy spacecraft flyby with asteroid Donaldjohanson",
-      "url": "https://www.msn.com/en-us/science/astronomy/learn-about-nasa-s-lucy-spacecraft-flyby-with-asteroid-donaldjohanson/vi-AA2i8NlX",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-24T11:40:00.000Z",
-      "latestAt": "2026-11-24T12:02:40.000Z",
-      "firstSeenAt": "2026-11-24T20:14:43.533Z",
-      "outlets": 2,
-      "outletNames": [
-        "Space on MSN",
-        "Dailymotion on MSN"
-      ],
-      "score": 1.71
     },
     {
       "id": "42f87fae315d",
@@ -953,25 +936,22 @@
       "score": 2.72
     },
     {
-      "id": "031e0f43c9a0",
+      "id": "dd86ac7e3b59",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers breach CIA unclassified computer system",
-      "url": "https://www.washingtonpost.com/national-security/2026/11/24/hackers-breach-cia-unclassified-computer-system/",
-      "source": "The Washington Post",
-      "publishedAt": "2026-11-24T15:13:00.000Z",
-      "latestAt": "2026-11-25T06:47:35.000Z",
-      "firstSeenAt": "2026-11-25T07:16:38.099Z",
-      "outlets": 6,
+      "title": "Cyberattack reportedly exposes unclassified data at CIA, US intelligence office",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02Y2xRNUxPeGtXbHRseWpqdXB3UWpYVk93ZjRtUlluQ2tWOTR6QmNLZTBFQUpfb1RGZDhudE9kLU9TcEMyT3Zkb0NvdGRxb3otbmFzVXA0ZHc?oc=5",
+      "source": "TRT World",
+      "publishedAt": "2026-11-24T21:40:19.000Z",
+      "latestAt": "2026-11-25T07:17:35.000Z",
+      "firstSeenAt": "2026-11-24T22:15:04.259Z",
+      "outlets": 3,
       "outletNames": [
-        "The Washington Post",
-        "Bloomberg.com",
-        "TradingView",
-        "Investing.com",
-        "India TV News",
-        "Seoul Economic Daily"
+        "TRT World",
+        "Baller Alert",
+        "Speaks Media"
       ],
-      "score": 2.63
+      "score": 2.56
     },
     {
       "id": "e724a6fe278b",
@@ -1062,6 +1042,24 @@
         "Yahoo News Canada"
       ],
       "score": 2.22
+    },
+    {
+      "id": "634202746766",
+      "cat": "internet",
+      "kind": "news",
+      "title": "TikTok goes down in latest mass outages to hit the US",
+      "url": "https://www.msn.com/en-ca/news/other/tiktok-goes-down-in-latest-mass-outages-to-hit-the-us/ar-AA2hDzli",
+      "source": "The Independent on MSN",
+      "publishedAt": "2026-11-24T13:53:57.000Z",
+      "latestAt": "2026-11-24T21:53:57.000Z",
+      "firstSeenAt": "2026-11-24T22:45:11.907Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Independent on MSN",
+        "Yahoo News UK",
+        "Newswav"
+      ],
+      "score": 2.2
     },
     {
       "id": "96983bcf19a7",
@@ -1185,23 +1183,6 @@
         "The Sunday Guardian"
       ],
       "score": 1.99
-    },
-    {
-      "id": "dd86ac7e3b59",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack reportedly exposes unclassified data at CIA, US intelligence office",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02Y2xRNUxPeGtXbHRseWpqdXB3UWpYVk93ZjRtUlluQ2tWOTR6QmNLZTBFQUpfb1RGZDhudE9kLU9TcEMyT3Zkb0NvdGRxb3otbmFzVXA0ZHc?oc=5",
-      "source": "TRT World",
-      "publishedAt": "2026-11-24T21:40:19.000Z",
-      "latestAt": "2026-11-24T21:51:17.000Z",
-      "firstSeenAt": "2026-11-24T22:15:04.259Z",
-      "outlets": 2,
-      "outletNames": [
-        "TRT World",
-        "Baller Alert"
-      ],
-      "score": 1.98
     },
     {
       "id": "c0a263ebd895",
@@ -1495,6 +1476,23 @@
       "score": 1.71
     },
     {
+      "id": "5efab0861ea0",
+      "cat": "space",
+      "kind": "news",
+      "title": "Learn about: NASA's Lucy spacecraft flyby with asteroid Donaldjohanson",
+      "url": "https://www.msn.com/en-us/science/astronomy/learn-about-nasa-s-lucy-spacecraft-flyby-with-asteroid-donaldjohanson/vi-AA2i8NlX",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-24T11:40:00.000Z",
+      "latestAt": "2026-11-24T12:02:40.000Z",
+      "firstSeenAt": "2026-11-24T20:14:43.533Z",
+      "outlets": 2,
+      "outletNames": [
+        "Space on MSN",
+        "Dailymotion on MSN"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "a0f1e5023f00",
       "cat": "grid",
       "kind": "news",
@@ -1587,7 +1585,7 @@
       "url": "https://www.yahoo.com/news/videos/were-not-worried-roc-passengers-040424722.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T04:10:07.000Z",
+      "latestAt": "2026-11-25T04:14:43.000Z",
       "firstSeenAt": "2026-11-25T05:01:18.990Z",
       "outlets": 2,
       "outletNames": [
@@ -1680,23 +1678,6 @@
         "AL.com"
       ],
       "score": 1.45
-    },
-    {
-      "id": "e55c564c17ff",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Chicago's O’Hare Airport ground stop lifted, flight delays continue after outage",
-      "url": "https://www.yahoo.com/news/us/articles/chicagos-o-hare-airport-ground-214231766.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T13:42:00.000Z",
-      "latestAt": "2026-11-24T21:42:31.000Z",
-      "firstSeenAt": "2026-11-25T07:16:38.099Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX 32 Chicago"
-      ],
-      "score": 1.41
     },
     {
       "id": "52f1674d700a",
@@ -1811,20 +1792,20 @@
       "score": 1.4
     },
     {
-      "id": "b199dab3d5ea",
+      "id": "ea6e760f89b1",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers May Have Breached FBI Database Used by Police Nationwide",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSG16U1oyN1dUbGI2c0JreFAxV1lYamVOb2RUS1FIVUlicF9VT1dmN2FReUhzSVh5Q3dhb2twYkR5NXZ5RE9ObEFGaktoUncwRzlLMndVRi1nRnU4SFg1TmJnTXV4Wk9FVldRYVB4QVBSOXF2dUFOU3QwTFRuNnlqSjhHLVlGNmFJbm85SEpGZU9BbjlPSXN5VzV5Nl9JXzlxVGltTUROZldUNEwyN0duOXFKM1NkbnPSAbwBQVVfeXFMT0pRLW9Ia2w4c2xZckdNTlNsT2gwVXR4dFliRklNUXhTRnhaMzlYc0NpRTlvWWZHUEJhMkI3bXJkc1htSWVwel9wQlFoaTExVzhDbTYtS2tzVVMybW1YVzhkNkQ4aDVLUkFMc20zQkwyTS1ZcU5qcEhFU3Rla3RzRlRaeWJkSlhvU0FWVU9OVnY1UGVWUXhLZzZIYlZ2WmFfVHluNmZxU3BRNXN1SmZpbVhiS196eE5pTlF1MFM?oc=5",
-      "source": "Security Affairs",
-      "publishedAt": "2026-11-24T07:19:09.000Z",
-      "latestAt": "2026-11-24T07:19:09.000Z",
-      "firstSeenAt": "2026-11-24T07:27:30.628Z",
+      "title": "Japan's Rakuten Securities suffers major customer data breach",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZkhzdkZRb2FmNUJwTlZKVzcyOXEzNFdxd1VvMnhkUVhyVGRCN2UxUVNNaWx2V1E0dWRsV3UwRWR6cmwzWnBqUldpZHlwMGZlNU5ZMS0tNzE1ZEI3dGk3d1RPVnRvU0k0dDZLVjVtUlE1em0xNXcxNUFnbXQ2clN1aG9iS1FTOEFHUnc?oc=5",
+      "source": "Latest news from Azerbaijan",
+      "publishedAt": "2026-11-25T07:05:36.000Z",
+      "latestAt": "2026-11-25T07:05:36.000Z",
+      "firstSeenAt": "2026-11-25T07:31:39.232Z",
       "outlets": 1,
       "outletNames": [
-        "Security Affairs"
+        "Latest news from Azerbaijan"
       ],
-      "score": 1.4
+      "score": 1.39
     },
     {
       "id": "abcb674b3c03",
@@ -1955,22 +1936,6 @@
       "score": 1.31
     },
     {
-      "id": "8ca9b14f75aa",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Stock market today: Nasdaq, S&P 500 tumble after Monday’s massive gains as Nvidia leads AI stock sell-off",
-      "url": "https://www.msn.com/en-us/money/general/stock-market-today-nasdaq-s-p-500-tumble-after-monday-s-huge-gains-as-nvidia-leads-ai-stocks-lower/ar-AA2i893a",
-      "source": "Investopedia on MSN",
-      "publishedAt": "2026-11-24T07:24:55.000Z",
-      "latestAt": "2026-11-24T13:19:30.000Z",
-      "firstSeenAt": "2026-11-24T21:44:59.738Z",
-      "outlets": 1,
-      "outletNames": [
-        "Investopedia on MSN"
-      ],
-      "score": 1.07
-    },
-    {
       "id": "23de3ce9e502",
       "cat": "markets",
       "kind": "news",
@@ -2051,6 +2016,22 @@
         "The Jerusalem Post"
       ],
       "score": 0.99
+    },
+    {
+      "id": "80f8b8c94585",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Jim Cramer Targets Corning and Boeing Amid Stock Market Selloff",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBCcC0yQ0tCRjlSOThZQng3WHhCQmJvbmtmT2ozVkdMRkJtMmR2MGNsQTdmVjRkaUJXT2pqalFoVS14d0sxZ3dWTXhEODA5cnRkazZRUlhLUkRTRkJuQlp1YnFMaWhOMmNlSFE?oc=5",
+      "source": "cwibc.co.id",
+      "publishedAt": "2026-11-24T23:33:00.000Z",
+      "latestAt": "2026-11-24T23:33:00.000Z",
+      "firstSeenAt": "2026-11-25T04:16:08.225Z",
+      "outlets": 1,
+      "outletNames": [
+        "cwibc.co.id"
+      ],
+      "score": 0.92
     },
     {
       "id": "9c77cfaf2dab",
