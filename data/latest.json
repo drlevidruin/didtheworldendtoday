@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T07:46:42.864Z",
+  "buildTime": "2026-11-25T08:01:46.947Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 02:46 ET",
+  "etStamp": "2026-11-25 03:01 ET",
   "score": 73,
   "fired": [
     "flights",
@@ -52,16 +52,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1326,
-  "lastSuccessAt": "2026-11-25T07:46:42.864Z",
+  "headlinesRead": 526,
+  "lastSuccessAt": "2026-11-25T08:01:46.947Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
     "internet": 18,
     "earth": 6,
-    "germs": 5,
+    "germs": 4,
     "weather": 4,
-    "hacks": 29,
+    "hacks": 30,
     "grid": 6,
     "space": 2,
     "markets": 4,
@@ -94,7 +94,7 @@
     "faa": {
       "groundStops": [],
       "nationwide": false,
-      "groundDelays": 1,
+      "groundDelays": 0,
       "closures": 0,
       "url": "https://nasstatus.faa.gov/"
     },
@@ -172,11 +172,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "6 killed when plane crashes off coast of Mississippi"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -188,57 +190,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1023,
-      "error": null,
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "count": 200,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     },
     "bing": {
       "ok": true,
-      "count": 265,
-      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "count": 287,
+      "error": null,
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-25T06:16:29.636Z"
     },
     "hn": {
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     },
     "status": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     },
     "x": {
       "ok": true,
@@ -249,15 +251,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T07:46:42.864Z"
+      "lastOkAt": "2026-11-25T08:01:46.947Z"
     }
   },
   "stories": [
@@ -1140,6 +1142,24 @@
       "score": 2.09
     },
     {
+      "id": "2bb07ffc981b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "'We're not worried': ROC passengers talk ticket prices, recent FAA ground stop during busy travel week",
+      "url": "https://www.yahoo.com/news/videos/were-not-worried-roc-passengers-040424722.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T15:59:00.000Z",
+      "latestAt": "2026-11-25T04:14:43.000Z",
+      "firstSeenAt": "2026-11-25T05:01:18.990Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "RochesterFirst",
+        "AOL.com"
+      ],
+      "score": 2.02
+    },
+    {
       "id": "fad84ef0d0fc",
       "cat": "internet",
       "kind": "news",
@@ -1567,23 +1587,6 @@
       "score": 1.59
     },
     {
-      "id": "2bb07ffc981b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "'We're not worried': ROC passengers talk ticket prices, recent FAA ground stop during busy travel week",
-      "url": "https://www.yahoo.com/news/videos/were-not-worried-roc-passengers-040424722.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T15:59:00.000Z",
-      "latestAt": "2026-11-25T04:14:43.000Z",
-      "firstSeenAt": "2026-11-25T05:01:18.990Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "RochesterFirst"
-      ],
-      "score": 1.57
-    },
-    {
       "id": "d6b8ce642e78",
       "cat": "hacks",
       "kind": "news",
@@ -1650,23 +1653,6 @@
         "Yahoo"
       ],
       "score": 1.52
-    },
-    {
-      "id": "8043fd0465d7",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Tomball-based Greenwich Rx recalls injections over contamination concerns",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYUhjZzVKZWZqYTE4d3dsYk4tOEhFbVRrMzV1bkpMQ0hma2draF9GQWlpLU5RWDhFUEVXbXhVM21STDBaNWo2ZmlySHFmUVlJVlotTDcwdUJDbFRnekstOWZtcHA5SkhhN0t5d2diZE81TDJtUXJ2V0tsSTZEZ0tONEZLQTBFRWNOemZjNnFR?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T16:54:21.000Z",
-      "latestAt": "2026-11-24T21:55:34.000Z",
-      "firstSeenAt": "2026-11-25T07:46:42.864Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Houston Chronicle"
-      ],
-      "score": 1.5
     },
     {
       "id": "c33a777bc6da",
@@ -1957,6 +1943,22 @@
         "Mezha.net"
       ],
       "score": 1.31
+    },
+    {
+      "id": "ca043b17770a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA system hacked in latest major data breach",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5fUldpM1hHV2RXZDM3MU1NTlg0N0VPTjhDUTFNYzZBeGZMVEVNeEVYU1ZsRmRYS0diM0NHRjJKYWFpdUZEcTYxRHBDYzQ2TkgzY2pKRnJNTFowTVpJek5R0gFcQVVfeXFMTUVWYWJTNVJfWDhsdnl6UEd6V0ZEZWx1RlEyZVpIbUYwaXZ4SHl4dEJYYlJKY2tsLWNsSUo1c29nMmN1QV9ldHo2cG94M0RxN2tjZkNLSGpkZDA3MmI?oc=5",
+      "source": "Modern Ghana",
+      "publishedAt": "2026-11-25T00:10:00.000Z",
+      "latestAt": "2026-11-25T00:10:00.000Z",
+      "firstSeenAt": "2026-11-25T04:31:12.371Z",
+      "outlets": 1,
+      "outletNames": [
+        "Modern Ghana"
+      ],
+      "score": 1.3
     },
     {
       "id": "23de3ce9e502",
