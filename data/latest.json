@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T10:02:10.816Z",
+  "buildTime": "2026-11-25T10:17:11.652Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 05:02 ET",
+  "etStamp": "2026-11-25 05:17 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -53,8 +53,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1408,
-  "lastSuccessAt": "2026-11-25T10:02:10.816Z",
+  "headlinesRead": 1373,
+  "lastSuccessAt": "2026-11-25T10:17:11.652Z",
   "rollingFallback": false,
   "cats": {
     "flights": 21,
@@ -173,11 +173,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "6 killed when plane crashes off Mississippi"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -189,15 +191,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1080,
+      "count": 1048,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     },
     "bing": {
       "ok": true,
-      "count": 290,
+      "count": 287,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     },
     "gdelt": {
       "ok": false,
@@ -209,37 +211,37 @@
       "ok": true,
       "count": 8,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     },
     "x": {
       "ok": true,
@@ -252,13 +254,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T10:02:10.816Z"
+      "lastOkAt": "2026-11-25T10:17:11.652Z"
     }
   },
   "stories": [
@@ -310,6 +312,53 @@
       "score": 7.24
     },
     {
+      "id": "a6c55f50f1ef",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Chicago's O’Hare Airport ground stop lifted, flight delays continue after outage",
+      "url": "https://www.yahoo.com/news/us/articles/chicagos-o-hare-airport-ground-214231766.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T13:42:00.000Z",
+      "latestAt": "2026-11-25T06:00:00.000Z",
+      "firstSeenAt": "2026-11-24T22:15:04.259Z",
+      "outlets": 32,
+      "outletNames": [
+        "Times Now",
+        "NBC 5 Chicago",
+        "JournalArta",
+        "https://www.thetraveler.org/",
+        "Rus Tourism News",
+        "Yahoo",
+        "FOX 32 Chicago",
+        "StreetInsider",
+        "WGN-TV",
+        "WABC Radio",
+        "Operativ Məlumat Mərkəzi",
+        "Fox News",
+        "WUSA9",
+        "KXLH News Helena",
+        "WTXL ABC 27 Tallahassee News",
+        "10News.com",
+        "Idaho News 6",
+        "23ABC News Bakersfield",
+        "FOX 13 News Utah",
+        "Scripps News",
+        "Shaw Local",
+        "KTVQ",
+        "WCPO 9 Cincinnati",
+        "Mezha.net",
+        "Hindustan Times",
+        "wrganews.com",
+        "Peradaban.id",
+        "National News Desk",
+        "WOAI",
+        "KTUL",
+        "NewsNation",
+        "tippinsights"
+      ],
+      "score": 5.14
+    },
+    {
       "id": "4144781d773d",
       "cat": "flights",
       "kind": "news",
@@ -352,29 +401,6 @@
         "WE News English"
       ],
       "score": 4.73
-    },
-    {
-      "id": "sig:faa-stop:SFO:2026-11-24",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at SFO (wind)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-25T02:00:48.580Z",
-      "latestAt": "2026-11-25T02:00:48.580Z",
-      "firstSeenAt": "2026-11-25T02:00:48.580Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "SFO",
-        "hub": true,
-        "nationwide": false,
-        "reason": "wind"
-      }
     },
     {
       "id": "031e0f43c9a0",
@@ -580,6 +606,29 @@
       "score": 2.93
     },
     {
+      "id": "sig:faa-stop:SFO:2026-11-24",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SFO (wind)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-25T02:00:48.580Z",
+      "latestAt": "2026-11-25T02:00:48.580Z",
+      "firstSeenAt": "2026-11-25T02:00:48.580Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SFO",
+        "hub": true,
+        "nationwide": false,
+        "reason": "wind"
+      }
+    },
+    {
       "id": "sig:faa-stop:ORD:2026-11-24",
       "cat": "flights",
       "kind": "signal",
@@ -623,24 +672,6 @@
       "score": 4.01
     },
     {
-      "id": "899c23b9703f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "A government watchdog warned about disruptions before the FAA grounded flights nationwide",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOejltVVg1ZUV5Rml4cV9hZ0RoaFkxejFDSlVTRVNrRFlnbk15ay02cjd5QWZaenFBUV9HSUVwTkVCNG9udGJETS1VV21WVkZxRHJ5TE5nYTlTWUhVN3M0emlqNnVfNVpaS1Exd0FId0tvVXE4X1A1RGFjTkhPTXhsT1hlQ3Y0TDh4RVRuZ193ZlM0X3JlVFAwVzJ0RzJQYjM1MTk0ZXVORkxrY2J4S2ZZYUdTZ0xDUldGVGpOSEpVaXFQZEd1eVJ6bmFQX3N2bjZZV25EODhwZTkyVW4yby1mTWFEYlpaODkwWGt1QjlOVC02c2Rac1FVSGhmc0tINHhwdGtyMnVMRWg0c3ZH?oc=5",
-      "source": "weareiowa.com",
-      "publishedAt": "2026-11-24T22:19:00.000Z",
-      "latestAt": "2026-11-24T22:19:00.000Z",
-      "firstSeenAt": "2026-11-24T22:45:11.907Z",
-      "outlets": 3,
-      "outletNames": [
-        "weareiowa.com",
-        "WKYC",
-        "WTHR"
-      ],
-      "score": 3.59
-    },
-    {
       "id": "95a87fd705d5",
       "cat": "hacks",
       "kind": "news",
@@ -648,7 +679,7 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYmlzRW5zcFppdnI1NWdVaXJyXzAwTFZQMEVkdjVUdjJMcDFuSF93Q2pldTlibld1LU1CcHl3bWVWdFpRdWpqbkx6ZXBvMERGcF9xT3lqT3BFbFhpS2pFY2lNVmM5UHVCVTN4NHpTLUVBZ3Q4QWZnSlM5SVI2eDZhejkxai02bGtFbEc3TE1RWnlsWG9fU3paUWZBWUpDZVBoMURUMVBNNVN5dw?oc=5",
       "source": "BleepingComputer",
       "publishedAt": "2026-11-24T16:15:23.000Z",
-      "latestAt": "2026-11-25T06:50:00.000Z",
+      "latestAt": "2026-11-25T09:59:22.000Z",
       "firstSeenAt": "2026-11-24T17:59:22.427Z",
       "outlets": 5,
       "outletNames": [
@@ -910,6 +941,24 @@
         "Dailymotion on MSN"
       ],
       "score": 1.71
+    },
+    {
+      "id": "899c23b9703f",
+      "cat": "flights",
+      "kind": "news",
+      "title": "A government watchdog warned about disruptions before the FAA grounded flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOejltVVg1ZUV5Rml4cV9hZ0RoaFkxejFDSlVTRVNrRFlnbk15ay02cjd5QWZaenFBUV9HSUVwTkVCNG9udGJETS1VV21WVkZxRHJ5TE5nYTlTWUhVN3M0emlqNnVfNVpaS1Exd0FId0tvVXE4X1A1RGFjTkhPTXhsT1hlQ3Y0TDh4RVRuZ193ZlM0X3JlVFAwVzJ0RzJQYjM1MTk0ZXVORkxrY2J4S2ZZYUdTZ0xDUldGVGpOSEpVaXFQZEd1eVJ6bmFQX3N2bjZZV25EODhwZTkyVW4yby1mTWFEYlpaODkwWGt1QjlOVC02c2Rac1FVSGhmc0tINHhwdGtyMnVMRWg0c3ZH?oc=5",
+      "source": "weareiowa.com",
+      "publishedAt": "2026-11-24T22:19:00.000Z",
+      "latestAt": "2026-11-24T22:19:00.000Z",
+      "firstSeenAt": "2026-11-24T22:45:11.907Z",
+      "outlets": 3,
+      "outletNames": [
+        "weareiowa.com",
+        "WKYC",
+        "WTHR"
+      ],
+      "score": 3.59
     },
     {
       "id": "0dd78f3eb490",
@@ -1588,6 +1637,23 @@
       "score": 1.5
     },
     {
+      "id": "d6b9d869e642",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Belgian municipalities hit by data breach affecting 1.2M people",
+      "url": "https://www.aa.com.tr/en/europe/belgian-municipalities-hit-by-data-breach-affecting-12m-people/4137063",
+      "source": "Anadolu Agency",
+      "publishedAt": "2026-11-24T17:02:00.000Z",
+      "latestAt": "2026-11-25T10:06:05.000Z",
+      "firstSeenAt": "2026-11-25T10:17:11.652Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Agency",
+        "Anadolu Ajansı"
+      ],
+      "score": 1.42
+    },
+    {
       "id": "52f1674d700a",
       "cat": "flights",
       "kind": "news",
@@ -1664,22 +1730,6 @@
       "outlets": 1,
       "outletNames": [
         "CAJ News Africa"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "f6ed3d56c12f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major Samsung subsidiary hit by data breach affecting customers",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1JN1lESGYwRmNMMXB4d0ZfejZWV1NObEs5blVEdDdVX2xldzRBc0VYdXM2VFFOT0xxSllaLTRwN0d4THcxMHN6YmZ5bnFjMzJXY2NfWXAxSHhDNU80Z1pSa2lLQTJrZkVLZFgtVGhjdw?oc=5",
-      "source": "Cybernews",
-      "publishedAt": "2026-11-24T10:03:16.000Z",
-      "latestAt": "2026-11-24T10:19:18.000Z",
-      "firstSeenAt": "2026-11-24T10:12:52.256Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cybernews"
       ],
       "score": 1.4
     },
@@ -1828,23 +1878,6 @@
       "score": 1.35
     },
     {
-      "id": "e55c564c17ff",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Chicago's O’Hare Airport ground stop lifted, flight delays continue after outage",
-      "url": "https://www.yahoo.com/news/us/articles/chicagos-o-hare-airport-ground-214231766.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T13:42:00.000Z",
-      "latestAt": "2026-11-24T21:42:31.000Z",
-      "firstSeenAt": "2026-11-25T09:47:07.407Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX 32 Chicago"
-      ],
-      "score": 1.33
-    },
-    {
       "id": "d186de7312b2",
       "cat": "flights",
       "kind": "news",
@@ -1891,6 +1924,22 @@
         "Modern Ghana"
       ],
       "score": 1.3
+    },
+    {
+      "id": "7dc531d5f964",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Global stocks are mixed as AI shares tumble after a retreat on Wall Street",
+      "url": "https://www.ksat.com/business/2026/11/25/asian-stocks-mostly-decline-as-ai-shares-tumble-after-a-retreat-on-wall-street/",
+      "source": "KSAT",
+      "publishedAt": "2026-11-24T19:49:00.000Z",
+      "latestAt": "2026-11-24T19:49:00.000Z",
+      "firstSeenAt": "2026-11-25T10:17:11.652Z",
+      "outlets": 1,
+      "outletNames": [
+        "KSAT"
+      ],
+      "score": 1.06
     },
     {
       "id": "e142fe2fb20b",
@@ -1953,22 +2002,6 @@
       "outlets": 1,
       "outletNames": [
         "Starlust.org"
-      ],
-      "score": 1
-    },
-    {
-      "id": "5803ad2f8baa",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Cramer and Lee Buy AI Stocks Amid Market Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5wYncxeURRVFRrZ0x5RGdna2MyTXRKcC1LTHlPeGlpS2pkNkRCYjBxTGZFUlpxX1ppRXZJSGdXbi1DNG1ZTFRGNWpXQkhIeGozSGtvUDExcXhmRmZTVHc?oc=5",
-      "source": "SuaraGarut.ID",
-      "publishedAt": "2026-11-25T05:34:24.000Z",
-      "latestAt": "2026-11-25T05:34:53.000Z",
-      "firstSeenAt": "2026-11-25T05:46:30.876Z",
-      "outlets": 1,
-      "outletNames": [
-        "SuaraGarut.ID"
       ],
       "score": 1
     },
