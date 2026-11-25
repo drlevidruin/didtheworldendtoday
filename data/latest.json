@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T14:37:35.071Z",
+  "buildTime": "2026-11-25T14:52:37.551Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 09:37 ET",
+  "etStamp": "2026-11-25 09:52 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,16 +49,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1435,
-  "lastSuccessAt": "2026-11-25T14:37:35.071Z",
+  "headlinesRead": 1452,
+  "lastSuccessAt": "2026-11-25T14:52:37.551Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 21,
-    "hacks": 30,
-    "internet": 12,
+    "flights": 22,
+    "hacks": 31,
+    "internet": 11,
     "germs": 5,
     "grid": 6,
-    "weather": 6,
+    "weather": 5,
     "markets": 4,
     "ai": 4,
     "sun": 4,
@@ -180,80 +180,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1105,
+      "count": 1080,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "bing": {
       "ok": true,
-      "count": 296,
+      "count": 288,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
-      "lastOkAt": "2026-11-25T13:52:36.116Z"
+      "ok": true,
+      "count": 50,
+      "error": "rate limited (HTTP 429)",
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "hn": {
       "ok": true,
       "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:37:35.071Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T14:37:35.071Z"
+      "lastOkAt": "2026-11-25T14:52:37.551Z"
     }
   },
   "stories": [
@@ -558,7 +559,7 @@
       "publishedAt": "2026-11-25T11:00:00.000Z",
       "latestAt": "2026-11-25T11:40:52.000Z",
       "firstSeenAt": "2026-11-25T11:17:22.706Z",
-      "outlets": 9,
+      "outlets": 10,
       "outletNames": [
         "Yahoo",
         "Reuters",
@@ -568,9 +569,10 @@
         "SRN News",
         "Yahoo Finance Singapore",
         "Charlotte Observer",
-        "Kansas City Star"
+        "Kansas City Star",
+        "Yahoo Finance"
       ],
-      "score": 4.15
+      "score": 4.3
     },
     {
       "id": "02f0d15c4df1",
@@ -1084,6 +1086,23 @@
       "score": 1.81
     },
     {
+      "id": "f510bdaed769",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA outage grounds flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9GM1VxZm1CTmtHMVpzbnl0Tm5mOGdDRzl6NVBGSTFmREpkaGl3OWZyS3ZNdG5ScXo5bGdlaUJmaWFZWkVLWVlOeUhlcFFEcUJrMHo4c2xZOHdTV3piTGkyNEpGZjR5aFFaY0lWekNaMGsxREg1eXFNWVA0RQ?oc=5",
+      "source": "NCClinked",
+      "publishedAt": "2026-11-24T17:45:44.000Z",
+      "latestAt": "2026-11-24T22:35:37.000Z",
+      "firstSeenAt": "2026-11-25T14:52:37.551Z",
+      "outlets": 2,
+      "outletNames": [
+        "NCClinked",
+        "Howl.Link"
+      ],
+      "score": 1.81
+    },
+    {
       "id": "e84ad2170042",
       "cat": "hacks",
       "kind": "news",
@@ -1150,6 +1169,23 @@
         "Silicon UK"
       ],
       "score": 1.72
+    },
+    {
+      "id": "45dbbf969cc4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA cyberattack reports follow FBI database incident",
+      "url": "https://www.yahoo.com/news/videos/cia-cyberattack-reports-fbi-database-131849085.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T05:18:00.000Z",
+      "latestAt": "2026-11-25T13:18:49.000Z",
+      "firstSeenAt": "2026-11-25T14:52:37.551Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 9 Minneapolis-St. Paul"
+      ],
+      "score": 1.68
     },
     {
       "id": "baea7dc99c5f",
@@ -1260,7 +1296,7 @@
       "title": "A 38% ransomware surge exposes major MFA blind spot: Beazley Security",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNajRQMWJ0VzlDZW9lQ0JCTUFoY2VHSEE0ZDR6ZWRpNUdnRm1JZ2VWNmVwN0tib2xZaGhCMFhjQWNmWm1kVFRfTFExUThqb05FQ3NiWU1aWHdTTG5DSFhfRVQ0ejNoalV2TnQwSzk5Q2VOaXRhTldfckJEdFA5NjJPNTZIYldRNzItTkJVdTU4MlU5RkRJa1J5T2xnaVV4U2YyZmRUbg?oc=5",
       "source": "Intelligent Insurer",
-      "publishedAt": "2026-11-25T14:20:13.000Z",
+      "publishedAt": "2026-11-25T14:19:34.000Z",
       "latestAt": "2026-11-25T14:20:13.000Z",
       "firstSeenAt": "2026-11-25T14:22:32.622Z",
       "outlets": 1,
@@ -1660,38 +1696,6 @@
       "score": 1.2
     },
     {
-      "id": "4591fa5047bb",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Rolls Out 'Code Red' Initiative to Avert Major Outages",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPN1g4Qm9palRoRlhRaEpoaHJxa0dubS1MWEJSazJlTmg4eEc0Z0dNZ29mbGpmTU9XanlWM1BzZ0hBang0Z1MxRHpKay1xSllzYUJQejFUd2gzX2drVnlvblBWNXdqb2JHWjBJaHJueXgtQVBwVnp1TV8wN244X3VTNk9pSVZZTnU1aDZRY2xyeXBpYlRBSXhSYmdR?oc=5",
-      "source": "Tempo.co English",
-      "publishedAt": "2026-11-25T03:37:00.000Z",
-      "latestAt": "2026-11-25T03:37:00.000Z",
-      "firstSeenAt": "2026-11-25T13:52:36.116Z",
-      "outlets": 1,
-      "outletNames": [
-        "Tempo.co English"
-      ],
-      "score": 1.16
-    },
-    {
-      "id": "3b9d2968bcc0",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Great Lakes water temperatures hit record highs for late November",
-      "url": "https://www.jsonline.com/story/news/environment/2026/11/25/lake-michigan-water-at-near-record-high-thats-bad-news-for-some-fish/92941859007/",
-      "source": "Milwaukee Journal Sentinel",
-      "publishedAt": "2026-11-25T03:06:00.000Z",
-      "latestAt": "2026-11-25T11:06:00.000Z",
-      "firstSeenAt": "2026-11-25T14:07:29.023Z",
-      "outlets": 1,
-      "outletNames": [
-        "Milwaukee Journal Sentinel"
-      ],
-      "score": 1.14
-    },
-    {
       "id": "7dc531d5f964",
       "cat": "markets",
       "kind": "news",
@@ -1822,6 +1826,22 @@
       "score": 1
     },
     {
+      "id": "b6b4dcbf7e62",
+      "cat": "space",
+      "kind": "news",
+      "title": "Meet Earth's New 'Mini-Moon' 2026 QQ8, a Six-Foot-Wide Asteroid That's Temporarily Circling Our Planet",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNaE82YUhVSG5haW1VeUw5RXBOdFlDaTVOQTg0WUNBa205b251OWpMa3Y4RUhXdlM0bWtHdkNndGxkeE9xSnhBOUJGZzQyWXRDS2c5TlFKanl5bmVuR1UybUJHWFl1QW0wQnAxTWNiTXJaeHVIUlM1alBubksxYnFFZWVNaWpma1JEejVWc0FRRnhSYk9NMi1xMjl5TXA3TXUyekFTdzU4UHFZcjdmVDQzQ1VRUUFzUkpNSy1ELTdrUUtCc0xDMC02bFV6UkZUVnhJRGw4YmdnSkJReHczSU5CZHRDWG0?oc=5",
+      "source": "Smithsonian Magazine",
+      "publishedAt": "2026-11-25T14:00:00.000Z",
+      "latestAt": "2026-11-25T14:00:00.000Z",
+      "firstSeenAt": "2026-11-25T14:52:37.551Z",
+      "outlets": 1,
+      "outletNames": [
+        "Smithsonian Magazine"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "5074e4bf73e1",
       "cat": "space",
       "kind": "news",
@@ -1914,22 +1934,6 @@
       "outlets": 1,
       "outletNames": [
         "Morning Overview on MSN"
-      ],
-      "score": 0.86
-    },
-    {
-      "id": "872fee2f7740",
-      "cat": "space",
-      "kind": "news",
-      "title": "Watch live: Europe unveils 1st close-up views of asteroid Dimorphos after NASA's DART impact",
-      "url": "https://www.space.com/space-exploration/asteroid-comet-missions/watch-live-europe-unveils-1st-close-up-views-of-asteroid-dimorphos-after-nasas-dart-impact",
-      "source": "Space.com",
-      "publishedAt": "2026-11-25T06:01:00.000Z",
-      "latestAt": "2026-11-25T06:01:00.000Z",
-      "firstSeenAt": "2026-11-25T14:37:35.071Z",
-      "outlets": 1,
-      "outletNames": [
-        "Space.com"
       ],
       "score": 0.86
     },
