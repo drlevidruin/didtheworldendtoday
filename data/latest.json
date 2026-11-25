@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T08:32:04.605Z",
+  "buildTime": "2026-11-25T08:47:00.279Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 03:32 ET",
+  "etStamp": "2026-11-25 03:47 ET",
   "score": 79,
   "fired": [
     "flights",
@@ -53,16 +53,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1368,
-  "lastSuccessAt": "2026-11-25T08:32:04.605Z",
+  "headlinesRead": 782,
+  "lastSuccessAt": "2026-11-25T08:47:00.279Z",
   "rollingFallback": false,
   "cats": {
     "flights": 23,
-    "hacks": 27,
-    "internet": 19,
+    "hacks": 29,
+    "internet": 18,
     "earth": 6,
     "germs": 4,
-    "weather": 5,
+    "weather": 4,
     "grid": 6,
     "space": 2,
     "markets": 4,
@@ -184,20 +184,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1040,
-      "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "count": 455,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 8 of 26 queries)",
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "bing": {
       "ok": true,
-      "count": 289,
+      "count": 288,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "gdelt": {
       "ok": false,
@@ -209,55 +209,56 @@
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "status": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:32:04.605Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T08:32:04.605Z"
+      "lastOkAt": "2026-11-25T08:47:00.279Z"
     }
   },
   "stories": [
@@ -377,7 +378,7 @@
       "score": 5
     },
     {
-      "id": "3654f280be86",
+      "id": "031e0f43c9a0",
       "cat": "hacks",
       "kind": "news",
       "title": "Hackers breach CIA unclassified computer system",
@@ -407,6 +408,28 @@
         "WE News English"
       ],
       "score": 4.24
+    },
+    {
+      "id": "74dc86579a2c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA systems breached in cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1abXB0bnAtQ280akw5OWlFSS13VDhUaVQxREtnZHpjOGpNSlUtd1N2X2VodEZYaGxhNmFpSUxqaTNsWnRDQW10ZlI1bWp2Nk1YZlZJREJ4MTZ3c3IyclMwOTlBcHI3Qjg3M1FvV1RxOGlSVmZmX3Jldw?oc=5",
+      "source": "KPAX News",
+      "publishedAt": "2026-11-25T00:01:41.000Z",
+      "latestAt": "2026-11-25T07:34:14.000Z",
+      "firstSeenAt": "2026-11-25T03:46:00.734Z",
+      "outlets": 7,
+      "outletNames": [
+        "KPAX News",
+        "Tampa Bay 28",
+        "Scripps News",
+        "NBC26",
+        "WKBW",
+        "News 5 Cleveland WEWS",
+        "ktnv.com"
+      ],
+      "score": 3.57
     },
     {
       "id": "sig:status:cloudflare:2026-11-25",
@@ -473,27 +496,6 @@
         "RadioPlusInfo.com"
       ],
       "score": 3.42
-    },
-    {
-      "id": "74dc86579a2c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "CIA systems breached in cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1abXB0bnAtQ280akw5OWlFSS13VDhUaVQxREtnZHpjOGpNSlUtd1N2X2VodEZYaGxhNmFpSUxqaTNsWnRDQW10ZlI1bWp2Nk1YZlZJREJ4MTZ3c3IyclMwOTlBcHI3Qjg3M1FvV1RxOGlSVmZmX3Jldw?oc=5",
-      "source": "KPAX News",
-      "publishedAt": "2026-11-25T00:01:41.000Z",
-      "latestAt": "2026-11-25T04:03:20.000Z",
-      "firstSeenAt": "2026-11-25T03:46:00.734Z",
-      "outlets": 6,
-      "outletNames": [
-        "KPAX News",
-        "Tampa Bay 28",
-        "Scripps News",
-        "NBC26",
-        "WKBW",
-        "News 5 Cleveland WEWS"
-      ],
-      "score": 3.36
     },
     {
       "id": "19618d3109d7",
@@ -664,6 +666,24 @@
       "score": 4.01
     },
     {
+      "id": "3654f280be86",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA hit by major cyberattack on key intelligence system",
+      "url": "https://www.yahoo.com/news/us/articles/cia-hit-major-cyberattack-key-004546284.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T15:59:00.000Z",
+      "latestAt": "2026-11-25T00:46:18.000Z",
+      "firstSeenAt": "2026-11-25T01:15:36.251Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "geekspin",
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 3.06
+    },
+    {
       "id": "42f87fae315d",
       "cat": "hacks",
       "kind": "news",
@@ -717,24 +737,6 @@
         "Speaks Media"
       ],
       "score": 2.56
-    },
-    {
-      "id": "e724a6fe278b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "VHV Company Data Breach Investigation: Edelson Lechtzin LLP Probes Class Action Claims After Social Security Numbers Are Exposed",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSFdIcUE3TVdBWHpMY3VrRjRiN1NJMU9HQm5RNHJ4UDU0bVVlVVUxNC1yOWgyYU9rMENmNUV3YjE1OFVfWGE4SHRuMVNLMEhSaFJGYy1oV1JCa2RpS2gyYVRSZDZ4YldXTWNzcXFEejctZnFhZ0U1U2FTb1p1OGxLazZ1SkI3MU5RNjAwd1FOM1Z2Qm42a0R0b3pTS1JkMTBKMTFONFduNkVqUDIySHRieHhUUFJVTXc?oc=5",
-      "source": "Carroll County Mirror-Democrat",
-      "publishedAt": "2026-11-25T00:11:49.000Z",
-      "latestAt": "2026-11-25T00:17:09.000Z",
-      "firstSeenAt": "2026-11-25T01:15:36.251Z",
-      "outlets": 3,
-      "outletNames": [
-        "Carroll County Mirror-Democrat",
-        "mykxlg.com",
-        "lincolnjournal.com"
-      ],
-      "score": 2.54
     },
     {
       "id": "88b30b5dc925",
@@ -971,6 +973,24 @@
       "score": 2.72
     },
     {
+      "id": "e724a6fe278b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "VHV Company Data Breach Investigation: Edelson Lechtzin LLP Probes Class Action Claims After Social Security Numbers Are Exposed",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSFdIcUE3TVdBWHpMY3VrRjRiN1NJMU9HQm5RNHJ4UDU0bVVlVVUxNC1yOWgyYU9rMENmNUV3YjE1OFVfWGE4SHRuMVNLMEhSaFJGYy1oV1JCa2RpS2gyYVRSZDZ4YldXTWNzcXFEejctZnFhZ0U1U2FTb1p1OGxLazZ1SkI3MU5RNjAwd1FOM1Z2Qm42a0R0b3pTS1JkMTBKMTFONFduNkVqUDIySHRieHhUUFJVTXc?oc=5",
+      "source": "Carroll County Mirror-Democrat",
+      "publishedAt": "2026-11-25T00:11:49.000Z",
+      "latestAt": "2026-11-25T00:17:09.000Z",
+      "firstSeenAt": "2026-11-25T01:15:36.251Z",
+      "outlets": 3,
+      "outletNames": [
+        "Carroll County Mirror-Democrat",
+        "mykxlg.com",
+        "lincolnjournal.com"
+      ],
+      "score": 2.54
+    },
+    {
       "id": "d9dcfe35bf4e",
       "cat": "hacks",
       "kind": "news",
@@ -1111,6 +1131,24 @@
         "Yahoo",
         "RochesterFirst",
         "AOL.com"
+      ],
+      "score": 2.02
+    },
+    {
+      "id": "de1e0e492977",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA hit by cyber breach that exposed unclassified data on intelligence analysis network: sources",
+      "url": "https://www.yahoo.com/news/us/articles/cia-hit-cyber-breach-exposed-205334581.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T12:53:00.000Z",
+      "latestAt": "2026-11-25T08:33:41.000Z",
+      "firstSeenAt": "2026-11-25T02:00:48.580Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "Fox News on MSN",
+        "Techzine Global"
       ],
       "score": 2.02
     },
@@ -1387,6 +1425,23 @@
       "score": 1.74
     },
     {
+      "id": "2fdeff134421",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA and Director of National Intelligence hit with cyberattack, according to reports",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9ySUZyN19wd3hMd2RZMHRfQVI5VDVUUFJxY0hPUjJXUzRjSkpGbUtoZnc1S0tXNGtQN1JtSnRITXBtNFowallUNjVfb0k?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-25T00:32:19.000Z",
+      "latestAt": "2026-11-25T00:50:00.000Z",
+      "firstSeenAt": "2026-11-25T08:47:00.279Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos",
+        "Modern Ghana"
+      ],
+      "score": 1.73
+    },
+    {
       "id": "7f4b4a58044b",
       "cat": "flights",
       "kind": "news",
@@ -1557,23 +1612,6 @@
         "New York Post"
       ],
       "score": 1.57
-    },
-    {
-      "id": "de1e0e492977",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "CIA hit by cyber breach that exposed unclassified data on intelligence analysis network: sources",
-      "url": "https://www.yahoo.com/news/us/articles/cia-hit-cyber-breach-exposed-205334581.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-24T12:53:00.000Z",
-      "latestAt": "2026-11-24T14:00:03.000Z",
-      "firstSeenAt": "2026-11-25T02:00:48.580Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Fox News on MSN"
-      ],
-      "score": 1.56
     },
     {
       "id": "be09b5dc5b1a",
@@ -1912,40 +1950,6 @@
         "CBS News"
       ],
       "score": 1.28
-    },
-    {
-      "id": "d1f8478fdf6c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Watch King tides flood Mill Valley streets as California braces for record high waters - America's Weather Center",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONHlCUFQtekVDSDhscW5FZHY0aXhNUXNYUFd2OElIMFViODFMZGdvT0t1c21XNzAteWR0VW1fLUZteV9PeW5URl9hYTZ6TEswdUktUzRiSzhrLWlqbE9tazdYbG4yMWUwRWFJTlh4TXgtb2pna0dwYkFsMnFNMjNsS3V0bG5fd2RaN0VSMDFCMnJoaVRYc0lqbDNMWjRTSnR4NVB1S2wyRHRHbDJEVklUMTdsUkVGajdkTUNsdnVkRmdtTmw1TUhzaWxwdUg?oc=5",
-      "source": "FOX One",
-      "publishedAt": "2026-11-24T20:19:02.000Z",
-      "latestAt": "2026-11-24T20:19:02.000Z",
-      "firstSeenAt": "2026-11-25T03:30:57.644Z",
-      "outlets": 1,
-      "outletNames": [
-        "FOX One"
-      ],
-      "score": 1.23,
-      "quiet": true,
-      "quietReason": "headline mentions flood"
-    },
-    {
-      "id": "0c294ed7cdda",
-      "cat": "internet",
-      "kind": "news",
-      "title": "US travelers issued nationwide flight disruption warning over new FAA rule at all airports from November 24",
-      "url": "https://www.msn.com/en-ca/news/news/us-travelers-issued-nationwide-flight-disruption-warning-over-new-faa-rule-at-all-airports-from-november-24/ar-AA2ibXHi",
-      "source": "MSN",
-      "publishedAt": "2026-11-25T00:29:00.000Z",
-      "latestAt": "2026-11-25T00:29:00.000Z",
-      "firstSeenAt": "2026-11-25T08:32:04.605Z",
-      "outlets": 1,
-      "outletNames": [
-        "MSN"
-      ],
-      "score": 1.21
     },
     {
       "id": "23de3ce9e502",
