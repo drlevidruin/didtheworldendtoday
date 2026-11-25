@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T00:00:38.565Z",
+  "buildTime": "2026-11-25T00:15:26.751Z",
   "etDate": "2026-11-24",
-  "etStamp": "2026-11-24 19:00 ET",
-  "score": 71,
+  "etStamp": "2026-11-24 19:15 ET",
+  "score": 65,
   "fired": [
     "flights",
     "hacks",
@@ -13,8 +13,7 @@
     "ai",
     "grid",
     "germs",
-    "weather",
-    "animals"
+    "weather"
   ],
   "bumps": [
     {
@@ -28,7 +27,7 @@
       "points": 6
     }
   ],
-  "change": 5,
+  "change": -1,
   "yesterday": {
     "date": "2026-11-23",
     "score": 66,
@@ -49,18 +48,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1083,
-  "lastSuccessAt": "2026-11-25T00:00:38.565Z",
+  "headlinesRead": 1276,
+  "lastSuccessAt": "2026-11-25T00:15:26.751Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
-    "internet": 19,
+    "flights": 20,
+    "internet": 17,
     "earth": 8,
-    "hacks": 31,
+    "hacks": 30,
     "grid": 9,
     "weather": 4,
     "germs": 4,
-    "animals": 1,
     "space": 1,
     "markets": 4,
     "ai": 3
@@ -76,7 +74,7 @@
     },
     "kp": {
       "value": 1.33,
-      "time": "2026-11-24T18:00:00.000Z",
+      "time": "2026-11-24T21:00:00.000Z",
       "max24": 1.67
     },
     "asteroid": {
@@ -185,15 +183,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 749,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 19 of 26 queries)",
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "count": 1005,
+      "error": null,
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "bing": {
       "ok": true,
-      "count": 296,
-      "error": null,
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "count": 231,
+      "error": "6 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,37 +203,37 @@
       "ok": true,
       "count": 10,
       "error": null,
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "x": {
       "ok": true,
@@ -246,15 +244,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T00:00:38.565Z"
+      "lastOkAt": "2026-11-25T00:15:26.751Z"
     }
   },
   "stories": [
@@ -323,29 +321,6 @@
       "score": 5
     },
     {
-      "id": "sig:faa-stop:ORD:2026-11-24",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at ORD (equipment outage)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-24T21:29:56.381Z",
-      "latestAt": "2026-11-24T21:29:56.381Z",
-      "firstSeenAt": "2026-11-24T21:29:56.381Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "ORD",
-        "hub": true,
-        "nationwide": false,
-        "reason": "equipment outage"
-      }
-    },
-    {
       "id": "206e9a53af20",
       "cat": "internet",
       "kind": "news",
@@ -353,9 +328,9 @@
       "url": "https://www.msn.com/en-us/news/other/exclusive-microsoft-declares-code-red-after-historic-outage-internal-memos-show/ar-AA2i8YNF",
       "source": "Reuters on MSN",
       "publishedAt": "2026-11-24T05:31:00.000Z",
-      "latestAt": "2026-11-24T23:44:00.000Z",
+      "latestAt": "2026-11-24T23:59:59.000Z",
       "firstSeenAt": "2026-11-24T19:59:40.773Z",
-      "outlets": 30,
+      "outlets": 32,
       "outletNames": [
         "Reuters on MSN",
         "Hindustan Times",
@@ -386,10 +361,35 @@
         "1290 WJNO",
         "News24",
         "YAHOO!",
-        "SiliconANGLE"
+        "SiliconANGLE",
+        "www.suaralandak.co.id",
+        "Sri Lanka Guardian"
       ],
       "xUrl": "https://x.com/Reuters/status/2125323636110209066",
-      "score": 4.48
+      "score": 4.55
+    },
+    {
+      "id": "sig:faa-stop:ORD:2026-11-24",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at ORD (equipment outage)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-24T21:29:56.381Z",
+      "latestAt": "2026-11-24T21:29:56.381Z",
+      "firstSeenAt": "2026-11-24T21:29:56.381Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "ORD",
+        "hub": true,
+        "nationwide": false,
+        "reason": "equipment outage"
+      }
     },
     {
       "id": "76df64bdaeb1",
@@ -574,41 +574,46 @@
       "score": 2.97
     },
     {
-      "id": "c69597c30f49",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands Without Power in Greenville County",
-      "url": "https://www.wspa.com/news/top-stories/thousands-without-power-in-greenville-county/",
-      "source": "WSPA 7News",
-      "publishedAt": "2026-11-24T03:07:00.000Z",
-      "latestAt": "2026-11-24T19:23:59.000Z",
-      "firstSeenAt": "2026-11-24T11:58:15.110Z",
-      "outlets": 5,
-      "outletNames": [
-        "WSPA 7News",
-        "WYFF",
-        "FOX Carolina News",
-        "KIRO 7 News Seattle",
-        "Yahoo"
-      ],
-      "score": 2.83
-    },
-    {
-      "id": "b71cd8e479e0",
+      "id": "857010ed9caa",
       "cat": "internet",
       "kind": "news",
-      "title": "What two global outages mean for TZ’s digital finance",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPeGpwTEdXcHdsdTlwWkVIcG4yb2ZhcnhRbHJVQzQtOVE1VllMZ2VlX0pObkU5UXBIMmNLZDZfN1ZBRjc2dHJDR0FpQjJQbElGNk95aU43TldVeU1jT1oxN3RXRXpDai15UVVkXy11ZE03RFhTZGwzZ0s0ajR6RXZKcXp3SQ?oc=5",
-      "source": "dailynews.co.tz",
-      "publishedAt": "2026-11-24T06:44:25.000Z",
-      "latestAt": "2026-11-24T06:46:00.000Z",
-      "firstSeenAt": "2026-11-24T06:57:23.736Z",
-      "outlets": 2,
+      "title": "Spotify back online after brief outage, Downdetector shows",
+      "url": "https://www.channelnewsasia.com/business/spotify-back-online-after-brief-outage-downdetector-shows-6578296",
+      "source": "CNA",
+      "publishedAt": "2026-11-24T12:11:00.000Z",
+      "latestAt": "2026-11-24T20:22:54.000Z",
+      "firstSeenAt": "2026-11-24T22:30:08.734Z",
+      "outlets": 6,
       "outletNames": [
-        "dailynews.co.tz",
-        "Daily News"
+        "TradingView",
+        "Reuters",
+        "Newswav",
+        "The Straits Times",
+        "101 WIXX",
+        "CNA"
       ],
-      "score": 2.79
+      "score": 2.97
+    },
+    {
+      "id": "d6951d480f01",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Thousands report outages on Spotify: Downdetector",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOV3dmZmt4T3otS2ZaLUV0VU1JZ0VsVmpaMkIxcVprbnNQTy1GUmxoQ0h2b0xoandta0ljVTRTdm0ySVAyZDFJc1RyYVdaY0lKZ2k5TGpxQ3h5SjJiYXVLZXV1RFdTZTl6QWVzOXctWkEzcFlYVmZCWlgzUXRVNm1hTUhmWUJ4VEg1bmJv0gGQAUFVX3lxTE9RdW5GSjM0VnZNZ2p3aHJKcGhnenB1anp1eTdna1hZQVNwcE5GZzJMU3BnVnVGSW53REx4WkFXUXV4bjRmM1VodWVQTEF0ZVpDV0FPbmNpLXE2cFZDQUJVcjZNR0x6QzFVQXMxakNxR1Uwbm1lRGI4bEVpTXBPU0lGa19EU0lGajZVaDB6T3dldg?oc=5",
+      "source": "PIX11",
+      "publishedAt": "2026-11-24T11:50:31.000Z",
+      "latestAt": "2026-11-24T13:30:00.000Z",
+      "firstSeenAt": "2026-11-24T22:45:11.907Z",
+      "outlets": 6,
+      "outletNames": [
+        "PIX11",
+        "Global Banking & Finance Review",
+        "Aaj English TV",
+        "AOL.com",
+        "The News International",
+        "Khaleej Times"
+      ],
+      "score": 2.93
     },
     {
       "id": "sig:faa-stop:LAS:2026-11-24",
@@ -675,24 +680,41 @@
       }
     },
     {
-      "id": "857010ed9caa",
-      "cat": "internet",
+      "id": "c69597c30f49",
+      "cat": "grid",
       "kind": "news",
-      "title": "Spotify back online after brief outage, Downdetector shows",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPaGY2Xzk3Uk90aW9lZTVUVkZsSlplRWZVRG9oUi04QmhlLWxtdWQ5QnY2Z3FzQkRjaUFQYWdwMkJhNTMzaV8xUjJxc0dSOEYwa3dILURIbzVFbWVFaG9HNzBnazNaVUhtQW93Z0JzVEYwWXhEaTZIZHU4ZFhtdDAxYklyVnI2SEZ0Q2Q4akNHbXlaakxNUHd6TzhPMVdTMVJDRzBjNnFZZEVZSzlzQXFJNjhEYk83QVh0Zld5WF8tMUxUOE80TVE?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-24T12:18:00.000Z",
-      "latestAt": "2026-11-24T20:22:54.000Z",
-      "firstSeenAt": "2026-11-24T22:30:08.734Z",
+      "title": "Thousands Without Power in Greenville County",
+      "url": "https://www.wspa.com/news/top-stories/thousands-without-power-in-greenville-county/",
+      "source": "WSPA 7News",
+      "publishedAt": "2026-11-24T03:07:00.000Z",
+      "latestAt": "2026-11-24T19:23:59.000Z",
+      "firstSeenAt": "2026-11-24T11:58:15.110Z",
       "outlets": 5,
       "outletNames": [
-        "TradingView",
-        "Reuters",
-        "Newswav",
-        "The Straits Times",
-        "101 WIXX"
+        "WSPA 7News",
+        "WYFF",
+        "FOX Carolina News",
+        "KIRO 7 News Seattle",
+        "Yahoo"
       ],
-      "score": 2.76
+      "score": 2.83
+    },
+    {
+      "id": "b71cd8e479e0",
+      "cat": "internet",
+      "kind": "news",
+      "title": "What two global outages mean for TZ’s digital finance",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPeGpwTEdXcHdsdTlwWkVIcG4yb2ZhcnhRbHJVQzQtOVE1VllMZ2VlX0pObkU5UXBIMmNLZDZfN1ZBRjc2dHJDR0FpQjJQbElGNk95aU43TldVeU1jT1oxN3RXRXpDai15UVVkXy11ZE03RFhTZGwzZ0s0ajR6RXZKcXp3SQ?oc=5",
+      "source": "dailynews.co.tz",
+      "publishedAt": "2026-11-24T06:44:25.000Z",
+      "latestAt": "2026-11-24T06:46:00.000Z",
+      "firstSeenAt": "2026-11-24T06:57:23.736Z",
+      "outlets": 2,
+      "outletNames": [
+        "dailynews.co.tz",
+        "Daily News"
+      ],
+      "score": 2.79
     },
     {
       "id": "42f87fae315d",
@@ -712,26 +734,6 @@
         "The Coloradoan"
       ],
       "score": 2.74
-    },
-    {
-      "id": "d6951d480f01",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Thousands report outages on Spotify: Downdetector",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOV3dmZmt4T3otS2ZaLUV0VU1JZ0VsVmpaMkIxcVprbnNQTy1GUmxoQ0h2b0xoandta0ljVTRTdm0ySVAyZDFJc1RyYVdaY0lKZ2k5TGpxQ3h5SjJiYXVLZXV1RFdTZTl6QWVzOXctWkEzcFlYVmZCWlgzUXRVNm1hTUhmWUJ4VEg1bmJv0gGQAUFVX3lxTE9RdW5GSjM0VnZNZ2p3aHJKcGhnenB1anp1eTdna1hZQVNwcE5GZzJMU3BnVnVGSW53REx4WkFXUXV4bjRmM1VodWVQTEF0ZVpDV0FPbmNpLXE2cFZDQUJVcjZNR0x6QzFVQXMxakNxR1Uwbm1lRGI4bEVpTXBPU0lGa19EU0lGajZVaDB6T3dldg?oc=5",
-      "source": "PIX11",
-      "publishedAt": "2026-11-24T11:50:31.000Z",
-      "latestAt": "2026-11-24T13:30:00.000Z",
-      "firstSeenAt": "2026-11-24T22:45:11.907Z",
-      "outlets": 5,
-      "outletNames": [
-        "PIX11",
-        "Global Banking & Finance Review",
-        "Aaj English TV",
-        "AOL.com",
-        "The News International"
-      ],
-      "score": 2.72
     },
     {
       "id": "c12cb954b403",
@@ -916,24 +918,6 @@
       "score": 2.18
     },
     {
-      "id": "21bc813321c6",
-      "cat": "animals",
-      "kind": "news",
-      "title": "Police wrangle horse that escaped farm and headed to old McDonald’s trot-thru",
-      "url": "https://www.mlive.com/news/2026/11/police-wrangle-horse-that-escaped-farm-and-headed-to-old-mcdonalds-trot-thru.html",
-      "source": "mlive",
-      "publishedAt": "2026-11-24T00:11:00.000Z",
-      "latestAt": "2026-11-24T06:12:00.000Z",
-      "firstSeenAt": "2026-11-24T14:43:43.527Z",
-      "outlets": 3,
-      "outletNames": [
-        "mlive",
-        "al.com",
-        "Yahoo"
-      ],
-      "score": 1.96
-    },
-    {
       "id": "af4f61912279",
       "cat": "earth",
       "kind": "news",
@@ -950,6 +934,25 @@
         "Daily Excelsior"
       ],
       "score": 1.84
+    },
+    {
+      "id": "f60198f20192",
+      "cat": "earth",
+      "kind": "news",
+      "title": "6.8 magnitude Earthquake strikes central Peru",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oQW5McjlMQTNUeFNjWnpDNDB5R3lBVFVoODhBemQyVGxEaW01Yld0eEZ6QktIQU4yNng5elBVbnE4ZVZDY2FaT0dVTEFTdGVkN1AyT1NtSGRob1BUQkNjN25LTGZHZFR0ZUs0SlBYRXotcFNHbzl5NFhJcw?oc=5",
+      "source": "News On AIR",
+      "publishedAt": "2026-11-24T12:44:25.000Z",
+      "latestAt": "2026-11-24T20:41:43.000Z",
+      "firstSeenAt": "2026-11-24T19:44:39.275Z",
+      "outlets": 2,
+      "outletNames": [
+        "News On AIR",
+        "The Daily Star"
+      ],
+      "score": 1.77,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "c6aec4b84c8b",
@@ -1197,6 +1200,23 @@
       "score": 1.96
     },
     {
+      "id": "3326599c43a4",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Second O’Hare ground stop in two days hits Thanksgiving travel",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVEs0RHI1bjFsSC1mNXFaV3B2aUlqSUZydDN3aTJkXzBuQkpHODVQMzUxT0JzNTZVVVk2eHo1NjRDeVcwQVFzVnRhN2I2VHlZd05SVG9MLXB1MlFrVHpBRWw5MXdhN3k3MkZuY0Ywc29QNXlocEVucnVTWWV6LTNYajBKcFUteDJVb0RNQnNWVE1rSWtR?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-24T22:40:46.000Z",
+      "latestAt": "2026-11-24T23:18:00.000Z",
+      "firstSeenAt": "2026-11-25T00:15:26.751Z",
+      "outlets": 2,
+      "outletNames": [
+        "https://www.thetraveler.org/",
+        "Rus Tourism News"
+      ],
+      "score": 1.95
+    },
+    {
       "id": "95a87fd705d5",
       "cat": "hacks",
       "kind": "news",
@@ -1280,25 +1300,6 @@
         "Industrial Cyber"
       ],
       "score": 1.79
-    },
-    {
-      "id": "f60198f20192",
-      "cat": "earth",
-      "kind": "news",
-      "title": "6.8 magnitude Earthquake strikes central Peru",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9oQW5McjlMQTNUeFNjWnpDNDB5R3lBVFVoODhBemQyVGxEaW01Yld0eEZ6QktIQU4yNng5elBVbnE4ZVZDY2FaT0dVTEFTdGVkN1AyT1NtSGRob1BUQkNjN25LTGZHZFR0ZUs0SlBYRXotcFNHbzl5NFhJcw?oc=5",
-      "source": "News On AIR",
-      "publishedAt": "2026-11-24T12:44:25.000Z",
-      "latestAt": "2026-11-24T20:41:43.000Z",
-      "firstSeenAt": "2026-11-24T19:44:39.275Z",
-      "outlets": 2,
-      "outletNames": [
-        "News On AIR",
-        "The Daily Star"
-      ],
-      "score": 1.77,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "e6e47f1883d4",
@@ -1696,6 +1697,22 @@
       "score": 1.45
     },
     {
+      "id": "52f1674d700a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "DFW, Love Field brace for Thanksgiving rush after nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQLUl3VjNiY1oyYUtsY092S2hfTHRsVzFNYnE4RVYzRTY5d09rRjlhWHFTU19XUUFzdnpQVUFCRlJ3Tk52dW9KRGt6M2pXQi10elhJMnBiUmk0cHhoTm1jeWg3dmhsZ0g5OXY3Z0tZVUVuYVRuYVNwN0lTb0FVcFpXTVJsaVp0dzZNdFBTbkdwN180bjZSV3RnRw?oc=5",
+      "source": "cbs19.tv",
+      "publishedAt": "2026-11-25T00:09:23.000Z",
+      "latestAt": "2026-11-25T00:09:23.000Z",
+      "firstSeenAt": "2026-11-25T00:15:26.751Z",
+      "outlets": 1,
+      "outletNames": [
+        "cbs19.tv"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "c82866214abf",
       "cat": "flights",
       "kind": "news",
@@ -1806,6 +1823,38 @@
         "Security Affairs"
       ],
       "score": 1.4
+    },
+    {
+      "id": "02f0d15c4df1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Exclusive: FAA probe zeros in on culprit of nationwide ground stop, but agency still faces tough questions",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNWXFVNlR6emtFRXlUbk0zVmlvQ2otcWR1bU9vMG9DVGVXaTMxVEtOX1c0R1gtVkVWMmFTQTAxZUFHaENaNm5ucHpKdjRMRDM2RTdPY1dueG43RkRrb0RCMGJ5RWhaNDFGN3JaSVZDM05YckU0UllCZkdteml1X3NMOVhBd3RUamhiNEZBRy14cjJIQi1WVGs3NXhxOHVVZnk0NE5SMFRob2tyampzcHU0VEJZWUxZV0ZfMlFMQVF0Uk1pRU0xc2loMEdVeVU5d05kMVE?oc=5",
+      "source": "CNN",
+      "publishedAt": "2026-11-25T00:02:00.000Z",
+      "latestAt": "2026-11-25T00:02:00.000Z",
+      "firstSeenAt": "2026-11-25T00:15:26.751Z",
+      "outlets": 1,
+      "outletNames": [
+        "CNN"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "f2c3b5bc12f4",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Another brief ground stop at O'Hare as record numbers expected at Chicago airports for Thanksgiving travel",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa0RvVUZSQUhaSzVNdjl3TzZCQmhpOWt3dV9sMTBKWTROdnZucHlrbDlXYlk0UWEwc1M0TkRYLTJ3YklRZFh1M2Jod1RPelRfLVoydHZpcm5OMFh3Mkh3d25NaTBqNnJDYXBUNE1DcFJXQ1pZaUtiRDBERTlNMm9QUFo0Zk5BN2d3T1g4?oc=5",
+      "source": "CBS News",
+      "publishedAt": "2026-11-24T23:37:48.000Z",
+      "latestAt": "2026-11-24T23:37:48.000Z",
+      "firstSeenAt": "2026-11-25T00:15:26.751Z",
+      "outlets": 1,
+      "outletNames": [
+        "CBS News"
+      ],
+      "score": 1.39
     },
     {
       "id": "e5b9c8050aac",
@@ -1924,22 +1973,6 @@
       "score": 1.39
     },
     {
-      "id": "4000a10430e9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US ports face millions of cyberattack attempts as AI raises security concerns",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNNUtJMlRpclRkWmtrSE1IVGlrSDFhdjZ0WHRsWTIxY05xVUhtekJLeXViYUVLQzh4ck0tSGROUnYyQzd1QzkwZTdzZ3Nad19fSWZoZjI2TkRzRm8wSGNLS205ek9Tc05OUzVOZXBZZ3NfakNaMlp6XzJSMXlMUW9fdHc4WlRTbTlRYTJyczVzaE51MFBNSjluVEV1UEdWZVNxMmhuRVdR?oc=5",
-      "source": "ABNA English",
-      "publishedAt": "2026-11-24T07:19:00.000Z",
-      "latestAt": "2026-11-24T07:19:00.000Z",
-      "firstSeenAt": "2026-11-24T07:42:26.331Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABNA English"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "24cd97c645da",
       "cat": "weather",
       "kind": "news",
@@ -1954,38 +1987,6 @@
         "Metro Mode"
       ],
       "score": 1.38
-    },
-    {
-      "id": "8c881ba1dc2d",
-      "cat": "internet",
-      "kind": "news",
-      "title": "TikTok down: Major outage disrupts app services across the US",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBhSHdWSXQwOGRkcjlrdXFpRDNtY1BmQjVsNEE1LTNZZVAzNms1RHhTNGxBRk1NSkdjY0R2ZmE5VTUxREhQa3g4aWI5MENDS25FcEkwUVY1NlFFRks3YXZtSTBQRmxKZ0J5azhlRDRRcHhXak9XRjRKQkJZSWlzZw?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-24T22:17:45.000Z",
-      "latestAt": "2026-11-24T22:17:45.000Z",
-      "firstSeenAt": "2026-11-25T00:00:38.565Z",
-      "outlets": 1,
-      "outletNames": [
-        "Beinsure"
-      ],
-      "score": 1.36
-    },
-    {
-      "id": "7e175ed82324",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft explains tech failures that triggered global outage",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTVg1LURBWFdTR3gwN1ZrVXZkQnFwaHA0MHBITmFnZFhXcm5tMkJPc0tDMDlMbWZQUHg2emxUdzY3TnRuNjBxUnFneVpNRWlfTFd0TjJ6OVpNc29vclFJZGl2SnN3RlZvV1MxdUxJZDdZQ1JydkVfT3lJeFd5TG1YVEpHM3lFTVp0QkdqLUtrRENMY2tmSmowc3hiZGVKeko0V2hTT1NmMXlPaEs1RlRj?oc=5",
-      "source": "The Seattle Times",
-      "publishedAt": "2026-11-24T01:22:55.000Z",
-      "latestAt": "2026-11-24T01:22:55.000Z",
-      "firstSeenAt": "2026-11-24T02:56:36.951Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Seattle Times"
-      ],
-      "score": 1.36
     },
     {
       "id": "8043fd0465d7",
@@ -2053,20 +2054,20 @@
       "score": 1
     },
     {
-      "id": "fb5cad585f7d",
+      "id": "8d6184cd4994",
       "cat": "germs",
       "kind": "news",
-      "title": "Bird flu confirmed at commercial turkey farm near Centuria",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQZXVyYWtpREN2cmVsbmtGMmI0VXVkV00xdTFFQkZpVzd2QWIydW94ZjhLdjlmaHVIYkRVdFctM0tQYzJqblJfdnUwTFBSbGtqLWg5MWd0ZUhsMklRYXN2RXdHM01RdnNsTUtnM0UyMmlDQl9zT2RHNlRHMEhYRC1aT0xIV0hXMHd4RkhjVlB5WmF2QjFhZUJDNk5KdTZVcFp6REYzZE5CWmhXNjhxbENyYUwyY0NsdEQxNUZ4U1JlUkVzLWlxRXRVOFZTdDRmYUJldk9xaG1WeG4xOGw2NG1JZg?oc=5",
-      "source": "Amery Free Press",
-      "publishedAt": "2026-11-24T21:49:00.000Z",
-      "latestAt": "2026-11-24T21:49:00.000Z",
-      "firstSeenAt": "2026-11-24T23:30:19.861Z",
+      "title": "Bird flu cases continue in Oregon, Washington",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNMVRSSHZ6Y1QtT3MyMXUxUF9IbU1KVGs0bURsd0dmRkRhSHdZOHVyX3hFaFl5dzg0R3B0ZEJyTkVLemdVUGFpMWxlbGh1NkFaMGQySW1XSU5jalh3ZF9KMmsydlhZa1FCRkJvTFZLTW5UVzduQzdEWWRZV1lkeFh1Q205Z1BzYXIzanpJdzE1OFppS196UUJ4NFA3aWNqZw?oc=5",
+      "source": "Capital Press",
+      "publishedAt": "2026-11-24T22:56:57.000Z",
+      "latestAt": "2026-11-24T22:56:57.000Z",
+      "firstSeenAt": "2026-11-25T00:15:26.751Z",
       "outlets": 1,
       "outletNames": [
-        "Amery Free Press"
+        "Capital Press"
       ],
-      "score": 0.97
+      "score": 0.98
     },
     {
       "id": "9c77cfaf2dab",
