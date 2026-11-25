@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-25T07:31:39.232Z",
+  "buildTime": "2026-11-25T07:46:42.864Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 02:31 ET",
+  "etStamp": "2026-11-25 02:46 ET",
   "score": 73,
   "fired": [
     "flights",
@@ -52,16 +52,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1380,
-  "lastSuccessAt": "2026-11-25T07:31:39.232Z",
+  "headlinesRead": 1326,
+  "lastSuccessAt": "2026-11-25T07:46:42.864Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 22,
+    "flights": 23,
     "internet": 18,
     "earth": 6,
-    "germs": 4,
+    "germs": 5,
     "weather": 4,
-    "hacks": 31,
+    "hacks": 29,
     "grid": 6,
     "space": 2,
     "markets": 4,
@@ -172,93 +172,92 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "6 killed when plane crashes off coast of Mississippi"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1054,
+      "count": 1023,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     },
     "bing": {
       "ok": true,
-      "count": 287,
-      "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "count": 265,
+      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-25T06:16:29.636Z"
     },
     "hn": {
       "ok": true,
       "count": 9,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     },
     "status": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:31:39.232Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-25T07:31:39.232Z"
+      "lastOkAt": "2026-11-25T07:46:42.864Z"
     }
   },
   "stories": [
@@ -310,6 +309,53 @@
       "score": 7.24
     },
     {
+      "id": "a6c55f50f1ef",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Ground stop at Chicago O'Hare Airport For Second Day In a Row Amid Thanksgiving Travel Rush",
+      "url": "https://www.timesnownews.com/world/us/us-news/ground-stop-at-chicago-ohare-airport-for-second-day-in-a-row-amid-thanksgiving-travel-rush-article-156561878",
+      "source": "Times Now",
+      "publishedAt": "2026-11-24T13:42:00.000Z",
+      "latestAt": "2026-11-25T06:00:00.000Z",
+      "firstSeenAt": "2026-11-24T22:15:04.259Z",
+      "outlets": 32,
+      "outletNames": [
+        "Times Now",
+        "NBC 5 Chicago",
+        "JournalArta",
+        "https://www.thetraveler.org/",
+        "Rus Tourism News",
+        "Yahoo",
+        "Fox News",
+        "StreetInsider",
+        "FOX 32 Chicago",
+        "WGN-TV",
+        "WABC Radio",
+        "Operativ Məlumat Mərkəzi",
+        "WUSA9",
+        "WTXL ABC 27 Tallahassee News",
+        "10News.com",
+        "Idaho News 6",
+        "23ABC News Bakersfield",
+        "FOX 13 News Utah",
+        "Scripps News",
+        "Shaw Local",
+        "KTVQ",
+        "WCPO 9 Cincinnati",
+        "Mezha.net",
+        "Hindustan Times",
+        "wrganews.com",
+        "Peradaban.id",
+        "National News Desk",
+        "WOAI",
+        "KTUL",
+        "NewsNation",
+        "tippinsights",
+        "Around Prague"
+      ],
+      "score": 5.14
+    },
+    {
       "id": "4144781d773d",
       "cat": "flights",
       "kind": "news",
@@ -329,29 +375,6 @@
         "WUSA9"
       ],
       "score": 5
-    },
-    {
-      "id": "sig:faa-stop:SFO:2026-11-24",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at SFO (wind)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-25T02:00:48.580Z",
-      "latestAt": "2026-11-25T02:00:48.580Z",
-      "firstSeenAt": "2026-11-25T02:00:48.580Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "SFO",
-        "hub": true,
-        "nationwide": false,
-        "reason": "wind"
-      }
     },
     {
       "id": "sig:status:cloudflare:2026-11-25",
@@ -482,25 +505,24 @@
       "score": 3.15
     },
     {
-      "id": "1c1f8c83d3f0",
+      "id": "74dc86579a2c",
       "cat": "hacks",
       "kind": "news",
-      "title": "GoFundMe alerts donors of data breach",
-      "url": "https://www.wsbtv.com/news/trending/gofundme-alerts-donors-data-breach/WSYJCTJU3BD4XPYVUBIKF7SFUM/",
-      "source": "WSB-TV Channel 2",
-      "publishedAt": "2026-11-24T07:39:00.000Z",
-      "latestAt": "2026-11-24T15:39:15.000Z",
-      "firstSeenAt": "2026-11-24T15:58:57.995Z",
-      "outlets": 6,
+      "title": "CIA systems breached in cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1abXB0bnAtQ280akw5OWlFSS13VDhUaVQxREtnZHpjOGpNSlUtd1N2X2VodEZYaGxhNmFpSUxqaTNsWnRDQW10ZlI1bWp2Nk1YZlZJREJ4MTZ3c3IyclMwOTlBcHI3Qjg3M1FvV1RxOGlSVmZmX3Jldw?oc=5",
+      "source": "KPAX News",
+      "publishedAt": "2026-11-25T00:01:41.000Z",
+      "latestAt": "2026-11-25T04:03:20.000Z",
+      "firstSeenAt": "2026-11-25T03:46:00.734Z",
+      "outlets": 5,
       "outletNames": [
-        "WSB-TV Channel 2",
-        "WHIO TV",
-        "104.5 WOKV on MSN",
-        "WGAU Radio | Athens, GA",
-        "95.5 WSB",
-        "95.3 and 101.1 FM The Eagle"
+        "KPAX News",
+        "Tampa Bay 28",
+        "Scripps News",
+        "NBC26",
+        "WKBW"
       ],
-      "score": 3.09
+      "score": 3.11
     },
     {
       "id": "3654f280be86",
@@ -561,6 +583,29 @@
       "score": 2.93
     },
     {
+      "id": "sig:faa-stop:SFO:2026-11-24",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SFO (wind)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-25T02:00:48.580Z",
+      "latestAt": "2026-11-25T02:00:48.580Z",
+      "firstSeenAt": "2026-11-25T02:00:48.580Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SFO",
+        "hub": true,
+        "nationwide": false,
+        "reason": "wind"
+      }
+    },
+    {
       "id": "sig:faa-stop:ORD:2026-11-24",
       "cat": "flights",
       "kind": "signal",
@@ -604,63 +649,6 @@
       "score": 4.01
     },
     {
-      "id": "899c23b9703f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "A government watchdog warned about disruptions before the FAA grounded flights nationwide",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOejltVVg1ZUV5Rml4cV9hZ0RoaFkxejFDSlVTRVNrRFlnbk15ay02cjd5QWZaenFBUV9HSUVwTkVCNG9udGJETS1VV21WVkZxRHJ5TE5nYTlTWUhVN3M0emlqNnVfNVpaS1Exd0FId0tvVXE4X1A1RGFjTkhPTXhsT1hlQ3Y0TDh4RVRuZ193ZlM0X3JlVFAwVzJ0RzJQYjM1MTk0ZXVORkxrY2J4S2ZZYUdTZ0xDUldGVGpOSEpVaXFQZEd1eVJ6bmFQX3N2bjZZV25EODhwZTkyVW4yby1mTWFEYlpaODkwWGt1QjlOVC02c2Rac1FVSGhmc0tINHhwdGtyMnVMRWg0c3ZH?oc=5",
-      "source": "weareiowa.com",
-      "publishedAt": "2026-11-24T22:19:00.000Z",
-      "latestAt": "2026-11-24T22:19:00.000Z",
-      "firstSeenAt": "2026-11-24T22:45:11.907Z",
-      "outlets": 3,
-      "outletNames": [
-        "weareiowa.com",
-        "WKYC",
-        "WTHR"
-      ],
-      "score": 3.59
-    },
-    {
-      "id": "0bc4c2c85c92",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "McDonald’s Japan Confirms Data Breach – Customer Information and Location Data Exposed",
-      "url": "https://cybersecuritynews.com/mcdonalds-japan-data-breach/",
-      "source": "Cyber Security News",
-      "publishedAt": "2026-11-24T07:39:00.000Z",
-      "latestAt": "2026-11-25T05:08:44.000Z",
-      "firstSeenAt": "2026-11-24T15:44:04.612Z",
-      "outlets": 5,
-      "outletNames": [
-        "Cyber Security News",
-        "BleepingComputer",
-        "Mezha.net",
-        "cyberpress",
-        "GBHackers News"
-      ],
-      "score": 2.87
-    },
-    {
-      "id": "74dc86579a2c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "CIA systems breached in cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1abXB0bnAtQ280akw5OWlFSS13VDhUaVQxREtnZHpjOGpNSlUtd1N2X2VodEZYaGxhNmFpSUxqaTNsWnRDQW10ZlI1bWp2Nk1YZlZJREJ4MTZ3c3IyclMwOTlBcHI3Qjg3M1FvV1RxOGlSVmZmX3Jldw?oc=5",
-      "source": "KPAX News",
-      "publishedAt": "2026-11-25T00:01:41.000Z",
-      "latestAt": "2026-11-25T04:03:20.000Z",
-      "firstSeenAt": "2026-11-25T03:46:00.734Z",
-      "outlets": 4,
-      "outletNames": [
-        "KPAX News",
-        "Tampa Bay 28",
-        "Scripps News",
-        "NBC26"
-      ],
-      "score": 2.81
-    },
-    {
       "id": "031e0f43c9a0",
       "cat": "hacks",
       "kind": "news",
@@ -683,6 +671,25 @@
       "score": 2.79
     },
     {
+      "id": "42f87fae315d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Latest headlines | Data breach keeps myColorado app offline as Thanksgiving travel nears",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxONXNpdkVlNE1WV01DY3AtUllTeFFUcVJLLWt1b2N0X3N4XzZiMmlFSTRaZXlQY3J4THVVTld1aVZrN3RmcV9Gb0dpZVRDZnpCYm9pOGpKZmRHY0Q2c1FuUVd1Vnlxcm8zTXhEQmZ4cThRM3pHTFhEZDdvay1FUzRreElRd2lfMFNOdWV0MmZjOHVDSmdIUkdGSlljQmpha2FwMTBBS3pIWVh5MnBhLWh6MGVCWVZTMFV3SzlIOFZLa3Qxc0ZhaVpvSHAySkQ0ekNaWmJmUlJza29PV0IyMWxQdUljRjc2dVRwdFZmclN2VXAySkJBZG5XVHJ3dzV5UTdFRFk2RXoydmxVc2pG?oc=5",
+      "source": "9News",
+      "publishedAt": "2026-11-24T13:30:00.000Z",
+      "latestAt": "2026-11-24T23:33:00.000Z",
+      "firstSeenAt": "2026-11-24T18:44:26.551Z",
+      "outlets": 4,
+      "outletNames": [
+        "9News",
+        "Yahoo",
+        "AOL.com",
+        "The Coloradoan"
+      ],
+      "score": 2.74
+    },
+    {
       "id": "c12cb954b403",
       "cat": "germs",
       "kind": "news",
@@ -699,6 +706,24 @@
         "GX94 Radio"
       ],
       "score": 2.58
+    },
+    {
+      "id": "dd86ac7e3b59",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack reportedly exposes unclassified data at CIA, US intelligence office",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02Y2xRNUxPeGtXbHRseWpqdXB3UWpYVk93ZjRtUlluQ2tWOTR6QmNLZTBFQUpfb1RGZDhudE9kLU9TcEMyT3Zkb0NvdGRxb3otbmFzVXA0ZHc?oc=5",
+      "source": "TRT World",
+      "publishedAt": "2026-11-24T21:40:19.000Z",
+      "latestAt": "2026-11-25T07:17:35.000Z",
+      "firstSeenAt": "2026-11-24T22:15:04.259Z",
+      "outlets": 3,
+      "outletNames": [
+        "TRT World",
+        "Baller Alert",
+        "Speaks Media"
+      ],
+      "score": 2.56
     },
     {
       "id": "88b30b5dc925",
@@ -899,23 +924,22 @@
       "score": 1.72
     },
     {
-      "id": "42f87fae315d",
-      "cat": "hacks",
+      "id": "899c23b9703f",
+      "cat": "flights",
       "kind": "news",
-      "title": "Latest headlines | Data breach keeps myColorado app offline as Thanksgiving travel nears",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxONXNpdkVlNE1WV01DY3AtUllTeFFUcVJLLWt1b2N0X3N4XzZiMmlFSTRaZXlQY3J4THVVTld1aVZrN3RmcV9Gb0dpZVRDZnpCYm9pOGpKZmRHY0Q2c1FuUVd1Vnlxcm8zTXhEQmZ4cThRM3pHTFhEZDdvay1FUzRreElRd2lfMFNOdWV0MmZjOHVDSmdIUkdGSlljQmpha2FwMTBBS3pIWVh5MnBhLWh6MGVCWVZTMFV3SzlIOFZLa3Qxc0ZhaVpvSHAySkQ0ekNaWmJmUlJza29PV0IyMWxQdUljRjc2dVRwdFZmclN2VXAySkJBZG5XVHJ3dzV5UTdFRFk2RXoydmxVc2pG?oc=5",
-      "source": "9News",
-      "publishedAt": "2026-11-24T13:30:00.000Z",
-      "latestAt": "2026-11-24T23:33:00.000Z",
-      "firstSeenAt": "2026-11-24T18:44:26.551Z",
-      "outlets": 4,
+      "title": "A government watchdog warned about disruptions before the FAA grounded flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOejltVVg1ZUV5Rml4cV9hZ0RoaFkxejFDSlVTRVNrRFlnbk15ay02cjd5QWZaenFBUV9HSUVwTkVCNG9udGJETS1VV21WVkZxRHJ5TE5nYTlTWUhVN3M0emlqNnVfNVpaS1Exd0FId0tvVXE4X1A1RGFjTkhPTXhsT1hlQ3Y0TDh4RVRuZ193ZlM0X3JlVFAwVzJ0RzJQYjM1MTk0ZXVORkxrY2J4S2ZZYUdTZ0xDUldGVGpOSEpVaXFQZEd1eVJ6bmFQX3N2bjZZV25EODhwZTkyVW4yby1mTWFEYlpaODkwWGt1QjlOVC02c2Rac1FVSGhmc0tINHhwdGtyMnVMRWg0c3ZH?oc=5",
+      "source": "weareiowa.com",
+      "publishedAt": "2026-11-24T22:19:00.000Z",
+      "latestAt": "2026-11-24T22:19:00.000Z",
+      "firstSeenAt": "2026-11-24T22:45:11.907Z",
+      "outlets": 3,
       "outletNames": [
-        "9News",
-        "Yahoo",
-        "AOL.com",
-        "The Coloradoan"
+        "weareiowa.com",
+        "WKYC",
+        "WTHR"
       ],
-      "score": 2.74
+      "score": 3.59
     },
     {
       "id": "0dd78f3eb490",
@@ -934,24 +958,6 @@
         "AOL"
       ],
       "score": 2.72
-    },
-    {
-      "id": "dd86ac7e3b59",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack reportedly exposes unclassified data at CIA, US intelligence office",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02Y2xRNUxPeGtXbHRseWpqdXB3UWpYVk93ZjRtUlluQ2tWOTR6QmNLZTBFQUpfb1RGZDhudE9kLU9TcEMyT3Zkb0NvdGRxb3otbmFzVXA0ZHc?oc=5",
-      "source": "TRT World",
-      "publishedAt": "2026-11-24T21:40:19.000Z",
-      "latestAt": "2026-11-25T07:17:35.000Z",
-      "firstSeenAt": "2026-11-24T22:15:04.259Z",
-      "outlets": 3,
-      "outletNames": [
-        "TRT World",
-        "Baller Alert",
-        "Speaks Media"
-      ],
-      "score": 2.56
     },
     {
       "id": "e724a6fe278b",
@@ -1527,23 +1533,6 @@
       "score": 1.63
     },
     {
-      "id": "1b46f5e3eca2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Critical OpenSSH Flaw Lets Hackers Bypass Password Authentication on Alpine Linux With 257-Byte Password",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBVVThOdmNkaFhsTWN3SHhqem1oMG4tYU5kNERUMS00ZDQtd0J2ajMzMVlQVE5sXzk3TExSZW9zaUZSWHhBOGE2N0xSdmRNVjNvdTZ6WldYcXUxZVR6VHBNVdIBYEFVX3lxTFBVVThOdmNkaFhsTWN3SHhqem1oMG4tYU5kNERUMS00ZDQtd0J2ajMzMVlQVE5sXzk3TExSZW9zaUZSWHhBOGE2N0xSdmRNVjNvdTZ6WldYcXUxZVR6VHBNVQ?oc=5",
-      "source": "Cyber Press",
-      "publishedAt": "2026-11-24T09:51:53.000Z",
-      "latestAt": "2026-11-24T11:28:35.000Z",
-      "firstSeenAt": "2026-11-24T21:44:59.738Z",
-      "outlets": 2,
-      "outletNames": [
-        "Cyber Press",
-        "CyberSecurityNews"
-      ],
-      "score": 1.6
-    },
-    {
       "id": "32630c27776e",
       "cat": "flights",
       "kind": "news",
@@ -1629,6 +1618,23 @@
       "score": 1.56
     },
     {
+      "id": "4dad9d39e353",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "CIA Hack: Three US Intelligence Agencies Hit by AI-Powered Cyberattack, Investigators Suspect China Link",
+      "url": "https://www.ibtimes.sg/cia-hack-three-us-intelligence-agencies-hit-by-ai-powered-cyberattack-investigators-suspect-china-96621",
+      "source": "International Business Times Singapore",
+      "publishedAt": "2026-11-24T17:31:00.000Z",
+      "latestAt": "2026-11-25T02:02:24.000Z",
+      "firstSeenAt": "2026-11-25T07:46:42.864Z",
+      "outlets": 2,
+      "outletNames": [
+        "International Business Times Singapore",
+        "Ynetnews"
+      ],
+      "score": 1.52
+    },
+    {
       "id": "be09b5dc5b1a",
       "cat": "germs",
       "kind": "news",
@@ -1644,6 +1650,23 @@
         "Yahoo"
       ],
       "score": 1.52
+    },
+    {
+      "id": "8043fd0465d7",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Tomball-based Greenwich Rx recalls injections over contamination concerns",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYUhjZzVKZWZqYTE4d3dsYk4tOEhFbVRrMzV1bkpMQ0hma2draF9GQWlpLU5RWDhFUEVXbXhVM21STDBaNWo2ZmlySHFmUVlJVlotTDcwdUJDbFRnekstOWZtcHA5SkhhN0t5d2diZE81TDJtUXJ2V0tsSTZEZ0tONEZLQTBFRWNOemZjNnFR?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-24T16:54:21.000Z",
+      "latestAt": "2026-11-24T21:55:34.000Z",
+      "firstSeenAt": "2026-11-25T07:46:42.864Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Houston Chronicle"
+      ],
+      "score": 1.5
     },
     {
       "id": "c33a777bc6da",
