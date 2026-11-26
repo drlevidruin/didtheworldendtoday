@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T02:24:32.389Z",
+  "buildTime": "2026-11-26T02:39:34.191Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 21:24 ET",
+  "etStamp": "2026-11-25 21:39 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,12 +49,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1353,
-  "lastSuccessAt": "2026-11-26T02:24:32.389Z",
+  "headlinesRead": 1221,
+  "lastSuccessAt": "2026-11-26T02:39:34.191Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
-    "internet": 13,
+    "flights": 15,
+    "internet": 12,
     "hacks": 33,
     "germs": 6,
     "grid": 8,
@@ -187,24 +187,24 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1000,
+      "count": 1006,
       "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "bing": {
       "ok": true,
-      "count": 283,
-      "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "count": 181,
+      "error": "9 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 38,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T02:24:32.389Z"
     },
@@ -212,56 +212,55 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T01:39:21.290Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "lastOkAt": "2026-11-26T02:39:34.191Z"
     }
   },
   "stories": [
@@ -292,6 +291,43 @@
       "score": 5.4
     },
     {
+      "id": "4cc16c20a2da",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA orders ground stop for Miami-bound flights after FedEx cargo plane goes off runway",
+      "url": "https://www.cbsnews.com/miami/news/miami-international-airport-ground-stop-fedex-md-11-runway-excursion-faa/",
+      "source": "CBS News",
+      "publishedAt": "2026-11-25T17:53:00.000Z",
+      "latestAt": "2026-11-26T02:34:21.000Z",
+      "firstSeenAt": "2026-11-26T01:54:21.004Z",
+      "outlets": 19,
+      "outletNames": [
+        "BNO News",
+        "CBS News",
+        "Hindustan Times",
+        "WLWT Channel 5",
+        "VINnews",
+        "WBAL News Radio",
+        "WYFF",
+        "The Mirror US on MSN",
+        "KMBC",
+        "The Mirror",
+        "@Breaking911 on X",
+        "@spectatorindex on X",
+        "WPTZ",
+        "AOL.com",
+        "Washington Examiner",
+        "cbs8.com",
+        "SSBCrack",
+        "kens5.com",
+        "iHeart"
+      ],
+      "xUrl": "https://x.com/Breaking911/status/2125766988962095216",
+      "trending": 2000,
+      "trendTerm": "miami airport",
+      "score": 4.55
+    },
+    {
       "id": "sig:faa-stop:MIA:2026-11-25",
       "cat": "flights",
       "kind": "signal",
@@ -313,31 +349,6 @@
         "nationwide": false,
         "reason": "disabled aircraft on the runway"
       }
-    },
-    {
-      "id": "423698a4ff54",
-      "cat": "flights",
-      "kind": "news",
-      "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAxZkVWQ0lYdVhCWFBhVVBrbEE0dEt4RTgwVTNydWFYeXAzTXBiMG9FQVl0ZE5hM00zN2czSXVhQmNOd0ZMRU1YWUtsUlFrLWNXQU40MGU4MjY0cm9tOEVjV1RlSkZkNHRtV2ZEbXJSbFRRcVVKSGxEQ2R3UVY?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T11:00:00.000Z",
-      "latestAt": "2026-11-25T19:56:20.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
-      "outlets": 10,
-      "outletNames": [
-        "Yahoo",
-        "Reuters",
-        "The Lufkin Daily News",
-        "TradingView",
-        "WHTC",
-        "SRN News",
-        "Yahoo Finance Singapore",
-        "Charlotte Observer",
-        "Kansas City Star",
-        "Yahoo Finance"
-      ],
-      "score": 4.3
     },
     {
       "id": "sig:status:github:2026-11-25",
@@ -459,6 +470,24 @@
       "score": 2.58
     },
     {
+      "id": "2fa8fefe8871",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Australia's Flight Centre probes data breach in third-party system",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPUjlnZU1xSXVubUtDNm9lLTBxdnVoUWRfdUNrTkVTTldIM1VGZXdHbFRDQWljdFlYZlVqZ2dHTlJsdDYtbkZnZ2dmcEMxblQtOUdrNHJXcGREamVGdGZCQTlka1hpaG1ESC1NY2JkdnZwMDFoeDRGMUxQcGZaTW9mVnhGRW93OXRqQnRkRTlSU1NZNFkxNVczYWZ0UWtySDdOYi13LXUzLU5xVnNVeUtYTS1mZTJPR3VpdHdqaFo0UmRKeDUzeldSMS0xVFlDZE1aV2c?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-25T23:35:57.000Z",
+      "latestAt": "2026-11-26T00:26:29.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 3,
+      "outletNames": [
+        "TradingView",
+        "101 WIXX",
+        "Reuters"
+      ],
+      "score": 2.5
+    },
+    {
       "id": "530e0e2931cc",
       "cat": "hacks",
       "kind": "news",
@@ -476,23 +505,6 @@
         "WRGA Rome's Newstalk"
       ],
       "score": 2.47
-    },
-    {
-      "id": "bf7fee70bac6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/massive-data-breach-exposes-2-122500776.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-25T04:25:00.000Z",
-      "latestAt": "2026-11-25T12:25:00.000Z",
-      "firstSeenAt": "2026-11-25T12:32:35.873Z",
-      "outlets": 2,
-      "outletNames": [
-        "TechRadar",
-        "YAHOO!"
-      ],
-      "score": 2.42
     },
     {
       "id": "4c1aa8652cf2",
@@ -531,28 +543,55 @@
       "score": 2.23
     },
     {
-      "id": "4cc16c20a2da",
+      "id": "423698a4ff54",
       "cat": "flights",
       "kind": "news",
-      "title": "FAA orders ground stop for Miami-bound flights after FedEx cargo plane goes off runway",
-      "url": "https://www.cbsnews.com/miami/news/miami-international-airport-ground-stop-fedex-md-11-runway-excursion-faa/",
-      "source": "CBS News",
-      "publishedAt": "2026-11-25T17:53:00.000Z",
-      "latestAt": "2026-11-26T02:22:33.000Z",
-      "firstSeenAt": "2026-11-26T01:54:21.004Z",
-      "outlets": 7,
+      "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAxZkVWQ0lYdVhCWFBhVVBrbEE0dEt4RTgwVTNydWFYeXAzTXBiMG9FQVl0ZE5hM00zN2czSXVhQmNOd0ZMRU1YWUtsUlFrLWNXQU40MGU4MjY0cm9tOEVjV1RlSkZkNHRtV2ZEbXJSbFRRcVVKSGxEQ2R3UVY?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T11:00:00.000Z",
+      "latestAt": "2026-11-25T19:56:20.000Z",
+      "firstSeenAt": "2026-11-25T11:17:22.706Z",
+      "outlets": 10,
       "outletNames": [
-        "BNO News",
-        "CBS News",
-        "Hindustan Times",
-        "WLWT Channel 5",
-        "VINnews",
-        "WBAL News Radio",
-        "WYFF"
+        "Yahoo",
+        "Reuters",
+        "The Lufkin Daily News",
+        "TradingView",
+        "WHTC",
+        "SRN News",
+        "Yahoo Finance Singapore",
+        "Charlotte Observer",
+        "Kansas City Star",
+        "Yahoo Finance"
       ],
-      "trending": 2000,
-      "trendTerm": "miami airport",
-      "score": 3.3
+      "score": 4.3
+    },
+    {
+      "id": "c2900f71c916",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Radar outage triggers second O’Hare ground stop in two days",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPN3I2OFIyWjVCYnRWM2NZRDM3V05Ma29HX1lZeERTRXl1bDRpR2lwdGFZOG9faWwwUjRhbTk4QW5rRkIyTl9GMnJwT2VVZGVQSXctMm9QbjV1ME5uWGtlUzNkWG1tUkRWQTEtU2xDUUxBczYyYlNEdU1BaGRTUjE2emt5RTFlN1dRaHdkR0RuaU0?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-25T04:15:47.000Z",
+      "latestAt": "2026-11-25T21:37:00.000Z",
+      "firstSeenAt": "2026-11-26T01:54:21.004Z",
+      "outlets": 11,
+      "outletNames": [
+        "https://www.thetraveler.org/",
+        "KOKI FOX 23",
+        "Saudi Gazette",
+        "WRGB",
+        "The City University of New York",
+        "The Lufkin Daily News",
+        "Demokratis.co.id",
+        "Aviation A2Z",
+        "The Mirror US",
+        "Yahoo",
+        "KTXS"
+      ],
+      "score": 2.85
     },
     {
       "id": "a9e3c4d84247",
@@ -572,31 +611,6 @@
       "score": 2.79
     },
     {
-      "id": "c2900f71c916",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Radar outage triggers second O’Hare ground stop in two days",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPN3I2OFIyWjVCYnRWM2NZRDM3V05Ma29HX1lZeERTRXl1bDRpR2lwdGFZOG9faWwwUjRhbTk4QW5rRkIyTl9GMnJwT2VVZGVQSXctMm9QbjV1ME5uWGtlUzNkWG1tUkRWQTEtU2xDUUxBczYyYlNEdU1BaGRTUjE2emt5RTFlN1dRaHdkR0RuaU0?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-25T04:15:47.000Z",
-      "latestAt": "2026-11-25T21:37:00.000Z",
-      "firstSeenAt": "2026-11-26T01:54:21.004Z",
-      "outlets": 10,
-      "outletNames": [
-        "https://www.thetraveler.org/",
-        "KOKI FOX 23",
-        "Saudi Gazette",
-        "WRGB",
-        "The City University of New York",
-        "The Lufkin Daily News",
-        "Demokratis.co.id",
-        "Aviation A2Z",
-        "The Mirror US",
-        "Yahoo"
-      ],
-      "score": 2.76
-    },
-    {
       "id": "325cd3c46cea",
       "cat": "internet",
       "kind": "news",
@@ -610,6 +624,23 @@
       "outletNames": [
         "Newsweek",
         "Yahoo"
+      ],
+      "score": 2.42
+    },
+    {
+      "id": "bf7fee70bac6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/massive-data-breach-exposes-2-122500776.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-25T04:25:00.000Z",
+      "latestAt": "2026-11-25T12:25:00.000Z",
+      "firstSeenAt": "2026-11-25T12:32:35.873Z",
+      "outlets": 2,
+      "outletNames": [
+        "TechRadar",
+        "YAHOO!"
       ],
       "score": 2.42
     },
@@ -647,24 +678,6 @@
         "The Times of India"
       ],
       "score": 2.29
-    },
-    {
-      "id": "dfcf1fa0e43b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Access Customer Data at Ochsner Sport",
-      "url": "https://www.bluewin.ch/en/news/hackers-access-customer-data-at-ochsner-sport-li.3686999",
-      "source": "Bluewin",
-      "publishedAt": "2026-11-25T07:25:00.000Z",
-      "latestAt": "2026-11-25T16:23:01.000Z",
-      "firstSeenAt": "2026-11-25T15:37:49.330Z",
-      "outlets": 3,
-      "outletNames": [
-        "Bluewin",
-        "blue News",
-        "SWI swissinfo.ch"
-      ],
-      "score": 2.23
     },
     {
       "id": "4ba712e3e9fe",
@@ -858,6 +871,24 @@
       "score": 1.72
     },
     {
+      "id": "dfcf1fa0e43b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Access Customer Data at Ochsner Sport",
+      "url": "https://www.bluewin.ch/en/news/hackers-access-customer-data-at-ochsner-sport-li.3686999",
+      "source": "Bluewin",
+      "publishedAt": "2026-11-25T07:25:00.000Z",
+      "latestAt": "2026-11-25T16:23:01.000Z",
+      "firstSeenAt": "2026-11-25T15:37:49.330Z",
+      "outlets": 3,
+      "outletNames": [
+        "Bluewin",
+        "blue News",
+        "SWI swissinfo.ch"
+      ],
+      "score": 2.23
+    },
+    {
       "id": "70f436c09f34",
       "cat": "hacks",
       "kind": "news",
@@ -1014,23 +1045,6 @@
       "score": 1.95,
       "quiet": true,
       "quietReason": "headline mentions typhoon"
-    },
-    {
-      "id": "2fa8fefe8871",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Australia's Flight Centre probes data breach in third-party system",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPUjlnZU1xSXVubUtDNm9lLTBxdnVoUWRfdUNrTkVTTldIM1VGZXdHbFRDQWljdFlYZlVqZ2dHTlJsdDYtbkZnZ2dmcEMxblQtOUdrNHJXcGREamVGdGZCQTlka1hpaG1ESC1NY2JkdnZwMDFoeDRGMUxQcGZaTW9mVnhGRW93OXRqQnRkRTlSU1NZNFkxNVczYWZ0UWtySDdOYi13LXUzLU5xVnNVeUtYTS1mZTJPR3VpdHdqaFo0UmRKeDUzeldSMS0xVFlDZE1aV2c?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-25T23:35:57.000Z",
-      "latestAt": "2026-11-26T00:26:29.000Z",
-      "firstSeenAt": "2026-11-26T01:39:21.290Z",
-      "outlets": 2,
-      "outletNames": [
-        "TradingView",
-        "101 WIXX"
-      ],
-      "score": 1.93
     },
     {
       "id": "a7ca4e09e904",
@@ -1692,6 +1706,22 @@
       "score": 1.19
     },
     {
+      "id": "4bce403edc45",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta restores key system after tech glitch delays flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdU4wZFE3WTZnVmpfV0p3MkpjbFZaOEdVQnJycUNCNzRDajlaakJMMVdGa0lJT3E2MENnQkZRb09RazlmUlEwX1JRazc5Mld0NDRvbTNiNVBiY2g0Z0QzZUs0ZzFjS3JybXdoTFh0VzBKeVFjMDlqdzdCSXFGYmkwc1BRVldNejNoNzh5ODcwRlpkUmNUT3pLRU0tSERtLXM?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-25T16:35:54.000Z",
+      "latestAt": "2026-11-25T16:35:54.000Z",
+      "firstSeenAt": "2026-11-26T02:39:34.191Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.17
+    },
+    {
       "id": "14ec8f5c37b6",
       "cat": "internet",
       "kind": "news",
@@ -1722,22 +1752,6 @@
         "The Sun"
       ],
       "score": 1.13
-    },
-    {
-      "id": "853791ba62a4",
-      "cat": "internet",
-      "kind": "news",
-      "title": "TikTok: Major outage with 25,000 reports",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOOG5YcE1WUUoyd2ZQdmhVWGViZmtIQjZobWs2VElTOU1TejJyVzh1M25hRUJLSm91anRTcW5BNzdNYjFUa1hCbkdfMEFLMTMxV1pOVGRGM0NmU3lFWEJxcDlvRklFbHdRM3cyT1AwdGQyczNYckM1OEVuUldSS1M2WUdR?oc=5",
-      "source": "SecNews.gr",
-      "publishedAt": "2026-11-25T08:17:34.000Z",
-      "latestAt": "2026-11-25T08:17:34.000Z",
-      "firstSeenAt": "2026-11-26T00:09:07.215Z",
-      "outlets": 1,
-      "outletNames": [
-        "SecNews.gr"
-      ],
-      "score": 1.03
     },
     {
       "id": "3f8fdb3f1a21",
@@ -1952,6 +1966,22 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "efa721a1dcea",
+      "cat": "weather",
+      "kind": "news",
+      "title": "West Nashville homeowner still waiting to rebuild more than 300 days after ice storm",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWEZ2UkRETWp1TnVyTUpUYkE1b1JqOW5LRFp2aS1vNlhGSWdFYW5sVXEzZ3RYNTF3NlVkTEs3M2F5Q3ZSd2JZMjNabVVSZUF0ZDd6RkJpam9mVm8tUmhENXlwZDUyazJsQkIya0xpd0RPODFqYXdwQkdWbmhwUE5tOHVnY3ZxRTM2bWpISWFvRVpScDVuMzI2R1duQ2xtbGd0eWVReVN1aGpYVjF5RXotNFZBTnI?oc=5",
+      "source": "WSMV",
+      "publishedAt": "2026-11-25T23:50:00.000Z",
+      "latestAt": "2026-11-26T00:28:00.000Z",
+      "firstSeenAt": "2026-11-26T02:39:34.191Z",
+      "outlets": 1,
+      "outletNames": [
+        "WSMV"
+      ],
+      "score": 0.95
+    },
+    {
       "id": "251d291f0bd0",
       "cat": "weather",
       "kind": "news",
@@ -1966,22 +1996,6 @@
         "WKRN News 2"
       ],
       "score": 0.93
-    },
-    {
-      "id": "32ee8c7796e6",
-      "cat": "weather",
-      "kind": "news",
-      "title": "What a ‘Particularly Dangerous Situation' Tag Means on Blizzard and Ice Storm Warnings This Winter",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOS2RaUTJ2REVHbWU4YmhmZkdpQnp1SzhFbkxwLXV4S1ZCR1VSMmpMZE5ZU3pmSTNETEpqY0htNDJSLWhTSFBmRHZraUJDNXBBQmsxZE5XU19iOFZ1WklvUXpmTkpYVklWZENRZUd4eW0yTW9RUkpjcDFQNlNSUnpSNHlhOVRLVmNKVk0yQ2g5N2Z5enRZanFmcXFpM3BNQ3plLVhGMGptOUZQTWpGeDRSVjU3djR6Q19rTi12OXozMEI3SmxRT1NPNkdtQU5UcWVpelAwRnhPeE5RbWgyZ0FzSEY1elNZbG05NTd6VTBpNXVEOGh4QnN4Sg?oc=5",
-      "source": "NewsBreak: Local News & Alerts",
-      "publishedAt": "2026-11-25T20:23:49.000Z",
-      "latestAt": "2026-11-25T20:23:49.000Z",
-      "firstSeenAt": "2026-11-26T02:09:27.895Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 0.9
     },
     {
       "id": "0f7f53682261",
