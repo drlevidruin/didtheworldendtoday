@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T09:25:35.418Z",
+  "buildTime": "2026-11-26T09:40:47.192Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 04:25 ET",
+  "etStamp": "2026-11-26 04:40 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,16 +51,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1255,
-  "lastSuccessAt": "2026-11-26T09:25:35.418Z",
+  "headlinesRead": 557,
+  "lastSuccessAt": "2026-11-26T09:40:47.192Z",
   "rollingFallback": false,
   "cats": {
     "flights": 14,
-    "internet": 15,
-    "hacks": 29,
-    "germs": 5,
+    "internet": 16,
+    "hacks": 30,
+    "germs": 4,
     "grid": 10,
-    "markets": 6,
+    "markets": 5,
     "animals": 1,
     "ai": 4,
     "weather": 4,
@@ -74,7 +74,7 @@
       "place": "204 km S of Taliwang, Indonesia",
       "time": "2026-11-26T09:08:40.640Z",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udm8",
-      "pager": null,
+      "pager": "green",
       "tsunami": false
     },
     "kp": {
@@ -183,81 +183,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 947,
-      "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "count": 245,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 10 of 26 queries)",
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
+      "count": 280,
       "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "gdelt": {
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T08:40:38.270Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T09:25:35.418Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z"
     }
   },
   "stories": [
@@ -509,22 +508,22 @@
       "score": 2.42
     },
     {
-      "id": "ae91e5d0ebbc",
+      "id": "f89caf439c55",
       "cat": "markets",
       "kind": "news",
-      "title": "Lam Research Stocks Plunge 9.54% With 35% of Sales Tied to China",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/lam-research-stocks-plunge-9-173756556.html",
+      "title": "CoreWeave Stocks Plunge 10.27% as Credit Markets Price 68% Default Risk",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-stocks-plunge-10-27-174415599.html",
       "source": "Yahoo Finance",
-      "publishedAt": "2026-11-25T09:37:00.000Z",
-      "latestAt": "2026-11-25T17:44:29.000Z",
-      "firstSeenAt": "2026-11-25T17:53:14.146Z",
+      "publishedAt": "2026-11-25T09:44:00.000Z",
+      "latestAt": "2026-11-25T18:02:42.000Z",
+      "firstSeenAt": "2026-11-25T18:38:14.223Z",
       "outlets": 3,
       "outletNames": [
-        "GuruFocus",
         "Yahoo Finance",
+        "GuruFocus",
         "TradingView"
       ],
-      "score": 2.23
+      "score": 2.2
     },
     {
       "id": "4b9d74481d40",
@@ -578,24 +577,6 @@
         "WRGA Rome's Newstalk"
       ],
       "score": 2.47
-    },
-    {
-      "id": "f89caf439c55",
-      "cat": "markets",
-      "kind": "news",
-      "title": "CoreWeave Stocks Plunge 10.27% as Credit Markets Price 68% Default Risk",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-stocks-plunge-10-27-174415599.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-25T09:44:00.000Z",
-      "latestAt": "2026-11-25T18:02:42.000Z",
-      "firstSeenAt": "2026-11-25T18:38:14.223Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo Finance",
-        "GuruFocus",
-        "TradingView"
-      ],
-      "score": 2.2
     },
     {
       "id": "11fd89512079",
@@ -838,6 +819,23 @@
         "Yorkshire Post"
       ],
       "score": 1.67
+    },
+    {
+      "id": "6715de6aefe5",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
+      "url": "https://en.clickpetroleoegas.com.br/brazilian-scientists-uncover-how-a-powerful-solar-storm-distorted-plasma-bubbles-and-reversed-their-movement-over-south-america-a-nmb91/",
+      "source": "en.clickpetroleoegas",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T04:57:00.000Z",
+      "firstSeenAt": "2026-11-26T05:09:52.811Z",
+      "outlets": 2,
+      "outletNames": [
+        "CPG Click Oil and Gas",
+        "en.clickpetroleoegas"
+      ],
+      "score": 1.56
     },
     {
       "id": "5c91ad2aa7b8",
@@ -1168,23 +1166,6 @@
         "BBC"
       ],
       "score": 1.57
-    },
-    {
-      "id": "6715de6aefe5",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
-      "url": "https://en.clickpetroleoegas.com.br/brazilian-scientists-uncover-how-a-powerful-solar-storm-distorted-plasma-bubbles-and-reversed-their-movement-over-south-america-a-nmb91/",
-      "source": "en.clickpetroleoegas",
-      "publishedAt": "2026-11-25T16:00:00.000Z",
-      "latestAt": "2026-11-26T04:57:00.000Z",
-      "firstSeenAt": "2026-11-26T05:09:52.811Z",
-      "outlets": 2,
-      "outletNames": [
-        "CPG Click Oil and Gas",
-        "en.clickpetroleoegas"
-      ],
-      "score": 1.56
     },
     {
       "id": "ae7c2ba4c273",
@@ -1656,6 +1637,38 @@
       "score": 1.02
     },
     {
+      "id": "832cc76f88c2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "EasyEquities clients locked out following ‘security incident’",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQkotTXQtNElSTjlHeTd3OXhCTHJxblJnSlpnVXgwWERzeXZpODZIOWNYeHZuSTRGZWJsaldJR29FOWlPR2VKbkE1dWFoVTRrNU1tazdscXNHTXBadmF2cWRrSHg1MHdHNkl3RnlVaE1jSlhVb1l6ZFpOYzVCeDNhUTFzczdIYmlUMzVtY3dnUDFBY0VtY1BRcEF5M1p3YnFta2NXeVNaMWpLSWF2eW1n?oc=5",
+      "source": "News24",
+      "publishedAt": "2026-11-26T09:33:20.000Z",
+      "latestAt": "2026-11-26T09:33:20.000Z",
+      "firstSeenAt": "2026-11-26T09:40:47.192Z",
+      "outlets": 1,
+      "outletNames": [
+        "News24"
+      ],
+      "score": 1
+    },
+    {
+      "id": "caef849f31fa",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Viettel-Singtel Consortium Begins Vietnam-Singapore Subsea Cable",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOdDAtejJnSThyemJhSHJoOWkyMHBLbmlGd2pPeEdMSkJJZWxKMExtMDM1NzBMdVp4SG9nRk83TGtMMFA4amxkWVJvaGt2VVZQbUNBMWZKeWxQNTg0TnBXdjVXUnVia2tmSXFLbS1jN0Y1R1ZDVEFCQ0RULThsbkVZRDFlWXJDLTJEQk1rTWgtMGo?oc=5",
+      "source": "Wisevoter",
+      "publishedAt": "2026-11-26T09:32:50.000Z",
+      "latestAt": "2026-11-26T09:32:50.000Z",
+      "firstSeenAt": "2026-11-26T09:40:47.192Z",
+      "outlets": 1,
+      "outletNames": [
+        "Wisevoter"
+      ],
+      "score": 1
+    },
+    {
       "id": "55a6584729ec",
       "cat": "grid",
       "kind": "news",
@@ -1716,22 +1729,6 @@
       "outlets": 1,
       "outletNames": [
         "Gulf Business"
-      ],
-      "score": 1
-    },
-    {
-      "id": "49be6341ddc6",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed at turkey farms as keepers warned",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxON0hnN2s2bWpqX2xMTFZRVFFhZ0hwU2tKUW1mdVNrU1dyMEFrQ1FzQjhPdlJocWxkRWozRUdmUnZFYUFTZ1hwRVBlbjc5Y3BlMDhnbXg0RFlSRVpEcjJLSHJqZXEzQWJXWVptSzktc2FuLVJIX3ZOQ0Q3a1hSbEpFaFJudE9iUkVTZlFyb05tdGxrWXB4?oc=5",
-      "source": "Richmondshire Today",
-      "publishedAt": "2026-11-26T08:42:33.000Z",
-      "latestAt": "2026-11-26T08:42:33.000Z",
-      "firstSeenAt": "2026-11-26T08:55:30.997Z",
-      "outlets": 1,
-      "outletNames": [
-        "Richmondshire Today"
       ],
       "score": 1
     },
