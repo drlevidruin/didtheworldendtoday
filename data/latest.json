@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T21:27:37.212Z",
+  "buildTime": "2026-11-26T21:42:38.401Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 16:27 ET",
+  "etStamp": "2026-11-26 16:42 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,17 +45,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1249,
-  "lastSuccessAt": "2026-11-26T21:27:37.212Z",
+  "headlinesRead": 1295,
+  "lastSuccessAt": "2026-11-26T21:42:38.401Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 13,
-    "hacks": 30,
-    "grid": 22,
+    "flights": 14,
+    "hacks": 28,
+    "grid": 23,
     "internet": 10,
     "markets": 4,
-    "weather": 5,
-    "germs": 4,
+    "weather": 4,
+    "germs": 5,
     "earth": 4,
     "sun": 4,
     "space": 4
@@ -164,11 +164,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Egypt detains driver suspected of causing Cairo fuel tanker crash and inferno that left 31 dead"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -180,57 +182,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 948,
+      "count": 985,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     },
     "bing": {
       "ok": true,
-      "count": 270,
+      "count": 277,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-26T20:12:23.742Z"
     },
     "hn": {
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     },
     "x": {
       "ok": true,
@@ -241,15 +243,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T21:27:37.212Z"
+      "lastOkAt": "2026-11-26T21:42:38.401Z"
     }
   },
   "stories": [
@@ -330,9 +332,9 @@
       "url": "https://money.usnews.com/investing/news/articles/2026-11-26/exclusive-stancharts-crypto-unit-zodia-custody-hit-by-security-breach-some-client-data-exposed",
       "source": "U.S. News Money",
       "publishedAt": "2026-11-25T21:44:00.000Z",
-      "latestAt": "2026-11-26T19:00:19.000Z",
+      "latestAt": "2026-11-26T21:30:39.000Z",
       "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 12,
+      "outlets": 13,
       "outletNames": [
         "Cointelegraph",
         "TradingView",
@@ -345,10 +347,11 @@
         "The Straits Times",
         "Yahoo Finance",
         "@Reuters on X",
-        "Digg"
+        "Digg",
+        "International Business Times"
       ],
       "xUrl": "https://x.com/Reuters/status/2125965343650693594",
-      "score": 3.5
+      "score": 3.59
     },
     {
       "id": "cfb691f18287",
@@ -483,6 +486,24 @@
       "score": 2.55
     },
     {
+      "id": "fb0e8cb3b5b8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft declares ‘Code Red’ after major global outage, targets service recovery within one hour",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOR2Z4aFRvd0dvRFdOcHJHWmlFdjFqcUJUcXZxdWI1SXIxOXQ3djNwNVB2R2FJbUtNQ0xObkVmNEFORk1EdklwWEczd3RMZGxmR2kwaUZxVGZlVFJHQWZ1bnMxNllMa3B5aThTV0w2VjVfOVpqZmZQNUZVaGZxWkctS0l6THhUZmo1bjNjajE1Y09hX0x0d0FZclRqMjM3R3c4cUpXb3RoU2dNRl9ROVpVcTU0b3pSWGZnQ0c1LVRJakpSNkJSLVBoZmJ6UEZWRm9tVTRlZmwtWmM?oc=5",
+      "source": "Profit by Pakistan Today",
+      "publishedAt": "2026-11-26T02:55:29.000Z",
+      "latestAt": "2026-11-26T11:47:41.000Z",
+      "firstSeenAt": "2026-11-26T21:12:42.873Z",
+      "outlets": 3,
+      "outletNames": [
+        "Profit by Pakistan Today",
+        "Aktualita.co",
+        "News18"
+      ],
+      "score": 2.52
+    },
+    {
       "id": "ba4586e1359a",
       "cat": "weather",
       "kind": "news",
@@ -500,23 +521,6 @@
       "score": 2.42
     },
     {
-      "id": "040839c82e3c",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft hits ‘Code Red’ after global outage shakes its cloud empire",
-      "url": "https://tech.yahoo.com/ai/copilot/articles/microsoft-hits-code-red-global-151000714.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-26T07:11:00.000Z",
-      "latestAt": "2026-11-26T15:10:00.000Z",
-      "firstSeenAt": "2026-11-26T15:26:40.311Z",
-      "outlets": 2,
-      "outletNames": [
-        "YAHOO!",
-        "Yahoo Tech"
-      ],
-      "score": 2.41
-    },
-    {
       "id": "4b9d74481d40",
       "cat": "flights",
       "kind": "news",
@@ -532,45 +536,6 @@
         "Daily Express"
       ],
       "score": 2.79
-    },
-    {
-      "id": "416c0add4e50",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Standard Chartered’s Zodia Custody suffers data breach",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNalFNV0s0S0Z2RjVVbjZQcXZlc2lwc0hQb3JYWkJ6QXdRWTJDV3FkaFczQVlOZ0xhN1UwREQ4bkZ2d2VvbDk4aVNmbzU1Z29EdTd0SWNqTUV2WmNXdzhHQW45cWlSck1pNEF1dkVBWnppWUxtakhJSHVxX2YzWDM2X1Y4V204YWk3RkNIdjY1S2xxUHdFU3VtbV9QZ1dHQ0VLcDh4c3BXRDBfSFVKOXl0NmJ6LWN1dzRsdEE?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-26T11:37:06.000Z",
-      "latestAt": "2026-11-26T15:51:05.000Z",
-      "firstSeenAt": "2026-11-26T21:12:42.873Z",
-      "outlets": 4,
-      "outletNames": [
-        "TradingView",
-        "ForkLog",
-        "Coinpedia",
-        "Digg"
-      ],
-      "score": 2.52
-    },
-    {
-      "id": "5900139ad908",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Microsoft says China’s Salt Typhoon and North Korean hackers now use ARTEX",
-      "url": "https://thenextweb.com/news/microsoft-artex-salt-typhoon-north-korea-state-hackers",
-      "source": "The Next Web",
-      "publishedAt": "2026-11-25T21:35:35.000Z",
-      "latestAt": "2026-11-26T11:07:00.000Z",
-      "firstSeenAt": "2026-11-25T23:09:03.842Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Record from Recorded Future News",
-        "MLQ.ai",
-        "The Next Web"
-      ],
-      "score": 2.52,
-      "quiet": true,
-      "quietReason": "headline mentions typhoon"
     },
     {
       "id": "d8faac5af851",
@@ -591,6 +556,40 @@
       "score": 2.46
     },
     {
+      "id": "040839c82e3c",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft hits ‘Code Red’ after global outage shakes its cloud empire",
+      "url": "https://tech.yahoo.com/ai/copilot/articles/microsoft-hits-code-red-global-151000714.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-26T07:11:00.000Z",
+      "latestAt": "2026-11-26T15:10:00.000Z",
+      "firstSeenAt": "2026-11-26T15:26:40.311Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "Yahoo Tech"
+      ],
+      "score": 2.41
+    },
+    {
+      "id": "dcc1deef7fbd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Gianni Infantino humiliated in major security breach at FIFA",
+      "url": "https://www.msn.com/en-us/news/other/gianni-infantino-humiliated-in-major-security-breach-at-fifa/ar-AA2ii3Dd",
+      "source": "The Daily Beast on MSN",
+      "publishedAt": "2026-11-26T05:24:00.000Z",
+      "latestAt": "2026-11-26T05:24:27.000Z",
+      "firstSeenAt": "2026-11-26T13:41:16.075Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Daily Beast on MSN",
+        "Yahoo Sports"
+      ],
+      "score": 2.41
+    },
+    {
       "id": "2da563b7e862",
       "cat": "germs",
       "kind": "news",
@@ -606,6 +605,24 @@
         "The Healthy @Reader's Digest"
       ],
       "score": 2.41
+    },
+    {
+      "id": "ba108ccd0525",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "1Password confirms hackers stole customer data, but not their passwords",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1FMnY1OWdHMEx2OGRmQWhzVjdfS1I1SVpIb29JS0szR2hLcjJnT1NFN1E3UzJpdHZmTGEtOXFLZEJkbGFETVpQaVJHN0duRjl5Qm0xTElUUHFfQXhNVFdpZFNoMVRwZXJBd0g1STlFc3o?oc=5",
+      "source": "Android Authority",
+      "publishedAt": "2026-11-26T05:10:24.000Z",
+      "latestAt": "2026-11-26T11:02:45.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 3,
+      "outletNames": [
+        "Android Authority",
+        "Windows Report",
+        "2-Spyware"
+      ],
+      "score": 2.38
     },
     {
       "id": "84a778c237e7",
@@ -730,23 +747,6 @@
       "score": 1.96
     },
     {
-      "id": "fb0e8cb3b5b8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft declares ‘Code Red’ after major global outage, targets service recovery within one hour",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOR2Z4aFRvd0dvRFdOcHJHWmlFdjFqcUJUcXZxdWI1SXIxOXQ3djNwNVB2R2FJbUtNQ0xObkVmNEFORk1EdklwWEczd3RMZGxmR2kwaUZxVGZlVFJHQWZ1bnMxNllMa3B5aThTV0w2VjVfOVpqZmZQNUZVaGZxWkctS0l6THhUZmo1bjNjajE1Y09hX0x0d0FZclRqMjM3R3c4cUpXb3RoU2dNRl9ROVpVcTU0b3pSWGZnQ0c1LVRJakpSNkJSLVBoZmJ6UEZWRm9tVTRlZmwtWmM?oc=5",
-      "source": "Profit by Pakistan Today",
-      "publishedAt": "2026-11-26T02:55:29.000Z",
-      "latestAt": "2026-11-26T03:45:29.000Z",
-      "firstSeenAt": "2026-11-26T21:12:42.873Z",
-      "outlets": 2,
-      "outletNames": [
-        "Profit by Pakistan Today",
-        "Aktualita.co"
-      ],
-      "score": 1.95
-    },
-    {
       "id": "4958786f794b",
       "cat": "germs",
       "kind": "news",
@@ -779,23 +779,6 @@
         "Yahoo"
       ],
       "score": 1.91
-    },
-    {
-      "id": "251d291f0bd0",
-      "cat": "weather",
-      "kind": "news",
-      "title": "London’s Lights in La Vergne repair after ice storm",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOTlCVGpRS3Q4UjJDckFBc0RZNE5kb3NwV0RILXZzaGpzdkFadjZxbTFGNHpLQlNQaDM0WEJGT1dMaTJacEluQkU4alhWbV9LalpnSUkzRHlfenZvOUtmLUgwbFprQUNJNC1kWnpWUV9QazNiYlpyNDRkQy0xVkp4ZTM3WXc1aWdGOGpKdkNCY2c?oc=5",
-      "source": "WKRN News 2",
-      "publishedAt": "2026-11-25T21:33:00.000Z",
-      "latestAt": "2026-11-25T21:33:00.000Z",
-      "firstSeenAt": "2026-11-26T01:39:21.290Z",
-      "outlets": 2,
-      "outletNames": [
-        "WKRN News 2",
-        "Yahoo"
-      ],
-      "score": 1.86
     },
     {
       "id": "6564231387e7",
@@ -832,39 +815,21 @@
       "score": 1.71
     },
     {
-      "id": "dcc1deef7fbd",
-      "cat": "hacks",
+      "id": "6fc50157d9ee",
+      "cat": "earth",
       "kind": "news",
-      "title": "Gianni Infantino humiliated in major security breach at FIFA",
-      "url": "https://www.msn.com/en-us/news/other/gianni-infantino-humiliated-in-major-security-breach-at-fifa/ar-AA2ii3Dd",
-      "source": "The Daily Beast on MSN",
-      "publishedAt": "2026-11-26T05:24:00.000Z",
-      "latestAt": "2026-11-26T05:24:27.000Z",
-      "firstSeenAt": "2026-11-26T13:41:16.075Z",
+      "title": "Preliminary 5.7-magnitude earthquake strikes off Baja California Peninsula",
+      "url": "https://www.yahoo.com/news/science/articles/preliminary-5-7-magnitude-earthquake-181532226.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T05:07:00.000Z",
+      "latestAt": "2026-11-26T18:15:32.000Z",
+      "firstSeenAt": "2026-11-26T19:27:15.794Z",
       "outlets": 2,
       "outletNames": [
-        "The Daily Beast on MSN",
-        "Yahoo Sports"
+        "Yahoo",
+        "New York Post"
       ],
-      "score": 2.41
-    },
-    {
-      "id": "ba108ccd0525",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "1Password confirms hackers stole customer data, but not their passwords",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1FMnY1OWdHMEx2OGRmQWhzVjdfS1I1SVpIb29JS0szR2hLcjJnT1NFN1E3UzJpdHZmTGEtOXFLZEJkbGFETVpQaVJHN0duRjl5Qm0xTElUUHFfQXhNVFdpZFNoMVRwZXJBd0g1STlFc3o?oc=5",
-      "source": "Android Authority",
-      "publishedAt": "2026-11-26T05:10:24.000Z",
-      "latestAt": "2026-11-26T11:02:45.000Z",
-      "firstSeenAt": "2026-11-26T09:55:39.177Z",
-      "outlets": 3,
-      "outletNames": [
-        "Android Authority",
-        "Windows Report",
-        "2-Spyware"
-      ],
-      "score": 2.38
+      "score": 1.52
     },
     {
       "id": "b338ec219fe9",
@@ -1333,23 +1298,6 @@
       "score": 1.52
     },
     {
-      "id": "6fc50157d9ee",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Preliminary 5.7-magnitude earthquake strikes off Baja California Peninsula",
-      "url": "https://www.yahoo.com/news/science/articles/preliminary-5-7-magnitude-earthquake-181532226.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T05:07:00.000Z",
-      "latestAt": "2026-11-26T18:15:32.000Z",
-      "firstSeenAt": "2026-11-26T19:27:15.794Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "New York Post"
-      ],
-      "score": 1.52
-    },
-    {
       "id": "dfb3820ef297",
       "cat": "hacks",
       "kind": "news",
@@ -1461,22 +1409,6 @@
       "outlets": 1,
       "outletNames": [
         "https://www.thetraveler.org/"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "2208b23f6093",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major outages affect US since Vanderbilt cyberattack began",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUm1id0tUS2Y5NjhVelBSNkpJaXFia2ZHaWNoT3gxa3M0R2E0UXR6RFAweG5VaTlyU2dwanp0YnU3ZHppOF9xTHEtYzVnZktGTE9FTkFWZ04zYnltaEY5bEEzcktJMERwR2xSeHRkRHctb1FZaHgtcWNvNl9Uem9wRkZpSlBEQ0pvV2RqU0ljd09wdWZRT1o5Z1FRak16cWtpZ1E?oc=5",
-      "source": "The Vanderbilt Hustler",
-      "publishedAt": "2026-11-25T21:30:43.000Z",
-      "latestAt": "2026-11-25T21:38:49.000Z",
-      "firstSeenAt": "2026-11-25T21:38:41.112Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Vanderbilt Hustler"
       ],
       "score": 1.4
     },
@@ -1803,13 +1735,45 @@
       "score": 1.19
     },
     {
+      "id": "0a73606aa929",
+      "cat": "flights",
+      "kind": "news",
+      "title": "US grounds flights to Washington National Airport due to thunderstorms",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdk9uZ0Y0OEJXTFMxSmJmVUM5MFA5cTFJbmxZUGxzOHJGbVJ2UVhZLXV3TEpVRlRBU0Z6TmRtVTN5MktpVm41b25XdV9NWnVISlREa2ZEcHFGbEVoNDlZc2RKMkViWXczS1RiYm1wWE9rSHlIRFpjeTN6Um1udUJQc29LZEFjbTVNNUx6eXVyTERXMklxUjZiMDdTNEktZnNTZmJXRzhsTFV5M2xqendXcnVB?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-26T21:36:28.000Z",
+      "latestAt": "2026-11-26T21:36:28.000Z",
+      "firstSeenAt": "2026-11-26T21:42:38.401Z",
+      "outlets": 1,
+      "outletNames": [
+        "Anadolu Ajansı"
+      ],
+      "score": 1
+    },
+    {
+      "id": "12b2949d0898",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Tens of Thousands Without Power Across North Carolina on Thanksgiving Morning",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRzc1UE54dFNZMlBLc3dIVjZ0NTluVTlIVFMzZWRvM3RmRjFONV9XOFdhV0FqMDc5S05sWVVDQ3BmVkZmMEowRUZUcmZkLWU5VnJuel8tN0F5akZHN3l3S19pVTdoNEpWY3g2MWZEbktoTGVXNE44b3RSdmZwZjk1RnNfN0ZrbDJRUEdXSklpN2RSZG9wWk1ZTVk3aHVadGRuTWVGLWZGQQ?oc=5",
+      "source": "SSBCrack",
+      "publishedAt": "2026-11-26T21:25:12.000Z",
+      "latestAt": "2026-11-26T21:25:12.000Z",
+      "firstSeenAt": "2026-11-26T21:42:38.401Z",
+      "outlets": 1,
+      "outletNames": [
+        "SSBCrack"
+      ],
+      "score": 1
+    },
+    {
       "id": "7fa71f9cd57e",
       "cat": "grid",
       "kind": "news",
       "title": "Mass power outage drags on",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9ETkhPVGFCdkpHUHp5WFczM1VnckZuZzhneGtqb21pa0dPNkJRRmdjaHJyZVVFaGkyTVJ5aUVJYllwdXdyeGx1cmY5SkhtN0NPNGRLYWQ0STVCZHJxa0pHNVlZWVUxTHl0V3JtdnhR?oc=5",
       "source": "5CC",
-      "publishedAt": "2026-11-26T21:17:29.000Z",
+      "publishedAt": "2026-11-26T21:16:34.000Z",
       "latestAt": "2026-11-26T21:17:29.000Z",
       "firstSeenAt": "2026-11-26T21:27:37.212Z",
       "outlets": 1,
@@ -1835,6 +1799,22 @@
       "score": 1
     },
     {
+      "id": "86f152ec6fbd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Port of Santos Restores Truck Scheduling System Following Cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOaFh5WDR6bkJNcC1qOUpzNFJpUUZqRmNlT1RUOEJwQVV1ZWM0N3gyc2ZIVDd6S1NsLUw4ZkRMSjNnM252RzRsSzhBM2J5dDBteWxobmVUQnM3NmROVHRKYWFwdWZTLXVPVWdfMjhuNnEtWVlEMk82WER4WU9DTWU4R3FIZVRtbUVWNWQ4R0FpTl9DbFpkWU0yWW9ZR09wcVhsSG5MdWZB?oc=5",
+      "source": "DatamarNews",
+      "publishedAt": "2026-11-26T21:06:37.000Z",
+      "latestAt": "2026-11-26T21:06:37.000Z",
+      "firstSeenAt": "2026-11-26T21:42:38.401Z",
+      "outlets": 1,
+      "outletNames": [
+        "DatamarNews"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "7a14efcae84f",
       "cat": "earth",
       "kind": "news",
@@ -1849,6 +1829,22 @@
         "Volcano Discovery"
       ],
       "score": 0.99
+    },
+    {
+      "id": "c3b2df29413f",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu concerns ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5VLVg1SEJqRzVOeUI1cEZTUW5sRk91QV9TZGJDbnJOWFVQOEExSDllb0V5VlZOMU9HcnhjbjJKWXRXNTB6VmowM1ozVmFzbGlTSldWV0p5TlMwVTdrTFJSdk1tb9IBaEFVX3lxTE91TFFhUDFGdFRQWVo1MGRkbGFuUEswZHEzUXJrbm5vYTM3bWQ5MU5LN2NqUzY2ZzVteDBJMXFVT0k3NWltZWtkZk10M08tNEpYcHd3eW5hRW1Ud0JHTmFOQm42cW54RVZn?oc=5",
+      "source": "LiveNOW from FOX",
+      "publishedAt": "2026-11-26T20:45:43.000Z",
+      "latestAt": "2026-11-26T20:45:43.000Z",
+      "firstSeenAt": "2026-11-26T21:42:38.401Z",
+      "outlets": 1,
+      "outletNames": [
+        "LiveNOW from FOX"
+      ],
+      "score": 0.98
     },
     {
       "id": "9e98c7904766",
