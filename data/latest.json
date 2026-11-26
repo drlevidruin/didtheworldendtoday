@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T04:39:47.244Z",
+  "buildTime": "2026-11-26T04:54:50.753Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 23:39 ET",
+  "etStamp": "2026-11-25 23:54 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,15 +49,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1285,
-  "lastSuccessAt": "2026-11-26T04:39:47.244Z",
+  "headlinesRead": 1281,
+  "lastSuccessAt": "2026-11-26T04:54:50.753Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
-    "internet": 13,
+    "flights": 16,
+    "internet": 12,
     "hacks": 33,
     "germs": 6,
-    "grid": 9,
+    "grid": 8,
     "markets": 4,
     "animals": 1,
     "ai": 4,
@@ -181,80 +181,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 969,
+      "count": 981,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     },
     "bing": {
       "ok": true,
-      "count": 281,
-      "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "count": 268,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-26T02:24:32.389Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     },
     "x": {
       "ok": true,
-      "count": 3,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T04:39:47.244Z"
+      "lastOkAt": "2026-11-26T04:54:50.753Z"
     }
   },
   "stories": [
@@ -330,25 +331,6 @@
         "nationwide": false,
         "reason": "disabled aircraft on the runway"
       }
-    },
-    {
-      "id": "fb9a5b3b1cec",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Overhauls Its Outage Response Plan After Major Outlook Problems",
-      "url": "https://uk.pcmag.com/office-suites/168586/microsoft-overhauls-its-outage-response-plan-after-major-outlook-problems",
-      "source": "PCMag UK",
-      "publishedAt": "2026-11-25T04:49:00.000Z",
-      "latestAt": "2026-11-26T03:19:39.000Z",
-      "firstSeenAt": "2026-11-25T13:07:22.139Z",
-      "outlets": 4,
-      "outletNames": [
-        "PCMag Australia",
-        "PCMag UK",
-        "MSN",
-        "PCMag Middle East"
-      ],
-      "score": 3.62
     },
     {
       "id": "sig:status:github:2026-11-25",
@@ -472,6 +454,23 @@
       "score": 2.47
     },
     {
+      "id": "325cd3c46cea",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Major Insurer Allstate Hit by 3-Day Outage Amid Spate of US Service Issues",
+      "url": "https://www.newsweek.com/major-insurer-allstate-hit-by-3-day-outage-amid-spate-of-us-service-issues-12768326",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-25T12:10:00.000Z",
+      "latestAt": "2026-11-25T20:10:00.000Z",
+      "firstSeenAt": "2026-11-25T20:23:32.754Z",
+      "outlets": 2,
+      "outletNames": [
+        "Newsweek",
+        "Yahoo"
+      ],
+      "score": 2.42
+    },
+    {
       "id": "2fa8fefe8871",
       "cat": "hacks",
       "kind": "news",
@@ -560,7 +559,7 @@
       "url": "https://www.yahoo.com/news/videos/faa-issues-ground-stop-miami-215133838.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-25T06:00:00.000Z",
-      "latestAt": "2026-11-26T04:39:17.000Z",
+      "latestAt": "2026-11-26T04:41:15.000Z",
       "firstSeenAt": "2026-11-26T04:39:47.244Z",
       "outlets": 32,
       "outletNames": [
@@ -615,23 +614,6 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 2.79
-    },
-    {
-      "id": "325cd3c46cea",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Major Insurer Allstate Hit by 3-Day Outage Amid Spate of US Service Issues",
-      "url": "https://www.newsweek.com/major-insurer-allstate-hit-by-3-day-outage-amid-spate-of-us-service-issues-12768326",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-25T12:10:00.000Z",
-      "latestAt": "2026-11-25T20:10:00.000Z",
-      "firstSeenAt": "2026-11-25T20:23:32.754Z",
-      "outlets": 2,
-      "outletNames": [
-        "Newsweek",
-        "Yahoo"
-      ],
-      "score": 2.42
     },
     {
       "id": "dfcf1fa0e43b",
@@ -872,6 +854,22 @@
       "outlets": 1,
       "outletNames": [
         "De Último Minuto"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "fae6145286ca",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
+      "source": "Coinpaper",
+      "publishedAt": "2026-11-25T17:34:59.000Z",
+      "latestAt": "2026-11-25T17:34:59.000Z",
+      "firstSeenAt": "2026-11-25T18:08:07.848Z",
+      "outlets": 1,
+      "outletNames": [
+        "Coinpaper"
       ],
       "score": 1.39
     },
@@ -1219,6 +1217,23 @@
       "score": 1.59
     },
     {
+      "id": "bda47bdf2621",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FedEx plane overshoots Miami runway, with flights briefly suspended at airport",
+      "url": "https://www.yahoo.com/news/us/articles/fedex-plane-overshoots-miami-runway-032737573.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T03:27:33.000Z",
+      "firstSeenAt": "2026-11-26T04:54:50.753Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "BBC"
+      ],
+      "score": 1.57
+    },
+    {
       "id": "f4c983635a2c",
       "cat": "hacks",
       "kind": "news",
@@ -1313,22 +1328,6 @@
       "outlets": 1,
       "outletNames": [
         "Daily Star"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "fae6145286ca",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
-      "source": "Coinpaper",
-      "publishedAt": "2026-11-25T17:34:59.000Z",
-      "latestAt": "2026-11-25T17:34:59.000Z",
-      "firstSeenAt": "2026-11-25T18:08:07.848Z",
-      "outlets": 1,
-      "outletNames": [
-        "Coinpaper"
       ],
       "score": 1.39
     },
@@ -1576,6 +1575,23 @@
       "score": 1.31
     },
     {
+      "id": "efa36710438b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Ground stop issued at O'Hare International Airport in Chicago due to 'equipment outage'",
+      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxQQXhXZjBURDNKT3kwSl9uT1NubzVGRmpFa1RDRXhJb2gwWHQ4anZFZ2Zac0VJaHpISmZuc1FDYS12NXhKRlZxeVI5anhxR1RONDRiM2Y2eW9Oc2VENWlFZ1dUZTh1R19uZk5wVDRrd21MRTFUUTBzUzBwc2t1NnhPNEs5TkFZWVczb1VJVFZ4QVhMUi1FNmd5TWpicHFybk14UWlkVm9NY3ZFSUFnZlNUYmpsbkRiSlZlS3M3N0NSem05b1N3NndMeW0yOWNNMjE1M3lDVkk3alpLRFhmLTAzYXBMcm5neUZtYnB2dTk1Z2RQZXJhcndza1ZqY0xaX1hEZGpDSTVIU2lHQzg4dzlySmZEbDUtV3JVTWxTM1VZTkFYcENtRHNfenIzU1pmODY3ZXpGLVc5OXIwMzlTLTd2NXVyRGtTMzVkZU1BS2dtWnlxRTNuSk1aOHd5OG5aTUhqUUpGZnl6WDVXOElvRGVlZzV0SDRHd0ctenc?oc=5",
+      "source": "KEYE",
+      "publishedAt": "2026-11-25T07:07:27.000Z",
+      "latestAt": "2026-11-25T08:36:14.000Z",
+      "firstSeenAt": "2026-11-26T04:54:50.753Z",
+      "outlets": 2,
+      "outletNames": [
+        "KEYE",
+        "WRGB"
+      ],
+      "score": 1.27
+    },
+    {
       "id": "7a7dbfd634b6",
       "cat": "internet",
       "kind": "news",
@@ -1672,6 +1688,22 @@
       "score": 1.19
     },
     {
+      "id": "e3ff2b9031e9",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Massive blackout disrupts life across eight districts in Sabah’s east coast",
+      "url": "https://www.thestar.com.my/news/nation/2026/11/26/massive-blackout-disrupts-life-across-eight-districts-in-sabahs-east-coast",
+      "source": "The Star",
+      "publishedAt": "2026-11-25T14:41:00.000Z",
+      "latestAt": "2026-11-25T14:41:00.000Z",
+      "firstSeenAt": "2026-11-26T04:54:50.753Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Star"
+      ],
+      "score": 1.07
+    },
+    {
       "id": "14ec8f5c37b6",
       "cat": "internet",
       "kind": "news",
@@ -1688,52 +1720,20 @@
       "score": 1.05
     },
     {
-      "id": "8a4d591cbf3b",
+      "id": "bf7fee70bac6",
       "cat": "hacks",
       "kind": "news",
-      "title": "McDonald’s Japan hit by data breach — customer purchase and location data leaked in latest major incident in the country",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQVnNJOEdIaTE4TENFZm1vU2JqTnVuNkE0dUk4d1NhU1dQSnYxVWtKb2JzSHJfSHpyd3lnUmt2NTZuWVE2V3UzcEhuem91bWxTYVZJUkI1RFdpSURtMjRmbXJtSHo4bEItOFUzQ3RlXzZ2Y0xmdmxJdW42SkdQNDZ6Zk9ncS1Zem1rMTViODlOcW5LZ3g0dUozQkJtdnF5WGpheVhnM0hnaXA3eTg0S0ZsRUlyRG5jWGROLVNHbjNXd1JHYkJ2cWFKdGI2VktKSDFsUlhXTGduM2dNekRzRXF6YjVEZkUzVkVFeHpzdQ?oc=5",
+      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxORDBJbERWb1JRUTZzTVduSk5BQVVwX0xkRlVtYVdGQ0JfbzhON0FNajU4NGRyQlQ5OW9hb3RJUGdZSzcyN3paMXJFUkp4eTAwa3ZzZXFLSmxUdUlpbEFFSzNBMkc1VC1ienFxeFgxLXFxMkxDaTMtNmlDdUc3MDJaSGpTZ3BaWU1OVHoyTXVkbERGdU5iUWs4emVtSWM4ZU1JekhJSTVVNVl5UGxfZEdTcTdKcGExN1R4UXFGLWVHNEZLV2lqOWVCdjMzcnhMMVRTWm1QdU9jaWdEeDI1OGdsMTBDaVc4MHVrVzNvNW44ekczWFlWNDdOOXZ0dmQ1UTFmRWUzZHZXdmhFdw?oc=5",
       "source": "TechRadar",
-      "publishedAt": "2026-11-25T11:42:24.000Z",
-      "latestAt": "2026-11-25T11:42:24.000Z",
-      "firstSeenAt": "2026-11-26T04:09:42.281Z",
+      "publishedAt": "2026-11-25T12:25:00.000Z",
+      "latestAt": "2026-11-25T12:25:00.000Z",
+      "firstSeenAt": "2026-11-26T04:54:50.753Z",
       "outlets": 1,
       "outletNames": [
         "TechRadar"
       ],
       "score": 1.02
-    },
-    {
-      "id": "31d3d30c3f86",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Today's Power Outage Schedule: Check PLN Blackout Areas and Times Until Afternoon",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MTnhFRUVmUDFGSW9leWNhbkhTYkdlUHJTOXhrZzdMczJ0XzIyVXdTYTBwbFRQakY0NVhoWEpOcjZrRWRrUDQxZVd0cEpYejlFX2JuZ2ljY201MWVJUFVwOG13dnMtNmpLbTh4OUREbTdUQQ?oc=5",
-      "source": "Aktualita.co",
-      "publishedAt": "2026-11-26T04:37:39.000Z",
-      "latestAt": "2026-11-26T04:37:39.000Z",
-      "firstSeenAt": "2026-11-26T04:39:47.244Z",
-      "outlets": 1,
-      "outletNames": [
-        "Aktualita.co"
-      ],
-      "score": 1
-    },
-    {
-      "id": "3e6abe5a4a83",
-      "cat": "grid",
-      "kind": "news",
-      "title": "More than 1,800 without power in Whatcom County as wind gusts increase",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZzNiOWdUYzZtTXkyZUowclJOQkQtd2dMUmxEUjBjQnJiT3Ytc1lGZjJIRW41SlV4cUROQzJLS0hXeURyRzFfRklKSUtRNzFxMTY2VGVyN3ZSNkZxSENKX2N0QUFoZkhQalpPS0UyYzJBaWt1c01WZTQyUDBVRXJvOHhBQXBMRkJNbTg3SW1LdzU3ZHRiajBOcHczT0dEVGUxMS1kUHU4UkxtS3JiZGpPY3Fn?oc=5",
-      "source": "Cascadia Daily News",
-      "publishedAt": "2026-11-26T04:32:23.000Z",
-      "latestAt": "2026-11-26T04:32:23.000Z",
-      "firstSeenAt": "2026-11-26T04:39:47.244Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cascadia Daily News"
-      ],
-      "score": 1
     },
     {
       "id": "3f8fdb3f1a21",
@@ -1996,20 +1996,20 @@
       "score": 0.77
     },
     {
-      "id": "2694c5d56908",
+      "id": "e0291e6aaafe",
       "cat": "ai",
       "kind": "news",
-      "title": "Sophos CEO On Why The Push To Prevent AI Attacks May Be Fueling Outages",
-      "url": "https://www.crn.com/news/security/2026/sophos-ceo-on-why-the-push-to-prevent-ai-attacks-may-be-fueling-outages",
-      "source": "CRN",
-      "publishedAt": "2026-11-25T05:30:00.000Z",
-      "latestAt": "2026-11-25T05:30:00.000Z",
-      "firstSeenAt": "2026-11-26T04:39:47.244Z",
+      "title": "OpenAI Outage Disrupts ChatGPT in UK, Europe",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPQzRkWGF1Qjl3dHJTeVEyNlFIQV9EcFlSQ3ZoQXRocVRFUm50X0Y5SXBySmhqMkVMM2MyZ0lidjJkX2lZMEtYQTVRWElfU3g2NDh1cFlNQzRHNU5BRmdndm55ZWVpeHBZX1RpX1dSaGVTWU5LZFRKWWgzSk52NUZXSFl3?oc=5",
+      "source": "Wisevoter",
+      "publishedAt": "2026-11-25T13:32:54.000Z",
+      "latestAt": "2026-11-25T13:32:54.000Z",
+      "firstSeenAt": "2026-11-26T04:54:50.753Z",
       "outlets": 1,
       "outletNames": [
-        "CRN"
+        "Wisevoter"
       ],
-      "score": 0.61
+      "score": 0.74
     }
   ]
 }
