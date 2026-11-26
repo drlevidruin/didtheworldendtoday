@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T23:28:02.296Z",
+  "buildTime": "2026-11-26T23:42:56.071Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 18:28 ET",
+  "etStamp": "2026-11-26 18:42 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,20 +45,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1273,
-  "lastSuccessAt": "2026-11-26T23:28:02.296Z",
+  "headlinesRead": 308,
+  "lastSuccessAt": "2026-11-26T23:42:56.071Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
     "grid": 24,
     "germs": 4,
-    "hacks": 28,
+    "hacks": 29,
     "markets": 4,
     "weather": 4,
     "internet": 8,
-    "earth": 4,
     "sun": 4,
-    "space": 4
+    "earth": 4,
+    "space": 3
   },
   "vital": {
     "quake": {
@@ -170,13 +170,11 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "Egypt tanker explosion kills 31 people as driver crashes into fuel truck in fiery highway crash"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
@@ -187,16 +185,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 966,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-26T23:28:02.296Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
+      "count": 275,
       "error": null,
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "lastOkAt": "2026-11-26T23:42:56.071Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,37 +206,37 @@
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "lastOkAt": "2026-11-26T23:42:56.071Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "lastOkAt": "2026-11-26T23:42:56.071Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "lastOkAt": "2026-11-26T23:42:56.071Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "lastOkAt": "2026-11-26T23:42:56.071Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "lastOkAt": "2026-11-26T23:42:56.071Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "lastOkAt": "2026-11-26T23:42:56.071Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +249,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "lastOkAt": "2026-11-26T23:42:56.071Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "lastOkAt": "2026-11-26T23:42:56.071Z"
     }
   },
   "stories": [
@@ -757,6 +755,23 @@
       "score": 1.79
     },
     {
+      "id": "d6cf7b7e41d1",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Sun unleashed powerful X1.11 class solar flare seen from space",
+      "url": "https://www.msn.com/en-us/news/other/sun-unleashed-powerful-x111-class-solar-flare-seen-from-space/vi-AA2ijLSG",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-26T14:35:00.000Z",
+      "latestAt": "2026-11-26T15:01:45.000Z",
+      "firstSeenAt": "2026-11-26T22:57:53.537Z",
+      "outlets": 2,
+      "outletNames": [
+        "Space on MSN",
+        "Dailymotion on MSN"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "6564231387e7",
       "cat": "internet",
       "kind": "news",
@@ -820,22 +835,6 @@
       "outlets": 1,
       "outletNames": [
         "Beinsure"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "ac4475e7fb20",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Global temperatures hit record high as Earth exceeds 2°C threshold",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLUtBSnFxQzJ2T3RoeDdMdldTVDktb19GR2VVS3Q3OHZpa0JmM2x0ZVlIaExzdGJ2a1V4X29IYWZZUVVTSDEwUkNNYjNxeUZQamdHSDdxb1RZMm8zamJMVkNqcVNkS3VieERHWTZmTHNpd2wxYkZITEF4Y0c1RXBldkZEUHdGbXE5TVJoYzdlVk5nLVE?oc=5",
-      "source": "Medya Press",
-      "publishedAt": "2026-11-26T12:32:07.000Z",
-      "latestAt": "2026-11-26T12:32:07.000Z",
-      "firstSeenAt": "2026-11-26T12:41:10.609Z",
-      "outlets": 1,
-      "outletNames": [
-        "Medya Press"
       ],
       "score": 1.4
     },
@@ -1389,6 +1388,23 @@
       "score": 1.61
     },
     {
+      "id": "7c9f16cbe062",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms personal, business data stolen in cyberattack",
+      "url": "https://www.straitstimes.com/sport/fifa-confirms-personal-business-data-stolen-in-cyberattack",
+      "source": "The Straits Times",
+      "publishedAt": "2026-11-26T09:20:00.000Z",
+      "latestAt": "2026-11-26T13:14:00.000Z",
+      "firstSeenAt": "2026-11-26T23:42:56.071Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Straits Times",
+        "Newsmax"
+      ],
+      "score": 1.52
+    },
+    {
       "id": "8cdf0c77100d",
       "cat": "grid",
       "kind": "news",
@@ -1455,6 +1471,22 @@
         "Yahoo"
       ],
       "score": 1.43
+    },
+    {
+      "id": "ac4475e7fb20",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Global temperatures hit record high as Earth exceeds 2°C threshold",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLUtBSnFxQzJ2T3RoeDdMdldTVDktb19GR2VVS3Q3OHZpa0JmM2x0ZVlIaExzdGJ2a1V4X29IYWZZUVVTSDEwUkNNYjNxeUZQamdHSDdxb1RZMm8zamJMVkNqcVNkS3VieERHWTZmTHNpd2wxYkZITEF4Y0c1RXBldkZEUHdGbXE5TVJoYzdlVk5nLVE?oc=5",
+      "source": "Medya Press",
+      "publishedAt": "2026-11-26T12:32:07.000Z",
+      "latestAt": "2026-11-26T12:32:07.000Z",
+      "firstSeenAt": "2026-11-26T12:41:10.609Z",
+      "outlets": 1,
+      "outletNames": [
+        "Medya Press"
+      ],
+      "score": 1.4
     },
     {
       "id": "8fb286d459c9",
@@ -1891,22 +1923,6 @@
       "score": 0.98
     },
     {
-      "id": "60bfdfea0829",
-      "cat": "space",
-      "kind": "x",
-      "title": "New images reveal crater on asteroid struck by DART spacecraft",
-      "url": "https://x.com/Reuters/status/2125736349625974961",
-      "source": "@Reuters on X",
-      "publishedAt": "2026-11-25T23:40:14.000Z",
-      "latestAt": "2026-11-26T04:00:21.000Z",
-      "firstSeenAt": "2026-11-26T00:39:19.183Z",
-      "outlets": 1,
-      "outletNames": [
-        "@Reuters on X"
-      ],
-      "score": 0.98
-    },
-    {
       "id": "0a4b0368472d",
       "cat": "earth",
       "kind": "news",
@@ -1921,22 +1937,6 @@
         "Sacramento Bee"
       ],
       "score": 0.92
-    },
-    {
-      "id": "d6cf7b7e41d1",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Sun unleashed powerful X1.11 class solar flare seen from space",
-      "url": "https://www.msn.com/en-us/news/other/sun-unleashed-powerful-x111-class-solar-flare-seen-from-space/vi-AA2ijLSG",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-26T14:35:00.000Z",
-      "latestAt": "2026-11-26T14:35:00.000Z",
-      "firstSeenAt": "2026-11-26T22:57:53.537Z",
-      "outlets": 1,
-      "outletNames": [
-        "Space on MSN"
-      ],
-      "score": 0.86
     },
     {
       "id": "e19154efd2c0",
