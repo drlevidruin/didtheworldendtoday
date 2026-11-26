@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T19:12:16.404Z",
+  "buildTime": "2026-11-26T19:27:15.794Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 14:12 ET",
+  "etStamp": "2026-11-26 14:27 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,19 +45,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1304,
-  "lastSuccessAt": "2026-11-26T19:12:16.404Z",
+  "headlinesRead": 1306,
+  "lastSuccessAt": "2026-11-26T19:27:15.794Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 30,
+    "hacks": 32,
     "flights": 12,
     "grid": 20,
-    "internet": 13,
+    "internet": 11,
+    "markets": 4,
     "weather": 5,
     "germs": 4,
-    "markets": 4,
-    "space": 4,
     "earth": 4,
+    "space": 4,
     "sun": 4
   },
   "vital": {
@@ -180,57 +180,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 999,
+      "count": 1002,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     },
     "bing": {
       "ok": true,
-      "count": 275,
+      "count": 272,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     },
     "x": {
       "ok": true,
@@ -241,15 +241,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T19:12:16.404Z"
+      "lastOkAt": "2026-11-26T19:27:15.794Z"
     }
   },
   "stories": [
@@ -487,6 +487,24 @@
       "score": 2.58
     },
     {
+      "id": "28bd6f1f8fdc",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Nvidia, AMD and Micron Stocks Plunge as AI Selloff Deepens",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNXI2ZHFBcjBOY2VTTTR5cWhjd0VHYUlmd3pJNjdIZkNKR1pKcEFESzBaM1NlcHRpQ1lnQy1SX3ozbDNMWkl3aTJReHl2NWlHdWd5WkZpWkNON2NBRVRSWENYZzBxOGhqbWNyd2Z0bjlHVnlVQ2FZcWc5aG1OQmZyNHFCdWxXRFpIWF9DSW9YZ3J0RktTajhvSkdEYUZjN2NyV3JfT1lQeDFleFZzN2lSX243VXdOZFVv?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-26T11:06:24.000Z",
+      "latestAt": "2026-11-26T13:26:17.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 3,
+      "outletNames": [
+        "TradingView",
+        "GuruFocus",
+        "Yahoo Finance"
+      ],
+      "score": 2.55
+    },
+    {
       "id": "ba4586e1359a",
       "cat": "weather",
       "kind": "news",
@@ -517,23 +535,6 @@
       "outletNames": [
         "YAHOO!",
         "Yahoo Tech"
-      ],
-      "score": 2.41
-    },
-    {
-      "id": "2da563b7e862",
-      "cat": "germs",
-      "kind": "news",
-      "title": "FDA: Pain Reliever Recalled Nationwide for Possible ‘Aluminum Particulate Contamination’",
-      "url": "https://www.yahoo.com/news/us/articles/fda-pain-reliever-recalled-nationwide-120231749.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T04:03:00.000Z",
-      "latestAt": "2026-11-26T13:17:00.000Z",
-      "firstSeenAt": "2026-11-26T12:26:10.024Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "The Healthy @Reader's Digest"
       ],
       "score": 2.41
     },
@@ -574,6 +575,26 @@
       "score": 2.6
     },
     {
+      "id": "5900139ad908",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Microsoft says China’s Salt Typhoon and North Korean hackers now use ARTEX",
+      "url": "https://thenextweb.com/news/microsoft-artex-salt-typhoon-north-korea-state-hackers",
+      "source": "The Next Web",
+      "publishedAt": "2026-11-25T21:35:35.000Z",
+      "latestAt": "2026-11-26T11:07:00.000Z",
+      "firstSeenAt": "2026-11-25T23:09:03.842Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Record from Recorded Future News",
+        "MLQ.ai",
+        "The Next Web"
+      ],
+      "score": 2.52,
+      "quiet": true,
+      "quietReason": "headline mentions typhoon"
+    },
+    {
       "id": "d8faac5af851",
       "cat": "hacks",
       "kind": "news",
@@ -592,19 +613,19 @@
       "score": 2.46
     },
     {
-      "id": "dcc1deef7fbd",
-      "cat": "hacks",
+      "id": "2da563b7e862",
+      "cat": "germs",
       "kind": "news",
-      "title": "Gianni Infantino humiliated in major security breach at FIFA",
-      "url": "https://www.msn.com/en-us/news/other/gianni-infantino-humiliated-in-major-security-breach-at-fifa/ar-AA2ii3Dd",
-      "source": "The Daily Beast on MSN",
-      "publishedAt": "2026-11-26T05:24:00.000Z",
-      "latestAt": "2026-11-26T05:24:27.000Z",
-      "firstSeenAt": "2026-11-26T13:41:16.075Z",
+      "title": "FDA: Pain Reliever Recalled Nationwide for Possible ‘Aluminum Particulate Contamination’",
+      "url": "https://www.yahoo.com/news/us/articles/fda-pain-reliever-recalled-nationwide-120231749.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T04:03:00.000Z",
+      "latestAt": "2026-11-26T13:17:00.000Z",
+      "firstSeenAt": "2026-11-26T12:26:10.024Z",
       "outlets": 2,
       "outletNames": [
-        "The Daily Beast on MSN",
-        "Yahoo Sports"
+        "Yahoo",
+        "The Healthy @Reader's Digest"
       ],
       "score": 2.41
     },
@@ -710,23 +731,6 @@
       "outletNames": [
         "WCIV",
         "WTMA-AM"
-      ],
-      "score": 1.97
-    },
-    {
-      "id": "28bd6f1f8fdc",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Nvidia, AMD and Micron Stocks Plunge as AI Selloff Deepens",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNXI2ZHFBcjBOY2VTTTR5cWhjd0VHYUlmd3pJNjdIZkNKR1pKcEFESzBaM1NlcHRpQ1lnQy1SX3ozbDNMWkl3aTJReHl2NWlHdWd5WkZpWkNON2NBRVRSWENYZzBxOGhqbWNyd2Z0bjlHVnlVQ2FZcWc5aG1OQmZyNHFCdWxXRFpIWF9DSW9YZ3J0RktTajhvSkdEYUZjN2NyV3JfT1lQeDFleFZzN2lSX243VXdOZFVv?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-26T11:06:24.000Z",
-      "latestAt": "2026-11-26T13:26:17.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 2,
-      "outletNames": [
-        "TradingView",
-        "GuruFocus"
       ],
       "score": 1.97
     },
@@ -848,6 +852,23 @@
         "TradingView"
       ],
       "score": 1.71
+    },
+    {
+      "id": "dcc1deef7fbd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Gianni Infantino humiliated in major security breach at FIFA",
+      "url": "https://www.msn.com/en-us/news/other/gianni-infantino-humiliated-in-major-security-breach-at-fifa/ar-AA2ii3Dd",
+      "source": "The Daily Beast on MSN",
+      "publishedAt": "2026-11-26T05:24:00.000Z",
+      "latestAt": "2026-11-26T05:24:27.000Z",
+      "firstSeenAt": "2026-11-26T13:41:16.075Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Daily Beast on MSN",
+        "Yahoo Sports"
+      ],
+      "score": 2.41
     },
     {
       "id": "ba108ccd0525",
@@ -1007,25 +1028,6 @@
       "score": 1.97
     },
     {
-      "id": "5900139ad908",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Microsoft: China’s Salt Typhoon hackers are using Artex",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5fTzRPVmxMSk9Ua2tyb2s0a05sVVJuS280ZDU0dkZOVnFIbm91TkNaT0NvSHAxRHdlUGFENlI3bGRsbHNQSVQ0U0FRQm1mU0NpejlQcFJWd2hmWUVmaTVMdm9nTmg5Z3lyTkxzSF81aWh3cjdjRHFsY0hGTVU?oc=5",
-      "source": "The Record from Recorded Future News",
-      "publishedAt": "2026-11-25T21:35:35.000Z",
-      "latestAt": "2026-11-25T23:03:52.000Z",
-      "firstSeenAt": "2026-11-25T23:09:03.842Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Record from Recorded Future News",
-        "MLQ.ai"
-      ],
-      "score": 1.95,
-      "quiet": true,
-      "quietReason": "headline mentions typhoon"
-    },
-    {
       "id": "2d9813eb624f",
       "cat": "hacks",
       "kind": "news",
@@ -1145,6 +1147,23 @@
       "trending": 100,
       "trendTerm": "report power outage",
       "score": 1.77
+    },
+    {
+      "id": "e7f4ea1619d9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-26T11:52:32.000Z",
+      "latestAt": "2026-11-26T14:47:38.000Z",
+      "firstSeenAt": "2026-11-26T19:27:15.794Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "TRT Afrika"
+      ],
+      "score": 1.75
     },
     {
       "id": "5f266584a470",
@@ -1302,6 +1321,23 @@
       "score": 1.63
     },
     {
+      "id": "6fc50157d9ee",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Preliminary 5.7-magnitude earthquake strikes off Baja California Peninsula",
+      "url": "https://www.yahoo.com/news/science/articles/preliminary-5-7-magnitude-earthquake-181532226.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T05:07:00.000Z",
+      "latestAt": "2026-11-26T18:15:00.000Z",
+      "firstSeenAt": "2026-11-26T19:27:15.794Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "New York Post"
+      ],
+      "score": 1.52
+    },
+    {
       "id": "dfb3820ef297",
       "cat": "hacks",
       "kind": "news",
@@ -1334,22 +1370,6 @@
         "Yahoo"
       ],
       "score": 1.43
-    },
-    {
-      "id": "a6c7de9bfddc",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Microsoft: Hackers in China, N Korea using ARTEX AI tool to break into global tech systems",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQeFhBRE5ZTEh1OGZkcENTNXUxOGpCZ1hxbHJrYmRlSDhUSjE2X3VYaFIwMndRMUJKbm01R3NKOGptZ3dNc0FkdkJ0X0lOcndEdmlqYkwwZnZxS0NvRUxMRUh0aXlnYXpxeEhFdEYtdF9xZjA4R3NsaXdsUlpVMzQyYzlWX3lRRE05UndIbHJJYnJ2TW5qeGQ2bTNXV1hQekNROEF5MF9YTG5tMHlQQkhmQkE4X2tqT0RpeUhKMXZIMUF2RDZ2VWZheGx3anpZX0ZhZ0QwZlFSTUpyN0xE?oc=5",
-      "source": "The Register",
-      "publishedAt": "2026-11-26T19:04:00.000Z",
-      "latestAt": "2026-11-26T19:04:00.000Z",
-      "firstSeenAt": "2026-11-26T19:12:16.404Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Register"
-      ],
-      "score": 1.4
     },
     {
       "id": "e7bd0fbdc6b0",
@@ -1660,20 +1680,37 @@
       "score": 1.25
     },
     {
-      "id": "9391ee252383",
-      "cat": "internet",
+      "id": "04e511012358",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Microsoft restores service to Outlook and Teams after global outage",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQc0lLcmJLVUNBS3U3ZDQzTjE3UnR3LTNNS1RDRV8xYlZiR1ZZSWJWRXZVVl8xME9YZEdFMmhZeVFNU3BpY3JIRnpIMlpSZk52NWJRTncxR1lQemh4UlZnWmtudnItcUFTQzJwLUpmWERaejVfMUtHenZCMlRKX1p4R2NkZDBQVndKTXlqODFmdDYzSTJMM09RMw?oc=5",
-      "source": "DD News",
-      "publishedAt": "2026-11-25T19:25:32.000Z",
-      "latestAt": "2026-11-25T19:25:32.000Z",
-      "firstSeenAt": "2026-11-26T03:12:19.485Z",
+      "title": "Hackers Breach CIA Open-Source Intelligence System",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNODVZamNldHRLWkxqQUFUbWpCX056V1lKOWoyR1JuZmNEUW9peUhrR3FwX1NNcGl2Y19ZVFVqX2REVlZDenJaX1FHSWJhMmlSVXhmNDR1RFRfQVA1X2pvZmE5SnNJc3o0dzFSbk53VXRZVXNiQWJHTXAxTHRrMG5sekxuWVNKLUNPQXdCamFSOVg?oc=5",
+      "source": "LinkedIn",
+      "publishedAt": "2026-11-25T21:00:03.000Z",
+      "latestAt": "2026-11-26T00:26:42.000Z",
+      "firstSeenAt": "2026-11-26T19:27:15.794Z",
+      "outlets": 2,
+      "outletNames": [
+        "LinkedIn",
+        "Security Boulevard"
+      ],
+      "score": 1.25
+    },
+    {
+      "id": "a6c7de9bfddc",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Microsoft: Hackers in China, N Korea using ARTEX AI tool to break into global tech systems",
+      "url": "https://www.theregister.com/security/2026/11/26/microsoft-hackers-in-china-n-korea-using-artex-ai-tool-to-break-into-global-tech-systems/5312433",
+      "source": "The Register",
+      "publishedAt": "2026-11-26T11:04:00.000Z",
+      "latestAt": "2026-11-26T19:04:00.000Z",
+      "firstSeenAt": "2026-11-26T19:12:16.404Z",
       "outlets": 1,
       "outletNames": [
-        "DD News"
+        "The Register"
       ],
-      "score": 1.22
+      "score": 1.21
     },
     {
       "id": "63be3a8c61ca",
@@ -1772,34 +1809,18 @@
       "score": 1.06
     },
     {
-      "id": "9e24d79778ef",
+      "id": "f1b8a077ccc1",
       "cat": "hacks",
       "kind": "news",
-      "title": "Remus 'Gmail zero-day' is a fake Google Sheets extension, researchers say",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSEZVVjBLM1VuTGlkM0lTeVBwVFBOdDZmMnE2V1JTVU9oMk83VTlBbHN1YW1KakRfcVRZV3l4Q1pqQzhZNEdrUko3RXViTmc2YkpueHFNUDBHZnM2QV8yQlVrVUZ4TlNaTjRQc1FrWFZLbGZkT1RKMHNSSUtpRGNLbGVPYm9PbnEtNmF0N3h6aWpYcUxrYkE?oc=5",
-      "source": "MLQ.ai",
-      "publishedAt": "2026-11-26T19:09:18.000Z",
-      "latestAt": "2026-11-26T19:09:18.000Z",
-      "firstSeenAt": "2026-11-26T19:12:16.404Z",
+      "title": "Microsoft Links China, North Korea Hackers to ARTEX",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNd0NHNUNCTmZfRkVaSFl2MXltc3JGZldMWkNGc09Hd3VQQnJGbG0ySjlMVFZJODRjU0kyVHhpc3hWYWJzSVFJdUgwa0hfdHNqdVozS3ZadTd3R3VoVHo4SFVfRUZiY084clRBdkR3enlOSk14SlNteXJHMmdRRGtHNHh5QmJBYnZLQjAwSg?oc=5",
+      "source": "The Defiant",
+      "publishedAt": "2026-11-26T19:22:16.000Z",
+      "latestAt": "2026-11-26T19:22:16.000Z",
+      "firstSeenAt": "2026-11-26T19:27:15.794Z",
       "outlets": 1,
       "outletNames": [
-        "MLQ.ai"
-      ],
-      "score": 1
-    },
-    {
-      "id": "c25972367b83",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Paramount+ Outage Today: Is Paramount+ Down in the US? Users Report Streaming, App Loading, Login and Video Playback Issues | Check Latest Downdetector Status",
-      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxNUDd4T3A5NWt6dGR4RDdPUGI3NXhRS1BaWDNmd2hWR0JCT3dvQWZJZllEWUs4WVFkQjhXTTdaUG9CQmFicC1wVEFFRlZEV2JSWjlXamRuUW1nR3A3OVh5OExSQjlrVEEwMzhLOGZuWXdaSTRwTmVZbVdPRVhkbVBQN0VJekFfcF9PZ0ZmWUdVYWVPbElBZUpmWnZhRXZEZU9CYkZNb01oNGxyODNsYjZLS01VTURTQm40R2loS1Z2bnJsYy1IR3pKUGQyTmROaFVGb2ZMY2J6NUNQU005dVNxTE05eXQ0Slp6d3hmUnFjdHQ2bzd1ZHpQQmNVYkhaOVc5aWoyTFBaazNDUFJZQkJ5bVN6U0ZhaXFHT1c4alBPVjZ5TUhU0gGqAkFVX3lxTE0xMDUzNnRLS0hDVkVJREJlRFJpOF9vaW5zUEFSZU1QZ2xleEpfQjRtcGczc3NzZUxWUDhmbEExcVg4R0NndmFtS0Q4VjBGLXIwX3M0Zi05bzVjOHIxSWNMMGZFRDBNY01VUHRpTHpBMFk0TG1PRkx4bFpVQi1HdGduT213SEVLbkNmMC1ucDZKcU9Jd2o3REhQd1FaclVWZWFWVWFSZzVPclRxdHNELXB3ZTJNajVjblZzTklCZ25LejFtcUVsRF9DdDNJV2k4M2dObVNvOG1QYkpYSDgtZkJJSWpwQlhoYWNldTJVYXpLTW5ubU14bTdveVBmTzJBSWtMVzdtU2tsbGpGU01Ya1M5VXFxNHlQYmd6U0tobmYxTmwtWmk2TmtvX0E?oc=5",
-      "source": "The Sunday Guardian",
-      "publishedAt": "2026-11-26T19:08:02.000Z",
-      "latestAt": "2026-11-26T19:08:02.000Z",
-      "firstSeenAt": "2026-11-26T19:12:16.404Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Sunday Guardian"
+        "The Defiant"
       ],
       "score": 1
     },
@@ -1898,22 +1919,6 @@
         "@Reuters on X"
       ],
       "score": 0.98
-    },
-    {
-      "id": "0a4b0368472d",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Update: 3.6 magnitude earthquake jolts near Ocotillo, CA on Nov. 25",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5yWDlvU0JPM3FnaDQ2QVdBQUZuTUJSWkd4azFmOHlwTU9sMHN3cWpUTmswSVZmVzlDTHk3bDRyLV9zVndndW01anotblVMQnJyOXhYRktyckN2SzdWeWJ3WG50OUN3cWpmZmNnZnNfdEZSM0lvSnpOV0hTSE0?oc=5",
-      "source": "Sacramento Bee",
-      "publishedAt": "2026-11-26T15:25:06.000Z",
-      "latestAt": "2026-11-26T15:25:06.000Z",
-      "firstSeenAt": "2026-11-26T19:12:16.404Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sacramento Bee"
-      ],
-      "score": 0.94
     },
     {
       "id": "e19154efd2c0",
