@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T09:10:32.025Z",
+  "buildTime": "2026-11-26T09:25:35.418Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 04:10 ET",
+  "etStamp": "2026-11-26 04:25 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,16 +51,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1214,
-  "lastSuccessAt": "2026-11-26T09:10:32.025Z",
+  "headlinesRead": 1255,
+  "lastSuccessAt": "2026-11-26T09:25:35.418Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
+    "flights": 14,
     "internet": 15,
-    "hacks": 30,
+    "hacks": 29,
     "germs": 5,
-    "grid": 9,
-    "markets": 5,
+    "grid": 10,
+    "markets": 6,
     "animals": 1,
     "ai": 4,
     "weather": 4,
@@ -70,10 +70,10 @@
   },
   "vital": {
     "quake": {
-      "mag": 5.2,
-      "place": "183 km N of Hicks Bay, New Zealand",
-      "time": "2026-11-26T01:48:44.213Z",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udjx",
+      "mag": 5.5,
+      "place": "204 km S of Taliwang, Indonesia",
+      "time": "2026-11-26T09:08:40.640Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udm8",
       "pager": null,
       "tsunami": false
     },
@@ -172,13 +172,11 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "At least 31 killed in Egypt vehicle fire, Health Ministry says"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
@@ -190,57 +188,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 944,
+      "count": 947,
       "error": null,
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "bing": {
       "ok": true,
-      "count": 238,
-      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "count": 276,
+      "error": null,
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "gdelt": {
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
-      "lastOkAt": "2026-11-26T06:55:12.325Z"
+      "error": "rate limited (HTTP 429)",
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "x": {
       "ok": true,
@@ -253,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T09:10:32.025Z"
+      "lastOkAt": "2026-11-26T09:25:35.418Z"
     }
   },
   "stories": [
@@ -1449,22 +1447,6 @@
       "score": 1.36
     },
     {
-      "id": "82218d53aaad",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Timeline of the FAA nationwide ground stop: How it developed",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSGtmU3BzdllUMng4SXBOQzk1TWdnOFRTLUZQNkJManhIb1RQNXFNRWh3b3JNZnlhcVhydlNUa1VCWDc2Z01Lem5vOVZ3eFhKRUt0ZmdjLV9rbTFjRUNjLVJOSTBycmlGbVRZMjRodUhWWVpfaEt1Ny1jUWQybW5kd0U4MVZEYUdZa3dhT0d0NlfSAZYBQVVfeXFMTzhqZl81M2hodnN2dl8xYjFWay01bXNZRnF1aWdTejdKZUxGZ2lWa3pNWldIdlAwMC1YVjhZSUFHaTNHdnozUmZ0YkI0OHZJOFNmRVYtU1BneldYTHZTclZ4d0NZR1ZSdlhMbnJrY3VFd0pGUXNBdEw2T05relZIbFRDbkJ3UGYyNDhwTS1naEt3WDBTR1h3?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-25T09:17:48.000Z",
-      "latestAt": "2026-11-26T00:00:29.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos"
-      ],
-      "score": 1.35
-    },
-    {
       "id": "6f47c7d0cafc",
       "cat": "hacks",
       "kind": "news",
@@ -1674,6 +1656,38 @@
       "score": 1.02
     },
     {
+      "id": "55a6584729ec",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power Outage Risk.png",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNWklsZlIwMDEwUVVTOW5NcFlidk1mczBBemFjSmJhNGtKSXFDc2NadkJyZlpuU3NoWHdnN0hMNFpMYVNxd09BaHVjSDhUVXpIR3c4OHUwY3JsVmxvVVJESG4yRGpPRC1sVmZGUWd5cGdPb0R2Q3YyZ2V5cnUyM0tMNjU4UTlSVGMzeTRmZzFoR1NHWlpQ?oc=5",
+      "source": "WFMZ.com",
+      "publishedAt": "2026-11-26T09:17:48.000Z",
+      "latestAt": "2026-11-26T09:17:48.000Z",
+      "firstSeenAt": "2026-11-26T09:25:35.418Z",
+      "outlets": 1,
+      "outletNames": [
+        "WFMZ.com"
+      ],
+      "score": 1
+    },
+    {
+      "id": "ceed54516664",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Vietnam stocks plunge as VN-Index loses nearly 58 points",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOWN3QW5Ga1RLSm1XNUExSWVTWVRLRTlYTUx5UnhBYVBfZnZqWDhYbnJnQVdFT2xMRjdkNjlLZUpJSERRMlIwQXgwOHNjS2NHRTFOVm0waTZyUUhTN3BPVm9jbWNxRDljQzQzZTJ4N084czEyaVZiLVBwV0o2UDNKdHYyWktJaWV1UEs2a0dxblZ2MllYSDFkQUpn?oc=5",
+      "source": "Báo VietNamNet",
+      "publishedAt": "2026-11-26T09:11:00.000Z",
+      "latestAt": "2026-11-26T09:11:00.000Z",
+      "firstSeenAt": "2026-11-26T09:25:35.418Z",
+      "outlets": 1,
+      "outletNames": [
+        "Báo VietNamNet"
+      ],
+      "score": 1
+    },
+    {
       "id": "e1314f98e99b",
       "cat": "hacks",
       "kind": "news",
@@ -1718,22 +1732,6 @@
       "outlets": 1,
       "outletNames": [
         "Richmondshire Today"
-      ],
-      "score": 1
-    },
-    {
-      "id": "c38126067f4e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Keio says ransomware attack may have exposed data on 10.6 million people",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNajBjVGZOalo0b0VUTFlOdTM4YkhJd284LXloR1VhRk9waTM4ZUI2R00xSzZVQ2dfVjNYM0tFblh4eG9RWHVXR1RhcXRROWZYMi1jYllrSjRtdE1DR2NwWTNETXZnQWNtb01YZ2o5X1RldG52R2gyRC0yMEVBb0Z0SUdCbmdoMm02ekVuQVV5SnhOdk9INklz?oc=5",
-      "source": "MLQ.ai",
-      "publishedAt": "2026-11-26T08:24:13.000Z",
-      "latestAt": "2026-11-26T08:24:18.000Z",
-      "firstSeenAt": "2026-11-26T08:25:28.829Z",
-      "outlets": 1,
-      "outletNames": [
-        "MLQ.ai"
       ],
       "score": 1
     },
@@ -1852,22 +1850,6 @@
       "score": 0.99
     },
     {
-      "id": "4db93e3c6858",
-      "cat": "sun",
-      "kind": "news",
-      "title": "M7.9 solar flare",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPelBIWk9Hdkh5cGR0Y1hWRGdFVlhzaUduRmIxX0pmZVNVRUlSamNyTkhTV0tPZ1lxRFRKcFF2Z3MtaXRRS3Viem1Wc2dmMWhzd2RSWEFsWlhSWjZKd0hWelMzNUpXNDM4S1M2M2hoSTZZR1VwR3M0ZmVDZnZha1d6VWFQV2xRbnM?oc=5",
-      "source": "SpaceWeatherLive.com",
-      "publishedAt": "2026-11-25T09:23:19.000Z",
-      "latestAt": "2026-11-25T09:23:19.000Z",
-      "firstSeenAt": "2026-11-25T10:02:10.816Z",
-      "outlets": 1,
-      "outletNames": [
-        "SpaceWeatherLive.com"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "4ee4e22b5039",
       "cat": "sun",
       "kind": "news",
@@ -1916,20 +1898,20 @@
       "score": 0.89
     },
     {
-      "id": "efa721a1dcea",
-      "cat": "weather",
+      "id": "0edb9f27fed7",
+      "cat": "sun",
       "kind": "news",
-      "title": "West Nashville homeowner still waiting to rebuild more than 300 days after ice storm",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWEZ2UkRETWp1TnVyTUpUYkE1b1JqOW5LRFp2aS1vNlhGSWdFYW5sVXEzZ3RYNTF3NlVkTEs3M2F5Q3ZSd2JZMjNabVVSZUF0ZDd6RkJpam9mVm8tUmhENXlwZDUyazJsQkIya0xpd0RPODFqYXdwQkdWbmhwUE5tOHVnY3ZxRTM2bWpISWFvRVpScDVuMzI2R1duQ2xtbGd0eWVReVN1aGpYVjF5RXotNFZBTnI?oc=5",
-      "source": "WSMV",
-      "publishedAt": "2026-11-25T23:50:00.000Z",
-      "latestAt": "2026-11-26T00:28:00.000Z",
-      "firstSeenAt": "2026-11-26T08:55:30.997Z",
+      "title": "Geomagnetic storms may show northern lights in Metro Vancouver as storms clear",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZngtMG1pblMtUnprbFc5bHdLaXd1Q1B1X0tPOFJRd3F1c25Wdk9QUXpXWVdtNXVuNmE3el9xdWNQT0tVeVFqTjdIUHhxamlyd0xsa3NRM09abTRNQmJuQXRwdHIxaWdYSDcyS1BGdEF4cVVqbXdZYlRRNExLWFp0QjJIY0RzalpzR3l3TzY1eUVwNlRQaGFDanRSWmprUQ?oc=5",
+      "source": "Vancouver Is Awesome",
+      "publishedAt": "2026-11-25T21:15:00.000Z",
+      "latestAt": "2026-11-25T21:15:00.000Z",
+      "firstSeenAt": "2026-11-26T09:25:35.418Z",
       "outlets": 1,
       "outletNames": [
-        "WSMV"
+        "Vancouver Is Awesome"
       ],
-      "score": 0.85
+      "score": 0.8
     },
     {
       "id": "7c67a4c71067",
@@ -1946,6 +1928,22 @@
         "fox23.com"
       ],
       "score": 0.77
+    },
+    {
+      "id": "feb5626546fe",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Wind strengthening, blizzard, ice - storm warnings issued across Kazakhstan: 25 November 23:25",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTUZzSHVlLVJtWGdtbXZfbG5MV25YTVp0YzdRVzlIN3NQRVVKMTMybk9ndXBFSWFJQ1ZCMnQxNElvT3BGcTFNaml2eGFmRUVhRC16cnpzdkZuX0VISDNMcDhjYXpIeFVrX29rdlhCalJJSjhUNnF2TUk0Y3BFcjNoZFdFdEkwOG1HMmVVZHRfUEplX1JLaHJKWC1kMFcwY0NNb05tZVdwVXF5OFliRmc?oc=5",
+      "source": "TengriNews",
+      "publishedAt": "2026-11-25T18:25:00.000Z",
+      "latestAt": "2026-11-25T18:25:00.000Z",
+      "firstSeenAt": "2026-11-26T09:25:35.418Z",
+      "outlets": 1,
+      "outletNames": [
+        "TengriNews"
+      ],
+      "score": 0.75
     },
     {
       "id": "e0291e6aaafe",
