@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T22:42:46.435Z",
+  "buildTime": "2026-11-26T22:57:53.537Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 17:42 ET",
+  "etStamp": "2026-11-26 17:57 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,15 +45,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1170,
-  "lastSuccessAt": "2026-11-26T22:42:46.435Z",
+  "headlinesRead": 1283,
+  "lastSuccessAt": "2026-11-26T22:57:53.537Z",
   "rollingFallback": false,
   "cats": {
     "flights": 14,
-    "grid": 25,
+    "grid": 24,
     "germs": 4,
     "internet": 9,
-    "hacks": 28,
+    "hacks": 29,
     "markets": 4,
     "weather": 4,
     "earth": 4,
@@ -177,81 +177,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 977,
+      "count": 976,
       "error": null,
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "bing": {
       "ok": true,
-      "count": 160,
-      "error": "10 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "count": 276,
+      "error": null,
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T21:57:40.268Z"
     },
     "hn": {
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T22:42:46.435Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z"
     }
   },
   "stories": [
@@ -332,9 +331,9 @@
       "url": "https://www.wusa9.com/article/weather/thousands-without-power-maryland-and-virginia-thanksgiving-day/65-04657edb-76c0-4ac3-8efa-b4482b43c6c4",
       "source": "WUSA9",
       "publishedAt": "2026-11-26T04:17:00.000Z",
-      "latestAt": "2026-11-26T21:25:12.000Z",
+      "latestAt": "2026-11-26T22:53:00.000Z",
       "firstSeenAt": "2026-11-26T12:26:10.024Z",
-      "outlets": 9,
+      "outlets": 10,
       "outletNames": [
         "WUSA9",
         "WRAL",
@@ -344,9 +343,10 @@
         "Energy News Beat",
         "SSBCrack",
         "ABC27",
-        "WANE 15"
+        "WANE 15",
+        "WKYC"
       ],
-      "score": 3.6
+      "score": 3.73
     },
     {
       "id": "2da563b7e862",
@@ -622,6 +622,26 @@
       "score": 2.38
     },
     {
+      "id": "668d8b7157f8",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Severe weather leaves thousands of Dominion customers without power in Hampton Roads",
+      "url": "https://www.wavy.com/news/local-news/severe-weather-leaves-thousands-of-dominion-customers-without-power-in-hampton-roads/",
+      "source": "WAVY.com",
+      "publishedAt": "2026-11-26T01:53:00.000Z",
+      "latestAt": "2026-11-26T22:19:55.000Z",
+      "firstSeenAt": "2026-11-26T08:55:30.997Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "WAVY.com",
+        "LancasterOnline"
+      ],
+      "trending": 100,
+      "trendTerm": "report power outage",
+      "score": 2.28
+    },
+    {
       "id": "84a778c237e7",
       "cat": "grid",
       "kind": "news",
@@ -692,23 +712,6 @@
       "score": 1.99
     },
     {
-      "id": "06a52e93c62c",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
-      "source": "WCIV",
-      "publishedAt": "2026-11-26T15:17:10.000Z",
-      "latestAt": "2026-11-26T21:11:15.000Z",
-      "firstSeenAt": "2026-11-26T16:11:53.860Z",
-      "outlets": 2,
-      "outletNames": [
-        "WCIV",
-        "WTMA-AM"
-      ],
-      "score": 1.97
-    },
-    {
       "id": "49be6341ddc6",
       "cat": "germs",
       "kind": "news",
@@ -741,6 +744,23 @@
         "Evesham Journal"
       ],
       "score": 1.92
+    },
+    {
+      "id": "dfe90c59c28e",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft issues 'Code Red' after huge global outage",
+      "url": "https://ia.acs.org.au/article/2026/microsoft-issues--code-red--after-huge-global-outage.html",
+      "source": "Information Age",
+      "publishedAt": "2026-11-26T01:19:32.000Z",
+      "latestAt": "2026-11-26T03:10:00.000Z",
+      "firstSeenAt": "2026-11-26T22:57:53.537Z",
+      "outlets": 2,
+      "outletNames": [
+        "Information Age | ACS",
+        "Information Age"
+      ],
+      "score": 1.79
     },
     {
       "id": "6564231387e7",
@@ -806,22 +826,6 @@
       "outlets": 1,
       "outletNames": [
         "Beinsure"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "ac4475e7fb20",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Global temperatures hit record high as Earth exceeds 2°C threshold",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLUtBSnFxQzJ2T3RoeDdMdldTVDktb19GR2VVS3Q3OHZpa0JmM2x0ZVlIaExzdGJ2a1V4X29IYWZZUVVTSDEwUkNNYjNxeUZQamdHSDdxb1RZMm8zamJMVkNqcVNkS3VieERHWTZmTHNpd2wxYkZITEF4Y0c1RXBldkZEUHdGbXE5TVJoYzdlVk5nLVE?oc=5",
-      "source": "Medya Press",
-      "publishedAt": "2026-11-26T12:32:07.000Z",
-      "latestAt": "2026-11-26T12:32:07.000Z",
-      "firstSeenAt": "2026-11-26T12:41:10.609Z",
-      "outlets": 1,
-      "outletNames": [
-        "Medya Press"
       ],
       "score": 1.4
     },
@@ -948,6 +952,23 @@
       "score": 1.99
     },
     {
+      "id": "06a52e93c62c",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
+      "source": "WCIV",
+      "publishedAt": "2026-11-26T15:17:10.000Z",
+      "latestAt": "2026-11-26T21:11:15.000Z",
+      "firstSeenAt": "2026-11-26T16:11:53.860Z",
+      "outlets": 2,
+      "outletNames": [
+        "WCIV",
+        "WTMA-AM"
+      ],
+      "score": 1.97
+    },
+    {
       "id": "833490745443",
       "cat": "hacks",
       "kind": "news",
@@ -1065,25 +1086,6 @@
         "Yahoo"
       ],
       "score": 1.78
-    },
-    {
-      "id": "668d8b7157f8",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Severe weather leaves thousands of Dominion customers without power in Hampton Roads",
-      "url": "https://www.wavy.com/news/local-news/severe-weather-leaves-thousands-of-dominion-customers-without-power-in-hampton-roads/",
-      "source": "WAVY.com",
-      "publishedAt": "2026-11-26T01:53:00.000Z",
-      "latestAt": "2026-11-26T22:19:55.000Z",
-      "firstSeenAt": "2026-11-26T08:55:30.997Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WAVY.com"
-      ],
-      "trending": 100,
-      "trendTerm": "report power outage",
-      "score": 1.77
     },
     {
       "id": "f15707865a72",
@@ -1360,6 +1362,23 @@
       "score": 1.52
     },
     {
+      "id": "48ea6ffdd742",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "1Password Data Breach – Hackers Compromise GitHub Account to Steal Customer Data and Source Code",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUld1RTlkUzE2Z3RNbUtpUnVOSnd1VU9ZY19lX3ZJOUZYdUQ4MlpNNXFDQUI0VGpOVFdxSmNydVlsbUZhaVVYaGRuYWxlcXVYWENZVmR3SXVLd3NpbGhodzhJbFpJYmhQZ25jZjY5M0hjU1dueVp2SHRNT0VEeTlrU3AxWVRyX3BFSmfSAYoBQVVfeXFMTVJXdUU5ZFMxNmd0TW1LaVJ1Tkp3dVVPWWNfZV92STlGWHVEODJaTTVxQ0FCNFRqTlRXcUpjcnVZbG1GYWlVWGhkbmFsZXF1WFhDWVZkd0l1S3dzaWxoaHc4SWxaSWJoUGduY2Y2OTNIY1NXbnladkh0TU9FRHk5a1NwMVlUcl9wRUpn?oc=5",
+      "source": "GBHackers News",
+      "publishedAt": "2026-11-26T07:17:02.000Z",
+      "latestAt": "2026-11-26T16:01:19.000Z",
+      "firstSeenAt": "2026-11-26T22:57:53.537Z",
+      "outlets": 2,
+      "outletNames": [
+        "GBHackers News",
+        "Deccan Herald"
+      ],
+      "score": 1.48
+    },
+    {
       "id": "ce0e6a2809e0",
       "cat": "grid",
       "kind": "news",
@@ -1392,6 +1411,22 @@
         "Yahoo"
       ],
       "score": 1.43
+    },
+    {
+      "id": "ac4475e7fb20",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Global temperatures hit record high as Earth exceeds 2°C threshold",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLUtBSnFxQzJ2T3RoeDdMdldTVDktb19GR2VVS3Q3OHZpa0JmM2x0ZVlIaExzdGJ2a1V4X29IYWZZUVVTSDEwUkNNYjNxeUZQamdHSDdxb1RZMm8zamJMVkNqcVNkS3VieERHWTZmTHNpd2wxYkZITEF4Y0c1RXBldkZEUHdGbXE5TVJoYzdlVk5nLVE?oc=5",
+      "source": "Medya Press",
+      "publishedAt": "2026-11-26T12:32:07.000Z",
+      "latestAt": "2026-11-26T12:32:07.000Z",
+      "firstSeenAt": "2026-11-26T12:41:10.609Z",
+      "outlets": 1,
+      "outletNames": [
+        "Medya Press"
+      ],
+      "score": 1.4
     },
     {
       "id": "8fb286d459c9",
@@ -1572,22 +1607,6 @@
       "score": 1.34
     },
     {
-      "id": "e7bd0fbdc6b0",
-      "cat": "internet",
-      "kind": "news",
-      "title": "No plans to ditch Microsoft 365 despite global outage, says Government ICT",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZjNfLUlldTQ2VVdtazA3MTcwVy1EbDNHV29JaHBaNXo2RVh1UF91cFRyU09UOXMwLTVNdElHTlJFQTQ0MVNJOGFiMTVqTlFrMWlEckduTlI4RlR3VEJOQmw2cHFjNGI0SWdfRVY3d3pMaFlxSkRMUjdNempqc0FPTHRyejdYbmp5Y0FkVEdPNDdkNFczUkpxOS1fSkdVZHdfemtGVmZXSmZOVlNPMVpyR1Rkc2k2bW84Z3pIeUJXOXJkQ0JrRi11TUY4Z1kwR2FZ?oc=5",
-      "source": "Cook Islands News",
-      "publishedAt": "2026-11-26T18:33:06.000Z",
-      "latestAt": "2026-11-26T18:33:06.000Z",
-      "firstSeenAt": "2026-11-26T22:42:46.435Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cook Islands News"
-      ],
-      "score": 1.3
-    },
-    {
       "id": "a2ba0d15c4b9",
       "cat": "flights",
       "kind": "news",
@@ -1764,52 +1783,36 @@
       "score": 1.19
     },
     {
-      "id": "edbe55757b0f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outages reported across North Carolina on Thanksgiving morning amid a wind advisory",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTXd3Mnk4ZHAxdXQxMHV5LTF5NGNlX2liQzgzdVltUG9kN3ZYakx4N25faWRxdmFNUDJhYkJXM0pTU0c2M2RVTFBaanVvNUI3RXVDSHp5TUpYcV9sR2FnN1UxMnVXQmkxQlktQm80LTdDeEJnWlIwQUs2dmJRLVhHWmZOTFlNNW9GUzFlb0ZuYVhrR1RzUkloQjE5ZDMwSHROOWdIWU9SLXpzSWhBQmQ4Sw?oc=5",
-      "source": "WLOS",
-      "publishedAt": "2026-11-26T22:30:00.000Z",
-      "latestAt": "2026-11-26T22:30:00.000Z",
-      "firstSeenAt": "2026-11-26T22:42:46.435Z",
-      "outlets": 1,
-      "outletNames": [
-        "WLOS"
-      ],
-      "score": 1
-    },
-    {
-      "id": "cac28c4ad7bf",
+      "id": "fba6a954a647",
       "cat": "hacks",
       "kind": "news",
-      "title": "USDA cyberattack leaves farmers with questions ahead of aid enrollment deadlines",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWnZ6VlNIYm1QUVVPUE1STF93YktlSE1URUVvMUtaSDNheFZ6aVhMRTNvMFdBZ2lBMHhXNDFoR1ZZUGJvY21Cd2E5eDlBQXYzblRDeUlMOTdjRDJDREo3VU5vcG04RzhZdzI0dUctTWhNZEROejdqVUNsd3I3aWJVSHJTZ3pFLVVDYVpoUjlCc21RaTFYNlRKWURJM0tPN2lGQ2pxejdhRnhRNFRq?oc=5",
-      "source": "KATV",
-      "publishedAt": "2026-11-26T22:16:36.000Z",
-      "latestAt": "2026-11-26T22:16:36.000Z",
-      "firstSeenAt": "2026-11-26T22:27:43.157Z",
+      "title": "Binance restores withdrawals across nearly all networks four weeks after record $6.3B hack",
+      "url": "https://cryptobriefing.com/binance-restores-withdrawals-after-record-hack/",
+      "source": "Crypto Briefing",
+      "publishedAt": "2026-11-26T13:42:00.000Z",
+      "latestAt": "2026-11-26T13:42:00.000Z",
+      "firstSeenAt": "2026-11-26T22:57:53.537Z",
       "outlets": 1,
       "outletNames": [
-        "KATV"
+        "Crypto Briefing"
       ],
-      "score": 1
+      "score": 1.18
     },
     {
-      "id": "7fa71f9cd57e",
+      "id": "f93ea6772985",
       "cat": "grid",
       "kind": "news",
-      "title": "Mass power outage drags on",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9ETkhPVGFCdkpHUHp5WFczM1VnckZuZzhneGtqb21pa0dPNkJRRmdjaHJyZVVFaGkyTVJ5aUVJYllwdXdyeGx1cmY5SkhtN0NPNGRLYWQ0STVCZHJxa0pHNVlZWVUxTHl0V3JtdnhR?oc=5",
-      "source": "5CC",
-      "publishedAt": "2026-11-26T21:16:34.000Z",
-      "latestAt": "2026-11-26T21:17:29.000Z",
-      "firstSeenAt": "2026-11-26T21:27:37.212Z",
+      "title": "Power being restored in stages after massive blackout hits Sabah’s east coast",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPYXUxbFFJRDZxSmJOdGF3dk1odk90SzctdGtmNHptOXdidUl3MVdMSURpQVJNcU9XNnBJckk1NE1ub0Uwd1V5SmdESldBQlJ2MzFKbVgwc25wZTFxZ1VsQnJ4dzNJbUVBX2pjenJaX3FOMHZlWWw1N1JtUWo4SWZZdEZid3Jha0NjYWVrTFhTTkczOFMzZVdyam96TmxIVkRhWHlDRGJja1NacGEyZTkycGh6OXBudHdLeG1ONVlqbXhSbEVT?oc=5",
+      "source": "The Star",
+      "publishedAt": "2026-11-26T11:15:00.000Z",
+      "latestAt": "2026-11-26T11:15:00.000Z",
+      "firstSeenAt": "2026-11-26T22:57:53.537Z",
       "outlets": 1,
       "outletNames": [
-        "5CC"
+        "The Star"
       ],
-      "score": 1
+      "score": 1.13
     },
     {
       "id": "802ce460ea38",
@@ -1908,6 +1911,22 @@
       "score": 0.92
     },
     {
+      "id": "d6cf7b7e41d1",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Sun unleashed powerful X1.11 class solar flare seen from space",
+      "url": "https://www.msn.com/en-us/news/other/sun-unleashed-powerful-x111-class-solar-flare-seen-from-space/vi-AA2ijLSG",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-26T14:35:00.000Z",
+      "latestAt": "2026-11-26T14:35:00.000Z",
+      "firstSeenAt": "2026-11-26T22:57:53.537Z",
+      "outlets": 1,
+      "outletNames": [
+        "Space on MSN"
+      ],
+      "score": 0.86
+    },
+    {
       "id": "e19154efd2c0",
       "cat": "space",
       "kind": "news",
@@ -1936,22 +1955,6 @@
       "outlets": 1,
       "outletNames": [
         "The Brighterside of News on MSN"
-      ],
-      "score": 0.86
-    },
-    {
-      "id": "6af20bf3f9d2",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Close-up view of X1-class solar flare via NASA's IRIS mission",
-      "url": "https://www.msn.com/en-us/science/astronomy/close-up-view-of-x1-class-solar-flare-via-nasa-s-iris-mission/vi-AA2iiQD1",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-26T08:00:00.000Z",
-      "latestAt": "2026-11-26T08:00:00.000Z",
-      "firstSeenAt": "2026-11-26T16:26:47.357Z",
-      "outlets": 1,
-      "outletNames": [
-        "Space on MSN"
       ],
       "score": 0.86
     },
