@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T23:42:56.071Z",
+  "buildTime": "2026-11-26T23:58:05.239Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 18:42 ET",
+  "etStamp": "2026-11-26 18:58 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,14 +45,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 308,
-  "lastSuccessAt": "2026-11-26T23:42:56.071Z",
+  "headlinesRead": 1283,
+  "lastSuccessAt": "2026-11-26T23:58:05.239Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
-    "grid": 24,
+    "grid": 25,
     "germs": 4,
-    "hacks": 29,
+    "hacks": 28,
     "markets": 4,
     "weather": 4,
     "internet": 8,
@@ -170,92 +170,93 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Egypt tanker explosion kills 31 people as driver crashes into fuel truck in fiery highway crash"
+      ]
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
-      "lastOkAt": "2026-11-26T23:28:02.296Z"
+      "ok": true,
+      "count": 976,
+      "error": null,
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "bing": {
       "ok": true,
-      "count": 275,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-26T23:42:56.071Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-26T21:57:40.268Z"
     },
     "hn": {
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T23:42:56.071Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:42:56.071Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:42:56.071Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:42:56.071Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T23:42:56.071Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:42:56.071Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T23:42:56.071Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T23:42:56.071Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z"
     }
   },
   "stories": [
@@ -1063,6 +1064,24 @@
       "score": 1.91
     },
     {
+      "id": "48ea6ffdd742",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "1Password Data Breach – Hackers Compromise GitHub Account to Steal Customer Data and Source Code",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUld1RTlkUzE2Z3RNbUtpUnVOSnd1VU9ZY19lX3ZJOUZYdUQ4MlpNNXFDQUI0VGpOVFdxSmNydVlsbUZhaVVYaGRuYWxlcXVYWENZVmR3SXVLd3NpbGhodzhJbFpJYmhQZ25jZjY5M0hjU1dueVp2SHRNT0VEeTlrU3AxWVRyX3BFSmfSAYoBQVVfeXFMTVJXdUU5ZFMxNmd0TW1LaVJ1Tkp3dVVPWWNfZV92STlGWHVEODJaTTVxQ0FCNFRqTlRXcUpjcnVZbG1GYWlVWGhkbmFsZXF1WFhDWVZkd0l1S3dzaWxoaHc4SWxaSWJoUGduY2Y2OTNIY1NXbnladkh0TU9FRHk5a1NwMVlUcl9wRUpn?oc=5",
+      "source": "GBHackers News",
+      "publishedAt": "2026-11-26T07:17:02.000Z",
+      "latestAt": "2026-11-26T19:30:08.000Z",
+      "firstSeenAt": "2026-11-26T22:57:53.537Z",
+      "outlets": 3,
+      "outletNames": [
+        "GBHackers News",
+        "Deccan Herald",
+        "LinkedIn"
+      ],
+      "score": 1.91
+    },
+    {
       "id": "5fd5406e4a09",
       "cat": "grid",
       "kind": "news",
@@ -1235,6 +1254,23 @@
       "score": 1.71
     },
     {
+      "id": "cc0a42ab87c1",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Storms disrupt Thanksgiving with flight delays and over 920,000 power outages",
+      "url": "https://www.yahoo.com/news/weather-news/articles/storms-disrupt-thanksgiving-flight-delays-230636756.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T15:05:00.000Z",
+      "latestAt": "2026-11-26T15:06:36.000Z",
+      "firstSeenAt": "2026-11-26T23:58:05.239Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Insider on MSN"
+      ],
+      "score": 1.7
+    },
+    {
       "id": "d2aebafb6ef4",
       "cat": "grid",
       "kind": "news",
@@ -1388,23 +1424,6 @@
       "score": 1.61
     },
     {
-      "id": "7c9f16cbe062",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms personal, business data stolen in cyberattack",
-      "url": "https://www.straitstimes.com/sport/fifa-confirms-personal-business-data-stolen-in-cyberattack",
-      "source": "The Straits Times",
-      "publishedAt": "2026-11-26T09:20:00.000Z",
-      "latestAt": "2026-11-26T13:14:00.000Z",
-      "firstSeenAt": "2026-11-26T23:42:56.071Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Straits Times",
-        "Newsmax"
-      ],
-      "score": 1.52
-    },
-    {
       "id": "8cdf0c77100d",
       "cat": "grid",
       "kind": "news",
@@ -1420,23 +1439,6 @@
         "Capital Gazette"
       ],
       "score": 1.52
-    },
-    {
-      "id": "48ea6ffdd742",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "1Password Data Breach – Hackers Compromise GitHub Account to Steal Customer Data and Source Code",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUld1RTlkUzE2Z3RNbUtpUnVOSnd1VU9ZY19lX3ZJOUZYdUQ4MlpNNXFDQUI0VGpOVFdxSmNydVlsbUZhaVVYaGRuYWxlcXVYWENZVmR3SXVLd3NpbGhodzhJbFpJYmhQZ25jZjY5M0hjU1dueVp2SHRNT0VEeTlrU3AxWVRyX3BFSmfSAYoBQVVfeXFMTVJXdUU5ZFMxNmd0TW1LaVJ1Tkp3dVVPWWNfZV92STlGWHVEODJaTTVxQ0FCNFRqTlRXcUpjcnVZbG1GYWlVWGhkbmFsZXF1WFhDWVZkd0l1S3dzaWxoaHc4SWxaSWJoUGduY2Y2OTNIY1NXbnladkh0TU9FRHk5a1NwMVlUcl9wRUpn?oc=5",
-      "source": "GBHackers News",
-      "publishedAt": "2026-11-26T07:17:02.000Z",
-      "latestAt": "2026-11-26T16:01:19.000Z",
-      "firstSeenAt": "2026-11-26T22:57:53.537Z",
-      "outlets": 2,
-      "outletNames": [
-        "GBHackers News",
-        "Deccan Herald"
-      ],
-      "score": 1.48
     },
     {
       "id": "ce0e6a2809e0",
