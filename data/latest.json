@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T06:25:09.060Z",
+  "buildTime": "2026-11-26T06:40:06.643Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 01:25 ET",
+  "etStamp": "2026-11-26 01:40 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,13 +51,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 312,
-  "lastSuccessAt": "2026-11-26T06:25:09.060Z",
+  "headlinesRead": 1249,
+  "lastSuccessAt": "2026-11-26T06:40:06.643Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
-    "internet": 17,
-    "hacks": 28,
+    "internet": 15,
+    "hacks": 30,
     "germs": 6,
     "grid": 9,
     "markets": 4,
@@ -169,7 +169,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "ok": true,
+      "count": 999,
+      "error": null,
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "bing": {
       "ok": true,
-      "count": 281,
-      "error": null,
-      "lastOkAt": "2026-11-26T06:25:09.060Z"
+      "count": 219,
+      "error": "5 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,56 +208,55 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T06:25:09.060Z"
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:25:09.060Z"
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:25:09.060Z"
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:25:09.060Z"
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:25:09.060Z"
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:25:09.060Z"
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T05:39:57.920Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T06:25:09.060Z"
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T06:25:09.060Z"
+      "lastOkAt": "2026-11-26T06:40:06.643Z"
     }
   },
   "stories": [
@@ -401,6 +400,28 @@
       "score": 3.03
     },
     {
+      "id": "2fa8fefe8871",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Flight Centre investigates customer data breach in third-party booking system",
+      "url": "https://travelweekly.com.au/flight-centre-investigates-customer-data-breach-in-third-party-booking-system/",
+      "source": "Travel Weekly",
+      "publishedAt": "2026-11-25T15:53:00.000Z",
+      "latestAt": "2026-11-26T04:45:27.000Z",
+      "firstSeenAt": "2026-11-26T03:39:36.789Z",
+      "outlets": 6,
+      "outletNames": [
+        "TradingView",
+        "101 WIXX",
+        "Travel Weekly",
+        "@Reuters on X",
+        "StreetInsider",
+        "95.7 KELO-FM"
+      ],
+      "xUrl": "https://x.com/Reuters/status/2125796743816049143",
+      "score": 2.88
+    },
+    {
       "id": "178c0e401af9",
       "cat": "hacks",
       "kind": "news",
@@ -456,25 +477,6 @@
         "The Malaysian Reserve"
       ],
       "score": 2.58
-    },
-    {
-      "id": "530e0e2931cc",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Autonomous AI agents are giving everyday hackers ‘nation-state’ firepower, cyber expert reveals",
-      "url": "https://www.aol.com/articles/autonomous-ai-agents-giving-everyday-184329000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-25T10:43:00.000Z",
-      "latestAt": "2026-11-25T19:01:18.000Z",
-      "firstSeenAt": "2026-11-25T21:23:41.700Z",
-      "outlets": 4,
-      "outletNames": [
-        "AOL",
-        "Fox News",
-        "Yahoo",
-        "WRGA Rome's Newstalk"
-      ],
-      "score": 2.47
     },
     {
       "id": "325cd3c46cea",
@@ -572,24 +574,23 @@
       "score": 2.79
     },
     {
-      "id": "2fa8fefe8871",
+      "id": "530e0e2931cc",
       "cat": "hacks",
       "kind": "news",
-      "title": "Flight Centre investigates customer data breach in third-party booking system",
-      "url": "https://travelweekly.com.au/flight-centre-investigates-customer-data-breach-in-third-party-booking-system/",
-      "source": "Travel Weekly",
-      "publishedAt": "2026-11-25T15:53:00.000Z",
-      "latestAt": "2026-11-26T03:40:13.000Z",
-      "firstSeenAt": "2026-11-26T03:39:36.789Z",
+      "title": "Autonomous AI agents are giving everyday hackers ‘nation-state’ firepower, cyber expert reveals",
+      "url": "https://www.aol.com/articles/autonomous-ai-agents-giving-everyday-184329000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-25T10:43:00.000Z",
+      "latestAt": "2026-11-25T19:01:18.000Z",
+      "firstSeenAt": "2026-11-25T21:23:41.700Z",
       "outlets": 4,
       "outletNames": [
-        "TradingView",
-        "101 WIXX",
-        "Travel Weekly",
-        "@Reuters on X"
+        "AOL",
+        "Fox News",
+        "Yahoo",
+        "WRGA Rome's Newstalk"
       ],
-      "xUrl": "https://x.com/Reuters/status/2125796743816049143",
-      "score": 2.41
+      "score": 2.47
     },
     {
       "id": "f1b8ae6ebc00",
@@ -1649,22 +1650,6 @@
       "score": 1.07
     },
     {
-      "id": "fb0e8cb3b5b8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft declares ‘Code Red’ after major global outage, targets service recovery within one hour",
-      "url": "https://profit.pakistantoday.com.pk/2026/11/26/microsoft-declares-code-red-after-major-global-outage-targets-service-recovery-within-one-hour",
-      "source": "Profit by Pakistan Today",
-      "publishedAt": "2026-11-25T16:00:00.000Z",
-      "latestAt": "2026-11-25T16:00:00.000Z",
-      "firstSeenAt": "2026-11-26T06:25:09.060Z",
-      "outlets": 1,
-      "outletNames": [
-        "Profit by Pakistan Today"
-      ],
-      "score": 1.06
-    },
-    {
       "id": "14ec8f5c37b6",
       "cat": "internet",
       "kind": "news",
@@ -1695,6 +1680,38 @@
         "TechRadar"
       ],
       "score": 1.02
+    },
+    {
+      "id": "d3b81c51bbd2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Ransomware recovery costing SA firms up to US$1.4m per attack",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORzdMaTlyTGxVZWZwUkhGOFhtV1o2MkVSTzRvcGVJWlFpSWo4dUo1d255NFh2emZfeU1XanZUa0xmYVdXdTU5eFhpNWtjSV9WVF9HQVczekpwMVZuMi0xOEhubzgxeGJQdUJLWkJrdy1yNHluU2xFUllGcUwxTk9WMVppR2xvb051TzNhcHBlT2VzeFJwZ3NpMVhDREdzZzduNm96TGY1QlpGbzA?oc=5",
+      "source": "Africa Business Communities",
+      "publishedAt": "2026-11-26T06:34:13.000Z",
+      "latestAt": "2026-11-26T06:34:13.000Z",
+      "firstSeenAt": "2026-11-26T06:40:06.643Z",
+      "outlets": 1,
+      "outletNames": [
+        "Africa Business Communities"
+      ],
+      "score": 1
+    },
+    {
+      "id": "b56bd4f60414",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "YCC deploys NTT Docomo Business AI security service after ransomware attack",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQOWM1LWNMWFR5dEZkVS1sR19DNlFxcjMyZzRmR2E3R25NV3M4dm5YWTNBLUx6bHcyd1Q1b25xQ0NFMmNiM29nYlF6QWVMZ3VvQk4wakFHX2tFUjlhZ1NNS0pJaXR1VFE3bkRsbWNxV2FvaF9uSjdiTWIwckJwemc0TmVUY25ybl9PN2Y5TFhaYi01Y1NHS0xIVzcxSm41bWJfV0NGclBXUU1vcEFYd3QtbWRmYzVLQmI2aFE?oc=5",
+      "source": "Telecompaper",
+      "publishedAt": "2026-11-26T06:31:48.000Z",
+      "latestAt": "2026-11-26T06:31:48.000Z",
+      "firstSeenAt": "2026-11-26T06:40:06.643Z",
+      "outlets": 1,
+      "outletNames": [
+        "Telecompaper"
+      ],
+      "score": 1
     },
     {
       "id": "4d1dce12e3a4",
@@ -1741,22 +1758,6 @@
       "outlets": 1,
       "outletNames": [
         "The Sunday Guardian"
-      ],
-      "score": 1
-    },
-    {
-      "id": "dfe90c59c28e",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft issues 'Code Red' after huge global outage",
-      "url": "https://ia.acs.org.au/article/2026/microsoft-issues--code-red--after-huge-global-outage.html",
-      "source": "Information Age",
-      "publishedAt": "2026-11-25T13:10:00.000Z",
-      "latestAt": "2026-11-25T13:10:00.000Z",
-      "firstSeenAt": "2026-11-26T06:25:09.060Z",
-      "outlets": 1,
-      "outletNames": [
-        "Information Age"
       ],
       "score": 1
     },
@@ -1973,18 +1974,18 @@
       "score": 0.74
     },
     {
-      "id": "872fee2f7740",
+      "id": "9222663a737e",
       "cat": "space",
       "kind": "news",
-      "title": "Watch live: Europe unveils 1st close-up views of asteroid Dimorphos after NASA's DART impact",
-      "url": "https://www.space.com/space-exploration/asteroid-comet-missions/watch-live-europe-unveils-1st-close-up-views-of-asteroid-dimorphos-after-nasas-dart-impact",
-      "source": "Space.com",
-      "publishedAt": "2026-11-25T10:45:00.000Z",
-      "latestAt": "2026-11-25T10:45:00.000Z",
-      "firstSeenAt": "2026-11-26T05:54:58.694Z",
+      "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
+      "url": "https://tech.yahoo.com/science/articles/four-years-huge-asteroid-crash-060041617.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-25T11:41:00.000Z",
+      "latestAt": "2026-11-25T11:41:00.000Z",
+      "firstSeenAt": "2026-11-26T06:40:06.643Z",
       "outlets": 1,
       "outletNames": [
-        "Space.com"
+        "YAHOO!"
       ],
       "score": 0.68
     }
