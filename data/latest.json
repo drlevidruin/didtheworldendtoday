@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T06:40:06.643Z",
+  "buildTime": "2026-11-26T06:55:12.325Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 01:40 ET",
+  "etStamp": "2026-11-26 01:55 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,13 +51,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1249,
-  "lastSuccessAt": "2026-11-26T06:40:06.643Z",
+  "headlinesRead": 1366,
+  "lastSuccessAt": "2026-11-26T06:55:12.325Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
-    "internet": 15,
-    "hacks": 30,
+    "internet": 14,
+    "hacks": 31,
     "germs": 6,
     "grid": 9,
     "markets": 4,
@@ -183,80 +183,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 999,
+      "count": 1014,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "bing": {
       "ok": true,
-      "count": 219,
-      "error": "5 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "count": 271,
+      "error": null,
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
-      "lastOkAt": "2026-11-26T02:24:32.389Z"
+      "ok": true,
+      "count": 50,
+      "error": "timeout",
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "hn": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:40:06.643Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T06:40:06.643Z"
+      "lastOkAt": "2026-11-26T06:55:12.325Z"
     }
   },
   "stories": [
@@ -593,23 +594,6 @@
       "score": 2.47
     },
     {
-      "id": "f1b8ae6ebc00",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft issues 'Code Red' declaration following major Outlook outage",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVUxpOHUxeVpQXy1UR2NXZ05GeV9fS0p3dHg5RDE4Rk5UV1NEZDJJTGY5OFZXTVZxUjRrU1lNamJfZm5XdXhDU0hWNDNydEE4czNVNVN4akRrRVhlOWdvcG42blQxcGltdFB5NE96WERfYWkzZGM3dmI2eEs3LXlmRFlIS2pSMWNjY25MbEhlQ3FjM2pFWlE?oc=5",
-      "source": "UNILAD Tech",
-      "publishedAt": "2026-11-25T17:10:19.000Z",
-      "latestAt": "2026-11-25T17:41:33.000Z",
-      "firstSeenAt": "2026-11-26T05:09:52.811Z",
-      "outlets": 2,
-      "outletNames": [
-        "UNILAD Tech",
-        "AOL.com"
-      ],
-      "score": 2.24
-    },
-    {
       "id": "dfcf1fa0e43b",
       "cat": "hacks",
       "kind": "news",
@@ -646,24 +630,6 @@
       "score": 2.22
     },
     {
-      "id": "70f436c09f34",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack against CIA didn't disrupt classified systems, officials say",
-      "url": "https://www.yahoo.com/news/videos/cyberattack-against-cia-didnt-disrupt-144234218.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T06:42:00.000Z",
-      "latestAt": "2026-11-25T15:00:00.000Z",
-      "firstSeenAt": "2026-11-25T15:22:43.868Z",
-      "outlets": 3,
-      "outletNames": [
-        "CBS News",
-        "Yahoo",
-        "Modern Ghana"
-      ],
-      "score": 2.21
-    },
-    {
       "id": "f89caf439c55",
       "cat": "markets",
       "kind": "news",
@@ -680,6 +646,24 @@
         "TradingView"
       ],
       "score": 2.2
+    },
+    {
+      "id": "11fd89512079",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "1Password said hackers broke into its internal systems, but customer passwords are safe",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/1password-said-hackers-broke-internal-184952949.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-25T10:49:00.000Z",
+      "latestAt": "2026-11-25T22:00:00.000Z",
+      "firstSeenAt": "2026-11-25T19:53:28.391Z",
+      "outlets": 3,
+      "outletNames": [
+        "YAHOO!",
+        "TechCrunch",
+        "The Sunday Guardian Live on MSN"
+      ],
+      "score": 2.19
     },
     {
       "id": "416e7d1bcf22",
@@ -853,22 +837,20 @@
       "score": 1.56
     },
     {
-      "id": "11fd89512079",
-      "cat": "hacks",
+      "id": "a20199df1c16",
+      "cat": "internet",
       "kind": "news",
-      "title": "1Password said hackers broke into its internal systems, but customer passwords are safe",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/1password-said-hackers-broke-internal-184952949.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-25T10:49:00.000Z",
-      "latestAt": "2026-11-25T22:00:00.000Z",
-      "firstSeenAt": "2026-11-25T19:53:28.391Z",
-      "outlets": 3,
+      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
+      "source": "Simply Wall St",
+      "publishedAt": "2026-11-26T03:26:14.000Z",
+      "latestAt": "2026-11-26T03:26:14.000Z",
+      "firstSeenAt": "2026-11-26T03:39:36.789Z",
+      "outlets": 1,
       "outletNames": [
-        "YAHOO!",
-        "TechCrunch",
-        "The Sunday Guardian Live on MSN"
+        "Simply Wall St"
       ],
-      "score": 2.19
+      "score": 1.39
     },
     {
       "id": "5c91ad2aa7b8",
@@ -956,25 +938,6 @@
         "CyberSecurityNews"
       ],
       "score": 1.93
-    },
-    {
-      "id": "efa36710438b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Ground stop issued at O'Hare International Airport in Chicago due to 'equipment outage'",
-      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxQQXhXZjBURDNKT3kwSl9uT1NubzVGRmpFa1RDRXhJb2gwWHQ4anZFZ2Zac0VJaHpISmZuc1FDYS12NXhKRlZxeVI5anhxR1RONDRiM2Y2eW9Oc2VENWlFZ1dUZTh1R19uZk5wVDRrd21MRTFUUTBzUzBwc2t1NnhPNEs5TkFZWVczb1VJVFZ4QVhMUi1FNmd5TWpicHFybk14UWlkVm9NY3ZFSUFnZlNUYmpsbkRiSlZlS3M3N0NSem05b1N3NndMeW0yOWNNMjE1M3lDVkk3alpLRFhmLTAzYXBMcm5neUZtYnB2dTk1Z2RQZXJhcndza1ZqY0xaX1hEZGpDSTVIU2lHQzg4dzlySmZEbDUtV3JVTWxTM1VZTkFYcENtRHNfenIzU1pmODY3ZXpGLVc5OXIwMzlTLTd2NXVyRGtTMzVkZU1BS2dtWnlxRTNuSk1aOHd5OG5aTUhqUUpGZnl6WDVXOElvRGVlZzV0SDRHd0ctenc?oc=5",
-      "source": "KEYE",
-      "publishedAt": "2026-11-25T07:07:27.000Z",
-      "latestAt": "2026-11-25T08:38:35.000Z",
-      "firstSeenAt": "2026-11-26T04:54:50.753Z",
-      "outlets": 4,
-      "outletNames": [
-        "KEYE",
-        "WRGB",
-        "KSNV",
-        "WXLV"
-      ],
-      "score": 1.91
     },
     {
       "id": "616845fd780a",
@@ -1246,22 +1209,6 @@
       "score": 1.39
     },
     {
-      "id": "a20199df1c16",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
-      "source": "Simply Wall St",
-      "publishedAt": "2026-11-26T03:26:14.000Z",
-      "latestAt": "2026-11-26T03:26:14.000Z",
-      "firstSeenAt": "2026-11-26T03:39:36.789Z",
-      "outlets": 1,
-      "outletNames": [
-        "Simply Wall St"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "a7980bb2bb2c",
       "cat": "grid",
       "kind": "news",
@@ -1322,22 +1269,6 @@
       "outlets": 1,
       "outletNames": [
         "Latest news from Azerbaijan"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "abcb674b3c03",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Festivalgoer struck by lightning, locust plague, freak storm causes major blackout",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQakhIYm44WHlLQl92N2pwYXNIOXg5UWVDUTRzb1hpVkZpQ0wyd0pUV3Z4V05JS1ZtUmF0UEd2czFPMUFDc1B6OHJET285c0l5WERNN0RjNWpoV3N5Mk8wOTZoTUQwY01vRjlsS1ZMUHdJeko2SnYteWQ4QUNzeHp2cDIxelQ3QTN6?oc=5",
-      "source": "9Now",
-      "publishedAt": "2026-11-25T06:54:14.000Z",
-      "latestAt": "2026-11-25T06:54:14.000Z",
-      "firstSeenAt": "2026-11-25T07:16:38.099Z",
-      "outlets": 1,
-      "outletNames": [
-        "9Now"
       ],
       "score": 1.39
     },
@@ -1641,7 +1572,7 @@
       "url": "https://www.thestar.com.my/news/nation/2026/11/26/massive-blackout-disrupts-life-across-eight-districts-in-sabahs-east-coast",
       "source": "The Star",
       "publishedAt": "2026-11-25T14:41:00.000Z",
-      "latestAt": "2026-11-25T14:41:00.000Z",
+      "latestAt": "2026-11-26T04:40:00.000Z",
       "firstSeenAt": "2026-11-26T04:54:50.753Z",
       "outlets": 1,
       "outletNames": [
@@ -1666,20 +1597,36 @@
       "score": 1.05
     },
     {
-      "id": "bf7fee70bac6",
+      "id": "6038ef546d70",
       "cat": "hacks",
       "kind": "news",
-      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
-      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxORDBJbERWb1JRUTZzTVduSk5BQVVwX0xkRlVtYVdGQ0JfbzhON0FNajU4NGRyQlQ5OW9hb3RJUGdZSzcyN3paMXJFUkp4eTAwa3ZzZXFLSmxUdUlpbEFFSzNBMkc1VC1ienFxeFgxLXFxMkxDaTMtNmlDdUc3MDJaSGpTZ3BaWU1OVHoyTXVkbERGdU5iUWs4emVtSWM4ZU1JekhJSTVVNVl5UGxfZEdTcTdKcGExN1R4UXFGLWVHNEZLV2lqOWVCdjMzcnhMMVRTWm1QdU9jaWdEeDI1OGdsMTBDaVc4MHVrVzNvNW44ekczWFlWNDdOOXZ0dmQ1UTFmRWUzZHZXdmhFdw?oc=5",
-      "source": "TechRadar",
-      "publishedAt": "2026-11-25T12:25:00.000Z",
-      "latestAt": "2026-11-25T12:25:00.000Z",
-      "firstSeenAt": "2026-11-26T04:54:50.753Z",
+      "title": "No confirmed losses reported in OneDegree data breach as cyberattacks intensify: privacy chief",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZTdROTNQRzFYcU9rZXZEc2tNbHBfZzA5RTV1dC1zMFhCUFRoc1BlZW9QXzhkVXdReTkzdUNRN0xKbnpnYjM1bjJ1dHhzYmd2aGdIci03c002bVV2dDBhZklycDlUcVlUY0d2Qi1UVVlURjdmQjFaWnFiSWQ0ZEphYmZSMDRFbTkzclQxaXQ2WFUyWmNhVXVIbGVsSzRuUVlOQmU1aFJvRGlJWUtFTDdETGNzZThFMlk1OXRXamJOcmtxNEI1QVlJbEVTT2tVNHlxS21adTlISkJDclg0?oc=5",
+      "source": "The Standard (HK)",
+      "publishedAt": "2026-11-26T06:49:17.000Z",
+      "latestAt": "2026-11-26T06:49:17.000Z",
+      "firstSeenAt": "2026-11-26T06:55:12.325Z",
       "outlets": 1,
       "outletNames": [
-        "TechRadar"
+        "The Standard (HK)"
       ],
-      "score": 1.02
+      "score": 1
+    },
+    {
+      "id": "197bd8f1d3de",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Passport data exposed in travel giant data breach",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNNVJOV2xqMkV3RWNYY25IN1IyTDJmOTZBTFNWa1JEUC0ydHIwSE5KeDNLYXUwRGJmUk9NRms2ZXhnaXFGUkdwNWQybXRNUGxJZHIzbXEzS0J5c0RtV2tHZnR2OHo4OHc5ZGRaSXg1T2o2OEdFbFZqSjdFZGh0M0JpT2xNNA?oc=5",
+      "source": "Michael West Media",
+      "publishedAt": "2026-11-26T06:44:29.000Z",
+      "latestAt": "2026-11-26T06:44:29.000Z",
+      "firstSeenAt": "2026-11-26T06:55:12.325Z",
+      "outlets": 1,
+      "outletNames": [
+        "Michael West Media"
+      ],
+      "score": 1
     },
     {
       "id": "d3b81c51bbd2",
@@ -1778,6 +1725,40 @@
       "score": 1
     },
     {
+      "id": "d2fe6504a541",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Kashmir Seismic Gap Capable of Generating Magnitude 8.4 Earthquake, Study Finds",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdmlITUNZakU3WFVVck5WeUxHQURJZmdqbnlUN1pWZHZ5dnJWWWFKeTNYTHZqUmFidW54T2JXTDJLSGRSWURWNFNMVUsxM2dhNTBFb2ZQcDEtdVJYWGpHMWF3TnpNc3BtU0pCcHU4V0E5VzloZ3QxQkMtdmFJQ2J2SnlhdmE1WFVETnlRTUFmaUU2QTBVQ2REWFU3bnRGS0cxd1Q4ckt1UWZvbnNpdWg4?oc=5",
+      "source": "Kashmir Life",
+      "publishedAt": "2026-11-26T06:25:49.000Z",
+      "latestAt": "2026-11-26T06:25:49.000Z",
+      "firstSeenAt": "2026-11-26T06:55:12.325Z",
+      "outlets": 1,
+      "outletNames": [
+        "Kashmir Life"
+      ],
+      "score": 0.99,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "5e3e660407fc",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hacked! Flight Centre hit by security breach",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNN1FKNkowVU5KOGd6QmhfU2pmb1lVVDNuUHdkcU9xdEJYRmdLVFlJanhqUkRVbF9lY1JSaEdlOVBrU0hoS0hrNU80Yzk5YjVoWi1adl9VZmdyNXFDNXR3ZVRCQ0NreUw5N0hhYjIxb1d0Y1JTdldYcG5SNWFOX2V4cVVRcGxhTlNISXFQU2NvV2h3WU9zN0xJTUVtNHh6aVpRWV8yM2pMaXg5Vk0?oc=5",
+      "source": "Travel Weekly Asia",
+      "publishedAt": "2026-11-26T06:12:53.000Z",
+      "latestAt": "2026-11-26T06:12:53.000Z",
+      "firstSeenAt": "2026-11-26T06:55:12.325Z",
+      "outlets": 1,
+      "outletNames": [
+        "Travel Weekly Asia"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "2729017858cd",
       "cat": "sun",
       "kind": "news",
@@ -1860,6 +1841,22 @@
       "score": 0.99
     },
     {
+      "id": "e9d7ba494107",
+      "cat": "flights",
+      "kind": "news",
+      "title": "New FAA outage rule could slow Thanksgiving flights",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRU1uQnNRZmZGbUkxUUdUNERuYzdWNm1HQWJTVHpYbC1KM3VRN01ybnV1dko4YU9ia0xtRHhXWnBPaFpVeHBRSWM2c1FHZF90c01PYnI1QXh4YjlraGhXMXp2eFZhWk4tSEZxQ2dCZjJTd0s2YVpENVh1Q0RTbmdUX1c3QnI4Tlk?oc=5",
+      "source": "www.thetraveler.org",
+      "publishedAt": "2026-11-26T05:32:25.000Z",
+      "latestAt": "2026-11-26T05:32:25.000Z",
+      "firstSeenAt": "2026-11-26T06:55:12.325Z",
+      "outlets": 1,
+      "outletNames": [
+        "www.thetraveler.org"
+      ],
+      "score": 0.98
+    },
+    {
       "id": "4ee4e22b5039",
       "cat": "sun",
       "kind": "news",
@@ -1892,24 +1889,6 @@
       "score": 0.98
     },
     {
-      "id": "94456286ccfa",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Why scientists say a magnitude 8 Alpine Fault mega-quake is likely",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQalZkeXcyV0QwWnVLaHFBNW9fdU9uRkpWbmdLRUh2SXgzak1sNnhUc01lYTE0aVdubHlITDN5cWVkYkFtcmlVa1c3OHNjdkRoYm1oZWpMSzc1YXd6YllicTBWREpSWGZvU2V3Z0NNWUNxb3E1cVl2UU5ISkpuZ3dxWWRENnBJc01kMGJaSm5VLTNtbGJmR0JWWk5fMU9yTnlRZUJQQkVB?oc=5",
-      "source": "Stuff",
-      "publishedAt": "2026-11-25T19:00:00.000Z",
-      "latestAt": "2026-11-25T19:00:00.000Z",
-      "firstSeenAt": "2026-11-25T20:08:32.112Z",
-      "outlets": 1,
-      "outletNames": [
-        "Stuff"
-      ],
-      "score": 0.98,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
-    },
-    {
       "id": "251d291f0bd0",
       "cat": "weather",
       "kind": "news",
@@ -1940,6 +1919,22 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 0.89
+    },
+    {
+      "id": "efa721a1dcea",
+      "cat": "weather",
+      "kind": "news",
+      "title": "West Nashville homeowner still waiting to rebuild more than 300 days after ice storm",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWEZ2UkRETWp1TnVyTUpUYkE1b1JqOW5LRFp2aS1vNlhGSWdFYW5sVXEzZ3RYNTF3NlVkTEs3M2F5Q3ZSd2JZMjNabVVSZUF0ZDd6RkJpam9mVm8tUmhENXlwZDUyazJsQkIya0xpd0RPODFqYXdwQkdWbmhwUE5tOHVnY3ZxRTM2bWpISWFvRVpScDVuMzI2R1duQ2xtbGd0eWVReVN1aGpYVjF5RXotNFZBTnI?oc=5",
+      "source": "WSMV",
+      "publishedAt": "2026-11-25T23:50:00.000Z",
+      "latestAt": "2026-11-26T00:28:00.000Z",
+      "firstSeenAt": "2026-11-26T06:55:12.325Z",
+      "outlets": 1,
+      "outletNames": [
+        "WSMV"
+      ],
+      "score": 0.88
     },
     {
       "id": "7c67a4c71067",
