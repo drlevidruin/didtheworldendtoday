@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T00:39:19.183Z",
+  "buildTime": "2026-11-26T00:54:15.822Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 19:39 ET",
+  "etStamp": "2026-11-25 19:54 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,17 +49,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1348,
-  "lastSuccessAt": "2026-11-26T00:39:19.183Z",
+  "headlinesRead": 1293,
+  "lastSuccessAt": "2026-11-26T00:54:15.822Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
+    "flights": 13,
     "internet": 14,
     "hacks": 33,
-    "germs": 6,
+    "germs": 7,
     "markets": 6,
-    "animals": 1,
     "grid": 6,
+    "animals": 1,
     "ai": 4,
     "weather": 4,
     "earth": 4,
@@ -181,20 +181,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1036,
+      "count": 988,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     },
     "bing": {
       "ok": true,
-      "count": 279,
-      "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "count": 273,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,55 +206,56 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:39:19.183Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z"
+      "lastOkAt": "2026-11-26T00:54:15.822Z"
     }
   },
   "stories": [
@@ -396,6 +397,24 @@
       "score": 3.15
     },
     {
+      "id": "fb9a5b3b1cec",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Overhauls Its Outage Response Plan After Major Outlook Problems",
+      "url": "https://uk.pcmag.com/office-suites/168586/microsoft-overhauls-its-outage-response-plan-after-major-outlook-problems",
+      "source": "PCMag UK",
+      "publishedAt": "2026-11-25T04:49:00.000Z",
+      "latestAt": "2026-11-25T12:49:25.000Z",
+      "firstSeenAt": "2026-11-25T13:07:22.139Z",
+      "outlets": 3,
+      "outletNames": [
+        "PCMag Australia",
+        "PCMag UK",
+        "MSN"
+      ],
+      "score": 3.12
+    },
+    {
       "id": "f80797f2b955",
       "cat": "germs",
       "kind": "news",
@@ -451,23 +470,6 @@
       "score": 2.42
     },
     {
-      "id": "fb9a5b3b1cec",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Overhauls Its Outage Response Plan After Major Outlook Problems",
-      "url": "https://uk.pcmag.com/office-suites/168586/microsoft-overhauls-its-outage-response-plan-after-major-outlook-problems",
-      "source": "PCMag UK",
-      "publishedAt": "2026-11-25T04:49:00.000Z",
-      "latestAt": "2026-11-25T12:49:25.000Z",
-      "firstSeenAt": "2026-11-25T13:07:22.139Z",
-      "outlets": 2,
-      "outletNames": [
-        "PCMag Australia",
-        "PCMag UK"
-      ],
-      "score": 2.41
-    },
-    {
       "id": "4c1aa8652cf2",
       "cat": "germs",
       "kind": "news",
@@ -520,6 +522,35 @@
         "AOL.com"
       ],
       "score": 2.22
+    },
+    {
+      "id": "d3859dbd8511",
+      "cat": "flights",
+      "kind": "news",
+      "title": "O’Hare ground stop lifted as equipment outage triggers evening delays",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQWJqbnlwbWRJMk1YVy1CdWVBUXNsWF9pRV9ValJJTE9aakV3QjhETkJEWndHa1BTRTAxQ3hQWm1Ibm5rRVl5ZlFoZG9oRGVtM1hVQVd6Qm5lNkV6Ml9hLXZjeDdNZ3NHWldZd3ROOENRQnAyZFpsOUFKQ3F0UVhuOGNDSkg1S2NOenk5OVpPMlpSakV6al80WlhqcFZNUQ?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-25T01:05:46.000Z",
+      "latestAt": "2026-11-25T21:37:00.000Z",
+      "firstSeenAt": "2026-11-26T00:54:15.822Z",
+      "outlets": 14,
+      "outletNames": [
+        "https://www.thetraveler.org/",
+        "Newsmax",
+        "AeroTime",
+        "AOL.com",
+        "Saudi Gazette",
+        "KEYE",
+        "The City University of New York",
+        "The Lufkin Daily News",
+        "Demokratis.co.id",
+        "Aviation A2Z",
+        "The Mirror US",
+        "Avi-Go",
+        "cedarnews.net",
+        "Yahoo"
+      ],
+      "score": 2.9
     },
     {
       "id": "a9e3c4d84247",
@@ -644,6 +675,24 @@
       "score": 2.12
     },
     {
+      "id": "c9a6d38cc05d",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Map Shows States at Risk of Thanksgiving Power Outages",
+      "url": "https://www.newsweek.com/map-shows-states-at-risk-of-thanksgiving-power-outages-12768464",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-25T12:17:00.000Z",
+      "latestAt": "2026-11-25T12:49:00.000Z",
+      "firstSeenAt": "2026-11-25T23:54:07.166Z",
+      "outlets": 3,
+      "outletNames": [
+        "Newsweek",
+        "AOL",
+        "Yahoo"
+      ],
+      "score": 2.08
+    },
+    {
       "id": "b34a9b912993",
       "cat": "markets",
       "kind": "news",
@@ -694,23 +743,6 @@
         "cedarnews.net"
       ],
       "score": 1.99
-    },
-    {
-      "id": "3b15d213ea1a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Another ground stop delays travelers at O'Hare airport",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T04:16:00.000Z",
-      "latestAt": "2026-11-25T04:16:48.000Z",
-      "firstSeenAt": "2026-11-25T05:16:26.751Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "ABC7 Chicago"
-      ],
-      "score": 1.97
     },
     {
       "id": "4f0994ffe67a",
@@ -800,23 +832,6 @@
       "score": 1.67
     },
     {
-      "id": "c9a6d38cc05d",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Map Shows States at Risk of Thanksgiving Power Outages",
-      "url": "https://www.newsweek.com/map-shows-states-at-risk-of-thanksgiving-power-outages-12768464",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-25T12:17:00.000Z",
-      "latestAt": "2026-11-25T12:49:00.000Z",
-      "firstSeenAt": "2026-11-25T23:54:07.166Z",
-      "outlets": 2,
-      "outletNames": [
-        "Newsweek",
-        "AOL"
-      ],
-      "score": 1.61
-    },
-    {
       "id": "a7980bb2bb2c",
       "cat": "grid",
       "kind": "news",
@@ -899,6 +914,23 @@
       "outletNames": [
         "Bioengineer.org",
         "cedarnews.net"
+      ],
+      "score": 1.97
+    },
+    {
+      "id": "3b15d213ea1a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Another ground stop delays travelers at O'Hare airport",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T04:16:00.000Z",
+      "latestAt": "2026-11-25T04:16:48.000Z",
+      "firstSeenAt": "2026-11-25T05:16:26.751Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "ABC7 Chicago"
       ],
       "score": 1.97
     },
@@ -1142,23 +1174,6 @@
         "FOX40"
       ],
       "score": 1.66
-    },
-    {
-      "id": "baea7dc99c5f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA limits flights into OHare Airport over equipment outage",
-      "url": "https://www.kristv.com/life/travel/faa-issues-limited-ground-stop-at-chicago-ohare-international-airport-over-equipment-outage",
-      "source": "kristv.com",
-      "publishedAt": "2026-11-25T00:45:00.000Z",
-      "latestAt": "2026-11-25T00:45:00.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
-      "outlets": 2,
-      "outletNames": [
-        "kristv.com",
-        "lex18.com"
-      ],
-      "score": 1.65
     },
     {
       "id": "6aa45fe14c94",
@@ -1503,22 +1518,6 @@
       "score": 1.24
     },
     {
-      "id": "4bce403edc45",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta restores key system after tech glitch delays flights nationwide",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdU4wZFE3WTZnVmpfV0p3MkpjbFZaOEdVQnJycUNCNzRDajlaakJMMVdGa0lJT3E2MENnQkZRb09RazlmUlEwX1JRazc5Mld0NDRvbTNiNVBiY2g0Z0QzZUs0ZzFjS3JybXdoTFh0VzBKeVFjMDlqdzdCSXFGYmkwc1BRVldNejNoNzh5ODcwRlpkUmNUT3pLRU0tSERtLXM?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-25T16:35:54.000Z",
-      "latestAt": "2026-11-25T16:35:54.000Z",
-      "firstSeenAt": "2026-11-26T00:39:19.183Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "325cd3c46cea",
       "cat": "internet",
       "kind": "news",
@@ -1743,6 +1742,22 @@
       "trending": 1000,
       "trendTerm": "kalshi",
       "score": 1
+    },
+    {
+      "id": "aa41d8f28bdd",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu doesn’t threaten Thanksgiving poultry safety, Idaho state veterinarian says",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZXcwOW41VUZaM21SZHBpUDRqX3FZVzdJUV9GaFV5Q1FyZUlHdEl2OXg2TnFIT2JpQ3A4cllVZkZTZHMzdGFQNXVob0dnUVY5TTRJYlpWSHFxQ2xKS0tud3RXRG5TajBEUzZZS18tOHZzSXZuWU5FVzVKai1pckcyZ2N5ZFp5OWpZbXMtQTZjampLcTVidURkeXhna1d2dlBlRzFsdGpmVlpIYm5jSDJjam13TnZudWFhNnpzMWp3?oc=5",
+      "source": "KMVT",
+      "publishedAt": "2026-11-26T00:24:47.000Z",
+      "latestAt": "2026-11-26T00:24:47.000Z",
+      "firstSeenAt": "2026-11-26T00:54:15.822Z",
+      "outlets": 1,
+      "outletNames": [
+        "KMVT"
+      ],
+      "score": 0.99
     },
     {
       "id": "0302bae86cf6",
