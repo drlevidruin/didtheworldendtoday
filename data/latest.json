@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T05:54:58.694Z",
+  "buildTime": "2026-11-26T06:10:03.225Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 00:54 ET",
+  "etStamp": "2026-11-26 01:10 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,20 +51,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1299,
-  "lastSuccessAt": "2026-11-26T05:54:58.694Z",
+  "headlinesRead": 1219,
+  "lastSuccessAt": "2026-11-26T06:10:03.225Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
+    "flights": 16,
     "internet": 15,
-    "hacks": 30,
+    "hacks": 29,
     "germs": 6,
     "grid": 9,
     "markets": 4,
     "animals": 1,
+    "sun": 4,
     "ai": 4,
     "weather": 4,
-    "sun": 4,
     "earth": 4,
     "space": 4
   },
@@ -78,9 +78,9 @@
       "tsunami": false
     },
     "kp": {
-      "value": 0.33,
-      "time": "2026-11-26T00:00:00.000Z",
-      "max24": 2.33
+      "value": 2,
+      "time": "2026-11-26T03:00:00.000Z",
+      "max24": 2
     },
     "asteroid": {
       "des": "2026 VQ19",
@@ -188,57 +188,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 988,
+      "count": 945,
       "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "bing": {
       "ok": true,
-      "count": 280,
-      "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "count": 243,
+      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-26T02:24:32.389Z"
     },
     "hn": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T05:54:58.694Z"
+      "lastOkAt": "2026-11-26T06:10:03.225Z"
     }
   },
   "stories": [
@@ -401,6 +401,26 @@
       "score": 3.03
     },
     {
+      "id": "178c0e401af9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "myColorado app cyberattack involves 100,000 people’s data, including passports and car registrations, state says",
+      "url": "https://www.yahoo.com/news/us/articles/mycolorado-app-cyberattack-involves-100-212319052.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T13:22:00.000Z",
+      "latestAt": "2026-11-26T05:13:00.000Z",
+      "firstSeenAt": "2026-11-25T22:38:49.894Z",
+      "outlets": 5,
+      "outletNames": [
+        "Yahoo",
+        "KDVR",
+        "AOL.com",
+        "KDVR-TV Denver on MSN",
+        "FOX21 News Colorado"
+      ],
+      "score": 2.81
+    },
+    {
       "id": "f80797f2b955",
       "cat": "germs",
       "kind": "news",
@@ -436,25 +456,6 @@
         "The Malaysian Reserve"
       ],
       "score": 2.58
-    },
-    {
-      "id": "178c0e401af9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "myColorado app cyberattack involves 100,000 people’s data, including passports and car registrations, state says",
-      "url": "https://www.yahoo.com/news/us/articles/mycolorado-app-cyberattack-involves-100-212319052.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T13:22:00.000Z",
-      "latestAt": "2026-11-26T05:13:00.000Z",
-      "firstSeenAt": "2026-11-25T22:38:49.894Z",
-      "outlets": 4,
-      "outletNames": [
-        "Yahoo",
-        "KDVR",
-        "AOL.com",
-        "KDVR-TV Denver on MSN"
-      ],
-      "score": 2.54
     },
     {
       "id": "530e0e2931cc",
@@ -552,55 +553,6 @@
         "Yahoo Finance"
       ],
       "score": 4.3
-    },
-    {
-      "id": "c50e780c4195",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA issues ground stop in Miami after FedEx cargo jet overshoots runway",
-      "url": "https://www.yahoo.com/news/videos/faa-issues-ground-stop-miami-215133838.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T06:00:00.000Z",
-      "latestAt": "2026-11-26T05:20:00.000Z",
-      "firstSeenAt": "2026-11-26T04:39:47.244Z",
-      "outlets": 32,
-      "outletNames": [
-        "Saudi Gazette",
-        "KEYE",
-        "WXLV",
-        "The City University of New York",
-        "The Lufkin Daily News",
-        "Demokratis.co.id",
-        "Aviation A2Z",
-        "Yahoo",
-        "Independent Journal Review",
-        "The Mirror US",
-        "New York Post",
-        "The News-Times on MSN",
-        "https://travelhost.com/",
-        "BNO News",
-        "CBS News",
-        "Hindustan Times",
-        "WPTZ",
-        "VINnews",
-        "AOL.com",
-        "Washington Examiner",
-        "WBAL News Radio",
-        "WCNC",
-        "LiveNOW from FOX",
-        "SSBCrack",
-        "kagstv.com",
-        "iHeart",
-        "WPEC",
-        "cedarnews.net",
-        "Daily Mail",
-        "Open Jaw",
-        "ABC News - Breaking News, Latest News and Videos",
-        "Modern Ghana"
-      ],
-      "trending": 10000,
-      "trendTerm": "fedex plane crash miami airport",
-      "score": 3.73
     },
     {
       "id": "a9e3c4d84247",
@@ -764,6 +716,23 @@
       "score": 2.08
     },
     {
+      "id": "270c6ce8165b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
+      "source": "KSNV",
+      "publishedAt": "2026-11-26T02:15:20.000Z",
+      "latestAt": "2026-11-26T02:18:19.000Z",
+      "firstSeenAt": "2026-11-26T02:24:32.389Z",
+      "outlets": 2,
+      "outletNames": [
+        "KSNV",
+        "cedarnews.net"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "7868d855bc82",
       "cat": "animals",
       "kind": "news",
@@ -866,20 +835,21 @@
       "score": 1.67
     },
     {
-      "id": "a20199df1c16",
-      "cat": "internet",
+      "id": "6715de6aefe5",
+      "cat": "sun",
       "kind": "news",
-      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
-      "source": "Simply Wall St",
-      "publishedAt": "2026-11-26T03:26:14.000Z",
-      "latestAt": "2026-11-26T03:26:14.000Z",
-      "firstSeenAt": "2026-11-26T03:39:36.789Z",
-      "outlets": 1,
+      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
+      "url": "https://en.clickpetroleoegas.com.br/brazilian-scientists-uncover-how-a-powerful-solar-storm-distorted-plasma-bubbles-and-reversed-their-movement-over-south-america-a-nmb91/",
+      "source": "en.clickpetroleoegas",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T04:57:00.000Z",
+      "firstSeenAt": "2026-11-26T05:09:52.811Z",
+      "outlets": 2,
       "outletNames": [
-        "Simply Wall St"
+        "CPG Click Oil and Gas",
+        "en.clickpetroleoegas"
       ],
-      "score": 1.39
+      "score": 1.56
     },
     {
       "id": "11fd89512079",
@@ -889,7 +859,7 @@
       "url": "https://tech.yahoo.com/cybersecurity/articles/1password-said-hackers-broke-internal-184952949.html",
       "source": "YAHOO!",
       "publishedAt": "2026-11-25T10:49:00.000Z",
-      "latestAt": "2026-11-25T18:49:52.000Z",
+      "latestAt": "2026-11-25T22:00:00.000Z",
       "firstSeenAt": "2026-11-25T19:53:28.391Z",
       "outlets": 3,
       "outletNames": [
@@ -898,23 +868,6 @@
         "The Sunday Guardian Live on MSN"
       ],
       "score": 2.19
-    },
-    {
-      "id": "270c6ce8165b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
-      "source": "KSNV",
-      "publishedAt": "2026-11-26T02:15:20.000Z",
-      "latestAt": "2026-11-26T02:18:19.000Z",
-      "firstSeenAt": "2026-11-26T02:24:32.389Z",
-      "outlets": 2,
-      "outletNames": [
-        "KSNV",
-        "cedarnews.net"
-      ],
-      "score": 1.99
     },
     {
       "id": "5c91ad2aa7b8",
@@ -1004,21 +957,41 @@
       "score": 1.93
     },
     {
-      "id": "76b2688dd598",
-      "cat": "hacks",
+      "id": "efa36710438b",
+      "cat": "flights",
       "kind": "news",
-      "title": "U.S. Treasury’s FinCEN Hit by Cyberattack Hours After CIA, ODNI Breach",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPY1ZzQmQwd0hTWXFEUnZpLTYzWnhheGxmV0dCNHRtYjh2bXVDcHA0WjJzSGd1X0lneEJFdHlBSnY0YmNGNEpsVTRiaFV3RTZrNVJrcW5UTXZEQmRvYUVvQnRQeV9DYkxrQk5qVEdaUVBpUS01U1hva1owbXItMTVVVmZQNA?oc=5",
-      "source": "Cryptopolitan",
-      "publishedAt": "2026-11-25T06:01:28.000Z",
-      "latestAt": "2026-11-25T13:04:18.000Z",
-      "firstSeenAt": "2026-11-25T08:32:04.605Z",
-      "outlets": 2,
+      "title": "Ground stop issued at O'Hare International Airport in Chicago due to 'equipment outage'",
+      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxQQXhXZjBURDNKT3kwSl9uT1NubzVGRmpFa1RDRXhJb2gwWHQ4anZFZ2Zac0VJaHpISmZuc1FDYS12NXhKRlZxeVI5anhxR1RONDRiM2Y2eW9Oc2VENWlFZ1dUZTh1R19uZk5wVDRrd21MRTFUUTBzUzBwc2t1NnhPNEs5TkFZWVczb1VJVFZ4QVhMUi1FNmd5TWpicHFybk14UWlkVm9NY3ZFSUFnZlNUYmpsbkRiSlZlS3M3N0NSem05b1N3NndMeW0yOWNNMjE1M3lDVkk3alpLRFhmLTAzYXBMcm5neUZtYnB2dTk1Z2RQZXJhcndza1ZqY0xaX1hEZGpDSTVIU2lHQzg4dzlySmZEbDUtV3JVTWxTM1VZTkFYcENtRHNfenIzU1pmODY3ZXpGLVc5OXIwMzlTLTd2NXVyRGtTMzVkZU1BS2dtWnlxRTNuSk1aOHd5OG5aTUhqUUpGZnl6WDVXOElvRGVlZzV0SDRHd0ctenc?oc=5",
+      "source": "KEYE",
+      "publishedAt": "2026-11-25T07:07:27.000Z",
+      "latestAt": "2026-11-25T08:38:35.000Z",
+      "firstSeenAt": "2026-11-26T04:54:50.753Z",
+      "outlets": 4,
       "outletNames": [
-        "Cryptopolitan",
-        "Cybernews"
+        "KEYE",
+        "WRGB",
+        "KSNV",
+        "WXLV"
       ],
-      "score": 1.92
+      "score": 1.91
+    },
+    {
+      "id": "616845fd780a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA Explains Second O'Hare Ground Stop in Two Days",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5xUE4tQk9XTHprT1pNZU9NbzRkNTVvVXJBa3dUWmFEeGN5dFVTSHUxczFsam1zcHFobl9yNHJabmQydllYaGRpZ3hZVGF3N3BOcHZQakVVVDJxdGE5YzQ2WG0zTGZ1WUE0OTAxOURDZw?oc=5",
+      "source": "Demokratis.co.id",
+      "publishedAt": "2026-11-25T11:05:37.000Z",
+      "latestAt": "2026-11-25T21:37:00.000Z",
+      "firstSeenAt": "2026-11-26T06:10:03.225Z",
+      "outlets": 3,
+      "outletNames": [
+        "Demokratis.co.id",
+        "Aviation A2Z",
+        "https://travelhost.com/"
+      ],
+      "score": 1.76
     },
     {
       "id": "857736e74970",
@@ -1138,24 +1111,6 @@
         "FOX40"
       ],
       "score": 1.66
-    },
-    {
-      "id": "efa36710438b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Ground stop issued at O'Hare International Airport in Chicago due to 'equipment outage'",
-      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxQQXhXZjBURDNKT3kwSl9uT1NubzVGRmpFa1RDRXhJb2gwWHQ4anZFZ2Zac0VJaHpISmZuc1FDYS12NXhKRlZxeVI5anhxR1RONDRiM2Y2eW9Oc2VENWlFZ1dUZTh1R19uZk5wVDRrd21MRTFUUTBzUzBwc2t1NnhPNEs5TkFZWVczb1VJVFZ4QVhMUi1FNmd5TWpicHFybk14UWlkVm9NY3ZFSUFnZlNUYmpsbkRiSlZlS3M3N0NSem05b1N3NndMeW0yOWNNMjE1M3lDVkk3alpLRFhmLTAzYXBMcm5neUZtYnB2dTk1Z2RQZXJhcndza1ZqY0xaX1hEZGpDSTVIU2lHQzg4dzlySmZEbDUtV3JVTWxTM1VZTkFYcENtRHNfenIzU1pmODY3ZXpGLVc5OXIwMzlTLTd2NXVyRGtTMzVkZU1BS2dtWnlxRTNuSk1aOHd5OG5aTUhqUUpGZnl6WDVXOElvRGVlZzV0SDRHd0ctenc?oc=5",
-      "source": "KEYE",
-      "publishedAt": "2026-11-25T07:07:27.000Z",
-      "latestAt": "2026-11-25T08:36:14.000Z",
-      "firstSeenAt": "2026-11-26T04:54:50.753Z",
-      "outlets": 3,
-      "outletNames": [
-        "KEYE",
-        "WRGB",
-        "KSNV"
-      ],
-      "score": 1.65
     },
     {
       "id": "6943a0cf6021",
@@ -1303,6 +1258,22 @@
       "outlets": 1,
       "outletNames": [
         "Daily Star"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "a20199df1c16",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
+      "source": "Simply Wall St",
+      "publishedAt": "2026-11-26T03:26:14.000Z",
+      "latestAt": "2026-11-26T03:26:14.000Z",
+      "firstSeenAt": "2026-11-26T03:39:36.789Z",
+      "outlets": 1,
+      "outletNames": [
+        "Simply Wall St"
       ],
       "score": 1.39
     },
@@ -1743,22 +1714,6 @@
       "score": 1
     },
     {
-      "id": "6715de6aefe5",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOOWlrdnlTUGtZOWtuakM2Y1ByOGRCdU5CNkI1ZUhCWGdnaV9KSWpBM1lFUlRzaGh5R2pSV0JIQzRSOHZpRjRMa2hxSV9BNVV4T3pkRW1keEI2X1V2Q0pfdldVY1BZR0lGYXNNZXYzNm5LMFc2akhIVkxNdEh5NXQ4ZTBLbms5dDNwOE5YWExWREhDYWNvVU5zOENJUFczSk03bzk1RlRjSEltTnBwU0k0aldFTUZNZGszZ1B3TEZaUVZLNGVpdV9WRmc4Ul9DSXhtcFhJSXFWaV9vUFA5V3JKajBrQ0pxekhXWEVXeHJGNHhqWjdHT1Vhc2tFYlNWOFN0Ync?oc=5",
-      "source": "CPG Click Oil and Gas",
-      "publishedAt": "2026-11-26T04:57:00.000Z",
-      "latestAt": "2026-11-26T04:57:00.000Z",
-      "firstSeenAt": "2026-11-26T05:09:52.811Z",
-      "outlets": 1,
-      "outletNames": [
-        "CPG Click Oil and Gas"
-      ],
-      "score": 1
-    },
-    {
       "id": "3f8fdb3f1a21",
       "cat": "earth",
       "kind": "news",
@@ -1807,20 +1762,20 @@
       "score": 1
     },
     {
-      "id": "9804d63defa9",
-      "cat": "sun",
+      "id": "e9d7ba494107",
+      "cat": "flights",
       "kind": "news",
-      "title": "Aurora alert: Solar wind may trigger northern lights in Maine and other U.S. states on Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNU3Y2bGM3b1o0NkxaQlZPWEF1X3RuLUEwYkpqMFQzYkU0YTRHdHJoZ1Z4SmJQV1NSOS1DVnBBTmhGbF9NNkVrVkYyRVhacWFQYVZNRmZmclNlQ2UybVRXRU9RU2d2cnB3bm1HX3pzWE1vd1FrUUZLTWVlS2hJM2tNdi10ajU2N2ZkaXlPdmlBRG53OFFBbGZickZHMUg5aHZHNW5nMzF5Sjd4V3VUYUxaajFVWlBncTBkVmtF?oc=5",
-      "source": "Starlust.org",
-      "publishedAt": "2026-11-25T06:08:26.000Z",
-      "latestAt": "2026-11-25T13:10:26.000Z",
-      "firstSeenAt": "2026-11-25T06:16:29.636Z",
+      "title": "New FAA outage rule could slow Thanksgiving flights",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRU1uQnNRZmZGbUkxUUdUNERuYzdWNm1HQWJTVHpYbC1KM3VRN01ybnV1dko4YU9ia0xtRHhXWnBPaFpVeHBRSWM2c1FHZF90c01PYnI1QXh4YjlraGhXMXp2eFZhWk4tSEZxQ2dCZjJTd0s2YVpENVh1Q0RTbmdUX1c3QnI4Tlk?oc=5",
+      "source": "www.thetraveler.org",
+      "publishedAt": "2026-11-26T05:32:25.000Z",
+      "latestAt": "2026-11-26T05:32:25.000Z",
+      "firstSeenAt": "2026-11-26T06:10:03.225Z",
       "outlets": 1,
       "outletNames": [
-        "Starlust.org"
+        "www.thetraveler.org"
       ],
-      "score": 1
+      "score": 0.99
     },
     {
       "id": "2729017858cd",
@@ -1903,6 +1858,22 @@
         "SpaceWeatherLive.com"
       ],
       "score": 0.99
+    },
+    {
+      "id": "4ee4e22b5039",
+      "cat": "sun",
+      "kind": "news",
+      "title": "☀️ Solar Activity: Kp Index, Solar Wind, Flares and Aurora Forecast",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tXzFhTUtNbHNxTU9TY3RzNlVLVFVpYklvRnZnS3BEcE5NSWlwNm1BUWJJbi1iTnluTkJiWVBaT1dGOTdLTTFIdXBldHlMZ3FfT0ptQ1FPUWZ4M05tSGJONEdLVTdEbU8w?oc=5",
+      "source": "notre-planete.info",
+      "publishedAt": "2026-11-26T00:45:40.000Z",
+      "latestAt": "2026-11-26T00:45:40.000Z",
+      "firstSeenAt": "2026-11-26T02:09:27.895Z",
+      "outlets": 1,
+      "outletNames": [
+        "notre-planete.info"
+      ],
+      "score": 0.98
     },
     {
       "id": "60bfdfea0829",
