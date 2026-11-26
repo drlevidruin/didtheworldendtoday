@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T21:57:40.268Z",
+  "buildTime": "2026-11-26T21:58:56.780Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 16:57 ET",
+  "etStamp": "2026-11-26 16:58 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,17 +45,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1341,
-  "lastSuccessAt": "2026-11-26T21:57:40.268Z",
+  "headlinesRead": 1278,
+  "lastSuccessAt": "2026-11-26T21:58:56.780Z",
   "rollingFallback": false,
   "cats": {
     "flights": 14,
-    "grid": 24,
+    "grid": 23,
+    "germs": 4,
     "internet": 10,
-    "hacks": 28,
+    "hacks": 29,
     "markets": 4,
     "weather": 4,
-    "germs": 4,
     "earth": 4,
     "sun": 4,
     "space": 4
@@ -177,24 +177,24 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 981,
+      "count": 973,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 272,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 50,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T21:57:40.268Z"
     },
@@ -202,55 +202,56 @@
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:57:40.268Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-26T21:58:56.780Z"
     }
   },
   "stories": [
@@ -331,18 +332,39 @@
       "url": "https://www.wusa9.com/article/weather/thousands-without-power-maryland-and-virginia-thanksgiving-day/65-04657edb-76c0-4ac3-8efa-b4482b43c6c4",
       "source": "WUSA9",
       "publishedAt": "2026-11-26T04:17:00.000Z",
-      "latestAt": "2026-11-26T15:22:03.000Z",
+      "latestAt": "2026-11-26T21:25:12.000Z",
       "firstSeenAt": "2026-11-26T12:26:10.024Z",
-      "outlets": 6,
+      "outlets": 9,
       "outletNames": [
         "WUSA9",
         "WRAL",
         "Albemarle Observer",
         "KSDK",
         "Yahoo",
-        "Energy News Beat"
+        "Energy News Beat",
+        "SSBCrack",
+        "ABC27",
+        "WANE 15"
       ],
-      "score": 3.1
+      "score": 3.6
+    },
+    {
+      "id": "2da563b7e862",
+      "cat": "germs",
+      "kind": "news",
+      "title": "FDA: Pain Reliever Recalled Nationwide for Possible ‘Aluminum Particulate Contamination’",
+      "url": "https://www.yahoo.com/news/us/articles/fda-pain-reliever-recalled-nationwide-120231749.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T04:03:00.000Z",
+      "latestAt": "2026-11-26T13:17:00.000Z",
+      "firstSeenAt": "2026-11-26T12:26:10.024Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "The Healthy @Reader's Digest",
+        "The Healthy"
+      ],
+      "score": 3.11
     },
     {
       "id": "9d364f5dc0cd",
@@ -493,23 +515,6 @@
       "score": 2.48
     },
     {
-      "id": "ba4586e1359a",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Virginia homeowner runs house on generator after ice storm but has to stagger major appliances",
-      "url": "https://www.yahoo.com/lifestyle/articles/virginia-homeowner-runs-house-generator-171800866.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T09:18:00.000Z",
-      "latestAt": "2026-11-26T17:18:00.000Z",
-      "firstSeenAt": "2026-11-26T17:27:00.235Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Cool Down",
-        "Yahoo"
-      ],
-      "score": 2.42
-    },
-    {
       "id": "4b9d74481d40",
       "cat": "flights",
       "kind": "news",
@@ -545,6 +550,23 @@
       "score": 2.46
     },
     {
+      "id": "ba4586e1359a",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Virginia homeowner runs house on generator after ice storm but has to stagger major appliances",
+      "url": "https://www.yahoo.com/lifestyle/articles/virginia-homeowner-runs-house-generator-171800866.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T09:18:00.000Z",
+      "latestAt": "2026-11-26T17:18:00.000Z",
+      "firstSeenAt": "2026-11-26T17:27:00.235Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Cool Down",
+        "Yahoo"
+      ],
+      "score": 2.42
+    },
+    {
       "id": "040839c82e3c",
       "cat": "internet",
       "kind": "news",
@@ -575,23 +597,6 @@
       "outletNames": [
         "The Daily Beast on MSN",
         "Yahoo Sports"
-      ],
-      "score": 2.41
-    },
-    {
-      "id": "2da563b7e862",
-      "cat": "germs",
-      "kind": "news",
-      "title": "FDA: Pain Reliever Recalled Nationwide for Possible ‘Aluminum Particulate Contamination’",
-      "url": "https://www.yahoo.com/news/us/articles/fda-pain-reliever-recalled-nationwide-120231749.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T04:03:00.000Z",
-      "latestAt": "2026-11-26T13:17:00.000Z",
-      "firstSeenAt": "2026-11-26T12:26:10.024Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "The Healthy @Reader's Digest"
       ],
       "score": 2.41
     },
@@ -1132,6 +1137,23 @@
       "score": 1.73
     },
     {
+      "id": "ce9773b794dc",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Standard Chartered's crypto unit suffers data breach just weeks after bank agreed to take full ownership",
+      "url": "https://www.msn.com/en-us/money/other/standard-chartered-s-crypto-unit-suffers-data-breach-just-weeks-after-bank-agreed-to-take-full-ownership/ar-AA2ijGuM",
+      "source": "International Business Times on MSN",
+      "publishedAt": "2026-11-26T13:30:39.000Z",
+      "latestAt": "2026-11-26T21:30:39.000Z",
+      "firstSeenAt": "2026-11-26T21:58:56.780Z",
+      "outlets": 2,
+      "outletNames": [
+        "International Business Times on MSN",
+        "Yahoo Finance"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "5a5580e5c64e",
       "cat": "hacks",
       "kind": "news",
@@ -1234,6 +1256,23 @@
         "Bluewin"
       ],
       "score": 1.69
+    },
+    {
+      "id": "a256c89f3461",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "StanChart’s Crypto Custody Unit Suffers Data Breach",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPelp2M0xxeVgzWWkweXg0OWRHcllEdGluMFZmYjRpVnlvNERpVWNPNGJpc1liMEhOZFBKTldNOGI3b3A5aUdnWHktSTV3cTZiWThKZGJ0c1Z5Sk56amFQZmhEUEc3U041ODI2V2NCT3VmY2ppdFVjUWx2d0RRZHdtOUpIcEpTUzNfZWRLTmdwNUVINDFaUktROW9pRW9DbnVjS3dmUQ?oc=5",
+      "source": "Bloomberg",
+      "publishedAt": "2026-11-26T12:24:38.000Z",
+      "latestAt": "2026-11-26T13:12:00.000Z",
+      "firstSeenAt": "2026-11-26T21:58:56.780Z",
+      "outlets": 2,
+      "outletNames": [
+        "Bloomberg",
+        "The Straits Times"
+      ],
+      "score": 1.68
     },
     {
       "id": "3836b3231876",
@@ -1741,22 +1780,6 @@
       "score": 1.19
     },
     {
-      "id": "12b2949d0898",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Tens of Thousands Without Power Across North Carolina on Thanksgiving Morning",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRzc1UE54dFNZMlBLc3dIVjZ0NTluVTlIVFMzZWRvM3RmRjFONV9XOFdhV0FqMDc5S05sWVVDQ3BmVkZmMEowRUZUcmZkLWU5VnJuel8tN0F5akZHN3l3S19pVTdoNEpWY3g2MWZEbktoTGVXNE44b3RSdmZwZjk1RnNfN0ZrbDJRUEdXSklpN2RSZG9wWk1ZTVk3aHVadGRuTWVGLWZGQQ?oc=5",
-      "source": "SSBCrack",
-      "publishedAt": "2026-11-26T21:25:12.000Z",
-      "latestAt": "2026-11-26T21:25:12.000Z",
-      "firstSeenAt": "2026-11-26T21:42:38.401Z",
-      "outlets": 1,
-      "outletNames": [
-        "SSBCrack"
-      ],
-      "score": 1
-    },
-    {
       "id": "7fa71f9cd57e",
       "cat": "grid",
       "kind": "news",
@@ -1801,22 +1824,6 @@
       "outlets": 1,
       "outletNames": [
         "KIRO 7 News Seattle"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "86f152ec6fbd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Port of Santos Restores Truck Scheduling System Following Cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOaFh5WDR6bkJNcC1qOUpzNFJpUUZqRmNlT1RUOEJwQVV1ZWM0N3gyc2ZIVDd6S1NsLUw4ZkRMSjNnM252RzRsSzhBM2J5dDBteWxobmVUQnM3NmROVHRKYWFwdWZTLXVPVWdfMjhuNnEtWVlEMk82WER4WU9DTWU4R3FIZVRtbUVWNWQ4R0FpTl9DbFpkWU0yWW9ZR09wcVhsSG5MdWZB?oc=5",
-      "source": "DatamarNews",
-      "publishedAt": "2026-11-26T21:06:37.000Z",
-      "latestAt": "2026-11-26T21:06:37.000Z",
-      "firstSeenAt": "2026-11-26T21:42:38.401Z",
-      "outlets": 1,
-      "outletNames": [
-        "DatamarNews"
       ],
       "score": 0.99
     },
