@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T20:42:27.817Z",
+  "buildTime": "2026-11-26T20:57:33.130Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 15:42 ET",
+  "etStamp": "2026-11-26 15:57 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,14 +45,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1326,
-  "lastSuccessAt": "2026-11-26T20:42:27.817Z",
+  "headlinesRead": 1259,
+  "lastSuccessAt": "2026-11-26T20:57:33.130Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 30,
+    "hacks": 32,
     "flights": 13,
-    "grid": 22,
-    "internet": 10,
+    "grid": 21,
+    "internet": 9,
     "markets": 4,
     "weather": 5,
     "germs": 4,
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1021,
+      "count": 977,
       "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "bing": {
       "ok": true,
-      "count": 272,
-      "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "count": 248,
+      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,56 +208,55 @@
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T19:57:20.831Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T20:42:27.817Z"
+      "lastOkAt": "2026-11-26T20:57:33.130Z"
     }
   },
   "stories": [
@@ -505,24 +504,6 @@
       "score": 2.62
     },
     {
-      "id": "fb0e8cb3b5b8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft declares ‘Code Red’ after major global outage, targets service recovery within one hour",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOR2Z4aFRvd0dvRFdOcHJHWmlFdjFqcUJUcXZxdWI1SXIxOXQ3djNwNVB2R2FJbUtNQ0xObkVmNEFORk1EdklwWEczd3RMZGxmR2kwaUZxVGZlVFJHQWZ1bnMxNllMa3B5aThTV0w2VjVfOVpqZmZQNUZVaGZxWkctS0l6THhUZmo1bjNjajE1Y09hX0x0d0FZclRqMjM3R3c4cUpXb3RoU2dNRl9ROVpVcTU0b3pSWGZnQ0c1LVRJakpSNkJSLVBoZmJ6UEZWRm9tVTRlZmwtWmM?oc=5",
-      "source": "Profit by Pakistan Today",
-      "publishedAt": "2026-11-26T02:55:29.000Z",
-      "latestAt": "2026-11-26T11:47:41.000Z",
-      "firstSeenAt": "2026-11-26T20:27:27.544Z",
-      "outlets": 3,
-      "outletNames": [
-        "Profit by Pakistan Today",
-        "Aktualita.co",
-        "News18"
-      ],
-      "score": 2.56
-    },
-    {
       "id": "28bd6f1f8fdc",
       "cat": "markets",
       "kind": "news",
@@ -556,6 +537,23 @@
         "Yahoo"
       ],
       "score": 2.42
+    },
+    {
+      "id": "040839c82e3c",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft hits ‘Code Red’ after global outage shakes its cloud empire",
+      "url": "https://tech.yahoo.com/ai/copilot/articles/microsoft-hits-code-red-global-151000714.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-26T07:11:00.000Z",
+      "latestAt": "2026-11-26T15:10:00.000Z",
+      "firstSeenAt": "2026-11-26T15:26:40.311Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "Yahoo Tech"
+      ],
+      "score": 2.41
     },
     {
       "id": "4b9d74481d40",
@@ -648,23 +646,6 @@
         "Beinsure"
       ],
       "score": 2.46
-    },
-    {
-      "id": "040839c82e3c",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft hits ‘Code Red’ after global outage shakes its cloud empire",
-      "url": "https://tech.yahoo.com/ai/copilot/articles/microsoft-hits-code-red-global-151000714.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-26T07:11:00.000Z",
-      "latestAt": "2026-11-26T15:10:00.000Z",
-      "firstSeenAt": "2026-11-26T15:26:40.311Z",
-      "outlets": 2,
-      "outletNames": [
-        "YAHOO!",
-        "Yahoo Tech"
-      ],
-      "score": 2.41
     },
     {
       "id": "2da563b7e862",
@@ -847,7 +828,7 @@
       "url": "https://www.msn.com/en-us/news/other/timberlake-rd-reopens-after-fallen-tree-hits-power-line-causing-widespread-outage/ar-AA2ihUKX",
       "source": "WSET on MSN",
       "publishedAt": "2026-11-26T07:22:51.000Z",
-      "latestAt": "2026-11-26T17:45:32.000Z",
+      "latestAt": "2026-11-26T20:48:12.000Z",
       "firstSeenAt": "2026-11-26T15:41:54.071Z",
       "outlets": 2,
       "outletNames": [
@@ -872,6 +853,23 @@
         "TradingView"
       ],
       "score": 1.71
+    },
+    {
+      "id": "6fc50157d9ee",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Preliminary 5.7-magnitude earthquake strikes off Baja California Peninsula",
+      "url": "https://www.yahoo.com/news/science/articles/preliminary-5-7-magnitude-earthquake-181532226.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T05:07:00.000Z",
+      "latestAt": "2026-11-26T18:15:32.000Z",
+      "firstSeenAt": "2026-11-26T19:27:15.794Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "New York Post"
+      ],
+      "score": 1.52
     },
     {
       "id": "dcc1deef7fbd",
@@ -1186,6 +1184,23 @@
       "score": 1.77
     },
     {
+      "id": "f15707865a72",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Ransomware Attacks in Africa Could Cost Businesses Over $368,000 Per Incident",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZDY2eS1IdVNaVFI4OFNXZFZnR2xnOXBSQWtacFpoMzVreUpWNzUwWVdEbTl3VzY0NVBXQWZKcjQxMWNSQWdHaGptdTBKc1d4RnpuZTR2ZFZ2clU5ZmppRDktUjVJVWViaG03RndGbDRibDBNbHRCaGVSemVxQjBIZDdlRG9fZmNJT1E?oc=5",
+      "source": "FF News",
+      "publishedAt": "2026-11-26T13:28:06.000Z",
+      "latestAt": "2026-11-26T20:38:00.000Z",
+      "firstSeenAt": "2026-11-26T20:57:33.130Z",
+      "outlets": 2,
+      "outletNames": [
+        "FF News",
+        "DNE Africa"
+      ],
+      "score": 1.75
+    },
+    {
       "id": "5f266584a470",
       "cat": "hacks",
       "kind": "news",
@@ -1237,6 +1252,23 @@
       "trending": 20000,
       "trendTerm": "tornado warning",
       "score": 1.71
+    },
+    {
+      "id": "e7f4ea1619d9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-26T11:52:32.000Z",
+      "latestAt": "2026-11-26T14:47:38.000Z",
+      "firstSeenAt": "2026-11-26T20:57:33.130Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "TRT Afrika"
+      ],
+      "score": 1.7
     },
     {
       "id": "d2aebafb6ef4",
@@ -1339,23 +1371,6 @@
         "FOX Carolina News"
       ],
       "score": 1.63
-    },
-    {
-      "id": "6fc50157d9ee",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Preliminary 5.7-magnitude earthquake strikes off Baja California Peninsula",
-      "url": "https://www.yahoo.com/news/science/articles/preliminary-5-7-magnitude-earthquake-181532226.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T05:07:00.000Z",
-      "latestAt": "2026-11-26T18:15:32.000Z",
-      "firstSeenAt": "2026-11-26T19:27:15.794Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "New York Post"
-      ],
-      "score": 1.52
     },
     {
       "id": "dfb3820ef297",
@@ -1842,22 +1857,6 @@
         "The Star"
       ],
       "score": 1.06
-    },
-    {
-      "id": "c8190fb9b846",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Tens of thousands without power in Lancaster County: PPL",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNVdLWkJjX2NaZ2VGMmpGZjlrdUx0QjQtQU9vanVQeTdLckEtblQzZVkxM2x4UFdzLUpidXhObDNRSXBIb2d6T3hfSWVWX05pVDc0NVNXQ0NCa0pDMkJtY0VJV3paMG44UWxsR1lCbC1qLVpNcUFNR2szaTFwRHp4OUhvT01rU3FlS0J2TXB3SEFHV1FM?oc=5",
-      "source": "WHP Harrisburg",
-      "publishedAt": "2026-11-26T20:15:00.000Z",
-      "latestAt": "2026-11-26T20:15:00.000Z",
-      "firstSeenAt": "2026-11-26T20:27:27.544Z",
-      "outlets": 1,
-      "outletNames": [
-        "WHP Harrisburg"
-      ],
-      "score": 1
     },
     {
       "id": "802ce460ea38",
