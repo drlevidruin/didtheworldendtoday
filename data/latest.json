@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T11:55:58.934Z",
+  "buildTime": "2026-11-26T12:11:06.237Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 06:55 ET",
+  "etStamp": "2026-11-26 07:11 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,21 +51,21 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1330,
-  "lastSuccessAt": "2026-11-26T11:55:58.934Z",
+  "headlinesRead": 669,
+  "lastSuccessAt": "2026-11-26T12:11:06.237Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
-    "internet": 16,
-    "germs": 5,
-    "hacks": 29,
-    "grid": 10,
-    "markets": 4,
+    "internet": 15,
+    "germs": 4,
+    "hacks": 27,
+    "grid": 13,
     "animals": 1,
     "weather": 4,
+    "markets": 4,
     "sun": 4,
     "ai": 4,
-    "earth": 4,
+    "earth": 5,
     "space": 4
   },
   "vital": {
@@ -79,7 +79,7 @@
     },
     "kp": {
       "value": 0.67,
-      "time": "2026-11-26T06:00:00.000Z",
+      "time": "2026-11-26T09:00:00.000Z",
       "max24": 2
     },
     "asteroid": {
@@ -169,7 +169,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -188,57 +188,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1013,
-      "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "count": 354,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     },
     "bing": {
       "ok": true,
-      "count": 285,
+      "count": 283,
       "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T11:55:58.934Z"
+      "lastOkAt": "2026-11-26T12:11:06.237Z"
     }
   },
   "stories": [
@@ -490,38 +490,39 @@
       "score": 2.47
     },
     {
-      "id": "325cd3c46cea",
+      "id": "7e175ed82324",
       "cat": "internet",
       "kind": "news",
-      "title": "Major Insurer Allstate Hit by 3-Day Outage Amid Spate of US Service Issues",
-      "url": "https://www.newsweek.com/major-insurer-allstate-hit-by-3-day-outage-amid-spate-of-us-service-issues-12768326",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-25T12:10:00.000Z",
-      "latestAt": "2026-11-25T20:10:00.000Z",
-      "firstSeenAt": "2026-11-25T20:23:32.754Z",
+      "title": "Microsoft explains tech failures that triggered global outage",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/11/26/microsoft-explains-tech-failures-that-triggered-global-outage",
+      "source": "The Star",
+      "publishedAt": "2026-11-25T22:00:00.000Z",
+      "latestAt": "2026-11-26T00:00:00.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
       "outlets": 2,
       "outletNames": [
-        "Newsweek",
-        "Yahoo"
+        "Longview Daily News",
+        "The Star"
       ],
-      "score": 2.42
+      "score": 2.22
     },
     {
-      "id": "4c01e784ea2d",
-      "cat": "markets",
+      "id": "c9a6d38cc05d",
+      "cat": "grid",
       "kind": "news",
-      "title": "Gold Prices Collapse 37% From Record High. Even Inflation And Market Turmoil Can't Stop The Sell-Off.",
-      "url": "https://finance.yahoo.com/markets/commodities/articles/gold-prices-collapse-37-record-200422840.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-25T12:04:00.000Z",
-      "latestAt": "2026-11-25T20:04:22.000Z",
-      "firstSeenAt": "2026-11-25T20:23:32.754Z",
-      "outlets": 2,
+      "title": "Map Shows States at Risk of Thanksgiving Power Outages",
+      "url": "https://www.newsweek.com/map-shows-states-at-risk-of-thanksgiving-power-outages-12768464",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-25T12:17:00.000Z",
+      "latestAt": "2026-11-25T20:16:00.000Z",
+      "firstSeenAt": "2026-11-25T23:54:07.166Z",
+      "outlets": 3,
       "outletNames": [
-        "Yahoo Finance",
-        "Yahoo Finance Singapore"
+        "Newsweek",
+        "AOL",
+        "Yahoo"
       ],
-      "score": 2.41
+      "score": 2.08
     },
     {
       "id": "a9e3c4d84247",
@@ -578,59 +579,21 @@
       "score": 2.38
     },
     {
-      "id": "03798af58a9c",
+      "id": "0349d45e030f",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers breach CIA’s unclassified computer system",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVFJiOFVOU3lFMk1lYi1DUmRfcHBOTDI5MXAycS1JRF9BU1l5TVVzZ2Vid3NnUTFGdlZEcFFxUURlTGN1bnY3SjU0MkZpbUlYZDZnMjlYSXUtTHpwM2ZDWjdfS3RSSktXTWExZlVEVnY3S2JBRkN4Y2RPbUoxX3M2d3M5V0F6NDdKN2VKSWVrSHNyRVZuZ0lJWnFYeGhRSXByQmhhQlBEOHpJX21pM29LQ0hR0gHGAUFVX3lxTFBPOGU3ZVNoRVpCcXVhV2U3Nm1YNEN6YnRqdy1rdEtWLVp0U2dlWU8yY09ycVJqVlRhcFo0aWthTWhFWU1hNzA2NzRJdE9POUMwLUZidVJQbzh6NHVVZ2tOa01Qb1ktczVJSTM3NTZMWmlqV2ZTbTIwNWFocTZGTUlSS2Jra0xYNlZvSnhhdk1TMW5KODk5S2xzTUZJbjl1XzdBYW85Z0lWZUtyWWhWSmNiYzl0UFBEeWtnbWdHY2dvdHpUOEVPdw?oc=5",
-      "source": "WSB-TV",
-      "publishedAt": "2026-11-25T11:57:31.000Z",
-      "latestAt": "2026-11-25T11:57:31.000Z",
-      "firstSeenAt": "2026-11-26T07:25:17.020Z",
-      "outlets": 5,
-      "outletNames": [
-        "WSB-TV",
-        "WSOC TV",
-        "95.5 WSB",
-        "WGAU Radio | Athens, GA",
-        "WPXI"
-      ],
-      "score": 2.24
-    },
-    {
-      "id": "7e175ed82324",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft explains tech failures that triggered global outage",
-      "url": "https://www.thestar.com.my/tech/tech-news/2026/11/26/microsoft-explains-tech-failures-that-triggered-global-outage",
-      "source": "The Star",
-      "publishedAt": "2026-11-25T22:00:00.000Z",
-      "latestAt": "2026-11-26T00:00:00.000Z",
+      "title": "FIFA confirms cyberattack after ransomware group HBHC threatens to leak data",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWHlsbGE2LVh0WDhFTXVGcXlpd2sxYXZWelJ3cEc3V1R6aklDVVBhYXA5QnF3a1ZiVjJYWGJEYi1idWh5R2dGRGhWU01fdE42TmJPNjhzM0FXa1p1aWZTbVpwTWdUcml1ekRCakh6ajFsN2JyRzN5WWNnalNwT3pwdzBEMVo1ZVBiOVpucWRyak56UVM3Y1Y5VENHcHpLaW5YaERKbW85ZURZZ3R4bW92R09Hb0tEU3dIUmxJ?oc=5",
+      "source": "Escudo Digital",
+      "publishedAt": "2026-11-26T10:16:51.000Z",
+      "latestAt": "2026-11-26T11:06:56.000Z",
       "firstSeenAt": "2026-11-26T10:25:45.653Z",
       "outlets": 2,
       "outletNames": [
-        "Longview Daily News",
-        "The Star"
+        "Escudo Digital",
+        "Ticker News"
       ],
-      "score": 2.22
-    },
-    {
-      "id": "c9a6d38cc05d",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Map Shows States at Risk of Thanksgiving Power Outages",
-      "url": "https://www.newsweek.com/map-shows-states-at-risk-of-thanksgiving-power-outages-12768464",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-25T12:17:00.000Z",
-      "latestAt": "2026-11-25T20:16:00.000Z",
-      "firstSeenAt": "2026-11-25T23:54:07.166Z",
-      "outlets": 3,
-      "outletNames": [
-        "Newsweek",
-        "AOL",
-        "Yahoo"
-      ],
-      "score": 2.08
+      "score": 2
     },
     {
       "id": "270c6ce8165b",
@@ -771,6 +734,23 @@
       "score": 1.77
     },
     {
+      "id": "3811b0439e08",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Over 100,000 Missouri customers without power as snow falls across St. Louis area",
+      "url": "https://www.msn.com/en-us/news/other/over-100-000-missouri-customers-without-power-as-snow-falls-across-st-louis-area/ar-AA2ih1Ty",
+      "source": "First Alert 4 on MSN",
+      "publishedAt": "2026-11-26T03:32:53.000Z",
+      "latestAt": "2026-11-26T11:32:00.000Z",
+      "firstSeenAt": "2026-11-26T12:11:06.237Z",
+      "outlets": 2,
+      "outletNames": [
+        "First Alert 4 on MSN",
+        "KMOV"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "f6f9fe180947",
       "cat": "markets",
       "kind": "news",
@@ -786,23 +766,6 @@
         "TradingView"
       ],
       "score": 1.71
-    },
-    {
-      "id": "795b176889d5",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands of residents in Rosseau, Orrville and Muskoka will lose power in scheduled Hydro One outage",
-      "url": "https://www.muskokaregion.com/news/hydro-one-schedules-outage-parry-sound/article_4242f334-5f7d-52d3-b75c-120b0ecbd4a7.html",
-      "source": "Muskoka Region",
-      "publishedAt": "2026-11-26T03:00:00.000Z",
-      "latestAt": "2026-11-26T11:00:00.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 2,
-      "outletNames": [
-        "Muskoka Region",
-        "ParrySound.com"
-      ],
-      "score": 1.7
     },
     {
       "id": "6715de6aefe5",
@@ -839,21 +802,36 @@
       "score": 1.48
     },
     {
-      "id": "0349d45e030f",
-      "cat": "hacks",
+      "id": "a20199df1c16",
+      "cat": "internet",
       "kind": "news",
-      "title": "FIFA confirms cyberattack after ransomware group HBHC threatens to leak data",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWHlsbGE2LVh0WDhFTXVGcXlpd2sxYXZWelJ3cEc3V1R6aklDVVBhYXA5QnF3a1ZiVjJYWGJEYi1idWh5R2dGRGhWU01fdE42TmJPNjhzM0FXa1p1aWZTbVpwTWdUcml1ekRCakh6ajFsN2JyRzN5WWNnalNwT3pwdzBEMVo1ZVBiOVpucWRyak56UVM3Y1Y5VENHcHpLaW5YaERKbW85ZURZZ3R4bW92R09Hb0tEU3dIUmxJ?oc=5",
-      "source": "Escudo Digital",
-      "publishedAt": "2026-11-26T10:16:51.000Z",
-      "latestAt": "2026-11-26T11:06:56.000Z",
-      "firstSeenAt": "2026-11-26T10:25:45.653Z",
-      "outlets": 2,
+      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
+      "source": "Simply Wall St",
+      "publishedAt": "2026-11-26T03:26:14.000Z",
+      "latestAt": "2026-11-26T03:26:14.000Z",
+      "firstSeenAt": "2026-11-26T03:39:36.789Z",
+      "outlets": 1,
       "outletNames": [
-        "Escudo Digital",
-        "Ticker News"
+        "Simply Wall St"
       ],
-      "score": 2
+      "score": 1.39
+    },
+    {
+      "id": "fae6145286ca",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
+      "source": "Coinpaper",
+      "publishedAt": "2026-11-25T17:34:59.000Z",
+      "latestAt": "2026-11-25T17:34:59.000Z",
+      "firstSeenAt": "2026-11-25T18:08:07.848Z",
+      "outlets": 1,
+      "outletNames": [
+        "Coinpaper"
+      ],
+      "score": 1.39
     },
     {
       "id": "5c91ad2aa7b8",
@@ -1028,6 +1006,23 @@
         "cedarnews.net"
       ],
       "score": 1.71
+    },
+    {
+      "id": "795b176889d5",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands of residents in Rosseau, Orrville and Muskoka will lose power in scheduled Hydro One outage",
+      "url": "https://www.muskokaregion.com/news/hydro-one-schedules-outage-parry-sound/article_4242f334-5f7d-52d3-b75c-120b0ecbd4a7.html",
+      "source": "Muskoka Region",
+      "publishedAt": "2026-11-26T03:00:00.000Z",
+      "latestAt": "2026-11-26T11:00:00.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 2,
+      "outletNames": [
+        "Muskoka Region",
+        "ParrySound.com"
+      ],
+      "score": 1.7
     },
     {
       "id": "fbcc4f70f36d",
@@ -1249,22 +1244,6 @@
       "score": 1.4
     },
     {
-      "id": "a20199df1c16",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
-      "source": "Simply Wall St",
-      "publishedAt": "2026-11-26T03:26:14.000Z",
-      "latestAt": "2026-11-26T03:26:14.000Z",
-      "firstSeenAt": "2026-11-26T03:39:36.789Z",
-      "outlets": 1,
-      "outletNames": [
-        "Simply Wall St"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "a7980bb2bb2c",
       "cat": "grid",
       "kind": "news",
@@ -1277,22 +1256,6 @@
       "outlets": 1,
       "outletNames": [
         "De Último Minuto"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "fae6145286ca",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
-      "source": "Coinpaper",
-      "publishedAt": "2026-11-25T17:34:59.000Z",
-      "latestAt": "2026-11-25T17:34:59.000Z",
-      "firstSeenAt": "2026-11-25T18:08:07.848Z",
-      "outlets": 1,
-      "outletNames": [
-        "Coinpaper"
       ],
       "score": 1.39
     },
@@ -1424,22 +1387,6 @@
       "outletNames": [
         "GBHackers News",
         "CyberSecurityNews"
-      ],
-      "score": 1.34
-    },
-    {
-      "id": "f63ae1a66157",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hack the Government 2026: record participation for the third edition",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQR3VLQ1VqVTl5TVYxWTRVYVR5MkJITC0weFNIdWVsSDA2X1BUaHJRWFZyUzJJUE1jbzdFUWt0WS1haThCdUx0c1l0aDlWZkstaUlqMnBpRi1kUTY2VU5RWFpyV2VVMlpETUVhVTRfMGJNVGliUjdxZWRHcUlFdGphbUc3OXNCNktYMDlz?oc=5",
-      "source": "CCB Belgium",
-      "publishedAt": "2026-11-25T12:00:00.000Z",
-      "latestAt": "2026-11-25T12:00:00.000Z",
-      "firstSeenAt": "2026-11-25T14:37:35.071Z",
-      "outlets": 1,
-      "outletNames": [
-        "CCB Belgium"
       ],
       "score": 1.34
     },
@@ -1669,22 +1616,6 @@
       "score": 1
     },
     {
-      "id": "1f8820b57e57",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed at Herefordshire commercial poultry farm",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5jaktGSnNQc3dtTDJPcWpSTER1cnRPVXBnT0g3c3piZG9MSlR4OFo0Q1d6UWg4LUI5MVduNFRPV3JvUEZaaFhkVGJTN0FkVHFEMUtCanVJb0tOSnBCZWc?oc=5",
-      "source": "BBC",
-      "publishedAt": "2026-11-26T11:54:44.000Z",
-      "latestAt": "2026-11-26T11:54:44.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 1,
-      "outletNames": [
-        "BBC"
-      ],
-      "score": 1
-    },
-    {
       "id": "3f8fdb3f1a21",
       "cat": "earth",
       "kind": "news",
@@ -1715,6 +1646,38 @@
         "The Sunday Guardian"
       ],
       "score": 1
+    },
+    {
+      "id": "5fd5406e4a09",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thanksgiving power outage update in Virginia - 6:30 a.m.",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaVM2R0NxcVItaWtCNUVTLW5oZUkyTWM5OE9RNEJoVWY1WDc1SFF5cUN5YUM1ZHZucDlVOW1zbU5qR2ljQVFrVHZGdXU5ZGhuSkFYdFhqc2dLbDBnWWJHbTJfZjExVzM1aG1COVJ5dF9YMjBQYktKTXJyYjZsd2NPclRPYUluWDJyVWVhbjdsUURyZ0pyX2lLUVE1bVNmdw?oc=5",
+      "source": "WTKR",
+      "publishedAt": "2026-11-26T11:37:01.000Z",
+      "latestAt": "2026-11-26T11:37:01.000Z",
+      "firstSeenAt": "2026-11-26T12:11:06.237Z",
+      "outlets": 1,
+      "outletNames": [
+        "WTKR"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "bde6b174f6f5",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage reported in Pamplico Highway area in Florence",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWVhkOWtiWmptQmZHSjBNTFpHd0FqZGswTFRkR1EwZndGOW9GRHB3aVpIREJMTmZZOHVOM0hJQnRValJ0RjRWbUJYQzhZb1o1azk2emYtVDB6bThHcVdmak1faXZVb2p4bHFMX3l1VnFNdXlSODU4aUliS1pNWk52cTFsNUI1TVNJcURGMkw0UQ?oc=5",
+      "source": "WPDE",
+      "publishedAt": "2026-11-26T11:20:28.000Z",
+      "latestAt": "2026-11-26T11:20:28.000Z",
+      "firstSeenAt": "2026-11-26T12:11:06.237Z",
+      "outlets": 1,
+      "outletNames": [
+        "WPDE"
+      ],
+      "score": 0.99
     },
     {
       "id": "28bd6f1f8fdc",
@@ -1847,6 +1810,24 @@
       "score": 0.98
     },
     {
+      "id": "94456286ccfa",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Why scientists say a magnitude 8 Alpine Fault mega-quake is likely",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQalZkeXcyV0QwWnVLaHFBNW9fdU9uRkpWbmdLRUh2SXgzak1sNnhUc01lYTE0aVdubHlITDN5cWVkYkFtcmlVa1c3OHNjdkRoYm1oZWpMSzc1YXd6YllicTBWREpSWGZvU2V3Z0NNWUNxb3E1cVl2UU5ISkpuZ3dxWWRENnBJc01kMGJaSm5VLTNtbGJmR0JWWk5fMU9yTnlRZUJQQkVB?oc=5",
+      "source": "Stuff",
+      "publishedAt": "2026-11-25T19:00:00.000Z",
+      "latestAt": "2026-11-25T19:00:00.000Z",
+      "firstSeenAt": "2026-11-25T20:08:32.112Z",
+      "outlets": 1,
+      "outletNames": [
+        "Stuff"
+      ],
+      "score": 0.98,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
       "id": "32ee8c7796e6",
       "cat": "weather",
       "kind": "news",
@@ -1861,6 +1842,22 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 0.89
+    },
+    {
+      "id": "201d8a7ee67e",
+      "cat": "markets",
+      "kind": "news",
+      "title": "South Korean news anchor breaks down in tears on live TV as stocks plunge",
+      "url": "https://www.msn.com/en-us/money/top-stocks/south-korean-news-anchor-breaks-down-in-tears-on-live-tv-as-stocks-plunge/ar-AA2ihw3Z",
+      "source": "The Mirror US on MSN",
+      "publishedAt": "2026-11-26T03:58:10.000Z",
+      "latestAt": "2026-11-26T03:58:10.000Z",
+      "firstSeenAt": "2026-11-26T12:11:06.237Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Mirror US on MSN"
+      ],
+      "score": 0.86
     },
     {
       "id": "0edb9f27fed7",
