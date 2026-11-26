@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T09:55:39.177Z",
+  "buildTime": "2026-11-26T10:10:56.058Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 04:55 ET",
+  "etStamp": "2026-11-26 05:10 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,13 +51,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1296,
-  "lastSuccessAt": "2026-11-26T09:55:39.177Z",
+  "headlinesRead": 1291,
+  "lastSuccessAt": "2026-11-26T10:10:56.058Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
-    "internet": 16,
-    "hacks": 30,
+    "internet": 15,
+    "hacks": 31,
     "germs": 5,
     "grid": 9,
     "animals": 1,
@@ -188,57 +188,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 978,
+      "count": 979,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     },
     "bing": {
       "ok": true,
-      "count": 286,
+      "count": 280,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T09:55:39.177Z"
+      "lastOkAt": "2026-11-26T10:10:56.058Z"
     }
   },
   "stories": [
@@ -686,23 +686,6 @@
       "score": 1.99
     },
     {
-      "id": "7e175ed82324",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft explains tech failures that triggered global outage",
-      "url": "https://www.thestar.com.my/tech/tech-news/2026/11/26/microsoft-explains-tech-failures-that-triggered-global-outage",
-      "source": "The Star",
-      "publishedAt": "2026-11-25T10:00:00.000Z",
-      "latestAt": "2026-11-26T00:00:00.000Z",
-      "firstSeenAt": "2026-11-26T05:09:52.811Z",
-      "outlets": 2,
-      "outletNames": [
-        "Longview Daily News",
-        "The Star"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "b802790718c1",
       "cat": "ai",
       "kind": "news",
@@ -837,6 +820,23 @@
         "en.clickpetroleoegas"
       ],
       "score": 1.56
+    },
+    {
+      "id": "ae7c2ba4c273",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Don’t let a market selloff wreck your retirement plan",
+      "url": "https://www.thestreet.com/retirement/dont-let-a-market-selloff-wreck-your-retirement-plan",
+      "source": "TheStreet",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T01:17:00.000Z",
+      "firstSeenAt": "2026-11-26T07:40:21.836Z",
+      "outlets": 2,
+      "outletNames": [
+        "TheStreet",
+        "AOL.com"
+      ],
+      "score": 1.48
     },
     {
       "id": "5c91ad2aa7b8",
@@ -1116,6 +1116,24 @@
       "score": 1.69
     },
     {
+      "id": "6051e6900706",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers access personal data of 11,000 people in Denmark",
+      "url": "https://punchng.com/hackers-access-personal-data-of-11000-people-in-denmark/",
+      "source": "The Punch",
+      "publishedAt": "2026-11-25T12:46:00.000Z",
+      "latestAt": "2026-11-26T10:07:00.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 3,
+      "outletNames": [
+        "Punch Newspapers",
+        "The Punch",
+        "Head Topics"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "27817016356d",
       "cat": "hacks",
       "kind": "news",
@@ -1184,23 +1202,6 @@
         "BBC"
       ],
       "score": 1.57
-    },
-    {
-      "id": "ae7c2ba4c273",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Don’t let a market selloff wreck your retirement plan",
-      "url": "https://www.thestreet.com/retirement/dont-let-a-market-selloff-wreck-your-retirement-plan",
-      "source": "TheStreet",
-      "publishedAt": "2026-11-25T16:00:00.000Z",
-      "latestAt": "2026-11-26T01:17:00.000Z",
-      "firstSeenAt": "2026-11-26T07:40:21.836Z",
-      "outlets": 2,
-      "outletNames": [
-        "TheStreet",
-        "AOL.com"
-      ],
-      "score": 1.48
     },
     {
       "id": "f4c983635a2c",
@@ -1687,18 +1688,18 @@
       "score": 1.01
     },
     {
-      "id": "6051e6900706",
+      "id": "f184cd5dc63b",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers access personal data of 11,000 people in Denmark",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRDV1MXdjWkFmRmNkWk92ajBqX01EZGpzdEEwQXh1MVFHQVVzdl9ONzV1V2VHQldMZm9kd3Z3dXdlYXRFcTRaa0NtSGdMVW1TZk9hSHhhMGVEZ2pLTDRRWWpyYmdjZnJBcU1Na1VNcXJiTHkxZ1ZuaGY5SjE0bGhlb196R3djNzQ?oc=5",
-      "source": "Punch Newspapers",
-      "publishedAt": "2026-11-26T09:53:07.000Z",
-      "latestAt": "2026-11-26T09:53:07.000Z",
-      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "title": "1Password hit by data breach via GitHub account",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWEs1OW5Rd3FTY0ZCR001T01SanZlUGoxTVlJM0tZLVZvalZxTURreXQwQWxUSDhjQ0tQd092YkFubE04OWVTc0tBaHNINk5CamV6MjlmZmgyRWVzWm51cm9GNWlUenpvUzJVM2lWWlBTaVRFQktGcU9HRFNsN0RTSmZSQklEdVhZSlYwTGZhZW82QVY4eWxWVA?oc=5",
+      "source": "Techzine Global",
+      "publishedAt": "2026-11-26T09:57:15.000Z",
+      "latestAt": "2026-11-26T09:57:15.000Z",
+      "firstSeenAt": "2026-11-26T10:10:56.058Z",
       "outlets": 1,
       "outletNames": [
-        "Punch Newspapers"
+        "Techzine Global"
       ],
       "score": 1
     },
@@ -1833,22 +1834,6 @@
       "score": 0.99
     },
     {
-      "id": "5074e4bf73e1",
-      "cat": "space",
-      "kind": "news",
-      "title": "Hera Spacecraft Examines NASA's Asteroid Impact Test",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9JOTBlNGFJVzA2SkwyVnRZQzdJTEtwRk1JajA1SnZTSm1GMVhjWlBIdEhIdzVJd3VtZUFFSFpNT3BNSzBXWFo2NWZ2UVBJVHAtRTc5ZWt1Y29kYUgtNzV3QnpfcTVlMDdBUG0walVoZw?oc=5",
-      "source": "Demokratis.co.id",
-      "publishedAt": "2026-11-25T10:05:16.000Z",
-      "latestAt": "2026-11-25T10:05:16.000Z",
-      "firstSeenAt": "2026-11-25T10:32:12.969Z",
-      "outlets": 1,
-      "outletNames": [
-        "Demokratis.co.id"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "4ee4e22b5039",
       "cat": "sun",
       "kind": "news",
@@ -1975,6 +1960,22 @@
         "Smithsonian Magazine"
       ],
       "score": 0.68
+    },
+    {
+      "id": "872fee2f7740",
+      "cat": "space",
+      "kind": "news",
+      "title": "Watch live: Europe unveils 1st close-up views of asteroid Dimorphos after NASA's DART impact",
+      "url": "https://www.space.com/space-exploration/asteroid-comet-missions/watch-live-europe-unveils-1st-close-up-views-of-asteroid-dimorphos-after-nasas-dart-impact",
+      "source": "Space.com",
+      "publishedAt": "2026-11-25T10:45:00.000Z",
+      "latestAt": "2026-11-25T10:45:00.000Z",
+      "firstSeenAt": "2026-11-26T10:10:56.058Z",
+      "outlets": 1,
+      "outletNames": [
+        "Space.com"
+      ],
+      "score": 0.61
     }
   ]
 }
