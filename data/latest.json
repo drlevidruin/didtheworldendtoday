@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T08:55:30.997Z",
+  "buildTime": "2026-11-26T09:10:32.025Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 03:55 ET",
+  "etStamp": "2026-11-26 04:10 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,13 +51,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1269,
-  "lastSuccessAt": "2026-11-26T08:55:30.997Z",
+  "headlinesRead": 1214,
+  "lastSuccessAt": "2026-11-26T09:10:32.025Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
-    "internet": 16,
-    "hacks": 29,
+    "internet": 15,
+    "hacks": 30,
     "germs": 5,
     "grid": 9,
     "markets": 5,
@@ -78,8 +78,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 2,
-      "time": "2026-11-26T03:00:00.000Z",
+      "value": 0.67,
+      "time": "2026-11-26T06:00:00.000Z",
       "max24": 2
     },
     "asteroid": {
@@ -172,11 +172,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "At least 31 killed in Egypt vehicle fire, Health Ministry says"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -188,57 +190,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 999,
+      "count": 944,
       "error": null,
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     },
     "bing": {
       "ok": true,
       "count": 238,
-      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +253,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T08:55:30.997Z"
+      "lastOkAt": "2026-11-26T09:10:32.025Z"
     }
   },
   "stories": [
@@ -640,7 +642,7 @@
       "url": "https://www.newsweek.com/map-shows-states-at-risk-of-thanksgiving-power-outages-12768464",
       "source": "Newsweek",
       "publishedAt": "2026-11-25T12:17:00.000Z",
-      "latestAt": "2026-11-25T12:49:00.000Z",
+      "latestAt": "2026-11-25T20:16:00.000Z",
       "firstSeenAt": "2026-11-25T23:54:07.166Z",
       "outlets": 3,
       "outletNames": [
@@ -961,6 +963,23 @@
         "CyberSecurityNews"
       ],
       "score": 1.93
+    },
+    {
+      "id": "05ace1d66d85",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "1Password Confirms Data Breach After Hackers Compromise Employee GitHub Account",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBCZjJLWlJyTDdxcFZqcVE5d19TRW1ZTUtTMHpiWkRua2c1WUdCOElpMlI5dWV6WlBtb01JWEdEc3hhQVU2RjM0UThVWVBOZmVtYnpGU1FHWFJnb01XWVUzUkZiSF9qMGRWLUd3M9IBbEFVX3lxTFBCZjJLWlJyTDdxcFZqcVE5d19TRW1ZTUtTMHpiWkRua2c1WUdCOElpMlI5dWV6WlBtb01JWEdEc3hhQVU2RjM0UThVWVBOZmVtYnpGU1FHWFJnb01XWVUzUkZiSF9qMGRWLUd3Mw?oc=5",
+      "source": "Cyber Press",
+      "publishedAt": "2026-11-26T06:42:52.000Z",
+      "latestAt": "2026-11-26T07:20:52.000Z",
+      "firstSeenAt": "2026-11-26T09:10:32.025Z",
+      "outlets": 2,
+      "outletNames": [
+        "Cyber Press",
+        "GBHackers News"
+      ],
+      "score": 1.92
     },
     {
       "id": "0a9eae05a76c",
@@ -1607,22 +1626,6 @@
       "score": 1.07
     },
     {
-      "id": "f1b8ae6ebc00",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft issues 'Code Red' declaration following major Outlook outage",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVUxpOHUxeVpQXy1UR2NXZ05GeV9fS0p3dHg5RDE4Rk5UV1NEZDJJTGY5OFZXTVZxUjRrU1lNamJfZm5XdXhDU0hWNDNydEE4czNVNVN4akRrRVhlOWdvcG42blQxcGltdFB5NE96WERfYWkzZGM3dmI2eEs3LXlmRFlIS2pSMWNjY25MbEhlQ3FjM2pFWlE?oc=5",
-      "source": "UNILAD Tech",
-      "publishedAt": "2026-11-25T17:10:19.000Z",
-      "latestAt": "2026-11-25T17:10:19.000Z",
-      "firstSeenAt": "2026-11-26T08:10:22.551Z",
-      "outlets": 1,
-      "outletNames": [
-        "UNILAD Tech"
-      ],
-      "score": 1.05
-    },
-    {
       "id": "14ec8f5c37b6",
       "cat": "internet",
       "kind": "news",
@@ -1961,20 +1964,20 @@
       "score": 0.74
     },
     {
-      "id": "9222663a737e",
+      "id": "b6b4dcbf7e62",
       "cat": "space",
       "kind": "news",
-      "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
-      "url": "https://tech.yahoo.com/science/articles/four-years-huge-asteroid-crash-060041617.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-25T11:41:00.000Z",
-      "latestAt": "2026-11-25T11:41:00.000Z",
-      "firstSeenAt": "2026-11-26T07:25:17.020Z",
+      "title": "Meet Earth's New 'Mini-Moon' 2026 QQ8, a Six-Foot-Wide Asteroid That's Temporarily Circling Our Planet",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNaE82YUhVSG5haW1VeUw5RXBOdFlDaTVOQTg0WUNBa205b251OWpMa3Y4RUhXdlM0bWtHdkNndGxkeE9xSnhBOUJGZzQyWXRDS2c5TlFKanl5bmVuR1UybUJHWFl1QW0wQnAxTWNiTXJaeHVIUlM1alBubksxYnFFZWVNaWpma1JEejVWc0FRRnhSYk9NMi1xMjl5TXA3TXUyekFTdzU4UHFZcjdmVDQzQ1VRUUFzUkpNSy1ELTdrUUtCc0xDMC02bFV6UkZUVnhJRGw4YmdnSkJReHczSU5CZHRDWG0?oc=5",
+      "source": "Smithsonian Magazine",
+      "publishedAt": "2026-11-25T14:00:00.000Z",
+      "latestAt": "2026-11-25T14:00:00.000Z",
+      "firstSeenAt": "2026-11-26T09:10:32.025Z",
       "outlets": 1,
       "outletNames": [
-        "YAHOO!"
+        "Smithsonian Magazine"
       ],
-      "score": 0.67
+      "score": 0.68
     }
   ]
 }
