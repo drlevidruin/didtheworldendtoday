@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T10:25:45.653Z",
+  "buildTime": "2026-11-26T10:40:47.214Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 05:25 ET",
+  "etStamp": "2026-11-26 05:40 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,20 +51,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1221,
-  "lastSuccessAt": "2026-11-26T10:25:45.653Z",
+  "headlinesRead": 984,
+  "lastSuccessAt": "2026-11-26T10:40:47.214Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
     "internet": 15,
-    "hacks": 30,
+    "hacks": 31,
     "germs": 5,
     "grid": 10,
     "markets": 4,
     "animals": 1,
-    "ai": 4,
     "weather": 4,
     "sun": 4,
+    "ai": 3,
     "earth": 4,
     "space": 4
   },
@@ -183,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 944,
-      "error": null,
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "count": 718,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 15 of 26 queries)",
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "bing": {
       "ok": true,
-      "count": 245,
-      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "count": 234,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,56 +208,55 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T10:25:45.653Z"
+      "lastOkAt": "2026-11-26T10:40:47.214Z"
     }
   },
   "stories": [
@@ -355,6 +354,29 @@
       }
     },
     {
+      "id": "2fa8fefe8871",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Flight Centre investigates customer data breach in third-party booking system",
+      "url": "https://travelweekly.com.au/flight-centre-investigates-customer-data-breach-in-third-party-booking-system/",
+      "source": "Travel Weekly",
+      "publishedAt": "2026-11-25T15:53:00.000Z",
+      "latestAt": "2026-11-26T07:45:08.000Z",
+      "firstSeenAt": "2026-11-26T03:39:36.789Z",
+      "outlets": 7,
+      "outletNames": [
+        "TradingView",
+        "101 WIXX",
+        "Travel Weekly",
+        "@Reuters on X",
+        "StreetInsider",
+        "95.7 KELO-FM",
+        "WSAU"
+      ],
+      "xUrl": "https://x.com/Reuters/status/2125796743816049143",
+      "score": 3.06
+    },
+    {
       "id": "afaee88dfda9",
       "cat": "hacks",
       "kind": "news",
@@ -374,28 +396,6 @@
         "iTnews"
       ],
       "score": 3.03
-    },
-    {
-      "id": "2fa8fefe8871",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Flight Centre investigates customer data breach in third-party booking system",
-      "url": "https://travelweekly.com.au/flight-centre-investigates-customer-data-breach-in-third-party-booking-system/",
-      "source": "Travel Weekly",
-      "publishedAt": "2026-11-25T15:53:00.000Z",
-      "latestAt": "2026-11-26T07:45:08.000Z",
-      "firstSeenAt": "2026-11-26T03:39:36.789Z",
-      "outlets": 6,
-      "outletNames": [
-        "TradingView",
-        "101 WIXX",
-        "Travel Weekly",
-        "@Reuters on X",
-        "StreetInsider",
-        "95.7 KELO-FM"
-      ],
-      "xUrl": "https://x.com/Reuters/status/2125796743816049143",
-      "score": 2.88
     },
     {
       "id": "178c0e401af9",
@@ -703,23 +703,6 @@
       "score": 1.99
     },
     {
-      "id": "1df2f0651f27",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Nearly 2,000 customers without power in Greenville County again",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWU5ybjBFb25QTTR5eWIyYzBkSmdkTzBjT1R3cWVkQURBTkxTVDU4ZGl6QVdoRlpVaTFNcHRUZU0tUUhjQWRtRlNVcms1UVhCNW9uZTBTYU1uZjZTbk12NXNQcjVGSlhiMlJtN19rNWJma0MtNmhkb3VrenpEZkdzaUtxazF0NDFDZjlHUmZTdFZTSkFJMy1aeHg4dkpWNzNC?oc=5",
-      "source": "FOX Carolina News",
-      "publishedAt": "2026-11-25T10:27:00.000Z",
-      "latestAt": "2026-11-25T10:31:19.000Z",
-      "firstSeenAt": "2026-11-25T10:47:20.414Z",
-      "outlets": 2,
-      "outletNames": [
-        "FOX Carolina News",
-        "cedarnews.net"
-      ],
-      "score": 1.99
-    },
-    {
       "id": "49be6341ddc6",
       "cat": "germs",
       "kind": "news",
@@ -735,23 +718,6 @@
         "Richmondshire Today"
       ],
       "score": 1.96
-    },
-    {
-      "id": "b802790718c1",
-      "cat": "ai",
-      "kind": "news",
-      "title": "OpenAI outage today: Is OpenAI down in the UK? Users report ChatGPT, API, login, AI response & website issues | Check latest Downdetector status",
-      "url": "https://www.msn.com/en-in/technology/artificial-intelligence/openai-outage-today-is-openai-down-in-the-uk-users-report-chatgpt-api-login-ai-response-website-issues-check-latest-downdetector-status/ar-AA2idSGz",
-      "source": "The Sunday Guardian Live on MSN",
-      "publishedAt": "2026-11-25T10:40:00.000Z",
-      "latestAt": "2026-11-25T13:24:08.000Z",
-      "firstSeenAt": "2026-11-25T13:37:23.185Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Sunday Guardian",
-        "The Sunday Guardian Live on MSN"
-      ],
-      "score": 1.9
     },
     {
       "id": "251d291f0bd0",
@@ -795,7 +761,7 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVzNlYmlfc3JmNlRpUDN1cXhKZDNoQXZBWjN3elREd0JpSzM5c2ZacFBZWXF0YWtjSVd6VWl0MXNPRUN2T1JCSDRLOHNfamdMZUZGZ1NEVVNoazIzN3l0M05Id1RUSU1IdmxrVm1kUzRoTzJZNEpsX1pBQ0h5RnpWdTgxdEZCYlBMMWJkd0c1dm01VndNQzA3Wk1yLTNVendENjFlWUREaw?oc=5",
       "source": "Yahoo",
       "publishedAt": "2026-11-26T01:53:00.000Z",
-      "latestAt": "2026-11-26T01:53:55.000Z",
+      "latestAt": "2026-11-26T10:19:55.000Z",
       "firstSeenAt": "2026-11-26T08:55:30.997Z",
       "outlets": 2,
       "outletNames": [
@@ -837,6 +803,40 @@
         "Yorkshire Post"
       ],
       "score": 1.67
+    },
+    {
+      "id": "6715de6aefe5",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
+      "url": "https://en.clickpetroleoegas.com.br/brazilian-scientists-uncover-how-a-powerful-solar-storm-distorted-plasma-bubbles-and-reversed-their-movement-over-south-america-a-nmb91/",
+      "source": "en.clickpetroleoegas",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T04:57:00.000Z",
+      "firstSeenAt": "2026-11-26T05:09:52.811Z",
+      "outlets": 2,
+      "outletNames": [
+        "CPG Click Oil and Gas",
+        "en.clickpetroleoegas"
+      ],
+      "score": 1.56
+    },
+    {
+      "id": "ae7c2ba4c273",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Don’t let a market selloff wreck your retirement plan",
+      "url": "https://www.thestreet.com/retirement/dont-let-a-market-selloff-wreck-your-retirement-plan",
+      "source": "TheStreet",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T01:17:00.000Z",
+      "firstSeenAt": "2026-11-26T07:40:21.836Z",
+      "outlets": 2,
+      "outletNames": [
+        "TheStreet",
+        "AOL.com"
+      ],
+      "score": 1.48
     },
     {
       "id": "5c91ad2aa7b8",
@@ -1202,40 +1202,6 @@
         "BBC"
       ],
       "score": 1.57
-    },
-    {
-      "id": "6715de6aefe5",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
-      "url": "https://en.clickpetroleoegas.com.br/brazilian-scientists-uncover-how-a-powerful-solar-storm-distorted-plasma-bubbles-and-reversed-their-movement-over-south-america-a-nmb91/",
-      "source": "en.clickpetroleoegas",
-      "publishedAt": "2026-11-25T16:00:00.000Z",
-      "latestAt": "2026-11-26T04:57:00.000Z",
-      "firstSeenAt": "2026-11-26T05:09:52.811Z",
-      "outlets": 2,
-      "outletNames": [
-        "CPG Click Oil and Gas",
-        "en.clickpetroleoegas"
-      ],
-      "score": 1.56
-    },
-    {
-      "id": "ae7c2ba4c273",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Don’t let a market selloff wreck your retirement plan",
-      "url": "https://www.thestreet.com/retirement/dont-let-a-market-selloff-wreck-your-retirement-plan",
-      "source": "TheStreet",
-      "publishedAt": "2026-11-25T16:00:00.000Z",
-      "latestAt": "2026-11-26T01:17:00.000Z",
-      "firstSeenAt": "2026-11-26T07:40:21.836Z",
-      "outlets": 2,
-      "outletNames": [
-        "TheStreet",
-        "AOL.com"
-      ],
-      "score": 1.48
     },
     {
       "id": "f4c983635a2c",
@@ -1738,20 +1704,36 @@
       "score": 1
     },
     {
-      "id": "3a214031f9d9",
-      "cat": "earth",
+      "id": "6ddfa2d8c180",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Semeru Volcano Volcanic Ash Advisory: ERUPTION LAST REPORTED AT 25/0747Z EST VA DTG: 25/1000Z",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONFZuZWhJYkFUeTJ3UVZxZk94U3liSjRtWWJRaG5adGlycUNaNGpwUXVpRnRxeXVRNWZQSURvUHNURU5xVmxFWW9KakdvUjFOb1ZGdUNsMTBLT0ZBMWlaSzgzQUxZNXp1OFlhWWUtY1U5XzBtU3lPNGZaSGFIeVZOcnV3T3VwRXM?oc=5",
-      "source": "Volcano Discovery",
-      "publishedAt": "2026-11-25T10:32:03.000Z",
-      "latestAt": "2026-11-25T10:50:38.000Z",
-      "firstSeenAt": "2026-11-25T10:47:20.414Z",
+      "title": "Hackers stole internal documents and business information from FIFA: federation confirms data leak",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNHd1NjVYX1IwYm9lZWZHZDZHdW5xTmNrMHNNcFB3TnVUaUxPS0hZOTdYdml5blpSV1hkR242MHhpb05HaXNLOUVJNUw2NU5ObzVKZ05WYkotYnROYlZ6Z3FSYUg0cHhTS0RBY05Qd3N5UnBxakZMbHpOd3I0aUdSd3BTdVFhRElmLWc5NTBhcGdsejBuOG80eTA3MVV5Ykk?oc=5",
+      "source": "dev.ua",
+      "publishedAt": "2026-11-26T10:13:00.000Z",
+      "latestAt": "2026-11-26T10:13:00.000Z",
+      "firstSeenAt": "2026-11-26T10:40:47.214Z",
       "outlets": 1,
       "outletNames": [
-        "Volcano Discovery"
+        "dev.ua"
       ],
-      "score": 1
+      "score": 0.99
+    },
+    {
+      "id": "fc16111d5522",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Morning blackout as more than 80 postcodes hit by power cut near Glasgow",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOYV9QTGJ1TXdDdXFaZ25rQTZ1cHZUQzVFZjhWTmhCRnc4RHk3RlNJZEpzWmFobzJYNEViV2xFOTlCTWtCbmpwVG8zZ0lQQkpIdWNRWXAzY0JRVkJFT181a280UGJaa2UyOEh5eFFXV2g2X2ZOQkxHZHF3ZzlHZTgzMQ?oc=5",
+      "source": "Yahoo News UK",
+      "publishedAt": "2026-11-26T10:08:54.000Z",
+      "latestAt": "2026-11-26T10:08:54.000Z",
+      "firstSeenAt": "2026-11-26T10:40:47.214Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yahoo News UK"
+      ],
+      "score": 0.99
     },
     {
       "id": "7a14efcae84f",
@@ -1818,6 +1800,24 @@
       "score": 0.99
     },
     {
+      "id": "7b76e1f248e1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "M6.4 Undersea Quake Puts Rodrigues Under Tsunami Watch",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPd0c0bFR6c0g4SzdodVhXRmgyUHZPYUhxUGNCeE9mNW9Kb2dxdUZrRXEtSTE1NlU5X09yNHR6V1BkSllTcmw5SFRJZDVTVmlUMHJ5WW5vVkw2TUJ6SXNjTTZtUFU5S0YxVlpfam90N1ZnT09NSElXeDNWdGh5YnFtNUdtLVJjZUMzdnhUdnRHUUdFbVlxYzJyeWJsdkgyYlFDMGdzeWNRRk83eHdXNmxuMF93WXAwSGN2eVhtUVp3VndWWGE1MXN1RV9BOWc?oc=5",
+      "source": "Nature World News",
+      "publishedAt": "2026-11-25T15:29:25.000Z",
+      "latestAt": "2026-11-25T15:29:25.000Z",
+      "firstSeenAt": "2026-11-25T16:23:01.784Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nature World News"
+      ],
+      "score": 0.99,
+      "quiet": true,
+      "quietReason": "headline mentions tsunami"
+    },
+    {
       "id": "ceed54516664",
       "cat": "markets",
       "kind": "news",
@@ -1882,22 +1882,6 @@
       "score": 0.89
     },
     {
-      "id": "efa721a1dcea",
-      "cat": "weather",
-      "kind": "news",
-      "title": "West Nashville homeowner still waiting to rebuild more than 300 days after ice storm",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWEZ2UkRETWp1TnVyTUpUYkE1b1JqOW5LRFp2aS1vNlhGSWdFYW5sVXEzZ3RYNTF3NlVkTEs3M2F5Q3ZSd2JZMjNabVVSZUF0ZDd6RkJpam9mVm8tUmhENXlwZDUyazJsQkIya0xpd0RPODFqYXdwQkdWbmhwUE5tOHVnY3ZxRTM2bWpISWFvRVpScDVuMzI2R1duQ2xtbGd0eWVReVN1aGpYVjF5RXotNFZBTnI?oc=5",
-      "source": "WSMV",
-      "publishedAt": "2026-11-25T23:50:00.000Z",
-      "latestAt": "2026-11-26T00:28:00.000Z",
-      "firstSeenAt": "2026-11-26T10:25:45.653Z",
-      "outlets": 1,
-      "outletNames": [
-        "WSMV"
-      ],
-      "score": 0.82
-    },
-    {
       "id": "0edb9f27fed7",
       "cat": "sun",
       "kind": "news",
@@ -1944,6 +1928,22 @@
         "Wisevoter"
       ],
       "score": 0.74
+    },
+    {
+      "id": "feb5626546fe",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Wind strengthening, blizzard, ice - storm warnings issued across Kazakhstan: 25 November 23:25",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTUZzSHVlLVJtWGdtbXZfbG5MV25YTVp0YzdRVzlIN3NQRVVKMTMybk9ndXBFSWFJQ1ZCMnQxNElvT3BGcTFNaml2eGFmRUVhRC16cnpzdkZuX0VISDNMcDhjYXpIeFVrX29rdlhCalJJSjhUNnF2TUk0Y3BFcjNoZFdFdEkwOG1HMmVVZHRfUEplX1JLaHJKWC1kMFcwY0NNb05tZVdwVXF5OFliRmc?oc=5",
+      "source": "TengriNews",
+      "publishedAt": "2026-11-25T18:25:00.000Z",
+      "latestAt": "2026-11-25T18:25:00.000Z",
+      "firstSeenAt": "2026-11-26T10:40:47.214Z",
+      "outlets": 1,
+      "outletNames": [
+        "TengriNews"
+      ],
+      "score": 0.73
     },
     {
       "id": "9222663a737e",
