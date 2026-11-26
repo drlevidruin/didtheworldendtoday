@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T15:26:40.311Z",
+  "buildTime": "2026-11-26T15:41:54.071Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 10:26 ET",
+  "etStamp": "2026-11-26 10:41 ET",
   "score": 74,
   "fired": [
     "flights",
@@ -50,16 +50,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1283,
-  "lastSuccessAt": "2026-11-26T15:26:40.311Z",
+  "headlinesRead": 1307,
+  "lastSuccessAt": "2026-11-26T15:41:54.071Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
+    "flights": 16,
     "internet": 13,
     "hacks": 27,
-    "germs": 5,
-    "grid": 16,
-    "markets": 6,
+    "grid": 15,
+    "germs": 6,
+    "markets": 5,
     "animals": 1,
     "weather": 4,
     "sun": 4,
@@ -182,81 +182,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 971,
+      "count": 995,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "bing": {
       "ok": true,
-      "count": 281,
+      "count": 280,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T14:41:31.285Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T15:26:40.311Z"
+      "lastOkAt": "2026-11-26T15:41:54.071Z"
     }
   },
   "stories": [
@@ -336,9 +335,9 @@
       "url": "https://money.usnews.com/investing/news/articles/2026-11-26/exclusive-stancharts-crypto-unit-zodia-custody-hit-by-security-breach-some-client-data-exposed",
       "source": "U.S. News Money",
       "publishedAt": "2026-11-25T21:44:00.000Z",
-      "latestAt": "2026-11-26T14:27:00.000Z",
+      "latestAt": "2026-11-26T14:50:11.000Z",
       "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 10,
+      "outlets": 11,
       "outletNames": [
         "Cointelegraph",
         "TradingView",
@@ -349,9 +348,11 @@
         "U.S. News Money",
         "Bloomberg.com",
         "The Straits Times",
-        "Yahoo Finance"
+        "Yahoo Finance",
+        "@Reuters on X"
       ],
-      "score": 3.3
+      "xUrl": "https://x.com/Reuters/status/2125965343650693594",
+      "score": 3.4
     },
     {
       "id": "2fa8fefe8871",
@@ -414,25 +415,6 @@
         "Daily Express"
       ],
       "score": 2.79
-    },
-    {
-      "id": "4c1aa8652cf2",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird Flu Hits a 19,000-Bird Turkey Farm in Wisconsin’s Polk County",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUDEtQ2Q2My1JWmFDLUFIdFhvMmw1MU5jLW9UQ2tfQV84ZGVpdVY0cDNoQWlSRWNxdlhlTDZlaU1xWWpNSFF1eFdoc1U3LW9jSnc1UHluLXozRlZ0dWtwd2RwSUhVZU1jTkx1M29fRzcwTkV1V1lONUNvcHhsVDNmTGx4azgtblRZMnRpam9uYW00MXBuR1JaWEZuMUdOQTlFcWRwTWJsajBfS3dzNFc3S09UYW85STVsa3Vn?oc=5",
-      "source": "Nature World News",
-      "publishedAt": "2026-11-25T15:34:20.000Z",
-      "latestAt": "2026-11-26T00:24:26.000Z",
-      "firstSeenAt": "2026-11-25T19:53:28.391Z",
-      "outlets": 4,
-      "outletNames": [
-        "Nature World News",
-        "The Daily Astorian",
-        "Hoodline",
-        "Your Oregon News"
-      ],
-      "score": 2.78
     },
     {
       "id": "e76663a8ab09",
@@ -524,6 +506,24 @@
       "score": 2.41
     },
     {
+      "id": "7e3288e167a6",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Financial news anchor breaks down in tears on live TV as stocks plunge before her eyes",
+      "url": "https://www.aol.com/articles/financial-news-anchor-breaks-down-115810000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-26T03:58:00.000Z",
+      "latestAt": "2026-11-26T11:58:54.000Z",
+      "firstSeenAt": "2026-11-26T12:41:10.609Z",
+      "outlets": 3,
+      "outletNames": [
+        "AOL",
+        "The Mirror US",
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 2.21
+    },
+    {
       "id": "a9e3c4d84247",
       "cat": "flights",
       "kind": "news",
@@ -611,22 +611,21 @@
       "score": 2.22
     },
     {
-      "id": "7e3288e167a6",
-      "cat": "markets",
+      "id": "6564231387e7",
+      "cat": "internet",
       "kind": "news",
-      "title": "Financial news anchor breaks down in tears on live TV as stocks plunge before her eyes",
-      "url": "https://www.aol.com/articles/financial-news-anchor-breaks-down-115810000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-26T03:58:00.000Z",
-      "latestAt": "2026-11-26T11:58:54.000Z",
-      "firstSeenAt": "2026-11-26T12:41:10.609Z",
-      "outlets": 3,
+      "title": "Timberlake Rd. reopens after fallen tree hits power line, causing widespread outage",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQjcyVVZfUWlVWnF2dXJBeC1zeEV6WkxmSnA0bnlGQmZsU19TNE5UTHZDRm4ySGZ2dWZlOGdPRXJwY2tmbWVoT1Z4bjJFak5lbG9rWGhtS3ptS2c5TGJnSG9qaTY4eFVheUI1OXZBbjBhYi15X2ZGTFl6RFVkWDJ0YThqOUdmbW5JRlVYeVpNQ29fcURvY1lZVERpSGNnZ2YtQkt1UC1ucnZUNk9zZmpyd2U2OUotZ0wz?oc=5",
+      "source": "WSET",
+      "publishedAt": "2026-11-26T15:26:58.000Z",
+      "latestAt": "2026-11-26T15:29:14.000Z",
+      "firstSeenAt": "2026-11-26T15:41:54.071Z",
+      "outlets": 2,
       "outletNames": [
-        "AOL",
-        "The Mirror US",
-        "NewsBreak: Local News & Alerts"
+        "WSET",
+        "cedarnews.net"
       ],
-      "score": 2.21
+      "score": 1.99
     },
     {
       "id": "270c6ce8165b",
@@ -704,7 +703,7 @@
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQc3A4cjYzaHp2X1BsQ1JXTjdJMHQzNUEwaktucHM1ZWpBSGJxZ1c3Tk5uR0pKMlY4dlZqemFhNGI2Wk5ONS1PbjlBb2s3R2xLZlVSc1laUU9UYjNDT0VRcV92TUw4dTV3c1RGb1Q4ODdhcTJKeUNRWmlpS1VWRW5vcXZMVUg4clk?oc=5",
       "source": "MLQ.ai",
       "publishedAt": "2026-11-26T10:14:13.000Z",
-      "latestAt": "2026-11-26T11:35:49.000Z",
+      "latestAt": "2026-11-26T12:10:43.000Z",
       "firstSeenAt": "2026-11-26T11:55:58.934Z",
       "outlets": 2,
       "outletNames": [
@@ -843,7 +842,7 @@
       "url": "https://www.msn.com/en-au/news/other/fifa-hit-by-cyberattack-amid-mounting-scrutiny-of-gianni-infantino/ar-AA2ihOxO",
       "source": "The Independent on MSN",
       "publishedAt": "2026-11-26T05:06:05.000Z",
-      "latestAt": "2026-11-26T13:30:11.000Z",
+      "latestAt": "2026-11-26T14:36:00.000Z",
       "firstSeenAt": "2026-11-26T13:11:16.410Z",
       "outlets": 3,
       "outletNames": [
@@ -1251,6 +1250,23 @@
       "score": 1.64
     },
     {
+      "id": "6e5b30fff7d7",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outages continue in western NC on Thanksgiving morning",
+      "url": "https://www.msn.com/en-us/money/general/power-outages-continue-in-western-nc-on-thanksgiving-morning/ar-AA2ifoNn",
+      "source": "Fox Carolina on MSN",
+      "publishedAt": "2026-11-26T04:29:34.000Z",
+      "latestAt": "2026-11-26T04:53:00.000Z",
+      "firstSeenAt": "2026-11-26T15:41:54.071Z",
+      "outlets": 2,
+      "outletNames": [
+        "Fox Carolina on MSN",
+        "FOX Carolina News"
+      ],
+      "score": 1.63
+    },
+    {
       "id": "a6bf85e51f1e",
       "cat": "flights",
       "kind": "news",
@@ -1628,6 +1644,23 @@
       "score": 1.28
     },
     {
+      "id": "7c3e0518b99a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta delays flights ahead of Thanksgiving holiday over system failure",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNWVItdzdjRmRzV1UxS2FUOXRmZVRDXzR5a3RjS1JYXzQ4UjdBRUJ3UGxMOWJKbU1IWG1uNTZmQTNVZkgzMkdmQ0RHQVlBSmJkWmE5RlpsSHZiSWZDRHVIRVlFWUFzZ19LXzB3LXRNTVZCMGFTODkwWjZXZ1JzUElVX3hwakI2dUhQZGtKa2NB?oc=5",
+      "source": "Gothamist",
+      "publishedAt": "2026-11-25T17:34:00.000Z",
+      "latestAt": "2026-11-26T03:40:57.000Z",
+      "firstSeenAt": "2026-11-26T15:41:54.071Z",
+      "outlets": 2,
+      "outletNames": [
+        "Gothamist",
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.26
+    },
+    {
       "id": "1cb401c416ce",
       "cat": "internet",
       "kind": "news",
@@ -1708,22 +1741,6 @@
       "score": 1.19
     },
     {
-      "id": "18fa1ed8b77b",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Forrester: AI-generated bug will cause global outage in 2027",
-      "url": "https://www.computerweekly.com/news/366655554/Forrester-AI-generated-bug-will-cause-global-outage-in-2027",
-      "source": "Computer Weekly",
-      "publishedAt": "2026-11-25T15:28:00.000Z",
-      "latestAt": "2026-11-26T05:14:11.000Z",
-      "firstSeenAt": "2026-11-26T05:24:53.119Z",
-      "outlets": 1,
-      "outletNames": [
-        "Computer Weekly"
-      ],
-      "score": 1.07
-    },
-    {
       "id": "f93ea6772985",
       "cat": "grid",
       "kind": "news",
@@ -1740,50 +1757,34 @@
       "score": 1.06
     },
     {
-      "id": "9eee87af66a8",
-      "cat": "grid",
+      "id": "ee47c80378a8",
+      "cat": "germs",
       "kind": "news",
-      "title": "Blackout Sweeps Occupied Crimea, Leaving Sevastopol Without Power and Parts of Kerch Without Heating",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1VM0E2bmVQb1lfaEVqRndtVi1FX1ZZcHdNMlM2a2R3bHFYZGhYZElNNjh1UUQwRzdpZ1lOOU9jSWVnSFNDZHYxVmxOWQ?oc=5",
-      "source": "Kyiv Post",
-      "publishedAt": "2026-11-26T15:18:42.000Z",
-      "latestAt": "2026-11-26T15:18:42.000Z",
-      "firstSeenAt": "2026-11-26T15:26:40.311Z",
+      "title": "Bird Flu Spreads Across UK Farms as Authorities Tighten Controls",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBfbktRdjhyUnVSSzVpd0F1YXNET2szT3hXclRsRWZzMDJ3c25rQjFRVDlGZVpPSkRSSkdfNml1UVhEdnlPcHJLQTF6eERVbm50LUJIOFpQZTRsVUZ0R2FGNUhJN2d0M2lv?oc=5",
+      "source": "cwibc.co.id",
+      "publishedAt": "2026-11-26T15:38:45.000Z",
+      "latestAt": "2026-11-26T15:38:45.000Z",
+      "firstSeenAt": "2026-11-26T15:41:54.071Z",
       "outlets": 1,
       "outletNames": [
-        "Kyiv Post"
+        "cwibc.co.id"
       ],
       "score": 1
     },
     {
-      "id": "06a52e93c62c",
-      "cat": "grid",
+      "id": "3f3a1a38b959",
+      "cat": "germs",
       "kind": "news",
-      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
-      "source": "WCIV",
-      "publishedAt": "2026-11-26T15:17:10.000Z",
-      "latestAt": "2026-11-26T15:17:10.000Z",
-      "firstSeenAt": "2026-11-26T15:26:40.311Z",
+      "title": "Bird Flu Cases Trigger Poultry Restrictions Across UK",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvWnJ5UlBFTHZMZXI1MDZsM0FhM0JMYS1iTjl2dTlBdHp5UnNnT2dHQkJGOGtsSzhZNDdPbDhqVTlqNXFEbTRQVEV5YVp2UVV0OUZyQVFKTXZpZms1UThzV0tCLXF6dzV2cHY5ZQ?oc=5",
+      "source": "Demokratis.co.id",
+      "publishedAt": "2026-11-26T15:27:56.000Z",
+      "latestAt": "2026-11-26T15:27:56.000Z",
+      "firstSeenAt": "2026-11-26T15:41:54.071Z",
       "outlets": 1,
       "outletNames": [
-        "WCIV"
-      ],
-      "score": 1
-    },
-    {
-      "id": "b16c01da2331",
-      "cat": "markets",
-      "kind": "news",
-      "title": "AYDEM.E Continuous Trading Suspended; Order Collection Began",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNSGVIdDU0alV1UXZsT0JJT0RhTGVfd3BWTnpWcEtVQnVPMUV1dHZ3ZkxESDlKN1d0dkpDMlk0ek1WNEs5QndiaTE0TmtUME9hbzIwZUxsLUlHUDAxd0FoM3ZZSHNRSWROcG1IZXpmZ3BEV0NDRVo0WFBnQXJLMEl4NlZQdkZfTzllLVNxOE5Cb2pFNTFybnFTeWlyZWVGaHA4T1BNNHZLT1ZIZWFfd2lncg?oc=5",
-      "source": "TipRanks",
-      "publishedAt": "2026-11-26T15:13:43.000Z",
-      "latestAt": "2026-11-26T15:13:43.000Z",
-      "firstSeenAt": "2026-11-26T15:26:40.311Z",
-      "outlets": 1,
-      "outletNames": [
-        "TipRanks"
+        "Demokratis.co.id"
       ],
       "score": 1
     },
@@ -1888,24 +1889,6 @@
       "score": 0.99
     },
     {
-      "id": "7b76e1f248e1",
-      "cat": "earth",
-      "kind": "news",
-      "title": "M6.4 Undersea Quake Puts Rodrigues Under Tsunami Watch",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPd0c0bFR6c0g4SzdodVhXRmgyUHZPYUhxUGNCeE9mNW9Kb2dxdUZrRXEtSTE1NlU5X09yNHR6V1BkSllTcmw5SFRJZDVTVmlUMHJ5WW5vVkw2TUJ6SXNjTTZtUFU5S0YxVlpfam90N1ZnT09NSElXeDNWdGh5YnFtNUdtLVJjZUMzdnhUdnRHUUdFbVlxYzJyeWJsdkgyYlFDMGdzeWNRRk83eHdXNmxuMF93WXAwSGN2eVhtUVp3VndWWGE1MXN1RV9BOWc?oc=5",
-      "source": "Nature World News",
-      "publishedAt": "2026-11-25T15:29:25.000Z",
-      "latestAt": "2026-11-25T15:29:25.000Z",
-      "firstSeenAt": "2026-11-25T16:23:01.784Z",
-      "outlets": 1,
-      "outletNames": [
-        "Nature World News"
-      ],
-      "score": 0.99,
-      "quiet": true,
-      "quietReason": "headline mentions tsunami"
-    },
-    {
       "id": "4ee4e22b5039",
       "cat": "sun",
       "kind": "news",
@@ -1952,6 +1935,24 @@
         "Stuff"
       ],
       "score": 0.98,
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "94caec8ed80f",
+      "cat": "earth",
+      "kind": "news",
+      "title": "People flee as buildings collapse in 7.7-magnitude Indonesia earthquake",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBuR1dWS0RHWXlCUUdVRm5fSzVmR0wwNHBDSFlLZUlyam1JdFJRSk1TNXJtaEVWM2ZUWVQxSUJBeXhlaFg4OUd6Z2hEY0c3TUlIcVJMbXdHMnlvZTU3VUE?oc=5",
+      "source": "The Straits Times",
+      "publishedAt": "2026-11-26T07:10:24.000Z",
+      "latestAt": "2026-11-26T07:10:24.000Z",
+      "firstSeenAt": "2026-11-26T15:41:54.071Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Straits Times"
+      ],
+      "score": 0.86,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
     },
