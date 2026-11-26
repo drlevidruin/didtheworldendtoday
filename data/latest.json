@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T21:12:42.873Z",
+  "buildTime": "2026-11-26T21:27:37.212Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 16:12 ET",
+  "etStamp": "2026-11-26 16:27 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,8 +45,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1310,
-  "lastSuccessAt": "2026-11-26T21:12:42.873Z",
+  "headlinesRead": 1249,
+  "lastSuccessAt": "2026-11-26T21:27:37.212Z",
   "rollingFallback": false,
   "cats": {
     "flights": 13,
@@ -84,13 +84,7 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "DCA",
-          "hub": true,
-          "reason": "thunderstorms"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
       "closures": 2,
@@ -170,13 +164,11 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "Egypt tanker explosion kills 31 people as driver crashes into fuel truck in fiery highway crash"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
@@ -188,57 +180,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1004,
+      "count": 948,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     },
     "bing": {
       "ok": true,
-      "count": 273,
+      "count": 270,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T20:12:23.742Z"
     },
     "hn": {
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     },
     "faa": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     },
     "x": {
       "ok": true,
@@ -249,15 +241,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T21:12:42.873Z"
+      "lastOkAt": "2026-11-26T21:27:37.212Z"
     }
   },
   "stories": [
@@ -711,7 +703,7 @@
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
       "source": "WCIV",
       "publishedAt": "2026-11-26T15:17:10.000Z",
-      "latestAt": "2026-11-26T16:07:30.000Z",
+      "latestAt": "2026-11-26T21:11:15.000Z",
       "firstSeenAt": "2026-11-26T16:11:53.860Z",
       "outlets": 2,
       "outletNames": [
@@ -1811,20 +1803,20 @@
       "score": 1.19
     },
     {
-      "id": "f93ea6772985",
+      "id": "7fa71f9cd57e",
       "cat": "grid",
       "kind": "news",
-      "title": "Power being restored in stages after massive blackout hits Sabah’s east coast",
-      "url": "https://www.thestar.com.my/news/nation/2026/11/26/power-being-restored-in-stages-after-massive-blackout-hits-sabahs-east-coast",
-      "source": "The Star",
-      "publishedAt": "2026-11-25T21:15:00.000Z",
-      "latestAt": "2026-11-25T21:15:00.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "title": "Mass power outage drags on",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9ETkhPVGFCdkpHUHp5WFczM1VnckZuZzhneGtqb21pa0dPNkJRRmdjaHJyZVVFaGkyTVJ5aUVJYllwdXdyeGx1cmY5SkhtN0NPNGRLYWQ0STVCZHJxa0pHNVlZWVUxTHl0V3JtdnhR?oc=5",
+      "source": "5CC",
+      "publishedAt": "2026-11-26T21:17:29.000Z",
+      "latestAt": "2026-11-26T21:17:29.000Z",
+      "firstSeenAt": "2026-11-26T21:27:37.212Z",
       "outlets": 1,
       "outletNames": [
-        "The Star"
+        "5CC"
       ],
-      "score": 1.06
+      "score": 1
     },
     {
       "id": "802ce460ea38",
