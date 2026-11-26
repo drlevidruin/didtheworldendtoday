@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T06:10:03.225Z",
+  "buildTime": "2026-11-26T06:25:09.060Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 01:10 ET",
+  "etStamp": "2026-11-26 01:25 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,13 +51,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1219,
-  "lastSuccessAt": "2026-11-26T06:10:03.225Z",
+  "headlinesRead": 312,
+  "lastSuccessAt": "2026-11-26T06:25:09.060Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
-    "internet": 15,
-    "hacks": 29,
+    "flights": 15,
+    "internet": 17,
+    "hacks": 28,
     "germs": 6,
     "grid": 9,
     "markets": 4,
@@ -169,7 +169,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -187,16 +187,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 945,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-26T06:10:03.225Z"
     },
     "bing": {
       "ok": true,
-      "count": 243,
-      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "count": 281,
+      "error": null,
+      "lastOkAt": "2026-11-26T06:25:09.060Z"
     },
     "gdelt": {
       "ok": false,
@@ -208,37 +208,37 @@
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "lastOkAt": "2026-11-26T06:25:09.060Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "lastOkAt": "2026-11-26T06:25:09.060Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "lastOkAt": "2026-11-26T06:25:09.060Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "lastOkAt": "2026-11-26T06:25:09.060Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "lastOkAt": "2026-11-26T06:25:09.060Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "lastOkAt": "2026-11-26T06:25:09.060Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "lastOkAt": "2026-11-26T06:25:09.060Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T06:10:03.225Z"
+      "lastOkAt": "2026-11-26T06:25:09.060Z"
     }
   },
   "stories": [
@@ -1062,23 +1062,6 @@
       "score": 1.71
     },
     {
-      "id": "3873296babda",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Todoist confirms 6% of customers’ details were stolen in data breach",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/todoist-confirms-6-customers-details-142028999.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-25T06:20:00.000Z",
-      "latestAt": "2026-11-25T14:20:28.000Z",
-      "firstSeenAt": "2026-11-25T15:22:43.868Z",
-      "outlets": 2,
-      "outletNames": [
-        "YAHOO!",
-        "TechCrunch"
-      ],
-      "score": 1.7
-    },
-    {
       "id": "5e14f636be1f",
       "cat": "hacks",
       "kind": "news",
@@ -1666,6 +1649,22 @@
       "score": 1.07
     },
     {
+      "id": "fb0e8cb3b5b8",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft declares ‘Code Red’ after major global outage, targets service recovery within one hour",
+      "url": "https://profit.pakistantoday.com.pk/2026/11/26/microsoft-declares-code-red-after-major-global-outage-targets-service-recovery-within-one-hour",
+      "source": "Profit by Pakistan Today",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-25T16:00:00.000Z",
+      "firstSeenAt": "2026-11-26T06:25:09.060Z",
+      "outlets": 1,
+      "outletNames": [
+        "Profit by Pakistan Today"
+      ],
+      "score": 1.06
+    },
+    {
       "id": "14ec8f5c37b6",
       "cat": "internet",
       "kind": "news",
@@ -1746,6 +1745,22 @@
       "score": 1
     },
     {
+      "id": "dfe90c59c28e",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft issues 'Code Red' after huge global outage",
+      "url": "https://ia.acs.org.au/article/2026/microsoft-issues--code-red--after-huge-global-outage.html",
+      "source": "Information Age",
+      "publishedAt": "2026-11-25T13:10:00.000Z",
+      "latestAt": "2026-11-25T13:10:00.000Z",
+      "firstSeenAt": "2026-11-26T06:25:09.060Z",
+      "outlets": 1,
+      "outletNames": [
+        "Information Age"
+      ],
+      "score": 1
+    },
+    {
       "id": "3a214031f9d9",
       "cat": "earth",
       "kind": "news",
@@ -1760,22 +1775,6 @@
         "Volcano Discovery"
       ],
       "score": 1
-    },
-    {
-      "id": "e9d7ba494107",
-      "cat": "flights",
-      "kind": "news",
-      "title": "New FAA outage rule could slow Thanksgiving flights",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRU1uQnNRZmZGbUkxUUdUNERuYzdWNm1HQWJTVHpYbC1KM3VRN01ybnV1dko4YU9ia0xtRHhXWnBPaFpVeHBRSWM2c1FHZF90c01PYnI1QXh4YjlraGhXMXp2eFZhWk4tSEZxQ2dCZjJTd0s2YVpENVh1Q0RTbmdUX1c3QnI4Tlk?oc=5",
-      "source": "www.thetraveler.org",
-      "publishedAt": "2026-11-26T05:32:25.000Z",
-      "latestAt": "2026-11-26T05:32:25.000Z",
-      "firstSeenAt": "2026-11-26T06:10:03.225Z",
-      "outlets": 1,
-      "outletNames": [
-        "www.thetraveler.org"
-      ],
-      "score": 0.99
     },
     {
       "id": "2729017858cd",
