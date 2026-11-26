@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T04:54:50.753Z",
-  "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 23:54 ET",
+  "buildTime": "2026-11-26T05:09:52.811Z",
+  "etDate": "2026-11-26",
+  "etStamp": "2026-11-26 00:09 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -29,14 +29,16 @@
       "points": 8
     }
   ],
-  "change": 15,
+  "change": 0,
   "yesterday": {
-    "date": "2026-11-24",
-    "score": 65,
+    "date": "2026-11-25",
+    "score": 80,
     "fired": [
       "flights",
       "hacks",
       "internet",
+      "space",
+      "sun",
       "earth",
       "markets",
       "ai",
@@ -49,21 +51,21 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1281,
-  "lastSuccessAt": "2026-11-26T04:54:50.753Z",
+  "headlinesRead": 886,
+  "lastSuccessAt": "2026-11-26T05:09:52.811Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 16,
-    "internet": 12,
-    "hacks": 33,
+    "flights": 14,
+    "internet": 15,
+    "hacks": 32,
     "germs": 6,
     "grid": 8,
     "markets": 4,
     "animals": 1,
     "ai": 4,
     "weather": 4,
-    "earth": 4,
     "sun": 4,
+    "earth": 4,
     "space": 4
   },
   "vital": {
@@ -186,57 +188,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 981,
-      "error": null,
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "count": 575,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 15 of 26 queries)",
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     },
     "bing": {
       "ok": true,
-      "count": 268,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "count": 282,
+      "error": null,
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T02:24:32.389Z"
     },
     "hn": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     },
     "x": {
       "ok": true,
@@ -247,15 +249,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T04:54:50.753Z"
+      "lastOkAt": "2026-11-26T05:09:52.811Z"
     }
   },
   "stories": [
@@ -435,6 +437,23 @@
       "score": 2.58
     },
     {
+      "id": "7e175ed82324",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft explains tech failures that triggered global outage",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUmd5Y3BzNTdfckhHZ2lGbEtOVEZWamRMSWNFMUdoaGJIaHJxRUpmNWFreDMtbDR5Ymk4OUFGVXB1RUtJdW1xbGVSaVl0RFlDWHhHTW9jRTZWb1V5TFMtRThmQVNzMi1IVXBadUFWU2t4bHVxNFN2ck1jaGpZSkFPYmVjLURhNkh4azJ6a3VySE1weWxVREthNGZ3?oc=5",
+      "source": "Longview Daily News",
+      "publishedAt": "2026-11-25T22:00:00.000Z",
+      "latestAt": "2026-11-26T00:00:00.000Z",
+      "firstSeenAt": "2026-11-26T05:09:52.811Z",
+      "outlets": 2,
+      "outletNames": [
+        "Longview Daily News",
+        "The Star"
+      ],
+      "score": 2.47
+    },
+    {
       "id": "530e0e2931cc",
       "cat": "hacks",
       "kind": "news",
@@ -452,23 +471,6 @@
         "WRGA Rome's Newstalk"
       ],
       "score": 2.47
-    },
-    {
-      "id": "325cd3c46cea",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Major Insurer Allstate Hit by 3-Day Outage Amid Spate of US Service Issues",
-      "url": "https://www.newsweek.com/major-insurer-allstate-hit-by-3-day-outage-amid-spate-of-us-service-issues-12768326",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-25T12:10:00.000Z",
-      "latestAt": "2026-11-25T20:10:00.000Z",
-      "firstSeenAt": "2026-11-25T20:23:32.754Z",
-      "outlets": 2,
-      "outletNames": [
-        "Newsweek",
-        "Yahoo"
-      ],
-      "score": 2.42
     },
     {
       "id": "2fa8fefe8871",
@@ -559,7 +561,7 @@
       "url": "https://www.yahoo.com/news/videos/faa-issues-ground-stop-miami-215133838.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-25T06:00:00.000Z",
-      "latestAt": "2026-11-26T04:41:15.000Z",
+      "latestAt": "2026-11-26T05:00:00.000Z",
       "firstSeenAt": "2026-11-26T04:39:47.244Z",
       "outlets": 32,
       "outletNames": [
@@ -614,6 +616,23 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 2.79
+    },
+    {
+      "id": "325cd3c46cea",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Major Insurer Allstate Hit by 3-Day Outage Amid Spate of US Service Issues",
+      "url": "https://www.newsweek.com/major-insurer-allstate-hit-by-3-day-outage-amid-spate-of-us-service-issues-12768326",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-25T12:10:00.000Z",
+      "latestAt": "2026-11-25T20:10:00.000Z",
+      "firstSeenAt": "2026-11-25T20:23:32.754Z",
+      "outlets": 2,
+      "outletNames": [
+        "Newsweek",
+        "Yahoo"
+      ],
+      "score": 2.42
     },
     {
       "id": "dfcf1fa0e43b",
@@ -858,22 +877,6 @@
       "score": 1.39
     },
     {
-      "id": "fae6145286ca",
-      "cat": "ai",
-      "kind": "news",
-      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
-      "source": "Coinpaper",
-      "publishedAt": "2026-11-25T17:34:59.000Z",
-      "latestAt": "2026-11-25T17:34:59.000Z",
-      "firstSeenAt": "2026-11-25T18:08:07.848Z",
-      "outlets": 1,
-      "outletNames": [
-        "Coinpaper"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "11fd89512079",
       "cat": "hacks",
       "kind": "news",
@@ -956,23 +959,6 @@
       "outletNames": [
         "The Record from Recorded Future News",
         "MLQ.ai"
-      ],
-      "score": 1.97
-    },
-    {
-      "id": "c0a263ebd895",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Enhanced BiLSTM Architecture Improves IoT Cyberattack Classification Accuracy and Sensitivity",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZEVFZUNKVmlEcjk1cTRLdGRzTjNZY0JhSi1JYVp3MHdBTHFibEs4aVZ6VmVSUGpWVGQtR0xVNXpUb1NYb3QwQzVmUkZXano4QWtEeFhsTDZXM3MwXzZIb3FOZ0Utd2tXNnRtYnFaRFQwVTl4YXRoY0tvR2ZzMWFFaVdzSzNOZWlPWFFINHlrVk9ZY1l3VkVrcXZ0Q0p5Z2sxNzRSUG84V0VYVjFzYWlVREdoQ0p1MFpZYXc?oc=5",
-      "source": "Bioengineer.org",
-      "publishedAt": "2026-11-25T04:54:54.000Z",
-      "latestAt": "2026-11-25T06:59:31.000Z",
-      "firstSeenAt": "2026-11-25T05:46:30.876Z",
-      "outlets": 2,
-      "outletNames": [
-        "Bioengineer.org",
-        "cedarnews.net"
       ],
       "score": 1.97
     },
@@ -1332,6 +1318,22 @@
       "score": 1.39
     },
     {
+      "id": "fae6145286ca",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Anthropic Stock Crashes 36% From Record High as Market Cap Falls Below $1 Trillion",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTREbWtfbDI3bDRyUDJFRzZ4NGlGaWY4MldxbFVBZjByRURvcDlqZFVtWmNfZDMwSUN2RWJnYjZsbFVySkJCU2pUa3Brekk4am1tZ1BtVk9yLTJEdHEwZWhtX1pEc3dORXhrazJxbUZaY0dEbV9FREpIRjRkeDhvbXRtaFBpX2UtWVBTemNlWTJKNDNueUMxbWR3NmJhZzlxaGxWTS1Rc2k2SGQx?oc=5",
+      "source": "Coinpaper",
+      "publishedAt": "2026-11-25T17:34:59.000Z",
+      "latestAt": "2026-11-25T17:34:59.000Z",
+      "firstSeenAt": "2026-11-25T18:08:07.848Z",
+      "outlets": 1,
+      "outletNames": [
+        "Coinpaper"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "cd30a07ae631",
       "cat": "hacks",
       "kind": "news",
@@ -1462,22 +1464,6 @@
       "score": 1.38
     },
     {
-      "id": "d8bad2fdd7fe",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Following nationwide shutdown, ground stops hit Chicago and Atlanta airports during Thanksgiving week",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBzTzEtdW5GLTVZRU8wOF9wcEVKeGcyQjBqU1BEREppV3Z2NzZrczBvNXBta1ZxeVdqS2kxS2NiZFJQUkhoZ3h5WGM3bjZlcnc4Tm52a0J2dmZEZ0N6ZkFiR0k1ZWxoMDFt?oc=5",
-      "source": "World Socialist Web Site",
-      "publishedAt": "2026-11-25T04:59:35.000Z",
-      "latestAt": "2026-11-25T04:59:35.000Z",
-      "firstSeenAt": "2026-11-25T05:46:30.876Z",
-      "outlets": 1,
-      "outletNames": [
-        "World Socialist Web Site"
-      ],
-      "score": 1.38
-    },
-    {
       "id": "4a89ce93752e",
       "cat": "grid",
       "kind": "news",
@@ -1492,6 +1478,22 @@
         "Herald.Wales"
       ],
       "score": 1.37
+    },
+    {
+      "id": "fb9a5b3b1cec",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Overhauls Its Outage Response Plan After Major Outlook Problems",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNeTIwbUFDd1d4ZmZUMXpVaEtibTJhTzhkaEJHLXEtMnlrRWRsZVlBT2ZhRVhEZ3lUWnBrQVRranEzUkpwUEZsdi02elpJak52QXlaMU9EZ0hrc29qVm9pQzV5MjlNYnlwcTlUdzRIZnJaTUV4aExZdnVNOFIzTktXY1dQYTVZZ1hEWTZBa09oUDFVcTBSMnBMR1Y5cERtMTNpdjk3UWdCazBNNHRyMnc2ZUZVd0VjS3pv?oc=5",
+      "source": "PCMag Middle East",
+      "publishedAt": "2026-11-26T03:19:39.000Z",
+      "latestAt": "2026-11-26T03:19:39.000Z",
+      "firstSeenAt": "2026-11-26T05:09:52.811Z",
+      "outlets": 1,
+      "outletNames": [
+        "PCMag Middle East"
+      ],
+      "score": 1.36
     },
     {
       "id": "a973bdfe6d38",
@@ -1573,23 +1575,6 @@
         "Wisevoter"
       ],
       "score": 1.31
-    },
-    {
-      "id": "efa36710438b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Ground stop issued at O'Hare International Airport in Chicago due to 'equipment outage'",
-      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxQQXhXZjBURDNKT3kwSl9uT1NubzVGRmpFa1RDRXhJb2gwWHQ4anZFZ2Zac0VJaHpISmZuc1FDYS12NXhKRlZxeVI5anhxR1RONDRiM2Y2eW9Oc2VENWlFZ1dUZTh1R19uZk5wVDRrd21MRTFUUTBzUzBwc2t1NnhPNEs5TkFZWVczb1VJVFZ4QVhMUi1FNmd5TWpicHFybk14UWlkVm9NY3ZFSUFnZlNUYmpsbkRiSlZlS3M3N0NSem05b1N3NndMeW0yOWNNMjE1M3lDVkk3alpLRFhmLTAzYXBMcm5neUZtYnB2dTk1Z2RQZXJhcndza1ZqY0xaX1hEZGpDSTVIU2lHQzg4dzlySmZEbDUtV3JVTWxTM1VZTkFYcENtRHNfenIzU1pmODY3ZXpGLVc5OXIwMzlTLTd2NXVyRGtTMzVkZU1BS2dtWnlxRTNuSk1aOHd5OG5aTUhqUUpGZnl6WDVXOElvRGVlZzV0SDRHd0ctenc?oc=5",
-      "source": "KEYE",
-      "publishedAt": "2026-11-25T07:07:27.000Z",
-      "latestAt": "2026-11-25T08:36:14.000Z",
-      "firstSeenAt": "2026-11-26T04:54:50.753Z",
-      "outlets": 2,
-      "outletNames": [
-        "KEYE",
-        "WRGB"
-      ],
-      "score": 1.27
     },
     {
       "id": "7a7dbfd634b6",
@@ -1688,6 +1673,22 @@
       "score": 1.19
     },
     {
+      "id": "f1b8ae6ebc00",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft issues 'Code Red' declaration following major Outlook outage",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVUxpOHUxeVpQXy1UR2NXZ05GeV9fS0p3dHg5RDE4Rk5UV1NEZDJJTGY5OFZXTVZxUjRrU1lNamJfZm5XdXhDU0hWNDNydEE4czNVNVN4akRrRVhlOWdvcG42blQxcGltdFB5NE96WERfYWkzZGM3dmI2eEs3LXlmRFlIS2pSMWNjY25MbEhlQ3FjM2pFWlE?oc=5",
+      "source": "UNILAD Tech",
+      "publishedAt": "2026-11-25T17:10:19.000Z",
+      "latestAt": "2026-11-25T17:10:19.000Z",
+      "firstSeenAt": "2026-11-26T05:09:52.811Z",
+      "outlets": 1,
+      "outletNames": [
+        "UNILAD Tech"
+      ],
+      "score": 1.12
+    },
+    {
       "id": "e3ff2b9031e9",
       "cat": "grid",
       "kind": "news",
@@ -1734,6 +1735,22 @@
         "TechRadar"
       ],
       "score": 1.02
+    },
+    {
+      "id": "6715de6aefe5",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOOWlrdnlTUGtZOWtuakM2Y1ByOGRCdU5CNkI1ZUhCWGdnaV9KSWpBM1lFUlRzaGh5R2pSV0JIQzRSOHZpRjRMa2hxSV9BNVV4T3pkRW1keEI2X1V2Q0pfdldVY1BZR0lGYXNNZXYzNm5LMFc2akhIVkxNdEh5NXQ4ZTBLbms5dDNwOE5YWExWREhDYWNvVU5zOENJUFczSk03bzk1RlRjSEltTnBwU0k0aldFTUZNZGszZ1B3TEZaUVZLNGVpdV9WRmc4Ul9DSXhtcFhJSXFWaV9vUFA5V3JKajBrQ0pxekhXWEVXeHJGNHhqWjdHT1Vhc2tFYlNWOFN0Ync?oc=5",
+      "source": "CPG Click Oil and Gas",
+      "publishedAt": "2026-11-26T04:57:00.000Z",
+      "latestAt": "2026-11-26T04:57:00.000Z",
+      "firstSeenAt": "2026-11-26T05:09:52.811Z",
+      "outlets": 1,
+      "outletNames": [
+        "CPG Click Oil and Gas"
+      ],
+      "score": 1
     },
     {
       "id": "3f8fdb3f1a21",
@@ -1896,22 +1913,6 @@
         "The Jerusalem Post"
       ],
       "score": 0.99
-    },
-    {
-      "id": "4ee4e22b5039",
-      "cat": "sun",
-      "kind": "news",
-      "title": "☀️ Solar Activity: Kp Index, Solar Wind, Flares and Aurora Forecast",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tXzFhTUtNbHNxTU9TY3RzNlVLVFVpYklvRnZnS3BEcE5NSWlwNm1BUWJJbi1iTnluTkJiWVBaT1dGOTdLTTFIdXBldHlMZ3FfT0ptQ1FPUWZ4M05tSGJONEdLVTdEbU8w?oc=5",
-      "source": "notre-planete.info",
-      "publishedAt": "2026-11-26T00:45:40.000Z",
-      "latestAt": "2026-11-26T00:45:40.000Z",
-      "firstSeenAt": "2026-11-26T02:09:27.895Z",
-      "outlets": 1,
-      "outletNames": [
-        "notre-planete.info"
-      ],
-      "score": 0.98
     },
     {
       "id": "60bfdfea0829",
