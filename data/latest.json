@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T11:41:00.235Z",
+  "buildTime": "2026-11-26T11:55:58.934Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 06:41 ET",
+  "etStamp": "2026-11-26 06:55 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,15 +51,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 659,
-  "lastSuccessAt": "2026-11-26T11:41:00.235Z",
+  "headlinesRead": 1330,
+  "lastSuccessAt": "2026-11-26T11:55:58.934Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
-    "internet": 15,
-    "germs": 4,
-    "hacks": 35,
-    "grid": 7,
+    "flights": 15,
+    "internet": 16,
+    "germs": 5,
+    "hacks": 29,
+    "grid": 10,
     "markets": 4,
     "animals": 1,
     "weather": 4,
@@ -183,80 +183,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 345,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 6 of 26 queries)",
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "count": 1013,
+      "error": null,
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     },
     "bing": {
       "ok": true,
-      "count": 282,
+      "count": 285,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:41:00.235Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T11:41:00.235Z"
+      "lastOkAt": "2026-11-26T11:55:58.934Z"
     }
   },
   "stories": [
@@ -338,7 +339,7 @@
       "publishedAt": "2026-11-25T12:35:17.000Z",
       "latestAt": "2026-11-26T10:47:40.000Z",
       "firstSeenAt": "2026-11-25T20:23:32.754Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "Craven Herald",
         "BBC",
@@ -346,9 +347,10 @@
         "Yahoo News UK",
         "The Northern Echo",
         "Yorkshire Post",
-        "The York Press"
+        "The York Press",
+        "Gazetteherald.co.uk"
       ],
-      "score": 3.31
+      "score": 3.48
     },
     {
       "id": "2fa8fefe8871",
@@ -477,7 +479,7 @@
       "url": "https://ia.acs.org.au/article/2026/microsoft-issues--code-red--after-huge-global-outage.html",
       "source": "Information Age",
       "publishedAt": "2026-11-25T13:10:00.000Z",
-      "latestAt": "2026-11-26T01:19:32.000Z",
+      "latestAt": "2026-11-26T03:10:00.000Z",
       "firstSeenAt": "2026-11-26T08:10:22.551Z",
       "outlets": 3,
       "outletNames": [
@@ -682,6 +684,23 @@
       "score": 1.96
     },
     {
+      "id": "01b55d1ed95d",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thanksgiving storms leave 260,000 US customers without power",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQc3A4cjYzaHp2X1BsQ1JXTjdJMHQzNUEwaktucHM1ZWpBSGJxZ1c3Tk5uR0pKMlY4dlZqemFhNGI2Wk5ONS1PbjlBb2s3R2xLZlVSc1laUU9UYjNDT0VRcV92TUw4dTV3c1RGb1Q4ODdhcTJKeUNRWmlpS1VWRW5vcXZMVUg4clk?oc=5",
+      "source": "MLQ.ai",
+      "publishedAt": "2026-11-26T10:14:16.000Z",
+      "latestAt": "2026-11-26T11:35:49.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 2,
+      "outletNames": [
+        "MLQ.ai",
+        "Men's Journal"
+      ],
+      "score": 1.94
+    },
+    {
       "id": "251d291f0bd0",
       "cat": "weather",
       "kind": "news",
@@ -737,16 +756,18 @@
       "cat": "grid",
       "kind": "news",
       "title": "Severe weather leaves thousands of Dominion customers without power in Hampton Roads",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVzNlYmlfc3JmNlRpUDN1cXhKZDNoQXZBWjN3elREd0JpSzM5c2ZacFBZWXF0YWtjSVd6VWl0MXNPRUN2T1JCSDRLOHNfamdMZUZGZ1NEVVNoazIzN3l0M05Id1RUSU1IdmxrVm1kUzRoTzJZNEpsX1pBQ0h5RnpWdTgxdEZCYlBMMWJkd0c1dm01VndNQzA3Wk1yLTNVendENjFlWUREaw?oc=5",
-      "source": "Yahoo",
+      "url": "https://www.wavy.com/news/local-news/severe-weather-leaves-thousands-of-dominion-customers-without-power-in-hampton-roads/",
+      "source": "WAVY.com",
       "publishedAt": "2026-11-26T01:53:00.000Z",
-      "latestAt": "2026-11-26T10:19:55.000Z",
+      "latestAt": "2026-11-26T11:30:00.000Z",
       "firstSeenAt": "2026-11-26T08:55:30.997Z",
       "outlets": 2,
       "outletNames": [
         "Yahoo",
         "WAVY.com"
       ],
+      "trending": 100,
+      "trendTerm": "report power outage",
       "score": 1.77
     },
     {
@@ -765,6 +786,23 @@
         "TradingView"
       ],
       "score": 1.71
+    },
+    {
+      "id": "795b176889d5",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands of residents in Rosseau, Orrville and Muskoka will lose power in scheduled Hydro One outage",
+      "url": "https://www.muskokaregion.com/news/hydro-one-schedules-outage-parry-sound/article_4242f334-5f7d-52d3-b75c-120b0ecbd4a7.html",
+      "source": "Muskoka Region",
+      "publishedAt": "2026-11-26T03:00:00.000Z",
+      "latestAt": "2026-11-26T11:00:00.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 2,
+      "outletNames": [
+        "Muskoka Region",
+        "ParrySound.com"
+      ],
+      "score": 1.7
     },
     {
       "id": "6715de6aefe5",
@@ -799,38 +837,6 @@
         "AOL.com"
       ],
       "score": 1.48
-    },
-    {
-      "id": "a20199df1c16",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
-      "source": "Simply Wall St",
-      "publishedAt": "2026-11-26T03:26:14.000Z",
-      "latestAt": "2026-11-26T03:26:14.000Z",
-      "firstSeenAt": "2026-11-26T03:39:36.789Z",
-      "outlets": 1,
-      "outletNames": [
-        "Simply Wall St"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "a7980bb2bb2c",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Brito warns Las Terrenas is at risk of electrical collapse and a massive blackout lasting up to two months",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxONUlSblgtc3BiajFLLWRRc3pOQVhTZWhvZ2h0WXQxSjlUZ1NYcHo3VjhUMkVvbkFKSXpvM3JaRmt6T2RzcVZZSWpHTmhKci1uUUlITFlHb09MQjB2cUNzT0dOaDh3STVWRGs5WFdlbU9rc1htNEtLbXNPd2VyYXUxTE9BcF8yQzk2UGhqTVctWWxsNXFEcXhHeFY1NWs1ZktieFAtaW5rVy1VLVJobENQODhreDVZMUpYb1RkdlFJU1FabEJMTmpzamdUcllpbnVvX2tidzIxUkp0N2FOOUIyRDFKVnd2ZHRvcDkzVQ?oc=5",
-      "source": "De Último Minuto",
-      "publishedAt": "2026-11-25T19:02:42.000Z",
-      "latestAt": "2026-11-25T19:02:42.000Z",
-      "firstSeenAt": "2026-11-25T19:38:22.696Z",
-      "outlets": 1,
-      "outletNames": [
-        "De Último Minuto"
-      ],
-      "score": 1.39
     },
     {
       "id": "0349d45e030f",
@@ -990,19 +996,19 @@
       "score": 1.73
     },
     {
-      "id": "258a18067b85",
+      "id": "7b81cdda58f3",
       "cat": "hacks",
       "kind": "news",
-      "title": "Fandango Data Breach: Card Numbers And CVVs May Have Been Exposed At Checkout",
-      "url": "https://www.forbes.com/sites/larsdaniel/2026/11/25/fandango-data-breach-card-numbers-and-cvvs-may-have-been-exposed-at-checkout/",
-      "source": "Forbes",
-      "publishedAt": "2026-11-25T11:44:00.000Z",
-      "latestAt": "2026-11-25T19:43:57.000Z",
-      "firstSeenAt": "2026-11-25T20:08:32.112Z",
+      "title": "Standard Chartered’s Zodia Custody suffers data breach: Report",
+      "url": "https://cointelegraph.com/news/standard-chartered-zodia-suffers-data-breach",
+      "source": "Cointelegraph",
+      "publishedAt": "2026-11-26T03:37:00.000Z",
+      "latestAt": "2026-11-26T11:37:06.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
       "outlets": 2,
       "outletNames": [
-        "Forbes",
-        "Yahoo"
+        "Cointelegraph",
+        "TradingView"
       ],
       "score": 1.72
     },
@@ -1022,6 +1028,23 @@
         "cedarnews.net"
       ],
       "score": 1.71
+    },
+    {
+      "id": "fbcc4f70f36d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA subject of cyberattack, has ‘personal and business information’ stolen",
+      "url": "https://www.nytimes.com/athletic/7813984/2026/11/26/fifa-hack-cyberattack/",
+      "source": "The New York Times",
+      "publishedAt": "2026-11-26T02:41:00.000Z",
+      "latestAt": "2026-11-26T10:41:57.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 2,
+      "outletNames": [
+        "The New York Times",
+        "The Mirror"
+      ],
+      "score": 1.69
     },
     {
       "id": "c742603a0621",
@@ -1226,6 +1249,38 @@
       "score": 1.4
     },
     {
+      "id": "a20199df1c16",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
+      "source": "Simply Wall St",
+      "publishedAt": "2026-11-26T03:26:14.000Z",
+      "latestAt": "2026-11-26T03:26:14.000Z",
+      "firstSeenAt": "2026-11-26T03:39:36.789Z",
+      "outlets": 1,
+      "outletNames": [
+        "Simply Wall St"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "a7980bb2bb2c",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Brito warns Las Terrenas is at risk of electrical collapse and a massive blackout lasting up to two months",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxONUlSblgtc3BiajFLLWRRc3pOQVhTZWhvZ2h0WXQxSjlUZ1NYcHo3VjhUMkVvbkFKSXpvM3JaRmt6T2RzcVZZSWpHTmhKci1uUUlITFlHb09MQjB2cUNzT0dOaDh3STVWRGs5WFdlbU9rc1htNEtLbXNPd2VyYXUxTE9BcF8yQzk2UGhqTVctWWxsNXFEcXhHeFY1NWs1ZktieFAtaW5rVy1VLVJobENQODhreDVZMUpYb1RkdlFJU1FabEJMTmpzamdUcllpbnVvX2tidzIxUkp0N2FOOUIyRDFKVnd2ZHRvcDkzVQ?oc=5",
+      "source": "De Último Minuto",
+      "publishedAt": "2026-11-25T19:02:42.000Z",
+      "latestAt": "2026-11-25T19:02:42.000Z",
+      "firstSeenAt": "2026-11-25T19:38:22.696Z",
+      "outlets": 1,
+      "outletNames": [
+        "De Último Minuto"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "fae6145286ca",
       "cat": "ai",
       "kind": "news",
@@ -1338,6 +1393,22 @@
         "Geo News"
       ],
       "score": 1.36
+    },
+    {
+      "id": "60bf689c89a1",
+      "cat": "internet",
+      "kind": "news",
+      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
+      "source": "StoneWars.com",
+      "publishedAt": "2026-11-26T09:48:28.000Z",
+      "latestAt": "2026-11-26T09:48:28.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 1,
+      "outletNames": [
+        "StoneWars.com"
+      ],
+      "score": 1.35
     },
     {
       "id": "6f47c7d0cafc",
@@ -1454,6 +1525,22 @@
       "score": 1.22
     },
     {
+      "id": "a6834dd44921",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA investigators reportedly trace nationwide ground stop to overlooked router setting",
+      "url": "https://www.msn.com/en-us/news/other/faa-investigators-reportedly-trace-nationwide-ground-stop-to-overlooked-router-setting/ar-AA2ihtyR",
+      "source": "Aerospace and Mechanical Insider on MSN",
+      "publishedAt": "2026-11-26T03:49:12.000Z",
+      "latestAt": "2026-11-26T03:49:12.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 1,
+      "outletNames": [
+        "Aerospace and Mechanical Insider on MSN"
+      ],
+      "score": 1.21
+    },
+    {
       "id": "f3fb306ec044",
       "cat": "internet",
       "kind": "news",
@@ -1500,6 +1587,22 @@
         "The Star"
       ],
       "score": 1.07
+    },
+    {
+      "id": "f93ea6772985",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power being restored in stages after massive blackout hits Sabah’s east coast",
+      "url": "https://www.thestar.com.my/news/nation/2026/11/26/power-being-restored-in-stages-after-massive-blackout-hits-sabahs-east-coast",
+      "source": "The Star",
+      "publishedAt": "2026-11-25T21:15:00.000Z",
+      "latestAt": "2026-11-25T21:15:00.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Star"
+      ],
+      "score": 1.06
     },
     {
       "id": "14ec8f5c37b6",
@@ -1550,66 +1653,34 @@
       "score": 1.02
     },
     {
-      "id": "2d9813eb624f",
+      "id": "c78ceb5e5415",
       "cat": "hacks",
       "kind": "news",
-      "title": "Microsoft details how state-backed hackers use the ARTEX AI framework to automate cyberattacks",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNblI5Z0NxX2ZNTkVJdzM4aTVWaXMzemdBTWk1Rzg1cWFtdktlQzk4Tml3c013VUo0M0l3UjJ2UDktVmFtQm1VWHFhUDlQbUZ3dlVDMHVwU2t6TDdwSEN6WVFzaWJhTFJhaE1abFgyRGZjNWhrMmczNDNrMkNsV1R6NHhVWF9iTmxPQmppNExwU0FCd3lKcTg5b09ZV21JeWZXS1laZjhkRU1BZzFPUnBkWVU4d1dGbUtaNjdj?oc=5",
-      "source": "The Decoder",
-      "publishedAt": "2026-11-26T11:30:06.000Z",
-      "latestAt": "2026-11-26T11:30:06.000Z",
-      "firstSeenAt": "2026-11-26T11:41:00.235Z",
+      "title": "1Password Data Breach: What Was Taken and What Was Not",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQlVhblNnaGlGTXpRNlBHQ3Z6WktFMlJ1OEloNUIwdjdyNkMtUXVPMTJzR3N6YmxIT3ctQ2NKdHlmMHRGLXEyRFR2S1N5dElkMEFhX3lla2I5TFdlckt4NmotNkNsemEwdnpMbXZFM3FVbWdxblRmQzhlSUNORmpPT01nRWxDQ0oxRDhMYQ?oc=5",
+      "source": "Cyber Magazine",
+      "publishedAt": "2026-11-26T11:55:00.000Z",
+      "latestAt": "2026-11-26T11:55:00.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
       "outlets": 1,
       "outletNames": [
-        "The Decoder"
+        "Cyber Magazine"
       ],
       "score": 1
     },
     {
-      "id": "d8faac5af851",
-      "cat": "hacks",
+      "id": "1f8820b57e57",
+      "cat": "germs",
       "kind": "news",
-      "title": "Chinese, North Korean Hackers Adopt ARTEX AI Offensive Framework",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1xV0N2LUl6aTB5U1JmQ0V1Z3dDZmtlRmx6ZUJlXzJRTmw0WUJUUzlqSThLUnlSNXNPVUdDU2NRb3Nwa3h0U1FNb1ljVGRjVjJQT1I0SnUteXRDalI5aDFhTE5HbnRUbTE5SmdmSGF4Z1Y0Z1pjd3RVNg?oc=5",
-      "source": "Infosecurity Magazine",
-      "publishedAt": "2026-11-26T11:05:00.000Z",
-      "latestAt": "2026-11-26T11:05:00.000Z",
-      "firstSeenAt": "2026-11-26T11:10:54.456Z",
+      "title": "Bird flu confirmed at Herefordshire commercial poultry farm",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5jaktGSnNQc3dtTDJPcWpSTER1cnRPVXBnT0g3c3piZG9MSlR4OFo0Q1d6UWg4LUI5MVduNFRPV3JvUEZaaFhkVGJTN0FkVHFEMUtCanVJb0tOSnBCZWc?oc=5",
+      "source": "BBC",
+      "publishedAt": "2026-11-26T11:54:44.000Z",
+      "latestAt": "2026-11-26T11:54:44.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
       "outlets": 1,
       "outletNames": [
-        "Infosecurity Magazine"
-      ],
-      "score": 1
-    },
-    {
-      "id": "38862c4cd6e7",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers help themselves to 1Password's source code and customer data",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOd2hVTm9DRFFzZzUtcDZWN2tVWkVrU0JQNmF1Si1MZExUTE95UmxsdzRjLVQ5X2hCNkxucFVLcFFaUkxmQlNJcmwwaldOcGtiR283aVhzZnZZOGQ2RmtDVmVNdHo1akxTR3dRSEZnM2ZWTkthUDItRmtnVVlWejhva0hZeF9aMTV2blk4cEJabzZ4SGFnZDZoOXhiR1B1R2xJZmhEX2NTQkhrQU03emRYVUZmRk5sdUk0TXJLaENVS0s?oc=5",
-      "source": "The Register",
-      "publishedAt": "2026-11-26T11:02:00.000Z",
-      "latestAt": "2026-11-26T11:02:00.000Z",
-      "firstSeenAt": "2026-11-26T11:10:54.456Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Register"
-      ],
-      "score": 1
-    },
-    {
-      "id": "10803638ad9d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "24/7 Fitness hit by data breach affecting current and former members",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxObHlNVWNIX3dFUDlUN0xDS2pHX0E0cmdudkJhSlA5ZHFfUll2djd0cVUyaXJvX3B0dkRRMnotWEloU1ZJU3diQXJRbGwyLUdMYTluNGpUMzJleWh0aWROYmdCMmtyNjhKRDBsZUxWT3N4ODVfNERzU1d6OUlGVnNjbmtHZ1pwOXhVRUlPc0NlLXNMU3JKSmhKVUZ3aUhkUUJxNHZNalRfcTN5aEM1d0llN25CS0pTbWxub3c?oc=5",
-      "source": "The Standard (HK)",
-      "publishedAt": "2026-11-26T10:56:28.000Z",
-      "latestAt": "2026-11-26T10:56:28.000Z",
-      "firstSeenAt": "2026-11-26T11:10:54.456Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Standard (HK)"
+        "BBC"
       ],
       "score": 1
     },
@@ -1646,66 +1717,18 @@
       "score": 1
     },
     {
-      "id": "47f7b79eaadb",
-      "cat": "hacks",
+      "id": "28bd6f1f8fdc",
+      "cat": "markets",
       "kind": "news",
-      "title": "SEC data breach affects 155 users",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOSmpLT0lpRm1FUnkxSld6LXdiMWsta2hHLXNUSXhEZGJEMmpBSUJaZVF0a3FzZ1cteTZ1V0RpdEc0bWZIbjB5RmwyUzRmWl9YdndtcDNjNFcxSnZxZ05mTUd0RXozeU8zLXhsWnpUbGMxWDRncFZuWDBJT1lyaTZHRjlac2NWMXVHLXp2YnduQQ?oc=5",
-      "source": "Bangkok Post",
-      "publishedAt": "2026-11-26T11:03:00.000Z",
-      "latestAt": "2026-11-26T11:03:00.000Z",
-      "firstSeenAt": "2026-11-26T11:41:00.235Z",
+      "title": "Nvidia, AMD and Micron Stocks Plunge as AI Selloff Deepens",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNXI2ZHFBcjBOY2VTTTR5cWhjd0VHYUlmd3pJNjdIZkNKR1pKcEFESzBaM1NlcHRpQ1lnQy1SX3ozbDNMWkl3aTJReHl2NWlHdWd5WkZpWkNON2NBRVRSWENYZzBxOGhqbWNyd2Z0bjlHVnlVQ2FZcWc5aG1OQmZyNHFCdWxXRFpIWF9DSW9YZ3J0RktTajhvSkdEYUZjN2NyV3JfT1lQeDFleFZzN2lSX243VXdOZFVv?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-26T11:06:24.000Z",
+      "latestAt": "2026-11-26T11:06:24.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
       "outlets": 1,
       "outletNames": [
-        "Bangkok Post"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "cc1bf53bbcec",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Password manager 1Password hit by cyberattack, user vaults remain safe",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTmUyVFc0UHppbjZLMnhoRHRGTF9Wd1ZtN0xVdTFoZm9HWFVUWFF3aFVrbE1rel9YRjJUQVB6SjRJd0tteENGY1JXU1dUSmNwQXBrUk1HeHcteTdYZlRSaU9QUDFscGEtR3ZoZnpGQUhONGxiSE5GbnRySkhKWHdEZWJTcW1rODhFRzhOM0NHWEFuV2JtMWtxZFpTYkdVRnRwLWNsSWdsaw?oc=5",
-      "source": "AKIpress News Agency",
-      "publishedAt": "2026-11-26T10:54:00.000Z",
-      "latestAt": "2026-11-26T10:54:00.000Z",
-      "firstSeenAt": "2026-11-26T11:41:00.235Z",
-      "outlets": 1,
-      "outletNames": [
-        "AKIpress News Agency"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "9445563e96cb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Meta’s Irish arm sets aside €4bn to deal with data breach fines",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWHpTUEVwUVF4dEVKei1Sa3kya1lYWWF1UE5KNVFOR1lxYmNiUlNVdGpkb2JiOUpXN29qc1hxVHB3WWE1OWd0eWFvMUxiUm9xNlNncktUOXpRTDdpSnpTTk5PQ0tkbHh5bkdmSzFqX2llYUZ2UTV2NTdCb01sMy1ubGRkWUdVVVcxd0tlN2pLUHZYSHR0WnE3LS1fdExxWlNlSjZ4R2thdmNNZm44NHc?oc=5",
-      "source": "The Irish Times",
-      "publishedAt": "2026-11-26T10:52:32.000Z",
-      "latestAt": "2026-11-26T10:52:32.000Z",
-      "firstSeenAt": "2026-11-26T11:41:00.235Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Irish Times"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "144cd40dcdee",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Next investigates supplier cyberattack amid data breach concerns",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPV2ZYWUVEY0x6dWVneXpFTGZnRk1SV3hmZlRNbUYxMnJ6QW5pVTduempWZUdscXlnT203cmE0TGFra210Nmd5S1dqU0I4dmNkRWh3b1d2Vk9hVjdNTl9yN3JTSFFCay1qeTYyRmVCWGtFeEhjdkhSRzVZWmxhTHpiajlhLXdsRnhDMGtYLTB4RUZnNzY1OVhUQzBFT0ZCaFJFTjZVNWpJOWlBRG5YSVgzaw?oc=5",
-      "source": "InteriorDaily",
-      "publishedAt": "2026-11-26T10:50:55.000Z",
-      "latestAt": "2026-11-26T10:50:55.000Z",
-      "firstSeenAt": "2026-11-26T11:41:00.235Z",
-      "outlets": 1,
-      "outletNames": [
-        "InteriorDaily"
+        "TradingView"
       ],
       "score": 0.99
     },
@@ -1717,7 +1740,7 @@
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPM2lDMXBaeHJ1NkF4ZS1Nd2xrMlEzRE5vWUp3TTl0TnU4QjFrUmEyV0JvR3hCMnZLQklYOTJGcU40ZEFCYTg4UUdYdk13TURBZWJCeU9EdnVvZDhsMkFPd251UFdnWjQxRWRWdHBIdnpXVFhuS0FnX19FU1l3MjFXMlEyemIyWlp1RGhDQ0I5cjlNNEZuWWpoQ2s5eUdyZzJKcFlacGY1eUdDLUx4dmZBbFFuQVA0MDBUeWxfUlVLaXJhQkpiRFpVMFd4ZkR1RHlvcTZaaVdkOA?oc=5",
       "source": "Volcano Discovery",
       "publishedAt": "2026-11-26T09:50:10.000Z",
-      "latestAt": "2026-11-26T09:50:10.000Z",
+      "latestAt": "2026-11-26T10:08:18.000Z",
       "firstSeenAt": "2026-11-26T10:25:45.653Z",
       "outlets": 1,
       "outletNames": [
@@ -1790,22 +1813,6 @@
       "score": 0.99,
       "quiet": true,
       "quietReason": "headline mentions tsunami"
-    },
-    {
-      "id": "ceed54516664",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Vietnam stocks plunge as VN-Index loses nearly 58 points",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOWN3QW5Ga1RLSm1XNUExSWVTWVRLRTlYTUx5UnhBYVBfZnZqWDhYbnJnQVdFT2xMRjdkNjlLZUpJSERRMlIwQXgwOHNjS2NHRTFOVm0waTZyUUhTN3BPVm9jbWNxRDljQzQzZTJ4N084czEyaVZiLVBwV0o2UDNKdHYyWktJaWV1UEs2a0dxblZ2MllYSDFkQUpn?oc=5",
-      "source": "Báo VietNamNet",
-      "publishedAt": "2026-11-26T09:11:00.000Z",
-      "latestAt": "2026-11-26T09:11:00.000Z",
-      "firstSeenAt": "2026-11-26T10:25:45.653Z",
-      "outlets": 1,
-      "outletNames": [
-        "Báo VietNamNet"
-      ],
-      "score": 0.98
     },
     {
       "id": "4ee4e22b5039",
