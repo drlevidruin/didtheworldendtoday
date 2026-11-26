@@ -55,6 +55,29 @@
       "score": 5.4
     },
     {
+      "id": "sig:faa-stop:SEA:2026-11-25",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at SEA (wind)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-26T03:09:37.492Z",
+      "latestAt": "2026-11-26T03:09:37.492Z",
+      "firstSeenAt": "2026-11-26T03:09:37.492Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "SEA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "wind"
+      }
+    },
+    {
       "id": "sig:faa-stop:MIA:2026-11-25",
       "cat": "flights",
       "kind": "signal",
@@ -76,31 +99,6 @@
         "nationwide": false,
         "reason": "disabled aircraft on the runway"
       }
-    },
-    {
-      "id": "423698a4ff54",
-      "cat": "flights",
-      "kind": "news",
-      "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAxZkVWQ0lYdVhCWFBhVVBrbEE0dEt4RTgwVTNydWFYeXAzTXBiMG9FQVl0ZE5hM00zN2czSXVhQmNOd0ZMRU1YWUtsUlFrLWNXQU40MGU4MjY0cm9tOEVjV1RlSkZkNHRtV2ZEbXJSbFRRcVVKSGxEQ2R3UVY?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T11:00:00.000Z",
-      "latestAt": "2026-11-25T19:56:20.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
-      "outlets": 10,
-      "outletNames": [
-        "Yahoo",
-        "Reuters",
-        "The Lufkin Daily News",
-        "TradingView",
-        "WHTC",
-        "SRN News",
-        "Yahoo Finance Singapore",
-        "Charlotte Observer",
-        "Kansas City Star",
-        "Yahoo Finance"
-      ],
-      "score": 4.3
     },
     {
       "id": "sig:status:github:2026-11-25",
@@ -145,26 +143,6 @@
         "page": "cloudflare",
         "description": "Partial System Outage"
       }
-    },
-    {
-      "id": "8ecf313fde5f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Report: Cyberattack breaches CIA and two other US intelligence agencies",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9SNmFHT2lvNWxud0ltWU5hZzNCMV82N0ZEaWFPM3ozMlhOU0tXMjFIcnRxeDJ5SlhnZFlucUVaUVdPck5keWQ2eUI2bWtldFBHcGRVeDV4T1U3Zw?oc=5",
-      "source": "Israel National News",
-      "publishedAt": "2026-11-25T03:09:13.000Z",
-      "latestAt": "2026-11-25T19:48:23.000Z",
-      "firstSeenAt": "2026-11-25T06:16:29.636Z",
-      "outlets": 5,
-      "outletNames": [
-        "Israel National News",
-        "BW Businessworld",
-        "Pajhwok Afghan News",
-        "Hungarian Conservative",
-        "NBC Palm Springs"
-      ],
-      "score": 3.15
     },
     {
       "id": "fb9a5b3b1cec",
@@ -259,6 +237,23 @@
       "score": 2.47
     },
     {
+      "id": "bf7fee70bac6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/massive-data-breach-exposes-2-122500776.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-25T04:25:00.000Z",
+      "latestAt": "2026-11-25T12:25:00.000Z",
+      "firstSeenAt": "2026-11-25T12:32:35.873Z",
+      "outlets": 2,
+      "outletNames": [
+        "TechRadar",
+        "YAHOO!"
+      ],
+      "score": 2.42
+    },
+    {
       "id": "4c1aa8652cf2",
       "cat": "germs",
       "kind": "news",
@@ -295,6 +290,31 @@
       "score": 2.23
     },
     {
+      "id": "423698a4ff54",
+      "cat": "flights",
+      "kind": "news",
+      "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAxZkVWQ0lYdVhCWFBhVVBrbEE0dEt4RTgwVTNydWFYeXAzTXBiMG9FQVl0ZE5hM00zN2czSXVhQmNOd0ZMRU1YWUtsUlFrLWNXQU40MGU4MjY0cm9tOEVjV1RlSkZkNHRtV2ZEbXJSbFRRcVVKSGxEQ2R3UVY?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T11:00:00.000Z",
+      "latestAt": "2026-11-25T19:56:20.000Z",
+      "firstSeenAt": "2026-11-25T11:17:22.706Z",
+      "outlets": 10,
+      "outletNames": [
+        "Yahoo",
+        "Reuters",
+        "The Lufkin Daily News",
+        "TradingView",
+        "WHTC",
+        "SRN News",
+        "Yahoo Finance Singapore",
+        "Charlotte Observer",
+        "Kansas City Star",
+        "Yahoo Finance"
+      ],
+      "score": 4.3
+    },
+    {
       "id": "4cc16c20a2da",
       "cat": "flights",
       "kind": "news",
@@ -302,7 +322,7 @@
       "url": "https://www.cbsnews.com/miami/news/miami-international-airport-ground-stop-fedex-md-11-runway-excursion-faa/",
       "source": "CBS News",
       "publishedAt": "2026-11-25T04:15:47.000Z",
-      "latestAt": "2026-11-26T02:46:00.000Z",
+      "latestAt": "2026-11-26T03:01:54.000Z",
       "firstSeenAt": "2026-11-26T01:54:21.004Z",
       "outlets": 32,
       "outletNames": [
@@ -379,23 +399,6 @@
       "score": 2.42
     },
     {
-      "id": "bf7fee70bac6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/massive-data-breach-exposes-2-122500776.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-25T04:25:00.000Z",
-      "latestAt": "2026-11-25T12:25:00.000Z",
-      "firstSeenAt": "2026-11-25T12:32:35.873Z",
-      "outlets": 2,
-      "outletNames": [
-        "TechRadar",
-        "YAHOO!"
-      ],
-      "score": 2.42
-    },
-    {
       "id": "8a4d591cbf3b",
       "cat": "hacks",
       "kind": "news",
@@ -447,6 +450,24 @@
         "AOL.com"
       ],
       "score": 2.22
+    },
+    {
+      "id": "70f436c09f34",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack against CIA didn't disrupt classified systems, officials say",
+      "url": "https://www.yahoo.com/news/videos/cyberattack-against-cia-didnt-disrupt-144234218.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T06:42:00.000Z",
+      "latestAt": "2026-11-25T15:00:00.000Z",
+      "firstSeenAt": "2026-11-25T15:22:43.868Z",
+      "outlets": 3,
+      "outletNames": [
+        "CBS News",
+        "Yahoo",
+        "Modern Ghana"
+      ],
+      "score": 2.21
     },
     {
       "id": "f89caf439c55",
@@ -537,23 +558,6 @@
       "score": 2.05
     },
     {
-      "id": "270c6ce8165b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
-      "source": "KSNV",
-      "publishedAt": "2026-11-26T02:15:20.000Z",
-      "latestAt": "2026-11-26T02:18:19.000Z",
-      "firstSeenAt": "2026-11-26T02:24:32.389Z",
-      "outlets": 2,
-      "outletNames": [
-        "KSNV",
-        "cedarnews.net"
-      ],
-      "score": 1.99
-    },
-    {
       "id": "7868d855bc82",
       "cat": "animals",
       "kind": "news",
@@ -639,24 +643,6 @@
       "score": 1.72
     },
     {
-      "id": "70f436c09f34",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack against CIA didn't disrupt classified systems, officials say",
-      "url": "https://www.yahoo.com/news/videos/cyberattack-against-cia-didnt-disrupt-144234218.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T06:42:00.000Z",
-      "latestAt": "2026-11-25T15:00:00.000Z",
-      "firstSeenAt": "2026-11-25T15:22:43.868Z",
-      "outlets": 3,
-      "outletNames": [
-        "CBS News",
-        "Yahoo",
-        "Modern Ghana"
-      ],
-      "score": 2.21
-    },
-    {
       "id": "178c0e401af9",
       "cat": "hacks",
       "kind": "news",
@@ -691,6 +677,43 @@
         "The Sunday Guardian Live on MSN"
       ],
       "score": 2.19
+    },
+    {
+      "id": "c2900f71c916",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Radar outage triggers second O’Hare ground stop in two days",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPN3I2OFIyWjVCYnRWM2NZRDM3V05Ma29HX1lZeERTRXl1bDRpR2lwdGFZOG9faWwwUjRhbTk4QW5rRkIyTl9GMnJwT2VVZGVQSXctMm9QbjV1ME5uWGtlUzNkWG1tUkRWQTEtU2xDUUxBczYyYlNEdU1BaGRTUjE2emt5RTFlN1dRaHdkR0RuaU0?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-25T04:15:47.000Z",
+      "latestAt": "2026-11-25T21:37:00.000Z",
+      "firstSeenAt": "2026-11-26T03:09:37.492Z",
+      "outlets": 5,
+      "outletNames": [
+        "https://www.thetraveler.org/",
+        "Saudi Gazette",
+        "cwibc.co.id",
+        "Aviation A2Z",
+        "Yahoo"
+      ],
+      "score": 2.05
+    },
+    {
+      "id": "270c6ce8165b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
+      "source": "KSNV",
+      "publishedAt": "2026-11-26T02:15:20.000Z",
+      "latestAt": "2026-11-26T02:18:19.000Z",
+      "firstSeenAt": "2026-11-26T02:24:32.389Z",
+      "outlets": 2,
+      "outletNames": [
+        "KSNV",
+        "cedarnews.net"
+      ],
+      "score": 1.99
     },
     {
       "id": "5c91ad2aa7b8",
@@ -839,7 +862,7 @@
       "url": "https://www.msn.com/en-us/technology/cybersecurity/piedmont-announces-cybersecurity-upgrades-following-cyberattack/ar-AA2iednX",
       "source": "KOCO 5 News on MSN",
       "publishedAt": "2026-11-25T13:03:00.000Z",
-      "latestAt": "2026-11-25T21:05:58.000Z",
+      "latestAt": "2026-11-25T23:09:00.000Z",
       "firstSeenAt": "2026-11-25T21:08:36.665Z",
       "outlets": 2,
       "outletNames": [
@@ -1360,6 +1383,23 @@
       "score": 1.34
     },
     {
+      "id": "16e044938acb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers used AI to attack US intelligence agencies",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5Ua0tYdGR3cmZHQ0k2X3BOQVF0elVQREppb2ZhTXNBcURJVS1XZlRBQW9XbkEzQ1dkcUFwYXpYUmo0T2tpZWd1Z2xtV3NaU1NkX0ZZLWFUWmFLSjJodnfSAWNBVV95cUxOXzhicEFaNGJiaWlNanpSSFRDTDY4a0JiQVJmMVNyQWlGSGdEOXIwc0djYmhSazBRZnkxZDV4S1JXMTF4Vy1JRFpFR2dldi1RNjN6QS1pcG5kRVZYYnprRjlJZ1U?oc=5",
+      "source": "Mezha",
+      "publishedAt": "2026-11-25T07:05:00.000Z",
+      "latestAt": "2026-11-25T13:03:00.000Z",
+      "firstSeenAt": "2026-11-26T03:09:37.492Z",
+      "outlets": 2,
+      "outletNames": [
+        "Mezha",
+        "The Times of India"
+      ],
+      "score": 1.33
+    },
+    {
       "id": "b389f439ad24",
       "cat": "internet",
       "kind": "news",
@@ -1374,6 +1414,23 @@
         "Wisevoter"
       ],
       "score": 1.31
+    },
+    {
+      "id": "efa36710438b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Ground stop issued at O'Hare International Airport in Chicago due to 'equipment outage'",
+      "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxNVUUzamxqWjVuSFJGS1ZjWTZibFl4NzhDZnVvRElsYXlaRXJ5cE90QkE4WFJiVVNCUGpPQjc2cWdKOUljVUVUXy1sZkpKTG1oT3c4OGFwc3VObVp4a3RpdlRZSG1WUlRzTjBBWDZSVlA4cHlYUDVnNjhEYlp0bThuak9aVXlrOWdWM0UwZXBoTWhqNmp2RXVIWmlPVURlOUdyTHhlQTExNDhUNjEwczdrM1ZudDJkZTJUM2pDaGlWTlZkYTJEQ29Yd1l2NUZKbHdJUnI5S0hmb1JXYmsxRWhXTlQweHg0bnJUWnRYbUZuVXM3V2lUMGgwampWa3Q4WVQ0aWczRWRnY3lSbjUyeFR4NnkyTWhYXzdia0ZoUnRUNFU2YnJxdHJTM3dUSjFTX0pHMmtfc29Calh1UlRjaGNTQm93cUJxVGVVbkRNUzN6bllJMnB3RWhXYjUyLVNBNVpPLUVvVWdBWE94ZWZxQjhtS1kwNW0?oc=5",
+      "source": "KOKI FOX 23",
+      "publishedAt": "2026-11-25T04:41:15.000Z",
+      "latestAt": "2026-11-25T08:36:14.000Z",
+      "firstSeenAt": "2026-11-26T03:09:37.492Z",
+      "outlets": 2,
+      "outletNames": [
+        "KOKI FOX 23",
+        "WRGB"
+      ],
+      "score": 1.25
     },
     {
       "id": "7a7dbfd634b6",
@@ -1470,54 +1527,6 @@
         "https://www.thetraveler.org/"
       ],
       "score": 1.17
-    },
-    {
-      "id": "14ec8f5c37b6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Code Red: The biggest Outlook outage in history",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQel9wVnZSVkkySDJTYVo4MmJLLUJaZHR1R0lDdnBiV09tcjE0QTB2d2NQLTdYcXZTREVVSXllU1FGM2JHNXB3V056UHJkZ1NoNklJUXBLU3AzSzJ2N0JwZHRtNkhzS3dxYlkwZXdYY3NoNnlYOEJ5R1FiNnVxeW0wNzd3?oc=5",
-      "source": "SecNews.gr",
-      "publishedAt": "2026-11-25T12:46:00.000Z",
-      "latestAt": "2026-11-25T12:46:00.000Z",
-      "firstSeenAt": "2026-11-25T23:39:01.672Z",
-      "outlets": 1,
-      "outletNames": [
-        "SecNews.gr"
-      ],
-      "score": 1.15
-    },
-    {
-      "id": "86698b045da7",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Millions of Americans face power outages on Thanksgiving due to powerful storm",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTmVqZmxKWWpFcEdJaldhREJjT3BQVDZ2MktEV2RCYnJIWF9UX2tLZTFkeXFIcUl4VEFNZWV2TzlzU0lGdnZyRkE5eUt6WnB4YmhnNk1HZVMzWm94aGZsZjdiTGo0VUVpSzRjeGpSMlFXeC1aZGJSNGxRYmVodHpEYVFvaWNfRWUxQ0t4T3hBejE2alA1N3dIRVpn?oc=5",
-      "source": "The Sun",
-      "publishedAt": "2026-11-25T11:16:27.000Z",
-      "latestAt": "2026-11-25T11:16:27.000Z",
-      "firstSeenAt": "2026-11-25T22:38:49.894Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Sun"
-      ],
-      "score": 1.13
-    },
-    {
-      "id": "ab65b485549f",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Unions Renew Pressure On American Airlines CEO After Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNV1Z0V2dVUG9ZVEJSVE9SYmVGcFRHVU1mSVEtNGMweHNLRzJoZzNGajZhaGxoVm5tVXhqSG5OWEZWMjM0VEhxLWhwSDhkd1pDUVNGcW9YRldHTUZIZ1QwemliQ1FManRvOTBfZ3NTR2tkZUFiT19keTZQMmlXcW9qTnZDVkt4cmdZTl90T3gxUk5vcFZQWF9Saw?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-26T02:45:57.000Z",
-      "latestAt": "2026-11-26T02:45:57.000Z",
-      "firstSeenAt": "2026-11-26T02:54:32.039Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1
     },
     {
       "id": "3f8fdb3f1a21",
@@ -1732,22 +1741,6 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "efa721a1dcea",
-      "cat": "weather",
-      "kind": "news",
-      "title": "West Nashville homeowner still waiting to rebuild more than 300 days after ice storm",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWEZ2UkRETWp1TnVyTUpUYkE1b1JqOW5LRFp2aS1vNlhGSWdFYW5sVXEzZ3RYNTF3NlVkTEs3M2F5Q3ZSd2JZMjNabVVSZUF0ZDd6RkJpam9mVm8tUmhENXlwZDUyazJsQkIya0xpd0RPODFqYXdwQkdWbmhwUE5tOHVnY3ZxRTM2bWpISWFvRVpScDVuMzI2R1duQ2xtbGd0eWVReVN1aGpYVjF5RXotNFZBTnI?oc=5",
-      "source": "WSMV",
-      "publishedAt": "2026-11-25T23:50:00.000Z",
-      "latestAt": "2026-11-26T00:28:00.000Z",
-      "firstSeenAt": "2026-11-26T02:39:34.191Z",
-      "outlets": 1,
-      "outletNames": [
-        "WSMV"
-      ],
-      "score": 0.95
-    },
-    {
       "id": "251d291f0bd0",
       "cat": "weather",
       "kind": "news",
@@ -1762,6 +1755,22 @@
         "WKRN News 2"
       ],
       "score": 0.93
+    },
+    {
+      "id": "32ee8c7796e6",
+      "cat": "weather",
+      "kind": "news",
+      "title": "What a ‘Particularly Dangerous Situation' Tag Means on Blizzard and Ice Storm Warnings This Winter",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOS2RaUTJ2REVHbWU4YmhmZkdpQnp1SzhFbkxwLXV4S1ZCR1VSMmpMZE5ZU3pmSTNETEpqY0htNDJSLWhTSFBmRHZraUJDNXBBQmsxZE5XU19iOFZ1WklvUXpmTkpYVklWZENRZUd4eW0yTW9RUkpjcDFQNlNSUnpSNHlhOVRLVmNKVk0yQ2g5N2Z5enRZanFmcXFpM3BNQ3plLVhGMGptOUZQTWpGeDRSVjU3djR6Q19rTi12OXozMEI3SmxRT1NPNkdtQU5UcWVpelAwRnhPeE5RbWgyZ0FzSEY1elNZbG05NTd6VTBpNXVEOGh4QnN4Sg?oc=5",
+      "source": "NewsBreak: Local News & Alerts",
+      "publishedAt": "2026-11-25T20:23:49.000Z",
+      "latestAt": "2026-11-25T20:23:49.000Z",
+      "firstSeenAt": "2026-11-26T03:09:37.492Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 0.89
     },
     {
       "id": "0f7f53682261",
@@ -1780,5 +1789,5 @@
       "score": 0.86
     }
   ],
-  "updatedAt": "2026-11-26T02:54:32.039Z"
+  "updatedAt": "2026-11-26T03:09:37.492Z"
 }
