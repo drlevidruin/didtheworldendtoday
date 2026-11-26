@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T01:24:19.475Z",
+  "buildTime": "2026-11-26T01:39:21.290Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 20:24 ET",
+  "etStamp": "2026-11-25 20:39 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,16 +49,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1328,
-  "lastSuccessAt": "2026-11-26T01:24:19.475Z",
+  "headlinesRead": 1307,
+  "lastSuccessAt": "2026-11-26T01:39:21.290Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
-    "internet": 14,
-    "hacks": 32,
-    "germs": 8,
-    "markets": 6,
-    "grid": 5,
+    "flights": 13,
+    "internet": 13,
+    "hacks": 34,
+    "germs": 7,
+    "markets": 5,
+    "grid": 7,
     "animals": 1,
     "ai": 4,
     "weather": 4,
@@ -90,7 +90,13 @@
       "upcoming": true
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "MIA",
+          "hub": true,
+          "reason": "disabled aircraft on the runway"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 0,
       "closures": 0,
@@ -181,20 +187,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 1017,
+      "count": 999,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "bing": {
       "ok": true,
-      "count": 279,
+      "count": 278,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "gdelt": {
       "ok": false,
@@ -206,56 +212,55 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T00:39:19.183Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T01:24:19.475Z"
+      "lastOkAt": "2026-11-26T01:39:21.290Z"
     }
   },
   "stories": [
@@ -269,7 +274,7 @@
       "publishedAt": "2026-11-25T08:47:00.000Z",
       "latestAt": "2026-11-25T17:53:28.000Z",
       "firstSeenAt": "2026-11-25T16:52:57.421Z",
-      "outlets": 10,
+      "outlets": 11,
       "outletNames": [
         "WTHI News10",
         "WABI",
@@ -280,9 +285,33 @@
         "WVLT",
         "WFLX",
         "WABI-TV",
-        "WWBT"
+        "WWBT",
+        "KBTX News 3"
       ],
-      "score": 5.23
+      "score": 5.4
+    },
+    {
+      "id": "sig:faa-stop:MIA:2026-11-25",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at MIA (disabled aircraft on the runway)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-26T01:39:21.290Z",
+      "latestAt": "2026-11-26T01:39:21.290Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "MIA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "disabled aircraft on the runway"
+      }
     },
     {
       "id": "sig:faa-stop:SFO:2026-11-24",
@@ -306,31 +335,6 @@
         "nationwide": false,
         "reason": "wind"
       }
-    },
-    {
-      "id": "423698a4ff54",
-      "cat": "flights",
-      "kind": "news",
-      "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAxZkVWQ0lYdVhCWFBhVVBrbEE0dEt4RTgwVTNydWFYeXAzTXBiMG9FQVl0ZE5hM00zN2czSXVhQmNOd0ZMRU1YWUtsUlFrLWNXQU40MGU4MjY0cm9tOEVjV1RlSkZkNHRtV2ZEbXJSbFRRcVVKSGxEQ2R3UVY?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T11:00:00.000Z",
-      "latestAt": "2026-11-25T19:56:20.000Z",
-      "firstSeenAt": "2026-11-25T11:17:22.706Z",
-      "outlets": 10,
-      "outletNames": [
-        "Yahoo",
-        "Reuters",
-        "The Lufkin Daily News",
-        "TradingView",
-        "WHTC",
-        "SRN News",
-        "Yahoo Finance Singapore",
-        "Charlotte Observer",
-        "Kansas City Star",
-        "Yahoo Finance"
-      ],
-      "score": 4.3
     },
     {
       "id": "sig:status:github:2026-11-25",
@@ -524,6 +528,31 @@
       "score": 2.22
     },
     {
+      "id": "423698a4ff54",
+      "cat": "flights",
+      "kind": "news",
+      "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAxZkVWQ0lYdVhCWFBhVVBrbEE0dEt4RTgwVTNydWFYeXAzTXBiMG9FQVl0ZE5hM00zN2czSXVhQmNOd0ZMRU1YWUtsUlFrLWNXQU40MGU4MjY0cm9tOEVjV1RlSkZkNHRtV2ZEbXJSbFRRcVVKSGxEQ2R3UVY?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T11:00:00.000Z",
+      "latestAt": "2026-11-25T19:56:20.000Z",
+      "firstSeenAt": "2026-11-25T11:17:22.706Z",
+      "outlets": 10,
+      "outletNames": [
+        "Yahoo",
+        "Reuters",
+        "The Lufkin Daily News",
+        "TradingView",
+        "WHTC",
+        "SRN News",
+        "Yahoo Finance Singapore",
+        "Charlotte Observer",
+        "Kansas City Star",
+        "Yahoo Finance"
+      ],
+      "score": 4.3
+    },
+    {
       "id": "a9e3c4d84247",
       "cat": "flights",
       "kind": "news",
@@ -539,50 +568,6 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 2.79
-    },
-    {
-      "id": "e4e0ab09ff51",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Radar outage prompts second ground stop in two days at Chicago O’Hare",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVmJJRUxfQ3lMZkJkQXNnSW4wYVp2T2tWQVBpcFp5QjA0b1FFbW9XUEdLQ2x5ekQyLXJqUXFmMnlUc2JzUFNscDN0NlpTcEs5TnlRYkJZSjBPRHdoMWt5TGdsbjNkN2JfMHlnOWxHR2gweXFtT1JUVUtIT3NQMERtRTViQ3NwY0NpSXBobld5WdIBlAFBVV95cUxQamlBXzU1RmlGZlZucVgzNi1aWkdQVkFMNEZJcUFxbGZBYllZSnNHQTh1aEZMZ3dUM2FwSS1ELUZ2bFQtZlRIYThoTUUxVlJEc2hyTl8zT2V2eTlKaDNsaU1iTGVIMlFCVHJPenpiTXlpbVZCcENZTTR6d2Y0X21Iek5SV0g4Ym9aemFDNUo4UFFhVGUy?oc=5",
-      "source": "AeroTime",
-      "publishedAt": "2026-11-25T01:31:28.000Z",
-      "latestAt": "2026-11-25T21:37:00.000Z",
-      "firstSeenAt": "2026-11-26T01:09:15.683Z",
-      "outlets": 12,
-      "outletNames": [
-        "AeroTime",
-        "AOL.com",
-        "WJAR",
-        "https://www.thetraveler.org/",
-        "Saudi Gazette",
-        "The City University of New York",
-        "KTXS",
-        "The Lufkin Daily News",
-        "Demokratis.co.id",
-        "Aviation A2Z",
-        "The Mirror US",
-        "Yahoo"
-      ],
-      "score": 2.78
-    },
-    {
-      "id": "640f507300f2",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA Traces Nationwide Ground Stop to Network Configuration Error",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4yNjk0R2I4WlNPdThSN2NsWUI0Q2RrSS1tM2dEVU1taU5XVlNnTk9ITGVZTnNxSi1md1lPZS1oeFg4eGZqTDB1NER3a3R5R2M3WnRnQTRFd1NNSDNaTkdKcFlJc1NCR0d4SExWVk1pZjlZWmx5?oc=5",
-      "source": "www.suaralandak.co.id",
-      "publishedAt": "2026-11-25T01:28:03.000Z",
-      "latestAt": "2026-11-25T16:40:51.000Z",
-      "firstSeenAt": "2026-11-25T02:00:48.580Z",
-      "outlets": 2,
-      "outletNames": [
-        "www.suaralandak.co.id",
-        "Avi-Go"
-      ],
-      "score": 2.77
     },
     {
       "id": "325cd3c46cea",
@@ -726,6 +711,23 @@
       "score": 2.05
     },
     {
+      "id": "368d106420ef",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Eight districts on Sabah's East Coast experience power outage Thursday morning",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBOSTNvblF3V29iUktlVDVndFZySlktWlNuZ2hzWG5HdEJRT3VoVXl2b3NLQlYyeENiNXF2UDZDVkhsSmJ1a2JNQ1dqQmM1cVo0?oc=5",
+      "source": "The Edge Malaysia",
+      "publishedAt": "2026-11-26T01:28:10.000Z",
+      "latestAt": "2026-11-26T01:29:00.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Edge Malaysia",
+        "Free Malaysia Today"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "7868d855bc82",
       "cat": "animals",
       "kind": "news",
@@ -758,6 +760,23 @@
         "cedarnews.net"
       ],
       "score": 1.99
+    },
+    {
+      "id": "3b15d213ea1a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Another ground stop delays travelers at O'Hare airport",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T04:16:00.000Z",
+      "latestAt": "2026-11-25T04:16:48.000Z",
+      "firstSeenAt": "2026-11-25T05:16:26.751Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "ABC7 Chicago"
+      ],
+      "score": 1.97
     },
     {
       "id": "4f0994ffe67a",
@@ -830,23 +849,6 @@
       "quietReason": "headline mentions evacuate"
     },
     {
-      "id": "e8c3efdabe62",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed at two North Yorkshire turkey farms weeks before Christmas",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ1FpUTNpZzljNllHUGlRX2o3NGVPSWppY09ybGpXVmxrSjRzQ3hiWDl5TF9jNEFwYy1rX3VQUGZ3VjRmc0xDWndVY25oUmJpazdYYWY0NW9vRHA1Mmkta0t0WkMtcWN5OXJIT2pBdVJhcGFqN0xEYTdkc3haNVlxSldBV05uczhKcllJQlo4d044TU9obkVBWVJpb1A0UEVt?oc=5",
-      "source": "The Northern Echo",
-      "publishedAt": "2026-11-25T13:30:00.000Z",
-      "latestAt": "2026-11-25T13:39:00.000Z",
-      "firstSeenAt": "2026-11-25T23:23:58.471Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Northern Echo",
-        "Yorkshire Post"
-      ],
-      "score": 1.67
-    },
-    {
       "id": "70f436c09f34",
       "cat": "hacks",
       "kind": "news",
@@ -872,7 +874,7 @@
       "url": "https://www.yahoo.com/news/us/articles/mycolorado-app-cyberattack-involves-100-212319052.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-25T13:22:00.000Z",
-      "latestAt": "2026-11-25T21:25:59.000Z",
+      "latestAt": "2026-11-26T00:59:00.000Z",
       "firstSeenAt": "2026-11-25T22:38:49.894Z",
       "outlets": 3,
       "outletNames": [
@@ -935,23 +937,6 @@
       "score": 1.97
     },
     {
-      "id": "3b15d213ea1a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Another ground stop delays travelers at O'Hare airport",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNHVpYm5lallPREdtWnZQd1VhYzR6UlkydEFGQlJEQnYxRVlQOG9xdTIxRGtvNks1SDFOUmt2LWJkaHJlS0RIQi1RZkl2Z05GSkdSdmM5NEM0a1NBbDQ3UWhyM25FWU5GOVk1ZGVjZHphMENLREJzSVppYkNIYmFMNHRfOGItWS1zd2NBUTFB?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T04:16:00.000Z",
-      "latestAt": "2026-11-25T04:16:48.000Z",
-      "firstSeenAt": "2026-11-25T05:16:26.751Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "ABC7 Chicago"
-      ],
-      "score": 1.97
-    },
-    {
       "id": "5900139ad908",
       "cat": "hacks",
       "kind": "news",
@@ -969,6 +954,23 @@
       "score": 1.95,
       "quiet": true,
       "quietReason": "headline mentions typhoon"
+    },
+    {
+      "id": "2fa8fefe8871",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Australia's Flight Centre probes data breach in third-party system",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPUjlnZU1xSXVubUtDNm9lLTBxdnVoUWRfdUNrTkVTTldIM1VGZXdHbFRDQWljdFlYZlVqZ2dHTlJsdDYtbkZnZ2dmcEMxblQtOUdrNHJXcGREamVGdGZCQTlka1hpaG1ESC1NY2JkdnZwMDFoeDRGMUxQcGZaTW9mVnhGRW93OXRqQnRkRTlSU1NZNFkxNVczYWZ0UWtySDdOYi13LXUzLU5xVnNVeUtYTS1mZTJPR3VpdHdqaFo0UmRKeDUzeldSMS0xVFlDZE1aV2c?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-25T23:35:57.000Z",
+      "latestAt": "2026-11-26T00:26:29.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 2,
+      "outletNames": [
+        "TradingView",
+        "101 WIXX"
+      ],
+      "score": 1.93
     },
     {
       "id": "a7ca4e09e904",
@@ -1159,6 +1161,23 @@
       "score": 1.68
     },
     {
+      "id": "e8c3efdabe62",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed at two North Yorkshire turkey farms weeks before Christmas",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ1FpUTNpZzljNllHUGlRX2o3NGVPSWppY09ybGpXVmxrSjRzQ3hiWDl5TF9jNEFwYy1rX3VQUGZ3VjRmc0xDWndVY25oUmJpazdYYWY0NW9vRHA1Mmkta0t0WkMtcWN5OXJIT2pBdVJhcGFqN0xEYTdkc3haNVlxSldBV05uczhKcllJQlo4d044TU9obkVBWVJpb1A0UEVt?oc=5",
+      "source": "The Northern Echo",
+      "publishedAt": "2026-11-25T13:30:00.000Z",
+      "latestAt": "2026-11-25T13:39:00.000Z",
+      "firstSeenAt": "2026-11-25T23:23:58.471Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Northern Echo",
+        "Yorkshire Post"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "27817016356d",
       "cat": "hacks",
       "kind": "news",
@@ -1208,6 +1227,22 @@
         "Daily Times Of Bangladesh"
       ],
       "score": 1.42
+    },
+    {
+      "id": "416e7d1bcf22",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Major blackout hits Sabah’s east coast again",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQREVDMWoxd2ZkOW5uVnY1aXFvOU5FcFFJUUFuc3lDWXFoUkprb1g2OVpxU3cxZ2tjWVh5WjJGN1p6ejNPZGpsRlRPOVhuQXVKWENiTGxOeFhkVjJXVUp2aWpWZlZxb2ZvQ1QzUkdzS3laNnAwVkJWOXEtdXdCb0NtNWVMTFZ3aHNlTmNDR3lwUWxYOUV6b1J0Mw?oc=5",
+      "source": "The Star",
+      "publishedAt": "2026-11-26T01:29:00.000Z",
+      "latestAt": "2026-11-26T01:29:00.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Star"
+      ],
+      "score": 1.4
     },
     {
       "id": "2208b23f6093",
@@ -1646,6 +1681,54 @@
       "score": 1.03
     },
     {
+      "id": "7ee4d97cb176",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Norse Atlantic Suspends Operations as Financial Crisis Grounds Flights",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbHNGajNCc1FTNTc0Qlpfc1hGcDFTMGpRYjNKSlJZSGYyWGh3MGlZTU5qckpMYV9FRTl1NTUxLTQ0S3pCVDlRaUhfZ002eE1SU2Eza19kOE8ya1JkLUlISnpJZkdlbzloQ2lqckNIV1MtRlFoWmFrNmV6cExLNEJObThiRFlZSFRUN29GQ2pvdmFkcW16VF82VDhWODFVMXFpRFZLZVlEXzFGNm8?oc=5",
+      "source": "AeroXplorer",
+      "publishedAt": "2026-11-26T01:26:54.000Z",
+      "latestAt": "2026-11-26T01:26:54.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 1,
+      "outletNames": [
+        "AeroXplorer"
+      ],
+      "score": 1
+    },
+    {
+      "id": "5c91ad2aa7b8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "KEPCO Faces Potential 3 Trillion Won Fine Over Data Breach",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9HTkUwUDc5a1FMY0J3d1lLakJCV3pSYUxhYVRyY3ZvN0NnTFRqUHBvMzRXRzN2WTQyX3MyVzNhUnJBaGNwLUlhdnlrQVE3d0dSY1pZT09uSERnajZfaERKN0FBRnh6Slk?oc=5",
+      "source": "www.thelec.net",
+      "publishedAt": "2026-11-26T01:26:01.000Z",
+      "latestAt": "2026-11-26T01:26:01.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 1,
+      "outletNames": [
+        "www.thelec.net"
+      ],
+      "score": 1
+    },
+    {
+      "id": "d6576d812bba",
+      "cat": "germs",
+      "kind": "news",
+      "title": "15 workers develop symptoms after H5N1 bird flu exposure at zoo in Mexico",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbnl0ekh6RkhVbW8zcEdGbEw2Q0JGcnlURVpUTlQxYkNOVEZTYXRtczVvQmZlcnFCZEY2TER2VXNTanA3eFNqQWt1Z01qclFrN3VHbkhackE2ODVUbV9KdWtLZFQyVUVqNjJKTkJxWTQ3S1hvQnNOOGNCdWVVVzJycXFwcXZIUndPSEc5SFdPV0JkZ1J6QnE3cG9ENExYcEVPVHFnREhOOEJJUF9yREpPaEFn?oc=5",
+      "source": "BNO News",
+      "publishedAt": "2026-11-26T01:24:50.000Z",
+      "latestAt": "2026-11-26T01:24:50.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 1,
+      "outletNames": [
+        "BNO News"
+      ],
+      "score": 1
+    },
+    {
       "id": "afaee88dfda9",
       "cat": "hacks",
       "kind": "news",
@@ -1710,22 +1793,6 @@
       "score": 1
     },
     {
-      "id": "042a569c0da8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft saw 10 years' worth of failures in just 2 hours during global outage",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQU0VPcGtXWHpNQ0NNWjZBTlEwOGU3V0o4aXREREpENGFvMWtScnhLbDJfWDdreWFfOVc3a0ZVclFkSERBNG5yZVR1RU5jYXR1c3ZuM0lwVjNEZE5OMnNPX1pCZmJKUnhIMVp3ZGxNSGdMbmxJSlhBSlU1ODBvTnJTMkJjQXBPd3cyRFV1aXBXMGlMOTljSHJRUUZSazhiMExjaGFyLUQtV2xqYzVVNG1Kb3AxVkZuVkdtMHZ6YU8tVVA?oc=5",
-      "source": "Inshorts",
-      "publishedAt": "2026-11-25T07:24:46.000Z",
-      "latestAt": "2026-11-25T07:24:46.000Z",
-      "firstSeenAt": "2026-11-26T00:24:08.764Z",
-      "outlets": 1,
-      "outletNames": [
-        "Inshorts"
-      ],
-      "score": 1
-    },
-    {
       "id": "9804d63defa9",
       "cat": "sun",
       "kind": "news",
@@ -1740,72 +1807,6 @@
         "Starlust.org"
       ],
       "score": 1
-    },
-    {
-      "id": "c0cf963bcc73",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Epiemiological Alert - Epidemiological Alert Avian Influenza A(H5N1) in the Americas Region - 24 November 2026",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLXVEMFNLaDlPdko0T01pVFVKTEdySDZua0dZNWVMNW1KanhqQ1pfU2tEQXlmdzdRQS15RDZBdmh2RVg3MHIzWUdjR2kyU3g3OTh3bGV1MjlnZFR2dmgwUE50MHVqT3lRXzFmR0RXV3JVcXJ1b0FoYTlWbF8wQzZDVS00aG5CQWZNeVR3MTZzUjF5TVVHSU92eGJjanlTTVFpQ21PNldFVmJvQU83MnRfTmpBZk1YZmZa?oc=5",
-      "source": "Pan American Health Organization (PAHO)",
-      "publishedAt": "2026-11-25T02:50:47.000Z",
-      "latestAt": "2026-11-25T02:50:47.000Z",
-      "firstSeenAt": "2026-11-25T03:00:56.149Z",
-      "outlets": 1,
-      "outletNames": [
-        "Pan American Health Organization (PAHO)"
-      ],
-      "score": 1
-    },
-    {
-      "id": "0ca50871b20b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Utah asks to drop charges against Kalshi and its founders after Kalshi halts trading there",
-      "url": "https://abcnews.com/Business/wireStory/utah-asks-drop-charges-kalshi-founders-after-kalshi-138416910",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-25T02:00:00.000Z",
-      "latestAt": "2026-11-25T02:00:00.000Z",
-      "firstSeenAt": "2026-11-25T02:15:50.239Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos"
-      ],
-      "trending": 1000,
-      "trendTerm": "kalshi",
-      "score": 1
-    },
-    {
-      "id": "aa41d8f28bdd",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu doesn’t threaten Thanksgiving poultry safety, Idaho state veterinarian says",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZXcwOW41VUZaM21SZHBpUDRqX3FZVzdJUV9GaFV5Q1FyZUlHdEl2OXg2TnFIT2JpQ3A4cllVZkZTZHMzdGFQNXVob0dnUVY5TTRJYlpWSHFxQ2xKS0tud3RXRG5TajBEUzZZS18tOHZzSXZuWU5FVzVKai1pckcyZ2N5ZFp5OWpZbXMtQTZjampLcTVidURkeXhna1d2dlBlRzFsdGpmVlpIYm5jSDJjam13TnZudWFhNnpzMWp3?oc=5",
-      "source": "KMVT",
-      "publishedAt": "2026-11-26T00:24:47.000Z",
-      "latestAt": "2026-11-26T00:24:47.000Z",
-      "firstSeenAt": "2026-11-26T00:54:15.822Z",
-      "outlets": 1,
-      "outletNames": [
-        "KMVT"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "0302bae86cf6",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Weather conditions, landing system outage divert at least 2 flights from Jackson airport",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQN0x3X054eU9fSTk3azZ0Y05ucDVMakJpTkJnUWc1RGNVa0NVSFlGb0oxVDRZUWFIZnZ2U1BMY09JbVhKMGpaV0ZlUmpyVThFV1pIRDBmd24xT2lnZUltLU1VeUVqWjl2N2Z2eG5oSV9hRTl0Yy1vb1FJeWQ3c2xuakx4bV9mRXlSUDJmdEJvSGxKeG9FSkd5eDRqOEhDbGVwNnhreTAtUEF0U212VnFhdUpR?oc=5",
-      "source": "WLBT",
-      "publishedAt": "2026-11-26T00:21:00.000Z",
-      "latestAt": "2026-11-26T00:23:59.000Z",
-      "firstSeenAt": "2026-11-26T00:39:19.183Z",
-      "outlets": 1,
-      "outletNames": [
-        "WLBT"
-      ],
-      "score": 0.99
     },
     {
       "id": "2729017858cd",
@@ -1940,20 +1941,20 @@
       "quietReason": "quake M6.5 or more"
     },
     {
-      "id": "efa721a1dcea",
+      "id": "251d291f0bd0",
       "cat": "weather",
       "kind": "news",
-      "title": "West Nashville homeowner still waiting to rebuild more than 300 days after ice storm",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWEZ2UkRETWp1TnVyTUpUYkE1b1JqOW5LRFp2aS1vNlhGSWdFYW5sVXEzZ3RYNTF3NlVkTEs3M2F5Q3ZSd2JZMjNabVVSZUF0ZDd6RkJpam9mVm8tUmhENXlwZDUyazJsQkIya0xpd0RPODFqYXdwQkdWbmhwUE5tOHVnY3ZxRTM2bWpISWFvRVpScDVuMzI2R1duQ2xtbGd0eWVReVN1aGpYVjF5RXotNFZBTnI?oc=5",
-      "source": "WSMV",
-      "publishedAt": "2026-11-25T23:50:00.000Z",
-      "latestAt": "2026-11-26T00:28:00.000Z",
-      "firstSeenAt": "2026-11-26T01:24:19.475Z",
+      "title": "London’s Lights in La Vergne repair after ice storm",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOTlCVGpRS3Q4UjJDckFBc0RZNE5kb3NwV0RILXZzaGpzdkFadjZxbTFGNHpLQlNQaDM0WEJGT1dMaTJacEluQkU4alhWbV9LalpnSUkzRHlfenZvOUtmLUgwbFprQUNJNC1kWnpWUV9QazNiYlpyNDRkQy0xVkp4ZTM3WXc1aWdGOGpKdkNCY2c?oc=5",
+      "source": "WKRN News 2",
+      "publishedAt": "2026-11-25T21:33:00.000Z",
+      "latestAt": "2026-11-25T21:33:00.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
       "outlets": 1,
       "outletNames": [
-        "WSMV"
+        "WKRN News 2"
       ],
-      "score": 0.97
+      "score": 0.93
     },
     {
       "id": "0f7f53682261",
