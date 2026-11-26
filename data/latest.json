@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T12:41:10.609Z",
+  "buildTime": "2026-11-26T12:46:28.627Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 07:41 ET",
+  "etStamp": "2026-11-26 07:46 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,13 +51,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1220,
-  "lastSuccessAt": "2026-11-26T12:41:10.609Z",
+  "headlinesRead": 1282,
+  "lastSuccessAt": "2026-11-26T12:46:28.627Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
-    "internet": 15,
-    "hacks": 26,
+    "internet": 14,
+    "hacks": 27,
     "germs": 6,
     "grid": 13,
     "markets": 4,
@@ -185,20 +185,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 963,
+      "count": 966,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     },
     "bing": {
       "ok": true,
-      "count": 225,
-      "error": "6 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "count": 284,
+      "error": null,
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     },
     "gdelt": {
       "ok": false,
@@ -210,55 +210,56 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:41:10.609Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T12:41:10.609Z"
+      "lastOkAt": "2026-11-26T12:46:28.627Z"
     }
   },
   "stories": [
@@ -331,28 +332,6 @@
       }
     },
     {
-      "id": "c4accbc57035",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms data breach: 12GB of internal documents stolen",
-      "url": "https://www.msn.com/en-au/news/other/fifa-confirms-data-breach-12gb-of-internal-documents-stolen/ar-AA2ihtpq",
-      "source": "Lente Desportiva on MSN",
-      "publishedAt": "2026-11-26T03:33:00.000Z",
-      "latestAt": "2026-11-26T12:31:29.000Z",
-      "firstSeenAt": "2026-11-26T11:10:54.456Z",
-      "outlets": 7,
-      "outletNames": [
-        "Modern Ghana",
-        "Lente Desportiva on MSN",
-        "Cyber Press",
-        "dev.ua",
-        "Punch Newspapers",
-        "Techweez",
-        "Arbiterz"
-      ],
-      "score": 3.32
-    },
-    {
       "id": "2fa8fefe8871",
       "cat": "hacks",
       "kind": "news",
@@ -398,6 +377,26 @@
       "score": 3.03
     },
     {
+      "id": "178c0e401af9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "myColorado app cyberattack involves 100,000 people’s data, including passports and car registrations, state says",
+      "url": "https://www.yahoo.com/news/us/articles/mycolorado-app-cyberattack-involves-100-212319052.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T13:22:00.000Z",
+      "latestAt": "2026-11-26T05:13:00.000Z",
+      "firstSeenAt": "2026-11-25T22:38:49.894Z",
+      "outlets": 5,
+      "outletNames": [
+        "Yahoo",
+        "KDVR",
+        "AOL.com",
+        "KDVR-TV Denver on MSN",
+        "FOX21 News Colorado"
+      ],
+      "score": 2.81
+    },
+    {
       "id": "4b9d74481d40",
       "cat": "flights",
       "kind": "news",
@@ -441,7 +440,7 @@
       "url": "https://www.wusa9.com/article/weather/thousands-without-power-maryland-and-virginia-thanksgiving-day/65-04657edb-76c0-4ac3-8efa-b4482b43c6c4",
       "source": "WUSA9",
       "publishedAt": "2026-11-26T04:17:00.000Z",
-      "latestAt": "2026-11-26T12:39:26.000Z",
+      "latestAt": "2026-11-26T12:39:37.000Z",
       "firstSeenAt": "2026-11-26T12:26:10.024Z",
       "outlets": 4,
       "outletNames": [
@@ -524,26 +523,6 @@
       "score": 2.21
     },
     {
-      "id": "178c0e401af9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "myColorado app cyberattack involves 100,000 people’s data, including passports and car registrations, state says",
-      "url": "https://www.yahoo.com/news/us/articles/mycolorado-app-cyberattack-involves-100-212319052.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-25T13:22:00.000Z",
-      "latestAt": "2026-11-26T05:13:00.000Z",
-      "firstSeenAt": "2026-11-25T22:38:49.894Z",
-      "outlets": 5,
-      "outletNames": [
-        "Yahoo",
-        "KDVR",
-        "AOL.com",
-        "KDVR-TV Denver on MSN",
-        "FOX21 News Colorado"
-      ],
-      "score": 2.81
-    },
-    {
       "id": "a9e3c4d84247",
       "cat": "flights",
       "kind": "news",
@@ -559,6 +538,30 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 2.79
+    },
+    {
+      "id": "c4accbc57035",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms data breach: 12GB of internal documents stolen",
+      "url": "https://www.msn.com/en-au/news/other/fifa-confirms-data-breach-12gb-of-internal-documents-stolen/ar-AA2ihtpq",
+      "source": "Lente Desportiva on MSN",
+      "publishedAt": "2026-11-25T15:03:00.000Z",
+      "latestAt": "2026-11-26T12:42:00.000Z",
+      "firstSeenAt": "2026-11-26T11:10:54.456Z",
+      "outlets": 9,
+      "outletNames": [
+        "Modern Ghana",
+        "Lente Desportiva on MSN",
+        "Cyber Press",
+        "dev.ua",
+        "Punch Newspapers",
+        "Techweez",
+        "Arbiterz",
+        "The Punch",
+        "Arise News"
+      ],
+      "score": 2.77
     },
     {
       "id": "ba108ccd0525",
@@ -628,6 +631,23 @@
         "BIG 105.9"
       ],
       "score": 1.99
+    },
+    {
+      "id": "28bd6f1f8fdc",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Nvidia, AMD and Micron Stocks Plunge as AI Selloff Deepens",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNXI2ZHFBcjBOY2VTTTR5cWhjd0VHYUlmd3pJNjdIZkNKR1pKcEFESzBaM1NlcHRpQ1lnQy1SX3ozbDNMWkl3aTJReHl2NWlHdWd5WkZpWkNON2NBRVRSWENYZzBxOGhqbWNyd2Z0bjlHVnlVQ2FZcWc5aG1OQmZyNHFCdWxXRFpIWF9DSW9YZ3J0RktTajhvSkdEYUZjN2NyV3JfT1lQeDFleFZzN2lSX243VXdOZFVv?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-26T11:06:24.000Z",
+      "latestAt": "2026-11-26T11:33:33.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 2,
+      "outletNames": [
+        "TradingView",
+        "GuruFocus"
+      ],
+      "score": 1.97
     },
     {
       "id": "49be6341ddc6",
@@ -816,22 +836,6 @@
         "Medya Press"
       ],
       "score": 1.4
-    },
-    {
-      "id": "a20199df1c16",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
-      "source": "Simply Wall St",
-      "publishedAt": "2026-11-26T03:26:14.000Z",
-      "latestAt": "2026-11-26T03:26:14.000Z",
-      "firstSeenAt": "2026-11-26T03:39:36.789Z",
-      "outlets": 1,
-      "outletNames": [
-        "Simply Wall St"
-      ],
-      "score": 1.39
     },
     {
       "id": "5c91ad2aa7b8",
@@ -1059,24 +1063,6 @@
       "score": 1.69
     },
     {
-      "id": "6051e6900706",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers access personal data of 11,000 people in Denmark",
-      "url": "https://punchng.com/hackers-access-personal-data-of-11000-people-in-denmark/",
-      "source": "The Punch",
-      "publishedAt": "2026-11-25T12:46:00.000Z",
-      "latestAt": "2026-11-26T10:07:00.000Z",
-      "firstSeenAt": "2026-11-26T09:55:39.177Z",
-      "outlets": 3,
-      "outletNames": [
-        "Punch Newspapers",
-        "The Punch",
-        "Head Topics"
-      ],
-      "score": 1.67
-    },
-    {
       "id": "6943a0cf6021",
       "cat": "flights",
       "kind": "news",
@@ -1208,6 +1194,22 @@
         "CSO Online"
       ],
       "score": 1.4
+    },
+    {
+      "id": "a20199df1c16",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft (MSFT) Stock Could Be 36% Below Fair Value After Global Outage",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQa1BXZnNZbXktajBUc1BCVkpUUWp6bWNCS3F5aVBfQW83d05MX3FYVm1pVTBJUkhMQS1fX09KbS1VQkpuZHpWazZtbFU3bERaWWlxbXdaQVQxeGkzMkdVSlZVUVpRYWMyVEh0Qi01alZsMXhPY2FtdVlIYngtcF9nMk02U1BadjgxM0VzbmlDRGVkemJTcGFJdmFsMDVvMjkwTkttVXUtMExQa2FXdzhSTmhtV1k3eHNtOExRT2FlTkZQNDJqQjJZ0gHMAUFVX3lxTE5UVnVwY3Fveno3ZDljOGZhRVJ0ZnhnbUxuNENkM1NmVm1yVGtFMTl6bVF0alhsUFlLWGpwUGJKYWhGbGVEZm03aVdoUWJCTmZuMnFFUmNsMXpDbmNUb3h4YXkyeXdPRUYzSElFTm9BS3NwUWJGU3RZRkMwUjFwaWxLaWdRZkJ5TmpBQjZFeTR3VUFnRWdXckI3aVZydjVBNkJ5alF4ek9JUkFjbEI0RUl2TlRfbzlETFRiMmRCY09Ra2dXejFZejJzT2h6ZA?oc=5",
+      "source": "Simply Wall St",
+      "publishedAt": "2026-11-26T03:26:14.000Z",
+      "latestAt": "2026-11-26T03:26:14.000Z",
+      "firstSeenAt": "2026-11-26T03:39:36.789Z",
+      "outlets": 1,
+      "outletNames": [
+        "Simply Wall St"
+      ],
+      "score": 1.39
     },
     {
       "id": "a7980bb2bb2c",
@@ -1517,22 +1519,6 @@
       "score": 1.06
     },
     {
-      "id": "14ec8f5c37b6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Code Red: The biggest Outlook outage in history",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQel9wVnZSVkkySDJTYVo4MmJLLUJaZHR1R0lDdnBiV09tcjE0QTB2d2NQLTdYcXZTREVVSXllU1FGM2JHNXB3V056UHJkZ1NoNklJUXBLU3AzSzJ2N0JwZHRtNkhzS3dxYlkwZXdYY3NoNnlYOEJ5R1FiNnVxeW0wNzd3?oc=5",
-      "source": "SecNews.gr",
-      "publishedAt": "2026-11-25T12:46:00.000Z",
-      "latestAt": "2026-11-25T12:46:00.000Z",
-      "firstSeenAt": "2026-11-26T03:54:39.974Z",
-      "outlets": 1,
-      "outletNames": [
-        "SecNews.gr"
-      ],
-      "score": 1.05
-    },
-    {
       "id": "44841ce07f61",
       "cat": "internet",
       "kind": "news",
@@ -1549,18 +1535,34 @@
       "score": 1.02
     },
     {
-      "id": "1b100f97e9e0",
+      "id": "23068f41fc0f",
       "cat": "hacks",
       "kind": "news",
-      "title": "Breach rocks FIFA: hackers seize confidential data as world governing body reveals details",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQMmhvMDFsQnp3SXA0UWszTEFldUtjanBRNjFhRFhCZDU3UFBLRDFRT2hNcGpibWIxLWJsZ21FM3diNEpxaXY0MzFwaEZSRXNXZDA1cWRCVzdZVUdEc3Q4eUtBMXc2U1BmdjcwVnFDcW82QkEwZXRjQTZybkJKdXBDMzlDMnpzSW5KWlMtQUN3MVExV0tldEV4MWI4ZDJVWVJhb2xBTkVWNU5kWEtmQnltOVdKbW1sMF9lY1o1MjNwWUV0bjBWaGhLZzNZc1hKRVlIeW9pdHd6Vzg?oc=5",
-      "source": "Goal.com",
-      "publishedAt": "2026-11-26T12:37:17.000Z",
-      "latestAt": "2026-11-26T12:37:17.000Z",
-      "firstSeenAt": "2026-11-26T12:41:10.609Z",
+      "title": "Data breach hits FIFA, hacking group 'takes' claim for theft of files",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNS2J0NU92Qkp1UVVIMXRsRXAxNXhTdmRDNDZYaWN3UVkwcXdjSFZJMF94X3NuNTZJOFpUNFRQX0QxZjlJcFdCOEFCUklEaUpCWHBPOU9aRE0zSUdDSmd1cFZXOVpsYjNVcC1jRl9RMHRRTXlRaVktOFJpR0NKRU56NnNpZXZ5OVlfNy1OM3FQb1d5dUV2TjVKWnZRaTF3ZFFTNWZpNjk5UVFzM0Zrc25BSFoxS2lBR09aWU9v?oc=5",
+      "source": "Deccan Herald",
+      "publishedAt": "2026-11-26T12:41:59.000Z",
+      "latestAt": "2026-11-26T12:41:59.000Z",
+      "firstSeenAt": "2026-11-26T12:46:28.627Z",
       "outlets": 1,
       "outletNames": [
-        "Goal.com"
+        "Deccan Herald"
+      ],
+      "score": 1
+    },
+    {
+      "id": "0bc10be8aa9f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Zodia Custody hit by security breach weeks after Standard Chartered took full ownership",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUlM5LXhvUl9hNHZsLTdBNV8xUHdha0gtbVRIeUZfZWZ4d3h5dF8wVlVfZzJlTEEtRnVCdDhqODBVell1MmNBY0c3QURyTE5IMEs0cHU4Ym1LOVZoSmlQbVZZLUYyMWF0QUJ0QTRBYmdjdWc2NnZHb3dFUWFPT1dOSkRieWV6Y1MtQU0tTmphWndHYm05Wnp0MVE1TXU3MnE3bmpVVzY3bzhzUzZ5S3k0V3ZiMHcxdFpMbHhfYkluelk?oc=5",
+      "source": "CoinDesk",
+      "publishedAt": "2026-11-26T12:38:51.000Z",
+      "latestAt": "2026-11-26T12:38:51.000Z",
+      "firstSeenAt": "2026-11-26T12:46:28.627Z",
+      "outlets": 1,
+      "outletNames": [
+        "CoinDesk"
       ],
       "score": 1
     },
@@ -1645,22 +1647,6 @@
       "score": 1
     },
     {
-      "id": "a256c89f3461",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "StanChart’s Crypto Custody Unit Suffers Data Breach",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPelp2M0xxeVgzWWkweXg0OWRHcllEdGluMFZmYjRpVnlvNERpVWNPNGJpc1liMEhOZFBKTldNOGI3b3A5aUdnWHktSTV3cTZiWThKZGJ0c1Z5Sk56amFQZmhEUEc3U041ODI2V2NCT3VmY2ppdFVjUWx2d0RRZHdtOUpIcEpTUzNfZWRLTmdwNUVINDFaUktROW9pRW9DbnVjS3dmUQ?oc=5",
-      "source": "Bloomberg.com",
-      "publishedAt": "2026-11-26T12:24:38.000Z",
-      "latestAt": "2026-11-26T12:24:38.000Z",
-      "firstSeenAt": "2026-11-26T12:41:10.609Z",
-      "outlets": 1,
-      "outletNames": [
-        "Bloomberg.com"
-      ],
-      "score": 1
-    },
-    {
       "id": "4958786f794b",
       "cat": "germs",
       "kind": "news",
@@ -1741,18 +1727,34 @@
       "score": 1
     },
     {
-      "id": "28bd6f1f8fdc",
-      "cat": "markets",
+      "id": "b085a6a0d144",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Nvidia, AMD and Micron Stocks Plunge as AI Selloff Deepens",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNXI2ZHFBcjBOY2VTTTR5cWhjd0VHYUlmd3pJNjdIZkNKR1pKcEFESzBaM1NlcHRpQ1lnQy1SX3ozbDNMWkl3aTJReHl2NWlHdWd5WkZpWkNON2NBRVRSWENYZzBxOGhqbWNyd2Z0bjlHVnlVQ2FZcWc5aG1OQmZyNHFCdWxXRFpIWF9DSW9YZ3J0RktTajhvSkdEYUZjN2NyV3JfT1lQeDFleFZzN2lSX243VXdOZFVv?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-26T11:06:24.000Z",
-      "latestAt": "2026-11-26T11:06:24.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "title": "Hackers steal personal and legal information from Fifa in cyberattack as investigation launched",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9iam5yNmdwX3h5MjhkYktZMHlJOVFNcy1jeXlKUEhPSmY0Z0JFT29BemNZSnJkOHFPTlRHWk9FYlBxTGRpVGFCNVhKbnd2T1NIdHcyN1c1bnc4T3k3OE5IajFZS2tkQk1nci1Rc0lNWVE?oc=5",
+      "source": "GB News",
+      "publishedAt": "2026-11-26T12:22:47.000Z",
+      "latestAt": "2026-11-26T12:22:47.000Z",
+      "firstSeenAt": "2026-11-26T12:46:28.627Z",
       "outlets": 1,
       "outletNames": [
-        "TradingView"
+        "GB News"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "7f8bc872629c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Australia’s Flight Centre Data Breach Exposes Customer Records and Passport Details",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQd3V3LVVURnVzR05GbjRyWWRPLVdyS1RRcVR2U2xWcUhSTUN2LWxVY2VrQjRVaDJrc1dheGlyZnhqUDFXWkpWS2xCdjlfRExVQnoyZ2JScU5qVDRqRkMxLVNmNmNhWGFHaEg2bTBZajBrcy0xT2dMOHI0Q2VoRVRmeHp6cUo2WjRNUVE0T0lRRi10ZnJJVmdFRldabWdURWhyYllCRWtUdVZEX05nejVSaTJKTWYyUFduUDZYcWFmWG5iUGl5bjd0QVlDS2hHeVXSAdQBQVVfeXFMUG9haTNQOGNNQ0ZPRm04TUR2elVNUXhSaEcwZ3dlTDZrcVphNHJLMXROMU9qTlNUemhtc3Z2MWxIZkFZVG1TWkhYaTAyOUF4Z1BsTktpdk5yUDhycTdqaXAtenpraFl2QkxTRVV4T2FHMlFrRnZjczExZlMyUWhET0llTU9SMmdVdzFDOXBGdEtYR1AzM0l0X3NKekdqM1M2Z2ptb21HSHU5YnV2WXB3N0RDOC14S0ZGY0ZGX0VNTmVCZ0l3bzlUUDZCeVIwXzJOY1NZUDE?oc=5",
+      "source": "Security Affairs",
+      "publishedAt": "2026-11-26T12:11:55.000Z",
+      "latestAt": "2026-11-26T12:11:55.000Z",
+      "firstSeenAt": "2026-11-26T12:46:28.627Z",
+      "outlets": 1,
+      "outletNames": [
+        "Security Affairs"
       ],
       "score": 0.99
     },
