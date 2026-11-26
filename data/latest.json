@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T22:57:53.537Z",
+  "buildTime": "2026-11-26T23:12:50.126Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 17:57 ET",
+  "etStamp": "2026-11-26 18:12 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,15 +45,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1283,
-  "lastSuccessAt": "2026-11-26T22:57:53.537Z",
+  "headlinesRead": 1282,
+  "lastSuccessAt": "2026-11-26T23:12:50.126Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
+    "flights": 16,
     "grid": 24,
     "germs": 4,
     "internet": 9,
-    "hacks": 29,
+    "hacks": 27,
     "markets": 4,
     "weather": 4,
     "earth": 4,
@@ -84,7 +84,13 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [],
+      "groundStops": [
+        {
+          "airport": "LGA",
+          "hub": true,
+          "reason": "other"
+        }
+      ],
       "nationwide": false,
       "groundDelays": 0,
       "closures": 2,
@@ -177,20 +183,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 976,
+      "count": 977,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     },
     "gdelt": {
       "ok": false,
@@ -202,58 +208,82 @@
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     },
     "faa": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T22:57:53.537Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T22:57:53.537Z"
+      "lastOkAt": "2026-11-26T23:12:50.126Z"
     }
   },
   "stories": [
+    {
+      "id": "sig:faa-stop:LGA:2026-11-26",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at LGA (other)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-26T23:12:50.126Z",
+      "latestAt": "2026-11-26T23:12:50.126Z",
+      "firstSeenAt": "2026-11-26T23:12:50.126Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "LGA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "other"
+      }
+    },
     {
       "id": "sig:faa-stop:DCA:2026-11-26",
       "cat": "flights",
@@ -301,29 +331,6 @@
       }
     },
     {
-      "id": "sig:faa-stop:MIA:2026-11-25",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at MIA (disabled aircraft on the runway)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-26T01:39:21.290Z",
-      "latestAt": "2026-11-26T01:39:21.290Z",
-      "firstSeenAt": "2026-11-26T01:39:21.290Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "MIA",
-        "hub": true,
-        "nationwide": false,
-        "reason": "disabled aircraft on the runway"
-      }
-    },
-    {
       "id": "cfb691f18287",
       "cat": "grid",
       "kind": "news",
@@ -331,7 +338,7 @@
       "url": "https://www.wusa9.com/article/weather/thousands-without-power-maryland-and-virginia-thanksgiving-day/65-04657edb-76c0-4ac3-8efa-b4482b43c6c4",
       "source": "WUSA9",
       "publishedAt": "2026-11-26T04:17:00.000Z",
-      "latestAt": "2026-11-26T22:53:00.000Z",
+      "latestAt": "2026-11-26T23:05:14.000Z",
       "firstSeenAt": "2026-11-26T12:26:10.024Z",
       "outlets": 10,
       "outletNames": [
@@ -518,6 +525,29 @@
       "score": 2.48
     },
     {
+      "id": "sig:faa-stop:MIA:2026-11-25",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at MIA (disabled aircraft on the runway)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-26T01:39:21.290Z",
+      "latestAt": "2026-11-26T01:39:21.290Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "MIA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "disabled aircraft on the runway"
+      }
+    },
+    {
       "id": "4b9d74481d40",
       "cat": "flights",
       "kind": "news",
@@ -693,23 +723,6 @@
         "Operativ Məlumat Mərkəzi"
       ],
       "score": 2
-    },
-    {
-      "id": "270c6ce8165b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
-      "source": "KSNV",
-      "publishedAt": "2026-11-26T02:15:20.000Z",
-      "latestAt": "2026-11-26T02:18:19.000Z",
-      "firstSeenAt": "2026-11-26T02:24:32.389Z",
-      "outlets": 2,
-      "outletNames": [
-        "KSNV",
-        "cedarnews.net"
-      ],
-      "score": 1.99
     },
     {
       "id": "49be6341ddc6",
@@ -935,6 +948,23 @@
       "score": 1.99
     },
     {
+      "id": "270c6ce8165b",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
+      "source": "KSNV",
+      "publishedAt": "2026-11-26T02:15:20.000Z",
+      "latestAt": "2026-11-26T02:18:19.000Z",
+      "firstSeenAt": "2026-11-26T02:24:32.389Z",
+      "outlets": 2,
+      "outletNames": [
+        "KSNV",
+        "cedarnews.net"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "5c91ad2aa7b8",
       "cat": "hacks",
       "kind": "news",
@@ -1069,6 +1099,23 @@
         "MTV Lebanon"
       ],
       "score": 1.87
+    },
+    {
+      "id": "e1307bc938c9",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Celina power outage resolved on Thanksgiving afternoon",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9mX01VYlpYQUFRZUxRQmhxcVFPTlhWTEt6RFZoS0FvZWpxZkp0VWxYYnVjT0FheUZ5M1RHLUlKSk1lbDRod0RwZHZYUFpsS21QNjg0VUxUOHlnQ0RmRm15N1JNU2ExeEZNTHBNR0lWQlMzSjRaNF80YUljONIBgAFBVV95cUxPRjRMV3h4NXFORUktcmMxeDg4Y3lhOVo0Z3NMVmZhM056RE9KWTBhbklrUTJwNFR0QlJCRHlMaGVVQVQ5anhjRjFtTXFBX0RoS2tjWDlSZnpCQ2hLUVRUSzAxdUQ5Sk5xWDBHUW9rS3VkbDFzWWFkQkVjcExQSnJicQ?oc=5",
+      "source": "WDTN.com",
+      "publishedAt": "2026-11-26T18:58:29.000Z",
+      "latestAt": "2026-11-26T18:58:29.000Z",
+      "firstSeenAt": "2026-11-26T23:12:50.126Z",
+      "outlets": 2,
+      "outletNames": [
+        "WDTN.com",
+        "Yahoo"
+      ],
+      "score": 1.86
     },
     {
       "id": "0a9eae05a76c",
@@ -1309,23 +1356,6 @@
         "WVNS"
       ],
       "score": 1.66
-    },
-    {
-      "id": "e7f4ea1619d9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-26T11:52:32.000Z",
-      "latestAt": "2026-11-26T14:47:38.000Z",
-      "firstSeenAt": "2026-11-26T22:42:46.435Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "TRT Afrika"
-      ],
-      "score": 1.64
     },
     {
       "id": "6e5b30fff7d7",
@@ -1655,6 +1685,22 @@
       "score": 1.26
     },
     {
+      "id": "48b07c475db0",
+      "cat": "flights",
+      "kind": "news",
+      "title": "6,000+ Holiday Flights Delayed Nationwide, Miami Airport Incident Grounds Flights: What Disney World Guests Should Know",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTG1fTHVyZ1FHdG5mSkxEZGwtLUVfRDBIY3FmYVBQb2JVaDJkYlJKaWl5TFNmV0hTa0w5dDhoMUJCOWE2Mmh6TWhmM0h6U2VyQ21kbXMtV0tzZWRDWEk4ejNFc01UbnRXbXFKNU8wYkMzbEdqYld6VWRWZE9PalVGTDBYV0VPOVplMHp6QjZ3?oc=5",
+      "source": "Inside the Magic",
+      "publishedAt": "2026-11-26T16:58:40.000Z",
+      "latestAt": "2026-11-26T16:58:40.000Z",
+      "firstSeenAt": "2026-11-26T23:12:50.126Z",
+      "outlets": 1,
+      "outletNames": [
+        "Inside the Magic"
+      ],
+      "score": 1.25
+    },
+    {
       "id": "b5f388a80608",
       "cat": "flights",
       "kind": "news",
@@ -1781,38 +1827,6 @@
         "Newspoint on MSN"
       ],
       "score": 1.19
-    },
-    {
-      "id": "fba6a954a647",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Binance restores withdrawals across nearly all networks four weeks after record $6.3B hack",
-      "url": "https://cryptobriefing.com/binance-restores-withdrawals-after-record-hack/",
-      "source": "Crypto Briefing",
-      "publishedAt": "2026-11-26T13:42:00.000Z",
-      "latestAt": "2026-11-26T13:42:00.000Z",
-      "firstSeenAt": "2026-11-26T22:57:53.537Z",
-      "outlets": 1,
-      "outletNames": [
-        "Crypto Briefing"
-      ],
-      "score": 1.18
-    },
-    {
-      "id": "f93ea6772985",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power being restored in stages after massive blackout hits Sabah’s east coast",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPYXUxbFFJRDZxSmJOdGF3dk1odk90SzctdGtmNHptOXdidUl3MVdMSURpQVJNcU9XNnBJckk1NE1ub0Uwd1V5SmdESldBQlJ2MzFKbVgwc25wZTFxZ1VsQnJ4dzNJbUVBX2pjenJaX3FOMHZlWWw1N1JtUWo4SWZZdEZid3Jha0NjYWVrTFhTTkczOFMzZVdyam96TmxIVkRhWHlDRGJja1NacGEyZTkycGh6OXBudHdLeG1ONVlqbXhSbEVT?oc=5",
-      "source": "The Star",
-      "publishedAt": "2026-11-26T11:15:00.000Z",
-      "latestAt": "2026-11-26T11:15:00.000Z",
-      "firstSeenAt": "2026-11-26T22:57:53.537Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Star"
-      ],
-      "score": 1.13
     },
     {
       "id": "802ce460ea38",
