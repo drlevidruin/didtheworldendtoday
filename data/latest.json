@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T10:10:56.058Z",
+  "buildTime": "2026-11-26T10:25:45.653Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 05:10 ET",
+  "etStamp": "2026-11-26 05:25 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,19 +51,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1291,
-  "lastSuccessAt": "2026-11-26T10:10:56.058Z",
+  "headlinesRead": 1221,
+  "lastSuccessAt": "2026-11-26T10:25:45.653Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
     "internet": 15,
-    "hacks": 31,
+    "hacks": 30,
     "germs": 5,
-    "grid": 9,
+    "grid": 10,
+    "markets": 4,
     "animals": 1,
     "ai": 4,
     "weather": 4,
-    "markets": 4,
     "sun": 4,
     "earth": 4,
     "space": 4
@@ -89,7 +89,7 @@
       "sizeM": 31,
       "size": "a house",
       "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20VQ19",
-      "upcoming": true
+      "upcoming": false
     },
     "faa": {
       "groundStops": [],
@@ -188,57 +188,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 979,
+      "count": 944,
       "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     },
     "bing": {
       "ok": true,
-      "count": 280,
-      "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "count": 245,
+      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     },
     "x": {
       "ok": true,
@@ -251,13 +251,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T10:10:56.058Z"
+      "lastOkAt": "2026-11-26T10:25:45.653Z"
     }
   },
   "stories": [
@@ -509,21 +509,21 @@
       "score": 2.42
     },
     {
-      "id": "416e7d1bcf22",
-      "cat": "grid",
+      "id": "4c01e784ea2d",
+      "cat": "markets",
       "kind": "news",
-      "title": "Major blackout hits Sabah’s east coast again",
-      "url": "https://www.thestar.com.my/news/nation/2026/11/26/major-blackout-hits-sabahs-east-coast-again",
-      "source": "The Star",
-      "publishedAt": "2026-11-25T11:29:00.000Z",
-      "latestAt": "2026-11-26T02:15:00.000Z",
-      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "title": "Gold Prices Collapse 37% From Record High. Even Inflation And Market Turmoil Can't Stop The Sell-Off.",
+      "url": "https://finance.yahoo.com/markets/commodities/articles/gold-prices-collapse-37-record-200422840.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-25T12:04:00.000Z",
+      "latestAt": "2026-11-25T20:04:22.000Z",
+      "firstSeenAt": "2026-11-25T20:23:32.754Z",
       "outlets": 2,
       "outletNames": [
-        "The Star",
-        "The Straits Times"
+        "Yahoo Finance",
+        "Yahoo Finance Singapore"
       ],
-      "score": 2.14
+      "score": 2.41
     },
     {
       "id": "4b9d74481d40",
@@ -599,6 +599,23 @@
       "score": 2.24
     },
     {
+      "id": "7e175ed82324",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft explains tech failures that triggered global outage",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/11/26/microsoft-explains-tech-failures-that-triggered-global-outage",
+      "source": "The Star",
+      "publishedAt": "2026-11-25T22:00:00.000Z",
+      "latestAt": "2026-11-26T00:00:00.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
+      "outlets": 2,
+      "outletNames": [
+        "Longview Daily News",
+        "The Star"
+      ],
+      "score": 2.22
+    },
+    {
       "id": "11fd89512079",
       "cat": "hacks",
       "kind": "news",
@@ -615,6 +632,23 @@
         "The Sunday Guardian Live on MSN"
       ],
       "score": 2.19
+    },
+    {
+      "id": "416e7d1bcf22",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Major blackout hits Sabah’s east coast again",
+      "url": "https://www.thestar.com.my/news/nation/2026/11/26/major-blackout-hits-sabahs-east-coast-again",
+      "source": "The Star",
+      "publishedAt": "2026-11-25T11:29:00.000Z",
+      "latestAt": "2026-11-26T02:15:00.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Star",
+        "The Straits Times"
+      ],
+      "score": 2.14
     },
     {
       "id": "c9a6d38cc05d",
@@ -686,6 +720,23 @@
       "score": 1.99
     },
     {
+      "id": "49be6341ddc6",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed at turkey farms as keepers warned",
+      "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPVHFyTzdKblFaSHY2VEg0MzRtNTZqRS1OSFFFT2NNTFZqVDlobF8wTzJRWkhsUkg0QlJpbkNjZ1ZkZ0VjU2ljNHQtMXRxREtZVVZRTzRwbTF2VnVXZEF3empxc2dNQzJDSEpwY2xxTFRuanEyMUNubm5GdUdudUJuM3JmbUhPR3FnQjBKTkg5bXozRDhGWUpELUhBWkFlSm9zMURKWF9NaWo4MF9xcG9JY1ZFTS0yMzRSVHh0b21pLU5ZLWdiRWlwOTJITmFWb2JQMGVFZmlnaFJTNG5BSDNIX3lGdHZUQmx4dFJFR00wcHNyallJNmIyMHd2dUxhOXpRMFQ0dklPZm02cG15WEItWHFKUHB3WGZXRDNqM0pFWnRYR1F5anc?oc=5",
+      "source": "Trending Now Infrastructure",
+      "publishedAt": "2026-11-26T08:42:33.000Z",
+      "latestAt": "2026-11-26T09:40:28.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 2,
+      "outletNames": [
+        "Trending Now Infrastructure",
+        "Richmondshire Today"
+      ],
+      "score": 1.96
+    },
+    {
       "id": "b802790718c1",
       "cat": "ai",
       "kind": "news",
@@ -737,23 +788,6 @@
       "score": 1.86
     },
     {
-      "id": "e45946dfcc54",
-      "cat": "markets",
-      "kind": "news",
-      "title": "South Korean Stocks Plunge 6.16% in One Day; South Korea Plans to Expand $8 Billion Stabilization Fund, Sounding Out 25 Financial Institutions on Contribution Capacity",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBEcjVNQTQ4bkdXQTFWUEJNNDNMSU1DUmlqdmU0Z1JnclEtMzZLcWhPYTU2eDNtZlFfRFRIMUF2czBhbnR5bVFZWGV4aTRBbFRnTWNxS0VJd0gwR3FLWHFNbWNHY1Rqc0dVaERpTjFxWllMTURvZUE?oc=5",
-      "source": "finance.biggo.com",
-      "publishedAt": "2026-11-25T10:25:00.000Z",
-      "latestAt": "2026-11-25T15:02:11.000Z",
-      "firstSeenAt": "2026-11-25T15:22:43.868Z",
-      "outlets": 2,
-      "outletNames": [
-        "finance.biggo.com",
-        "Peradaban.id"
-      ],
-      "score": 1.83
-    },
-    {
       "id": "668d8b7157f8",
       "cat": "grid",
       "kind": "news",
@@ -803,40 +837,6 @@
         "Yorkshire Post"
       ],
       "score": 1.67
-    },
-    {
-      "id": "6715de6aefe5",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
-      "url": "https://en.clickpetroleoegas.com.br/brazilian-scientists-uncover-how-a-powerful-solar-storm-distorted-plasma-bubbles-and-reversed-their-movement-over-south-america-a-nmb91/",
-      "source": "en.clickpetroleoegas",
-      "publishedAt": "2026-11-25T16:00:00.000Z",
-      "latestAt": "2026-11-26T04:57:00.000Z",
-      "firstSeenAt": "2026-11-26T05:09:52.811Z",
-      "outlets": 2,
-      "outletNames": [
-        "CPG Click Oil and Gas",
-        "en.clickpetroleoegas"
-      ],
-      "score": 1.56
-    },
-    {
-      "id": "ae7c2ba4c273",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Don’t let a market selloff wreck your retirement plan",
-      "url": "https://www.thestreet.com/retirement/dont-let-a-market-selloff-wreck-your-retirement-plan",
-      "source": "TheStreet",
-      "publishedAt": "2026-11-25T16:00:00.000Z",
-      "latestAt": "2026-11-26T01:17:00.000Z",
-      "firstSeenAt": "2026-11-26T07:40:21.836Z",
-      "outlets": 2,
-      "outletNames": [
-        "TheStreet",
-        "AOL.com"
-      ],
-      "score": 1.48
     },
     {
       "id": "5c91ad2aa7b8",
@@ -1204,6 +1204,40 @@
       "score": 1.57
     },
     {
+      "id": "6715de6aefe5",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
+      "url": "https://en.clickpetroleoegas.com.br/brazilian-scientists-uncover-how-a-powerful-solar-storm-distorted-plasma-bubbles-and-reversed-their-movement-over-south-america-a-nmb91/",
+      "source": "en.clickpetroleoegas",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T04:57:00.000Z",
+      "firstSeenAt": "2026-11-26T05:09:52.811Z",
+      "outlets": 2,
+      "outletNames": [
+        "CPG Click Oil and Gas",
+        "en.clickpetroleoegas"
+      ],
+      "score": 1.56
+    },
+    {
+      "id": "ae7c2ba4c273",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Don’t let a market selloff wreck your retirement plan",
+      "url": "https://www.thestreet.com/retirement/dont-let-a-market-selloff-wreck-your-retirement-plan",
+      "source": "TheStreet",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T01:17:00.000Z",
+      "firstSeenAt": "2026-11-26T07:40:21.836Z",
+      "outlets": 2,
+      "outletNames": [
+        "TheStreet",
+        "AOL.com"
+      ],
+      "score": 1.48
+    },
+    {
       "id": "f4c983635a2c",
       "cat": "hacks",
       "kind": "news",
@@ -1560,22 +1594,6 @@
       "score": 1.22
     },
     {
-      "id": "4c01e784ea2d",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Gold Prices Collapse 37% From Record High. Even Inflation And Market Turmoil Can't Stop The Sell-Off.",
-      "url": "https://finance.yahoo.com/markets/commodities/articles/gold-prices-collapse-37-record-200422840.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-25T12:04:00.000Z",
-      "latestAt": "2026-11-25T12:04:00.000Z",
-      "firstSeenAt": "2026-11-25T20:23:32.754Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yahoo Finance"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "3b9d2968bcc0",
       "cat": "weather",
       "kind": "news",
@@ -1672,66 +1690,34 @@
       "score": 1.02
     },
     {
-      "id": "f1b8ae6ebc00",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft issues 'Code Red' declaration following major Outlook outage",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVUxpOHUxeVpQXy1UR2NXZ05GeV9fS0p3dHg5RDE4Rk5UV1NEZDJJTGY5OFZXTVZxUjRrU1lNamJfZm5XdXhDU0hWNDNydEE4czNVNVN4akRrRVhlOWdvcG42blQxcGltdFB5NE96WERfYWkzZGM3dmI2eEs3LXlmRFlIS2pSMWNjY25MbEhlQ3FjM2pFWlE?oc=5",
-      "source": "UNILAD Tech",
-      "publishedAt": "2026-11-25T17:10:19.000Z",
-      "latestAt": "2026-11-25T17:10:19.000Z",
-      "firstSeenAt": "2026-11-26T09:55:39.177Z",
-      "outlets": 1,
-      "outletNames": [
-        "UNILAD Tech"
-      ],
-      "score": 1.01
-    },
-    {
-      "id": "f184cd5dc63b",
+      "id": "0349d45e030f",
       "cat": "hacks",
       "kind": "news",
-      "title": "1Password hit by data breach via GitHub account",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWEs1OW5Rd3FTY0ZCR001T01SanZlUGoxTVlJM0tZLVZvalZxTURreXQwQWxUSDhjQ0tQd092YkFubE04OWVTc0tBaHNINk5CamV6MjlmZmgyRWVzWm51cm9GNWlUenpvUzJVM2lWWlBTaVRFQktGcU9HRFNsN0RTSmZSQklEdVhZSlYwTGZhZW82QVY4eWxWVA?oc=5",
-      "source": "Techzine Global",
-      "publishedAt": "2026-11-26T09:57:15.000Z",
-      "latestAt": "2026-11-26T09:57:15.000Z",
-      "firstSeenAt": "2026-11-26T10:10:56.058Z",
+      "title": "FIFA confirms cyberattack after ransomware group HBHC threatens to leak data",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWHlsbGE2LVh0WDhFTXVGcXlpd2sxYXZWelJ3cEc3V1R6aklDVVBhYXA5QnF3a1ZiVjJYWGJEYi1idWh5R2dGRGhWU01fdE42TmJPNjhzM0FXa1p1aWZTbVpwTWdUcml1ekRCakh6ajFsN2JyRzN5WWNnalNwT3pwdzBEMVo1ZVBiOVpucWRyak56UVM3Y1Y5VENHcHpLaW5YaERKbW85ZURZZ3R4bW92R09Hb0tEU3dIUmxJ?oc=5",
+      "source": "Escudo Digital",
+      "publishedAt": "2026-11-26T10:16:51.000Z",
+      "latestAt": "2026-11-26T10:16:51.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
       "outlets": 1,
       "outletNames": [
-        "Techzine Global"
+        "Escudo Digital"
       ],
       "score": 1
     },
     {
-      "id": "49be6341ddc6",
-      "cat": "germs",
+      "id": "01b55d1ed95d",
+      "cat": "grid",
       "kind": "news",
-      "title": "Bird flu confirmed at turkey farms as keepers warned",
-      "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPVHFyTzdKblFaSHY2VEg0MzRtNTZqRS1OSFFFT2NNTFZqVDlobF8wTzJRWkhsUkg0QlJpbkNjZ1ZkZ0VjU2ljNHQtMXRxREtZVVZRTzRwbTF2VnVXZEF3empxc2dNQzJDSEpwY2xxTFRuanEyMUNubm5GdUdudUJuM3JmbUhPR3FnQjBKTkg5bXozRDhGWUpELUhBWkFlSm9zMURKWF9NaWo4MF9xcG9JY1ZFTS0yMzRSVHh0b21pLU5ZLWdiRWlwOTJITmFWb2JQMGVFZmlnaFJTNG5BSDNIX3lGdHZUQmx4dFJFR00wcHNyallJNmIyMHd2dUxhOXpRMFQ0dklPZm02cG15WEItWHFKUHB3WGZXRDNqM0pFWnRYR1F5anc?oc=5",
-      "source": "Trending Now Infrastructure",
-      "publishedAt": "2026-11-26T09:40:28.000Z",
-      "latestAt": "2026-11-26T09:40:28.000Z",
-      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "title": "Thanksgiving storms leave 260,000 US customers without power",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQc3A4cjYzaHp2X1BsQ1JXTjdJMHQzNUEwaktucHM1ZWpBSGJxZ1c3Tk5uR0pKMlY4dlZqemFhNGI2Wk5ONS1PbjlBb2s3R2xLZlVSc1laUU9UYjNDT0VRcV92TUw4dTV3c1RGb1Q4ODdhcTJKeUNRWmlpS1VWRW5vcXZMVUg4clk?oc=5",
+      "source": "MLQ.ai",
+      "publishedAt": "2026-11-26T10:14:16.000Z",
+      "latestAt": "2026-11-26T10:14:16.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
       "outlets": 1,
       "outletNames": [
-        "Trending Now Infrastructure"
-      ],
-      "score": 1
-    },
-    {
-      "id": "832cc76f88c2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "EasyEquities clients locked out following ‘security incident’",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQkotTXQtNElSTjlHeTd3OXhCTHJxblJnSlpnVXgwWERzeXZpODZIOWNYeHZuSTRGZWJsaldJR29FOWlPR2VKbkE1dWFoVTRrNU1tazdscXNHTXBadmF2cWRrSHg1MHdHNkl3RnlVaE1jSlhVb1l6ZFpOYzVCeDNhUTFzczdIYmlUMzVtY3dnUDFBY0VtY1BRcEF5M1p3YnFta2NXeVNaMWpLSWF2eW1n?oc=5",
-      "source": "News24",
-      "publishedAt": "2026-11-26T09:33:20.000Z",
-      "latestAt": "2026-11-26T09:33:20.000Z",
-      "firstSeenAt": "2026-11-26T09:40:47.192Z",
-      "outlets": 1,
-      "outletNames": [
-        "News24"
+        "MLQ.ai"
       ],
       "score": 1
     },
@@ -1768,6 +1754,22 @@
       "score": 1
     },
     {
+      "id": "7a14efcae84f",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Iwo-jima Volcano (Volcano Islands, Japan): new Lava Delta Grows as Eruption Continues",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPM2lDMXBaeHJ1NkF4ZS1Nd2xrMlEzRE5vWUp3TTl0TnU4QjFrUmEyV0JvR3hCMnZLQklYOTJGcU40ZEFCYTg4UUdYdk13TURBZWJCeU9EdnVvZDhsMkFPd251UFdnWjQxRWRWdHBIdnpXVFhuS0FnX19FU1l3MjFXMlEyemIyWlp1RGhDQ0I5cjlNNEZuWWpoQ2s5eUdyZzJKcFlacGY1eUdDLUx4dmZBbFFuQVA0MDBUeWxfUlVLaXJhQkpiRFpVMFd4ZkR1RHlvcTZaaVdkOA?oc=5",
+      "source": "Volcano Discovery",
+      "publishedAt": "2026-11-26T09:50:10.000Z",
+      "latestAt": "2026-11-26T09:50:10.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
+      "outlets": 1,
+      "outletNames": [
+        "Volcano Discovery"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "55423aa6a178",
       "cat": "earth",
       "kind": "news",
@@ -1782,24 +1784,6 @@
         "Sacramento Bee"
       ],
       "score": 0.99
-    },
-    {
-      "id": "d2fe6504a541",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Kashmir Seismic Gap Capable of Generating Magnitude 8.4 Earthquake, Study Finds",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdmlITUNZakU3WFVVck5WeUxHQURJZmdqbnlUN1pWZHZ5dnJWWWFKeTNYTHZqUmFidW54T2JXTDJLSGRSWURWNFNMVUsxM2dhNTBFb2ZQcDEtdVJYWGpHMWF3TnpNc3BtU0pCcHU4V0E5VzloZ3QxQkMtdmFJQ2J2SnlhdmE1WFVETnlRTUFmaUU2QTBVQ2REWFU3bnRGS0cxd1Q4ckt1UWZvbnNpdWg4?oc=5",
-      "source": "Kashmir Life",
-      "publishedAt": "2026-11-26T06:25:49.000Z",
-      "latestAt": "2026-11-26T06:25:49.000Z",
-      "firstSeenAt": "2026-11-26T06:55:12.325Z",
-      "outlets": 1,
-      "outletNames": [
-        "Kashmir Life"
-      ],
-      "score": 0.99,
-      "quiet": true,
-      "quietReason": "quake M6.5 or more"
     },
     {
       "id": "2729017858cd",
@@ -1832,6 +1816,22 @@
         "SpaceNews"
       ],
       "score": 0.99
+    },
+    {
+      "id": "ceed54516664",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Vietnam stocks plunge as VN-Index loses nearly 58 points",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOWN3QW5Ga1RLSm1XNUExSWVTWVRLRTlYTUx5UnhBYVBfZnZqWDhYbnJnQVdFT2xMRjdkNjlLZUpJSERRMlIwQXgwOHNjS2NHRTFOVm0waTZyUUhTN3BPVm9jbWNxRDljQzQzZTJ4N084czEyaVZiLVBwV0o2UDNKdHYyWktJaWV1UEs2a0dxblZ2MllYSDFkQUpn?oc=5",
+      "source": "Báo VietNamNet",
+      "publishedAt": "2026-11-26T09:11:00.000Z",
+      "latestAt": "2026-11-26T09:11:00.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
+      "outlets": 1,
+      "outletNames": [
+        "Báo VietNamNet"
+      ],
+      "score": 0.98
     },
     {
       "id": "4ee4e22b5039",
@@ -1882,6 +1882,22 @@
       "score": 0.89
     },
     {
+      "id": "efa721a1dcea",
+      "cat": "weather",
+      "kind": "news",
+      "title": "West Nashville homeowner still waiting to rebuild more than 300 days after ice storm",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWEZ2UkRETWp1TnVyTUpUYkE1b1JqOW5LRFp2aS1vNlhGSWdFYW5sVXEzZ3RYNTF3NlVkTEs3M2F5Q3ZSd2JZMjNabVVSZUF0ZDd6RkJpam9mVm8tUmhENXlwZDUyazJsQkIya0xpd0RPODFqYXdwQkdWbmhwUE5tOHVnY3ZxRTM2bWpISWFvRVpScDVuMzI2R1duQ2xtbGd0eWVReVN1aGpYVjF5RXotNFZBTnI?oc=5",
+      "source": "WSMV",
+      "publishedAt": "2026-11-25T23:50:00.000Z",
+      "latestAt": "2026-11-26T00:28:00.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
+      "outlets": 1,
+      "outletNames": [
+        "WSMV"
+      ],
+      "score": 0.82
+    },
+    {
       "id": "0edb9f27fed7",
       "cat": "sun",
       "kind": "news",
@@ -1914,22 +1930,6 @@
       "score": 0.77
     },
     {
-      "id": "feb5626546fe",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Wind strengthening, blizzard, ice - storm warnings issued across Kazakhstan: 25 November 23:25",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTUZzSHVlLVJtWGdtbXZfbG5MV25YTVp0YzdRVzlIN3NQRVVKMTMybk9ndXBFSWFJQ1ZCMnQxNElvT3BGcTFNaml2eGFmRUVhRC16cnpzdkZuX0VISDNMcDhjYXpIeFVrX29rdlhCalJJSjhUNnF2TUk0Y3BFcjNoZFdFdEkwOG1HMmVVZHRfUEplX1JLaHJKWC1kMFcwY0NNb05tZVdwVXF5OFliRmc?oc=5",
-      "source": "TengriNews",
-      "publishedAt": "2026-11-25T18:25:00.000Z",
-      "latestAt": "2026-11-25T18:25:00.000Z",
-      "firstSeenAt": "2026-11-26T09:25:35.418Z",
-      "outlets": 1,
-      "outletNames": [
-        "TengriNews"
-      ],
-      "score": 0.75
-    },
-    {
       "id": "e0291e6aaafe",
       "cat": "ai",
       "kind": "news",
@@ -1946,6 +1946,22 @@
       "score": 0.74
     },
     {
+      "id": "9222663a737e",
+      "cat": "space",
+      "kind": "news",
+      "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
+      "url": "https://tech.yahoo.com/science/articles/four-years-huge-asteroid-crash-060041617.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-25T16:00:00.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
+      "outlets": 1,
+      "outletNames": [
+        "YAHOO!"
+      ],
+      "score": 0.69
+    },
+    {
       "id": "b6b4dcbf7e62",
       "cat": "space",
       "kind": "news",
@@ -1960,22 +1976,6 @@
         "Smithsonian Magazine"
       ],
       "score": 0.68
-    },
-    {
-      "id": "872fee2f7740",
-      "cat": "space",
-      "kind": "news",
-      "title": "Watch live: Europe unveils 1st close-up views of asteroid Dimorphos after NASA's DART impact",
-      "url": "https://www.space.com/space-exploration/asteroid-comet-missions/watch-live-europe-unveils-1st-close-up-views-of-asteroid-dimorphos-after-nasas-dart-impact",
-      "source": "Space.com",
-      "publishedAt": "2026-11-25T10:45:00.000Z",
-      "latestAt": "2026-11-25T10:45:00.000Z",
-      "firstSeenAt": "2026-11-26T10:10:56.058Z",
-      "outlets": 1,
-      "outletNames": [
-        "Space.com"
-      ],
-      "score": 0.61
     }
   ]
 }
