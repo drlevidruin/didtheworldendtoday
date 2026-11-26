@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T07:40:21.836Z",
+  "buildTime": "2026-11-26T07:55:25.802Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 02:40 ET",
+  "etStamp": "2026-11-26 02:55 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,20 +51,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 839,
-  "lastSuccessAt": "2026-11-26T07:40:21.836Z",
+  "headlinesRead": 1286,
+  "lastSuccessAt": "2026-11-26T07:55:25.802Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
-    "internet": 15,
+    "flights": 15,
+    "internet": 14,
     "hacks": 30,
     "germs": 6,
     "grid": 9,
     "markets": 5,
     "animals": 1,
     "ai": 4,
-    "sun": 4,
     "weather": 4,
+    "sun": 4,
     "earth": 4,
     "space": 4
   },
@@ -183,80 +183,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 526,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 14 of 26 queries)",
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "count": 973,
+      "error": null,
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     },
     "bing": {
       "ok": true,
       "count": 283,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T06:55:12.325Z"
     },
     "hn": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:40:21.836Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T07:40:21.836Z"
+      "lastOkAt": "2026-11-26T07:55:25.802Z"
     }
   },
   "stories": [
@@ -270,7 +271,7 @@
       "publishedAt": "2026-11-25T08:47:00.000Z",
       "latestAt": "2026-11-25T17:53:28.000Z",
       "firstSeenAt": "2026-11-25T16:52:57.421Z",
-      "outlets": 13,
+      "outlets": 14,
       "outletNames": [
         "WTHI News10",
         "WABI",
@@ -284,9 +285,10 @@
         "WWBT",
         "KBTX News 3",
         "WCAX",
-        "Alaska's News Source"
+        "Alaska's News Source",
+        "KY3"
       ],
-      "score": 5.69
+      "score": 5.82
     },
     {
       "id": "sig:faa-stop:SEA:2026-11-25",
@@ -553,6 +555,23 @@
       "score": 4.3
     },
     {
+      "id": "4b9d74481d40",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Flights grounded at major US airport after cargo plane veers off runway",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQT0JzZy1BVUs3Mzdxa1hHWUx2bTFCaHA1T2ZOeTZXNGxWWlUxbk5zOEFrY01OcWRTYlhfZER3bEdPWXJFSVdqR1ItTWFfQWxRWUJ3WHVTaWhRdGgwTl90RC1KWFRMYnhNeS05TUpWdFYtYUlDWEFEeGQwVndXRnJFWnVDNFF4bkZ6bldxdGlXbmwzRHk1X3c?oc=5",
+      "source": "Daily Star",
+      "publishedAt": "2026-11-26T04:09:00.000Z",
+      "latestAt": "2026-11-26T07:02:00.000Z",
+      "firstSeenAt": "2026-11-26T04:24:51.828Z",
+      "outlets": 2,
+      "outletNames": [
+        "Daily Star",
+        "Daily Express"
+      ],
+      "score": 2.79
+    },
+    {
       "id": "a9e3c4d84247",
       "cat": "flights",
       "kind": "news",
@@ -660,23 +679,6 @@
       "score": 2.08
     },
     {
-      "id": "270c6ce8165b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
-      "source": "KSNV",
-      "publishedAt": "2026-11-26T02:15:20.000Z",
-      "latestAt": "2026-11-26T02:18:19.000Z",
-      "firstSeenAt": "2026-11-26T02:24:32.389Z",
-      "outlets": 2,
-      "outletNames": [
-        "KSNV",
-        "cedarnews.net"
-      ],
-      "score": 1.99
-    },
-    {
       "id": "5c91ad2aa7b8",
       "cat": "hacks",
       "kind": "news",
@@ -762,6 +764,23 @@
       "score": 1.9
     },
     {
+      "id": "251d291f0bd0",
+      "cat": "weather",
+      "kind": "news",
+      "title": "London’s Lights in La Vergne repair after ice storm",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOTlCVGpRS3Q4UjJDckFBc0RZNE5kb3NwV0RILXZzaGpzdkFadjZxbTFGNHpLQlNQaDM0WEJGT1dMaTJacEluQkU4alhWbV9LalpnSUkzRHlfenZvOUtmLUgwbFprQUNJNC1kWnpWUV9QazNiYlpyNDRkQy0xVkp4ZTM3WXc1aWdGOGpKdkNCY2c?oc=5",
+      "source": "WKRN News 2",
+      "publishedAt": "2026-11-25T21:33:00.000Z",
+      "latestAt": "2026-11-25T21:33:00.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 2,
+      "outletNames": [
+        "WKRN News 2",
+        "Yahoo"
+      ],
+      "score": 1.86
+    },
+    {
       "id": "4f0994ffe67a",
       "cat": "grid",
       "kind": "news",
@@ -830,21 +849,21 @@
       "score": 1.56
     },
     {
-      "id": "ae7c2ba4c273",
-      "cat": "markets",
+      "id": "270c6ce8165b",
+      "cat": "flights",
       "kind": "news",
-      "title": "Don’t let a market selloff wreck your retirement plan",
-      "url": "https://www.thestreet.com/retirement/dont-let-a-market-selloff-wreck-your-retirement-plan",
-      "source": "TheStreet",
-      "publishedAt": "2026-11-25T16:00:00.000Z",
-      "latestAt": "2026-11-26T01:17:00.000Z",
-      "firstSeenAt": "2026-11-26T07:40:21.836Z",
+      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
+      "source": "KSNV",
+      "publishedAt": "2026-11-26T02:15:20.000Z",
+      "latestAt": "2026-11-26T02:18:19.000Z",
+      "firstSeenAt": "2026-11-26T02:24:32.389Z",
       "outlets": 2,
       "outletNames": [
-        "TheStreet",
-        "AOL.com"
+        "KSNV",
+        "cedarnews.net"
       ],
-      "score": 1.48
+      "score": 1.99
     },
     {
       "id": "833490745443",
@@ -918,6 +937,24 @@
       "score": 1.94
     },
     {
+      "id": "197bd8f1d3de",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Passport data exposed in travel giant data breach",
+      "url": "https://www.newcastleherald.com.au/story/9399078/passport-data-exposed-in-travel-giant-data-breach/",
+      "source": "Newcastle Herald",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T06:44:29.000Z",
+      "firstSeenAt": "2026-11-26T06:55:12.325Z",
+      "outlets": 3,
+      "outletNames": [
+        "Michael West Media",
+        "Newcastle Herald",
+        "Starts at 60"
+      ],
+      "score": 1.94
+    },
+    {
       "id": "a7ca4e09e904",
       "cat": "hacks",
       "kind": "news",
@@ -951,6 +988,24 @@
         "https://travelhost.com/"
       ],
       "score": 1.76
+    },
+    {
+      "id": "03798af58a9c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach CIA’s unclassified computer system",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVFJiOFVOU3lFMk1lYi1DUmRfcHBOTDI5MXAycS1JRF9BU1l5TVVzZ2Vid3NnUTFGdlZEcFFxUURlTGN1bnY3SjU0MkZpbUlYZDZnMjlYSXUtTHpwM2ZDWjdfS3RSSktXTWExZlVEVnY3S2JBRkN4Y2RPbUoxX3M2d3M5V0F6NDdKN2VKSWVrSHNyRVZuZ0lJWnFYeGhRSXByQmhhQlBEOHpJX21pM29LQ0hR0gHGAUFVX3lxTFBPOGU3ZVNoRVpCcXVhV2U3Nm1YNEN6YnRqdy1rdEtWLVp0U2dlWU8yY09ycVJqVlRhcFo0aWthTWhFWU1hNzA2NzRJdE9POUMwLUZidVJQbzh6NHVVZ2tOa01Qb1ktczVJSTM3NTZMWmlqV2ZTbTIwNWFocTZGTUlSS2Jra0xYNlZvSnhhdk1TMW5KODk5S2xzTUZJbjl1XzdBYW85Z0lWZUtyWWhWSmNiYzl0UFBEeWtnbWdHY2dvdHpUOEVPdw?oc=5",
+      "source": "WSB-TV",
+      "publishedAt": "2026-11-25T11:57:31.000Z",
+      "latestAt": "2026-11-25T11:57:31.000Z",
+      "firstSeenAt": "2026-11-26T07:25:17.020Z",
+      "outlets": 3,
+      "outletNames": [
+        "WSB-TV",
+        "WSOC TV",
+        "95.5 WSB"
+      ],
+      "score": 1.75
     },
     {
       "id": "857736e74970",
@@ -1055,23 +1110,6 @@
       "score": 1.64
     },
     {
-      "id": "197bd8f1d3de",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Passport data exposed in travel giant data breach",
-      "url": "https://www.newcastleherald.com.au/story/9399078/passport-data-exposed-in-travel-giant-data-breach/",
-      "source": "Newcastle Herald",
-      "publishedAt": "2026-11-25T19:40:00.000Z",
-      "latestAt": "2026-11-26T06:44:29.000Z",
-      "firstSeenAt": "2026-11-26T06:55:12.325Z",
-      "outlets": 2,
-      "outletNames": [
-        "Michael West Media",
-        "Newcastle Herald"
-      ],
-      "score": 1.62
-    },
-    {
       "id": "a6bf85e51f1e",
       "cat": "flights",
       "kind": "news",
@@ -1125,6 +1163,23 @@
       "score": 1.57
     },
     {
+      "id": "ae7c2ba4c273",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Don’t let a market selloff wreck your retirement plan",
+      "url": "https://www.thestreet.com/retirement/dont-let-a-market-selloff-wreck-your-retirement-plan",
+      "source": "TheStreet",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T01:17:00.000Z",
+      "firstSeenAt": "2026-11-26T07:40:21.836Z",
+      "outlets": 2,
+      "outletNames": [
+        "TheStreet",
+        "AOL.com"
+      ],
+      "score": 1.48
+    },
+    {
       "id": "f4c983635a2c",
       "cat": "hacks",
       "kind": "news",
@@ -1140,6 +1195,22 @@
         "NBC Palm Springs"
       ],
       "score": 1.47
+    },
+    {
+      "id": "b8370e35ed89",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta tech outage triggers nationwide delays at start of Thanksgiving rush",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaGhLVHZrdmZOLTZzTlo3dW5QMGR2bGJlYjFGNEVTUkIwc1lqUEdLdDNCOTFZaHR4MWhsS2NoWC0xRzhBVHJOZWJyZmRuWF85NThrS2paRHZMNm9NUGJuakZ2RE9kT2N5SV9iNTVkT1UwZlZTdzN0aDJ4eVFEYXAwVmN2R3gzUGJYQUtVNEN0ZVV2WGRncFlQNXlWTng4ZFRDOGFoX3NR?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-26T07:46:16.000Z",
+      "latestAt": "2026-11-26T07:46:16.000Z",
+      "firstSeenAt": "2026-11-26T07:55:25.802Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.4
     },
     {
       "id": "2208b23f6093",
@@ -1188,22 +1259,6 @@
         "CSO Online"
       ],
       "score": 1.4
-    },
-    {
-      "id": "4b9d74481d40",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Flights grounded at major US airport after cargo plane veers off runway",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQT0JzZy1BVUs3Mzdxa1hHWUx2bTFCaHA1T2ZOeTZXNGxWWlUxbk5zOEFrY01OcWRTYlhfZER3bEdPWXJFSVdqR1ItTWFfQWxRWUJ3WHVTaWhRdGgwTl90RC1KWFRMYnhNeS05TUpWdFYtYUlDWEFEeGQwVndXRnJFWnVDNFF4bkZ6bldxdGlXbmwzRHk1X3c?oc=5",
-      "source": "Daily Star",
-      "publishedAt": "2026-11-26T04:09:00.000Z",
-      "latestAt": "2026-11-26T04:09:00.000Z",
-      "firstSeenAt": "2026-11-26T04:24:51.828Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Star"
-      ],
-      "score": 1.39
     },
     {
       "id": "a20199df1c16",
@@ -1366,23 +1421,6 @@
         "Geo News"
       ],
       "score": 1.36
-    },
-    {
-      "id": "03798af58a9c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers breach CIA’s unclassified computer system",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVFJiOFVOU3lFMk1lYi1DUmRfcHBOTDI5MXAycS1JRF9BU1l5TVVzZ2Vid3NnUTFGdlZEcFFxUURlTGN1bnY3SjU0MkZpbUlYZDZnMjlYSXUtTHpwM2ZDWjdfS3RSSktXTWExZlVEVnY3S2JBRkN4Y2RPbUoxX3M2d3M5V0F6NDdKN2VKSWVrSHNyRVZuZ0lJWnFYeGhRSXByQmhhQlBEOHpJX21pM29LQ0hR0gHGAUFVX3lxTFBPOGU3ZVNoRVpCcXVhV2U3Nm1YNEN6YnRqdy1rdEtWLVp0U2dlWU8yY09ycVJqVlRhcFo0aWthTWhFWU1hNzA2NzRJdE9POUMwLUZidVJQbzh6NHVVZ2tOa01Qb1ktczVJSTM3NTZMWmlqV2ZTbTIwNWFocTZGTUlSS2Jra0xYNlZvSnhhdk1TMW5KODk5S2xzTUZJbjl1XzdBYW85Z0lWZUtyWWhWSmNiYzl0UFBEeWtnbWdHY2dvdHpUOEVPdw?oc=5",
-      "source": "WSB-TV",
-      "publishedAt": "2026-11-25T11:57:31.000Z",
-      "latestAt": "2026-11-25T11:57:31.000Z",
-      "firstSeenAt": "2026-11-26T07:25:17.020Z",
-      "outlets": 2,
-      "outletNames": [
-        "WSB-TV",
-        "WSOC TV"
-      ],
-      "score": 1.35
     },
     {
       "id": "82218d53aaad",
@@ -1578,22 +1616,6 @@
       "score": 1.05
     },
     {
-      "id": "fb0e8cb3b5b8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft declares ‘Code Red’ after major global outage, targets service recovery within one hour",
-      "url": "https://profit.pakistantoday.com.pk/2026/11/26/microsoft-declares-code-red-after-major-global-outage-targets-service-recovery-within-one-hour",
-      "source": "Profit by Pakistan Today",
-      "publishedAt": "2026-11-25T16:00:00.000Z",
-      "latestAt": "2026-11-25T16:00:00.000Z",
-      "firstSeenAt": "2026-11-26T07:40:21.836Z",
-      "outlets": 1,
-      "outletNames": [
-        "Profit by Pakistan Today"
-      ],
-      "score": 1.03
-    },
-    {
       "id": "44841ce07f61",
       "cat": "internet",
       "kind": "news",
@@ -1626,6 +1648,22 @@
       "score": 1.02
     },
     {
+      "id": "4701f3f3af7d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "AI Hackers Target Swiss Electricity and Water Utilities",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVlhfUTA2Um5Da1NTZGdfU0hoZVJNR3VzVUdFdmh5clJsUkhGb1RDUUVfWGRpdkpERDlpMHpKQjNzNGdQdEV2WENqdzhNeDBDN19RbXNrOGhJdUdTMEZITENjR1h3MkhhTHNRNGhQTFpaYi1WdGdwbjVmSzRyLW03WWFGUTBrYkRjZEhtV3JuaFViSmQ5eUpoQVd3d2Itdw?oc=5",
+      "source": "blue News",
+      "publishedAt": "2026-11-26T07:41:15.000Z",
+      "latestAt": "2026-11-26T07:41:15.000Z",
+      "firstSeenAt": "2026-11-26T07:55:25.802Z",
+      "outlets": 1,
+      "outletNames": [
+        "blue News"
+      ],
+      "score": 1
+    },
+    {
       "id": "07926489b35c",
       "cat": "grid",
       "kind": "news",
@@ -1638,6 +1676,22 @@
       "outlets": 1,
       "outletNames": [
         "Punjab Newsline"
+      ],
+      "score": 1
+    },
+    {
+      "id": "909f6a8a1b40",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Microsoft Finds State-Backed Hackers Bringing AI Into Their Everyday Operations",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOblNBT2V1OEVGay1uZ2psU2hkaXMtaWR4MVg0dzRYZGZ4R25tMTNvUm1yb2RhMU1xOWd0VnBMUnY3RE0yY1dtU1V3eGR0dkJVTUswSWV6M2lsQTVEMW1icDNWUmdjb3l2a2dPWTJEMnlTbWNZZmVWTVpDek02WE0tcU1UXzBLVzZ3NHlhdkpwZ0o3WjdC?oc=5",
+      "source": "The 420.in",
+      "publishedAt": "2026-11-26T07:37:41.000Z",
+      "latestAt": "2026-11-26T07:37:41.000Z",
+      "firstSeenAt": "2026-11-26T07:55:25.802Z",
+      "outlets": 1,
+      "outletNames": [
+        "The 420.in"
       ],
       "score": 1
     },
@@ -1686,38 +1740,6 @@
       "outlets": 1,
       "outletNames": [
         "The Standard (HK)"
-      ],
-      "score": 1
-    },
-    {
-      "id": "d3b81c51bbd2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ransomware recovery costing SA firms up to US$1.4m per attack",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORzdMaTlyTGxVZWZwUkhGOFhtV1o2MkVSTzRvcGVJWlFpSWo4dUo1d255NFh2emZfeU1XanZUa0xmYVdXdTU5eFhpNWtjSV9WVF9HQVczekpwMVZuMi0xOEhubzgxeGJQdUJLWkJrdy1yNHluU2xFUllGcUwxTk9WMVppR2xvb051TzNhcHBlT2VzeFJwZ3NpMVhDREdzZzduNm96TGY1QlpGbzA?oc=5",
-      "source": "Africa Business Communities",
-      "publishedAt": "2026-11-26T06:34:13.000Z",
-      "latestAt": "2026-11-26T06:34:13.000Z",
-      "firstSeenAt": "2026-11-26T06:40:06.643Z",
-      "outlets": 1,
-      "outletNames": [
-        "Africa Business Communities"
-      ],
-      "score": 1
-    },
-    {
-      "id": "b56bd4f60414",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "YCC deploys NTT Docomo Business AI security service after ransomware attack",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQOWM1LWNMWFR5dEZkVS1sR19DNlFxcjMyZzRmR2E3R25NV3M4dm5YWTNBLUx6bHcyd1Q1b25xQ0NFMmNiM29nYlF6QWVMZ3VvQk4wakFHX2tFUjlhZ1NNS0pJaXR1VFE3bkRsbWNxV2FvaF9uSjdiTWIwckJwemc0TmVUY25ybl9PN2Y5TFhaYi01Y1NHS0xIVzcxSm41bWJfV0NGclBXUU1vcEFYd3QtbWRmYzVLQmI2aFE?oc=5",
-      "source": "Telecompaper",
-      "publishedAt": "2026-11-26T06:31:48.000Z",
-      "latestAt": "2026-11-26T06:31:48.000Z",
-      "firstSeenAt": "2026-11-26T06:40:06.643Z",
-      "outlets": 1,
-      "outletNames": [
-        "Telecompaper"
       ],
       "score": 1
     },
@@ -1884,22 +1906,6 @@
         "@Reuters on X"
       ],
       "score": 0.98
-    },
-    {
-      "id": "251d291f0bd0",
-      "cat": "weather",
-      "kind": "news",
-      "title": "London’s Lights in La Vergne repair after ice storm",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOTlCVGpRS3Q4UjJDckFBc0RZNE5kb3NwV0RILXZzaGpzdkFadjZxbTFGNHpLQlNQaDM0WEJGT1dMaTJacEluQkU4alhWbV9LalpnSUkzRHlfenZvOUtmLUgwbFprQUNJNC1kWnpWUV9QazNiYlpyNDRkQy0xVkp4ZTM3WXc1aWdGOGpKdkNCY2c?oc=5",
-      "source": "WKRN News 2",
-      "publishedAt": "2026-11-25T21:33:00.000Z",
-      "latestAt": "2026-11-25T21:33:00.000Z",
-      "firstSeenAt": "2026-11-26T01:39:21.290Z",
-      "outlets": 1,
-      "outletNames": [
-        "WKRN News 2"
-      ],
-      "score": 0.93
     },
     {
       "id": "32ee8c7796e6",
