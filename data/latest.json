@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T09:40:47.192Z",
+  "buildTime": "2026-11-26T09:55:39.177Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 04:40 ET",
+  "etStamp": "2026-11-26 04:55 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -51,19 +51,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 557,
-  "lastSuccessAt": "2026-11-26T09:40:47.192Z",
+  "headlinesRead": 1296,
+  "lastSuccessAt": "2026-11-26T09:55:39.177Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 14,
+    "flights": 15,
     "internet": 16,
     "hacks": 30,
-    "germs": 4,
-    "grid": 10,
-    "markets": 5,
+    "germs": 5,
+    "grid": 9,
     "animals": 1,
     "ai": 4,
     "weather": 4,
+    "markets": 4,
     "sun": 4,
     "earth": 4,
     "space": 4
@@ -183,80 +183,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 245,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 10 of 26 queries)",
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "count": 978,
+      "error": null,
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     },
     "bing": {
       "ok": true,
-      "count": 280,
+      "count": 286,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:40:47.192Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T09:40:47.192Z"
+      "lastOkAt": "2026-11-26T09:55:39.177Z"
     }
   },
   "stories": [
@@ -508,22 +509,21 @@
       "score": 2.42
     },
     {
-      "id": "f89caf439c55",
-      "cat": "markets",
+      "id": "416e7d1bcf22",
+      "cat": "grid",
       "kind": "news",
-      "title": "CoreWeave Stocks Plunge 10.27% as Credit Markets Price 68% Default Risk",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-stocks-plunge-10-27-174415599.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-25T09:44:00.000Z",
-      "latestAt": "2026-11-25T18:02:42.000Z",
-      "firstSeenAt": "2026-11-25T18:38:14.223Z",
-      "outlets": 3,
+      "title": "Major blackout hits Sabah’s east coast again",
+      "url": "https://www.thestar.com.my/news/nation/2026/11/26/major-blackout-hits-sabahs-east-coast-again",
+      "source": "The Star",
+      "publishedAt": "2026-11-25T11:29:00.000Z",
+      "latestAt": "2026-11-26T02:15:00.000Z",
+      "firstSeenAt": "2026-11-26T01:39:21.290Z",
+      "outlets": 2,
       "outletNames": [
-        "Yahoo Finance",
-        "GuruFocus",
-        "TradingView"
+        "The Star",
+        "The Straits Times"
       ],
-      "score": 2.2
+      "score": 2.14
     },
     {
       "id": "4b9d74481d40",
@@ -579,6 +579,26 @@
       "score": 2.47
     },
     {
+      "id": "03798af58a9c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach CIA’s unclassified computer system",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVFJiOFVOU3lFMk1lYi1DUmRfcHBOTDI5MXAycS1JRF9BU1l5TVVzZ2Vid3NnUTFGdlZEcFFxUURlTGN1bnY3SjU0MkZpbUlYZDZnMjlYSXUtTHpwM2ZDWjdfS3RSSktXTWExZlVEVnY3S2JBRkN4Y2RPbUoxX3M2d3M5V0F6NDdKN2VKSWVrSHNyRVZuZ0lJWnFYeGhRSXByQmhhQlBEOHpJX21pM29LQ0hR0gHGAUFVX3lxTFBPOGU3ZVNoRVpCcXVhV2U3Nm1YNEN6YnRqdy1rdEtWLVp0U2dlWU8yY09ycVJqVlRhcFo0aWthTWhFWU1hNzA2NzRJdE9POUMwLUZidVJQbzh6NHVVZ2tOa01Qb1ktczVJSTM3NTZMWmlqV2ZTbTIwNWFocTZGTUlSS2Jra0xYNlZvSnhhdk1TMW5KODk5S2xzTUZJbjl1XzdBYW85Z0lWZUtyWWhWSmNiYzl0UFBEeWtnbWdHY2dvdHpUOEVPdw?oc=5",
+      "source": "WSB-TV",
+      "publishedAt": "2026-11-25T11:57:31.000Z",
+      "latestAt": "2026-11-25T11:57:31.000Z",
+      "firstSeenAt": "2026-11-26T07:25:17.020Z",
+      "outlets": 5,
+      "outletNames": [
+        "WSB-TV",
+        "WSOC TV",
+        "95.5 WSB",
+        "WGAU Radio | Athens, GA",
+        "WPXI"
+      ],
+      "score": 2.24
+    },
+    {
       "id": "11fd89512079",
       "cat": "hacks",
       "kind": "news",
@@ -597,23 +617,6 @@
       "score": 2.19
     },
     {
-      "id": "416e7d1bcf22",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Major blackout hits Sabah’s east coast again",
-      "url": "https://www.thestar.com.my/news/nation/2026/11/26/major-blackout-hits-sabahs-east-coast-again",
-      "source": "The Star",
-      "publishedAt": "2026-11-25T11:29:00.000Z",
-      "latestAt": "2026-11-26T02:15:00.000Z",
-      "firstSeenAt": "2026-11-26T01:39:21.290Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Star",
-        "The Straits Times"
-      ],
-      "score": 2.14
-    },
-    {
       "id": "c9a6d38cc05d",
       "cat": "grid",
       "kind": "news",
@@ -630,25 +633,6 @@
         "Yahoo"
       ],
       "score": 2.08
-    },
-    {
-      "id": "03798af58a9c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers breach CIA’s unclassified computer system",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVFJiOFVOU3lFMk1lYi1DUmRfcHBOTDI5MXAycS1JRF9BU1l5TVVzZ2Vid3NnUTFGdlZEcFFxUURlTGN1bnY3SjU0MkZpbUlYZDZnMjlYSXUtTHpwM2ZDWjdfS3RSSktXTWExZlVEVnY3S2JBRkN4Y2RPbUoxX3M2d3M5V0F6NDdKN2VKSWVrSHNyRVZuZ0lJWnFYeGhRSXByQmhhQlBEOHpJX21pM29LQ0hR0gHGAUFVX3lxTFBPOGU3ZVNoRVpCcXVhV2U3Nm1YNEN6YnRqdy1rdEtWLVp0U2dlWU8yY09ycVJqVlRhcFo0aWthTWhFWU1hNzA2NzRJdE9POUMwLUZidVJQbzh6NHVVZ2tOa01Qb1ktczVJSTM3NTZMWmlqV2ZTbTIwNWFocTZGTUlSS2Jra0xYNlZvSnhhdk1TMW5KODk5S2xzTUZJbjl1XzdBYW85Z0lWZUtyWWhWSmNiYzl0UFBEeWtnbWdHY2dvdHpUOEVPdw?oc=5",
-      "source": "WSB-TV",
-      "publishedAt": "2026-11-25T11:57:31.000Z",
-      "latestAt": "2026-11-25T11:57:31.000Z",
-      "firstSeenAt": "2026-11-26T07:25:17.020Z",
-      "outlets": 4,
-      "outletNames": [
-        "WSB-TV",
-        "WSOC TV",
-        "95.5 WSB",
-        "WGAU Radio | Athens, GA"
-      ],
-      "score": 2.03
     },
     {
       "id": "270c6ce8165b",
@@ -802,6 +786,23 @@
         "WAVY.com"
       ],
       "score": 1.77
+    },
+    {
+      "id": "f6f9fe180947",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Hawkish Fed risks deeper market selloff as real yields climb, Brooks warns",
+      "url": "https://www.msn.com/en-us/news/other/hawkish-fed-risks-deeper-market-selloff-as-real-yields-climb-brooks-warns/ar-AA2ihcHl",
+      "source": "Seeking Alpha on MSN",
+      "publishedAt": "2026-11-26T01:12:42.000Z",
+      "latestAt": "2026-11-26T09:12:42.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 2,
+      "outletNames": [
+        "Seeking Alpha on MSN",
+        "TradingView"
+      ],
+      "score": 1.71
     },
     {
       "id": "e8c3efdabe62",
@@ -976,6 +977,23 @@
         "GBHackers News"
       ],
       "score": 1.92
+    },
+    {
+      "id": "ba108ccd0525",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "1Password confirms hackers stole customer data, but not their passwords",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1FMnY1OWdHMEx2OGRmQWhzVjdfS1I1SVpIb29JS0szR2hLcjJnT1NFN1E3UzJpdHZmTGEtOXFLZEJkbGFETVpQaVJHN0duRjl5Qm0xTElUUHFfQXhNVFdpZFNoMVRwZXJBd0g1STlFc3o?oc=5",
+      "source": "Android Authority",
+      "publishedAt": "2026-11-26T05:10:24.000Z",
+      "latestAt": "2026-11-26T09:34:57.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 2,
+      "outletNames": [
+        "Android Authority",
+        "Windows Report"
+      ],
+      "score": 1.84
     },
     {
       "id": "0a9eae05a76c",
@@ -1477,6 +1495,22 @@
       "score": 1.31
     },
     {
+      "id": "a2ba0d15c4b9",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Arkansas Router Misconfiguration Blamed for Rare Nationwide FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZ1p2Q3pCZDJYYXkwdVBPSy1HR0NGRThFTzBqeWNVQ1l2c2FSOXMxWHVMeU9VZE1wYm16V2o5N2tWZFlubkFmRUg0LUhoSVdiZ3dtNjlsaEhoSERSS1ZSNkQxaTZxOGdkQUpJZlFwN0x3LXNub3lZcU40bDFIQndSbzBkeXgzb0laR3ZGN1BlbXo5LW9mZ0pVaTRMV2owcGU5anB3UGVEVQ?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-26T04:40:58.000Z",
+      "latestAt": "2026-11-26T04:40:58.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.28
+    },
+    {
       "id": "7a7dbfd634b6",
       "cat": "internet",
       "kind": "news",
@@ -1564,7 +1598,7 @@
       "url": "https://www.computerweekly.com/news/366655554/Forrester-AI-generated-bug-will-cause-global-outage-in-2027",
       "source": "Computer Weekly",
       "publishedAt": "2026-11-25T15:28:00.000Z",
-      "latestAt": "2026-11-25T15:28:00.000Z",
+      "latestAt": "2026-11-26T05:14:11.000Z",
       "firstSeenAt": "2026-11-26T05:24:53.119Z",
       "outlets": 1,
       "outletNames": [
@@ -1637,6 +1671,54 @@
       "score": 1.02
     },
     {
+      "id": "f1b8ae6ebc00",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft issues 'Code Red' declaration following major Outlook outage",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVUxpOHUxeVpQXy1UR2NXZ05GeV9fS0p3dHg5RDE4Rk5UV1NEZDJJTGY5OFZXTVZxUjRrU1lNamJfZm5XdXhDU0hWNDNydEE4czNVNVN4akRrRVhlOWdvcG42blQxcGltdFB5NE96WERfYWkzZGM3dmI2eEs3LXlmRFlIS2pSMWNjY25MbEhlQ3FjM2pFWlE?oc=5",
+      "source": "UNILAD Tech",
+      "publishedAt": "2026-11-25T17:10:19.000Z",
+      "latestAt": "2026-11-25T17:10:19.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 1,
+      "outletNames": [
+        "UNILAD Tech"
+      ],
+      "score": 1.01
+    },
+    {
+      "id": "6051e6900706",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers access personal data of 11,000 people in Denmark",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRDV1MXdjWkFmRmNkWk92ajBqX01EZGpzdEEwQXh1MVFHQVVzdl9ONzV1V2VHQldMZm9kd3Z3dXdlYXRFcTRaa0NtSGdMVW1TZk9hSHhhMGVEZ2pLTDRRWWpyYmdjZnJBcU1Na1VNcXJiTHkxZ1ZuaGY5SjE0bGhlb196R3djNzQ?oc=5",
+      "source": "Punch Newspapers",
+      "publishedAt": "2026-11-26T09:53:07.000Z",
+      "latestAt": "2026-11-26T09:53:07.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 1,
+      "outletNames": [
+        "Punch Newspapers"
+      ],
+      "score": 1
+    },
+    {
+      "id": "49be6341ddc6",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed at turkey farms as keepers warned",
+      "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPVHFyTzdKblFaSHY2VEg0MzRtNTZqRS1OSFFFT2NNTFZqVDlobF8wTzJRWkhsUkg0QlJpbkNjZ1ZkZ0VjU2ljNHQtMXRxREtZVVZRTzRwbTF2VnVXZEF3empxc2dNQzJDSEpwY2xxTFRuanEyMUNubm5GdUdudUJuM3JmbUhPR3FnQjBKTkg5bXozRDhGWUpELUhBWkFlSm9zMURKWF9NaWo4MF9xcG9JY1ZFTS0yMzRSVHh0b21pLU5ZLWdiRWlwOTJITmFWb2JQMGVFZmlnaFJTNG5BSDNIX3lGdHZUQmx4dFJFR00wcHNyallJNmIyMHd2dUxhOXpRMFQ0dklPZm02cG15WEItWHFKUHB3WGZXRDNqM0pFWnRYR1F5anc?oc=5",
+      "source": "Trending Now Infrastructure",
+      "publishedAt": "2026-11-26T09:40:28.000Z",
+      "latestAt": "2026-11-26T09:40:28.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 1,
+      "outletNames": [
+        "Trending Now Infrastructure"
+      ],
+      "score": 1
+    },
+    {
       "id": "832cc76f88c2",
       "cat": "hacks",
       "kind": "news",
@@ -1649,86 +1731,6 @@
       "outlets": 1,
       "outletNames": [
         "News24"
-      ],
-      "score": 1
-    },
-    {
-      "id": "caef849f31fa",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Viettel-Singtel Consortium Begins Vietnam-Singapore Subsea Cable",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOdDAtejJnSThyemJhSHJoOWkyMHBLbmlGd2pPeEdMSkJJZWxKMExtMDM1NzBMdVp4SG9nRk83TGtMMFA4amxkWVJvaGt2VVZQbUNBMWZKeWxQNTg0TnBXdjVXUnVia2tmSXFLbS1jN0Y1R1ZDVEFCQ0RULThsbkVZRDFlWXJDLTJEQk1rTWgtMGo?oc=5",
-      "source": "Wisevoter",
-      "publishedAt": "2026-11-26T09:32:50.000Z",
-      "latestAt": "2026-11-26T09:32:50.000Z",
-      "firstSeenAt": "2026-11-26T09:40:47.192Z",
-      "outlets": 1,
-      "outletNames": [
-        "Wisevoter"
-      ],
-      "score": 1
-    },
-    {
-      "id": "55a6584729ec",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power Outage Risk.png",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNWklsZlIwMDEwUVVTOW5NcFlidk1mczBBemFjSmJhNGtKSXFDc2NadkJyZlpuU3NoWHdnN0hMNFpMYVNxd09BaHVjSDhUVXpIR3c4OHUwY3JsVmxvVVJESG4yRGpPRC1sVmZGUWd5cGdPb0R2Q3YyZ2V5cnUyM0tMNjU4UTlSVGMzeTRmZzFoR1NHWlpQ?oc=5",
-      "source": "WFMZ.com",
-      "publishedAt": "2026-11-26T09:17:48.000Z",
-      "latestAt": "2026-11-26T09:17:48.000Z",
-      "firstSeenAt": "2026-11-26T09:25:35.418Z",
-      "outlets": 1,
-      "outletNames": [
-        "WFMZ.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "ceed54516664",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Vietnam stocks plunge as VN-Index loses nearly 58 points",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOWN3QW5Ga1RLSm1XNUExSWVTWVRLRTlYTUx5UnhBYVBfZnZqWDhYbnJnQVdFT2xMRjdkNjlLZUpJSERRMlIwQXgwOHNjS2NHRTFOVm0waTZyUUhTN3BPVm9jbWNxRDljQzQzZTJ4N084czEyaVZiLVBwV0o2UDNKdHYyWktJaWV1UEs2a0dxblZ2MllYSDFkQUpn?oc=5",
-      "source": "Báo VietNamNet",
-      "publishedAt": "2026-11-26T09:11:00.000Z",
-      "latestAt": "2026-11-26T09:11:00.000Z",
-      "firstSeenAt": "2026-11-26T09:25:35.418Z",
-      "outlets": 1,
-      "outletNames": [
-        "Báo VietNamNet"
-      ],
-      "score": 1
-    },
-    {
-      "id": "e1314f98e99b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "myColorado Data Breach: App Offline, 150,000 at Risk",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOd2hxS0RrU3YwVEtuM3JDeUVYWlNpMkNUVlNHc2stcEZfUGpUUWNMMTR5ZUhwQmpFWkRqYkZRQmNzbExtVWdJX2RPU3hfZ2Uwd3R0NGNROExudTJkdVJNM2ZraFA5WTk2M1hha3ZLTjY3MVVqbnYzQkg4c2Fnd0FRTGlHaw?oc=5",
-      "source": "shattered.io",
-      "publishedAt": "2026-11-26T08:49:36.000Z",
-      "latestAt": "2026-11-26T08:49:36.000Z",
-      "firstSeenAt": "2026-11-26T08:55:30.997Z",
-      "outlets": 1,
-      "outletNames": [
-        "shattered.io"
-      ],
-      "score": 1
-    },
-    {
-      "id": "6e7ac6246d58",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US Treasury takes financial crime systems offline after cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaFpoUXdPWlkxYndwOGtfdHQteFh4OVFJanB6Q1h3d3ZzcjJZLWJmNmJ4a0lXTjYyZ1d6R3VQSlhGaUFWZWVZRUtPQnl5NDlFem1EVmMwWHVTeDNUMTE4aFRjU3h4M2xneDU5Z3VyczZaWWR1V2dyeUtEc3J2S29qNU45amN6aFMtSlJ5UGNIekNCa3J5S0R1VmRGS0phWTlXdkNRSkJPN1ZCd2xnQXVyaGVINjM3Zw?oc=5",
-      "source": "Gulf Business",
-      "publishedAt": "2026-11-26T08:47:55.000Z",
-      "latestAt": "2026-11-26T08:47:55.000Z",
-      "firstSeenAt": "2026-11-26T08:55:30.997Z",
-      "outlets": 1,
-      "outletNames": [
-        "Gulf Business"
       ],
       "score": 1
     },
