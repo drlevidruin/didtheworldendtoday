@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T17:57:12.069Z",
+  "buildTime": "2026-11-26T18:12:05.865Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 12:57 ET",
+  "etStamp": "2026-11-26 13:12 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,18 +45,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1269,
-  "lastSuccessAt": "2026-11-26T17:57:12.069Z",
+  "headlinesRead": 1338,
+  "lastSuccessAt": "2026-11-26T18:12:05.865Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 29,
+    "hacks": 31,
     "flights": 11,
-    "internet": 13,
     "grid": 21,
+    "internet": 13,
+    "weather": 5,
     "germs": 4,
     "markets": 4,
-    "weather": 6,
-    "space": 4,
+    "space": 3,
     "earth": 4,
     "sun": 4
   },
@@ -71,7 +71,7 @@
     },
     "kp": {
       "value": 1,
-      "time": "2026-11-26T12:00:00.000Z",
+      "time": "2026-11-26T15:00:00.000Z",
       "max24": 2
     },
     "asteroid": {
@@ -164,93 +164,92 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "Egypt tanker explosion kills 31 people as driver crashes into fuel truck in fiery highway crash"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 960,
+      "count": 1024,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 282,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T17:57:12.069Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T17:57:12.069Z"
+      "lastOkAt": "2026-11-26T18:12:05.865Z"
     }
   },
   "stories": [
@@ -376,6 +375,26 @@
       "score": 3.5
     },
     {
+      "id": "01b55d1ed95d",
+      "cat": "grid",
+      "kind": "news",
+      "title": "More than 16,000 PPL customers without power on Thanksgiving",
+      "url": "https://www.pennlive.com/news/2026/11/more-than-16000-ppl-customers-without-power-on-thanksgiving.html",
+      "source": "The Patriot-News",
+      "publishedAt": "2026-11-26T04:48:00.000Z",
+      "latestAt": "2026-11-26T17:23:43.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 5,
+      "outletNames": [
+        "MLQ.ai",
+        "Men's Journal",
+        "X",
+        "The Patriot-News",
+        "PennLive"
+      ],
+      "score": 2.93
+    },
+    {
       "id": "4b9d74481d40",
       "cat": "flights",
       "kind": "news",
@@ -409,25 +428,6 @@
         "Information Age"
       ],
       "score": 2.71
-    },
-    {
-      "id": "01b55d1ed95d",
-      "cat": "grid",
-      "kind": "news",
-      "title": "More than 16,000 PPL customers without power on Thanksgiving",
-      "url": "https://www.pennlive.com/news/2026/11/more-than-16000-ppl-customers-without-power-on-thanksgiving.html",
-      "source": "The Patriot-News",
-      "publishedAt": "2026-11-26T04:48:00.000Z",
-      "latestAt": "2026-11-26T17:23:43.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 4,
-      "outletNames": [
-        "MLQ.ai",
-        "Men's Journal",
-        "X",
-        "The Patriot-News"
-      ],
-      "score": 2.64
     },
     {
       "id": "b0adfba84f59",
@@ -486,6 +486,23 @@
       "score": 2.58
     },
     {
+      "id": "ba4586e1359a",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Virginia homeowner runs house on generator after ice storm but has to stagger major appliances",
+      "url": "https://www.yahoo.com/lifestyle/articles/virginia-homeowner-runs-house-generator-171800866.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T09:18:00.000Z",
+      "latestAt": "2026-11-26T17:18:00.000Z",
+      "firstSeenAt": "2026-11-26T17:27:00.235Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Cool Down",
+        "Yahoo"
+      ],
+      "score": 2.42
+    },
+    {
       "id": "040839c82e3c",
       "cat": "internet",
       "kind": "news",
@@ -518,23 +535,6 @@
         "The Healthy @Reader's Digest"
       ],
       "score": 2.41
-    },
-    {
-      "id": "7e175ed82324",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft explains tech failures that triggered global outage",
-      "url": "https://www.thestar.com.my/tech/tech-news/2026/11/26/microsoft-explains-tech-failures-that-triggered-global-outage",
-      "source": "The Star",
-      "publishedAt": "2026-11-25T22:00:00.000Z",
-      "latestAt": "2026-11-26T00:00:00.000Z",
-      "firstSeenAt": "2026-11-26T10:25:45.653Z",
-      "outlets": 2,
-      "outletNames": [
-        "Longview Daily News",
-        "The Star"
-      ],
-      "score": 2.22
     },
     {
       "id": "a9e3c4d84247",
@@ -605,6 +605,23 @@
         "2-Spyware"
       ],
       "score": 2.38
+    },
+    {
+      "id": "7e175ed82324",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft explains tech failures that triggered global outage",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/11/26/microsoft-explains-tech-failures-that-triggered-global-outage",
+      "source": "The Star",
+      "publishedAt": "2026-11-25T22:00:00.000Z",
+      "latestAt": "2026-11-26T00:00:00.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
+      "outlets": 2,
+      "outletNames": [
+        "Longview Daily News",
+        "The Star"
+      ],
+      "score": 2.22
     },
     {
       "id": "7e3288e167a6",
@@ -828,22 +845,6 @@
         "TradingView"
       ],
       "score": 1.71
-    },
-    {
-      "id": "ba4586e1359a",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Virginia homeowner runs house on generator after ice storm but has to stagger major appliances",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeW1hUkFvd2RNVDc2Z2t0U2E3OTVSWWhOTjlEZ29TZE5Hb3pBdWhPRHo3TnZMUnNuV3RlQzZrU2FYbEpOeXA4eERwTFo0ajEzcTJwUHNWYUdNTFBWZ0tZTE5CZmxpN1VhbzR4eHFJb1VRb2xOdk5RSTM0VW1tLURZejZNeFhlOUU?oc=5",
-      "source": "The Cool Down",
-      "publishedAt": "2026-11-26T17:18:00.000Z",
-      "latestAt": "2026-11-26T17:18:00.000Z",
-      "firstSeenAt": "2026-11-26T17:27:00.235Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Cool Down"
-      ],
-      "score": 1.4
     },
     {
       "id": "22e6f5d8189d",
@@ -1079,7 +1080,7 @@
       "url": "https://www.wavy.com/news/local-news/severe-weather-leaves-thousands-of-dominion-customers-without-power-in-hampton-roads/",
       "source": "WAVY.com",
       "publishedAt": "2026-11-26T01:53:00.000Z",
-      "latestAt": "2026-11-26T16:19:55.000Z",
+      "latestAt": "2026-11-26T18:08:11.000Z",
       "firstSeenAt": "2026-11-26T08:55:30.997Z",
       "outlets": 2,
       "outletNames": [
@@ -1107,6 +1108,23 @@
         "Anadolu Ajansı"
       ],
       "score": 1.76
+    },
+    {
+      "id": "b338ec219fe9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Georgia city targeted in cyberattack day before Thanksgiving",
+      "url": "https://www.yahoo.com/news/articles/georgia-city-targeted-cyberattack-day-174821287.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T09:48:00.000Z",
+      "latestAt": "2026-11-26T17:49:24.000Z",
+      "firstSeenAt": "2026-11-26T17:57:12.069Z",
+      "outlets": 2,
+      "outletNames": [
+        "WSB-TV",
+        "Yahoo"
+      ],
+      "score": 1.73
     },
     {
       "id": "5f266584a470",
@@ -1408,6 +1426,24 @@
         "De Último Minuto"
       ],
       "score": 1.39
+    },
+    {
+      "id": "9d364f5dc0cd",
+      "cat": "grid",
+      "kind": "news",
+      "title": "🚨🇺🇸 Thanksgiving BLACKOUT CHAOS as powerful storms leave 500,000+ WITHOUT POWER MILLIONS of Americans face a holiday in the DARK as fierce winds, heavy snow, and flooding threaten power supplies across at least 20 states. More than 500,00",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE02WFR1cDJObDR1c09pbnppcGtpdllfTFZtYldZTno4aUVhMUwyQ3ZvLVJUaE5aWUJUZjVmRzRoaWJXMldlNmhiY2RkVU9aWG1vanB5NVMtN0dPRFVSYWNPakZ2WU5LUkNQRVZrcQ?oc=5",
+      "source": "X",
+      "publishedAt": "2026-11-26T17:23:43.000Z",
+      "latestAt": "2026-11-26T17:23:43.000Z",
+      "firstSeenAt": "2026-11-26T18:12:05.865Z",
+      "outlets": 1,
+      "outletNames": [
+        "X"
+      ],
+      "score": 1.38,
+      "quiet": true,
+      "quietReason": "headline mentions flooding"
     },
     {
       "id": "7c2cbb4906df",
@@ -1717,6 +1753,54 @@
       "score": 1.06
     },
     {
+      "id": "11f9749693a7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Claim 166 Million USA Today Records Stolen In New Cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQeXdISFBmaC0tNEpVMktRTE5MNEJoajZhZkFfc1NxRUViRFZzTHRYLVVVV18xTkNLbloyNC0tRjBpZWtCUTN0TlRVVHpUVDdsNl9VWk4tNFlMWTlTTnN3QWppYU9HWks0Y0ZLTjVGcjlhRFB3dlFsbTU2UzZkbDN1RVJ2a2MycWFvdnB0RjdxOGdDZw?oc=5",
+      "source": "The 420.in",
+      "publishedAt": "2026-11-26T18:04:41.000Z",
+      "latestAt": "2026-11-26T18:04:41.000Z",
+      "firstSeenAt": "2026-11-26T18:12:05.865Z",
+      "outlets": 1,
+      "outletNames": [
+        "The 420.in"
+      ],
+      "score": 1
+    },
+    {
+      "id": "2ddf9c8d1e6a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cornwell Quality Tools data breach class action settlement",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPbUxPLVBGTHJ1RU9vamdMRVQ5VjctUzlQa0pmNFVCZ0tXd3l3UGQyRG5ZWUMxUU94SnpEd2QwaXplODJtQTF6UVBuRVo4eTcwQWN0aUZna0FkVG5xeURNWTBIVXZjRGlSN295d2dTVVJmeXJaVDJWUkRzVjZOM2pacTZSNExJQ29XakhvempLMHdpWjBVS2R5NFByY1B3TkZETVpOMmJTVno0UFRpdThaTHV2ckc2M3hTTERsNzFDYXItZElDMkhNVkJGbzg?oc=5",
+      "source": "Top Class Actions",
+      "publishedAt": "2026-11-26T18:02:34.000Z",
+      "latestAt": "2026-11-26T18:02:34.000Z",
+      "firstSeenAt": "2026-11-26T18:12:05.865Z",
+      "outlets": 1,
+      "outletNames": [
+        "Top Class Actions"
+      ],
+      "score": 1
+    },
+    {
+      "id": "fe9622ed8c30",
+      "cat": "grid",
+      "kind": "news",
+      "title": "More than 1,900 MLGW customers without power on Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMlFLTG9BLUNvWnZHLWhEend0Vk44ZXlCaE02UnRURTZOb0V3T3RDS1hpWURMUVgzS0JyUzg4Qm9BbjlBMHZXcy1aZldWcjU4dDR0STRLV2RVWnNkSVZxa0NGM1dXWkJMRDVGZm0wS2NTY3YwZDlSbXNFOElIWHhQRjZKcUdxYXBrY0dkRjhyMk5fVkc3VHZJZl80MmE?oc=5",
+      "source": "Action News 5",
+      "publishedAt": "2026-11-26T18:01:00.000Z",
+      "latestAt": "2026-11-26T18:01:00.000Z",
+      "firstSeenAt": "2026-11-26T18:12:05.865Z",
+      "outlets": 1,
+      "outletNames": [
+        "Action News 5"
+      ],
+      "score": 1
+    },
+    {
       "id": "1bc052432a0f",
       "cat": "hacks",
       "kind": "news",
@@ -1729,70 +1813,6 @@
       "outlets": 1,
       "outletNames": [
         "Vietnam.vn"
-      ],
-      "score": 1
-    },
-    {
-      "id": "0da33f8732a5",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outages across Mid-Missouri, more than 2,500 without power in Crawford County",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQ2E1VlllMUtibTN6Um01MDYyYzU2ODRuWTVGLXFSLTRFbTVIU2Q2TVlZSTViMVBmM2NHSUQ3Rmxjb1RPQ3ZHZkgwZWkxQ1NWaWtETnA2R1JpaEpuNkpaTnJDb29kckZrYnpVMVJXMVBTcjRCYWphc250b1Fya2tpaFVTYjBhVVZmc1FON19sd0g5SWpmSXEzZDAzSWMzX1lvanRjbndrems1Vnd6czlRcA?oc=5",
-      "source": "KRCG",
-      "publishedAt": "2026-11-26T17:50:45.000Z",
-      "latestAt": "2026-11-26T17:50:45.000Z",
-      "firstSeenAt": "2026-11-26T17:57:12.069Z",
-      "outlets": 1,
-      "outletNames": [
-        "KRCG"
-      ],
-      "score": 1
-    },
-    {
-      "id": "b338ec219fe9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Georgia city targeted in cyberattack day before Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNR0paMkVNN1pOZnNTWnF2Yl95ZnRBYndrMmpvcm1kWU9NekY2b1Bld3JxWHo2U2RuU2tSY21ick95SVVLaFBCa2pJNHVXOV9mTGdSNDlqeGk4dXFYTzZlMGxSWDFqRV9TZ0tlN3ZRSkZ5LUtRalAtSVdQWWVmR3gxUnlvUHNRSmhWOElmUHhjbXdlV3ItblA1Tklwc0hnd3ZJTkZPXy1LZWtlVWNDQ0VnNG5iOFM1b2kxbmfSAc4BQVVfeXFMT0g2bGRjVk85czhNNy1KVVlqbzV4UzEtLVBTbWc0N1FqWXhka3JsUmR4cmxUTnN1aU00a1NXLWYwd1gtY01lTmJWS3NTVXJUdVpDQzV4eEVFLW9SVmozQWwtSXNjRWVrQ3BXLUluRnJlTlBBVGFLZlE4Vl9Gd3Y2SDlVVXc0aDFkbWNqTFBiTUZWNTJ6b0s3WmR6MHBsNkkzMXFWMHFqQWx3UXJhbFFybXF3N2piWmdaZnUxVjZYdjZxLWktUXFwVVluMk9ORkE?oc=5",
-      "source": "WSB-TV",
-      "publishedAt": "2026-11-26T17:48:21.000Z",
-      "latestAt": "2026-11-26T17:49:24.000Z",
-      "firstSeenAt": "2026-11-26T17:57:12.069Z",
-      "outlets": 1,
-      "outletNames": [
-        "WSB-TV"
-      ],
-      "score": 1
-    },
-    {
-      "id": "224baf0f57d6",
-      "cat": "grid",
-      "kind": "news",
-      "title": "JPS says electricity has been fully restored to all customers affected by power outage",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOLS0wY3ItMlpwanpPUVhuWEk3aUJYQkdZMzlIMnNZMXVYZGNWdzBDVkNhYnRramc2dG45dlhCYUx0SGJYMFU2WThxWi1UREFnNW1mZmZpZHlleVJhUUVJMWMyNFVkVHlIdVdJLWgwcm5KRGpvMG1FaUt0TjAyUTdiNDVfTVFBenUxZVc0RUhiZXNiQmVvdHNCQ2lvdnZ0dTc2MjhmUDNYeFNzQQ?oc=5",
-      "source": "IRIE FM",
-      "publishedAt": "2026-11-26T17:34:32.000Z",
-      "latestAt": "2026-11-26T17:35:04.000Z",
-      "firstSeenAt": "2026-11-26T17:42:00.871Z",
-      "outlets": 1,
-      "outletNames": [
-        "IRIE FM"
-      ],
-      "score": 1
-    },
-    {
-      "id": "70baeb00821c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Extreme heat reversed which mussel sizes survived along the same Washington shoreline",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNWWpzVzRMbXpScWE4eWJxVGhTVkRIQTl4WjFyamxqYmo3dDAwdkZtZEx4SGxsTWtJTjhkcG1LZE1kVTVkYTRRdlN6eTlaQ1lCMjlvS1Fja3dlTVhuOXN3Ym42eUlabDJLb2cxYm5pZ3lSOGJnN0pVTERTb1Jxa2hnNWU2UGNlOXpIM2dSdng2TGNWbWxFXzRyazN1dnRqa3ZtZHdLTUZMWS1oc2EzaWhsT3FlNWpBQ3dMTGc?oc=5",
-      "source": "The Watchers - Watching the world evolve and transform",
-      "publishedAt": "2026-11-26T17:31:12.000Z",
-      "latestAt": "2026-11-26T17:31:12.000Z",
-      "firstSeenAt": "2026-11-26T17:42:00.871Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Watchers - Watching the world evolve and transform"
       ],
       "score": 1
     },
@@ -1857,22 +1877,6 @@
       "outlets": 1,
       "outletNames": [
         "Bloomberg"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "e1c907d85518",
-      "cat": "space",
-      "kind": "news",
-      "title": "Hera glimpses the results of DART asteroid impact",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1UUENLWmdlWEkyWE9lYjNzX2xjaHExTkwzSEsxXzNMWHAwNi1SUkNCbXo4cnF0bjlmR0M5T1EwSjdZT2RiTi1oZy1JSWgtMWJObi1obmpqNzZBbFdJSnNXRmxaMkJrRlBlYnNUcEhUVlNOMFdYeERBRjl6TGY?oc=5",
-      "source": "SpaceNews",
-      "publishedAt": "2026-11-25T18:05:00.000Z",
-      "latestAt": "2026-11-25T18:05:00.000Z",
-      "firstSeenAt": "2026-11-25T18:23:11.615Z",
-      "outlets": 1,
-      "outletNames": [
-        "SpaceNews"
       ],
       "score": 0.99
     },
