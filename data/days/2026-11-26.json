@@ -70,6 +70,29 @@
       "score": 5.91
     },
     {
+      "id": "sig:faa-stop:DCA:2026-11-26",
+      "cat": "flights",
+      "kind": "signal",
+      "title": "FAA ground stop at DCA (thunderstorms)",
+      "url": "https://nasstatus.faa.gov/",
+      "source": "FAA",
+      "publishedAt": "2026-11-26T20:12:23.742Z",
+      "latestAt": "2026-11-26T20:12:23.742Z",
+      "firstSeenAt": "2026-11-26T20:12:23.742Z",
+      "outlets": 1,
+      "outletNames": [
+        "FAA"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "faa-ground-stop",
+        "airport": "DCA",
+        "hub": true,
+        "nationwide": false,
+        "reason": "thunderstorms"
+      }
+    },
+    {
       "id": "sig:faa-stop:SEA:2026-11-25",
       "cat": "flights",
       "kind": "signal",
@@ -153,33 +176,17 @@
       "publishedAt": "2026-11-26T04:48:00.000Z",
       "latestAt": "2026-11-26T17:23:43.000Z",
       "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "MLQ.ai",
         "Men's Journal",
         "X",
         "The Patriot-News",
         "PennLive",
-        "Yahoo"
+        "Yahoo",
+        "BBC"
       ],
-      "score": 3.16
-    },
-    {
-      "id": "4b9d74481d40",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Flights grounded at major US airport after cargo plane veers off runway",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQT0JzZy1BVUs3Mzdxa1hHWUx2bTFCaHA1T2ZOeTZXNGxWWlUxbk5zOEFrY01OcWRTYlhfZER3bEdPWXJFSVdqR1ItTWFfQWxRWUJ3WHVTaWhRdGgwTl90RC1KWFRMYnhNeS05TUpWdFYtYUlDWEFEeGQwVndXRnJFWnVDNFF4bkZ6bldxdGlXbmwzRHk1X3c?oc=5",
-      "source": "Daily Star",
-      "publishedAt": "2026-11-26T04:09:00.000Z",
-      "latestAt": "2026-11-26T07:02:00.000Z",
-      "firstSeenAt": "2026-11-26T04:24:51.828Z",
-      "outlets": 2,
-      "outletNames": [
-        "Daily Star",
-        "Daily Express"
-      ],
-      "score": 2.79
+      "score": 3.35
     },
     {
       "id": "e76663a8ab09",
@@ -241,9 +248,9 @@
       "id": "368d106420ef",
       "cat": "grid",
       "kind": "news",
-      "title": "Eight districts on Sabah's East Coast experience power outage Thursday morning",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBOSTNvblF3V29iUktlVDVndFZySlktWlNuZ2hzWG5HdEJRT3VoVXl2b3NLQlYyeENiNXF2UDZDVkhsSmJ1a2JNQ1dqQmM1cVo0?oc=5",
-      "source": "The Edge Malaysia",
+      "title": "Power outage for 8 districts on Sabah east coast",
+      "url": "https://www.freemalaysiatoday.com/category/nation/2026/11/26/power-outage-for-8-districts-on-sabah-s-east-coast",
+      "source": "freemalaysiatoday.com",
       "publishedAt": "2026-11-26T01:28:10.000Z",
       "latestAt": "2026-11-26T05:48:55.000Z",
       "firstSeenAt": "2026-11-26T01:39:21.290Z",
@@ -308,6 +315,23 @@
       "score": 2.41
     },
     {
+      "id": "4b9d74481d40",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Flights grounded at major US airport after cargo plane veers off runway",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQT0JzZy1BVUs3Mzdxa1hHWUx2bTFCaHA1T2ZOeTZXNGxWWlUxbk5zOEFrY01OcWRTYlhfZER3bEdPWXJFSVdqR1ItTWFfQWxRWUJ3WHVTaWhRdGgwTl90RC1KWFRMYnhNeS05TUpWdFYtYUlDWEFEeGQwVndXRnJFWnVDNFF4bkZ6bldxdGlXbmwzRHk1X3c?oc=5",
+      "source": "Daily Star",
+      "publishedAt": "2026-11-26T04:09:00.000Z",
+      "latestAt": "2026-11-26T07:02:00.000Z",
+      "firstSeenAt": "2026-11-26T04:24:51.828Z",
+      "outlets": 2,
+      "outletNames": [
+        "Daily Star",
+        "Daily Express"
+      ],
+      "score": 2.79
+    },
+    {
       "id": "b0adfba84f59",
       "cat": "hacks",
       "kind": "news",
@@ -325,25 +349,6 @@
         "AOL.co.uk"
       ],
       "score": 2.6
-    },
-    {
-      "id": "416c0add4e50",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Standard Chartered’s Zodia Custody suffers data breach",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNalFNV0s0S0Z2RjVVbjZQcXZlc2lwc0hQb3JYWkJ6QXdRWTJDV3FkaFczQVlOZ0xhN1UwREQ4bkZ2d2VvbDk4aVNmbzU1Z29EdTd0SWNqTUV2WmNXdzhHQW45cWlSck1pNEF1dkVBWnppWUxtakhJSHVxX2YzWDM2X1Y4V204YWk3RkNIdjY1S2xxUHdFU3VtbV9QZ1dHQ0VLcDh4c3BXRDBfSFVKOXl0NmJ6LWN1dzRsdEE?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-26T11:37:06.000Z",
-      "latestAt": "2026-11-26T15:51:05.000Z",
-      "firstSeenAt": "2026-11-26T19:57:20.831Z",
-      "outlets": 4,
-      "outletNames": [
-        "TradingView",
-        "ForkLog",
-        "Coinpedia",
-        "Digg"
-      ],
-      "score": 2.58
     },
     {
       "id": "5900139ad908",
@@ -364,6 +369,24 @@
       "score": 2.52,
       "quiet": true,
       "quietReason": "headline mentions typhoon"
+    },
+    {
+      "id": "d8faac5af851",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Chinese, North Korean Hackers Adopt ARTEX AI Offensive Framework",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1xV0N2LUl6aTB5U1JmQ0V1Z3dDZmtlRmx6ZUJlXzJRTmw0WUJUUzlqSThLUnlSNXNPVUdDU2NRb3Nwa3h0U1FNb1ljVGRjVjJQT1I0SnUteXRDalI5aDFhTE5HbnRUbTE5SmdmSGF4Z1Y0Z1pjd3RVNg?oc=5",
+      "source": "Infosecurity Magazine",
+      "publishedAt": "2026-11-26T11:05:00.000Z",
+      "latestAt": "2026-11-26T15:57:07.000Z",
+      "firstSeenAt": "2026-11-26T13:56:25.027Z",
+      "outlets": 3,
+      "outletNames": [
+        "Infosecurity Magazine",
+        "LinkedIn",
+        "Beinsure"
+      ],
+      "score": 2.46
     },
     {
       "id": "2da563b7e862",
@@ -556,42 +579,6 @@
       "score": 1.86
     },
     {
-      "id": "329e03415fb2",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Issues Code Red After 24-Hour Service Outage",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9xM1JGUG9XR1dXUTFER3E3MVBxT0dwMDVocDc4Y0hsS1YwTVQ0Y0lDS2pXRnVfSnBNN2tuNFdTdWRVaGl4bTI4M1JSMndWWDF4R1BsbWhpRTZlRU5ETVA3a0IyY0FpUGFiaWp1VndxT25zWk82Yk03TFU0NHk?oc=5",
-      "source": "JournalArta",
-      "publishedAt": "2026-11-25T20:04:00.000Z",
-      "latestAt": "2026-11-26T11:47:41.000Z",
-      "firstSeenAt": "2026-11-26T19:57:20.831Z",
-      "outlets": 4,
-      "outletNames": [
-        "JournalArta",
-        "Profit by Pakistan Today",
-        "Aktualita.co",
-        "News18"
-      ],
-      "score": 1.81
-    },
-    {
-      "id": "0a9eae05a76c",
-      "cat": "flights",
-      "kind": "news",
-      "title": "You can be ready for an airline ground stop-updated version",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOX2h2NDMtR2p3UG1DLW5sSUhsWjRLa3QyWXNjNFFoX1hHRWllOTZmS1VlcXYwOFdwNjhvcjNVOTlxNHoxOVdVX05IRVlna2dMTGdZSjZ2SVhLS3VOOXVIQjhiRzNjLVAyNW5yNmJ0bE1hbzQzbjBCenhFX3Bsbi1tNFVWLVlKRmRPdEpiS0ozcGdVd2JiY0hMVnpLUlpOaGxINEZYTFdrTE5IRVN5VzhKcVRWRnFyMExweWF2VWFYZzFlb1U?oc=5",
-      "source": "NewsBreak: Local News & Alerts",
-      "publishedAt": "2026-11-26T02:06:58.000Z",
-      "latestAt": "2026-11-26T02:10:53.000Z",
-      "firstSeenAt": "2026-11-26T08:40:38.270Z",
-      "outlets": 2,
-      "outletNames": [
-        "NewsBreak: Local News & Alerts",
-        "Yahoo"
-      ],
-      "score": 1.78
-    },
-    {
       "id": "6564231387e7",
       "cat": "internet",
       "kind": "news",
@@ -626,22 +613,21 @@
       "score": 1.71
     },
     {
-      "id": "d8faac5af851",
-      "cat": "hacks",
+      "id": "6fc50157d9ee",
+      "cat": "earth",
       "kind": "news",
-      "title": "Chinese, North Korean Hackers Adopt ARTEX AI Offensive Framework",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1xV0N2LUl6aTB5U1JmQ0V1Z3dDZmtlRmx6ZUJlXzJRTmw0WUJUUzlqSThLUnlSNXNPVUdDU2NRb3Nwa3h0U1FNb1ljVGRjVjJQT1I0SnUteXRDalI5aDFhTE5HbnRUbTE5SmdmSGF4Z1Y0Z1pjd3RVNg?oc=5",
-      "source": "Infosecurity Magazine",
-      "publishedAt": "2026-11-26T11:05:00.000Z",
-      "latestAt": "2026-11-26T15:57:07.000Z",
-      "firstSeenAt": "2026-11-26T13:56:25.027Z",
-      "outlets": 3,
+      "title": "Preliminary 5.7-magnitude earthquake strikes off Baja California Peninsula",
+      "url": "https://www.yahoo.com/news/science/articles/preliminary-5-7-magnitude-earthquake-181532226.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T05:07:00.000Z",
+      "latestAt": "2026-11-26T18:15:32.000Z",
+      "firstSeenAt": "2026-11-26T19:27:15.794Z",
+      "outlets": 2,
       "outletNames": [
-        "Infosecurity Magazine",
-        "LinkedIn",
-        "Beinsure"
+        "Yahoo",
+        "New York Post"
       ],
-      "score": 2.46
+      "score": 1.52
     },
     {
       "id": "dcc1deef7fbd",
@@ -903,6 +889,23 @@
       "score": 1.83
     },
     {
+      "id": "0a9eae05a76c",
+      "cat": "flights",
+      "kind": "news",
+      "title": "You can be ready for an airline ground stop-updated version",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOX2h2NDMtR2p3UG1DLW5sSUhsWjRLa3QyWXNjNFFoX1hHRWllOTZmS1VlcXYwOFdwNjhvcjNVOTlxNHoxOVdVX05IRVlna2dMTGdZSjZ2SVhLS3VOOXVIQjhiRzNjLVAyNW5yNmJ0bE1hbzQzbjBCenhFX3Bsbi1tNFVWLVlKRmRPdEpiS0ozcGdVd2JiY0hMVnpLUlpOaGxINEZYTFdrTE5IRVN5VzhKcVRWRnFyMExweWF2VWFYZzFlb1U?oc=5",
+      "source": "NewsBreak: Local News & Alerts",
+      "publishedAt": "2026-11-26T02:06:58.000Z",
+      "latestAt": "2026-11-26T02:10:53.000Z",
+      "firstSeenAt": "2026-11-26T08:40:38.270Z",
+      "outlets": 2,
+      "outletNames": [
+        "NewsBreak: Local News & Alerts",
+        "Yahoo"
+      ],
+      "score": 1.78
+    },
+    {
       "id": "668d8b7157f8",
       "cat": "grid",
       "kind": "news",
@@ -920,23 +923,6 @@
       "trending": 100,
       "trendTerm": "report power outage",
       "score": 1.77
-    },
-    {
-      "id": "e7f4ea1619d9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-26T11:52:32.000Z",
-      "latestAt": "2026-11-26T14:47:38.000Z",
-      "firstSeenAt": "2026-11-26T19:27:15.794Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "TRT Afrika"
-      ],
-      "score": 1.75
     },
     {
       "id": "5f266584a470",
@@ -1111,23 +1097,6 @@
       "score": 1.63
     },
     {
-      "id": "6fc50157d9ee",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Preliminary 5.7-magnitude earthquake strikes off Baja California Peninsula",
-      "url": "https://www.yahoo.com/news/science/articles/preliminary-5-7-magnitude-earthquake-181532226.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T05:07:00.000Z",
-      "latestAt": "2026-11-26T18:15:00.000Z",
-      "firstSeenAt": "2026-11-26T19:27:15.794Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "New York Post"
-      ],
-      "score": 1.52
-    },
-    {
       "id": "dfb3820ef297",
       "cat": "hacks",
       "kind": "news",
@@ -1143,6 +1112,23 @@
         "The US Sun"
       ],
       "score": 1.5
+    },
+    {
+      "id": "ce0e6a2809e0",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Widespread power outage affecting areas of Hogansville , crews responding",
+      "url": "https://cedarnews.net/newstasks/1197246/power-outage-widespread-affecting-areas-hogansville-crews/",
+      "source": "cedarnews.net",
+      "publishedAt": "2026-11-26T03:27:16.000Z",
+      "latestAt": "2026-11-26T04:30:00.000Z",
+      "firstSeenAt": "2026-11-26T20:12:23.742Z",
+      "outlets": 2,
+      "outletNames": [
+        "CNAW2",
+        "cedarnews.net"
+      ],
+      "score": 1.44
     },
     {
       "id": "4b7f517a5874",
@@ -1615,6 +1601,22 @@
       "score": 1
     },
     {
+      "id": "59bdcd1bc237",
+      "cat": "flights",
+      "kind": "news",
+      "title": "After router failure grounds US flights, aviation groups seek USD 30 billion for FAA upgrade",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNbVRjWVR4dlFBYVBlOVM0Vk43TUdsRHlGSnRxbTNKU0RNV29TREVpd0lSMWhNUXZpUTdhMXdqWTI4Z0VVVU1fd2hndGdLT1JaWEZ4VVY0RG5vNVAwOE9wdFZGQ29TSjBFS29rdVRtbHBrVXNtSHRzNDBrT1luUEN5NmFjdV9QN2R1d0RQODdKaGdPdEgyNFhDZnM0QmdKWUZDVDR5WW5JZ0syZWwxc1BaOUdPakh3RUJNUWxhdEgtWGM3RVp2ME5iMFVDVWhKZXVvTmJQNm12MXhrSFE?oc=5",
+      "source": "Prop News Time",
+      "publishedAt": "2026-11-26T19:30:24.000Z",
+      "latestAt": "2026-11-26T19:30:24.000Z",
+      "firstSeenAt": "2026-11-26T20:12:23.742Z",
+      "outlets": 1,
+      "outletNames": [
+        "Prop News Time"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "7a14efcae84f",
       "cat": "earth",
       "kind": "news",
@@ -1775,5 +1777,5 @@
       "score": 0.77
     }
   ],
-  "updatedAt": "2026-11-26T19:57:20.831Z"
+  "updatedAt": "2026-11-26T20:12:23.742Z"
 }
