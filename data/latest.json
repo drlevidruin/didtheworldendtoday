@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T14:11:34.774Z",
+  "buildTime": "2026-11-26T14:26:25.295Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 09:11 ET",
+  "etStamp": "2026-11-26 09:26 ET",
   "score": 74,
   "fired": [
     "flights",
@@ -50,18 +50,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1260,
-  "lastSuccessAt": "2026-11-26T14:11:34.774Z",
+  "headlinesRead": 469,
+  "lastSuccessAt": "2026-11-26T14:26:25.295Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 15,
+    "flights": 16,
     "internet": 15,
-    "hacks": 32,
+    "hacks": 31,
     "germs": 4,
     "grid": 11,
-    "markets": 5,
+    "markets": 4,
     "animals": 1,
-    "weather": 4,
+    "weather": 5,
     "sun": 4,
     "ai": 2,
     "earth": 4,
@@ -171,13 +171,11 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "Road Fire Near Cairo Kills Dozens After Petroleum-Laden Truck Crashes"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
@@ -189,57 +187,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 949,
-      "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "count": 160,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     },
     "bing": {
       "ok": true,
-      "count": 279,
+      "count": 277,
       "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     },
     "x": {
       "ok": true,
@@ -252,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T14:11:34.774Z"
+      "lastOkAt": "2026-11-26T14:26:25.295Z"
     }
   },
   "stories": [
@@ -871,6 +869,23 @@
       "score": 1.97
     },
     {
+      "id": "369990032e3e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA says hackers accessed ‘limited set of personal and business information’",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE96ckxnTDBVNUM3bGJVSGJxaXlHYmMwNTAwLWNtWUxkTkUxcnVQZlNQSW9VSTNXWjE4U0Y0ZzNTT1d0SkxtZG5VM1ZhS1hmMzVhcTBxaGVkQ3V6RjlS?oc=5",
+      "source": "The Record from Recorded Future News",
+      "publishedAt": "2026-11-25T21:00:35.000Z",
+      "latestAt": "2026-11-25T21:38:49.000Z",
+      "firstSeenAt": "2026-11-25T21:53:50.204Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Record from Recorded Future News",
+        "MLQ.ai"
+      ],
+      "score": 1.97
+    },
+    {
       "id": "5900139ad908",
       "cat": "hacks",
       "kind": "news",
@@ -1235,6 +1250,23 @@
       "score": 1.5
     },
     {
+      "id": "6c6b2b5c6765",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Ground stop, delays at MIA after FedEx cargo plane overshoots runway",
+      "url": "https://www.yahoo.com/news/us/articles/ground-stop-delays-mia-fedex-045119250.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T20:50:00.000Z",
+      "latestAt": "2026-11-26T04:42:00.000Z",
+      "firstSeenAt": "2026-11-26T14:26:25.295Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "CBS News"
+      ],
+      "score": 1.41
+    },
+    {
       "id": "99cb3fabbd0e",
       "cat": "internet",
       "kind": "news",
@@ -1311,22 +1343,6 @@
       "outlets": 1,
       "outletNames": [
         "The Vanderbilt Hustler"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "a4b7a1792bcd",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "A 38% ransomware surge exposes major MFA blind spot: Beazley Security",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNajRQMWJ0VzlDZW9lQ0JCTUFoY2VHSEE0ZDR6ZWRpNUdnRm1JZ2VWNmVwN0tib2xZaGhCMFhjQWNmWm1kVFRfTFExUThqb05FQ3NiWU1aWHdTTG5DSFhfRVQ0ejNoalV2TnQwSzk5Q2VOaXRhTldfckJEdFA5NjJPNTZIYldRNzItTkJVdTU4MlU5RkRJa1J5T2xnaVV4U2YyZmRUbg?oc=5",
-      "source": "Intelligent Insurer",
-      "publishedAt": "2026-11-25T14:19:34.000Z",
-      "latestAt": "2026-11-25T14:20:13.000Z",
-      "firstSeenAt": "2026-11-25T14:22:32.622Z",
-      "outlets": 1,
-      "outletNames": [
-        "Intelligent Insurer"
       ],
       "score": 1.4
     },
@@ -1473,23 +1489,6 @@
         "StoneWars.com"
       ],
       "score": 1.35
-    },
-    {
-      "id": "3aacf90a509b",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Why this stock-market selloff is probably going to get worse before it gets better",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-stock-market-selloff-probably-003300706.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-25T16:33:00.000Z",
-      "latestAt": "2026-11-26T00:33:00.000Z",
-      "firstSeenAt": "2026-11-26T13:26:15.471Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo Finance",
-        "MarketWatch"
-      ],
-      "score": 1.3
     },
     {
       "id": "a2ba0d15c4b9",
@@ -1666,22 +1665,6 @@
         "bsinews.id"
       ],
       "score": 1.02
-    },
-    {
-      "id": "44a873167fed",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Wyoming uranium operation shuts down after cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTVhSMkRlS0RZSFBDdlBReGE2SG5IeVBPX2s3eXRRcHYxa0JlMjUxZ01wMmdhRkNxNV9Jb2tRTDJhM0VNVl9oT3ZCNFpWUFVCVFhpdTRkRDF5cmlFeDA3YlBzNldGUFJWQmduNDhiajR6Q3d4aWpVOE8zcC1lR1pJZ1Vva1dIZFNZc2F2dk5BQmZ4U3o2Nmg5cjJ3NkpSQnhRVzNqQzZURVVSZ2hJQ3ln?oc=5",
-      "source": "The Register",
-      "publishedAt": "2026-11-26T14:02:00.000Z",
-      "latestAt": "2026-11-26T14:02:00.000Z",
-      "firstSeenAt": "2026-11-26T14:11:34.774Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Register"
-      ],
-      "score": 1
     },
     {
       "id": "3dc83d3f18a2",
@@ -1926,6 +1909,22 @@
       "score": 0.98,
       "quiet": true,
       "quietReason": "quake M6.5 or more"
+    },
+    {
+      "id": "32ee8c7796e6",
+      "cat": "weather",
+      "kind": "news",
+      "title": "What a ‘Particularly Dangerous Situation' Tag Means on Blizzard and Ice Storm Warnings This Winter",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOS2RaUTJ2REVHbWU4YmhmZkdpQnp1SzhFbkxwLXV4S1ZCR1VSMmpMZE5ZU3pmSTNETEpqY0htNDJSLWhTSFBmRHZraUJDNXBBQmsxZE5XU19iOFZ1WklvUXpmTkpYVklWZENRZUd4eW0yTW9RUkpjcDFQNlNSUnpSNHlhOVRLVmNKVk0yQ2g5N2Z5enRZanFmcXFpM3BNQ3plLVhGMGptOUZQTWpGeDRSVjU3djR6Q19rTi12OXozMEI3SmxRT1NPNkdtQU5UcWVpelAwRnhPeE5RbWgyZ0FzSEY1elNZbG05NTd6VTBpNXVEOGh4QnN4Sg?oc=5",
+      "source": "NewsBreak: Local News & Alerts",
+      "publishedAt": "2026-11-25T20:23:49.000Z",
+      "latestAt": "2026-11-25T20:23:49.000Z",
+      "firstSeenAt": "2026-11-26T03:09:37.492Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 0.89
     },
     {
       "id": "0edb9f27fed7",
