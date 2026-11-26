@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T04:24:51.828Z",
+  "buildTime": "2026-11-26T04:39:47.244Z",
   "etDate": "2026-11-25",
-  "etStamp": "2026-11-25 23:24 ET",
+  "etStamp": "2026-11-25 23:39 ET",
   "score": 80,
   "fired": [
     "flights",
@@ -49,18 +49,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1211,
-  "lastSuccessAt": "2026-11-26T04:24:51.828Z",
+  "headlinesRead": 1285,
+  "lastSuccessAt": "2026-11-26T04:39:47.244Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 13,
-    "internet": 14,
-    "hacks": 36,
+    "flights": 14,
+    "internet": 13,
+    "hacks": 33,
     "germs": 6,
-    "grid": 7,
+    "grid": 9,
     "markets": 4,
     "animals": 1,
-    "ai": 3,
+    "ai": 4,
     "weather": 4,
     "earth": 4,
     "sun": 4,
@@ -170,94 +170,91 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "6 dead after small plane crashes off Mississippi coast: US Coast Guard"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 991,
+      "count": 969,
       "error": null,
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "bing": {
       "ok": true,
-      "count": 188,
-      "error": "9 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "count": 281,
+      "error": null,
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T02:24:32.389Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T03:39:36.789Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T04:24:51.828Z"
+      "lastOkAt": "2026-11-26T04:39:47.244Z"
     }
   },
   "stories": [
@@ -271,7 +268,7 @@
       "publishedAt": "2026-11-25T08:47:00.000Z",
       "latestAt": "2026-11-25T17:53:28.000Z",
       "firstSeenAt": "2026-11-25T16:52:57.421Z",
-      "outlets": 11,
+      "outlets": 12,
       "outletNames": [
         "WTHI News10",
         "WABI",
@@ -283,9 +280,10 @@
         "WFLX",
         "WABI-TV",
         "WWBT",
-        "KBTX News 3"
+        "KBTX News 3",
+        "WCAX"
       ],
-      "score": 5.4
+      "score": 5.55
     },
     {
       "id": "sig:faa-stop:SEA:2026-11-25",
@@ -474,21 +472,24 @@
       "score": 2.47
     },
     {
-      "id": "bf7fee70bac6",
+      "id": "2fa8fefe8871",
       "cat": "hacks",
       "kind": "news",
-      "title": "Massive data breach exposes 2 billion credentials — email addresses, login names, passwords, and more all leaked online in major database breach",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/massive-data-breach-exposes-2-122500776.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-25T04:25:00.000Z",
-      "latestAt": "2026-11-25T12:25:00.000Z",
-      "firstSeenAt": "2026-11-25T12:32:35.873Z",
-      "outlets": 2,
+      "title": "Flight Centre investigates customer data breach in third-party booking system",
+      "url": "https://travelweekly.com.au/flight-centre-investigates-customer-data-breach-in-third-party-booking-system/",
+      "source": "Travel Weekly",
+      "publishedAt": "2026-11-25T15:53:00.000Z",
+      "latestAt": "2026-11-26T03:40:13.000Z",
+      "firstSeenAt": "2026-11-26T03:39:36.789Z",
+      "outlets": 4,
       "outletNames": [
-        "TechRadar",
-        "YAHOO!"
+        "TradingView",
+        "101 WIXX",
+        "Travel Weekly",
+        "@Reuters on X"
       ],
-      "score": 2.42
+      "xUrl": "https://x.com/Reuters/status/2125796743816049143",
+      "score": 2.41
     },
     {
       "id": "4c1aa8652cf2",
@@ -550,6 +551,53 @@
         "Yahoo Finance"
       ],
       "score": 4.3
+    },
+    {
+      "id": "c50e780c4195",
+      "cat": "flights",
+      "kind": "news",
+      "title": "FAA issues ground stop in Miami after FedEx cargo jet overshoots runway",
+      "url": "https://www.yahoo.com/news/videos/faa-issues-ground-stop-miami-215133838.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T06:00:00.000Z",
+      "latestAt": "2026-11-26T04:39:17.000Z",
+      "firstSeenAt": "2026-11-26T04:39:47.244Z",
+      "outlets": 32,
+      "outletNames": [
+        "Saudi Gazette",
+        "KEYE",
+        "WXLV",
+        "The City University of New York",
+        "The Lufkin Daily News",
+        "Demokratis.co.id",
+        "Aviation A2Z",
+        "Yahoo",
+        "Independent Journal Review",
+        "The Mirror US",
+        "New York Post",
+        "The News-Times on MSN",
+        "https://travelhost.com/",
+        "BNO News",
+        "CBS News",
+        "Hindustan Times",
+        "WPTZ",
+        "VINnews",
+        "AOL.com",
+        "Washington Examiner",
+        "WBAL News Radio",
+        "WCNC",
+        "LiveNOW from FOX",
+        "SSBCrack",
+        "kagstv.com",
+        "iHeart",
+        "WPEC",
+        "cedarnews.net",
+        "Daily Mail",
+        "Open Jaw",
+        "ABC News - Breaking News, Latest News and Videos",
+        "Modern Ghana"
+      ],
+      "score": 3.73
     },
     {
       "id": "a9e3c4d84247",
@@ -711,23 +759,6 @@
       "score": 2.08
     },
     {
-      "id": "270c6ce8165b",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
-      "source": "KSNV",
-      "publishedAt": "2026-11-26T02:15:20.000Z",
-      "latestAt": "2026-11-26T02:18:19.000Z",
-      "firstSeenAt": "2026-11-26T02:24:32.389Z",
-      "outlets": 2,
-      "outletNames": [
-        "KSNV",
-        "cedarnews.net"
-      ],
-      "score": 1.99
-    },
-    {
       "id": "7868d855bc82",
       "cat": "animals",
       "kind": "news",
@@ -796,23 +827,6 @@
       "score": 1.83
     },
     {
-      "id": "d25bb94e53dd",
-      "cat": "ai",
-      "kind": "news",
-      "title": "OpenAI outage: ChatGPT and Codex down in UK and Europe",
-      "url": "https://cybernews.com/ai-news/openai-outage-chatgpt-codex/",
-      "source": "Cybernews",
-      "publishedAt": "2026-11-25T04:28:00.000Z",
-      "latestAt": "2026-11-25T13:32:54.000Z",
-      "firstSeenAt": "2026-11-25T12:52:13.969Z",
-      "outlets": 2,
-      "outletNames": [
-        "Cybernews",
-        "Wisevoter"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "e8c3efdabe62",
       "cat": "germs",
       "kind": "news",
@@ -846,6 +860,22 @@
       "score": 1.39
     },
     {
+      "id": "a7980bb2bb2c",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Brito warns Las Terrenas is at risk of electrical collapse and a massive blackout lasting up to two months",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxONUlSblgtc3BiajFLLWRRc3pOQVhTZWhvZ2h0WXQxSjlUZ1NYcHo3VjhUMkVvbkFKSXpvM3JaRmt6T2RzcVZZSWpHTmhKci1uUUlITFlHb09MQjB2cUNzT0dOaDh3STVWRGs5WFdlbU9rc1htNEtLbXNPd2VyYXUxTE9BcF8yQzk2UGhqTVctWWxsNXFEcXhHeFY1NWs1ZktieFAtaW5rVy1VLVJobENQODhreDVZMUpYb1RkdlFJU1FabEJMTmpzamdUcllpbnVvX2tidzIxUkp0N2FOOUIyRDFKVnd2ZHRvcDkzVQ?oc=5",
+      "source": "De Último Minuto",
+      "publishedAt": "2026-11-25T19:02:42.000Z",
+      "latestAt": "2026-11-25T19:02:42.000Z",
+      "firstSeenAt": "2026-11-25T19:38:22.696Z",
+      "outlets": 1,
+      "outletNames": [
+        "De Último Minuto"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "11fd89512079",
       "cat": "hacks",
       "kind": "news",
@@ -864,22 +894,21 @@
       "score": 2.19
     },
     {
-      "id": "2fa8fefe8871",
-      "cat": "hacks",
+      "id": "270c6ce8165b",
+      "cat": "flights",
       "kind": "news",
-      "title": "Flight Centre investigates customer data breach in third-party booking system",
-      "url": "https://travelweekly.com.au/flight-centre-investigates-customer-data-breach-in-third-party-booking-system/",
-      "source": "Travel Weekly",
-      "publishedAt": "2026-11-25T15:53:00.000Z",
-      "latestAt": "2026-11-26T00:26:29.000Z",
-      "firstSeenAt": "2026-11-26T03:39:36.789Z",
-      "outlets": 3,
+      "title": "Holiday travel surges at Harry Reid International Airport as FAA outage worries linger",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOZDdRNnpZZ0JIejdWb2txU1VXMGhNbGJZV2tNZUY0OUZzUjlCVlVFYy15Z1pSQUJyc19pUllhaDE1Njk1MGQ5Wm5EU1dZQWhmc3JueXZGUUMzdVBSRnQ3SmN5SFJVaVRVQngtNGZUUlRuN2JNelU3eUdySTBadTJrYVVMaEdWTUxERUZ3X3Q2REwycXQwYUtwSTMzT25pWnNzMGN0cHAxWFBOSU5OS2x3Y3VoX1FzMFA1?oc=5",
+      "source": "KSNV",
+      "publishedAt": "2026-11-26T02:15:20.000Z",
+      "latestAt": "2026-11-26T02:18:19.000Z",
+      "firstSeenAt": "2026-11-26T02:24:32.389Z",
+      "outlets": 2,
       "outletNames": [
-        "TradingView",
-        "101 WIXX",
-        "Travel Weekly"
+        "KSNV",
+        "cedarnews.net"
       ],
-      "score": 2.08
+      "score": 1.99
     },
     {
       "id": "5c91ad2aa7b8",
@@ -1156,6 +1185,23 @@
       "score": 1.64
     },
     {
+      "id": "a6bf85e51f1e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Ground stop issued at Seattle-Tacoma International Airport due to wind",
+      "url": "https://www.yahoo.com/news/weather-news/articles/ground-stop-issued-seattle-tacoma-034051971.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-25T16:00:00.000Z",
+      "latestAt": "2026-11-26T03:40:00.000Z",
+      "firstSeenAt": "2026-11-26T03:54:39.974Z",
+      "outlets": 2,
+      "outletNames": [
+        "KING5.com",
+        "Yahoo"
+      ],
+      "score": 1.6
+    },
+    {
       "id": "6aa45fe14c94",
       "cat": "hacks",
       "kind": "news",
@@ -1267,22 +1313,6 @@
       "outlets": 1,
       "outletNames": [
         "Daily Star"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "a7980bb2bb2c",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Brito warns Las Terrenas is at risk of electrical collapse and a massive blackout lasting up to two months",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxONUlSblgtc3BiajFLLWRRc3pOQVhTZWhvZ2h0WXQxSjlUZ1NYcHo3VjhUMkVvbkFKSXpvM3JaRmt6T2RzcVZZSWpHTmhKci1uUUlITFlHb09MQjB2cUNzT0dOaDh3STVWRGs5WFdlbU9rc1htNEtLbXNPd2VyYXUxTE9BcF8yQzk2UGhqTVctWWxsNXFEcXhHeFY1NWs1ZktieFAtaW5rVy1VLVJobENQODhreDVZMUpYb1RkdlFJU1FabEJMTmpzamdUcllpbnVvX2tidzIxUkp0N2FOOUIyRDFKVnd2ZHRvcDkzVQ?oc=5",
-      "source": "De Último Minuto",
-      "publishedAt": "2026-11-25T19:02:42.000Z",
-      "latestAt": "2026-11-25T19:02:42.000Z",
-      "firstSeenAt": "2026-11-25T19:38:22.696Z",
-      "outlets": 1,
-      "outletNames": [
-        "De Último Minuto"
       ],
       "score": 1.39
     },
@@ -1674,34 +1704,34 @@
       "score": 1.02
     },
     {
-      "id": "96bdb773726d",
-      "cat": "hacks",
+      "id": "31d3d30c3f86",
+      "cat": "grid",
       "kind": "news",
-      "title": "Flight Centre Data Breach: 3 Brands, Mandiant Called In",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUkZSMkh6T2V0azA4SUNSMkI2bDg4b3BmZEhaRHZYYUlLbzVULTdtY2F4LXh3emp0U19LbE1mODgwOXZjRjdiNF9TX0xzWDJqQmNUMUhQczFBeDBRWmtod0pZcjFvaUs1Vkgzc2tKVk5Ga1ZBTzRsMWdXLXZtdDlIWVFNLWhlXzZLT2lkbFdWS2ZTZE5P?oc=5",
-      "source": "shattered.io",
-      "publishedAt": "2026-11-26T04:20:15.000Z",
-      "latestAt": "2026-11-26T04:20:15.000Z",
-      "firstSeenAt": "2026-11-26T04:24:51.828Z",
+      "title": "Today's Power Outage Schedule: Check PLN Blackout Areas and Times Until Afternoon",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MTnhFRUVmUDFGSW9leWNhbkhTYkdlUHJTOXhrZzdMczJ0XzIyVXdTYTBwbFRQakY0NVhoWEpOcjZrRWRrUDQxZVd0cEpYejlFX2JuZ2ljY201MWVJUFVwOG13dnMtNmpLbTh4OUREbTdUQQ?oc=5",
+      "source": "Aktualita.co",
+      "publishedAt": "2026-11-26T04:37:39.000Z",
+      "latestAt": "2026-11-26T04:37:39.000Z",
+      "firstSeenAt": "2026-11-26T04:39:47.244Z",
       "outlets": 1,
       "outletNames": [
-        "shattered.io"
+        "Aktualita.co"
       ],
       "score": 1
     },
     {
-      "id": "a6bf85e51f1e",
-      "cat": "flights",
+      "id": "3e6abe5a4a83",
+      "cat": "grid",
       "kind": "news",
-      "title": "Ground stop issued at Seattle-Tacoma International Airport due to wind",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNRHhjdEkyRzVmcElKZXR0N2NndnJkN25hT2wzSEtHczBtaFVXX2dFR0x0cjc2bzBpQmhsbnpia3I4Z0lxV2Y1NzJzVG9QckFRanFVX2x3MDdyOS15QS1TWGw0eGpIYU5oSkJvbVNHdTZ3aTZuanFFWG1Za29iYWw3MGdiZWxlRFdDdTFWTkdfU2x5cUVYeHJmdTIwdk1acUZRV3ozdDZBNk1ZbUJPbTJUWUwxQkJSdkZnQjhxTXBhX1JqM1RhOUprN2JRVWRBYTBQZ3h3dXRWSHZRSi1MVHc0S0kycWlBaDNnaUZ3Vnh3SFFBUGFpSzlJ?oc=5",
-      "source": "KING5.com",
-      "publishedAt": "2026-11-26T03:40:00.000Z",
-      "latestAt": "2026-11-26T03:40:00.000Z",
-      "firstSeenAt": "2026-11-26T03:54:39.974Z",
+      "title": "More than 1,800 without power in Whatcom County as wind gusts increase",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZzNiOWdUYzZtTXkyZUowclJOQkQtd2dMUmxEUjBjQnJiT3Ytc1lGZjJIRW41SlV4cUROQzJLS0hXeURyRzFfRklKSUtRNzFxMTY2VGVyN3ZSNkZxSENKX2N0QUFoZkhQalpPS0UyYzJBaWt1c01WZTQyUDBVRXJvOHhBQXBMRkJNbTg3SW1LdzU3ZHRiajBOcHczT0dEVGUxMS1kUHU4UkxtS3JiZGpPY3Fn?oc=5",
+      "source": "Cascadia Daily News",
+      "publishedAt": "2026-11-26T04:32:23.000Z",
+      "latestAt": "2026-11-26T04:32:23.000Z",
+      "firstSeenAt": "2026-11-26T04:39:47.244Z",
       "outlets": 1,
       "outletNames": [
-        "KING5.com"
+        "Cascadia Daily News"
       ],
       "score": 1
     },
@@ -1768,38 +1798,6 @@
         "Starlust.org"
       ],
       "score": 1
-    },
-    {
-      "id": "46b288663ac7",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Viettel, Singtel building subsea cable for data-hungry Vietnam",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOLTY2VExMOC03UURSTW5PRmpEM2t2bTlhY2NPX09KSGl1YzFlNC1CNTdTaU5XUlFCYk1VNTV6WEt4TE9VMElabG1sREJhNV9RM1BNSzlkTWg0X3hiZzdjMjVqM2cyMzNJcmFIbnYwQU4xZlJnZk5nQ1hVSkZVeUVMazV1UTJjSWNSOXg0TDd5NHpJX2hBUmJVT2o1d19xWl9HVUE?oc=5",
-      "source": "The Edge Singapore",
-      "publishedAt": "2026-11-26T04:00:09.000Z",
-      "latestAt": "2026-11-26T04:00:09.000Z",
-      "firstSeenAt": "2026-11-26T04:24:51.828Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Edge Singapore"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "979125b379ed",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Japan's Keio says cyberattack may have leaked 11mn records",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOOEt1SWNMZXg0R2ZRZ1d5NWxiMHF2dUtfaTVVV05NQ1VVQ09KTUJhOHRCZEdueEJITExSUm9KazFDN3dZcUpFb18zdkh1MjNHVUI4NzdESThHZWl4WlJGSFZ2dTNOVm5OQzJiaEpaZ0l1dXVBaFk0TmdjNmNnMjJGSG1MTEVLUGx3ckpBUWIyam9tcnlCby1YTzdYZkswQ1ZFT1Z0dUNWdGttS3dCU3MxbEpRNnpodw?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-26T03:39:00.000Z",
-      "latestAt": "2026-11-26T03:39:00.000Z",
-      "firstSeenAt": "2026-11-26T04:24:51.828Z",
-      "outlets": 1,
-      "outletNames": [
-        "TradingView"
-      ],
-      "score": 0.99
     },
     {
       "id": "2729017858cd",
@@ -1923,7 +1921,7 @@
       "url": "https://x.com/Reuters/status/2125736349625974961",
       "source": "@Reuters on X",
       "publishedAt": "2026-11-25T23:40:14.000Z",
-      "latestAt": "2026-11-25T23:40:14.000Z",
+      "latestAt": "2026-11-26T04:00:21.000Z",
       "firstSeenAt": "2026-11-26T00:39:19.183Z",
       "outlets": 1,
       "outletNames": [
@@ -1980,6 +1978,38 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 0.89
+    },
+    {
+      "id": "7c67a4c71067",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Stay updated: Microsoft Outlook, OpenAI outage reported by thousands",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPNDdnbE9mWE5KbkpaMVpqX2VqOFRXc2kxWTl0eG5IVVlLRFdaOFlkNE5Hanl5YWhjdUJGY2k1WjVRLXo5Smc5NnZVWUFDYkpKUFhrSW9YbUJxS2ZyLW5MOU0xOURocHlpSTB6ZEtqd1Mxc2x2d0VEZnNsdUs5UkNJY055QVVndHhsSGw1ZUUtZnlUbFp3MkM3VGlGMHFfbWN6ZFk1UHUzbldubzVUMDF5aVlhcUlSc3J3R0NpeTAySmtoOXEyZ01HTzZWVQ?oc=5",
+      "source": "fox23.com",
+      "publishedAt": "2026-11-25T14:46:13.000Z",
+      "latestAt": "2026-11-25T14:46:13.000Z",
+      "firstSeenAt": "2026-11-26T04:39:47.244Z",
+      "outlets": 1,
+      "outletNames": [
+        "fox23.com"
+      ],
+      "score": 0.77
+    },
+    {
+      "id": "2694c5d56908",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Sophos CEO On Why The Push To Prevent AI Attacks May Be Fueling Outages",
+      "url": "https://www.crn.com/news/security/2026/sophos-ceo-on-why-the-push-to-prevent-ai-attacks-may-be-fueling-outages",
+      "source": "CRN",
+      "publishedAt": "2026-11-25T05:30:00.000Z",
+      "latestAt": "2026-11-25T05:30:00.000Z",
+      "firstSeenAt": "2026-11-26T04:39:47.244Z",
+      "outlets": 1,
+      "outletNames": [
+        "CRN"
+      ],
+      "score": 0.61
     }
   ]
 }
