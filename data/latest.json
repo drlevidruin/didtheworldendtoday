@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T14:56:33.753Z",
+  "buildTime": "2026-11-26T15:11:37.925Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 09:56 ET",
+  "etStamp": "2026-11-26 10:11 ET",
   "score": 74,
   "fired": [
     "flights",
@@ -50,15 +50,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1245,
-  "lastSuccessAt": "2026-11-26T14:56:33.753Z",
+  "headlinesRead": 1122,
+  "lastSuccessAt": "2026-11-26T15:11:37.925Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
     "internet": 13,
-    "hacks": 32,
+    "hacks": 31,
     "germs": 5,
-    "grid": 13,
+    "grid": 14,
     "markets": 4,
     "animals": 1,
     "weather": 4,
@@ -77,8 +77,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 0.67,
-      "time": "2026-11-26T09:00:00.000Z",
+      "value": 1,
+      "time": "2026-11-26T12:00:00.000Z",
       "max24": 2
     },
     "asteroid": {
@@ -189,57 +189,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 933,
-      "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "count": 816,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 23 of 26 queries)",
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     },
     "bing": {
       "ok": true,
-      "count": 280,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T09:25:35.418Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     },
     "x": {
       "ok": true,
@@ -252,13 +252,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T14:56:33.753Z"
+      "lastOkAt": "2026-11-26T15:11:37.925Z"
     }
   },
   "stories": [
@@ -331,6 +331,31 @@
       }
     },
     {
+      "id": "7b81cdda58f3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Exclusive-StanChart's Crypto Unit Zodia Custody Hit by Security Breach, Some Client Data Exposed",
+      "url": "https://money.usnews.com/investing/news/articles/2026-11-26/exclusive-stancharts-crypto-unit-zodia-custody-hit-by-security-breach-some-client-data-exposed",
+      "source": "U.S. News Money",
+      "publishedAt": "2026-11-25T21:44:00.000Z",
+      "latestAt": "2026-11-26T14:27:00.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 10,
+      "outletNames": [
+        "Cointelegraph",
+        "TradingView",
+        "Crypto News",
+        "Coinpedia",
+        "KuCoin",
+        "ForkLog",
+        "U.S. News Money",
+        "Bloomberg.com",
+        "The Straits Times",
+        "Yahoo Finance"
+      ],
+      "score": 3.3
+    },
+    {
       "id": "2fa8fefe8871",
       "cat": "hacks",
       "kind": "news",
@@ -353,27 +378,6 @@
       ],
       "xUrl": "https://x.com/Reuters/status/2125796743816049143",
       "score": 3.21
-    },
-    {
-      "id": "7b81cdda58f3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Standard Chartered’s Zodia Custody suffers data breach: Report",
-      "url": "https://cointelegraph.com/news/standard-chartered-zodia-suffers-data-breach",
-      "source": "Cointelegraph",
-      "publishedAt": "2026-11-26T03:37:00.000Z",
-      "latestAt": "2026-11-26T12:45:30.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 6,
-      "outletNames": [
-        "Cointelegraph",
-        "TradingView",
-        "Crypto News",
-        "Coinpedia",
-        "KuCoin",
-        "ForkLog"
-      ],
-      "score": 3.09
     },
     {
       "id": "afaee88dfda9",
@@ -574,6 +578,24 @@
       "score": 2.38
     },
     {
+      "id": "b0adfba84f59",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA hit by cyberattack amid mounting scrutiny of Gianni Infantino",
+      "url": "https://www.msn.com/en-au/news/other/fifa-hit-by-cyberattack-amid-mounting-scrutiny-of-gianni-infantino/ar-AA2ihOxO",
+      "source": "The Independent on MSN",
+      "publishedAt": "2026-11-26T05:06:05.000Z",
+      "latestAt": "2026-11-26T13:30:11.000Z",
+      "firstSeenAt": "2026-11-26T13:11:16.410Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Independent",
+        "Yahoo Sports",
+        "LiveScore"
+      ],
+      "score": 2.24
+    },
+    {
       "id": "7e3288e167a6",
       "cat": "markets",
       "kind": "news",
@@ -590,23 +612,6 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 2.21
-    },
-    {
-      "id": "0349d45e030f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms cyberattack after ransomware group HBHC threatens to leak data",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWHlsbGE2LVh0WDhFTXVGcXlpd2sxYXZWelJ3cEc3V1R6aklDVVBhYXA5QnF3a1ZiVjJYWGJEYi1idWh5R2dGRGhWU01fdE42TmJPNjhzM0FXa1p1aWZTbVpwTWdUcml1ekRCakh6ajFsN2JyRzN5WWNnalNwT3pwdzBEMVo1ZVBiOVpucWRyak56UVM3Y1Y5VENHcHpLaW5YaERKbW85ZURZZ3R4bW92R09Hb0tEU3dIUmxJ?oc=5",
-      "source": "Escudo Digital",
-      "publishedAt": "2026-11-26T10:16:51.000Z",
-      "latestAt": "2026-11-26T11:06:56.000Z",
-      "firstSeenAt": "2026-11-26T10:25:45.653Z",
-      "outlets": 2,
-      "outletNames": [
-        "Escudo Digital",
-        "Ticker News"
-      ],
-      "score": 2
     },
     {
       "id": "270c6ce8165b",
@@ -833,6 +838,23 @@
       "score": 1.56
     },
     {
+      "id": "0349d45e030f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms cyberattack after ransomware group HBHC threatens to leak data",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWHlsbGE2LVh0WDhFTXVGcXlpd2sxYXZWelJ3cEc3V1R6aklDVVBhYXA5QnF3a1ZiVjJYWGJEYi1idWh5R2dGRGhWU01fdE42TmJPNjhzM0FXa1p1aWZTbVpwTWdUcml1ekRCakh6ajFsN2JyRzN5WWNnalNwT3pwdzBEMVo1ZVBiOVpucWRyak56UVM3Y1Y5VENHcHpLaW5YaERKbW85ZURZZ3R4bW92R09Hb0tEU3dIUmxJ?oc=5",
+      "source": "Escudo Digital",
+      "publishedAt": "2026-11-26T10:16:51.000Z",
+      "latestAt": "2026-11-26T11:06:56.000Z",
+      "firstSeenAt": "2026-11-26T10:25:45.653Z",
+      "outlets": 2,
+      "outletNames": [
+        "Escudo Digital",
+        "Ticker News"
+      ],
+      "score": 2
+    },
+    {
       "id": "5c91ad2aa7b8",
       "cat": "hacks",
       "kind": "news",
@@ -956,24 +978,6 @@
       "score": 1.91
     },
     {
-      "id": "2642da226f88",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Exclusive-StanChart's Crypto Unit Zodia Custody Hit by Security Breach, Some Client Data Exposed",
-      "url": "https://money.usnews.com/investing/news/articles/2026-11-26/exclusive-stancharts-crypto-unit-zodia-custody-hit-by-security-breach-some-client-data-exposed",
-      "source": "U.S. News Money",
-      "publishedAt": "2026-11-25T21:44:00.000Z",
-      "latestAt": "2026-11-26T13:12:00.000Z",
-      "firstSeenAt": "2026-11-26T13:26:15.471Z",
-      "outlets": 3,
-      "outletNames": [
-        "U.S. News Money",
-        "Bloomberg.com",
-        "The Straits Times"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "e7f4ea1619d9",
       "cat": "hacks",
       "kind": "news",
@@ -1076,23 +1080,6 @@
       "score": 1.73
     },
     {
-      "id": "b0adfba84f59",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA hit by cyberattack amid mounting scrutiny of Gianni Infantino",
-      "url": "https://www.msn.com/en-au/news/other/fifa-hit-by-cyberattack-amid-mounting-scrutiny-of-gianni-infantino/ar-AA2ihOxO",
-      "source": "The Independent on MSN",
-      "publishedAt": "2026-11-26T05:06:05.000Z",
-      "latestAt": "2026-11-26T13:06:05.000Z",
-      "firstSeenAt": "2026-11-26T13:11:16.410Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Independent",
-        "Yahoo Sports"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "482ed5347fe2",
       "cat": "hacks",
       "kind": "news",
@@ -1117,13 +1104,15 @@
       "url": "https://www.msn.com/en-us/news/other/over-100-000-missouri-customers-without-power-as-snow-falls-across-st-louis-area/ar-AA2ih1Ty",
       "source": "First Alert 4 on MSN",
       "publishedAt": "2026-11-26T03:32:53.000Z",
-      "latestAt": "2026-11-26T11:32:00.000Z",
+      "latestAt": "2026-11-26T14:30:00.000Z",
       "firstSeenAt": "2026-11-26T12:11:06.237Z",
       "outlets": 2,
       "outletNames": [
         "First Alert 4 on MSN",
         "KMOV"
       ],
+      "trending": 10000,
+      "trendTerm": "tornado warning",
       "score": 1.71
     },
     {
@@ -1195,6 +1184,23 @@
       "score": 1.69
     },
     {
+      "id": "f25c01bed994",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands in St. Louis without power on Thanksgiving after snow blankets the region",
+      "url": "https://www.yahoo.com/news/weather-news/articles/thousands-st-louis-without-power-123808573.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T04:38:00.000Z",
+      "latestAt": "2026-11-26T12:39:37.000Z",
+      "firstSeenAt": "2026-11-26T15:11:37.925Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "KSDK"
+      ],
+      "score": 1.65
+    },
+    {
       "id": "05ace1d66d85",
       "cat": "hacks",
       "kind": "news",
@@ -1202,7 +1208,7 @@
       "url": "https://cyberpress.org/1password-confirms-data-breach/",
       "source": "cyberpress",
       "publishedAt": "2026-11-25T22:42:00.000Z",
-      "latestAt": "2026-11-26T07:20:52.000Z",
+      "latestAt": "2026-11-26T07:32:06.000Z",
       "firstSeenAt": "2026-11-26T09:10:32.025Z",
       "outlets": 2,
       "outletNames": [
@@ -1667,6 +1673,22 @@
       "score": 1.06
     },
     {
+      "id": "02966ffe4ff8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Use Microsoft Store to Spread Vinci RAT Malware Through Fake Downloads",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBlZEp3SU5mMlZKVjBKR2pIRG5zdUpzU3dRZkJraE1SUWtONEdoUDAtWXBOTTkta2x1dnZETTUyNVB0bE93SWRucEdLaUZBYjk1UDJPcHExc2FkdjFkYlVKV09tNDdDT3phWkdF?oc=5",
+      "source": "The 420.in",
+      "publishedAt": "2026-11-26T15:05:14.000Z",
+      "latestAt": "2026-11-26T15:05:14.000Z",
+      "firstSeenAt": "2026-11-26T15:11:37.925Z",
+      "outlets": 1,
+      "outletNames": [
+        "The 420.in"
+      ],
+      "score": 1
+    },
+    {
       "id": "0d9c986c07e4",
       "cat": "hacks",
       "kind": "news",
@@ -1681,26 +1703,6 @@
         "Macclesfield Nub News"
       ],
       "score": 1
-    },
-    {
-      "id": "42587202204a",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Tornado warning issued for Chesapeake, Norfolk, Portsmouth, Virginia Beach",
-      "url": "https://www.13newsnow.com/article/weather/severe-weather/tornado-warning-issued-chesapeake-norfolk-portsmouth-virginia-beach/291-e40772dd-692a-427f-ac95-e5c1c80074e1",
-      "source": "13newsnow.com",
-      "publishedAt": "2026-11-26T14:40:00.000Z",
-      "latestAt": "2026-11-26T14:40:00.000Z",
-      "firstSeenAt": "2026-11-26T14:56:33.753Z",
-      "outlets": 1,
-      "outletNames": [
-        "13newsnow.com"
-      ],
-      "trending": 500,
-      "trendTerm": "tornado",
-      "score": 1,
-      "quiet": true,
-      "quietReason": "headline mentions tornado"
     },
     {
       "id": "1dc9510825d9",
@@ -1799,22 +1801,6 @@
       "score": 1
     },
     {
-      "id": "33f6fa427ea2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA Cyberattack: 12 GB Claimed, Under 0.1% Hit",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMWxqN0NKMjF0VUxqcVVTWVl0aVY3ajkwWmh0bkEyUTJTUlVXZXdJX2FZREVzZVcwWlJ5ek9OSnk5TnJ1c3daRDFxYVNBN2c0clpjSmhqa3drUXgzQ0N1TmUweUV4SG4tR0ROTjZNUFlEanlyYTVaSEpnRnhZc3BiYi10YUxWNUR5OWtTbF9rYw?oc=5",
-      "source": "shattered.io",
-      "publishedAt": "2026-11-26T13:34:58.000Z",
-      "latestAt": "2026-11-26T13:34:58.000Z",
-      "firstSeenAt": "2026-11-26T13:41:16.075Z",
-      "outlets": 1,
-      "outletNames": [
-        "shattered.io"
-      ],
-      "score": 1
-    },
-    {
       "id": "3f8fdb3f1a21",
       "cat": "earth",
       "kind": "news",
@@ -1829,6 +1815,26 @@
         "Apa.az"
       ],
       "score": 1
+    },
+    {
+      "id": "42587202204a",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Tornado warning issued for Chesapeake, Norfolk, Portsmouth, Virginia Beach",
+      "url": "https://www.13newsnow.com/article/weather/severe-weather/tornado-warning-issued-chesapeake-norfolk-portsmouth-virginia-beach/291-e40772dd-692a-427f-ac95-e5c1c80074e1",
+      "source": "13newsnow.com",
+      "publishedAt": "2026-11-26T14:30:00.000Z",
+      "latestAt": "2026-11-26T14:40:00.000Z",
+      "firstSeenAt": "2026-11-26T14:56:33.753Z",
+      "outlets": 1,
+      "outletNames": [
+        "13newsnow.com"
+      ],
+      "trending": 10000,
+      "trendTerm": "tornado",
+      "score": 0.99,
+      "quiet": true,
+      "quietReason": "headline mentions tornado"
     },
     {
       "id": "7a14efcae84f",
