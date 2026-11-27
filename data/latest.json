@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T05:43:59.493Z",
+  "buildTime": "2026-11-27T05:58:58.592Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 00:43 ET",
+  "etStamp": "2026-11-27 00:58 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,13 +45,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 304,
-  "lastSuccessAt": "2026-11-27T05:43:59.493Z",
+  "headlinesRead": 1260,
+  "lastSuccessAt": "2026-11-27T05:58:58.592Z",
   "rollingFallback": false,
   "cats": {
     "flights": 10,
-    "grid": 30,
-    "hacks": 28,
+    "grid": 27,
+    "hacks": 31,
     "markets": 4,
     "weather": 5,
     "internet": 6,
@@ -162,7 +162,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -176,20 +176,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-27T05:28:52.968Z"
+      "ok": true,
+      "count": 959,
+      "error": null,
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "bing": {
       "ok": true,
-      "count": 269,
-      "error": null,
-      "lastOkAt": "2026-11-27T05:43:59.493Z"
+      "count": 268,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,56 +201,55 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T05:43:59.493Z"
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T05:43:59.493Z"
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T05:43:59.493Z"
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T05:43:59.493Z"
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T05:43:59.493Z"
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T05:43:59.493Z"
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-27T05:43:59.493Z"
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T05:43:59.493Z"
+      "lastOkAt": "2026-11-27T05:58:58.592Z"
     }
   },
   "stories": [
@@ -299,35 +298,6 @@
         "nationwide": false,
         "reason": "thunderstorms"
       }
-    },
-    {
-      "id": "7460af6d2d67",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands without power in DC, Maryland and Virginia on Thanksgiving, trees fall on homes and cars | Weather Updates",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOa1JkLUd1ZXhBUzc4bU12YTN2VUNuNFlfOEx0aDZZQmhzaTJieFpHaGFyRHJqMXByUkViZEJlTTh5UlVGdXVlbV8yWkg2N25ZQzgzZUpkN3hUQzFjQnJZV3V0WGx0ckhBeFM5QlI0QzN5N1MyVHU3WTlxdXoteXpNcmpRYzZfZFh3dmUyOWlRLTlxUG52Zzd6cHJ4TG5hQk0wYWNlXzluOE1zZDJHTVJQSFV3eXg0c1FiRlpqVnZOZkp4Ny1XRUNFVzBSS1FQSkNuM1NhdkNUZw?oc=5",
-      "source": "WUSA9",
-      "publishedAt": "2026-11-26T12:17:00.000Z",
-      "latestAt": "2026-11-27T04:50:30.000Z",
-      "firstSeenAt": "2026-11-27T04:43:43.269Z",
-      "outlets": 14,
-      "outletNames": [
-        "WUSA9",
-        "Albemarle Observer",
-        "Yahoo",
-        "Energy News Beat",
-        "WANE 15",
-        "WDBJ7",
-        "FOX 5 DC",
-        "ABC27",
-        "SSBCrack",
-        "WKYC",
-        "primetimer.com",
-        "Cleveland 19 News",
-        "NewsBreak: Local News & Alerts",
-        "FFXnow"
-      ],
-      "score": 3.49
     },
     {
       "id": "9d364f5dc0cd",
@@ -500,6 +470,23 @@
       "score": 2.23
     },
     {
+      "id": "06a52e93c62c",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
+      "source": "WCIV",
+      "publishedAt": "2026-11-26T15:17:10.000Z",
+      "latestAt": "2026-11-27T03:11:15.000Z",
+      "firstSeenAt": "2026-11-26T16:11:53.860Z",
+      "outlets": 2,
+      "outletNames": [
+        "WCIV",
+        "WTMA-AM"
+      ],
+      "score": 1.97
+    },
+    {
       "id": "49be6341ddc6",
       "cat": "germs",
       "kind": "news",
@@ -574,23 +561,6 @@
       "score": 2.42
     },
     {
-      "id": "06a52e93c62c",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
-      "source": "WCIV",
-      "publishedAt": "2026-11-26T15:17:10.000Z",
-      "latestAt": "2026-11-27T03:11:15.000Z",
-      "firstSeenAt": "2026-11-26T16:11:53.860Z",
-      "outlets": 2,
-      "outletNames": [
-        "WCIV",
-        "WTMA-AM"
-      ],
-      "score": 1.97
-    },
-    {
       "id": "4958786f794b",
       "cat": "germs",
       "kind": "news",
@@ -657,6 +627,23 @@
         "NewsBreak: Local News & Alerts"
       ],
       "score": 1.87
+    },
+    {
+      "id": "e1307bc938c9",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Celina power outage resolved on Thanksgiving afternoon",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9mX01VYlpYQUFRZUxRQmhxcVFPTlhWTEt6RFZoS0FvZWpxZkp0VWxYYnVjT0FheUZ5M1RHLUlKSk1lbDRod0RwZHZYUFpsS21QNjg0VUxUOHlnQ0RmRm15N1JNU2ExeEZNTHBNR0lWQlMzSjRaNF80YUljONIBgAFBVV95cUxPRjRMV3h4NXFORUktcmMxeDg4Y3lhOVo0Z3NMVmZhM056RE9KWTBhbklrUTJwNFR0QlJCRHlMaGVVQVQ5anhjRjFtTXFBX0RoS2tjWDlSZnpCQ2hLUVRUSzAxdUQ5Sk5xWDBHUW9rS3VkbDFzWWFkQkVjcExQSnJicQ?oc=5",
+      "source": "WDTN.com",
+      "publishedAt": "2026-11-26T18:58:29.000Z",
+      "latestAt": "2026-11-26T18:58:29.000Z",
+      "firstSeenAt": "2026-11-26T23:12:50.126Z",
+      "outlets": 2,
+      "outletNames": [
+        "WDTN.com",
+        "Yahoo"
+      ],
+      "score": 1.86
     },
     {
       "id": "d6cf7b7e41d1",
@@ -751,7 +738,7 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-27T00:42:03.000Z",
-      "latestAt": "2026-11-27T04:34:48.000Z",
+      "latestAt": "2026-11-27T05:33:22.000Z",
       "firstSeenAt": "2026-11-27T00:43:07.514Z",
       "outlets": 1,
       "outletNames": [
@@ -895,6 +882,23 @@
       "score": 2
     },
     {
+      "id": "5a105c9d3fb2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "South Korea's Data Breach Reports Hit 1,019, 2.3 Times Last Year's Total; Government to Launch 3-Month AI Hacking Crackdown in December",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5CT0ltQmRGdWtzMmo1Q1hxVjBWYkNET0FxaFNvbEVfSVduRE1GX0lHQ1B0Z0x5NFd0NjFlbm1YMzJhekYxY3Z5YUc3MXdiSUNkUmRfeFJ3MnAweDdZc1NicFcwa0xHQm4yYU1zOFpvWW11VDltdEE?oc=5",
+      "source": "finance.biggo.com",
+      "publishedAt": "2026-11-27T03:55:00.000Z",
+      "latestAt": "2026-11-27T05:03:41.000Z",
+      "firstSeenAt": "2026-11-27T04:04:23.345Z",
+      "outlets": 2,
+      "outletNames": [
+        "finance.biggo.com",
+        "Seoul Economic Daily"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "681b26ed837e",
       "cat": "hacks",
       "kind": "news",
@@ -978,23 +982,6 @@
         "MTV Lebanon"
       ],
       "score": 1.87
-    },
-    {
-      "id": "e1307bc938c9",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Celina power outage resolved on Thanksgiving afternoon",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9mX01VYlpYQUFRZUxRQmhxcVFPTlhWTEt6RFZoS0FvZWpxZkp0VWxYYnVjT0FheUZ5M1RHLUlKSk1lbDRod0RwZHZYUFpsS21QNjg0VUxUOHlnQ0RmRm15N1JNU2ExeEZNTHBNR0lWQlMzSjRaNF80YUljONIBgAFBVV95cUxPRjRMV3h4NXFORUktcmMxeDg4Y3lhOVo0Z3NMVmZhM056RE9KWTBhbklrUTJwNFR0QlJCRHlMaGVVQVQ5anhjRjFtTXFBX0RoS2tjWDlSZnpCQ2hLUVRUSzAxdUQ5Sk5xWDBHUW9rS3VkbDFzWWFkQkVjcExQSnJicQ?oc=5",
-      "source": "WDTN.com",
-      "publishedAt": "2026-11-26T18:58:29.000Z",
-      "latestAt": "2026-11-26T18:58:29.000Z",
-      "firstSeenAt": "2026-11-26T23:12:50.126Z",
-      "outlets": 2,
-      "outletNames": [
-        "WDTN.com",
-        "Yahoo"
-      ],
-      "score": 1.86
     },
     {
       "id": "5a5580e5c64e",
@@ -1594,6 +1581,54 @@
       "score": 1.04
     },
     {
+      "id": "638f18641893",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack prompts AFP to take news platform offline",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5EeHFzLVoyWGR5LVNpYnFNYlVWb0xhU2JMb3dnRnY3UXd6MlVqVU9qaXpRMldObGxZbUg1dlJOOUhJTS0wTnFzajkxc1FheFlzYkdLeW9jWFo?oc=5",
+      "source": "TRT World",
+      "publishedAt": "2026-11-27T05:54:09.000Z",
+      "latestAt": "2026-11-27T05:54:09.000Z",
+      "firstSeenAt": "2026-11-27T05:58:58.592Z",
+      "outlets": 1,
+      "outletNames": [
+        "TRT World"
+      ],
+      "score": 1
+    },
+    {
+      "id": "50f26de16a0c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Reportedly Stole SAP Employee Logins to Alter and Copy Company Source Code",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ2dxM2tXZlpfUzVQbjRiWFA1YVp0NzdmX1d1eTctU0tsWWJ5R1ZvUTNONldFRHBJVXpmOXlPTEkyZ01taENfYWtDY0owTkVaeXRCcUY1WTZyRjJuNUVUZE1heDJzVWhVV1dkSEN6eTYwUXlPX0tJaTVwRUlpVkZTak9wRzItRUZRRGZEbzlnc2p0TjAzSUtwZkVHLTRldW9uVXp2Q2dZN3BBZw?oc=5",
+      "source": "the deep dive",
+      "publishedAt": "2026-11-27T05:48:18.000Z",
+      "latestAt": "2026-11-27T05:48:18.000Z",
+      "firstSeenAt": "2026-11-27T05:58:58.592Z",
+      "outlets": 1,
+      "outletNames": [
+        "the deep dive"
+      ],
+      "score": 1
+    },
+    {
+      "id": "61cba123749e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNOS1VUmpJcEM5SHNNX09PYlZaQWstSGNyQnpEbWt5TXlVcVdkakhyS0p1NjQ5em5PRGpTLUVYVzhsZE5xSWRhMHpYUDZ6UDctcUhtaUl4VENGc01jN09sX29Ta05Cdkw3LXJfVlk4MzVkb3RlUTBuNnJBX0tUMHVOMVpxdV8?oc=5",
+      "source": "The Hacker News",
+      "publishedAt": "2026-11-27T05:48:00.000Z",
+      "latestAt": "2026-11-27T05:48:00.000Z",
+      "firstSeenAt": "2026-11-27T05:58:58.592Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Hacker News"
+      ],
+      "score": 1
+    },
+    {
       "id": "463a9c226583",
       "cat": "grid",
       "kind": "news",
@@ -1654,22 +1689,6 @@
       "outlets": 1,
       "outletNames": [
         "Fintech Singapore"
-      ],
-      "score": 1
-    },
-    {
-      "id": "5a105c9d3fb2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "South Korea's Data Breach Reports Hit 1,019, 2.3 Times Last Year's Total; Government to Launch 3-Month AI Hacking Crackdown in December",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5CT0ltQmRGdWtzMmo1Q1hxVjBWYkNET0FxaFNvbEVfSVduRE1GX0lHQ1B0Z0x5NFd0NjFlbm1YMzJhekYxY3Z5YUc3MXdiSUNkUmRfeFJ3MnAweDdZc1NicFcwa0xHQm4yYU1zOFpvWW11VDltdEE?oc=5",
-      "source": "finance.biggo.com",
-      "publishedAt": "2026-11-27T03:55:00.000Z",
-      "latestAt": "2026-11-27T03:55:00.000Z",
-      "firstSeenAt": "2026-11-27T04:04:23.345Z",
-      "outlets": 1,
-      "outletNames": [
-        "finance.biggo.com"
       ],
       "score": 1
     },
@@ -1752,38 +1771,6 @@
         "UrduPoint"
       ],
       "score": 1
-    },
-    {
-      "id": "7453c84edf29",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Tustin restaurant saves Thanksgiving after power outage",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOM0dvZFlHQlJxdFB5U0NpOU9Bd3ZreFNsVVdYQnQxcmd6ekdaVjhrT2ZuNTNvdDd4WHFHSHNuMXk2WGFiVGZlSjJYeE9ZNjQzdGFreDVyUjZMVUdwZGF2MU5YcFNyWFRLUy13cUp0REVHdUpka2VoVlFOV1B6b3VvaFdUM01VT1d4RU1Hc1Y2WVAycVdEdldkWlVBR0h5Zw?oc=5",
-      "source": "CBS News",
-      "publishedAt": "2026-11-27T05:06:00.000Z",
-      "latestAt": "2026-11-27T05:06:00.000Z",
-      "firstSeenAt": "2026-11-27T05:28:52.968Z",
-      "outlets": 1,
-      "outletNames": [
-        "CBS News"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "edbe55757b0f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outages reported across North Carolina on Thanksgiving morning amid a wind advisory",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTXd3Mnk4ZHAxdXQxMHV5LTF5NGNlX2liQzgzdVltUG9kN3ZYakx4N25faWRxdmFNUDJhYkJXM0pTU0c2M2RVTFBaanVvNUI3RXVDSHp5TUpYcV9sR2FnN1UxMnVXQmkxQlktQm80LTdDeEJnWlIwQUs2dmJRLVhHWmZOTFlNNW9GUzFlb0ZuYVhrR1RzUkloQjE5ZDMwSHROOWdIWU9SLXpzSWhBQmQ4Sw?oc=5",
-      "source": "WLOS",
-      "publishedAt": "2026-11-27T04:18:45.000Z",
-      "latestAt": "2026-11-27T04:18:45.000Z",
-      "firstSeenAt": "2026-11-27T04:43:43.269Z",
-      "outlets": 1,
-      "outletNames": [
-        "WLOS"
-      ],
-      "score": 0.99
     },
     {
       "id": "7a14efcae84f",
