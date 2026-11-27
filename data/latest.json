@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T12:45:07.402Z",
+  "buildTime": "2026-11-27T13:00:18.138Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 07:45 ET",
+  "etStamp": "2026-11-27 08:00 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,8 +44,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1177,
-  "lastSuccessAt": "2026-11-27T12:45:07.402Z",
+  "headlinesRead": 300,
+  "lastSuccessAt": "2026-11-27T13:00:18.138Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 40,
@@ -161,7 +161,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -175,20 +175,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 936,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "3 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "bing": {
       "ok": true,
-      "count": 205,
-      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-27T12:45:07.402Z"
+      "count": 264,
+      "error": null,
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     },
     "gdelt": {
       "ok": false,
@@ -200,56 +200,55 @@
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-27T12:45:07.402Z"
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:45:07.402Z"
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:45:07.402Z"
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:45:07.402Z"
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:45:07.402Z"
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:45:07.402Z"
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T11:59:52.439Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T12:45:07.402Z"
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T12:45:07.402Z"
+      "lastOkAt": "2026-11-27T13:00:18.138Z"
     }
   },
   "stories": [
@@ -353,10 +352,10 @@
       "title": "Hackers breach US Air Force flagship Cloud One computing platform",
       "url": "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
       "source": "Reuters",
-      "publishedAt": "2026-11-26T19:50:00.000Z",
+      "publishedAt": "2026-11-26T16:42:00.000Z",
       "latestAt": "2026-11-27T12:30:00.000Z",
       "firstSeenAt": "2026-11-27T11:29:49.328Z",
-      "outlets": 25,
+      "outlets": 27,
       "outletNames": [
         "Bloomberg.com",
         "MLQ.ai",
@@ -382,11 +381,13 @@
         "New York Post",
         "Moneycontrol",
         "The Times of India",
-        "Sky News"
+        "Sky News",
+        "The Jerusalem Post on MSN",
+        "Geo News"
       ],
       "trending": 500,
       "trendTerm": "us air force cloud one breach",
-      "score": 4.17
+      "score": 3.95
     },
     {
       "id": "9d364f5dc0cd",
@@ -1050,6 +1051,25 @@
         "Retail News Asia"
       ],
       "score": 1.8
+    },
+    {
+      "id": "cc531ce8a14e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US Air Force's Cloud One platform hacked, disrupt military operations",
+      "url": "https://www.moneycontrol.com/world/us-air-force-s-cloud-one-platform-hacked-disrupt-military-operations-article-14090469.html",
+      "source": "Moneycontrol",
+      "publishedAt": "2026-11-27T04:16:00.000Z",
+      "latestAt": "2026-11-27T12:30:00.000Z",
+      "firstSeenAt": "2026-11-27T13:00:18.138Z",
+      "outlets": 2,
+      "outletNames": [
+        "Moneycontrol",
+        "Sky News"
+      ],
+      "trending": 500,
+      "trendTerm": "us air force cloud one breach",
+      "score": 1.71
     },
     {
       "id": "124beede899e",
@@ -1799,22 +1819,6 @@
       "outlets": 1,
       "outletNames": [
         "Cybernews"
-      ],
-      "score": 1
-    },
-    {
-      "id": "f2648aae60be",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Chase Bank outage triggers U.S. banking disruptions Monday",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQNk1jR1Z4ajBZZmNXeG0tOHpQeGJJSVVMZXVYNDJzRzR2SHRyXzZLelEzREptTk1vZzJuQmJCUVR4SVV6ZzdBOTVPRXA2c2ZaNFJteEpKYm92amdmcTRwekJTWmNzRHNDRm8xblpEbWp2MS1hYWlOc3dkY09Zb2k0LVdRTTJUVnpsYnBmejlha3BTdUZSTWZHY0VZbw?oc=5",
-      "source": "USA Today",
-      "publishedAt": "2026-11-27T11:05:00.000Z",
-      "latestAt": "2026-11-27T11:05:00.000Z",
-      "firstSeenAt": "2026-11-27T11:14:46.817Z",
-      "outlets": 1,
-      "outletNames": [
-        "USA Today"
       ],
       "score": 1
     },
