@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T18:31:05.149Z",
+  "buildTime": "2026-11-27T18:46:00.444Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 13:31 ET",
+  "etStamp": "2026-11-27 13:46 ET",
   "score": 60,
   "fired": [
     "flights",
@@ -43,19 +43,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1032,
-  "lastSuccessAt": "2026-11-27T18:31:05.149Z",
+  "headlinesRead": 1244,
+  "lastSuccessAt": "2026-11-27T18:46:00.444Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 41,
-    "flights": 7,
-    "germs": 6,
+    "hacks": 43,
+    "flights": 6,
+    "germs": 5,
     "grid": 15,
-    "weather": 10,
+    "weather": 11,
     "ai": 3,
-    "markets": 4,
-    "internet": 7,
     "earth": 4,
+    "markets": 4,
+    "internet": 6,
     "space": 2,
     "sun": 1
   },
@@ -179,15 +179,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 725,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 22 of 26 queries)",
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "count": 938,
+      "error": null,
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     },
     "bing": {
       "ok": true,
-      "count": 275,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     },
     "gdelt": {
       "ok": false,
@@ -199,37 +199,37 @@
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     },
     "x": {
       "ok": true,
@@ -242,13 +242,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T18:31:05.149Z"
+      "lastOkAt": "2026-11-27T18:46:00.444Z"
     }
   },
   "stories": [
@@ -281,53 +281,6 @@
         "CX Today"
       ],
       "score": 5.93
-    },
-    {
-      "id": "f2010c32fda3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Breach U.S. Air Force Flagship Cloud One Computing Platform",
-      "url": "https://www.huffpost.com/entry/us-air-force-cloud-one-hack_n_6b096996e4b084fa2e17d141",
-      "source": "HuffPost",
-      "publishedAt": "2026-11-27T03:35:00.000Z",
-      "latestAt": "2026-11-27T18:14:20.000Z",
-      "firstSeenAt": "2026-11-27T15:30:31.090Z",
-      "outlets": 32,
-      "outletNames": [
-        "TodayPress.tv",
-        "The Times",
-        "Yahoo",
-        "Decrypt",
-        "HuffPost",
-        "WTVA 9 News",
-        "CNA",
-        "Seeking Alpha",
-        "Yahoo Finance",
-        "The Indian Express",
-        "MLQ.ai",
-        "The Times of India",
-        "Reuters",
-        "The Next Web",
-        "Bloomberg.com",
-        "Arise News",
-        "marketscreener.com",
-        "TimesLIVE",
-        "news.sky.com",
-        "The Times of Israel",
-        "dev.ua",
-        "cwibc.co.id",
-        "Quartz",
-        "Modern Diplomacy",
-        "CNBC",
-        "The Diplomatic Insight",
-        "Floridian Press",
-        "Escudo Digital",
-        "The Hill",
-        "Washington Times",
-        "Root-Nation.com",
-        "tovima.com"
-      ],
-      "score": 4.81
     },
     {
       "id": "sig:faa-stop:LGA:2026-11-26",
@@ -376,6 +329,53 @@
       }
     },
     {
+      "id": "f2010c32fda3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Breach U.S. Air Force Flagship Cloud One Computing Platform",
+      "url": "https://www.huffpost.com/entry/us-air-force-cloud-one-hack_n_6b096996e4b084fa2e17d141",
+      "source": "HuffPost",
+      "publishedAt": "2026-11-26T22:29:00.000Z",
+      "latestAt": "2026-11-27T18:35:02.000Z",
+      "firstSeenAt": "2026-11-27T15:30:31.090Z",
+      "outlets": 32,
+      "outletNames": [
+        "TodayPress.tv",
+        "The Times",
+        "Yahoo",
+        "Decrypt",
+        "HuffPost",
+        "WTVA 9 News",
+        "CNA",
+        "Seeking Alpha",
+        "Yahoo Finance",
+        "The Indian Express",
+        "MLQ.ai",
+        "The Times of India",
+        "Reuters",
+        "The Next Web",
+        "Bloomberg.com",
+        "Arise News",
+        "marketscreener.com",
+        "TimesLIVE",
+        "news.sky.com",
+        "The Times of Israel",
+        "dev.ua",
+        "cwibc.co.id",
+        "Quartz",
+        "Modern Diplomacy",
+        "CNBC",
+        "The Diplomatic Insight",
+        "Floridian Press",
+        "Escudo Digital",
+        "The Hill",
+        "Washington Times",
+        "Root-Nation.com",
+        "tovima.com"
+      ],
+      "score": 4.3
+    },
+    {
       "id": "8bd025a5242b",
       "cat": "germs",
       "kind": "news",
@@ -383,9 +383,9 @@
       "url": "https://www.msn.com/en-us/news/other/polish-poultry-exports-at-risk-as-bird-flu-returns-after-six-month-break/ar-AA2ilm7I",
       "source": "Reuters on MSN",
       "publishedAt": "2026-11-27T01:38:48.000Z",
-      "latestAt": "2026-11-27T11:18:00.000Z",
+      "latestAt": "2026-11-27T11:57:52.000Z",
       "firstSeenAt": "2026-11-27T09:44:30.068Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "www.marketscreener.com",
         "Reuters on MSN",
@@ -393,9 +393,10 @@
         "The Mighty 790 KFGO",
         "SRN News",
         "TimesLIVE",
-        "TVP World"
+        "TVP World",
+        "ESM Magazine"
       ],
-      "score": 3.29
+      "score": 3.46
     },
     {
       "id": "824d40a7de12",
@@ -717,6 +718,23 @@
       "score": 1.7
     },
     {
+      "id": "d0eae5ed65df",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Evidence of deepest explosive volcanic eruption found in Pacific’s Mariana Trench",
+      "url": "https://www.straitstimes.com/world/united-states/evidence-of-deepest-explosive-volcanic-eruption-found-in-pacifics-mariana-trench",
+      "source": "The Straits Times",
+      "publishedAt": "2026-11-27T03:21:00.000Z",
+      "latestAt": "2026-11-27T07:01:00.000Z",
+      "firstSeenAt": "2026-11-27T18:46:00.444Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Straits Times",
+        "Yahoo"
+      ],
+      "score": 1.49
+    },
+    {
       "id": "fc30b8b61bc2",
       "cat": "weather",
       "kind": "news",
@@ -781,6 +799,22 @@
       "score": 1.4
     },
     {
+      "id": "06b071e56695",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Record low temperature measured in Brussels",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPeF82bFhqWUFPMHFuanRtcGZLZDhCNzFVczhBS09uVVhRNDdTQVM2ejhRQ09LQmZpeFhobDMwdk13RlZwT1ZmMzhjVkp1dk9KNWdFcnZRbmVXUFZOQ25GVWZSM2NkTFNZSHROWHBwZkFvTl9PT2FHRDZ5aVo0TnJUNGhPdmh6UkxXMGhEa2xoX2ZlVGl2c2NEbw?oc=5",
+      "source": "The Brussels Times",
+      "publishedAt": "2026-11-27T18:28:50.000Z",
+      "latestAt": "2026-11-27T18:28:50.000Z",
+      "firstSeenAt": "2026-11-27T18:46:00.444Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Brussels Times"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "5d5b88b6abc4",
       "cat": "internet",
       "kind": "news",
@@ -811,38 +845,6 @@
         "SooToday.com"
       ],
       "score": 1.39
-    },
-    {
-      "id": "4d568b2c5e9b",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Record Heat Drained the World's Rivers and Lakes in 2023 and 2024, a New Science Study Finds",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxONXY1SnBIRHF6ZTNMdEJoU19FMWZuSFhVa3lCaUJhdGZ5aWxycE1VNWIxZThKczkxOTZxSzlEQkdwWXBrVWdVX3VkRERfbzRORENrSi00MEZRMVlqUWM1LUx5Vjd4MVI2Z1M3N2RCWmxnWGxZS1pYUDcxYmo4UVROY3AzdmlIZUctREFZYWdxdVRURXpIRmNGM3ZEblZ3MGs0WGQzS1dtWE40SU1fY2hvV1dleDQwWmlvdUo2OHphcnFBbHBBMHhJZElHS3lKZw?oc=5",
-      "source": "Nature World News",
-      "publishedAt": "2026-11-27T07:57:10.000Z",
-      "latestAt": "2026-11-27T07:57:10.000Z",
-      "firstSeenAt": "2026-11-27T08:14:16.364Z",
-      "outlets": 1,
-      "outletNames": [
-        "Nature World News"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "36bd83d9f0d6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
-      "source": "Demokratis.co.id",
-      "publishedAt": "2026-11-27T14:44:49.000Z",
-      "latestAt": "2026-11-27T14:44:49.000Z",
-      "firstSeenAt": "2026-11-27T15:45:32.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "Demokratis.co.id"
-      ],
-      "score": 1.38
     },
     {
       "id": "92c5ec80fbd1",
@@ -1084,6 +1086,40 @@
       "score": 1.72
     },
     {
+      "id": "733c150a76ea",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Have Been Remotely Hijacking Bitcoin Miners’ Computing Power",
+      "url": "https://gizmodo.com/hackers-have-been-remotely-hijacking-bitcoin-miners-computing-power-2000846211",
+      "source": "Gizmodo",
+      "publishedAt": "2026-11-27T10:06:00.000Z",
+      "latestAt": "2026-11-27T18:15:51.000Z",
+      "firstSeenAt": "2026-11-27T18:46:00.444Z",
+      "outlets": 2,
+      "outletNames": [
+        "Gizmodo",
+        "AOL.com"
+      ],
+      "score": 1.71
+    },
+    {
+      "id": "7aee287f69f6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "BREAKING: Hackers breach Air Force computer system, Reuters reports",
+      "url": "https://www.yahoo.com/news/videos/breaking-hackers-breach-air-force-180534693.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T10:06:00.000Z",
+      "latestAt": "2026-11-27T18:07:28.000Z",
+      "firstSeenAt": "2026-11-27T18:46:00.444Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "MS NOW"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "72e46b5b520f",
       "cat": "grid",
       "kind": "news",
@@ -1283,6 +1319,38 @@
         "UNILAD Tech"
       ],
       "score": 1.39
+    },
+    {
+      "id": "4d568b2c5e9b",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Record Heat Drained the World's Rivers and Lakes in 2023 and 2024, a New Science Study Finds",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxONXY1SnBIRHF6ZTNMdEJoU19FMWZuSFhVa3lCaUJhdGZ5aWxycE1VNWIxZThKczkxOTZxSzlEQkdwWXBrVWdVX3VkRERfbzRORENrSi00MEZRMVlqUWM1LUx5Vjd4MVI2Z1M3N2RCWmxnWGxZS1pYUDcxYmo4UVROY3AzdmlIZUctREFZYWdxdVRURXpIRmNGM3ZEblZ3MGs0WGQzS1dtWE40SU1fY2hvV1dleDQwWmlvdUo2OHphcnFBbHBBMHhJZElHS3lKZw?oc=5",
+      "source": "Nature World News",
+      "publishedAt": "2026-11-27T07:57:10.000Z",
+      "latestAt": "2026-11-27T07:57:10.000Z",
+      "firstSeenAt": "2026-11-27T08:14:16.364Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nature World News"
+      ],
+      "score": 1.39
+    },
+    {
+      "id": "36bd83d9f0d6",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
+      "source": "Demokratis.co.id",
+      "publishedAt": "2026-11-27T14:44:49.000Z",
+      "latestAt": "2026-11-27T14:44:49.000Z",
+      "firstSeenAt": "2026-11-27T15:45:32.463Z",
+      "outlets": 1,
+      "outletNames": [
+        "Demokratis.co.id"
+      ],
+      "score": 1.38
     },
     {
       "id": "4a31471a8cff",
@@ -1671,22 +1739,6 @@
       "score": 1.08
     },
     {
-      "id": "e7bd0fbdc6b0",
-      "cat": "internet",
-      "kind": "news",
-      "title": "No plans to ditch Microsoft 365 despite global outage, says Government ICT",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZjNfLUlldTQ2VVdtazA3MTcwVy1EbDNHV29JaHBaNXo2RVh1UF91cFRyU09UOXMwLTVNdElHTlJFQTQ0MVNJOGFiMTVqTlFrMWlEckduTlI4RlR3VEJOQmw2cHFjNGI0SWdfRVY3d3pMaFlxSkRMUjdNempqc0FPTHRyejdYbmp5Y0FkVEdPNDdkNFczUkpxOS1fSkdVZHdfemtGVmZXSmZOVlNPMVpyR1Rkc2k2bW84Z3pIeUJXOXJkQ0JrRi11TUY4Z1kwR2FZ?oc=5",
-      "source": "Cook Islands News",
-      "publishedAt": "2026-11-26T18:33:06.000Z",
-      "latestAt": "2026-11-26T18:33:06.000Z",
-      "firstSeenAt": "2026-11-27T09:44:30.068Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cook Islands News"
-      ],
-      "score": 1.05
-    },
-    {
       "id": "dcac5b231278",
       "cat": "hacks",
       "kind": "news",
@@ -1701,6 +1753,22 @@
         "Digital Trends"
       ],
       "score": 1.02
+    },
+    {
+      "id": "b8a20fa2adb3",
+      "cat": "grid",
+      "kind": "news",
+      "title": "More than 17,000 PPL customers still without power Friday morning in Lancaster County, PA",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNOVFWNzUyaGU4ZmRzSzlWODd6cE9WVGs3ZUFXY1ZzRzAwTmNEbjIyY195MkdsRjRTY0RGTHF4WmlCLXJkLTJ5X1RKVUhLOXp6SENTMExDaDRfaXBMcW91QXY3VHNHMTYwY09SODNFTlNxMl9CYlcxZV9rTl9ialZYd29FU3lXcDBfcm9vMUltM0VrT2J5dHZ5WWhiQlhsVXY3cmo0eG8yTVE2Uy1YLTRwNkliRGFMMzlGUmd3Wk03RFkwSWQyLU53?oc=5",
+      "source": "cedarnews.net",
+      "publishedAt": "2026-11-27T18:35:48.000Z",
+      "latestAt": "2026-11-27T18:35:48.000Z",
+      "firstSeenAt": "2026-11-27T18:46:00.444Z",
+      "outlets": 1,
+      "outletNames": [
+        "cedarnews.net"
+      ],
+      "score": 1
     },
     {
       "id": "96dfa2bafa4f",
@@ -1765,54 +1833,6 @@
       "outlets": 1,
       "outletNames": [
         "Palo Alto Online"
-      ],
-      "score": 1
-    },
-    {
-      "id": "9d9eb65fd120",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Nairobi Airspace Closed for Military Activity Today and on 4 and 12 December, With Notice Reaching Public Only Hours Ahead",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9MVHBKem9LQmJ5eDBOOWtLZUdWMmZ3VGFCekxEalR6bW9nTXZDc3NqdDduUk41dm03YTZYeFRtTUNLYWRPM1lOVDhla2FlUnJWYmxDNHlocGxMQlhXSTBOOGlKckNjY2tIb0IyVDVfbTlNNHc?oc=5",
-      "source": "Avi-Go",
-      "publishedAt": "2026-11-27T16:46:41.000Z",
-      "latestAt": "2026-11-27T16:46:41.000Z",
-      "firstSeenAt": "2026-11-27T17:00:44.679Z",
-      "outlets": 1,
-      "outletNames": [
-        "Avi-Go"
-      ],
-      "score": 1
-    },
-    {
-      "id": "0538b08e3d16",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power Outage As TCN Shuts Katampe Substation For Maintenance",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPem5kSmZRXzBnbFk0UGZjM09uYkdRYUhGdWNTY1hxV1g3UHBiSFg3ekY3dGNxMTBKWXktVG5QNjYyU2JFbXJMbm43SWFvM2phQl9JcWVfRnFZVzlxeFREeHNBRGNaNkQxM0xzOEpTdm5NQ29lNWdmd1Q0dkEyc290OUdDNmlsZTQ?oc=5",
-      "source": "https://thefact.ng/",
-      "publishedAt": "2026-11-27T16:23:08.000Z",
-      "latestAt": "2026-11-27T16:23:08.000Z",
-      "firstSeenAt": "2026-11-27T16:30:42.723Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://thefact.ng/"
-      ],
-      "score": 1
-    },
-    {
-      "id": "018b9c526184",
-      "cat": "germs",
-      "kind": "news",
-      "title": "New measures introduced to tackle rise in bird flu cases - with disease detected at park near Chesterfield",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNOWVhOUlEa3JySlc5bXR6TE8tWndtVUZwNHh2OXhxVkZXcnI5MkZpRVd6d3owYWhOT0xKQzZCc29hMWFkalphb2E1UzZxZXl3bDAzM2xhSE1yYW1Eejl1eG1RRl9OWExvOVRFZWRxTnVBSERidzZSNjFscDlaa24zd3VWbjM?oc=5",
-      "source": "Derbyshire Times",
-      "publishedAt": "2026-11-27T16:22:00.000Z",
-      "latestAt": "2026-11-27T16:22:00.000Z",
-      "firstSeenAt": "2026-11-27T16:30:42.723Z",
-      "outlets": 1,
-      "outletNames": [
-        "Derbyshire Times"
       ],
       "score": 1
     },
@@ -1895,22 +1915,6 @@
       "outlets": 1,
       "outletNames": [
         "Crypto Economy"
-      ],
-      "score": 0.97
-    },
-    {
-      "id": "642c8e7bbe1f",
-      "cat": "earth",
-      "kind": "news",
-      "title": "5.7 Magnitude Quake Hits Off the Coast of Mexico",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSGU4TE1MYXdIQkJTTDJxQ3pXRDFmYkR0SEtqZ1dUWFkzUmdOcDhOMklPT1pVRWJzcGIzY1F5T3JyLWxHdDQ5SmYyZG5PYkZxS2JSZ0JFV3Y0UzI5ZEI1UEdTbXdWWjlIVjk2dVd2MlJNbG5OLTlUX2pnZjhXSEE0RFVIdnlLR2VZMUhpUHpRLU5GMmFxaFVMUW5ZcDltNHhqSTdhbzRVaGFmSU82UkhZSDZGMFdwY0E?oc=5",
-      "source": "NewsBreak: Local News & Alerts",
-      "publishedAt": "2026-11-27T15:39:14.000Z",
-      "latestAt": "2026-11-27T15:39:14.000Z",
-      "firstSeenAt": "2026-11-27T17:15:46.695Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsBreak: Local News & Alerts"
       ],
       "score": 0.97
     },
