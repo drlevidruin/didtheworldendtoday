@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T03:28:32.989Z",
+  "buildTime": "2026-11-27T03:43:35.794Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 22:28 ET",
+  "etStamp": "2026-11-26 22:43 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,16 +45,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1290,
-  "lastSuccessAt": "2026-11-27T03:28:32.989Z",
+  "headlinesRead": 1118,
+  "lastSuccessAt": "2026-11-27T03:43:35.794Z",
   "rollingFallback": false,
   "cats": {
     "flights": 12,
     "grid": 29,
-    "hacks": 28,
+    "hacks": 27,
     "germs": 4,
     "markets": 4,
-    "weather": 5,
+    "weather": 6,
     "internet": 6,
     "sun": 4,
     "earth": 4,
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 985,
+      "count": 913,
       "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     },
     "bing": {
       "ok": true,
-      "count": 269,
-      "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "count": 172,
+      "error": "8 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "hn": {
       "ok": true,
-      "count": 6,
+      "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     },
     "x": {
       "ok": true,
@@ -242,15 +242,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T03:28:32.989Z"
+      "lastOkAt": "2026-11-27T03:43:35.794Z"
     }
   },
   "stories": [
@@ -308,7 +308,7 @@
       "url": "https://www.wusa9.com/article/weather/thousands-without-power-maryland-and-virginia-thanksgiving-day/65-04657edb-76c0-4ac3-8efa-b4482b43c6c4",
       "source": "WUSA9",
       "publishedAt": "2026-11-26T04:17:00.000Z",
-      "latestAt": "2026-11-27T00:39:00.000Z",
+      "latestAt": "2026-11-27T02:50:30.000Z",
       "firstSeenAt": "2026-11-26T12:26:10.024Z",
       "outlets": 15,
       "outletNames": [
@@ -554,21 +554,24 @@
       "score": 2.46
     },
     {
-      "id": "dcc1deef7fbd",
+      "id": "48ea6ffdd742",
       "cat": "hacks",
       "kind": "news",
-      "title": "Gianni Infantino humiliated in major security breach at FIFA",
-      "url": "https://www.msn.com/en-us/news/other/gianni-infantino-humiliated-in-major-security-breach-at-fifa/ar-AA2ii3Dd",
-      "source": "The Daily Beast on MSN",
-      "publishedAt": "2026-11-26T05:24:00.000Z",
-      "latestAt": "2026-11-26T05:24:27.000Z",
-      "firstSeenAt": "2026-11-26T13:41:16.075Z",
-      "outlets": 2,
+      "title": "1Password Data Breach – Hackers Compromise GitHub Account to Steal Customer Data and Source Code",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUld1RTlkUzE2Z3RNbUtpUnVOSnd1VU9ZY19lX3ZJOUZYdUQ4MlpNNXFDQUI0VGpOVFdxSmNydVlsbUZhaVVYaGRuYWxlcXVYWENZVmR3SXVLd3NpbGhodzhJbFpJYmhQZ25jZjY5M0hjU1dueVp2SHRNT0VEeTlrU3AxWVRyX3BFSmfSAYoBQVVfeXFMTVJXdUU5ZFMxNmd0TW1LaVJ1Tkp3dVVPWWNfZV92STlGWHVEODJaTTVxQ0FCNFRqTlRXcUpjcnVZbG1GYWlVWGhkbmFsZXF1WFhDWVZkd0l1S3dzaWxoaHc4SWxaSWJoUGduY2Y2OTNIY1NXbnladkh0TU9FRHk5a1NwMVlUcl9wRUpn?oc=5",
+      "source": "GBHackers News",
+      "publishedAt": "2026-11-26T06:42:52.000Z",
+      "latestAt": "2026-11-27T03:19:47.000Z",
+      "firstSeenAt": "2026-11-26T22:57:53.537Z",
+      "outlets": 5,
       "outletNames": [
-        "The Daily Beast on MSN",
-        "Yahoo Sports"
+        "GBHackers News",
+        "Deccan Herald",
+        "LinkedIn",
+        "Cyber Press",
+        "The Indian Express"
       ],
-      "score": 2.41
+      "score": 2.42
     },
     {
       "id": "84a778c237e7",
@@ -800,7 +803,7 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-27T00:42:03.000Z",
-      "latestAt": "2026-11-27T02:38:30.000Z",
+      "latestAt": "2026-11-27T03:36:39.000Z",
       "firstSeenAt": "2026-11-27T00:43:07.514Z",
       "outlets": 1,
       "outletNames": [
@@ -823,6 +826,23 @@
         "Beinsure"
       ],
       "score": 1.4
+    },
+    {
+      "id": "dcc1deef7fbd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Gianni Infantino humiliated in major security breach at FIFA",
+      "url": "https://www.msn.com/en-us/news/other/gianni-infantino-humiliated-in-major-security-breach-at-fifa/ar-AA2ii3Dd",
+      "source": "The Daily Beast on MSN",
+      "publishedAt": "2026-11-26T05:24:00.000Z",
+      "latestAt": "2026-11-26T05:24:27.000Z",
+      "firstSeenAt": "2026-11-26T13:41:16.075Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Daily Beast on MSN",
+        "Yahoo Sports"
+      ],
+      "score": 2.41
     },
     {
       "id": "ba108ccd0525",
@@ -897,25 +917,6 @@
       "score": 2.23
     },
     {
-      "id": "48ea6ffdd742",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "1Password Data Breach – Hackers Compromise GitHub Account to Steal Customer Data and Source Code",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUld1RTlkUzE2Z3RNbUtpUnVOSnd1VU9ZY19lX3ZJOUZYdUQ4MlpNNXFDQUI0VGpOVFdxSmNydVlsbUZhaVVYaGRuYWxlcXVYWENZVmR3SXVLd3NpbGhodzhJbFpJYmhQZ25jZjY5M0hjU1dueVp2SHRNT0VEeTlrU3AxWVRyX3BFSmfSAYoBQVVfeXFMTVJXdUU5ZFMxNmd0TW1LaVJ1Tkp3dVVPWWNfZV92STlGWHVEODJaTTVxQ0FCNFRqTlRXcUpjcnVZbG1GYWlVWGhkbmFsZXF1WFhDWVZkd0l1S3dzaWxoaHc4SWxaSWJoUGduY2Y2OTNIY1NXbnladkh0TU9FRHk5a1NwMVlUcl9wRUpn?oc=5",
-      "source": "GBHackers News",
-      "publishedAt": "2026-11-26T06:42:52.000Z",
-      "latestAt": "2026-11-26T19:30:08.000Z",
-      "firstSeenAt": "2026-11-26T22:57:53.537Z",
-      "outlets": 4,
-      "outletNames": [
-        "GBHackers News",
-        "Deccan Herald",
-        "LinkedIn",
-        "Cyber Press"
-      ],
-      "score": 2.19
-    },
-    {
       "id": "0349d45e030f",
       "cat": "hacks",
       "kind": "news",
@@ -982,25 +983,6 @@
         "Security Affairs"
       ],
       "score": 1.91
-    },
-    {
-      "id": "0c4e661cc31a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
-      "url": "https://www.aa.com.tr/en/europe/frances-afp-news-agency-hit-by-cyberattack-takes-content-platform-offline/4139870",
-      "source": "Anadolu Agency",
-      "publishedAt": "2026-11-26T03:30:00.000Z",
-      "latestAt": "2026-11-27T02:49:26.000Z",
-      "firstSeenAt": "2026-11-27T01:28:20.315Z",
-      "outlets": 4,
-      "outletNames": [
-        "Al Jazeera on MSN",
-        "Anadolu Agency",
-        "Anadolu Ajansı",
-        "BusinessToday Malaysia"
-      ],
-      "score": 1.9
     },
     {
       "id": "6051e6900706",
@@ -1105,25 +1087,6 @@
       "score": 1.71
     },
     {
-      "id": "3811b0439e08",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Over 100,000 Missouri customers without power as snow falls across St. Louis area",
-      "url": "https://www.msn.com/en-us/news/other/over-100-000-missouri-customers-without-power-as-snow-falls-across-st-louis-area/ar-AA2ih1Ty",
-      "source": "First Alert 4 on MSN",
-      "publishedAt": "2026-11-26T03:32:53.000Z",
-      "latestAt": "2026-11-26T14:30:00.000Z",
-      "firstSeenAt": "2026-11-26T12:11:06.237Z",
-      "outlets": 2,
-      "outletNames": [
-        "First Alert 4 on MSN",
-        "KMOV"
-      ],
-      "trending": 20000,
-      "trendTerm": "tornado warning",
-      "score": 1.71
-    },
-    {
       "id": "cc0a42ab87c1",
       "cat": "grid",
       "kind": "news",
@@ -1131,7 +1094,7 @@
       "url": "https://www.yahoo.com/news/weather-news/articles/storms-disrupt-thanksgiving-flight-delays-230636756.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-26T15:05:00.000Z",
-      "latestAt": "2026-11-26T15:06:36.000Z",
+      "latestAt": "2026-11-26T16:00:00.000Z",
       "firstSeenAt": "2026-11-26T23:58:05.239Z",
       "outlets": 2,
       "outletNames": [
@@ -1384,7 +1347,7 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaGhLVHZrdmZOLTZzTlo3dW5QMGR2bGJlYjFGNEVTUkIwc1lqUEdLdDNCOTFZaHR4MWhsS2NoWC0xRzhBVHJOZWJyZmRuWF85NThrS2paRHZMNm9NUGJuakZ2RE9kT2N5SV9iNTVkT1UwZlZTdzN0aDJ4eVFEYXAwVmN2R3gzUGJYQUtVNEN0ZVV2WGRncFlQNXlWTng4ZFRDOGFoX3NR?oc=5",
       "source": "https://www.thetraveler.org/",
       "publishedAt": "2026-11-26T07:46:16.000Z",
-      "latestAt": "2026-11-26T07:46:16.000Z",
+      "latestAt": "2026-11-26T23:26:23.000Z",
       "firstSeenAt": "2026-11-26T07:55:25.802Z",
       "outlets": 1,
       "outletNames": [
@@ -1779,6 +1742,24 @@
       "score": 1
     },
     {
+      "id": "9101f0700586",
+      "cat": "weather",
+      "kind": "news",
+      "title": "‘Clashing Through the Snow’ turned a Hudson Valley blizzard into a holiday rom-com",
+      "url": "https://www.timesunion.com/movies/article/clashing-through-the-snow-amazon-locations-22541310.php",
+      "source": "Times Union",
+      "publishedAt": "2026-11-27T03:20:00.000Z",
+      "latestAt": "2026-11-27T03:20:00.000Z",
+      "firstSeenAt": "2026-11-27T03:43:35.794Z",
+      "outlets": 1,
+      "outletNames": [
+        "Times Union"
+      ],
+      "trending": 500,
+      "trendTerm": "clashing through the snow cast",
+      "score": 0.99
+    },
+    {
       "id": "80d758cd2a9e",
       "cat": "hacks",
       "kind": "news",
@@ -1857,6 +1838,22 @@
         "Volcano Discovery"
       ],
       "score": 0.99
+    },
+    {
+      "id": "c8190fb9b846",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Tens of thousands without power in Lancaster County: PPL",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNVdLWkJjX2NaZ2VGMmpGZjlrdUx0QjQtQU9vanVQeTdLckEtblQzZVkxM2x4UFdzLUpidXhObDNRSXBIb2d6T3hfSWVWX05pVDc0NVNXQ0NCa0pDMkJtY0VJV3paMG44UWxsR1lCbC1qLVpNcUFNR2szaTFwRHp4OUhvT01rU3FlS0J2TXB3SEFHV1FM?oc=5",
+      "source": "WHP Harrisburg",
+      "publishedAt": "2026-11-27T02:47:28.000Z",
+      "latestAt": "2026-11-27T02:47:28.000Z",
+      "firstSeenAt": "2026-11-27T03:43:35.794Z",
+      "outlets": 1,
+      "outletNames": [
+        "WHP Harrisburg"
+      ],
+      "score": 0.98
     },
     {
       "id": "9e98c7904766",
