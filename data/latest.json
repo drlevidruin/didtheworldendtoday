@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T04:58:49.971Z",
-  "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 23:58 ET",
-  "score": 66,
+  "buildTime": "2026-11-27T05:13:51.187Z",
+  "etDate": "2026-11-27",
+  "etStamp": "2026-11-27 00:13 ET",
+  "score": 72,
   "fired": [
     "flights",
     "hacks",
@@ -12,6 +12,7 @@
     "sun",
     "earth",
     "markets",
+    "ai",
     "grid",
     "germs",
     "weather"
@@ -23,10 +24,10 @@
       "points": 6
     }
   ],
-  "change": -14,
+  "change": 6,
   "yesterday": {
-    "date": "2026-11-25",
-    "score": 80,
+    "date": "2026-11-26",
+    "score": 66,
     "fired": [
       "flights",
       "hacks",
@@ -35,7 +36,6 @@
       "sun",
       "earth",
       "markets",
-      "ai",
       "grid",
       "germs",
       "weather"
@@ -45,21 +45,21 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1191,
-  "lastSuccessAt": "2026-11-27T04:58:49.971Z",
+  "headlinesRead": 1341,
+  "lastSuccessAt": "2026-11-27T05:13:51.187Z",
   "rollingFallback": false,
   "cats": {
     "flights": 10,
     "grid": 28,
-    "hacks": 32,
+    "hacks": 30,
     "markets": 4,
     "weather": 5,
     "internet": 6,
     "germs": 4,
     "sun": 3,
-    "earth": 4,
-    "ai": 1,
-    "space": 3
+    "ai": 3,
+    "space": 3,
+    "earth": 4
   },
   "vital": {
     "quake": {
@@ -176,80 +176,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 920,
+      "count": 1003,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "bing": {
       "ok": true,
-      "count": 236,
-      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "count": 273,
+      "error": null,
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 30,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T04:58:49.971Z"
+      "lastOkAt": "2026-11-27T05:13:51.187Z"
     }
   },
   "stories": [
@@ -329,6 +330,46 @@
       "score": 3.49
     },
     {
+      "id": "9d364f5dc0cd",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thanksgiving storms leave nearly a million without power across the US",
+      "url": "https://www.aljazeera.com/news/2026/11/27/thanksgiving-storms-leave-nearly-a-million-without-power-across-the-us",
+      "source": "Al Jazeera",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-27T04:01:51.000Z",
+      "firstSeenAt": "2026-11-26T18:12:05.865Z",
+      "outlets": 6,
+      "outletNames": [
+        "X",
+        "Gossip Cop",
+        "Wide Open Country",
+        "Al Jazeera",
+        "USA TODAY",
+        "Lokmat Times"
+      ],
+      "score": 3.45
+    },
+    {
+      "id": "0c4e661cc31a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Global news agency AFP reports cyberattack, shuts down content platform",
+      "url": "https://www.msn.com/en-us/news/world/global-news-agency-afp-reports-cyberattack-shuts-down-content-platform/ar-AA2ijNdv",
+      "source": "Al Jazeera on MSN",
+      "publishedAt": "2026-11-26T17:07:44.000Z",
+      "latestAt": "2026-11-27T03:53:26.000Z",
+      "firstSeenAt": "2026-11-27T03:58:37.448Z",
+      "outlets": 4,
+      "outletNames": [
+        "Al Jazeera on MSN",
+        "Anadolu Ajansı",
+        "BusinessToday Malaysia",
+        "Inshorts"
+      ],
+      "score": 3.44
+    },
+    {
       "id": "11f9749693a7",
       "cat": "hacks",
       "kind": "news",
@@ -345,26 +386,6 @@
         "Forbes",
         "Yahoo",
         "Yahoo News Singapore"
-      ],
-      "score": 3.2
-    },
-    {
-      "id": "9d364f5dc0cd",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thanksgiving storms leave nearly a million without power across the US",
-      "url": "https://www.aljazeera.com/news/2026/11/27/thanksgiving-storms-leave-nearly-a-million-without-power-across-the-us",
-      "source": "Al Jazeera",
-      "publishedAt": "2026-11-26T16:00:00.000Z",
-      "latestAt": "2026-11-26T22:48:03.000Z",
-      "firstSeenAt": "2026-11-26T18:12:05.865Z",
-      "outlets": 5,
-      "outletNames": [
-        "X",
-        "Gossip Cop",
-        "Wide Open Country",
-        "Al Jazeera",
-        "USA TODAY"
       ],
       "score": 3.2
     },
@@ -389,24 +410,6 @@
         "marketscreener.com"
       ],
       "score": 3.15
-    },
-    {
-      "id": "0c4e661cc31a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Global news agency AFP reports cyberattack, shuts down content platform",
-      "url": "https://www.msn.com/en-us/news/world/global-news-agency-afp-reports-cyberattack-shuts-down-content-platform/ar-AA2ijNdv",
-      "source": "Al Jazeera on MSN",
-      "publishedAt": "2026-11-26T17:07:44.000Z",
-      "latestAt": "2026-11-27T02:49:26.000Z",
-      "firstSeenAt": "2026-11-27T03:58:37.448Z",
-      "outlets": 3,
-      "outletNames": [
-        "Al Jazeera on MSN",
-        "Anadolu Ajansı",
-        "BusinessToday Malaysia"
-      ],
-      "score": 2.96
     },
     {
       "id": "0a73606aa929",
@@ -533,25 +536,6 @@
       "score": 2.62
     },
     {
-      "id": "b0adfba84f59",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA hit by cyberattack amid mounting scrutiny of Gianni Infantino",
-      "url": "https://www.msn.com/en-au/news/other/fifa-hit-by-cyberattack-amid-mounting-scrutiny-of-gianni-infantino/ar-AA2ihOxO",
-      "source": "The Independent on MSN",
-      "publishedAt": "2026-11-26T05:06:05.000Z",
-      "latestAt": "2026-11-26T14:36:06.000Z",
-      "firstSeenAt": "2026-11-26T13:11:16.410Z",
-      "outlets": 4,
-      "outletNames": [
-        "The Independent",
-        "Yahoo Sports",
-        "LiveScore",
-        "AOL.co.uk"
-      ],
-      "score": 2.6
-    },
-    {
       "id": "d8faac5af851",
       "cat": "hacks",
       "kind": "news",
@@ -568,6 +552,26 @@
         "Beinsure"
       ],
       "score": 2.46
+    },
+    {
+      "id": "48ea6ffdd742",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "1Password Data Breach – Hackers Compromise GitHub Account to Steal Customer Data and Source Code",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUld1RTlkUzE2Z3RNbUtpUnVOSnd1VU9ZY19lX3ZJOUZYdUQ4MlpNNXFDQUI0VGpOVFdxSmNydVlsbUZhaVVYaGRuYWxlcXVYWENZVmR3SXVLd3NpbGhodzhJbFpJYmhQZ25jZjY5M0hjU1dueVp2SHRNT0VEeTlrU3AxWVRyX3BFSmfSAYoBQVVfeXFMTVJXdUU5ZFMxNmd0TW1LaVJ1Tkp3dVVPWWNfZV92STlGWHVEODJaTTVxQ0FCNFRqTlRXcUpjcnVZbG1GYWlVWGhkbmFsZXF1WFhDWVZkd0l1S3dzaWxoaHc4SWxaSWJoUGduY2Y2OTNIY1NXbnladkh0TU9FRHk5a1NwMVlUcl9wRUpn?oc=5",
+      "source": "GBHackers News",
+      "publishedAt": "2026-11-26T06:42:52.000Z",
+      "latestAt": "2026-11-27T03:19:47.000Z",
+      "firstSeenAt": "2026-11-26T22:57:53.537Z",
+      "outlets": 5,
+      "outletNames": [
+        "GBHackers News",
+        "Deccan Herald",
+        "LinkedIn",
+        "Cyber Press",
+        "The Indian Express"
+      ],
+      "score": 2.42
     },
     {
       "id": "06a52e93c62c",
@@ -723,23 +727,6 @@
       "score": 1.53
     },
     {
-      "id": "6fc50157d9ee",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Preliminary 5.7-magnitude earthquake strikes off Baja California Peninsula",
-      "url": "https://www.yahoo.com/news/science/articles/preliminary-5-7-magnitude-earthquake-181532226.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T05:07:00.000Z",
-      "latestAt": "2026-11-26T18:15:32.000Z",
-      "firstSeenAt": "2026-11-26T19:27:15.794Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "New York Post"
-      ],
-      "score": 1.52
-    },
-    {
       "id": "3a64d7cbe587",
       "cat": "ai",
       "kind": "news",
@@ -820,24 +807,20 @@
       "score": 1.35
     },
     {
-      "id": "48ea6ffdd742",
-      "cat": "hacks",
+      "id": "60bf689c89a1",
+      "cat": "internet",
       "kind": "news",
-      "title": "1Password Data Breach – Hackers Compromise GitHub Account to Steal Customer Data and Source Code",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUld1RTlkUzE2Z3RNbUtpUnVOSnd1VU9ZY19lX3ZJOUZYdUQ4MlpNNXFDQUI0VGpOVFdxSmNydVlsbUZhaVVYaGRuYWxlcXVYWENZVmR3SXVLd3NpbGhodzhJbFpJYmhQZ25jZjY5M0hjU1dueVp2SHRNT0VEeTlrU3AxWVRyX3BFSmfSAYoBQVVfeXFMTVJXdUU5ZFMxNmd0TW1LaVJ1Tkp3dVVPWWNfZV92STlGWHVEODJaTTVxQ0FCNFRqTlRXcUpjcnVZbG1GYWlVWGhkbmFsZXF1WFhDWVZkd0l1S3dzaWxoaHc4SWxaSWJoUGduY2Y2OTNIY1NXbnladkh0TU9FRHk5a1NwMVlUcl9wRUpn?oc=5",
-      "source": "GBHackers News",
-      "publishedAt": "2026-11-26T06:42:52.000Z",
-      "latestAt": "2026-11-27T03:19:47.000Z",
-      "firstSeenAt": "2026-11-26T22:57:53.537Z",
-      "outlets": 5,
+      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
+      "source": "StoneWars.com",
+      "publishedAt": "2026-11-26T09:48:28.000Z",
+      "latestAt": "2026-11-26T09:48:28.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 1,
       "outletNames": [
-        "GBHackers News",
-        "Deccan Herald",
-        "LinkedIn",
-        "Cyber Press",
-        "The Indian Express"
+        "StoneWars.com"
       ],
-      "score": 2.42
+      "score": 1.35
     },
     {
       "id": "dcc1deef7fbd",
@@ -855,24 +838,6 @@
         "Yahoo Sports"
       ],
       "score": 2.41
-    },
-    {
-      "id": "ba108ccd0525",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "1Password confirms hackers stole customer data, but not their passwords",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1FMnY1OWdHMEx2OGRmQWhzVjdfS1I1SVpIb29JS0szR2hLcjJnT1NFN1E3UzJpdHZmTGEtOXFLZEJkbGFETVpQaVJHN0duRjl5Qm0xTElUUHFfQXhNVFdpZFNoMVRwZXJBd0g1STlFc3o?oc=5",
-      "source": "Android Authority",
-      "publishedAt": "2026-11-26T05:10:24.000Z",
-      "latestAt": "2026-11-26T11:02:45.000Z",
-      "firstSeenAt": "2026-11-26T09:55:39.177Z",
-      "outlets": 3,
-      "outletNames": [
-        "Android Authority",
-        "Windows Report",
-        "2-Spyware"
-      ],
-      "score": 2.38
     },
     {
       "id": "8131b068c68e",
@@ -1066,23 +1031,6 @@
       "score": 1.86
     },
     {
-      "id": "5f266584a470",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Standard Chartered's Zodia Custody Says Hackers Accessed Client Contact Details",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/standard-chartereds-zodia-custody-says-131319768.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-26T05:13:00.000Z",
-      "latestAt": "2026-11-26T13:13:19.000Z",
-      "firstSeenAt": "2026-11-26T13:26:15.471Z",
-      "outlets": 2,
-      "outletNames": [
-        "Decrypt",
-        "Yahoo Finance"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "5a5580e5c64e",
       "cat": "hacks",
       "kind": "news",
@@ -1236,6 +1184,25 @@
       "score": 1.66
     },
     {
+      "id": "a6632bb51604",
+      "cat": "grid",
+      "kind": "news",
+      "title": "US storm brings severe flooding, power outages on Thanksgiving; Midwest and Northeast hit - watch",
+      "url": "https://www.msn.com/en-in/weather/extreme-weather-events/us-storm-brings-severe-flooding-power-outages-on-thanksgiving-midwest-and-northeast-hit-watch/ar-AA2ijNQc",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-26T18:22:02.000Z",
+      "latestAt": "2026-11-27T00:30:00.000Z",
+      "firstSeenAt": "2026-11-27T05:13:51.187Z",
+      "outlets": 2,
+      "outletNames": [
+        "Hindustan Times on MSN",
+        "cbsnews.com"
+      ],
+      "score": 1.64,
+      "quiet": true,
+      "quietReason": "headline mentions flooding"
+    },
+    {
       "id": "209fc1576206",
       "cat": "grid",
       "kind": "news",
@@ -1321,6 +1288,23 @@
       "score": 1.45
     },
     {
+      "id": "e7f4ea1619d9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-26T11:52:32.000Z",
+      "latestAt": "2026-11-26T14:47:38.000Z",
+      "firstSeenAt": "2026-11-27T05:13:51.187Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "TRT Afrika"
+      ],
+      "score": 1.42
+    },
+    {
       "id": "a03a692953af",
       "cat": "grid",
       "kind": "news",
@@ -1370,22 +1354,6 @@
       "trending": 500,
       "trendTerm": "north carolina",
       "score": 1.38
-    },
-    {
-      "id": "60bf689c89a1",
-      "cat": "internet",
-      "kind": "news",
-      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
-      "source": "StoneWars.com",
-      "publishedAt": "2026-11-26T09:48:28.000Z",
-      "latestAt": "2026-11-26T09:48:28.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 1,
-      "outletNames": [
-        "StoneWars.com"
-      ],
-      "score": 1.35
     },
     {
       "id": "9783082a53d9",
@@ -1804,22 +1772,6 @@
       "score": 1
     },
     {
-      "id": "edbe55757b0f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outages reported across North Carolina on Thanksgiving morning amid a wind advisory",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTXd3Mnk4ZHAxdXQxMHV5LTF5NGNlX2liQzgzdVltUG9kN3ZYakx4N25faWRxdmFNUDJhYkJXM0pTU0c2M2RVTFBaanVvNUI3RXVDSHp5TUpYcV9sR2FnN1UxMnVXQmkxQlktQm80LTdDeEJnWlIwQUs2dmJRLVhHWmZOTFlNNW9GUzFlb0ZuYVhrR1RzUkloQjE5ZDMwSHROOWdIWU9SLXpzSWhBQmQ4Sw?oc=5",
-      "source": "WLOS",
-      "publishedAt": "2026-11-27T04:18:45.000Z",
-      "latestAt": "2026-11-27T04:18:45.000Z",
-      "firstSeenAt": "2026-11-27T04:43:43.269Z",
-      "outlets": 1,
-      "outletNames": [
-        "WLOS"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "7a14efcae84f",
       "cat": "earth",
       "kind": "news",
@@ -1962,6 +1914,54 @@
         "IFLScience"
       ],
       "score": 0.85
+    },
+    {
+      "id": "26527bd31018",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Volcano Watch — Four Years Later: Remembering Maunaloa’s 2022 Eruption",
+      "url": "https://mauinow.com/2026/11/26/volcano-watch-four-years-later-remembering-maunaloas-2022-eruption/",
+      "source": "Maui Now",
+      "publishedAt": "2026-11-26T18:00:00.000Z",
+      "latestAt": "2026-11-26T18:00:00.000Z",
+      "firstSeenAt": "2026-11-27T05:13:51.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "Maui Now"
+      ],
+      "score": 0.81
+    },
+    {
+      "id": "3f99b2a2a3e3",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Is ChatGPT down right now?",
+      "url": "https://www.jkn.co.kr/editions/english/status/chatgpt",
+      "source": "JKN",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-26T16:00:00.000Z",
+      "firstSeenAt": "2026-11-27T05:13:51.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "JKN"
+      ],
+      "score": 0.78
+    },
+    {
+      "id": "6b2b2e2c7601",
+      "cat": "ai",
+      "kind": "news",
+      "title": "Anthropic Is Down 7% Since Its IPO. History Says a $5,000 Investment Could Be Worth This Much in a Year.",
+      "url": "https://www.fool.com/investing/2026/11/26/anthropic-is-down-7-since-its-ipo-history-says-a-usd5-000-investment-could-be-worth-this-much-in-a-year/",
+      "source": "The Motley Fool",
+      "publishedAt": "2026-11-26T07:13:00.000Z",
+      "latestAt": "2026-11-26T07:13:00.000Z",
+      "firstSeenAt": "2026-11-27T05:13:51.187Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Motley Fool"
+      ],
+      "score": 0.63
     }
   ]
 }
