@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T21:16:24.552Z",
+  "buildTime": "2026-11-27T21:46:34.962Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 16:16 ET",
+  "etStamp": "2026-11-27 16:46 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,15 +44,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1278,
-  "lastSuccessAt": "2026-11-27T21:16:24.552Z",
+  "headlinesRead": 1233,
+  "lastSuccessAt": "2026-11-27T21:46:34.962Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 42,
-    "flights": 7,
+    "hacks": 41,
+    "flights": 6,
     "germs": 5,
-    "grid": 13,
-    "weather": 10,
+    "grid": 16,
+    "weather": 9,
     "ai": 3,
     "earth": 4,
     "markets": 4,
@@ -175,20 +175,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 970,
+      "count": 929,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
+      "count": 270,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     },
     "gdelt": {
       "ok": false,
@@ -200,55 +200,56 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:16:24.552Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T21:16:24.552Z"
+      "lastOkAt": "2026-11-27T21:46:34.962Z"
     }
   },
   "stories": [
@@ -305,53 +306,6 @@
         "nationwide": false,
         "reason": "other"
       }
-    },
-    {
-      "id": "ce355e701f51",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Air Force Cloud Platform Breached by Hackers, Putting Sensitive Data at Risk: Report",
-      "url": "https://www.military.com/us-air-force-computing-platform-breached-by-hackers-report",
-      "source": "Military.com",
-      "publishedAt": "2026-11-26T22:00:00.000Z",
-      "latestAt": "2026-11-27T20:56:01.000Z",
-      "firstSeenAt": "2026-11-27T13:15:06.042Z",
-      "outlets": 32,
-      "outletNames": [
-        "tech-ish.com",
-        "Techish Kenya",
-        "USA Today",
-        "Military.com",
-        "Hindustan Times",
-        "CNBC",
-        "Yahoo",
-        "FOX 5 New York",
-        "Reuters on MSN",
-        "news.sky.com",
-        "Interesting Engineering",
-        "Fox News",
-        "U.S. News & World Report",
-        "WJTV",
-        "CNA",
-        "Seeking Alpha",
-        "Yahoo Finance",
-        "The Independent",
-        "The Times of India",
-        "The Next Web",
-        "Bloomberg",
-        "Quartz",
-        "Escudo Digital",
-        "The Hill",
-        "Floridian Press",
-        "Washington Times",
-        "The Times of Israel",
-        "Washington Examiner",
-        "Beinsure",
-        "News Radio 1200 WOAI",
-        "Forbes",
-        "The New Voice of Ukraine"
-      ],
-      "score": 4.47
     },
     {
       "id": "1b7bf10ac16a",
@@ -424,6 +378,24 @@
       "score": 3.46
     },
     {
+      "id": "92c5ec80fbd1",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US’s Nationwide Response Plan For ‘Black-Level’ Cyber Attack",
+      "url": "https://www.newsweek.com/us-nationwide-response-black-level-cyber-attack-12774288",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-27T08:58:00.000Z",
+      "latestAt": "2026-11-27T09:35:00.000Z",
+      "firstSeenAt": "2026-11-27T17:15:46.695Z",
+      "outlets": 3,
+      "outletNames": [
+        "Newsweek",
+        "AOL",
+        "Yahoo"
+      ],
+      "score": 3.12
+    },
+    {
       "id": "824d40a7de12",
       "cat": "germs",
       "kind": "news",
@@ -442,24 +414,6 @@
         "eKathimerini.com"
       ],
       "score": 2.86
-    },
-    {
-      "id": "0a73606aa929",
-      "cat": "flights",
-      "kind": "news",
-      "title": "US grounds flights to Washington National Airport due to thunderstorms",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdk9uZ0Y0OEJXTFMxSmJmVUM5MFA5cTFJbmxZUGxzOHJGbVJ2UVhZLXV3TEpVRlRBU0Z6TmRtVTN5MktpVm41b25XdV9NWnVISlREa2ZEcHFGbEVoNDlZc2RKMkViWXczS1RiYm1wWE9rSHlIRFpjeTN6Um1udUJQc29LZEFjbTVNNUx6eXVyTERXMklxUjZiMDdTNEktZnNTZmJXRzhsTFV5M2xqendXcnVB?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-26T21:36:28.000Z",
-      "latestAt": "2026-11-27T04:37:05.000Z",
-      "firstSeenAt": "2026-11-26T21:42:38.401Z",
-      "outlets": 3,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi",
-        "Avi-Go"
-      ],
-      "score": 2.58
     },
     {
       "id": "94e16ff27e9a",
@@ -562,6 +516,23 @@
       "outletNames": [
         "AOL",
         "The Motley Fool"
+      ],
+      "score": 1.7
+    },
+    {
+      "id": "7149e421759e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "The hidden cost of technical debt seen in FAA ground stop",
+      "url": "https://www.arkansasonline.com/news/2026/nov/27/the-hidden-cost-of-technical-debt-seen-in-faa/",
+      "source": "Arkansas Democrat-Gazette",
+      "publishedAt": "2026-11-27T00:15:00.000Z",
+      "latestAt": "2026-11-27T08:15:00.000Z",
+      "firstSeenAt": "2026-11-27T09:14:28.601Z",
+      "outlets": 2,
+      "outletNames": [
+        "Arkansas Democrat-Gazette",
+        "Northwest Arkansas Democrat-Gazette"
       ],
       "score": 1.7
     },
@@ -709,23 +680,6 @@
       "score": 1.72
     },
     {
-      "id": "7149e421759e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "The hidden cost of technical debt seen in FAA ground stop",
-      "url": "https://www.arkansasonline.com/news/2026/nov/27/the-hidden-cost-of-technical-debt-seen-in-faa/",
-      "source": "Arkansas Democrat-Gazette",
-      "publishedAt": "2026-11-27T00:15:00.000Z",
-      "latestAt": "2026-11-27T08:15:00.000Z",
-      "firstSeenAt": "2026-11-27T09:14:28.601Z",
-      "outlets": 2,
-      "outletNames": [
-        "Arkansas Democrat-Gazette",
-        "Northwest Arkansas Democrat-Gazette"
-      ],
-      "score": 1.7
-    },
-    {
       "id": "d0eae5ed65df",
       "cat": "earth",
       "kind": "news",
@@ -871,21 +825,20 @@
       "score": 1.39
     },
     {
-      "id": "92c5ec80fbd1",
-      "cat": "hacks",
+      "id": "36bd83d9f0d6",
+      "cat": "internet",
       "kind": "news",
-      "title": "US’s Nationwide Response Plan For ‘Black-Level’ Cyber Attack",
-      "url": "https://www.newsweek.com/us-nationwide-response-black-level-cyber-attack-12774288",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-27T08:58:00.000Z",
-      "latestAt": "2026-11-27T09:35:00.000Z",
-      "firstSeenAt": "2026-11-27T17:15:46.695Z",
-      "outlets": 2,
+      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
+      "source": "Demokratis.co.id",
+      "publishedAt": "2026-11-27T14:44:49.000Z",
+      "latestAt": "2026-11-27T14:44:49.000Z",
+      "firstSeenAt": "2026-11-27T15:45:32.463Z",
+      "outlets": 1,
       "outletNames": [
-        "Newsweek",
-        "AOL"
+        "Demokratis.co.id"
       ],
-      "score": 2.41
+      "score": 1.38
     },
     {
       "id": "ce1dc71aa12f",
@@ -1213,6 +1166,23 @@
       "score": 1.66
     },
     {
+      "id": "842eb3255e23",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "American uranium plant forced offline following cyberattack — Peninsula Energy shuts down mining operation to investigate incident",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/american-uranium-plant-forced-offline-190500003.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-27T11:05:00.000Z",
+      "latestAt": "2026-11-27T19:05:00.000Z",
+      "firstSeenAt": "2026-11-27T21:46:34.962Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "TechRadar"
+      ],
+      "score": 1.64
+    },
+    {
       "id": "b6ac6e6b8bc2",
       "cat": "hacks",
       "kind": "news",
@@ -1309,22 +1279,6 @@
         "UNILAD Tech"
       ],
       "score": 1.39
-    },
-    {
-      "id": "36bd83d9f0d6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
-      "source": "Demokratis.co.id",
-      "publishedAt": "2026-11-27T14:44:49.000Z",
-      "latestAt": "2026-11-27T14:44:49.000Z",
-      "firstSeenAt": "2026-11-27T15:45:32.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "Demokratis.co.id"
-      ],
-      "score": 1.38
     },
     {
       "id": "4a31471a8cff",
@@ -1665,22 +1619,6 @@
       "score": 1.19
     },
     {
-      "id": "9568ceceed12",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Cities along the East Coast see record heat, more severe weather hits Midwest and Plains",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaXAzbEVvenN2cF84dWFsREl5Y2tBaTgzMzVQS01JRUdVNkFUek9FOHVFQnBLT0g0Y3BrYjliUjVqUmdwLVhrcVdWUTk5ZXFha2dLVTN5by1udGhZWHRCS0JxV1BLcUUxa3ROVWNMY3NtVDBwSC1ILUFiclFhanprWEJFMEdRZkJhUFpNMmxneGFFT3RNSlHSAZsBQVVfeXFMT3dNQ2hTa0VDYVgzejczWnBGdnluM1dya2FBYWNtbnlIcFY2NVNEYmU0Y0QtRnVmUDhFYnd0MjM3akUxSEFDemczclRtUkpLckxjQnFwVzBVQWxqMEFhUmhPbkpnX19keUNXclZmV05tVUN4QzFvRVFXX084VnhYVmZZMUV6SDFuVy12LXczYzQ0dC1jYU5VWWFhck0?oc=5",
-      "source": "ABC News - Breaking News, Latest News and Videos",
-      "publishedAt": "2026-11-26T21:42:54.000Z",
-      "latestAt": "2026-11-26T21:42:54.000Z",
-      "firstSeenAt": "2026-11-27T06:59:07.893Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC News - Breaking News, Latest News and Videos"
-      ],
-      "score": 1.18
-    },
-    {
       "id": "423122838e82",
       "cat": "grid",
       "kind": "news",
@@ -1745,20 +1683,36 @@
       "score": 1.08
     },
     {
-      "id": "dcac5b231278",
-      "cat": "hacks",
+      "id": "d129ff169ea2",
+      "cat": "grid",
       "kind": "news",
-      "title": "Hackers reportedly cracked a major US military cloud, putting sensitive systems at risk",
-      "url": "https://www.digitaltrends.com/computing/hackers-reportedly-cracked-a-major-us-military-cloud-putting-sensitive-systems-at-risk/",
-      "source": "Digital Trends",
-      "publishedAt": "2026-11-26T21:34:00.000Z",
-      "latestAt": "2026-11-27T13:34:13.000Z",
-      "firstSeenAt": "2026-11-27T13:45:11.685Z",
+      "title": "Power outage affects more than 2000 customers in Rochester",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPV1JSSHpkb21aQVNTSG93Q3h2ZU5VSFNXLWdGSy0tVUVNVHZGd3pPaFBzWFoyNVlUbWV1c1pnUHdwOWsyS1ZVT1hzeDFQckpUNVc1cVRaUHZ4RjRYMUtwdm9zVnF3YURKTEd2MEtvdE5kMzZLOGZ6eGZfeGtUNXpvbktSMVBVakl3OUVzLWZ1S3Rkd9IBpgFBVV95cUxNc2JLcEhvUVRkV2hGS3Q3ejZIcTJtR1FiMGd1M1N4YmpfeHllYnR4czlJYVBJZ2t5UW16ZXVLc0kyQjdVTWVkcDhFRWo2T3NpSkR1d2JpZTNIUVFqVHJJVUxCMzlBY0ZGOXZGS3NGZENiN1JmT0gtb3ltYkFYa0xFTHdFR0R0azg1VGJnUkNQX2o4d3NtaTRxRlpBSC1LeGU3dFBtTFNB?oc=5",
+      "source": "KTTC",
+      "publishedAt": "2026-11-27T21:39:00.000Z",
+      "latestAt": "2026-11-27T21:39:00.000Z",
+      "firstSeenAt": "2026-11-27T21:46:34.962Z",
       "outlets": 1,
       "outletNames": [
-        "Digital Trends"
+        "KTTC"
       ],
-      "score": 1.02
+      "score": 1
+    },
+    {
+      "id": "36bbee094cbd",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Hydro-Québec announces overnight power outage for 6,000 customers in Dorval",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONnAyU0pJQnZ5cWh2aE5JODExeTBDV1lNZkV4OGZvanJnbTVPYm9qZVlYbC1MdlhyUUtvQnVBX250TWcydHhJbTEwTGZzUktfa0dHTmQzQlh2b3NwZDVkY0JvUl9EVHlndXBTR01BcXQzaURlSDlZbHQwbGlDblJmd1VzOHdMeXFqVXFMTGQ0a1VYVlRMRENZR0RzTURRVGM?oc=5",
+      "source": "CityNews Montreal",
+      "publishedAt": "2026-11-27T21:33:45.000Z",
+      "latestAt": "2026-11-27T21:33:45.000Z",
+      "firstSeenAt": "2026-11-27T21:46:34.962Z",
+      "outlets": 1,
+      "outletNames": [
+        "CityNews Montreal"
+      ],
+      "score": 1
     },
     {
       "id": "7b6eae4abe4d",
@@ -1871,6 +1825,22 @@
       "outlets": 1,
       "outletNames": [
         "Inside Retail Australia"
+      ],
+      "score": 1
+    },
+    {
+      "id": "159f8ed25f06",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Wind leaves more than 105,000 PPL customers without power",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMS1JRXpoYm1ydld4MlRSSjVmd1JTa0lnaDFQZ3VHMFNyM0VBTTlEbDlVdUlVQ3hCNkY4ZzFQMTlkdDJqaXREZnRlUkkzd1lrVjlycmtwMENrbFZRUGhEdnJFM3ozZGptQ3FwLVBqZ2s1am9vY01QTjBsaklVM2Zqcy0wTmRRUXFtVVFzM3J3?oc=5",
+      "source": "fox56.com",
+      "publishedAt": "2026-11-27T02:46:12.000Z",
+      "latestAt": "2026-11-27T02:47:00.000Z",
+      "firstSeenAt": "2026-11-27T02:58:26.353Z",
+      "outlets": 1,
+      "outletNames": [
+        "fox56.com"
       ],
       "score": 1
     },
