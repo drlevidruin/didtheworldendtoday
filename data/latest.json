@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T22:16:32.855Z",
+  "buildTime": "2026-11-27T22:31:38.976Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 17:16 ET",
-  "score": 66,
+  "etStamp": "2026-11-27 17:31 ET",
+  "score": 72,
   "fired": [
     "flights",
     "hacks",
@@ -14,7 +14,8 @@
     "ai",
     "grid",
     "germs",
-    "weather"
+    "weather",
+    "animals"
   ],
   "bumps": [
     {
@@ -23,7 +24,7 @@
       "points": 6
     }
   ],
-  "change": 0,
+  "change": 6,
   "yesterday": {
     "date": "2026-11-26",
     "score": 66,
@@ -44,20 +45,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1292,
-  "lastSuccessAt": "2026-11-27T22:16:32.855Z",
+  "headlinesRead": 632,
+  "lastSuccessAt": "2026-11-27T22:31:38.976Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 41,
+    "hacks": 40,
     "flights": 5,
     "germs": 5,
-    "grid": 16,
+    "grid": 18,
     "weather": 8,
     "ai": 3,
+    "animals": 2,
     "earth": 4,
     "markets": 4,
-    "internet": 7,
-    "animals": 2,
+    "internet": 6,
     "space": 4,
     "sun": 1
   },
@@ -176,80 +177,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 984,
-      "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "count": 320,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 8 of 26 queries)",
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
+      "count": 278,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:16:32.855Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z"
+      "lastOkAt": "2026-11-27T22:31:38.976Z"
     }
   },
   "stories": [
@@ -263,7 +265,7 @@
       "publishedAt": "2026-11-27T03:00:29.000Z",
       "latestAt": "2026-11-27T15:59:48.000Z",
       "firstSeenAt": "2026-11-27T11:14:46.817Z",
-      "outlets": 16,
+      "outlets": 17,
       "outletNames": [
         "The Independent on MSN",
         "AOL.co.uk",
@@ -280,9 +282,10 @@
         "GB News",
         "Business Upturn",
         "CX Today",
-        "Daily Record"
+        "Daily Record",
+        "UA.NEWS"
       ],
-      "score": 6.04
+      "score": 6.14
     },
     {
       "id": "sig:faa-stop:LGA:2026-11-26",
@@ -648,6 +651,23 @@
       "score": 1.71
     },
     {
+      "id": "c42ed7992d88",
+      "cat": "animals",
+      "kind": "news",
+      "title": "A Portuguese Zoo's Escaped Monkey Was Caught After Days of Eating Avocados",
+      "url": "https://www.aol.com/articles/portuguese-zoos-escaped-monkey-caught-184106000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-27T10:41:00.000Z",
+      "latestAt": "2026-11-27T10:41:00.000Z",
+      "firstSeenAt": "2026-11-27T22:16:32.855Z",
+      "outlets": 2,
+      "outletNames": [
+        "AOL",
+        "Yahoo"
+      ],
+      "score": 1.61
+    },
+    {
       "id": "d0eae5ed65df",
       "cat": "earth",
       "kind": "news",
@@ -791,22 +811,6 @@
         "Nature World News"
       ],
       "score": 1.39
-    },
-    {
-      "id": "36bd83d9f0d6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
-      "source": "Demokratis.co.id",
-      "publishedAt": "2026-11-27T14:44:49.000Z",
-      "latestAt": "2026-11-27T14:44:49.000Z",
-      "firstSeenAt": "2026-11-27T15:45:32.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "Demokratis.co.id"
-      ],
-      "score": 1.38
     },
     {
       "id": "bd573c4f71b8",
@@ -1049,6 +1053,23 @@
       "score": 1.7
     },
     {
+      "id": "34fb80859fc2",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Here's how you can replace SNAP food lost in power outage",
+      "url": "https://www.yahoo.com/news/us/articles/heres-replace-snap-food-lost-212101531.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T13:21:00.000Z",
+      "latestAt": "2026-11-27T21:22:40.000Z",
+      "firstSeenAt": "2026-11-27T22:31:38.976Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "KSDK"
+      ],
+      "score": 1.69
+    },
+    {
       "id": "9753aa15b04b",
       "cat": "grid",
       "kind": "news",
@@ -1215,6 +1236,22 @@
       "score": 1.39
     },
     {
+      "id": "36bd83d9f0d6",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
+      "source": "Demokratis.co.id",
+      "publishedAt": "2026-11-27T14:44:49.000Z",
+      "latestAt": "2026-11-27T14:44:49.000Z",
+      "firstSeenAt": "2026-11-27T15:45:32.463Z",
+      "outlets": 1,
+      "outletNames": [
+        "Demokratis.co.id"
+      ],
+      "score": 1.38
+    },
+    {
       "id": "4a31471a8cff",
       "cat": "weather",
       "kind": "news",
@@ -1293,22 +1330,6 @@
         "Avi-Go"
       ],
       "score": 1.31
-    },
-    {
-      "id": "064b9604c379",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft declares ‘Code Red’ in wake of global outage",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPQTBGNWREVFFpQnNmeDVITEp2NEtmLWNJQW90clRvRjJNYTVWNGZkczdWQWFlcVdiblR0dW9NeVl3c0FNTVpzUjlwMnJhYWpQa19iX2dMMXpMN2N1YXljRTlVMkxidVhuQlczbjE0VUZ3c0NYb0dCNGVyaFVxTDVaUGRhSExrdjY1TjNsSUhtazR4bTQ?oc=5",
-      "source": "Cyber Daily",
-      "publishedAt": "2026-11-26T22:20:12.000Z",
-      "latestAt": "2026-11-26T22:20:12.000Z",
-      "firstSeenAt": "2026-11-27T04:04:23.345Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cyber Daily"
-      ],
-      "score": 1.27
     },
     {
       "id": "8cd3cfe6b124",
@@ -1569,22 +1590,6 @@
       "score": 1.12
     },
     {
-      "id": "3ed131f19990",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US Air Force hacked in major security breach exposing one of military’s biggest data platforms",
-      "url": "https://www.the-sun.com/news/17366516/us-air-force-hacked-security-breach/",
-      "source": "The US Sun",
-      "publishedAt": "2026-11-26T22:20:00.000Z",
-      "latestAt": "2026-11-26T22:20:00.000Z",
-      "firstSeenAt": "2026-11-27T12:14:57.663Z",
-      "outlets": 1,
-      "outletNames": [
-        "The US Sun"
-      ],
-      "score": 1.08
-    },
-    {
       "id": "3901d5d9a26c",
       "cat": "grid",
       "kind": "news",
@@ -1779,6 +1784,22 @@
       "score": 1
     },
     {
+      "id": "8e95629f1a2b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power Outage Meals: Refined No-Cook Pantry Dining",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVmloZ0x5dVpvTUk2SmI3ejgyUWRFM1ZQRjhPY0R0bm9CMThOZWdUOVB1QzJKUkkyWm1iQ0JCMktSZnlJaVdNU2kyQ1VHakt2dDBXU3o3OVJNc1VXaTA2RVZUMDZvbGttazJfdlZLOFluUWVOellib1gyVXVnVjlOVEZIeGQzM2ktMGc1alp3?oc=5",
+      "source": "DC Life Magazine",
+      "publishedAt": "2026-11-27T02:33:30.000Z",
+      "latestAt": "2026-11-27T02:33:30.000Z",
+      "firstSeenAt": "2026-11-27T02:43:26.251Z",
+      "outlets": 1,
+      "outletNames": [
+        "DC Life Magazine"
+      ],
+      "score": 1
+    },
+    {
       "id": "fd86856780f0",
       "cat": "earth",
       "kind": "news",
@@ -1905,22 +1926,6 @@
         "UA.NEWS"
       ],
       "score": 0.83
-    },
-    {
-      "id": "c42ed7992d88",
-      "cat": "animals",
-      "kind": "news",
-      "title": "A Portuguese Zoo's Escaped Monkey Was Caught After Days of Eating Avocados",
-      "url": "https://www.aol.com/articles/portuguese-zoos-escaped-monkey-caught-184106000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-27T10:41:00.000Z",
-      "latestAt": "2026-11-27T10:41:00.000Z",
-      "firstSeenAt": "2026-11-27T22:16:32.855Z",
-      "outlets": 1,
-      "outletNames": [
-        "AOL"
-      ],
-      "score": 0.81
     },
     {
       "id": "3f99b2a2a3e3",
