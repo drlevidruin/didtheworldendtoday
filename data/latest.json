@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T02:58:26.353Z",
+  "buildTime": "2026-11-27T03:13:30.910Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 21:58 ET",
+  "etStamp": "2026-11-26 22:13 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,13 +45,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1369,
-  "lastSuccessAt": "2026-11-27T02:58:26.353Z",
+  "headlinesRead": 1277,
+  "lastSuccessAt": "2026-11-27T03:13:30.910Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 13,
-    "grid": 29,
-    "hacks": 25,
+    "flights": 12,
+    "grid": 28,
+    "hacks": 27,
     "germs": 4,
     "markets": 4,
     "weather": 5,
@@ -71,8 +71,8 @@
       "tsunami": false
     },
     "kp": {
-      "value": 2.33,
-      "time": "2026-11-26T21:00:00.000Z",
+      "value": 2,
+      "time": "2026-11-27T00:00:00.000Z",
       "max24": 2.33
     },
     "asteroid": {
@@ -176,24 +176,24 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 991,
+      "count": 976,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     },
     "bing": {
       "ok": true,
-      "count": 268,
+      "count": 265,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 74,
+      "ok": false,
+      "count": 0,
       "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
@@ -201,55 +201,56 @@
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T02:58:26.353Z"
+      "lastOkAt": "2026-11-27T03:13:30.910Z"
     }
   },
   "stories": [
@@ -297,29 +298,6 @@
         "hub": true,
         "nationwide": false,
         "reason": "thunderstorms"
-      }
-    },
-    {
-      "id": "sig:faa-stop:SEA:2026-11-25",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at SEA (wind)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-26T03:09:37.492Z",
-      "latestAt": "2026-11-26T03:09:37.492Z",
-      "firstSeenAt": "2026-11-26T03:09:37.492Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "SEA",
-        "hub": true,
-        "nationwide": false,
-        "reason": "wind"
       }
     },
     {
@@ -430,6 +408,23 @@
       "score": 2.89
     },
     {
+      "id": "4b9d74481d40",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Flights grounded at major US airport after cargo plane veers off runway",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQT0JzZy1BVUs3Mzdxa1hHWUx2bTFCaHA1T2ZOeTZXNGxWWlUxbk5zOEFrY01OcWRTYlhfZER3bEdPWXJFSVdqR1ItTWFfQWxRWUJ3WHVTaWhRdGgwTl90RC1KWFRMYnhNeS05TUpWdFYtYUlDWEFEeGQwVndXRnJFWnVDNFF4bkZ6bldxdGlXbmwzRHk1X3c?oc=5",
+      "source": "Daily Star",
+      "publishedAt": "2026-11-26T04:09:00.000Z",
+      "latestAt": "2026-11-26T07:02:00.000Z",
+      "firstSeenAt": "2026-11-26T04:24:51.828Z",
+      "outlets": 2,
+      "outletNames": [
+        "Daily Star",
+        "Daily Express"
+      ],
+      "score": 2.79
+    },
+    {
       "id": "22e6f5d8189d",
       "cat": "hacks",
       "kind": "news",
@@ -518,23 +513,6 @@
         "Yahoo Tech"
       ],
       "score": 2.41
-    },
-    {
-      "id": "4b9d74481d40",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Flights grounded at major US airport after cargo plane veers off runway",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQT0JzZy1BVUs3Mzdxa1hHWUx2bTFCaHA1T2ZOeTZXNGxWWlUxbk5zOEFrY01OcWRTYlhfZER3bEdPWXJFSVdqR1ItTWFfQWxRWUJ3WHVTaWhRdGgwTl90RC1KWFRMYnhNeS05TUpWdFYtYUlDWEFEeGQwVndXRnJFWnVDNFF4bkZ6bldxdGlXbmwzRHk1X3c?oc=5",
-      "source": "Daily Star",
-      "publishedAt": "2026-11-26T04:09:00.000Z",
-      "latestAt": "2026-11-26T07:02:00.000Z",
-      "firstSeenAt": "2026-11-26T04:24:51.828Z",
-      "outlets": 2,
-      "outletNames": [
-        "Daily Star",
-        "Daily Express"
-      ],
-      "score": 2.79
     },
     {
       "id": "b0adfba84f59",
@@ -627,24 +605,6 @@
       "score": 2.23
     },
     {
-      "id": "df4a770e8955",
-      "cat": "grid",
-      "kind": "news",
-      "title": "1,000 without power in Buncombe among 31,000 statewide as outages increase",
-      "url": "https://www.yahoo.com/news/weather-news/articles/1-000-without-power-buncombe-155024817.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T03:09:00.000Z",
-      "latestAt": "2026-11-26T16:02:00.000Z",
-      "firstSeenAt": "2026-11-26T16:26:47.357Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "The Asheville Citizen Times",
-        "Charlotte Observer"
-      ],
-      "score": 2.01
-    },
-    {
       "id": "0a73606aa929",
       "cat": "flights",
       "kind": "news",
@@ -728,6 +688,23 @@
         "Yahoo"
       ],
       "score": 1.91
+    },
+    {
+      "id": "5fd5406e4a09",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thanksgiving power outage update in Virginia - 6:30 a.m.",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPYVo4TUtNeVZOa0VhbXB3MzNCMllXNzVKelZPNHowMUlVZGJ6NFY1eU1fUWVyRTE2ZUFoV0lyZUc3Nm42ZGR3ZGE3S2hMdHpWQmdOaTBmZ0NjUmlXSUc3blNVa3FWU2ltU1cxa3B2cW1hNEd2cG5GeDFnQkllY0lwV3lKMUliM1NoRGxsOWp3?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T11:37:01.000Z",
+      "latestAt": "2026-11-26T11:37:01.000Z",
+      "firstSeenAt": "2026-11-26T14:41:31.285Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "WTKR"
+      ],
+      "score": 1.9
     },
     {
       "id": "d6cf7b7e41d1",
@@ -827,6 +804,22 @@
       "outlets": 1,
       "outletNames": [
         "IOL"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "99cb3fabbd0e",
+      "cat": "internet",
+      "kind": "news",
+      "title": "FAA faces scrutiny over AI rollout after nationwide aviation system failure",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcGc1YzloWlhlczVvc2V4bWJvSF9BS0w1T3BVU3BVMnVkemxmbHV3aW9DTXdDc08wejN6ei1FTzAxWExPZkNfbURRRE5VVERuVmJEbVRNSWNrUVhfU2U0SVZoV2c5VjYxU3E4M19zQzd5cEtiVkk3TmplMlliUjJJb3pvSEdPS2VSZDJoWXhOa1ZsdkgxdHJuYlBoT2tzQQ?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-26T13:59:05.000Z",
+      "latestAt": "2026-11-26T13:59:05.000Z",
+      "firstSeenAt": "2026-11-26T14:11:34.774Z",
+      "outlets": 1,
+      "outletNames": [
+        "Beinsure"
       ],
       "score": 1.4
     },
@@ -973,6 +966,24 @@
       "score": 1.94
     },
     {
+      "id": "e7f4ea1619d9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-26T11:52:32.000Z",
+      "latestAt": "2026-11-27T00:07:52.000Z",
+      "firstSeenAt": "2026-11-27T03:13:30.910Z",
+      "outlets": 3,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "TRT Afrika",
+        "cwibc.co.id"
+      ],
+      "score": 1.92
+    },
+    {
       "id": "c4e5dc76b9b4",
       "cat": "hacks",
       "kind": "news",
@@ -988,23 +999,6 @@
         "Security Affairs"
       ],
       "score": 1.91
-    },
-    {
-      "id": "5fd5406e4a09",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thanksgiving power outage update in Virginia - 6:30 a.m.",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPYVo4TUtNeVZOa0VhbXB3MzNCMllXNzVKelZPNHowMUlVZGJ6NFY1eU1fUWVyRTE2ZUFoV0lyZUc3Nm42ZGR3ZGE3S2hMdHpWQmdOaTBmZ0NjUmlXSUc3blNVa3FWU2ltU1cxa3B2cW1hNEd2cG5GeDFnQkllY0lwV3lKMUliM1NoRGxsOWp3?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T11:37:01.000Z",
-      "latestAt": "2026-11-26T11:37:01.000Z",
-      "firstSeenAt": "2026-11-26T14:41:31.285Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WTKR"
-      ],
-      "score": 1.9
     },
     {
       "id": "0c4e661cc31a",
@@ -1198,23 +1192,6 @@
       "score": 1.7
     },
     {
-      "id": "795b176889d5",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands of residents in Rosseau, Orrville and Muskoka will lose power in scheduled Hydro One outage",
-      "url": "https://www.muskokaregion.com/news/hydro-one-schedules-outage-parry-sound/article_4242f334-5f7d-52d3-b75c-120b0ecbd4a7.html",
-      "source": "Muskoka Region",
-      "publishedAt": "2026-11-26T03:00:00.000Z",
-      "latestAt": "2026-11-26T11:00:00.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 2,
-      "outletNames": [
-        "Muskoka Region",
-        "ParrySound.com"
-      ],
-      "score": 1.7
-    },
-    {
       "id": "7d45a3b77d2b",
       "cat": "grid",
       "kind": "news",
@@ -1400,22 +1377,6 @@
         "FOX 29 Philadelphia"
       ],
       "score": 1.42
-    },
-    {
-      "id": "99cb3fabbd0e",
-      "cat": "internet",
-      "kind": "news",
-      "title": "FAA faces scrutiny over AI rollout after nationwide aviation system failure",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcGc1YzloWlhlczVvc2V4bWJvSF9BS0w1T3BVU3BVMnVkemxmbHV3aW9DTXdDc08wejN6ei1FTzAxWExPZkNfbURRRE5VVERuVmJEbVRNSWNrUVhfU2U0SVZoV2c5VjYxU3E4M19zQzd5cEtiVkk3TmplMlliUjJJb3pvSEdPS2VSZDJoWXhOa1ZsdkgxdHJuYlBoT2tzQQ?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-26T13:59:05.000Z",
-      "latestAt": "2026-11-26T13:59:05.000Z",
-      "firstSeenAt": "2026-11-26T14:11:34.774Z",
-      "outlets": 1,
-      "outletNames": [
-        "Beinsure"
-      ],
-      "score": 1.4
     },
     {
       "id": "ac4475e7fb20",
@@ -1850,6 +1811,38 @@
         "UrduPoint"
       ],
       "score": 1
+    },
+    {
+      "id": "d610ea364549",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Ameren Illinois reports hundreds without power in McLean County",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUnpEVFZ6NzlTb09qbjFWNXlvZ0pUOWdaVWw5d3piX3ZzZVVDSjZOcnZYUkJXb2swRXFCMG1JX1dpYmtHclptalcwZTZuallsUTRraE1yNFhoUEVJTUhPaVNka3Q1dXhmN0FLcVNKbUtvbkFpR2pTb25LcmhqaEplNHV6UVRSWU12M0lua1hEdXlrTktwblAtb2NBUy0yMTTSAbMBQVVfeXFMTWV6OUZ6TXJ2UzJzczZqMDV3eFg5VHRleTV0RWtteURzNVhBOGNPT2dJSHYtZ3k3NC1NczlhRFJzTGFtTVp3Qk9TbDE3SUdXSFd4bEtfSHlNT3V6aTdwc25Ka1l4WjhKWE5aYjF4cno5NUthSmV4NTRJVVVGd0d4S213VW44WC1hYnRMazBmMWkwMUNTV0dWOGU4NlNVMnBKcm90VW9FRDR4NWoyMF93U2pOSXM?oc=5",
+      "source": "WEEK | 25 News Now",
+      "publishedAt": "2026-11-27T02:54:00.000Z",
+      "latestAt": "2026-11-27T02:54:00.000Z",
+      "firstSeenAt": "2026-11-27T03:13:30.910Z",
+      "outlets": 1,
+      "outletNames": [
+        "WEEK | 25 News Now"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "4dfd7820dd77",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "North Korean hackers reportedly begin laundering stolen Binance crypto",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVFF4THdGenBoMDlxa2ZRQmkzMHVyUFkxeWRyelFXYTNqcDE3OTJ2MlZ6NU8ycHF1WVlQTExEc29MRnlTUzVpaUpGT1RPbjNHbElTYmYtTVZpLTlIdS1RS29UcDJFMllvbFVyR0x0ZS16Sk1SUUs3MEZkTTkyLTVneWx5cGFCZnV20gGcAUFVX3lxTFBfd3J3NUxseUVjSFQ0SXZ5T0NXTDJSVXNfRTlVNjJ6VlBXb3NQTUVTd1ptLWU0bGVaNmc1aXgxVGg3ZG9QWkRvNHp6Uy0wajgwV2s0Z3F5RUVMZnJabDRPRzRZSUN0WHRhdjJVbVhMVUdMQWNTU0pYd0g0WGRFdmEzOUFoZFFGX2huazFoMmU5QWVyZlFRVE9zS3JhUA?oc=5",
+      "source": "Chosunbiz",
+      "publishedAt": "2026-11-27T02:40:00.000Z",
+      "latestAt": "2026-11-27T02:40:00.000Z",
+      "firstSeenAt": "2026-11-27T03:13:30.910Z",
+      "outlets": 1,
+      "outletNames": [
+        "Chosunbiz"
+      ],
+      "score": 0.99
     },
     {
       "id": "7a14efcae84f",
