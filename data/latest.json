@@ -1,15 +1,13 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T14:30:23.087Z",
+  "buildTime": "2026-11-27T14:45:19.764Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 09:30 ET",
-  "score": 72,
+  "etStamp": "2026-11-27 09:45 ET",
+  "score": 60,
   "fired": [
     "flights",
     "hacks",
     "internet",
-    "space",
-    "sun",
     "earth",
     "markets",
     "ai",
@@ -24,7 +22,7 @@
       "points": 6
     }
   ],
-  "change": 6,
+  "change": -6,
   "yesterday": {
     "date": "2026-11-26",
     "score": 66,
@@ -45,21 +43,21 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1278,
-  "lastSuccessAt": "2026-11-27T14:30:23.087Z",
+  "headlinesRead": 1298,
+  "lastSuccessAt": "2026-11-27T14:45:19.764Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 38,
-    "flights": 8,
-    "grid": 20,
+    "hacks": 40,
+    "flights": 7,
+    "grid": 21,
     "germs": 4,
-    "sun": 2,
     "ai": 3,
     "markets": 4,
     "weather": 7,
     "internet": 7,
-    "space": 3,
-    "earth": 4
+    "earth": 4,
+    "space": 2,
+    "sun": 1
   },
   "vital": {
     "quake": {
@@ -181,57 +179,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 978,
+      "count": 1009,
       "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     },
     "bing": {
       "ok": true,
-      "count": 263,
-      "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "count": 253,
+      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
-      "count": 7,
+      "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +242,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T14:30:23.087Z"
+      "lastOkAt": "2026-11-27T14:45:19.764Z"
     }
   },
   "stories": [
@@ -359,7 +357,7 @@
       "url": "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
       "source": "Reuters",
       "publishedAt": "2026-11-26T16:42:00.000Z",
-      "latestAt": "2026-11-27T14:25:07.000Z",
+      "latestAt": "2026-11-27T14:39:10.000Z",
       "firstSeenAt": "2026-11-27T11:29:49.328Z",
       "outlets": 32,
       "outletNames": [
@@ -396,7 +394,7 @@
         "Demokratis.co.id",
         "https://www.businesstimes-bd.com/"
       ],
-      "trending": 500,
+      "trending": 2000,
       "trendTerm": "us air force cloud one breach",
       "score": 4.12
     },
@@ -517,23 +515,6 @@
       "score": 2.2
     },
     {
-      "id": "d6cf7b7e41d1",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Sun unleashed powerful X1.11 class solar flare seen from space",
-      "url": "https://www.msn.com/en-us/news/other/sun-unleashed-powerful-x111-class-solar-flare-seen-from-space/vi-AA2ijLSG",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-26T14:35:00.000Z",
-      "latestAt": "2026-11-26T15:01:45.000Z",
-      "firstSeenAt": "2026-11-26T22:57:53.537Z",
-      "outlets": 2,
-      "outletNames": [
-        "Space on MSN",
-        "Dailymotion on MSN"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "c5ee91bdccb0",
       "cat": "ai",
       "kind": "news",
@@ -549,6 +530,23 @@
         "The Motley Fool"
       ],
       "score": 1.7
+    },
+    {
+      "id": "7415e8f9d4a8",
+      "cat": "markets",
+      "kind": "news",
+      "title": "How Leveraged ETFs and Margin Debt Amplified South Korea’s 39% Stock Market Selloff",
+      "url": "https://www.ebc.com/forex/south-korea-kospi-selloff-leveraged-etfs-margin-debt",
+      "source": "ebc.com",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-27T06:53:00.000Z",
+      "firstSeenAt": "2026-11-27T08:44:26.580Z",
+      "outlets": 2,
+      "outletNames": [
+        "ebc.com",
+        "EBC Financial Group"
+      ],
+      "score": 1.44
     },
     {
       "id": "11f9749693a7",
@@ -571,30 +569,6 @@
       "score": 3.2
     },
     {
-      "id": "8e257f2bc72d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK Department for Work and Pensions hit by cyber incident",
-      "url": "https://www.ft.com/content/59a87442-51ad-47b7-ba11-e36876456fd4?syn-25a6b1a6=1",
-      "source": "Financial Times",
-      "publishedAt": "2026-11-26T14:35:00.000Z",
-      "latestAt": "2026-11-27T13:18:54.000Z",
-      "firstSeenAt": "2026-11-27T08:59:23.428Z",
-      "outlets": 9,
-      "outletNames": [
-        "London Evening Standard",
-        "Financial Times",
-        "Daily Mail",
-        "BBC",
-        "Yahoo",
-        "NDTV",
-        "Arise News",
-        "Yahoo News Singapore",
-        "Euronews on MSN"
-      ],
-      "score": 2.89
-    },
-    {
       "id": "21a164c8a426",
       "cat": "hacks",
       "kind": "news",
@@ -610,6 +584,26 @@
         "Operativ Məlumat Mərkəzi"
       ],
       "score": 2.72
+    },
+    {
+      "id": "a086d4abc6e4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-27T01:12:48.000Z",
+      "latestAt": "2026-11-27T12:50:38.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 5,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "A News",
+        "The Malaysian Reserve",
+        "US Muslims",
+        "MLQ.ai"
+      ],
+      "score": 2.68
     },
     {
       "id": "463a9c226583",
@@ -678,23 +672,6 @@
         "Northwest Arkansas Democrat-Gazette"
       ],
       "score": 1.7
-    },
-    {
-      "id": "7415e8f9d4a8",
-      "cat": "markets",
-      "kind": "news",
-      "title": "How Leveraged ETFs and Margin Debt Amplified South Korea’s 39% Stock Market Selloff",
-      "url": "https://www.ebc.com/forex/south-korea-kospi-selloff-leveraged-etfs-margin-debt",
-      "source": "ebc.com",
-      "publishedAt": "2026-11-26T16:00:00.000Z",
-      "latestAt": "2026-11-27T06:53:00.000Z",
-      "firstSeenAt": "2026-11-27T08:44:26.580Z",
-      "outlets": 2,
-      "outletNames": [
-        "ebc.com",
-        "EBC Financial Group"
-      ],
-      "score": 1.44
     },
     {
       "id": "fc30b8b61bc2",
@@ -857,24 +834,20 @@
       "score": 1.33
     },
     {
-      "id": "a086d4abc6e4",
-      "cat": "hacks",
+      "id": "e7343453112c",
+      "cat": "weather",
       "kind": "news",
-      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-27T01:12:48.000Z",
-      "latestAt": "2026-11-27T12:50:38.000Z",
-      "firstSeenAt": "2026-11-27T12:45:07.402Z",
-      "outlets": 5,
+      "title": "Record heat, less water: New study reveals global decline in surface water resources",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObnJyQUQwd3lOeW4zQVhJNV95aG02Y2h4Rnp3V1JUTmVhWDMxQml1OUl1dW9DWXlvM0UzbTdmWG1kYlYwSDdZMjhqSEhqbmRaVFVoWllVUlh4c0puU2J1VHh4MmpsazUzaGpsYmRyc1B0WFlIeGNFUWhnSnk3V0hlaTdGUVpERExyem1CRm1wakNKS1JNRkFnVzNiczVGSEczejRHSm5VZFFMMTJiTTZlblRHSEcwYXRsTE5hc25wQ2c4STZHTkNvSFRsVmVsZw?oc=5",
+      "source": "Stockholms universitet",
+      "publishedAt": "2026-11-26T22:02:08.000Z",
+      "latestAt": "2026-11-26T22:02:08.000Z",
+      "firstSeenAt": "2026-11-27T02:13:17.262Z",
+      "outlets": 1,
       "outletNames": [
-        "Anadolu Ajansı",
-        "A News",
-        "The Malaysian Reserve",
-        "US Muslims",
-        "MLQ.ai"
+        "Stockholms universitet"
       ],
-      "score": 2.68
+      "score": 1.3
     },
     {
       "id": "abee7e37d59e",
@@ -1143,6 +1116,23 @@
       "score": 1.68
     },
     {
+      "id": "4ac41a826097",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Don't make these carbon monoxide mistakes during a power outage",
+      "url": "https://health.yahoo.com/your-body/first-aid-safety/articles/dont-carbon-monoxide-mistakes-during-130000084.html",
+      "source": "health",
+      "publishedAt": "2026-11-27T05:00:00.000Z",
+      "latestAt": "2026-11-27T13:00:00.000Z",
+      "firstSeenAt": "2026-11-27T14:45:19.764Z",
+      "outlets": 2,
+      "outletNames": [
+        "health",
+        "Yahoo Health"
+      ],
+      "score": 1.67
+    },
+    {
       "id": "1b02436d2958",
       "cat": "hacks",
       "kind": "news",
@@ -1230,6 +1220,22 @@
       "score": 1.48
     },
     {
+      "id": "00d4037578c4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Global news platform AFP knocked offline after cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5zanR3MTVmTlQzZG03UzJHckVGb3NuZEptUjJsOUltMkhmc0tybEZsRFJfVmRKZkR2NDUxQkpkWG1jVDc4UC01a3lIMHBGcFJ6U2VYOFoyc3F5Q01nNFBabjVSN0FFNFdZRG5wZzIxam9YU3BUeHlV?oc=5",
+      "source": "Cybernews",
+      "publishedAt": "2026-11-27T14:34:18.000Z",
+      "latestAt": "2026-11-27T14:34:18.000Z",
+      "firstSeenAt": "2026-11-27T14:45:19.764Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cybernews"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "7a80e6912e5c",
       "cat": "hacks",
       "kind": "news",
@@ -1295,22 +1301,6 @@
       "score": 1.32
     },
     {
-      "id": "e7343453112c",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Record heat, less water: New study reveals global decline in surface water resources",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObnJyQUQwd3lOeW4zQVhJNV95aG02Y2h4Rnp3V1JUTmVhWDMxQml1OUl1dW9DWXlvM0UzbTdmWG1kYlYwSDdZMjhqSEhqbmRaVFVoWllVUlh4c0puU2J1VHh4MmpsazUzaGpsYmRyc1B0WFlIeGNFUWhnSnk3V0hlaTdGUVpERExyem1CRm1wakNKS1JNRkFnVzNiczVGSEczejRHSm5VZFFMMTJiTTZlblRHSEcwYXRsTE5hc25wQ2c4STZHTkNvSFRsVmVsZw?oc=5",
-      "source": "Stockholms universitet",
-      "publishedAt": "2026-11-26T22:02:08.000Z",
-      "latestAt": "2026-11-26T22:02:08.000Z",
-      "firstSeenAt": "2026-11-27T02:13:17.262Z",
-      "outlets": 1,
-      "outletNames": [
-        "Stockholms universitet"
-      ],
-      "score": 1.3
-    },
-    {
       "id": "064b9604c379",
       "cat": "internet",
       "kind": "news",
@@ -1325,22 +1315,6 @@
         "Cyber Daily"
       ],
       "score": 1.27
-    },
-    {
-      "id": "f90baf32cac4",
-      "cat": "flights",
-      "kind": "news",
-      "title": "FAA’s SMART AI rollout questioned after nationwide US flight ground stop",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcHZiLWd2RW1hZzlnUlRqNXlnY0RpMjJENm5US0FKVEYzbnBjb0U5SFJjc1Y4TEhJY1FaRWVMTEo2Y1JoZjlYWGZURHJ2YVVXb0F3ZklxY2JLbUs0TXYyR2dMVFlFeEFqcnFzSVBfbDVscGExTzVmSHJnQ3dPekc4SC05OVBwZzVFVzVZdzVuZ25qc0YweEFXV1lIcW9zS21MUEE?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-26T14:31:18.000Z",
-      "latestAt": "2026-11-26T14:31:18.000Z",
-      "firstSeenAt": "2026-11-26T20:42:27.817Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.26
     },
     {
       "id": "c6b2ecc0a9c1",
@@ -1599,18 +1573,36 @@
       "score": 1.02
     },
     {
-      "id": "6950fe4151fe",
-      "cat": "hacks",
+      "id": "abb76f5a2c98",
+      "cat": "earth",
       "kind": "news",
-      "title": "Ransomware attack cripples a Chinese manufacturer after backup failure",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcmI3NEUyaGhPYlF0Rm9ZaHl0YlM5TS0wcE5ocVF5a2JLVVFYM0xIRmdfMzlyZFVUamZJTWpUeTlMaDJ5VVNaZEpLaHRENUdocmRSQzUzQWlFMXRnOTA2NGRyV1BZejZTQVd3dGdESE1NNDZTT3NzSENFVllyRDE5Mk0zUUNlbDdJc3lWTWt5NzZHWkU1R1J0U0taX284REE?oc=5",
-      "source": "SC Media",
-      "publishedAt": "2026-11-27T14:23:07.000Z",
-      "latestAt": "2026-11-27T14:23:07.000Z",
-      "firstSeenAt": "2026-11-27T14:30:23.087Z",
+      "title": "Guatemala's Fuego volcano erupts, no evacuations ordered yet",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVllRZDNjeXZqSkdNcHhickZEaFAxTGdscEJUWDdXN3RWRlVOb0tic1N6R1N4a0loc0ppVkNSLVdDZVp0b3hqWFBfNUE2dmMzSGtRV0lmMmxfbVgzaTBCSERLWkRzZjZsc25uTWNKVlZTUERwRW9KdG85S2RnZjNuMmNXSU10YzRQTEZjekpGTTFyRTYxTDZ0dmhYZHpTNWJv?oc=5",
+      "source": "Yeni Safak English",
+      "publishedAt": "2026-11-27T14:39:51.000Z",
+      "latestAt": "2026-11-27T14:39:51.000Z",
+      "firstSeenAt": "2026-11-27T14:45:19.764Z",
       "outlets": 1,
       "outletNames": [
-        "SC Media"
+        "Yeni Safak English"
+      ],
+      "score": 1,
+      "quiet": true,
+      "quietReason": "headline mentions evacuations"
+    },
+    {
+      "id": "d6c6dbd2b8e6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA and LaLiga hit by separate cyberattacks within days",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRFdMeFdwMUFYUkpLcmNQVzVmLVFoSVdTMGJEUU5OTi1XZDhfeDdsSmZKRzBBYXcwRTZ6ZElPR0xBNm0wMUxIZ3ZGeGpFbmJ2cEhja0NrVUdfTm4yam5rSHE4TUtYc3hEVEJ1RkNTSWtPR0NaLVZmWTh0Z29qdUFackV3Wlo0S2R3TGFaNDEtRVF3T0poTDl2Zm5JTVhYT1h3YzZLdmhKVmtjVUU?oc=5",
+      "source": "Sporting Goods Intelligence Europe",
+      "publishedAt": "2026-11-27T14:38:42.000Z",
+      "latestAt": "2026-11-27T14:38:42.000Z",
+      "firstSeenAt": "2026-11-27T14:45:19.764Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sporting Goods Intelligence Europe"
       ],
       "score": 1
     },
@@ -1855,18 +1847,34 @@
       "score": 1
     },
     {
-      "id": "802ce460ea38",
-      "cat": "space",
+      "id": "512e341d4905",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Tiny asteroid 2026 QQ8 has stayed with Earth for 7.5 months",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9HeWVBTzQ2c2Y4ZmVlU0JuOUpMTVdFa0MxNndQbm5JdVpnenRYQ013OUh5YldFcnNTaUpOX2RHeVQtWHN0MFZwZjhaeW1XS09PZ1plR0lNd3F4YjFMdkE?oc=5",
-      "source": "UrduPoint",
-      "publishedAt": "2026-11-26T14:33:00.000Z",
-      "latestAt": "2026-11-26T14:33:00.000Z",
-      "firstSeenAt": "2026-11-26T14:41:31.285Z",
+      "title": "Town of Bernalillo updates residents on cyberattack recovery",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWEstNjBXdWxRZkJjajc3UjJGTEpPSTZsd0h0dWdRTExhMFoxWXpiNVNTUURRcWF3R0lpTjBHeDlxeEh4RnRLbVh2eGJ5Y1hHWm9FeFFOeUpqdEEybGdtTFAwbmxodFgybFVPVDliay1VVmtHeXAzOVdKZGhoZEVpaXYtRXdQMlBlUXZVVThIeGxRNGRLVEM3emZNY0hIckNUenc?oc=5",
+      "source": "Rio Rancho Observer Home",
+      "publishedAt": "2026-11-27T04:27:16.000Z",
+      "latestAt": "2026-11-27T04:27:42.000Z",
+      "firstSeenAt": "2026-11-27T04:28:40.522Z",
       "outlets": 1,
       "outletNames": [
-        "UrduPoint"
+        "Rio Rancho Observer Home"
+      ],
+      "score": 1
+    },
+    {
+      "id": "b77a88253fd4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Thai SEC Data Breach Exposes Personal Information of 155 Users",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1wWmswNDVuS0xBVG9GUlo0MXBhbTZkUkU2RWEwWkxEdkYzRWZlcjBHRFBreXNmNy14cXpCcHlPeEZvdkc2TkdFclRqSmJsNGJGalBkeS1JX3dqcl9Qc1NQYk1WZ0xjM05vdDM1Mjdkd21BcUk?oc=5",
+      "source": "Fintech Singapore",
+      "publishedAt": "2026-11-27T04:16:13.000Z",
+      "latestAt": "2026-11-27T04:16:13.000Z",
+      "firstSeenAt": "2026-11-27T04:28:40.522Z",
+      "outlets": 1,
+      "outletNames": [
+        "Fintech Singapore"
       ],
       "score": 1
     },
@@ -1917,22 +1925,6 @@
         "KCRA"
       ],
       "score": 0.97
-    },
-    {
-      "id": "0a4b0368472d",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Update: 3.6 magnitude earthquake jolts near Ocotillo, CA on Nov. 25",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5yWDlvU0JPM3FnaDQ2QVdBQUZuTUJSWkd4azFmOHlwTU9sMHN3cWpUTmswSVZmVzlDTHk3bDRyLV9zVndndW01anotblVMQnJyOXhYRktyckN2SzdWeWJ3WG50OUN3cWpmZmNnZnNfdEZSM0lvSnpOV0hTSE0?oc=5",
-      "source": "Sacramento Bee",
-      "publishedAt": "2026-11-26T15:25:06.000Z",
-      "latestAt": "2026-11-26T15:25:06.000Z",
-      "firstSeenAt": "2026-11-26T19:57:20.831Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sacramento Bee"
-      ],
-      "score": 0.92
     },
     {
       "id": "ff2c0cab721a",
