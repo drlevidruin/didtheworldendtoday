@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-26T23:58:05.239Z",
+  "buildTime": "2026-11-27T00:12:58.553Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 18:58 ET",
+  "etStamp": "2026-11-26 19:12 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,17 +45,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1283,
-  "lastSuccessAt": "2026-11-26T23:58:05.239Z",
+  "headlinesRead": 1274,
+  "lastSuccessAt": "2026-11-27T00:12:58.553Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
-    "grid": 25,
+    "grid": 24,
     "germs": 4,
     "hacks": 28,
     "markets": 4,
+    "internet": 9,
     "weather": 4,
-    "internet": 8,
     "sun": 4,
     "earth": 4,
     "space": 3
@@ -70,9 +70,9 @@
       "tsunami": false
     },
     "kp": {
-      "value": 0.67,
-      "time": "2026-11-26T18:00:00.000Z",
-      "max24": 2
+      "value": 2.33,
+      "time": "2026-11-26T21:00:00.000Z",
+      "max24": 2.33
     },
     "asteroid": {
       "des": "2026 VQ19",
@@ -170,93 +170,92 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "Egypt tanker explosion kills 31 people as driver crashes into fuel truck in fiery highway crash"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 976,
+      "count": 969,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     },
     "bing": {
       "ok": true,
-      "count": 273,
+      "count": 274,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-26T21:57:40.268Z"
     },
     "hn": {
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-26T23:58:05.239Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-26T23:58:05.239Z"
+      "lastOkAt": "2026-11-27T00:12:58.553Z"
     }
   },
   "stories": [
@@ -468,6 +467,25 @@
       "score": 2.56
     },
     {
+      "id": "0303d6ec6c43",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Declares Code Red After Major Global Outage Disrupts Outlook, Teams and Copilot",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeF9ZV0FmTXRSc0VMel9kbXRSdWc1dU5oQlNoT29jVV9rdXlBWlV4dlFxSWF2QmE1bGVySE1wN0VQUWVDNWF3endOX2wtNnpwR2JvRUtESFVhTmJYZ0JxR1d6RjV5RWttcHE5YzhNZ3pxaUdubXRMVGJ2RmZxOHROVzlBTVFIamg5LUlvMVh2YTljd3B2eGMxMEdvUUU5cUEycjFNRXc0bUJVWWpWWTM4eS1JdDJwZmhvMDNraU1n?oc=5",
+      "source": "Speaks Media",
+      "publishedAt": "2026-11-26T00:50:47.000Z",
+      "latestAt": "2026-11-26T22:20:12.000Z",
+      "firstSeenAt": "2026-11-27T00:12:58.553Z",
+      "outlets": 4,
+      "outletNames": [
+        "Speaks Media",
+        "Profit by Pakistan Today",
+        "Aktualita.co",
+        "Cyber Daily"
+      ],
+      "score": 2.56
+    },
+    {
       "id": "28bd6f1f8fdc",
       "cat": "markets",
       "kind": "news",
@@ -503,23 +521,6 @@
         "Digg"
       ],
       "score": 2.48
-    },
-    {
-      "id": "ba4586e1359a",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Virginia homeowner runs house on generator after ice storm but has to stagger major appliances",
-      "url": "https://www.yahoo.com/lifestyle/articles/virginia-homeowner-runs-house-generator-171800866.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T09:18:00.000Z",
-      "latestAt": "2026-11-26T17:18:00.000Z",
-      "firstSeenAt": "2026-11-26T17:27:00.235Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Cool Down",
-        "Yahoo"
-      ],
-      "score": 2.42
     },
     {
       "id": "sig:faa-stop:MIA:2026-11-25",
@@ -578,6 +579,23 @@
         "Beinsure"
       ],
       "score": 2.46
+    },
+    {
+      "id": "ba4586e1359a",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Virginia homeowner runs house on generator after ice storm but has to stagger major appliances",
+      "url": "https://www.yahoo.com/lifestyle/articles/virginia-homeowner-runs-house-generator-171800866.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T09:18:00.000Z",
+      "latestAt": "2026-11-26T17:18:00.000Z",
+      "firstSeenAt": "2026-11-26T17:27:00.235Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Cool Down",
+        "Yahoo"
+      ],
+      "score": 2.42
     },
     {
       "id": "040839c82e3c",
@@ -824,22 +842,6 @@
       "score": 1.52
     },
     {
-      "id": "99cb3fabbd0e",
-      "cat": "internet",
-      "kind": "news",
-      "title": "FAA faces scrutiny over AI rollout after nationwide aviation system failure",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcGc1YzloWlhlczVvc2V4bWJvSF9BS0w1T3BVU3BVMnVkemxmbHV3aW9DTXdDc08wejN6ei1FTzAxWExPZkNfbURRRE5VVERuVmJEbVRNSWNrUVhfU2U0SVZoV2c5VjYxU3E4M19zQzd5cEtiVkk3TmplMlliUjJJb3pvSEdPS2VSZDJoWXhOa1ZsdkgxdHJuYlBoT2tzQQ?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-26T13:59:05.000Z",
-      "latestAt": "2026-11-26T13:59:05.000Z",
-      "firstSeenAt": "2026-11-26T14:11:34.774Z",
-      "outlets": 1,
-      "outletNames": [
-        "Beinsure"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "8131b068c68e",
       "cat": "hacks",
       "kind": "news",
@@ -892,6 +894,24 @@
         "YAHOO!"
       ],
       "score": 2.23
+    },
+    {
+      "id": "e7f4ea1619d9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-26T11:52:32.000Z",
+      "latestAt": "2026-11-27T00:07:52.000Z",
+      "firstSeenAt": "2026-11-26T23:28:02.296Z",
+      "outlets": 3,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "TRT Afrika",
+        "cwibc.co.id"
+      ],
+      "score": 2.09
     },
     {
       "id": "11f9749693a7",
@@ -1407,23 +1427,6 @@
       "score": 1.63
     },
     {
-      "id": "e7f4ea1619d9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-26T11:52:32.000Z",
-      "latestAt": "2026-11-26T14:47:38.000Z",
-      "firstSeenAt": "2026-11-26T23:28:02.296Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "TRT Afrika"
-      ],
-      "score": 1.61
-    },
-    {
       "id": "8cdf0c77100d",
       "cat": "grid",
       "kind": "news",
@@ -1458,21 +1461,20 @@
       "score": 1.44
     },
     {
-      "id": "4b7f517a5874",
-      "cat": "grid",
+      "id": "99cb3fabbd0e",
+      "cat": "internet",
       "kind": "news",
-      "title": "N.J. live power outage tracker: Dangerous Thanksgiving storm knocks out power to thousands",
-      "url": "https://www.nj.com/weather/2026/11/nj-live-power-outage-tracker-dangerous-thanksgiving-storm-knocks-out-power-to-thousands.html",
-      "source": "NJ.com",
-      "publishedAt": "2026-11-26T00:08:00.000Z",
-      "latestAt": "2026-11-26T20:32:23.000Z",
-      "firstSeenAt": "2026-11-26T17:11:56.591Z",
-      "outlets": 2,
+      "title": "FAA faces scrutiny over AI rollout after nationwide aviation system failure",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcGc1YzloWlhlczVvc2V4bWJvSF9BS0w1T3BVU3BVMnVkemxmbHV3aW9DTXdDc08wejN6ei1FTzAxWExPZkNfbURRRE5VVERuVmJEbVRNSWNrUVhfU2U0SVZoV2c5VjYxU3E4M19zQzd5cEtiVkk3TmplMlliUjJJb3pvSEdPS2VSZDJoWXhOa1ZsdkgxdHJuYlBoT2tzQQ?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-26T13:59:05.000Z",
+      "latestAt": "2026-11-26T13:59:05.000Z",
+      "firstSeenAt": "2026-11-26T14:11:34.774Z",
+      "outlets": 1,
       "outletNames": [
-        "NJ.com",
-        "Yahoo"
+        "Beinsure"
       ],
-      "score": 1.43
+      "score": 1.4
     },
     {
       "id": "ac4475e7fb20",
