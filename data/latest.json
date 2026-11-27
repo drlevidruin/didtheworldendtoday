@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T04:43:43.269Z",
+  "buildTime": "2026-11-27T04:58:49.971Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 23:43 ET",
+  "etStamp": "2026-11-26 23:58 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,18 +45,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1248,
-  "lastSuccessAt": "2026-11-27T04:43:43.269Z",
+  "headlinesRead": 1191,
+  "lastSuccessAt": "2026-11-27T04:58:49.971Z",
   "rollingFallback": false,
   "cats": {
     "flights": 10,
-    "grid": 27,
+    "grid": 28,
     "hacks": 32,
     "markets": 4,
     "weather": 5,
     "internet": 6,
     "germs": 4,
-    "sun": 4,
+    "sun": 3,
     "earth": 4,
     "ai": 1,
     "space": 3
@@ -176,81 +176,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 948,
+      "count": 920,
       "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "bing": {
       "ok": true,
-      "count": 265,
-      "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "count": 236,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T04:43:43.269Z"
+      "lastOkAt": "2026-11-27T04:58:49.971Z"
     }
   },
   "stories": [
@@ -301,26 +300,6 @@
       }
     },
     {
-      "id": "9d364f5dc0cd",
-      "cat": "grid",
-      "kind": "news",
-      "title": "🚨🇺🇸 Thanksgiving BLACKOUT CHAOS as powerful storms leave 500,000+ WITHOUT POWER MILLIONS of Americans face a holiday in the DARK as fierce winds, heavy snow, and flooding threaten power supplies across at least 20 states. More than 500,00",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE02WFR1cDJObDR1c09pbnppcGtpdllfTFZtYldZTno4aUVhMUwyQ3ZvLVJUaE5aWUJUZjVmRzRoaWJXMldlNmhiY2RkVU9aWG1vanB5NVMtN0dPRFVSYWNPakZ2WU5LUkNQRVZrcQ?oc=5",
-      "source": "X",
-      "publishedAt": "2026-11-26T17:23:43.000Z",
-      "latestAt": "2026-11-26T22:48:03.000Z",
-      "firstSeenAt": "2026-11-26T18:12:05.865Z",
-      "outlets": 3,
-      "outletNames": [
-        "X",
-        "Gossip Cop",
-        "Wide Open Country"
-      ],
-      "score": 3.57,
-      "quiet": true,
-      "quietReason": "headline mentions flooding"
-    },
-    {
       "id": "7460af6d2d67",
       "cat": "grid",
       "kind": "news",
@@ -328,9 +307,9 @@
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOa1JkLUd1ZXhBUzc4bU12YTN2VUNuNFlfOEx0aDZZQmhzaTJieFpHaGFyRHJqMXByUkViZEJlTTh5UlVGdXVlbV8yWkg2N25ZQzgzZUpkN3hUQzFjQnJZV3V0WGx0ckhBeFM5QlI0QzN5N1MyVHU3WTlxdXoteXpNcmpRYzZfZFh3dmUyOWlRLTlxUG52Zzd6cHJ4TG5hQk0wYWNlXzluOE1zZDJHTVJQSFV3eXg0c1FiRlpqVnZOZkp4Ny1XRUNFVzBSS1FQSkNuM1NhdkNUZw?oc=5",
       "source": "WUSA9",
       "publishedAt": "2026-11-26T12:17:00.000Z",
-      "latestAt": "2026-11-27T03:41:11.000Z",
+      "latestAt": "2026-11-27T04:50:30.000Z",
       "firstSeenAt": "2026-11-27T04:43:43.269Z",
-      "outlets": 12,
+      "outlets": 14,
       "outletNames": [
         "WUSA9",
         "Albemarle Observer",
@@ -343,9 +322,11 @@
         "SSBCrack",
         "WKYC",
         "primetimer.com",
-        "Cleveland 19 News"
+        "Cleveland 19 News",
+        "NewsBreak: Local News & Alerts",
+        "FFXnow"
       ],
-      "score": 3.33
+      "score": 3.49
     },
     {
       "id": "11f9749693a7",
@@ -364,6 +345,26 @@
         "Forbes",
         "Yahoo",
         "Yahoo News Singapore"
+      ],
+      "score": 3.2
+    },
+    {
+      "id": "9d364f5dc0cd",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thanksgiving storms leave nearly a million without power across the US",
+      "url": "https://www.aljazeera.com/news/2026/11/27/thanksgiving-storms-leave-nearly-a-million-without-power-across-the-us",
+      "source": "Al Jazeera",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-26T22:48:03.000Z",
+      "firstSeenAt": "2026-11-26T18:12:05.865Z",
+      "outlets": 5,
+      "outletNames": [
+        "X",
+        "Gossip Cop",
+        "Wide Open Country",
+        "Al Jazeera",
+        "USA TODAY"
       ],
       "score": 3.2
     },
@@ -997,6 +998,23 @@
       "score": 1.94
     },
     {
+      "id": "4dfd7820dd77",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "North Korean hackers reportedly begin laundering stolen Binance crypto",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVFF4THdGenBoMDlxa2ZRQmkzMHVyUFkxeWRyelFXYTNqcDE3OTJ2MlZ6NU8ycHF1WVlQTExEc29MRnlTUzVpaUpGT1RPbjNHbElTYmYtTVZpLTlIdS1RS29UcDJFMllvbFVyR0x0ZS16Sk1SUUs3MEZkTTkyLTVneWx5cGFCZnV20gGcAUFVX3lxTFBfd3J3NUxseUVjSFQ0SXZ5T0NXTDJSVXNfRTlVNjJ6VlBXb3NQTUVTd1ptLWU0bGVaNmc1aXgxVGg3ZG9QWkRvNHp6Uy0wajgwV2s0Z3F5RUVMZnJabDRPRzRZSUN0WHRhdjJVbVhMVUdMQWNTU0pYd0g0WGRFdmEzOUFoZFFGX2huazFoMmU5QWVyZlFRVE9zS3JhUA?oc=5",
+      "source": "Chosunbiz",
+      "publishedAt": "2026-11-27T02:40:00.000Z",
+      "latestAt": "2026-11-27T04:49:53.000Z",
+      "firstSeenAt": "2026-11-27T04:58:49.971Z",
+      "outlets": 2,
+      "outletNames": [
+        "Chosunbiz",
+        "news.sbs.co.kr"
+      ],
+      "score": 1.92
+    },
+    {
       "id": "c4e5dc76b9b4",
       "cat": "hacks",
       "kind": "news",
@@ -1284,23 +1302,6 @@
         "Capital Gazette"
       ],
       "score": 1.52
-    },
-    {
-      "id": "e7f4ea1619d9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-26T11:52:32.000Z",
-      "latestAt": "2026-11-26T14:47:38.000Z",
-      "firstSeenAt": "2026-11-27T04:04:23.345Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "TRT Afrika"
-      ],
-      "score": 1.46
     },
     {
       "id": "795b176889d5",
@@ -1643,13 +1644,29 @@
       "score": 1.04
     },
     {
+      "id": "463a9c226583",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage hits OR Tambo, passengers stranded in long queues",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSFVnVEdJb3Q4LWNSenRnYjlzdUJsVktYa1NhOHRjZUh4SkhvTERKcGhxNllYZ0ZrQjZjbjNSOXVLUjc4bGxld0VWR0NkOVh6bDc1ODJvVGhvRU9xQXBqWngxbUMzbmlOUzZHZnpoZml6UVdtWHVtbDdpNDN0ZmVKQ194T3dXNzJSeHd2bDlqVVRPV09hNXIwR3NSdk8?oc=5",
+      "source": "eNCA",
+      "publishedAt": "2026-11-27T04:48:16.000Z",
+      "latestAt": "2026-11-27T04:48:16.000Z",
+      "firstSeenAt": "2026-11-27T04:58:49.971Z",
+      "outlets": 1,
+      "outletNames": [
+        "eNCA"
+      ],
+      "score": 1
+    },
+    {
       "id": "512e341d4905",
       "cat": "hacks",
       "kind": "news",
       "title": "Town of Bernalillo updates residents on cyberattack recovery",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWEstNjBXdWxRZkJjajc3UjJGTEpPSTZsd0h0dWdRTExhMFoxWXpiNVNTUURRcWF3R0lpTjBHeDlxeEh4RnRLbVh2eGJ5Y1hHWm9FeFFOeUpqdEEybGdtTFAwbmxodFgybFVPVDliay1VVmtHeXAzOVdKZGhoZEVpaXYtRXdQMlBlUXZVVThIeGxRNGRLVEM3emZNY0hIckNUenc?oc=5",
       "source": "Rio Rancho Observer Home",
-      "publishedAt": "2026-11-27T04:27:42.000Z",
+      "publishedAt": "2026-11-27T04:27:16.000Z",
       "latestAt": "2026-11-27T04:27:42.000Z",
       "firstSeenAt": "2026-11-27T04:28:40.522Z",
       "outlets": 1,
@@ -1945,22 +1962,6 @@
         "IFLScience"
       ],
       "score": 0.85
-    },
-    {
-      "id": "6715de6aefe5",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Brazilian scientists uncover how a powerful solar storm distorted plasma bubbles and reversed their movement over South America, a phenomenon that could affect GPS",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOOWlrdnlTUGtZOWtuakM2Y1ByOGRCdU5CNkI1ZUhCWGdnaV9KSWpBM1lFUlRzaGh5R2pSV0JIQzRSOHZpRjRMa2hxSV9BNVV4T3pkRW1keEI2X1V2Q0pfdldVY1BZR0lGYXNNZXYzNm5LMFc2akhIVkxNdEh5NXQ4ZTBLbms5dDNwOE5YWExWREhDYWNvVU5zOENJUFczSk03bzk1RlRjSEltTnBwU0k0aldFTUZNZGszZ1B3TEZaUVZLNGVpdV9WRmc4Ul9DSXhtcFhJSXFWaV9vUFA5V3JKajBrQ0pxekhXWEVXeHJGNHhqWjdHT1Vhc2tFYlNWOFN0Ync?oc=5",
-      "source": "CPG Click Oil and Gas",
-      "publishedAt": "2026-11-26T04:57:00.000Z",
-      "latestAt": "2026-11-26T04:57:00.000Z",
-      "firstSeenAt": "2026-11-27T00:58:09.251Z",
-      "outlets": 1,
-      "outletNames": [
-        "CPG Click Oil and Gas"
-      ],
-      "score": 0.67
     }
   ]
 }
