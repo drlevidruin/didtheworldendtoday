@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T07:29:08.103Z",
+  "buildTime": "2026-11-27T07:44:10.481Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 02:29 ET",
+  "etStamp": "2026-11-27 02:44 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,19 +44,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1270,
-  "lastSuccessAt": "2026-11-27T07:29:08.103Z",
+  "headlinesRead": 1222,
+  "lastSuccessAt": "2026-11-27T07:44:10.481Z",
   "rollingFallback": false,
   "cats": {
     "flights": 12,
     "hacks": 29,
-    "grid": 24,
+    "grid": 25,
     "markets": 4,
     "weather": 6,
     "germs": 4,
     "sun": 4,
     "ai": 2,
-    "internet": 8,
+    "internet": 7,
     "space": 3,
     "earth": 4
   },
@@ -180,15 +180,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 966,
+      "count": 959,
       "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     },
     "bing": {
       "ok": true,
-      "count": 269,
-      "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "count": 228,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     },
     "gdelt": {
       "ok": false,
@@ -200,37 +200,37 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     },
     "x": {
       "ok": true,
@@ -243,13 +243,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T07:29:08.103Z"
+      "lastOkAt": "2026-11-27T07:44:10.481Z"
     }
   },
   "stories": [
@@ -309,15 +309,16 @@
       "publishedAt": "2026-11-26T16:00:00.000Z",
       "latestAt": "2026-11-27T03:53:26.000Z",
       "firstSeenAt": "2026-11-27T03:58:37.448Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "Al Jazeera on MSN",
         "Anadolu Ajansı",
         "BusinessToday Malaysia",
         "Inshorts",
-        "muslimnetwork"
+        "muslimnetwork",
+        "US Muslims"
       ],
-      "score": 3.72
+      "score": 4.02
     },
     {
       "id": "9d364f5dc0cd",
@@ -507,6 +508,24 @@
       "score": 1.92
     },
     {
+      "id": "abee7e37d59e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SAP flags security incident, says no evidence of customer data breach",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPOVExMUVpekE4RHgxVGU5eFZTQWR6aC0zaFFjWFhKWmpINWZMRTI2MWk1SkJ6aHByQkkxVUNQOUJmNWhzelRsRFJ1cXB5NnVpN2RCNXNneXp2Qnp1bG5HbHVWVzBydkxYSEFGQURSeld2ckdPMmlRUmF3OXRsRnNzbFJ5QXlKSm11SGp1eFN0eEVwQnVnTVdIdnVyVVlSUGFIdHppc3FFcnVCWl8xMnFweWhET1hyYUZqcmVwXzd3cXdCUzdJdWZGbExqSFZlZ9IB0wFBVV95cUxPa2RGN1hiUDhPb19TV0FNbGNWMTUzVkxPZWoyTE9qanRTX3dXZ3BZdnQybE9vMFQyci10RXFXbFpJRkI0c3hzNnhjMURoSEpXTVVyR2FETl96aEtGdVhPbGVGSEYzSnhyVnhQS3dneXNYR3RtbV9hZ1NVbGtBZEtXRWpZYS1GUTZQM2dWMGgyYWYzMWgxX1hoTHBjd1ByMDJ1ZFR3U0E5MFNyMDU3MFdwQWZYNkJDeWRqSEVrT1Jkelp6ZWlLdW9FdnB6VUJIdXVQa0s0?oc=5",
+      "source": "Business Standard",
+      "publishedAt": "2026-11-27T07:06:16.000Z",
+      "latestAt": "2026-11-27T07:40:00.000Z",
+      "firstSeenAt": "2026-11-27T07:44:10.481Z",
+      "outlets": 3,
+      "outletNames": [
+        "Business Standard",
+        "marketscreener.com",
+        "The Straits Times"
+      ],
+      "score": 2.56
+    },
+    {
       "id": "d8faac5af851",
       "cat": "hacks",
       "kind": "news",
@@ -543,22 +562,22 @@
       "score": 2.36
     },
     {
-      "id": "f15707865a72",
-      "cat": "hacks",
+      "id": "cc0a42ab87c1",
+      "cat": "grid",
       "kind": "news",
-      "title": "Ransomware Attacks in Africa Could Cost Businesses Over $368,000 Per Incident",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZDY2eS1IdVNaVFI4OFNXZFZnR2xnOXBSQWtacFpoMzVreUpWNzUwWVdEbTl3VzY0NVBXQWZKcjQxMWNSQWdHaGptdTBKc1d4RnpuZTR2ZFZ2clU5ZmppRDktUjVJVWViaG03RndGbDRibDBNbHRCaGVSemVxQjBIZDdlRG9fZmNJT1E?oc=5",
-      "source": "FF News",
-      "publishedAt": "2026-11-26T13:28:06.000Z",
-      "latestAt": "2026-11-27T03:00:48.000Z",
-      "firstSeenAt": "2026-11-26T20:57:33.130Z",
+      "title": "Storms disrupt Thanksgiving with flight delays and over 920,000 power outages",
+      "url": "https://www.yahoo.com/news/weather-news/articles/storms-disrupt-thanksgiving-flight-delays-230636756.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T15:05:00.000Z",
+      "latestAt": "2026-11-27T01:34:00.000Z",
+      "firstSeenAt": "2026-11-26T23:58:05.239Z",
       "outlets": 3,
       "outletNames": [
-        "FF News",
-        "DNE Africa",
-        "The Guardian Nigeria News"
+        "Yahoo",
+        "Insider on MSN",
+        "Business Insider"
       ],
-      "score": 2.26
+      "score": 2.2
     },
     {
       "id": "7d45a3b77d2b",
@@ -611,23 +630,6 @@
         "Yahoo"
       ],
       "score": 1.91
-    },
-    {
-      "id": "5fd5406e4a09",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thanksgiving power outage update in Virginia - 6:30 a.m.",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPYVo4TUtNeVZOa0VhbXB3MzNCMllXNzVKelZPNHowMUlVZGJ6NFY1eU1fUWVyRTE2ZUFoV0lyZUc3Nm42ZGR3ZGE3S2hMdHpWQmdOaTBmZ0NjUmlXSUc3blNVa3FWU2ltU1cxa3B2cW1hNEd2cG5GeDFnQkllY0lwV3lKMUliM1NoRGxsOWp3?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T11:37:01.000Z",
-      "latestAt": "2026-11-26T11:37:01.000Z",
-      "firstSeenAt": "2026-11-26T14:41:31.285Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WTKR"
-      ],
-      "score": 1.9
     },
     {
       "id": "b1eb963b6b79",
@@ -706,7 +708,7 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-27T00:42:03.000Z",
-      "latestAt": "2026-11-27T06:32:24.000Z",
+      "latestAt": "2026-11-27T07:30:31.000Z",
       "firstSeenAt": "2026-11-27T00:43:07.514Z",
       "outlets": 1,
       "outletNames": [
@@ -809,6 +811,24 @@
         "Vinetur"
       ],
       "score": 1.34
+    },
+    {
+      "id": "f15707865a72",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Ransomware Attacks in Africa Could Cost Businesses Over $368,000 Per Incident",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZDY2eS1IdVNaVFI4OFNXZFZnR2xnOXBSQWtacFpoMzVreUpWNzUwWVdEbTl3VzY0NVBXQWZKcjQxMWNSQWdHaGptdTBKc1d4RnpuZTR2ZFZ2clU5ZmppRDktUjVJVWViaG03RndGbDRibDBNbHRCaGVSemVxQjBIZDdlRG9fZmNJT1E?oc=5",
+      "source": "FF News",
+      "publishedAt": "2026-11-26T13:28:06.000Z",
+      "latestAt": "2026-11-27T03:00:48.000Z",
+      "firstSeenAt": "2026-11-26T20:57:33.130Z",
+      "outlets": 3,
+      "outletNames": [
+        "FF News",
+        "DNE Africa",
+        "The Guardian Nigeria News"
+      ],
+      "score": 2.26
     },
     {
       "id": "b338ec219fe9",
@@ -948,6 +968,23 @@
       "score": 1.91
     },
     {
+      "id": "5fd5406e4a09",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thanksgiving power outage update in Virginia - 6:30 a.m.",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPYVo4TUtNeVZOa0VhbXB3MzNCMllXNzVKelZPNHowMUlVZGJ6NFY1eU1fUWVyRTE2ZUFoV0lyZUc3Nm42ZGR3ZGE3S2hMdHpWQmdOaTBmZ0NjUmlXSUc3blNVa3FWU2ltU1cxa3B2cW1hNEd2cG5GeDFnQkllY0lwV3lKMUliM1NoRGxsOWp3?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T11:37:01.000Z",
+      "latestAt": "2026-11-26T11:37:01.000Z",
+      "firstSeenAt": "2026-11-26T14:41:31.285Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "WTKR"
+      ],
+      "score": 1.9
+    },
+    {
       "id": "cbe8ea8872c7",
       "cat": "grid",
       "kind": "news",
@@ -1040,7 +1077,7 @@
       "url": "https://www.yahoo.com/news/articles/maumee-power-outage-leaves-over-215802223.html",
       "source": "Yahoo",
       "publishedAt": "2026-11-26T13:58:00.000Z",
-      "latestAt": "2026-11-26T21:58:00.000Z",
+      "latestAt": "2026-11-26T21:58:02.000Z",
       "firstSeenAt": "2026-11-26T22:42:46.435Z",
       "outlets": 2,
       "outletNames": [
@@ -1611,6 +1648,54 @@
       "score": 1.04
     },
     {
+      "id": "41bfd14f419a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Booba ransomware spreads from US water treatment plant to local government network, exposing IT/OT network security gap",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQQjFPdVp4al9kUHZvSzB6S1hpMTZ4bGpQUlBDcEVZMkdYQm1jYXVYM1Ywdkk3SHBYblNBVEFieTVmNnhVVmhqVkFodTlkbUNiUEJzeENRX0o4ZVpEZ24xS2I0SWNUSXdsaG50UTAydkVTbDR2aUJna2x6OFhBVDRlVkMwaGJ5UUhITTg3QkQtRkFZZ3N5bVdYazJfVVRMRlRaUmIxa2hwYVJLV3VPNW9fdnF5MnR3TWZDWGhFOXJDTElDZjlDVDNwSGlDRE9jcVQ5bmRZUjROWmlfWnlQLVpGY1B4THNRc19HZTNrOE1DVGJkRk9R?oc=5",
+      "source": "Industrial Cyber",
+      "publishedAt": "2026-11-27T07:41:58.000Z",
+      "latestAt": "2026-11-27T07:41:58.000Z",
+      "firstSeenAt": "2026-11-27T07:44:10.481Z",
+      "outlets": 1,
+      "outletNames": [
+        "Industrial Cyber"
+      ],
+      "score": 1
+    },
+    {
+      "id": "05bf682dd354",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "When hackers reach the engine room",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1zWUJsbjlpWDRMLUFTUnVVYkMwckVxUmdfMzdJbHZSY3dDU2JaR05GYzdsZFFuaEpVWmhNQ1Y1eTN1TURNV2NFeTZIRDdraHphY1V6ajVCTHp0ejdITWlrN05YMHNPLWJU?oc=5",
+      "source": "Splash247",
+      "publishedAt": "2026-11-27T07:31:45.000Z",
+      "latestAt": "2026-11-27T07:31:45.000Z",
+      "firstSeenAt": "2026-11-27T07:44:10.481Z",
+      "outlets": 1,
+      "outletNames": [
+        "Splash247"
+      ],
+      "score": 1
+    },
+    {
+      "id": "0bc2f85d0071",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Data breach reports jump 48pc amid surge in cyberattacks",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQSUppaVA5dDZHcm5sOVFVNURzbktPWElaZ3dxVlFrUjBzYUFReFhnbF96X0xCWlctd3VYd21SaTdfY1NkTXZuZlVQSFdVMVBlTVZEYV84TzZDdUtFVlJneFJkWnZEbk5MTUlWN1Y0dzFaVjdzX1NhaGt0OHoydkpHSW0tMHltblpGYTVMYkMwQmo2NzFrTXdtWDcycWhKNDAzU0UzQkV0SmhfLVU?oc=5",
+      "source": "The Standard (HK)",
+      "publishedAt": "2026-11-27T07:27:43.000Z",
+      "latestAt": "2026-11-27T07:27:43.000Z",
+      "firstSeenAt": "2026-11-27T07:44:10.481Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Standard (HK)"
+      ],
+      "score": 1
+    },
+    {
       "id": "895d7da6c9f0",
       "cat": "grid",
       "kind": "news",
@@ -1671,86 +1756,6 @@
       "outlets": 1,
       "outletNames": [
         "Pasquale Pillitteri"
-      ],
-      "score": 1
-    },
-    {
-      "id": "910fe0d23065",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ransomware attacks in PHL doubled in November as hackers harness AI",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPX2FnV3lQYk4yNVF2cTdNcDZyODFWd1dEQ1Z2NXd1cE14N1NpOWNVUVF2VXlnekg0ckg2V1VFNng1RXYyRjRsQmc1LVhJZ2ZHQnpBSDlTTGF0c2VYMVpnXy1Kbzlrck83WE9CV3dLd2FmNVM1amc3ZU9KTEFNcmt1U01MTkhrZDNDa2tnU001MXg2TVgwRXNOQjJ4WlZRRU9PQ2VIVUtLOWdYRy12WWY4aE04VW95NDE4TktMUkwzZw?oc=5",
-      "source": "BusinessWorld Online",
-      "publishedAt": "2026-11-27T07:00:11.000Z",
-      "latestAt": "2026-11-27T07:00:11.000Z",
-      "firstSeenAt": "2026-11-27T07:14:06.650Z",
-      "outlets": 1,
-      "outletNames": [
-        "BusinessWorld Online"
-      ],
-      "score": 1
-    },
-    {
-      "id": "dc35bf735b9e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "SAP Hit by Cyberattack as Hackers Allegedly Access Source Code Through GitHub",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1oTXRtZXQxU05UMnFfN1M2TE1HamtkWHJfQW5aSmZrWXVpS3JPT0FBOVdqREtucjBSamRXY1doMlNscmJ0UElCeEtLTXFZNlQtN0NaMlo5QTFSV1dpMGtVVmE2MHFjQ1Z6emNaVA?oc=5",
-      "source": "The420",
-      "publishedAt": "2026-11-27T06:59:55.000Z",
-      "latestAt": "2026-11-27T06:59:55.000Z",
-      "firstSeenAt": "2026-11-27T07:14:06.650Z",
-      "outlets": 1,
-      "outletNames": [
-        "The420"
-      ],
-      "score": 1
-    },
-    {
-      "id": "94fc3d82bf5d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Samsung Tops Korean Ransomware Credential Exposure Rankings",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBiTjR6bU9MUHZWWTN6WFVOeVdQSzlJTDlOaEdyVHRCVG9wSVFjU1ZncUlyZkNKSXE2dWFqajgwTTk2bzdER2t2a0xxWU5CT1FOVnd3QUI5dUZZV2RSVzI0TE12X3dKdVk?oc=5",
-      "source": "THE ELEC, Korea Electronics Industry Media",
-      "publishedAt": "2026-11-27T06:58:58.000Z",
-      "latestAt": "2026-11-27T06:58:58.000Z",
-      "firstSeenAt": "2026-11-27T07:14:06.650Z",
-      "outlets": 1,
-      "outletNames": [
-        "THE ELEC, Korea Electronics Industry Media"
-      ],
-      "score": 1
-    },
-    {
-      "id": "5ae3e82b8286",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Possible outage suspected as users report Microsoft Outlook down again",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxON3UyS1ZfNlBqZnpaWEtRRWVGNVBvWF81Yk9JZnlHZk41MUdMVVV5MmhhenVyeUo4VXRfb19waVFoX195Q1Q2MS1DV3VBc3hZdlNLN3U4MWhiaGFqX3dRUXpkZHlMcDNvUWxPM2pQN0l1amVTb1pTSm9RV29Tb0h2bmxmV3N6dG52OWJMQmhhTzFLNlZ3TE1URUoxaTJ2c0JH?oc=5",
-      "source": "Neowin",
-      "publishedAt": "2026-11-27T06:57:12.000Z",
-      "latestAt": "2026-11-27T06:57:12.000Z",
-      "firstSeenAt": "2026-11-27T07:14:06.650Z",
-      "outlets": 1,
-      "outletNames": [
-        "Neowin"
-      ],
-      "score": 1
-    },
-    {
-      "id": "7a3ee88c4d1e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA hackers stole personal data, and photographers warned not to use Photoshop",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNUjByQ05xZ2lidTByNC1PMlJIdGd2R2w4RmNYejFiMUh5dndTM3MyME04TzgxUWVyY3RJaUtiektQeEdJbnhUcEg2RWNhR2x6bmlvUlJUalBaNUpONUdTODYwSkZKd24tVGJFWjhINEdxNF9rM3lrVmVNY0o3aHJKUWNKOVl2OEFQVTZoSF80NEdWRHhoaVdwaHlsdjdzekdxb21nbkdzcGRCZkEwZERRZFBWTVZ3VXVOSlhMUjFyN2FUQVJWRmh1dzhR?oc=5",
-      "source": "MyBroadband",
-      "publishedAt": "2026-11-27T06:44:47.000Z",
-      "latestAt": "2026-11-27T06:44:47.000Z",
-      "firstSeenAt": "2026-11-27T06:59:07.893Z",
-      "outlets": 1,
-      "outletNames": [
-        "MyBroadband"
       ],
       "score": 1
     },
