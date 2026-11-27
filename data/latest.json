@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T06:13:54.922Z",
+  "buildTime": "2026-11-27T06:29:00.402Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 01:13 ET",
+  "etStamp": "2026-11-27 01:29 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,16 +45,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 566,
-  "lastSuccessAt": "2026-11-27T06:13:54.922Z",
+  "headlinesRead": 1299,
+  "lastSuccessAt": "2026-11-27T06:29:00.402Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 11,
-    "grid": 27,
-    "hacks": 31,
+    "flights": 12,
+    "grid": 26,
+    "hacks": 29,
     "markets": 4,
     "weather": 5,
-    "internet": 5,
+    "internet": 7,
     "germs": 4,
     "sun": 3,
     "ai": 3,
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 265,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 5 of 26 queries)",
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "count": 992,
+      "error": null,
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     },
     "bing": {
       "ok": true,
-      "count": 269,
+      "count": 272,
       "error": null,
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     },
     "x": {
       "ok": true,
@@ -242,15 +242,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 27,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T06:13:54.922Z"
+      "lastOkAt": "2026-11-27T06:29:00.402Z"
     }
   },
   "stories": [
@@ -471,22 +471,21 @@
       "score": 2.23
     },
     {
-      "id": "7d45a3b77d2b",
+      "id": "8ecff6907df4",
       "cat": "grid",
       "kind": "news",
-      "title": "Large-scale power outage reported in Crimea",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYjFOU3B0NHo0c2ZIbFNNSERKNFVyLW9zX1ZVTVYxRHljZmdLX19jdkhvQzZkbU5mSjhOMWJ0ajVReVMzNFB5T1czdWp1LWdnaDYyRW9DV2I5Y0h4RDVrdkw3Wnl6SVJNWW4wYWJDdjhGQWtrdDlmOGVoRGN2bEFOTU81R1RVM3pqVEtiVGR5cTdDV29E?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T13:24:00.000Z",
-      "latestAt": "2026-11-26T14:01:47.000Z",
-      "firstSeenAt": "2026-11-26T22:42:46.435Z",
-      "outlets": 3,
+      "title": "Thanksgiving storm batters eastern US, leaves over 724,000 without power, shuts major bridges",
+      "url": "https://ddnews.gov.in/en/thanksgiving-storm-batters-eastern-us-leaves-over-724000-without-power-shuts-major-bridges/",
+      "source": "DD News",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-26T22:25:00.000Z",
+      "firstSeenAt": "2026-11-27T04:43:43.269Z",
+      "outlets": 2,
       "outletNames": [
-        "Yahoo",
-        "Anadolu Ajansı",
-        "US Muslims"
+        "DD News",
+        "Moneycontrol"
       ],
-      "score": 2.18
+      "score": 2.21
     },
     {
       "id": "49be6341ddc6",
@@ -563,6 +562,24 @@
       "score": 2.42
     },
     {
+      "id": "7d45a3b77d2b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Large-scale power outage reported in Crimea",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYjFOU3B0NHo0c2ZIbFNNSERKNFVyLW9zX1ZVTVYxRHljZmdLX19jdkhvQzZkbU5mSjhOMWJ0ajVReVMzNFB5T1czdWp1LWdnaDYyRW9DV2I5Y0h4RDVrdkw3Wnl6SVJNWW4wYWJDdjhGQWtrdDlmOGVoRGN2bEFOTU81R1RVM3pqVEtiVGR5cTdDV29E?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T13:24:00.000Z",
+      "latestAt": "2026-11-26T14:01:47.000Z",
+      "firstSeenAt": "2026-11-26T22:42:46.435Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "Anadolu Ajansı",
+        "US Muslims"
+      ],
+      "score": 2.18
+    },
+    {
       "id": "06a52e93c62c",
       "cat": "grid",
       "kind": "news",
@@ -629,23 +646,6 @@
         "WTKR"
       ],
       "score": 1.9
-    },
-    {
-      "id": "cbe8ea8872c7",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage affecting Pen Light customers in Gig Harbor",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFByNWFWazVLMFE3cDZCU05QV3Q4VXJaN2VFZUc2V3E5dUJLSjBMUTcwUGRpOVBiM3dxMm9yUzdGZ1Itd3BPVk5GY1gwaV9scGtxVTZUZGVwZW9aQkpQck1ZOGgxblVrSUhIazY5YVFTSW1vWnFkR01pQm1B0gF6QVVfeXFMUGlRSzBlNU5XWnoyZ09iZmlKLVRndWxJQmo5dlpBR21ZX21uY3puMENnZnh2UnJ4N05BTmpyaHdtOVdYa1U2a0Z5Z3ZRVDlTWmd1R1J2bVpRQ19FeEh4eDNmNC0zZ1VmdXpjMHhwaHFjNUhlN25mLU9CWUE?oc=5",
-      "source": "Tacoma News Tribune",
-      "publishedAt": "2026-11-26T21:06:00.000Z",
-      "latestAt": "2026-11-26T21:41:43.000Z",
-      "firstSeenAt": "2026-11-27T00:58:09.251Z",
-      "outlets": 2,
-      "outletNames": [
-        "Tacoma News Tribune",
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 1.87
     },
     {
       "id": "d6cf7b7e41d1",
@@ -917,6 +917,23 @@
       "score": 1.99
     },
     {
+      "id": "939c93fd203d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "JPCrypto-ISAC partners with SEAL to enhance cyberattack response",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZkk1U1o4aGlqcWwwbjRTcVgxVzM1UjdGZ1Z0SUFNY2o2OTk2cmN1dTA3NjBaOHIxUk10Q3YzV1ExYXdPX3RVOWpGU1JsQ0ZiSklCWTBkTldGeldwWnZ6YThHd045SHd5SGFDN1NYcW5NRWtQUk9HUlpPSGM4cmVDbXNtMzFfTTV2bWpGX2VSWGppNTFramxPTExMUXhHNXBpWW91WWtBc3N6ZmpMdjZKVXI3Q3lNQXZpVWpNNkJJVThTX2NyRzZ1Sg?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-11-27T05:29:00.000Z",
+      "latestAt": "2026-11-27T05:29:29.000Z",
+      "firstSeenAt": "2026-11-27T06:29:00.402Z",
+      "outlets": 2,
+      "outletNames": [
+        "TradingView",
+        "Crypto Briefing"
+      ],
+      "score": 1.97
+    },
+    {
       "id": "2d9813eb624f",
       "cat": "hacks",
       "kind": "news",
@@ -981,6 +998,24 @@
       "outletNames": [
         "Punch Newspapers",
         "MTV Lebanon"
+      ],
+      "score": 1.87
+    },
+    {
+      "id": "cc0a42ab87c1",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Storms disrupt Thanksgiving with flight delays and over 920,000 power outages",
+      "url": "https://www.yahoo.com/news/weather-news/articles/storms-disrupt-thanksgiving-flight-delays-230636756.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T07:18:51.000Z",
+      "latestAt": "2026-11-27T01:34:00.000Z",
+      "firstSeenAt": "2026-11-26T23:58:05.239Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "Insider on MSN",
+        "Business Insider"
       ],
       "score": 1.87
     },
@@ -1225,23 +1260,6 @@
       "score": 1.45
     },
     {
-      "id": "cc0a42ab87c1",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Storms disrupt Thanksgiving with flight delays and over 920,000 power outages",
-      "url": "https://www.yahoo.com/news/weather-news/articles/storms-disrupt-thanksgiving-flight-delays-230636756.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T07:18:51.000Z",
-      "latestAt": "2026-11-26T16:00:00.000Z",
-      "firstSeenAt": "2026-11-26T23:58:05.239Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "Insider on MSN"
-      ],
-      "score": 1.44
-    },
-    {
       "id": "e7f4ea1619d9",
       "cat": "hacks",
       "kind": "news",
@@ -1470,6 +1488,22 @@
       "score": 1.21
     },
     {
+      "id": "dcd28ccd8b64",
+      "cat": "flights",
+      "kind": "news",
+      "title": "American Airlines flights resume after brief IT outage led to nationwide ground stop",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeVBualA4LWNuZkc4eTZybC1GdlJFbHo5QV9EWDY5MEFUYTVncjFQdElhYVVYNktKdERYeXY5WWxWeWwxS0Y2ZXd0cVFsZnUxYi1QeU50Sm8zbHZVek5URXRHckpEQUhIXzNJUDhZdzN2NkQ5cm84X0t1ZnZWYk81b0d5MUIzM3lhSWdGdGFrSV9RYjdaOS0yeUdzNm1yMEdSRzBDb9IBqgFBVV95cUxOc2JMNVZ2TXN0RVNJcXRMVXgwMWw0bTdGQnFLcDF3eEJtSndBYTRoSjM2RWwxeUJIdXhNX3ZJWlpFUVB3MjZQcWRoZVBPOXMxYUVaVjk4QmRlZDA4Znl3c1lyOV9RdWQ1QW55bUw1dGVDdHJCYzRabk0xc2VxdU1jSktQX2hyQWhkTHdvYzBPcTJXaUdUclVpTHN0ZTFGbUZhblFENEtlSDBwQQ?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-26T22:03:55.000Z",
+      "latestAt": "2026-11-26T22:03:55.000Z",
+      "firstSeenAt": "2026-11-27T06:29:00.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "score": 1.2
+    },
+    {
       "id": "c63ae471f83a",
       "cat": "hacks",
       "kind": "news",
@@ -1502,6 +1536,22 @@
       "score": 1.2
     },
     {
+      "id": "1dc9a6239a55",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Password Manager - 1Password Source Code Hacked In Major Data Breach‼️",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRHU0OHd0aU1wMzM3SmwxMDdnQ2RsUTZ1Rl9TUy12SnptdjFmQmtGTy01dGZ4czZnNm9PRWV6ZzNsVEJsUjhlV2ZVMkxNNVp0aXFiRGMwSTdjdEZHaTVPdkJJOWR1SlM5Vk5tZk5lNVFJVVRETGhCc0kyVmFNR0VUbDFFQ0s1RUV2TzIyNGhvQVFMZXdMbUI4Y2JYYkhoZkxzYmpIeA?oc=5",
+      "source": "LinkedIn",
+      "publishedAt": "2026-11-26T19:30:08.000Z",
+      "latestAt": "2026-11-26T19:30:08.000Z",
+      "firstSeenAt": "2026-11-27T06:29:00.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "LinkedIn"
+      ],
+      "score": 1.14
+    },
+    {
       "id": "fba6a954a647",
       "cat": "hacks",
       "kind": "news",
@@ -1518,22 +1568,6 @@
       "score": 1.12
     },
     {
-      "id": "8ecff6907df4",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thanksgiving storm batters eastern US, leaves over 724,000 without power, shuts major bridges",
-      "url": "https://ddnews.gov.in/en/thanksgiving-storm-batters-eastern-us-leaves-over-724000-without-power-shuts-major-bridges/",
-      "source": "DD News",
-      "publishedAt": "2026-11-26T16:00:00.000Z",
-      "latestAt": "2026-11-26T16:00:00.000Z",
-      "firstSeenAt": "2026-11-27T04:43:43.269Z",
-      "outlets": 1,
-      "outletNames": [
-        "DD News"
-      ],
-      "score": 1.1
-    },
-    {
       "id": "48b07c475db0",
       "cat": "flights",
       "kind": "news",
@@ -1548,6 +1582,22 @@
         "Inside the Magic"
       ],
       "score": 1.07
+    },
+    {
+      "id": "982566a9f053",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Wants to Fix Global Outages in an Hour. It Has a Long Way To Go",
+      "url": "https://analyticsindiamag.com/ai-features/microsoft-wants-to-fix-global-outages-in-an-hour-it-has-a-long-way-to-go",
+      "source": "Analytics India Magazine",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-26T16:00:00.000Z",
+      "firstSeenAt": "2026-11-27T06:29:00.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "Analytics India Magazine"
+      ],
+      "score": 1.06
     },
     {
       "id": "1b3fa43e6f7c",
@@ -1580,6 +1630,86 @@
         "The Star"
       ],
       "score": 1.04
+    },
+    {
+      "id": "66ef75b2b191",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Swiss AI Agent Cyberattacks Confirmed: Five Cases, Three Targeted Critical Infrastructure",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNcWdYdVUtXy1fdTZHMWZlX3JzT0VIVWdOdUdlZERTUDRodEloV01ESk9mUFNmSXBYNGFPTmZubk9wdHlhQjQ1Q0hIYy1CYkFzZzFobTdDRExhWS1CSjNNbVlIZ244b29FNklaS00zTXlTRWpsMmlvU2tpQnJzeExLSmJacW5qWnVSSDJKbDRwU0gwRVlNSWE1RVltR3RrTGVzQWtyUFlZWkNxMi1NYUN3dzI4UHRLWDhId1AwZWt4eHlWVjVOU0NTbnk5Q2dqQ1VReUo4Zk5ENnp1QQ?oc=5",
+      "source": "Tech Times",
+      "publishedAt": "2026-11-27T06:25:34.000Z",
+      "latestAt": "2026-11-27T06:25:34.000Z",
+      "firstSeenAt": "2026-11-27T06:29:00.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "Tech Times"
+      ],
+      "score": 1
+    },
+    {
+      "id": "6281a90f7e15",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Binance Lifts Withdrawal Suspension After $6.3B Crypto Hack",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVUhrV1Bwdk9JSU5yclhDR3NSV3RzemxRYmdhOGNaSl9lTkVCMEhnRWY1RzBzNDdKU05GdXB5TFI4ZElpSW05VDBGU1FVNEFGMlQxU3dQS0tZc0NWUkdkenZuV1FXbGRSa1NhMFpEQkw1bl91VWVOckJkMEVhUU41S0g3M0pKMFEyU21VcGpsN1NOX1V2eVpvMWNtM0RlWnF5U0NoZnJsV09BQURKdlNhUkpqWDQ1UXZUR2VKS3ZCdHYwRU95SHE4bDlMa0VfNms5cGc?oc=5",
+      "source": "Forbes Middle East",
+      "publishedAt": "2026-11-27T06:22:30.000Z",
+      "latestAt": "2026-11-27T06:22:30.000Z",
+      "firstSeenAt": "2026-11-27T06:29:00.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "Forbes Middle East"
+      ],
+      "score": 1
+    },
+    {
+      "id": "8ab1f28394c6",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft outage hits South African businesses, government services and universities",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPendFUktGazBkcURFNFpQUjZEWnVwWWNNb1MwVkxjSFdpejVTOW13VExocHpTaTVRSmRaMnlkLTFDUzNzb2kxNm5oZUlRR185V2laWU5fYVFRbURRdExXUFVfVFBSSHRpYXBqb1NGVTVuMjlfSWRUZmx1U0hseEk0MGRrV0ZIWVU1MER2bVNOSWM2YUJhaVMtdUctdklJU20yQkRpZVIzb19OSDNqVE9uU3Vyb0JpbkcwMzZZdnJYaw?oc=5",
+      "source": "IOL",
+      "publishedAt": "2026-11-27T06:18:24.000Z",
+      "latestAt": "2026-11-27T06:18:24.000Z",
+      "firstSeenAt": "2026-11-27T06:29:00.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "IOL"
+      ],
+      "score": 1
+    },
+    {
+      "id": "c9676d6730b4",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage disrupts check-in, security at OR Tambo’s domestic terminal",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNYzVOd25hVnFrR0w1aWNmbVNhTmVkbFV6T3RyNU4tSk9jRjNLdFNYRm5acUNiaFdvQ2YtdzFsNlpSY0dScU5Ob29GNks5Z0lybnR4VnI5Q29NckxRUTJZcXlSM0VhWWp2RnhYcHBLZWYwV3VWZjNPWHp3ZmN3WUJ2czhweEk3TXozamZKX2ZQZmhJbXhKTmVxRHlodWZCRU1aTFpadmw2cUVEb1FBdWNIeHFYc21WZUEtQmlhUk9QQnRhQQ?oc=5",
+      "source": "News24",
+      "publishedAt": "2026-11-27T06:13:18.000Z",
+      "latestAt": "2026-11-27T06:13:18.000Z",
+      "firstSeenAt": "2026-11-27T06:29:00.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "News24"
+      ],
+      "score": 1
+    },
+    {
+      "id": "8b924f779234",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage hits domestic terminal at O. R. Tambo International Airport",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUTFJOE1PN0I4T3hja0FTazhITzNwTTlEbnBPRm01Nk93dTBhbHVVT2E3LVd1dkxkTzZxRkdRMTJ4VWdlb2hBVl81LUM2MC1zUmJGZHZobmpEcFVHRlJ6Nm5YS25PSE5BZDV2UTNVQnY0Zlp5bURZYXFabG1aS2RrMXgzUjlrcUlJclkxYUVQemhnRnJURUtKWDhGV25pRWNRaVNMVDRiVEJDTl9nMWpFdjNxWWxWT0M0RFE?oc=5",
+      "source": "IOL",
+      "publishedAt": "2026-11-27T06:13:11.000Z",
+      "latestAt": "2026-11-27T06:13:11.000Z",
+      "firstSeenAt": "2026-11-27T06:29:00.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "IOL"
+      ],
+      "score": 1
     },
     {
       "id": "aeacda13e851",
@@ -1626,134 +1756,6 @@
       "outlets": 1,
       "outletNames": [
         "Cleveland 19 News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "638f18641893",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack prompts AFP to take news platform offline",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5EeHFzLVoyWGR5LVNpYnFNYlVWb0xhU2JMb3dnRnY3UXd6MlVqVU9qaXpRMldObGxZbUg1dlJOOUhJTS0wTnFzajkxc1FheFlzYkdLeW9jWFo?oc=5",
-      "source": "TRT World",
-      "publishedAt": "2026-11-27T05:54:09.000Z",
-      "latestAt": "2026-11-27T05:54:09.000Z",
-      "firstSeenAt": "2026-11-27T05:58:58.592Z",
-      "outlets": 1,
-      "outletNames": [
-        "TRT World"
-      ],
-      "score": 1
-    },
-    {
-      "id": "50f26de16a0c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Reportedly Stole SAP Employee Logins to Alter and Copy Company Source Code",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ2dxM2tXZlpfUzVQbjRiWFA1YVp0NzdmX1d1eTctU0tsWWJ5R1ZvUTNONldFRHBJVXpmOXlPTEkyZ01taENfYWtDY0owTkVaeXRCcUY1WTZyRjJuNUVUZE1heDJzVWhVV1dkSEN6eTYwUXlPX0tJaTVwRUlpVkZTak9wRzItRUZRRGZEbzlnc2p0TjAzSUtwZkVHLTRldW9uVXp2Q2dZN3BBZw?oc=5",
-      "source": "the deep dive",
-      "publishedAt": "2026-11-27T05:48:18.000Z",
-      "latestAt": "2026-11-27T05:48:18.000Z",
-      "firstSeenAt": "2026-11-27T05:58:58.592Z",
-      "outlets": 1,
-      "outletNames": [
-        "the deep dive"
-      ],
-      "score": 1
-    },
-    {
-      "id": "61cba123749e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNOS1VUmpJcEM5SHNNX09PYlZaQWstSGNyQnpEbWt5TXlVcVdkakhyS0p1NjQ5em5PRGpTLUVYVzhsZE5xSWRhMHpYUDZ6UDctcUhtaUl4VENGc01jN09sX29Ta05Cdkw3LXJfVlk4MzVkb3RlUTBuNnJBX0tUMHVOMVpxdV8?oc=5",
-      "source": "The Hacker News",
-      "publishedAt": "2026-11-27T05:48:00.000Z",
-      "latestAt": "2026-11-27T05:48:00.000Z",
-      "firstSeenAt": "2026-11-27T05:58:58.592Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Hacker News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "463a9c226583",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage hits OR Tambo, passengers stranded in long queues",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSFVnVEdJb3Q4LWNSenRnYjlzdUJsVktYa1NhOHRjZUh4SkhvTERKcGhxNllYZ0ZrQjZjbjNSOXVLUjc4bGxld0VWR0NkOVh6bDc1ODJvVGhvRU9xQXBqWngxbUMzbmlOUzZHZnpoZml6UVdtWHVtbDdpNDN0ZmVKQ194T3dXNzJSeHd2bDlqVVRPV09hNXIwR3NSdk8?oc=5",
-      "source": "eNCA",
-      "publishedAt": "2026-11-27T04:48:16.000Z",
-      "latestAt": "2026-11-27T04:48:16.000Z",
-      "firstSeenAt": "2026-11-27T04:58:49.971Z",
-      "outlets": 1,
-      "outletNames": [
-        "eNCA"
-      ],
-      "score": 1
-    },
-    {
-      "id": "512e341d4905",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Town of Bernalillo updates residents on cyberattack recovery",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWEstNjBXdWxRZkJjajc3UjJGTEpPSTZsd0h0dWdRTExhMFoxWXpiNVNTUURRcWF3R0lpTjBHeDlxeEh4RnRLbVh2eGJ5Y1hHWm9FeFFOeUpqdEEybGdtTFAwbmxodFgybFVPVDliay1VVmtHeXAzOVdKZGhoZEVpaXYtRXdQMlBlUXZVVThIeGxRNGRLVEM3emZNY0hIckNUenc?oc=5",
-      "source": "Rio Rancho Observer Home",
-      "publishedAt": "2026-11-27T04:27:16.000Z",
-      "latestAt": "2026-11-27T04:27:42.000Z",
-      "firstSeenAt": "2026-11-27T04:28:40.522Z",
-      "outlets": 1,
-      "outletNames": [
-        "Rio Rancho Observer Home"
-      ],
-      "score": 1
-    },
-    {
-      "id": "447944af111a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "SAP hit by 'Project Granite' cyberattack as hackers reportedly steal GitHub tokens and alter source code",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOVGs0eV9VLVczZXdQdk1NbjJ6TXF4ZU1CZzBWSmxUR2VGYk9CNzBiRmVsS2FpQUVMOHp2TWdQMXQ3UkRuTE9ha2wyczU2RUZac19zM0dXeG1KWUpUdlg5czkwUmRRN2xJOWN3Z25DVlRYSXJsTXhYeUVKZHpRQWZYdXlVamFmbGFPOElLRnJYNnFRNUwtWkJQblFSNHh5N0h5Z1JtTEtwN2dpSl9yRGk3RjZJWTdsaTRTNkpPVG1aNHFicHJGemM0LXQ2eHd5WGljRVE?oc=5",
-      "source": "Dealroom",
-      "publishedAt": "2026-11-27T04:26:32.000Z",
-      "latestAt": "2026-11-27T04:26:32.000Z",
-      "firstSeenAt": "2026-11-27T04:28:40.522Z",
-      "outlets": 1,
-      "outletNames": [
-        "Dealroom"
-      ],
-      "score": 1
-    },
-    {
-      "id": "b77a88253fd4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Thai SEC Data Breach Exposes Personal Information of 155 Users",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1wWmswNDVuS0xBVG9GUlo0MXBhbTZkUkU2RWEwWkxEdkYzRWZlcjBHRFBreXNmNy14cXpCcHlPeEZvdkc2TkdFclRqSmJsNGJGalBkeS1JX3dqcl9Qc1NQYk1WZ0xjM05vdDM1Mjdkd21BcUk?oc=5",
-      "source": "Fintech Singapore",
-      "publishedAt": "2026-11-27T04:16:13.000Z",
-      "latestAt": "2026-11-27T04:16:13.000Z",
-      "firstSeenAt": "2026-11-27T04:28:40.522Z",
-      "outlets": 1,
-      "outletNames": [
-        "Fintech Singapore"
-      ],
-      "score": 1
-    },
-    {
-      "id": "2bc1b77a3fd6",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Downed hydro pole sparks power outage for 1,000 Cambridge customers amid gusty winds",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWDlxX1VUckc2LWtlZGJUbkRXVDlHN180M2VSekNHOXh2VUhEUU9rcUt0ejNudXJlTmJXWjFLNThmOFZWSTVWQWx6Vnp0N3o2czk2OGF4SUsxWlJwUjVjcVJoSXdVS1MxWUg4dHQ2Q0Z6UVYzTjlISmhONW1OaVZTTFpJOHZxV1dTenFQNUE5Yk53b05hWTIyLTU1NUpvVDN3Tk1WSW9QU1JIV1ZZQTFrWkl6Z3I5ZWM2NnlLXzJ2Wjcwd0E?oc=5",
-      "source": "CTV News",
-      "publishedAt": "2026-11-27T03:24:00.000Z",
-      "latestAt": "2026-11-27T03:24:00.000Z",
-      "firstSeenAt": "2026-11-27T03:28:32.989Z",
-      "outlets": 1,
-      "outletNames": [
-        "CTV News"
       ],
       "score": 1
     },
