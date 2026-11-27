@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T07:59:11.044Z",
+  "buildTime": "2026-11-27T08:14:16.364Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 02:59 ET",
+  "etStamp": "2026-11-27 03:14 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,15 +44,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 617,
-  "lastSuccessAt": "2026-11-27T07:59:11.044Z",
+  "headlinesRead": 1266,
+  "lastSuccessAt": "2026-11-27T08:14:16.364Z",
   "rollingFallback": false,
   "cats": {
     "flights": 11,
-    "hacks": 29,
-    "grid": 26,
+    "hacks": 27,
+    "grid": 27,
     "markets": 4,
-    "weather": 6,
+    "weather": 7,
     "germs": 4,
     "sun": 4,
     "ai": 2,
@@ -175,80 +175,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 318,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 8 of 26 queries)",
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "count": 939,
+      "error": null,
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "bing": {
       "ok": true,
-      "count": 264,
+      "count": 262,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "gdelt": {
       "ok": true,
-      "count": 0,
-      "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "count": 30,
+      "error": "timeout",
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T07:59:11.044Z"
+      "lastOkAt": "2026-11-27T08:14:16.364Z"
     }
   },
   "stories": [
@@ -318,35 +319,6 @@
         "US Muslims"
       ],
       "score": 4.02
-    },
-    {
-      "id": "7460af6d2d67",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands without power in DC, Maryland and Virginia on Thanksgiving, trees fall on homes and cars | Weather Updates",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOa1JkLUd1ZXhBUzc4bU12YTN2VUNuNFlfOEx0aDZZQmhzaTJieFpHaGFyRHJqMXByUkViZEJlTTh5UlVGdXVlbV8yWkg2N25ZQzgzZUpkN3hUQzFjQnJZV3V0WGx0ckhBeFM5QlI0QzN5N1MyVHU3WTlxdXoteXpNcmpRYzZfZFh3dmUyOWlRLTlxUG52Zzd6cHJ4TG5hQk0wYWNlXzluOE1zZDJHTVJQSFV3eXg0c1FiRlpqVnZOZkp4Ny1XRUNFVzBSS1FQSkNuM1NhdkNUZw?oc=5",
-      "source": "WUSA9",
-      "publishedAt": "2026-11-26T12:17:00.000Z",
-      "latestAt": "2026-11-27T04:50:30.000Z",
-      "firstSeenAt": "2026-11-27T04:43:43.269Z",
-      "outlets": 14,
-      "outletNames": [
-        "WUSA9",
-        "Albemarle Observer",
-        "Yahoo",
-        "Energy News Beat",
-        "WANE 15",
-        "WDBJ7",
-        "FOX 5 DC",
-        "ABC27",
-        "SSBCrack",
-        "WKYC",
-        "primetimer.com",
-        "Cleveland 19 News",
-        "NewsBreak: Local News & Alerts",
-        "FFXnow"
-      ],
-      "score": 3.49
     },
     {
       "id": "9d364f5dc0cd",
@@ -485,6 +457,23 @@
       "score": 2.23
     },
     {
+      "id": "8ecff6907df4",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thanksgiving storm batters eastern US, leaves over 724,000 without power, shuts major bridges",
+      "url": "https://ddnews.gov.in/en/thanksgiving-storm-batters-eastern-us-leaves-over-724000-without-power-shuts-major-bridges/",
+      "source": "DD News",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-26T22:25:00.000Z",
+      "firstSeenAt": "2026-11-27T04:43:43.269Z",
+      "outlets": 2,
+      "outletNames": [
+        "DD News",
+        "Moneycontrol"
+      ],
+      "score": 2.21
+    },
+    {
       "id": "49be6341ddc6",
       "cat": "germs",
       "kind": "news",
@@ -522,19 +511,20 @@
       "id": "abee7e37d59e",
       "cat": "hacks",
       "kind": "news",
-      "title": "SAP flags security incident, says no evidence of customer data breach",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPOVExMUVpekE4RHgxVGU5eFZTQWR6aC0zaFFjWFhKWmpINWZMRTI2MWk1SkJ6aHByQkkxVUNQOUJmNWhzelRsRFJ1cXB5NnVpN2RCNXNneXp2Qnp1bG5HbHVWVzBydkxYSEFGQURSeld2ckdPMmlRUmF3OXRsRnNzbFJ5QXlKSm11SGp1eFN0eEVwQnVnTVdIdnVyVVlSUGFIdHppc3FFcnVCWl8xMnFweWhET1hyYUZqcmVwXzd3cXdCUzdJdWZGbExqSFZlZ9IB0wFBVV95cUxPa2RGN1hiUDhPb19TV0FNbGNWMTUzVkxPZWoyTE9qanRTX3dXZ3BZdnQybE9vMFQyci10RXFXbFpJRkI0c3hzNnhjMURoSEpXTVVyR2FETl96aEtGdVhPbGVGSEYzSnhyVnhQS3dneXNYR3RtbV9hZ1NVbGtBZEtXRWpZYS1GUTZQM2dWMGgyYWYzMWgxX1hoTHBjd1ByMDJ1ZFR3U0E5MFNyMDU3MFdwQWZYNkJDeWRqSEVrT1Jkelp6ZWlLdW9FdnB6VUJIdXVQa0s0?oc=5",
-      "source": "Business Standard",
-      "publishedAt": "2026-11-27T07:06:16.000Z",
+      "title": "Europe’s SAP security incident: No evidence of customer data breach found",
+      "url": "https://www.thenews.com.pk/latest/1425371-europes-sap-security-incident-no-evidence-of-customer-data-breach-found",
+      "source": "The News International",
+      "publishedAt": "2026-11-27T00:00:00.000Z",
       "latestAt": "2026-11-27T07:40:00.000Z",
       "firstSeenAt": "2026-11-27T07:44:10.481Z",
-      "outlets": 3,
+      "outlets": 4,
       "outletNames": [
         "Business Standard",
         "marketscreener.com",
-        "The Straits Times"
+        "The Straits Times",
+        "The News International"
       ],
-      "score": 2.56
+      "score": 2.61
     },
     {
       "id": "d8faac5af851",
@@ -555,39 +545,22 @@
       "score": 2.46
     },
     {
-      "id": "8131b068c68e",
+      "id": "f15707865a72",
       "cat": "hacks",
       "kind": "news",
-      "title": "Kaspersky and VDC Strategy: ransomware incidents could cost each affected company over $470,000",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQ1lrS2xnMW1DM1diYm1HQlZ0X1oxRlBSN0MwZGtMVFNnU0Y2TkxFWVVhRURKR0N5bjFPT1haQVhDOEJReGNtVlZ3ekoyYVVmaWxuT1ZOa21Zdl95bFRSTGxNSTlLS3AyWWg5MVdhMVF0czNkbW5vSWlRRUZ0MS1RdkdtTGs1dDlVQlU4NmhZZTd3cFFoUnNtcHE0eFpFeUR4bG1LcjZGbUxxZkdqQlIwMS1fTXppTEdscFduZ1hKbTU1MjQ4YUVTQ2E1WmRpRTNkc2pZOTlB?oc=5",
-      "source": "Kaspersky",
-      "publishedAt": "2026-11-26T08:01:20.000Z",
-      "latestAt": "2026-11-26T12:44:05.000Z",
-      "firstSeenAt": "2026-11-26T13:11:16.410Z",
+      "title": "Ransomware Attacks in Africa Could Cost Businesses Over $368,000 Per Incident",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZDY2eS1IdVNaVFI4OFNXZFZnR2xnOXBSQWtacFpoMzVreUpWNzUwWVdEbTl3VzY0NVBXQWZKcjQxMWNSQWdHaGptdTBKc1d4RnpuZTR2ZFZ2clU5ZmppRDktUjVJVWViaG03RndGbDRibDBNbHRCaGVSemVxQjBIZDdlRG9fZmNJT1E?oc=5",
+      "source": "FF News",
+      "publishedAt": "2026-11-26T13:28:06.000Z",
+      "latestAt": "2026-11-27T03:00:48.000Z",
+      "firstSeenAt": "2026-11-26T20:57:33.130Z",
       "outlets": 3,
       "outletNames": [
-        "Kaspersky",
-        "Africa.com",
-        "Zawya"
+        "FF News",
+        "DNE Africa",
+        "The Guardian Nigeria News"
       ],
-      "score": 2.36
-    },
-    {
-      "id": "8ecff6907df4",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thanksgiving storm batters eastern US, leaves over 724,000 without power, shuts major bridges",
-      "url": "https://ddnews.gov.in/en/thanksgiving-storm-batters-eastern-us-leaves-over-724000-without-power-shuts-major-bridges/",
-      "source": "DD News",
-      "publishedAt": "2026-11-26T16:00:00.000Z",
-      "latestAt": "2026-11-26T22:25:00.000Z",
-      "firstSeenAt": "2026-11-27T04:43:43.269Z",
-      "outlets": 2,
-      "outletNames": [
-        "DD News",
-        "Moneycontrol"
-      ],
-      "score": 2.21
+      "score": 2.26
     },
     {
       "id": "cc0a42ab87c1",
@@ -626,6 +599,42 @@
       "score": 2.18
     },
     {
+      "id": "b1eb963b6b79",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Storms disrupt Thanksgiving with flight delays, over 960,000 power outages, and a Delta ground stop at LaGuardia",
+      "url": "https://www.msn.com/en-us/news/other/storms-disrupt-thanksgiving-with-flight-delays-over-960-000-power-outages-and-a-delta-ground-stop-at-laguardia/ar-AA2ifD6f",
+      "source": "Insider on MSN",
+      "publishedAt": "2026-11-26T12:16:03.000Z",
+      "latestAt": "2026-11-27T01:34:06.000Z",
+      "firstSeenAt": "2026-11-27T04:43:43.269Z",
+      "outlets": 4,
+      "outletNames": [
+        "Insider on MSN",
+        "Business Insider Africa",
+        "International Business Times UK",
+        "Business Insider"
+      ],
+      "score": 2.18
+    },
+    {
+      "id": "06a52e93c62c",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
+      "source": "WCIV",
+      "publishedAt": "2026-11-26T15:17:10.000Z",
+      "latestAt": "2026-11-27T03:14:55.000Z",
+      "firstSeenAt": "2026-11-26T16:11:53.860Z",
+      "outlets": 2,
+      "outletNames": [
+        "WCIV",
+        "WTMA-AM"
+      ],
+      "score": 1.97
+    },
+    {
       "id": "53427eab3273",
       "cat": "flights",
       "kind": "news",
@@ -641,24 +650,6 @@
         "Yahoo"
       ],
       "score": 1.91
-    },
-    {
-      "id": "b1eb963b6b79",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Storms disrupt Thanksgiving with flight delays, over 960,000 power outages, and a Delta ground stop at LaGuardia",
-      "url": "https://www.msn.com/en-us/news/other/storms-disrupt-thanksgiving-with-flight-delays-over-960-000-power-outages-and-a-delta-ground-stop-at-laguardia/ar-AA2ifD6f",
-      "source": "Insider on MSN",
-      "publishedAt": "2026-11-26T12:16:03.000Z",
-      "latestAt": "2026-11-27T01:34:06.000Z",
-      "firstSeenAt": "2026-11-27T04:43:43.269Z",
-      "outlets": 3,
-      "outletNames": [
-        "Insider on MSN",
-        "Business Insider Africa",
-        "International Business Times UK"
-      ],
-      "score": 1.88
     },
     {
       "id": "d6cf7b7e41d1",
@@ -776,6 +767,22 @@
       "score": 1.4
     },
     {
+      "id": "4d568b2c5e9b",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Record Heat Drained the World's Rivers and Lakes in 2023 and 2024, a New Science Study Finds",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxONXY1SnBIRHF6ZTNMdEJoU19FMWZuSFhVa3lCaUJhdGZ5aWxycE1VNWIxZThKczkxOTZxSzlEQkdwWXBrVWdVX3VkRERfbzRORENrSi00MEZRMVlqUWM1LUx5Vjd4MVI2Z1M3N2RCWmxnWGxZS1pYUDcxYmo4UVROY3AzdmlIZUctREFZYWdxdVRURXpIRmNGM3ZEblZ3MGs0WGQzS1dtWE40SU1fY2hvV1dleDQwWmlvdUo2OHphcnFBbHBBMHhJZElHS3lKZw?oc=5",
+      "source": "Nature World News",
+      "publishedAt": "2026-11-27T07:57:10.000Z",
+      "latestAt": "2026-11-27T07:57:10.000Z",
+      "firstSeenAt": "2026-11-27T08:14:16.364Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nature World News"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "05f321ac59b4",
       "cat": "weather",
       "kind": "news",
@@ -806,40 +813,6 @@
         "StoneWars.com"
       ],
       "score": 1.35
-    },
-    {
-      "id": "9783082a53d9",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Italy's premium Prosecco hills preserved their 2026 harvest despite record heat",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQeS1LZmJuLUs4RHh0T3h0N2w2eFVWNG9IUFV0NGhTV2tRYTRoUk9YQjFkSWhER3hHYTI4M2ZBbDhMYUFmSk9kbEwzMUpCTGFhelZRWDJuOWtMU1NDelNKemlaYURick56cDh5YWtpX1lxZ01ydS1DYlFtTEFSX016U3lGSC1hamlXMTZ2cWo3V1g2b3hZYTJoQm9pX3NUT2JaRi1yd1Q5WDY0T1lKbFJsSFQzRHJJMmN6eC1qOEVEdjZiR01x0gHKAUFVX3lxTE1GR0NZUGxxNnUyaHdRakpiS1gtMm9XQ3psdGtQaWJjc2ZTYzgyek83LXRDWnNNdkxNOVhBVktLZU1Ta09qREVnYWZfdEhHZjh0RzdSc3RmZHFGdjBZNkJVLUhhXzFQRTRXQ1BmYjNuaXJCeHFEbENTZnh0aHJreVB4ek5oaHkxNUhXdjF6dndhd2VYV2NwY1BZUVA3VFNyekVFQ2VoNDNnNlU2eV9OSy02NW5zUjU0aWtxNS1ucFJ1SlJLQzZZZnFkZmc?oc=5",
-      "source": "Vinetur",
-      "publishedAt": "2026-11-26T13:24:50.000Z",
-      "latestAt": "2026-11-26T13:24:57.000Z",
-      "firstSeenAt": "2026-11-26T16:11:53.860Z",
-      "outlets": 1,
-      "outletNames": [
-        "Vinetur"
-      ],
-      "score": 1.34
-    },
-    {
-      "id": "f15707865a72",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Ransomware Attacks in Africa Could Cost Businesses Over $368,000 Per Incident",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZDY2eS1IdVNaVFI4OFNXZFZnR2xnOXBSQWtacFpoMzVreUpWNzUwWVdEbTl3VzY0NVBXQWZKcjQxMWNSQWdHaGptdTBKc1d4RnpuZTR2ZFZ2clU5ZmppRDktUjVJVWViaG03RndGbDRibDBNbHRCaGVSemVxQjBIZDdlRG9fZmNJT1E?oc=5",
-      "source": "FF News",
-      "publishedAt": "2026-11-26T13:28:06.000Z",
-      "latestAt": "2026-11-27T03:00:48.000Z",
-      "firstSeenAt": "2026-11-26T20:57:33.130Z",
-      "outlets": 3,
-      "outletNames": [
-        "FF News",
-        "DNE Africa",
-        "The Guardian Nigeria News"
-      ],
-      "score": 2.26
     },
     {
       "id": "b338ec219fe9",
@@ -924,23 +897,6 @@
       "outletNames": [
         "TradingView",
         "Crypto Briefing"
-      ],
-      "score": 1.97
-    },
-    {
-      "id": "06a52e93c62c",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
-      "source": "WCIV",
-      "publishedAt": "2026-11-26T15:17:10.000Z",
-      "latestAt": "2026-11-27T03:14:55.000Z",
-      "firstSeenAt": "2026-11-26T16:11:53.860Z",
-      "outlets": 2,
-      "outletNames": [
-        "WCIV",
-        "WTMA-AM"
       ],
       "score": 1.97
     },
@@ -1113,6 +1069,23 @@
         "wfmynews2.com"
       ],
       "score": 1.7
+    },
+    {
+      "id": "7d215f5ace2f",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Heavy Snow Leaves More Than 125,000 Ameren Customers Without Power in St. Louis Region on Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUW9TdGNCdE9yckJWRWM2S3VvQmRBR3JRaHZONW5vb2RyMTBHb0JXQjJpRWJFOG82SjFESUhRaTVtY2N1OWtaY0wzRUNQS19lOFd1eUpEcXdad0VWenlWS0Z0NW96R2VCd2t4TzJZWHdpekxzbl9iYWkycDA1dXV6MG42NERSZ1NDRFJIMEZMR3g0cmdXakxVd1FyVlo1YlpHMmVHWkhDZ2YyTFVXcnJhaWJUaFBfZEI1WDFBY3JaUUJ2X3ZXRUE?oc=5",
+      "source": "SSBCrack",
+      "publishedAt": "2026-11-26T23:05:14.000Z",
+      "latestAt": "2026-11-27T04:39:07.000Z",
+      "firstSeenAt": "2026-11-27T08:14:16.364Z",
+      "outlets": 2,
+      "outletNames": [
+        "SSBCrack",
+        "NewsCord"
+      ],
+      "score": 1.69
     },
     {
       "id": "5e4a3d9ab78e",
@@ -1322,6 +1295,22 @@
       "score": 1.38
     },
     {
+      "id": "9783082a53d9",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Italy's premium Prosecco hills preserved their 2026 harvest despite record heat",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQeS1LZmJuLUs4RHh0T3h0N2w2eFVWNG9IUFV0NGhTV2tRYTRoUk9YQjFkSWhER3hHYTI4M2ZBbDhMYUFmSk9kbEwzMUpCTGFhelZRWDJuOWtMU1NDelNKemlaYURick56cDh5YWtpX1lxZ01ydS1DYlFtTEFSX016U3lGSC1hamlXMTZ2cWo3V1g2b3hZYTJoQm9pX3NUT2JaRi1yd1Q5WDY0T1lKbFJsSFQzRHJJMmN6eC1qOEVEdjZiR01x0gHKAUFVX3lxTE1GR0NZUGxxNnUyaHdRakpiS1gtMm9XQ3psdGtQaWJjc2ZTYzgyek83LXRDWnNNdkxNOVhBVktLZU1Ta09qREVnYWZfdEhHZjh0RzdSc3RmZHFGdjBZNkJVLUhhXzFQRTRXQ1BmYjNuaXJCeHFEbENTZnh0aHJreVB4ek5oaHkxNUhXdjF6dndhd2VYV2NwY1BZUVA3VFNyekVFQ2VoNDNnNlU2eV9OSy02NW5zUjU0aWtxNS1ucFJ1SlJLQzZZZnFkZmc?oc=5",
+      "source": "Vinetur",
+      "publishedAt": "2026-11-26T13:24:50.000Z",
+      "latestAt": "2026-11-26T13:24:57.000Z",
+      "firstSeenAt": "2026-11-26T16:11:53.860Z",
+      "outlets": 1,
+      "outletNames": [
+        "Vinetur"
+      ],
+      "score": 1.34
+    },
+    {
       "id": "4a1fe6b1997c",
       "cat": "markets",
       "kind": "news",
@@ -1467,22 +1456,6 @@
       "score": 1.21
     },
     {
-      "id": "63be3a8c61ca",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Another massive hack may have leaked your banking info: JPMorgan Chase says customer data may have been exposed in hack",
-      "url": "https://www.msn.com/en-us/news/other/another-massive-hack-may-have-leaked-your-banking-info-jpmorgan-chase-says-customer-data-may-have-been-exposed-in-hack/ar-AA2iiLqk",
-      "source": "The Western Journal on MSN",
-      "publishedAt": "2026-11-26T08:00:03.000Z",
-      "latestAt": "2026-11-26T08:00:03.000Z",
-      "firstSeenAt": "2026-11-26T16:11:53.860Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Western Journal on MSN"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "dcd28ccd8b64",
       "cat": "flights",
       "kind": "news",
@@ -1602,7 +1575,7 @@
       "url": "https://analyticsindiamag.com/ai-features/microsoft-wants-to-fix-global-outages-in-an-hour-it-has-a-long-way-to-go",
       "source": "Analytics India Magazine",
       "publishedAt": "2026-11-26T16:00:00.000Z",
-      "latestAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-27T06:20:25.000Z",
       "firstSeenAt": "2026-11-27T06:29:00.402Z",
       "outlets": 1,
       "outletNames": [
@@ -1771,6 +1744,22 @@
       "score": 1
     },
     {
+      "id": "463a9c226583",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage hits OR Tambo, passengers stranded in long queues",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSFVnVEdJb3Q4LWNSenRnYjlzdUJsVktYa1NhOHRjZUh4SkhvTERKcGhxNllYZ0ZrQjZjbjNSOXVLUjc4bGxld0VWR0NkOVh6bDc1ODJvVGhvRU9xQXBqWngxbUMzbmlOUzZHZnpoZml6UVdtWHVtbDdpNDN0ZmVKQ194T3dXNzJSeHd2bDlqVVRPV09hNXIwR3NSdk8?oc=5",
+      "source": "eNCA",
+      "publishedAt": "2026-11-27T04:48:16.000Z",
+      "latestAt": "2026-11-27T04:48:16.000Z",
+      "firstSeenAt": "2026-11-27T04:58:49.971Z",
+      "outlets": 1,
+      "outletNames": [
+        "eNCA"
+      ],
+      "score": 1
+    },
+    {
       "id": "802ce460ea38",
       "cat": "space",
       "kind": "news",
@@ -1785,6 +1774,22 @@
         "UrduPoint"
       ],
       "score": 1
+    },
+    {
+      "id": "ce38d941a3e0",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird Flu Hits Two More English Farms in Herefordshire, Cheshire",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQR2t6NTkwa3FtbE9NcUNYVzlDN1NTVjFKWk9oXzZnUWp4Z3E1UmRIZm1nNFJTYUd3UHV5LXg3aDZlb1JvaGpVOVFSeU1XbkVPMHBpUWdFS2pYQ1UzZDFkc3JDR0FabzRlTjM3V1FRUmdBMU9NNDF5QUxReGpodVpfeXljRDYwZVRNaThNZFVPMkZVVkd6MDlFRV92M3piMXNMQ3ZfWVlmRlFZcGtZclNxd21ERGx6WnhTMUpaWm5HQ2N4WmwtUjE3cGozM0lvak04VTBsY0VpZzdrSXJCTmNOZnZn?oc=5",
+      "source": "Nature World News",
+      "publishedAt": "2026-11-27T07:44:47.000Z",
+      "latestAt": "2026-11-27T07:44:47.000Z",
+      "firstSeenAt": "2026-11-27T08:14:16.364Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nature World News"
+      ],
+      "score": 0.99
     },
     {
       "id": "fd86856780f0",
@@ -1851,18 +1856,18 @@
       "score": 0.97
     },
     {
-      "id": "1b6ac2c5c318",
+      "id": "efe95355fe18",
       "cat": "markets",
       "kind": "news",
-      "title": "South Korea faces stock market plunge with limited policy tools",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNVZiVVJvRlBnc0pTMkRsc3IzX2pYaFpYV1lYWXRKWlJDOVFjOER6RzJzYXpIN3VBdGUtR0UwUzdZY2MyZlFSMGNBSFJEVmxrRWp5S05FOXFuZ2ZIbDJtZzUwak8ycU9kdGxFMDlZaDBUdzM3RGxaOTNFS2I1c1hKUlFwOTV0aXM2V0NSa09OSGVGaEZX0gGUAUFVX3lxTE81VmJVUm9GUGdzSlMyRGxzcjNfalhoWlhXWVhZdEpaUkM5UWM4RHpHMnNhekg3dUF0ZS1HRTBTN1ljYzJmUVIwY0FIUkRWbGtFanlLTkU5cW5nZkhsMm1nNTBqTzJxT2R0bEUwOVloMFR3MzdEbFo5M0VLYjVzWEpSUXA5NXRpczZXQ1JrT05IZUZoRlc?oc=5",
-      "source": "Chosunbiz",
-      "publishedAt": "2026-11-27T04:11:00.000Z",
-      "latestAt": "2026-11-27T04:11:00.000Z",
-      "firstSeenAt": "2026-11-27T07:29:08.103Z",
+      "title": "Bitcoin Faces Weekend Sell-Off as Hayes Warns Ahead of $6.8B Options Expiry",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOc0IxdlpUN1A1RGh4a3NfekJNRlVZM1luTHZvQmpQMEc1TXNWZVZIRmJONjdhMGhTanVxTTNLaWFXM055VkVQZHBxY09DTzdLd0RNdVEtem0ydnYtZHNJWmtHWktCSlBUY0JJVDJsRFB1M3ZyenBhYTJpdVZjMVQ1SWViUWJUNWJ5U2xhMUp0YXVhOUdhZlk3VUVrSlh5UU0?oc=5",
+      "source": "Blockonomi",
+      "publishedAt": "2026-11-27T04:37:07.000Z",
+      "latestAt": "2026-11-27T04:37:07.000Z",
+      "firstSeenAt": "2026-11-27T08:14:16.364Z",
       "outlets": 1,
       "outletNames": [
-        "Chosunbiz"
+        "Blockonomi"
       ],
       "score": 0.94
     },
@@ -1881,22 +1886,6 @@
         "Sacramento Bee"
       ],
       "score": 0.92
-    },
-    {
-      "id": "c3b2df29413f",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu concerns ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5VLVg1SEJqRzVOeUI1cEZTUW5sRk91QV9TZGJDbnJOWFVQOEExSDllb0V5VlZOMU9HcnhjbjJKWXRXNTB6VmowM1ozVmFzbGlTSldWV0p5TlMwVTdrTFJSdk1tb9IBaEFVX3lxTE91TFFhUDFGdFRQWVo1MGRkbGFuUEswZHEzUXJrbm5vYTM3bWQ5MU5LN2NqUzY2ZzVteDBJMXFVT0k3NWltZWtkZk10M08tNEpYcHd3eW5hRW1Ud0JHTmFOQm42cW54RVZn?oc=5",
-      "source": "LiveNOW from FOX",
-      "publishedAt": "2026-11-26T20:45:43.000Z",
-      "latestAt": "2026-11-26T20:45:43.000Z",
-      "firstSeenAt": "2026-11-27T04:04:23.345Z",
-      "outlets": 1,
-      "outletNames": [
-        "LiveNOW from FOX"
-      ],
-      "score": 0.88
     },
     {
       "id": "e19154efd2c0",
