@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T12:29:56.734Z",
+  "buildTime": "2026-11-27T12:45:07.402Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 07:29 ET",
+  "etStamp": "2026-11-27 07:45 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,18 +44,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1312,
-  "lastSuccessAt": "2026-11-27T12:29:56.734Z",
+  "headlinesRead": 1177,
+  "lastSuccessAt": "2026-11-27T12:45:07.402Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 38,
+    "hacks": 40,
     "flights": 7,
-    "grid": 20,
+    "grid": 19,
     "germs": 4,
     "sun": 2,
     "ai": 3,
     "markets": 4,
-    "weather": 9,
+    "weather": 8,
     "internet": 7,
     "space": 2,
     "earth": 4
@@ -180,57 +180,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1009,
+      "count": 936,
       "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "bing": {
       "ok": true,
-      "count": 267,
-      "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "count": 205,
+      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "x": {
       "ok": true,
@@ -243,13 +243,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T12:29:56.734Z"
+      "lastOkAt": "2026-11-27T12:45:07.402Z"
     }
   },
   "stories": [
@@ -354,9 +354,9 @@
       "url": "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
       "source": "Reuters",
       "publishedAt": "2026-11-26T19:50:00.000Z",
-      "latestAt": "2026-11-27T12:06:15.000Z",
+      "latestAt": "2026-11-27T12:30:00.000Z",
       "firstSeenAt": "2026-11-27T11:29:49.328Z",
-      "outlets": 22,
+      "outlets": 25,
       "outletNames": [
         "Bloomberg.com",
         "MLQ.ai",
@@ -379,9 +379,14 @@
         "The Sacramento Bee",
         "U.S. News & World Report",
         "South China Morning Post",
-        "New York Post"
+        "New York Post",
+        "Moneycontrol",
+        "The Times of India",
+        "Sky News"
       ],
-      "score": 4.03
+      "trending": 500,
+      "trendTerm": "us air force cloud one breach",
+      "score": 4.17
     },
     {
       "id": "9d364f5dc0cd",
@@ -759,22 +764,6 @@
       "score": 1.4
     },
     {
-      "id": "ac4475e7fb20",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Global temperatures hit record high as Earth exceeds 2°C threshold",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLUtBSnFxQzJ2T3RoeDdMdldTVDktb19GR2VVS3Q3OHZpa0JmM2x0ZVlIaExzdGJ2a1V4X29IYWZZUVVTSDEwUkNNYjNxeUZQamdHSDdxb1RZMm8zamJMVkNqcVNkS3VieERHWTZmTHNpd2wxYkZITEF4Y0c1RXBldkZEUHdGbXE5TVJoYzdlVk5nLVE?oc=5",
-      "source": "Medya Press",
-      "publishedAt": "2026-11-26T12:32:07.000Z",
-      "latestAt": "2026-11-26T12:32:07.000Z",
-      "firstSeenAt": "2026-11-26T12:41:10.609Z",
-      "outlets": 1,
-      "outletNames": [
-        "Medya Press"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "5d5b88b6abc4",
       "cat": "internet",
       "kind": "news",
@@ -839,6 +828,22 @@
       "score": 1.38
     },
     {
+      "id": "167bbdee7370",
+      "cat": "markets",
+      "kind": "news",
+      "title": "FTSE 100 Nears Record High as Global Stocks Recover From Tech Selloff",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNekdRTXRVdkg5RVlrVEhDc1Z4d0hzNWpaZ3NsS2l4M1VkOGlVNFVsaW1lN3I2dXZWMl9tRnlJT1k5Q2VDQnAtOEtkM1duUU5fbUdkTFlqOUFheERfTEMxN3ZTZ0d2R2F5dUJxd29RdWdhMTNURGdyNTYzYmE3emZvd09UeVhVajBJSVNaZFMxeFp3RnJiMVVmMU5oVl82YTJGMC04aDVsWDZjeWg5SmZuU2taQQ?oc=5",
+      "source": "Investing.com UK",
+      "publishedAt": "2026-11-27T09:06:00.000Z",
+      "latestAt": "2026-11-27T09:06:00.000Z",
+      "firstSeenAt": "2026-11-27T10:44:42.019Z",
+      "outlets": 1,
+      "outletNames": [
+        "Investing.com UK"
+      ],
+      "score": 1.36
+    },
+    {
       "id": "abee7e37d59e",
       "cat": "hacks",
       "kind": "news",
@@ -874,6 +879,24 @@
         "The Guardian Nigeria News"
       ],
       "score": 2.26
+    },
+    {
+      "id": "a086d4abc6e4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-27T01:18:20.000Z",
+      "latestAt": "2026-11-27T10:44:34.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 3,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "A News",
+        "The Malaysian Reserve"
+      ],
+      "score": 2.09
     },
     {
       "id": "8e257f2bc72d",
@@ -1219,22 +1242,6 @@
       "score": 1.38
     },
     {
-      "id": "167bbdee7370",
-      "cat": "markets",
-      "kind": "news",
-      "title": "FTSE 100 Nears Record High as Global Stocks Recover From Tech Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNekdRTXRVdkg5RVlrVEhDc1Z4d0hzNWpaZ3NsS2l4M1VkOGlVNFVsaW1lN3I2dXZWMl9tRnlJT1k5Q2VDQnAtOEtkM1duUU5fbUdkTFlqOUFheERfTEMxN3ZTZ0d2R2F5dUJxd29RdWdhMTNURGdyNTYzYmE3emZvd09UeVhVajBJSVNaZFMxeFp3RnJiMVVmMU5oVl82YTJGMC04aDVsWDZjeWg5SmZuU2taQQ?oc=5",
-      "source": "Investing.com UK",
-      "publishedAt": "2026-11-27T09:06:00.000Z",
-      "latestAt": "2026-11-27T09:06:00.000Z",
-      "firstSeenAt": "2026-11-27T10:44:42.019Z",
-      "outlets": 1,
-      "outletNames": [
-        "Investing.com UK"
-      ],
-      "score": 1.36
-    },
-    {
       "id": "e9cd5c34c7ab",
       "cat": "grid",
       "kind": "news",
@@ -1264,22 +1271,6 @@
       "outlets": 1,
       "outletNames": [
         "Vinetur"
-      ],
-      "score": 1.34
-    },
-    {
-      "id": "4a1fe6b1997c",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Global Selloff Deepens as US Futures Fall Nearly 2 Percent",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1fZEpZY3pCYVRBUUc4R2dIRWZsY19ZeFhWYnQ5bVFUdmdXWlpqZ1YtY09nLU5kcXB0UmVMU0tKc2ZvdW9meTlERVpBQkJkbzB0SmxtZUJNQm5UR2ttQUllbnhwWlhhVmZtTXd3?oc=5",
-      "source": "Limapagi",
-      "publishedAt": "2026-11-26T12:44:46.000Z",
-      "latestAt": "2026-11-26T12:44:46.000Z",
-      "firstSeenAt": "2026-11-26T15:26:40.311Z",
-      "outlets": 1,
-      "outletNames": [
-        "Limapagi"
       ],
       "score": 1.34
     },
@@ -1428,6 +1419,22 @@
       "score": 1.21
     },
     {
+      "id": "e2a40ab32176",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack disrupts global news distribution platform at France’s AFP",
+      "url": "https://therecord.media/france-afp-hit-by-cyberattack",
+      "source": "The Record from Recorded Future News",
+      "publishedAt": "2026-11-27T04:01:00.000Z",
+      "latestAt": "2026-11-27T04:01:00.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Record from Recorded Future News"
+      ],
+      "score": 1.2
+    },
+    {
       "id": "1f08a712b093",
       "cat": "hacks",
       "kind": "news",
@@ -1570,6 +1577,70 @@
         "Cook Islands News"
       ],
       "score": 1.05
+    },
+    {
+      "id": "a573a323b6a9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Decathlon France confirms customer data breach at external provider",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOYTFaU2xiOGZ5RVY5MjZSYk9NN3oyZlMzSmZUMEExcWdkWm9fVVRrdEJwLVVTR0ZtLWdpUWtXczhNbzB5NmpLc2dzWlQ1Z0FPT09mZ2tnbFVkLWJJa1lONFFzYnBkMGxReGJETXk2YzVqV0QwZkVKWlFHUUQxeFpHRGZLNEVnOXFiRXpZYjFXZWZ2aW4tbW4wX1l1LUp3a1k?oc=5",
+      "source": "Sporting Goods Intelligence Europe",
+      "publishedAt": "2026-11-27T12:39:56.000Z",
+      "latestAt": "2026-11-27T12:39:56.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sporting Goods Intelligence Europe"
+      ],
+      "score": 1
+    },
+    {
+      "id": "da0c07ba194d",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Blackout across U.S. as Thanksgiving storm knocks out power",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ0N4RmkyOGJRME1haURRWkNjckNidHhuVFppN19RY0xPSElKa0tFcjM4c2loWTA0LUY2QWdkdXJGV3A5UHVPSEU2ZEZyOEl3WXFwR2x3Tm9hc01tcHR1Z0NjMmFtM3dzZUMtS2lBN3FuV1A2eEhOWTB1R0VCSERpMWo1RC1WajNRZVE?oc=5",
+      "source": "Peoples Gazette Nigeria",
+      "publishedAt": "2026-11-27T12:36:53.000Z",
+      "latestAt": "2026-11-27T12:36:53.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "Peoples Gazette Nigeria"
+      ],
+      "score": 1
+    },
+    {
+      "id": "8eee2df67118",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Breach US Air Force Cloud Platform Powered by Microsoft, Amazon, Oracle, Alphabet",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQOGxVVzZuNW9md2VTTHU1NEVXTDhqRGFTMkc4dlFsVDhPM2FMQ3JrMjZ2RnhsSnpfS2J1RXo2MERzNFg1TXQxbzhiclFCNkhnUjlMQnBjUDRLQUVOMm0xUUZOcHZ4d2ViMUZCNUlnRHNucjg4V2VWQ2VWUjhST05FOV95YXVBeVhBMkNyRnFacEhDRnNPOVI1SjFQdnJST3pZUmNJeG5WeWx2aEhmTEF2cW4tVWg5YjZoMTI5eXFKR0J5S3p3Ry1hRy1fVnZBMW9nNXRGd3FB?oc=5",
+      "source": "marketscreener.com",
+      "publishedAt": "2026-11-27T12:33:47.000Z",
+      "latestAt": "2026-11-27T12:33:47.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "marketscreener.com"
+      ],
+      "score": 1
+    },
+    {
+      "id": "44eb12352087",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA hit by data breach after suspected account compromise",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQYjh1VklmNUw1TFpCU1VjYkh0Z2p3cnJQZlpFVU1vaUlHa2Z4eDliYWxKUEtBdlZhWTdwQXY5RlZkRnNyUzZoSGRCQlE4YTZDZGk4ckFrUF9Jck10OGRDMDNNSUFmZzBFSTJVcjJ5UTBGN3dfbzZmS0huMFpxSkNDM0l2amwwSnptYUdqeTBrYjJlbVBrVDlsYWxCckVlWEVLYjlGeXgzQjNMWTE4ZWhFZQ?oc=5",
+      "source": "IT Pro",
+      "publishedAt": "2026-11-27T12:33:31.000Z",
+      "latestAt": "2026-11-27T12:33:31.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 1,
+      "outletNames": [
+        "IT Pro"
+      ],
+      "score": 1
     },
     {
       "id": "386ad834ad5f",
@@ -1748,86 +1819,6 @@
       "score": 1
     },
     {
-      "id": "512e341d4905",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Town of Bernalillo updates residents on cyberattack recovery",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWEstNjBXdWxRZkJjajc3UjJGTEpPSTZsd0h0dWdRTExhMFoxWXpiNVNTUURRcWF3R0lpTjBHeDlxeEh4RnRLbVh2eGJ5Y1hHWm9FeFFOeUpqdEEybGdtTFAwbmxodFgybFVPVDliay1VVmtHeXAzOVdKZGhoZEVpaXYtRXdQMlBlUXZVVThIeGxRNGRLVEM3emZNY0hIckNUenc?oc=5",
-      "source": "Rio Rancho Observer Home",
-      "publishedAt": "2026-11-27T04:27:16.000Z",
-      "latestAt": "2026-11-27T04:27:42.000Z",
-      "firstSeenAt": "2026-11-27T04:28:40.522Z",
-      "outlets": 1,
-      "outletNames": [
-        "Rio Rancho Observer Home"
-      ],
-      "score": 1
-    },
-    {
-      "id": "b77a88253fd4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Thai SEC Data Breach Exposes Personal Information of 155 Users",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1wWmswNDVuS0xBVG9GUlo0MXBhbTZkUkU2RWEwWkxEdkYzRWZlcjBHRFBreXNmNy14cXpCcHlPeEZvdkc2TkdFclRqSmJsNGJGalBkeS1JX3dqcl9Qc1NQYk1WZ0xjM05vdDM1Mjdkd21BcUk?oc=5",
-      "source": "Fintech Singapore",
-      "publishedAt": "2026-11-27T04:16:13.000Z",
-      "latestAt": "2026-11-27T04:16:13.000Z",
-      "firstSeenAt": "2026-11-27T04:28:40.522Z",
-      "outlets": 1,
-      "outletNames": [
-        "Fintech Singapore"
-      ],
-      "score": 1
-    },
-    {
-      "id": "2bc1b77a3fd6",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Downed hydro pole sparks power outage for 1,000 Cambridge customers amid gusty winds",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWDlxX1VUckc2LWtlZGJUbkRXVDlHN180M2VSekNHOXh2VUhEUU9rcUt0ejNudXJlTmJXWjFLNThmOFZWSTVWQWx6Vnp0N3o2czk2OGF4SUsxWlJwUjVjcVJoSXdVS1MxWUg4dHQ2Q0Z6UVYzTjlISmhONW1OaVZTTFpJOHZxV1dTenFQNUE5Yk53b05hWTIyLTU1NUpvVDN3Tk1WSW9QU1JIV1ZZQTFrWkl6Z3I5ZWM2NnlLXzJ2Wjcwd0E?oc=5",
-      "source": "CTV News",
-      "publishedAt": "2026-11-27T03:24:00.000Z",
-      "latestAt": "2026-11-27T03:24:00.000Z",
-      "firstSeenAt": "2026-11-27T03:28:32.989Z",
-      "outlets": 1,
-      "outletNames": [
-        "CTV News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "46c4fea402aa",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Flight Centre suffers cyberattack; passport info accessed",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTXNLSGJYTi1FZ3ZxUXBxVkcwUXRUc09CTFF4ZWtSMzVCeEIyd0l2T3REek9JSzJwRFRGdGZkS0VLWm9mQzRzVWI1a3hOMjAzbjlZYmROYnZrZENRTEoxZVFTSjRjakwxMHA5Vlh2eldtaEhlOXlubndYTGpRTC1ZUURkZGVYOVRTcjlNZXZJbXQ0X3p0TkpkSmVTdWplT1dIdTVHenpxNURqUXJX?oc=5",
-      "source": "Inside Retail Australia",
-      "publishedAt": "2026-11-27T03:18:07.000Z",
-      "latestAt": "2026-11-27T03:18:07.000Z",
-      "firstSeenAt": "2026-11-27T03:28:32.989Z",
-      "outlets": 1,
-      "outletNames": [
-        "Inside Retail Australia"
-      ],
-      "score": 1
-    },
-    {
-      "id": "159f8ed25f06",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Wind leaves more than 105,000 PPL customers without power",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMS1JRXpoYm1ydld4MlRSSjVmd1JTa0lnaDFQZ3VHMFNyM0VBTTlEbDlVdUlVQ3hCNkY4ZzFQMTlkdDJqaXREZnRlUkkzd1lrVjlycmtwMENrbFZRUGhEdnJFM3ozZGptQ3FwLVBqZ2s1am9vY01QTjBsaklVM2Zqcy0wTmRRUXFtVVFzM3J3?oc=5",
-      "source": "fox56.com",
-      "publishedAt": "2026-11-27T02:46:12.000Z",
-      "latestAt": "2026-11-27T03:56:17.000Z",
-      "firstSeenAt": "2026-11-27T02:58:26.353Z",
-      "outlets": 1,
-      "outletNames": [
-        "fox56.com"
-      ],
-      "score": 1
-    },
-    {
       "id": "802ce460ea38",
       "cat": "space",
       "kind": "news",
@@ -1922,6 +1913,22 @@
         "Sacramento Bee"
       ],
       "score": 0.92
+    },
+    {
+      "id": "ec9b265fb7ae",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Bruce MacKinnon: World needs circuit breaker for tech overload",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPalFQV3RnSVdpN1J6ZFJrUERfRGFnaGVZUE1hSmJsV1VzdExjWFIybGZVdzRYVmF4bHRKRXd0dTlDRW5hblNpbXpqRGxsc2E4bTNUNnVVdWdNclNNMFlUb2luR0NrQVFlekU3ODRaMHJMb2RoTjlXZS1lZDNicHRTNk1IYW10aXg5MkRKOVlkemsyam5Ic1AybWdIV1NkTF9pNUdBV2pndTFPaHhrYXBhTGxKV2tORGlyRzN3?oc=5",
+      "source": "Halifax Herald",
+      "publishedAt": "2026-11-26T22:00:00.000Z",
+      "latestAt": "2026-11-26T22:00:00.000Z",
+      "firstSeenAt": "2026-11-27T03:58:37.448Z",
+      "outlets": 1,
+      "outletNames": [
+        "Halifax Herald"
+      ],
+      "score": 0.9
     },
     {
       "id": "ff2c0cab721a",
