@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T17:45:55.819Z",
+  "buildTime": "2026-11-27T18:00:55.612Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 12:45 ET",
+  "etStamp": "2026-11-27 13:00 ET",
   "score": 60,
   "fired": [
     "flights",
@@ -43,8 +43,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 946,
-  "lastSuccessAt": "2026-11-27T17:45:55.819Z",
+  "headlinesRead": 396,
+  "lastSuccessAt": "2026-11-27T18:00:55.612Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 42,
@@ -179,15 +179,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 633,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 22 of 26 queries)",
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "count": 82,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     },
     "bing": {
       "ok": true,
-      "count": 280,
+      "count": 281,
       "error": null,
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     },
     "gdelt": {
       "ok": false,
@@ -199,37 +199,37 @@
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     },
     "x": {
       "ok": true,
@@ -242,13 +242,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T17:45:55.819Z"
+      "lastOkAt": "2026-11-27T18:00:55.612Z"
     }
   },
   "stories": [
@@ -329,53 +329,6 @@
       }
     },
     {
-      "id": "b159877c0236",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Exclusive-Hackers Breach US Air Force Flagship Cloud One Computing Platform",
-      "url": "https://www.usnews.com/news/top-news/articles/2026-11-27/exclusive-hackers-breach-us-air-force-flagship-cloud-one-computing-platform",
-      "source": "U.S. News & World Report",
-      "publishedAt": "2026-11-26T22:00:00.000Z",
-      "latestAt": "2026-11-27T17:33:00.000Z",
-      "firstSeenAt": "2026-11-27T17:00:44.679Z",
-      "outlets": 32,
-      "outletNames": [
-        "U.S. News & World Report",
-        "HuffPost",
-        "CNBC",
-        "Yahoo",
-        "Honolulu Star-Advertiser",
-        "The Lufkin Daily News",
-        "CNA",
-        "Seeking Alpha",
-        "TradingView",
-        "Yahoo! Finance Canada",
-        "Yahoo Finance",
-        "The Indian Express",
-        "SRN News",
-        "The Straits Times",
-        "The Times of India",
-        "Reuters",
-        "The Next Web",
-        "Bloomberg.com",
-        "Arise News",
-        "New York Post",
-        "marketscreener.com",
-        "Sowetan",
-        "news.sky.com",
-        "The Hindu",
-        "The Times of Israel",
-        "dev.ua",
-        "Quartz",
-        "Modern Diplomacy",
-        "The Diplomatic Insight",
-        "Floridian Press",
-        "Escudo Digital",
-        "The Hill"
-      ],
-      "score": 4.1
-    },
-    {
       "id": "8bd025a5242b",
       "cat": "germs",
       "kind": "news",
@@ -435,6 +388,26 @@
       "score": 2.72
     },
     {
+      "id": "a086d4abc6e4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-27T01:12:48.000Z",
+      "latestAt": "2026-11-27T12:50:38.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 5,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "A News",
+        "The Malaysian Reserve",
+        "US Muslims",
+        "MLQ.ai"
+      ],
+      "score": 2.68
+    },
+    {
       "id": "0a73606aa929",
       "cat": "flights",
       "kind": "news",
@@ -488,6 +461,24 @@
       "score": 2.4
     },
     {
+      "id": "4ac41a826097",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Don't make these carbon monoxide mistakes during a power outage",
+      "url": "https://health.yahoo.com/your-body/first-aid-safety/articles/dont-carbon-monoxide-mistakes-during-130000084.html",
+      "source": "health",
+      "publishedAt": "2026-11-27T05:00:00.000Z",
+      "latestAt": "2026-11-27T13:00:00.000Z",
+      "firstSeenAt": "2026-11-27T14:45:19.764Z",
+      "outlets": 3,
+      "outletNames": [
+        "health",
+        "Yahoo Health",
+        "The Weather Channel"
+      ],
+      "score": 2.16
+    },
+    {
       "id": "dc51c3bd3429",
       "cat": "germs",
       "kind": "news",
@@ -522,44 +513,6 @@
       "score": 1.99
     },
     {
-      "id": "11d0363ede94",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outages, heavy rain continue on East Coast after Thanksgiving Day storm",
-      "url": "https://www.msn.com/en-us/news/other/power-outages-heavy-rain-continue-on-east-coast-after-thanksgiving-day-storm/ar-AA2iloD3",
-      "source": "The Washington Post on MSN",
-      "publishedAt": "2026-11-26T22:15:00.000Z",
-      "latestAt": "2026-11-27T05:50:49.000Z",
-      "firstSeenAt": "2026-11-27T13:45:11.685Z",
-      "outlets": 3,
-      "outletNames": [
-        "WNEP",
-        "The Washington Post on MSN",
-        "The Detroit News"
-      ],
-      "score": 1.92
-    },
-    {
-      "id": "a086d4abc6e4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-27T01:12:48.000Z",
-      "latestAt": "2026-11-27T12:50:38.000Z",
-      "firstSeenAt": "2026-11-27T12:45:07.402Z",
-      "outlets": 5,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "A News",
-        "The Malaysian Reserve",
-        "US Muslims",
-        "MLQ.ai"
-      ],
-      "score": 2.68
-    },
-    {
       "id": "447944af111a",
       "cat": "hacks",
       "kind": "news",
@@ -576,6 +529,24 @@
         "GBHackers News"
       ],
       "score": 2.46
+    },
+    {
+      "id": "f2010c32fda3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data",
+      "url": "https://www.yahoo.com/news/us/articles/hackers-hit-us-air-force-174329040.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T09:44:00.000Z",
+      "latestAt": "2026-11-27T15:24:00.000Z",
+      "firstSeenAt": "2026-11-27T15:30:31.090Z",
+      "outlets": 3,
+      "outletNames": [
+        "TodayPress.tv",
+        "The Times",
+        "Yahoo"
+      ],
+      "score": 2.34
     },
     {
       "id": "d0c009fc7fc1",
@@ -613,6 +584,24 @@
       "score": 1.98
     },
     {
+      "id": "11d0363ede94",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outages, heavy rain continue on East Coast after Thanksgiving Day storm",
+      "url": "https://www.msn.com/en-us/news/other/power-outages-heavy-rain-continue-on-east-coast-after-thanksgiving-day-storm/ar-AA2iloD3",
+      "source": "The Washington Post on MSN",
+      "publishedAt": "2026-11-26T22:15:00.000Z",
+      "latestAt": "2026-11-27T05:50:49.000Z",
+      "firstSeenAt": "2026-11-27T13:45:11.685Z",
+      "outlets": 3,
+      "outletNames": [
+        "WNEP",
+        "The Washington Post on MSN",
+        "The Detroit News"
+      ],
+      "score": 1.92
+    },
+    {
       "id": "cbe8ea8872c7",
       "cat": "grid",
       "kind": "news",
@@ -645,23 +634,6 @@
         "Yahoo"
       ],
       "score": 1.86
-    },
-    {
-      "id": "c8ab9b427bc8",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands of customers affected by power outage in South Tyler",
-      "url": "https://www.yahoo.com/news/articles/thousands-customers-affected-power-outage-161846467.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T08:18:00.000Z",
-      "latestAt": "2026-11-27T16:21:26.000Z",
-      "firstSeenAt": "2026-11-27T16:30:42.723Z",
-      "outlets": 2,
-      "outletNames": [
-        "cbs19.tv",
-        "Yahoo"
-      ],
-      "score": 1.73
     },
     {
       "id": "3333e1821e7e",
@@ -945,23 +917,6 @@
       "score": 1.96
     },
     {
-      "id": "f2010c32fda3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US Air Force system hit by cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5aaU1zc19yMWM0RjlibzBmbE5fNllfdmFYRlNmVEdtTlV6Y1hHUms5MU5NNWtRRkZYRTd6MlVwS3ZMZVdzT1hFZjRIYlM4WEp5YzJ5OF9qLV9Pa0JnRjdEUGwzR2huN2lMR0FJeGZFX21Zb1dCV1dfcg?oc=5",
-      "source": "TodayPress.tv",
-      "publishedAt": "2026-11-27T13:30:30.000Z",
-      "latestAt": "2026-11-27T15:24:00.000Z",
-      "firstSeenAt": "2026-11-27T15:30:31.090Z",
-      "outlets": 2,
-      "outletNames": [
-        "TodayPress.tv",
-        "The Times"
-      ],
-      "score": 1.93
-    },
-    {
       "id": "4dfd7820dd77",
       "cat": "hacks",
       "kind": "news",
@@ -1028,6 +983,23 @@
         "BusinessLine"
       ],
       "score": 1.88
+    },
+    {
+      "id": "c8ab9b427bc8",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands of customers affected by power outage in South Tyler",
+      "url": "https://www.yahoo.com/news/articles/thousands-customers-affected-power-outage-161846467.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T08:18:00.000Z",
+      "latestAt": "2026-11-27T16:21:26.000Z",
+      "firstSeenAt": "2026-11-27T16:30:42.723Z",
+      "outlets": 2,
+      "outletNames": [
+        "cbs19.tv",
+        "Yahoo"
+      ],
+      "score": 1.73
     },
     {
       "id": "56d7b6688cc3",
@@ -1128,23 +1100,6 @@
       "outletNames": [
         "Forbes",
         "Yahoo Tech"
-      ],
-      "score": 1.67
-    },
-    {
-      "id": "4ac41a826097",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Don't make these carbon monoxide mistakes during a power outage",
-      "url": "https://health.yahoo.com/your-body/first-aid-safety/articles/dont-carbon-monoxide-mistakes-during-130000084.html",
-      "source": "health",
-      "publishedAt": "2026-11-27T05:00:00.000Z",
-      "latestAt": "2026-11-27T13:00:00.000Z",
-      "firstSeenAt": "2026-11-27T14:45:19.764Z",
-      "outlets": 2,
-      "outletNames": [
-        "health",
-        "Yahoo Health"
       ],
       "score": 1.67
     },
@@ -1843,6 +1798,22 @@
       "outlets": 1,
       "outletNames": [
         "Haberler.com"
+      ],
+      "score": 1
+    },
+    {
+      "id": "512e341d4905",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Town of Bernalillo updates residents on cyberattack recovery",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWEstNjBXdWxRZkJjajc3UjJGTEpPSTZsd0h0dWdRTExhMFoxWXpiNVNTUURRcWF3R0lpTjBHeDlxeEh4RnRLbVh2eGJ5Y1hHWm9FeFFOeUpqdEEybGdtTFAwbmxodFgybFVPVDliay1VVmtHeXAzOVdKZGhoZEVpaXYtRXdQMlBlUXZVVThIeGxRNGRLVEM3emZNY0hIckNUenc?oc=5",
+      "source": "Rio Rancho Observer Home",
+      "publishedAt": "2026-11-27T04:27:16.000Z",
+      "latestAt": "2026-11-27T04:27:42.000Z",
+      "firstSeenAt": "2026-11-27T04:28:40.522Z",
+      "outlets": 1,
+      "outletNames": [
+        "Rio Rancho Observer Home"
       ],
       "score": 1
     },
