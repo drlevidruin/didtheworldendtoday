@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T01:13:09.823Z",
+  "buildTime": "2026-11-27T01:28:20.315Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 20:13 ET",
+  "etStamp": "2026-11-26 20:28 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,17 +45,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1222,
-  "lastSuccessAt": "2026-11-27T01:13:09.823Z",
+  "headlinesRead": 1305,
+  "lastSuccessAt": "2026-11-27T01:28:20.315Z",
   "rollingFallback": false,
   "cats": {
     "flights": 16,
     "grid": 26,
-    "hacks": 26,
+    "hacks": 28,
     "germs": 4,
     "markets": 4,
     "weather": 4,
-    "internet": 8,
+    "internet": 6,
     "sun": 4,
     "earth": 4,
     "ai": 1,
@@ -171,13 +171,11 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "Egypt tanker explosion kills 31 people as driver crashes into fuel truck in fiery highway crash"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
@@ -189,15 +187,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 990,
+      "count": 1006,
       "error": null,
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     },
     "bing": {
       "ok": true,
-      "count": 198,
-      "error": "6 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "count": 265,
+      "error": null,
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     },
     "gdelt": {
       "ok": false,
@@ -209,37 +207,37 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     },
     "faa": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     },
     "x": {
       "ok": true,
@@ -252,13 +250,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T01:13:09.823Z"
+      "lastOkAt": "2026-11-27T01:28:20.315Z"
     }
   },
   "stories": [
@@ -458,24 +456,6 @@
       "score": 2.6
     },
     {
-      "id": "368d106420ef",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage for 8 districts on Sabah east coast",
-      "url": "https://www.freemalaysiatoday.com/category/nation/2026/11/26/power-outage-for-8-districts-on-sabah-s-east-coast",
-      "source": "freemalaysiatoday.com",
-      "publishedAt": "2026-11-26T01:28:10.000Z",
-      "latestAt": "2026-11-26T05:48:55.000Z",
-      "firstSeenAt": "2026-11-26T01:39:21.290Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Edge Malaysia",
-        "Free Malaysia Today",
-        "The Malaysian Reserve"
-      ],
-      "score": 2.58
-    },
-    {
       "id": "7e3288e167a6",
       "cat": "markets",
       "kind": "news",
@@ -528,6 +508,23 @@
         "Yahoo"
       ],
       "score": 2.42
+    },
+    {
+      "id": "040839c82e3c",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft hits ‘Code Red’ after global outage shakes its cloud empire",
+      "url": "https://tech.yahoo.com/ai/copilot/articles/microsoft-hits-code-red-global-151000714.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-26T07:11:00.000Z",
+      "latestAt": "2026-11-26T15:10:00.000Z",
+      "firstSeenAt": "2026-11-26T15:26:40.311Z",
+      "outlets": 2,
+      "outletNames": [
+        "YAHOO!",
+        "Yahoo Tech"
+      ],
+      "score": 2.41
     },
     {
       "id": "sig:faa-stop:MIA:2026-11-25",
@@ -588,23 +585,6 @@
       "score": 2.46
     },
     {
-      "id": "040839c82e3c",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft hits ‘Code Red’ after global outage shakes its cloud empire",
-      "url": "https://tech.yahoo.com/ai/copilot/articles/microsoft-hits-code-red-global-151000714.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-26T07:11:00.000Z",
-      "latestAt": "2026-11-26T15:10:00.000Z",
-      "firstSeenAt": "2026-11-26T15:26:40.311Z",
-      "outlets": 2,
-      "outletNames": [
-        "YAHOO!",
-        "Yahoo Tech"
-      ],
-      "score": 2.41
-    },
-    {
       "id": "dcc1deef7fbd",
       "cat": "hacks",
       "kind": "news",
@@ -658,6 +638,24 @@
       "trending": 100,
       "trendTerm": "report power outage",
       "score": 2.28
+    },
+    {
+      "id": "7e43b7ccbaf9",
+      "cat": "grid",
+      "kind": "news",
+      "title": "UPDATE: 24K customers still without power after Thanksgiving storm across hometowns",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOOXptV2lveW15eHZmTC1uQnlOZDFZTUhWYVdsNjB3VnlGS0o3Mlh3czEyVTg3N3FFUmc0NVRpR1F5NktBTHhzdWoteVJvbHlZNHh6aEtzYmt4czdSZEY1NjFMLXJXLXg3aXRwN0dUU1FGNFpjQllXNFV1SjAtd29QQWY3ZUszSVZYNXZPY0RWVTdPV3pDeWV3ekxiUDBQWWVfX2p1X3Z1REgxWEo3QmEw0gHDAUFVX3lxTFB5c1VPOVJMSDFtYXF3LWxfWUlSMjFCV1BiSkQzWm5TYm1hN2FpYVJuTHctbGkxYVBwdHR5eDVvVDNGRW95Tnc5OEN6UXRpTWlzaVhGZE9vZndDUXVOTkVRWl81VThOcnh4aF9JT2JEVURDY3EzbnUzSzlZdnFXaTRjUlZQTHBWOU41ZUw5dnRwdW93LUk1NzNiRUJFR3BpcVUxeTMtbHVlaE02bEJWNWJiWVdUdWlzclhXdmZuSHlDb2ZIdw?oc=5",
+      "source": "WDBJ7",
+      "publishedAt": "2026-11-26T16:23:00.000Z",
+      "latestAt": "2026-11-26T17:05:52.000Z",
+      "firstSeenAt": "2026-11-27T00:43:07.514Z",
+      "outlets": 3,
+      "outletNames": [
+        "WDBJ7",
+        "FOX 5 DC",
+        "Yahoo"
+      ],
+      "score": 2.23
     },
     {
       "id": "84a778c237e7",
@@ -747,23 +745,6 @@
       "score": 1.92
     },
     {
-      "id": "dfe90c59c28e",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft issues 'Code Red' after huge global outage",
-      "url": "https://ia.acs.org.au/article/2026/microsoft-issues--code-red--after-huge-global-outage.html",
-      "source": "Information Age",
-      "publishedAt": "2026-11-26T01:19:32.000Z",
-      "latestAt": "2026-11-26T03:10:00.000Z",
-      "firstSeenAt": "2026-11-26T22:57:53.537Z",
-      "outlets": 2,
-      "outletNames": [
-        "Information Age | ACS",
-        "Information Age"
-      ],
-      "score": 1.79
-    },
-    {
       "id": "d6cf7b7e41d1",
       "cat": "sun",
       "kind": "news",
@@ -843,6 +824,22 @@
       "outlets": 1,
       "outletNames": [
         "Beinsure"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "ac4475e7fb20",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Global temperatures hit record high as Earth exceeds 2°C threshold",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLUtBSnFxQzJ2T3RoeDdMdldTVDktb19GR2VVS3Q3OHZpa0JmM2x0ZVlIaExzdGJ2a1V4X29IYWZZUVVTSDEwUkNNYjNxeUZQamdHSDdxb1RZMm8zamJMVkNqcVNkS3VieERHWTZmTHNpd2wxYkZITEF4Y0c1RXBldkZEUHdGbXE5TVJoYzdlVk5nLVE?oc=5",
+      "source": "Medya Press",
+      "publishedAt": "2026-11-26T12:32:07.000Z",
+      "latestAt": "2026-11-26T12:32:07.000Z",
+      "firstSeenAt": "2026-11-26T12:41:10.609Z",
+      "outlets": 1,
+      "outletNames": [
+        "Medya Press"
       ],
       "score": 1.4
     },
@@ -937,6 +934,24 @@
       "score": 2
     },
     {
+      "id": "e7f4ea1619d9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-26T11:52:32.000Z",
+      "latestAt": "2026-11-27T00:07:52.000Z",
+      "firstSeenAt": "2026-11-27T01:28:20.315Z",
+      "outlets": 3,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "TRT Afrika",
+        "cwibc.co.id"
+      ],
+      "score": 2
+    },
+    {
       "id": "0349d45e030f",
       "cat": "hacks",
       "kind": "news",
@@ -984,23 +999,6 @@
       "outletNames": [
         "KSNV",
         "cedarnews.net"
-      ],
-      "score": 1.99
-    },
-    {
-      "id": "5c91ad2aa7b8",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "KEPCO Faces Potential 3 Trillion Won Fine Over Data Breach",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9HTkUwUDc5a1FMY0J3d1lLakJCV3pSYUxhYVRyY3ZvN0NnTFRqUHBvMzRXRzN2WTQyX3MyVzNhUnJBaGNwLUlhdnlrQVE3d0dSY1pZT09uSERnajZfaERKN0FBRnh6Slk?oc=5",
-      "source": "www.thelec.net",
-      "publishedAt": "2026-11-26T01:26:01.000Z",
-      "latestAt": "2026-11-26T01:26:01.000Z",
-      "firstSeenAt": "2026-11-26T01:39:21.290Z",
-      "outlets": 2,
-      "outletNames": [
-        "www.thelec.net",
-        "THE ELEC, Korea Electronics Industry Media"
       ],
       "score": 1.99
     },
@@ -1209,23 +1207,6 @@
       "score": 1.73
     },
     {
-      "id": "7e43b7ccbaf9",
-      "cat": "grid",
-      "kind": "news",
-      "title": "UPDATE: 24K customers still without power after Thanksgiving storm across hometowns",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOOXptV2lveW15eHZmTC1uQnlOZDFZTUhWYVdsNjB3VnlGS0o3Mlh3czEyVTg3N3FFUmc0NVRpR1F5NktBTHhzdWoteVJvbHlZNHh6aEtzYmt4czdSZEY1NjFMLXJXLXg3aXRwN0dUU1FGNFpjQllXNFV1SjAtd29QQWY3ZUszSVZYNXZPY0RWVTdPV3pDeWV3ekxiUDBQWWVfX2p1X3Z1REgxWEo3QmEw0gHDAUFVX3lxTFB5c1VPOVJMSDFtYXF3LWxfWUlSMjFCV1BiSkQzWm5TYm1hN2FpYVJuTHctbGkxYVBwdHR5eDVvVDNGRW95Tnc5OEN6UXRpTWlzaVhGZE9vZndDUXVOTkVRWl81VThOcnh4aF9JT2JEVURDY3EzbnUzSzlZdnFXaTRjUlZQTHBWOU41ZUw5dnRwdW93LUk1NzNiRUJFR3BpcVUxeTMtbHVlaE02bEJWNWJiWVdUdWlzclhXdmZuSHlDb2ZIdw?oc=5",
-      "source": "WDBJ7",
-      "publishedAt": "2026-11-26T16:23:00.000Z",
-      "latestAt": "2026-11-26T17:05:52.000Z",
-      "firstSeenAt": "2026-11-27T00:43:07.514Z",
-      "outlets": 2,
-      "outletNames": [
-        "WDBJ7",
-        "FOX 5 DC"
-      ],
-      "score": 1.72
-    },
-    {
       "id": "5a5580e5c64e",
       "cat": "hacks",
       "kind": "news",
@@ -1364,6 +1345,23 @@
       "score": 1.69
     },
     {
+      "id": "5e4a3d9ab78e",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Monster East Coast storm leaves hundreds of thousands without power",
+      "url": "https://www.yahoo.com/news/videos/monster-east-coast-storm-leaves-000658732.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-26T21:40:35.000Z",
+      "firstSeenAt": "2026-11-27T01:28:20.315Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "UA.NEWS"
+      ],
+      "score": 1.68
+    },
+    {
       "id": "a256c89f3461",
       "cat": "hacks",
       "kind": "news",
@@ -1498,22 +1496,6 @@
         "cedarnews.net"
       ],
       "score": 1.44
-    },
-    {
-      "id": "ac4475e7fb20",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Global temperatures hit record high as Earth exceeds 2°C threshold",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLUtBSnFxQzJ2T3RoeDdMdldTVDktb19GR2VVS3Q3OHZpa0JmM2x0ZVlIaExzdGJ2a1V4X29IYWZZUVVTSDEwUkNNYjNxeUZQamdHSDdxb1RZMm8zamJMVkNqcVNkS3VieERHWTZmTHNpd2wxYkZITEF4Y0c1RXBldkZEUHdGbXE5TVJoYzdlVk5nLVE?oc=5",
-      "source": "Medya Press",
-      "publishedAt": "2026-11-26T12:32:07.000Z",
-      "latestAt": "2026-11-26T12:32:07.000Z",
-      "firstSeenAt": "2026-11-26T12:41:10.609Z",
-      "outlets": 1,
-      "outletNames": [
-        "Medya Press"
-      ],
-      "score": 1.4
     },
     {
       "id": "8fb286d459c9",
@@ -1678,6 +1660,23 @@
       "score": 1.28
     },
     {
+      "id": "a086d4abc6e4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
+      "url": "https://www.aa.com.tr/en/europe/frances-afp-news-agency-hit-by-cyberattack-takes-content-platform-offline/4139870",
+      "source": "Anadolu Agency",
+      "publishedAt": "2026-11-26T03:30:00.000Z",
+      "latestAt": "2026-11-27T01:18:20.000Z",
+      "firstSeenAt": "2026-11-27T01:28:20.315Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Agency",
+        "Anadolu Ajansı"
+      ],
+      "score": 1.27
+    },
+    {
       "id": "f90baf32cac4",
       "cat": "flights",
       "kind": "news",
@@ -1740,6 +1739,22 @@
         "https://www.thetraveler.org/"
       ],
       "score": 1.25
+    },
+    {
+      "id": "0c4e661cc31a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Global news agency AFP reports cyberattack, shuts down content platform",
+      "url": "https://www.msn.com/en-us/news/other/global-news-agency-afp-reports-cyberattack-shuts-down-content-platform/ar-AA2ijNdv",
+      "source": "Al Jazeera on MSN",
+      "publishedAt": "2026-11-26T17:07:44.000Z",
+      "latestAt": "2026-11-26T17:07:44.000Z",
+      "firstSeenAt": "2026-11-27T01:28:20.315Z",
+      "outlets": 1,
+      "outletNames": [
+        "Al Jazeera on MSN"
+      ],
+      "score": 1.21
     },
     {
       "id": "a6c7de9bfddc",
@@ -1820,22 +1835,6 @@
         "Dailymotion on MSN"
       ],
       "score": 1.2
-    },
-    {
-      "id": "1b3fa43e6f7c",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft declared Code Red status after massive M365 outage",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPNVNtXzhXcFpBSzZTSDlsMV95dXMwcHpLUk5sdUVqRTFlajQ4dEZmVXVSU0FXWjZncDNqYUxDRHNFaGEzblJ5ZjFmYnpXSnZpd2s4RjZ2bVFZc3VGeGpZaExoZjdpVXZ5dWhvaTZzOThrdDNfcHp5aE53R2RqQWNrT3Zoam05WTBMZkJkYjZ0ZFAtS09KTnBUck52NkJKdllpWmx4V2FWWnNLNERkZS1vaXFyeTlBN0dVMFNXVGI0LXlBZlJYbnprQXF0Nmo?oc=5",
-      "source": "Jablíčkář.cz",
-      "publishedAt": "2026-11-26T11:46:45.000Z",
-      "latestAt": "2026-11-26T11:46:45.000Z",
-      "firstSeenAt": "2026-11-27T00:58:09.251Z",
-      "outlets": 1,
-      "outletNames": [
-        "Jablíčkář.cz"
-      ],
-      "score": 1.09
     },
     {
       "id": "802ce460ea38",
