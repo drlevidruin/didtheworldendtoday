@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T06:44:03.840Z",
+  "buildTime": "2026-11-27T06:59:07.893Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 01:44 ET",
+  "etStamp": "2026-11-27 01:59 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,16 +45,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1220,
-  "lastSuccessAt": "2026-11-27T06:44:03.840Z",
+  "headlinesRead": 1249,
+  "lastSuccessAt": "2026-11-27T06:59:07.893Z",
   "rollingFallback": false,
   "cats": {
     "flights": 12,
-    "grid": 27,
-    "hacks": 27,
+    "grid": 26,
+    "hacks": 28,
     "markets": 4,
-    "weather": 5,
-    "internet": 8,
+    "weather": 6,
+    "internet": 7,
     "germs": 4,
     "sun": 3,
     "ai": 3,
@@ -176,81 +176,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 934,
+      "count": 963,
       "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "bing": {
       "ok": true,
-      "count": 251,
-      "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "count": 250,
+      "error": "3 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-27T05:13:51.187Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-27T05:58:58.592Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T06:44:03.840Z"
+      "lastOkAt": "2026-11-27T06:59:07.893Z"
     }
   },
   "stories": [
@@ -965,23 +964,6 @@
       "score": 1.91
     },
     {
-      "id": "cbe8ea8872c7",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage affecting Pen Light customers in Gig Harbor",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFByNWFWazVLMFE3cDZCU05QV3Q4VXJaN2VFZUc2V3E5dUJLSjBMUTcwUGRpOVBiM3dxMm9yUzdGZ1Itd3BPVk5GY1gwaV9scGtxVTZUZGVwZW9aQkpQck1ZOGgxblVrSUhIazY5YVFTSW1vWnFkR01pQm1B0gF6QVVfeXFMUGlRSzBlNU5XWnoyZ09iZmlKLVRndWxJQmo5dlpBR21ZX21uY3puMENnZnh2UnJ4N05BTmpyaHdtOVdYa1U2a0Z5Z3ZRVDlTWmd1R1J2bVpRQ19FeEh4eDNmNC0zZ1VmdXpjMHhwaHFjNUhlN25mLU9CWUE?oc=5",
-      "source": "Tacoma News Tribune",
-      "publishedAt": "2026-11-26T21:06:00.000Z",
-      "latestAt": "2026-11-26T21:41:43.000Z",
-      "firstSeenAt": "2026-11-27T00:58:09.251Z",
-      "outlets": 2,
-      "outletNames": [
-        "Tacoma News Tribune",
-        "NewsBreak: Local News & Alerts"
-      ],
-      "score": 1.87
-    },
-    {
       "id": "6051e6900706",
       "cat": "hacks",
       "kind": "news",
@@ -1032,6 +1014,23 @@
         "Yahoo"
       ],
       "score": 1.86
+    },
+    {
+      "id": "7d215f5ace2f",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Heavy Snow Leaves More Than 125,000 Ameren Customers Without Power in St. Louis Region on Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUW9TdGNCdE9yckJWRWM2S3VvQmRBR3JRaHZONW5vb2RyMTBHb0JXQjJpRWJFOG82SjFESUhRaTVtY2N1OWtaY0wzRUNQS19lOFd1eUpEcXdad0VWenlWS0Z0NW96R2VCd2t4TzJZWHdpekxzbl9iYWkycDA1dXV6MG42NERSZ1NDRFJIMEZMR3g0cmdXakxVd1FyVlo1YlpHMmVHWkhDZ2YyTFVXcnJhaWJUaFBfZEI1WDFBY3JaUUJ2X3ZXRUE?oc=5",
+      "source": "SSBCrack",
+      "publishedAt": "2026-11-26T23:05:14.000Z",
+      "latestAt": "2026-11-27T04:39:07.000Z",
+      "firstSeenAt": "2026-11-27T06:59:07.893Z",
+      "outlets": 2,
+      "outletNames": [
+        "SSBCrack",
+        "NewsCord"
+      ],
+      "score": 1.74
     },
     {
       "id": "5a5580e5c64e",
@@ -1221,23 +1220,6 @@
         "Yahoo"
       ],
       "score": 1.56
-    },
-    {
-      "id": "8cdf0c77100d",
-      "cat": "grid",
-      "kind": "news",
-      "title": "BGE map shows scattered power outages in Maryland",
-      "url": "https://www.baltimoresun.com/2026/11/26/bge-scattered-outages-maryland/",
-      "source": "The Baltimore Sun",
-      "publishedAt": "2026-11-26T06:53:00.000Z",
-      "latestAt": "2026-11-26T16:10:12.000Z",
-      "firstSeenAt": "2026-11-26T21:12:42.873Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Baltimore Sun",
-        "Capital Gazette"
-      ],
-      "score": 1.52
     },
     {
       "id": "795b176889d5",
@@ -1534,20 +1516,20 @@
       "score": 1.2
     },
     {
-      "id": "e7bd0fbdc6b0",
-      "cat": "internet",
+      "id": "9568ceceed12",
+      "cat": "weather",
       "kind": "news",
-      "title": "No plans to ditch Microsoft 365 despite global outage, says Government ICT",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZjNfLUlldTQ2VVdtazA3MTcwVy1EbDNHV29JaHBaNXo2RVh1UF91cFRyU09UOXMwLTVNdElHTlJFQTQ0MVNJOGFiMTVqTlFrMWlEckduTlI4RlR3VEJOQmw2cHFjNGI0SWdfRVY3d3pMaFlxSkRMUjdNempqc0FPTHRyejdYbmp5Y0FkVEdPNDdkNFczUkpxOS1fSkdVZHdfemtGVmZXSmZOVlNPMVpyR1Rkc2k2bW84Z3pIeUJXOXJkQ0JrRi11TUY4Z1kwR2FZ?oc=5",
-      "source": "Cook Islands News",
-      "publishedAt": "2026-11-26T18:33:06.000Z",
-      "latestAt": "2026-11-26T18:33:06.000Z",
-      "firstSeenAt": "2026-11-27T06:44:03.840Z",
+      "title": "Cities along the East Coast see record heat, more severe weather hits Midwest and Plains",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaXAzbEVvenN2cF84dWFsREl5Y2tBaTgzMzVQS01JRUdVNkFUek9FOHVFQnBLT0g0Y3BrYjliUjVqUmdwLVhrcVdWUTk5ZXFha2dLVTN5by1udGhZWHRCS0JxV1BLcUUxa3ROVWNMY3NtVDBwSC1ILUFiclFhanprWEJFMEdRZkJhUFpNMmxneGFFT3RNSlHSAZsBQVVfeXFMT3dNQ2hTa0VDYVgzejczWnBGdnluM1dya2FBYWNtbnlIcFY2NVNEYmU0Y0QtRnVmUDhFYnd0MjM3akUxSEFDemczclRtUkpLckxjQnFwVzBVQWxqMEFhUmhPbkpnX19keUNXclZmV05tVUN4QzFvRVFXX084VnhYVmZZMUV6SDFuVy12LXczYzQ0dC1jYU5VWWFhck0?oc=5",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "publishedAt": "2026-11-26T21:42:54.000Z",
+      "latestAt": "2026-11-26T21:42:54.000Z",
+      "firstSeenAt": "2026-11-27T06:59:07.893Z",
       "outlets": 1,
       "outletNames": [
-        "Cook Islands News"
+        "ABC News - Breaking News, Latest News and Videos"
       ],
-      "score": 1.12
+      "score": 1.18
     },
     {
       "id": "fba6a954a647",
@@ -1630,6 +1612,22 @@
       "score": 1.04
     },
     {
+      "id": "7a3ee88c4d1e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA hackers stole personal data, and photographers warned not to use Photoshop",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNUjByQ05xZ2lidTByNC1PMlJIdGd2R2w4RmNYejFiMUh5dndTM3MyME04TzgxUWVyY3RJaUtiektQeEdJbnhUcEg2RWNhR2x6bmlvUlJUalBaNUpONUdTODYwSkZKd24tVGJFWjhINEdxNF9rM3lrVmVNY0o3aHJKUWNKOVl2OEFQVTZoSF80NEdWRHhoaVdwaHlsdjdzekdxb21nbkdzcGRCZkEwZERRZFBWTVZ3VXVOSlhMUjFyN2FUQVJWRmh1dzhR?oc=5",
+      "source": "MyBroadband",
+      "publishedAt": "2026-11-27T06:44:47.000Z",
+      "latestAt": "2026-11-27T06:44:47.000Z",
+      "firstSeenAt": "2026-11-27T06:59:07.893Z",
+      "outlets": 1,
+      "outletNames": [
+        "MyBroadband"
+      ],
+      "score": 1
+    },
+    {
       "id": "021586a55a70",
       "cat": "grid",
       "kind": "news",
@@ -1710,22 +1708,6 @@
       "score": 1
     },
     {
-      "id": "8b924f779234",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage hits domestic terminal at O. R. Tambo International Airport",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUTFJOE1PN0I4T3hja0FTazhITzNwTTlEbnBPRm01Nk93dTBhbHVVT2E3LVd1dkxkTzZxRkdRMTJ4VWdlb2hBVl81LUM2MC1zUmJGZHZobmpEcFVHRlJ6Nm5YS25PSE5BZDV2UTNVQnY0Zlp5bURZYXFabG1aS2RrMXgzUjlrcUlJclkxYUVQemhnRnJURUtKWDhGV25pRWNRaVNMVDRiVEJDTl9nMWpFdjNxWWxWT0M0RFE?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-27T06:13:11.000Z",
-      "latestAt": "2026-11-27T06:13:48.000Z",
-      "firstSeenAt": "2026-11-27T06:29:00.402Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 1
-    },
-    {
       "id": "d62b6b4c4046",
       "cat": "flights",
       "kind": "news",
@@ -1754,6 +1736,22 @@
       "outlets": 1,
       "outletNames": [
         "Cleveland 19 News"
+      ],
+      "score": 1
+    },
+    {
+      "id": "463a9c226583",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage hits OR Tambo, passengers stranded in long queues",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSFVnVEdJb3Q4LWNSenRnYjlzdUJsVktYa1NhOHRjZUh4SkhvTERKcGhxNllYZ0ZrQjZjbjNSOXVLUjc4bGxld0VWR0NkOVh6bDc1ODJvVGhvRU9xQXBqWngxbUMzbmlOUzZHZnpoZml6UVdtWHVtbDdpNDN0ZmVKQ194T3dXNzJSeHd2bDlqVVRPV09hNXIwR3NSdk8?oc=5",
+      "source": "eNCA",
+      "publishedAt": "2026-11-27T04:48:16.000Z",
+      "latestAt": "2026-11-27T04:48:16.000Z",
+      "firstSeenAt": "2026-11-27T04:58:49.971Z",
+      "outlets": 1,
+      "outletNames": [
+        "eNCA"
       ],
       "score": 1
     },
