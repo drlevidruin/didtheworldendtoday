@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T01:43:16.494Z",
+  "buildTime": "2026-11-27T01:58:17.781Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 20:43 ET",
+  "etStamp": "2026-11-26 20:58 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,8 +45,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1296,
-  "lastSuccessAt": "2026-11-27T01:43:16.494Z",
+  "headlinesRead": 1241,
+  "lastSuccessAt": "2026-11-27T01:58:17.781Z",
   "rollingFallback": false,
   "cats": {
     "flights": 15,
@@ -85,13 +85,7 @@
       "upcoming": false
     },
     "faa": {
-      "groundStops": [
-        {
-          "airport": "LGA",
-          "hub": true,
-          "reason": "other"
-        }
-      ],
+      "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
       "closures": 2,
@@ -171,31 +165,33 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Egypt tanker explosion kills 31 people as driver crashes into fuel truck in fiery highway crash"
+      ]
     },
     "holdUntil": null,
     "reason": null
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 994,
+      "count": 1015,
       "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "bing": {
       "ok": true,
-      "count": 269,
-      "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "count": 193,
+      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "gdelt": {
       "ok": false,
@@ -207,56 +203,55 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "faa": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T00:58:09.251Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "trends": {
       "ok": true,
       "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T01:43:16.494Z"
+      "lastOkAt": "2026-11-27T01:58:17.781Z"
     }
   },
   "stories": [
@@ -597,26 +592,6 @@
       "score": 2.38
     },
     {
-      "id": "668d8b7157f8",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Severe weather leaves thousands of Dominion customers without power in Hampton Roads",
-      "url": "https://www.wavy.com/news/local-news/severe-weather-leaves-thousands-of-dominion-customers-without-power-in-hampton-roads/",
-      "source": "WAVY.com",
-      "publishedAt": "2026-11-26T01:53:00.000Z",
-      "latestAt": "2026-11-26T22:19:55.000Z",
-      "firstSeenAt": "2026-11-26T08:55:30.997Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "WAVY.com",
-        "LancasterOnline"
-      ],
-      "trending": 100,
-      "trendTerm": "report power outage",
-      "score": 2.28
-    },
-    {
       "id": "7e43b7ccbaf9",
       "cat": "grid",
       "kind": "news",
@@ -703,6 +678,23 @@
         "cedarnews.net"
       ],
       "score": 1.99
+    },
+    {
+      "id": "06a52e93c62c",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
+      "source": "WCIV",
+      "publishedAt": "2026-11-26T15:17:10.000Z",
+      "latestAt": "2026-11-26T21:11:15.000Z",
+      "firstSeenAt": "2026-11-26T16:11:53.860Z",
+      "outlets": 2,
+      "outletNames": [
+        "WCIV",
+        "WTMA-AM"
+      ],
+      "score": 1.97
     },
     {
       "id": "49be6341ddc6",
@@ -962,21 +954,22 @@
       "score": 1.99
     },
     {
-      "id": "06a52e93c62c",
-      "cat": "grid",
+      "id": "e7f4ea1619d9",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
-      "source": "WCIV",
-      "publishedAt": "2026-11-26T15:17:10.000Z",
-      "latestAt": "2026-11-26T21:11:15.000Z",
-      "firstSeenAt": "2026-11-26T16:11:53.860Z",
-      "outlets": 2,
+      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-26T11:52:32.000Z",
+      "latestAt": "2026-11-27T00:07:52.000Z",
+      "firstSeenAt": "2026-11-27T01:58:17.781Z",
+      "outlets": 3,
       "outletNames": [
-        "WCIV",
-        "WTMA-AM"
+        "Anadolu Ajansı",
+        "TRT Afrika",
+        "cwibc.co.id"
       ],
-      "score": 1.97
+      "score": 1.98
     },
     {
       "id": "833490745443",
@@ -1283,23 +1276,6 @@
       "outletNames": [
         "Yahoo",
         "Anadolu Ajansı"
-      ],
-      "score": 1.69
-    },
-    {
-      "id": "c742603a0621",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "New Danish data breach hits 11,000 despite security upgrades",
-      "url": "https://www.msn.com/en-my/technology/cybersecurity/new-danish-data-breach-hits-11-000-despite-security-upgrades/ar-AA2igmC5",
-      "source": "Euronews on MSN",
-      "publishedAt": "2026-11-26T01:46:56.000Z",
-      "latestAt": "2026-11-26T09:46:56.000Z",
-      "firstSeenAt": "2026-11-26T10:56:00.192Z",
-      "outlets": 2,
-      "outletNames": [
-        "Euronews on MSN",
-        "Yahoo News UK"
       ],
       "score": 1.69
     },
@@ -1787,7 +1763,7 @@
       "url": "https://www.msn.com/en-us/news/other/global-news-agency-afp-reports-cyberattack-shuts-down-content-platform/ar-AA2ijNdv",
       "source": "Al Jazeera on MSN",
       "publishedAt": "2026-11-26T16:00:00.000Z",
-      "latestAt": "2026-11-26T17:07:44.000Z",
+      "latestAt": "2026-11-27T01:08:24.000Z",
       "firstSeenAt": "2026-11-27T01:28:20.315Z",
       "outlets": 1,
       "outletNames": [
@@ -1826,6 +1802,22 @@
         "Jablíčkář.cz"
       ],
       "score": 1.07
+    },
+    {
+      "id": "f93ea6772985",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power being restored in stages after massive blackout hits Sabah’s east coast",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPYXUxbFFJRDZxSmJOdGF3dk1odk90SzctdGtmNHptOXdidUl3MVdMSURpQVJNcU9XNnBJckk1NE1ub0Uwd1V5SmdESldBQlJ2MzFKbVgwc25wZTFxZ1VsQnJ4dzNJbUVBX2pjenJaX3FOMHZlWWw1N1JtUWo4SWZZdEZid3Jha0NjYWVrTFhTTkczOFMzZVdyam96TmxIVkRhWHlDRGJja1NacGEyZTkycGh6OXBudHdLeG1ONVlqbXhSbEVT?oc=5",
+      "source": "The Star",
+      "publishedAt": "2026-11-26T11:15:00.000Z",
+      "latestAt": "2026-11-26T11:15:00.000Z",
+      "firstSeenAt": "2026-11-27T01:58:17.781Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Star"
+      ],
+      "score": 1.06
     },
     {
       "id": "802ce460ea38",
