@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T20:46:26.142Z",
+  "buildTime": "2026-11-27T21:01:24.548Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 15:46 ET",
+  "etStamp": "2026-11-27 16:01 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,20 +44,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1281,
-  "lastSuccessAt": "2026-11-27T20:46:26.142Z",
+  "headlinesRead": 375,
+  "lastSuccessAt": "2026-11-27T21:01:24.548Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 42,
     "flights": 7,
-    "germs": 6,
+    "germs": 5,
     "grid": 13,
     "weather": 10,
     "ai": 3,
     "earth": 4,
     "markets": 4,
     "internet": 7,
-    "space": 3,
+    "space": 4,
     "sun": 1
   },
   "vital": {
@@ -70,9 +70,9 @@
       "tsunami": false
     },
     "kp": {
-      "value": 0.33,
-      "time": "2026-11-27T15:00:00.000Z",
-      "max24": 2.33
+      "value": 1,
+      "time": "2026-11-27T18:00:00.000Z",
+      "max24": 2
     },
     "asteroid": {
       "des": "2026 WK3",
@@ -161,9 +161,9 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
-      "headlines": 30,
+      "headlines": 29,
       "matched": 0,
       "tripAt": 3,
       "tripped": false,
@@ -180,57 +180,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 972,
-      "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "count": 76,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 3 of 26 queries)",
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
-      "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "count": 266,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     },
     "x": {
       "ok": true,
@@ -243,13 +243,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     },
     "topstories": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-27T20:46:26.142Z"
+      "lastOkAt": "2026-11-27T21:01:24.548Z"
     }
   },
   "stories": [
@@ -840,6 +840,45 @@
         "Nature World News"
       ],
       "score": 1.39
+    },
+    {
+      "id": "5a8764ff11bb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Air Force Cloud Platform Breached by Hackers, Putting Sensitive Data at Risk: Report",
+      "url": "https://www.military.com/us-air-force-computing-platform-breached-by-hackers-report",
+      "source": "Military.com",
+      "publishedAt": "2026-11-26T22:29:00.000Z",
+      "latestAt": "2026-11-27T12:54:11.000Z",
+      "firstSeenAt": "2026-11-27T21:01:24.548Z",
+      "outlets": 7,
+      "outletNames": [
+        "Military.com",
+        "Hindustan Times",
+        "CNBC",
+        "Yahoo",
+        "FOX 5 New York",
+        "Reuters on MSN",
+        "news.sky.com"
+      ],
+      "score": 2.38
+    },
+    {
+      "id": "5e845a6ddf62",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers target US Air Force’s Cloud One platform in major cybersecurity breach",
+      "url": "https://interestingengineering.com/military/us-air-force-cloud-one-cyberattack",
+      "source": "Interesting Engineering",
+      "publishedAt": "2026-11-27T11:32:00.000Z",
+      "latestAt": "2026-11-27T12:08:00.000Z",
+      "firstSeenAt": "2026-11-27T21:01:24.548Z",
+      "outlets": 2,
+      "outletNames": [
+        "Interesting Engineering",
+        "Fox News"
+      ],
+      "score": 2.36
     },
     {
       "id": "ce1dc71aa12f",
@@ -1765,54 +1804,6 @@
       "score": 1.02
     },
     {
-      "id": "73368c7d8081",
-      "cat": "germs",
-      "kind": "news",
-      "title": "DOC staff on 'high alert' for signs of bird flu on subantarctic islands",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVkVIekZUZFNJWHpGZ3hkUFJJQUZtRS1FZm9RbVc4MkI2ajVFbnA4VzlCNVBpVGRMLVNKMDZNUUNIanVhd0Ziems1RGlsRHlmaVJnTFdnLW9vMUpmTDZUVXlMaXA4OGFqNEVpYk11WW53MXNnMlFncDhnVllBQ0pfMnFSc1V2cTFxRVlxV09jc2pvNUJjajBSLUN4TjBiQzh6RGNUQmZ1bFMzNUsxN3drMHJ4bk9LM2M?oc=5",
-      "source": "RNZ",
-      "publishedAt": "2026-11-27T20:40:00.000Z",
-      "latestAt": "2026-11-27T20:40:00.000Z",
-      "firstSeenAt": "2026-11-27T20:46:26.142Z",
-      "outlets": 1,
-      "outletNames": [
-        "RNZ"
-      ],
-      "score": 1
-    },
-    {
-      "id": "2f50e8241e56",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "North Korean hackers expand PolinRider campaign via GitHub repositories",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRWJsLWdEdmJHaG5IQU1UU1YtUG9HMVRsTmhhUWdIci15M3RJR3REU0xJU3p2blAtYXJyN1lxd012ODlJeHBFdG40MzlNTkd3RzhDMUVIVGVKY21FUU9CUmt1YVZnandRMDRwa1BZYnZXdGx2Vzk4WFVZM1RLQ2RucHlqZzhZWlVoQ29OTGRHOUZZem1RRUpzMHpuNC1PQnlFOWVV?oc=5",
-      "source": "SC Media",
-      "publishedAt": "2026-11-27T20:05:54.000Z",
-      "latestAt": "2026-11-27T20:05:54.000Z",
-      "firstSeenAt": "2026-11-27T20:16:17.579Z",
-      "outlets": 1,
-      "outletNames": [
-        "SC Media"
-      ],
-      "score": 1
-    },
-    {
-      "id": "bd50eeb564e2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA’s internal info stolen in cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdUZTLUp4Q3N4UFBJMlFHTDhvcHZQdzZySVIxVUlHTTFreFZXcnA3cEMtSFhoTGZnZ0VtQmdDdS1abHZ6LS1YM1JMNThoeldqTi0xd1pOeE5FdU1pZEx1OVlpd0xXWkhUd3RRTGxxVmdLN0hVQUIzT05kVmhmcFdkcXcxZw?oc=5",
-      "source": "KYMA",
-      "publishedAt": "2026-11-27T19:37:17.000Z",
-      "latestAt": "2026-11-27T19:37:17.000Z",
-      "firstSeenAt": "2026-11-27T19:46:10.024Z",
-      "outlets": 1,
-      "outletNames": [
-        "KYMA"
-      ],
-      "score": 1
-    },
-    {
       "id": "abb76f5a2c98",
       "cat": "earth",
       "kind": "news",
@@ -1893,6 +1884,22 @@
         "Crypto Economy"
       ],
       "score": 0.97
+    },
+    {
+      "id": "73d0a3b5e8b8",
+      "cat": "space",
+      "kind": "news",
+      "title": "Asteroid Flyby: 2026 WU1 Passed Earth at 12.5 Lunar Distances, Size Estimate Spans 98 to 220 Feet",
+      "url": "https://www.techtimes.com/articles/331708/20261127/asteroid-flyby-2026-wu1-passed-earth-125-lunar-distances-size-estimate-spans-98-220-feet.htm",
+      "source": "Tech Times",
+      "publishedAt": "2026-11-27T12:54:00.000Z",
+      "latestAt": "2026-11-27T20:54:21.000Z",
+      "firstSeenAt": "2026-11-27T21:01:24.548Z",
+      "outlets": 1,
+      "outletNames": [
+        "Tech Times"
+      ],
+      "score": 0.86
     },
     {
       "id": "9e5ee9a72be9",
