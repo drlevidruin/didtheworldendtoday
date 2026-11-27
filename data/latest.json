@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T07:44:10.481Z",
+  "buildTime": "2026-11-27T07:59:11.044Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 02:44 ET",
+  "etStamp": "2026-11-27 02:59 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,13 +44,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1222,
-  "lastSuccessAt": "2026-11-27T07:44:10.481Z",
+  "headlinesRead": 617,
+  "lastSuccessAt": "2026-11-27T07:59:11.044Z",
   "rollingFallback": false,
   "cats": {
-    "flights": 12,
+    "flights": 11,
     "hacks": 29,
-    "grid": 25,
+    "grid": 26,
     "markets": 4,
     "weather": 6,
     "germs": 4,
@@ -175,81 +175,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 959,
-      "error": null,
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "count": 318,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 8 of 26 queries)",
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "bing": {
       "ok": true,
-      "count": 228,
-      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "count": 264,
+      "error": null,
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "gdelt": {
-      "ok": false,
+      "ok": true,
       "count": 0,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-27T05:13:51.187Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T06:59:07.893Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T07:44:10.481Z"
+      "lastOkAt": "2026-11-27T07:59:11.044Z"
     }
   },
   "stories": [
@@ -319,6 +318,35 @@
         "US Muslims"
       ],
       "score": 4.02
+    },
+    {
+      "id": "7460af6d2d67",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands without power in DC, Maryland and Virginia on Thanksgiving, trees fall on homes and cars | Weather Updates",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOa1JkLUd1ZXhBUzc4bU12YTN2VUNuNFlfOEx0aDZZQmhzaTJieFpHaGFyRHJqMXByUkViZEJlTTh5UlVGdXVlbV8yWkg2N25ZQzgzZUpkN3hUQzFjQnJZV3V0WGx0ckhBeFM5QlI0QzN5N1MyVHU3WTlxdXoteXpNcmpRYzZfZFh3dmUyOWlRLTlxUG52Zzd6cHJ4TG5hQk0wYWNlXzluOE1zZDJHTVJQSFV3eXg0c1FiRlpqVnZOZkp4Ny1XRUNFVzBSS1FQSkNuM1NhdkNUZw?oc=5",
+      "source": "WUSA9",
+      "publishedAt": "2026-11-26T12:17:00.000Z",
+      "latestAt": "2026-11-27T04:50:30.000Z",
+      "firstSeenAt": "2026-11-27T04:43:43.269Z",
+      "outlets": 14,
+      "outletNames": [
+        "WUSA9",
+        "Albemarle Observer",
+        "Yahoo",
+        "Energy News Beat",
+        "WANE 15",
+        "WDBJ7",
+        "FOX 5 DC",
+        "ABC27",
+        "SSBCrack",
+        "WKYC",
+        "primetimer.com",
+        "Cleveland 19 News",
+        "NewsBreak: Local News & Alerts",
+        "FFXnow"
+      ],
+      "score": 3.49
     },
     {
       "id": "9d364f5dc0cd",
@@ -457,23 +485,6 @@
       "score": 2.23
     },
     {
-      "id": "8ecff6907df4",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thanksgiving storm batters eastern US, leaves over 724,000 without power, shuts major bridges",
-      "url": "https://ddnews.gov.in/en/thanksgiving-storm-batters-eastern-us-leaves-over-724000-without-power-shuts-major-bridges/",
-      "source": "DD News",
-      "publishedAt": "2026-11-26T16:00:00.000Z",
-      "latestAt": "2026-11-26T22:25:00.000Z",
-      "firstSeenAt": "2026-11-27T04:43:43.269Z",
-      "outlets": 2,
-      "outletNames": [
-        "DD News",
-        "Moneycontrol"
-      ],
-      "score": 2.21
-    },
-    {
       "id": "49be6341ddc6",
       "cat": "germs",
       "kind": "news",
@@ -562,6 +573,23 @@
       "score": 2.36
     },
     {
+      "id": "8ecff6907df4",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thanksgiving storm batters eastern US, leaves over 724,000 without power, shuts major bridges",
+      "url": "https://ddnews.gov.in/en/thanksgiving-storm-batters-eastern-us-leaves-over-724000-without-power-shuts-major-bridges/",
+      "source": "DD News",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-26T22:25:00.000Z",
+      "firstSeenAt": "2026-11-27T04:43:43.269Z",
+      "outlets": 2,
+      "outletNames": [
+        "DD News",
+        "Moneycontrol"
+      ],
+      "score": 2.21
+    },
+    {
       "id": "cc0a42ab87c1",
       "cat": "grid",
       "kind": "news",
@@ -596,23 +624,6 @@
         "US Muslims"
       ],
       "score": 2.18
-    },
-    {
-      "id": "06a52e93c62c",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
-      "source": "WCIV",
-      "publishedAt": "2026-11-26T15:17:10.000Z",
-      "latestAt": "2026-11-27T03:14:55.000Z",
-      "firstSeenAt": "2026-11-26T16:11:53.860Z",
-      "outlets": 2,
-      "outletNames": [
-        "WCIV",
-        "WTMA-AM"
-      ],
-      "score": 1.97
     },
     {
       "id": "53427eab3273",
@@ -917,6 +928,23 @@
       "score": 1.97
     },
     {
+      "id": "06a52e93c62c",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Cause unclear as Berkeley Electric outages leave 6.6K without power on Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZ3ZkeUxBaVppM0VZaDFmcnV0Y2RnRmo4RlY1dUtJV2FnX1A3ekhnbGpSRmw5SmhPRXJqQjhsZmFlbEFkYTRoV0N4Z3BmMVVhVWR3WjNyd3hTeEN1NlcxS0ctLVdHZEJLbjY3d1F4RmV1T2NJNV9QNWY5RkRLT3RtSTNDQ1drVDFsZW52Sk9rVEdwWklJYWFxVE85c2p5R0tERURYOF9sLUhsb0ZwRlc0UkJKVzJMdw?oc=5",
+      "source": "WCIV",
+      "publishedAt": "2026-11-26T15:17:10.000Z",
+      "latestAt": "2026-11-27T03:14:55.000Z",
+      "firstSeenAt": "2026-11-26T16:11:53.860Z",
+      "outlets": 2,
+      "outletNames": [
+        "WCIV",
+        "WTMA-AM"
+      ],
+      "score": 1.97
+    },
+    {
       "id": "2d9813eb624f",
       "cat": "hacks",
       "kind": "news",
@@ -1034,23 +1062,6 @@
         "Yahoo"
       ],
       "score": 1.86
-    },
-    {
-      "id": "5a5580e5c64e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US Treasury’s FinCEN takes systems offline after a cybersecurity incident",
-      "url": "https://thenextweb.com/news/fincen-hack-treasury-systems-offline-filing-deadlines",
-      "source": "The Next Web",
-      "publishedAt": "2026-11-26T07:50:00.000Z",
-      "latestAt": "2026-11-26T12:50:56.000Z",
-      "firstSeenAt": "2026-11-26T16:11:53.860Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Next Web",
-        "Howl.Link"
-      ],
-      "score": 1.72
     },
     {
       "id": "8b924f779234",
@@ -1172,25 +1183,6 @@
       "score": 1.66
     },
     {
-      "id": "a6632bb51604",
-      "cat": "grid",
-      "kind": "news",
-      "title": "US storm brings severe flooding, power outages on Thanksgiving; Midwest and Northeast hit - watch",
-      "url": "https://www.msn.com/en-in/weather/extreme-weather-events/us-storm-brings-severe-flooding-power-outages-on-thanksgiving-midwest-and-northeast-hit-watch/ar-AA2ijNQc",
-      "source": "Hindustan Times on MSN",
-      "publishedAt": "2026-11-26T18:22:02.000Z",
-      "latestAt": "2026-11-27T00:30:00.000Z",
-      "firstSeenAt": "2026-11-27T05:13:51.187Z",
-      "outlets": 2,
-      "outletNames": [
-        "Hindustan Times on MSN",
-        "cbsnews.com"
-      ],
-      "score": 1.64,
-      "quiet": true,
-      "quietReason": "headline mentions flooding"
-    },
-    {
       "id": "209fc1576206",
       "cat": "grid",
       "kind": "news",
@@ -1242,6 +1234,25 @@
       "score": 1.56
     },
     {
+      "id": "a6632bb51604",
+      "cat": "grid",
+      "kind": "news",
+      "title": "US storm brings severe flooding, power outages on Thanksgiving; Midwest and Northeast hit - watch",
+      "url": "https://www.msn.com/en-in/weather/extreme-weather-events/us-storm-brings-severe-flooding-power-outages-on-thanksgiving-midwest-and-northeast-hit-watch/ar-AA2ijNQc",
+      "source": "Hindustan Times on MSN",
+      "publishedAt": "2026-11-26T15:51:00.000Z",
+      "latestAt": "2026-11-27T00:30:00.000Z",
+      "firstSeenAt": "2026-11-27T05:13:51.187Z",
+      "outlets": 2,
+      "outletNames": [
+        "Hindustan Times on MSN",
+        "cbsnews.com"
+      ],
+      "score": 1.55,
+      "quiet": true,
+      "quietReason": "headline mentions flooding"
+    },
+    {
       "id": "795b176889d5",
       "cat": "grid",
       "kind": "news",
@@ -1291,22 +1302,6 @@
         "FOX 29 Philadelphia"
       ],
       "score": 1.42
-    },
-    {
-      "id": "b8370e35ed89",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta tech outage triggers nationwide delays at start of Thanksgiving rush",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaGhLVHZrdmZOLTZzTlo3dW5QMGR2bGJlYjFGNEVTUkIwc1lqUEdLdDNCOTFZaHR4MWhsS2NoWC0xRzhBVHJOZWJyZmRuWF85NThrS2paRHZMNm9NUGJuakZ2RE9kT2N5SV9iNTVkT1UwZlZTdzN0aDJ4eVFEYXAwVmN2R3gzUGJYQUtVNEN0ZVV2WGRncFlQNXlWTng4ZFRDOGFoX3NR?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-26T07:46:16.000Z",
-      "latestAt": "2026-11-26T23:26:23.000Z",
-      "firstSeenAt": "2026-11-26T07:55:25.802Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.4
     },
     {
       "id": "7c2cbb4906df",
@@ -1648,6 +1643,38 @@
       "score": 1.04
     },
     {
+      "id": "239aadabab90",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "KOFST Data Breach: 210,000 Records, 16 Data Types",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWThrV19JcDY1anRzR0pBbDc5OUlweWo4d0V1a1ViQlpCVF9tVkRYTzd6dXlRdFRMMVZpbGRvdVlORGRmaU41UXl2NHJaMHVGemsxblZ6N01tYktjV09sbDJ4S1FVb1QtY1JlLVdYTXJTTENEY0JJbmQ4N1IxdDFTNk1GVnFZR3QzakFVa0k5RDYyWWRMbFp4cw?oc=5",
+      "source": "shattered.io",
+      "publishedAt": "2026-11-27T07:48:57.000Z",
+      "latestAt": "2026-11-27T07:48:57.000Z",
+      "firstSeenAt": "2026-11-27T07:59:11.044Z",
+      "outlets": 1,
+      "outletNames": [
+        "shattered.io"
+      ],
+      "score": 1
+    },
+    {
+      "id": "c9114f263b0b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA Cyberattack: Hackers Reportedly Impersonated Staff as Sport Faces a Wave of Attacks",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWThCNnNEQk9USmxHQ2dLZVV3d3BZb3NxcFRZVC0tYjBucjVnMERkUHlwN2UzMjFpeHZjQ2w5LVdRNHFScjB6ZnBCaHpid2k1UFhFQlNRVGNVeGlUWmppR0lfT2Z3NkRXdjFLckRoaFpwaHZMU0R2RDhwdUprNlFVZC1MbzRCVzQtMFJRNVVpX0t6SnVnQmZpdTktdE5iNTRNWkZTa2stUTBvMTFLSUtyY0EzSnlaOTdZdVRwc2E3RWhuNUsxeWc?oc=5",
+      "source": "Sportscape Magazine",
+      "publishedAt": "2026-11-27T07:42:30.000Z",
+      "latestAt": "2026-11-27T07:42:30.000Z",
+      "firstSeenAt": "2026-11-27T07:59:11.044Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sportscape Magazine"
+      ],
+      "score": 1
+    },
+    {
       "id": "41bfd14f419a",
       "cat": "hacks",
       "kind": "news",
@@ -1740,22 +1767,6 @@
       "outlets": 1,
       "outletNames": [
         "IOL"
-      ],
-      "score": 1
-    },
-    {
-      "id": "a489660d1215",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "ARTEX with ransomware advertised on a dark web forum, no proof yet",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUENjcTh3MEpia1BGdG5NdXU4dnNPc3Vtckh2U0FXeThsRWoxYjJHMUpqQTBvb3hLWXpzZGVqNUFEUlRpV3FmYWhpY3pYNFBHSHBzVWk0dWNrTDBjYUdwbFd1cFlmdHZrNmlhbEhRbTBILU5iSnVIVWhubHAySkxpSllUZzhIWW45VE4w?oc=5",
-      "source": "Pasquale Pillitteri",
-      "publishedAt": "2026-11-27T07:11:33.000Z",
-      "latestAt": "2026-11-27T07:11:33.000Z",
-      "firstSeenAt": "2026-11-27T07:14:06.650Z",
-      "outlets": 1,
-      "outletNames": [
-        "Pasquale Pillitteri"
       ],
       "score": 1
     },
