@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T23:16:46.899Z",
+  "buildTime": "2026-11-27T23:31:54.295Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 18:16 ET",
+  "etStamp": "2026-11-27 18:31 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -39,16 +39,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 314,
-  "lastSuccessAt": "2026-11-27T23:16:46.899Z",
+  "headlinesRead": 1229,
+  "lastSuccessAt": "2026-11-27T23:31:54.295Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 41,
+    "hacks": 40,
     "germs": 5,
     "grid": 17,
     "weather": 8,
     "ai": 3,
-    "flights": 5,
+    "flights": 6,
     "animals": 2,
     "earth": 4,
     "markets": 4,
@@ -157,7 +157,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "bbc-top-stories",
+      "via": "google-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -171,80 +171,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "ok": true,
+      "count": 920,
+      "error": null,
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     },
     "bing": {
       "ok": true,
-      "count": 280,
+      "count": 275,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z"
+      "lastOkAt": "2026-11-27T23:31:54.295Z"
     }
   },
   "stories": [
@@ -322,31 +323,6 @@
       "score": 3.12
     },
     {
-      "id": "b419fa2bff71",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers break into US Air Force cloud computing platform: Report",
-      "url": "https://www.yahoo.com/news/us/articles/hackers-break-us-air-force-135401829.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T03:35:00.000Z",
-      "latestAt": "2026-11-27T12:54:11.000Z",
-      "firstSeenAt": "2026-11-27T23:01:42.017Z",
-      "outlets": 10,
-      "outletNames": [
-        "Yahoo",
-        "The Denver Post",
-        "KIII-TV",
-        "KGNS-TV",
-        "WRAL",
-        "FOX 5 New York",
-        "Reuters on MSN",
-        "news.sky.com",
-        "HuffPost",
-        "CNA"
-      ],
-      "score": 2.92
-    },
-    {
       "id": "824d40a7de12",
       "cat": "germs",
       "kind": "news",
@@ -365,6 +341,26 @@
         "eKathimerini.com"
       ],
       "score": 2.86
+    },
+    {
+      "id": "a086d4abc6e4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-27T01:12:48.000Z",
+      "latestAt": "2026-11-27T12:50:38.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 5,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "A News",
+        "The Malaysian Reserve",
+        "US Muslims",
+        "MLQ.ai"
+      ],
+      "score": 2.68
     },
     {
       "id": "94e16ff27e9a",
@@ -505,26 +501,6 @@
       "score": 1.61
     },
     {
-      "id": "a086d4abc6e4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-27T01:12:48.000Z",
-      "latestAt": "2026-11-27T12:50:38.000Z",
-      "firstSeenAt": "2026-11-27T12:45:07.402Z",
-      "outlets": 5,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "A News",
-        "The Malaysian Reserve",
-        "US Muslims",
-        "MLQ.ai"
-      ],
-      "score": 2.68
-    },
-    {
       "id": "bd573c4f71b8",
       "cat": "hacks",
       "kind": "news",
@@ -560,6 +536,23 @@
         "GBHackers News"
       ],
       "score": 2.46
+    },
+    {
+      "id": "ce1dc71aa12f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Millions lose access to benefits and pensions services after 'cyber incident'",
+      "url": "https://www.aol.com/articles/department-pensions-takes-services-offline-083625000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-27T00:34:00.000Z",
+      "latestAt": "2026-11-27T20:42:44.000Z",
+      "firstSeenAt": "2026-11-27T11:59:52.439Z",
+      "outlets": 2,
+      "outletNames": [
+        "BBC",
+        "AOL"
+      ],
+      "score": 2.27
     },
     {
       "id": "142801077e11",
@@ -664,6 +657,22 @@
       "score": 1.49
     },
     {
+      "id": "9749ab7c58b2",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta system outage snarls Thanksgiving-week flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcEljZks1eEdjVEdJRG1SemhZRFZzUmJRVWpVSE9BRlQ1UGF6X0NZcFlJVzNabFFZcU9aUl9iZWlabmd5cEpibUNxaE50cm5JNUNlN1dzd2ZjX3BqTzlZUU5BaXAtQUhiM1ZXcWFGbTVnS2h2SnIyYkRaTkEzVnNoOGJmRGhzX2JBcVZJUElxcG1GOVRNdXhv?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-27T23:22:37.000Z",
+      "latestAt": "2026-11-27T23:22:37.000Z",
+      "firstSeenAt": "2026-11-27T23:31:54.295Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "fc30b8b61bc2",
       "cat": "weather",
       "kind": "news",
@@ -719,7 +728,7 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-27T00:42:03.000Z",
-      "latestAt": "2026-11-27T22:15:49.000Z",
+      "latestAt": "2026-11-27T23:14:12.000Z",
       "firstSeenAt": "2026-11-27T00:43:07.514Z",
       "outlets": 1,
       "outletNames": [
@@ -790,39 +799,6 @@
         "Nature World News"
       ],
       "score": 1.39
-    },
-    {
-      "id": "36bd83d9f0d6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
-      "source": "Demokratis.co.id",
-      "publishedAt": "2026-11-27T14:44:49.000Z",
-      "latestAt": "2026-11-27T14:44:49.000Z",
-      "firstSeenAt": "2026-11-27T15:45:32.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "Demokratis.co.id"
-      ],
-      "score": 1.38
-    },
-    {
-      "id": "ce1dc71aa12f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Millions lose access to benefits and pensions services after 'cyber incident'",
-      "url": "https://www.aol.com/articles/department-pensions-takes-services-offline-083625000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-27T00:34:00.000Z",
-      "latestAt": "2026-11-27T20:42:44.000Z",
-      "firstSeenAt": "2026-11-27T11:59:52.439Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "AOL"
-      ],
-      "score": 2.27
     },
     {
       "id": "7aee287f69f6",
@@ -1150,6 +1126,23 @@
       "score": 1.57
     },
     {
+      "id": "8b924f779234",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage hits domestic terminal at O. R. Tambo International Airport",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUTFJOE1PN0I4T3hja0FTazhITzNwTTlEbnBPRm01Nk93dTBhbHVVT2E3LVd1dkxkTzZxRkdRMTJ4VWdlb2hBVl81LUM2MC1zUmJGZHZobmpEcFVHRlJ6Nm5YS25PSE5BZDV2UTNVQnY0Zlp5bURZYXFabG1aS2RrMXgzUjlrcUlJclkxYUVQemhnRnJURUtKWDhGV25pRWNRaVNMVDRiVEJDTl9nMWpFdjNxWWxWT0M0RFE?oc=5",
+      "source": "IOL",
+      "publishedAt": "2026-11-27T06:13:11.000Z",
+      "latestAt": "2026-11-27T10:06:51.000Z",
+      "firstSeenAt": "2026-11-27T23:31:54.295Z",
+      "outlets": 2,
+      "outletNames": [
+        "IOL",
+        "EWN"
+      ],
+      "score": 1.42
+    },
+    {
       "id": "94baa68ac682",
       "cat": "hacks",
       "kind": "news",
@@ -1229,6 +1222,22 @@
         "TipRanks"
       ],
       "score": 1.39
+    },
+    {
+      "id": "36bd83d9f0d6",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
+      "source": "Demokratis.co.id",
+      "publishedAt": "2026-11-27T14:44:49.000Z",
+      "latestAt": "2026-11-27T14:44:49.000Z",
+      "firstSeenAt": "2026-11-27T15:45:32.463Z",
+      "outlets": 1,
+      "outletNames": [
+        "Demokratis.co.id"
+      ],
+      "score": 1.38
     },
     {
       "id": "4a31471a8cff",
@@ -1779,20 +1788,20 @@
       "score": 1
     },
     {
-      "id": "8e95629f1a2b",
-      "cat": "grid",
+      "id": "e23c92df5fb3",
+      "cat": "earth",
       "kind": "news",
-      "title": "Power Outage Meals: Refined No-Cook Pantry Dining",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVmloZ0x5dVpvTUk2SmI3ejgyUWRFM1ZQRjhPY0R0bm9CMThOZWdUOVB1QzJKUkkyWm1iQ0JCMktSZnlJaVdNU2kyQ1VHakt2dDBXU3o3OVJNc1VXaTA2RVZUMDZvbGttazJfdlZLOFluUWVOellib1gyVXVnVjlOVEZIeGQzM2ktMGc1alp3?oc=5",
-      "source": "DC Life Magazine",
-      "publishedAt": "2026-11-27T02:33:30.000Z",
-      "latestAt": "2026-11-27T02:33:30.000Z",
-      "firstSeenAt": "2026-11-27T02:43:26.251Z",
+      "title": "3.6 magnitude earthquake registered close to Silver Peak, NV on Nov. 27",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE94QkFxWTFlLXk1VzFZbDBlc3M1d25XdXdvUEgyLUFhN05SaGxQOWlxcVR1UUxDa0pvamRuQnRJWnpvZTZuY09hTUtDZFFGeUR5ZWxROWtZVTV5M08xNnAwa2REbm1QRXFlNjVJcVdDZmd4eWU4S2hMdWlSMUg?oc=5",
+      "source": "Sacramento Bee",
+      "publishedAt": "2026-11-27T22:52:08.000Z",
+      "latestAt": "2026-11-27T22:52:08.000Z",
+      "firstSeenAt": "2026-11-27T23:31:54.295Z",
       "outlets": 1,
       "outletNames": [
-        "DC Life Magazine"
+        "Sacramento Bee"
       ],
-      "score": 1
+      "score": 0.99
     },
     {
       "id": "fd86856780f0",
@@ -1823,22 +1832,6 @@
       "outlets": 1,
       "outletNames": [
         "CTV News"
-      ],
-      "score": 0.97
-    },
-    {
-      "id": "1e1b66000764",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Update: Nov. 27 - 2.9 magnitude earthquake detected near Ridgecrest, CA",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBLSEVXNVZ0WEs1eWxTWWdZYVhLU1VyMHZBbmhrZEUwRnhoQmxQMldtRGFPME4wMGNaR2hQcGJUejFhX3pQYWVucWtwWUlNbHJWUFdyejhIODBGVUxxOE5tZjg3aGswNFJHMWgyd1d3UEg2UW1HcE5idUNCQnk?oc=5",
-      "source": "Sacramento Bee",
-      "publishedAt": "2026-11-27T16:26:06.000Z",
-      "latestAt": "2026-11-27T16:26:06.000Z",
-      "firstSeenAt": "2026-11-27T18:31:05.149Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sacramento Bee"
       ],
       "score": 0.97
     },
