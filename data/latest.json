@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T03:58:37.448Z",
+  "buildTime": "2026-11-27T04:04:23.345Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 22:58 ET",
+  "etStamp": "2026-11-26 23:04 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,17 +45,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1267,
-  "lastSuccessAt": "2026-11-27T03:58:37.448Z",
+  "headlinesRead": 1285,
+  "lastSuccessAt": "2026-11-27T04:04:23.345Z",
   "rollingFallback": false,
   "cats": {
     "flights": 11,
-    "grid": 30,
-    "hacks": 28,
-    "germs": 4,
+    "grid": 27,
+    "hacks": 30,
     "markets": 4,
     "weather": 6,
-    "internet": 5,
+    "internet": 6,
+    "germs": 4,
     "sun": 4,
     "earth": 4,
     "ai": 1,
@@ -176,20 +176,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 963,
+      "count": 979,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     },
     "bing": {
       "ok": true,
-      "count": 271,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     },
     "gdelt": {
       "ok": false,
@@ -201,55 +201,56 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T03:58:37.448Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 28,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T03:58:37.448Z"
+      "lastOkAt": "2026-11-27T04:04:23.345Z"
     }
   },
   "stories": [
@@ -309,7 +310,7 @@
       "publishedAt": "2026-11-26T04:17:00.000Z",
       "latestAt": "2026-11-27T03:41:11.000Z",
       "firstSeenAt": "2026-11-26T12:26:10.024Z",
-      "outlets": 15,
+      "outlets": 16,
       "outletNames": [
         "WUSA9",
         "WRAL",
@@ -325,9 +326,10 @@
         "PRIMETIMER",
         "Cleveland 19 News",
         "WDBJ7",
-        "FOX 5 DC"
+        "FOX 5 DC",
+        "NewsBreak: Local News & Alerts"
       ],
-      "score": 4.24
+      "score": 4.32
     },
     {
       "id": "9d364f5dc0cd",
@@ -390,24 +392,6 @@
         "marketscreener.com"
       ],
       "score": 3.15
-    },
-    {
-      "id": "2da563b7e862",
-      "cat": "germs",
-      "kind": "news",
-      "title": "FDA: Pain Reliever Recalled Nationwide for Possible ‘Aluminum Particulate Contamination’",
-      "url": "https://www.yahoo.com/news/us/articles/fda-pain-reliever-recalled-nationwide-120231749.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T04:03:00.000Z",
-      "latestAt": "2026-11-26T13:17:00.000Z",
-      "firstSeenAt": "2026-11-26T12:26:10.024Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "The Healthy @Reader's Digest",
-        "The Healthy"
-      ],
-      "score": 3.11
     },
     {
       "id": "0c4e661cc31a",
@@ -515,6 +499,23 @@
       "score": 2.23
     },
     {
+      "id": "49be6341ddc6",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed at turkey farms as keepers warned",
+      "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPVHFyTzdKblFaSHY2VEg0MzRtNTZqRS1OSFFFT2NNTFZqVDlobF8wTzJRWkhsUkg0QlJpbkNjZ1ZkZ0VjU2ljNHQtMXRxREtZVVZRTzRwbTF2VnVXZEF3empxc2dNQzJDSEpwY2xxTFRuanEyMUNubm5GdUdudUJuM3JmbUhPR3FnQjBKTkg5bXozRDhGWUpELUhBWkFlSm9zMURKWF9NaWo4MF9xcG9JY1ZFTS0yMzRSVHh0b21pLU5ZLWdiRWlwOTJITmFWb2JQMGVFZmlnaFJTNG5BSDNIX3lGdHZUQmx4dFJFR00wcHNyallJNmIyMHd2dUxhOXpRMFQ0dklPZm02cG15WEItWHFKUHB3WGZXRDNqM0pFWnRYR1F5anc?oc=5",
+      "source": "Trending Now Infrastructure",
+      "publishedAt": "2026-11-26T08:42:33.000Z",
+      "latestAt": "2026-11-26T09:40:28.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 2,
+      "outletNames": [
+        "Trending Now Infrastructure",
+        "Richmondshire Today"
+      ],
+      "score": 1.96
+    },
+    {
       "id": "22e6f5d8189d",
       "cat": "hacks",
       "kind": "news",
@@ -603,23 +604,6 @@
         "WTMA-AM"
       ],
       "score": 1.97
-    },
-    {
-      "id": "49be6341ddc6",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed at turkey farms as keepers warned",
-      "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPVHFyTzdKblFaSHY2VEg0MzRtNTZqRS1OSFFFT2NNTFZqVDlobF8wTzJRWkhsUkg0QlJpbkNjZ1ZkZ0VjU2ljNHQtMXRxREtZVVZRTzRwbTF2VnVXZEF3empxc2dNQzJDSEpwY2xxTFRuanEyMUNubm5GdUdudUJuM3JmbUhPR3FnQjBKTkg5bXozRDhGWUpELUhBWkFlSm9zMURKWF9NaWo4MF9xcG9JY1ZFTS0yMzRSVHh0b21pLU5ZLWdiRWlwOTJITmFWb2JQMGVFZmlnaFJTNG5BSDNIX3lGdHZUQmx4dFJFR00wcHNyallJNmIyMHd2dUxhOXpRMFQ0dklPZm02cG15WEItWHFKUHB3WGZXRDNqM0pFWnRYR1F5anc?oc=5",
-      "source": "Trending Now Infrastructure",
-      "publishedAt": "2026-11-26T08:42:33.000Z",
-      "latestAt": "2026-11-26T09:40:28.000Z",
-      "firstSeenAt": "2026-11-26T09:55:39.177Z",
-      "outlets": 2,
-      "outletNames": [
-        "Trending Now Infrastructure",
-        "Richmondshire Today"
-      ],
-      "score": 1.96
     },
     {
       "id": "4958786f794b",
@@ -820,6 +804,22 @@
         "The Nightly"
       ],
       "score": 1.4
+    },
+    {
+      "id": "05f321ac59b4",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Some cities set new record-high temperatures, rainfall in two months",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxONy1pQkw3STdCMEdkMFAwdzVGUC10QjFQaEdLelVMa2EyakVUMXF4WHE2UHcybDVETmx2ZmVYNXZfUzBzQThGdkw2TnppakYzWHQ1RkEtNlpwbF9yMFNueFowR1llR2F0ZUZxWURmYUpYWWJLanVEUHNuVThObjdELTJ1OHFCbmxidV9vXzI2bFMzWnVGRDdB?oc=5",
+      "source": "Global New Light Of Myanmar",
+      "publishedAt": "2026-11-26T11:22:42.000Z",
+      "latestAt": "2026-11-26T11:22:42.000Z",
+      "firstSeenAt": "2026-11-26T13:26:15.471Z",
+      "outlets": 1,
+      "outletNames": [
+        "Global New Light Of Myanmar"
+      ],
+      "score": 1.35
     },
     {
       "id": "48ea6ffdd742",
@@ -1288,6 +1288,23 @@
       "score": 1.52
     },
     {
+      "id": "e7f4ea1619d9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-26T11:52:32.000Z",
+      "latestAt": "2026-11-26T14:47:38.000Z",
+      "firstSeenAt": "2026-11-27T04:04:23.345Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "TRT Afrika"
+      ],
+      "score": 1.46
+    },
+    {
       "id": "795b176889d5",
       "cat": "grid",
       "kind": "news",
@@ -1354,22 +1371,6 @@
       "trending": 500,
       "trendTerm": "north carolina",
       "score": 1.38
-    },
-    {
-      "id": "05f321ac59b4",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Some cities set new record-high temperatures, rainfall in two months",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxONy1pQkw3STdCMEdkMFAwdzVGUC10QjFQaEdLelVMa2EyakVUMXF4WHE2UHcybDVETmx2ZmVYNXZfUzBzQThGdkw2TnppakYzWHQ1RkEtNlpwbF9yMFNueFowR1llR2F0ZUZxWURmYUpYWWJLanVEUHNuVThObjdELTJ1OHFCbmxidV9vXzI2bFMzWnVGRDdB?oc=5",
-      "source": "Global New Light Of Myanmar",
-      "publishedAt": "2026-11-26T11:22:42.000Z",
-      "latestAt": "2026-11-26T11:22:42.000Z",
-      "firstSeenAt": "2026-11-26T13:26:15.471Z",
-      "outlets": 1,
-      "outletNames": [
-        "Global New Light Of Myanmar"
-      ],
-      "score": 1.35
     },
     {
       "id": "60bf689c89a1",
@@ -1450,6 +1451,22 @@
         "https://www.thetraveler.org/"
       ],
       "score": 1.28
+    },
+    {
+      "id": "064b9604c379",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft declares ‘Code Red’ in wake of global outage",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPQTBGNWREVFFpQnNmeDVITEp2NEtmLWNJQW90clRvRjJNYTVWNGZkczdWQWFlcVdiblR0dW9NeVl3c0FNTVpzUjlwMnJhYWpQa19iX2dMMXpMN2N1YXljRTlVMkxidVhuQlczbjE0VUZ3c0NYb0dCNGVyaFVxTDVaUGRhSExrdjY1TjNsSUhtazR4bTQ?oc=5",
+      "source": "Cyber Daily",
+      "publishedAt": "2026-11-26T22:20:12.000Z",
+      "latestAt": "2026-11-26T22:20:12.000Z",
+      "firstSeenAt": "2026-11-27T04:04:23.345Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cyber Daily"
+      ],
+      "score": 1.27
     },
     {
       "id": "f90baf32cac4",
@@ -1628,6 +1645,38 @@
       "score": 1.04
     },
     {
+      "id": "88d4022cb97b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SAP hit by cyberattack, says no sign of customer data being breached",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNdHpKTUhROFNQR0tHX1laSDlNUkE2QzFOSDVERW1DTFVjcEFYVUNXdU1OUElXZXJmX1F6d2lweUlmVHlBYUV2T3pKY3lvWV8xa21zekxPUG1LdHp0ZTkzOUFvNmd2OU9OaFFLcUU4MkZPSGVrRWJhM19NLUhPYzhUUTV1cGw5ZTIzU2NveTBaN0xDQVYxdHpMT0JTOTBDRDB0T0dWdmZfUXdqVktpZ2JQOEllb2Ryd3RtTk03ZVh2UWg0YktGYW02OXVIOW9WY1FXcUxNVdIB1AFBVV95cUxNdHpKTUhROFNQR0tHX1laSDlNUkE2QzFOSDVERW1DTFVjcEFYVUNXdU1OUElXZXJmX1F6d2lweUlmVHlBYUV2T3pKY3lvWV8xa21zekxPUG1LdHp0ZTkzOUFvNmd2OU9OaFFLcUU4MkZPSGVrRWJhM19NLUhPYzhUUTV1cGw5ZTIzU2NveTBaN0xDQVYxdHpMT0JTOTBDRDB0T0dWdmZfUXdqVktpZ2JQOEllb2Ryd3RtTk03ZVh2UWg0YktGYW02OXVIOW9WY1FXcUxNVQ?oc=5",
+      "source": "India Today",
+      "publishedAt": "2026-11-27T03:58:41.000Z",
+      "latestAt": "2026-11-27T03:58:41.000Z",
+      "firstSeenAt": "2026-11-27T04:04:23.345Z",
+      "outlets": 1,
+      "outletNames": [
+        "India Today"
+      ],
+      "score": 1
+    },
+    {
+      "id": "5a105c9d3fb2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "South Korea's Data Breach Reports Hit 1,019, 2.3 Times Last Year's Total; Government to Launch 3-Month AI Hacking Crackdown in December",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5CT0ltQmRGdWtzMmo1Q1hxVjBWYkNET0FxaFNvbEVfSVduRE1GX0lHQ1B0Z0x5NFd0NjFlbm1YMzJhekYxY3Z5YUc3MXdiSUNkUmRfeFJ3MnAweDdZc1NicFcwa0xHQm4yYU1zOFpvWW11VDltdEE?oc=5",
+      "source": "finance.biggo.com",
+      "publishedAt": "2026-11-27T03:55:00.000Z",
+      "latestAt": "2026-11-27T03:55:00.000Z",
+      "firstSeenAt": "2026-11-27T04:04:23.345Z",
+      "outlets": 1,
+      "outletNames": [
+        "finance.biggo.com"
+      ],
+      "score": 1
+    },
+    {
       "id": "2bc1b77a3fd6",
       "cat": "grid",
       "kind": "news",
@@ -1758,54 +1807,6 @@
       "score": 0.99
     },
     {
-      "id": "d610ea364549",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Ameren Illinois reports hundreds without power in McLean County",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUnpEVFZ6NzlTb09qbjFWNXlvZ0pUOWdaVWw5d3piX3ZzZVVDSjZOcnZYUkJXb2swRXFCMG1JX1dpYmtHclptalcwZTZuallsUTRraE1yNFhoUEVJTUhPaVNka3Q1dXhmN0FLcVNKbUtvbkFpR2pTb25LcmhqaEplNHV6UVRSWU12M0lua1hEdXlrTktwblAtb2NBUy0yMTTSAbMBQVVfeXFMTWV6OUZ6TXJ2UzJzczZqMDV3eFg5VHRleTV0RWtteURzNVhBOGNPT2dJSHYtZ3k3NC1NczlhRFJzTGFtTVp3Qk9TbDE3SUdXSFd4bEtfSHlNT3V6aTdwc25Ka1l4WjhKWE5aYjF4cno5NUthSmV4NTRJVVVGd0d4S213VW44WC1hYnRMazBmMWkwMUNTV0dWOGU4NlNVMnBKcm90VW9FRDR4NWoyMF93U2pOSXM?oc=5",
-      "source": "WEEK | 25 News Now",
-      "publishedAt": "2026-11-27T02:54:00.000Z",
-      "latestAt": "2026-11-27T02:54:00.000Z",
-      "firstSeenAt": "2026-11-27T03:13:30.910Z",
-      "outlets": 1,
-      "outletNames": [
-        "WEEK | 25 News Now"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "4dfd7820dd77",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "North Korean hackers reportedly begin laundering stolen Binance crypto",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVFF4THdGenBoMDlxa2ZRQmkzMHVyUFkxeWRyelFXYTNqcDE3OTJ2MlZ6NU8ycHF1WVlQTExEc29MRnlTUzVpaUpGT1RPbjNHbElTYmYtTVZpLTlIdS1RS29UcDJFMllvbFVyR0x0ZS16Sk1SUUs3MEZkTTkyLTVneWx5cGFCZnV20gGcAUFVX3lxTFBfd3J3NUxseUVjSFQ0SXZ5T0NXTDJSVXNfRTlVNjJ6VlBXb3NQTUVTd1ptLWU0bGVaNmc1aXgxVGg3ZG9QWkRvNHp6Uy0wajgwV2s0Z3F5RUVMZnJabDRPRzRZSUN0WHRhdjJVbVhMVUdMQWNTU0pYd0g0WGRFdmEzOUFoZFFGX2huazFoMmU5QWVyZlFRVE9zS3JhUA?oc=5",
-      "source": "Chosunbiz",
-      "publishedAt": "2026-11-27T02:40:00.000Z",
-      "latestAt": "2026-11-27T02:40:00.000Z",
-      "firstSeenAt": "2026-11-27T03:13:30.910Z",
-      "outlets": 1,
-      "outletNames": [
-        "Chosunbiz"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "550be41fb632",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outages are climbing as Thanksgiving nor’easter hits CT. Here’s the latest.",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWTljTWx1OXVuUHVGaXY0dWg3cXhOVkpLdHlWN2pHUEZpVklTNEJMc19vdmswdFh2eFZHZ2dEYUJ2Vlg5UFlHLU50eWNzTlk0MWlCNDdKbDRSeHZ3NHU3UlpCMUM0WjhtVGNFcGVjM0s0S0hFdlhaVTZGNjJqZ0M4Rmt0QV9pNldULVhyTGw5S3ZlMjc4cTJVWGdfenRPNXZzalJMdmVfS3R2RERsX185U2xVcThrQTA?oc=5",
-      "source": "Hartford Courant",
-      "publishedAt": "2026-11-27T02:39:18.000Z",
-      "latestAt": "2026-11-27T02:39:18.000Z",
-      "firstSeenAt": "2026-11-27T03:28:32.989Z",
-      "outlets": 1,
-      "outletNames": [
-        "Hartford Courant"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "7a14efcae84f",
       "cat": "earth",
       "kind": "news",
@@ -1820,22 +1821,6 @@
         "Volcano Discovery"
       ],
       "score": 0.99
-    },
-    {
-      "id": "c8190fb9b846",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Tens of thousands without power in Lancaster County: PPL",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNVdLWkJjX2NaZ2VGMmpGZjlrdUx0QjQtQU9vanVQeTdLckEtblQzZVkxM2x4UFdzLUpidXhObDNRSXBIb2d6T3hfSWVWX05pVDc0NVNXQ0NCa0pDMkJtY0VJV3paMG44UWxsR1lCbC1qLVpNcUFNR2szaTFwRHp4OUhvT01rU3FlS0J2TXB3SEFHV1FM?oc=5",
-      "source": "WHP Harrisburg",
-      "publishedAt": "2026-11-27T02:47:28.000Z",
-      "latestAt": "2026-11-27T02:47:28.000Z",
-      "firstSeenAt": "2026-11-27T03:43:35.794Z",
-      "outlets": 1,
-      "outletNames": [
-        "WHP Harrisburg"
-      ],
-      "score": 0.98
     },
     {
       "id": "9e98c7904766",
@@ -1900,6 +1885,22 @@
         "Halifax Herald"
       ],
       "score": 0.9
+    },
+    {
+      "id": "c3b2df29413f",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu concerns ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5VLVg1SEJqRzVOeUI1cEZTUW5sRk91QV9TZGJDbnJOWFVQOEExSDllb0V5VlZOMU9HcnhjbjJKWXRXNTB6VmowM1ozVmFzbGlTSldWV0p5TlMwVTdrTFJSdk1tb9IBaEFVX3lxTE91TFFhUDFGdFRQWVo1MGRkbGFuUEswZHEzUXJrbm5vYTM3bWQ5MU5LN2NqUzY2ZzVteDBJMXFVT0k3NWltZWtkZk10M08tNEpYcHd3eW5hRW1Ud0JHTmFOQm42cW54RVZn?oc=5",
+      "source": "LiveNOW from FOX",
+      "publishedAt": "2026-11-26T20:45:43.000Z",
+      "latestAt": "2026-11-26T20:45:43.000Z",
+      "firstSeenAt": "2026-11-27T04:04:23.345Z",
+      "outlets": 1,
+      "outletNames": [
+        "LiveNOW from FOX"
+      ],
+      "score": 0.88
     },
     {
       "id": "e19154efd2c0",
