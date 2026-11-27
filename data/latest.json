@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T13:57:32.211Z",
+  "buildTime": "2026-11-27T14:15:17.133Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 08:57 ET",
+  "etStamp": "2026-11-27 09:15 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,19 +45,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1270,
-  "lastSuccessAt": "2026-11-27T13:57:32.211Z",
+  "headlinesRead": 1280,
+  "lastSuccessAt": "2026-11-27T14:15:17.133Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 39,
-    "flights": 6,
+    "hacks": 38,
+    "flights": 8,
     "grid": 20,
     "germs": 4,
     "sun": 2,
     "ai": 3,
     "markets": 4,
     "weather": 7,
-    "internet": 8,
+    "internet": 7,
     "space": 3,
     "earth": 4
   },
@@ -176,81 +176,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 968,
+      "count": 978,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "bing": {
       "ok": true,
-      "count": 267,
+      "count": 264,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
-      "count": 6,
+      "count": 7,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-27T13:00:18.138Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T13:57:32.211Z"
+      "lastOkAt": "2026-11-27T14:15:17.133Z"
     }
   },
   "stories": [
@@ -264,7 +263,7 @@
       "publishedAt": "2026-11-27T03:00:29.000Z",
       "latestAt": "2026-11-27T12:50:28.000Z",
       "firstSeenAt": "2026-11-27T11:14:46.817Z",
-      "outlets": 12,
+      "outlets": 13,
       "outletNames": [
         "The Independent on MSN",
         "AOL.co.uk",
@@ -277,9 +276,10 @@
         "inkl",
         "Yahoo Finance",
         "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi"
+        "Operativ Məlumat Mərkəzi",
+        "GB News"
       ],
-      "score": 5.54
+      "score": 5.68
     },
     {
       "id": "sig:faa-stop:LGA:2026-11-26",
@@ -358,7 +358,7 @@
       "url": "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
       "source": "Reuters",
       "publishedAt": "2026-11-26T16:42:00.000Z",
-      "latestAt": "2026-11-27T13:43:43.000Z",
+      "latestAt": "2026-11-27T13:54:00.000Z",
       "firstSeenAt": "2026-11-27T11:29:49.328Z",
       "outlets": 32,
       "outletNames": [
@@ -648,21 +648,21 @@
       "score": 1.97
     },
     {
-      "id": "cbe8ea8872c7",
+      "id": "94e16ff27e9a",
       "cat": "grid",
       "kind": "news",
-      "title": "Power outage affecting Pen Light customers in Gig Harbor",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFByNWFWazVLMFE3cDZCU05QV3Q4VXJaN2VFZUc2V3E5dUJLSjBMUTcwUGRpOVBiM3dxMm9yUzdGZ1Itd3BPVk5GY1gwaV9scGtxVTZUZGVwZW9aQkpQck1ZOGgxblVrSUhIazY5YVFTSW1vWnFkR01pQm1B0gF6QVVfeXFMUGlRSzBlNU5XWnoyZ09iZmlKLVRndWxJQmo5dlpBR21ZX21uY3puMENnZnh2UnJ4N05BTmpyaHdtOVdYa1U2a0Z5Z3ZRVDlTWmd1R1J2bVpRQ19FeEh4eDNmNC0zZ1VmdXpjMHhwaHFjNUhlN25mLU9CWUE?oc=5",
-      "source": "Tacoma News Tribune",
-      "publishedAt": "2026-11-26T21:06:00.000Z",
-      "latestAt": "2026-11-26T21:41:43.000Z",
-      "firstSeenAt": "2026-11-27T00:58:09.251Z",
+      "title": "Thousands affected by St. Matthews-area power outage",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPZXVsUjM5blN6UE9DeXVLRnVnSks5TTFXOFUxYnU3anplNlBlX0prWVVhb3Nzb0h5bHEyWHBwWFFwSGt0OGxQS0pTVnFHY1h6ZGtDelNIQkFUclNKZDJVdVNJMFhkMXRJYjRoaVpmSWtJR2RoS2F0dnZLdWNYbjN4VmN6Z0Nrc3JyVjJ5RHc5UkUtZkxXWFYtd3NGUUYwNkE5aVFGcEFWVWdIeXNhamRJNDRBVUlZVk5NUzFFemdScFFWZUNpbmhQMFpmcjZjbksxZkpIUko2YU1odjU1cERQRg?oc=5",
+      "source": "The Courier-Journal",
+      "publishedAt": "2026-11-27T12:50:00.000Z",
+      "latestAt": "2026-11-27T12:50:00.000Z",
+      "firstSeenAt": "2026-11-27T14:15:17.133Z",
       "outlets": 2,
       "outletNames": [
-        "Tacoma News Tribune",
-        "NewsBreak: Local News & Alerts"
+        "The Courier-Journal",
+        "Lexington Herald Leader"
       ],
-      "score": 1.87
+      "score": 1.95
     },
     {
       "id": "7149e421759e",
@@ -763,22 +763,6 @@
       "score": 1.4
     },
     {
-      "id": "99cb3fabbd0e",
-      "cat": "internet",
-      "kind": "news",
-      "title": "FAA faces scrutiny over AI rollout after nationwide aviation system failure",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcGc1YzloWlhlczVvc2V4bWJvSF9BS0w1T3BVU3BVMnVkemxmbHV3aW9DTXdDc08wejN6ei1FTzAxWExPZkNfbURRRE5VVERuVmJEbVRNSWNrUVhfU2U0SVZoV2c5VjYxU3E4M19zQzd5cEtiVkk3TmplMlliUjJJb3pvSEdPS2VSZDJoWXhOa1ZsdkgxdHJuYlBoT2tzQQ?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-26T13:59:05.000Z",
-      "latestAt": "2026-11-26T13:59:05.000Z",
-      "firstSeenAt": "2026-11-26T14:11:34.774Z",
-      "outlets": 1,
-      "outletNames": [
-        "Beinsure"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "5d5b88b6abc4",
       "cat": "internet",
       "kind": "news",
@@ -857,6 +841,22 @@
         "Investing.com UK"
       ],
       "score": 1.36
+    },
+    {
+      "id": "5ce7211d907f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Claims 36-Hour Tech Disruption Of Global Work Productivity Has Been Resolved",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOW1uS0N3SHFHbndIcnVoZjJjaTEwc3B6NEtWcnNpdlVJQVhkVl9mNzBla2JraVVNWWVsQmhYdTFMT014T0RKSFpxR1ZCMUdqQjZDVGRGU19rbFJnbTNSYjRzMjZXNDhqZnQxb25FWmFRUHNpcmNJdHd6T1ZNZXhvOE9aTklqY09EN2FqNEd0MjFJc2JMbTBBSWxTZzRWX3pRbDV5V0VDYXhvbkZKNTVnMncyMFo?oc=5",
+      "source": "Todayville",
+      "publishedAt": "2026-11-27T04:18:07.000Z",
+      "latestAt": "2026-11-27T04:18:07.000Z",
+      "firstSeenAt": "2026-11-27T07:29:08.103Z",
+      "outlets": 1,
+      "outletNames": [
+        "Todayville"
+      ],
+      "score": 1.33
     },
     {
       "id": "abee7e37d59e",
@@ -1039,6 +1039,23 @@
       "score": 1.92
     },
     {
+      "id": "cbe8ea8872c7",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage affecting Pen Light customers in Gig Harbor",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFByNWFWazVLMFE3cDZCU05QV3Q4VXJaN2VFZUc2V3E5dUJLSjBMUTcwUGRpOVBiM3dxMm9yUzdGZ1Itd3BPVk5GY1gwaV9scGtxVTZUZGVwZW9aQkpQck1ZOGgxblVrSUhIazY5YVFTSW1vWnFkR01pQm1B0gF6QVVfeXFMUGlRSzBlNU5XWnoyZ09iZmlKLVRndWxJQmo5dlpBR21ZX21uY3puMENnZnh2UnJ4N05BTmpyaHdtOVdYa1U2a0Z5Z3ZRVDlTWmd1R1J2bVpRQ19FeEh4eDNmNC0zZ1VmdXpjMHhwaHFjNUhlN25mLU9CWUE?oc=5",
+      "source": "Tacoma News Tribune",
+      "publishedAt": "2026-11-26T21:06:00.000Z",
+      "latestAt": "2026-11-26T21:41:43.000Z",
+      "firstSeenAt": "2026-11-27T00:58:09.251Z",
+      "outlets": 2,
+      "outletNames": [
+        "Tacoma News Tribune",
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 1.87
+    },
+    {
       "id": "e1307bc938c9",
       "cat": "grid",
       "kind": "news",
@@ -1090,23 +1107,6 @@
       "score": 1.71
     },
     {
-      "id": "7838a3ce71bf",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Maumee power outage leaves over 1,000 temporarily without power on Thanksgiving Day",
-      "url": "https://www.yahoo.com/news/articles/maumee-power-outage-leaves-over-215802223.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T13:58:00.000Z",
-      "latestAt": "2026-11-26T21:58:02.000Z",
-      "firstSeenAt": "2026-11-26T22:42:46.435Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WTOL"
-      ],
-      "score": 1.71
-    },
-    {
       "id": "5e4a3d9ab78e",
       "cat": "grid",
       "kind": "news",
@@ -1139,23 +1139,6 @@
         "Yahoo"
       ],
       "score": 1.66
-    },
-    {
-      "id": "209fc1576206",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage prompts boil water advisory for some Wildwood residents",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYUpqLUxVa2t5OFEwNmVmc01OejBWUjkwWjkyUjR1bnlLeTA2Z1pZYTNaX1ktUDlJaUd0dEt4S040ZTRaYlJmU19DMUdORGdRT2xGMUtZanU1LS13aGtRNkMtRWZWaVhOS3dlczE1QmcxaDZ5c0RFVy00bmVzNlUzV0ZiWnB1NmlNVFNVWEF4cVZjeGs3TW55bmxiVlJ1cDZOYXMwcERydw?oc=5",
-      "source": "KMOV",
-      "publishedAt": "2026-11-26T14:12:00.000Z",
-      "latestAt": "2026-11-26T14:31:17.000Z",
-      "firstSeenAt": "2026-11-27T00:58:09.251Z",
-      "outlets": 2,
-      "outletNames": [
-        "KMOV",
-        "cedarnews.net"
-      ],
-      "score": 1.64
     },
     {
       "id": "219f0f54cf10",
@@ -1218,7 +1201,7 @@
       "url": "https://www.msn.com/en-us/news/other/power-outages-heavy-rain-continue-on-east-coast-after-thanksgiving-day-storm/ar-AA2iloD3",
       "source": "The Washington Post on MSN",
       "publishedAt": "2026-11-26T22:15:00.000Z",
-      "latestAt": "2026-11-27T04:39:16.000Z",
+      "latestAt": "2026-11-27T05:50:49.000Z",
       "firstSeenAt": "2026-11-27T13:45:11.685Z",
       "outlets": 2,
       "outletNames": [
@@ -1295,22 +1278,6 @@
       "score": 1.36
     },
     {
-      "id": "5ce7211d907f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Claims 36-Hour Tech Disruption Of Global Work Productivity Has Been Resolved",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOW1uS0N3SHFHbndIcnVoZjJjaTEwc3B6NEtWcnNpdlVJQVhkVl9mNzBla2JraVVNWWVsQmhYdTFMT014T0RKSFpxR1ZCMUdqQjZDVGRGU19rbFJnbTNSYjRzMjZXNDhqZnQxb25FWmFRUHNpcmNJdHd6T1ZNZXhvOE9aTklqY09EN2FqNEd0MjFJc2JMbTBBSWxTZzRWX3pRbDV5V0VDYXhvbkZKNTVnMncyMFo?oc=5",
-      "source": "Todayville",
-      "publishedAt": "2026-11-27T04:18:07.000Z",
-      "latestAt": "2026-11-27T04:18:07.000Z",
-      "firstSeenAt": "2026-11-27T07:29:08.103Z",
-      "outlets": 1,
-      "outletNames": [
-        "Todayville"
-      ],
-      "score": 1.33
-    },
-    {
       "id": "ce1dc71aa12f",
       "cat": "hacks",
       "kind": "news",
@@ -1373,6 +1340,38 @@
         "https://www.thetraveler.org/"
       ],
       "score": 1.26
+    },
+    {
+      "id": "c6b2ecc0a9c1",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Days After A Nationwide Ground Stop, 6 In 10 Americans Say Fares Are Air Travel's Biggest Problem",
+      "url": "https://simpleflying.com/yougov-poll-americans-air-travel-fares-air-traffic-control/",
+      "source": "Simple Flying",
+      "publishedAt": "2026-11-27T05:59:00.000Z",
+      "latestAt": "2026-11-27T13:59:29.000Z",
+      "firstSeenAt": "2026-11-27T14:15:17.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "Simple Flying"
+      ],
+      "score": 1.21
+    },
+    {
+      "id": "9054d4a3f090",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers strike AFP, taking global news platform offline",
+      "url": "https://cybernews.com/security/afp-data-breach-global-news-platform/",
+      "source": "Cybernews",
+      "publishedAt": "2026-11-27T05:54:00.000Z",
+      "latestAt": "2026-11-27T05:54:00.000Z",
+      "firstSeenAt": "2026-11-27T14:15:17.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cybernews"
+      ],
+      "score": 1.21
     },
     {
       "id": "64d601f90723",
@@ -1599,6 +1598,86 @@
       "score": 1.02
     },
     {
+      "id": "772c10ec885e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Norse Atlantic grounds flights as financial crisis deepens",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWV83N1lOX2s1RWtHeEtuaHlKSmx5R2pybUgtamhVNFk4eTBBNjltUXhZX2JQTFNiVEhaNkZJRFZMN1VxLWc0SUJxZm1oWjVLV3FHdF8xNHNqazJIdUhKZTBkdFROTXVrcGI0ak5UQmp0alZSYnlod1loOWlDMkhkMWM5WWVHQXI4czkxS3haeWpFZw?oc=5",
+      "source": "ITIJ",
+      "publishedAt": "2026-11-27T14:09:23.000Z",
+      "latestAt": "2026-11-27T14:09:23.000Z",
+      "firstSeenAt": "2026-11-27T14:15:17.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "ITIJ"
+      ],
+      "score": 1
+    },
+    {
+      "id": "3587ee2bf35e",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands without power Friday after blast of harsh November weather",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQa3ZCNTZnYWtPYkdjaXVpOXlIN21OTksxb01pRkxRZ3dIUTBja1ZZelFfQTBzaDJIVkNlZDZYQlBmSDIxQ3pVVHRIWndOMVo1S3RyRmpuTjdqYzF6TGZXVjlobmVvWDFkcTFTV1JsdXhBWmxnemswb2hLLWR3N2wwUDVVM1VXRzJHanBsX2NDNE5LUm5ZYUZWOS11Q2V6SVBQcjB3aVdVQWowTUlQZW0tMGcwVEI?oc=5",
+      "source": "My Barry's Bay Now",
+      "publishedAt": "2026-11-27T14:06:34.000Z",
+      "latestAt": "2026-11-27T14:06:34.000Z",
+      "firstSeenAt": "2026-11-27T14:15:17.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "My Barry's Bay Now"
+      ],
+      "score": 1
+    },
+    {
+      "id": "27481d5961b0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SAP source code target of cyberattack; company says no customer data compromised: report",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNajlrM2l0dTdCY1JPVmpqZkk2NmlvTi1aZkx4Y1RjUWRtOWowZXhhMXlQVkNydmhha3NUR1NKM0paempGZ3hCSGh5TUk0MkpRaEp0LVlSaEtnR0Joa0xLU3hsbzJiODk3a0RtZHYtcUFTQ1RzYVVvdVdITGJMajBoWW55SXNxWjNCX1F0NU5LUmJ6UzVJWTBwV29yN3ZKVUlyZFJEaGtIaVVxWElPX3VHR0J5MS1UTFU0d3dJdVRxTXBPZw?oc=5",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-11-27T14:06:10.000Z",
+      "latestAt": "2026-11-27T14:06:10.000Z",
+      "firstSeenAt": "2026-11-27T14:15:17.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "Seeking Alpha"
+      ],
+      "score": 1
+    },
+    {
+      "id": "8c0c19dd4e11",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands without power across Lanark and Leeds as freezing rain and high winds hit the region",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPVXdKSFFCR1ZVOWVKVTdzTHVWZXBLdEZqa2x3OHdiNHZ4UGhtcjJ2cXdlajNrSkt1S1M4T05QeHByd1NEOWItZXplYk5WYktPM2Z1anY3bW0xbDVuZ3dhanFVdnR1aEpkb3NaclRoUjNBTTJrTV9mYUhLaFRzZm5qaWNqS3gtclRqQ1NLT0tHUDhfeUM2WlVIQkxhOGUzOU1wS3RVRDFlekVwUnVFQzBUSjFPWWduUFdORTJCdGRad0ZRT2ZkSC1XUHIwb09hRDQ?oc=5",
+      "source": "Lanarkleedstoday.ca",
+      "publishedAt": "2026-11-27T14:03:45.000Z",
+      "latestAt": "2026-11-27T14:03:45.000Z",
+      "firstSeenAt": "2026-11-27T14:15:17.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "Lanarkleedstoday.ca"
+      ],
+      "score": 1
+    },
+    {
+      "id": "66b2f9a66ba1",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Guest Post: 100 Percent Chance of Agentic Hackers",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbzZ0MUJLZW5EQ1BJNEE3MW11YzJBTllkVmtRSGRLb01sUEJtSEVqQmNvb0s3WHhyelFsald4a3pBRUtneTdjZ1NpVXlVYkVuVXNTVGVMRWlMNkhPQkU2NlNldUlRTGpvX3l5RUxyWF9qZU5DaDJZWXUzMFo4WnhoUTZyT3VQQmF2aUhwbE42Yw?oc=5",
+      "source": "AI Insider",
+      "publishedAt": "2026-11-27T14:03:25.000Z",
+      "latestAt": "2026-11-27T14:03:25.000Z",
+      "firstSeenAt": "2026-11-27T14:15:17.133Z",
+      "outlets": 1,
+      "outletNames": [
+        "AI Insider"
+      ],
+      "score": 1
+    },
+    {
       "id": "dc53329aa1cd",
       "cat": "germs",
       "kind": "news",
@@ -1743,22 +1822,6 @@
       "score": 1
     },
     {
-      "id": "b700ef78150b",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA hit by cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLVVfT3ZaRDdmRThveXp5bGxFSDNtSXpMeUw1dG1HbjVlWkxKclJTaXlaOThSQUF1N0FlYVV4TEJENHFRZVowU3kySy1YekE3VjVCTHJLX05pcHFpWlkwQlUtRDJIelBEcE9NbGRDQXJreDhvLUo3MkI0bnBxdEE4R3VzYVZLOWk3RXZzSXZGSkptbG14ODFIZUQtX2pRaWhLRERpdXRVdFNvemxlcFA0?oc=5",
-      "source": "KING5.com",
-      "publishedAt": "2026-11-27T13:13:00.000Z",
-      "latestAt": "2026-11-27T13:13:00.000Z",
-      "firstSeenAt": "2026-11-27T13:30:09.909Z",
-      "outlets": 1,
-      "outletNames": [
-        "KING5.com"
-      ],
-      "score": 1
-    },
-    {
       "id": "1a672088dce4",
       "cat": "markets",
       "kind": "news",
@@ -1771,70 +1834,6 @@
       "outlets": 1,
       "outletNames": [
         "Haberler.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "a573a323b6a9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Decathlon France confirms customer data breach at external provider",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOYTFaU2xiOGZ5RVY5MjZSYk9NN3oyZlMzSmZUMEExcWdkWm9fVVRrdEJwLVVTR0ZtLWdpUWtXczhNbzB5NmpLc2dzWlQ1Z0FPT09mZ2tnbFVkLWJJa1lONFFzYnBkMGxReGJETXk2YzVqV0QwZkVKWlFHUUQxeFpHRGZLNEVnOXFiRXpZYjFXZWZ2aW4tbW4wX1l1LUp3a1k?oc=5",
-      "source": "Sporting Goods Intelligence Europe",
-      "publishedAt": "2026-11-27T12:39:56.000Z",
-      "latestAt": "2026-11-27T12:39:56.000Z",
-      "firstSeenAt": "2026-11-27T12:45:07.402Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sporting Goods Intelligence Europe"
-      ],
-      "score": 1
-    },
-    {
-      "id": "da0c07ba194d",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Blackout across U.S. as Thanksgiving storm knocks out power",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ0N4RmkyOGJRME1haURRWkNjckNidHhuVFppN19RY0xPSElKa0tFcjM4c2loWTA0LUY2QWdkdXJGV3A5UHVPSEU2ZEZyOEl3WXFwR2x3Tm9hc01tcHR1Z0NjMmFtM3dzZUMtS2lBN3FuV1A2eEhOWTB1R0VCSERpMWo1RC1WajNRZVE?oc=5",
-      "source": "Peoples Gazette Nigeria",
-      "publishedAt": "2026-11-27T12:36:53.000Z",
-      "latestAt": "2026-11-27T12:40:50.000Z",
-      "firstSeenAt": "2026-11-27T12:45:07.402Z",
-      "outlets": 1,
-      "outletNames": [
-        "Peoples Gazette Nigeria"
-      ],
-      "score": 1
-    },
-    {
-      "id": "44eb12352087",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA hit by data breach after suspected account compromise",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQYjh1VklmNUw1TFpCU1VjYkh0Z2p3cnJQZlpFVU1vaUlHa2Z4eDliYWxKUEtBdlZhWTdwQXY5RlZkRnNyUzZoSGRCQlE4YTZDZGk4ckFrUF9Jck10OGRDMDNNSUFmZzBFSTJVcjJ5UTBGN3dfbzZmS0huMFpxSkNDM0l2amwwSnptYUdqeTBrYjJlbVBrVDlsYWxCckVlWEVLYjlGeXgzQjNMWTE4ZWhFZQ?oc=5",
-      "source": "IT Pro",
-      "publishedAt": "2026-11-27T12:33:31.000Z",
-      "latestAt": "2026-11-27T12:33:31.000Z",
-      "firstSeenAt": "2026-11-27T12:45:07.402Z",
-      "outlets": 1,
-      "outletNames": [
-        "IT Pro"
-      ],
-      "score": 1
-    },
-    {
-      "id": "386ad834ad5f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Barclays confirms data breach affecting US credit card applicants",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBlZENPUWNLaFIwRmdXdVhhUVFTTVV2T3NUMkJCT0VIbElCd3dBOXZrTDlhU0hWVW5CczdiZFBpWG9fN1J2MTd6LWh1OXV1aF83c1BTaExmb1NzN1dJd29QYmg5Zjlmdw?oc=5",
-      "source": "Cybernews",
-      "publishedAt": "2026-11-27T12:22:30.000Z",
-      "latestAt": "2026-11-27T12:22:30.000Z",
-      "firstSeenAt": "2026-11-27T12:29:56.734Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cybernews"
       ],
       "score": 1
     },
@@ -1887,22 +1886,6 @@
       "score": 0.99
     },
     {
-      "id": "1e1b66000764",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Update: Nov. 27 - 2.9 magnitude earthquake detected near Ridgecrest, CA",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBLSEVXNVZ0WEs1eWxTWWdZYVhLU1VyMHZBbmhrZEUwRnhoQmxQMldtRGFPME4wMGNaR2hQcGJUejFhX3pQYWVucWtwWUlNbHJWUFdyejhIODBGVUxxOE5tZjg3aGswNFJHMWgyd1d3UEg2UW1HcE5idUNCQnk?oc=5",
-      "source": "Sacramento Bee",
-      "publishedAt": "2026-11-27T12:48:06.000Z",
-      "latestAt": "2026-11-27T12:48:06.000Z",
-      "firstSeenAt": "2026-11-27T13:45:11.685Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sacramento Bee"
-      ],
-      "score": 0.98
-    },
-    {
       "id": "9e98c7904766",
       "cat": "earth",
       "kind": "news",
@@ -1933,6 +1916,22 @@
         "KCRA"
       ],
       "score": 0.97
+    },
+    {
+      "id": "0a4b0368472d",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Update: 3.6 magnitude earthquake jolts near Ocotillo, CA on Nov. 25",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5yWDlvU0JPM3FnaDQ2QVdBQUZuTUJSWkd4azFmOHlwTU9sMHN3cWpUTmswSVZmVzlDTHk3bDRyLV9zVndndW01anotblVMQnJyOXhYRktyckN2SzdWeWJ3WG50OUN3cWpmZmNnZnNfdEZSM0lvSnpOV0hTSE0?oc=5",
+      "source": "Sacramento Bee",
+      "publishedAt": "2026-11-26T15:25:06.000Z",
+      "latestAt": "2026-11-26T15:25:06.000Z",
+      "firstSeenAt": "2026-11-26T19:57:20.831Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sacramento Bee"
+      ],
+      "score": 0.92
     },
     {
       "id": "ff2c0cab721a",
