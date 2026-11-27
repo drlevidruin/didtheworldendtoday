@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T19:46:10.024Z",
+  "buildTime": "2026-11-27T20:01:11.889Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 14:46 ET",
+  "etStamp": "2026-11-27 15:01 ET",
   "score": 60,
   "fired": [
     "flights",
@@ -43,8 +43,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1103,
-  "lastSuccessAt": "2026-11-27T19:46:10.024Z",
+  "headlinesRead": 707,
+  "lastSuccessAt": "2026-11-27T20:01:11.889Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 43,
@@ -179,15 +179,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 794,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 18 of 26 queries)",
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "count": 409,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 12 of 26 queries)",
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 265,
       "error": null,
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     },
     "gdelt": {
       "ok": false,
@@ -197,39 +197,39 @@
     },
     "hn": {
       "ok": true,
-      "count": 2,
+      "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     },
     "x": {
       "ok": true,
@@ -242,13 +242,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T19:46:10.024Z"
+      "lastOkAt": "2026-11-27T20:01:11.889Z"
     }
   },
   "stories": [
@@ -330,53 +330,6 @@
       }
     },
     {
-      "id": "f2010c32fda3",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Breach U.S. Air Force Flagship Cloud One Computing Platform",
-      "url": "https://www.huffpost.com/entry/us-air-force-cloud-one-hack_n_6b096996e4b084fa2e17d141",
-      "source": "HuffPost",
-      "publishedAt": "2026-11-26T22:00:00.000Z",
-      "latestAt": "2026-11-27T19:28:25.000Z",
-      "firstSeenAt": "2026-11-27T15:30:31.090Z",
-      "outlets": 32,
-      "outletNames": [
-        "TodayPress.tv",
-        "The Times",
-        "Yahoo",
-        "Decrypt",
-        "HuffPost",
-        "WTVA 9 News",
-        "CNA",
-        "Seeking Alpha",
-        "Yahoo Finance",
-        "The Indian Express",
-        "MLQ.ai",
-        "The Times of India",
-        "Reuters",
-        "The Next Web",
-        "Bloomberg.com",
-        "Arise News",
-        "marketscreener.com",
-        "TimesLIVE",
-        "news.sky.com",
-        "The Times of Israel",
-        "dev.ua",
-        "cwibc.co.id",
-        "Quartz",
-        "Modern Diplomacy",
-        "CNBC",
-        "The Diplomatic Insight",
-        "Floridian Press",
-        "Escudo Digital",
-        "The Hill",
-        "Washington Times",
-        "Root-Nation.com",
-        "tovima.com"
-      ],
-      "score": 4.25
-    },
-    {
       "id": "8bd025a5242b",
       "cat": "germs",
       "kind": "news",
@@ -420,21 +373,24 @@
       "score": 2.86
     },
     {
-      "id": "21a164c8a426",
+      "id": "a086d4abc6e4",
       "cat": "hacks",
       "kind": "news",
-      "title": "Lloyds Bank, Bank of Scotland apps hit by major outage",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNazE2RGxFZmRXSXdLWlRmNXhBR2tlOTJzOFZRRGh0QnZQS21pTUJHVVc1bFFUY2pFTTFQWGlJeWJjX2RtcWZyS01IRWV2WEtJWU5hMGNJXzByRGpNRldCV2JQMVd0cTdBVTltWnVTV3A2SVZzT2FhaW8zOGFHbDVCNVBUZFBZbTM4X2E3aGV6NlZkN2s?oc=5",
+      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
       "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-27T12:50:22.000Z",
-      "latestAt": "2026-11-27T12:50:28.000Z",
-      "firstSeenAt": "2026-11-27T14:30:23.087Z",
-      "outlets": 2,
+      "publishedAt": "2026-11-27T01:12:48.000Z",
+      "latestAt": "2026-11-27T12:50:38.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 5,
       "outletNames": [
         "Anadolu Ajansı",
-        "Operativ Məlumat Mərkəzi"
+        "A News",
+        "The Malaysian Reserve",
+        "US Muslims",
+        "MLQ.ai"
       ],
-      "score": 2.72
+      "score": 2.68
     },
     {
       "id": "0a73606aa929",
@@ -453,6 +409,25 @@
         "Avi-Go"
       ],
       "score": 2.58
+    },
+    {
+      "id": "d0c009fc7fc1",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers attack and penetrate Air Force’s computing platform",
+      "url": "https://www.nbcnews.com/news/us-news/hackers-attack-penetrate-air-forces-computing-platform-rcna611559",
+      "source": "NBC News",
+      "publishedAt": "2026-11-27T07:28:00.000Z",
+      "latestAt": "2026-11-27T16:02:42.000Z",
+      "firstSeenAt": "2026-11-27T16:30:42.723Z",
+      "outlets": 4,
+      "outletNames": [
+        "NBC News",
+        "AOL.com",
+        "Yahoo",
+        "NBC 5 Dallas-Fort Worth"
+      ],
+      "score": 2.55
     },
     {
       "id": "94e16ff27e9a",
@@ -542,45 +517,6 @@
       "score": 1.99
     },
     {
-      "id": "a086d4abc6e4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-27T01:12:48.000Z",
-      "latestAt": "2026-11-27T12:50:38.000Z",
-      "firstSeenAt": "2026-11-27T12:45:07.402Z",
-      "outlets": 5,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "A News",
-        "The Malaysian Reserve",
-        "US Muslims",
-        "MLQ.ai"
-      ],
-      "score": 2.68
-    },
-    {
-      "id": "d0c009fc7fc1",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers attack and penetrate Air Force’s computing platform",
-      "url": "https://www.nbcnews.com/news/us-news/hackers-attack-penetrate-air-forces-computing-platform-rcna611559",
-      "source": "NBC News",
-      "publishedAt": "2026-11-27T07:28:00.000Z",
-      "latestAt": "2026-11-27T16:02:42.000Z",
-      "firstSeenAt": "2026-11-27T16:30:42.723Z",
-      "outlets": 4,
-      "outletNames": [
-        "NBC News",
-        "AOL.com",
-        "Yahoo",
-        "NBC 5 Dallas-Fort Worth"
-      ],
-      "score": 2.55
-    },
-    {
       "id": "447944af111a",
       "cat": "hacks",
       "kind": "news",
@@ -597,6 +533,41 @@
         "GBHackers News"
       ],
       "score": 2.46
+    },
+    {
+      "id": "92c5ec80fbd1",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US’s Nationwide Response Plan For ‘Black-Level’ Cyber Attack",
+      "url": "https://www.newsweek.com/us-nationwide-response-black-level-cyber-attack-12774288",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-27T08:58:00.000Z",
+      "latestAt": "2026-11-27T09:35:00.000Z",
+      "firstSeenAt": "2026-11-27T17:15:46.695Z",
+      "outlets": 2,
+      "outletNames": [
+        "Newsweek",
+        "AOL"
+      ],
+      "score": 2.41
+    },
+    {
+      "id": "1b7bf10ac16a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cloud One cyberattack: US Air Force platform backed by tech giants Microsoft, Amazon, Oracle, Alphabet reportedly hacked",
+      "url": "https://www.msn.com/en-in/news/other/cloud-one-cyberattack-us-air-force-platform-backed-by-tech-giants-microsoft-amazon-oracle-alphabet-reportedly-hacked/ar-AA2inrnb",
+      "source": "Mint on MSN",
+      "publishedAt": "2026-11-27T09:47:02.000Z",
+      "latestAt": "2026-11-27T16:03:18.000Z",
+      "firstSeenAt": "2026-11-27T15:30:31.090Z",
+      "outlets": 3,
+      "outletNames": [
+        "Coinpedia",
+        "BusinessLine",
+        "Mint on MSN"
+      ],
+      "score": 2.34
     },
     {
       "id": "142801077e11",
@@ -846,41 +817,6 @@
         "SooToday.com"
       ],
       "score": 1.39
-    },
-    {
-      "id": "92c5ec80fbd1",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US’s Nationwide Response Plan For ‘Black-Level’ Cyber Attack",
-      "url": "https://www.newsweek.com/us-nationwide-response-black-level-cyber-attack-12774288",
-      "source": "Newsweek",
-      "publishedAt": "2026-11-27T08:58:00.000Z",
-      "latestAt": "2026-11-27T09:35:00.000Z",
-      "firstSeenAt": "2026-11-27T17:15:46.695Z",
-      "outlets": 2,
-      "outletNames": [
-        "Newsweek",
-        "AOL"
-      ],
-      "score": 2.41
-    },
-    {
-      "id": "1b7bf10ac16a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cloud One cyberattack: US Air Force platform backed by tech giants Microsoft, Amazon, Oracle, Alphabet reportedly hacked",
-      "url": "https://www.msn.com/en-in/news/other/cloud-one-cyberattack-us-air-force-platform-backed-by-tech-giants-microsoft-amazon-oracle-alphabet-reportedly-hacked/ar-AA2inrnb",
-      "source": "Mint on MSN",
-      "publishedAt": "2026-11-27T09:47:02.000Z",
-      "latestAt": "2026-11-27T16:03:18.000Z",
-      "firstSeenAt": "2026-11-27T15:30:31.090Z",
-      "outlets": 3,
-      "outletNames": [
-        "Coinpedia",
-        "BusinessLine",
-        "Mint on MSN"
-      ],
-      "score": 2.34
     },
     {
       "id": "ce1dc71aa12f",
@@ -1322,6 +1258,22 @@
       "score": 1.39
     },
     {
+      "id": "b92c6100184f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers reach control system of major US Air Force cloud platform",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOZkNiNkFFZEo3VXdFZG9vMUNmaHh1ME02SmFCWXM0dmRsMlRVMGNYWlVGRVJqUmVuVDJBTElsOTZPZS0zQm1OT2Y4dldwWUJQQWFtQlhwSUVEM2tGV2pCcVg2dEtvOWUyaDJBRXlrejhKV3hIZUlITzBOdzY1ckppRldMYkR2T3VvcEVuaWtiNGRONjdGUE82MFk2MXpnUFNoeUNSMTN3VTBUd2tOTHhJcGc2LW1XX3BfUkZPT2NMcnhGMmRB?oc=5",
+      "source": "USA Today",
+      "publishedAt": "2026-11-27T18:58:39.000Z",
+      "latestAt": "2026-11-27T18:58:39.000Z",
+      "firstSeenAt": "2026-11-27T20:01:11.889Z",
+      "outlets": 1,
+      "outletNames": [
+        "USA Today"
+      ],
+      "score": 1.38
+    },
+    {
       "id": "36bd83d9f0d6",
       "cat": "internet",
       "kind": "news",
@@ -1738,6 +1690,22 @@
         "Digital Trends"
       ],
       "score": 1.02
+    },
+    {
+      "id": "f4f510a8f5e7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Kenya probes 740GB eCitizen data breach claim",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPeFpzeUJieDd1bEZKeXFzS2F1eDUzWVlzMDJ4aC1RejJTamxwM0ZTMVU4V2VlQ19fNjU3NW9FY3EzSDVFbW1PY1FINTdIalh3VDZVSTJuSmJlemk2RXJqWWYwRmJwTUZRTWxsM0h3dzBEU250Mk93YVpJdmNGOF9TalpKRWY1RmxpV1JlQg?oc=5",
+      "source": "Biometric Update",
+      "publishedAt": "2026-11-27T19:46:00.000Z",
+      "latestAt": "2026-11-27T19:46:00.000Z",
+      "firstSeenAt": "2026-11-27T20:01:11.889Z",
+      "outlets": 1,
+      "outletNames": [
+        "Biometric Update"
+      ],
+      "score": 1
     },
     {
       "id": "bd50eeb564e2",
