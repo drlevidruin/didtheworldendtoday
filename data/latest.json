@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T08:14:16.364Z",
+  "buildTime": "2026-11-27T08:29:21.793Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 03:14 ET",
+  "etStamp": "2026-11-27 03:29 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -44,14 +44,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1266,
-  "lastSuccessAt": "2026-11-27T08:14:16.364Z",
+  "headlinesRead": 1134,
+  "lastSuccessAt": "2026-11-27T08:29:21.793Z",
   "rollingFallback": false,
   "cats": {
     "flights": 11,
-    "hacks": 27,
-    "grid": 27,
-    "markets": 4,
+    "hacks": 28,
+    "grid": 25,
+    "markets": 5,
     "weather": 7,
     "germs": 4,
     "sun": 4,
@@ -180,57 +180,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 939,
+      "count": 979,
       "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     },
     "bing": {
       "ok": true,
-      "count": 262,
-      "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "count": 120,
+      "error": "5 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 30,
-      "error": "timeout",
+      "ok": false,
+      "count": 0,
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     },
     "x": {
       "ok": true,
@@ -243,13 +243,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "lastOkAt": "2026-11-27T08:29:21.793Z"
     }
   },
   "stories": [
@@ -508,25 +508,6 @@
       "score": 1.92
     },
     {
-      "id": "abee7e37d59e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Europe’s SAP security incident: No evidence of customer data breach found",
-      "url": "https://www.thenews.com.pk/latest/1425371-europes-sap-security-incident-no-evidence-of-customer-data-breach-found",
-      "source": "The News International",
-      "publishedAt": "2026-11-27T00:00:00.000Z",
-      "latestAt": "2026-11-27T07:40:00.000Z",
-      "firstSeenAt": "2026-11-27T07:44:10.481Z",
-      "outlets": 4,
-      "outletNames": [
-        "Business Standard",
-        "marketscreener.com",
-        "The Straits Times",
-        "The News International"
-      ],
-      "score": 2.61
-    },
-    {
       "id": "d8faac5af851",
       "cat": "hacks",
       "kind": "news",
@@ -543,6 +524,25 @@
         "Beinsure"
       ],
       "score": 2.46
+    },
+    {
+      "id": "abee7e37d59e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Europe’s SAP security incident: No evidence of customer data breach found",
+      "url": "https://www.thenews.com.pk/latest/1425371-europes-sap-security-incident-no-evidence-of-customer-data-breach-found",
+      "source": "The News International",
+      "publishedAt": "2026-11-26T17:40:00.000Z",
+      "latestAt": "2026-11-27T07:40:00.000Z",
+      "firstSeenAt": "2026-11-27T07:44:10.481Z",
+      "outlets": 4,
+      "outletNames": [
+        "Business Standard",
+        "marketscreener.com",
+        "The Straits Times",
+        "The News International"
+      ],
+      "score": 2.3
     },
     {
       "id": "f15707865a72",
@@ -703,6 +703,22 @@
       "score": 1.53
     },
     {
+      "id": "ffc9aee4c5fd",
+      "cat": "markets",
+      "kind": "news",
+      "title": "India's top AI stocks plunge as global selloff erases massive gains",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQanpJUllTMC1QVmljNDJCSXdJeUFZejlFSWlzZTZCNnpTaUF1R0gtWmVOTGZPZkE2UGF3VzRmNWxoZzQ4NnFKMDRWLUxRUUxpVDhOY3M3bG9JdEtwZEpuSDhIbEwwNEM4Zk4ySDd0ODhHYS0walliTVhNemx1NlNfT2hkNXhXdHVRTXFvQnN5azJtNktOclVQeg?oc=5",
+      "source": "FlipItMoney",
+      "publishedAt": "2026-11-27T08:23:18.000Z",
+      "latestAt": "2026-11-27T08:23:18.000Z",
+      "firstSeenAt": "2026-11-27T08:29:21.793Z",
+      "outlets": 1,
+      "outletNames": [
+        "FlipItMoney"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "3a64d7cbe587",
       "cat": "ai",
       "kind": "news",
@@ -795,22 +811,6 @@
       "outlets": 1,
       "outletNames": [
         "Global New Light Of Myanmar"
-      ],
-      "score": 1.35
-    },
-    {
-      "id": "60bf689c89a1",
-      "cat": "internet",
-      "kind": "news",
-      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
-      "source": "StoneWars.com",
-      "publishedAt": "2026-11-26T09:48:28.000Z",
-      "latestAt": "2026-11-26T09:48:28.000Z",
-      "firstSeenAt": "2026-11-26T11:55:58.934Z",
-      "outlets": 1,
-      "outletNames": [
-        "StoneWars.com"
       ],
       "score": 1.35
     },
@@ -916,6 +916,23 @@
         "Superpower Daily"
       ],
       "score": 1.94
+    },
+    {
+      "id": "500a9df173ce",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Standard Chartered’s Crypto Unit Zodia Custody Hit by Data Breach, Exposing Client and Employee Information",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQXlqalFYRm15RnRzOUdXU3Zaa21PWTR1MzRod0drejB3aVh3ZmhuRk9Zb3RxbUNPM1NNVHAyNmozZVlJR1RZQkYzaEVwMGlzU1hMZmhkQUt4LTl5eEwySTNMcmgta0FQdnpUNmtnMUVuUXZoVWQyeWhDQ2JRejROLVA2cWFrMUpHd0N4VzNkeVTSAZYBQVVfeXFMTXlta0lHcUp0R1VMdEkzWUdvNURiYWVJRU4yaVduQkkyTkRFdEJJSDNsRnB5Z0dlVTYxYTVSMVBpTGVwNVQxTzU0eUFjWkJ5NEkxTjJ1Q3lweElFMDRENWctelNReklTeTRBWWtNN0hEZlZRODFiRkdBNVlvRmcxYWJGZWZuTGtHb3ZFN3Z5YVBQRjNmcEln?oc=5",
+      "source": "GBHackers News",
+      "publishedAt": "2026-11-27T06:08:23.000Z",
+      "latestAt": "2026-11-27T06:27:44.000Z",
+      "firstSeenAt": "2026-11-27T08:29:21.793Z",
+      "outlets": 2,
+      "outletNames": [
+        "GBHackers News",
+        "Retail News Asia"
+      ],
+      "score": 1.92
     },
     {
       "id": "4dfd7820dd77",
@@ -1052,23 +1069,6 @@
         "WTOL"
       ],
       "score": 1.71
-    },
-    {
-      "id": "d2aebafb6ef4",
-      "cat": "grid",
-      "kind": "news",
-      "title": "'We're gonna do everything we can to restore power,' Duke Energy crews respond as more than 15K customers deal with Thanksgiving power outage",
-      "url": "https://www.yahoo.com/news/weather-news/articles/were-gonna-everything-restore-power-162418346.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-26T08:24:00.000Z",
-      "latestAt": "2026-11-26T16:24:00.000Z",
-      "firstSeenAt": "2026-11-26T17:27:00.235Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "wfmynews2.com"
-      ],
-      "score": 1.7
     },
     {
       "id": "7d215f5ace2f",
@@ -1295,6 +1295,22 @@
       "score": 1.38
     },
     {
+      "id": "60bf689c89a1",
+      "cat": "internet",
+      "kind": "news",
+      "title": "BrickLink Down Again – Second Major Outage in Two Weeks",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01cnpIYm9pSE5iMVNIa3FmcElhdEpyQVF2TEtjbFo3bFdULTU5aEt0OXpyaUQwNVA2aU42aTlJTERvVVhPNEtSbllwV0tRV0RjcGF6dVoyVWotaTdzbjZVdFVnQ1IweHM?oc=5",
+      "source": "StoneWars.com",
+      "publishedAt": "2026-11-26T09:48:28.000Z",
+      "latestAt": "2026-11-26T09:48:28.000Z",
+      "firstSeenAt": "2026-11-26T11:55:58.934Z",
+      "outlets": 1,
+      "outletNames": [
+        "StoneWars.com"
+      ],
+      "score": 1.35
+    },
+    {
       "id": "9783082a53d9",
       "cat": "weather",
       "kind": "news",
@@ -1358,6 +1374,23 @@
         "Todayville"
       ],
       "score": 1.33
+    },
+    {
+      "id": "7e3288e167a6",
+      "cat": "markets",
+      "kind": "news",
+      "title": "Financial news anchor breaks down in tears on live TV as stocks plunge before her eyes",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVTJLaHNvTkJ4VkNkM2hLNWRFMzQ1ZUR1cFpEWVl3NDFpbXdsZFJSVkk0U1EzajBBT1hYdjhjdlpManhkT3Eya0JHVVo0VjhVSGZPeGxseXViYkM1QXRUTXZGdjJidmJOTmo3a3hxR0FRTWptaEYxRzVVX3Vkd09NRFhjU3XSAYoBQVVfeXFMTllvQ0tGNER2eml3M2dOLXV6ZEFyMTlaa0puTkZyUWV1UG5ocXVpQnNBcmVsc1Z1Wi1DTUcwSkFrNW5CTkJKZUUxTG5uSlUwTEs0VzM1XzJ3UDd3TDNSS3ppRGxVOTYxcVZaQ3RoNV9MdFNyOTNxYWQxcHpmbzl6MzVtbXo1Y0lndlpR?oc=5",
+      "source": "The Mirror US - News, Sports, Celebrities and Showbiz",
+      "publishedAt": "2026-11-26T11:58:00.000Z",
+      "latestAt": "2026-11-26T11:58:54.000Z",
+      "firstSeenAt": "2026-11-27T08:29:21.793Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Mirror US - News, Sports, Celebrities and Showbiz",
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 1.32
     },
     {
       "id": "e7343453112c",
@@ -1552,6 +1585,22 @@
       "score": 1.12
     },
     {
+      "id": "e7bd0fbdc6b0",
+      "cat": "internet",
+      "kind": "news",
+      "title": "No plans to ditch Microsoft 365 despite global outage, says Government ICT",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZjNfLUlldTQ2VVdtazA3MTcwVy1EbDNHV29JaHBaNXo2RVh1UF91cFRyU09UOXMwLTVNdElHTlJFQTQ0MVNJOGFiMTVqTlFrMWlEckduTlI4RlR3VEJOQmw2cHFjNGI0SWdfRVY3d3pMaFlxSkRMUjdNempqc0FPTHRyejdYbmp5Y0FkVEdPNDdkNFczUkpxOS1fSkdVZHdfemtGVmZXSmZOVlNPMVpyR1Rkc2k2bW84Z3pIeUJXOXJkQ0JrRi11TUY4Z1kwR2FZ?oc=5",
+      "source": "Cook Islands News",
+      "publishedAt": "2026-11-26T18:33:06.000Z",
+      "latestAt": "2026-11-26T18:33:06.000Z",
+      "firstSeenAt": "2026-11-27T08:29:21.793Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cook Islands News"
+      ],
+      "score": 1.07
+    },
+    {
       "id": "48b07c475db0",
       "cat": "flights",
       "kind": "news",
@@ -1728,38 +1777,6 @@
       "score": 1
     },
     {
-      "id": "8ab1f28394c6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft outage hits South African businesses, government services and universities",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPendFUktGazBkcURFNFpQUjZEWnVwWWNNb1MwVkxjSFdpejVTOW13VExocHpTaTVRSmRaMnlkLTFDUzNzb2kxNm5oZUlRR185V2laWU5fYVFRbURRdExXUFVfVFBSSHRpYXBqb1NGVTVuMjlfSWRUZmx1U0hseEk0MGRrV0ZIWVU1MER2bVNOSWM2YUJhaVMtdUctdklJU20yQkRpZVIzb19OSDNqVE9uU3Vyb0JpbkcwMzZZdnJYaw?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-27T07:16:32.000Z",
-      "latestAt": "2026-11-27T07:16:32.000Z",
-      "firstSeenAt": "2026-11-27T07:29:08.103Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 1
-    },
-    {
-      "id": "463a9c226583",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage hits OR Tambo, passengers stranded in long queues",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSFVnVEdJb3Q4LWNSenRnYjlzdUJsVktYa1NhOHRjZUh4SkhvTERKcGhxNllYZ0ZrQjZjbjNSOXVLUjc4bGxld0VWR0NkOVh6bDc1ODJvVGhvRU9xQXBqWngxbUMzbmlOUzZHZnpoZml6UVdtWHVtbDdpNDN0ZmVKQ194T3dXNzJSeHd2bDlqVVRPV09hNXIwR3NSdk8?oc=5",
-      "source": "eNCA",
-      "publishedAt": "2026-11-27T04:48:16.000Z",
-      "latestAt": "2026-11-27T04:48:16.000Z",
-      "firstSeenAt": "2026-11-27T04:58:49.971Z",
-      "outlets": 1,
-      "outletNames": [
-        "eNCA"
-      ],
-      "score": 1
-    },
-    {
       "id": "802ce460ea38",
       "cat": "space",
       "kind": "news",
@@ -1854,22 +1871,6 @@
         "myMotherLode.com"
       ],
       "score": 0.97
-    },
-    {
-      "id": "efe95355fe18",
-      "cat": "markets",
-      "kind": "news",
-      "title": "Bitcoin Faces Weekend Sell-Off as Hayes Warns Ahead of $6.8B Options Expiry",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOc0IxdlpUN1A1RGh4a3NfekJNRlVZM1luTHZvQmpQMEc1TXNWZVZIRmJONjdhMGhTanVxTTNLaWFXM055VkVQZHBxY09DTzdLd0RNdVEtem0ydnYtZHNJWmtHWktCSlBUY0JJVDJsRFB1M3ZyenBhYTJpdVZjMVQ1SWViUWJUNWJ5U2xhMUp0YXVhOUdhZlk3VUVrSlh5UU0?oc=5",
-      "source": "Blockonomi",
-      "publishedAt": "2026-11-27T04:37:07.000Z",
-      "latestAt": "2026-11-27T04:37:07.000Z",
-      "firstSeenAt": "2026-11-27T08:14:16.364Z",
-      "outlets": 1,
-      "outletNames": [
-        "Blockonomi"
-      ],
-      "score": 0.94
     },
     {
       "id": "0a4b0368472d",
