@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T13:45:11.685Z",
+  "buildTime": "2026-11-27T13:57:32.211Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 08:45 ET",
+  "etStamp": "2026-11-27 08:57 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,8 +45,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1311,
-  "lastSuccessAt": "2026-11-27T13:45:11.685Z",
+  "headlinesRead": 1270,
+  "lastSuccessAt": "2026-11-27T13:57:32.211Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 39,
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 1006,
+      "count": 968,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     },
     "bing": {
       "ok": true,
-      "count": 271,
+      "count": 267,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     },
     "x": {
       "ok": true,
@@ -242,15 +242,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T13:45:11.685Z"
+      "lastOkAt": "2026-11-27T13:57:32.211Z"
     }
   },
   "stories": [
@@ -358,7 +358,7 @@
       "url": "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
       "source": "Reuters",
       "publishedAt": "2026-11-26T16:42:00.000Z",
-      "latestAt": "2026-11-27T13:41:03.000Z",
+      "latestAt": "2026-11-27T13:43:43.000Z",
       "firstSeenAt": "2026-11-27T11:29:49.328Z",
       "outlets": 32,
       "outletNames": [
@@ -897,6 +897,27 @@
         "GBHackers News"
       ],
       "score": 2.46
+    },
+    {
+      "id": "a97c38642467",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms personal, business data recently stolen by hackers",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQRDhLOE1BdzF1eGVmWnM0SDdST1laZkZMRkJJQ0ZmTFJ2QmVyWWNfaElBZzNxM0hOV1hXUHZ4V3FJTndpY00wMlZhOVlsSUZzcFNvWkJzWWE4SWxDdi1RbHhlSzQ5STNydXAxQTBwNmY3QVc0aGlRZ2J4UTJ1TV9HLW1yc3I4emJ1UFVv?oc=5",
+      "source": "UPI.com",
+      "publishedAt": "2026-11-26T16:09:58.000Z",
+      "latestAt": "2026-11-27T11:14:08.000Z",
+      "firstSeenAt": "2026-11-27T13:57:32.211Z",
+      "outlets": 6,
+      "outletNames": [
+        "UPI.com",
+        "Yahoo",
+        "Fresno Bee",
+        "The SOFX Report",
+        "National Technology News",
+        "Sportcal"
+      ],
+      "score": 2.28
     },
     {
       "id": "ce355e701f51",
@@ -1578,6 +1599,22 @@
       "score": 1.02
     },
     {
+      "id": "dc53329aa1cd",
+      "cat": "germs",
+      "kind": "news",
+      "title": "List of recalled items grows in Danish flour contamination case",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMFRwTHlOUXBIVFlhblVzVWM2cVBEVjlycXI5QkpxejN5SURkcVY2OWdSb0kxa1ZocExXVndCeDdXWjUwT182aGxmeGVnbkJkSVU3dm1ERFpOY3NUXy1QUDh6V1BueHplaHRleXNMTklGak9kNUIxTVNMbmN4cV9QOFlneUdNT3pLV3hrQmZHNWpmU2N1akN0MW1rc2Q?oc=5",
+      "source": "The Local Denmark",
+      "publishedAt": "2026-11-27T13:51:08.000Z",
+      "latestAt": "2026-11-27T13:51:08.000Z",
+      "firstSeenAt": "2026-11-27T13:57:32.211Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Local Denmark"
+      ],
+      "score": 1
+    },
+    {
       "id": "df2ea4ebbecc",
       "cat": "internet",
       "kind": "news",
@@ -1633,7 +1670,7 @@
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQejV3Q3NmLXBpVUI1eDIyQXZHSnF1aGwyU3VvcllqR0FlRzByRjdzaGhvNnZBNEwwaXNYZkFQa3pTVFV5aThIdHdIaTZDZW9DWkZUeTBOTngtd3AyZ3A5Ym9MYzVqbkotSTl1NEVPTi04aHgyUVZSdzhiMVQ5MHJiTDlITGhYQXI3X1Z0NEFQR0ZIQnNSWjJ6QS1EQmljTkpmbHo4c3FCck9LSjNFdElJ?oc=5",
       "source": "The Paypers",
       "publishedAt": "2026-11-27T13:28:45.000Z",
-      "latestAt": "2026-11-27T13:28:45.000Z",
+      "latestAt": "2026-11-27T13:38:29.000Z",
       "firstSeenAt": "2026-11-27T13:30:09.909Z",
       "outlets": 1,
       "outletNames": [
@@ -1665,7 +1702,7 @@
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA5UGViQ0RSR2xxVGZ0eXVrMFgzSVhDM0hsNjZ2RHljU2VhMXhGZGpvWmc0TTRBRTdYYjhySDVxQkluU21wcVhwOEFqTndSa1ZGdGFTTVp3eVVvS3ptbE9USG9ZaTA?oc=5",
       "source": "The Record from Recorded Future News",
       "publishedAt": "2026-11-27T13:21:01.000Z",
-      "latestAt": "2026-11-27T13:21:01.000Z",
+      "latestAt": "2026-11-27T13:23:33.000Z",
       "firstSeenAt": "2026-11-27T13:30:09.909Z",
       "outlets": 1,
       "outletNames": [
@@ -1680,7 +1717,7 @@
       "title": "Widespread power outage hits Old Town, Marblehead Neck",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPLVQ5RlBpaEhsUEZzVC1UUWJRSG1MQllXdVE1dkRObm5vS0pmV1phMGJ5TmNfbmhkSjRNaGdJTUd2Q3pXTHRlajVvNUZ5SEM2NWhEaHB1Nmo0dER2TEg5MXk3d0l1UVVRcnZFdjdrR1lwVThkTUgyb1Utb3l2UGFOSzlyN3VyUFR2cm52STBCVWdqN3pTQUlV?oc=5",
       "source": "The Marblehead Independent",
-      "publishedAt": "2026-11-27T13:19:08.000Z",
+      "publishedAt": "2026-11-27T13:18:54.000Z",
       "latestAt": "2026-11-27T13:19:08.000Z",
       "firstSeenAt": "2026-11-27T13:30:09.909Z",
       "outlets": 1,
@@ -1702,22 +1739,6 @@
       "outlets": 1,
       "outletNames": [
         "Digg"
-      ],
-      "score": 1
-    },
-    {
-      "id": "5ac082d01bd8",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Breach Key Military Computing Platform, Potentially Exposing Sensitive Data",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZHExWTRiM1dFOGpsTEw1dEJ5ZHBFcDI4cmpVZW9JMkpsT1ZwOEszV0FZUXg5YzdvOHVFYUNCM1RRTEdGSUhmbVZJbzJaREU1MktrVzJ1SmdKYmN6VFptZGtCQ0tZaFllb002eGUtT04xckpEblFrd3drYWxWUGUtVURkakZMSlhqVXpsYi1ERjZ3bU8tUGc?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T13:16:49.000Z",
-      "latestAt": "2026-11-27T13:16:49.000Z",
-      "firstSeenAt": "2026-11-27T13:30:09.909Z",
-      "outlets": 1,
-      "outletNames": [
-        "Yahoo"
       ],
       "score": 1
     },
@@ -1848,22 +1869,6 @@
         "UrduPoint"
       ],
       "score": 1
-    },
-    {
-      "id": "ff3dcb2f2b08",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Corny Energy Bars Recalled in Iceland After Metal Found",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSVc0cUlQSnZtbXZlN3NaUG1vbkU2UXhod3I4Zi1jTGdIaThnR3RxbnZ6SXZtQ1M0WVNPV0xBQ1JDLVVlVV9iZkhWdHNZcERMRjJHSXZpOElWQ0FYWGhXS0xpQTNUZllxWmdTOURMV1BQMWlmRlNKRmowYjBadnFjVGZZM2Nydw?oc=5",
-      "source": "Iceland Review",
-      "publishedAt": "2026-11-27T13:00:39.000Z",
-      "latestAt": "2026-11-27T13:00:39.000Z",
-      "firstSeenAt": "2026-11-27T13:30:09.909Z",
-      "outlets": 1,
-      "outletNames": [
-        "Iceland Review"
-      ],
-      "score": 0.99
     },
     {
       "id": "fd86856780f0",
