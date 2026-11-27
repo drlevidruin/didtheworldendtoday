@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T02:28:21.548Z",
+  "buildTime": "2026-11-27T02:43:26.251Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 21:28 ET",
+  "etStamp": "2026-11-26 21:43 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,17 +45,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1228,
-  "lastSuccessAt": "2026-11-27T02:28:21.548Z",
+  "headlinesRead": 1304,
+  "lastSuccessAt": "2026-11-27T02:43:26.251Z",
   "rollingFallback": false,
   "cats": {
     "flights": 13,
-    "grid": 26,
+    "grid": 28,
     "hacks": 28,
     "germs": 4,
     "markets": 4,
     "weather": 5,
-    "internet": 8,
+    "internet": 6,
     "sun": 4,
     "earth": 4,
     "ai": 1,
@@ -165,13 +165,11 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 0,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": [
-        "Egypt tanker explosion kills 31 people as driver crashes into fuel truck in fiery highway crash"
-      ]
+      "matches": []
     },
     "holdUntil": null,
     "reason": null
@@ -183,15 +181,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 987,
+      "count": 996,
       "error": null,
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     },
     "bing": {
       "ok": true,
-      "count": 205,
-      "error": "7 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "count": 272,
+      "error": null,
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     },
     "gdelt": {
       "ok": false,
@@ -203,37 +201,37 @@
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     },
     "x": {
       "ok": true,
@@ -246,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T02:28:21.548Z"
+      "lastOkAt": "2026-11-27T02:43:26.251Z"
     }
   },
   "stories": [
@@ -540,6 +538,24 @@
       "score": 2.79
     },
     {
+      "id": "11f9749693a7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "USA Today Data Breach Claim: Hackers Say They Have 166 Million Records",
+      "url": "https://www.forbes.com/sites/larsdaniel/2026/11/26/usa-today-data-breach-claim-hackers-say-they-have-166-million-records/",
+      "source": "Forbes",
+      "publishedAt": "2026-11-26T18:04:41.000Z",
+      "latestAt": "2026-11-27T02:31:54.000Z",
+      "firstSeenAt": "2026-11-26T18:12:05.865Z",
+      "outlets": 3,
+      "outletNames": [
+        "The 420.in",
+        "The420",
+        "Forbes"
+      ],
+      "score": 2.58
+    },
+    {
       "id": "d8faac5af851",
       "cat": "hacks",
       "kind": "news",
@@ -573,24 +589,6 @@
         "Yahoo Sports"
       ],
       "score": 2.41
-    },
-    {
-      "id": "ba108ccd0525",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "1Password confirms hackers stole customer data, but not their passwords",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1FMnY1OWdHMEx2OGRmQWhzVjdfS1I1SVpIb29JS0szR2hLcjJnT1NFN1E3UzJpdHZmTGEtOXFLZEJkbGFETVpQaVJHN0duRjl5Qm0xTElUUHFfQXhNVFdpZFNoMVRwZXJBd0g1STlFc3o?oc=5",
-      "source": "Android Authority",
-      "publishedAt": "2026-11-26T05:10:24.000Z",
-      "latestAt": "2026-11-26T11:02:45.000Z",
-      "firstSeenAt": "2026-11-26T09:55:39.177Z",
-      "outlets": 3,
-      "outletNames": [
-        "Android Authority",
-        "Windows Report",
-        "2-Spyware"
-      ],
-      "score": 2.38
     },
     {
       "id": "7e43b7ccbaf9",
@@ -627,24 +625,6 @@
         "Wisevoter"
       ],
       "score": 2.23
-    },
-    {
-      "id": "fb0e8cb3b5b8",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft declares ‘Code Red’ after major global outage, targets service recovery within one hour",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOR2Z4aFRvd0dvRFdOcHJHWmlFdjFqcUJUcXZxdWI1SXIxOXQ3djNwNVB2R2FJbUtNQ0xObkVmNEFORk1EdklwWEczd3RMZGxmR2kwaUZxVGZlVFJHQWZ1bnMxNllMa3B5aThTV0w2VjVfOVpqZmZQNUZVaGZxWkctS0l6THhUZmo1bjNjajE1Y09hX0x0d0FZclRqMjM3R3c4cUpXb3RoU2dNRl9ROVpVcTU0b3pSWGZnQ0c1LVRJakpSNkJSLVBoZmJ6UEZWRm9tVTRlZmwtWmM?oc=5",
-      "source": "Profit by Pakistan Today",
-      "publishedAt": "2026-11-26T02:55:29.000Z",
-      "latestAt": "2026-11-26T22:20:12.000Z",
-      "firstSeenAt": "2026-11-27T02:28:21.548Z",
-      "outlets": 3,
-      "outletNames": [
-        "Profit by Pakistan Today",
-        "Aktualita.co",
-        "Cyber Daily"
-      ],
-      "score": 2.2
     },
     {
       "id": "df4a770e8955",
@@ -825,13 +805,47 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-27T00:42:03.000Z",
-      "latestAt": "2026-11-27T01:40:16.000Z",
+      "latestAt": "2026-11-27T02:38:30.000Z",
       "firstSeenAt": "2026-11-27T00:43:07.514Z",
       "outlets": 1,
       "outletNames": [
         "IOL"
       ],
       "score": 1.4
+    },
+    {
+      "id": "99cb3fabbd0e",
+      "cat": "internet",
+      "kind": "news",
+      "title": "FAA faces scrutiny over AI rollout after nationwide aviation system failure",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcGc1YzloWlhlczVvc2V4bWJvSF9BS0w1T3BVU3BVMnVkemxmbHV3aW9DTXdDc08wejN6ei1FTzAxWExPZkNfbURRRE5VVERuVmJEbVRNSWNrUVhfU2U0SVZoV2c5VjYxU3E4M19zQzd5cEtiVkk3TmplMlliUjJJb3pvSEdPS2VSZDJoWXhOa1ZsdkgxdHJuYlBoT2tzQQ?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-26T13:59:05.000Z",
+      "latestAt": "2026-11-26T13:59:05.000Z",
+      "firstSeenAt": "2026-11-26T14:11:34.774Z",
+      "outlets": 1,
+      "outletNames": [
+        "Beinsure"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "ba108ccd0525",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "1Password confirms hackers stole customer data, but not their passwords",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1FMnY1OWdHMEx2OGRmQWhzVjdfS1I1SVpIb29JS0szR2hLcjJnT1NFN1E3UzJpdHZmTGEtOXFLZEJkbGFETVpQaVJHN0duRjl5Qm0xTElUUHFfQXhNVFdpZFNoMVRwZXJBd0g1STlFc3o?oc=5",
+      "source": "Android Authority",
+      "publishedAt": "2026-11-26T05:10:24.000Z",
+      "latestAt": "2026-11-26T11:02:45.000Z",
+      "firstSeenAt": "2026-11-26T09:55:39.177Z",
+      "outlets": 3,
+      "outletNames": [
+        "Android Authority",
+        "Windows Report",
+        "2-Spyware"
+      ],
+      "score": 2.38
     },
     {
       "id": "8131b068c68e",
@@ -907,23 +921,6 @@
       "score": 2.19
     },
     {
-      "id": "11f9749693a7",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Claim 166 Million USA Today Records Stolen In New Cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQeXdISFBmaC0tNEpVMktRTE5MNEJoajZhZkFfc1NxRUViRFZzTHRYLVVVV18xTkNLbloyNC0tRjBpZWtCUTN0TlRVVHpUVDdsNl9VWk4tNFlMWTlTTnN3QWppYU9HWks0Y0ZLTjVGcjlhRFB3dlFsbTU2UzZkbDN1RVJ2a2MycWFvdnB0RjdxOGdDZw?oc=5",
-      "source": "The 420.in",
-      "publishedAt": "2026-11-26T18:04:41.000Z",
-      "latestAt": "2026-11-26T18:04:41.000Z",
-      "firstSeenAt": "2026-11-26T18:12:05.865Z",
-      "outlets": 2,
-      "outletNames": [
-        "The 420.in",
-        "The420"
-      ],
-      "score": 2
-    },
-    {
       "id": "0349d45e030f",
       "cat": "hacks",
       "kind": "news",
@@ -956,23 +953,6 @@
         "Techish Kenya"
       ],
       "score": 1.99
-    },
-    {
-      "id": "833490745443",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "🇺🇸 Washington keeps calling it upgrades: hackers just breached the CIA and Treasury on the same day A network shared by the CIA and ODNI was hit, Treasury's financial crimes unit took systems offline, and officials still describe the wave of outages as patc",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9xSmZHdHFsMnNpekpIalVRWHJ4QndVWmxFTk9mREU1cHlTdHR1STl4bUhHWXpoZTJ0ZUZTQjRoZDQ5Wk9pelFnckhfd1hhMXZ6M3l6b2hLektzU2ZPaHAwa2Z0TUlhbEpFM242Tg?oc=5",
-      "source": "X",
-      "publishedAt": "2026-11-26T02:42:06.000Z",
-      "latestAt": "2026-11-26T03:23:20.000Z",
-      "firstSeenAt": "2026-11-26T03:39:36.789Z",
-      "outlets": 2,
-      "outletNames": [
-        "X",
-        "The SOFX Report"
-      ],
-      "score": 1.97
     },
     {
       "id": "e7f4ea1619d9",
@@ -1420,22 +1400,6 @@
       "score": 1.42
     },
     {
-      "id": "99cb3fabbd0e",
-      "cat": "internet",
-      "kind": "news",
-      "title": "FAA faces scrutiny over AI rollout after nationwide aviation system failure",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcGc1YzloWlhlczVvc2V4bWJvSF9BS0w1T3BVU3BVMnVkemxmbHV3aW9DTXdDc08wejN6ei1FTzAxWExPZkNfbURRRE5VVERuVmJEbVRNSWNrUVhfU2U0SVZoV2c5VjYxU3E4M19zQzd5cEtiVkk3TmplMlliUjJJb3pvSEdPS2VSZDJoWXhOa1ZsdkgxdHJuYlBoT2tzQQ?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-26T13:59:05.000Z",
-      "latestAt": "2026-11-26T13:59:05.000Z",
-      "firstSeenAt": "2026-11-26T14:11:34.774Z",
-      "outlets": 1,
-      "outletNames": [
-        "Beinsure"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "ac4475e7fb20",
       "cat": "weather",
       "kind": "news",
@@ -1711,22 +1675,6 @@
       "score": 1.25
     },
     {
-      "id": "e7bd0fbdc6b0",
-      "cat": "internet",
-      "kind": "news",
-      "title": "No plans to ditch Microsoft 365 despite global outage, says Government ICT",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZjNfLUlldTQ2VVdtazA3MTcwVy1EbDNHV29JaHBaNXo2RVh1UF91cFRyU09UOXMwLTVNdElHTlJFQTQ0MVNJOGFiMTVqTlFrMWlEckduTlI4RlR3VEJOQmw2cHFjNGI0SWdfRVY3d3pMaFlxSkRMUjdNempqc0FPTHRyejdYbmp5Y0FkVEdPNDdkNFczUkpxOS1fSkdVZHdfemtGVmZXSmZOVlNPMVpyR1Rkc2k2bW84Z3pIeUJXOXJkQ0JrRi11TUY4Z1kwR2FZ?oc=5",
-      "source": "Cook Islands News",
-      "publishedAt": "2026-11-26T18:33:06.000Z",
-      "latestAt": "2026-11-26T18:33:06.000Z",
-      "firstSeenAt": "2026-11-27T02:28:21.548Z",
-      "outlets": 1,
-      "outletNames": [
-        "Cook Islands News"
-      ],
-      "score": 1.22
-    },
-    {
       "id": "a6c7de9bfddc",
       "cat": "hacks",
       "kind": "news",
@@ -1839,6 +1787,38 @@
       "score": 1.12
     },
     {
+      "id": "f93ea6772985",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power being restored in stages after massive blackout hits Sabah’s east coast",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPYXUxbFFJRDZxSmJOdGF3dk1odk90SzctdGtmNHptOXdidUl3MVdMSURpQVJNcU9XNnBJckk1NE1ub0Uwd1V5SmdESldBQlJ2MzFKbVgwc25wZTFxZ1VsQnJ4dzNJbUVBX2pjenJaX3FOMHZlWWw1N1JtUWo4SWZZdEZid3Jha0NjYWVrTFhTTkczOFMzZVdyam96TmxIVkRhWHlDRGJja1NacGEyZTkycGh6OXBudHdLeG1ONVlqbXhSbEVT?oc=5",
+      "source": "The Star",
+      "publishedAt": "2026-11-26T11:15:00.000Z",
+      "latestAt": "2026-11-26T11:15:00.000Z",
+      "firstSeenAt": "2026-11-27T02:43:26.251Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Star"
+      ],
+      "score": 1.04
+    },
+    {
+      "id": "8e95629f1a2b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power Outage Meals: Refined No-Cook Pantry Dining",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVmloZ0x5dVpvTUk2SmI3ejgyUWRFM1ZQRjhPY0R0bm9CMThOZWdUOVB1QzJKUkkyWm1iQ0JCMktSZnlJaVdNU2kyQ1VHakt2dDBXU3o3OVJNc1VXaTA2RVZUMDZvbGttazJfdlZLOFluUWVOellib1gyVXVnVjlOVEZIeGQzM2ktMGc1alp3?oc=5",
+      "source": "DC Life Magazine",
+      "publishedAt": "2026-11-27T02:33:30.000Z",
+      "latestAt": "2026-11-27T02:33:30.000Z",
+      "firstSeenAt": "2026-11-27T02:43:26.251Z",
+      "outlets": 1,
+      "outletNames": [
+        "DC Life Magazine"
+      ],
+      "score": 1
+    },
+    {
       "id": "802ce460ea38",
       "cat": "space",
       "kind": "news",
@@ -1853,6 +1833,22 @@
         "UrduPoint"
       ],
       "score": 1
+    },
+    {
+      "id": "579a97f92083",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Montville Library Warns Patrons After Vendor Data Breach Exposes Personal Information",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNSXFDTzBvaHh2THRyTVBpcW5JU2x3dGRtZk5VMkRQd1gwTmRjVmdZYWxyd2doZVVILWdUYy1UcHlOTGp4dG14N1YyTmtPbFMzSU83dC0xRmdoQ0VzVUxKVlRKbFY3WlJqdE52RDFuVTFjYi1seG5XQmFjTUxfdDRueVkzZUhRQndNWUtwd2pUSmJBWVhvNW1sVkRQbUJiSXJEMFl2UTJscFdGMnktT1BtdE14R09mMGFOV2d1X1JvNW9HZnlIOE9aSGpHekxBU1hsSkd4OGp5SUpWMlY4aG0yMXRseTZ3U19TRW1UUXZDR3pLZm85Q2lWemxR?oc=5",
+      "source": "TAPinto",
+      "publishedAt": "2026-11-27T02:18:11.000Z",
+      "latestAt": "2026-11-27T02:18:11.000Z",
+      "firstSeenAt": "2026-11-27T02:43:26.251Z",
+      "outlets": 1,
+      "outletNames": [
+        "TAPinto"
+      ],
+      "score": 0.99
     },
     {
       "id": "7a14efcae84f",
