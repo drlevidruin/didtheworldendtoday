@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T23:01:42.017Z",
+  "buildTime": "2026-11-27T23:16:46.899Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 18:01 ET",
-  "score": 72,
+  "etStamp": "2026-11-27 18:16 ET",
+  "score": 66,
   "fired": [
     "flights",
     "hacks",
@@ -17,14 +17,8 @@
     "weather",
     "animals"
   ],
-  "bumps": [
-    {
-      "key": "faa",
-      "label": "Ground stop at a major hub",
-      "points": 6
-    }
-  ],
-  "change": 6,
+  "bumps": [],
+  "change": 0,
   "yesterday": {
     "date": "2026-11-26",
     "score": 66,
@@ -45,16 +39,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 306,
-  "lastSuccessAt": "2026-11-27T23:01:42.017Z",
+  "headlinesRead": 314,
+  "lastSuccessAt": "2026-11-27T23:16:46.899Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 41,
-    "flights": 6,
     "germs": 5,
-    "grid": 16,
+    "grid": 17,
     "weather": 8,
     "ai": 3,
+    "flights": 5,
     "animals": 2,
     "earth": 4,
     "markets": 4,
@@ -177,81 +171,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": false,
       "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
+      "error": "4 of 26 queries failed: HTTP 503 (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-27T22:37:48.913Z"
     },
     "bing": {
       "ok": true,
-      "count": 273,
+      "count": 280,
       "error": null,
-      "lastOkAt": "2026-11-27T23:01:42.017Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-27T23:01:42.017Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:01:42.017Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:01:42.017Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:01:42.017Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:01:42.017Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:01:42.017Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:16:32.855Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T23:01:42.017Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T23:01:42.017Z"
+      "lastOkAt": "2026-11-27T23:16:46.899Z"
     }
   },
   "stories": [
@@ -286,29 +279,6 @@
         "UA.NEWS"
       ],
       "score": 6.14
-    },
-    {
-      "id": "sig:faa-stop:LGA:2026-11-26",
-      "cat": "flights",
-      "kind": "signal",
-      "title": "FAA ground stop at LGA (other)",
-      "url": "https://nasstatus.faa.gov/",
-      "source": "FAA",
-      "publishedAt": "2026-11-26T23:12:50.126Z",
-      "latestAt": "2026-11-26T23:12:50.126Z",
-      "firstSeenAt": "2026-11-26T23:12:50.126Z",
-      "outlets": 1,
-      "outletNames": [
-        "FAA"
-      ],
-      "score": 4.5,
-      "signal": {
-        "type": "faa-ground-stop",
-        "airport": "LGA",
-        "hub": true,
-        "nationwide": false,
-        "reason": "other"
-      }
     },
     {
       "id": "8bd025a5242b",
@@ -358,10 +328,10 @@
       "title": "Hackers break into US Air Force cloud computing platform: Report",
       "url": "https://www.yahoo.com/news/us/articles/hackers-break-us-air-force-135401829.html",
       "source": "Yahoo",
-      "publishedAt": "2026-11-27T05:54:00.000Z",
+      "publishedAt": "2026-11-27T03:35:00.000Z",
       "latestAt": "2026-11-27T12:54:11.000Z",
       "firstSeenAt": "2026-11-27T23:01:42.017Z",
-      "outlets": 8,
+      "outlets": 10,
       "outletNames": [
         "Yahoo",
         "The Denver Post",
@@ -370,9 +340,11 @@
         "WRAL",
         "FOX 5 New York",
         "Reuters on MSN",
-        "news.sky.com"
+        "news.sky.com",
+        "HuffPost",
+        "CNA"
       ],
-      "score": 2.86
+      "score": 2.92
     },
     {
       "id": "824d40a7de12",
@@ -516,6 +488,23 @@
       "score": 1.7
     },
     {
+      "id": "c42ed7992d88",
+      "cat": "animals",
+      "kind": "news",
+      "title": "A Portuguese Zoo's Escaped Monkey Was Caught After Days of Eating Avocados",
+      "url": "https://www.aol.com/articles/portuguese-zoos-escaped-monkey-caught-184106000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-27T10:41:00.000Z",
+      "latestAt": "2026-11-27T10:41:00.000Z",
+      "firstSeenAt": "2026-11-27T22:16:32.855Z",
+      "outlets": 2,
+      "outletNames": [
+        "AOL",
+        "Yahoo"
+      ],
+      "score": 1.61
+    },
+    {
       "id": "a086d4abc6e4",
       "cat": "hacks",
       "kind": "news",
@@ -656,23 +645,6 @@
         "STLtoday.com"
       ],
       "score": 1.72
-    },
-    {
-      "id": "c42ed7992d88",
-      "cat": "animals",
-      "kind": "news",
-      "title": "A Portuguese Zoo's Escaped Monkey Was Caught After Days of Eating Avocados",
-      "url": "https://www.aol.com/articles/portuguese-zoos-escaped-monkey-caught-184106000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-27T10:41:00.000Z",
-      "latestAt": "2026-11-27T10:41:00.000Z",
-      "firstSeenAt": "2026-11-27T22:16:32.855Z",
-      "outlets": 2,
-      "outletNames": [
-        "AOL",
-        "Yahoo"
-      ],
-      "score": 1.61
     },
     {
       "id": "d0eae5ed65df",
@@ -818,6 +790,22 @@
         "Nature World News"
       ],
       "score": 1.39
+    },
+    {
+      "id": "36bd83d9f0d6",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
+      "source": "Demokratis.co.id",
+      "publishedAt": "2026-11-27T14:44:49.000Z",
+      "latestAt": "2026-11-27T14:44:49.000Z",
+      "firstSeenAt": "2026-11-27T15:45:32.463Z",
+      "outlets": 1,
+      "outletNames": [
+        "Demokratis.co.id"
+      ],
+      "score": 1.38
     },
     {
       "id": "ce1dc71aa12f",
@@ -1241,22 +1229,6 @@
         "TipRanks"
       ],
       "score": 1.39
-    },
-    {
-      "id": "36bd83d9f0d6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Allstate Faces Nationwide Tech Outage Ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1icjkyRUc3dkc5aGFMaXctT2JTZXRlUXA1cEE5ZUlzdERKTUFyWjBzSU83OU9wT2V3b1VFZWdhd2NKS2lfWkl2NGtVOC1wY0gwNGx1QndMWmoweTFQZWQ2YW1JWnh1UW92SVpj?oc=5",
-      "source": "Demokratis.co.id",
-      "publishedAt": "2026-11-27T14:44:49.000Z",
-      "latestAt": "2026-11-27T14:44:49.000Z",
-      "firstSeenAt": "2026-11-27T15:45:32.463Z",
-      "outlets": 1,
-      "outletNames": [
-        "Demokratis.co.id"
-      ],
-      "score": 1.38
     },
     {
       "id": "4a31471a8cff",
@@ -1803,6 +1775,22 @@
       "outlets": 1,
       "outletNames": [
         "fox56.com"
+      ],
+      "score": 1
+    },
+    {
+      "id": "8e95629f1a2b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power Outage Meals: Refined No-Cook Pantry Dining",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVmloZ0x5dVpvTUk2SmI3ejgyUWRFM1ZQRjhPY0R0bm9CMThOZWdUOVB1QzJKUkkyWm1iQ0JCMktSZnlJaVdNU2kyQ1VHakt2dDBXU3o3OVJNc1VXaTA2RVZUMDZvbGttazJfdlZLOFluUWVOellib1gyVXVnVjlOVEZIeGQzM2ktMGc1alp3?oc=5",
+      "source": "DC Life Magazine",
+      "publishedAt": "2026-11-27T02:33:30.000Z",
+      "latestAt": "2026-11-27T02:33:30.000Z",
+      "firstSeenAt": "2026-11-27T02:43:26.251Z",
+      "outlets": 1,
+      "outletNames": [
+        "DC Life Magazine"
       ],
       "score": 1
     },
