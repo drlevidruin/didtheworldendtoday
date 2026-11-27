@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T02:43:26.251Z",
+  "buildTime": "2026-11-27T02:58:26.353Z",
   "etDate": "2026-11-26",
-  "etStamp": "2026-11-26 21:43 ET",
+  "etStamp": "2026-11-26 21:58 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -45,17 +45,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1304,
-  "lastSuccessAt": "2026-11-27T02:43:26.251Z",
+  "headlinesRead": 1369,
+  "lastSuccessAt": "2026-11-27T02:58:26.353Z",
   "rollingFallback": false,
   "cats": {
     "flights": 13,
-    "grid": 28,
-    "hacks": 28,
+    "grid": 29,
+    "hacks": 25,
     "germs": 4,
     "markets": 4,
     "weather": 5,
-    "internet": 6,
+    "internet": 8,
     "sun": 4,
     "earth": 4,
     "ai": 1,
@@ -176,81 +176,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 996,
+      "count": 991,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "bing": {
       "ok": true,
-      "count": 272,
+      "count": 268,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "gdelt": {
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 74,
       "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-26T21:57:40.268Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T01:58:17.781Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T02:43:26.251Z"
+      "lastOkAt": "2026-11-27T02:58:26.353Z"
     }
   },
   "stories": [
@@ -412,6 +411,25 @@
       "score": 3.11
     },
     {
+      "id": "11f9749693a7",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "USA Today Data Breach Claim: Hackers Say They Have 166 Million Records",
+      "url": "https://www.forbes.com/sites/larsdaniel/2026/11/26/usa-today-data-breach-claim-hackers-say-they-have-166-million-records/",
+      "source": "Forbes",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "latestAt": "2026-11-27T02:31:54.000Z",
+      "firstSeenAt": "2026-11-26T18:12:05.865Z",
+      "outlets": 4,
+      "outletNames": [
+        "The 420.in",
+        "The420",
+        "Forbes",
+        "Yahoo"
+      ],
+      "score": 2.89
+    },
+    {
       "id": "22e6f5d8189d",
       "cat": "hacks",
       "kind": "news",
@@ -429,25 +447,6 @@
         "Forbes Middle East"
       ],
       "score": 2.62
-    },
-    {
-      "id": "b0adfba84f59",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA hit by cyberattack amid mounting scrutiny of Gianni Infantino",
-      "url": "https://www.msn.com/en-au/news/other/fifa-hit-by-cyberattack-amid-mounting-scrutiny-of-gianni-infantino/ar-AA2ihOxO",
-      "source": "The Independent on MSN",
-      "publishedAt": "2026-11-26T05:06:05.000Z",
-      "latestAt": "2026-11-26T14:36:06.000Z",
-      "firstSeenAt": "2026-11-26T13:11:16.410Z",
-      "outlets": 4,
-      "outletNames": [
-        "The Independent",
-        "Yahoo Sports",
-        "LiveScore",
-        "AOL.co.uk"
-      ],
-      "score": 2.6
     },
     {
       "id": "7e3288e167a6",
@@ -538,22 +537,23 @@
       "score": 2.79
     },
     {
-      "id": "11f9749693a7",
+      "id": "b0adfba84f59",
       "cat": "hacks",
       "kind": "news",
-      "title": "USA Today Data Breach Claim: Hackers Say They Have 166 Million Records",
-      "url": "https://www.forbes.com/sites/larsdaniel/2026/11/26/usa-today-data-breach-claim-hackers-say-they-have-166-million-records/",
-      "source": "Forbes",
-      "publishedAt": "2026-11-26T18:04:41.000Z",
-      "latestAt": "2026-11-27T02:31:54.000Z",
-      "firstSeenAt": "2026-11-26T18:12:05.865Z",
-      "outlets": 3,
+      "title": "FIFA hit by cyberattack amid mounting scrutiny of Gianni Infantino",
+      "url": "https://www.msn.com/en-au/news/other/fifa-hit-by-cyberattack-amid-mounting-scrutiny-of-gianni-infantino/ar-AA2ihOxO",
+      "source": "The Independent on MSN",
+      "publishedAt": "2026-11-26T05:06:05.000Z",
+      "latestAt": "2026-11-26T14:36:06.000Z",
+      "firstSeenAt": "2026-11-26T13:11:16.410Z",
+      "outlets": 4,
       "outletNames": [
-        "The 420.in",
-        "The420",
-        "Forbes"
+        "The Independent",
+        "Yahoo Sports",
+        "LiveScore",
+        "AOL.co.uk"
       ],
-      "score": 2.58
+      "score": 2.6
     },
     {
       "id": "d8faac5af851",
@@ -747,6 +747,23 @@
       "score": 1.72
     },
     {
+      "id": "ad95563b05ad",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Declares Code Red Status After Global Outage, Targets One-Hour Service Recovery",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQYkJsVm1BRHctRHllWjJkTktKVlBsVGV2am9aa1h0b1VQdVpLT1BKYnJBVl9XblplY0FPLWtXSnBiT3RIbWVBaU83NGh3Y05YbzJOdlpkOFdTMm5jM3hJSWFUSjlBeGE3N2ZTRUNraGt1XzBpZ1RUZm9lT3c4WnJ1NjFn?oc=5",
+      "source": "Aktualita.co",
+      "publishedAt": "2026-11-26T03:45:29.000Z",
+      "latestAt": "2026-11-26T22:20:12.000Z",
+      "firstSeenAt": "2026-11-27T02:58:26.353Z",
+      "outlets": 2,
+      "outletNames": [
+        "Aktualita.co",
+        "Cyber Daily"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "6564231387e7",
       "cat": "internet",
       "kind": "news",
@@ -810,22 +827,6 @@
       "outlets": 1,
       "outletNames": [
         "IOL"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "99cb3fabbd0e",
-      "cat": "internet",
-      "kind": "news",
-      "title": "FAA faces scrutiny over AI rollout after nationwide aviation system failure",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcGc1YzloWlhlczVvc2V4bWJvSF9BS0w1T3BVU3BVMnVkemxmbHV3aW9DTXdDc08wejN6ei1FTzAxWExPZkNfbURRRE5VVERuVmJEbVRNSWNrUVhfU2U0SVZoV2c5VjYxU3E4M19zQzd5cEtiVkk3TmplMlliUjJJb3pvSEdPS2VSZDJoWXhOa1ZsdkgxdHJuYlBoT2tzQQ?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-26T13:59:05.000Z",
-      "latestAt": "2026-11-26T13:59:05.000Z",
-      "firstSeenAt": "2026-11-26T14:11:34.774Z",
-      "outlets": 1,
-      "outletNames": [
-        "Beinsure"
       ],
       "score": 1.4
     },
@@ -955,24 +956,6 @@
       "score": 1.99
     },
     {
-      "id": "e7f4ea1619d9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms cyberattack as hacking group claims theft of sensitive data: Report",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORUZYbXMxUEw2QTVIdy1jR3hpLW15UmV2THBqbnBTSmIzRlNsSjJadWxDejhrU0lBa0VzWDE2aEdaejVOSUFxTXpBX0Y5R3p6My1OVkI2bFhaSkhITzhwZUgxX28xQUdkYWxNYnc3R3FfeEVLM29rV3l5dFhhWTg0M04tNXFQN2ZYaXFmdE8wNVRPU2p6WDJVV09IQXZTby1JcFB1WkJNSVBrcGhqcUJUaE5jWWFnU2xQSTREQw?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-26T11:52:32.000Z",
-      "latestAt": "2026-11-27T00:07:52.000Z",
-      "firstSeenAt": "2026-11-27T02:28:21.548Z",
-      "outlets": 3,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "TRT Afrika",
-        "cwibc.co.id"
-      ],
-      "score": 1.96
-    },
-    {
       "id": "2d9813eb624f",
       "cat": "hacks",
       "kind": "news",
@@ -1020,6 +1003,25 @@
       "outletNames": [
         "Yahoo",
         "WTKR"
+      ],
+      "score": 1.9
+    },
+    {
+      "id": "0c4e661cc31a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
+      "url": "https://www.aa.com.tr/en/europe/frances-afp-news-agency-hit-by-cyberattack-takes-content-platform-offline/4139870",
+      "source": "Anadolu Agency",
+      "publishedAt": "2026-11-26T03:30:00.000Z",
+      "latestAt": "2026-11-27T02:49:26.000Z",
+      "firstSeenAt": "2026-11-27T01:28:20.315Z",
+      "outlets": 4,
+      "outletNames": [
+        "Al Jazeera on MSN",
+        "Anadolu Agency",
+        "Anadolu Ajansı",
+        "BusinessToday Malaysia"
       ],
       "score": 1.9
     },
@@ -1400,6 +1402,22 @@
       "score": 1.42
     },
     {
+      "id": "99cb3fabbd0e",
+      "cat": "internet",
+      "kind": "news",
+      "title": "FAA faces scrutiny over AI rollout after nationwide aviation system failure",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcGc1YzloWlhlczVvc2V4bWJvSF9BS0w1T3BVU3BVMnVkemxmbHV3aW9DTXdDc08wejN6ei1FTzAxWExPZkNfbURRRE5VVERuVmJEbVRNSWNrUVhfU2U0SVZoV2c5VjYxU3E4M19zQzd5cEtiVkk3TmplMlliUjJJb3pvSEdPS2VSZDJoWXhOa1ZsdkgxdHJuYlBoT2tzQQ?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-26T13:59:05.000Z",
+      "latestAt": "2026-11-26T13:59:05.000Z",
+      "firstSeenAt": "2026-11-26T14:11:34.774Z",
+      "outlets": 1,
+      "outletNames": [
+        "Beinsure"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "ac4475e7fb20",
       "cat": "weather",
       "kind": "news",
@@ -1594,23 +1612,6 @@
       "score": 1.28
     },
     {
-      "id": "a086d4abc6e4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
-      "url": "https://www.aa.com.tr/en/europe/frances-afp-news-agency-hit-by-cyberattack-takes-content-platform-offline/4139870",
-      "source": "Anadolu Agency",
-      "publishedAt": "2026-11-26T03:30:00.000Z",
-      "latestAt": "2026-11-27T01:18:20.000Z",
-      "firstSeenAt": "2026-11-27T01:28:20.315Z",
-      "outlets": 2,
-      "outletNames": [
-        "Anadolu Agency",
-        "Anadolu Ajansı"
-      ],
-      "score": 1.27
-    },
-    {
       "id": "f90baf32cac4",
       "cat": "flights",
       "kind": "news",
@@ -1641,22 +1642,6 @@
         "RBC-Ukraine"
       ],
       "score": 1.26
-    },
-    {
-      "id": "48b07c475db0",
-      "cat": "flights",
-      "kind": "news",
-      "title": "6,000+ Holiday Flights Delayed Nationwide, Miami Airport Incident Grounds Flights: What Disney World Guests Should Know",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTG1fTHVyZ1FHdG5mSkxEZGwtLUVfRDBIY3FmYVBQb2JVaDJkYlJKaWl5TFNmV0hTa0w5dDhoMUJCOWE2Mmh6TWhmM0h6U2VyQ21kbXMtV0tzZWRDWEk4ejNFc01UbnRXbXFKNU8wYkMzbEdqYld6VWRWZE9PalVGTDBYV0VPOVplMHp6QjZ3?oc=5",
-      "source": "Inside the Magic",
-      "publishedAt": "2026-11-26T16:58:40.000Z",
-      "latestAt": "2026-11-26T16:58:40.000Z",
-      "firstSeenAt": "2026-11-26T23:12:50.126Z",
-      "outlets": 1,
-      "outletNames": [
-        "Inside the Magic"
-      ],
-      "score": 1.25
     },
     {
       "id": "b5f388a80608",
@@ -1755,22 +1740,6 @@
       "score": 1.2
     },
     {
-      "id": "0c4e661cc31a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Global news agency AFP reports cyberattack, shuts down content platform",
-      "url": "https://www.msn.com/en-us/news/other/global-news-agency-afp-reports-cyberattack-shuts-down-content-platform/ar-AA2ijNdv",
-      "source": "Al Jazeera on MSN",
-      "publishedAt": "2026-11-26T16:00:00.000Z",
-      "latestAt": "2026-11-27T01:08:30.000Z",
-      "firstSeenAt": "2026-11-27T01:28:20.315Z",
-      "outlets": 1,
-      "outletNames": [
-        "Al Jazeera on MSN"
-      ],
-      "score": 1.18
-    },
-    {
       "id": "fba6a954a647",
       "cat": "hacks",
       "kind": "news",
@@ -1787,6 +1756,38 @@
       "score": 1.12
     },
     {
+      "id": "48b07c475db0",
+      "cat": "flights",
+      "kind": "news",
+      "title": "6,000+ Holiday Flights Delayed Nationwide, Miami Airport Incident Grounds Flights: What Disney World Guests Should Know",
+      "url": "https://insidethemagic.net/2026/11/disney-world-thanksgiving-flight-delays-2026-emd1/",
+      "source": "Inside the Magic",
+      "publishedAt": "2026-11-26T08:58:00.000Z",
+      "latestAt": "2026-11-26T16:58:40.000Z",
+      "firstSeenAt": "2026-11-26T23:12:50.126Z",
+      "outlets": 1,
+      "outletNames": [
+        "Inside the Magic"
+      ],
+      "score": 1.07
+    },
+    {
+      "id": "1b3fa43e6f7c",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft declared Code Red status after massive M365 outage",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPNVNtXzhXcFpBSzZTSDlsMV95dXMwcHpLUk5sdUVqRTFlajQ4dEZmVXVSU0FXWjZncDNqYUxDRHNFaGEzblJ5ZjFmYnpXSnZpd2s4RjZ2bVFZc3VGeGpZaExoZjdpVXZ5dWhvaTZzOThrdDNfcHp5aE53R2RqQWNrT3Zoam05WTBMZkJkYjZ0ZFAtS09KTnBUck52NkJKdllpWmx4V2FWWnNLNERkZS1vaXFyeTlBN0dVMFNXVGI0LXlBZlJYbnprQXF0Nmo?oc=5",
+      "source": "Jablíčkář.cz",
+      "publishedAt": "2026-11-26T11:46:45.000Z",
+      "latestAt": "2026-11-26T11:46:45.000Z",
+      "firstSeenAt": "2026-11-27T02:58:26.353Z",
+      "outlets": 1,
+      "outletNames": [
+        "Jablíčkář.cz"
+      ],
+      "score": 1.05
+    },
+    {
       "id": "f93ea6772985",
       "cat": "grid",
       "kind": "news",
@@ -1801,6 +1802,22 @@
         "The Star"
       ],
       "score": 1.04
+    },
+    {
+      "id": "159f8ed25f06",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Wind leaves more than 105,000 PPL customers without power",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMS1JRXpoYm1ydld4MlRSSjVmd1JTa0lnaDFQZ3VHMFNyM0VBTTlEbDlVdUlVQ3hCNkY4ZzFQMTlkdDJqaXREZnRlUkkzd1lrVjlycmtwMENrbFZRUGhEdnJFM3ozZGptQ3FwLVBqZ2s1am9vY01QTjBsaklVM2Zqcy0wTmRRUXFtVVFzM3J3?oc=5",
+      "source": "fox56.com",
+      "publishedAt": "2026-11-27T02:46:12.000Z",
+      "latestAt": "2026-11-27T02:46:12.000Z",
+      "firstSeenAt": "2026-11-27T02:58:26.353Z",
+      "outlets": 1,
+      "outletNames": [
+        "fox56.com"
+      ],
+      "score": 1
     },
     {
       "id": "8e95629f1a2b",
@@ -1833,22 +1850,6 @@
         "UrduPoint"
       ],
       "score": 1
-    },
-    {
-      "id": "579a97f92083",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Montville Library Warns Patrons After Vendor Data Breach Exposes Personal Information",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNSXFDTzBvaHh2THRyTVBpcW5JU2x3dGRtZk5VMkRQd1gwTmRjVmdZYWxyd2doZVVILWdUYy1UcHlOTGp4dG14N1YyTmtPbFMzSU83dC0xRmdoQ0VzVUxKVlRKbFY3WlJqdE52RDFuVTFjYi1seG5XQmFjTUxfdDRueVkzZUhRQndNWUtwd2pUSmJBWVhvNW1sVkRQbUJiSXJEMFl2UTJscFdGMnktT1BtdE14R09mMGFOV2d1X1JvNW9HZnlIOE9aSGpHekxBU1hsSkd4OGp5SUpWMlY4aG0yMXRseTZ3U19TRW1UUXZDR3pLZm85Q2lWemxR?oc=5",
-      "source": "TAPinto",
-      "publishedAt": "2026-11-27T02:18:11.000Z",
-      "latestAt": "2026-11-27T02:18:11.000Z",
-      "firstSeenAt": "2026-11-27T02:43:26.251Z",
-      "outlets": 1,
-      "outletNames": [
-        "TAPinto"
-      ],
-      "score": 0.99
     },
     {
       "id": "7a14efcae84f",
