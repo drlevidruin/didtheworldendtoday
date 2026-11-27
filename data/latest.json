@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-27T22:37:48.913Z",
+  "buildTime": "2026-11-27T23:01:42.017Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 17:37 ET",
+  "etStamp": "2026-11-27 18:01 ET",
   "score": 72,
   "fired": [
     "flights",
@@ -45,8 +45,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1266,
-  "lastSuccessAt": "2026-11-27T22:37:48.913Z",
+  "headlinesRead": 306,
+  "lastSuccessAt": "2026-11-27T23:01:42.017Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 41,
@@ -163,7 +163,7 @@
     },
     "auto": {
       "checked": true,
-      "via": "google-top-stories",
+      "via": "bbc-top-stories",
       "error": null,
       "headlines": 30,
       "matched": 0,
@@ -181,16 +181,16 @@
   },
   "sources": {
     "google": {
-      "ok": true,
-      "count": 958,
-      "error": null,
+      "ok": false,
+      "count": 0,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
       "lastOkAt": "2026-11-27T22:37:48.913Z"
     },
     "bing": {
       "ok": true,
-      "count": 274,
+      "count": 273,
       "error": null,
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "lastOkAt": "2026-11-27T23:01:42.017Z"
     },
     "gdelt": {
       "ok": false,
@@ -202,37 +202,37 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "lastOkAt": "2026-11-27T23:01:42.017Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "lastOkAt": "2026-11-27T23:01:42.017Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "lastOkAt": "2026-11-27T23:01:42.017Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "lastOkAt": "2026-11-27T23:01:42.017Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "lastOkAt": "2026-11-27T23:01:42.017Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "lastOkAt": "2026-11-27T23:01:42.017Z"
     },
     "x": {
       "ok": true,
@@ -243,15 +243,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "lastOkAt": "2026-11-27T23:01:42.017Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-27T22:37:48.913Z"
+      "lastOkAt": "2026-11-27T23:01:42.017Z"
     }
   },
   "stories": [
@@ -352,6 +352,29 @@
       "score": 3.12
     },
     {
+      "id": "b419fa2bff71",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers break into US Air Force cloud computing platform: Report",
+      "url": "https://www.yahoo.com/news/us/articles/hackers-break-us-air-force-135401829.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T05:54:00.000Z",
+      "latestAt": "2026-11-27T12:54:11.000Z",
+      "firstSeenAt": "2026-11-27T23:01:42.017Z",
+      "outlets": 8,
+      "outletNames": [
+        "Yahoo",
+        "The Denver Post",
+        "KIII-TV",
+        "KGNS-TV",
+        "WRAL",
+        "FOX 5 New York",
+        "Reuters on MSN",
+        "news.sky.com"
+      ],
+      "score": 2.86
+    },
+    {
       "id": "824d40a7de12",
       "cat": "germs",
       "kind": "news",
@@ -370,26 +393,6 @@
         "eKathimerini.com"
       ],
       "score": 2.86
-    },
-    {
-      "id": "a086d4abc6e4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-27T01:12:48.000Z",
-      "latestAt": "2026-11-27T12:50:38.000Z",
-      "firstSeenAt": "2026-11-27T12:45:07.402Z",
-      "outlets": 5,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "A News",
-        "The Malaysian Reserve",
-        "US Muslims",
-        "MLQ.ai"
-      ],
-      "score": 2.68
     },
     {
       "id": "94e16ff27e9a",
@@ -513,6 +516,26 @@
       "score": 1.7
     },
     {
+      "id": "a086d4abc6e4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-27T01:12:48.000Z",
+      "latestAt": "2026-11-27T12:50:38.000Z",
+      "firstSeenAt": "2026-11-27T12:45:07.402Z",
+      "outlets": 5,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "A News",
+        "The Malaysian Reserve",
+        "US Muslims",
+        "MLQ.ai"
+      ],
+      "score": 2.68
+    },
+    {
       "id": "bd573c4f71b8",
       "cat": "hacks",
       "kind": "news",
@@ -550,23 +573,6 @@
       "score": 2.46
     },
     {
-      "id": "ce1dc71aa12f",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Millions lose access to benefits and pensions services after 'cyber incident'",
-      "url": "https://www.aol.com/articles/department-pensions-takes-services-offline-083625000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-27T00:34:00.000Z",
-      "latestAt": "2026-11-27T20:42:44.000Z",
-      "firstSeenAt": "2026-11-27T11:59:52.439Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "AOL"
-      ],
-      "score": 2.27
-    },
-    {
       "id": "142801077e11",
       "cat": "germs",
       "kind": "news",
@@ -582,6 +588,23 @@
         "Wisevoter"
       ],
       "score": 1.98
+    },
+    {
+      "id": "3901d5d9a26c",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Strong winds leave thousands without power in central Pennsylvania",
+      "url": "https://www.yahoo.com/news/weather-news/articles/strong-winds-leave-thousands-without-221005763.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T14:10:00.000Z",
+      "latestAt": "2026-11-27T22:10:00.000Z",
+      "firstSeenAt": "2026-11-27T22:16:32.855Z",
+      "outlets": 2,
+      "outletNames": [
+        "FOX43",
+        "Yahoo"
+      ],
+      "score": 1.73
     },
     {
       "id": "c8ab9b427bc8",
@@ -633,23 +656,6 @@
         "STLtoday.com"
       ],
       "score": 1.72
-    },
-    {
-      "id": "72e46b5b520f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Monmouth County hardest hit by blackouts; 50,000 still without power",
-      "url": "https://www.app.com/story/weather/2026/11/27/power-outage-monmouth-ocean-county-nj-jersey-shore/92978241007/",
-      "source": "APP.com",
-      "publishedAt": "2026-11-27T08:02:00.000Z",
-      "latestAt": "2026-11-27T08:02:00.000Z",
-      "firstSeenAt": "2026-11-27T16:45:43.522Z",
-      "outlets": 2,
-      "outletNames": [
-        "APP.com",
-        "Yahoo"
-      ],
-      "score": 1.71
     },
     {
       "id": "c42ed7992d88",
@@ -812,6 +818,23 @@
         "Nature World News"
       ],
       "score": 1.39
+    },
+    {
+      "id": "ce1dc71aa12f",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Millions lose access to benefits and pensions services after 'cyber incident'",
+      "url": "https://www.aol.com/articles/department-pensions-takes-services-offline-083625000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-27T00:34:00.000Z",
+      "latestAt": "2026-11-27T20:42:44.000Z",
+      "firstSeenAt": "2026-11-27T11:59:52.439Z",
+      "outlets": 2,
+      "outletNames": [
+        "BBC",
+        "AOL"
+      ],
+      "score": 2.27
     },
     {
       "id": "7aee287f69f6",
@@ -1003,6 +1026,23 @@
       "score": 1.71
     },
     {
+      "id": "72e46b5b520f",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Monmouth County hardest hit by blackouts; 50,000 still without power",
+      "url": "https://www.app.com/story/weather/2026/11/27/power-outage-monmouth-ocean-county-nj-jersey-shore/92978241007/",
+      "source": "APP.com",
+      "publishedAt": "2026-11-27T08:02:00.000Z",
+      "latestAt": "2026-11-27T08:02:00.000Z",
+      "firstSeenAt": "2026-11-27T16:45:43.522Z",
+      "outlets": 2,
+      "outletNames": [
+        "APP.com",
+        "Yahoo"
+      ],
+      "score": 1.71
+    },
+    {
       "id": "124beede899e",
       "cat": "hacks",
       "kind": "news",
@@ -1120,23 +1160,6 @@
         "National Technology News"
       ],
       "score": 1.57
-    },
-    {
-      "id": "7c9f16cbe062",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms personal, business data stolen in cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5jTmFsUkZOOUNicnpodzNtX1NhQTlXdW1vX1BMRGtNU0xUMG80QkY4eUttVXJJRlNGTFVoRGlMcVNPZGtjYnJjUjRIeHpRaVdQTmVzNWl3bkhwallhQjJBNmRjWmhrTXplTzlrMHdR?oc=5",
-      "source": "Fresno Bee",
-      "publishedAt": "2026-11-26T22:41:00.000Z",
-      "latestAt": "2026-11-27T11:14:08.000Z",
-      "firstSeenAt": "2026-11-27T16:30:42.723Z",
-      "outlets": 2,
-      "outletNames": [
-        "Fresno Bee",
-        "Sportcal"
-      ],
-      "score": 1.41
     },
     {
       "id": "94baa68ac682",
@@ -1602,22 +1625,6 @@
       "outlets": 1,
       "outletNames": [
         "https://www.thetraveler.org/"
-      ],
-      "score": 1
-    },
-    {
-      "id": "3901d5d9a26c",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Strong winds leave thousands without power in central Pennsylvania",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQTTFULVVReUF5aXRuaF94dXNsN0x4SklkUGlTcnRTblZJWjlyendBV1NYMG14STIzVnlDZjJySzJldDhIaTRMOU1QVDcwU0FkZFc0bXB4R3R2cFRmb2l4NEd2Tjh6ZmlSQ1RPRktXdTNKZmZjZDVxQWJHTjZhRHRyUkpsTkhYSzhZbzNpSUU5dG54ZTZLQWM0aVhNY2NpYjE1cGJFUDY4MzJXZXVKUE8wXzIzSU4zOXpvMnFlb2plbXU0b0U4RzRON2E2TUxLd0FTMEJnSFdfcTNMeTZ4a2N6QzRyMlRzcWFkVG4xLWVUUVRfZw?oc=5",
-      "source": "FOX43",
-      "publishedAt": "2026-11-27T22:10:00.000Z",
-      "latestAt": "2026-11-27T22:10:00.000Z",
-      "firstSeenAt": "2026-11-27T22:16:32.855Z",
-      "outlets": 1,
-      "outletNames": [
-        "FOX43"
       ],
       "score": 1
     },
