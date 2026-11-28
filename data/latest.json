@@ -1,10 +1,11 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T09:18:18.705Z",
+  "buildTime": "2026-11-28T09:33:18.208Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 04:18 ET",
-  "score": 62,
+  "etStamp": "2026-11-28 04:33 ET",
+  "score": 68,
   "fired": [
+    "flights",
     "hacks",
     "internet",
     "space",
@@ -22,7 +23,7 @@
       "points": 8
     }
   ],
-  "change": 8,
+  "change": 14,
   "yesterday": {
     "date": "2026-11-27",
     "score": 54,
@@ -43,7 +44,7 @@
     "score": 80
   },
   "headlinesRead": 1222,
-  "lastSuccessAt": "2026-11-28T09:18:18.705Z",
+  "lastSuccessAt": "2026-11-28T09:33:18.208Z",
   "rollingFallback": false,
   "cats": {
     "internet": 7,
@@ -89,7 +90,7 @@
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
-      "worst": "major",
+      "worst": "minor",
       "pages": [
         {
           "id": "github",
@@ -100,8 +101,8 @@
         {
           "id": "cloudflare",
           "name": "Cloudflare",
-          "indicator": "major",
-          "description": "Partial System Outage"
+          "indicator": "minor",
+          "description": "Partially Degraded Service"
         },
         {
           "id": "openai",
@@ -175,20 +176,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 926,
+      "count": 930,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     },
     "bing": {
       "ok": true,
-      "count": 264,
+      "count": 260,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     },
     "gdelt": {
       "ok": false,
@@ -200,55 +201,56 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     },
     "status": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T09:18:18.705Z"
+      "lastOkAt": "2026-11-28T09:33:18.208Z"
     }
   },
   "stories": [
@@ -799,6 +801,24 @@
       "score": 1.96
     },
     {
+      "id": "51cebd73a78e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US military says cyber systems secure after reports of Air Force hack",
+      "url": "https://www.straitstimes.com/world/united-states/us-military-says-cyber-systems-secure-after-reports-of-air-force-hack?ref=latest",
+      "source": "The Straits Times",
+      "publishedAt": "2026-11-27T16:00:00.000Z",
+      "latestAt": "2026-11-28T06:08:31.000Z",
+      "firstSeenAt": "2026-11-28T07:32:59.494Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Straits Times",
+        "The Malaysian Reserve",
+        "Yahoo"
+      ],
+      "score": 1.92
+    },
+    {
       "id": "5cc3e5f07823",
       "cat": "hacks",
       "kind": "news",
@@ -970,23 +990,6 @@
       "score": 1.56
     },
     {
-      "id": "51cebd73a78e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US military says cyber systems secure after reports of Air Force hack",
-      "url": "https://www.straitstimes.com/world/united-states/us-military-says-cyber-systems-secure-after-reports-of-air-force-hack?ref=latest",
-      "source": "The Straits Times",
-      "publishedAt": "2026-11-27T16:50:00.000Z",
-      "latestAt": "2026-11-28T06:08:31.000Z",
-      "firstSeenAt": "2026-11-28T07:32:59.494Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Straits Times",
-        "The Malaysian Reserve"
-      ],
-      "score": 1.51
-    },
-    {
       "id": "ea511356490e",
       "cat": "hacks",
       "kind": "news",
@@ -1149,22 +1152,6 @@
       "score": 1.21
     },
     {
-      "id": "3ea15c7fdfab",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers steal credit card numbers and CVV codes in major breach",
-      "url": "https://cyberguy.com/security/hackers-steal-credit-card-numbers-and-cvv-codes-in-major-breach/",
-      "source": "CyberGuy",
-      "publishedAt": "2026-11-27T09:23:00.000Z",
-      "latestAt": "2026-11-27T09:23:00.000Z",
-      "firstSeenAt": "2026-11-27T18:31:05.149Z",
-      "outlets": 1,
-      "outletNames": [
-        "CyberGuy"
-      ],
-      "score": 1.19
-    },
-    {
       "id": "4a89ce93752e",
       "cat": "grid",
       "kind": "news",
@@ -1211,6 +1198,22 @@
         "Digital Trends"
       ],
       "score": 1.04
+    },
+    {
+      "id": "9b4619b62eed",
+      "cat": "flights",
+      "kind": "news",
+      "title": "The impact of GPS jamming on flights – and when it can be dangerous",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNUlA5NHV4bHRRZFY2SkVLZGQxb2oyX3Q3VEpOck9jZjFTTzlrX21JQW9QV2ZicFpJWklfTlV2T1BkaHVPRFp1X2E1aUpucnc1ei1DRW1GNVRVNmVJS0dPN1BTRDI0cDhhZEE3amlRM1YtN0ZTU1A4RmRFYTdVU1Q4WDNoZFBYNG8?oc=5",
+      "source": "The i Paper",
+      "publishedAt": "2026-11-28T09:22:28.000Z",
+      "latestAt": "2026-11-28T09:22:28.000Z",
+      "firstSeenAt": "2026-11-28T09:33:18.208Z",
+      "outlets": 1,
+      "outletNames": [
+        "The i Paper"
+      ],
+      "score": 1
     },
     {
       "id": "f2babb489ea0",
@@ -1460,7 +1463,7 @@
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5HSWJXMFMySm5YV2U2bk91SURhU2pTRGU2ekdJUExKVkR3bFVWRnlfeUU1aExaNzQtWF9BQVhTREdwVTJ1dU9VeG1FTjA0Ty1yc21NNElwcUNnQ3pGN00yVEFjZUxmNkhxRkpDdFNn?oc=5",
       "source": "news.sbs.co.kr",
       "publishedAt": "2026-11-28T01:56:30.000Z",
-      "latestAt": "2026-11-28T02:10:00.000Z",
+      "latestAt": "2026-11-28T06:26:00.000Z",
       "firstSeenAt": "2026-11-28T02:02:07.667Z",
       "outlets": 1,
       "outletNames": [
@@ -1695,6 +1698,22 @@
       "score": 0.99
     },
     {
+      "id": "6247c387eb7d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "HACKERS BREACH INTELLIGENCE SYSTEM USED BY CIA AND ODNI | Techlife News - technology",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcktJbGVhcEN2NGxvdWx2dXpmSHhWZ25iSEc1bUp2aXpZVGxmaDlZMzlMUExGSlBPR0JLTXJNNjNrN0hTSzVEUzdsb1liM3V3bWNWNmhueE1EcVdmSDRsZWpHVFhMd1AxYTJEVFp1dFpiZ1pHQmh6R1JBZ2J4SjFzcGpidkN5cFVlVjYtcnVvZnh6XzlCLXB1M2JtQnpWRVZraldGM1lXcUpwaDdqYXc1UnFR?oc=5",
+      "source": "Magzter",
+      "publishedAt": "2026-11-28T08:26:56.000Z",
+      "latestAt": "2026-11-28T08:26:56.000Z",
+      "firstSeenAt": "2026-11-28T09:33:18.208Z",
+      "outlets": 1,
+      "outletNames": [
+        "Magzter"
+      ],
+      "score": 0.98
+    },
+    {
       "id": "61046e1cae25",
       "cat": "hacks",
       "kind": "news",
@@ -1885,22 +1904,6 @@
         "Tech Times"
       ],
       "score": 0.86
-    },
-    {
-      "id": "afdb2f9c94f4",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta tech outage delays over 1,600 flights ahead of Thanksgiving",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNVFZrZzZEdjBodjh5b21Uai0wUUszVUdBSUY5eVJSbnEyeFFoQ3MyOWFVNFRiOXN3YXVnWHRhLWRfQmNadVBxMDVHeW9LMWMxdk8ycjVaNEpWdWFZM0dURUNmNjQ2Y3pJa0w4R05rYmJZSlJVNk13V0NjeUFUUm55dWszUnN5TjJXOEtWTEY0eVlHME54S2FJV1BB?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-28T00:32:37.000Z",
-      "latestAt": "2026-11-28T00:32:37.000Z",
-      "firstSeenAt": "2026-11-28T09:18:18.705Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 0.85
     }
   ]
 }
