@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T08:18:08.550Z",
+  "buildTime": "2026-11-28T08:33:20.128Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 03:18 ET",
+  "etStamp": "2026-11-28 03:33 ET",
   "score": 62,
   "fired": [
     "flights",
@@ -42,13 +42,13 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1222,
-  "lastSuccessAt": "2026-11-28T08:18:08.550Z",
+  "headlinesRead": 1219,
+  "lastSuccessAt": "2026-11-28T08:33:20.128Z",
   "rollingFallback": false,
   "cats": {
+    "hacks": 46,
     "internet": 8,
-    "hacks": 45,
-    "grid": 16,
+    "grid": 15,
     "germs": 6,
     "earth": 4,
     "animals": 3,
@@ -175,83 +175,131 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 922,
+      "count": 928,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     },
     "bing": {
       "ok": true,
-      "count": 264,
+      "count": 257,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     },
     "status": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:18:08.550Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 30,
+      "count": 29,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z"
+      "lastOkAt": "2026-11-28T08:33:20.128Z"
     }
   },
   "stories": [
+    {
+      "id": "370273aaaa1d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach Air Force's flagship cloud computing platform, report says",
+      "url": "https://www.yahoo.com/news/us/articles/hackers-breach-air-forces-flagship-182903463.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T10:29:00.000Z",
+      "latestAt": "2026-11-28T08:03:45.000Z",
+      "firstSeenAt": "2026-11-28T08:33:20.128Z",
+      "outlets": 32,
+      "outletNames": [
+        "Yahoo",
+        "FOX 5 New York",
+        "Reuters",
+        "The Daily News | Texas' Oldest Newspaper",
+        "CNA",
+        "Seeking Alpha",
+        "Yahoo Finance",
+        "The Independent",
+        "The Next Web",
+        "Bloomberg.com",
+        "news.sky.com",
+        "The Hill",
+        "Floridian Press",
+        "Washington Times",
+        "Beinsure",
+        "NBC News",
+        "UNITED24 Media",
+        "Stars and Stripes",
+        "KBTX News 3",
+        "NewsCord",
+        "The Mary Sue",
+        "Sahara Reporters",
+        "MyNorthwest.com",
+        "The Information",
+        "The American Bazaar",
+        "New York Post",
+        "Military.com",
+        "Fox News",
+        "WV News",
+        "LiveNOW from FOX",
+        "CBS News on MSN",
+        "WRAL"
+      ],
+      "score": 3.79
+    },
     {
       "id": "sig:status:cloudflare:2026-11-28",
       "cat": "internet",
@@ -328,24 +376,6 @@
       "trending": 500,
       "trendTerm": "united fidelity bank",
       "score": 2.3
-    },
-    {
-      "id": "7aee287f69f6",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "BREAKING: Hackers breach Air Force computer system, Reuters reports",
-      "url": "https://www.yahoo.com/news/videos/breaking-hackers-breach-air-force-180534693.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T10:06:00.000Z",
-      "latestAt": "2026-11-27T18:50:00.000Z",
-      "firstSeenAt": "2026-11-27T18:46:00.444Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "MS NOW",
-        "Modern Ghana"
-      ],
-      "score": 2.21
     },
     {
       "id": "dc51c3bd3429",
@@ -485,6 +515,24 @@
       "score": 1.4
     },
     {
+      "id": "7aee287f69f6",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "BREAKING: Hackers breach Air Force computer system, Reuters reports",
+      "url": "https://www.yahoo.com/news/videos/breaking-hackers-breach-air-force-180534693.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T10:06:00.000Z",
+      "latestAt": "2026-11-27T18:50:00.000Z",
+      "firstSeenAt": "2026-11-27T18:46:00.444Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "MS NOW",
+        "Modern Ghana"
+      ],
+      "score": 2.21
+    },
+    {
       "id": "842eb3255e23",
       "cat": "hacks",
       "kind": "news",
@@ -518,24 +566,6 @@
         "AOL"
       ],
       "score": 2.02
-    },
-    {
-      "id": "07b0d2e8ee89",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cook County online court portal down amid ‘cybersecurity incident’",
-      "url": "https://www.chicagotribune.com/2026/11/27/cook-county-circuit-court-online-portal-outage-cybersecurity-incident/",
-      "source": "Chicago Tribune",
-      "publishedAt": "2026-11-27T14:29:00.000Z",
-      "latestAt": "2026-11-28T04:00:03.000Z",
-      "firstSeenAt": "2026-11-28T04:17:34.288Z",
-      "outlets": 3,
-      "outletNames": [
-        "Chicago Tribune",
-        "ABC7 Chicago",
-        "Yahoo"
-      ],
-      "score": 1.99
     },
     {
       "id": "3901d5d9a26c",
@@ -654,22 +684,6 @@
       "score": 1.4
     },
     {
-      "id": "ffc9aee4c5fd",
-      "cat": "markets",
-      "kind": "news",
-      "title": "India's top AI stocks plunge as global selloff erases massive gains",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQanpJUllTMC1QVmljNDJCSXdJeUFZejlFSWlzZTZCNnpTaUF1R0gtWmVOTGZPZkE2UGF3VzRmNWxoZzQ4NnFKMDRWLUxRUUxpVDhOY3M3bG9JdEtwZEpuSDhIbEwwNEM4Zk4ySDd0ODhHYS0walliTVhNemx1NlNfT2hkNXhXdHVRTXFvQnN5azJtNktOclVQeg?oc=5",
-      "source": "FlipItMoney",
-      "publishedAt": "2026-11-27T08:23:18.000Z",
-      "latestAt": "2026-11-27T08:23:18.000Z",
-      "firstSeenAt": "2026-11-27T08:29:21.793Z",
-      "outlets": 1,
-      "outletNames": [
-        "FlipItMoney"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "06b071e56695",
       "cat": "weather",
       "kind": "news",
@@ -780,6 +794,40 @@
         "Avi-Go"
       ],
       "score": 1.31
+    },
+    {
+      "id": "9c9946d9d13f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft works to restore global Outlook outage affecting Teams and Copilot",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObFZzaU8tbVRBMmRpb0V5bUlKcmc1VWstampqcjRwbkUtX2ZCR2NwRGtpZXh3RkVPd2RZUUEtdlkzOHlqR2h5c1F4Ymx2R2x6SExiZjVaUm1qVHRkaG5kTVJMYWFsVHhRSUtKM2ttb25hbmlhb29YTVE1Zl81ZlNucGFySktmWEpNaWJlczFlbk50Vm96M25lTEJkc1p6d3dWQndiXzVuWS1aZ0psY3phMkZudVhpYUNINHpJ?oc=5",
+      "source": "IOL",
+      "publishedAt": "2026-11-27T10:43:40.000Z",
+      "latestAt": "2026-11-27T19:01:14.000Z",
+      "firstSeenAt": "2026-11-27T19:31:11.845Z",
+      "outlets": 1,
+      "outletNames": [
+        "IOL"
+      ],
+      "score": 1.19
+    },
+    {
+      "id": "07b0d2e8ee89",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cook County online court portal down amid ‘cybersecurity incident’",
+      "url": "https://www.chicagotribune.com/2026/11/27/cook-county-circuit-court-online-portal-outage-cybersecurity-incident/",
+      "source": "Chicago Tribune",
+      "publishedAt": "2026-11-27T14:29:00.000Z",
+      "latestAt": "2026-11-28T04:00:03.000Z",
+      "firstSeenAt": "2026-11-28T04:17:34.288Z",
+      "outlets": 3,
+      "outletNames": [
+        "Chicago Tribune",
+        "ABC7 Chicago",
+        "Yahoo"
+      ],
+      "score": 1.99
     },
     {
       "id": "cd1b0d124270",
@@ -1197,22 +1245,6 @@
         "Daily Mail"
       ],
       "score": 1.21
-    },
-    {
-      "id": "9c9946d9d13f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft works to restore global Outlook outage affecting Teams and Copilot",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObFZzaU8tbVRBMmRpb0V5bUlKcmc1VWstampqcjRwbkUtX2ZCR2NwRGtpZXh3RkVPd2RZUUEtdlkzOHlqR2h5c1F4Ymx2R2x6SExiZjVaUm1qVHRkaG5kTVJMYWFsVHhRSUtKM2ttb25hbmlhb29YTVE1Zl81ZlNucGFySktmWEpNaWJlczFlbk50Vm96M25lTEJkc1p6d3dWQndiXzVuWS1aZ0psY3phMkZudVhpYUNINHpJ?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-27T10:43:40.000Z",
-      "latestAt": "2026-11-27T19:01:14.000Z",
-      "firstSeenAt": "2026-11-27T19:31:11.845Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 1.19
     },
     {
       "id": "3ea15c7fdfab",
@@ -1681,6 +1713,22 @@
       "score": 1
     },
     {
+      "id": "01c273adf2a3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Now Target Mechanics, Repair Shops With Infected Vehicle Diagnostic Software",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOM21MWFdyM1NWYlJfV1J2eHRwUlYyOEtkNnJ6ekxBU1psbWpUWExmRkl1dzhKZzNKbUUtbWFLX2tIQlV4YjJoeW0wcllEYzVXQVp4cmdkWERFbV9vaXlaX2JjZEg4NnlTTUZkTEwtOERGeHNZUEtBWnJ5b2J5b3QyYmlxdGhMRUs2STUyQXpBZXBOMm11UFVCOVhtSEYzV2JjWHg2N0VzWWNQRkFDX05sMnl4TlRac2RWeEFmUUN0QnQ5bWwxRW5tZ1pn?oc=5",
+      "source": "autoevolution",
+      "publishedAt": "2026-11-28T07:59:52.000Z",
+      "latestAt": "2026-11-28T07:59:52.000Z",
+      "firstSeenAt": "2026-11-28T08:33:20.128Z",
+      "outlets": 1,
+      "outletNames": [
+        "autoevolution"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "91153e811350",
       "cat": "hacks",
       "kind": "news",
@@ -1761,38 +1809,6 @@
       "score": 0.99
     },
     {
-      "id": "5d7165dfa909",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage: Sabah Electricity boosts staffing at 24-hour call centre",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY3JXZjdQWVFCczF1R0lfMlhhd0pfUHduWEFVR09CTVpPVlBMQ1hmQXJ2bmZWeXJ2YU5oQzMzNWZUX2dWczZlbW44MjZBMERvSURPeGlyZ2ZWa3hQLVc3S0g4UTlRZ1N3Q1BOQ1YwMFZhNWdnSlhqUkNvTnU1SUh6Y2dvMEZjZTJFVzVQSDVnOVBIU1RCV0hhbTF3UDNZN0JGZ3ZnSDE0WElOUHBER0hQZFphWS1JQzIw?oc=5",
-      "source": "The Malaysian Reserve",
-      "publishedAt": "2026-11-28T06:41:40.000Z",
-      "latestAt": "2026-11-28T06:41:40.000Z",
-      "firstSeenAt": "2026-11-28T08:03:05.957Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Malaysian Reserve"
-      ],
-      "score": 0.98
-    },
-    {
-      "id": "59daa8fd9202",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "eCitizen hackers begin leaking data of 32 million Kenyans on dark web",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2JlclAwZ21kU3YwNnhiOGNtd2JPSkJCNldEVllfSVhjbC1vWUZrelhPcjdXMWVWYzlWd1FQV0lCanpCYldyN3Z3Y0d3d0tjcG04N0U1cjZqeE4zdlc1QXVTam1mOTBzZlEzTzBwQlMta3NaUG5TeDNubllIRGtZU241cjBrbGFOYmkxU0txa05qcm9hOVk0RGwzQXJYRHJZRjhYWmY1X0RaMHRlMG5N?oc=5",
-      "source": "Daily Nation",
-      "publishedAt": "2026-11-28T03:00:00.000Z",
-      "latestAt": "2026-11-28T03:00:00.000Z",
-      "firstSeenAt": "2026-11-28T04:47:41.715Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Nation"
-      ],
-      "score": 0.97
-    },
-    {
       "id": "05bc9b40c07c",
       "cat": "animals",
       "kind": "news",
@@ -1807,6 +1823,22 @@
         "CTV News"
       ],
       "score": 0.97
+    },
+    {
+      "id": "40ef8163be8b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "AI Stocks Plunge as Wall Street's Tech Sell-Off Deepens - The Financial Exchange Show",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcmdnX3B5RDFHYjU0U2V5LW5oOFZ0N0hwaHAxUERTczlFc3pFTlBXbDZEMG5SVEpZcEZLSGpnZkNlU1RBalVWclJrcE41T1JHQVFDa0hGS2czRWpXLVdhWkw5RXRaajJZOTZNcjB0dERzU1c0S2FFR3BoZzRrbHI5RXFwaEcyRnBmNm9rRkhhbmh6RVhrSUc1dTJOYkNNWXV6aGhqbmdObmV6akV6T1E?oc=5",
+      "source": "iHeart",
+      "publishedAt": "2026-11-28T04:47:40.000Z",
+      "latestAt": "2026-11-28T04:47:40.000Z",
+      "firstSeenAt": "2026-11-28T08:33:20.128Z",
+      "outlets": 1,
+      "outletNames": [
+        "iHeart"
+      ],
+      "score": 0.94
     },
     {
       "id": "c493bff86dc3",
