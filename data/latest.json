@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T09:03:13.930Z",
+  "buildTime": "2026-11-28T09:18:18.705Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 04:03 ET",
+  "etStamp": "2026-11-28 04:18 ET",
   "score": 62,
   "fired": [
-    "flights",
     "hacks",
     "internet",
+    "space",
     "earth",
     "markets",
     "grid",
@@ -42,21 +42,21 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1129,
-  "lastSuccessAt": "2026-11-28T09:03:13.930Z",
+  "headlinesRead": 1222,
+  "lastSuccessAt": "2026-11-28T09:18:18.705Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 46,
     "internet": 7,
     "grid": 16,
+    "hacks": 47,
     "germs": 6,
     "earth": 4,
+    "space": 2,
     "animals": 3,
     "flights": 4,
-    "weather": 6,
+    "weather": 5,
     "markets": 4,
-    "sun": 2,
-    "space": 2
+    "sun": 2
   },
   "vital": {
     "quake": {
@@ -175,20 +175,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 902,
+      "count": 926,
       "error": null,
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "bing": {
       "ok": true,
-      "count": 195,
-      "error": "6 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "count": 264,
+      "error": null,
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "gdelt": {
       "ok": false,
@@ -200,106 +200,58 @@
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "status": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T08:18:08.550Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "trends": {
       "ok": true,
       "count": 27,
       "error": null,
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T09:03:13.930Z"
+      "lastOkAt": "2026-11-28T09:18:18.705Z"
     }
   },
   "stories": [
-    {
-      "id": "370273aaaa1d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers breach Air Force's flagship cloud computing platform, report says",
-      "url": "https://www.yahoo.com/news/us/articles/hackers-breach-air-forces-flagship-182903463.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T09:44:00.000Z",
-      "latestAt": "2026-11-28T08:45:47.000Z",
-      "firstSeenAt": "2026-11-28T08:33:20.128Z",
-      "outlets": 32,
-      "outletNames": [
-        "Yahoo",
-        "FOX 5 New York",
-        "Reuters",
-        "The Daily News | Texas' Oldest Newspaper",
-        "CNA",
-        "Seeking Alpha",
-        "Yahoo Finance",
-        "The Independent",
-        "The Next Web",
-        "Bloomberg.com",
-        "news.sky.com",
-        "The Hill",
-        "Floridian Press",
-        "Washington Times",
-        "Beinsure",
-        "NBC News",
-        "UNITED24 Media",
-        "Stars and Stripes",
-        "KBTX News 3",
-        "NewsCord",
-        "The Mary Sue",
-        "Sahara Reporters",
-        "MyNorthwest.com",
-        "The Information",
-        "The American Bazaar",
-        "New York Post",
-        "Military.com",
-        "Fox News",
-        "WV News",
-        "LiveNOW from FOX",
-        "CBS News on MSN",
-        "WRAL"
-      ],
-      "score": 3.72
-    },
     {
       "id": "sig:status:cloudflare:2026-11-28",
       "cat": "internet",
@@ -376,6 +328,24 @@
         "Modern Ghana"
       ],
       "score": 2.21
+    },
+    {
+      "id": "842eb3255e23",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "American uranium plant forced offline following cyberattack — Peninsula Energy shuts down mining operation to investigate incident",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/american-uranium-plant-forced-offline-190500003.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-27T11:05:00.000Z",
+      "latestAt": "2026-11-27T19:05:00.000Z",
+      "firstSeenAt": "2026-11-27T21:46:34.962Z",
+      "outlets": 3,
+      "outletNames": [
+        "YAHOO!",
+        "TechRadar",
+        "Yahoo Tech"
+      ],
+      "score": 2.12
     },
     {
       "id": "dc51c3bd3429",
@@ -482,6 +452,23 @@
       "score": 1.78
     },
     {
+      "id": "9e5ee9a72be9",
+      "cat": "space",
+      "kind": "news",
+      "title": "Hera reveals stadium-sized asteroid crater from spacecraft impact",
+      "url": "https://phys.org/news/2026-11-hera-reveals-stadium-sized-asteroid.html",
+      "source": "Phys.org",
+      "publishedAt": "2026-11-27T12:20:00.000Z",
+      "latestAt": "2026-11-28T06:51:43.000Z",
+      "firstSeenAt": "2026-11-27T20:46:26.142Z",
+      "outlets": 2,
+      "outletNames": [
+        "Phys.org",
+        "Tech Explorist"
+      ],
+      "score": 1.72
+    },
+    {
       "id": "c42ed7992d88",
       "cat": "animals",
       "kind": "news",
@@ -497,40 +484,6 @@
         "Yahoo"
       ],
       "score": 1.61
-    },
-    {
-      "id": "f61dc0909598",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Stranded Bismarck Nurse Buys Bronco After Nationwide FAA Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRFJaRHBCX2UtYlRGcnM1MmJiV2tNX1hjckhaMkhkRHZ1NmJXTmZ2VWloQnR0aTFRTEk4T2NsMjYwOHpzUURaQjQxa0hTRVZZbTRKckhzUG55WXVTVzQyX1N0SUI1M0FCVWcyam9ubzRkR0NaOHdSTU40QjQ0WWNhUExQM3VzanVEVnR4V3hnYURSaHF2Q0wwZjhNZk1jZw?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-28T00:12:37.000Z",
-      "latestAt": "2026-11-28T00:12:37.000Z",
-      "firstSeenAt": "2026-11-28T00:16:50.918Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "842eb3255e23",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "American uranium plant forced offline following cyberattack — Peninsula Energy shuts down mining operation to investigate incident",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/american-uranium-plant-forced-offline-190500003.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-27T11:05:00.000Z",
-      "latestAt": "2026-11-27T19:05:00.000Z",
-      "firstSeenAt": "2026-11-27T21:46:34.962Z",
-      "outlets": 3,
-      "outletNames": [
-        "YAHOO!",
-        "TechRadar",
-        "Yahoo Tech"
-      ],
-      "score": 2.12
     },
     {
       "id": "07b0d2e8ee89",
@@ -564,6 +517,23 @@
       "outletNames": [
         "NBC News",
         "Modern Ghana"
+      ],
+      "score": 1.99
+    },
+    {
+      "id": "5f2072288703",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "North Korean Hackers Use Deepfake Meetings as Malware Traps",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPc0hCVnYzVXE5MTBIS3R3RUlVYktVZ1R5S0ttZFpGclpUUkZKeXR0a09hdzFZU2VESjI0eFkteWFFTHZ1SXdSUGgtYzV6Sk9qU1h4ZVZoZTlIeXk5NTd2UGhybjdmWlpHWWhUM09IUjdmaW05d0VlZ19MbjVSUlQ1OGlYWkh3a0dSWGNhUXhKMFN4dS1salRQcVh5d3hBeWdq?oc=5",
+      "source": "GovInfoSecurity",
+      "publishedAt": "2026-11-27T09:49:05.000Z",
+      "latestAt": "2026-11-27T11:04:07.000Z",
+      "firstSeenAt": "2026-11-27T09:59:32.954Z",
+      "outlets": 2,
+      "outletNames": [
+        "GovInfoSecurity",
+        "BankInfoSecurity"
       ],
       "score": 1.99
     },
@@ -636,6 +606,22 @@
       "score": 1.43
     },
     {
+      "id": "f61dc0909598",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Stranded Bismarck Nurse Buys Bronco After Nationwide FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRFJaRHBCX2UtYlRGcnM1MmJiV2tNX1hjckhaMkhkRHZ1NmJXTmZ2VWloQnR0aTFRTEk4T2NsMjYwOHpzUURaQjQxa0hTRVZZbTRKckhzUG55WXVTVzQyX1N0SUI1M0FCVWcyam9ubzRkR0NaOHdSTU40QjQ0WWNhUExQM3VzanVEVnR4V3hnYURSaHF2Q0wwZjhNZk1jZw?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-28T00:12:37.000Z",
+      "latestAt": "2026-11-28T00:12:37.000Z",
+      "firstSeenAt": "2026-11-28T00:16:50.918Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "9749ab7c58b2",
       "cat": "flights",
       "kind": "news",
@@ -664,22 +650,6 @@
       "outlets": 1,
       "outletNames": [
         "Newser"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "68e4328150e8",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Global Temperatures Hit New Record After 6 Consecutive Days of Record Heat",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9VcVB4a1hHcWYwTzZtT0dTRWVlbFB2VnpQeDBzVnRBak54emhYNXdOZ2ozWlRyYkwzMFlLQWhiaUpXWmJORUY3d3lnazQ1d0k?oc=5",
-      "source": "MTV Lebanon",
-      "publishedAt": "2026-11-27T09:05:33.000Z",
-      "latestAt": "2026-11-27T09:05:33.000Z",
-      "firstSeenAt": "2026-11-27T09:14:28.601Z",
-      "outlets": 1,
-      "outletNames": [
-        "MTV Lebanon"
       ],
       "score": 1.4
     },
@@ -764,22 +734,6 @@
       "score": 1.38
     },
     {
-      "id": "167bbdee7370",
-      "cat": "markets",
-      "kind": "news",
-      "title": "FTSE 100 Nears Record High as Global Stocks Recover From Tech Selloff",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNekdRTXRVdkg5RVlrVEhDc1Z4d0hzNWpaZ3NsS2l4M1VkOGlVNFVsaW1lN3I2dXZWMl9tRnlJT1k5Q2VDQnAtOEtkM1duUU5fbUdkTFlqOUFheERfTEMxN3ZTZ0d2R2F5dUJxd29RdWdhMTNURGdyNTYzYmE3emZvd09UeVhVajBJSVNaZFMxeFp3RnJiMVVmMU5oVl82YTJGMC04aDVsWDZjeWg5SmZuU2taQQ?oc=5",
-      "source": "Investing.com UK",
-      "publishedAt": "2026-11-27T09:06:00.000Z",
-      "latestAt": "2026-11-27T09:06:00.000Z",
-      "firstSeenAt": "2026-11-27T10:44:42.019Z",
-      "outlets": 1,
-      "outletNames": [
-        "Investing.com UK"
-      ],
-      "score": 1.36
-    },
-    {
       "id": "c91ac9c26947",
       "cat": "flights",
       "kind": "news",
@@ -812,21 +766,20 @@
       "score": 1.19
     },
     {
-      "id": "5f2072288703",
-      "cat": "hacks",
+      "id": "1cb401c416ce",
+      "cat": "internet",
       "kind": "news",
-      "title": "North Korean Hackers Use Deepfake Meetings as Malware Traps",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPc0hCVnYzVXE5MTBIS3R3RUlVYktVZ1R5S0ttZFpGclpUUkZKeXR0a09hdzFZU2VESjI0eFkteWFFTHZ1SXdSUGgtYzV6Sk9qU1h4ZVZoZTlIeXk5NTd2UGhybjdmWlpHWWhUM09IUjdmaW05d0VlZ19MbjVSUlQ1OGlYWkh3a0dSWGNhUXhKMFN4dS1salRQcVh5d3hBeWdq?oc=5",
-      "source": "GovInfoSecurity",
-      "publishedAt": "2026-11-27T09:49:05.000Z",
-      "latestAt": "2026-11-27T11:04:07.000Z",
-      "firstSeenAt": "2026-11-27T09:59:32.954Z",
-      "outlets": 2,
+      "title": "Microsoft Apologises for Global Outage Affecting Millions of Customers and Partners",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSE5LWl82NVczbFVZSnhyS0ZzcDlLcmZzNGJRclJLV1NvdE5Jel95WXFPRGppNVRoSVJzQ0RGUHBJby1SS0JkbEJ3TVE1VW80SHBxNzdwamJrQVllZlMzemM4WEljbjZ5VDBCanMtd29QVnBhX19jZFotZG5kVlVXSzduUUtycGpDTUZNdFNXa1hyVXRxd3d5enFZSm9iUzU1WmNvYy0tX1N5RTBFZ0E?oc=5",
+      "source": "DD News",
+      "publishedAt": "2026-11-27T19:16:44.000Z",
+      "latestAt": "2026-11-27T19:16:44.000Z",
+      "firstSeenAt": "2026-11-28T05:02:37.492Z",
+      "outlets": 1,
       "outletNames": [
-        "GovInfoSecurity",
-        "BankInfoSecurity"
+        "DD News"
       ],
-      "score": 1.99
+      "score": 1.17
     },
     {
       "id": "27481d5961b0",
@@ -1212,22 +1165,6 @@
       "score": 1.19
     },
     {
-      "id": "1cb401c416ce",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Apologises for Global Outage Affecting Millions of Customers and Partners",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSE5LWl82NVczbFVZSnhyS0ZzcDlLcmZzNGJRclJLV1NvdE5Jel95WXFPRGppNVRoSVJzQ0RGUHBJby1SS0JkbEJ3TVE1VW80SHBxNzdwamJrQVllZlMzemM4WEljbjZ5VDBCanMtd29QVnBhX19jZFotZG5kVlVXSzduUUtycGpDTUZNdFNXa1hyVXRxd3d5enFZSm9iUzU1WmNvYy0tX1N5RTBFZ0E?oc=5",
-      "source": "DD News",
-      "publishedAt": "2026-11-27T19:16:44.000Z",
-      "latestAt": "2026-11-27T19:16:44.000Z",
-      "firstSeenAt": "2026-11-28T05:02:37.492Z",
-      "outlets": 1,
-      "outletNames": [
-        "DD News"
-      ],
-      "score": 1.17
-    },
-    {
       "id": "4a89ce93752e",
       "cat": "grid",
       "kind": "news",
@@ -1240,22 +1177,6 @@
       "outlets": 1,
       "outletNames": [
         "Herald.Wales"
-      ],
-      "score": 1.13
-    },
-    {
-      "id": "e83eae6b91d3",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Norse Atlantic Grounds All Flights as Lessors Demand Its 787s Back",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPU0lRdW9meDU3MWlzbTVSYlV0WnVMR2lZNEV0MkdYMFRSd25uWUV3am5sMHJ1NEN4WWxrN3dnTVFybUszMV9GeGNieV9ERjVDMFpZLVRNSHpYR3VTd0VqVHY3bFRJa052RjZsQ2JINGZfNWV6NXBTTlBPOTg2TTNnYTZmNDdqaFQ3TVJFb3pNWFJuYWN1a19kV2pVa3pfYWJNd2JMZnpqcw?oc=5",
-      "source": "MiGFlug",
-      "publishedAt": "2026-11-27T09:17:01.000Z",
-      "latestAt": "2026-11-27T09:18:43.000Z",
-      "firstSeenAt": "2026-11-27T20:46:26.142Z",
-      "outlets": 1,
-      "outletNames": [
-        "MiGFlug"
       ],
       "score": 1.13
     },
@@ -1646,6 +1567,38 @@
       "score": 1
     },
     {
+      "id": "53fc1eef4506",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA confirms cyberattack, hackers gain access to personal and business data",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOd0VUY1ZIblY4a1dnY3ZmUG80YVVRdm9FVU1wX0c1b3VVdGNBZWt3MDJBRlhkWmpjaTVQRkpyMkpEamEya2cyeDJwQnVIdkxrUG9wSlBhRkVZZ2dFYlgtRG5NektZU05MdGNUYXFUdjFtZDIzRHYxZUdjNFJkZDM4MEh4MjlraGFjRlJXQ0s4Mng2d0V2VkIzdVBkRnNXbF91cnFSSmppb2JVcmdfaVVkUERKZkRMSU1VNjY4alBZRQ?oc=5",
+      "source": "thepost.co.za",
+      "publishedAt": "2026-11-28T08:43:10.000Z",
+      "latestAt": "2026-11-28T08:43:10.000Z",
+      "firstSeenAt": "2026-11-28T09:18:18.705Z",
+      "outlets": 1,
+      "outletNames": [
+        "thepost.co.za"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "5b4df1932497",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Pensions and benefits services still offline amid 'strong suspicion' government department was targeted by hackers",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPazlQLTdZWmY5MmxWaFMwcHpSMEI1VUlrZGYzcUV5bnFZWUEtbGFQRkNfbzBSOEVaREp2Ykp3a0ZjejQ3X0tlMTlJZkFyLUd4Xzk0U0lIN3ZnY19ydVQwTWFpeDczd1lpRnBKd3hIWFRkWjZYZTcyT1dXZnF2WkJNcmhoSmU?oc=5",
+      "source": "LBC",
+      "publishedAt": "2026-11-28T08:35:06.000Z",
+      "latestAt": "2026-11-28T08:35:06.000Z",
+      "firstSeenAt": "2026-11-28T09:18:18.705Z",
+      "outlets": 1,
+      "outletNames": [
+        "LBC"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "01c273adf2a3",
       "cat": "hacks",
       "kind": "news",
@@ -1886,6 +1839,22 @@
       "score": 0.93
     },
     {
+      "id": "40ef8163be8b",
+      "cat": "markets",
+      "kind": "news",
+      "title": "AI Stocks Plunge as Wall Street's Tech Sell-Off Deepens - The Financial Exchange Show",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcmdnX3B5RDFHYjU0U2V5LW5oOFZ0N0hwaHAxUERTczlFc3pFTlBXbDZEMG5SVEpZcEZLSGpnZkNlU1RBalVWclJrcE41T1JHQVFDa0hGS2czRWpXLVdhWkw5RXRaajJZOTZNcjB0dERzU1c0S2FFR3BoZzRrbHI5RXFwaEcyRnBmNm9rRkhhbmh6RVhrSUc1dTJOYkNNWXV6aGhqbmdObmV6akV6T1E?oc=5",
+      "source": "iHeart",
+      "publishedAt": "2026-11-28T04:47:40.000Z",
+      "latestAt": "2026-11-28T04:47:40.000Z",
+      "firstSeenAt": "2026-11-28T09:18:18.705Z",
+      "outlets": 1,
+      "outletNames": [
+        "iHeart"
+      ],
+      "score": 0.92
+    },
+    {
       "id": "78575db2a791",
       "cat": "sun",
       "kind": "news",
@@ -1918,20 +1887,20 @@
       "score": 0.86
     },
     {
-      "id": "9e5ee9a72be9",
-      "cat": "space",
+      "id": "afdb2f9c94f4",
+      "cat": "flights",
       "kind": "news",
-      "title": "Hera reveals stadium-sized asteroid crater from spacecraft impact",
-      "url": "https://phys.org/news/2026-11-hera-reveals-stadium-sized-asteroid.html",
-      "source": "Phys.org",
-      "publishedAt": "2026-11-27T12:20:00.000Z",
-      "latestAt": "2026-11-27T12:20:00.000Z",
-      "firstSeenAt": "2026-11-27T20:46:26.142Z",
+      "title": "Delta tech outage delays over 1,600 flights ahead of Thanksgiving",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNVFZrZzZEdjBodjh5b21Uai0wUUszVUdBSUY5eVJSbnEyeFFoQ3MyOWFVNFRiOXN3YXVnWHRhLWRfQmNadVBxMDVHeW9LMWMxdk8ycjVaNEpWdWFZM0dURUNmNjQ2Y3pJa0w4R05rYmJZSlJVNk13V0NjeUFUUm55dWszUnN5TjJXOEtWTEY0eVlHME54S2FJV1BB?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-28T00:32:37.000Z",
+      "latestAt": "2026-11-28T00:32:37.000Z",
+      "firstSeenAt": "2026-11-28T09:18:18.705Z",
       "outlets": 1,
       "outletNames": [
-        "Phys.org"
+        "https://www.thetraveler.org/"
       ],
-      "score": 0.86
+      "score": 0.85
     }
   ]
 }
