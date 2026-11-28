@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T12:33:55.626Z",
+  "buildTime": "2026-11-28T12:48:49.010Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 07:33 ET",
+  "etStamp": "2026-11-28 07:48 ET",
   "score": 62,
   "fired": [
     "flights",
@@ -42,18 +42,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1178,
-  "lastSuccessAt": "2026-11-28T12:33:55.626Z",
+  "headlinesRead": 1125,
+  "lastSuccessAt": "2026-11-28T12:48:49.010Z",
   "rollingFallback": false,
   "cats": {
-    "germs": 6,
+    "germs": 7,
     "internet": 5,
-    "hacks": 43,
+    "hacks": 42,
     "grid": 20,
-    "earth": 4,
     "flights": 8,
     "weather": 4,
     "markets": 4,
+    "earth": 4,
     "animals": 2,
     "sun": 3,
     "space": 1
@@ -180,57 +180,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 893,
+      "count": 863,
       "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     },
     "bing": {
       "ok": true,
-      "count": 252,
-      "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "count": 229,
+      "error": "2 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "hn": {
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     },
     "x": {
       "ok": true,
@@ -243,13 +243,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T12:33:55.626Z"
+      "lastOkAt": "2026-11-28T12:48:49.010Z"
     }
   },
   "stories": [
@@ -263,15 +263,16 @@
       "publishedAt": "2026-11-27T22:29:00.000Z",
       "latestAt": "2026-11-28T11:37:29.000Z",
       "firstSeenAt": "2026-11-28T11:48:51.893Z",
-      "outlets": 5,
+      "outlets": 6,
       "outletNames": [
         "News 12 Long Island",
         "News12 | New Jersey",
         "News12 | Bronx",
         "News 12 The Bronx",
-        "News12 | Westchester"
+        "News12 | Westchester",
+        "Amazon S3 on MSN"
       ],
-      "score": 3.62
+      "score": 3.9
     },
     {
       "id": "sig:status:cloudflare:2026-11-28",
@@ -438,24 +439,6 @@
       "score": 1.98
     },
     {
-      "id": "9cbca09399b1",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Evidence of deepest explosive volcanic eruption found in Pacific trench",
-      "url": "https://www.japantimes.co.jp/news/2026/11/28/world/science-health/deepest-explosive-volcanic-eruption/",
-      "source": "The Japan Times",
-      "publishedAt": "2026-11-27T16:00:00.000Z",
-      "latestAt": "2026-11-27T19:48:00.000Z",
-      "firstSeenAt": "2026-11-28T07:48:04.390Z",
-      "outlets": 3,
-      "outletNames": [
-        "The Japan Times",
-        "The Straits Times",
-        "FBC News"
-      ],
-      "score": 1.9
-    },
-    {
       "id": "9b4619b62eed",
       "cat": "flights",
       "kind": "news",
@@ -489,6 +472,22 @@
       "score": 1.4
     },
     {
+      "id": "f61dc0909598",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Stranded Bismarck Nurse Buys Bronco After Nationwide FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRFJaRHBCX2UtYlRGcnM1MmJiV2tNX1hjckhaMkhkRHZ1NmJXTmZ2VWloQnR0aTFRTEk4T2NsMjYwOHpzUURaQjQxa0hTRVZZbTRKckhzUG55WXVTVzQyX1N0SUI1M0FCVWcyam9ubzRkR0NaOHdSTU40QjQ0WWNhUExQM3VzanVEVnR4V3hnYURSaHF2Q0wwZjhNZk1jZw?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-28T00:12:37.000Z",
+      "latestAt": "2026-11-28T00:12:37.000Z",
+      "firstSeenAt": "2026-11-28T00:16:50.918Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "71c66b8c664d",
       "cat": "hacks",
       "kind": "news",
@@ -508,24 +507,6 @@
       "score": 2.1
     },
     {
-      "id": "07b0d2e8ee89",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cook County online court portal down amid ‘cybersecurity incident’",
-      "url": "https://www.chicagotribune.com/2026/11/27/cook-county-circuit-court-online-portal-outage-cybersecurity-incident/",
-      "source": "Chicago Tribune",
-      "publishedAt": "2026-11-27T14:29:00.000Z",
-      "latestAt": "2026-11-28T04:00:03.000Z",
-      "firstSeenAt": "2026-11-28T04:17:34.288Z",
-      "outlets": 3,
-      "outletNames": [
-        "Chicago Tribune",
-        "ABC7 Chicago",
-        "Yahoo"
-      ],
-      "score": 1.99
-    },
-    {
       "id": "27481d5961b0",
       "cat": "hacks",
       "kind": "news",
@@ -541,6 +522,23 @@
         "Seeking Alpha"
       ],
       "score": 1.96
+    },
+    {
+      "id": "5cc3e5f07823",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Who's to blame for tech outages? Clue: It's not AI or hackers",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWS1mX1dGRTZhVXhvZXpRVGFuMUpybXh1eE5qNEU1SEItTXdUbHJPVUdpSEhYM1ItMFVrbGxkVXlmUzFaRlh1N3AtbVd0Ukw4SkZCQ0JUODVLZl9Dclpoem9ZYnBaZ1VNRjNuMGI1bll3eHc5X3ZSN09GRWRwNjd4SkJLZ1RSbDJWVmVLME9Sa0U5X0ZlM1NWUU1OR2wwUnJYdmhuU3VBMDNxX2l0UDVqVFQwSWVZclhvMGNBUjI4RlUtRHU3UFg2VXoydVQxbTFhbUtrekd3T28?oc=5",
+      "source": "Fairbanks Daily News-Miner",
+      "publishedAt": "2026-11-27T15:00:00.000Z",
+      "latestAt": "2026-11-27T15:48:37.000Z",
+      "firstSeenAt": "2026-11-27T17:45:55.819Z",
+      "outlets": 2,
+      "outletNames": [
+        "Fairbanks Daily News-Miner",
+        "Yakima Herald-Republic"
+      ],
+      "score": 1.91
     },
     {
       "id": "12c5129975aa",
@@ -592,22 +590,6 @@
         "KSDK"
       ],
       "score": 1.69
-    },
-    {
-      "id": "f61dc0909598",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Stranded Bismarck Nurse Buys Bronco After Nationwide FAA Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRFJaRHBCX2UtYlRGcnM1MmJiV2tNX1hjckhaMkhkRHZ1NmJXTmZ2VWloQnR0aTFRTEk4T2NsMjYwOHpzUURaQjQxa0hTRVZZbTRKckhzUG55WXVTVzQyX1N0SUI1M0FCVWcyam9ubzRkR0NaOHdSTU40QjQ0WWNhUExQM3VzanVEVnR4V3hnYURSaHF2Q0wwZjhNZk1jZw?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-28T00:12:37.000Z",
-      "latestAt": "2026-11-28T00:12:37.000Z",
-      "firstSeenAt": "2026-11-28T00:16:50.918Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.4
     },
     {
       "id": "9749ab7c58b2",
@@ -786,21 +768,20 @@
       "score": 1
     },
     {
-      "id": "5cc3e5f07823",
-      "cat": "hacks",
+      "id": "8ab1f28394c6",
+      "cat": "internet",
       "kind": "news",
-      "title": "Who's to blame for tech outages? Clue: It's not AI or hackers",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWS1mX1dGRTZhVXhvZXpRVGFuMUpybXh1eE5qNEU1SEItTXdUbHJPVUdpSEhYM1ItMFVrbGxkVXlmUzFaRlh1N3AtbVd0Ukw4SkZCQ0JUODVLZl9Dclpoem9ZYnBaZ1VNRjNuMGI1bll3eHc5X3ZSN09GRWRwNjd4SkJLZ1RSbDJWVmVLME9Sa0U5X0ZlM1NWUU1OR2wwUnJYdmhuU3VBMDNxX2l0UDVqVFQwSWVZclhvMGNBUjI4RlUtRHU3UFg2VXoydVQxbTFhbUtrekd3T28?oc=5",
-      "source": "Fairbanks Daily News-Miner",
-      "publishedAt": "2026-11-27T15:00:00.000Z",
-      "latestAt": "2026-11-27T15:48:37.000Z",
-      "firstSeenAt": "2026-11-27T17:45:55.819Z",
-      "outlets": 2,
+      "title": "Microsoft outage hits South African businesses, government services and universities",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPendFUktGazBkcURFNFpQUjZEWnVwWWNNb1MwVkxjSFdpejVTOW13VExocHpTaTVRSmRaMnlkLTFDUzNzb2kxNm5oZUlRR185V2laWU5fYVFRbURRdExXUFVfVFBSSHRpYXBqb1NGVTVuMjlfSWRUZmx1U0hseEk0MGRrV0ZIWVU1MER2bVNOSWM2YUJhaVMtdUctdklJU20yQkRpZVIzb19OSDNqVE9uU3Vyb0JpbkcwMzZZdnJYaw?oc=5",
+      "source": "IOL",
+      "publishedAt": "2026-11-28T01:55:02.000Z",
+      "latestAt": "2026-11-28T12:36:02.000Z",
+      "firstSeenAt": "2026-11-28T02:02:07.667Z",
+      "outlets": 1,
       "outletNames": [
-        "Fairbanks Daily News-Miner",
-        "Yakima Herald-Republic"
+        "IOL"
       ],
-      "score": 1.91
+      "score": 1
     },
     {
       "id": "a3000ce6fbd2",
@@ -1133,6 +1114,22 @@
         "Digital Trends"
       ],
       "score": 1.04
+    },
+    {
+      "id": "dca9b90aac92",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hong Kong’s SmartPLAY data breach potentially exposes 90K users",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOMkxoa0VHenFySlNKQTljQXVNTnhUdTNzMWV3UEdlTWhTdzNwOW5GNnd3VzZZcnYyOS1GdllaM05lN2Vwd0UxV3NCbUdfWnl4WnlmVEtxTFVGbVNBSXR2bXFmaFd3NHo2akxCaU9TTFZIdmdRazNwcVFHdkptNmFBdjkzbXdwRGF1REFRX3ZHT01MTWM?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-28T12:45:21.000Z",
+      "latestAt": "2026-11-28T12:45:21.000Z",
+      "firstSeenAt": "2026-11-28T12:48:49.010Z",
+      "outlets": 1,
+      "outletNames": [
+        "Beinsure"
+      ],
+      "score": 1
     },
     {
       "id": "6b3f2d2a017f",
@@ -1487,22 +1484,6 @@
       "score": 1
     },
     {
-      "id": "8ab1f28394c6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft outage hits South African businesses, government services and universities",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPendFUktGazBkcURFNFpQUjZEWnVwWWNNb1MwVkxjSFdpejVTOW13VExocHpTaTVRSmRaMnlkLTFDUzNzb2kxNm5oZUlRR185V2laWU5fYVFRbURRdExXUFVfVFBSSHRpYXBqb1NGVTVuMjlfSWRUZmx1U0hseEk0MGRrV0ZIWVU1MER2bVNOSWM2YUJhaVMtdUctdklJU20yQkRpZVIzb19OSDNqVE9uU3Vyb0JpbkcwMzZZdnJYaw?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-28T01:55:02.000Z",
-      "latestAt": "2026-11-28T10:38:53.000Z",
-      "firstSeenAt": "2026-11-28T02:02:07.667Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 1
-    },
-    {
       "id": "a20822d8e9f8",
       "cat": "hacks",
       "kind": "news",
@@ -1585,6 +1566,38 @@
       "score": 1
     },
     {
+      "id": "045813433627",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Microorganisms: Avian Influenza A(H5) in Cats and Exposed Humans in Poland, 2023–2025: Findings from One Health Surveillance Investigations",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZFhNNkJXVUZ1YUVEQ25VMTl3RWxybGlQX3FYSG9IMmhNSkN0OFNET0NRZ1N0Z3lZcFFrSkxEQjJfOFFzM0hXbFFhX3BqWXdrbDJkVWR0WHk1UkdjTWdxNzBpQmdVTDF0STgyTU9qMDJ1TGpEOWJEOXlVWURWdGVwT3l1UkMzUDZF?oc=5",
+      "source": "Avian Flu Diary",
+      "publishedAt": "2026-11-28T12:29:00.000Z",
+      "latestAt": "2026-11-28T12:29:00.000Z",
+      "firstSeenAt": "2026-11-28T12:48:49.010Z",
+      "outlets": 1,
+      "outletNames": [
+        "Avian Flu Diary"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "b62015d808af",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack on telecom provider OnlineCity.io exposes SMS data across Denmark",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPTWRFQ3Qtd1pERndxTW5PS2RoeE91bkxJVUNQQmpLZlZ6NjVlN0tITUluSGgxTlpUYzIyVDI3UUdPN08ybDFZNm9JNDdVQk0zSUhtNi05bGFSMDM3UFExNlRKN19HOHZ2WDZDTGdyUl93RDdzRXU5dXUwV01sQ3NWOVdSNEZVTE04Mk80NUtWeTFUaVE2aXhLcDhNLTk1TDZDSnVHTEQ4MA?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-28T12:15:13.000Z",
+      "latestAt": "2026-11-28T12:15:13.000Z",
+      "firstSeenAt": "2026-11-28T12:48:49.010Z",
+      "outlets": 1,
+      "outletNames": [
+        "Beinsure"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "df5fad6f7c8a",
       "cat": "grid",
       "kind": "news",
@@ -1597,6 +1610,22 @@
       "outlets": 1,
       "outletNames": [
         "North Wales Live"
+      ],
+      "score": 0.99
+    },
+    {
+      "id": "f558626fcf82",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA says cyberattack against it accessed a ‘limited’ set of data",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQzlQUVpIcG9oakEtN19xbzNEdmlkVlVUcTY1ajd2UFJYTm92MTVLOEU0UWcwdXlEMmFXdFplWU0wekxGUW1abXNieWxUQTZ1Wkg0M2Z6aVREaS1pTWtKeHgyWXdmVmhhYmpJaFJiaE1OeU4xUGkyZnkzSkdYc2xjdmZWN25LeGVJMTdLRGpKM0VWSl9RVXd6NFlUdElFYlZk?oc=5",
+      "source": "Newswire",
+      "publishedAt": "2026-11-28T12:03:46.000Z",
+      "latestAt": "2026-11-28T12:03:46.000Z",
+      "firstSeenAt": "2026-11-28T12:48:49.010Z",
+      "outlets": 1,
+      "outletNames": [
+        "Newswire"
       ],
       "score": 0.99
     },
@@ -1681,22 +1710,6 @@
       "score": 0.99
     },
     {
-      "id": "53fc1eef4506",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA confirms cyberattack, hackers gain access to personal and business data",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOd0VUY1ZIblY4a1dnY3ZmUG80YVVRdm9FVU1wX0c1b3VVdGNBZWt3MDJBRlhkWmpjaTVQRkpyMkpEamEya2cyeDJwQnVIdkxrUG9wSlBhRkVZZ2dFYlgtRG5NektZU05MdGNUYXFUdjFtZDIzRHYxZUdjNFJkZDM4MEh4MjlraGFjRlJXQ0s4Mng2d0V2VkIzdVBkRnNXbF91cnFSSmppb2JVcmdfaVVkUERKZkRMSU1VNjY4alBZRQ?oc=5",
-      "source": "thepost.co.za",
-      "publishedAt": "2026-11-28T08:43:10.000Z",
-      "latestAt": "2026-11-28T08:43:10.000Z",
-      "firstSeenAt": "2026-11-28T09:18:18.705Z",
-      "outlets": 1,
-      "outletNames": [
-        "thepost.co.za"
-      ],
-      "score": 0.99
-    },
-    {
       "id": "e23c92df5fb3",
       "cat": "earth",
       "kind": "news",
@@ -1711,38 +1724,6 @@
         "Sacramento Bee"
       ],
       "score": 0.99
-    },
-    {
-      "id": "cdb230c82317",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Andorra Police Website Hacked and Image of a Pig Dressed as an Officer Displayed",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQWZRX3I0dWNjMmwtSGlJNnZiVVFmVGRYTlpPaWpudGlvQzNXekxFbHF0MVY5ZEpOSWlfdnpFNC12eTNHVDJ2bGI4anU5SXU4TXdPcGh1NVpZRXdtWHVVSUpsSzNFU2R3MzQtVjg1Q21KTXJScDMyR3psLTVDQV9NTC1qWHB3ams?oc=5",
-      "source": "La Veu Lliure",
-      "publishedAt": "2026-11-28T11:23:20.000Z",
-      "latestAt": "2026-11-28T11:23:20.000Z",
-      "firstSeenAt": "2026-11-28T12:33:55.626Z",
-      "outlets": 1,
-      "outletNames": [
-        "La Veu Lliure"
-      ],
-      "score": 0.98
-    },
-    {
-      "id": "59daa8fd9202",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "eCitizen hackers begin leaking data of 32 million Kenyans on dark web",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2JlclAwZ21kU3YwNnhiOGNtd2JPSkJCNldEVllfSVhjbC1vWUZrelhPcjdXMWVWYzlWd1FQV0lCanpCYldyN3Z3Y0d3d0tjcG04N0U1cjZqeE4zdlc1QXVTam1mOTBzZlEzTzBwQlMta3NaUG5TeDNubllIRGtZU241cjBrbGFOYmkxU0txa05qcm9hOVk0RGwzQXJYRHJZRjhYWmY1X0RaMHRlMG5N?oc=5",
-      "source": "Daily Nation",
-      "publishedAt": "2026-11-28T03:00:00.000Z",
-      "latestAt": "2026-11-28T03:00:00.000Z",
-      "firstSeenAt": "2026-11-28T04:47:41.715Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Nation"
-      ],
-      "score": 0.97
     },
     {
       "id": "05bc9b40c07c",
@@ -1887,6 +1868,22 @@
         "Tech Times"
       ],
       "score": 0.86
+    },
+    {
+      "id": "ddd458483ade",
+      "cat": "earth",
+      "kind": "news",
+      "title": "First Close-Up Look At Crater Humans Left On An Asteroid, World's Deepest Explosive Volcanic Eruption, And Much More This Week",
+      "url": "https://www.iflscience.com/first-close-up-look-at-crater-humans-left-on-an-asteroid-worlds-deepest-explosive-volcanic-eruption-and-much-more-this-week-85303",
+      "source": "IFLScience",
+      "publishedAt": "2026-11-28T04:00:00.000Z",
+      "latestAt": "2026-11-28T04:00:00.000Z",
+      "firstSeenAt": "2026-11-28T12:48:49.010Z",
+      "outlets": 1,
+      "outletNames": [
+        "IFLScience"
+      ],
+      "score": 0.85
     },
     {
       "id": "5d232c36c583",
