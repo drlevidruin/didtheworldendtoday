@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T04:02:26.891Z",
+  "buildTime": "2026-11-28T04:17:34.288Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 23:02 ET",
+  "etStamp": "2026-11-27 23:17 ET",
   "score": 60,
   "fired": [
     "flights",
@@ -38,14 +38,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1263,
-  "lastSuccessAt": "2026-11-28T04:02:26.891Z",
+  "headlinesRead": 1236,
+  "lastSuccessAt": "2026-11-28T04:17:34.288Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 40,
+    "hacks": 39,
     "grid": 19,
     "weather": 8,
-    "germs": 5,
+    "germs": 6,
     "animals": 3,
     "flights": 5,
     "markets": 4,
@@ -170,81 +170,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 955,
+      "count": 933,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "bing": {
       "ok": true,
-      "count": 272,
+      "count": 267,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T03:17:19.928Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T04:02:26.891Z"
+      "lastOkAt": "2026-11-28T04:17:34.288Z"
     }
   },
   "stories": [
@@ -1061,6 +1060,23 @@
       "score": 1.6
     },
     {
+      "id": "07b0d2e8ee89",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cook County online court portal down amid ‘cybersecurity incident’",
+      "url": "https://www.chicagotribune.com/2026/11/27/cook-county-circuit-court-online-portal-outage-cybersecurity-incident/",
+      "source": "Chicago Tribune",
+      "publishedAt": "2026-11-27T14:29:00.000Z",
+      "latestAt": "2026-11-27T16:00:00.000Z",
+      "firstSeenAt": "2026-11-28T04:17:34.288Z",
+      "outlets": 2,
+      "outletNames": [
+        "Chicago Tribune",
+        "ABC7 Chicago"
+      ],
+      "score": 1.54
+    },
+    {
       "id": "ea511356490e",
       "cat": "hacks",
       "kind": "news",
@@ -1355,22 +1371,6 @@
       "score": 1.21
     },
     {
-      "id": "64d601f90723",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Major hack hits US Air Force in latest breach",
-      "url": "https://www.msn.com/en-us/news/other/major-hack-hits-us-air-force-in-latest-breach/ar-AA2ilOEF",
-      "source": "Daily Voice on MSN",
-      "publishedAt": "2026-11-27T04:10:00.000Z",
-      "latestAt": "2026-11-27T04:10:00.000Z",
-      "firstSeenAt": "2026-11-27T12:29:56.734Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Voice on MSN"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "000d27b237cb",
       "cat": "weather",
       "kind": "news",
@@ -1469,6 +1469,22 @@
       "score": 1.12
     },
     {
+      "id": "c76487b7b064",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "United Fidelity Bank shut in biggest US bank failure in 2 years, First Citizens buys assets",
+      "url": "https://www.reuters.com/sustainability/boards-policy-regulation/united-fidelity-bank-shut-biggest-us-bank-failure-2-years-first-citizens-buys-2026-11-28/",
+      "source": "Reuters",
+      "publishedAt": "2026-11-27T16:00:00.000Z",
+      "latestAt": "2026-11-27T16:00:00.000Z",
+      "firstSeenAt": "2026-11-28T04:17:34.288Z",
+      "outlets": 1,
+      "outletNames": [
+        "Reuters"
+      ],
+      "score": 1.11
+    },
+    {
       "id": "8a575712b48a",
       "cat": "internet",
       "kind": "news",
@@ -1483,6 +1499,22 @@
         "Yorkshire Live"
       ],
       "score": 1.02
+    },
+    {
+      "id": "e398910a6e7d",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed in dairy herd",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNkpzdXcxdHRSVC1adVlzMHdBNXpZczhGeGk0aUp1aU16cnB0bE9tRnQ2S1NiaklfM1FTVFdxX2N0cmhqajRIZFRVZnZqUmZ4dF9zeXZ3OXpLbFMxVi00aGxaS3MwWG5fX2tSREtzUTZ2OS1GSjYwbjlyQTJaRWFtci1FQ250Rkkz?oc=5",
+      "source": "Sequoyah County Times",
+      "publishedAt": "2026-11-28T04:03:42.000Z",
+      "latestAt": "2026-11-28T04:03:42.000Z",
+      "firstSeenAt": "2026-11-28T04:17:34.288Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sequoyah County Times"
+      ],
+      "score": 1
     },
     {
       "id": "ea63bd206f8c",
@@ -1556,7 +1588,7 @@
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5HSWJXMFMySm5YV2U2bk91SURhU2pTRGU2ekdJUExKVkR3bFVWRnlfeUU1aExaNzQtWF9BQVhTREdwVTJ1dU9VeG1FTjA0Ty1yc21NNElwcUNnQ3pGN00yVEFjZUxmNkhxRkpDdFNn?oc=5",
       "source": "news.sbs.co.kr",
       "publishedAt": "2026-11-28T01:56:30.000Z",
-      "latestAt": "2026-11-28T01:56:30.000Z",
+      "latestAt": "2026-11-28T02:10:00.000Z",
       "firstSeenAt": "2026-11-28T02:02:07.667Z",
       "outlets": 1,
       "outletNames": [
@@ -1695,22 +1727,6 @@
       "score": 1
     },
     {
-      "id": "b77a88253fd4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Thai SEC Data Breach Exposes Personal Information of 155 Users",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1wWmswNDVuS0xBVG9GUlo0MXBhbTZkUkU2RWEwWkxEdkYzRWZlcjBHRFBreXNmNy14cXpCcHlPeEZvdkc2TkdFclRqSmJsNGJGalBkeS1JX3dqcl9Qc1NQYk1WZ0xjM05vdDM1Mjdkd21BcUk?oc=5",
-      "source": "Fintech Singapore",
-      "publishedAt": "2026-11-27T04:16:13.000Z",
-      "latestAt": "2026-11-27T04:16:13.000Z",
-      "firstSeenAt": "2026-11-27T04:28:40.522Z",
-      "outlets": 1,
-      "outletNames": [
-        "Fintech Singapore"
-      ],
-      "score": 1
-    },
-    {
       "id": "e23c92df5fb3",
       "cat": "earth",
       "kind": "news",
@@ -1759,22 +1775,6 @@
       "score": 0.99
     },
     {
-      "id": "59daa8fd9202",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "eCitizen hackers begin leaking data of 32 million Kenyans on dark web",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2JlclAwZ21kU3YwNnhiOGNtd2JPSkJCNldEVllfSVhjbC1vWUZrelhPcjdXMWVWYzlWd1FQV0lCanpCYldyN3Z3Y0d3d0tjcG04N0U1cjZqeE4zdlc1QXVTam1mOTBzZlEzTzBwQlMta3NaUG5TeDNubllIRGtZU241cjBrbGFOYmkxU0txa05qcm9hOVk0RGwzQXJYRHJZRjhYWmY1X0RaMHRlMG5N?oc=5",
-      "source": "Daily Nation",
-      "publishedAt": "2026-11-28T03:00:00.000Z",
-      "latestAt": "2026-11-28T03:00:00.000Z",
-      "firstSeenAt": "2026-11-28T04:02:26.891Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Nation"
-      ],
-      "score": 0.98
-    },
-    {
       "id": "05bc9b40c07c",
       "cat": "animals",
       "kind": "news",
@@ -1791,18 +1791,18 @@
       "score": 0.97
     },
     {
-      "id": "97eac00c3a9e",
+      "id": "0dd2e0d7c65b",
       "cat": "earth",
       "kind": "news",
-      "title": "3.9-magnitude earthquake shakes parts of San Benito, Monterey counties",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObWRoWlVHT3JWV3I0MGVGUDlWWVRXVEsxaUZqS2tTS01idlJvM3R1NmtlaTNoS0twZzBBamZoYXJXU3JtRGlhUVlfZFRQY1RwVy1ZX3R4TS1YdFFFRkNIQUdaQ1RCT3U2N05sNzRrNFpsdzZMV2lpN1h6aWZyaWd1Tm5FTWdIS3NqY3Foeg?oc=5",
-      "source": "KCRA",
-      "publishedAt": "2026-11-27T23:04:37.000Z",
-      "latestAt": "2026-11-27T23:04:37.000Z",
-      "firstSeenAt": "2026-11-28T03:32:24.379Z",
+      "title": "Earthquake rattles area close to Pinnacles, CA: 2.6 magnitude recorded on Nov. 27",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQd2M4bkNHdE1iUkN1X1NrMy1BYVlPMU9KRnl1UjRNbG1xdm56LVI2aUJCYjFvZUE1Yk52WlBsQlJid2o2aTFMOUtiV2tVVWhyaE9kaDQyUk1wM0ZuQzctd0d3Y18tOUtvb0dWbmh6QlM0cEV0NWxpWjh0MzJSRXU0Mw?oc=5",
+      "source": "Fresno Bee",
+      "publishedAt": "2026-11-28T00:04:05.000Z",
+      "latestAt": "2026-11-28T00:04:05.000Z",
+      "firstSeenAt": "2026-11-28T04:17:34.288Z",
       "outlets": 1,
       "outletNames": [
-        "KCRA"
+        "Fresno Bee"
       ],
       "score": 0.93
     },
