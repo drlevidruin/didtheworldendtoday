@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T05:02:37.492Z",
+  "buildTime": "2026-11-28T05:17:37.510Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 00:02 ET",
+  "etStamp": "2026-11-28 00:17 ET",
   "score": 54,
   "fired": [
     "flights",
@@ -36,18 +36,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1280,
-  "lastSuccessAt": "2026-11-28T05:02:37.492Z",
+  "headlinesRead": 1200,
+  "lastSuccessAt": "2026-11-28T05:17:37.510Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 40,
-    "grid": 17,
+    "grid": 18,
     "weather": 9,
     "germs": 6,
     "animals": 3,
     "flights": 5,
     "markets": 4,
-    "internet": 7,
+    "internet": 6,
     "earth": 4,
     "sun": 2,
     "space": 2,
@@ -168,20 +168,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 977,
+      "count": 916,
       "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "bing": {
       "ok": true,
-      "count": 267,
-      "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "count": 248,
+      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "gdelt": {
       "ok": false,
@@ -193,56 +193,55 @@
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T04:17:34.288Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T05:02:37.492Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z"
     }
   },
   "stories": [
@@ -823,6 +822,25 @@
       "score": 1.99
     },
     {
+      "id": "88306e1871e4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "South Korea Post confirms data leak affecting at least 113,855 customers — Korea Herald",
+      "url": "https://ua.news/en/dovkolo-svitu/poshta-pivdennoyi-koreyi-pidtverdila-vitik-danikh-shchonaimenshe-113-855-kliientiv-korea-herald",
+      "source": "UA.NEWS",
+      "publishedAt": "2026-11-27T06:16:00.000Z",
+      "latestAt": "2026-11-28T04:24:11.000Z",
+      "firstSeenAt": "2026-11-28T02:32:11.542Z",
+      "outlets": 4,
+      "outletNames": [
+        "UA.NEWS",
+        "The Korea Herald",
+        "MLQ.ai",
+        "The Straits Times"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "939c93fd203d",
       "cat": "hacks",
       "kind": "news",
@@ -959,24 +977,6 @@
       "score": 1.71
     },
     {
-      "id": "88306e1871e4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "South Korea Post confirms data leak affecting at least 113,855 customers — Korea Herald",
-      "url": "https://ua.news/en/dovkolo-svitu/poshta-pivdennoyi-koreyi-pidtverdila-vitik-danikh-shchonaimenshe-113-855-kliientiv-korea-herald",
-      "source": "UA.NEWS",
-      "publishedAt": "2026-11-27T06:16:00.000Z",
-      "latestAt": "2026-11-28T04:24:11.000Z",
-      "firstSeenAt": "2026-11-28T02:32:11.542Z",
-      "outlets": 3,
-      "outletNames": [
-        "UA.NEWS",
-        "The Korea Herald",
-        "MLQ.ai"
-      ],
-      "score": 1.71
-    },
-    {
       "id": "0920a9418e5a",
       "cat": "hacks",
       "kind": "news",
@@ -1094,6 +1094,23 @@
         "Asbury Park Press"
       ],
       "score": 1.6
+    },
+    {
+      "id": "48ee284342e5",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage leaves some DMV residents in the dark after Thanksgiving storm",
+      "url": "https://www.yahoo.com/news/weather-news/articles/power-outage-leaves-dmv-residents-042217964.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T16:00:00.000Z",
+      "latestAt": "2026-11-28T04:22:00.000Z",
+      "firstSeenAt": "2026-11-28T05:17:37.510Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "WUSA9"
+      ],
+      "score": 1.56
     },
     {
       "id": "ea511356490e",
@@ -1552,6 +1569,22 @@
       "score": 1.02
     },
     {
+      "id": "967703851535",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SAP investigates reported cyberattack, source code tampering",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUU5xRllVbGdBVk9ybUpkZHVkd2p3OWtBM1RDZ1pCdVB0Nm00dHNhNEFpWmo3b2hLeGxYVEVmdTRFSHd3bm9OV1FNaWFSMGFkdjlNTHg3eW1OR0xaWlJ6WFNnRUZ1bXR1azBIbFg3T01FektKaU9fNG1ybU1iQWNuT1poTTkxVnZCZG84YmxGcWYwY0phNEp3SkQ2VktuWjBLenpvNE1uWFZiblZx?oc=5",
+      "source": "TechGig",
+      "publishedAt": "2026-11-28T05:03:45.000Z",
+      "latestAt": "2026-11-28T05:03:45.000Z",
+      "firstSeenAt": "2026-11-28T05:17:37.510Z",
+      "outlets": 1,
+      "outletNames": [
+        "TechGig"
+      ],
+      "score": 1
+    },
+    {
       "id": "9ae591231e22",
       "cat": "hacks",
       "kind": "news",
@@ -1660,38 +1693,6 @@
       "outlets": 1,
       "outletNames": [
         "news.sbs.co.kr"
-      ],
-      "score": 1
-    },
-    {
-      "id": "8ab1f28394c6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft outage hits South African businesses, government services and universities",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPendFUktGazBkcURFNFpQUjZEWnVwWWNNb1MwVkxjSFdpejVTOW13VExocHpTaTVRSmRaMnlkLTFDUzNzb2kxNm5oZUlRR185V2laWU5fYVFRbURRdExXUFVfVFBSSHRpYXBqb1NGVTVuMjlfSWRUZmx1U0hseEk0MGRrV0ZIWVU1MER2bVNOSWM2YUJhaVMtdUctdklJU20yQkRpZVIzb19OSDNqVE9uU3Vyb0JpbkcwMzZZdnJYaw?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-28T01:55:02.000Z",
-      "latestAt": "2026-11-28T04:49:42.000Z",
-      "firstSeenAt": "2026-11-28T02:02:07.667Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 1
-    },
-    {
-      "id": "a20822d8e9f8",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "pCloud confirms a cyberattack on its pCloud Pass password manager",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTUdub202TlY1RVRXcEJCZFBOSzBSdTNpLWVVTXQyS3JOT1Q3NnFrUWVvZjktSmV1dUN4TjFrT0RDZVItaGxIdEpkWXFxUDBRSjRHWkhCd2ZZTGFKY0RCZmRoUk9EYUFWdkJhaTNOaXpsbmtiWFk4X21tejZ0ZC1odVdHVFE1QkphQXlDOTROcw?oc=5",
-      "source": "MLQ.ai",
-      "publishedAt": "2026-11-28T01:00:36.000Z",
-      "latestAt": "2026-11-28T01:00:36.000Z",
-      "firstSeenAt": "2026-11-28T01:02:00.556Z",
-      "outlets": 1,
-      "outletNames": [
-        "MLQ.ai"
       ],
       "score": 1
     },
