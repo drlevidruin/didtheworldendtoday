@@ -1,13 +1,14 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T05:17:37.510Z",
+  "buildTime": "2026-11-28T05:32:41.978Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 00:17 ET",
-  "score": 54,
+  "etStamp": "2026-11-28 00:32 ET",
+  "score": 60,
   "fired": [
     "flights",
     "hacks",
     "internet",
+    "sun",
     "earth",
     "markets",
     "grid",
@@ -16,7 +17,7 @@
     "animals"
   ],
   "bumps": [],
-  "change": 0,
+  "change": 6,
   "yesterday": {
     "date": "2026-11-27",
     "score": 54,
@@ -36,12 +37,12 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1200,
-  "lastSuccessAt": "2026-11-28T05:17:37.510Z",
+  "headlinesRead": 959,
+  "lastSuccessAt": "2026-11-28T05:32:41.978Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 40,
-    "grid": 18,
+    "hacks": 41,
+    "grid": 16,
     "weather": 9,
     "germs": 6,
     "animals": 3,
@@ -49,7 +50,7 @@
     "markets": 4,
     "internet": 6,
     "earth": 4,
-    "sun": 2,
+    "sun": 3,
     "space": 2,
     "ai": 1
   },
@@ -168,19 +169,19 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 916,
+      "count": 923,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:32:41.978Z"
     },
     "bing": {
-      "ok": true,
-      "count": 248,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
+      "ok": false,
+      "count": 0,
+      "error": "4 of 26 queries failed: feed has no channel (not an RSS response) (gave up after 4 failures in a row)",
       "lastOkAt": "2026-11-28T05:17:37.510Z"
     },
     "gdelt": {
@@ -193,58 +194,106 @@
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:32:41.978Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:32:41.978Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:32:41.978Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:32:41.978Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:32:41.978Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:32:41.978Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:17:37.510Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:32:41.978Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T05:17:37.510Z"
+      "lastOkAt": "2026-11-28T05:32:41.978Z"
     }
   },
   "stories": [
+    {
+      "id": "81fcd76c8fde",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers breach US Air Force flagship Cloud One computing platform",
+      "url": "https://www.reuters.com/world/hackers-breach-us-air-force-flagship-cloud-one-computing-platform-2026-11-27/",
+      "source": "reuters.com",
+      "publishedAt": "2026-11-27T11:03:00.000Z",
+      "latestAt": "2026-11-28T05:14:10.000Z",
+      "firstSeenAt": "2026-11-28T05:32:41.978Z",
+      "outlets": 32,
+      "outletNames": [
+        "CNA",
+        "Seeking Alpha",
+        "Yahoo Finance",
+        "The Next Web",
+        "reuters.com",
+        "Bloomberg.com",
+        "news.sky.com",
+        "The Hill",
+        "Floridian Press",
+        "CyberSecurityNews",
+        "Washington Times",
+        "Beinsure",
+        "NBC News",
+        "UNITED24 Media",
+        "Stars and Stripes",
+        "KBTX News 3",
+        "NewsCord",
+        "Sahara Reporters",
+        "MyNorthwest.com",
+        "The Information",
+        "The American Bazaar",
+        "New York Post",
+        "Military.com",
+        "Fox News",
+        "WV News",
+        "LiveNOW from FOX",
+        "Yahoo",
+        "WRAL",
+        "Diya TV",
+        "USA Today",
+        "The Daily Signal",
+        "WHEC.com"
+      ],
+      "score": 4.15
+    },
     {
       "id": "92c5ec80fbd1",
       "cat": "hacks",
@@ -316,25 +365,6 @@
         "Yahoo"
       ],
       "score": 2.4
-    },
-    {
-      "id": "c283aaca55be",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Federal regulators shut $6 billion Indiana lender in biggest bank failure in over two years",
-      "url": "https://www.msn.com/en-us/news/other/federal-regulators-shut-6-billion-indiana-lender-in-biggest-bank-failure-in-over-two-years/ar-AA2iofr4",
-      "source": "CNN on MSN",
-      "publishedAt": "2026-11-27T16:00:00.000Z",
-      "latestAt": "2026-11-28T04:10:00.000Z",
-      "firstSeenAt": "2026-11-28T02:47:22.260Z",
-      "outlets": 2,
-      "outletNames": [
-        "CNN on MSN",
-        "Yahoo Finance"
-      ],
-      "trending": 500,
-      "trendTerm": "united fidelity bank",
-      "score": 2.3
     },
     {
       "id": "dc51c3bd3429",
@@ -472,6 +502,45 @@
       "score": 1.4
     },
     {
+      "id": "c283aaca55be",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Federal regulators shut $6 billion Indiana lender in biggest bank failure in over two years",
+      "url": "https://www.msn.com/en-us/news/other/federal-regulators-shut-6-billion-indiana-lender-in-biggest-bank-failure-in-over-two-years/ar-AA2iofr4",
+      "source": "CNN on MSN",
+      "publishedAt": "2026-11-27T16:00:00.000Z",
+      "latestAt": "2026-11-28T04:10:00.000Z",
+      "firstSeenAt": "2026-11-28T02:47:22.260Z",
+      "outlets": 2,
+      "outletNames": [
+        "CNN on MSN",
+        "Yahoo Finance"
+      ],
+      "trending": 500,
+      "trendTerm": "united fidelity bank",
+      "score": 2.3
+    },
+    {
+      "id": "faae85a3e844",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Lloyds Bank Outage Today: Is Lloyds Bank Down in the UK? Thousands of Customers Report Login Failures, Online Banking Issues, Payment Errors and App Problems | Check Downdetector Status",
+      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQdm9oT0FHVHBrY1ZqZ2F6dW44UTVpcmVkRDUxcVY0VDMyWENmOURaMW4yYVVFQmZTNVFWWUo0QlRvY0dveWUtUG1SaU9jc0dXUnI2S2ZOaUtyUFZCZVpGeXVudEJYUm9VZWYtVDYyLUdZQXlPWHVhYnNMWUFjaC1aLU0tdWpzNGFtZVFZM203ZHUzQ1ktTU5hcWo2LW9FX0dUZEhZM3dFeEtvYS1HTG02bVJhbW9HeHhMX2h2OFIyMEp3b2FpcC1FUENZUXhMVGpBaFRpbVZRamFsYkd4TW9xbzdieXMwWU53YmZGeE5zZU1uUEpRaXQ2Q3AyLVhVVGhzQVc5SDJCRm80MXpHem5yZVJBeURWV3EzN0lOU1Q2SnVfb2dmdTA3MWhiZUxTTWR1dGRFcUhpTlo5Tmt1T3AwWm5XTk9NQUc4MXJYNNIBzAJBVV95cUxQdm9oT0FHVHBrY1ZqZ2F6dW44UTVpcmVkRDUxcVY0VDMyWENmOURaMW4yYVVFQmZTNVFWWUo0QlRvY0dveWUtUG1SaU9jc0dXUnI2S2ZOaUtyUFZCZVpGeXVudEJYUm9VZWYtVDYyLUdZQXlPWHVhYnNMWUFjaC1aLU0tdWpzNGFtZVFZM203ZHUzQ1ktTU5hcWo2LW9FX0dUZEhZM3dFeEtvYS1HTG02bVJhbW9HeHhMX2h2OFIyMEp3b2FpcC1FUENZUXhMVGpBaFRpbVZRamFsYkd4TW9xbzdieXMwWU53YmZGeE5zZU1uUEpRaXQ2Q3AyLVhVVGhzQVc5SDJCRm80MXpHem5yZVJBeURWV3EzN0lOU1Q2SnVfb2dmdTA3MWhiZUxTTWR1dGRFcUhpTlo5Tmt1T3AwWm5XTk9NQUc4MXJYNA?oc=5",
+      "source": "The Sunday Guardian",
+      "publishedAt": "2026-11-27T10:52:07.000Z",
+      "latestAt": "2026-11-27T15:59:48.000Z",
+      "firstSeenAt": "2026-11-28T05:32:41.978Z",
+      "outlets": 5,
+      "outletNames": [
+        "The Sunday Guardian",
+        "The Independent",
+        "Yahoo Finance UK",
+        "Business Upturn",
+        "CX Today"
+      ],
+      "score": 2.29
+    },
+    {
       "id": "7aee287f69f6",
       "cat": "hacks",
       "kind": "news",
@@ -488,41 +557,6 @@
         "Modern Ghana"
       ],
       "score": 2.21
-    },
-    {
-      "id": "842eb3255e23",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "American uranium plant forced offline following cyberattack — Peninsula Energy shuts down mining operation to investigate incident",
-      "url": "https://tech.yahoo.com/cybersecurity/articles/american-uranium-plant-forced-offline-190500003.html",
-      "source": "YAHOO!",
-      "publishedAt": "2026-11-27T11:05:00.000Z",
-      "latestAt": "2026-11-27T19:05:00.000Z",
-      "firstSeenAt": "2026-11-27T21:46:34.962Z",
-      "outlets": 3,
-      "outletNames": [
-        "YAHOO!",
-        "TechRadar",
-        "Yahoo Tech"
-      ],
-      "score": 2.12
-    },
-    {
-      "id": "eda09afa3516",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Millions lose access to benefits and pensions services after 'cyber incident'",
-      "url": "https://www.aol.com/articles/department-pensions-takes-services-offline-083625000.html",
-      "source": "AOL",
-      "publishedAt": "2026-11-27T08:34:17.000Z",
-      "latestAt": "2026-11-27T12:45:00.000Z",
-      "firstSeenAt": "2026-11-28T01:17:02.863Z",
-      "outlets": 2,
-      "outletNames": [
-        "BBC",
-        "AOL"
-      ],
-      "score": 2.02
     },
     {
       "id": "3901d5d9a26c",
@@ -770,6 +804,58 @@
       "score": 1.31
     },
     {
+      "id": "842eb3255e23",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "American uranium plant forced offline following cyberattack — Peninsula Energy shuts down mining operation to investigate incident",
+      "url": "https://tech.yahoo.com/cybersecurity/articles/american-uranium-plant-forced-offline-190500003.html",
+      "source": "YAHOO!",
+      "publishedAt": "2026-11-27T11:05:00.000Z",
+      "latestAt": "2026-11-27T19:05:00.000Z",
+      "firstSeenAt": "2026-11-27T21:46:34.962Z",
+      "outlets": 3,
+      "outletNames": [
+        "YAHOO!",
+        "TechRadar",
+        "Yahoo Tech"
+      ],
+      "score": 2.12
+    },
+    {
+      "id": "21a164c8a426",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Lloyds Bank, Bank of Scotland apps hit by major outage",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNazE2RGxFZmRXSXdLWlRmNXhBR2tlOTJzOFZRRGh0QnZQS21pTUJHVVc1bFFUY2pFTTFQWGlJeWJjX2RtcWZyS01IRWV2WEtJWU5hMGNJXzByRGpNRldCV2JQMVd0cTdBVTltWnVTV3A2SVZzT2FhaW8zOGFHbDVCNVBUZFBZbTM4X2E3aGV6NlZkN2s?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-27T12:50:22.000Z",
+      "latestAt": "2026-11-27T12:50:28.000Z",
+      "firstSeenAt": "2026-11-28T05:32:41.978Z",
+      "outlets": 2,
+      "outletNames": [
+        "Anadolu Ajansı",
+        "Operativ Məlumat Mərkəzi"
+      ],
+      "score": 2.02
+    },
+    {
+      "id": "eda09afa3516",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Millions lose access to benefits and pensions services after 'cyber incident'",
+      "url": "https://www.aol.com/articles/department-pensions-takes-services-offline-083625000.html",
+      "source": "AOL",
+      "publishedAt": "2026-11-27T08:34:17.000Z",
+      "latestAt": "2026-11-27T12:45:00.000Z",
+      "firstSeenAt": "2026-11-28T01:17:02.863Z",
+      "outlets": 2,
+      "outletNames": [
+        "BBC",
+        "AOL"
+      ],
+      "score": 2.02
+    },
+    {
       "id": "07b0d2e8ee89",
       "cat": "hacks",
       "kind": "news",
@@ -839,23 +925,6 @@
         "The Straits Times"
       ],
       "score": 1.99
-    },
-    {
-      "id": "939c93fd203d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "JPCrypto-ISAC partners with SEAL to enhance cyberattack response",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZkk1U1o4aGlqcWwwbjRTcVgxVzM1UjdGZ1Z0SUFNY2o2OTk2cmN1dTA3NjBaOHIxUk10Q3YzV1ExYXdPX3RVOWpGU1JsQ0ZiSklCWTBkTldGeldwWnZ6YThHd045SHd5SGFDN1NYcW5NRWtQUk9HUlpPSGM4cmVDbXNtMzFfTTV2bWpGX2VSWGppNTFramxPTExMUXhHNXBpWW91WWtBc3N6ZmpMdjZKVXI3Q3lNQXZpVWpNNkJJVThTX2NyRzZ1Sg?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-27T05:29:00.000Z",
-      "latestAt": "2026-11-27T05:29:29.000Z",
-      "firstSeenAt": "2026-11-27T06:29:00.402Z",
-      "outlets": 2,
-      "outletNames": [
-        "TradingView",
-        "Crypto Briefing"
-      ],
-      "score": 1.97
     },
     {
       "id": "27481d5961b0",
@@ -1292,23 +1361,6 @@
       "score": 1.31
     },
     {
-      "id": "399b2e483a27",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outages, heavy rain continue on East Coast after Thanksgiving Day storm",
-      "url": "https://www.detroitnews.com/story/news/nation/2026/11/27/power-outages-heavy-rain-continue-on-east-coast-after-thanksgiving-day-storm/92977645007/",
-      "source": "The Detroit News",
-      "publishedAt": "2026-11-27T05:28:00.000Z",
-      "latestAt": "2026-11-27T05:28:00.000Z",
-      "firstSeenAt": "2026-11-28T02:17:12.639Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Detroit News",
-        "USA TODAY"
-      ],
-      "score": 1.31
-    },
-    {
       "id": "676c0d3d8d92",
       "cat": "grid",
       "kind": "news",
@@ -1416,7 +1468,7 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObFZzaU8tbVRBMmRpb0V5bUlKcmc1VWstampqcjRwbkUtX2ZCR2NwRGtpZXh3RkVPd2RZUUEtdlkzOHlqR2h5c1F4Ymx2R2x6SExiZjVaUm1qVHRkaG5kTVJMYWFsVHhRSUtKM2ttb25hbmlhb29YTVE1Zl81ZlNucGFySktmWEpNaWJlczFlbk50Vm96M25lTEJkc1p6d3dWQndiXzVuWS1aZ0psY3phMkZudVhpYUNINHpJ?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-27T10:43:40.000Z",
-      "latestAt": "2026-11-27T10:43:40.000Z",
+      "latestAt": "2026-11-27T19:01:14.000Z",
       "firstSeenAt": "2026-11-27T19:31:11.845Z",
       "outlets": 1,
       "outletNames": [
@@ -1665,38 +1717,6 @@
       "score": 1
     },
     {
-      "id": "fb20395c8635",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage warrants independent probe",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcF94Ui1uSkY2MEduam1jQTc3LUVZNnZldHNwc1JDM29UcWZxNldzUkcwWGtxWHpEZ1M5cVgxSmNnNGNublM0akxVZUlHdFFOWU5ObG85MXRTRzZRVW9DcHpYSWthUzJtQUpCY0F4Q2FSSHVicUVGdUR5c2d2R2RFcUNBNl9kZlJqajhsRQ?oc=5",
-      "source": "Daily Express Malaysia",
-      "publishedAt": "2026-11-28T03:08:30.000Z",
-      "latestAt": "2026-11-28T03:08:30.000Z",
-      "firstSeenAt": "2026-11-28T03:17:19.928Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Express Malaysia"
-      ],
-      "score": 1
-    },
-    {
-      "id": "db6a713ec424",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Internet Post Office Suffers Data Breach Affecting Over 113,000 Users in a Single Day",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5HSWJXMFMySm5YV2U2bk91SURhU2pTRGU2ekdJUExKVkR3bFVWRnlfeUU1aExaNzQtWF9BQVhTREdwVTJ1dU9VeG1FTjA0Ty1yc21NNElwcUNnQ3pGN00yVEFjZUxmNkhxRkpDdFNn?oc=5",
-      "source": "news.sbs.co.kr",
-      "publishedAt": "2026-11-28T01:56:30.000Z",
-      "latestAt": "2026-11-28T02:10:00.000Z",
-      "firstSeenAt": "2026-11-28T02:02:07.667Z",
-      "outlets": 1,
-      "outletNames": [
-        "news.sbs.co.kr"
-      ],
-      "score": 1
-    },
-    {
       "id": "7b6eae4abe4d",
       "cat": "markets",
       "kind": "news",
@@ -1905,6 +1925,22 @@
         "JKN"
       ],
       "score": 0.8
+    },
+    {
+      "id": "7f68148d5c42",
+      "cat": "sun",
+      "kind": "news",
+      "title": "A two-day magnetic storm will hit Earth: Forecast for November 27–28",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTXBPVmc1ZnRjT2RIaHdDZTYtSndCdkF4ME5naXJaN1M2QTZnaXZ5S3hFODlURDI1am9WZC1NRFpIeTA1U1JxQ2hBd01CaXYtaEFUM3kyVmpIeXQ0WllCUFZMUmJUYUZrMkFKRy1vN1lDQkJFRExfUXVlTk5VN29ZRldaX3gyal9EcDU0U1ZWOGxIbGJ2ZE1Z?oc=5",
+      "source": "UA.NEWS",
+      "publishedAt": "2026-11-27T07:25:55.000Z",
+      "latestAt": "2026-11-27T07:25:55.000Z",
+      "firstSeenAt": "2026-11-28T05:32:41.978Z",
+      "outlets": 1,
+      "outletNames": [
+        "UA.NEWS"
+      ],
+      "score": 0.63
     }
   ]
 }
