@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T18:04:41.741Z",
+  "buildTime": "2026-11-28T18:19:40.643Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 13:04 ET",
+  "etStamp": "2026-11-28 13:19 ET",
   "score": 67,
   "fired": [
     "flights",
@@ -47,14 +47,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1145,
-  "lastSuccessAt": "2026-11-28T18:04:41.741Z",
+  "headlinesRead": 1158,
+  "lastSuccessAt": "2026-11-28T18:19:40.643Z",
   "rollingFallback": false,
   "cats": {
-    "earth": 10,
+    "earth": 11,
     "germs": 4,
+    "hacks": 35,
     "internet": 4,
-    "hacks": 36,
     "grid": 23,
     "sun": 4,
     "flights": 8,
@@ -180,81 +180,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 880,
+      "count": 886,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "bing": {
       "ok": true,
-      "count": 232,
+      "count": 236,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "timeout",
       "lastOkAt": "2026-11-28T15:49:20.961Z"
     },
     "hn": {
       "ok": true,
-      "count": 3,
+      "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T18:04:41.741Z"
+      "lastOkAt": "2026-11-28T18:19:40.643Z"
     }
   },
   "stories": [
@@ -307,6 +306,27 @@
       "score": 4.36
     },
     {
+      "id": "f45d204f72ff",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "UK's biggest-spending government department hit by a cyberattack",
+      "url": "https://abcnews.com/Business/wireStory/uks-biggest-spending-government-department-confirms-hit-cyberattack-138501313",
+      "source": "ABC News",
+      "publishedAt": "2026-11-28T01:37:00.000Z",
+      "latestAt": "2026-11-28T17:44:26.000Z",
+      "firstSeenAt": "2026-11-28T17:49:34.440Z",
+      "outlets": 6,
+      "outletNames": [
+        "ABC News",
+        "Associated Press News",
+        "The Globe and Mail",
+        "U.S. News & World Report",
+        "KSAT",
+        "ABC News - Breaking News, Latest News and Videos"
+      ],
+      "score": 3.66
+    },
+    {
       "id": "sig:status:cloudflare:2026-11-28",
       "cat": "internet",
       "kind": "signal",
@@ -329,48 +349,6 @@
       }
     },
     {
-      "id": "cdbafa021d88",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers got into the Air Force cloud computing system but critical parts not impacted",
-      "url": "https://apnews.com/article/air-force-hacking-cloud-computing-ai-ea8437e0d7d1017838713ef11c984f82",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-28T04:34:00.000Z",
-      "latestAt": "2026-11-28T17:35:35.000Z",
-      "firstSeenAt": "2026-11-28T17:49:34.440Z",
-      "outlets": 8,
-      "outletNames": [
-        "Associated Press News",
-        "The Canadian Press on MSN",
-        "Oskaloosa Herald",
-        "Temple Daily Telegram",
-        "Toronto Star",
-        "Livemint",
-        "U.S. News & World Report",
-        "Star Beacon"
-      ],
-      "score": 3.12
-    },
-    {
-      "id": "f45d204f72ff",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK's biggest-spending government department hit by a cyberattack",
-      "url": "https://abcnews.com/Business/wireStory/uks-biggest-spending-government-department-confirms-hit-cyberattack-138501313",
-      "source": "ABC News",
-      "publishedAt": "2026-11-28T01:37:00.000Z",
-      "latestAt": "2026-11-28T17:39:31.000Z",
-      "firstSeenAt": "2026-11-28T17:49:34.440Z",
-      "outlets": 4,
-      "outletNames": [
-        "ABC News",
-        "Associated Press News",
-        "The Globe and Mail",
-        "U.S. News & World Report"
-      ],
-      "score": 3.07
-    },
-    {
       "id": "411536834b0a",
       "cat": "hacks",
       "kind": "news",
@@ -378,9 +356,9 @@
       "url": "https://www.reuters.com/business/finance/uk-pensions-department-says-it-was-targeted-cyberattack-2026-11-28/",
       "source": "Reuters",
       "publishedAt": "2026-11-27T20:57:00.000Z",
-      "latestAt": "2026-11-28T16:58:41.000Z",
+      "latestAt": "2026-11-28T17:33:26.000Z",
       "firstSeenAt": "2026-11-28T16:49:30.271Z",
-      "outlets": 11,
+      "outlets": 15,
       "outletNames": [
         "Reuters",
         "The Star",
@@ -392,10 +370,32 @@
         "Yahoo News UK",
         "@Reuters on X",
         "Devdiscourse",
-        "The Detroit News"
+        "The Detroit News",
+        "Southern Cross",
+        "The Canberra Times",
+        "CNA",
+        "Newsmax"
       ],
       "xUrl": "https://x.com/Reuters/status/2126719057856430444",
-      "score": 2.98
+      "score": 3.28
+    },
+    {
+      "id": "cb4259de16b0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "United Fidelity Bank seized in biggest US bank failure since 2024",
+      "url": "https://apnews.com/article/united-fidelity-bank-a01d066d778855d919761cc77e1b0b00",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-28T04:30:00.000Z",
+      "latestAt": "2026-11-28T17:30:19.000Z",
+      "firstSeenAt": "2026-11-28T17:34:33.155Z",
+      "outlets": 3,
+      "outletNames": [
+        "Associated Press News",
+        "Richmond Register",
+        "Newsday"
+      ],
+      "score": 2.83
     },
     {
       "id": "d797a2d51f86",
@@ -436,6 +436,27 @@
       "score": 2.44
     },
     {
+      "id": "9678ef7e2c9a",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Strong Earthquake Strikes Los Angeles Area",
+      "url": "https://deadline.com/2026/11/earthquake-los-angeles-1237234661/",
+      "source": "Deadline",
+      "publishedAt": "2026-11-28T01:45:00.000Z",
+      "latestAt": "2026-11-28T18:08:22.000Z",
+      "firstSeenAt": "2026-11-28T18:04:41.741Z",
+      "outlets": 5,
+      "outletNames": [
+        "Deadline",
+        "Variety",
+        "CNN",
+        "Newsweek",
+        "@cnnbrk on X"
+      ],
+      "xUrl": "https://x.com/cnnbrk/status/2126739996568662315",
+      "score": 2.42
+    },
+    {
       "id": "75c00368c23d",
       "cat": "sun",
       "kind": "news",
@@ -452,6 +473,23 @@
         "Dailymotion on MSN"
       ],
       "score": 2.23
+    },
+    {
+      "id": "cb0a932bb6d9",
+      "cat": "earth",
+      "kind": "news",
+      "title": "4.7 magnitude earthquake strikes Manhattan Beach area, USGS says",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZ01vcUVBUGJGWFhhMTlsZjE3Q1RIVXhKUzg0SkNZN2drX0FGWFk2cnd0UlNwaFltWEY4bVdKQWVoOU82VFBnTDlXbk9zZzFpTzdOcEFSTWh1YXpUTXBJR2N2ZlBoa1pTNzVNT1R5TEZ0T3FWRE9qTE9BVjdlNk1NYmVXcWY5SGdEM2hpR0lPdjdtMTFaZGJ4TNIBngFBVV95cUxQMElISkd6LWE0bklLVFN1S1dKR3B6akZvMFJKbHJBWjRfbV85TmRjRF96VWk4bHVOdUFhTU1qWHAtYThBYnF1Z0FVOTVNaXBTNUZJOXl1Q1gyWGYwSFpLMDZuWTNMTUJhR196Z1JLTGdFc2tVRHl2R3hnOTI5YjN4SFpxUGdfMExmRmcyVld3X1k0TFJWeVVkZFpuQ19uZw?oc=5",
+      "source": "ABC7 Los Angeles",
+      "publishedAt": "2026-11-28T17:38:39.000Z",
+      "latestAt": "2026-11-28T17:58:00.000Z",
+      "firstSeenAt": "2026-11-28T17:49:34.440Z",
+      "outlets": 2,
+      "outletNames": [
+        "ABC7 Los Angeles",
+        "Demokratis.co.id"
+      ],
+      "score": 1.99
     },
     {
       "id": "49ab3821e57e",
@@ -488,6 +526,112 @@
       "score": 1.99
     },
     {
+      "id": "04a41d90be8c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "DWP latest to be hit in string of cyber attacks raising alarm across US and Europe",
+      "url": "https://www.aol.co.uk/articles/dwp-latest-hit-string-cyber-150703000.html",
+      "source": "AOL.co.uk",
+      "publishedAt": "2026-11-28T08:42:00.000Z",
+      "latestAt": "2026-11-28T15:07:03.000Z",
+      "firstSeenAt": "2026-11-28T15:34:20.375Z",
+      "outlets": 3,
+      "outletNames": [
+        "Newswav",
+        "AOL.co.uk",
+        "The Independent on MSN"
+      ],
+      "score": 2.29
+    },
+    {
+      "id": "42d688590eeb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Zodia Custody confirms client contact data breach, says no unauthorized transactions",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/zodia-custody-confirms-client-contact-090254786.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-28T01:02:00.000Z",
+      "latestAt": "2026-11-28T16:12:18.000Z",
+      "firstSeenAt": "2026-11-28T10:18:30.336Z",
+      "outlets": 3,
+      "outletNames": [
+        "99Bitcoins",
+        "Yahoo Finance",
+        "ValueWalk"
+      ],
+      "score": 2.19
+    },
+    {
+      "id": "a20822d8e9f8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "pCloud confirms a cyberattack on its pCloud Pass password manager",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTUdub202TlY1RVRXcEJCZFBOSzBSdTNpLWVVTXQyS3JOT1Q3NnFrUWVvZjktSmV1dUN4TjFrT0RDZVItaGxIdEpkWXFxUDBRSjRHWkhCd2ZZTGFKY0RCZmRoUk9EYUFWdkJhaTNOaXpsbmtiWFk4X21tejZ0ZC1odVdHVFE1QkphQXlDOTROcw?oc=5",
+      "source": "MLQ.ai",
+      "publishedAt": "2026-11-28T01:00:36.000Z",
+      "latestAt": "2026-11-28T13:00:25.000Z",
+      "firstSeenAt": "2026-11-28T01:02:00.556Z",
+      "outlets": 2,
+      "outletNames": [
+        "MLQ.ai",
+        "Beinsure"
+      ],
+      "score": 2
+    },
+    {
+      "id": "df5fad6f7c8a",
+      "cat": "grid",
+      "kind": "news",
+      "title": "The 57 postcodes affected by Gwynedd power outage",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQM1NXRXRHajdfdFlKZXRlU3hFeWVGaUpXWU5CV2s1dTBYSkwyVHFWZEJ4dXJpV0ZhRWVPdmhQWTBjLU5JMzZNUXFhdXNHMHpQdklzNXdwMGl0b0g3cHJLVG9vRnNRak5wa0hYNnhwNXdtRWcxRWY1c3FxcTBkMG1fNGNxNzBwN0V4UXN0Wi14ZXoyRHI2VndWSWh3?oc=5",
+      "source": "North Wales Live",
+      "publishedAt": "2026-11-28T12:05:00.000Z",
+      "latestAt": "2026-11-28T12:05:10.000Z",
+      "firstSeenAt": "2026-11-28T12:33:55.626Z",
+      "outlets": 2,
+      "outletNames": [
+        "North Wales Live",
+        "Yahoo News UK"
+      ],
+      "score": 1.98
+    },
+    {
+      "id": "ff7a514ee230",
+      "cat": "grid",
+      "kind": "news",
+      "title": "SCHUYLKILL COUNTY POWER OUTAGE UPDATE: 5,100+ Remain Without Power Saturday Morning",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOU3liaUYwOFhISkN1RDgxX2ptQnFQeTlZVmsxX2lsdnAxazh2RmpaY1l5dTJlYlFKd2xFMWd4Wm8tUzZESjkwWFNQdjl5S0pjbUYzMmstdUwyMUVCQW44TDRJclljMGlYVFpYRFVOakxlZExmRi1raHNkT1hGWVJha1BR?oc=5",
+      "source": "Skook News",
+      "publishedAt": "2026-11-28T15:15:00.000Z",
+      "latestAt": "2026-11-28T16:01:58.000Z",
+      "firstSeenAt": "2026-11-28T18:19:40.643Z",
+      "outlets": 2,
+      "outletNames": [
+        "Skook News",
+        "NewsBreak: Local News & Alerts"
+      ],
+      "score": 1.9
+    },
+    {
+      "id": "9dbca75e2028",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands still without power in Catskills, Hudson Valley after Thanksgiving storm",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVjNNeEV6Y3NFSDVuSGIwZHdMUGVIakJBUzZTS0d2R2ludWJ3R2U5SUE3VjdqWTl6bzNYOXlPV0R2dENVUjNQbU5SR0pEaWJhY2c2VnBsZUozMjIzQzlaYWdPUWxtb3REN3FIUExCQ0I1N2Q3Ym94UFYtZXlENVZDeDdLRE9vckhybVN4TVZqbjhyU3N3b2NMQUV3dV9RbUEycnlrTndDRmE4TWtBelJXVzFfcHRwNE1PdU5VTUNreXNtUGNM?oc=5",
+      "source": "WAMC",
+      "publishedAt": "2026-11-27T20:00:00.000Z",
+      "latestAt": "2026-11-28T00:55:58.000Z",
+      "firstSeenAt": "2026-11-28T18:04:41.741Z",
+      "outlets": 4,
+      "outletNames": [
+        "WAMC",
+        "fox56.com",
+        "Howl.Link",
+        "Radio Catskill"
+      ],
+      "score": 1.9
+    },
+    {
       "id": "0dd2e0d7c65b",
       "cat": "earth",
       "kind": "news",
@@ -522,115 +666,6 @@
       "score": 1.73
     },
     {
-      "id": "4b9b89e72206",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK pensions department says cyberattack hit services, payments unaffected",
-      "url": "https://www.msn.com/en-gb/news/other/uk-pensions-department-says-cyberattack-hit-services-payments-unaffected/ar-AA2irceT",
-      "source": "Reuters on MSN",
-      "publishedAt": "2026-11-28T02:36:00.000Z",
-      "latestAt": "2026-11-28T17:33:26.000Z",
-      "firstSeenAt": "2026-11-28T17:04:35.362Z",
-      "outlets": 6,
-      "outletNames": [
-        "Southern Cross",
-        "The Canberra Times",
-        "Reuters on MSN",
-        "CNA",
-        "Yahoo News UK",
-        "Yahoo"
-      ],
-      "score": 2.72
-    },
-    {
-      "id": "cb4259de16b0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "United Fidelity Bank seized in biggest US bank failure since 2024",
-      "url": "https://apnews.com/article/united-fidelity-bank-a01d066d778855d919761cc77e1b0b00",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-28T09:31:00.000Z",
-      "latestAt": "2026-11-28T17:30:19.000Z",
-      "firstSeenAt": "2026-11-28T17:34:33.155Z",
-      "outlets": 2,
-      "outletNames": [
-        "Associated Press News",
-        "Richmond Register"
-      ],
-      "score": 2.42
-    },
-    {
-      "id": "04a41d90be8c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "DWP latest to be hit in string of cyber attacks raising alarm across US and Europe",
-      "url": "https://www.aol.co.uk/articles/dwp-latest-hit-string-cyber-150703000.html",
-      "source": "AOL.co.uk",
-      "publishedAt": "2026-11-28T08:42:00.000Z",
-      "latestAt": "2026-11-28T15:07:03.000Z",
-      "firstSeenAt": "2026-11-28T15:34:20.375Z",
-      "outlets": 3,
-      "outletNames": [
-        "Newswav",
-        "AOL.co.uk",
-        "The Independent on MSN"
-      ],
-      "score": 2.29
-    },
-    {
-      "id": "df5fad6f7c8a",
-      "cat": "grid",
-      "kind": "news",
-      "title": "The 57 postcodes affected by Gwynedd power outage",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQM1NXRXRHajdfdFlKZXRlU3hFeWVGaUpXWU5CV2s1dTBYSkwyVHFWZEJ4dXJpV0ZhRWVPdmhQWTBjLU5JMzZNUXFhdXNHMHpQdklzNXdwMGl0b0g3cHJLVG9vRnNRak5wa0hYNnhwNXdtRWcxRWY1c3FxcTBkMG1fNGNxNzBwN0V4UXN0Wi14ZXoyRHI2VndWSWh3?oc=5",
-      "source": "North Wales Live",
-      "publishedAt": "2026-11-28T12:05:00.000Z",
-      "latestAt": "2026-11-28T12:05:10.000Z",
-      "firstSeenAt": "2026-11-28T12:33:55.626Z",
-      "outlets": 2,
-      "outletNames": [
-        "North Wales Live",
-        "Yahoo News UK"
-      ],
-      "score": 1.98
-    },
-    {
-      "id": "9dbca75e2028",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thousands still without power in Catskills, Hudson Valley after Thanksgiving storm",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVjNNeEV6Y3NFSDVuSGIwZHdMUGVIakJBUzZTS0d2R2ludWJ3R2U5SUE3VjdqWTl6bzNYOXlPV0R2dENVUjNQbU5SR0pEaWJhY2c2VnBsZUozMjIzQzlaYWdPUWxtb3REN3FIUExCQ0I1N2Q3Ym94UFYtZXlENVZDeDdLRE9vckhybVN4TVZqbjhyU3N3b2NMQUV3dV9RbUEycnlrTndDRmE4TWtBelJXVzFfcHRwNE1PdU5VTUNreXNtUGNM?oc=5",
-      "source": "WAMC",
-      "publishedAt": "2026-11-27T20:00:00.000Z",
-      "latestAt": "2026-11-28T00:55:58.000Z",
-      "firstSeenAt": "2026-11-28T18:04:41.741Z",
-      "outlets": 4,
-      "outletNames": [
-        "WAMC",
-        "fox56.com",
-        "Howl.Link",
-        "Radio Catskill"
-      ],
-      "score": 1.9
-    },
-    {
-      "id": "d496d995ac2e",
-      "cat": "grid",
-      "kind": "news",
-      "title": "TCN announces 10-hour power outage in parts of Abuja, Niger over maintenance",
-      "url": "https://www.thecable.ng/tcn-announces-10-hour-power-outage-in-parts-of-abuja-niger-over-maintenance/",
-      "source": "TheCable",
-      "publishedAt": "2026-11-28T05:48:00.000Z",
-      "latestAt": "2026-11-28T14:35:35.000Z",
-      "firstSeenAt": "2026-11-28T09:48:25.023Z",
-      "outlets": 2,
-      "outletNames": [
-        "Peoples Gazette Nigeria",
-        "TheCable"
-      ],
-      "score": 1.87
-    },
-    {
       "id": "7ce2726b7db8",
       "cat": "earth",
       "kind": "news",
@@ -663,23 +698,6 @@
         "Newspoint on MSN"
       ],
       "score": 1.72
-    },
-    {
-      "id": "9678ef7e2c9a",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Strong Earthquake Strikes Los Angeles Area",
-      "url": "https://deadline.com/2026/11/earthquake-los-angeles-1237234661/",
-      "source": "Deadline",
-      "publishedAt": "2026-11-28T01:45:00.000Z",
-      "latestAt": "2026-11-28T17:55:00.000Z",
-      "firstSeenAt": "2026-11-28T18:04:41.741Z",
-      "outlets": 2,
-      "outletNames": [
-        "Deadline",
-        "Variety"
-      ],
-      "score": 1.46
     },
     {
       "id": "f61dc0909598",
@@ -810,57 +828,6 @@
       "score": 1.02
     },
     {
-      "id": "297afb9fbf44",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Strong earthquake rattles SoCal",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdlRqTG9nM0d1UWE0OHlhVGh0azJ6X194T01CZ0c1a1NHSzRSXzBwYk1hUjhmYTFYNnZlYXJtTnVjaEk1Y1Y0TEdhVlhmTEhpY1BHY0hEdVA1a2RydXFJWWhhSndxTVQ4dm5CTTFJby14WW1pMU53NDl5ak5JNHZoZHdLZ2pzUENFeUZjcDR5dHFOWThlUVczQXV3?oc=5",
-      "source": "Spectrum News",
-      "publishedAt": "2026-11-28T17:53:00.000Z",
-      "latestAt": "2026-11-28T17:53:00.000Z",
-      "firstSeenAt": "2026-11-28T18:04:41.741Z",
-      "outlets": 1,
-      "outletNames": [
-        "Spectrum News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "42d688590eeb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Zodia Custody confirms client contact data breach, says no unauthorized transactions",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/zodia-custody-confirms-client-contact-090254786.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-28T01:02:00.000Z",
-      "latestAt": "2026-11-28T16:12:18.000Z",
-      "firstSeenAt": "2026-11-28T10:18:30.336Z",
-      "outlets": 3,
-      "outletNames": [
-        "99Bitcoins",
-        "Yahoo Finance",
-        "ValueWalk"
-      ],
-      "score": 2.19
-    },
-    {
-      "id": "a20822d8e9f8",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "pCloud confirms a cyberattack on its pCloud Pass password manager",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTUdub202TlY1RVRXcEJCZFBOSzBSdTNpLWVVTXQyS3JOT1Q3NnFrUWVvZjktSmV1dUN4TjFrT0RDZVItaGxIdEpkWXFxUDBRSjRHWkhCd2ZZTGFKY0RCZmRoUk9EYUFWdkJhaTNOaXpsbmtiWFk4X21tejZ0ZC1odVdHVFE1QkphQXlDOTROcw?oc=5",
-      "source": "MLQ.ai",
-      "publishedAt": "2026-11-28T01:00:36.000Z",
-      "latestAt": "2026-11-28T13:00:25.000Z",
-      "firstSeenAt": "2026-11-28T01:02:00.556Z",
-      "outlets": 2,
-      "outletNames": [
-        "MLQ.ai",
-        "Beinsure"
-      ],
-      "score": 2
-    },
-    {
       "id": "593cf699d089",
       "cat": "hacks",
       "kind": "news",
@@ -894,6 +861,23 @@
         "Techweez"
       ],
       "score": 1.94
+    },
+    {
+      "id": "d496d995ac2e",
+      "cat": "grid",
+      "kind": "news",
+      "title": "TCN announces 10-hour power outage in parts of Abuja, Niger over maintenance",
+      "url": "https://www.thecable.ng/tcn-announces-10-hour-power-outage-in-parts-of-abuja-niger-over-maintenance/",
+      "source": "TheCable",
+      "publishedAt": "2026-11-28T05:48:00.000Z",
+      "latestAt": "2026-11-28T14:35:35.000Z",
+      "firstSeenAt": "2026-11-28T09:48:25.023Z",
+      "outlets": 2,
+      "outletNames": [
+        "Peoples Gazette Nigeria",
+        "TheCable"
+      ],
+      "score": 1.87
     },
     {
       "id": "12c5129975aa",
@@ -945,6 +929,23 @@
         "Computerworld"
       ],
       "score": 1.73
+    },
+    {
+      "id": "f76b81889a8f",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Large earthquake rocks Los Angeles",
+      "url": "https://www.yahoo.com/news/weather-news/articles/large-earthquake-rocks-los-angeles-173849659.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-28T09:38:00.000Z",
+      "latestAt": "2026-11-28T17:38:00.000Z",
+      "firstSeenAt": "2026-11-28T18:19:40.643Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "New York Post"
+      ],
+      "score": 1.71
     },
     {
       "id": "c8d7fa665cb7",
@@ -1064,6 +1065,22 @@
       "score": 1.4
     },
     {
+      "id": "41ae59728219",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack hits UK's biggest-spending govt department handling pensions, benefits",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOeGg3RjVhRkhNNGg1Tm9fRWhDTmQ1NkNZUGR1eWVOWWptTmlkd2RtQXpvWXRHZVozNEdYRy0wU2tmRWIzam5qNXVQZ1AxVVRrbWRMQTAwZFRlRkFTNlUydmRKSU5wNmh1Z2RwekRhLW1kMi1xVFVGb3RvSllycHRMd1RYcVh3VERlWGZHMWZNZVd1U2drSFlYeUJITjN3Z0YzdzRpdnNOd2FMeVZVNFNsMi00QUphZ2o3WWFHazZZTkN6dEh5a20tQWlIWWRzUEZaU1RwN2ItNktrbXNGd29ZWUFaOTNRQW9QMGFyenpGaXpxdGZ4MkdvcHNFY1hrWnRpQXFV0gGIAkFVX3lxTE81eU9RUnNGejBtZnN5Z01nOEdRVElFdnMxSWxkT0RDN21malppbDVLTktVd2xpNVpOU29IeDJWY1ZlZnQzdFNfd3FiejEyd21FeXdzb0ctcVNEUEhVNTNfLXJvV2NmNmkwZlFzaVhnYXF5bzJ4MHJrTDY2dmRkazQ0Zmc2QlFad3Y5bmlqaGRHUUhXNms2bHppeUJNU3BRLWMtVjBoUzcwRkNkUHN1TmUzTGQyRjJZVmNTbExNcHE5VDIxNzY2YUdPR1BZYnp3Q2FDTmZHOXVvQy1mQ25nY25IYVVueWlyV1NMRHh0UjJhZF9PRnBzOXZ1dHVsZWxxcVFFRGxqNUlDWg?oc=5",
+      "source": "India Today",
+      "publishedAt": "2026-11-28T18:02:31.000Z",
+      "latestAt": "2026-11-28T18:02:31.000Z",
+      "firstSeenAt": "2026-11-28T18:19:40.643Z",
+      "outlets": 1,
+      "outletNames": [
+        "India Today"
+      ],
+      "score": 1.39
+    },
+    {
       "id": "0a969c04ed16",
       "cat": "hacks",
       "kind": "news",
@@ -1164,22 +1181,6 @@
       "score": 1.21
     },
     {
-      "id": "ca1599d9f9d7",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Federal regulators shut down $6 billion bank in largest failure of major US financial institution in over two years",
-      "url": "https://www.dailymail.com/news/article-16328479/united-fidelity-bank-fdic-shut-indiana.html",
-      "source": "Daily Mail",
-      "publishedAt": "2026-11-27T21:28:00.000Z",
-      "latestAt": "2026-11-27T21:28:00.000Z",
-      "firstSeenAt": "2026-11-28T05:47:42.457Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Mail"
-      ],
-      "score": 1.21
-    },
-    {
       "id": "ddefe23273dd",
       "cat": "hacks",
       "kind": "news",
@@ -1228,6 +1229,22 @@
       "score": 1.2
     },
     {
+      "id": "297afb9fbf44",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Strong earthquake rattles SoCal",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdlRqTG9nM0d1UWE0OHlhVGh0azJ6X194T01CZ0c1a1NHSzRSXzBwYk1hUjhmYTFYNnZlYXJtTnVjaEk1Y1Y0TEdhVlhmTEhpY1BHY0hEdVA1a2RydXFJWWhhSndxTVQ4dm5CTTFJby14WW1pMU53NDl5ak5JNHZoZHdLZ2pzUENFeUZjcDR5dHFOWThlUVczQXV3?oc=5",
+      "source": "Spectrum News",
+      "publishedAt": "2026-11-28T17:53:00.000Z",
+      "latestAt": "2026-11-28T17:53:00.000Z",
+      "firstSeenAt": "2026-11-28T18:04:41.741Z",
+      "outlets": 1,
+      "outletNames": [
+        "Spectrum News"
+      ],
+      "score": 1
+    },
+    {
       "id": "aabb497421c2",
       "cat": "hacks",
       "kind": "news",
@@ -1256,22 +1273,6 @@
       "outlets": 1,
       "outletNames": [
         "shattered.io"
-      ],
-      "score": 1
-    },
-    {
-      "id": "9ebc99830d8e",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Dansoman, Adenta, Amasaman among power outage hotspots – Energy Ministry",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONjBNVGl2cElwLWNNNjdSQ01KcFI5Q0tVVm90UEVmblhVcnVndF9CLXh6VUhqM0NtdFlFMGljTW5QY0d0clk3aGxSc3B6R2pVbWhrMFlYRDh6alg1N3UxMVk0bW05T1RlUjB4VDNaYUVZQWpkYXdGbWlUWWlBSlo0blNZN1VrUVk1NWRxWDRVNTQ5bHM5TGlycnFxYUpVUQ?oc=5",
-      "source": "MyJoyOnline",
-      "publishedAt": "2026-11-28T17:44:49.000Z",
-      "latestAt": "2026-11-28T17:44:49.000Z",
-      "firstSeenAt": "2026-11-28T17:49:34.440Z",
-      "outlets": 1,
-      "outletNames": [
-        "MyJoyOnline"
       ],
       "score": 1
     },
@@ -1306,22 +1307,6 @@
       "outlets": 1,
       "outletNames": [
         "Patch"
-      ],
-      "score": 1
-    },
-    {
-      "id": "cb0a932bb6d9",
-      "cat": "earth",
-      "kind": "news",
-      "title": "4.7 magnitude earthquake strikes Manhattan Beach area, USGS says",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZ01vcUVBUGJGWFhhMTlsZjE3Q1RIVXhKUzg0SkNZN2drX0FGWFk2cnd0UlNwaFltWEY4bVdKQWVoOU82VFBnTDlXbk9zZzFpTzdOcEFSTWh1YXpUTXBJR2N2ZlBoa1pTNzVNT1R5TEZ0T3FWRE9qTE9BVjdlNk1NYmVXcWY5SGdEM2hpR0lPdjdtMTFaZGJ4TNIBngFBVV95cUxQMElISkd6LWE0bklLVFN1S1dKR3B6akZvMFJKbHJBWjRfbV85TmRjRF96VWk4bHVOdUFhTU1qWHAtYThBYnF1Z0FVOTVNaXBTNUZJOXl1Q1gyWGYwSFpLMDZuWTNMTUJhR196Z1JLTGdFc2tVRHl2R3hnOTI5YjN4SFpxUGdfMExmRmcyVld3X1k0TFJWeVVkZFpuQ19uZw?oc=5",
-      "source": "ABC7 Los Angeles",
-      "publishedAt": "2026-11-28T17:38:39.000Z",
-      "latestAt": "2026-11-28T17:38:39.000Z",
-      "firstSeenAt": "2026-11-28T17:49:34.440Z",
-      "outlets": 1,
-      "outletNames": [
-        "ABC7 Los Angeles"
       ],
       "score": 1
     },
@@ -1758,6 +1743,22 @@
       "score": 1
     },
     {
+      "id": "9ae591231e22",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "November 28 tech news roundup: Jensen Huang returns as NVIDIA's CEO, Todoist and 1Password suffered data breaches, Rockstar takes down AI-ported PC versions of GTA VI",
+      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxNaG9ob0pLblRwMWhPLXZ1VVlKeWxkRW82TWZEOFpSQ1BNSnpGY05IeExhRkxFTHpTazhSQkNXeFpnT3Utd25DWERLX0R1SWZrV1hiaVlqQV9WaHhBdVYyLWIzeWtTakNNNnFrYzVybjRyWHE5WUhzSVhNTERIdk92bXhnSjhCenplQ2IyQlQ2elNUellIMXdIME9tQ0hGdE5seEUxeDNxTjdkR3R0bE5vQWQwTVpWNmxlalNMSlFWYlAxNjRPS1ZwV3djVUY5OXZaMmNzOW40UDM1Tl9uel9wSUdfNXNFdVFQYTVid1lkYU0yb2JpWkpMOU9xeTdsMUhmcE5tM0d6UU5xYjdCVkFwdUc0bDkweXF6ODQyVUVVbkZ5NFUz?oc=5",
+      "source": "FileHippo",
+      "publishedAt": "2026-11-28T04:35:38.000Z",
+      "latestAt": "2026-11-28T04:35:38.000Z",
+      "firstSeenAt": "2026-11-28T04:47:41.715Z",
+      "outlets": 1,
+      "outletNames": [
+        "FileHippo"
+      ],
+      "score": 1
+    },
+    {
       "id": "e398910a6e7d",
       "cat": "germs",
       "kind": "news",
@@ -1788,6 +1789,22 @@
         "The Dark Side Of The Boom"
       ],
       "score": 1
+    },
+    {
+      "id": "8a9fbcc19ca3",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Two states set for battering from severe storms with large hail and damaging winds",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPWVpsaGhEVXVxSk9zUFRtNXZid3BDclVHalI2UmV1WWd0STRia29BRDVhbThfaktXWWxrVnp1VElwNEpfdXJ1SGZqYUw4ZnlDalNrTXp0Uklxb0lFbjRqcnl5b082VE9yWFdibnFkcm04NzR2Rmo2MGlkSlF5TlhfdDczaVFuZGtCQUt2a0NNaHoySXB3WUp4cFdDNEdkSXMtTzRZQmFGUGZ0YVg3aXBFLXExZG5oRnBsR3pidl9PV1N5YXpXV2ZUaEFfUHc1VU81UkNsOGgxcnJoaUR6ZWI1Ny1jRG1nMGNJa2VXUUM2MjBoeVlUTXpIWExfcFfSAYICQVVfeXFMT2RObzNzdXJ0ZmJQdmFjTTlfTEFRMGUtSkh5SEFDM1hKVWJrM2VWN0dLQVJ2dnFYR2hkNUxhak5USGNhc2wycTZFSmZRV082NlBiVnFrYkpiSTI3VkJPc1JsRkpCdWJUTTZOX0dET05zd3ZEWWc0VTBjYW43VVhoZ3kxM21vWXE5ZnN3MEhCZUh1YjBkNGVaQmJSY0RMSkJoV3RHYVlBbk1LbG56WDJ6Rnh0X0JFdHZOQ0xhVVZMQTNBQW5BaHoxd2N2eE5KRGIxQzgza0VOY3RLNG4xV0wwaHhtTGlENXhQcDI4eDROakg3V0xiTnlsR0RDMVg2TnlXejdB?oc=5",
+      "source": "News24",
+      "publishedAt": "2026-11-28T18:01:03.000Z",
+      "latestAt": "2026-11-28T18:01:03.000Z",
+      "firstSeenAt": "2026-11-28T18:19:40.643Z",
+      "outlets": 1,
+      "outletNames": [
+        "News24"
+      ],
+      "score": 0.99
     },
     {
       "id": "6bd920e25daf",
@@ -1884,22 +1901,6 @@
         "CTV News"
       ],
       "score": 0.93
-    },
-    {
-      "id": "e03b6924a1ec",
-      "cat": "weather",
-      "kind": "news",
-      "title": "NES outlines changes after January ice storm left more than 230,000 without power",
-      "url": "https://www.msn.com/en-us/news/other/nes-outlines-changes-after-january-ice-storm-left-more-than-230-000-without-power/ar-AA2ioCfW",
-      "source": "WSMV on MSN",
-      "publishedAt": "2026-11-27T20:14:06.000Z",
-      "latestAt": "2026-11-28T04:14:00.000Z",
-      "firstSeenAt": "2026-11-28T04:18:58.012Z",
-      "outlets": 1,
-      "outletNames": [
-        "WSMV"
-      ],
-      "score": 0.87
     },
     {
       "id": "f04aa0d5ea8c",
