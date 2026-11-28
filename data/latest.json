@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T07:48:04.390Z",
+  "buildTime": "2026-11-28T08:03:05.957Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 02:48 ET",
+  "etStamp": "2026-11-28 03:03 ET",
   "score": 62,
   "fired": [
     "flights",
@@ -42,18 +42,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1209,
-  "lastSuccessAt": "2026-11-28T07:48:04.390Z",
+  "headlinesRead": 1201,
+  "lastSuccessAt": "2026-11-28T08:03:05.957Z",
   "rollingFallback": false,
   "cats": {
     "internet": 7,
-    "hacks": 42,
+    "hacks": 43,
     "grid": 19,
     "germs": 6,
-    "animals": 3,
     "earth": 4,
+    "animals": 3,
     "flights": 4,
-    "weather": 7,
+    "weather": 6,
     "markets": 4,
     "sun": 2,
     "space": 2
@@ -162,11 +162,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 0,
+      "matched": 1,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
-      "matches": []
+      "matches": [
+        "Israeli ‘direct hit ‘on Doctors Without Borders Gaza clinic kills 2 staff"
+      ]
     },
     "holdUntil": null,
     "reason": null
@@ -178,57 +180,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 910,
+      "count": 903,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     },
     "bing": {
       "ok": true,
-      "count": 264,
+      "count": 263,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     },
     "status": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     },
     "x": {
       "ok": true,
@@ -241,13 +243,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T07:48:04.390Z"
+      "lastOkAt": "2026-11-28T08:03:05.957Z"
     }
   },
   "stories": [
@@ -398,6 +400,24 @@
       "score": 1.98
     },
     {
+      "id": "9cbca09399b1",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Evidence of deepest explosive volcanic eruption found in Pacific trench",
+      "url": "https://www.japantimes.co.jp/news/2026/11/28/world/science-health/deepest-explosive-volcanic-eruption/",
+      "source": "The Japan Times",
+      "publishedAt": "2026-11-27T16:00:00.000Z",
+      "latestAt": "2026-11-27T19:48:00.000Z",
+      "firstSeenAt": "2026-11-28T07:48:04.390Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Japan Times",
+        "The Straits Times",
+        "FBC News"
+      ],
+      "score": 1.9
+    },
+    {
       "id": "824d40a7de12",
       "cat": "germs",
       "kind": "news",
@@ -448,23 +468,6 @@
         "Yahoo"
       ],
       "score": 1.61
-    },
-    {
-      "id": "9cbca09399b1",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Evidence of deepest explosive volcanic eruption found in Pacific trench",
-      "url": "https://www.japantimes.co.jp/news/2026/11/28/world/science-health/deepest-explosive-volcanic-eruption/",
-      "source": "The Japan Times",
-      "publishedAt": "2026-11-27T16:00:00.000Z",
-      "latestAt": "2026-11-27T17:23:00.000Z",
-      "firstSeenAt": "2026-11-28T07:48:04.390Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Japan Times",
-        "The Straits Times"
-      ],
-      "score": 1.47
     },
     {
       "id": "f61dc0909598",
@@ -716,22 +719,6 @@
       "score": 1.39
     },
     {
-      "id": "4d568b2c5e9b",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Record Heat Drained the World's Rivers and Lakes in 2023 and 2024, a New Science Study Finds",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxONXY1SnBIRHF6ZTNMdEJoU19FMWZuSFhVa3lCaUJhdGZ5aWxycE1VNWIxZThKczkxOTZxSzlEQkdwWXBrVWdVX3VkRERfbzRORENrSi00MEZRMVlqUWM1LUx5Vjd4MVI2Z1M3N2RCWmxnWGxZS1pYUDcxYmo4UVROY3AzdmlIZUctREFZYWdxdVRURXpIRmNGM3ZEblZ3MGs0WGQzS1dtWE40SU1fY2hvV1dleDQwWmlvdUo2OHphcnFBbHBBMHhJZElHS3lKZw?oc=5",
-      "source": "Nature World News",
-      "publishedAt": "2026-11-27T07:57:10.000Z",
-      "latestAt": "2026-11-27T07:57:10.000Z",
-      "firstSeenAt": "2026-11-27T08:14:16.364Z",
-      "outlets": 1,
-      "outletNames": [
-        "Nature World News"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "36bd83d9f0d6",
       "cat": "internet",
       "kind": "news",
@@ -778,6 +765,22 @@
         "Investing.com UK"
       ],
       "score": 1.36
+    },
+    {
+      "id": "c91ac9c26947",
+      "cat": "flights",
+      "kind": "news",
+      "title": "YouGov Poll: 60% of Americans Call High Ticket Prices a Major Air Travel Problem Days After Nationwide Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE11LUd5NjdhdWFRSUlkckM2R0tnYkVPYXI5WFpZbG1kZkxtd3N2WEZfbHU4Nkx5ZTNMczhwZ0ZEOVpHLVlIbDB6TEcxbzNFVF81Z2ZJVk5DOFhHMi1nWXhkUm4tQWZpM2dJS2JLV19kdjltQkE?oc=5",
+      "source": "Avi-Go",
+      "publishedAt": "2026-11-27T16:51:05.000Z",
+      "latestAt": "2026-11-27T16:51:05.000Z",
+      "firstSeenAt": "2026-11-27T20:46:26.142Z",
+      "outlets": 1,
+      "outletNames": [
+        "Avi-Go"
+      ],
+      "score": 1.31
     },
     {
       "id": "cd1b0d124270",
@@ -912,23 +915,6 @@
       "outletNames": [
         "Gizmodo",
         "AOL.com"
-      ],
-      "score": 1.71
-    },
-    {
-      "id": "72e46b5b520f",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Monmouth County hardest hit by blackouts; 50,000 still without power",
-      "url": "https://www.app.com/story/weather/2026/11/27/power-outage-monmouth-ocean-county-nj-jersey-shore/92978241007/",
-      "source": "APP.com",
-      "publishedAt": "2026-11-27T08:02:00.000Z",
-      "latestAt": "2026-11-27T08:02:00.000Z",
-      "firstSeenAt": "2026-11-27T16:45:43.522Z",
-      "outlets": 2,
-      "outletNames": [
-        "APP.com",
-        "Yahoo"
       ],
       "score": 1.71
     },
@@ -1086,6 +1072,23 @@
       "score": 1.49
     },
     {
+      "id": "7a325ff6efa9",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Pensions and benefits services still down after 'cyber incident'",
+      "url": "https://www.yahoo.com/news/world/articles/pensions-benefits-services-still-down-072759273.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T16:00:00.000Z",
+      "latestAt": "2026-11-28T07:26:06.000Z",
+      "firstSeenAt": "2026-11-28T08:03:05.957Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "BBC"
+      ],
+      "score": 1.46
+    },
+    {
       "id": "9ad373154f58",
       "cat": "grid",
       "kind": "news",
@@ -1213,22 +1216,6 @@
         "The Nightly"
       ],
       "score": 1.35
-    },
-    {
-      "id": "c91ac9c26947",
-      "cat": "flights",
-      "kind": "news",
-      "title": "YouGov Poll: 60% of Americans Call High Ticket Prices a Major Air Travel Problem Days After Nationwide Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE11LUd5NjdhdWFRSUlkckM2R0tnYkVPYXI5WFpZbG1kZkxtd3N2WEZfbHU4Nkx5ZTNMczhwZ0ZEOVpHLVlIbDB6TEcxbzNFVF81Z2ZJVk5DOFhHMi1nWXhkUm4tQWZpM2dJS2JLV19kdjltQkE?oc=5",
-      "source": "Avi-Go",
-      "publishedAt": "2026-11-27T16:51:05.000Z",
-      "latestAt": "2026-11-27T16:51:05.000Z",
-      "firstSeenAt": "2026-11-27T20:46:26.142Z",
-      "outlets": 1,
-      "outletNames": [
-        "Avi-Go"
-      ],
-      "score": 1.31
     },
     {
       "id": "ca1599d9f9d7",
@@ -1389,6 +1376,22 @@
         "Yorkshire Live"
       ],
       "score": 1.02
+    },
+    {
+      "id": "01c273adf2a3",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Now Target Mechanics, Repair Shops With Infected Vehicle Diagnostic Software",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOM21MWFdyM1NWYlJfV1J2eHRwUlYyOEtkNnJ6ekxBU1psbWpUWExmRkl1dzhKZzNKbUUtbWFLX2tIQlV4YjJoeW0wcllEYzVXQVp4cmdkWERFbV9vaXlaX2JjZEg4NnlTTUZkTEwtOERGeHNZUEtBWnJ5b2J5b3QyYmlxdGhMRUs2STUyQXpBZXBOMm11UFVCOVhtSEYzV2JjWHg2N0VzWWNQRkFDX05sMnl4TlRac2RWeEFmUUN0QnQ5bWwxRW5tZ1pn?oc=5",
+      "source": "autoevolution",
+      "publishedAt": "2026-11-28T07:59:52.000Z",
+      "latestAt": "2026-11-28T07:59:52.000Z",
+      "firstSeenAt": "2026-11-28T08:03:05.957Z",
+      "outlets": 1,
+      "outletNames": [
+        "autoevolution"
+      ],
+      "score": 1
     },
     {
       "id": "3eb2e4c98c2c",
@@ -1777,20 +1780,20 @@
       "score": 0.99
     },
     {
-      "id": "59daa8fd9202",
-      "cat": "hacks",
+      "id": "5d7165dfa909",
+      "cat": "grid",
       "kind": "news",
-      "title": "eCitizen hackers begin leaking data of 32 million Kenyans on dark web",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2JlclAwZ21kU3YwNnhiOGNtd2JPSkJCNldEVllfSVhjbC1vWUZrelhPcjdXMWVWYzlWd1FQV0lCanpCYldyN3Z3Y0d3d0tjcG04N0U1cjZqeE4zdlc1QXVTam1mOTBzZlEzTzBwQlMta3NaUG5TeDNubllIRGtZU241cjBrbGFOYmkxU0txa05qcm9hOVk0RGwzQXJYRHJZRjhYWmY1X0RaMHRlMG5N?oc=5",
-      "source": "Daily Nation",
-      "publishedAt": "2026-11-28T03:00:00.000Z",
-      "latestAt": "2026-11-28T03:00:00.000Z",
-      "firstSeenAt": "2026-11-28T04:47:41.715Z",
+      "title": "Power outage: Sabah Electricity boosts staffing at 24-hour call centre",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY3JXZjdQWVFCczF1R0lfMlhhd0pfUHduWEFVR09CTVpPVlBMQ1hmQXJ2bmZWeXJ2YU5oQzMzNWZUX2dWczZlbW44MjZBMERvSURPeGlyZ2ZWa3hQLVc3S0g4UTlRZ1N3Q1BOQ1YwMFZhNWdnSlhqUkNvTnU1SUh6Y2dvMEZjZTJFVzVQSDVnOVBIU1RCV0hhbTF3UDNZN0JGZ3ZnSDE0WElOUHBER0hQZFphWS1JQzIw?oc=5",
+      "source": "The Malaysian Reserve",
+      "publishedAt": "2026-11-28T06:41:40.000Z",
+      "latestAt": "2026-11-28T06:41:40.000Z",
+      "firstSeenAt": "2026-11-28T08:03:05.957Z",
       "outlets": 1,
       "outletNames": [
-        "Daily Nation"
+        "The Malaysian Reserve"
       ],
-      "score": 0.97
+      "score": 0.98
     },
     {
       "id": "05bc9b40c07c",
@@ -1848,7 +1851,7 @@
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSkExbWRiN3ZrSHRNTS14bFc3RjVZU1h1bmdhM2J1ZEZCM0xQT0RKYV8teG1DZ2pyM3BHS1poN0h5MGNzZWNzR2JiZ1o3akFiSUxJcmlHUGpNN08tYjV4U1ZsYzZucGRzQ0JUXzlVNExzR3hhNHIza2pQT0QxVjVFVkJwWnpIOExhSy04RUhhT2lpRU9iM2FxZFphampVS0tvbUk3eXprSXh5NG4zMGIyQkhaM1ZVZk9q?oc=5",
       "source": "CTV News",
       "publishedAt": "2026-11-27T23:02:26.000Z",
-      "latestAt": "2026-11-27T23:02:26.000Z",
+      "latestAt": "2026-11-27T23:15:33.000Z",
       "firstSeenAt": "2026-11-28T03:17:19.928Z",
       "outlets": 1,
       "outletNames": [
