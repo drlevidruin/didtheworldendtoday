@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T16:19:22.705Z",
+  "buildTime": "2026-11-28T16:34:25.095Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 11:19 ET",
+  "etStamp": "2026-11-28 11:34 ET",
   "score": 67,
   "fired": [
     "flights",
@@ -47,8 +47,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1178,
-  "lastSuccessAt": "2026-11-28T16:19:22.705Z",
+  "headlinesRead": 1134,
+  "lastSuccessAt": "2026-11-28T16:34:25.095Z",
   "rollingFallback": false,
   "cats": {
     "earth": 5,
@@ -179,20 +179,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 910,
+      "count": 864,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     },
     "bing": {
       "ok": true,
       "count": 236,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     },
     "gdelt": {
       "ok": false,
@@ -204,55 +204,56 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:19:22.705Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
-      "count": 28,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z"
+      "lastOkAt": "2026-11-28T16:34:25.095Z"
     }
   },
   "stories": [
@@ -398,6 +399,23 @@
       "score": 2
     },
     {
+      "id": "49ab3821e57e",
+      "cat": "flights",
+      "kind": "news",
+      "title": "GPS Jamming Hits Nearly 200 European Flights Amid Spoofing Risks",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNeTUwSjFveVZpLTNCcWVYT0t1OTNnY2JLRFlQd0k3UExZeGFuWnJ4MnJ6VmtRLVFFRDRUV09DYmV6WHItLXYxNDhzaVhfeWRtYUdmTVNUT2Y3cHdGcGpLRG5Zak5HVlRfbmRoMUlmZ2IzTE93aWlpR0VzMjJPQnJDNXF2bWJoR3dvXzVxU1MzUDU3RGVza1BjMnZIcGZNZTQ?oc=5",
+      "source": "streamlinefeed.co.ke",
+      "publishedAt": "2026-11-28T10:18:00.000Z",
+      "latestAt": "2026-11-28T10:18:00.000Z",
+      "firstSeenAt": "2026-11-28T10:33:30.627Z",
+      "outlets": 2,
+      "outletNames": [
+        "streamlinefeed.co.ke",
+        "https://streamlinefeed.co.ke/"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "e164c01a89b4",
       "cat": "grid",
       "kind": "news",
@@ -466,36 +484,21 @@
       "score": 1.73
     },
     {
-      "id": "f61dc0909598",
-      "cat": "flights",
+      "id": "16eb192bf4a8",
+      "cat": "earth",
       "kind": "news",
-      "title": "Stranded Bismarck Nurse Buys Bronco After Nationwide FAA Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRFJaRHBCX2UtYlRGcnM1MmJiV2tNX1hjckhaMkhkRHZ1NmJXTmZ2VWloQnR0aTFRTEk4T2NsMjYwOHpzUURaQjQxa0hTRVZZbTRKckhzUG55WXVTVzQyX1N0SUI1M0FCVWcyam9ubzRkR0NaOHdSTU40QjQ0WWNhUExQM3VzanVEVnR4V3hnYURSaHF2Q0wwZjhNZk1jZw?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-28T00:12:37.000Z",
-      "latestAt": "2026-11-28T00:12:37.000Z",
-      "firstSeenAt": "2026-11-28T00:16:50.918Z",
-      "outlets": 1,
+      "title": "Strong Earthquake Hits Russias Kamchatka Region",
+      "url": "https://www.msn.com/en-in/news/other/strong-earthquake-hits-russias-kamchatka-region/ar-AA2iqMHz",
+      "source": "Newspoint on MSN",
+      "publishedAt": "2026-11-28T07:16:49.000Z",
+      "latestAt": "2026-11-28T15:16:49.000Z",
+      "firstSeenAt": "2026-11-28T15:34:20.375Z",
+      "outlets": 2,
       "outletNames": [
-        "https://www.thetraveler.org/"
+        "Udaipur Kiran",
+        "Newspoint on MSN"
       ],
-      "score": 1.4
-    },
-    {
-      "id": "9749ab7c58b2",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta system outage snarls Thanksgiving-week flights nationwide",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcEljZks1eEdjVEdJRG1SemhZRFZzUmJRVWpVSE9BRlQ1UGF6X0NZcFlJVzNabFFZcU9aUl9iZWlabmd5cEpibUNxaE50cm5JNUNlN1dzd2ZjX3BqTzlZUU5BaXAtQUhiM1ZXcWFGbTVnS2h2SnIyYkRaTkEzVnNoOGJmRGhzX2JBcVZJUElxcG1GOVRNdXhv?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-27T23:22:37.000Z",
-      "latestAt": "2026-11-28T14:42:39.000Z",
-      "firstSeenAt": "2026-11-27T23:31:54.295Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.4
+      "score": 1.72
     },
     {
       "id": "df5fad6f7c8a",
@@ -600,6 +603,38 @@
       "score": 1.69
     },
     {
+      "id": "f61dc0909598",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Stranded Bismarck Nurse Buys Bronco After Nationwide FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRFJaRHBCX2UtYlRGcnM1MmJiV2tNX1hjckhaMkhkRHZ1NmJXTmZ2VWloQnR0aTFRTEk4T2NsMjYwOHpzUURaQjQxa0hTRVZZbTRKckhzUG55WXVTVzQyX1N0SUI1M0FCVWcyam9ubzRkR0NaOHdSTU40QjQ0WWNhUExQM3VzanVEVnR4V3hnYURSaHF2Q0wwZjhNZk1jZw?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-28T00:12:37.000Z",
+      "latestAt": "2026-11-28T00:12:37.000Z",
+      "firstSeenAt": "2026-11-28T00:16:50.918Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.4
+    },
+    {
+      "id": "9749ab7c58b2",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta system outage snarls Thanksgiving-week flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcEljZks1eEdjVEdJRG1SemhZRFZzUmJRVWpVSE9BRlQ1UGF6X0NZcFlJVzNabFFZcU9aUl9iZWlabmd5cEpibUNxaE50cm5JNUNlN1dzd2ZjX3BqTzlZUU5BaXAtQUhiM1ZXcWFGbTVnS2h2SnIyYkRaTkEzVnNoOGJmRGhzX2JBcVZJUElxcG1GOVRNdXhv?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-27T23:22:37.000Z",
+      "latestAt": "2026-11-28T14:42:39.000Z",
+      "firstSeenAt": "2026-11-27T23:31:54.295Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.4
+    },
+    {
       "id": "06b071e56695",
       "cat": "weather",
       "kind": "news",
@@ -680,22 +715,6 @@
       "score": 1.17
     },
     {
-      "id": "b8d3baa90b3a",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Rant and Rave: Readers praise workers during nationwide ground stop",
-      "url": "https://www.seattletimes.com/life/lifestyle/rant-and-rave-readers-praise-workers-during-nationwide-ground-stop/",
-      "source": "The Seattle Times",
-      "publishedAt": "2026-11-27T22:00:00.000Z",
-      "latestAt": "2026-11-28T14:00:03.000Z",
-      "firstSeenAt": "2026-11-28T14:19:06.875Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Seattle Times"
-      ],
-      "score": 1.02
-    },
-    {
       "id": "9bddf51a0e24",
       "cat": "earth",
       "kind": "news",
@@ -708,22 +727,6 @@
       "outlets": 1,
       "outletNames": [
         "TodayPress.tv"
-      ],
-      "score": 1
-    },
-    {
-      "id": "16eb192bf4a8",
-      "cat": "earth",
-      "kind": "news",
-      "title": "Strong Earthquake Hits Russias Kamchatka Region",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBacEJmaENzWkZadlBITGJ4eUY1cVo2Umc3akhTOWtEYXR1d3cwVE5DNDFKT3pRTmV2dnZhd1IyWFM2YnphXzBDYVk5SHk1MTEwZXgyckVrTmhDTlZ3UVR6b0ctWHY3WVJJTjdFaXFNMHItcHJoWFc2czFXMWpCUQ?oc=5",
-      "source": "Udaipur Kiran",
-      "publishedAt": "2026-11-28T15:16:49.000Z",
-      "latestAt": "2026-11-28T15:16:49.000Z",
-      "firstSeenAt": "2026-11-28T15:34:20.375Z",
-      "outlets": 1,
-      "outletNames": [
-        "Udaipur Kiran"
       ],
       "score": 1
     },
@@ -1056,6 +1059,54 @@
       "score": 1.13
     },
     {
+      "id": "b8d3baa90b3a",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Rant and Rave: Readers praise workers during nationwide ground stop",
+      "url": "https://www.seattletimes.com/life/lifestyle/rant-and-rave-readers-praise-workers-during-nationwide-ground-stop/",
+      "source": "The Seattle Times",
+      "publishedAt": "2026-11-27T22:00:00.000Z",
+      "latestAt": "2026-11-28T14:00:03.000Z",
+      "firstSeenAt": "2026-11-28T14:19:06.875Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Seattle Times"
+      ],
+      "score": 1.02
+    },
+    {
+      "id": "21bc0ac45c73",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "ALERT: Hackers Hijack ICIR’s X Account, Publish Crypto Spam",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdGgxQl9Hcklkcm5jejZKYmJqaUhfdzU4aS1jb3RoSlVLdnhUd2F3a3dfSkZScHctR0g3a3F2OS1zVmNxTWlodDJtdG9BMUFUYldZVk0xOEl4NE5zMkNqSXE3Y1RnTVVnZlZrRy1wdVFwamNESTViR0VRRzZLRDlMQXBLUXRMRU0?oc=5",
+      "source": "FIJ NG",
+      "publishedAt": "2026-11-28T16:33:13.000Z",
+      "latestAt": "2026-11-28T16:33:13.000Z",
+      "firstSeenAt": "2026-11-28T16:34:25.095Z",
+      "outlets": 1,
+      "outletNames": [
+        "FIJ NG"
+      ],
+      "score": 1
+    },
+    {
+      "id": "65ae216ac1af",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Was the Allstate outage a hack? No evidence of a cyberattack, and Allstate hasn't named a cause",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRHdvVUFHSDZGWmZHcGpCUUhLX1FnWkduenkwVVNVR01wbGJ1dy1rQ1RsZXZWZ05qNUdWSktCdmozV2VKVDR5N2VPYUVZcE9kdEh1UFFCaFNVX1lPTWM5b0tnc3lxd0tFeC02Vjdsa3pUd09WMGxhNEFmSHluTHRxYnRkUGRpcVNIb3ZlWUl2UGFGek0zZWUzdHAtci1ha2I0UDJSMEFIeDFkLUZpaWc?oc=5",
+      "source": "Nacionale",
+      "publishedAt": "2026-11-28T16:24:07.000Z",
+      "latestAt": "2026-11-28T16:24:07.000Z",
+      "firstSeenAt": "2026-11-28T16:34:25.095Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nacionale"
+      ],
+      "score": 1
+    },
+    {
       "id": "acc234d12bc7",
       "cat": "grid",
       "kind": "news",
@@ -1212,22 +1263,6 @@
       "outlets": 1,
       "outletNames": [
         "The Japan News"
-      ],
-      "score": 1
-    },
-    {
-      "id": "49ab3821e57e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "GPS Jamming Hits Nearly 200 European Flights Amid Spoofing Risks",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNeTUwSjFveVZpLTNCcWVYT0t1OTNnY2JLRFlQd0k3UExZeGFuWnJ4MnJ6VmtRLVFFRDRUV09DYmV6WHItLXYxNDhzaVhfeWRtYUdmTVNUT2Y3cHdGcGpLRG5Zak5HVlRfbmRoMUlmZ2IzTE93aWlpR0VzMjJPQnJDNXF2bWJoR3dvXzVxU1MzUDU3RGVza1BjMnZIcGZNZTQ?oc=5",
-      "source": "streamlinefeed.co.ke",
-      "publishedAt": "2026-11-28T10:18:00.000Z",
-      "latestAt": "2026-11-28T10:18:00.000Z",
-      "firstSeenAt": "2026-11-28T10:33:30.627Z",
-      "outlets": 1,
-      "outletNames": [
-        "streamlinefeed.co.ke"
       ],
       "score": 1
     },
@@ -1479,7 +1514,7 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPendFUktGazBkcURFNFpQUjZEWnVwWWNNb1MwVkxjSFdpejVTOW13VExocHpTaTVRSmRaMnlkLTFDUzNzb2kxNm5oZUlRR185V2laWU5fYVFRbURRdExXUFVfVFBSSHRpYXBqb1NGVTVuMjlfSWRUZmx1U0hseEk0MGRrV0ZIWVU1MER2bVNOSWM2YUJhaVMtdUctdklJU20yQkRpZVIzb19OSDNqVE9uU3Vyb0JpbkcwMzZZdnJYaw?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-28T01:55:02.000Z",
-      "latestAt": "2026-11-28T15:30:46.000Z",
+      "latestAt": "2026-11-28T16:28:58.000Z",
       "firstSeenAt": "2026-11-28T02:02:07.667Z",
       "outlets": 1,
       "outletNames": [
@@ -1676,38 +1711,6 @@
       "outlets": 1,
       "outletNames": [
         "Avian Flu Diary"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "b62015d808af",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cyberattack on telecom provider OnlineCity.io exposes SMS data across Denmark",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPTWRFQ3Qtd1pERndxTW5PS2RoeE91bkxJVUNQQmpLZlZ6NjVlN0tITUluSGgxTlpUYzIyVDI3UUdPN08ybDFZNm9JNDdVQk0zSUhtNi05bGFSMDM3UFExNlRKN19HOHZ2WDZDTGdyUl93RDdzRXU5dXUwV01sQ3NWOVdSNEZVTE04Mk80NUtWeTFUaVE2aXhLcDhNLTk1TDZDSnVHTEQ4MA?oc=5",
-      "source": "Beinsure",
-      "publishedAt": "2026-11-28T12:15:13.000Z",
-      "latestAt": "2026-11-28T12:15:13.000Z",
-      "firstSeenAt": "2026-11-28T12:48:49.010Z",
-      "outlets": 1,
-      "outletNames": [
-        "Beinsure"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "f558626fcf82",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA says cyberattack against it accessed a ‘limited’ set of data",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQzlQUVpIcG9oakEtN19xbzNEdmlkVlVUcTY1ajd2UFJYTm92MTVLOEU0UWcwdXlEMmFXdFplWU0wekxGUW1abXNieWxUQTZ1Wkg0M2Z6aVREaS1pTWtKeHgyWXdmVmhhYmpJaFJiaE1OeU4xUGkyZnkzSkdYc2xjdmZWN25LeGVJMTdLRGpKM0VWSl9RVXd6NFlUdElFYlZk?oc=5",
-      "source": "Newswire",
-      "publishedAt": "2026-11-28T12:03:46.000Z",
-      "latestAt": "2026-11-28T12:03:46.000Z",
-      "firstSeenAt": "2026-11-28T12:48:49.010Z",
-      "outlets": 1,
-      "outletNames": [
-        "Newswire"
       ],
       "score": 0.99
     },
