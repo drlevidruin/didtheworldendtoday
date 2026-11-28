@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T01:17:02.863Z",
+  "buildTime": "2026-11-28T01:32:11.115Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 20:17 ET",
+  "etStamp": "2026-11-27 20:32 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -39,11 +39,11 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1245,
-  "lastSuccessAt": "2026-11-28T01:17:02.863Z",
+  "headlinesRead": 1259,
+  "lastSuccessAt": "2026-11-28T01:32:11.115Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 39,
+    "hacks": 40,
     "germs": 5,
     "grid": 17,
     "weather": 8,
@@ -53,8 +53,7 @@
     "flights": 8,
     "markets": 4,
     "internet": 6,
-    "space": 4,
-    "sun": 1
+    "space": 4
   },
   "vital": {
     "quake": {
@@ -171,80 +170,81 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 941,
+      "count": 955,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     },
     "bing": {
       "ok": true,
       "count": 270,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:17:02.863Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T01:17:02.863Z"
+      "lastOkAt": "2026-11-28T01:32:11.115Z"
     }
   },
   "stories": [
@@ -511,7 +511,7 @@
       "url": "https://www.straitstimes.com/world/united-states/evidence-of-deepest-explosive-volcanic-eruption-found-in-pacifics-mariana-trench",
       "source": "The Straits Times",
       "publishedAt": "2026-11-27T03:21:00.000Z",
-      "latestAt": "2026-11-27T07:01:00.000Z",
+      "latestAt": "2026-11-27T17:23:00.000Z",
       "firstSeenAt": "2026-11-27T18:46:00.444Z",
       "outlets": 2,
       "outletNames": [
@@ -1109,6 +1109,23 @@
         "National Technology News"
       ],
       "score": 1.57
+    },
+    {
+      "id": "ea511356490e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hacking group targets FIFA in CYBERATTACK",
+      "url": "https://www.yahoo.com/news/videos/hacking-group-targets-fifa-cyberattack-182139474.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T10:21:00.000Z",
+      "latestAt": "2026-11-27T18:21:39.000Z",
+      "firstSeenAt": "2026-11-28T01:32:11.115Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Fox News"
+      ],
+      "score": 1.49
     },
     {
       "id": "8b924f779234",
@@ -1915,22 +1932,6 @@
         "Bright Side on MSN"
       ],
       "score": 0.85
-    },
-    {
-      "id": "7f68148d5c42",
-      "cat": "sun",
-      "kind": "news",
-      "title": "A two-day magnetic storm will hit Earth: Forecast for November 27–28",
-      "url": "https://ua.news/en/ukraine/zemliu-nakriie-dvodenna-magnitna-buria-prognoz-na-27-28-listopada",
-      "source": "UA.NEWS",
-      "publishedAt": "2026-11-27T01:23:00.000Z",
-      "latestAt": "2026-11-27T07:25:55.000Z",
-      "firstSeenAt": "2026-11-27T11:45:04.133Z",
-      "outlets": 1,
-      "outletNames": [
-        "UA.NEWS"
-      ],
-      "score": 0.83
     },
     {
       "id": "3f99b2a2a3e3",
