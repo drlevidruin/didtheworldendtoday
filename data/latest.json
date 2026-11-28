@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T13:20:15.208Z",
+  "buildTime": "2026-11-28T13:33:59.388Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 08:20 ET",
-  "score": 62,
+  "etStamp": "2026-11-28 08:33 ET",
+  "score": 67,
   "fired": [
     "flights",
     "hacks",
@@ -17,12 +17,17 @@
   ],
   "bumps": [
     {
+      "key": "quake",
+      "label": "Quake M6 or more",
+      "points": 5
+    },
+    {
       "key": "status",
       "label": "Big status page in major outage",
       "points": 8
     }
   ],
-  "change": 8,
+  "change": 13,
   "yesterday": {
     "date": "2026-11-27",
     "score": 54,
@@ -42,10 +47,11 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1184,
-  "lastSuccessAt": "2026-11-28T13:20:15.208Z",
+  "headlinesRead": 1162,
+  "lastSuccessAt": "2026-11-28T13:33:59.388Z",
   "rollingFallback": false,
   "cats": {
+    "earth": 4,
     "germs": 7,
     "internet": 5,
     "hacks": 44,
@@ -53,18 +59,17 @@
     "flights": 8,
     "weather": 4,
     "markets": 4,
-    "earth": 4,
     "animals": 2,
     "sun": 4
   },
   "vital": {
     "quake": {
-      "mag": 5.2,
-      "place": "93 km W of San Antonio de los Cobres, Argentina",
-      "time": "2026-11-28T02:25:05.520Z",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue1h",
-      "pager": null,
-      "tsunami": false
+      "mag": 6.7,
+      "place": "62 km NNW of Yelizovo, Russia",
+      "time": "2026-11-28T13:15:06.781Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue3p",
+      "pager": "green",
+      "tsunami": true
     },
     "kp": {
       "value": 3.33,
@@ -73,9 +78,9 @@
     },
     "asteroid": {
       "des": "2026 WK3",
-      "ld": 1.478,
+      "ld": 1.477,
       "at": "2026-11-28T10:50:00.000Z",
-      "sizeM": 15.8,
+      "sizeM": 15.6,
       "size": "a house",
       "url": "https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2026%20WK3",
       "upcoming": false
@@ -179,57 +184,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 894,
+      "count": 877,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     },
     "bing": {
       "ok": true,
-      "count": 258,
+      "count": 253,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     },
     "usgs": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     },
     "x": {
       "ok": true,
@@ -242,16 +247,41 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T13:20:15.208Z"
+      "lastOkAt": "2026-11-28T13:33:59.388Z"
     }
   },
   "stories": [
+    {
+      "id": "sig:quake:us6000ue3p",
+      "cat": "earth",
+      "kind": "signal",
+      "title": "M 6.7 - 62 km NNW of Yelizovo, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue3p",
+      "source": "USGS",
+      "publishedAt": "2026-11-28T13:15:06.781Z",
+      "latestAt": "2026-11-28T13:15:06.781Z",
+      "firstSeenAt": "2026-11-28T13:33:59.388Z",
+      "outlets": 1,
+      "outletNames": [
+        "USGS"
+      ],
+      "score": 4.5,
+      "signal": {
+        "type": "quake",
+        "mag": 6.7,
+        "place": "62 km NNW of Yelizovo, Russia",
+        "pager": "green",
+        "tsunami": true
+      },
+      "quiet": true,
+      "quietReason": "quake M6.5 or more"
+    },
     {
       "id": "ff5b0d91f7b8",
       "cat": "germs",
@@ -472,22 +502,6 @@
       "score": 1.4
     },
     {
-      "id": "f61dc0909598",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Stranded Bismarck Nurse Buys Bronco After Nationwide FAA Ground Stop",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRFJaRHBCX2UtYlRGcnM1MmJiV2tNX1hjckhaMkhkRHZ1NmJXTmZ2VWloQnR0aTFRTEk4T2NsMjYwOHpzUURaQjQxa0hTRVZZbTRKckhzUG55WXVTVzQyX1N0SUI1M0FCVWcyam9ubzRkR0NaOHdSTU40QjQ0WWNhUExQM3VzanVEVnR4V3hnYURSaHF2Q0wwZjhNZk1jZw?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-28T00:12:37.000Z",
-      "latestAt": "2026-11-28T00:12:37.000Z",
-      "firstSeenAt": "2026-11-28T00:16:50.918Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "a20822d8e9f8",
       "cat": "hacks",
       "kind": "news",
@@ -503,6 +517,23 @@
         "Beinsure"
       ],
       "score": 2
+    },
+    {
+      "id": "df5fad6f7c8a",
+      "cat": "grid",
+      "kind": "news",
+      "title": "The 57 postcodes affected by Gwynedd power outage",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQM1NXRXRHajdfdFlKZXRlU3hFeWVGaUpXWU5CV2s1dTBYSkwyVHFWZEJ4dXJpV0ZhRWVPdmhQWTBjLU5JMzZNUXFhdXNHMHpQdklzNXdwMGl0b0g3cHJLVG9vRnNRak5wa0hYNnhwNXdtRWcxRWY1c3FxcTBkMG1fNGNxNzBwN0V4UXN0Wi14ZXoyRHI2VndWSWh3?oc=5",
+      "source": "North Wales Live",
+      "publishedAt": "2026-11-28T12:05:00.000Z",
+      "latestAt": "2026-11-28T12:05:10.000Z",
+      "firstSeenAt": "2026-11-28T12:33:55.626Z",
+      "outlets": 2,
+      "outletNames": [
+        "North Wales Live",
+        "Yahoo News UK"
+      ],
+      "score": 1.98
     },
     {
       "id": "27481d5961b0",
@@ -573,21 +604,20 @@
       "score": 1.73
     },
     {
-      "id": "34fb80859fc2",
-      "cat": "grid",
+      "id": "f61dc0909598",
+      "cat": "flights",
       "kind": "news",
-      "title": "Here's how you can replace SNAP food lost in power outage",
-      "url": "https://www.yahoo.com/news/us/articles/heres-replace-snap-food-lost-212101531.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T13:21:00.000Z",
-      "latestAt": "2026-11-27T21:22:40.000Z",
-      "firstSeenAt": "2026-11-27T22:31:38.976Z",
-      "outlets": 2,
+      "title": "Stranded Bismarck Nurse Buys Bronco After Nationwide FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRFJaRHBCX2UtYlRGcnM1MmJiV2tNX1hjckhaMkhkRHZ1NmJXTmZ2VWloQnR0aTFRTEk4T2NsMjYwOHpzUURaQjQxa0hTRVZZbTRKckhzUG55WXVTVzQyX1N0SUI1M0FCVWcyam9ubzRkR0NaOHdSTU40QjQ0WWNhUExQM3VzanVEVnR4V3hnYURSaHF2Q0wwZjhNZk1jZw?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-28T00:12:37.000Z",
+      "latestAt": "2026-11-28T00:12:37.000Z",
+      "firstSeenAt": "2026-11-28T00:16:50.918Z",
+      "outlets": 1,
       "outletNames": [
-        "Yahoo",
-        "KSDK"
+        "https://www.thetraveler.org/"
       ],
-      "score": 1.69
+      "score": 1.4
     },
     {
       "id": "9749ab7c58b2",
@@ -766,22 +796,6 @@
       "score": 1
     },
     {
-      "id": "8ab1f28394c6",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft outage hits South African businesses, government services and universities",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPendFUktGazBkcURFNFpQUjZEWnVwWWNNb1MwVkxjSFdpejVTOW13VExocHpTaTVRSmRaMnlkLTFDUzNzb2kxNm5oZUlRR185V2laWU5fYVFRbURRdExXUFVfVFBSSHRpYXBqb1NGVTVuMjlfSWRUZmx1U0hseEk0MGRrV0ZIWVU1MER2bVNOSWM2YUJhaVMtdUctdklJU20yQkRpZVIzb19OSDNqVE9uU3Vyb0JpbkcwMzZZdnJYaw?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-28T01:55:02.000Z",
-      "latestAt": "2026-11-28T12:36:02.000Z",
-      "firstSeenAt": "2026-11-28T02:02:07.667Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 1
-    },
-    {
       "id": "5cc3e5f07823",
       "cat": "hacks",
       "kind": "news",
@@ -797,23 +811,6 @@
         "Yakima Herald-Republic"
       ],
       "score": 1.91
-    },
-    {
-      "id": "a3000ce6fbd2",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Software giant SAP confirms cyber incident amid reports of source code breach",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA5UGViQ0RSR2xxVGZ0eXVrMFgzSVhDM0hsNjZ2RHljU2VhMXhGZGpvWmc0TTRBRTdYYjhySDVxQkluU21wcVhwOEFqTndSa1ZGdGFTTVp3eVVvS3ptbE9USG9ZaTA?oc=5",
-      "source": "The Record from Recorded Future News",
-      "publishedAt": "2026-11-27T13:23:33.000Z",
-      "latestAt": "2026-11-27T16:13:15.000Z",
-      "firstSeenAt": "2026-11-27T16:15:35.844Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Record from Recorded Future News",
-        "Canadian HR Reporter"
-      ],
-      "score": 1.9
     },
     {
       "id": "7a325ff6efa9",
@@ -956,9 +953,9 @@
       "id": "593cf699d089",
       "cat": "hacks",
       "kind": "news",
-      "title": "Octopus cyberattack exposes data of 7,500 customers and 22,000 merchants",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPckFmNF80bVJqaVk2Wm1yTDNWaEd3RGVFZzVFZnNJRFZWOVdyZThUZ1F6cDRucE53TzJCNU1MLXY1WEp2QVdESUdxTnpBYzFNNV9rNlhISVFaZm4yaGRSMnNzUlBEVk5CTl9Sazlub1FpVklWSDRlWWZoR3dvMUt5b0RnaktDcVVvd2c5S2tmTEFXalRkYTFnVXI0TzFGTlpFazFsOEVuTWQ2Mm5TdUprazUzNC1xTVIyUjJ6V2xB?oc=5",
-      "source": "The Standard (HK)",
+      "title": "Hong Kong’s Octopus cyberattack exposes data of nearly 30K customers and merchants",
+      "url": "https://beinsure.com/news/hong-kongs-octopus-cyberattack-exposes-data/",
+      "source": "beinsure",
       "publishedAt": "2026-11-27T22:28:39.000Z",
       "latestAt": "2026-11-28T12:39:35.000Z",
       "firstSeenAt": "2026-11-28T13:03:54.160Z",
@@ -968,6 +965,23 @@
         "Beinsure"
       ],
       "score": 1.51
+    },
+    {
+      "id": "626d963643bc",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Thousands of power outages remain in Lehigh Valley after Thanksgiving storm, could take days to restore [Updated]",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQLXZQWEd2Z1c5TVpESGM5LWhHd1VNdjlnWkpoNllZNUl3cHFydEhzeHFPRGItUTJyUjBnbDc0d3hnSjlBbTVfUXc5ZkxuREZrUVRvaEVHOFplclZDSWp1d3NGSVZZaEQwSkZfbDN2N2xUc0E0YXl1Z2kxbU1sOGdNYXF0cG1Yblp6Y3N6YUU0WjJEU1F6alFVX0JUX3RIbVVacUQzaDdTa1RLdGpWOHM1TWV6MA?oc=5",
+      "source": "The Morning Call",
+      "publishedAt": "2026-11-27T21:10:34.000Z",
+      "latestAt": "2026-11-27T22:00:00.000Z",
+      "firstSeenAt": "2026-11-28T13:33:59.388Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Morning Call",
+        "WFMZ.com"
+      ],
+      "score": 1.45
     },
     {
       "id": "9ad373154f58",
@@ -1015,22 +1029,6 @@
       "outlets": 1,
       "outletNames": [
         "Dealroom"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "7a80e6912e5c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US Air Force targeted by hackers in massive attack",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQOVhEZ1B1R3g2NHZEZjNXSnlMN3JNVkNQVDd3bkdhU1FaZXdJNnZLWDVfWUdfOHVxR1doTDdGd211VC1VMmVFaHBxMnl4T2RXdTdtRzdiYTctT0pXbEtqLTktTkc0MllqNFZhQUVsb3lEY1Z3dE10Zlpvd29PbGdjcA?oc=5",
-      "source": "AOL.co.uk",
-      "publishedAt": "2026-11-27T13:20:33.000Z",
-      "latestAt": "2026-11-27T13:20:33.000Z",
-      "firstSeenAt": "2026-11-27T13:30:09.909Z",
-      "outlets": 1,
-      "outletNames": [
-        "AOL.co.uk"
       ],
       "score": 1.4
     },
@@ -1146,6 +1144,22 @@
         "Digital Trends"
       ],
       "score": 1.04
+    },
+    {
+      "id": "d593fa608ec4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Indonesia Denies Reports Of 90 Million Passport Data Breach",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcHl3S2NrLU9tUEtlbXEwUVBzS1VJWnBETVJDZzFWZUphSkh5aDY3MEhPaUo2VlBvR0YzcTZTLUhsVFZfTXdpRVh1RXo5U0RtMXZoUUJBY0taNFRCZksybFJfeGM1WDJfZ21pZlBseVpXR3BlR0EybGtnMU9VSUJzenNWNVp1cHBvSWxfeVQwNk1CYkEyUE5RVnFlODBWQUE3NU1RbDQ4QQ?oc=5",
+      "source": "BusinessToday Malaysia",
+      "publishedAt": "2026-11-28T13:20:46.000Z",
+      "latestAt": "2026-11-28T13:20:46.000Z",
+      "firstSeenAt": "2026-11-28T13:33:59.388Z",
+      "outlets": 1,
+      "outletNames": [
+        "BusinessToday Malaysia"
+      ],
+      "score": 1
     },
     {
       "id": "dca9b90aac92",
@@ -1484,6 +1498,22 @@
       "score": 1
     },
     {
+      "id": "8ab1f28394c6",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft outage hits South African businesses, government services and universities",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPendFUktGazBkcURFNFpQUjZEWnVwWWNNb1MwVkxjSFdpejVTOW13VExocHpTaTVRSmRaMnlkLTFDUzNzb2kxNm5oZUlRR185V2laWU5fYVFRbURRdExXUFVfVFBSSHRpYXBqb1NGVTVuMjlfSWRUZmx1U0hseEk0MGRrV0ZIWVU1MER2bVNOSWM2YUJhaVMtdUctdklJU20yQkRpZVIzb19OSDNqVE9uU3Vyb0JpbkcwMzZZdnJYaw?oc=5",
+      "source": "IOL",
+      "publishedAt": "2026-11-28T01:55:02.000Z",
+      "latestAt": "2026-11-28T12:36:02.000Z",
+      "firstSeenAt": "2026-11-28T02:02:07.667Z",
+      "outlets": 1,
+      "outletNames": [
+        "IOL"
+      ],
+      "score": 1
+    },
+    {
       "id": "c2483722d09d",
       "cat": "hacks",
       "kind": "news",
@@ -1562,22 +1592,6 @@
       "outlets": 1,
       "outletNames": [
         "Beinsure"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "df5fad6f7c8a",
-      "cat": "grid",
-      "kind": "news",
-      "title": "The 57 postcodes affected by Gwynedd power outage",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQM1NXRXRHajdfdFlKZXRlU3hFeWVGaUpXWU5CV2s1dTBYSkwyVHFWZEJ4dXJpV0ZhRWVPdmhQWTBjLU5JMzZNUXFhdXNHMHpQdklzNXdwMGl0b0g3cHJLVG9vRnNRak5wa0hYNnhwNXdtRWcxRWY1c3FxcTBkMG1fNGNxNzBwN0V4UXN0Wi14ZXoyRHI2VndWSWh3?oc=5",
-      "source": "North Wales Live",
-      "publishedAt": "2026-11-28T12:05:00.000Z",
-      "latestAt": "2026-11-28T12:05:00.000Z",
-      "firstSeenAt": "2026-11-28T12:33:55.626Z",
-      "outlets": 1,
-      "outletNames": [
-        "North Wales Live"
       ],
       "score": 0.99
     },
@@ -1692,6 +1706,22 @@
         "Sacramento Bee"
       ],
       "score": 0.99
+    },
+    {
+      "id": "534bbd003633",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SAP cyberattack: new details emerge on GitHub and source code compromise",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVUFCYktxUEpPcVJrSHF2QTQxY0wyc0Zzek5CYjNXbGpPdE5zbnRWeXBDeVZLV0tKb1puODZCbDZQWGdGNTFqWnRjSXRXU1N5UHFZSGpPVS1Ud0tHeFpMSFBheXQ4aTZWVW9QdHRHbVF5RFhEcy1pdVFNLWYxMDM4ZC1XWkxmRExMRnl1YTB0U3ZHRmdQcVZncUJtMjlYOWs?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-28T12:04:50.000Z",
+      "latestAt": "2026-11-28T12:04:50.000Z",
+      "firstSeenAt": "2026-11-28T13:33:59.388Z",
+      "outlets": 1,
+      "outletNames": [
+        "Beinsure"
+      ],
+      "score": 0.98
     },
     {
       "id": "2c68ab565d32",
@@ -1870,22 +1900,6 @@
         "Tech Times"
       ],
       "score": 0.86
-    },
-    {
-      "id": "ddd458483ade",
-      "cat": "earth",
-      "kind": "news",
-      "title": "First Close-Up Look At Crater Humans Left On An Asteroid, World's Deepest Explosive Volcanic Eruption, And Much More This Week",
-      "url": "https://www.iflscience.com/first-close-up-look-at-crater-humans-left-on-an-asteroid-worlds-deepest-explosive-volcanic-eruption-and-much-more-this-week-85303",
-      "source": "IFLScience",
-      "publishedAt": "2026-11-28T04:00:00.000Z",
-      "latestAt": "2026-11-28T04:00:00.000Z",
-      "firstSeenAt": "2026-11-28T12:48:49.010Z",
-      "outlets": 1,
-      "outletNames": [
-        "IFLScience"
-      ],
-      "score": 0.85
     },
     {
       "id": "773eb149aa8c",
