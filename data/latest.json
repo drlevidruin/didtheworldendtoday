@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T02:47:22.260Z",
+  "buildTime": "2026-11-28T03:02:20.202Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 21:47 ET",
+  "etStamp": "2026-11-27 22:02 ET",
   "score": 60,
   "fired": [
     "flights",
@@ -38,14 +38,14 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1309,
-  "lastSuccessAt": "2026-11-28T02:47:22.260Z",
+  "headlinesRead": 618,
+  "lastSuccessAt": "2026-11-28T03:02:20.202Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 40,
-    "grid": 18,
+    "grid": 17,
     "weather": 8,
-    "germs": 4,
+    "germs": 5,
     "animals": 2,
     "earth": 4,
     "flights": 7,
@@ -175,57 +175,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 997,
-      "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "count": 310,
+      "error": "1 of 26 queries failed: HTTP 429 (blocked after 4 of 26 queries)",
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     },
     "bing": {
       "ok": true,
-      "count": 276,
+      "count": 272,
       "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 6,
       "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     },
     "x": {
       "ok": true,
@@ -238,13 +238,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T02:47:22.260Z"
+      "lastOkAt": "2026-11-28T03:02:20.202Z"
     }
   },
   "stories": [
@@ -258,7 +258,7 @@
       "publishedAt": "2026-11-27T03:25:00.000Z",
       "latestAt": "2026-11-27T15:59:48.000Z",
       "firstSeenAt": "2026-11-28T01:17:02.863Z",
-      "outlets": 11,
+      "outlets": 12,
       "outletNames": [
         "AOL.co.uk",
         "The Telegraph",
@@ -270,9 +270,10 @@
         "cwibc.co.id",
         "Anadolu Ajansı",
         "Operativ Məlumat Mərkəzi",
-        "CX Today"
+        "CX Today",
+        "UA.NEWS"
       ],
-      "score": 3.97
+      "score": 4.08
     },
     {
       "id": "b159877c0236",
@@ -444,21 +445,22 @@
       "score": 1.98
     },
     {
-      "id": "3333e1821e7e",
+      "id": "824d40a7de12",
       "cat": "germs",
       "kind": "news",
-      "title": "Hotel Chocolat issues recall following suspected contamination",
-      "url": "https://www.foodnavigator.com/Article/2026/11/27/mars-owned-hotel-chocolat-recalls-pistachio-chocolates-over-salmonella-concerns/",
-      "source": "FoodNavigator",
-      "publishedAt": "2026-11-27T07:05:00.000Z",
-      "latestAt": "2026-11-27T15:05:05.000Z",
-      "firstSeenAt": "2026-11-27T15:15:26.686Z",
-      "outlets": 2,
+      "title": "Slow bird flu season offers relief for Europe's poultry sector",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSDRfMVlGZjB2c21GU2pFMlpDWlB0Q3R0aUJZWEhQTElGalhYSjZqeWJISHEzQjYxNlh1cFFCa2c1WUNXeVoweUY3MWNTQ1RYOUdBR3o1a29NWW53OUhzR3pCd0hEX1pIY3dzRDU0NEF0QU1QZVlIVGc1T0tlZFZERnZBSmlLX1paczZlWkhsUTFTaGtELV9hN2xLemlvVHk1dmROZUhtZ1M0NTliSmc?oc=5",
+      "source": "London South East",
+      "publishedAt": "2026-11-27T10:40:00.000Z",
+      "latestAt": "2026-11-27T12:28:43.000Z",
+      "firstSeenAt": "2026-11-28T03:02:20.202Z",
+      "outlets": 3,
       "outletNames": [
-        "FoodNavigator.com",
-        "Confectionery News"
+        "London South East",
+        "TradingView",
+        "eKathimerini.com"
       ],
-      "score": 1.73
+      "score": 1.88
     },
     {
       "id": "c42ed7992d88",
@@ -613,6 +615,23 @@
       "outletNames": [
         "FOX43",
         "Yahoo"
+      ],
+      "score": 1.73
+    },
+    {
+      "id": "3333e1821e7e",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Hotel Chocolat issues recall following suspected contamination",
+      "url": "https://www.foodnavigator.com/Article/2026/11/27/mars-owned-hotel-chocolat-recalls-pistachio-chocolates-over-salmonella-concerns/",
+      "source": "FoodNavigator",
+      "publishedAt": "2026-11-27T07:05:00.000Z",
+      "latestAt": "2026-11-27T15:05:05.000Z",
+      "firstSeenAt": "2026-11-27T15:15:26.686Z",
+      "outlets": 2,
+      "outletNames": [
+        "FoodNavigator.com",
+        "Confectionery News"
       ],
       "score": 1.73
     },
@@ -792,22 +811,6 @@
         "Investing.com UK"
       ],
       "score": 1.36
-    },
-    {
-      "id": "5ce7211d907f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft Claims 36-Hour Tech Disruption Of Global Work Productivity Has Been Resolved",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOW1uS0N3SHFHbndIcnVoZjJjaTEwc3B6NEtWcnNpdlVJQVhkVl9mNzBla2JraVVNWWVsQmhYdTFMT014T0RKSFpxR1ZCMUdqQjZDVGRGU19rbFJnbTNSYjRzMjZXNDhqZnQxb25FWmFRUHNpcmNJdHd6T1ZNZXhvOE9aTklqY09EN2FqNEd0MjFJc2JMbTBBSWxTZzRWX3pRbDV5V0VDYXhvbkZKNTVnMncyMFo?oc=5",
-      "source": "Todayville",
-      "publishedAt": "2026-11-27T04:18:07.000Z",
-      "latestAt": "2026-11-27T04:18:07.000Z",
-      "firstSeenAt": "2026-11-27T07:29:08.103Z",
-      "outlets": 1,
-      "outletNames": [
-        "Todayville"
-      ],
-      "score": 1.33
     },
     {
       "id": "cd1b0d124270",
@@ -1295,6 +1298,22 @@
       "score": 1.35
     },
     {
+      "id": "5ce7211d907f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft Claims 36-Hour Tech Disruption Of Global Work Productivity Has Been Resolved",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPOW1uS0N3SHFHbndIcnVoZjJjaTEwc3B6NEtWcnNpdlVJQVhkVl9mNzBla2JraVVNWWVsQmhYdTFMT014T0RKSFpxR1ZCMUdqQjZDVGRGU19rbFJnbTNSYjRzMjZXNDhqZnQxb25FWmFRUHNpcmNJdHd6T1ZNZXhvOE9aTklqY09EN2FqNEd0MjFJc2JMbTBBSWxTZzRWX3pRbDV5V0VDYXhvbkZKNTVnMncyMFo?oc=5",
+      "source": "Todayville",
+      "publishedAt": "2026-11-27T04:18:07.000Z",
+      "latestAt": "2026-11-27T04:18:07.000Z",
+      "firstSeenAt": "2026-11-27T07:29:08.103Z",
+      "outlets": 1,
+      "outletNames": [
+        "Todayville"
+      ],
+      "score": 1.33
+    },
+    {
       "id": "88306e1871e4",
       "cat": "hacks",
       "kind": "news",
@@ -1439,22 +1458,6 @@
       "outlets": 1,
       "outletNames": [
         "Daily Voice on MSN"
-      ],
-      "score": 1.21
-    },
-    {
-      "id": "ed89971c2876",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power grid alert issued for record fourth day running to prevent threat of black-outs",
-      "url": "https://www.mirror.co.uk/money/power-grid-blackout-warning-uk-37921552",
-      "source": "The Mirror",
-      "publishedAt": "2026-11-27T02:58:00.000Z",
-      "latestAt": "2026-11-27T02:58:00.000Z",
-      "firstSeenAt": "2026-11-27T11:14:46.817Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Mirror"
       ],
       "score": 1.21
     },
