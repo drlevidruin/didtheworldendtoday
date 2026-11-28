@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T09:48:25.023Z",
+  "buildTime": "2026-11-28T10:03:25.970Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 04:48 ET",
+  "etStamp": "2026-11-28 05:03 ET",
   "score": 68,
   "fired": [
     "flights",
@@ -43,19 +43,19 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1217,
-  "lastSuccessAt": "2026-11-28T09:48:25.023Z",
+  "headlinesRead": 1207,
+  "lastSuccessAt": "2026-11-28T10:03:25.970Z",
   "rollingFallback": false,
   "cats": {
     "internet": 7,
     "grid": 19,
-    "hacks": 45,
+    "hacks": 46,
     "germs": 5,
     "earth": 4,
     "flights": 4,
     "space": 2,
     "animals": 3,
-    "weather": 5,
+    "weather": 4,
     "markets": 4,
     "sun": 2
   },
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 924,
+      "count": 913,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "bing": {
       "ok": true,
-      "count": 261,
+      "count": 265,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "gdelt": {
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
-      "lastOkAt": "2026-11-27T08:14:16.364Z"
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "x": {
       "ok": true,
@@ -242,15 +242,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 27,
+      "count": 24,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T09:48:25.023Z"
+      "lastOkAt": "2026-11-28T10:03:25.970Z"
     }
   },
   "stories": [
@@ -368,6 +368,23 @@
       "score": 2
     },
     {
+      "id": "e164c01a89b4",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Power outage limits water production in Sandakan",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUzB4VjJZcVhlZkJmcTV6LWpSYTBCRnRSWkpDZjk1OHJLS3pqNEM2TXZ4NjZCbTBIakpyTWZPUW8xVTJPZFRjOFdCaGxWQ19ZNjJ1WlgxVlRtM19hS1NvWXdjRTBjT1NrQk1KR2g1UVNGbjdHbFI4b2FoczRZM1U2NFQxRFJGZWJuUjJBOTB5THk2ak42TzdaMg?oc=5",
+      "source": "Daily Express Malaysia",
+      "publishedAt": "2026-11-28T06:15:36.000Z",
+      "latestAt": "2026-11-28T06:18:38.000Z",
+      "firstSeenAt": "2026-11-28T06:32:53.421Z",
+      "outlets": 2,
+      "outletNames": [
+        "Daily Express Malaysia",
+        "Newswav"
+      ],
+      "score": 1.99
+    },
+    {
       "id": "941d08a315c5",
       "cat": "grid",
       "kind": "news",
@@ -436,23 +453,6 @@
         "eKathimerini.com"
       ],
       "score": 1.88
-    },
-    {
-      "id": "12c5129975aa",
-      "cat": "grid",
-      "kind": "news",
-      "title": "UPDATE - Hundreds of thousands remain without power in US as recovery continues after severe storm",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbThrRUluS2JEVGVNZVd5YjlfUnJ2SWtabXNaMW02Rld2aTRBV1EzMDN2QTdFU1RWbXpra0RDMFB5ZWVhV3lTbEpKc0xRS2pJRmNxeFhsT3pMUWZJMlZyNHpzOVp5S0liVEZuRUdaMGsybU5KcXczOXZNamM3OFF2ZXdOUmU4MEdNNHF3Znp6WHozR1JMTzdxT3pTOG5xeDdFTkpXMlh5eU1uV3htaW5NQWRNakFOZ9IBxgFBVV95cUxOc2RyRUpxMnVLZVlqQTM1ZDduZnotWWkyRlhPbXBWT01CcDF1ZkNOclF0RlBiamFFNWtqS3dXSEJuZG5DclQxczNFUjlEWS03Yi1EUkJGdG5TWDgyTWt6UGI2Qno4T2lVZ283RnpFRWU2WWVlV2dFamdINDcyNzJ4enNGUVlCV2E1ckFzQXlnb2ZKU2t1T0FXWVFKbl9pTDhwZURNaFpsZHQtWHQ2YU5MTGdEVmozVkdDVjdoTkwxUWRodE05MFE?oc=5",
-      "source": "US Muslims",
-      "publishedAt": "2026-11-27T19:28:31.000Z",
-      "latestAt": "2026-11-27T21:49:13.000Z",
-      "firstSeenAt": "2026-11-28T02:02:07.667Z",
-      "outlets": 2,
-      "outletNames": [
-        "US Muslims",
-        "Anadolu Ajansı"
-      ],
-      "score": 1.78
     },
     {
       "id": "9b4619b62eed",
@@ -542,6 +542,23 @@
       "score": 1.99
     },
     {
+      "id": "12c5129975aa",
+      "cat": "grid",
+      "kind": "news",
+      "title": "UPDATE - Hundreds of thousands remain without power in US as recovery continues after severe storm",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbThrRUluS2JEVGVNZVd5YjlfUnJ2SWtabXNaMW02Rld2aTRBV1EzMDN2QTdFU1RWbXpra0RDMFB5ZWVhV3lTbEpKc0xRS2pJRmNxeFhsT3pMUWZJMlZyNHpzOVp5S0liVEZuRUdaMGsybU5KcXczOXZNamM3OFF2ZXdOUmU4MEdNNHF3Znp6WHozR1JMTzdxT3pTOG5xeDdFTkpXMlh5eU1uV3htaW5NQWRNakFOZ9IBxgFBVV95cUxOc2RyRUpxMnVLZVlqQTM1ZDduZnotWWkyRlhPbXBWT01CcDF1ZkNOclF0RlBiamFFNWtqS3dXSEJuZG5DclQxczNFUjlEWS03Yi1EUkJGdG5TWDgyTWt6UGI2Qno4T2lVZ283RnpFRWU2WWVlV2dFamdINDcyNzJ4enNGUVlCV2E1ckFzQXlnb2ZKU2t1T0FXWVFKbl9pTDhwZURNaFpsZHQtWHQ2YU5MTGdEVmozVkdDVjdoTkwxUWRodE05MFE?oc=5",
+      "source": "US Muslims",
+      "publishedAt": "2026-11-27T19:28:31.000Z",
+      "latestAt": "2026-11-27T21:49:13.000Z",
+      "firstSeenAt": "2026-11-28T02:02:07.667Z",
+      "outlets": 2,
+      "outletNames": [
+        "US Muslims",
+        "Anadolu Ajansı"
+      ],
+      "score": 1.78
+    },
+    {
       "id": "3901d5d9a26c",
       "cat": "grid",
       "kind": "news",
@@ -572,23 +589,6 @@
       "outletNames": [
         "Yahoo",
         "KSDK"
-      ],
-      "score": 1.69
-    },
-    {
-      "id": "9753aa15b04b",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Spoiled food from a St. Louis-area power outage? You could seek reimbursement",
-      "url": "https://www.yahoo.com/news/weather-news/articles/spoiled-food-st-louis-area-190212214.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T11:02:00.000Z",
-      "latestAt": "2026-11-27T19:02:12.000Z",
-      "firstSeenAt": "2026-11-27T20:16:17.579Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "FOX 2"
       ],
       "score": 1.69
     },
@@ -722,22 +722,6 @@
       "score": 1.38
     },
     {
-      "id": "4a31471a8cff",
-      "cat": "weather",
-      "kind": "news",
-      "title": "London’s Famed Kew Gardens Face Major Cuts After Record Heat",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxONWlKd20wTnljOVRpcktVaFEtbTVZN1hTTDBRb00xQUl6bzRCRFRoZ2NCNW9JRnF5S24zNzZIN3BKeFlCX2lCaFUteHhVblQyREwwOTd5RVY5a1BjYWpNdDhlcDd6N29xUXFXbTNBR3VENFM2WGVNVm4tMUR5N1pSSlctYVZ1cEZpXzlmbVFBREc3cVdhOWZ0eF96RkprY1JCUWUyeDd2NkVmVVoyNjBfbw?oc=5",
-      "source": "Bloomberg.com",
-      "publishedAt": "2026-11-27T10:00:00.000Z",
-      "latestAt": "2026-11-27T10:00:00.000Z",
-      "firstSeenAt": "2026-11-27T10:44:42.019Z",
-      "outlets": 1,
-      "outletNames": [
-        "Bloomberg.com"
-      ],
-      "score": 1.38
-    },
-    {
       "id": "c91ac9c26947",
       "cat": "flights",
       "kind": "news",
@@ -786,21 +770,20 @@
       "score": 1.17
     },
     {
-      "id": "5f2072288703",
-      "cat": "hacks",
+      "id": "2a2fd0a95a61",
+      "cat": "weather",
       "kind": "news",
-      "title": "North Korean Hackers Use Deepfake Meetings as Malware Traps",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPc0hCVnYzVXE5MTBIS3R3RUlVYktVZ1R5S0ttZFpGclpUUkZKeXR0a09hdzFZU2VESjI0eFkteWFFTHZ1SXdSUGgtYzV6Sk9qU1h4ZVZoZTlIeXk5NTd2UGhybjdmWlpHWWhUM09IUjdmaW05d0VlZ19MbjVSUlQ1OGlYWkh3a0dSWGNhUXhKMFN4dS1salRQcVh5d3hBeWdq?oc=5",
-      "source": "GovInfoSecurity",
-      "publishedAt": "2026-11-27T09:49:05.000Z",
-      "latestAt": "2026-11-27T11:04:07.000Z",
-      "firstSeenAt": "2026-11-27T09:59:32.954Z",
-      "outlets": 2,
+      "title": "Thanksgiving Day Ice Storm",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSFF1cllNNFdlcjZrZm5CX0hFTHgzNFFwVzJzU3NTdkZHOE9uS0FNekVMRUh0TzVPWlVNYmVTVERadDhxNFozNlhGTlZKRllNT2JNZFhkdkdGbmhjR1NHWTNDQ0U5UGVNNXdYc0IzQXdkZFMtRGlPbUNCSjBSemRsdVV5T05LZUhCdkxFcw?oc=5",
+      "source": "The Intermountain",
+      "publishedAt": "2026-11-28T06:34:59.000Z",
+      "latestAt": "2026-11-28T06:34:59.000Z",
+      "firstSeenAt": "2026-11-28T06:47:52.854Z",
+      "outlets": 1,
       "outletNames": [
-        "GovInfoSecurity",
-        "BankInfoSecurity"
+        "The Intermountain"
       ],
-      "score": 1.99
+      "score": 1
     },
     {
       "id": "27481d5961b0",
@@ -938,6 +921,23 @@
         "Newspoint on MSN"
       ],
       "score": 1.7
+    },
+    {
+      "id": "9753aa15b04b",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Spoiled food from a St. Louis-area power outage? You could seek reimbursement",
+      "url": "https://www.yahoo.com/news/weather-news/articles/spoiled-food-st-louis-area-190212214.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T11:02:00.000Z",
+      "latestAt": "2026-11-27T19:02:12.000Z",
+      "firstSeenAt": "2026-11-27T20:16:17.579Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "FOX 2"
+      ],
+      "score": 1.69
     },
     {
       "id": "9d434d49d383",
@@ -1313,22 +1313,6 @@
       "score": 1
     },
     {
-      "id": "2a2fd0a95a61",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Thanksgiving Day Ice Storm",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSFF1cllNNFdlcjZrZm5CX0hFTHgzNFFwVzJzU3NTdkZHOE9uS0FNekVMRUh0TzVPWlVNYmVTVERadDhxNFozNlhGTlZKRllNT2JNZFhkdkdGbmhjR1NHWTNDQ0U5UGVNNXdYc0IzQXdkZFMtRGlPbUNCSjBSemRsdVV5T05LZUhCdkxFcw?oc=5",
-      "source": "The Intermountain",
-      "publishedAt": "2026-11-28T06:34:59.000Z",
-      "latestAt": "2026-11-28T06:34:59.000Z",
-      "firstSeenAt": "2026-11-28T06:47:52.854Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Intermountain"
-      ],
-      "score": 1
-    },
-    {
       "id": "923cc093ed22",
       "cat": "germs",
       "kind": "news",
@@ -1341,22 +1325,6 @@
       "outlets": 1,
       "outletNames": [
         "NewsBytes"
-      ],
-      "score": 1
-    },
-    {
-      "id": "e164c01a89b4",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage limits water production in Sandakan",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUzB4VjJZcVhlZkJmcTV6LWpSYTBCRnRSWkpDZjk1OHJLS3pqNEM2TXZ4NjZCbTBIakpyTWZPUW8xVTJPZFRjOFdCaGxWQ19ZNjJ1WlgxVlRtM19hS1NvWXdjRTBjT1NrQk1KR2g1UVNGbjdHbFI4b2FoczRZM1U2NFQxRFJGZWJuUjJBOTB5THk2ak42TzdaMg?oc=5",
-      "source": "Daily Express Malaysia",
-      "publishedAt": "2026-11-28T06:18:38.000Z",
-      "latestAt": "2026-11-28T06:18:38.000Z",
-      "firstSeenAt": "2026-11-28T06:32:53.421Z",
-      "outlets": 1,
-      "outletNames": [
-        "Daily Express Malaysia"
       ],
       "score": 1
     },
@@ -1731,6 +1699,22 @@
       "score": 0.99
     },
     {
+      "id": "f22509a20bb4",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers allegedly access US Air Force’s digital cloud, report says",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQazJpQ0FSMUhiaThaXzRDRVdUV1NiMUhOVUo2ZWVsV2RTNHpDa1ZxUDQ5eFNYVUE4WHhKYnptYzEyVTJKcmgyZXNjaExaeGpveHlrY01oNW5FYXNCbVZILXlmcmNacW5IYU1DVzJoOFRqZXkwbUVoaVdOQUV6VndFMmdrNDA5UzlSdm5fRDFjMnBnbXVTVkNUUFhYbm1BRU5reVVVTG9nZWstZ3BUUTBzQmNsRQ?oc=5",
+      "source": "Nine.com.au",
+      "publishedAt": "2026-11-28T09:07:08.000Z",
+      "latestAt": "2026-11-28T09:07:08.000Z",
+      "firstSeenAt": "2026-11-28T10:03:25.970Z",
+      "outlets": 1,
+      "outletNames": [
+        "Nine.com.au"
+      ],
+      "score": 0.98
+    },
+    {
       "id": "6247c387eb7d",
       "cat": "hacks",
       "kind": "news",
@@ -1791,6 +1775,22 @@
       "outlets": 1,
       "outletNames": [
         "The Malaysian Reserve"
+      ],
+      "score": 0.97
+    },
+    {
+      "id": "59daa8fd9202",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "eCitizen hackers begin leaking data of 32 million Kenyans on dark web",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2JlclAwZ21kU3YwNnhiOGNtd2JPSkJCNldEVllfSVhjbC1vWUZrelhPcjdXMWVWYzlWd1FQV0lCanpCYldyN3Z3Y0d3d0tjcG04N0U1cjZqeE4zdlc1QXVTam1mOTBzZlEzTzBwQlMta3NaUG5TeDNubllIRGtZU241cjBrbGFOYmkxU0txa05qcm9hOVk0RGwzQXJYRHJZRjhYWmY1X0RaMHRlMG5N?oc=5",
+      "source": "Daily Nation",
+      "publishedAt": "2026-11-28T03:00:00.000Z",
+      "latestAt": "2026-11-28T03:00:00.000Z",
+      "firstSeenAt": "2026-11-28T04:47:41.715Z",
+      "outlets": 1,
+      "outletNames": [
+        "Daily Nation"
       ],
       "score": 0.97
     },
