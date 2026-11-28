@@ -1,6 +1,6 @@
 {
   "date": "2026-11-28",
-  "score": 54,
+  "score": 62,
   "fired": [
     "flights",
     "hacks",
@@ -12,9 +12,37 @@
     "weather",
     "animals"
   ],
-  "bumps": [],
-  "change": 0,
+  "bumps": [
+    {
+      "key": "status",
+      "label": "Big status page in major outage",
+      "points": 8
+    }
+  ],
+  "change": 8,
   "stories": [
+    {
+      "id": "sig:status:cloudflare:2026-11-28",
+      "cat": "internet",
+      "kind": "signal",
+      "title": "Cloudflare reports a major outage on its status page",
+      "url": "https://www.cloudflarestatus.com/",
+      "source": "Cloudflare status",
+      "publishedAt": "2026-11-28T07:32:59.494Z",
+      "latestAt": "2026-11-28T07:32:59.494Z",
+      "firstSeenAt": "2026-11-28T07:32:59.494Z",
+      "outlets": 1,
+      "outletNames": [
+        "Cloudflare status"
+      ],
+      "score": 3.5,
+      "signal": {
+        "type": "status",
+        "indicator": "major",
+        "page": "cloudflare",
+        "description": "Partial System Outage"
+      }
+    },
     {
       "id": "92c5ec80fbd1",
       "cat": "hacks",
@@ -224,22 +252,6 @@
       "score": 1.4
     },
     {
-      "id": "fc30b8b61bc2",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Record Heat Drains World's Rivers, Lakes in Just 2 Years",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUFBubVJxZkhFTk03LXRjQWhJTzVyV1BiMlh5b2Q5TDhXX2dFNnBOYlQxeWJIRXhVR3F1NVczODdGdm0tblBMODhYWWVIM1pNQ3Zjcm5uLTFQd1NBOTFJS3ZEVHR2UXZIbUJnS1pxRVcxZnRJMzZTR3FWbEVNWExEdG5hdDNPUF94OGhUMnJYRVhPQnRqYWlYc2tROA?oc=5",
-      "source": "Newser",
-      "publishedAt": "2026-11-27T11:50:00.000Z",
-      "latestAt": "2026-11-27T11:50:00.000Z",
-      "firstSeenAt": "2026-11-27T11:59:52.439Z",
-      "outlets": 1,
-      "outletNames": [
-        "Newser"
-      ],
-      "score": 1.4
-    },
-    {
       "id": "842eb3255e23",
       "cat": "hacks",
       "kind": "news",
@@ -359,6 +371,22 @@
         "ESM Magazine"
       ],
       "score": 1.43
+    },
+    {
+      "id": "fc30b8b61bc2",
+      "cat": "weather",
+      "kind": "news",
+      "title": "Record Heat Drains World's Rivers, Lakes in Just 2 Years",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUFBubVJxZkhFTk03LXRjQWhJTzVyV1BiMlh5b2Q5TDhXX2dFNnBOYlQxeWJIRXhVR3F1NVczODdGdm0tblBMODhYWWVIM1pNQ3Zjcm5uLTFQd1NBOTFJS3ZEVHR2UXZIbUJnS1pxRVcxZnRJMzZTR3FWbEVNWExEdG5hdDNPUF94OGhUMnJYRVhPQnRqYWlYc2tROA?oc=5",
+      "source": "Newser",
+      "publishedAt": "2026-11-27T11:50:00.000Z",
+      "latestAt": "2026-11-27T11:50:00.000Z",
+      "firstSeenAt": "2026-11-27T11:59:52.439Z",
+      "outlets": 1,
+      "outletNames": [
+        "Newser"
+      ],
+      "score": 1.4
     },
     {
       "id": "68e4328150e8",
@@ -519,22 +547,6 @@
         "Avi-Go"
       ],
       "score": 1.31
-    },
-    {
-      "id": "9c9946d9d13f",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Microsoft works to restore global Outlook outage affecting Teams and Copilot",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObFZzaU8tbVRBMmRpb0V5bUlKcmc1VWstampqcjRwbkUtX2ZCR2NwRGtpZXh3RkVPd2RZUUEtdlkzOHlqR2h5c1F4Ymx2R2x6SExiZjVaUm1qVHRkaG5kTVJMYWFsVHhRSUtKM2ttb25hbmlhb29YTVE1Zl81ZlNucGFySktmWEpNaWJlczFlbk50Vm96M25lTEJkc1p6d3dWQndiXzVuWS1aZ0psY3phMkZudVhpYUNINHpJ?oc=5",
-      "source": "IOL",
-      "publishedAt": "2026-11-27T10:43:40.000Z",
-      "latestAt": "2026-11-27T19:01:14.000Z",
-      "firstSeenAt": "2026-11-27T19:31:11.845Z",
-      "outlets": 1,
-      "outletNames": [
-        "IOL"
-      ],
-      "score": 1.19
     },
     {
       "id": "cd1b0d124270",
@@ -809,6 +821,23 @@
       "score": 1.56
     },
     {
+      "id": "51cebd73a78e",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "US military says cyber systems secure after reports of Air Force hack",
+      "url": "https://www.straitstimes.com/world/united-states/us-military-says-cyber-systems-secure-after-reports-of-air-force-hack?ref=latest",
+      "source": "The Straits Times",
+      "publishedAt": "2026-11-27T16:50:00.000Z",
+      "latestAt": "2026-11-28T06:08:31.000Z",
+      "firstSeenAt": "2026-11-28T07:32:59.494Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Straits Times",
+        "The Malaysian Reserve"
+      ],
+      "score": 1.51
+    },
+    {
       "id": "ea511356490e",
       "cat": "hacks",
       "kind": "news",
@@ -970,6 +999,22 @@
       "score": 1.21
     },
     {
+      "id": "9c9946d9d13f",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Microsoft works to restore global Outlook outage affecting Teams and Copilot",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObFZzaU8tbVRBMmRpb0V5bUlKcmc1VWstampqcjRwbkUtX2ZCR2NwRGtpZXh3RkVPd2RZUUEtdlkzOHlqR2h5c1F4Ymx2R2x6SExiZjVaUm1qVHRkaG5kTVJMYWFsVHhRSUtKM2ttb25hbmlhb29YTVE1Zl81ZlNucGFySktmWEpNaWJlczFlbk50Vm96M25lTEJkc1p6d3dWQndiXzVuWS1aZ0psY3phMkZudVhpYUNINHpJ?oc=5",
+      "source": "IOL",
+      "publishedAt": "2026-11-27T10:43:40.000Z",
+      "latestAt": "2026-11-27T19:01:14.000Z",
+      "firstSeenAt": "2026-11-27T19:31:11.845Z",
+      "outlets": 1,
+      "outletNames": [
+        "IOL"
+      ],
+      "score": 1.19
+    },
+    {
       "id": "3ea15c7fdfab",
       "cat": "hacks",
       "kind": "news",
@@ -1096,6 +1141,22 @@
         "Yorkshire Live"
       ],
       "score": 1.02
+    },
+    {
+      "id": "d71dbfc41211",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers access delivery records of at least 113,855 South Korean postal customers",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQMDFGTHJ6dHpjYWxxeGtpZFV3aExIaVoxU2xZdU1ORldLSW1HRl9mTGFOa1RScmJJa2s0UFdEeTVvOS1DM0tUejBhNDJkM1hzenhhV2FodFZqOU5SdmM2UHp3SzJkMDRfdmMtbmRhUjZtT0I0R3BuTVdtRkhXcy03el9ZMFlmdHlVTHdUTldqbVVKY00tV3VzaGhRMXA4NklrMEVsYU51THI3by1DbzM2bVNKMlgzRUVIdDh1QThMQW1WNWRoRFE?oc=5",
+      "source": "Anadolu Ajansı",
+      "publishedAt": "2026-11-28T07:27:34.000Z",
+      "latestAt": "2026-11-28T07:27:34.000Z",
+      "firstSeenAt": "2026-11-28T07:32:59.494Z",
+      "outlets": 1,
+      "outletNames": [
+        "Anadolu Ajansı"
+      ],
+      "score": 1
     },
     {
       "id": "0ef2acd35c8a",
@@ -1404,6 +1465,22 @@
       "score": 1
     },
     {
+      "id": "8d618780a0db",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Cyberattack on U.S. Air Force",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZWxBNUR0OTRldzlhaF9nWW5oMVU1N1UyTUhabzBNWk5nRFRjbGJCX21Na2diV0tkTGg2Zmt4Qng4VzloYU8zUGNlSGNZNXU3bWZWWGMwclN6UkdMcU11V3o4aGx1bl9fc3BBaF9hQXgxc2padElHZVNveWxEelZ2cVR4QUk0c0NCVkhTd0FKWENHWmpPQ05oSmlEaHgybUFWQUswYlAwNjZ5WDlWQVVaeUlB?oc=5",
+      "source": "KTVN",
+      "publishedAt": "2026-11-28T07:13:00.000Z",
+      "latestAt": "2026-11-28T07:13:00.000Z",
+      "firstSeenAt": "2026-11-28T07:32:59.494Z",
+      "outlets": 1,
+      "outletNames": [
+        "KTVN"
+      ],
+      "score": 0.99
+    },
+    {
       "id": "528d63a4f57d",
       "cat": "hacks",
       "kind": "news",
@@ -1484,54 +1561,6 @@
       "score": 0.96
     },
     {
-      "id": "f2297cac3299",
-      "cat": "germs",
-      "kind": "news",
-      "title": "One wild bird tests positive for H5N1 bird flu in Coimbatore, authorities step up surveillance",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQajh4SC1YTzQ0S3F0eUFGbWhSaWtQVllwUHJIajNFM0xhMFdhSlFkVUpJaW1uWVZ0YmsyZHhTN3NtQjRwZVdRaEZDek9kem1wRmRJREY0enozcXdhNWNCSWEyQno5V3BlZ2xkZm13SlRMNDBlUGEtckR6VVNkQ3gyNVJWVTFJVGdWVGFKcnc1NFpHYTBUME1IQkFtR3FGMjJxeHZZOGxDa3NxVzdkTFJEUndIWmRQdm95bDNLV0xSdDNfNm0wSUg2OVpZNUhSNnJ1MUVMQnBPNnpQaGZja1czUWdHd3BDOERSUkU5bdIB-gFBVV95cUxPa09EWFJKeHptZWk3TkszTFFEbFpDd1FzNDJYMVdFY3hRNXp4b2lsRW5PZ2xjc1RWY2lEQ0VSU3VzMGtBZjZVOUg2bEpDakZ6U2N3TkEtYl9XaGx3ejI4VFhpTW5TUTNvbUlqSDUxUS1ua25kNzNhcGZYdi1XQWxrNHMzSzJBQ20wb3NDWktZcV9lU0ZoVjZBYnpSY1k0cmp6aUQybHlRVTNVUnZKWWUxQjdyQ3FGVmU2WVQxTmVfTE5nWkQ3MWpsRmVWMEZFS1ozb0xldG5DY2xBY0VNSVJfWWxnWFRia0RBd0NmR3RPNmFUcUc4aEVIZzVn?oc=5",
-      "source": "The New Indian Express",
-      "publishedAt": "2026-11-28T04:46:13.000Z",
-      "latestAt": "2026-11-28T04:46:13.000Z",
-      "firstSeenAt": "2026-11-28T07:18:07.109Z",
-      "outlets": 1,
-      "outletNames": [
-        "The New Indian Express"
-      ],
-      "score": 0.96
-    },
-    {
-      "id": "368d106420ef",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Eight districts on Sabah's East Coast experience power outage Thursday morning",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBOSTNvblF3V29iUktlVDVndFZySlktWlNuZ2hzWG5HdEJRT3VoVXl2b3NLQlYyeENiNXF2UDZDVkhsSmJ1a2JNQ1dqQmM1cVo0?oc=5",
-      "source": "The Edge Malaysia",
-      "publishedAt": "2026-11-28T03:51:49.000Z",
-      "latestAt": "2026-11-28T03:51:49.000Z",
-      "firstSeenAt": "2026-11-28T07:18:07.109Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Edge Malaysia"
-      ],
-      "score": 0.94
-    },
-    {
-      "id": "a2a05cf7258a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "RansomwareRadar — Real-Time Ransomware Tracker & Threat Intelligence",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1YNFJ1aWhUNmVnUjRkM2pyZ3FmOHhQS1NiNzAwRENXaGgxRnlfNG84bGhrcUNqZWwxdGU2U2o5WDVVS1RlbVd3WlBmWnYtZURUUlFKV0kwZkJNakI2amttV1ZyRnY?oc=5",
-      "source": "SOCRadar",
-      "publishedAt": "2026-11-28T03:34:26.000Z",
-      "latestAt": "2026-11-28T03:34:26.000Z",
-      "firstSeenAt": "2026-11-28T07:18:07.109Z",
-      "outlets": 1,
-      "outletNames": [
-        "SOCRadar"
-      ],
-      "score": 0.94
-    },
-    {
       "id": "c493bff86dc3",
       "cat": "sun",
       "kind": "news",
@@ -1578,22 +1607,6 @@
         "CTV News"
       ],
       "score": 0.93
-    },
-    {
-      "id": "ca358a2c9f93",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage: Police step up security, traffic control in Tawau",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNkR3bnBtc3NZZ2RWbllhMjJ2UkhzUWI4UGRDYVp2bmkzdUhsMm5vS2xEcHVoYzlvSE0wckh6Y2ZWMXBwcEtSZGdaQnJZOEJVWWFDVU53OXBoTFpRZXVVcmV6LXU4c09uclRKNXFDQ3FQOHhTSmpKQllWUmlTVGhscWJuS1hRd2hodnpVRTdSQTZ0d1ljUXRyV2ZPMGVad3NtMVRwMGxNS0VqSDVw0gGyAUFVX3lxTE9UVm5zeG02alpuRTFVOE1tVXBSR2l3UmxJamE5QlZLVl9FZEFXd2Nnay1CV3ViTW9VN0J3WEVKNmo0Q0NNZzlfMmdZZjhqa1E3ZW5TTldpcC1VLXFxOGphUUdwbTlvcDQyOFRjZkV5WmRVbFhGUEhySjFyQWFFaVhjMUpJaDVKOW9jVFlyNTBMVUNnMTV1VnRTeFBRWlJTS1R3OTJMbVJpSkEzelpiZTJTMlE?oc=5",
-      "source": "NST Online",
-      "publishedAt": "2026-11-28T02:43:38.000Z",
-      "latestAt": "2026-11-28T02:43:38.000Z",
-      "firstSeenAt": "2026-11-28T07:18:07.109Z",
-      "outlets": 1,
-      "outletNames": [
-        "NST Online"
-      ],
-      "score": 0.92
     },
     {
       "id": "97eac00c3a9e",
@@ -1660,5 +1673,5 @@
       "score": 0.86
     }
   ],
-  "updatedAt": "2026-11-28T07:18:07.109Z"
+  "updatedAt": "2026-11-28T07:32:59.494Z"
 }
