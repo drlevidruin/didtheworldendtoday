@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T17:04:35.362Z",
+  "buildTime": "2026-11-28T17:19:30.815Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 12:04 ET",
+  "etStamp": "2026-11-28 12:19 ET",
   "score": 67,
   "fired": [
     "flights",
@@ -47,17 +47,17 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1155,
-  "lastSuccessAt": "2026-11-28T17:04:35.362Z",
+  "headlinesRead": 1175,
+  "lastSuccessAt": "2026-11-28T17:19:30.815Z",
   "rollingFallback": false,
   "cats": {
     "earth": 4,
-    "germs": 5,
+    "germs": 4,
     "internet": 5,
-    "hacks": 39,
+    "hacks": 40,
     "grid": 24,
-    "flights": 8,
     "sun": 4,
+    "flights": 8,
     "weather": 4,
     "markets": 4,
     "animals": 3
@@ -66,7 +66,7 @@
     "quake": {
       "mag": 6.7,
       "place": "62 km NNW of Yelizovo, Russia",
-      "time": "2026-11-28T13:15:06.781Z",
+      "time": "2026-11-28T13:15:07.475Z",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ue3p",
       "pager": "green",
       "tsunami": true
@@ -180,20 +180,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 886,
+      "count": 909,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "bing": {
       "ok": true,
-      "count": 235,
+      "count": 231,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,56 +205,55 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "x": {
       "ok": true,
-      "count": 0,
+      "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T16:19:22.705Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T17:04:35.362Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z"
     }
   },
   "stories": [
@@ -335,18 +334,23 @@
       "title": "UK pensions department says it was targeted in cyberattack",
       "url": "https://www.reuters.com/business/finance/uk-pensions-department-says-it-was-targeted-cyberattack-2026-11-28/",
       "source": "Reuters",
-      "publishedAt": "2026-11-28T08:36:00.000Z",
+      "publishedAt": "2026-11-27T20:57:00.000Z",
       "latestAt": "2026-11-28T16:54:15.000Z",
       "firstSeenAt": "2026-11-28T16:49:30.271Z",
-      "outlets": 5,
+      "outlets": 9,
       "outletNames": [
         "Reuters",
         "The Star",
         "London South East",
         "Cyprus Mail",
-        "Dubai Eye 103.8"
+        "Dubai Eye 103.8",
+        "The Jerusalem Post",
+        "Yahoo",
+        "Yahoo News UK",
+        "@Reuters on X"
       ],
-      "score": 2.87
+      "xUrl": "https://x.com/Reuters/status/2126719057856430444",
+      "score": 2.79
     },
     {
       "id": "d797a2d51f86",
@@ -387,19 +391,55 @@
       "score": 2.44
     },
     {
-      "id": "a20822d8e9f8",
+      "id": "04a41d90be8c",
       "cat": "hacks",
       "kind": "news",
-      "title": "pCloud confirms a cyberattack on its pCloud Pass password manager",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTUdub202TlY1RVRXcEJCZFBOSzBSdTNpLWVVTXQyS3JOT1Q3NnFrUWVvZjktSmV1dUN4TjFrT0RDZVItaGxIdEpkWXFxUDBRSjRHWkhCd2ZZTGFKY0RCZmRoUk9EYUFWdkJhaTNOaXpsbmtiWFk4X21tejZ0ZC1odVdHVFE1QkphQXlDOTROcw?oc=5",
-      "source": "MLQ.ai",
-      "publishedAt": "2026-11-28T01:00:36.000Z",
-      "latestAt": "2026-11-28T13:00:25.000Z",
-      "firstSeenAt": "2026-11-28T01:02:00.556Z",
+      "title": "DWP latest to be hit in string of cyber attacks raising alarm across US and Europe",
+      "url": "https://www.aol.co.uk/articles/dwp-latest-hit-string-cyber-150703000.html",
+      "source": "AOL.co.uk",
+      "publishedAt": "2026-11-28T08:42:00.000Z",
+      "latestAt": "2026-11-28T15:07:03.000Z",
+      "firstSeenAt": "2026-11-28T15:34:20.375Z",
+      "outlets": 3,
+      "outletNames": [
+        "Newswav",
+        "AOL.co.uk",
+        "The Independent on MSN"
+      ],
+      "score": 2.29
+    },
+    {
+      "id": "75c00368c23d",
+      "cat": "sun",
+      "kind": "news",
+      "title": "Sun blasts strong M7.9 solar flare viewed from NASA spacecraft",
+      "url": "https://www.msn.com/en-us/news/other/sun-blasts-strong-m79-solar-flare-viewed-from-nasa-spacecraft/vi-AA2iqxdy",
+      "source": "Space on MSN",
+      "publishedAt": "2026-11-28T08:00:00.000Z",
+      "latestAt": "2026-11-28T16:00:00.000Z",
+      "firstSeenAt": "2026-11-28T16:19:22.705Z",
+      "outlets": 3,
+      "outletNames": [
+        "Space on MSN",
+        "Yahoo",
+        "Dailymotion on MSN"
+      ],
+      "score": 2.23
+    },
+    {
+      "id": "4b9b89e72206",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "UK pensions department says it was hit by cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdkl5aUhJaHg0cG8yQzlNclh5MjVlazNrcHNhRmJXT09ZOUMzU3dLUkhYX09fRDEyRHBRZ1A1aDFaYktPMk9kOVNiajBvdEVESFlOelB2eUdtZV9jZzJQc3ZZVVhiV0Z2cG1LdHhrU3E1bExTS09OQ2JsOFF4SFZGNkNOOTdCSHE4MHdlWDdUSGpBWnBkYjNqVnU1ejRGQlhxdkQyOHk5Mm5hUQ?oc=5",
+      "source": "Southern Cross",
+      "publishedAt": "2026-11-28T16:58:29.000Z",
+      "latestAt": "2026-11-28T17:03:48.000Z",
+      "firstSeenAt": "2026-11-28T17:04:35.362Z",
       "outlets": 2,
       "outletNames": [
-        "MLQ.ai",
-        "Beinsure"
+        "Southern Cross",
+        "The Canberra Times"
       ],
       "score": 2
     },
@@ -438,23 +478,6 @@
       "score": 1.99
     },
     {
-      "id": "59daa8fd9202",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "eCitizen hackers begin leaking data of 32 million Kenyans on dark web",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2JlclAwZ21kU3YwNnhiOGNtd2JPSkJCNldEVllfSVhjbC1vWUZrelhPcjdXMWVWYzlWd1FQV0lCanpCYldyN3Z3Y0d3d0tjcG04N0U1cjZqeE4zdlc1QXVTam1mOTBzZlEzTzBwQlMta3NaUG5TeDNubllIRGtZU241cjBrbGFOYmkxU0txa05qcm9hOVk0RGwzQXJYRHJZRjhYWmY1X0RaMHRlMG5N?oc=5",
-      "source": "Daily Nation",
-      "publishedAt": "2026-11-28T03:00:00.000Z",
-      "latestAt": "2026-11-28T10:12:34.000Z",
-      "firstSeenAt": "2026-11-28T04:47:41.715Z",
-      "outlets": 2,
-      "outletNames": [
-        "Daily Nation",
-        "Techweez"
-      ],
-      "score": 1.94
-    },
-    {
       "id": "9b4619b62eed",
       "cat": "flights",
       "kind": "news",
@@ -470,23 +493,6 @@
         "inews.co.uk"
       ],
       "score": 1.73
-    },
-    {
-      "id": "75c00368c23d",
-      "cat": "sun",
-      "kind": "news",
-      "title": "Sun blasts strong M7.9 solar flare viewed from NASA spacecraft",
-      "url": "https://www.msn.com/en-us/news/other/sun-blasts-strong-m79-solar-flare-viewed-from-nasa-spacecraft/vi-AA2iqxdy",
-      "source": "Space on MSN",
-      "publishedAt": "2026-11-28T08:00:00.000Z",
-      "latestAt": "2026-11-28T16:00:00.000Z",
-      "firstSeenAt": "2026-11-28T16:19:22.705Z",
-      "outlets": 2,
-      "outletNames": [
-        "Space on MSN",
-        "Yahoo"
-      ],
-      "score": 1.72
     },
     {
       "id": "16eb192bf4a8",
@@ -506,6 +512,23 @@
       "score": 1.72
     },
     {
+      "id": "a20822d8e9f8",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "pCloud confirms a cyberattack on its pCloud Pass password manager",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTUdub202TlY1RVRXcEJCZFBOSzBSdTNpLWVVTXQyS3JOT1Q3NnFrUWVvZjktSmV1dUN4TjFrT0RDZVItaGxIdEpkWXFxUDBRSjRHWkhCd2ZZTGFKY0RCZmRoUk9EYUFWdkJhaTNOaXpsbmtiWFk4X21tejZ0ZC1odVdHVFE1QkphQXlDOTROcw?oc=5",
+      "source": "MLQ.ai",
+      "publishedAt": "2026-11-28T01:00:36.000Z",
+      "latestAt": "2026-11-28T13:00:25.000Z",
+      "firstSeenAt": "2026-11-28T01:02:00.556Z",
+      "outlets": 2,
+      "outletNames": [
+        "MLQ.ai",
+        "Beinsure"
+      ],
+      "score": 2
+    },
+    {
       "id": "df5fad6f7c8a",
       "cat": "grid",
       "kind": "news",
@@ -521,6 +544,41 @@
         "Yahoo News UK"
       ],
       "score": 1.98
+    },
+    {
+      "id": "593cf699d089",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hong Kong’s Octopus cyberattack exposes data of nearly 30K customers and merchants",
+      "url": "https://beinsure.com/news/hong-kongs-octopus-cyberattack-exposes-data/",
+      "source": "beinsure",
+      "publishedAt": "2026-11-27T22:28:39.000Z",
+      "latestAt": "2026-11-28T17:07:42.000Z",
+      "firstSeenAt": "2026-11-28T13:03:54.160Z",
+      "outlets": 3,
+      "outletNames": [
+        "The Standard (HK)",
+        "Beinsure",
+        "GBHackers News"
+      ],
+      "score": 1.96
+    },
+    {
+      "id": "59daa8fd9202",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "eCitizen hackers begin leaking data of 32 million Kenyans on dark web",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2JlclAwZ21kU3YwNnhiOGNtd2JPSkJCNldEVllfSVhjbC1vWUZrelhPcjdXMWVWYzlWd1FQV0lCanpCYldyN3Z3Y0d3d0tjcG04N0U1cjZqeE4zdlc1QXVTam1mOTBzZlEzTzBwQlMta3NaUG5TeDNubllIRGtZU241cjBrbGFOYmkxU0txa05qcm9hOVk0RGwzQXJYRHJZRjhYWmY1X0RaMHRlMG5N?oc=5",
+      "source": "Daily Nation",
+      "publishedAt": "2026-11-28T03:00:00.000Z",
+      "latestAt": "2026-11-28T10:12:34.000Z",
+      "firstSeenAt": "2026-11-28T04:47:41.715Z",
+      "outlets": 2,
+      "outletNames": [
+        "Daily Nation",
+        "Techweez"
+      ],
+      "score": 1.94
     },
     {
       "id": "d496d995ac2e",
@@ -555,57 +613,6 @@
         "Anadolu Ajansı"
       ],
       "score": 1.78
-    },
-    {
-      "id": "04a41d90be8c",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "DWP latest to be hit in string of cyber attacks raising alarm across US and Europe",
-      "url": "https://www.aol.co.uk/articles/dwp-latest-hit-string-cyber-150703000.html",
-      "source": "AOL.co.uk",
-      "publishedAt": "2026-11-28T08:42:00.000Z",
-      "latestAt": "2026-11-28T15:07:03.000Z",
-      "firstSeenAt": "2026-11-28T15:34:20.375Z",
-      "outlets": 2,
-      "outletNames": [
-        "Newswav",
-        "AOL.co.uk"
-      ],
-      "score": 1.77
-    },
-    {
-      "id": "863742bfd8fe",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers break into US air force cloud, putting aircrafts at risk",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSWlBSUt1ZUtneW9LQWdfdldnTVhDMEIxRi1WcHl2aDQ1YmJQZG9NaUJLZVRMeVNZaEJud205YzZ1QWVGWGV1bXVfUnhaYkZ1WGk5aDVRalpWc3I1RlBCRjQtRFBnbzdFU3NDRGF5bjJaTlZrZHRvOVp0Z09EdDByR0ppYW0?oc=5",
-      "source": "Al-Bawaba",
-      "publishedAt": "2026-11-27T19:06:13.000Z",
-      "latestAt": "2026-11-28T01:46:58.000Z",
-      "firstSeenAt": "2026-11-28T02:02:07.667Z",
-      "outlets": 2,
-      "outletNames": [
-        "Al-Bawaba",
-        "Eurasia Review"
-      ],
-      "score": 1.77
-    },
-    {
-      "id": "37ad64dc0231",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "1Password data breach included some customer info, internal source code",
-      "url": "https://www.computerworld.com/article/4254145/1password-data-breach-included-some-customer-info-internal-source-code-2.html",
-      "source": "Computerworld",
-      "publishedAt": "2026-11-27T19:49:00.000Z",
-      "latestAt": "2026-11-28T03:46:12.000Z",
-      "firstSeenAt": "2026-11-28T03:47:25.279Z",
-      "outlets": 2,
-      "outletNames": [
-        "CSO Online",
-        "Computerworld"
-      ],
-      "score": 1.73
     },
     {
       "id": "f61dc0909598",
@@ -736,22 +743,6 @@
       "score": 1.02
     },
     {
-      "id": "f97659a74daa",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Teesside University academic plays key role in discovering new virus in crabs",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZWV5R2diOGFZMUNHb1JqUzRTeE14S0lQMGNsV3ZDY3U3a19hSkhvSjFLT2J0aTlaVkhqcEVTWmVkVmN0R3pldmpJUlZDUzNiVWltYzRxRV9nRmM0and3QVdldGZwZ2NGLXgwV0tRSGVNaGxkVTNKNVB3SmhlSU5PSC1nRkE5OVI2X1FLRHlKLVk1dDBGcVZYTzhBRXhnUdIBowFBVV95cUxOZkdMcENld095U0FXZm5tYll5UUxMTTdfcThJQ3NjUWxPUzg2ODVKQm84VUsxTVRlbVE3LTlrQUlicVlxaVBuM3JuT20ya1ZqWDdKMTRQa2NqblhSMXZNSm1NY2lidXc1bnl4QS0wMkhFMEdsMWJybmlvTi1yWm1ZNE4xbTltQ1VYaldfSUVwUXc2b0NYUVBaOURkak1MOXd1YVJN?oc=5",
-      "source": "Teesside Live",
-      "publishedAt": "2026-11-28T17:02:00.000Z",
-      "latestAt": "2026-11-28T17:02:00.000Z",
-      "firstSeenAt": "2026-11-28T17:04:35.362Z",
-      "outlets": 1,
-      "outletNames": [
-        "Teesside Live"
-      ],
-      "score": 1
-    },
-    {
       "id": "d748835d01f6",
       "cat": "earth",
       "kind": "news",
@@ -798,6 +789,56 @@
         "Afternoon"
       ],
       "score": 1
+    },
+    {
+      "id": "32c531b42b7b",
+      "cat": "internet",
+      "kind": "news",
+      "title": "Good News for Internet Users in Pakistan as SMW-5 Submarine Cable Fully Restored",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE51SU9ZdXZrYmNEbEpJS003dHRpbGs3YzkzV3Fpb3hWNndJeUFWemQzS09iaGZXQ3NsaWFGby1vVGk1RDlMcllyNGlnby10Q0Rf?oc=5",
+      "source": "Aik News",
+      "publishedAt": "2026-11-28T10:35:17.000Z",
+      "latestAt": "2026-11-28T10:35:25.000Z",
+      "firstSeenAt": "2026-11-28T10:48:34.141Z",
+      "outlets": 1,
+      "outletNames": [
+        "Aik News"
+      ],
+      "score": 1
+    },
+    {
+      "id": "863742bfd8fe",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers break into US air force cloud, putting aircrafts at risk",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSWlBSUt1ZUtneW9LQWdfdldnTVhDMEIxRi1WcHl2aDQ1YmJQZG9NaUJLZVRMeVNZaEJud205YzZ1QWVGWGV1bXVfUnhaYkZ1WGk5aDVRalpWc3I1RlBCRjQtRFBnbzdFU3NDRGF5bjJaTlZrZHRvOVp0Z09EdDByR0ppYW0?oc=5",
+      "source": "Al-Bawaba",
+      "publishedAt": "2026-11-27T19:06:13.000Z",
+      "latestAt": "2026-11-28T01:46:58.000Z",
+      "firstSeenAt": "2026-11-28T02:02:07.667Z",
+      "outlets": 2,
+      "outletNames": [
+        "Al-Bawaba",
+        "Eurasia Review"
+      ],
+      "score": 1.77
+    },
+    {
+      "id": "37ad64dc0231",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "1Password data breach included some customer info, internal source code",
+      "url": "https://www.computerworld.com/article/4254145/1password-data-breach-included-some-customer-info-internal-source-code-2.html",
+      "source": "Computerworld",
+      "publishedAt": "2026-11-27T19:49:00.000Z",
+      "latestAt": "2026-11-28T03:46:12.000Z",
+      "firstSeenAt": "2026-11-28T03:47:25.279Z",
+      "outlets": 2,
+      "outletNames": [
+        "CSO Online",
+        "Computerworld"
+      ],
+      "score": 1.73
     },
     {
       "id": "c8d7fa665cb7",
@@ -866,23 +907,6 @@
         "NJ.com"
       ],
       "score": 1.52
-    },
-    {
-      "id": "593cf699d089",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hong Kong’s Octopus cyberattack exposes data of nearly 30K customers and merchants",
-      "url": "https://beinsure.com/news/hong-kongs-octopus-cyberattack-exposes-data/",
-      "source": "beinsure",
-      "publishedAt": "2026-11-27T22:28:39.000Z",
-      "latestAt": "2026-11-28T12:39:35.000Z",
-      "firstSeenAt": "2026-11-28T13:03:54.160Z",
-      "outlets": 2,
-      "outletNames": [
-        "The Standard (HK)",
-        "Beinsure"
-      ],
-      "score": 1.51
     },
     {
       "id": "626d963643bc",
@@ -1084,6 +1108,22 @@
       "score": 1.21
     },
     {
+      "id": "24de9d2c3347",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "OCC shutters United Fidelity Bank, marking biggest US bank failure in 2 years",
+      "url": "https://thehill.com/business/6246057-comptroller-united-fidelity-bank-failure/",
+      "source": "The Hill",
+      "publishedAt": "2026-11-28T08:39:00.000Z",
+      "latestAt": "2026-11-28T08:39:00.000Z",
+      "firstSeenAt": "2026-11-28T17:19:30.815Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Hill"
+      ],
+      "score": 1.2
+    },
+    {
       "id": "344a83803236",
       "cat": "hacks",
       "kind": "news",
@@ -1116,18 +1156,18 @@
       "score": 1.13
     },
     {
-      "id": "4b9b89e72206",
+      "id": "fa2843d9033f",
       "cat": "hacks",
       "kind": "news",
-      "title": "UK pensions department says it was hit by cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdkl5aUhJaHg0cG8yQzlNclh5MjVlazNrcHNhRmJXT09ZOUMzU3dLUkhYX09fRDEyRHBRZ1A1aDFaYktPMk9kOVNiajBvdEVESFlOelB2eUdtZV9jZzJQc3ZZVVhiV0Z2cG1LdHhrU3E1bExTS09OQ2JsOFF4SFZGNkNOOTdCSHE4MHdlWDdUSGpBWnBkYjNqVnU1ejRGQlhxdkQyOHk5Mm5hUQ?oc=5",
-      "source": "Southern Cross",
-      "publishedAt": "2026-11-28T16:58:29.000Z",
-      "latestAt": "2026-11-28T16:58:29.000Z",
-      "firstSeenAt": "2026-11-28T17:04:35.362Z",
+      "title": "A data breach may leave identity theft risks long after the notice",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5iZnV1RncxOUoxVElrZjNOa1pNZVJXR1hiZGNRaVA4eFIzRmpyR0w0a202TXRqRUg4QWhxQ0RsU1JDZzlPYzZPV2xReGdJWkw4eGFGT09BWG1UR2tUX3BBZUlaay1nTm1ESHM1MnZnczBZUTk4YXZ6dmREY2g?oc=5",
+      "source": "Mezha.net",
+      "publishedAt": "2026-11-28T17:13:01.000Z",
+      "latestAt": "2026-11-28T17:13:01.000Z",
+      "firstSeenAt": "2026-11-28T17:19:30.815Z",
       "outlets": 1,
       "outletNames": [
-        "Southern Cross"
+        "Mezha.net"
       ],
       "score": 1
     },
@@ -1144,22 +1184,6 @@
       "outlets": 1,
       "outletNames": [
         "The Times"
-      ],
-      "score": 1
-    },
-    {
-      "id": "a437d42cfc7d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers target FIFA's systems",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQjFfR2Y4cEtyVHpkQ010YWdncUFpMklkZGJYZnJqOHBPNk9rcUNkVjh2ZEZTRjRyZUwxZG5ERFlMMDY4aGR4MzVBRW01dnhoSnhDY3dDWlpGQkVQME5NaVdzVE55cy1oOVNiWVVqcmVtcXpPMjYxWlpZejl2anZ3bjMxT3BPcTNMSllIZjN1WmRCX0plQWpvRHA2XzZtcVJtVVJSTGY2MGNnQTI5aGFrMUJ5Rzg?oc=5",
-      "source": "WUSA9",
-      "publishedAt": "2026-11-28T16:56:00.000Z",
-      "latestAt": "2026-11-28T16:56:00.000Z",
-      "firstSeenAt": "2026-11-28T17:04:35.362Z",
-      "outlets": 1,
-      "outletNames": [
-        "WUSA9"
       ],
       "score": 1
     },
@@ -1336,22 +1360,6 @@
       "outlets": 1,
       "outletNames": [
         "Security Affairs"
-      ],
-      "score": 1
-    },
-    {
-      "id": "32c531b42b7b",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Good News for Internet Users in Pakistan as SMW-5 Submarine Cable Fully Restored",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE51SU9ZdXZrYmNEbEpJS003dHRpbGs3YzkzV3Fpb3hWNndJeUFWemQzS09iaGZXQ3NsaWFGby1vVGk1RDlMcllyNGlnby10Q0Rf?oc=5",
-      "source": "Aik News",
-      "publishedAt": "2026-11-28T10:35:17.000Z",
-      "latestAt": "2026-11-28T10:35:25.000Z",
-      "firstSeenAt": "2026-11-28T10:48:34.141Z",
-      "outlets": 1,
-      "outletNames": [
-        "Aik News"
       ],
       "score": 1
     },
@@ -1560,6 +1568,22 @@
       "outlets": 1,
       "outletNames": [
         "FileHippo"
+      ],
+      "score": 1
+    },
+    {
+      "id": "e03b6924a1ec",
+      "cat": "weather",
+      "kind": "news",
+      "title": "NES outlines changes after January ice storm left more than 230,000 without power",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMW1seXVDVTJVYW9QT29mU3prU2twb1pGeVBwdW9pbjRySUVJRmExd0ZLYTBFUk11VjQ0WThZcGRTSGljYXdFRnUyV0V4cHVQblAxRTVTOG9ibU91ZTZJWlZ2ZVF3SmxfdFdNREpGMVpJbVNfRjIxazJLX09jaElqZ1YyQ1l6RElkWDJZOGF5LU9kOW9Xb3F3eVY3Y3h6dUNLNnZ5Y3VxaEFiX2dKMEpfWmFsMzVwMk9vaFdPbGVqSWpRM2VY?oc=5",
+      "source": "WSMV",
+      "publishedAt": "2026-11-28T04:14:00.000Z",
+      "latestAt": "2026-11-28T04:14:00.000Z",
+      "firstSeenAt": "2026-11-28T04:18:58.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "WSMV"
       ],
       "score": 1
     },
@@ -1850,22 +1874,6 @@
         "CTV News"
       ],
       "score": 0.93
-    },
-    {
-      "id": "1ceb2e3fbd29",
-      "cat": "weather",
-      "kind": "news",
-      "title": "NSW Severe Thunderstorm Warning: Large Hail, Damaging Winds, Heavy Rain",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxORGNlQ2xZOEdsSmc2b3VWTnRoOXZ4N3ZYaEdiSUJzNWF5VFhQVXdESWFFQ0ZTOVZpOXQyNkFTanVXdUNmTkY1M1NLTkdiZUVpT2FyZjZnRTFTX1hfOUVuQjZ3SEZJYmxSN2lJN1dDYVFiMEM5ckx0RzVrN3lMeFdaZEFLLUpteGlDUlRhRmFma3BiU2sz?oc=5",
-      "source": "Early Warning Network",
-      "publishedAt": "2026-11-28T08:10:14.000Z",
-      "latestAt": "2026-11-28T09:20:30.000Z",
-      "firstSeenAt": "2026-11-28T15:04:11.933Z",
-      "outlets": 1,
-      "outletNames": [
-        "Early Warning Network"
-      ],
-      "score": 0.89
     },
     {
       "id": "f04aa0d5ea8c",
