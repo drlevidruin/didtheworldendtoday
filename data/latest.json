@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T19:34:53.569Z",
+  "buildTime": "2026-11-28T19:50:00.080Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 14:34 ET",
+  "etStamp": "2026-11-28 14:50 ET",
   "score": 67,
   "fired": [
     "flights",
@@ -47,15 +47,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1160,
-  "lastSuccessAt": "2026-11-28T19:34:53.569Z",
+  "headlinesRead": 1120,
+  "lastSuccessAt": "2026-11-28T19:50:00.080Z",
   "rollingFallback": false,
   "cats": {
-    "hacks": 36,
+    "hacks": 35,
     "germs": 4,
     "earth": 14,
     "internet": 4,
-    "grid": 19,
+    "grid": 20,
     "sun": 4,
     "flights": 8,
     "weather": 4,
@@ -171,7 +171,7 @@
       "tripped": false,
       "reason": null,
       "matches": [
-        "At least 10 students killed in blast beside school in Afghanistan’s Kunar"
+        "An explosion at a school in eastern Afghanistan kills 10, wounds 110"
       ]
     },
     "holdUntil": null,
@@ -184,15 +184,15 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 904,
+      "count": 856,
       "error": null,
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     },
     "bing": {
       "ok": true,
-      "count": 223,
-      "error": "1 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "count": 231,
+      "error": null,
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     },
     "gdelt": {
       "ok": false,
@@ -204,37 +204,37 @@
       "ok": true,
       "count": 3,
       "error": null,
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     },
     "x": {
       "ok": true,
@@ -247,13 +247,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T19:34:53.569Z"
+      "lastOkAt": "2026-11-28T19:50:00.080Z"
     }
   },
   "stories": [
@@ -267,7 +267,7 @@
       "publishedAt": "2026-11-28T01:37:00.000Z",
       "latestAt": "2026-11-28T18:26:00.000Z",
       "firstSeenAt": "2026-11-28T17:49:34.440Z",
-      "outlets": 11,
+      "outlets": 12,
       "outletNames": [
         "ABC News",
         "Associated Press News",
@@ -279,9 +279,10 @@
         "Eagle-Tribune",
         "The Sun Chronicle",
         "Herald Bulletin",
-        "Los Angeles Times"
+        "Los Angeles Times",
+        "CTV News"
       ],
-      "score": 4.56
+      "score": 4.68
     },
     {
       "id": "ff5b0d91f7b8",
@@ -333,6 +334,26 @@
       "quietReason": "quake M6.5 or more"
     },
     {
+      "id": "cb4259de16b0",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "United Fidelity Bank seized in biggest US bank failure since 2024",
+      "url": "https://apnews.com/article/united-fidelity-bank-a01d066d778855d919761cc77e1b0b00",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-28T04:30:00.000Z",
+      "latestAt": "2026-11-28T19:33:00.000Z",
+      "firstSeenAt": "2026-11-28T17:34:33.155Z",
+      "outlets": 5,
+      "outletNames": [
+        "Associated Press News",
+        "Richmond Register",
+        "Newsday",
+        "Southeast Missourian",
+        "The Independent"
+      ],
+      "score": 3.64
+    },
+    {
       "id": "sig:status:cloudflare:2026-11-28",
       "cat": "internet",
       "kind": "signal",
@@ -353,25 +374,6 @@
         "page": "cloudflare",
         "description": "Partial System Outage"
       }
-    },
-    {
-      "id": "cb4259de16b0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "United Fidelity Bank seized in biggest US bank failure since 2024",
-      "url": "https://apnews.com/article/united-fidelity-bank-a01d066d778855d919761cc77e1b0b00",
-      "source": "Associated Press News",
-      "publishedAt": "2026-11-28T04:30:00.000Z",
-      "latestAt": "2026-11-28T17:30:19.000Z",
-      "firstSeenAt": "2026-11-28T17:34:33.155Z",
-      "outlets": 4,
-      "outletNames": [
-        "Associated Press News",
-        "Richmond Register",
-        "Newsday",
-        "Southeast Missourian"
-      ],
-      "score": 3.28
     },
     {
       "id": "411536834b0a",
@@ -537,6 +539,28 @@
       "score": 1.99
     },
     {
+      "id": "c768c3e8f920",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "UK pensions department says cyberattack hit services, payments unaffected",
+      "url": "https://www.msn.com/en-gb/news/other/uk-pensions-department-says-cyberattack-hit-services-payments-unaffected/ar-AA2irceT",
+      "source": "Reuters on MSN",
+      "publishedAt": "2026-11-28T09:22:00.000Z",
+      "latestAt": "2026-11-28T18:25:05.000Z",
+      "firstSeenAt": "2026-11-28T18:34:45.779Z",
+      "outlets": 7,
+      "outletNames": [
+        "Reuters on MSN",
+        "Yahoo",
+        "The Canberra Times",
+        "SRN News",
+        "AOL",
+        "Devdiscourse",
+        "Livemint"
+      ],
+      "score": 3.22
+    },
+    {
       "id": "cdbafa021d88",
       "cat": "hacks",
       "kind": "news",
@@ -559,27 +583,6 @@
         "ABC News - Breaking News, Latest News and Videos"
       ],
       "score": 3.2
-    },
-    {
-      "id": "c768c3e8f920",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK pensions department says cyberattack hit services, payments unaffected",
-      "url": "https://www.msn.com/en-gb/news/other/uk-pensions-department-says-cyberattack-hit-services-payments-unaffected/ar-AA2irceT",
-      "source": "Reuters on MSN",
-      "publishedAt": "2026-11-28T09:22:00.000Z",
-      "latestAt": "2026-11-28T17:38:26.000Z",
-      "firstSeenAt": "2026-11-28T18:34:45.779Z",
-      "outlets": 6,
-      "outletNames": [
-        "Reuters on MSN",
-        "Yahoo",
-        "The Canberra Times",
-        "SRN News",
-        "AOL",
-        "Devdiscourse"
-      ],
-      "score": 3.03
     },
     {
       "id": "42d688590eeb",
@@ -994,23 +997,6 @@
       "score": 1.8
     },
     {
-      "id": "37ad64dc0231",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "1Password data breach included some customer info, internal source code",
-      "url": "https://www.computerworld.com/article/4254145/1password-data-breach-included-some-customer-info-internal-source-code-2.html",
-      "source": "Computerworld",
-      "publishedAt": "2026-11-27T19:49:00.000Z",
-      "latestAt": "2026-11-28T03:46:12.000Z",
-      "firstSeenAt": "2026-11-28T03:47:25.279Z",
-      "outlets": 2,
-      "outletNames": [
-        "CSO Online",
-        "Computerworld"
-      ],
-      "score": 1.73
-    },
-    {
       "id": "a7cb43050461",
       "cat": "hacks",
       "kind": "news",
@@ -1246,6 +1232,23 @@
       "score": 1.24
     },
     {
+      "id": "2737aa5de6a8",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Prykarpattia power outage schedule for November 28",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBCOUNuUmVQTmNYNlQxVHRYX3NDSEdXZGRKZnZ4d0VrTEF5bjVWVUdKbjZ1cVJtbHJoSXpJMnRuT21WdnRRTW9HRVRzam8wWkd2clZPXzlibGFtOXFTMFBVV2sxdGVRT0VBanhqQ0FZdTRpTzVBQVJN?oc=5",
+      "source": "finway.com.ua",
+      "publishedAt": "2026-11-27T20:31:22.000Z",
+      "latestAt": "2026-11-28T16:13:46.000Z",
+      "firstSeenAt": "2026-11-28T19:50:00.080Z",
+      "outlets": 2,
+      "outletNames": [
+        "finway.com.ua",
+        "Pakistan Connect"
+      ],
+      "score": 1.22
+    },
+    {
       "id": "41ae59728219",
       "cat": "hacks",
       "kind": "news",
@@ -1310,6 +1313,22 @@
       "score": 1.2
     },
     {
+      "id": "4c624040e96b",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "UK welfare cyberattack disrupts millions’ benefit access",
+      "url": "https://ijr.com/discover/uk-welfare-cyberattack-disrupts-millions-benefit-access-6a52b53b",
+      "source": "Independent Journal Review",
+      "publishedAt": "2026-11-28T08:58:00.000Z",
+      "latestAt": "2026-11-28T08:58:00.000Z",
+      "firstSeenAt": "2026-11-28T19:50:00.080Z",
+      "outlets": 1,
+      "outletNames": [
+        "Independent Journal Review"
+      ],
+      "score": 1.15
+    },
+    {
       "id": "c9c80c6c590c",
       "cat": "hacks",
       "kind": "news",
@@ -1365,7 +1384,7 @@
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQLXdEdUVsYllLaV9uTkI1WEFJUk0tblFiSU1iRzExb1FVdGN0Qm51UWJ0YmE0SHZBQTlCek5NTDkzckRrbnNHMzFXb2U4UzY2RHFpSEpPRWU2clpuMV9Ka18ycVdLUUNIbjhLRnMyNmdaY196eGxLZkw0Nmk4NjNjRHliQ2hSZWFGdzF4TkVUaUREcWEwUnRSUXFTbFVyNFVPYmZQag?oc=5",
       "source": "MyNewsLA.com",
       "publishedAt": "2026-11-28T18:42:01.000Z",
-      "latestAt": "2026-11-28T18:42:39.000Z",
+      "latestAt": "2026-11-28T19:42:15.000Z",
       "firstSeenAt": "2026-11-28T18:49:45.490Z",
       "outlets": 1,
       "outletNames": [
@@ -1758,22 +1777,6 @@
       "score": 1
     },
     {
-      "id": "9ae591231e22",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "November 28 tech news roundup: Jensen Huang returns as NVIDIA's CEO, Todoist and 1Password suffered data breaches, Rockstar takes down AI-ported PC versions of GTA VI",
-      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxNaG9ob0pLblRwMWhPLXZ1VVlKeWxkRW82TWZEOFpSQ1BNSnpGY05IeExhRkxFTHpTazhSQkNXeFpnT3Utd25DWERLX0R1SWZrV1hiaVlqQV9WaHhBdVYyLWIzeWtTakNNNnFrYzVybjRyWHE5WUhzSVhNTERIdk92bXhnSjhCenplQ2IyQlQ2elNUellIMXdIME9tQ0hGdE5seEUxeDNxTjdkR3R0bE5vQWQwTVpWNmxlalNMSlFWYlAxNjRPS1ZwV3djVUY5OXZaMmNzOW40UDM1Tl9uel9wSUdfNXNFdVFQYTVid1lkYU0yb2JpWkpMOU9xeTdsMUhmcE5tM0d6UU5xYjdCVkFwdUc0bDkweXF6ODQyVUVVbkZ5NFUz?oc=5",
-      "source": "FileHippo",
-      "publishedAt": "2026-11-28T04:35:38.000Z",
-      "latestAt": "2026-11-28T04:35:38.000Z",
-      "firstSeenAt": "2026-11-28T04:47:41.715Z",
-      "outlets": 1,
-      "outletNames": [
-        "FileHippo"
-      ],
-      "score": 1
-    },
-    {
       "id": "e03b6924a1ec",
       "cat": "weather",
       "kind": "news",
@@ -1829,7 +1832,7 @@
       "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPWVpsaGhEVXVxSk9zUFRtNXZid3BDclVHalI2UmV1WWd0STRia29BRDVhbThfaktXWWxrVnp1VElwNEpfdXJ1SGZqYUw4ZnlDalNrTXp0Uklxb0lFbjRqcnl5b082VE9yWFdibnFkcm04NzR2Rmo2MGlkSlF5TlhfdDczaVFuZGtCQUt2a0NNaHoySXB3WUp4cFdDNEdkSXMtTzRZQmFGUGZ0YVg3aXBFLXExZG5oRnBsR3pidl9PV1N5YXpXV2ZUaEFfUHc1VU81UkNsOGgxcnJoaUR6ZWI1Ny1jRG1nMGNJa2VXUUM2MjBoeVlUTXpIWExfcFfSAYICQVVfeXFMT2RObzNzdXJ0ZmJQdmFjTTlfTEFRMGUtSkh5SEFDM1hKVWJrM2VWN0dLQVJ2dnFYR2hkNUxhak5USGNhc2wycTZFSmZRV082NlBiVnFrYkpiSTI3VkJPc1JsRkpCdWJUTTZOX0dET05zd3ZEWWc0VTBjYW43VVhoZ3kxM21vWXE5ZnN3MEhCZUh1YjBkNGVaQmJSY0RMSkJoV3RHYVlBbk1LbG56WDJ6Rnh0X0JFdHZOQ0xhVVZMQTNBQW5BaHoxd2N2eE5KRGIxQzgza0VOY3RLNG4xV0wwaHhtTGlENXhQcDI4eDROakg3V0xiTnlsR0RDMVg2TnlXejdB?oc=5",
       "source": "News24",
       "publishedAt": "2026-11-28T18:01:03.000Z",
-      "latestAt": "2026-11-28T18:01:03.000Z",
+      "latestAt": "2026-11-28T18:05:06.000Z",
       "firstSeenAt": "2026-11-28T18:19:40.643Z",
       "outlets": 1,
       "outletNames": [
