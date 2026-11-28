@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T14:04:04.019Z",
+  "buildTime": "2026-11-28T14:19:06.875Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 09:04 ET",
+  "etStamp": "2026-11-28 09:19 ET",
   "score": 67,
   "fired": [
     "flights",
@@ -47,16 +47,16 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1188,
-  "lastSuccessAt": "2026-11-28T14:04:04.019Z",
+  "headlinesRead": 1179,
+  "lastSuccessAt": "2026-11-28T14:19:06.875Z",
   "rollingFallback": false,
   "cats": {
     "earth": 4,
     "germs": 7,
     "internet": 5,
-    "hacks": 41,
-    "grid": 20,
-    "flights": 9,
+    "hacks": 43,
+    "grid": 17,
+    "flights": 10,
     "weather": 4,
     "markets": 4,
     "animals": 2,
@@ -166,12 +166,13 @@
       "via": "google-top-stories",
       "error": null,
       "headlines": 30,
-      "matched": 1,
+      "matched": 2,
       "tripAt": 3,
       "tripped": false,
       "reason": null,
       "matches": [
-        "Israeli ‘direct hit ‘on Doctors Without Borders Gaza clinic kills 2 staff"
+        "Israeli ‘direct hit ‘on Doctors Without Borders Gaza clinic kills 2 staff",
+        "Afghanistan explosion kills 10 students and injures more than 100, official says"
       ]
     },
     "holdUntil": null,
@@ -179,20 +180,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 910,
+      "count": 894,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "bing": {
       "ok": true,
-      "count": 245,
+      "count": 251,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "gdelt": {
       "ok": false,
@@ -202,58 +203,57 @@
     },
     "hn": {
       "ok": true,
-      "count": 3,
+      "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:18:53.674Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T14:04:04.019Z"
+      "lastOkAt": "2026-11-28T14:19:06.875Z"
     }
   },
   "stories": [
@@ -292,7 +292,7 @@
       "publishedAt": "2026-11-27T22:29:00.000Z",
       "latestAt": "2026-11-28T11:37:29.000Z",
       "firstSeenAt": "2026-11-28T11:48:51.893Z",
-      "outlets": 7,
+      "outlets": 8,
       "outletNames": [
         "News 12 Long Island",
         "News12 | New Jersey",
@@ -300,9 +300,10 @@
         "News 12 The Bronx",
         "News12 | Westchester",
         "Amazon S3 on MSN",
-        "News12 | Brooklyn"
+        "News12 | Brooklyn",
+        "News12 | Connecticut"
       ],
-      "score": 4.15
+      "score": 4.36
     },
     {
       "id": "sig:status:cloudflare:2026-11-28",
@@ -519,23 +520,6 @@
       "score": 2
     },
     {
-      "id": "27481d5961b0",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "SAP source code target of cyberattack; company says no customer data compromised: report",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdG9vUDlERmpmRFB5aVJIQUhJMjUtQlZ2eVRlekRrazNja2U5NU02UC0tdXVXWkZnNTRFQnA1U24wTEFMdEdCYkFQeUpmTWZFdTNxZTRHQm5rNy1aSmxNZ196MlJ2SG5UOGJGWi1HZ1ljQi1FcTVzbWpqN0YyVnotMXVreFRoNTBJdnVJcXB4LVI4dENidHM0eHFIT3lMR2FNaW5VT2lPQ0pYdDh4U2htYnJnYmNIMmtDN1U0Z2pjbUtwTTRpR29aNW1MbEgtZ2c1VmpoNHBCeWZxZ2NqMHJhaWptNA?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-11-27T14:06:10.000Z",
-      "latestAt": "2026-11-27T14:06:10.000Z",
-      "firstSeenAt": "2026-11-27T15:15:26.686Z",
-      "outlets": 2,
-      "outletNames": [
-        "TradingView",
-        "Seeking Alpha"
-      ],
-      "score": 1.96
-    },
-    {
       "id": "59daa8fd9202",
       "cat": "hacks",
       "kind": "news",
@@ -551,6 +535,23 @@
         "Techweez"
       ],
       "score": 1.94
+    },
+    {
+      "id": "5cc3e5f07823",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Who's to blame for tech outages? Clue: It's not AI or hackers",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWS1mX1dGRTZhVXhvZXpRVGFuMUpybXh1eE5qNEU1SEItTXdUbHJPVUdpSEhYM1ItMFVrbGxkVXlmUzFaRlh1N3AtbVd0Ukw4SkZCQ0JUODVLZl9Dclpoem9ZYnBaZ1VNRjNuMGI1bll3eHc5X3ZSN09GRWRwNjd4SkJLZ1RSbDJWVmVLME9Sa0U5X0ZlM1NWUU1OR2wwUnJYdmhuU3VBMDNxX2l0UDVqVFQwSWVZclhvMGNBUjI4RlUtRHU3UFg2VXoydVQxbTFhbUtrekd3T28?oc=5",
+      "source": "Fairbanks Daily News-Miner",
+      "publishedAt": "2026-11-27T15:00:00.000Z",
+      "latestAt": "2026-11-27T15:48:37.000Z",
+      "firstSeenAt": "2026-11-27T17:45:55.819Z",
+      "outlets": 2,
+      "outletNames": [
+        "Fairbanks Daily News-Miner",
+        "Yakima Herald-Republic"
+      ],
+      "score": 1.91
     },
     {
       "id": "d496d995ac2e",
@@ -587,21 +588,21 @@
       "score": 1.78
     },
     {
-      "id": "3901d5d9a26c",
+      "id": "48ee284342e5",
       "cat": "grid",
       "kind": "news",
-      "title": "Strong winds leave thousands without power in central Pennsylvania",
-      "url": "https://www.yahoo.com/news/weather-news/articles/strong-winds-leave-thousands-without-221005763.html",
+      "title": "Power outage leaves some DMV residents in the dark after Thanksgiving storm",
+      "url": "https://www.yahoo.com/news/weather-news/articles/power-outage-leaves-dmv-residents-042217964.html",
       "source": "Yahoo",
-      "publishedAt": "2026-11-27T14:10:00.000Z",
-      "latestAt": "2026-11-27T22:10:00.000Z",
-      "firstSeenAt": "2026-11-27T22:16:32.855Z",
+      "publishedAt": "2026-11-27T16:00:00.000Z",
+      "latestAt": "2026-11-28T04:22:00.000Z",
+      "firstSeenAt": "2026-11-28T05:17:37.510Z",
       "outlets": 2,
       "outletNames": [
-        "FOX43",
-        "Yahoo"
+        "Yahoo",
+        "WUSA9"
       ],
-      "score": 1.73
+      "score": 1.56
     },
     {
       "id": "f61dc0909598",
@@ -796,23 +797,6 @@
       "score": 1
     },
     {
-      "id": "5cc3e5f07823",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Who's to blame for tech outages? Clue: It's not AI or hackers",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWS1mX1dGRTZhVXhvZXpRVGFuMUpybXh1eE5qNEU1SEItTXdUbHJPVUdpSEhYM1ItMFVrbGxkVXlmUzFaRlh1N3AtbVd0Ukw4SkZCQ0JUODVLZl9Dclpoem9ZYnBaZ1VNRjNuMGI1bll3eHc5X3ZSN09GRWRwNjd4SkJLZ1RSbDJWVmVLME9Sa0U5X0ZlM1NWUU1OR2wwUnJYdmhuU3VBMDNxX2l0UDVqVFQwSWVZclhvMGNBUjI4RlUtRHU3UFg2VXoydVQxbTFhbUtrekd3T28?oc=5",
-      "source": "Fairbanks Daily News-Miner",
-      "publishedAt": "2026-11-27T15:00:00.000Z",
-      "latestAt": "2026-11-27T15:48:37.000Z",
-      "firstSeenAt": "2026-11-27T17:45:55.819Z",
-      "outlets": 2,
-      "outletNames": [
-        "Fairbanks Daily News-Miner",
-        "Yakima Herald-Republic"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "7a325ff6efa9",
       "cat": "hacks",
       "kind": "news",
@@ -882,6 +866,24 @@
       "score": 1.7
     },
     {
+      "id": "71c66b8c664d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWkFBeHFZdkM3dGwxM3ZHbnJWNGN2NVA5WFJJTnZlQUg0dXpqYTUtN2tscFE5QWtCc2tyb3JUV0NGLV9YSVRrMFZoSzN0VXdpTFJiZFdzZUlrRkxXLVdhYUZSMHBINkxEbnF3NUxNeDNkSHNFbE8wTkduV2pIb0F3ZmxKYTk?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T17:43:29.000Z",
+      "latestAt": "2026-11-27T20:36:11.000Z",
+      "firstSeenAt": "2026-11-28T14:19:06.875Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "The Mary Sue",
+        "Greater Belize Media"
+      ],
+      "score": 1.7
+    },
+    {
       "id": "42d688590eeb",
       "cat": "hacks",
       "kind": "news",
@@ -914,23 +916,6 @@
         "MLQ.ai"
       ],
       "score": 1.64
-    },
-    {
-      "id": "48ee284342e5",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Power outage leaves some DMV residents in the dark after Thanksgiving storm",
-      "url": "https://www.yahoo.com/news/weather-news/articles/power-outage-leaves-dmv-residents-042217964.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T16:00:00.000Z",
-      "latestAt": "2026-11-28T04:22:00.000Z",
-      "firstSeenAt": "2026-11-28T05:17:37.510Z",
-      "outlets": 2,
-      "outletNames": [
-        "Yahoo",
-        "WUSA9"
-      ],
-      "score": 1.56
     },
     {
       "id": "07b0d2e8ee89",
@@ -982,23 +967,6 @@
         "WFMZ.com"
       ],
       "score": 1.45
-    },
-    {
-      "id": "9ad373154f58",
-      "cat": "grid",
-      "kind": "news",
-      "title": "QESCO issues three-day power outage schedule",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBSQm00ZzlkYWlQOGRyaU1wOXRIMm8wTE1sRmtmbThRQW9UcS02bC1YUHQ0MWkwaGxrc3VQYUVwQ3ljazRwMVNpTmp6Q0Rma0luT3I0SFdGd044aTNkYVhqTi1NdU96NWU3SFBR?oc=5",
-      "source": "Pakistan Connect",
-      "publishedAt": "2026-11-27T14:08:23.000Z",
-      "latestAt": "2026-11-27T14:12:39.000Z",
-      "firstSeenAt": "2026-11-28T07:48:04.390Z",
-      "outlets": 2,
-      "outletNames": [
-        "Pakistan Connect",
-        "Daily Ausaf"
-      ],
-      "score": 1.41
     },
     {
       "id": "7c9392559010",
@@ -1113,20 +1081,20 @@
       "score": 1.13
     },
     {
-      "id": "5e5d89464920",
-      "cat": "grid",
+      "id": "b8d3baa90b3a",
+      "cat": "flights",
       "kind": "news",
-      "title": "Slidell power outage, more than 500 Cleco customers impacted",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUnZnWXlFeGdocEFscFdMalVPamZCNWo2TUY2Tloxd0l3ckktZTQxLXYwVzJ4QjBCSXZfa0h6dG9RclpVdUZMbUNxMHVfQzljUzRWYzF2aTkyQ2R2UjRSSFlZS0lHWkhUS1VpTndmaWhpZFpveXkwZFFxZDFCTllycVFnMTJ5NURGc01PcEg3V0lYNDZGaDNERndiUEVmUQ?oc=5",
-      "source": "WDSU",
-      "publishedAt": "2026-11-28T13:51:00.000Z",
-      "latestAt": "2026-11-28T13:51:00.000Z",
-      "firstSeenAt": "2026-11-28T14:04:04.019Z",
+      "title": "Rant and Rave: Readers praise workers during nationwide ground stop",
+      "url": "https://www.seattletimes.com/life/lifestyle/rant-and-rave-readers-praise-workers-during-nationwide-ground-stop/",
+      "source": "The Seattle Times",
+      "publishedAt": "2026-11-27T22:00:00.000Z",
+      "latestAt": "2026-11-27T22:00:00.000Z",
+      "firstSeenAt": "2026-11-28T14:19:06.875Z",
       "outlets": 1,
       "outletNames": [
-        "WDSU"
+        "The Seattle Times"
       ],
-      "score": 1
+      "score": 1.02
     },
     {
       "id": "b2cf5510fd51",
@@ -1723,6 +1691,22 @@
       "score": 0.98
     },
     {
+      "id": "ffdbcff2fded",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Around 500,000 workers data leaked as hackers target construction body",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNdEtIbVBLWnBLR20xdkNzaTdpZWRnZXptSHZnN1MwSXl6R3lIQ3JGbmcyOWxEdXZHcVNtZ3ZzLTNxbTBvNEFxR2VsRFRDQmVTbjNEcld1ZG8wOEZUTzVHSVZPZEdOU1JHRS1hYjVqMGcwZmNzVExielA0eUd3Vnl3bmcxcDY2Ym9RWWVNQUdsNGwwb0xpbTdV?oc=5",
+      "source": "TVB",
+      "publishedAt": "2026-11-28T12:37:00.000Z",
+      "latestAt": "2026-11-28T12:37:00.000Z",
+      "firstSeenAt": "2026-11-28T14:19:06.875Z",
+      "outlets": 1,
+      "outletNames": [
+        "TVB"
+      ],
+      "score": 0.97
+    },
+    {
       "id": "2c68ab565d32",
       "cat": "hacks",
       "kind": "news",
@@ -1753,6 +1737,22 @@
         "CTV News"
       ],
       "score": 0.97
+    },
+    {
+      "id": "534bbd003633",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "SAP cyberattack: new details emerge on GitHub and source code compromise",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVUFCYktxUEpPcVJrSHF2QTQxY0wyc0Zzek5CYjNXbGpPdE5zbnRWeXBDeVZLV0tKb1puODZCbDZQWGdGNTFqWnRjSXRXU1N5UHFZSGpPVS1Ud0tHeFpMSFBheXQ4aTZWVW9QdHRHbVF5RFhEcy1pdVFNLWYxMDM4ZC1XWkxmRExMRnl1YTB0U3ZHRmdQcVZncUJtMjlYOWs?oc=5",
+      "source": "Beinsure",
+      "publishedAt": "2026-11-28T12:04:50.000Z",
+      "latestAt": "2026-11-28T12:04:50.000Z",
+      "firstSeenAt": "2026-11-28T14:19:06.875Z",
+      "outlets": 1,
+      "outletNames": [
+        "Beinsure"
+      ],
+      "score": 0.96
     },
     {
       "id": "1f5a858833ec",
