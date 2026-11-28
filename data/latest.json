@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T01:02:00.556Z",
+  "buildTime": "2026-11-28T01:17:02.863Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 20:02 ET",
+  "etStamp": "2026-11-27 20:17 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -39,20 +39,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 565,
-  "lastSuccessAt": "2026-11-28T01:02:00.556Z",
+  "headlinesRead": 1245,
+  "lastSuccessAt": "2026-11-28T01:17:02.863Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 39,
     "germs": 5,
-    "grid": 18,
+    "grid": 17,
     "weather": 8,
     "ai": 2,
     "animals": 2,
     "earth": 4,
     "flights": 8,
     "markets": 4,
-    "internet": 5,
+    "internet": 6,
     "space": 4,
     "sun": 1
   },
@@ -171,84 +171,109 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 303,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 7 of 26 queries)",
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "count": 941,
+      "error": null,
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "bing": {
       "ok": true,
-      "count": 231,
-      "error": "4 of 26 queries failed: feed has no channel (not an RSS response)",
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "count": 270,
+      "error": null,
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T00:16:50.918Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "trends": {
       "ok": true,
-      "count": 27,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T01:02:00.556Z"
+      "lastOkAt": "2026-11-28T01:17:02.863Z"
     }
   },
   "stories": [
+    {
+      "id": "b9817dd4916c",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Lloyds banking app goes down in latest major outage",
+      "url": "https://www.aol.co.uk/articles/lloyds-down-online-banking-app-105603000.html",
+      "source": "AOL.co.uk",
+      "publishedAt": "2026-11-27T03:25:00.000Z",
+      "latestAt": "2026-11-27T15:59:48.000Z",
+      "firstSeenAt": "2026-11-28T01:17:02.863Z",
+      "outlets": 11,
+      "outletNames": [
+        "AOL.co.uk",
+        "The Telegraph",
+        "beinsure",
+        "The Sunday Guardian",
+        "The Independent",
+        "Yahoo Finance UK",
+        "Business Upturn",
+        "cwibc.co.id",
+        "Anadolu Ajansı",
+        "Operativ Məlumat Mərkəzi",
+        "CX Today"
+      ],
+      "score": 3.97
+    },
     {
       "id": "b159877c0236",
       "cat": "hacks",
@@ -256,7 +281,7 @@
       "title": "Exclusive - Hackers breach US Air Force flagship Cloud One computing platform",
       "url": "https://www.msn.com/en-us/news/other/exclusive-hackers-breach-us-air-force-flagship-cloud-one-computing-platform/ar-AA2ilEaZ",
       "source": "Reuters on MSN",
-      "publishedAt": "2026-11-27T03:37:39.000Z",
+      "publishedAt": "2026-11-27T03:35:00.000Z",
       "latestAt": "2026-11-28T00:31:47.000Z",
       "firstSeenAt": "2026-11-28T01:02:00.556Z",
       "outlets": 32,
@@ -294,7 +319,7 @@
         "Sahara Reporters",
         "MyNorthwest.com"
       ],
-      "score": 3.86
+      "score": 3.85
     },
     {
       "id": "8bd025a5242b",
@@ -356,26 +381,6 @@
         "eKathimerini.com"
       ],
       "score": 2.86
-    },
-    {
-      "id": "a086d4abc6e4",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "France's AFP news agency hit by cyberattack, takes content platform offline",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQVlkR3RhVTkyX2EtNWxGTWtQem5Oa0xwR3BlbTM0RTFaOGVHOHA2a0NKVU1wZ0FRRWlKZnpaeGVxSDhuWWJWWDBiR2J0QThuOUVwZDBtOEdIaEFmbktwMWtHcVVCYl8wYjhNNDVKY1hHdVdmWlBSWXQ5RTNISENtU3hxU3JjZzNPS1Y1ZDJ3MjlmaGc1aFpXb0RBLWhKSG9JSTJqSEJYMkRqUVN4UVZUX2xxRQ?oc=5",
-      "source": "Anadolu Ajansı",
-      "publishedAt": "2026-11-27T01:12:48.000Z",
-      "latestAt": "2026-11-27T12:50:38.000Z",
-      "firstSeenAt": "2026-11-27T12:45:07.402Z",
-      "outlets": 5,
-      "outletNames": [
-        "Anadolu Ajansı",
-        "A News",
-        "The Malaysian Reserve",
-        "US Muslims",
-        "MLQ.ai"
-      ],
-      "score": 2.68
     },
     {
       "id": "94e16ff27e9a",
@@ -1526,6 +1531,38 @@
       "score": 1.12
     },
     {
+      "id": "8a575712b48a",
+      "cat": "internet",
+      "kind": "news",
+      "title": "DWP 'cyber incident' causes major outage hitting benefits services",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPOWgxYVFsRG8tQXE5NVg4RkpQZ25mUmFpYmxyVFFGaVR2VkhPRHNjLUtDSVF0TVQ5eXdfcDVDd2pPVkpsQmhxVGlkV29rel9CY3Y0NXo2VnlFcFNvaDlPSHAwQXdMZzZ0SUdlblVkRkNjaDdzSVh2WTNfRVpWZjNYRnlzUDVPNmtLQm5YVWxsZXN4YkEzNmfSAZsBQVVfeXFMUDNNV29RUG16Rk9BQWxZLWV2dHJPUEIzVV9OaHVmdV9JZVB6SWRZZVpxdU9FT0FUbFBHdEw5Q0psT1FncVFkOUt2dEtzUFh0MGxpZjdtU1o2WVlQcVVKaTRpNVhaQUh1TXZzMXYybmtOR3BlOFpjT0Vxc3oyd2JFNHRtV1hjaG9LTGdDeEtPLXBXNVdrLTFqQlNYZGs?oc=5",
+      "source": "Yorkshire Live",
+      "publishedAt": "2026-11-27T08:56:00.000Z",
+      "latestAt": "2026-11-27T08:56:00.000Z",
+      "firstSeenAt": "2026-11-28T01:17:02.863Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yorkshire Live"
+      ],
+      "score": 1.02
+    },
+    {
+      "id": "eda09afa3516",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Millions lose access to benefits and pensions services after 'cyber incident'",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5qTlc4VnVELTJDUDV4Nlo3aGNCemZHSGpMcTA1aWFfdTRKNTRMRHBxeWd5eVNwRlc0dldoLXMteDlMSEh2cjVOY1A4SHdPYUh2UnM5M3lGdkoyMEx2aGc?oc=5",
+      "source": "BBC",
+      "publishedAt": "2026-11-27T08:34:17.000Z",
+      "latestAt": "2026-11-27T08:34:17.000Z",
+      "firstSeenAt": "2026-11-28T01:17:02.863Z",
+      "outlets": 1,
+      "outletNames": [
+        "BBC"
+      ],
+      "score": 1.01
+    },
+    {
       "id": "a20822d8e9f8",
       "cat": "hacks",
       "kind": "news",
@@ -1538,22 +1575,6 @@
       "outlets": 1,
       "outletNames": [
         "MLQ.ai"
-      ],
-      "score": 1
-    },
-    {
-      "id": "acbf88a03d73",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "'No Classified Networks Accessed' — CIA, ODNI and NGA Breached by Hackers Who May Have Used AI Hacking Tool ARTEX",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1ic0gxTy1jMHJIV29VakNFeEI1dC0wR0hpNTFmMmFxakR2X2d3WU9Oa0JxdnRXeVhvM21Nc1lVMjBpc1BVM3NlZVhCMEhNZHpsOHIzbjdnQjhmWFMzbmdFVDRoZjhVSjRtNWZpejU0emdPeDBlWDQyQXljd0I?oc=5",
-      "source": "Latin Times",
-      "publishedAt": "2026-11-28T00:55:27.000Z",
-      "latestAt": "2026-11-28T00:55:27.000Z",
-      "firstSeenAt": "2026-11-28T01:02:00.556Z",
-      "outlets": 1,
-      "outletNames": [
-        "Latin Times"
       ],
       "score": 1
     },
@@ -1780,22 +1801,6 @@
       "outlets": 1,
       "outletNames": [
         "Inside Retail Australia"
-      ],
-      "score": 1
-    },
-    {
-      "id": "159f8ed25f06",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Wind leaves more than 105,000 PPL customers without power",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMS1JRXpoYm1ydld4MlRSSjVmd1JTa0lnaDFQZ3VHMFNyM0VBTTlEbDlVdUlVQ3hCNkY4ZzFQMTlkdDJqaXREZnRlUkkzd1lrVjlycmtwMENrbFZRUGhEdnJFM3ozZGptQ3FwLVBqZ2s1am9vY01QTjBsaklVM2Zqcy0wTmRRUXFtVVFzM3J3?oc=5",
-      "source": "fox56.com",
-      "publishedAt": "2026-11-27T02:46:12.000Z",
-      "latestAt": "2026-11-27T02:47:00.000Z",
-      "firstSeenAt": "2026-11-27T02:58:26.353Z",
-      "outlets": 1,
-      "outletNames": [
-        "fox56.com"
       ],
       "score": 1
     },
