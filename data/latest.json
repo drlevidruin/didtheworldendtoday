@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T11:33:38.131Z",
+  "buildTime": "2026-11-28T11:48:51.893Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 06:33 ET",
+  "etStamp": "2026-11-28 06:48 ET",
   "score": 68,
   "fired": [
     "flights",
@@ -43,18 +43,18 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1232,
-  "lastSuccessAt": "2026-11-28T11:33:38.131Z",
+  "headlinesRead": 1194,
+  "lastSuccessAt": "2026-11-28T11:48:51.893Z",
   "rollingFallback": false,
   "cats": {
-    "internet": 7,
+    "internet": 6,
     "grid": 18,
-    "hacks": 44,
-    "germs": 4,
+    "hacks": 45,
+    "germs": 5,
     "earth": 4,
     "flights": 7,
     "space": 2,
-    "weather": 5,
+    "weather": 4,
     "markets": 4,
     "animals": 2,
     "sun": 3
@@ -181,57 +181,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 937,
+      "count": 900,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     },
     "bing": {
       "ok": true,
-      "count": 260,
+      "count": 259,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "rate limited (HTTP 429)",
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "hn": {
       "ok": true,
       "count": 5,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     },
     "x": {
       "ok": true,
@@ -244,13 +244,13 @@
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T11:33:38.131Z"
+      "lastOkAt": "2026-11-28T11:48:51.893Z"
     }
   },
   "stories": [
@@ -331,6 +331,23 @@
         "The New Indian Express"
       ],
       "score": 2.22
+    },
+    {
+      "id": "ff5b0d91f7b8",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Toothpaste, mouthwash products recalled nationwide due to hormone contamination",
+      "url": "https://longisland.news12.com/2026/11/28/toothpaste-mouthwash-products-recalled-nationwide-due-to-hormone-contamination/4D69ZFcMnp4QG4TmkuyhwO",
+      "source": "News 12 Long Island",
+      "publishedAt": "2026-11-27T22:29:00.000Z",
+      "latestAt": "2026-11-28T11:35:14.000Z",
+      "firstSeenAt": "2026-11-28T11:48:51.893Z",
+      "outlets": 2,
+      "outletNames": [
+        "News 12 Long Island",
+        "News12 | New Jersey"
+      ],
+      "score": 2.18
     },
     {
       "id": "dc51c3bd3429",
@@ -471,39 +488,6 @@
       "score": 1.72
     },
     {
-      "id": "8c7ddcbcbccb",
-      "cat": "flights",
-      "kind": "news",
-      "title": "Delta restores weight system after outage delays flights nationwide",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQdE8zSlY4Zjk2MTJyRHcwM0t6akVmLV9DYmpabEJWSnJsUk0yUGlqZkxjS2xTS2JiVUtRUUZuVUF3TTBZbEdKQURIX1dPWWdkNUFMaEtrU3RCcHpmSkxuSVpoOVRiazVKalV4SE8waWptSTZ6MUx5eEd1d1k1WlllNU1yMElLSXg5VXBzWVdTMlQ5d0s4Z2RJUGxXTXE?oc=5",
-      "source": "https://www.thetraveler.org/",
-      "publishedAt": "2026-11-28T10:22:39.000Z",
-      "latestAt": "2026-11-28T11:02:39.000Z",
-      "firstSeenAt": "2026-11-28T10:33:30.627Z",
-      "outlets": 1,
-      "outletNames": [
-        "https://www.thetraveler.org/"
-      ],
-      "score": 1.4
-    },
-    {
-      "id": "cd1b0d124270",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "FIFA targeted by cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTWV2MXpLUko0TzJaNXUzb1FxaDFOSVg1LVJ1NTlmSWxTNXRDaGsyc1VSdVA0QmNUR2hfYzhsX3BCajdwam5QSE5CbnQyX3RuVVJEYUJKT2JhZmNtQkM0QVdDRmNZaEkyMlBST1UwdmFMc2ZENW9LTnllb0h3WkhIVEp0UEQ?oc=5",
-      "source": "NBC News",
-      "publishedAt": "2026-11-27T11:36:03.000Z",
-      "latestAt": "2026-11-27T11:50:00.000Z",
-      "firstSeenAt": "2026-11-27T11:45:04.133Z",
-      "outlets": 2,
-      "outletNames": [
-        "NBC News",
-        "Modern Ghana"
-      ],
-      "score": 1.99
-    },
-    {
       "id": "27481d5961b0",
       "cat": "hacks",
       "kind": "news",
@@ -536,6 +520,23 @@
         "Yakima Herald-Republic"
       ],
       "score": 1.91
+    },
+    {
+      "id": "a3000ce6fbd2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Software giant SAP confirms cyber incident amid reports of source code breach",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA5UGViQ0RSR2xxVGZ0eXVrMFgzSVhDM0hsNjZ2RHljU2VhMXhGZGpvWmc0TTRBRTdYYjhySDVxQkluU21wcVhwOEFqTndSa1ZGdGFTTVp3eVVvS3ptbE9USG9ZaTA?oc=5",
+      "source": "The Record from Recorded Future News",
+      "publishedAt": "2026-11-27T13:23:33.000Z",
+      "latestAt": "2026-11-27T16:13:15.000Z",
+      "firstSeenAt": "2026-11-27T16:15:35.844Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Record from Recorded Future News",
+        "Canadian HR Reporter"
+      ],
+      "score": 1.9
     },
     {
       "id": "12c5129975aa",
@@ -587,6 +588,22 @@
         "KSDK"
       ],
       "score": 1.69
+    },
+    {
+      "id": "8c7ddcbcbccb",
+      "cat": "flights",
+      "kind": "news",
+      "title": "Delta restores weight system after outage delays flights nationwide",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQdE8zSlY4Zjk2MTJyRHcwM0t6akVmLV9DYmpabEJWSnJsUk0yUGlqZkxjS2xTS2JiVUtRUUZuVUF3TTBZbEdKQURIX1dPWWdkNUFMaEtrU3RCcHpmSkxuSVpoOVRiazVKalV4SE8waWptSTZ6MUx5eEd1d1k1WlllNU1yMElLSXg5VXBzWVdTMlQ5d0s4Z2RJUGxXTXE?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-28T10:22:39.000Z",
+      "latestAt": "2026-11-28T11:02:39.000Z",
+      "firstSeenAt": "2026-11-28T10:33:30.627Z",
+      "outlets": 1,
+      "outletNames": [
+        "https://www.thetraveler.org/"
+      ],
+      "score": 1.4
     },
     {
       "id": "f61dc0909598",
@@ -653,38 +670,6 @@
       "score": 1.39
     },
     {
-      "id": "5d5b88b6abc4",
-      "cat": "internet",
-      "kind": "news",
-      "title": "Hydro One responding to major outage in Madawaska Valley region",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOYWgydkFvUkx2N3dITDVROEZRRGxQdDBueWRfZGh5eWppa0RRbGQ1VHJ3QnBaaWFBQUNFQTUtcldHb1FTSS1JTGNxLUFxMk1yZU0zSUZVLWZMaTVSN096MGo3NXdSS1Y1Z3cyb0lEQmpxaFV3bWUzb2xBa0tBdmRaWERaWVRyTWRqSl9XaU96VHJQblgzNzM5R1B4WDdKeDMteF85S0JnOA?oc=5",
-      "source": "104.9 Pembroke Today",
-      "publishedAt": "2026-11-27T11:46:35.000Z",
-      "latestAt": "2026-11-27T12:26:06.000Z",
-      "firstSeenAt": "2026-11-27T11:59:52.439Z",
-      "outlets": 1,
-      "outletNames": [
-        "104.9 Pembroke Today"
-      ],
-      "score": 1.39
-    },
-    {
-      "id": "83ef9fdc9f2a",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Weekend Outlook: Record heat followed by cold and snow",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPWldiaXFNcnhnWk52b0VrZ2tCTFB0a2hTOTZHT0V6NjdyNkFtNnI5VDlSbTh5Um16YTJVbEswM29qOHV5ZTNUbHFSaTdXSFN1YXZWc2NRNE9mdTdGbUlqYVp5QkNkVTQwSUNfcm4zOElkRGhBSC1YcW1PVTEwMnB3enN0OXRMQ0gydFpXcWtabEJvcTcxNFpUdVh3THF5bms?oc=5",
-      "source": "SooToday.com",
-      "publishedAt": "2026-11-27T11:45:18.000Z",
-      "latestAt": "2026-11-27T11:45:18.000Z",
-      "firstSeenAt": "2026-11-27T11:59:52.439Z",
-      "outlets": 1,
-      "outletNames": [
-        "SooToday.com"
-      ],
-      "score": 1.39
-    },
-    {
       "id": "36bd83d9f0d6",
       "cat": "internet",
       "kind": "news",
@@ -733,22 +718,6 @@
       "score": 1.17
     },
     {
-      "id": "5d232c36c583",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Looking Back: A historic ice storm and Bear Lake/Onekama runners",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdTZzWDNzNGZKWk1pQVdRaEtPMU9WUG93Y09FaWM2M2dqSzRoUUp3THBSYXJzS1VfSmljY0tSenBZS3Nhd1VEX1N4elNpS3g3OW5ueVhzQ0loWlpfU1M3bHV5T1NfV0RnZ1J5aVNHM0tFRFhSZmdCdjh2eDVCYmtGRDZ0N1U2TGVfdGpDTlZnRWxzNHd2N1R3aDZsSjhrMDU1UWxyUUlZTQ?oc=5",
-      "source": "Manistee News Advocate",
-      "publishedAt": "2026-11-28T11:07:11.000Z",
-      "latestAt": "2026-11-28T11:07:11.000Z",
-      "firstSeenAt": "2026-11-28T11:18:34.544Z",
-      "outlets": 1,
-      "outletNames": [
-        "Manistee News Advocate"
-      ],
-      "score": 1
-    },
-    {
       "id": "32c531b42b7b",
       "cat": "internet",
       "kind": "news",
@@ -781,21 +750,36 @@
       "score": 1
     },
     {
-      "id": "a3000ce6fbd2",
-      "cat": "hacks",
+      "id": "2a2fd0a95a61",
+      "cat": "weather",
       "kind": "news",
-      "title": "Software giant SAP confirms cyber incident amid reports of source code breach",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA5UGViQ0RSR2xxVGZ0eXVrMFgzSVhDM0hsNjZ2RHljU2VhMXhGZGpvWmc0TTRBRTdYYjhySDVxQkluU21wcVhwOEFqTndSa1ZGdGFTTVp3eVVvS3ptbE9USG9ZaTA?oc=5",
-      "source": "The Record from Recorded Future News",
-      "publishedAt": "2026-11-27T13:23:33.000Z",
-      "latestAt": "2026-11-27T16:13:15.000Z",
-      "firstSeenAt": "2026-11-27T16:15:35.844Z",
-      "outlets": 2,
+      "title": "Thanksgiving Day Ice Storm",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSFF1cllNNFdlcjZrZm5CX0hFTHgzNFFwVzJzU3NTdkZHOE9uS0FNekVMRUh0TzVPWlVNYmVTVERadDhxNFozNlhGTlZKRllNT2JNZFhkdkdGbmhjR1NHWTNDQ0U5UGVNNXdYc0IzQXdkZFMtRGlPbUNCSjBSemRsdVV5T05LZUhCdkxFcw?oc=5",
+      "source": "The Intermountain",
+      "publishedAt": "2026-11-28T06:34:59.000Z",
+      "latestAt": "2026-11-28T06:34:59.000Z",
+      "firstSeenAt": "2026-11-28T06:47:52.854Z",
+      "outlets": 1,
       "outletNames": [
-        "The Record from Recorded Future News",
-        "Canadian HR Reporter"
+        "The Intermountain"
       ],
-      "score": 1.9
+      "score": 1
+    },
+    {
+      "id": "923cc093ed22",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Pond heron near Coimbatore tests positive for H5N1 avian flu",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQYlBWZkxyeEgyWUVRTGZrcTdTRElkUUMybWJZdDMyUFZ6Z0pCZjV2c29BcXc5dnoxakJWS0F1WUgwRDFLT28tS1pvcTJDNzBzU3o1Rzg4MzhkZWQ1X1AyaDBXMGJtdUFXRTE2ZGQ0dEhnOFVveWZNdU1LSUxhcFdib0NJYkpwTWE3dHlGU0xHNVpYeHB4emJna19sN0lkd25vRGJOUXZ6VmQ?oc=5",
+      "source": "NewsBytes",
+      "publishedAt": "2026-11-28T06:18:49.000Z",
+      "latestAt": "2026-11-28T06:18:49.000Z",
+      "firstSeenAt": "2026-11-28T06:32:53.421Z",
+      "outlets": 1,
+      "outletNames": [
+        "NewsBytes"
+      ],
+      "score": 1
     },
     {
       "id": "7a325ff6efa9",
@@ -814,6 +798,24 @@
         "Stand Up For Southport"
       ],
       "score": 1.89
+    },
+    {
+      "id": "71c66b8c664d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWkFBeHFZdkM3dGwxM3ZHbnJWNGN2NVA5WFJJTnZlQUg0dXpqYTUtN2tscFE5QWtCc2tyb3JUV0NGLV9YSVRrMFZoSzN0VXdpTFJiZFdzZUlrRkxXLVdhYUZSMHBINkxEbnF3NUxNeDNkSHNFbE8wTkduV2pIb0F3ZmxKYTk?oc=5",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-27T17:43:29.000Z",
+      "latestAt": "2026-11-27T20:36:11.000Z",
+      "firstSeenAt": "2026-11-28T11:48:51.893Z",
+      "outlets": 3,
+      "outletNames": [
+        "Yahoo",
+        "Decrypt",
+        "Greater Belize Media"
+      ],
+      "score": 1.81
     },
     {
       "id": "863742bfd8fe",
@@ -1032,22 +1034,6 @@
       "score": 1.39
     },
     {
-      "id": "8fb6cb6ad85d",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Massive power outage in Mount Uniacke",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBVdE9GN2c0VXVOaWNUcW5IZ1pBM2haTFNvY1ZZdWdrMDNhRDVSaHpZd1ZIZ0RMTzBZRU9TTU5LODhpU29fSHAwZnJMeVNNY3FFVVZCSlZLVXlTT255dHdXcklSVjVsRlpObjlMejNSU3hNdw?oc=5",
-      "source": "Your Halifax Now",
-      "publishedAt": "2026-11-27T11:48:30.000Z",
-      "latestAt": "2026-11-27T11:48:30.000Z",
-      "firstSeenAt": "2026-11-27T13:30:09.909Z",
-      "outlets": 1,
-      "outletNames": [
-        "Your Halifax Now"
-      ],
-      "score": 1.36
-    },
-    {
       "id": "0a969c04ed16",
       "cat": "hacks",
       "kind": "news",
@@ -1126,6 +1112,22 @@
         "Digital Trends"
       ],
       "score": 1.04
+    },
+    {
+      "id": "2c68ab565d32",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "A cyberattack compromises the security of a key United States Air Force platform",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVmFBTzZybWpVd01SeTNJUTdvM1JqZk41dTdMaWREay1rTmRoTnlScUxvaHdBNW1sdko1bEpjcmpkSks3bVdoaFVLSmNKaEl5b01OWUdmODZzdVJWR3gzUmNmY0VuRDJjazF5bTZHSlpDS2hkeHYtTnBNYnhENHFtQjV6YlNrY3BQUi1fc0htQ3luMGlfQ0dBenkyUVVQakNVNzFKcHpJeGdURUttYWxTYnJxX0tuR25BUlRTMlBrZ0RJallKdDhRX05OUzdSS1lubnZPbVdn0gHWAUFVX3lxTE5UQU1uelVNZDkwQ2wzMFhIRVVuUEE4MVZLSHdKRlZfX2dwUlVFNko1bks0YjVIczFzeE00VFRraVl2bVZUUGltRVo2TE8zNUI1R2FmUnc0czZabnB2Z1JlRFg5V0ZfTEV3andJaTNVN29vNDJkeTNqOWZfOVpkemphaENrMlRoeUxOeElxUndnNzRqRHFhazFtcGF4a3Fob1BxaGJRQUg2QkQ4ZldUNmJMeGlvYThLRFdXVHphclNtdk5uVU5nNGxPMFhzVXhXbEsteE1ObHc?oc=5",
+      "source": "MARCA",
+      "publishedAt": "2026-11-28T11:42:12.000Z",
+      "latestAt": "2026-11-28T11:42:12.000Z",
+      "firstSeenAt": "2026-11-28T11:48:51.893Z",
+      "outlets": 1,
+      "outletNames": [
+        "MARCA"
+      ],
+      "score": 1
     },
     {
       "id": "0113906ded65",
@@ -1300,38 +1302,6 @@
       "outlets": 1,
       "outletNames": [
         "Babushahi.com"
-      ],
-      "score": 1
-    },
-    {
-      "id": "2a2fd0a95a61",
-      "cat": "weather",
-      "kind": "news",
-      "title": "Thanksgiving Day Ice Storm",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSFF1cllNNFdlcjZrZm5CX0hFTHgzNFFwVzJzU3NTdkZHOE9uS0FNekVMRUh0TzVPWlVNYmVTVERadDhxNFozNlhGTlZKRllNT2JNZFhkdkdGbmhjR1NHWTNDQ0U5UGVNNXdYc0IzQXdkZFMtRGlPbUNCSjBSemRsdVV5T05LZUhCdkxFcw?oc=5",
-      "source": "The Intermountain",
-      "publishedAt": "2026-11-28T06:34:59.000Z",
-      "latestAt": "2026-11-28T06:34:59.000Z",
-      "firstSeenAt": "2026-11-28T06:47:52.854Z",
-      "outlets": 1,
-      "outletNames": [
-        "The Intermountain"
-      ],
-      "score": 1
-    },
-    {
-      "id": "923cc093ed22",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Pond heron near Coimbatore tests positive for H5N1 avian flu",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQYlBWZkxyeEgyWUVRTGZrcTdTRElkUUMybWJZdDMyUFZ6Z0pCZjV2c29BcXc5dnoxakJWS0F1WUgwRDFLT28tS1pvcTJDNzBzU3o1Rzg4MzhkZWQ1X1AyaDBXMGJtdUFXRTE2ZGQ0dEhnOFVveWZNdU1LSUxhcFdib0NJYkpwTWE3dHlGU0xHNVpYeHB4emJna19sN0lkd25vRGJOUXZ6VmQ?oc=5",
-      "source": "NewsBytes",
-      "publishedAt": "2026-11-28T06:18:49.000Z",
-      "latestAt": "2026-11-28T06:18:49.000Z",
-      "firstSeenAt": "2026-11-28T06:32:53.421Z",
-      "outlets": 1,
-      "outletNames": [
-        "NewsBytes"
       ],
       "score": 1
     },
@@ -1560,6 +1530,22 @@
         "Haberler.com"
       ],
       "score": 1
+    },
+    {
+      "id": "8bee5bace66d",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Chandigarh blackout drill: Sirens sounded across city but some lights stay on at Sector 17 Plaza",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSk5MSE1iYVBaQTRYRExCNEFVU3pzY3dWdktPeHlWbGFhcWhCSDJ5NXlITVRWYXROQ2hUVzgyeHlxUFFaSjZXZFhQaUVPRkxvSkw2Vm1ZZXBHUXpYam5FNThLZmlzeEZpb2YwQUh5ZXBValVzd2lBMnhKQTJTZzZiQi1RQ0VTa1FIX3E3NDc4Y29uOHQ0TDdNSlc1ZmpFejFKWmxEQ2JsWkpoOHRvY0Z2Rnk0ZG9mXzFlNWNST3MtTF9ZN25VeThkSEEzMFXSAdABQVVfeXFMUFNDS0wzelUyVnp4VGZhNnNRWFIwUS1pTGp2THhHbVJlUHc5cENVMDNMVGYtSThwWDl1ZnBCUldGLXdTcXpub2s3bWptNndZa1oydTNQQ3F0em1pVENBbzBkX1BCamZsdEVGdFAzSnhFQVBQeFYza2dDRTgwcmEzMkJZNTdaeEhVRWFyeVhzbWdmSmdlTVh6MGRzemp6b3NvbXNXMTVYQUdMOHZCZVk2Yml6X3QzUjNMaG1OWU1hMmJSa3hvS19ZZy1OMy0zNnE4aA?oc=5",
+      "source": "The Tribune",
+      "publishedAt": "2026-11-28T11:14:27.000Z",
+      "latestAt": "2026-11-28T11:14:27.000Z",
+      "firstSeenAt": "2026-11-28T11:48:51.893Z",
+      "outlets": 1,
+      "outletNames": [
+        "The Tribune"
+      ],
+      "score": 0.99
     },
     {
       "id": "7c47a9eb9613",
@@ -1848,6 +1834,22 @@
         "CTV News"
       ],
       "score": 0.93
+    },
+    {
+      "id": "e03b6924a1ec",
+      "cat": "weather",
+      "kind": "news",
+      "title": "NES outlines changes after January ice storm left more than 230,000 without power",
+      "url": "https://www.msn.com/en-us/news/other/nes-outlines-changes-after-january-ice-storm-left-more-than-230-000-without-power/ar-AA2ioCfW",
+      "source": "WSMV on MSN",
+      "publishedAt": "2026-11-27T20:14:06.000Z",
+      "latestAt": "2026-11-28T04:14:00.000Z",
+      "firstSeenAt": "2026-11-28T04:18:58.012Z",
+      "outlets": 1,
+      "outletNames": [
+        "WSMV"
+      ],
+      "score": 0.87
     },
     {
       "id": "b1c9bd8653f0",
