@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T00:01:50.534Z",
+  "buildTime": "2026-11-28T00:16:50.918Z",
   "etDate": "2026-11-27",
-  "etStamp": "2026-11-27 19:01 ET",
+  "etStamp": "2026-11-27 19:16 ET",
   "score": 66,
   "fired": [
     "flights",
@@ -39,8 +39,8 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 311,
-  "lastSuccessAt": "2026-11-28T00:01:50.534Z",
+  "headlinesRead": 1229,
+  "lastSuccessAt": "2026-11-28T00:16:50.918Z",
   "rollingFallback": false,
   "cats": {
     "hacks": 39,
@@ -48,9 +48,9 @@
     "grid": 18,
     "weather": 8,
     "ai": 3,
-    "flights": 6,
     "animals": 2,
     "earth": 4,
+    "flights": 6,
     "markets": 4,
     "internet": 6,
     "space": 4,
@@ -58,17 +58,17 @@
   },
   "vital": {
     "quake": {
-      "mag": 5.1,
-      "place": "107 km SSE of Auki, Solomon Islands",
-      "time": "2026-11-27T00:07:00.857Z",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udt9",
+      "mag": 5,
+      "place": "Off the coast of Aisen, Chile",
+      "time": "2026-11-27T04:44:36.196Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000udua",
       "pager": null,
       "tsunami": false
     },
     "kp": {
-      "value": 1,
-      "time": "2026-11-27T18:00:00.000Z",
-      "max24": 1
+      "value": 2.33,
+      "time": "2026-11-27T21:00:00.000Z",
+      "max24": 2.33
     },
     "asteroid": {
       "des": "2026 WK3",
@@ -171,81 +171,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
-      "ok": false,
-      "count": 0,
-      "error": "1 of 26 queries failed: HTTP 429 (blocked after 0 of 26 queries)",
-      "lastOkAt": "2026-11-27T23:31:54.295Z"
+      "ok": true,
+      "count": 925,
+      "error": null,
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "bing": {
       "ok": true,
-      "count": 277,
+      "count": 270,
       "error": null,
-      "lastOkAt": "2026-11-28T00:01:50.534Z"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-27T08:14:16.364Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-28T00:01:50.534Z"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T00:01:50.534Z"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T00:01:50.534Z"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T00:01:50.534Z"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T00:01:50.534Z"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T00:01:50.534Z"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-27T23:16:46.899Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T00:01:50.534Z"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T00:01:50.534Z"
+      "lastOkAt": "2026-11-28T00:16:50.918Z"
     }
   },
   "stories": [
@@ -312,7 +311,7 @@
       "url": "https://www.newsweek.com/us-nationwide-response-black-level-cyber-attack-12774288",
       "source": "Newsweek",
       "publishedAt": "2026-11-27T08:58:00.000Z",
-      "latestAt": "2026-11-27T09:35:00.000Z",
+      "latestAt": "2026-11-27T16:58:00.000Z",
       "firstSeenAt": "2026-11-27T17:15:46.695Z",
       "outlets": 3,
       "outletNames": [
@@ -467,23 +466,6 @@
       "score": 1.7
     },
     {
-      "id": "7149e421759e",
-      "cat": "flights",
-      "kind": "news",
-      "title": "The hidden cost of technical debt seen in FAA ground stop",
-      "url": "https://www.arkansasonline.com/news/2026/nov/27/the-hidden-cost-of-technical-debt-seen-in-faa/",
-      "source": "Arkansas Democrat-Gazette",
-      "publishedAt": "2026-11-27T00:15:00.000Z",
-      "latestAt": "2026-11-27T08:15:00.000Z",
-      "firstSeenAt": "2026-11-27T09:14:28.601Z",
-      "outlets": 2,
-      "outletNames": [
-        "Arkansas Democrat-Gazette",
-        "Northwest Arkansas Democrat-Gazette"
-      ],
-      "score": 1.7
-    },
-    {
       "id": "c42ed7992d88",
       "cat": "animals",
       "kind": "news",
@@ -499,6 +481,23 @@
         "Yahoo"
       ],
       "score": 1.61
+    },
+    {
+      "id": "d0eae5ed65df",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Evidence of deepest explosive volcanic eruption found in Pacific’s Mariana Trench",
+      "url": "https://www.straitstimes.com/world/united-states/evidence-of-deepest-explosive-volcanic-eruption-found-in-pacifics-mariana-trench",
+      "source": "The Straits Times",
+      "publishedAt": "2026-11-27T03:21:00.000Z",
+      "latestAt": "2026-11-27T07:01:00.000Z",
+      "firstSeenAt": "2026-11-27T18:46:00.444Z",
+      "outlets": 2,
+      "outletNames": [
+        "The Straits Times",
+        "Yahoo"
+      ],
+      "score": 1.49
     },
     {
       "id": "bd573c4f71b8",
@@ -640,21 +639,20 @@
       "score": 1.72
     },
     {
-      "id": "d0eae5ed65df",
-      "cat": "earth",
+      "id": "f61dc0909598",
+      "cat": "flights",
       "kind": "news",
-      "title": "Evidence of deepest explosive volcanic eruption found in Pacific’s Mariana Trench",
-      "url": "https://www.straitstimes.com/world/united-states/evidence-of-deepest-explosive-volcanic-eruption-found-in-pacifics-mariana-trench",
-      "source": "The Straits Times",
-      "publishedAt": "2026-11-27T03:21:00.000Z",
-      "latestAt": "2026-11-27T07:01:00.000Z",
-      "firstSeenAt": "2026-11-27T18:46:00.444Z",
-      "outlets": 2,
+      "title": "Stranded Bismarck Nurse Buys Bronco After Nationwide FAA Ground Stop",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRFJaRHBCX2UtYlRGcnM1MmJiV2tNX1hjckhaMkhkRHZ1NmJXTmZ2VWloQnR0aTFRTEk4T2NsMjYwOHpzUURaQjQxa0hTRVZZbTRKckhzUG55WXVTVzQyX1N0SUI1M0FCVWcyam9ubzRkR0NaOHdSTU40QjQ0WWNhUExQM3VzanVEVnR4V3hnYURSaHF2Q0wwZjhNZk1jZw?oc=5",
+      "source": "https://www.thetraveler.org/",
+      "publishedAt": "2026-11-28T00:12:37.000Z",
+      "latestAt": "2026-11-28T00:12:37.000Z",
+      "firstSeenAt": "2026-11-28T00:16:50.918Z",
+      "outlets": 1,
       "outletNames": [
-        "The Straits Times",
-        "Yahoo"
+        "https://www.thetraveler.org/"
       ],
-      "score": 1.49
+      "score": 1.4
     },
     {
       "id": "9749ab7c58b2",
@@ -728,7 +726,7 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUdkZE1oOFJNQ3g5REZ2V1gzMXJmZnZla004ci1oelpldnFDYm1FaHREVXNSanRDRUgwTEI0U3NBU0FaNS1sOU1iQUNDZ0JVOW9qRy15UVdNeUQ2LXlLNDlENmJ0bVJjeXVST1l5dFZDUGZhaVRTM3FocU1ZMk1MTGJGQ1VYd3VpSmpQZTFpLUU0dmpIa1NmRE9mZlR0eTVLMlBCRzc0Z3FYaTlhZEoxc3RR?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-27T00:42:03.000Z",
-      "latestAt": "2026-11-27T23:14:12.000Z",
+      "latestAt": "2026-11-28T00:12:26.000Z",
       "firstSeenAt": "2026-11-27T00:43:07.514Z",
       "outlets": 1,
       "outletNames": [
