@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T15:49:20.961Z",
+  "buildTime": "2026-11-28T16:04:21.847Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 10:49 ET",
+  "etStamp": "2026-11-28 11:04 ET",
   "score": 67,
   "fired": [
     "flights",
@@ -47,15 +47,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1161,
-  "lastSuccessAt": "2026-11-28T15:49:20.961Z",
+  "headlinesRead": 1167,
+  "lastSuccessAt": "2026-11-28T16:04:21.847Z",
   "rollingFallback": false,
   "cats": {
-    "earth": 4,
+    "earth": 5,
     "germs": 6,
     "internet": 6,
-    "hacks": 40,
-    "grid": 20,
+    "grid": 22,
+    "hacks": 37,
     "flights": 9,
     "weather": 4,
     "markets": 4,
@@ -89,7 +89,7 @@
       "groundStops": [],
       "nationwide": false,
       "groundDelays": 0,
-      "closures": 2,
+      "closures": 3,
       "url": "https://nasstatus.faa.gov/"
     },
     "status": {
@@ -184,57 +184,57 @@
   "sources": {
     "google": {
       "ok": true,
-      "count": 871,
+      "count": 901,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     },
     "bing": {
       "ok": true,
-      "count": 237,
+      "count": 236,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     },
     "gdelt": {
-      "ok": true,
-      "count": 22,
-      "error": "timeout",
+      "ok": false,
+      "count": 0,
+      "error": "network error: UND_ERR_CONNECT_TIMEOUT",
       "lastOkAt": "2026-11-28T15:49:20.961Z"
     },
     "hn": {
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     },
     "x": {
       "ok": true,
@@ -245,15 +245,15 @@
     },
     "trends": {
       "ok": true,
-      "count": 27,
+      "count": 26,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T15:49:20.961Z"
+      "lastOkAt": "2026-11-28T16:04:21.847Z"
     }
   },
   "stories": [
@@ -328,45 +328,6 @@
       }
     },
     {
-      "id": "c76487b7b064",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "United Fidelity Bank shut in biggest US bank failure in 2 years, First Citizens buys assets",
-      "url": "https://www.reuters.com/sustainability/boards-policy-regulation/united-fidelity-bank-shut-biggest-us-bank-failure-2-years-first-citizens-buys-2026-11-28/",
-      "source": "Reuters",
-      "publishedAt": "2026-11-27T16:00:00.000Z",
-      "latestAt": "2026-11-28T05:05:40.000Z",
-      "firstSeenAt": "2026-11-28T04:17:34.288Z",
-      "outlets": 4,
-      "outletNames": [
-        "Reuters",
-        "New York Post",
-        "Yahoo Finance",
-        "Seeking Alpha on MSN"
-      ],
-      "score": 3.34
-    },
-    {
-      "id": "51cebd73a78e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "US military says cyber systems secure after reports of Air Force hack",
-      "url": "https://www.straitstimes.com/world/united-states/us-military-says-cyber-systems-secure-after-reports-of-air-force-hack?ref=latest",
-      "source": "The Straits Times",
-      "publishedAt": "2026-11-27T16:00:00.000Z",
-      "latestAt": "2026-11-28T06:08:31.000Z",
-      "firstSeenAt": "2026-11-28T07:32:59.494Z",
-      "outlets": 5,
-      "outletNames": [
-        "The Straits Times",
-        "The Malaysian Reserve",
-        "Yahoo",
-        "The New Indian Express",
-        "NZ Herald"
-      ],
-      "score": 2.46
-    },
-    {
       "id": "941d08a315c5",
       "cat": "grid",
       "kind": "news",
@@ -385,23 +346,21 @@
       "score": 2.44
     },
     {
-      "id": "c283aaca55be",
+      "id": "a20822d8e9f8",
       "cat": "hacks",
       "kind": "news",
-      "title": "Federal regulators shut $6 billion Indiana lender in biggest bank failure in over two years",
-      "url": "https://www.msn.com/en-us/news/other/federal-regulators-shut-6-billion-indiana-lender-in-biggest-bank-failure-in-over-two-years/ar-AA2iofr4",
-      "source": "CNN on MSN",
-      "publishedAt": "2026-11-27T16:00:00.000Z",
-      "latestAt": "2026-11-28T04:10:00.000Z",
-      "firstSeenAt": "2026-11-28T02:47:22.260Z",
+      "title": "pCloud confirms a cyberattack on its pCloud Pass password manager",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTUdub202TlY1RVRXcEJCZFBOSzBSdTNpLWVVTXQyS3JOT1Q3NnFrUWVvZjktSmV1dUN4TjFrT0RDZVItaGxIdEpkWXFxUDBRSjRHWkhCd2ZZTGFKY0RCZmRoUk9EYUFWdkJhaTNOaXpsbmtiWFk4X21tejZ0ZC1odVdHVFE1QkphQXlDOTROcw?oc=5",
+      "source": "MLQ.ai",
+      "publishedAt": "2026-11-28T01:00:36.000Z",
+      "latestAt": "2026-11-28T13:00:25.000Z",
+      "firstSeenAt": "2026-11-28T01:02:00.556Z",
       "outlets": 2,
       "outletNames": [
-        "CNN on MSN",
-        "Yahoo Finance"
+        "MLQ.ai",
+        "Beinsure"
       ],
-      "trending": 500,
-      "trendTerm": "united fidelity bank",
-      "score": 2.3
+      "score": 2
     },
     {
       "id": "dc51c3bd3429",
@@ -455,6 +414,40 @@
       "score": 1.98
     },
     {
+      "id": "59daa8fd9202",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "eCitizen hackers begin leaking data of 32 million Kenyans on dark web",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2JlclAwZ21kU3YwNnhiOGNtd2JPSkJCNldEVllfSVhjbC1vWUZrelhPcjdXMWVWYzlWd1FQV0lCanpCYldyN3Z3Y0d3d0tjcG04N0U1cjZqeE4zdlc1QXVTam1mOTBzZlEzTzBwQlMta3NaUG5TeDNubllIRGtZU241cjBrbGFOYmkxU0txa05qcm9hOVk0RGwzQXJYRHJZRjhYWmY1X0RaMHRlMG5N?oc=5",
+      "source": "Daily Nation",
+      "publishedAt": "2026-11-28T03:00:00.000Z",
+      "latestAt": "2026-11-28T10:12:34.000Z",
+      "firstSeenAt": "2026-11-28T04:47:41.715Z",
+      "outlets": 2,
+      "outletNames": [
+        "Daily Nation",
+        "Techweez"
+      ],
+      "score": 1.94
+    },
+    {
+      "id": "863742bfd8fe",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers break into US air force cloud, putting aircrafts at risk",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSWlBSUt1ZUtneW9LQWdfdldnTVhDMEIxRi1WcHl2aDQ1YmJQZG9NaUJLZVRMeVNZaEJud205YzZ1QWVGWGV1bXVfUnhaYkZ1WGk5aDVRalpWc3I1RlBCRjQtRFBnbzdFU3NDRGF5bjJaTlZrZHRvOVp0Z09EdDByR0ppYW0?oc=5",
+      "source": "Al-Bawaba",
+      "publishedAt": "2026-11-27T19:06:13.000Z",
+      "latestAt": "2026-11-28T01:46:58.000Z",
+      "firstSeenAt": "2026-11-28T02:02:07.667Z",
+      "outlets": 2,
+      "outletNames": [
+        "Al-Bawaba",
+        "Eurasia Review"
+      ],
+      "score": 1.77
+    },
+    {
       "id": "9b4619b62eed",
       "cat": "flights",
       "kind": "news",
@@ -504,56 +497,21 @@
       "score": 1.4
     },
     {
-      "id": "a20822d8e9f8",
-      "cat": "hacks",
+      "id": "d797a2d51f86",
+      "cat": "grid",
       "kind": "news",
-      "title": "pCloud confirms a cyberattack on its pCloud Pass password manager",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTUdub202TlY1RVRXcEJCZFBOSzBSdTNpLWVVTXQyS3JOT1Q3NnFrUWVvZjktSmV1dUN4TjFrT0RDZVItaGxIdEpkWXFxUDBRSjRHWkhCd2ZZTGFKY0RCZmRoUk9EYUFWdkJhaTNOaXpsbmtiWFk4X21tejZ0ZC1odVdHVFE1QkphQXlDOTROcw?oc=5",
-      "source": "MLQ.ai",
-      "publishedAt": "2026-11-28T01:00:36.000Z",
-      "latestAt": "2026-11-28T13:00:25.000Z",
-      "firstSeenAt": "2026-11-28T01:02:00.556Z",
+      "title": "More than 36,000 Ameren Missouri customers still without power Saturday morning after Thanksgiving winter storm",
+      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxNQmUtaHhickJSZExCRjZTUEZHSmZHVlF3Qmgxemd0OGFvSEs1YVNEOUFGZHlaNGw5MmwzbGJxYUluLUI4eTJUWm5YLWI2bVJ2Zm01WTdZMEQyempuNzJ0M005UTNXSzF3OHFaOEo5WTYtLVlKcFN5RFJrUGtRV05GM0JndnJ1WDVOY1ZlUlZvTnhacEMxZzl1eTZMSlZRajBEaElZUnZUZEhhQ2JZT0FGV3dQelR1MEx1Sk5HSEdhVjFoNko5NVlmcGlid0tCdGhmaXpMWTlSWjZSblQyN28tRXlWa01IZU0wUXNvTHc2X0F5eFk3Tl9KZ1RlM2lFQU9WcFhwY0t3el8zWkZBVll4Y1JCVHgyQ19MenZEZHZ4WEVyVUIyamJ4aGZn?oc=5",
+      "source": "KSDK",
+      "publishedAt": "2026-11-28T14:20:18.000Z",
+      "latestAt": "2026-11-28T15:17:23.000Z",
+      "firstSeenAt": "2026-11-28T16:04:21.847Z",
       "outlets": 2,
       "outletNames": [
-        "MLQ.ai",
-        "Beinsure"
-      ],
-      "score": 2
-    },
-    {
-      "id": "59daa8fd9202",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "eCitizen hackers begin leaking data of 32 million Kenyans on dark web",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR2JlclAwZ21kU3YwNnhiOGNtd2JPSkJCNldEVllfSVhjbC1vWUZrelhPcjdXMWVWYzlWd1FQV0lCanpCYldyN3Z3Y0d3d0tjcG04N0U1cjZqeE4zdlc1QXVTam1mOTBzZlEzTzBwQlMta3NaUG5TeDNubllIRGtZU241cjBrbGFOYmkxU0txa05qcm9hOVk0RGwzQXJYRHJZRjhYWmY1X0RaMHRlMG5N?oc=5",
-      "source": "Daily Nation",
-      "publishedAt": "2026-11-28T03:00:00.000Z",
-      "latestAt": "2026-11-28T10:12:34.000Z",
-      "firstSeenAt": "2026-11-28T04:47:41.715Z",
-      "outlets": 2,
-      "outletNames": [
-        "Daily Nation",
-        "Techweez"
+        "KSDK",
+        "WBFF"
       ],
       "score": 1.94
-    },
-    {
-      "id": "7a325ff6efa9",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Pensions and benefits services still down after 'cyber incident'",
-      "url": "https://www.yahoo.com/news/world/articles/pensions-benefits-services-still-down-072759273.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T16:00:00.000Z",
-      "latestAt": "2026-11-28T13:02:10.000Z",
-      "firstSeenAt": "2026-11-28T08:03:05.957Z",
-      "outlets": 3,
-      "outletNames": [
-        "Yahoo",
-        "BBC",
-        "Stand Up For Southport"
-      ],
-      "score": 1.89
     },
     {
       "id": "d496d995ac2e",
@@ -590,21 +548,55 @@
       "score": 1.78
     },
     {
-      "id": "48ee284342e5",
-      "cat": "grid",
+      "id": "37ad64dc0231",
+      "cat": "hacks",
       "kind": "news",
-      "title": "Power outage leaves some DMV residents in the dark after Thanksgiving storm",
-      "url": "https://www.yahoo.com/news/weather-news/articles/power-outage-leaves-dmv-residents-042217964.html",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T16:00:00.000Z",
-      "latestAt": "2026-11-28T04:22:00.000Z",
-      "firstSeenAt": "2026-11-28T05:17:37.510Z",
+      "title": "1Password data breach included some customer info, internal source code",
+      "url": "https://www.computerworld.com/article/4254145/1password-data-breach-included-some-customer-info-internal-source-code-2.html",
+      "source": "Computerworld",
+      "publishedAt": "2026-11-27T19:49:00.000Z",
+      "latestAt": "2026-11-28T03:46:12.000Z",
+      "firstSeenAt": "2026-11-28T03:47:25.279Z",
       "outlets": 2,
       "outletNames": [
-        "Yahoo",
-        "WUSA9"
+        "CSO Online",
+        "Computerworld"
       ],
-      "score": 1.56
+      "score": 1.73
+    },
+    {
+      "id": "0920a9418e5a",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "South Korea's postal service reports data breach affecting 113,855 customers",
+      "url": "https://www.msn.com/en-in/news/other/south-koreas-postal-service-reports-data-breach-affecting-113855-customers/ar-AA2io5gQ",
+      "source": "Newspoint on MSN",
+      "publishedAt": "2026-11-27T19:52:36.000Z",
+      "latestAt": "2026-11-28T03:44:40.000Z",
+      "firstSeenAt": "2026-11-28T04:47:41.715Z",
+      "outlets": 2,
+      "outletNames": [
+        "Telangana Today",
+        "Newspoint on MSN"
+      ],
+      "score": 1.7
+    },
+    {
+      "id": "42d688590eeb",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Zodia Custody confirms client contact data breach, says no unauthorized transactions",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/zodia-custody-confirms-client-contact-090254786.html",
+      "source": "Yahoo Finance",
+      "publishedAt": "2026-11-28T01:02:00.000Z",
+      "latestAt": "2026-11-28T09:04:04.000Z",
+      "firstSeenAt": "2026-11-28T10:18:30.336Z",
+      "outlets": 2,
+      "outletNames": [
+        "99Bitcoins",
+        "Yahoo Finance"
+      ],
+      "score": 1.69
     },
     {
       "id": "06b071e56695",
@@ -703,6 +695,22 @@
       "score": 1.02
     },
     {
+      "id": "9bddf51a0e24",
+      "cat": "earth",
+      "kind": "news",
+      "title": "Powerful earthquake off Kamchatka coast: Ground shakes",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNUXFETFNKdVBzYWtYbGo2b1hqM2F4LUhVMjB4VlI0R1NHbU04RXNwaUpNWlNWSEZQVkZLcE01NElQRS1FRWdja0M0a2VCWlUxYklMbTJzVEJPbVprRWxyWHhTX2JKQzh2UEp6SG9XTkhXenBzSDFJVlpWSFU1d2JwU1dXZ3RKQWVhUGNnTQ?oc=5",
+      "source": "TodayPress.tv",
+      "publishedAt": "2026-11-28T15:59:00.000Z",
+      "latestAt": "2026-11-28T15:59:00.000Z",
+      "firstSeenAt": "2026-11-28T16:04:21.847Z",
+      "outlets": 1,
+      "outletNames": [
+        "TodayPress.tv"
+      ],
+      "score": 1
+    },
+    {
       "id": "16eb192bf4a8",
       "cat": "earth",
       "kind": "news",
@@ -781,90 +789,6 @@
         "NewsBytes"
       ],
       "score": 1
-    },
-    {
-      "id": "e398910a6e7d",
-      "cat": "germs",
-      "kind": "news",
-      "title": "Bird flu confirmed in dairy herd",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNkpzdXcxdHRSVC1adVlzMHdBNXpZczhGeGk0aUp1aU16cnB0bE9tRnQ2S1NiaklfM1FTVFdxX2N0cmhqajRIZFRVZnZqUmZ4dF9zeXZ3OXpLbFMxVi00aGxaS3MwWG5fX2tSREtzUTZ2OS1GSjYwbjlyQTJaRWFtci1FQ250Rkkz?oc=5",
-      "source": "Sequoyah County Times",
-      "publishedAt": "2026-11-28T04:03:42.000Z",
-      "latestAt": "2026-11-28T04:03:42.000Z",
-      "firstSeenAt": "2026-11-28T04:17:34.288Z",
-      "outlets": 1,
-      "outletNames": [
-        "Sequoyah County Times"
-      ],
-      "score": 1
-    },
-    {
-      "id": "863742bfd8fe",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers break into US air force cloud, putting aircrafts at risk",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSWlBSUt1ZUtneW9LQWdfdldnTVhDMEIxRi1WcHl2aDQ1YmJQZG9NaUJLZVRMeVNZaEJud205YzZ1QWVGWGV1bXVfUnhaYkZ1WGk5aDVRalpWc3I1RlBCRjQtRFBnbzdFU3NDRGF5bjJaTlZrZHRvOVp0Z09EdDByR0ppYW0?oc=5",
-      "source": "Al-Bawaba",
-      "publishedAt": "2026-11-27T19:06:13.000Z",
-      "latestAt": "2026-11-28T01:46:58.000Z",
-      "firstSeenAt": "2026-11-28T02:02:07.667Z",
-      "outlets": 2,
-      "outletNames": [
-        "Al-Bawaba",
-        "Eurasia Review"
-      ],
-      "score": 1.77
-    },
-    {
-      "id": "37ad64dc0231",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "1Password data breach included some customer info, internal source code",
-      "url": "https://www.computerworld.com/article/4254145/1password-data-breach-included-some-customer-info-internal-source-code-2.html",
-      "source": "Computerworld",
-      "publishedAt": "2026-11-27T19:49:00.000Z",
-      "latestAt": "2026-11-28T03:46:12.000Z",
-      "firstSeenAt": "2026-11-28T03:47:25.279Z",
-      "outlets": 2,
-      "outletNames": [
-        "CSO Online",
-        "Computerworld"
-      ],
-      "score": 1.73
-    },
-    {
-      "id": "0920a9418e5a",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "South Korea's postal service reports data breach affecting 113,855 customers",
-      "url": "https://www.msn.com/en-in/news/other/south-koreas-postal-service-reports-data-breach-affecting-113855-customers/ar-AA2io5gQ",
-      "source": "Newspoint on MSN",
-      "publishedAt": "2026-11-27T19:52:36.000Z",
-      "latestAt": "2026-11-28T03:44:40.000Z",
-      "firstSeenAt": "2026-11-28T04:47:41.715Z",
-      "outlets": 2,
-      "outletNames": [
-        "Telangana Today",
-        "Newspoint on MSN"
-      ],
-      "score": 1.7
-    },
-    {
-      "id": "42d688590eeb",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Zodia Custody confirms client contact data breach, says no unauthorized transactions",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/zodia-custody-confirms-client-contact-090254786.html",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-11-28T01:02:00.000Z",
-      "latestAt": "2026-11-28T09:04:04.000Z",
-      "firstSeenAt": "2026-11-28T10:18:30.336Z",
-      "outlets": 2,
-      "outletNames": [
-        "99Bitcoins",
-        "Yahoo Finance"
-      ],
-      "score": 1.69
     },
     {
       "id": "d3be1029813e",
@@ -1017,6 +941,56 @@
       "score": 1.35
     },
     {
+      "id": "9987345a37d8",
+      "cat": "grid",
+      "kind": "news",
+      "title": "12,000 Atlantic City Electric customers remain without power following Thanksgiving storm",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOVl1VGduNkFzM1QtMEl4MXZKNkhvNG9xZ2t4blpMcmdqRUNFZUk3NnBXZU4xZzJDUk4yLWpUQ0pWazIyc0w4emVFUF9yRWU2SVZKVk8xRmtlTXJxUWZiTGQ4Z1VsYVpPNEJsdERBNnFVVmF6d3hTSWRzeW1kRVU1NEgxamVIVEJyVDVJ?oc=5",
+      "source": "Shore Local",
+      "publishedAt": "2026-11-27T19:33:46.000Z",
+      "latestAt": "2026-11-27T19:45:34.000Z",
+      "firstSeenAt": "2026-11-28T16:04:21.847Z",
+      "outlets": 2,
+      "outletNames": [
+        "Shore Local",
+        "Latest news from Azerbaijan"
+      ],
+      "score": 1.32
+    },
+    {
+      "id": "41f9d6caa793",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "FIFA says hackers accessed personal and business information",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1ROEF1bzNRNUh3ME5WYVN2ejRhYlBhdlF5QXZjenNIY29qVU9lVnhFNi1OTkhtN2dCX2RQTy1RQUlVOGNF?oc=5",
+      "source": "Digg",
+      "publishedAt": "2026-11-27T18:28:59.000Z",
+      "latestAt": "2026-11-28T13:47:47.000Z",
+      "firstSeenAt": "2026-11-28T16:04:21.847Z",
+      "outlets": 2,
+      "outletNames": [
+        "Digg",
+        "Scripps News"
+      ],
+      "score": 1.28
+    },
+    {
+      "id": "c63e980c2079",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Timeline of Major 2026 Cyberattacks As Threats Surge",
+      "url": "https://www.newsweek.com/2026-cyberattack-timeline-data-rise-threats-12775618",
+      "source": "Newsweek",
+      "publishedAt": "2026-11-28T07:55:00.000Z",
+      "latestAt": "2026-11-28T07:55:00.000Z",
+      "firstSeenAt": "2026-11-28T16:04:21.847Z",
+      "outlets": 1,
+      "outletNames": [
+        "Newsweek"
+      ],
+      "score": 1.21
+    },
+    {
       "id": "ca1599d9f9d7",
       "cat": "hacks",
       "kind": "news",
@@ -1029,23 +1003,6 @@
       "outlets": 1,
       "outletNames": [
         "Daily Mail"
-      ],
-      "score": 1.21
-    },
-    {
-      "id": "5d6f88b08eb1",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "September 2026 Healthcare Data Breach Report",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBmU1IyTTREWjQyRHROa1htUV94eXBXV2RacTFKMHlOWUlXYjh0Ql9nMWhKdlJYZVlfTW1vdU55UWZ4ZzJhYjBhZVpRdHZhWm9UV1pJNGhJY2pvTE9KM1B5Q2YxZXR2N1pUOTVWV09SYzF1QjJndVFZRQ?oc=5",
-      "source": "London School of Business and Research (LSBR)",
-      "publishedAt": "2026-11-27T15:50:00.000Z",
-      "latestAt": "2026-11-27T15:50:06.000Z",
-      "firstSeenAt": "2026-11-28T15:34:20.375Z",
-      "outlets": 2,
-      "outletNames": [
-        "London School of Business and Research (LSBR)",
-        "The HIPAA Journal"
       ],
       "score": 1.21
     },
@@ -1080,6 +1037,22 @@
         "Herald.Wales"
       ],
       "score": 1.13
+    },
+    {
+      "id": "acc234d12bc7",
+      "cat": "grid",
+      "kind": "news",
+      "title": "IESCO announces power outage schedule for Islamabad, Rawalpindi and other areas",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1ISUx6Y0Q1eFl2Vm5CYnFCWHZ5cUhra2VkQmR4dFdxeUF5RFRoRGtCV1Q4WTVtLWNlZG1raUk0NlR6NTNiWWFGYlAzYlJqWUhRSVFTNWtsd3pRTlgzaGI3SFNxNGJPVFZNZVMwTmdhVm5NUE5VZGdmMUNSUQ?oc=5",
+      "source": "Pakistan Connect",
+      "publishedAt": "2026-11-28T15:48:43.000Z",
+      "latestAt": "2026-11-28T15:48:43.000Z",
+      "firstSeenAt": "2026-11-28T16:04:21.847Z",
+      "outlets": 1,
+      "outletNames": [
+        "Pakistan Connect"
+      ],
+      "score": 1
     },
     {
       "id": "0fa3183f2d4e",
@@ -1402,6 +1375,22 @@
       "score": 1
     },
     {
+      "id": "e398910a6e7d",
+      "cat": "germs",
+      "kind": "news",
+      "title": "Bird flu confirmed in dairy herd",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNkpzdXcxdHRSVC1adVlzMHdBNXpZczhGeGk0aUp1aU16cnB0bE9tRnQ2S1NiaklfM1FTVFdxX2N0cmhqajRIZFRVZnZqUmZ4dF9zeXZ3OXpLbFMxVi00aGxaS3MwWG5fX2tSREtzUTZ2OS1GSjYwbjlyQTJaRWFtci1FQ250Rkkz?oc=5",
+      "source": "Sequoyah County Times",
+      "publishedAt": "2026-11-28T04:03:42.000Z",
+      "latestAt": "2026-11-28T04:03:42.000Z",
+      "firstSeenAt": "2026-11-28T04:17:34.288Z",
+      "outlets": 1,
+      "outletNames": [
+        "Sequoyah County Times"
+      ],
+      "score": 1
+    },
+    {
       "id": "ea63bd206f8c",
       "cat": "hacks",
       "kind": "news",
@@ -1512,6 +1501,22 @@
         "The Dark Side Of The Boom"
       ],
       "score": 1
+    },
+    {
+      "id": "ff7a514ee230",
+      "cat": "grid",
+      "kind": "news",
+      "title": "SCHUYLKILL COUNTY POWER OUTAGE UPDATE: 5,100+ Remain Without Power Saturday Morning",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOU3liaUYwOFhISkN1RDgxX2ptQnFQeTlZVmsxX2lsdnAxazh2RmpaY1l5dTJlYlFKd2xFMWd4Wm8tUzZESjkwWFNQdjl5S0pjbUYzMmstdUwyMUVCQW44TDRJclljMGlYVFpYRFVOakxlZExmRi1raHNkT1hGWVJha1BR?oc=5",
+      "source": "Skook News",
+      "publishedAt": "2026-11-28T15:15:00.000Z",
+      "latestAt": "2026-11-28T15:15:00.000Z",
+      "firstSeenAt": "2026-11-28T16:04:21.847Z",
+      "outlets": 1,
+      "outletNames": [
+        "Skook News"
+      ],
+      "score": 0.99
     },
     {
       "id": "04a41d90be8c",
@@ -1718,22 +1723,6 @@
       "outlets": 1,
       "outletNames": [
         "South China Morning Post"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "c3ab7dc316c9",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Nearly 1,500 west Suffolk properties hit by power cut",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPanYtSzllazlyS1hrQVNfM1pBeW1LRER2TUV5LVktYUNnVFdXNTk0SDFIanVLLUI3SFhXOGI2dHRfZGptOFBxZDFMaXpIam1UUFBFSHRrZnVWa2ZBT3gzX19Wd2hVZzFaT0xwSWREVTljaE9uZWJBcHNickViOWlFY1V6aHlJRUZLam1iYWd3VndLTFp4?oc=5",
-      "source": "East Anglian Daily Times",
-      "publishedAt": "2026-11-28T09:12:49.000Z",
-      "latestAt": "2026-11-28T09:12:49.000Z",
-      "firstSeenAt": "2026-11-28T09:48:25.023Z",
-      "outlets": 1,
-      "outletNames": [
-        "East Anglian Daily Times"
       ],
       "score": 0.99
     },
