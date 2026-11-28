@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T13:03:54.160Z",
+  "buildTime": "2026-11-28T13:18:53.674Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 08:03 ET",
+  "etStamp": "2026-11-28 08:18 ET",
   "score": 62,
   "fired": [
     "flights",
@@ -42,20 +42,20 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1199,
-  "lastSuccessAt": "2026-11-28T13:03:54.160Z",
+  "headlinesRead": 1169,
+  "lastSuccessAt": "2026-11-28T13:18:53.674Z",
   "rollingFallback": false,
   "cats": {
     "germs": 7,
     "internet": 5,
-    "hacks": 45,
+    "hacks": 44,
     "grid": 18,
     "flights": 8,
     "weather": 4,
     "markets": 4,
     "earth": 4,
     "animals": 2,
-    "sun": 3
+    "sun": 4
   },
   "vital": {
     "quake": {
@@ -174,81 +174,80 @@
   },
   "x": {
     "enabled": true,
-    "skipped": "interval"
+    "skipped": null
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 909,
+      "count": 886,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "bing": {
       "ok": true,
-      "count": 259,
+      "count": 251,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "gdelt": {
       "ok": false,
       "count": 0,
-      "error": "timeout",
+      "error": "rate limited (HTTP 429)",
       "lastOkAt": "2026-11-28T10:03:25.970Z"
     },
     "hn": {
       "ok": true,
       "count": 2,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "usgs": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "x": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T12:18:47.372Z",
-      "skipped": "interval"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "trends": {
       "ok": true,
-      "count": 29,
+      "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T13:03:54.160Z"
+      "lastOkAt": "2026-11-28T13:18:53.674Z"
     }
   },
   "stories": [
@@ -262,16 +261,17 @@
       "publishedAt": "2026-11-27T22:29:00.000Z",
       "latestAt": "2026-11-28T11:37:29.000Z",
       "firstSeenAt": "2026-11-28T11:48:51.893Z",
-      "outlets": 6,
+      "outlets": 7,
       "outletNames": [
         "News 12 Long Island",
         "News12 | New Jersey",
         "News12 | Bronx",
         "News 12 The Bronx",
         "News12 | Westchester",
-        "Amazon S3 on MSN"
+        "Amazon S3 on MSN",
+        "News12 | Brooklyn"
       ],
-      "score": 3.9
+      "score": 4.15
     },
     {
       "id": "sig:status:cloudflare:2026-11-28",
@@ -312,6 +312,24 @@
         "Yahoo Finance"
       ],
       "score": 2.88
+    },
+    {
+      "id": "941d08a315c5",
+      "cat": "grid",
+      "kind": "news",
+      "title": "About 2,000 AEP customers without power in the Hilltop",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZjl4bzdtekpXTTM0RVVUcTRnTnZnM3R0T25vX0s5S2lycHVBa0h0Y0JEdkFaV0h3ZjRBSnVQQ1hGU0dtSFluTTBUVThrWnplMlJaYUlDdVlVclh3bkVyV2tYcFJyTUVtYVVyblVSQ3hfa3Vnd1Qzd1VfQU1vc05jaC1sczB3NkxYc2NhTmJsYlI2bWpheWFwb05hSGswY2twa0xwb3dzcGpqOXFlcGRaQW04R1VTbncyTkNZbW9rUlVOaTAwRnN1ZWpQZXF6dkstZHVocGE2bmtxb2VfWDRZRS1ZVQ?oc=5",
+      "source": "WSYX",
+      "publishedAt": "2026-11-28T01:40:57.000Z",
+      "latestAt": "2026-11-28T13:07:37.000Z",
+      "firstSeenAt": "2026-11-28T02:17:12.639Z",
+      "outlets": 3,
+      "outletNames": [
+        "WSYX",
+        "Fox 28",
+        "Hoodline"
+      ],
+      "score": 2.56
     },
     {
       "id": "c283aaca55be",
@@ -403,23 +421,6 @@
       "score": 1.99
     },
     {
-      "id": "941d08a315c5",
-      "cat": "grid",
-      "kind": "news",
-      "title": "About 2,000 AEP customers without power in the Hilltop",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNZjl4bzdtekpXTTM0RVVUcTRnTnZnM3R0T25vX0s5S2lycHVBa0h0Y0JEdkFaV0h3ZjRBSnVQQ1hGU0dtSFluTTBUVThrWnplMlJaYUlDdVlVclh3bkVyV2tYcFJyTUVtYVVyblVSQ3hfa3Vnd1Qzd1VfQU1vc05jaC1sczB3NkxYc2NhTmJsYlI2bWpheWFwb05hSGswY2twa0xwb3dzcGpqOXFlcGRaQW04R1VTbncyTkNZbW9rUlVOaTAwRnN1ZWpQZXF6dkstZHVocGE2bmtxb2VfWDRZRS1ZVQ?oc=5",
-      "source": "WSYX",
-      "publishedAt": "2026-11-28T01:40:57.000Z",
-      "latestAt": "2026-11-28T02:33:22.000Z",
-      "firstSeenAt": "2026-11-28T02:17:12.639Z",
-      "outlets": 2,
-      "outletNames": [
-        "WSYX",
-        "Fox 28"
-      ],
-      "score": 1.98
-    },
-    {
       "id": "142801077e11",
       "cat": "germs",
       "kind": "news",
@@ -486,25 +487,6 @@
       "score": 1.4
     },
     {
-      "id": "71c66b8c664d",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWkFBeHFZdkM3dGwxM3ZHbnJWNGN2NVA5WFJJTnZlQUg0dXpqYTUtN2tscFE5QWtCc2tyb3JUV0NGLV9YSVRrMFZoSzN0VXdpTFJiZFdzZUlrRkxXLVdhYUZSMHBINkxEbnF3NUxNeDNkSHNFbE8wTkduV2pIb0F3ZmxKYTk?oc=5",
-      "source": "Yahoo",
-      "publishedAt": "2026-11-27T17:43:29.000Z",
-      "latestAt": "2026-11-27T20:36:11.000Z",
-      "firstSeenAt": "2026-11-28T11:48:51.893Z",
-      "outlets": 4,
-      "outletNames": [
-        "Yahoo",
-        "Decrypt",
-        "Greater Belize Media",
-        "The Mary Sue"
-      ],
-      "score": 2.1
-    },
-    {
       "id": "a20822d8e9f8",
       "cat": "hacks",
       "kind": "news",
@@ -537,6 +519,23 @@
         "Seeking Alpha"
       ],
       "score": 1.96
+    },
+    {
+      "id": "5cc3e5f07823",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Who's to blame for tech outages? Clue: It's not AI or hackers",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWS1mX1dGRTZhVXhvZXpRVGFuMUpybXh1eE5qNEU1SEItTXdUbHJPVUdpSEhYM1ItMFVrbGxkVXlmUzFaRlh1N3AtbVd0Ukw4SkZCQ0JUODVLZl9Dclpoem9ZYnBaZ1VNRjNuMGI1bll3eHc5X3ZSN09GRWRwNjd4SkJLZ1RSbDJWVmVLME9Sa0U5X0ZlM1NWUU1OR2wwUnJYdmhuU3VBMDNxX2l0UDVqVFQwSWVZclhvMGNBUjI4RlUtRHU3UFg2VXoydVQxbTFhbUtrekd3T28?oc=5",
+      "source": "Fairbanks Daily News-Miner",
+      "publishedAt": "2026-11-27T15:00:00.000Z",
+      "latestAt": "2026-11-27T15:48:37.000Z",
+      "firstSeenAt": "2026-11-27T17:45:55.819Z",
+      "outlets": 2,
+      "outletNames": [
+        "Fairbanks Daily News-Miner",
+        "Yakima Herald-Republic"
+      ],
+      "score": 1.91
     },
     {
       "id": "12c5129975aa",
@@ -782,23 +781,6 @@
       "score": 1
     },
     {
-      "id": "5cc3e5f07823",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Who's to blame for tech outages? Clue: It's not AI or hackers",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWS1mX1dGRTZhVXhvZXpRVGFuMUpybXh1eE5qNEU1SEItTXdUbHJPVUdpSEhYM1ItMFVrbGxkVXlmUzFaRlh1N3AtbVd0Ukw4SkZCQ0JUODVLZl9Dclpoem9ZYnBaZ1VNRjNuMGI1bll3eHc5X3ZSN09GRWRwNjd4SkJLZ1RSbDJWVmVLME9Sa0U5X0ZlM1NWUU1OR2wwUnJYdmhuU3VBMDNxX2l0UDVqVFQwSWVZclhvMGNBUjI4RlUtRHU3UFg2VXoydVQxbTFhbUtrekd3T28?oc=5",
-      "source": "Fairbanks Daily News-Miner",
-      "publishedAt": "2026-11-27T15:00:00.000Z",
-      "latestAt": "2026-11-27T15:48:37.000Z",
-      "firstSeenAt": "2026-11-27T17:45:55.819Z",
-      "outlets": 2,
-      "outletNames": [
-        "Fairbanks Daily News-Miner",
-        "Yakima Herald-Republic"
-      ],
-      "score": 1.91
-    },
-    {
       "id": "a3000ce6fbd2",
       "cat": "hacks",
       "kind": "news",
@@ -934,23 +916,6 @@
         "WUSA9"
       ],
       "score": 1.56
-    },
-    {
-      "id": "07b0d2e8ee89",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Cook County online court portal down amid ‘cybersecurity incident’",
-      "url": "https://www.chicagotribune.com/2026/11/27/cook-county-circuit-court-online-portal-outage-cybersecurity-incident/",
-      "source": "Chicago Tribune",
-      "publishedAt": "2026-11-27T14:29:00.000Z",
-      "latestAt": "2026-11-28T04:00:03.000Z",
-      "firstSeenAt": "2026-11-28T04:17:34.288Z",
-      "outlets": 2,
-      "outletNames": [
-        "Chicago Tribune",
-        "ABC7 Chicago"
-      ],
-      "score": 1.54
     },
     {
       "id": "593cf699d089",
@@ -1517,22 +1482,6 @@
       "quietReason": "headline mentions evacuations"
     },
     {
-      "id": "1a672088dce4",
-      "cat": "markets",
-      "kind": "news",
-      "title": "The 38-year-old holding that employs 600 people is in trouble! Shares hit the circuit breaker.",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUUo2THkxV1dfRlBDdWlQNzF2ZlhhV1JZSXVYM2ZVZ2g1ZkFxTU9nWXJXS3ZGckhJaW9Oa1JpbUR3T0hpUzZwRkt0aWN5Y0R1bE1saUhsWTAyNlBLRTlBMHgyLUtZb1pDNVlrSC1JVHNfb0JHS1RJelp0bnpmb21ReVpHZ01QMFAzNXlB?oc=5",
-      "source": "Haberler.com",
-      "publishedAt": "2026-11-27T13:10:04.000Z",
-      "latestAt": "2026-11-27T13:10:04.000Z",
-      "firstSeenAt": "2026-11-27T13:15:06.042Z",
-      "outlets": 1,
-      "outletNames": [
-        "Haberler.com"
-      ],
-      "score": 1
-    },
-    {
       "id": "045813433627",
       "cat": "germs",
       "kind": "news",
@@ -1757,6 +1706,22 @@
       "score": 0.97
     },
     {
+      "id": "d2490f59c2b2",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "12-Year-Old Linux Kernel Flaw Allows Hackers to Take Over Servers Without Passwords",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA3TUY1X2Q1TEJaN2pqY1k5ODdsRDFSUXI4SS1FcmszWmdMQmtYR1lwbzVORzFpaWpmekNyUWRQbVVBVVIwSzhVMkNEa18zT2Z0Zm80aWxveDBIbnpxQWxiTTJn0gFnQVVfeXFMUE1VSHRNQ2hQMUwxcGE3dGlfN05NTVpDVEh0UDJ1dEY0d0JSSWZnc01XU25IT2k1Ql9JMzBVaWhMU0M0cVFxVV93NmdEbmFsdW1uTUJ6dFowZjVwekVKX3dpanZOeUJzTQ?oc=5",
+      "source": "GBHackers News",
+      "publishedAt": "2026-11-28T09:45:00.000Z",
+      "latestAt": "2026-11-28T09:45:00.000Z",
+      "firstSeenAt": "2026-11-28T13:18:53.674Z",
+      "outlets": 1,
+      "outletNames": [
+        "GBHackers News"
+      ],
+      "score": 0.94
+    },
+    {
       "id": "1f5a858833ec",
       "cat": "markets",
       "kind": "news",
@@ -1821,6 +1786,22 @@
       "score": 0.93
     },
     {
+      "id": "3bf757f479ed",
+      "cat": "markets",
+      "kind": "news",
+      "title": "WLFI Token Plunges 59 Percent as Liquidations Hit Market",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9oZXBBZkpKbUpxQnJRRGxoaWVJQU1CNjluTGliT0o2TTZnakxhamUtdThCWWppUGZNTGlzVC1JVG9XSDlnb0VqZDk0bF84aDlvT1U1WHFmS2JmOFMxTXlDUQ?oc=5",
+      "source": "Limapagi",
+      "publishedAt": "2026-11-28T06:38:51.000Z",
+      "latestAt": "2026-11-28T06:38:51.000Z",
+      "firstSeenAt": "2026-11-28T13:18:53.674Z",
+      "outlets": 1,
+      "outletNames": [
+        "Limapagi"
+      ],
+      "score": 0.89
+    },
+    {
       "id": "e03b6924a1ec",
       "cat": "weather",
       "kind": "news",
@@ -1835,6 +1816,24 @@
         "WSMV"
       ],
       "score": 0.87
+    },
+    {
+      "id": "44b91fcff70d",
+      "cat": "weather",
+      "kind": "news",
+      "title": "A historically quiet hurricane season is ending. Don’t expect a repeat next year",
+      "url": "https://www.yahoo.com/news/weather-news/articles/historically-quiet-hurricane-season-ending-130000112.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-28T05:00:00.000Z",
+      "latestAt": "2026-11-28T05:00:00.000Z",
+      "firstSeenAt": "2026-11-28T13:18:53.674Z",
+      "outlets": 1,
+      "outletNames": [
+        "Yahoo"
+      ],
+      "score": 0.86,
+      "quiet": true,
+      "quietReason": "headline mentions hurricane"
     },
     {
       "id": "b1c9bd8653f0",
@@ -1885,20 +1884,20 @@
       "score": 0.85
     },
     {
-      "id": "5d232c36c583",
-      "cat": "weather",
+      "id": "773eb149aa8c",
+      "cat": "sun",
       "kind": "news",
-      "title": "Looking back: A historic ice storm and Bear Lake/Onekama runners",
-      "url": "https://www.msn.com/en-us/news/other/looking-back-a-historic-ice-storm-and-bear-lake-onekama-runners/ar-AA2iqmcg",
-      "source": "Manistee News Advocate on MSN",
-      "publishedAt": "2026-11-28T03:00:05.000Z",
-      "latestAt": "2026-11-28T11:07:11.000Z",
-      "firstSeenAt": "2026-11-28T12:03:41.518Z",
+      "title": "Safeguarding Satellites: How NOAA Monitors Space Weather to Prevent Disruptions | NESDIS",
+      "url": "https://www.europesays.com/3406602/",
+      "source": "europesays",
+      "publishedAt": "2026-11-28T01:45:00.000Z",
+      "latestAt": "2026-11-28T01:45:00.000Z",
+      "firstSeenAt": "2026-11-28T13:18:53.674Z",
       "outlets": 1,
       "outletNames": [
-        "Manistee News Advocate"
+        "europesays"
       ],
-      "score": 0.85
+      "score": 0.81
     }
   ]
 }
