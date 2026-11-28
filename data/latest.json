@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "buildTime": "2026-11-28T17:19:30.815Z",
+  "buildTime": "2026-11-28T17:34:33.155Z",
   "etDate": "2026-11-28",
-  "etStamp": "2026-11-28 12:19 ET",
+  "etStamp": "2026-11-28 12:34 ET",
   "score": 67,
   "fired": [
     "flights",
@@ -47,15 +47,15 @@
     "date": "2026-11-16",
     "score": 80
   },
-  "headlinesRead": 1175,
-  "lastSuccessAt": "2026-11-28T17:19:30.815Z",
+  "headlinesRead": 1145,
+  "lastSuccessAt": "2026-11-28T17:34:33.155Z",
   "rollingFallback": false,
   "cats": {
     "earth": 4,
     "germs": 4,
     "internet": 5,
-    "hacks": 40,
-    "grid": 24,
+    "hacks": 41,
+    "grid": 23,
     "sun": 4,
     "flights": 8,
     "weather": 4,
@@ -180,20 +180,20 @@
   },
   "x": {
     "enabled": true,
-    "skipped": null
+    "skipped": "interval"
   },
   "sources": {
     "google": {
       "ok": true,
-      "count": 909,
+      "count": 880,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     },
     "bing": {
       "ok": true,
       "count": 231,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     },
     "gdelt": {
       "ok": false,
@@ -205,55 +205,56 @@
       "ok": true,
       "count": 4,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     },
     "usgs": {
       "ok": true,
       "count": 1,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     },
     "swpc": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     },
     "jpl": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     },
     "faa": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     },
     "status": {
       "ok": true,
       "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     },
     "x": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:19:30.815Z",
+      "skipped": "interval"
     },
     "trends": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     },
     "topstories": {
       "ok": true,
       "count": 30,
       "error": null,
-      "lastOkAt": "2026-11-28T17:19:30.815Z"
+      "lastOkAt": "2026-11-28T17:34:33.155Z"
     }
   },
   "stories": [
@@ -328,6 +329,26 @@
       }
     },
     {
+      "id": "4b9b89e72206",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "UK pensions department says cyberattack hit services, payments unaffected",
+      "url": "https://www.msn.com/en-gb/news/other/uk-pensions-department-says-cyberattack-hit-services-payments-unaffected/ar-AA2irceT",
+      "source": "Reuters on MSN",
+      "publishedAt": "2026-11-28T09:22:10.000Z",
+      "latestAt": "2026-11-28T17:22:10.000Z",
+      "firstSeenAt": "2026-11-28T17:04:35.362Z",
+      "outlets": 5,
+      "outletNames": [
+        "Southern Cross",
+        "The Canberra Times",
+        "Reuters on MSN",
+        "CNA",
+        "Yahoo News UK"
+      ],
+      "score": 2.9
+    },
+    {
       "id": "411536834b0a",
       "cat": "hacks",
       "kind": "news",
@@ -335,9 +356,9 @@
       "url": "https://www.reuters.com/business/finance/uk-pensions-department-says-it-was-targeted-cyberattack-2026-11-28/",
       "source": "Reuters",
       "publishedAt": "2026-11-27T20:57:00.000Z",
-      "latestAt": "2026-11-28T16:54:15.000Z",
+      "latestAt": "2026-11-28T16:58:41.000Z",
       "firstSeenAt": "2026-11-28T16:49:30.271Z",
-      "outlets": 9,
+      "outlets": 10,
       "outletNames": [
         "Reuters",
         "The Star",
@@ -347,10 +368,11 @@
         "The Jerusalem Post",
         "Yahoo",
         "Yahoo News UK",
-        "@Reuters on X"
+        "@Reuters on X",
+        "Devdiscourse"
       ],
       "xUrl": "https://x.com/Reuters/status/2126719057856430444",
-      "score": 2.79
+      "score": 2.89
     },
     {
       "id": "d797a2d51f86",
@@ -425,23 +447,6 @@
         "Dailymotion on MSN"
       ],
       "score": 2.23
-    },
-    {
-      "id": "4b9b89e72206",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "UK pensions department says it was hit by cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdkl5aUhJaHg0cG8yQzlNclh5MjVlazNrcHNhRmJXT09ZOUMzU3dLUkhYX09fRDEyRHBRZ1A1aDFaYktPMk9kOVNiajBvdEVESFlOelB2eUdtZV9jZzJQc3ZZVVhiV0Z2cG1LdHhrU3E1bExTS09OQ2JsOFF4SFZGNkNOOTdCSHE4MHdlWDdUSGpBWnBkYjNqVnU1ejRGQlhxdkQyOHk5Mm5hUQ?oc=5",
-      "source": "Southern Cross",
-      "publishedAt": "2026-11-28T16:58:29.000Z",
-      "latestAt": "2026-11-28T17:03:48.000Z",
-      "firstSeenAt": "2026-11-28T17:04:35.362Z",
-      "outlets": 2,
-      "outletNames": [
-        "Southern Cross",
-        "The Canberra Times"
-      ],
-      "score": 2
     },
     {
       "id": "49ab3821e57e",
@@ -892,6 +897,41 @@
       "score": 1.69
     },
     {
+      "id": "71c66b8c664d",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOcU9NY1kyTFd3MjRQcXJrZUpCSnU5a2lfcGNqQkZ3UDNCNF9MSEEyTkVoemRoUkdoWk9PRnVyQVZFcHdnbUR6bzBsTWlEeHhJRl95dWpmMzNQX2xHTGJMcnRkT0JoOThKeHRlbnplb1pXT05FUVVhVENZd0stZFpiOGdIV0tqSFlCb3VV?oc=5",
+      "source": "Decrypt",
+      "publishedAt": "2026-11-27T17:43:29.000Z",
+      "latestAt": "2026-11-27T20:36:11.000Z",
+      "firstSeenAt": "2026-11-28T17:04:35.362Z",
+      "outlets": 3,
+      "outletNames": [
+        "Decrypt",
+        "Greater Belize Media",
+        "Yahoo"
+      ],
+      "score": 1.58
+    },
+    {
+      "id": "6f3c37ba0f87",
+      "cat": "grid",
+      "kind": "news",
+      "title": "Map shows where thousands still without power after Thanksgiving storms",
+      "url": "https://www.yahoo.com/news/weather-news/articles/map-shows-where-thousands-still-124742361.html",
+      "source": "Yahoo",
+      "publishedAt": "2026-11-28T04:47:00.000Z",
+      "latestAt": "2026-11-28T12:47:00.000Z",
+      "firstSeenAt": "2026-11-28T17:34:33.155Z",
+      "outlets": 2,
+      "outletNames": [
+        "Yahoo",
+        "Newsweek"
+      ],
+      "score": 1.57
+    },
+    {
       "id": "e5bcd5c11a0b",
       "cat": "grid",
       "kind": "news",
@@ -1059,21 +1099,20 @@
       "score": 1.23
     },
     {
-      "id": "71c66b8c664d",
+      "id": "cb4259de16b0",
       "cat": "hacks",
       "kind": "news",
-      "title": "Hackers Hit US Air Force Cloud System Running Air-Defense and Munitions Data",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOcU9NY1kyTFd3MjRQcXJrZUpCSnU5a2lfcGNqQkZ3UDNCNF9MSEEyTkVoemRoUkdoWk9PRnVyQVZFcHdnbUR6bzBsTWlEeHhJRl95dWpmMzNQX2xHTGJMcnRkT0JoOThKeHRlbnplb1pXT05FUVVhVENZd0stZFpiOGdIV0tqSFlCb3VV?oc=5",
-      "source": "Decrypt",
-      "publishedAt": "2026-11-27T17:43:29.000Z",
-      "latestAt": "2026-11-27T20:36:11.000Z",
-      "firstSeenAt": "2026-11-28T17:04:35.362Z",
-      "outlets": 2,
+      "title": "United Fidelity Bank seized in biggest US bank failure since 2024",
+      "url": "https://apnews.com/article/united-fidelity-bank-a01d066d778855d919761cc77e1b0b00",
+      "source": "Associated Press News",
+      "publishedAt": "2026-11-28T09:31:00.000Z",
+      "latestAt": "2026-11-28T09:31:00.000Z",
+      "firstSeenAt": "2026-11-28T17:34:33.155Z",
+      "outlets": 1,
       "outletNames": [
-        "Decrypt",
-        "Greater Belize Media"
+        "Associated Press News"
       ],
-      "score": 1.22
+      "score": 1.21
     },
     {
       "id": "c63e980c2079",
@@ -1106,6 +1145,22 @@
         "Daily Mail"
       ],
       "score": 1.21
+    },
+    {
+      "id": "ddefe23273dd",
+      "cat": "hacks",
+      "kind": "news",
+      "title": "Meet the 20-somethings who halted a worldwide cyberattack",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5OLXRKdFZuZ0xmWlJLQnZfbDFOSGw4R3VaMVhEN05zMXNfNmZ2a3Vjc09sS0pSUWNQbnN6YVFJTThPSE5rY2JKb3A3aTdNbzJKM0k5eGNITUE5Q1lhekdmRzVVcVhvVEZ1enMtV1oxMy1iaW9EYVE?oc=5",
+      "source": "Mashable",
+      "publishedAt": "2026-11-28T09:05:33.000Z",
+      "latestAt": "2026-11-28T09:05:33.000Z",
+      "firstSeenAt": "2026-11-28T17:34:33.155Z",
+      "outlets": 1,
+      "outletNames": [
+        "Mashable"
+      ],
+      "score": 1.2
     },
     {
       "id": "24de9d2c3347",
@@ -1355,7 +1410,7 @@
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPcHZLMzk1bm5IbWlZSFMybUpkdzJnZ0FQSlJOb3dyOU1vN21wd2RqamZzd3NjaXc5SF9qNjBkM1ZBQzgyVHR2b1E0Qjc0VHlET0VRN3ZFazdOY1NqYjNsTE9ZY3hiX2ZXYjY0X2NFeEtfRlN5b2dMN3RrNFJybU1rcEZJMWZYR2JMTThlREFvWVlYclNJdmhBUmp6OFVWazdxYWhsUzBEMTNHTmxicy00Wl9UTUVKVHMwWDdyMNIBwgFBVV95cUxNb3NvN0NSVGVHX0hTNVlBZGlkak5KR0lQSFlpMnVMc1gxVWFZLXFqWlFoRlBhclpEaWVPbWtLaW54eFJvWUU0YjhCaFlHSVpNUUdoc0Q1RndJSFZncUUzaEZORG5QR2JvTWFobnZlX3otR0ZWcmhQcy1UVm85cFNnSTByZjEtQ2E5Y1NlT1pRcjZHWlpjcVhJMGh6R1RjeUNqWXYyNVdra25ESzBsRlcwZjR0VGoxbUc2Q2QtZkZXMXNqQQ?oc=5",
       "source": "Security Affairs",
       "publishedAt": "2026-11-28T11:17:24.000Z",
-      "latestAt": "2026-11-28T11:17:24.000Z",
+      "latestAt": "2026-11-28T12:09:22.000Z",
       "firstSeenAt": "2026-11-28T11:33:38.131Z",
       "outlets": 1,
       "outletNames": [
@@ -1675,7 +1730,7 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPendFUktGazBkcURFNFpQUjZEWnVwWWNNb1MwVkxjSFdpejVTOW13VExocHpTaTVRSmRaMnlkLTFDUzNzb2kxNm5oZUlRR185V2laWU5fYVFRbURRdExXUFVfVFBSSHRpYXBqb1NGVTVuMjlfSWRUZmx1U0hseEk0MGRrV0ZIWVU1MER2bVNOSWM2YUJhaVMtdUctdklJU20yQkRpZVIzb19OSDNqVE9uU3Vyb0JpbkcwMzZZdnJYaw?oc=5",
       "source": "IOL",
       "publishedAt": "2026-11-28T01:55:02.000Z",
-      "latestAt": "2026-11-28T16:28:58.000Z",
+      "latestAt": "2026-11-28T17:27:10.000Z",
       "firstSeenAt": "2026-11-28T02:02:07.667Z",
       "outlets": 1,
       "outletNames": [
@@ -1716,66 +1771,18 @@
       "score": 1
     },
     {
-      "id": "a1a4cfc3ba4f",
+      "id": "bd73635bd811",
       "cat": "hacks",
       "kind": "news",
-      "title": "Over 100 Belgian municipalities now exposed to cyberattack",
-      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE5CN1ZWVXhrYjh3VTZ3T2VkMGVITmtYQ3BoUE5UNVZMSjB2aEl5N2pQSUlwRHcxOThCQlZv?oc=5",
-      "source": "Howl.Link",
-      "publishedAt": "2026-11-28T15:55:08.000Z",
-      "latestAt": "2026-11-28T15:55:08.000Z",
-      "firstSeenAt": "2026-11-28T16:19:22.705Z",
+      "title": "United Kingdom admits a cyberattack against the Ministry of Labour and Pensions",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRm04WDZ3OHAzbzBXSTNHRFN1Zm5rUmNkTGc3bV9zajIwWGFzSnRSWG5LZUpuR3Y3Wno4eTRXV05GTDlOXy1tcmt0bV9GdU1vUUtWZi1NY0RQaGZGeWU5RnB3Y0VzV0JUaVBFZUFaalNmZlltSFlrNW1waVVEOGN6a1JOWXAzblRPVUNjNENqSDVYbUhXOVFIZU5jTy1TNlZPdjB6TTUtOEVmeHpMalJZM190NWlEZUVnSlRaT1VMY9IBxAFBVV95cUxNYVU0VGI3QkxLZVhxOFVoR1N3TWczVWZNV3lQUDRaeEluVnpGTlhJSEFjejJweW1lQ1BwOFdiZzFEaERpR2phVGN0VUZyQjBxUHZ5UWhkMDZ2Qmgzblk3TF95Qno5OEE2WFhHOHlLX2ZlLVc0VmxRQ29RUThTbllvdUxNcDlPSzEwTWJqTjlaUm15dHhWNDFoWkR5eFRJRXFGYVo3ekIySTFiXzU5QncwOE5KMkJCLUlJSGRBZ2JwaFJ0OEly?oc=5",
+      "source": "Demócrata",
+      "publishedAt": "2026-11-28T17:14:41.000Z",
+      "latestAt": "2026-11-28T17:14:41.000Z",
+      "firstSeenAt": "2026-11-28T17:34:33.155Z",
       "outlets": 1,
       "outletNames": [
-        "Howl.Link"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "c43880f6ba5e",
-      "cat": "hacks",
-      "kind": "news",
-      "title": "Data breach at Construction Industry Council app exposes personal details of around 500,000 registered workers",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQSUo5NXE3SzY1anJ3dmJGTU4wQ3VkQ05qRlZhVl9CVnRxSjZVYmlXanZsQ1dHSmNUVlhBMllFejhGbTFZSWlzZmVhWkFVNHRVSFBtTWtFTEhCQWg5UjVZNU9ydW9La1ppX1o5cHhOMXJJbnBFS2RvWDNuVi04RTdEZHpLdzBhUHVQRlJEbnlEeVZQTzhtVVFjc1JwQzRqRzUwYU43aWJjcE44SVQwRFFZbTJEOXl5ZXFQRWRNcHp4Q2VvNkNHNEJ0XzA0VmR6Y3BneHdr?oc=5",
-      "source": "Dimsum Daily",
-      "publishedAt": "2026-11-28T15:48:06.000Z",
-      "latestAt": "2026-11-28T15:48:06.000Z",
-      "firstSeenAt": "2026-11-28T16:19:22.705Z",
-      "outlets": 1,
-      "outletNames": [
-        "Dimsum Daily"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "ff7a514ee230",
-      "cat": "grid",
-      "kind": "news",
-      "title": "SCHUYLKILL COUNTY POWER OUTAGE UPDATE: 5,100+ Remain Without Power Saturday Morning",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOU3liaUYwOFhISkN1RDgxX2ptQnFQeTlZVmsxX2lsdnAxazh2RmpaY1l5dTJlYlFKd2xFMWd4Wm8tUzZESjkwWFNQdjl5S0pjbUYzMmstdUwyMUVCQW44TDRJclljMGlYVFpYRFVOakxlZExmRi1raHNkT1hGWVJha1BR?oc=5",
-      "source": "Skook News",
-      "publishedAt": "2026-11-28T15:15:00.000Z",
-      "latestAt": "2026-11-28T15:15:00.000Z",
-      "firstSeenAt": "2026-11-28T16:04:21.847Z",
-      "outlets": 1,
-      "outletNames": [
-        "Skook News"
-      ],
-      "score": 0.99
-    },
-    {
-      "id": "d4346c774b04",
-      "cat": "grid",
-      "kind": "news",
-      "title": "Thanksgiving nor’easter leaves thousands without power across Maryland, DC, Virginia",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUFR1SS1rQ2E0Z1E3azE4LXpLVDFUZU80RHZza1c0YVRCYWRpUWdDeWFYS2lhb0o2eDRMMU05ZmMxa01kamlpYzJ6eXJiUkhtRGEzSGg0QnBQSkx4bW1XSUpCbHRvR0YycjdxRlN1OGJMcXJVb1Uyd08wZGlhblJvQjZCSmotVmpKSkgxb3YxQU1peHRBbDFVVTAwRjExM3dQTFFGbExWRFJra29LRWc?oc=5",
-      "source": "WJLA",
-      "publishedAt": "2026-11-28T14:56:13.000Z",
-      "latestAt": "2026-11-28T14:56:13.000Z",
-      "firstSeenAt": "2026-11-28T15:49:20.961Z",
-      "outlets": 1,
-      "outletNames": [
-        "WJLA"
+        "Demócrata"
       ],
       "score": 0.99
     },
